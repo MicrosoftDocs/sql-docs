@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], full-text search"
   - "full-text search [SQL Server], dynamic management views"
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl 
+ms.author: pelopes
 manager: craigg
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions

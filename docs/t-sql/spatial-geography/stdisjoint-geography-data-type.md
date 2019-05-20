@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDisjoint"
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STDisjoint (geography Data Type)

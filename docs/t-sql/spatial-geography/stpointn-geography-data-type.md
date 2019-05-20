@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointN method"
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPointN (geography Data Type)

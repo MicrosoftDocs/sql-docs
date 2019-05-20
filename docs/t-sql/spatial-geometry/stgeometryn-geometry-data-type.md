@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryN (geometry Data Type)"
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STGeometryN (geometry Data Type)

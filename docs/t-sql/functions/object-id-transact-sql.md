@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "viewing object IDs"
   - "verifying object exists"
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

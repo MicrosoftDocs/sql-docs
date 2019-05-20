@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AsTextZM method"
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # AsTextZM (geography Data Type)

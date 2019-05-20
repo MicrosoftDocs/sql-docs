@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "code [SQL Server], ASCII"
   - "leftmost character of expression"
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

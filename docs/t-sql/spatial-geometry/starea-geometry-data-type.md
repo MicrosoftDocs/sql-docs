@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STArea (geometry Data Type)"
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STArea (geometry Data Type)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "number of triggers"
   - "TRIGGER_NESTLEVEL function"
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # TRIGGER_NESTLEVEL (Transact-SQL)

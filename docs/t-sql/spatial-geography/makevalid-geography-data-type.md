@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MakeValid method (geography)"
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # MakeValid (geography Data Type)

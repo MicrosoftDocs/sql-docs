@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STLineFromText method"
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STMLineFromText (geography Data Type)

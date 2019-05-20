@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomCollFromText (geometry Data Type)"
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STGeomCollFromText (geometry Data Type)

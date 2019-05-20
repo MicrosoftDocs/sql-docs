@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "GROUP BY clause, GROUPING_ID"
   - "GROUPING_ID function"
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GROUPING_ID (Transact-SQL)

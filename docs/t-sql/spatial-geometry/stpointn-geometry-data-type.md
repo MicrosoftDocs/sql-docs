@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointN (geometry Data Type)"
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPointN (geometry Data Type)

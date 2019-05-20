@@ -31,9 +31,9 @@ ms.author: maggies
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service must be running.  
   
-### To preload the cache by creating a cache refresh plan  
+## To preload the cache by creating a cache refresh plan  
   
-1. Start ["The web portal of a report server"](../../reporting-services/web-portal-ssrs-native-mode.md).  
+1. Start the [web portal of a report server](../../reporting-services/web-portal-ssrs-native-mode.md "The web portal of a report server").  
   
 2. Select **Browse** from the Home screen and navigate the folder hierarchy to locate the item that you want to cache.  
   
@@ -88,9 +88,9 @@ ms.author: maggies
           3. Select **Create cache refresh plan** to save the plan if adding, or **Apply** if editing the plan.  
       You are returned to the updated **Cache Refresh Plans** page.
   
-### To preload the cache with a user-specific report by using a data-driven subscription
+## To preload the cache with a user-specific report by using a data-driven subscription
 
-1. Start [the web portal of a report server](../reporting-services/web-portal-ssrs-native-mode.md "The web portal of a report server" ).
+1. Start the [web portal of a report server](../reporting-services/web-portal-ssrs-native-mode.md "The web portal of a report server" ).
 2. Select **Browse** from the Home screen and navigate the folder hierarchy to locate the report you want to subscribe to.  
 3. Right-click the report, select **Subscribe** from the dropdown menu. The **New Subscriptions** page is displayed.  
 4. Enter a description for the subscription in the **Description** text box.  
@@ -135,7 +135,7 @@ ms.author: maggies
      Or, to create a custom schedule, select **On a schedule created for this subscription** and then select **Next**. Configure the schedule and then select **Finish**.  
   
     > [!NOTE]  
-    > In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see **[The web portal of a report server](../../reporting-services/web-portal-ssrs-native-mode.mdn "The web portal of a report server")**.  
+    > In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see the [web portal of a report server](../../reporting-services/web-portal-ssrs-native-mode.md  "The web portal of a report server").  
   
 16. Configure the Execution options for the report as follows. On the report page, select the **Properties** tab.  
   
@@ -151,7 +151,7 @@ ms.author: maggies
   
 18. Select **Apply**.  
   
-## See also  
+## See also 
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Performance, Snapshots, Caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

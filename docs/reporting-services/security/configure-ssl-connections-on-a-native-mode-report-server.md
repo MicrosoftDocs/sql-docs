@@ -22,7 +22,7 @@ ms.author: maggies
  Because Internet Information Services (IIS) also uses HTTP SSL, there are significant interoperability issues that you must account for if you run IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer. Be sure to review the Interoperability Issues with IIS section for guidance on how to address these issues.  
   
 ## Server Certificate Requirements  
- You must have a server certificate installed on the computer (client certificates are not supported). Reporting Services does not provide functionality for requesting, generating, downloading, or installing a certificate. Windows Server 2012 qnd later provide a Certificates snap-in that you can use to request a certificate from a trusted certificate authority.  
+ You must have a server certificate installed on the computer (client certificates are not supported). Reporting Services does not provide functionality for requesting, generating, downloading, or installing a certificate. Windows Server 2012 and later provide a Certificates snap-in that you can use to request a certificate from a trusted certificate authority.  
   
  For testing purposes, you can generate a certificate locally. If you use the **MakeCert** utility and the sample command as a template, be sure to specify your server name as the host and remove all line breaks before running the command. If you run the command in a DOS window, you might need to increase the buffer size of the window to accommodate the entire command.  
   

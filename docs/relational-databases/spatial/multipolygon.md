@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "MultiPolygon geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

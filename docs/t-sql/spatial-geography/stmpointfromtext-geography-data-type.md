@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPointFromText method"
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STMPointFromText (geography Data Type)

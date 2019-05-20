@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STCurveToLine method (geography)"
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STCurveToLine (geography Data Type)

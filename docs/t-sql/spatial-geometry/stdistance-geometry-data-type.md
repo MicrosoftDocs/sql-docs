@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDistance (geometry Data Type)"
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STDistance (geometry Data Type)

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MinDbCompatibilityLevel method (geography)"
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # MinDbCompatibilityLevel (geography Data Type)

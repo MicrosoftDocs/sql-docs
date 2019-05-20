@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "RingN method"
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # RingN (geography Data Type)

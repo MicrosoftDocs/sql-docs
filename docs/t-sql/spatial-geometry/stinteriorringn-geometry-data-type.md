@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STInteriorRingN (geometry Data Type)"
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STInteriorRingN (geometry Data Type)

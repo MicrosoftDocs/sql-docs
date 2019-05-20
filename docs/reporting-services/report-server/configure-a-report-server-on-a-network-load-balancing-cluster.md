@@ -3,7 +3,8 @@ title: "Configure a Report Server on a Network Load Balancing Cluster | Microsof
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 10/03/2018

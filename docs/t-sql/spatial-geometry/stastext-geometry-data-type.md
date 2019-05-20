@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STAsText (geometry Data Type)"
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STAsText (geometry Data Type)

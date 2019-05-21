@@ -90,7 +90,7 @@ To capture diagnostic information to troubleshoot an OutOfMemoryException from S
 
 2. Then share the memory dump file collected to OneDrive (or equivalent) where the file can be collected.
 
-    > [IImportant]
+    > [!Important]
     > Memory dump files may contain sensitive information.
 
 ## Next steps

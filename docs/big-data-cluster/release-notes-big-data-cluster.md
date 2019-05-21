@@ -31,6 +31,7 @@ The following sections describe the new features and known issues for big data c
 | **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
 | Multiple compute pool instances | Support for multiple compute pool instances. |
+| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
 
 ### Known issues
 
@@ -77,39 +78,14 @@ The following sections describe the known issues and limitations with this relea
    > The URI for creating these external data sources is different between CTPs. Please see the Transact-SQL commands below to see how to create them 
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
        CREATE EXTERNAL DATA SOURCE SqlDataPool
        WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
-   END
-
-   -- Create the SqlStoragePool data source:
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
-   END
    ```
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
@@ -180,39 +156,14 @@ The following sections describe the known issues and limitations with this relea
 - Big data cluster deployment no longer creates the **SqlDataPool** and **SqlStoragePool** external data sources. You can create these data sources manually to support data virtualization to the data pool and storage pool.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
        CREATE EXTERNAL DATA SOURCE SqlDataPool
        WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
-   END
-
-   -- Create the SqlStoragePool data source:
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
-   END
    ```
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
@@ -336,39 +287,14 @@ A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API
 - Big data cluster deployment no longer creates the **SqlDataPool** and **SqlStoragePool** external data sources. You can create these data sources manually to support data virtualization to the data pool and storage pool.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
        CREATE EXTERNAL DATA SOURCE SqlDataPool
        WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
-   END
-
-   -- Create the SqlStoragePool data source:
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
-   END
    ```
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:

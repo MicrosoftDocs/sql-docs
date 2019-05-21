@@ -169,7 +169,7 @@ To install **kubectl** to an offline machine, use the following steps.
 
 1. Copy the folder to the target machine.
 
-## Deploy with from repository
+## Deploy from private repository
 
 To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **mssqlctl** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **custom.json**:
 

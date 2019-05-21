@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_semantic_register_language_statistics_db"
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)

@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: "sql-server-2019"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -14,23 +14,69 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. 
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 The article summarizes the features in each release and points to more details for each feature. The [Details](#details) section provides technical details of features that may not be available in core documentation. The other sections of this article provide details about all of the features released to date for this [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
-**Try [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
-
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
-- Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
-
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## CTP 2.5 April 2019
+## CTP 3.0 May 2019
 
-Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.5.
+Community technology preview (CTP) 3.0 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
+
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+
+For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
+
+In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0.
+
+### Big data clusters
+
+| New feature or update | Details |
+|:---|:---|
+| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
+| Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
+| Multiple compute pool instances | Support for multiple compute pool instances. |
+| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
+| &nbsp; | &nbsp; |
+
+### Database engine
+
+| New feature or update | Details |
+|:---|:---|
+|SQL Server extensibility - Java extension|The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now open sourced and available on [GitHub](http://aka.ms/mssql-java-lang-extension). |
+|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+|More supported data types for Java|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
+|Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|[In-memory database](../relational-databases/in-memory-database.md) adds new DDL syntax to control the hybrid buffer pool. <sup>2</sup>|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
+|New in-memory database feature, memory-optimized tempdb metadata added.|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
+|Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|`sys.dm_exec_query_plan_stats` returns more information about degree of parallelism and memory grants for query plans. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| &nbsp; | &nbsp; |
+
+><sup>1</sup>
+>This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
+>
+><sup>2</sup>
+>A trace flag is no longer required to enable the hybrid buffer pool.
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| New feature or update | Details |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] supports Azure SQL Database managed instance databases.| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).
+| &nbsp; | &nbsp; |
+
+### Analysis Services
+
+| New feature or update | Details |
+|:---|:---|
+|MDX query support for tabular models with calculation groups. |This release removes an earlier limitation in [calculation groups](#calc-ctp24). |
+|Dynamic formatting of measures using calculation groups. |This feature allows you to conditionally change format strings for measures with [calculation groups](#calc-ctp24). For example, with currency conversion, a measure can be displayed using different foreign currency formats.|
+
+## CTP 2.5 April 2019
 
 ### Big data clusters
 
@@ -110,7 +156,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 | Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
 | _Security_ endpoint names have been changed and consolidated. | **service-security-lb** and **service-security-nodeport** have been consolidated into the **endpoint-security** endpoint. |
 | _Proxy_ endpoint names have been changed and consolidated. | **service-proxy-lb** and **service-proxy-nodeport** have been consolidated into the **endpoint-service-proxy** endpoint. |
-| _Controller_ endpoint names have been changed and consolidated. | **service-mssql-controller-lb** and **service-mssql-controller-nodeport** have been consolidated into the **endpoint-controller** enpoint. |
+| _Controller_ endpoint names have been changed and consolidated. | **service-mssql-controller-lb** and **service-mssql-controller-nodeport** have been consolidated into the **endpoint-controller** endpoint. |
 | &nbsp; | &nbsp; |
 
 ### Database engine
@@ -121,7 +167,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 |Query Store plan forcing support for fast forward and static cursors.|[Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |Reduced recompilations for workloads using temporary tables across multiple scopes. |[Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
 |Improved indirect checkpoint scalability. |[Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
-|UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |Define cascaded delete actions on an edge constraint in a graph database. |[Edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
 |Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
 | &nbsp; | &nbsp; |

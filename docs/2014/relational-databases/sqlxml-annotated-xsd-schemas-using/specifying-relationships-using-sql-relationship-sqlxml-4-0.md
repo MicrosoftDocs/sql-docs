@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "named relationships [SQLXML]"
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Specifying Relationships Using sql:relationship (SQLXML 4.0)

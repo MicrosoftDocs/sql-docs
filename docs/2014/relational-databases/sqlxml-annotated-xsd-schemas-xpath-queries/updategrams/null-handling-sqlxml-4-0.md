@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "nullvalue attribute"
   - "null values [SQLXML]"
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # NULL Handling (SQLXML 4.0)

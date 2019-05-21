@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "AND"
   - "combining expressions"
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

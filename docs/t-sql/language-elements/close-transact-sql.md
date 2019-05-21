@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "cursors [SQL Server], closing"
   - "CLOSE statement"
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # CLOSE (Transact-SQL)

@@ -57,6 +57,8 @@ The following sections describe the known issues and limitations with this relea
 
 #### Deployment
 
+- The previous deployment procedures for GPU-enabled big data clusters are not supported in CTP 3.0. An alternate deployment procedure is being investigated. For now, the article "Deploy a big data cluster with GPU support and run TensorFlow" has been temporarily unpublished to avoid confusion.
+
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]

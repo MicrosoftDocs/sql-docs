@@ -47,7 +47,7 @@ Use the following instructions to load the sample notebook file **spark-sql.ipyn
 
 The following steps show how to open the notebook file in Azure Data Studio:
 
-1. In Azure Data Studio, connect to the HDFS/Spark gateway of your big data cluster. For more information, see [Connect to the HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+1. In Azure Data Studio, connect to the master instance of your big data cluster. For more information, see [Connect to a big data cluster](connect-to-big-data-cluster.md).
 
 1. Double-click on the HDFS/Spark gateway connection in the **Servers** window. Then select **Open Notebook**.
 

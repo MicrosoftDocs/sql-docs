@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+           "source_path": "docs/big-data-cluster/spark-gpu-tensorflow.md",
+           "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
+           "redirect_document_id": false
+        },       
+        {
            "source_path": "docs/big-data-cluster/reference-mssqlctl-storage.md",
            "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-cluster-storage-pool",
            "redirect_document_id": false

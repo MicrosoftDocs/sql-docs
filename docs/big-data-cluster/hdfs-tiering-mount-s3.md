@@ -52,7 +52,7 @@ Now that you have prepared a credential file with access keys, you can start mou
 1. Log in with **mssqlctl** using the external IP address of the management proxy endpoint with your cluster username and password:
 
    ```bash
-   mssqlctl login -e https://<IP-of-controller-svc>:30080/
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
 1. Mount the remote HDFS storage in Azure using **mssqlctl cluster storage-pool mount create**. Replace the placeholder values before running the following command:

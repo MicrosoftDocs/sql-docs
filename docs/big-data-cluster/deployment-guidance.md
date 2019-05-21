@@ -231,10 +231,10 @@ After the deployment script has completed successfully, you can obtain the IP ad
    > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
    > ```
 
-1. Log in to the big data cluster with **mssqlctl login**. Set the **--endpoint** parameter to the Management Proxy.
+1. Log in to the big data cluster with **mssqlctl login**. Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 
    ```bash
-   mssqlctl login --endpoint https://<ip-address>:30777
+   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
    Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.

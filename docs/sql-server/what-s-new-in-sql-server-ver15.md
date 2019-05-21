@@ -38,7 +38,8 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |:---|:---|
 | **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
-| Updates to Spark mLeap samples | For more information, see [Export Spark machine learning models with MLeap](../big-data-cluster/export-model-with-spark-mleap.md). |
+| Multiple compute pool instances | Support for multiple compute pool instances. |
+| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
 | &nbsp; | &nbsp; |
 
 ### Database engine

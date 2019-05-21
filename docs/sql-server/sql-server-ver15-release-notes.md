@@ -68,6 +68,14 @@ Complete details about support and licensing for CTP releases are in `license_Ev
 
 - **Applies to**: SQL Server 2019 CTP 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
+## Installation Wizard may wait between EULA pages
+
+- **Issue and customer impact**: During installation with Installation Wizard, the process may wait an excessive amount of time between the end user license agreement (EULA) for R Services and the EULA for Python.
+
+- **Workaround**: Wait for the Installation Wizard to proceed. The time to wait may exceed 30 minutes.
+
+- **Applies to**: SQL Server 2019 CTP 3.0
+
 ## UTF-8 collations
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:

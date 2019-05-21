@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "comparing queries"
   - "INTERSECT operator"
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

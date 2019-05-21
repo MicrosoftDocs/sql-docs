@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "-= (subtract equals)"
   - "-= (subtraction assignment)"
 ms.assetid: 2a2056b5-1dfa-4ea8-8cfc-6331a2f94da9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

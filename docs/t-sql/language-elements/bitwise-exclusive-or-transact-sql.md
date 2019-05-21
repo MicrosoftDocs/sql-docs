@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "exclusive OR mathematical operations"
   - "bitwise exclusive OR (^)"
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

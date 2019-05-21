@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,7 +16,8 @@ helpviewer_keywords:
   - "annotated XSD schemas, constant elements"
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ""
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function"
   - "DECRYPTBYPASSPHRASE function"
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DECRYPTBYPASSPHRASE (Transact-SQL)

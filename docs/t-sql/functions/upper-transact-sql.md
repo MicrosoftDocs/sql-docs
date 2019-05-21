@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "characters [SQL Server], uppercase"
   - "lowercase characters"
 ms.assetid: 5ced55f7-ac89-4cf2-9465-f63f4dc480db
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPolyFromText method"
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPolyFromText (geography Data Type)

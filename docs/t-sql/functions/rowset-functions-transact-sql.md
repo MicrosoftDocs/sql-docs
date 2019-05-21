@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "rowsets [SQL Server], functions"
   - "rowsets [SQL Server]"
 ms.assetid: ac24d700-3144-4ab5-9fa8-8c014001cc71
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Rowset Functions (Transact-SQL)

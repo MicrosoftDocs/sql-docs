@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SIN function"
   - "sine"
 ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

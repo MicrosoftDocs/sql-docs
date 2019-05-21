@@ -55,15 +55,15 @@ SET STATISTICS IO { ON | OFF }
 |**logical reads**|Number of pages read from the data cache.|  
 |**physical reads**|Number of pages read from disk.|  
 |**read-ahead reads**|Number of pages placed into the cache for the query.|  
-|**lob logical reads**|Number of **text**, **ntext**, **image**, or large value type (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**) pages read from the data cache.|  
-|**lob physical reads**|Number of **text**, **ntext**, **image**, or large value type pages read from disk.|  
-|**lob read-ahead reads**|Number of **text**, **ntext**, **image**, or large value type pages placed into the cache for the query.|  
-  
- The setting of SET STATISTICS IO is set at execute or run time and not at parse time.  
-  
+|**lob logical reads**|Number of pages read from the data cache. Includes **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or columnstore index pages.|  
+|**lob physical reads**|Number of pages read from disk. Includes **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or columnstore index pages.|  
+|**lob read-ahead reads**|Number of pages placed into the cache for the query. Includes **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, or columnstore index pages.|
+
+ The setting of SET STATISTICS IO is set at execute or run time and not at parse time.
+
 > [!NOTE]  
->  When Transact-SQL statements retrieve LOB columns, some LOB retrieval operations might require traversing the LOB tree multiple times. This may cause SET STATISTICS IO to report higher than expected logical reads.  
-  
+> When Transact-SQL statements retrieve LOB columns, some LOB retrieval operations might require traversing the LOB tree multiple times. This may cause SET STATISTICS IO to report higher than expected logical reads.
+
 ## Permissions  
  To use SET STATISTICS IO, users must have the appropriate permissions to execute the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The SHOWPLAN permission isn't required.  
   

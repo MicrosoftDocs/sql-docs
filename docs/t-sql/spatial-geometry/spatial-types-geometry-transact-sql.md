@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "spatial data types [SQL Server]"
   - "geometry data type [SQL Server], Transact-SQL"
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Spatial Types - geometry (Transact-SQL)

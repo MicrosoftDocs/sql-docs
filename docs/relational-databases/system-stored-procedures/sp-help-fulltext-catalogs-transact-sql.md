@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_catalogs"
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sp_help_fulltext_catalogs (Transact-SQL)

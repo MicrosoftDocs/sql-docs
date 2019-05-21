@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STLength (geometry Data Type)"
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STLength (geometry Data Type)

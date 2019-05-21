@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_catalog"
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

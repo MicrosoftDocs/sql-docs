@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "nesting stored procedures"
   - "stored procedure nesting levels [SQL Server]"
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # &#x40;&#x40;NESTLEVEL (Transact-SQL)

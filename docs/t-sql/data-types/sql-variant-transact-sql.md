@@ -103,7 +103,9 @@ The following table lists the types of values that cannot be stored by using **s
 |**image**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
-|User-defined types|**datetimeoffset**|  
+|User-defined types|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> SQL Server 2012 and greater do not restrict **datetimeoffset**.
 
 ## Examples  
 

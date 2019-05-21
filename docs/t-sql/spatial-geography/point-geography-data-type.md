@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Point method"
   - "Point (geography Data Type)"
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Point (geography Data Type)

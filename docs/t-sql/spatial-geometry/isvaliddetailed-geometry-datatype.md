@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IsValidDetailed geometry"
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # IsValidDetailed (geometry DataType)

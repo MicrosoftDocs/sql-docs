@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "networking [SQL Server], packet errors"
   - "connections [SQL Server], packets"
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # &#x40;&#x40;PACKET_ERRORS (Transact-SQL)

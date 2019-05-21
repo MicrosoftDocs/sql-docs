@@ -1,25 +1,24 @@
 ---
-title: Java data types supported in SQL Server 2019 - SQL Server Language Extensions
+title: Java data types supported in SQL Server 2019 
+titleSuffix: SQL Server Language Extensions
 description: Map data types from Java to SQL Server for input and output data structures, and for input parameters on the sp_execute_external_script.
-ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 04/23/2019
-ms.topic: conceptual
 author: dphansen
-ms.author: davidph
+ms.author: davidph 
 manager: cgronlun
+ms.date: 05/22/2019
+ms.topic: conceptual
+ms.prod: sql
+ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-
 # Java and SQL Server supported data types
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article maps SQL Server data types to Java data types for data structures and parameters on [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
 ## Data types for data sets
 
 The following SQL and Java data types are currently supported for Input and Output data sets.
-
 
 | SQL data type        | Java data type | Comment | |
 | ------------- |-------------|-|-|
@@ -67,6 +66,4 @@ The following SQL and Java data types are currently supported for input paramete
 
 ## Next steps
 
-+ [How to call Java in SQL Server](howto-call-java-from-sql.md)
-+ [Java sample in SQL Server](java-first-sample.md)
-+ [Java language extension in SQL Server](extension-java.md)
++ [How to call Java in SQL Server](../how-to/call-java-from-sql.md)

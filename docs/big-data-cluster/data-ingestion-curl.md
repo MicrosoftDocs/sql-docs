@@ -27,7 +27,7 @@ kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .stat
 ```
 
 > [!NOTE]
-> The `<cluster name>` here is the name of the cluster that you provided when you ran `mssqlctl cluster create --name <cluster name>`.
+> The `<cluster name>` here is the name of the cluster that you specified in the deployment configuration file. The default name is `mssql-cluster`.
 
 ## Construct the URL to access WebHDFS
 

@@ -1,44 +1,44 @@
 ---
-title: mssqlctl storage mount reference
+title: mssqlctl cluster storage-pool mount reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl storage mount commands.
+description: Reference article for mssqlctl cluster storage-pool mount commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl storage mount
+# mssqlctl cluster storage-pool mount
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **storage mount** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **cluster storage-pool mount** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl storage mount create](#mssqlctl-storage-mount-create) | Create mounts of remote stores in HDFS.
-[mssqlctl storage mount delete](#mssqlctl-storage-mount-delete) | Delete mounts of remote stores in HDFS.
-[mssqlctl storage mount status](#mssqlctl-storage-mount-status) | Status of mount(s).
-## mssqlctl storage mount create
+[mssqlctl cluster storage-pool mount create](#mssqlctl-cluster-storage-pool-mount-create) | Create mounts of remote stores in HDFS.
+[mssqlctl cluster storage-pool mount delete](#mssqlctl-cluster-storage-pool-mount-delete) | Delete mounts of remote stores in HDFS.
+[mssqlctl cluster storage-pool mount status](#mssqlctl-cluster-storage-pool-mount-status) | Status of mount(s).
+## mssqlctl cluster storage-pool mount create
 Create mounts of remote stores in HDFS.
 ```bash
-mssqlctl storage mount create --remote-uri 
-                              --mount-path  
-                              [--credential-file]
+mssqlctl cluster storage-pool mount create --remote-uri 
+                                           --mount-path  
+                                           [--credential-file]
 ```
 ### Examples
 To mount container "data" in ADLS Gen 2 account "adlsv2example" on HDFS path /mounts/adlsv2/data using the shared key
 ```bash
-mssqlctl storage mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/
+mssqlctl cluster storage-pool mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/
     --mount-path /mounts/adlsv2/data --credentials credential_file
 ```
 To mount a remote HDFS cluster (hdfs://namenode1:8080/) on local HDFS path /mounts/hdfs/
 ```bash
-mssqlctl storage mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
+mssqlctl cluster storage-pool mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
 ```
 ### Required Parameters
 #### `--remote-uri`
@@ -59,16 +59,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl storage mount delete
+## mssqlctl cluster storage-pool mount delete
 Delete mounts of remote stores in HDFS.
 ```bash
-mssqlctl storage mount delete --mount-path 
-                              
+mssqlctl cluster storage-pool mount delete --mount-path 
+                                           
 ```
 ### Examples
 Delete mount created at /mounts/adlsv2/data for a ADLS Gen 2 storage account.
 ```bash
-mssqlctl storage mount delete --mount-path /mounts/adlsv2/data
+mssqlctl cluster storage-pool mount delete --mount-path /mounts/adlsv2/data
 ```
 ### Required Parameters
 #### `--mount-path`
@@ -84,20 +84,20 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl storage mount status
+## mssqlctl cluster storage-pool mount status
 Status of mount(s).
 ```bash
-mssqlctl storage mount status [--mount-path] 
-                              
+mssqlctl cluster storage-pool mount status [--mount-path] 
+                                           
 ```
 ### Examples
 Get mount status by path
 ```bash
-mssqlctl storage mount status --mount-path /mounts/hdfs
+mssqlctl cluster storage-pool mount status --mount-path /mounts/hdfs
 ```
 Get status of all mounts.
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 ### Optional Parameters
 #### `--mount-path`

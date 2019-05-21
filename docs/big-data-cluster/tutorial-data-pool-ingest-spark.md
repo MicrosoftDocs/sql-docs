@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to ingest data into the data pool of
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -51,7 +51,7 @@ The following steps create an external table in the data pool named **web_clicks
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. Create an external table named **web_clickstreams_spark_results** in the data pool.
@@ -69,13 +69,13 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.5, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 3.0, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Start a Spark streaming job
 
 The next step is to create a Spark streaming job that loads web clickstream data from the storage pool (HDFS) into the external table you created in the data pool.
 
-1. In Azure Data Studio, connect to the **HDFS/Spark gateway** of your big data cluster. For more information, see [Connect to the HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+1. In Azure Data Studio, connect to the master instance of your big data cluster. For more information, see [Connect to a big data cluster](connect-to-big-data-cluster.md).
 
 1. Double-click on the HDFS/Spark gateway connection in the **Servers** window. Then select **New Spark Job**.
 

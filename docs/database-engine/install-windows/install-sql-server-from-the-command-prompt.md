@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2019"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ""
@@ -255,6 +255,7 @@ Use the following guidelines to develop installation commands that have correct 
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Optional**|Specifies the directory for the data files for user databases.<br /><br /> Default value: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **Optional**|Enables instant file initialization for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. For security and performance considerations, see [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).<br /><br /> Default value: "False"<br /><br /> Optional value: "True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Optional**|Specifies the directory for the log files for user databases.<br /><br /> Default value: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **Optional** If omitted on unattended (silent) installs, MAXDOP will align with the [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). |Specifies the max degree of parallelism, which determines how many processors a single statement can utilize during execution. Only available starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. <br /><br /> Default value will align with the [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **Optional**|Specifies the access level for the FILESTREAM feature. Supported values:<br /><br /> 0 =Disable FILESTREAM support for this instance. (Default value)<br /><br /> 1=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access.<br /><br /> 2=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] and file I/O streaming access. (Not valid for cluster scenarios)<br /><br /> 3=Allow remote clients to have streaming access to FILESTREAM data.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **Optional**<br /><br /> **Required when FILESTREAMLEVEL is greater than 1.**|Specifies the name of the windows share in which the FILESTREAM data will be stored.|  
 |SQL Server Full Text|/FTSVCACCOUNT<br /><br /> **Optional**|Specifies the account for Full-Text filter launcher service.<br /><br /> This parameter is ignored in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher. ServiceSID is used to help secure the communication between SQL Server and Full-text Filter Daemon. If the values are not provided, the Full-text Filter Launcher Service is disabled. You have to use SQL Server Control Manager to change the service account and enable full-text functionality.<br /><br /> Default value: Local Service Account|  

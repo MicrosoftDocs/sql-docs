@@ -208,8 +208,7 @@ The **Availability replica** pane displays the following columns:
     -   For a secondary database, indicates that the database has not started log synchronization because of a connection issue, is being suspended, or is going through transition states during startup or a role switch.  
   
 -   **Synchronizing**:
--   
-     On a primary replica:   
+- On a primary replica:   
     - On a primary database, indicates that this database is ready to accept a scan request from a secondary database.  
     - On a secondary replica, indicates that there is active data movement going on for that secondary database. 
   

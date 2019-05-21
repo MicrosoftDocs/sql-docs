@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "functions [SQL Server], cursors"
   - "cursors [SQL Server], statements"
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Cursors (Transact-SQL)

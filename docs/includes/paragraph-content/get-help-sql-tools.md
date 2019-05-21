@@ -1,4 +1,4 @@
-## ![info_tip](../media/info-tip.png) Get SQL tools help
+## ![info_tip](../media/info-tip.png) Get help for SQL tools
 
 - [Submit an Azure Data Studio Git issue](https://github.com/Microsoft/azuredatastudio/issues)
 - [Contribute to Azure Data Studio](https://github.com/Microsoft/azuredatastudio)

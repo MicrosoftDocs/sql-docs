@@ -1,7 +1,7 @@
 ---
 title: "Connect to the Database Engine Using Extended Protection | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/21/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

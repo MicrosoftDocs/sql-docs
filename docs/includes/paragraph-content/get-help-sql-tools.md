@@ -1,3 +1,10 @@
+---
+ms.date: 05/21/2019
+ms.topic: include
+ms.prod: sql
+author: craigg-msft
+ms.author: craigg
+---
 ## ![info_tip](../media/info-tip.png) Get help for SQL tools
 
 - [Submit an Azure Data Studio Git issue](https://github.com/Microsoft/azuredatastudio/issues)

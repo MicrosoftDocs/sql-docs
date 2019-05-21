@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_deauthorize_db stored procedure"
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sys.sp_rda_deauthorize_db (Transact-SQL)

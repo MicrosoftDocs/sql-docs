@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_column"
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

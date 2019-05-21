@@ -63,10 +63,10 @@ The following sections describe these commands in more detail.
 
 ## Sign in
 
-Before you deploy or interact with applications, first sign in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `mgmtproxy-svc-external` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before you deploy or interact with applications, first sign in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `controller-svc-external` service (for example: `https://ip-address:30080`) along with the user name and password to the cluster.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
+mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## AKS

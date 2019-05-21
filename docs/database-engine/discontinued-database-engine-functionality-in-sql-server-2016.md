@@ -42,20 +42,16 @@ manager: craigg
   
 ## Discontinued Features in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
+- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] is a 64-bit application. 32-bit installation is discontinued, though some elements run as 32-bit components.  
   
--   Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+- Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
--   ActiveX subsytem is discontinued. Use command line or PowerShell scripts instead.
+- ActiveX subsystem is discontinued. Use command line or PowerShell scripts instead.
   
 ## Previous Versions  
   
--   [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
--   [Discontinued Database Engine Functionality in SQL Server 2012](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
--   [Discontinued Database Engine Functionality in SQL Server 2008](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
+- [Discontinued Database Engine Functionality in SQL Server 2014](http://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+
 ## See Also  
  [Deprecated Database Engine Features in SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Deprecated Features in SQL Server Replication](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  

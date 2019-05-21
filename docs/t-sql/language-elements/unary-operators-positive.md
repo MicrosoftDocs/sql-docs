@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "positive operator (+)"
   - "positive values [SQL Server]"
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Unary Operators - Positive

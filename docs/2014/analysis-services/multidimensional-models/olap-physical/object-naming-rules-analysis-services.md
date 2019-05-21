@@ -64,9 +64,9 @@ manager: craigg
 |------------|------------------------|  
 |`Server`|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions) for details.|  
 |`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` or `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
-|`Dimension` or `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
-|All other objects|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
+|`Level` or `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
+|`Dimension` or `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
+|All other objects|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
   
  **Exceptions: When Reserved Characters are Allowed**  
   

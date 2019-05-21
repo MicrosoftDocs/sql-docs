@@ -32,7 +32,7 @@ manager: craigg
 
 ## <a name="previous-versions"></a> Previous Versions  
 
-For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and in some earlier versions, see Breaking Changes to Database Engine Features in SQL Server 2014.
+For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and in some earlier versions, see [Breaking Changes to Database Engine Features in SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
 
 #### Archived Documentation for Very Old Versions of SQL Server
 

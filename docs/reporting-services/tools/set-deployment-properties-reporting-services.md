@@ -65,7 +65,7 @@ ms.date: 05/15/2019
   
 1. Right-click the report project, and then click **Properties**.  
   
-2. In the **Property Pages** dialog box for the project, click **Configuration Manager**.  
+2. In the **Property Pages** dialog box for the project, click **Configuration Manager**.  sssssssssssssssss
   
 3. In the **Configuration Manager** dialog box, select the configuration to edit. The currently active configuration is displayed as **Active(***\<configuration>***)**.  
   
@@ -75,9 +75,10 @@ ms.date: 05/15/2019
     > If **Build** is selected, Report Designer builds the report project and checks for errors before previewing or publishing to a report server. If **Deploy** is selected, Report Designer publishes the reports to the report server as defined in deployment properties. If **Deploy** is not selected, Report Designer displays the report specified in the **StartItem** property in a local preview window.  
   
 ## See also  
- [Publishing Data Sources and Reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)
- [Previewing Reports](../../reporting-services/reports/previewing-reports.md)
- [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)
- [URL Examples for Published Report Items on a Report Server in SharePoint Mode &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)
- [Project Property Pages Dialog Box](../../reporting-services/tools/project-property-pages-dialog-box.md)
- [Publishing Reports to a Report Server](../../reporting-services/reports/publishing-reports-to-a-report-server.md)
+
+- [Publishing Data Sources and Reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)
+- [Previewing Reports](../../reporting-services/reports/previewing-reports.md)
+- [Report Designer F1 Help](../../reporting-services/tools/report-designer-f1-help.md)
+- [URL Examples for Published Report Items on a Report Server in SharePoint Mode &#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)
+- [Project Property Pages Dialog Box](../../reporting-services/tools/project-property-pages-dialog-box.md)
+- [Publishing Reports to a Report Server](../../reporting-services/reports/publishing-reports-to-a-report-server.md)

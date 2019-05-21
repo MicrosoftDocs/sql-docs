@@ -1,6 +1,6 @@
 ---
 title: "Finding and Viewing Reports in the web portal (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 05/20/2019
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-builder

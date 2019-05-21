@@ -1,5 +1,5 @@
 ---
-title: "Preload the Cache | Microsoft Docs"
+title: "Preload the Cache (SSRS)| Microsoft Docs"
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -52,27 +52,27 @@ ms.author: maggies
           ![The web portal cache expiration schedule details page for datasets](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Dataset cache schedule details page")
 
        On this page you can select:
-       1. The type of schedule:
+       - The type of schedule:
            - **Hour** - run the schedule every: specify hours and minutes and the start time.
            - **Day** - select one of the three choices below:  
-              1. **On the following days**: (Sun, Mon, Tue, Wed, Thu, Fri, Sat).
-              2. **Every weekday**
-              3. **Repeat after this number of days** - specify a number.  
+              - **On the following days**: (Sun, Mon, Tue, Wed, Thu, Fri, Sat).
+              - **Every weekday**
+              - **Repeat after this number of days** - specify a number.  
            - **Week** - specify both of the following two items:
-              1. **Repeat after this number of weeks** - specify a number.  
-              2. **On days** - pick the days of the week to run it.  
+              - **Repeat after this number of weeks** - specify a number.  
+              - **On days** - pick the days of the week to run it.  
            - **Month** - which month(s), with a choice of:
-              1. **On week of the month**,  
-                 1. Select (1st, 2nd, 3rd, 4th or Last) from the dropdown box.  
-                 2. **On day of the week** to run it. Select one or more of the check boxes (Sun, Mon, Tue, Wed, Thu, Fri, Sat).  
-                 3. **On calendar day(s)** -  Enter the actual day number of the month separated  by commas, or a range of days separated by a dash, or any combination of both  (e.g. 1,3-5).  
+              - **On week of the month**,  
+                 - Select (1st, 2nd, 3rd, 4th or Last) from the dropdown box.  
+                 - **On day of the week** to run it. Select one or more of the check boxes (Sun, Mon, Tue, Wed, Thu, Fri, Sat).  
+                 - **On calendar day(s)** -  Enter the actual day number of the month separated  by commas, or a range of days separated by a dash, or any combination of both  (e.g. 1,3-5).  
            - **Once** - a single occurrence.  
-       2. **Start time** - the time of the day for the schedule to start.  
-       3. **Start and end dates** - Specify the start date and optionally the end date of the schedule.
-       4. Select **Apply** to save the schedule.  
+       - **Start time** - the time of the day for the schedule to start.  
+       - **Start and end dates** - Specify the start date and optionally the end date of the schedule.
+       - Select **Apply** to save the schedule.  
           > [!NOTE]
           > If the item does not have caching enabled, you will be prompted to enable caching. To enable caching, select **OK**.
-       5. Select **Create cache refresh plan** to create / save the cache plan.  
+       - Select **Create cache refresh plan** to create / save the cache plan.  
        The **Cache Refresh Plans** page opens on the screen. From here you can:
            - Add a new cache refresh plan.
            - Create a new cache refresh plan from an existing plan.
@@ -81,25 +81,25 @@ ms.author: maggies
            - Search for a plan by name.
 
           If no cache refresh plans have been saved yet, the list will be empty, and the "Add" choice will be the only available option. Select **+ New cache refresh plan** to add a new one, and the **New Cache Refresh Plan** page is displayed.  
-          1. Type a **Description** in the first text box to name the refresh plan.  
-          2. Select one of the following radio buttons in the **Refresh the cache on the following schedule**  
-             1. **Shared schedule** - select a shared schedule from the adjacent dropdown box. 
-             2. **Report-specific schedule** - Edit the schedule as in step 2.2 above by selecting the **Edit schedule** link if desired to display the *Schedule details* page. 
-          3. Select **Create cache refresh plan** to save the plan if adding, or **Apply** if editing the plan.  
+          - Type a **Description** in the first text box to name the refresh plan.  
+          - Select one of the following radio buttons in the **Refresh the cache on the following schedule**  
+             - **Shared schedule** - select a shared schedule from the adjacent dropdown box. 
+             - **Report-specific schedule** - Edit the schedule as in step 2.2 above by selecting the **Edit schedule** link if desired to display the *Schedule details* page. 
+          - Select **Create cache refresh plan** to save the plan if adding, or **Apply** if editing the plan.  
       You are returned to the updated **Cache Refresh Plans** page.
   
 ## To preload the cache with a user-specific report by using a data-driven subscription
 
-1. Start the [web portal of a report services](../../reporting-services/web-portal-ssrs-native-mode.md "The web portal of a report server").
+1. Start the [web portal of a report server](../../reporting-services/web-portal-ssrs-native-mode.md "The web portal of a report server").  
 2. Select **Browse** from the Home screen and navigate the folder hierarchy to locate the report you want to subscribe to.  
 3. Right-click the report, select **Subscribe** from the dropdown menu. The **New Subscriptions** page is displayed.  
 4. Enter a description for the subscription in the **Description** text box.  
 5. The **Type of subscription** radio buttons display two options:  
-   1. **Standard subscription** - to generate and deliver one report
-   2. **Data-driven subscription** - to generate and deliver one report for each row in a dataset. This is the option you want to select to preload the cache.
+   - **Standard subscription** - to generate and deliver one report
+   - **Data-driven subscription** - to generate and deliver one report for each row in a dataset. This is the option you want to select to preload the cache.
 6. In the **Schedule** section, select one of the following radio buttons:
-   1. **Shared schedule** - select a shared schedule from the dropdown box.  
-   2. **Report-specific schedule** - Edit the schedule as in step 2.2 above by selecting the **Edit schedule** link if desired to display the *Schedule details* page.  
+   - **Shared schedule** - select a shared schedule from the dropdown box.  
+   - **Report-specific schedule** - Edit the schedule as in step 2.2 above by selecting the **Edit schedule** link if desired to display the *Schedule details* page.  
 7. The **Destination** section displays the following choices in a dropdown box:
     - **Windows File Share**
     - **E-Mail**
@@ -107,14 +107,14 @@ ms.author: maggies
 8. In the **Dataset** section, edit or create a dataset for this report subscription by selecting the **Edit dataset** button.  
 9. On the **Edit Dataset** page in the **data source** section, you choose the data source that contains the report parameter values and delivery options. Your choices are:  
    - **A shared data source** - select the ellipsis and select a shared data source from the *Shared Data Souce* folder.
-   - **A custom data source** - most likely this is the option you will have to choose, unless you have already set the steps below as a shared data source.
-         1. Specify the connection type, connection string, and credentials for accessing the data source that contains subscriber data. The following example illustrates a connection string used to connect to a SQL Server database named Subscribers.  
+   - **A custom data source** - most likely. this is the option you will have to choose, unless you or someone else has already completed the steps below to create it as a shared data source.  
+     - Specify the connection type, connection string, and credentials for accessing the data source that contains subscriber data. The following example illustrates a connection string used to connect to a SQL Server database named Subscribers.  
   
-          ```  
-          data source=<servername>; initial catalog=Subscribers  
-          ```
+   ```T-SQL
+   data source=<servername>;initial catalog=Subscribers  
+   ```
   
-10. In the **Query** section - specify the query that retrieves the desired subscriber data.  For example:  
+10. I`n the **Query** section - specify the query that retrieves the desired subscriber data.  For example:  
   
     ```T-SQL  
     Select * from RptSubscribers  
@@ -145,17 +145,18 @@ ms.author: maggies
   
 19. Choose one of the following two cache options and configure the expiration as follows:  
   
-    -   To make the cached copy expire after a particular time period, select **Cache a temporary copy of the report. Expire copy of report after a number of minutes.** Type the number of minutes for report expiration.  
+    - To make the cached copy expire after a particular time period, select **Cache a temporary copy of the report. Expire copy of report after a number of minutes.** Type the number of minutes for report expiration.  
   
-    -   To make the cached copy expire on a schedule, select **Cache a temporary copy of the report. Expire copy of report on the following schedule.** Select **Configure**, or select a shared schedule to set a schedule for report expiration.  
+    - To make the cached copy expire on a schedule, select **Cache a temporary copy of the report. Expire copy of report on the following schedule.** Select **Configure**, or select a shared schedule to set a schedule for report expiration.  
   
-18. Select **Apply**.  
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-## See also 
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Performance, Snapshots, Caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
- [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Working with shared datasets](../../reporting-services/work-with-shared-datasets-web-portal.md)
+20. Select **Apply**.
+  
+## See also  
+
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
+ [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
+ [Performance, Snapshots, Caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)  
+ [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)  
+ [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
+ [Working with shared datasets](../../reporting-services/work-with-shared-datasets-web-portal.md)  
   

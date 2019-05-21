@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "!> (not greater than)"
   - "not greater than operator (!>)"
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # !&gt; (Not Greater Than) (Transact-SQL)

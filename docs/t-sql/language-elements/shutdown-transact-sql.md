@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "stopping SQL Server"
   - "immediately stopping SQL Server"
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SHUTDOWN (Transact-SQL)

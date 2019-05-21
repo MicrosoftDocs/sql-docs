@@ -16,10 +16,10 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= azure-sqldw-latest ||= sqlallproducts-allversions"
+monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions"
 ---
 # AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Converts an *inputdate* to the corresponding *datetimeoffset* value in the target time zone. When *inputdate* is provided without offset information, the function applies the offset of the time zone assuming that *inputdate* is in the target time zone. If *inputdate* is provided as a *datetimeoffset* value, then **AT TIME ZONE** clause converts it into the target time zone using the time zone conversion rules.  
   

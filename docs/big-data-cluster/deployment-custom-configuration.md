@@ -97,11 +97,17 @@ The characteristics of each pool, such as the storage pool, is defined in the co
             "type": "Storage",
             "replicas": 2,
             "storage": {
-                "usePersistentVolume": true,
-                "className": "managed-premium",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
+               "data": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "15Gi"
+               },
+               "logs": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "10Gi"
+               }
+           },
         }
     }
 ]
@@ -116,22 +122,11 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.typ
 
 ## <a id="storage"></a> Configure storage
 
-You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool:
+You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool and updates the size of the persistent volume claim for storing data to 100Gb. You must have this section in the configuration file to update the settings using the *mssqlctl cluster config set* command, see below how to use a patch file to add this section:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec={""replicas"": 2,""storage"": {""className"": ""newStorageClass"",""size"": ""20Gi"",""accessMode"": ""ReadWriteOnce"",""usePersistentVolume"": true},""type"": ""Storage""}"
-```
-
-The following example only updates the size of the storage pool to `32Gi`:
-
-```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
-```
-
-The following example updates the size of all pools to `32Gi`:
-
-```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
@@ -173,10 +168,10 @@ The following **patch.json** file performs the following changes:
 
 - Updates the port of single endpoint.
 - Updates all endpoints (**port** and **serviceType**).
-- Updates the control plane storage.
+- Updates the control plane storage. These settings are applicable to all cluster components, unless overridden at pool level.
 - Updates the storage class name in control plane storage.
-- Updates pool storage, including replicas (storage pool).
-- Updates Spark settings for a specific pool (storage pool).
+- Updates pool storage settings for storage pool.
+- Updates Spark settings for storage pool.
 
 ```json
 {
@@ -214,30 +209,39 @@ The following **patch.json** file performs the following changes:
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage",
+      "path": "spec.controlPlane.spec.controlPlane",
       "value": {
-        "usePersistentVolume":true,
-        "accessMode":"ReadWriteMany",
-        "className":"managed-premium",
-        "size":"10Gi"
-      }
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
+        }
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage.className",
-      "value": "default"
+      "path": "spec.controlPlane.spec.storage.data.className",
+      "value": "managed-premium"
     },
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "managed-premium",
-          "size": "10Gi"
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
     },

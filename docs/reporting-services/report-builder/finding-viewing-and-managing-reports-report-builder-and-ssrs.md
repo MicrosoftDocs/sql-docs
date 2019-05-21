@@ -47,7 +47,7 @@ ms.author: maggies
 ##  <a name="ViewingAndManagingReportServer"></a> Viewing and Managing Reports on a Report Server  
  You use the web portal to view and manage reports on the report server. Browse the folders on the server to locate reports, run reports, to view them in a browser, and perform management tasks.  
   
- The web portal you can help you with following management tasks:  
+ The web portal can help you with the following management tasks:  
   
 -   View and update the properties of reports, shared data sources, and other report items.  
   
@@ -67,10 +67,9 @@ The web portal typically contains folders, reports, data sources, as well as the
   
  The web portal displays reports in the Reporting Services HTML Viewer. The HTML Viewer provides a framework for viewing reports in HTML and includes a report toolbar, a parameter section, a credentials section, and a document map. The report toolbar provides page navigation, zoom, refresh, search, export, print, and data feed functionality. The report toolbar also appears in a browser window at the top of a report when you access reports through a URL. Print functionality is optional and must be turned on by your administrator. When it is available, a Printer icon appears on the report toolbar. The following illustrations shows a closeup of the report toolbar in the web portal.  
   
- ![Report toolbar in the web portal](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/report-toolbar-in-the-web-portal.png) 
+ ![Report toolbar in the web portal](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/report-toolbar-in-the-web-portal.png)  
   
-
- After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).
+After you run a report, you can export it to another format, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel or PDF. You can also export the report using a data rendering extension such as the Comma-Separated Value (CSV) rendering extension and then use the CSV data file as input to another application. For more information about exporting reports, see [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).
   
  The easiest way to select and run a report is to open the web portal and then search for or browse to the report that you want to view. For step-by-step instruction on how to open reports, see [Open and Close a Report](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
@@ -93,7 +92,7 @@ The web portal typically contains folders, reports, data sources, as well as the
   
  To access the application pages, select item-specific actions from a drop-down menu on a report or other report server item that you previously added to a SharePoint library. Depending on the item and your permissions, you might also be able to create reports in Report Builder, generate models, and set model item security.  
   
- For more information about Reporting Services and SharePoint technology, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=154888) on msdn.microsoft.com.  
+ For more information about Reporting Services and SharePoint technology, see [Configuration and Administration of a Report Server &#40;Reporting Services SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md).
   
 ### Finding Report Server Items on a SharePoint Site  
  Before you can set properties, you must first be able to locate the item. Report server items are always stored in libraries or in a folder within a library.  
@@ -130,7 +129,7 @@ The web portal typically contains folders, reports, data sources, as well as the
 ##  <a name="InThisSection"></a> In This Section  
  The following articles provide additional information about viewing and managing reports.  
   
-  [Find, view, and manage reports](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+ [Find, view, and manage reports](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
   
  [Finding and Viewing Reports with a Browser &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Describes how to use a URL to find and view a report.  

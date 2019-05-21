@@ -65,7 +65,7 @@ ms.date: 05/15/2019
   
 1. Right-click the report project, and then click **Properties**.  
   
-2. In the **Property Pages** dialog box for the project, click **Configuration Manager**.  sssssssssssssssss
+2. In the **Property Pages** dialog box for the project, click **Configuration Manager**.  
   
 3. In the **Configuration Manager** dialog box, select the configuration to edit. The currently active configuration is displayed as **Active(***\<configuration>***)**.  
   

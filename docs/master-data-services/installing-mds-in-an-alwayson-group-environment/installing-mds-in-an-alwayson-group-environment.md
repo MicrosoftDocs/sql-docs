@@ -452,8 +452,7 @@ other nodes as replicas. See Figure 17.
     Figure 17
 
     For each replica, configure the following **Synchronous Commit**,
-**Automatic Failover**, and **Readable Secondary** settings. See Figure
-17.
+**Automatic Failover**, and **Readable Secondary** settings. See Figure 17.
 
     **Synchronous Commit**: This guarantees that if a transaction is
 committed on the primary replica of a database, then the transaction

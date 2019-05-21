@@ -1,7 +1,7 @@
 ---
 title: "Master Data Services Installation and Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2017"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
@@ -122,8 +122,19 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
 2.  Click **Create Database**, and then click **Next** in the **Create Database Wizard**.  
   
-3.  On the **Database Server** page, select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click **Next**.
-  
+3.  On the **Database Server** page, specify the SQL Server instance. 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] adds support for SQL Server Managed Instance. Set the value of **SQL Server Instance** to the host of an Azure SQL Database managed instance. For example, `xxxxxx.xxxxxx.database.windows.net`.
+
+4. Select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click **Next**.
+
+    >For [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], to connect to Azure SQL Database managed instance, use one of the following authentication types:
+    >
+    >- Azure Active Directory Integrated Authentication: **Current User – Active Directory Integrated**
+    >- SQL Server Authentication: **SQL Server Account**.
+    >
+    >In Azure SQL Database managed instance, the user must be a member of the `sysadmin` fixed server role.
+
     > [!NOTE]  
     >  When you select **Current User - Integrated Security** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM. 
 

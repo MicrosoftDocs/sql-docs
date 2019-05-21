@@ -5,7 +5,7 @@ description: Reference article for mssqlctl cluster debug commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -23,7 +23,7 @@ The following article provides reference for the **cluster debug** commands in t
 [mssqlctl cluster debug copy-logs](#mssqlctl-cluster-debug-copy-logs) | Copy logs.
 [mssqlctl cluster debug dump](#mssqlctl-cluster-debug-dump) | Trigger logging dump.
 ## mssqlctl cluster debug copy-logs
-Copy the debug logs from the cluster.
+Copy the debug logs from the cluster - kube config is required on your system.
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -55,7 +55,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for mor
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## mssqlctl cluster debug dump
-Trigger logging dump and copy it out from container.
+Trigger logging dump and copy it out from container - kube config is required on your system.
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

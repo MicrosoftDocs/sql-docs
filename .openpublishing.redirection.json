@@ -1,6 +1,21 @@
 {
     "redirections": [
         {
+           "source_path": "docs/big-data-cluster/spark-gpu-tensorflow.md",
+           "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
+           "redirect_document_id": false
+        },       
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-storage.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-cluster-storage-pool",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-storage-mount.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount",
+           "redirect_document_id": false
+        },  
+        {
            "source_path": "docs/linux/sql-server-linux-active-directory-third-party-providers.md",
            "redirect_url": "/sql/linux/sql-server-linux-active-directory-authentication",
            "redirect_document_id": false
@@ -273,6 +288,31 @@
         {
             "source_path": "docs/advanced-analytics/install/sql-r-standalone-windows-install.md",
             "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/extension-java.md",
+            "redirect_url": "/sql/language-extensions/language-extensions-overview",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/howto-call-java-from-sql.md",
+            "redirect_url": "/sql/language-extensions/how-to/call-java-from-sql",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/java-first-sample.md",
+            "redirect_url": "/sql/language-extensions/tutorials/search-for-string-using-regular-expressions-in-java",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/java-sdk.md",
+            "redirect_url": "/sql/language-extensions/language-extensions-overview",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/java-sql-datatypes.md",
+            "redirect_url": "/sql/language-extensions/how-to/java-to-sql-data-types",
             "redirect_document_id": false
         },   
         {

@@ -160,3 +160,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 - [Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
+
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

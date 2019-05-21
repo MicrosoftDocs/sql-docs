@@ -205,7 +205,7 @@ See one of the following quickstarts to get started:
 - [Connect & Query Azure SQL Database](quickstart-sql-database.md)
 - [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
 
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 

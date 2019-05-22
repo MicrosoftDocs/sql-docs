@@ -4,7 +4,7 @@ description: Use the olapR package library in SQL Server to write MDX queries in
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

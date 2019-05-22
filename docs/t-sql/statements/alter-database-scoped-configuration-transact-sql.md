@@ -84,8 +84,6 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
-**_Note:_** In SQL Server 2017 (14.x) only, the option INTERLEAVED_EXECUTION_TVF had the older name of **DISABLE**_INTERLEAVED_EXECUTION_TVF.
-
 ## Arguments
 
 FOR SECONDARY

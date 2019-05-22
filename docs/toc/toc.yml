@@ -8770,6 +8770,10 @@
           href: ../ssms/scripting/color-coding-in-query-editors.md
     - name: Quickstarts
       items:
+      - name: SSMS
+        items: 
+        - name: Connect & query SQL Server
+          href: ../ssms/tutorials/connect-query-sql-server.md
       - name: Register servers
         items:
         - name: Create a New Registered Server

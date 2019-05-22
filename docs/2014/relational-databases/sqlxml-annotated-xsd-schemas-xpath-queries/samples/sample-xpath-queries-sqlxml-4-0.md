@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "mapping schema [SQLXML], queries"
   - "XPath queries [SQLXML], samples"
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Sample XPath Queries (SQLXML 4.0)

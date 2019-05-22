@@ -454,24 +454,24 @@ other nodes as replicas. See Figure 17.
     For each replica, configure the following **Synchronous Commit**,
 **Automatic Failover**, and **Readable Secondary** settings. See Figure 17.
 
-    **Synchronous Commit**: This guarantees that if a transaction is
+**Synchronous Commit**: This guarantees that if a transaction is
 committed on the primary replica of a database, then the transaction
 is also committed on all other synchronous replicas. Asynchronous
 commit does not guarantee this, and it may lag behind the primary
 replica.
 
-    You should usually enable synchronous commit only when the two nodes
+You should usually enable synchronous commit only when the two nodes
 are in the same data center. If they are in different data centers,
 synchronous commit may slow down the database performance.
 
-    If this checkbox is not selected, then asynchronous commit is used.
+If this checkbox is not selected, then asynchronous commit is used.
 
-    **Automatic Failover:** When the primary replica is down, the AG will
+**Automatic Failover:** When the primary replica is down, the AG will
 automatically failover to its secondary replica when automatic
 failover is selected. This can only be enabled on the replicas with
 synchronous commits.
 
-    **Readable Secondary:** By default, users cannot connect to any
+**Readable Secondary:** By default, users cannot connect to any
 secondary replicas. This will enable users to connect to the secondary
 replica with read-only access.
 

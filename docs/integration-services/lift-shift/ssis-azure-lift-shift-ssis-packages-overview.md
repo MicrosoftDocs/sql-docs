@@ -9,7 +9,7 @@ ms.custom: ""
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ExecuteXmlReader method"
   - "SQL queries [SQLXML]"
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Executing SQL Queries by Using the ExecuteXMLReader Method

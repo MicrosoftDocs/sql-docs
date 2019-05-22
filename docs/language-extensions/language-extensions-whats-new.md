@@ -1,6 +1,6 @@
 ---
-title: What's new is Language Extensions?
-titleSuffix: SQL Server language extensions
+title: What's new in Language Extensions?
+titleSuffix: SQL Server Language Extensions
 description: Learn about what's new SQL Server 2019 Language Extensions (preview). 
 author: dphansen
 ms.author: davidph 
@@ -24,7 +24,7 @@ This release adds the support for Language Extensions in SQL Server. For more in
 |---------|----------------|
 | CTP 3.0 | New [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) for registering external language (for example, Java) in SQL Server.
 | | New supported [Java data types](how-to/java-to-sql-data-types.md). |
-| CTP 2.5 | New Microsoft Extensibility SDK for Java. |
+| CTP 2.5 | New [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md). |
 | CTP 2.4 | Linux support for [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md). |
 | | The environment variable that specifies the location of the Java interpreter has changed from `JAVA_HOME` to `JRE_HOME`. |
 | CTP 2.3 | New supported [Java data types](how-to/java-to-sql-data-types.md). |

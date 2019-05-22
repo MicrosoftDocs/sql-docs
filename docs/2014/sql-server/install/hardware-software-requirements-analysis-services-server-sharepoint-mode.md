@@ -1,8 +1,7 @@
 ---
 title: "Hardware and Software Requirements for Analysis Services Server in SharePoint Mode (SQL Server 2014) | Microsoft Docs"
 ms.prod: "sql-server-2014"
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 author: markingmyname
 ms.author: maghan
 manager: kfile

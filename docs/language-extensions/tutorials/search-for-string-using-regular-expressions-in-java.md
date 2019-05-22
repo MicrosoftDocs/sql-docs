@@ -28,7 +28,7 @@ This particular sample uses a regular expression that checks if a text contains 
 
 + Java SE Development Kit (JDK) 8 or JRE 8 on Windows or Linux.
 
-+ [Microsoft Java Extensibility SDK for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) mssql-java-lang-extension.jar.
++ The **mssql-java-lang-extension.jar** file from the [Microsoft Java Extensibility SDK for Microsoft SQL Server](../how-to/extensibility-sdk-java-sql-server.md) .
 
 Command-line compilation using **javac** is sufficient for this tutorial.
 
@@ -175,7 +175,7 @@ If you are not using a Java IDE, you can manually create a `.jar` file. For more
 
 ## Create external language
 
-In CTP 3.0, you need to create an external language in the database. This is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
+In CTP 3.0, you need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
 
 ### Create external language on Windows
 
@@ -221,7 +221,7 @@ Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
-1. Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) **mssql-java-lang-extension.jar**.
+1. Download the **mssql-java-lang-extension.jar** file from the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](../how-to/extensibility-sdk-java-sql-server.md) .
 
 2. Create an external library for the SDK.
 

@@ -1,8 +1,7 @@
 ---
 title: "Where to find the Reporting Services add-in for SharePoint Products | Microsoft Docs"
 ms.prod: "sql-server-2014"
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rsSharePoint"

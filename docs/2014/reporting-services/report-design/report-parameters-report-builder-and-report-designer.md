@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.subreportproperties.parameters.f1"

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/25/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.ssmsimbi.Backup.f1"

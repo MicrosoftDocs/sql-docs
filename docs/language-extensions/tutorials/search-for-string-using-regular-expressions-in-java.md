@@ -28,7 +28,7 @@ This particular sample uses a regular expression that checks if a text contains 
 
 + Java SE Development Kit (JDK) 8 or JRE 8 on Windows or Linux.
 
-+ The **mssql-java-lang-extension.jar** file from the [Microsoft Java Extensibility SDK for Microsoft SQL Server](../how-to/sdk-for-java-and-sql-server.md) .
++ The **mssql-java-lang-extension.jar** file from the [Microsoft Java Extensibility SDK for Microsoft SQL Server](../how-to/extensibility-sdk-java-sql-server.md) .
 
 Command-line compilation using **javac** is sufficient for this tutorial.
 
@@ -221,7 +221,7 @@ Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
-1. Download the **mssql-java-lang-extension.jar** file from the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](../how-to/sdk-for-java-and-sql-server.md) .
+1. Download the **mssql-java-lang-extension.jar** file from the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](../how-to/extensibility-sdk-java-sql-server.md) .
 
 2. Create an external library for the SDK.
 

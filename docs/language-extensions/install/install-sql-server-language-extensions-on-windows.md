@@ -52,7 +52,7 @@ You can use your preferred Java 8 distribution. Below are two suggested distribu
 
 On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
-> [!Note]
+> [!NOTE]
 > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for this early CTP release is Java 8. 
 
 ## Get the installation media

@@ -45,7 +45,7 @@ The following are some basic principles when executing Java on SQL Server.
 
 * **params** is used to pass parameters to a Java class. Calling a method that requires arguments is not supported. Therefore, parameters the only way to pass argument values to your method. 
 
-> [!Note]
+> [!NOTE]
 > This note restates supported and unsupported operations specific to Java in CTP 3.0.
 > * On the stored procedure, input parameters are supported. Output parameters are not.
 > * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported.

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 author: minewiskan

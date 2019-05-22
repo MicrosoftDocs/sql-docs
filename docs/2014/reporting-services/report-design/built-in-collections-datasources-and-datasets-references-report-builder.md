@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT

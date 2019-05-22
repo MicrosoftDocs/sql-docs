@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: 01/19/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: "master-data-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined metadata [Master Data Services], about user-defined metadata"

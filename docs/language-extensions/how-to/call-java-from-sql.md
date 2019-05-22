@@ -57,7 +57,7 @@ The folowing are some basic principles when executing Java on SQL Server.
 The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an `sp_execute_external_script` using the Java extension, and parameters for specifying path, script, and your custom code.
 
 > [!NOTE]
-> Note that you don't need to define which method to call. By default, a method called **execute** is called. This means that you need to follow the SDK and implement an execute method in your Java class.
+> Note that you don't need to define which method to call. By default, a method called **execute** is called. This means that you need to follow the [Extensibility SDK for Java in SQL Server](sdk-for-java-and-sql-server.md) and implement an execute method in your Java class.
 
 ```sql
 DECLARE @param1 int

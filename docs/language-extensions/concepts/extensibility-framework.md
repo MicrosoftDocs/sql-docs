@@ -34,7 +34,7 @@ The architecture is designed such that external code run in a separate process f
 
   ![Component architecture](../media/generic-architecture.png "Component architecture")
 
-Components include a **Launchpad** service used to invoke language-specific launchers (for example,, Java), language and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. 
+Components include a **Launchpad** service used to invoke language-specific launchers (for example, Java), language, and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. 
 
 <a name="launchpad"></a>
 

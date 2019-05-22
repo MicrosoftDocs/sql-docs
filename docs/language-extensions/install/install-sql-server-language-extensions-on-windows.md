@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Starting in SQL Server 2019, Language Extensions and Java support is provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
+Starting in SQL Server 2019, Language Extensions and Java support are provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 > [!NOTE]
 > This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions.md)
@@ -41,7 +41,7 @@ Starting in SQL Server 2019, Language Extensions and Java support is provided. T
 
 ## Java JRE or JDK prerequisite
 
-Java 8 is currently the supported version. Newer versions, like Java 11, should with the language extension but is currently not supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
+Java 8 is currently the supported version. Newer versions, like Java 11, should work with the language extension but is currently not supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
 You can use your preferred Java 8 distribution. Below are two suggested distributions:
 
@@ -52,7 +52,7 @@ You can use your preferred Java 8 distribution. Below are two suggested distribu
 
 On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
-> [!Note]
+> [!NOTE]
 > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for this early CTP release is Java 8. 
 
 ## Get the installation media
@@ -152,7 +152,7 @@ If you did not install the JDK or JRE under program files, you need to perform t
     sp_configure
     ```
 
-    The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run Java code.
+    The value for the property, `external scripts enabled`, should be **0** at this point. The feature is turned off by default and must be explicitly enabled by an administrator before you can run Java code.
     
 3.  To enable the external scripting feature, run the following statement:
     
@@ -183,7 +183,7 @@ Use the following steps to verify that all components used to launch external sc
     EXEC sp_configure  'external scripts enabled'
     ```
 
-    The **run_value** should now be set to 1.
+    The **run_value** is now set to 1.
     
 2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has language extensions installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
    

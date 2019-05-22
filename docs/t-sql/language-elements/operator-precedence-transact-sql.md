@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "order of operator execution [Transact-SQL]"
   - "precedence [SQL Server], operators"
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Operator Precedence (Transact-SQL)

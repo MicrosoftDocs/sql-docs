@@ -5,7 +5,7 @@ description: Learn about how data persistence works in a SQL Server 2019 big dat
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -29,17 +29,22 @@ Similar to other customizations, you can specify storage settings in the cluster
 ```json
     "storage": 
     {
-        "usePersistentVolume": true,
-        "className": "managed-premium",
+      "data": {
+        "className": "default",
+        "accessMode": "ReadWriteOnce",
+        "size": "15Gi"
+      },
+      "logs": {
+        "className": "default",
         "accessMode": "ReadWriteOnce",
         "size": "10Gi"
     }
 ```
 
-To use persistent storage during deployment, set the values of **usePersistentVolume** key to *true* and **className** key to the name of the storage class you want to use for the respective pool. You can also customize the size of the persistent volume claims created as part of the deployment. As a best practice, we recommend to use storage classes with a *Retain* [reclaim policy](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
+Deployment of big data cluster will use persistent storage to store data, metadata and logs for various components. You can customize the size of the persistent volume claims created as part of the deployment. As a best practice, we recommend to use storage classes with a *Retain* [reclaim policy](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!NOTE]
-> In CTP 2.5, you can't modify storage configuration setting post deployment. Also, only `ReadWriteOnce` access mode for the whole cluster is supported.
+> In CTP 3.0, you can't modify storage configuration setting post deployment. Also, only `ReadWriteOnce` access mode for the whole cluster is supported.
 
 > [!WARNING]
 > Running without persistent storage can work in a test environment, but it could result in a non-functional cluster. Upon pod restarts, cluster metadata and/or user data will be lost permanently. We do not recommend to run in this configuration. 
@@ -48,7 +53,7 @@ To use persistent storage during deployment, set the values of **usePersistentVo
 
 ## AKS storage classes
 
-AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **default** and **managed-premium** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled. By default, the built in cluster configuration file for aks *aks-dev-test.json* comes with persistent storage configurations to use **managed-premium** storage class.
+AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **default** and **managed-premium** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled. By default, the built in cluster configuration file for aks *aks-dev-test.json* comes with persistent storage configurations to use **default** storage class.
 
 > [!WARNING]
 > Persistent volumes created with the built-in storage classes **default** and **managed-premium** have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using **azure-disk** privioner with a *Retain* reclaim policy as shown in  [this](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) article.
@@ -63,7 +68,7 @@ Minikube comes with a built-in storage class called **standard** along with a dy
 Kubeadm does not come with a built-in storage class. You must create your own storage classes and persistent volumes using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that case, you would set the **className** to the storage class you configured. 
 
 > [!NOTE]
-> In the built in deployment configuration file for kubeadm *kubeadm-dev-test.json*, the default value for **usePersistentVolume** key is *true*, so you must set the value for **className** otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. In CTP2.5, for the default cluster size you must create at least 23 volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
+>  In the built in deployment configuration file for *kubeadm kubeadm-dev-test.json* there is no storage class name specified for the data and log storage. Before deployment, you must customize the configuration file and set the value for className otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. In CTP 3.0, for the default cluster size you must create at least 23 volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
 
 
 ## Customize storage configurations for each pool
@@ -80,16 +85,16 @@ Then, you can customize your config file either by editing it manually, or you c
 
 By default, the size of the persistent volume claims provisioned for each of the pods provisioned in the cluster is 10 GB. You can update this value to accommodate the workloads you are running in a custom configuration file before cluster deployment.
 
-The following example only updates the size of persistent volume claims in the storage pool to 32Gi:
+The following example only updates the size of persistent volume claims for data stored in the storage pool to 100Gi. Note that storage section must exist in the configuration file for the storage pool before you run this command:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
 ```
 
 The following example updates the size of persistent volume claims for all pools to 32Gi:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
 ```
 
 ### <a id="config-samples"></a> Configure storage class
@@ -97,7 +102,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 Following example shows how to modify the storage class for the control plane:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.storage.className=<yourStorageClassName>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
 ```
 
 Another option is to manually edit the custom configuration file or to use jsonpatch like in the following example that changes the storage class for Storage pool. Create a *patch.json*
@@ -107,19 +112,21 @@ Another option is to manually edit the custom configuration file or to use jsonp
 {
   "patch": [
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "<yourStorageClassName>",
-          "size": "32Gi"
+          "data": {
+            "className": "default",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "default",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
-    }
   ]
 }
 ```
@@ -127,7 +134,7 @@ Another option is to manually edit the custom configuration file or to use jsonp
 Apply the patch file. Use *mssqlctl cluster config section set* command to apply the changes in the JSON patch file. The following example applies the patch.json file to a target deployment configuration file custom.json.
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## Next steps

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "naming conventions [SQL Server]"
   - "syntax [SQL Server], Transact-SQL"
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

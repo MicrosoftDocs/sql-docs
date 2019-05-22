@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "thesaurus [full-text search], configuring"
   - "thesaurus [full-text search]"
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure and Manage Thesaurus Files for Full-Text Search

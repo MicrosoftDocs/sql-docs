@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_set_query_mode stored procedure"
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sys.sp_rda_set_query_mode (Transact-SQL)

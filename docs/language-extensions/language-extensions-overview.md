@@ -41,7 +41,7 @@ Developers typically write code on their own laptop or development workstation. 
 
 + **Use the IDE you prefer** for developing Java code.
 
-+ **Install the [Microsoft Extensibility SDK for Java](how-to/sdk-for-java-and-sql-server.md)** to execute Java code on SQL Server
++ **Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)** to execute Java code on SQL Server
 
 + **Use [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) or [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)** for executing external code on SQL Server
 
@@ -56,4 +56,4 @@ Execute Java code from within T-SQL script:
 ## Next steps
 
 + Install [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions.md)
-+ Install the [Microsoft Extensibility SDK for Java](how-to/sdk-for-java-and-sql-server.md)
++ Install the [Microsoft Extensibility SDK for Java](how-to/extensibility-sdk-java-sql-server.md)

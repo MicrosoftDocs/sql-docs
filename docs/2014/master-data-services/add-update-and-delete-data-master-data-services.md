@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: "master-data-services"
 ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: lrtoyou1223

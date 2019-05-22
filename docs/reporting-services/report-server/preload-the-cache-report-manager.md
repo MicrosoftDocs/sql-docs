@@ -44,7 +44,7 @@ ms.author: maggies
 5. To activate caching for a dataset, select the **Cache copies of this dataset and use them when available** radio button. The  **Cache expiration** section then appears beneath it. Select one of the following radio buttons:
 
     1. **Cache expires after x minutes** (enter the desired number of minutes for x).
-    2. **Cache expires on a schedule**.  Reporting Services provides shared schedules and report-specific schedules to help you control processing, consistent content, and the performance of report distribution. For more information, see [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). You have several options on how to create a schedule, in this case for cache expiration:  
+    - **Cache expires on a schedule**.  Reporting Services provides shared schedules and report-specific schedules to help you control processing, consistent content, and the performance of report distribution. For more information, see [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). You have several options on how to create a schedule, in this case for cache expiration:  
     Select one of the two scheduling choices below:
        1. **Shared schedule** radio button, and then select a schedule from the **Select a shared schedule** dropdown textbox. For more information, see [Schedules](../../reporting-services/subscriptions/schedules.md "Schedules").
        2. **Report-specific schedule** radio button, then select the **Edit schedule** link if necessary to display the *Schedule details* page.  

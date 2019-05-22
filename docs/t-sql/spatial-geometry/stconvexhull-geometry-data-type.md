@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STConvexHull (geometry Data Type)"
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STConvexHull (geometry Data Type)

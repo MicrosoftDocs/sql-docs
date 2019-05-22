@@ -13,7 +13,7 @@ f1_keywords:
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
 author: "yanancai"
 ms.author: "yanacai"
-ms.reviewer: "douglasl"
+ms.reviewer: maghan
 manager: craigg
 ---
 

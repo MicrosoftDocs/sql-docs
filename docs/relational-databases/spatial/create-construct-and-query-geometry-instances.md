@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "planar spatial data [SQL Server], getting started"
   - "geometry data type [SQL Server], getting started"
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

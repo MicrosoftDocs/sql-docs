@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMGeomCollFromWKB method"
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STGeomCollFromWKB (geography Data Type)

@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsValid method (geography)"
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STIsValid (geography Data Type)

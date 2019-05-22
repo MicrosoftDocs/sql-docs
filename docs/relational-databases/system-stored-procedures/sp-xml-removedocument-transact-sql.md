@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_xml_removedocument"
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sp_xml_removedocument (Transact-SQL)

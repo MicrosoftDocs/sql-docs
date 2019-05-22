@@ -35,8 +35,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sq
 |**runtime_stats_interval_id**|**bigint**|Foreign key. Joins to [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Determines type of query execution:<br /><br /> 0 - Regular execution (successfully finished)<br /><br /> 3 - Client initiated aborted execution<br /><br /> 4 -  Exception aborted execution|  
 |**execution_type_desc**|**nvarchar(128)**|Textual description of the execution type field:<br /><br /> 0 -  Regular<br /><br /> 3 -  Aborted<br /><br /> 4 -  Exception|  
-|**first_execution_time**|**datetimeoffset**|First execution time for the query plan within the aggregation interval.|  
-|**last_execution_time**|**datetimeoffset**|Last execution time for the query plan within the aggregation interval.|  
+|**first_execution_time**|**datetimeoffset**|First execution time for the query plan within the aggregation interval. This refers to the end time of the query execution.|  
+|**last_execution_time**|**datetimeoffset**|Last execution time for the query plan within the aggregation interval. This refers to the end time of the query execution.|  
 |**count_executions**|**bigint**|Total count of executions for the query plan within the aggregation interval.|  
 |**avg_duration**|**float**|Average duration for the query plan within the aggregation interval (reported in microseconds) .|  
 |**last_duration**|**bigint**|Last duration for the query plan within the aggregation interval (reported in microseconds).|  

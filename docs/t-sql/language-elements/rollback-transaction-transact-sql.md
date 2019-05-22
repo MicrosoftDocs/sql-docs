@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "roll back transactions [SQL Server]"
   - "savepoints [SQL Server]"
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

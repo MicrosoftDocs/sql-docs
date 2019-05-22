@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "values [SQL Server], average"
   - "average values"
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "geodetic spatial data [SQL Server], identifiers"
   - "SRID"
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 ---
 # Spatial Reference Identifiers (SRIDs)

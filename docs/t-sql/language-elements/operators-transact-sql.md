@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "operators [Transact-SQL], about operators"
   - "operators [Transact-SQL]"
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Operators (Transact-SQL)

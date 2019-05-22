@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ranking rows"
   - "RANK function [Transact-SQL]"
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

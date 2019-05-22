@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "pattern searching [SQL Server]"
   - "PATINDEX function"
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -49,7 +49,9 @@ PATINDEX ( '%pattern%' , expression )
   
 ## Remarks  
  If either *pattern* or *expression* is NULL, PATINDEX returns NULL.  
-  
+ 
+ The starting position returned is 1-based, not 0-based.
+ 
  PATINDEX performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use COLLATE to apply an explicit collation to the input.  
   
 ## Supplementary Characters (Surrogate Pairs)  

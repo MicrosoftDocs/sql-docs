@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Extended Static Geography Methods"
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Extended Static Geography Methods

@@ -100,15 +100,11 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 - **SSIS Integration Runtime Creation Wizard** only shows SQL databases under one tenant when the customer account belongs to more than one tenant.
 
-## Previous releases
+## Previous SSMS releases
 
 [Previous SQL Server Management Studio Releases](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
-## Feedback
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
-
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
 ## See Also
 
@@ -118,5 +114,3 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 - [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).

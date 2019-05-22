@@ -1,7 +1,7 @@
 ---
 title: "ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2017"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -44,6 +44,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -92,8 +93,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## Arguments  
@@ -239,7 +249,28 @@ Disables automatic software partitioning of large NUMA hardware nodes into small
 > 4) Start the instance of SQL Server Agent.  
   
 **More Information:** If you run the ALTER SERVER CONFIGURATION with SET SOFTNUMA command before the SQL Server service restarts, then when the SQL Server Agent service stops, it runs a T-SQL RECONFIGURE command that reverts the SOFTNUMA settings back to what they were before the ALTER SERVER CONFIGURATION. 
-  
+
+**\<memory_optimized> ::=**
+
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later
+
+ON <br>
+Enables all instance-level features that are part of the [In-Memory Database](../../relational-databases/in-memory-database.md) feature family. This currently includes [memory-optimized tempdb metadata](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
+
+OFF <br>
+Disables all instance-level features that are part of the In-Memory Database feature family. Requires a restart to take effect.
+
+TEMPDB_METADATA = ON | OFF <br>
+Enables or disables memory-optimized tempdb metadata only. Requires a restart to take effect. 
+
+RESOURCE_POOL='resource_pool_name' <br>
+When combined with TEMPDB_METADATA = ON, specifies the user-defined resource pool that should be used for tempdb. If not specified, tempdb will use the default pool. The pool must already exist. If the pool is not available when the service is restarted, tempdb will use the default pool.
+
+
+HYBRID_BUFFER_POOL = ON | OFF <br>
+Enables or disables hybrid buffer pool at the instance level. Requires a restart to take effect.
+
+
 ## General Remarks  
 This statement doesn't require a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unless explicitly stated otherwise. If it's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, it doesn't require a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource.  
   
@@ -261,7 +292,9 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../
 |[Setting diagnostic log options](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Setting failover cluster properties](#Failover)|HealthCheckTimeout|  
 |[Changing the cluster context of an availability replica](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[Setting the buffer pool extension](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[Setting the buffer pool extension](#BufferPoolExtension)|BUFFER POOL EXTENSION| 
+|[Setting In-Memory Database options](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> Setting process affinity  
 The examples in this section show how to set process affinity to CPUs and NUMA nodes. The examples assume that the server contains 256 CPUs that are arranged into four groups of 16 NUMA nodes each. Threads aren't assigned to any NUMA node or CPU.  
@@ -398,7 +431,37 @@ SET BUFFER POOL EXTENSION ON
 GO  
   
 ```  
-  
+
+### <a name="MemoryOptimized"></a> Setting In-Memory Database Options
+
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later
+
+#### A. Enable all In-Memory Database features with default options
+
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
+GO
+```
+
+#### B. Enable memory-optimized tempdb metadata using the default resource pool
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
+GO
+```
+
+#### C. Enable memory-optimized tempdb metadata with a user-defined resource pool
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+GO
+```
+
+#### D. Enable hybrid buffer pool
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+GO
+```
+
+
 ## See Also  
 [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Change the HADR Cluster Context of Server Instance &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   

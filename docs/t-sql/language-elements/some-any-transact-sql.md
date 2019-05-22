@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SOME | ANY keyword"
   - "single-column set of values [SQL Server]"
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SOME | ANY (Transact-SQL)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "deleting cursor references"
   - "removing cursor references"
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # DEALLOCATE (Transact-SQL)

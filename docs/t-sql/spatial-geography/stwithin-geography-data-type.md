@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STWithin method (geography)"
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STWithin (geography Data Type)

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,7 +20,8 @@ helpviewer_keywords:
   - "table/view mapping [SQLXML], excluding schema elements"
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ""
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

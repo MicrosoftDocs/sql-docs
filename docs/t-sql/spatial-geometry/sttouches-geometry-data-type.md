@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STTouches (geometry Data Type)"
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STTouches (geometry Data Type)

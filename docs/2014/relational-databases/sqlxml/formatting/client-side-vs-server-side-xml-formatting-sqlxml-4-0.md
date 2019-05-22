@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "AUTO mode"
   - "client-side XPath"
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Client-side vs. Server-side XML Formatting (SQLXML 4.0)

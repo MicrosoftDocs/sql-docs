@@ -12,7 +12,7 @@ f1_keywords:
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
 author: "Lingxi-Li"
 ms.author: "lingxl"
-ms.reviewer: "douglasl"
+ms.reviewer: maghan
 manager: craigg
 ---
 # Azure Data Lake Store File System Task

@@ -15,7 +15,7 @@ f1_keywords:
   - sql14.ssis.designer.powerquerysource.connmgrs.f1
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
 ---
 # Power Query Source (Preview)

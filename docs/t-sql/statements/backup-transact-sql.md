@@ -1413,3 +1413,5 @@ WITH (
 ## See Also
 
 [RESTORE DATABASE - Parallel Data Warehous](../../t-sql/statements/restore-statements-transact-sql.md)
+
+::: moniker-end

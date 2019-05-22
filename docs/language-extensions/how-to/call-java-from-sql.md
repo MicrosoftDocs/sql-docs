@@ -35,7 +35,7 @@ There are two methods for calling Java classes in SQL Server:
 
 ### Basic principles
 
-The folowing are some basic principles when executing Java on SQL Server.
+The following are some basic principles when executing Java on SQL Server.
 
 * Compiled custom Java classes must exist in **.class** files or **.jar** files in your Java classpath. The [CLASSPATH parameter](#set-classpath) provides the path to the compiled Java files. 
 
@@ -82,7 +82,7 @@ Once you have compiled your Java class or classes and created a jar file in your
 
 2. Register a system environment variable
 
-    Just as you created a system environment variable for the Java runtime , you can create a system environment variable and provide the paths to your jar file that contains the classes. To do this, you need to create a system environment variable called "CLASSPATH".
+    You can create a system environment variable and provide the paths to your jar file that contains the classes. Create a system environment variable called **CLASSPATH**.
 
 <a name="external-library"></a>
 

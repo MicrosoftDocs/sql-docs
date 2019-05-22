@@ -175,7 +175,7 @@ If you are not using a Java IDE, you can manually create a `.jar` file. For more
 
 ## Create external language
 
-In CTP 3.0, you need to create an external language in the database. This is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
+In CTP 3.0, you need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
 
 ### Create external language on Windows
 

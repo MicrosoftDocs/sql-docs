@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Change the Word Breaker Used for US English and UK English

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], restoring"
   - "restore operations [full-text search]"
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes

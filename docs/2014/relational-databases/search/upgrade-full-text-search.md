@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "installing Full-Text Search"
   - "full-text search [SQL Server], upgrading"
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Upgrade Full-Text Search

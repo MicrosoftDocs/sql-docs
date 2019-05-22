@@ -8796,8 +8796,6 @@
           href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
         - name: Execute Statements Against Multiple Servers Simultaneously
           href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
-      - name: Scripting
-        items:
     - name: Concepts
       items:
       - name: SSMS

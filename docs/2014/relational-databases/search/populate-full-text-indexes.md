@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "full populations [full-text search]"
   - "full-text indexes [SQL Server], populations"
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Populate Full-Text Indexes

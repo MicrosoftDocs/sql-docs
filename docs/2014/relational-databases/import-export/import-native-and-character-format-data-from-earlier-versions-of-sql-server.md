@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], earlier versions"
   - "previous versions [SQL Server], import and export data formats"
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Import Native and Character Format Data from Earlier Versions of SQL Server

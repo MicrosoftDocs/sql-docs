@@ -10,7 +10,7 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-ms.reviewer: "douglasl"
+ms.reviewer: maghan
 manager: craigg
 ---
 # Walkthrough: Set up Integration Services (SSIS) Scale Out

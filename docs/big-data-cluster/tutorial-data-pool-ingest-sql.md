@@ -80,7 +80,7 @@ The following steps create an external table in the data pool named **web_clicks
 
 The following steps ingest sample web clickstream data into the data pool using the external table created in the previous steps.
 
-1. Define variables for the query that you want to use to insert data into the data pool. For CTP 2.3 or earlier, the **model..sp_data_pool_table_insert_data** stored procedure is needed. For CTP 2.4 and later, you can use an `INSERT INTO` statement to insert the results from the query into the data pool (the **web_clickstream_clicks_data_pool** external table).
+1. Use an `INSERT INTO` statement to insert the results from the query into the data pool (the **web_clickstream_clicks_data_pool** external table).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

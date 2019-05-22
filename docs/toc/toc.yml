@@ -9074,6 +9074,10 @@
           href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
         - name: Configure Login Auditing
           href: ../ssms/configure-login-auditing-sql-server-management-studio.md
+        - name: Troubleshoot
+          items:
+          - name: Get full memory dump
+            href: docs/ssms/troubleshoot/get-full-memory-dump.md
       - name: SQL Server Agent
         items:
         - name: Configure

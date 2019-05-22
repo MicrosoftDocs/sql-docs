@@ -114,7 +114,7 @@ ms.author: maggies
    data source=<servername>;initial catalog=Subscribers  
    ```
   
-10. I`n the **Query** section - specify the query that retrieves the desired subscriber data.  For example:  
+10. In the **Query** section - specify the query that retrieves the desired subscriber data.  For example:  
   
     ```T-SQL  
     Select * from RptSubscribers  

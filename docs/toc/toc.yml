@@ -9077,7 +9077,7 @@
         - name: Troubleshoot
           items:
           - name: Get full memory dump
-            href: docs/ssms/troubleshoot/get-full-memory-dump.md
+            href: ../ssms/troubleshoot/get-full-memory-dump.md
       - name: SQL Server Agent
         items:
         - name: Configure

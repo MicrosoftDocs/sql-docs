@@ -210,7 +210,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
@@ -218,7 +218,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
@@ -226,7 +226,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 

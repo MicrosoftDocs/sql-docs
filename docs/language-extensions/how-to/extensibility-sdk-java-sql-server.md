@@ -1,10 +1,10 @@
 ---
-title: SDK for Java extension - SQL Server Language Extensions
-description: Description of the Microsoft Extensibility SDK for Java for Microsoft SQL Server 2019
+title: Microsoft Extensibility SDK for Java for SQL Server - SQL Server Language Extensions
+description: How to implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
@@ -14,38 +14,36 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
 # Microsoft Extensibility SDK for Java for SQL Server
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In SQL Server CTP 2.5, you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. This is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
+This article describes how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. The SDK is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
 
-> [!Note]
-> The SDK in CTP 2.5 is a big change from previous CTPs. Any samples you had working will need to be updated to use the SDK instead.
-
-Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension).
++ Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension).
 
 ## Implementation requirements
 
-The SDK interface defines a set of requirements that need to be fulfilled for SQL Server to communicate with the Java runtime. This means that you need to follow some implementation rules in your main class. SQL Server can then execute a specific method in the Java class and exchange data using the Java language extension.
+The SDK interface defines a set of requirements that need to be fulfilled for SQL Server to communicate with the Java runtime. To use the SDK, you need to follow some implementation rules in your main class. SQL Server can then execute a specific method in the Java class and exchange data using the Java language extension.
 
-For an example of how you can use the SDK, see the [end-to-end sample](java-first-sample.md).
+For an example of how you can use the SDK, see [Tutorial: Search for a string using regular expressions (regex) in Java](../tutorials/search-for-string-using-regular-expressions-in-java.md).
 
 ## SDK Classes
 
-This SDK consists of three classes.
+The SDK consists of three classes.
 
 Two abstract classes that define the interface the Java extension uses to exchange data with SQL Server:
 
 - **AbstractSqlServerExtensionExecutor**
 - **AbstractSqlServerExtensionDataset**
 
-The third class is a helper class which contains an implementation of a data set object. This is an optional class to use to make it easier to get started. You can use your own implementation of such a class.
+The third class is a helper class, which contains an implementation of a data set object. It is an optional class you can use, which makes it easier to get started. You can also use your own implementation of such a class instead.
 
 - **PrimitiveDataset**
 
-Below follows details and source code for each class in the Java language extension for SQL Server.
+Below you will find the details and source code for each class in the Java language extension for SQL Server.
 
-## AbstractSqlServerExtensionExecutor
+## Class: AbstractSqlServerExtensionExecutor
 
-This is an abstract class containing the interface used to execute Java code by the Java language extension for SQL Server.
+The abstract class `AbstractSqlServerExtensionExecutor` contains the interface used to execute Java code by the Java language extension for SQL Server.
 
 Your main Java class needs to inherit from this class. Inheriting from this class means that there are certain methods in the class you need to implement in your own class.
 
@@ -59,9 +57,9 @@ At a minimum, your main class needs to implement the execute(...) method.
 
 ### Method execute
 
-The execute method is the method that is called from SQL Server via the Java language extension, to invoke Java code from SQL Server. You should view this as a key method where you include the main operations you wish to execute from SQL Server.
+The execute method is the method that is called from SQL Server via the Java language extension, to invoke Java code from SQL Server. It is a key method where you include the main operations you wish to execute from SQL Server.
 
-To pass method arguments to Java from SQL Server, use the `@param` parameter in sp_execute_external_script. The method **execute** takes its arguments that way.
+To pass method arguments to Java from SQL Server, use the `@param` parameter in `sp_execute_external_script`. The method **execute** takes its arguments that way.
 
 ```java
 public AbstractSqlServerExtensionDataset execute(AbstractSqlServerExtensionDataset input, LinkedHashMap<String, Object> params)  {}
@@ -77,7 +75,7 @@ public void init(String sessionId, int taskId, int numtask) {}
 
 ### AbstractSqlServerExtensionExecutor source code
 
-More details can be found below in source code:
+More details can be found below in the source code:
 
 ```java
 package com.microsoft.sqlserver.javalangextension;
@@ -114,10 +112,11 @@ public abstract class AbstractSqlServerExtensionExecutor {
 }
 ```
 
-### AbstractSqlServerExtensionDataset
+## Class: AbstractSqlServerExtensionDataset
 
-Abstract class containing interface for handling input and output data used by the Java
-extension.
+The abstract class **AbstractSqlServerExtensionDataset** contains the interface for handling input and output data used by the Java extension.
+
+Below you can find the source code for **AbstractSqlServerExtensionDataset**.
 
 ```java
 package com.microsoft.sqlserver.javalangextension;
@@ -232,11 +231,13 @@ public class AbstractSqlServerExtensionDataset {
 }
 ```
 
-### PrimitiveDataset
+## Class: PrimitiveDataset
 
-This class is an implementation of **AbstractSqlServerExtensionDataset** that stores simple types as primitives arrays. It is provided in the SDK simply as a helper class that is optional to use.
+The class **PrimitiveDataset** is an implementation of **AbstractSqlServerExtensionDataset** that stores simple types as primitives arrays.
 
-If you don't use this class, you need to implement your own class that inherits from **AbstractSqlServerExtensionDataset**.  
+It is provided in the SDK simply as an optional helper class. If you don't use this class, you need to implement your own class that inherits from **AbstractSqlServerExtensionDataset**.  
+
+Below you can find the source code for **PrimitiveDataset**.
 
 ```java
 package com.microsoft.sqlserver.javalangextension;
@@ -419,7 +420,5 @@ public class PrimitiveDataset extends AbstractSqlServerExtensionDataset {
 
 ## Next steps
 
-+ [End to end Java sample using the SDK](java-first-sample.md)
-+ [How to call Java in SQL Server](howto-call-java-from-sql.md)
-+ [Java extensions in SQL Server](extension-java.md)
-+ [Java and SQL Server data types](java-sql-datatypes.md)
++ [Tutorial: Search for a string using regular expressions (regex) in Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [How to call Java in SQL Server](call-java-from-sql.md)

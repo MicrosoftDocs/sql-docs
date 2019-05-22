@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "XPath data types [SQLXML]"
   - "operators [SQLXML]"
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # XPath Data Types (SQLXML 4.0)

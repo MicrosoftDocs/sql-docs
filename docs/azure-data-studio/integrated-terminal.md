@@ -88,17 +88,17 @@ The **View: Toggle Integrated Terminal** command is bound to **Ctrl+`** to quick
 
 Below are the keyboard shortcuts to quickly navigate within the integrated terminal:
 
-Key|Command
----|---
-**Ctrl+`**|Show integrated terminal
-**Ctrl+Shift+`**|Create new terminal
-**Ctrl+Up**|Scroll up
-**Ctrl+Down**|Scroll down
-**Ctrl+PageUp**|Scroll page up
-**Ctrl+PageDown**|Scroll page down
-**Ctrl+Home**|Scroll to top
-**Ctrl+End**|Scroll to bottom
-**Ctrl+K**|Clear the terminal
+|Key|Command|  
+|---|---|  
+|**Ctrl+\`**|Show integrated terminal|  
+|**Ctrl+Shift+\`**|Create new terminal|  
+|**Ctrl+Up**|Scroll up|  
+|**Ctrl+Down**|Scroll down|  
+|**Ctrl+PageUp**|Scroll page up|  
+|**Ctrl+PageDown**|Scroll page down|  
+|**Ctrl+Home**|Scroll to top|  
+|**Ctrl+End**|Scroll to bottom|  
+|**Ctrl+K**|Clear the terminal|  
 
 Other terminal commands are available and can be bound to your preferred keyboard shortcuts.
 

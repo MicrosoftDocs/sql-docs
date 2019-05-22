@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "data providers [SQLXML], SQLXML Managed Classes"
   - "SQLXML, Managed Classes"
 ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLXML Managed Classes

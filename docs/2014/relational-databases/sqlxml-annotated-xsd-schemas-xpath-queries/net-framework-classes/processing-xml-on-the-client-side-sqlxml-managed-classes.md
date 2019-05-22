@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, client-side XML formatting"
   - "ClientSideXml property"
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)

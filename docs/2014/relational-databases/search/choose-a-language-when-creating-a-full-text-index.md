@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "languages [SQL Server], full-text indexes"
   - "word breakers [full-text search]"
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Choose a Language When Creating a Full-Text Index

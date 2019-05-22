@@ -17,17 +17,17 @@ ms.date: 05/15/2019
 
 # Set Deployment Properties (Reporting Services)
 
-  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or Visual Studio, you must specify the report server and optionally the folders for reports and shared data sources so that you can publish the items in a Report Server project to a report server. The properties and values that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or Visual Studio needs to build, preview an deploy reports are stored in project configurations of the Report Server project. You can create multiple named sets for these project properties, so that you can conveniently switch between property sets. Each set of properties is a configuration. For example, you can have a configuration for publishing reports to a test server and a different configuration for publishing reports to a production server.  
+  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or Visual Studio, you must specify the report server and optionally the folders for reports and shared data sources so that you can publish the items in a Report Server project to a report server. The properties and values that [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or Visual Studio need to build, preview, and deploy reports are stored in project configurations of the Report Server project. You can create multiple named sets for these project properties, so that you can conveniently switch between property sets. Each set of properties is a configuration. For example, you can have a configuration for publishing reports to a test server and a different configuration for publishing reports to a production server.  
   
  Use Configuration Manager to create and manage sets of project properties in project configurations. Configuration Manager is a feature supported by [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], on which [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] is based.  
   
 > [!NOTE]  
 > Do not confuse this feature with the Reporting Services Configuration Manager, which is used to configure Reporting Services after installation. For more information, see [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
-  
+>
 > [!NOTE]  
 > In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], the action of publishing reports from a Report Server project or solution is known as *deploying reports*.  
   
-### To set deployment properties
+## To set deployment properties
   
 1. Right-click the report project, and then click **Properties**.  
   
@@ -59,7 +59,7 @@ ms.date: 05/15/2019
   
 10. In the **TargetServerURL** text box, type the URL of the target report server. Before you publish a report, you must set this property to a valid report server URL. When publishing to a report server running in native mode, use the URL of the virtual directory of the report server (for example, http:*//server/reportserver* or https:*//server/reportserver)*. This is the virtual directory of the report server, not the web portal.  
   
-     When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used (for example, https://*servername*, https://*servername*/*site* or https://*servername*/*site*/*subsite*).  
+     When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used, (for example, <https://*servername*>, <https://*servername*/*site*>, or <https://*servername*/*site*/*subsite*>).  
   
 ### To set Configuration Manager properties  
   

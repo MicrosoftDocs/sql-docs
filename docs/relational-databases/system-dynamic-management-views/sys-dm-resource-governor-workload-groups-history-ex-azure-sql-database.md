@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_resource_governor_workload_groups_history_ex dynamic management view"
-author: stevestein
-ms.author: sstein
+author: joesackmsft
+ms.author: josack
 manager: craigg
 ---
-# sys.dm_resource_governor_workload_groups_history_ex (Transact-SQL)
+# sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Returns snapshot at 15 seconds interval for last 30 minutes of resource pools stats for an Azure SQL Database.

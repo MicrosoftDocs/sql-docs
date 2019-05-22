@@ -943,6 +943,16 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
+### <a name="backup_progress"></a> J. Track the progress of backup statement
+
+```sql
+SELECT query = a.text, start_time, percent_complete,
+    eta = dateadd(second,estimated_completion_time/1000, getdate())
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+WHERE r.command LIKE 'BACKUP%'
+```
+
 ## See Also
 
 - [Backup Devices](../../relational-databases/backup-restore/backup-devices-sql-server.md)

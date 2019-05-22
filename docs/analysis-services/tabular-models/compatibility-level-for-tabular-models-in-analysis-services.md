@@ -58,7 +58,7 @@ Major features in the 1400 compatibility level include:
  This property specifies the highest compatibility level of a database that will run on the server. The supported compatibility level is read-only cannot be changed.
  
 > [!NOTE]  
->  There is a known issue where SQL Server 2017 and later Analysis Services, Azure Analysis Services, and Power BI Premium workspaces show a supported compatibility level of 1200. This is not the case. Refer to [Supported compatibility levels](#supported-compatibility-levels-by-version) above to determine the level supported by your instance.  
+>  There is a known issue where SQL Server 2017 and later Analysis Services servers, Azure Analysis Services servers, and Power BI Premium workspaces show a supported compatibility level of 1200. This is not the case. Refer to [Supported compatibility levels](#supported-compatibility-levels-by-version) above to determine the level supported by your instance.  
   
 ## See also  
  [Compatibility Level of a multidimensional database](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

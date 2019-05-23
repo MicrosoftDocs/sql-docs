@@ -15,7 +15,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Configure a Firewall for Report Server Access
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report server applications and published reports are accessed through URLs that specify an IP address, port, and virtual directory. If Windows Firewall is turned on, the port that the report server is configured to use is most likely closed. Indications that a port might be closed are receiving a blank page when you attempt to open the web portal from a remote client computer. or a blank Web page after requesting a report.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report server applications and published reports are accessed through URLs that specify an IP address, port, and virtual directory. If Windows Firewall is turned on, the port that the report server is configured to use is most likely closed. Indications that a port might be closed are receiving a blank page when you attempt to open the web portal from a remote client computer, or a blank Web page after requesting a report.  
   
  To open a port, you must use the Windows Firewall utility on the report server computer. Reporting Services will not open ports for you; you must perform this step manually.  
   

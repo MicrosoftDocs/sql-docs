@@ -61,7 +61,7 @@ ms.date: 05/15/2019
   
      When publishing to a report server running in SharePoint integrated mode, use a URL to a SharePoint top-level site or subsite. If you do not specify a site, the default top-level site is used, (for example, <https://*servername*>, <https://*servername*/*site*>, or <https://*servername*/*site*/*subsite*>).  
   
-### To set Configuration Manager properties  
+## To set Configuration Manager properties  
   
 1. Right-click the report project, and then click **Properties**.  
   

@@ -53,6 +53,18 @@ Execute Java code from within T-SQL script:
 
 + [Tutorial: Regular expressions with Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
+## Limitations in CTP 3.0
+
+SQL Server Language Extensions is currently in public preview. There are some limitations in CTP 3.0:
+
+* The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
+
+* Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
+
+* Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
+
+* Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
+
 ## Next steps
 
 + Install [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions.md)

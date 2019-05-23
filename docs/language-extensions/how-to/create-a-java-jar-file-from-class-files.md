@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # Create a Java jar file from class files
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-When using [SQL Server Language Extensions](../language-extensions-overview.md) and executing a Java code, we recommend to package your class files into a jar file.
+When using [SQL Server Language Extensions](../language-extensions-overview.md) and executing a Java code, we recommend packaging your class files into a jar file.
 
 ## Create a jar file
 

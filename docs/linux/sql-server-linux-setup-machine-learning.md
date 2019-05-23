@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
-Package location for the R and Python extensions are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
+Package location for the R and Python extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-mlservices** package install commands using the same repo registration.
 
 Machine Learning Services is also supported on Linux containers. We do not provide pre-built containers with Machine Learning Services, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -49,7 +49,7 @@ Commands for removing packages appear in the following table.
 | Ubuntu	| `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open 3.4.4 is composed of two or three packages, depending on which CTP release you previously installed. (The foreachiterators package was combined into the main mro package in November 2018; CTP 2.2.) If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
+> Microsoft R Open 3.4.4 is composed of two or three packages, depending on which CTP release you previously installed. (The foreachiterators package was combined into the main mro package in CTP 2.2.) If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
@@ -189,7 +189,7 @@ sudo yum install mssql-mlservices-mlm-r-9.4.7*
 
 ### Example 2 - Minimum installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries and machine learning libraries for R and Python. Excludes the pre-trained models.
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries, and machine learning libraries for R and Python. Excludes the pre-trained models.
 
 ```bash
 # Install as root or sudo
@@ -222,7 +222,7 @@ sudo apt-get install mssql-mlservices-mlm-r
 
 ### Example 2 - Minimum installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries and machine learning libraries for R and Python. Excludes the pre-trained models. 
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries, and machine learning libraries for R and Python. Excludes the pre-trained models. 
 
 ```bash
 # Install as root or sudo
@@ -252,7 +252,7 @@ sudo zypper install mssql-mlservices-mlm-r-9.4.7*
 
 ### Example 2 - Minimum installation 
 
-Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries and machine learning libraries for R and Python. Excludes the pre-trained models. 
+Includes open-source R and Python, extensibility framework, microsoft-openmpi, core Revo* libraries, and machine learning libraries for R and Python. Excludes the pre-trained models. 
 
 ```bash
 # Install as root or sudo
@@ -405,7 +405,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 #### Download site
 
-You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R and Python are co-located with database engine package. Base version for the mlservices packages is 9.4.5 (for CTP 2.0) 9.4.6 (for CTP 2.1 and later). Recall that the microsoft-r-open packages are in a [different repository](#mro).
+You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the mlservices packages for R and Python are colocated with database engine package. Base version for the mlservices packages is 9.4.5 (for CTP 2.0) 9.4.6 (for CTP 2.1 and later). Recall that the microsoft-r-open packages are in a [different repository](#mro).
 
 #### RHEL/7 paths
 

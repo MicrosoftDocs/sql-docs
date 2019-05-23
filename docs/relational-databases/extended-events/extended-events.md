@@ -1,7 +1,7 @@
 ---
 title: "XEvents overview - SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/17/2018"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -105,5 +105,4 @@ Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsq
  [Monitor Data-tier Applications](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [Extended Events Dynamic Management Views](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
-  
-  
+ [XELite: Cross-platform library to read XEvents from XEL files or live SQL streams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), released May 2019.  

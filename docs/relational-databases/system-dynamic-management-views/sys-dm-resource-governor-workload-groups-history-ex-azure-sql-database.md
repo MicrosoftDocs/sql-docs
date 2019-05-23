@@ -39,8 +39,6 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 |**delta_request_count**| int |Count of completed requests in the workload group since last snapshot. Is not nullable.|
 |**total_cpu_usage_ms**| bigint |Cumulative CPU usage, in milliseconds, by this workload group. Is not nullable.|
 |**delta_cpu_usage_ms**| int |CPU usage in milliseconds since last snapshot. Is not nullable.|
-|**delta_cpu_active_ms**| int |Will remove from sys.dm_resource_governor_workload_groups_history_ex|
-|**delta_cpu_delayed_ms**| int |Will remove from sys.dm_resource_governor_workload_groups_history_ex|
 |**delta_cpu_usage_preemptive_ms**| int |Preemptive win32 calls not govern by SQL CPU RG, since last snapshot.|
 |**delta_reads_reduced_memgrant_count**| int |The count of memory grants that reached the maximum query size limit since last snapshot. Is not nullable.|
 |**reads_throttled**| int |Total number of reads throttled.|
@@ -57,12 +55,7 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 |**delta_write_stall_ms**| int |Total time (in milliseconds) between write IO arrival and completion since last snapshot. Is not nullable.|
 |**delta_background_writes**| int |The total writes performed by background tasks since last snapshot.|
 |**delta_background_write_bytes**| bigint |The total write size performed by background tasks since last snapshot, in bytes.|
-|**delta_io_active_time_ms**| int |Will remove from sys.dm_resource_governor_workload_groups_history_ex|
 |**delta_log_bytes_used**| bigint |Log used since last snapshot in bytes.|
-|**delta_log_commits_tracked**| int |Will remove from sys.dm_resource_governor_workload_groups_history_ex|
-|**delta_log_operations_tracked**| int |Will remove from sys.dm_resource_governor_workload_groups_history_ex|
-|**delta_log_time_waits_for_allotment**| int |Will remove from sys.dm_resource_governor_workload_groups_history_ex|
-|**delta_log_time_waits_for_allotment_ms**| int |Will remove from sys.dm_resource_governor_workload_groups_history_ex|
 |**delta_log_temp_db_bytes_used**| bigint |Tempdb log used since last snapshot in bytes.|
 |**delta_query_optimizations**| bigint |The count of query optimizations in this workload group since last snapshot. Is not nullable.|
 |**delta_suboptimal_plan_generations**| bigint |The count of suboptimal plan generations that occurred in this workload group due to memory pressure since last snapshot. Is not nullable.
@@ -70,8 +63,8 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 |**max_request_cpu_msec**| bigint |Maximum CPU usage, in milliseconds, for a single request. Is not nullable.|
 |**max_concurrent_request**| int |Current setting for the maximum number of concurrent requests. Is not nullable.|
 |**max_io**| int |Maximum IO limit for the group.|
-|**max_global_io**| int |pResourceGroupData->SetMaxGlobalIo((UINT32)(pResourceGroupData->GetMaxGlobalIo() * ((double)pMdGroupData->bMaxIopsPercent / 100.0))); Max global io is to a degree artifact of sawa v1 and box io rg v1.<br>Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.
-|**max_queued_io**| int |pResourceGroupData->SetMaxGlobalIo((UINT32)(pResourceGroupData->GetMaxGlobalIo() * ((double)pMdGroupData->bMaxIopsPercent / 100.0))); Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
+|**max_global_io**| int |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.
+|**max_queued_io**| int |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 |**max_log_rate_kb**| bigint |Maximum log rate (kilo-bytes per sec) at resource group level.|
 |**max_session**| int |Session limit for the group.|
 |**max_worker**| int |Worker limit for the group.|
@@ -93,21 +86,13 @@ Users can access this dynamic management view to monitor near real time resour
 The following example returns maximum log rate data and consumption at each snapshot by user pool:
 
 ```sql
-select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_workload_groups_history_ex where name like 'UserPool%' order by snapshot_time desc
-```
-
-The following example returns similar info as sys.elastic_pool_resource_stats without having to connect to Logical Master
-
-```sql
-select snapshot_time, name, cap_vcores_used_percent,
-  avg_data_io_percent,  
-  avg_log_write_percent,
-  avg_storage_percent,
-  avg_allocated_storage_percent,
-  max_data_space_kb,
-  max_worker_percent,
-  max_session_percent
-    from sys.dm_resource_governor_workload_groups_history_ex where name like 'UserPool%' order by snapshot_time desc
+SELECT snapshot_time,
+       name,
+       max_log_rate_kb,
+       delta_log_bytes_used
+FROM sys.dm_resource_governor_workload_groups_history_ex
+WHERE name LIKE 'User%'
+ORDER BY snapshot_time DESC;
 ```
 
 ## See Also

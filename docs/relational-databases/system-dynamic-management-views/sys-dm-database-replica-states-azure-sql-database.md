@@ -23,14 +23,14 @@ manager: craigg
 # sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Returns a row for each database that is participating in an Always On availability group for which the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is hosting an availability replica. This dynamic management view exposes state information on both the primary and secondary replicas. On a secondary replica, this view returns a row for every secondary database on the server instance. On the primary replica, this view returns a row for each primary database and an additional row for the corresponding secondary database.  
+  Returns a row for the database, exposing state for the local replica.  
   
 > [!IMPORTANT]
-> Depending on the action and higher-level states, database-state information may be unavailable or out of date. Furthermore, the values have only local relevance. For example, on the primary replica, the value of the **last_hardened_lsn** column reflects the information about a given secondary database that is currently available to the primary replica, not the actual hardened LSN value that the secondary replica might have currently.  
+> Depending on the action and higher-level states, database-state information may be unavailable or out of date. Furthermore, the values have only local relevance. 
    
 |Column name|Data type|Description (on primary replica)|  
 |-----------------|---------------|----------------------------------------|  
-|**database_id**|**int**|Identifier of the database, unique within an instance of SQL Server. This is the same value as displayed in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.|  
+|**database_id**|**int**|Identifier of the database.|  
 |**group_id**|**uniqueidentifier**|Identifier of the availability group to which the database belongs.|  
 |**replica_id**|**uniqueidentifier**|Identifier of the availability replica within the availability group.|  
 |**group_database_id**|**uniqueidentifier**|Identifier of the database within the availability group. This identifier is identical on every replica to which this database is joined.|  
@@ -66,17 +66,10 @@ manager: craigg
 |**last_commit_time**|**datetime**|Time corresponding to the last commit record.<br /><br /> On the secondary database, this time is the same as on the primary database.<br /><br /> On the primary replica, each secondary database row displays the time that the secondary replica that hosts that secondary database has reported back to the primary replica. The difference in time between the primary-database row and a given secondary-database row represents approximately the recovery point objective (RPO), assuming that the redo process is caught up and that the progress has been reported back to the primary replica by the secondary replica.|  
 |**low_water_mark_for_ghosts**|**bigint**|A monotonically increasing number for the database indicating a low water mark used by ghost cleanup on the primary database. If this number is not increasing over time, it implies that ghost cleanup might not happen. To decide which ghost rows to clean up, the primary replica uses the minimum value of this column for this database across all availability replicas (including the primary replica).|  
 |**secondary_lag_seconds**|**bigint**|The number of seconds that the secondary replica is behind the primary replica during synchronization.<br /><br />**Applies to:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**quorum_commit_lsn**|**Numeric(25,0)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
+|**quorum_commit_time**|**datetime**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
   
-##  <a name="LSNcolumns"></a> Understanding the LSN Column Values  
- The values of the **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recovery_lsn**, and **truncation_lsn** columns are not actual log sequence numbers (LSNs). Rather each of these values reflects a log-block ID padded with zeroes.  
-  
- **end_of_log_lsn**, **last_hardened_lsn**, and **recovery_lsn** are flush LSNs. For example, **last_hardened_lsn** indicates the start of the next block past the blocks that are already on disk.  So any LSN < the value of **last_hardened_lsn** is on disk.  LSN that are >= to this value are not flushed.  
-  
- Of the LSN values returned by **sys.dm_database_replica_states**, only **last_redone_lsn** is a real LSN.  
-  
-## Security  
-  
-### Permissions  
+ ### Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
 ## See Also  

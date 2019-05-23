@@ -797,6 +797,7 @@ This section contains the following examples:
 - G. [Backing up to an existing mirrored media set](#existing_mirrored_media_set)
 - H. [Creating a compressed backup in a new media set](#creating_compressed_backup_new_media_set)
 - I. [Backing up to the Microsoft Azure Blob storage service](#url)
+- J. [Track the progress of backup statement](#backup_progress)
 
 > [!NOTE]
 > The backup how-to topics contain additional examples. For more information, see [Backup Overview](../../relational-databases/backup-restore/backup-overview-sql-server.md).
@@ -941,6 +942,17 @@ The example performs a full database backup of `Sales` to the Microsoft Azure Bl
 BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
 WITH STATS = 5;
+```
+
+### <a name="backup_progress"></a> J. Track the progress of backup statement
+
+The following query returns information about the currently running backup statements:
+```sql
+SELECT query = a.text, start_time, percent_complete,
+    eta = dateadd(second,estimated_completion_time/1000, getdate())
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+WHERE r.command LIKE 'BACKUP%'
 ```
 
 ## See Also

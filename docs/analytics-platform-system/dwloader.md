@@ -479,7 +479,7 @@ Verify the target appliance has a valid SQL Server PDW certificate from a truste
 **-se**  
 Skip loading empty files. This also skips uncompressing empty gzip files.
 
-**-l**
+**-l**  
 Available with CU7.4 update, specifies the maximum row length (in bytes) that can be loaded. Valid values are integers between 32768 and 33554432. Only use when needed to load large rows (greater than 32KB) as this will allocate more memory on the client and server.
   
 ## Return Code Values  

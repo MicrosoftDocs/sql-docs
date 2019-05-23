@@ -63,26 +63,26 @@ For more information, see [View or Configure the backup compression default Serv
 
 #### Backup checksum
 
-This allows you to toggle the sp_configure setting for the *backup checksum default*. This feature makes it easier for you to enable the backup checksum default.
+This option allows you to toggle the sp_configure setting for the *backup checksum default*. This feature makes it easier for you to enable the backup checksum default.
 
     > [!Note]
     > This feature is considered a good *best practice*.
 
 ### Recovery interval (minutes)
 
-Sets the maximum number of minutes per database to recover databases. The default is 0, indicating automatic configuration by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In practice, this means a recovery time of less than one minute and a checkpoint approximately every one minute for active databases. For more information, see [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
+Sets the maximum number of minutes per database to recover databases. The default is 0, indicating automatic configuration by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In practice, this option means a recovery time of less than one minute and a checkpoint approximately every one minute for active databases. For more information, see [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
 ### Data
 
-Specifies the default location for data files. Click the browse button to navigate to a new default location. Does not take effect until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted.  
+Specifies the default location for data files. Click the browse button to navigate to a new default location. Doesn't take effect until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted.  
   
 ### Log
   
-Specifies the default location for log files. Click the browse button to navigate to a new default location. Does not take effect until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted.  
+Specifies the default location for log files. Click the browse button to navigate to a new default location. Doesn't take effect until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted.  
   
 ### Configured Values
 
-Displays the configured values for the options on this pane. If you change these values, click **Running Values** to see whether the changes have taken effect. If they have not, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be restated first.  
+Displays the configured values for the options on this pane. If you change these values, click **Running Values** to see whether the changes have taken effect. If they haven't, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be restated first.  
   
  ### Running Values
 

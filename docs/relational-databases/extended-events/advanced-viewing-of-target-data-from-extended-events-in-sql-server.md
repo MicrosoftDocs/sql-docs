@@ -1,7 +1,7 @@
 ---
 title: "Advanced Viewing of Target Data from Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/04/2016"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -312,4 +312,6 @@ The **query_post_execution_showplan** event enables you to see the actual query 
 
 ![Query Plan, with properties list for one node](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
+## See also
 
+[XELite: Cross-platform library to read XEvents from XEL files or live SQL streams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), released May 2019.

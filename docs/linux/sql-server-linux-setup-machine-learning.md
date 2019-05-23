@@ -49,7 +49,7 @@ Commands for removing packages appear in the following table.
 | Ubuntu	| `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
-> Microsoft R Open is composed of three packages. If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
+> Microsoft R Open 3.4.4 is composed of two or three packages, depending on which CTP release you previously installed. (The foreachiterators package was combined into the main mro package in November 2018; CTP 2.2.) If any of these packages remain after removing microsoft-r-open-mro-3.4.4, you should remove them individually.
 > ```
 > microsoft-r-open-foreachiterators-3.4.4
 > microsoft-r-open-mkl-3.4.4
@@ -90,13 +90,13 @@ For each OS-specific set of installation instructions, *highest package level* i
 
 Microsoft's base distribution of R is a prerequisite for using RevoScaleR, MicrosoftML, and other R packages installed with Machine Learning Services.
 
-The required version is MRO 3.4.4.
+The required version is MRO 3.5.2.
 
 Choose from the following two approaches to install MRO:
 
-+ Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.4.4) if you want this approach.
++ Download the MRO tarball from MRAN, unpack it, and run its install.sh script. You can follow the [installation instructions on MRAN](https://mran.microsoft.com/releases/3.5.2) if you want this approach.
 
-+ Alternatively, register the **packages.microsoft.com** repo as described below to install the three packages comprising the MRO distribution: microsoft-r-open-mro, microsoft-r-open-mkl, and microsoft-r-open-foreachiterators. 
++ Alternatively, register the **packages.microsoft.com** repo as described below to install the two packages comprising the MRO distribution: microsoft-r-open-mro and microsoft-r-open-mkl. 
 
 The following commands register the repository providing MRO. Post-registration, the commands for installing other R packages, such as mssql-mlservices-mml-r, will automatically include MRO as a package dependency.
 
@@ -108,11 +108,6 @@ sudo su
 
 # Optionally, if your system does not have the https apt transport option
 apt-get install apt-transport-https
-
-# Add the **azure-cli** repo to your apt sources list
-AZ_REPO=$(lsb_release -cs)
-
-echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
 
 # Set the location of the package repo the "prod" directory containing the distribution.
 # This example specifies 16.04. Replace with 14.04 if you want that version
@@ -131,8 +126,6 @@ sudo apt-get update
 # Import the Microsoft repository key
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-# Create local `azure-cli` repository
-sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
 
 # Set the location of the package repo at the "prod" directory
 # The following command is for version 7.x
@@ -189,9 +182,9 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, e
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python)
-# Be sure to include -9.4.6* in mlsservices package names
-sudo yum install mssql-mlservices-mlm-py-9.4.6*
-sudo yum install mssql-mlservices-mlm-r-9.4.6* 
+# Be sure to include -9.4.7* in mlsservices package names
+sudo yum install mssql-mlservices-mlm-py-9.4.7*
+sudo yum install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
 ### Example 2 - Minimum installation 
@@ -202,8 +195,8 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, c
 # Install as root or sudo
 # Minimum install of R, Python extensions
 # Be sure to include -9.4.6* in mlsservices package names
-sudo yum install mssql-mlservices-packages-py-9.4.6*
-sudo yum install mssql-mlservices-packages-r-9.4.6*
+sudo yum install mssql-mlservices-packages-py-9.4.7*
+sudo yum install mssql-mlservices-packages-r-9.4.7*
 ```
 
 <a name="ubuntu"></a>
@@ -214,16 +207,6 @@ You can install language support in whatever combination you require (single or 
 
 > [!Tip]
 > If possible, run `apt-get update` to refresh packages on the system prior to installation. Additionally, some docker images of Ubuntu might not have the https apt transport option. To install it, use `apt-get install apt-transport-https`.
-
-<!---
-### Prerequisite for 18.04
-
-Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
-
-```bash
-wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
-```--->
 
 ### Example 1 -  Full installation 
 
@@ -262,9 +245,9 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, e
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python)
-# Be sure to include -9.4.6* in mlsservices package names
-sudo zypper install mssql-mlservices-mlm-py-9.4.6*
-sudo zypper install mssql-mlservices-mlm-r-9.4.6* 
+# Be sure to include -9.4.7* in mlsservices package names
+sudo zypper install mssql-mlservices-mlm-py-9.4.7*
+sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
 ```
 
 ### Example 2 - Minimum installation 
@@ -275,8 +258,8 @@ Includes open-source R and Python, extensibility framework, microsoft-openmpi, c
 # Install as root or sudo
 # Minimum install of R, Python extensions
 # Be sure to include -9.4.6* in mlsservices package names
-sudo zypper install mssql-mlservices-packages-py-9.4.6*
-sudo zypper install mssql-mlservices-packages-r-9.4.6*
+sudo zypper install mssql-mlservices-packages-py-9.4.7*
+sudo zypper install mssql-mlservices-packages-r-9.4.7*
 ```
 
 ## Post-install config (required)
@@ -377,13 +360,13 @@ You can install and configure the database engine and Machine Learning Services 
   You can add a single feature, such as Python integration, to a database engine install.
 
   ```bash
-  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.6* 
+  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* 
   ```
 
   Or, add both extensions (R, Python).
 
   ```bash
-  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.6* mssql-mlservices-packages-py-9.4.6*
+  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.7* mssql-mlservices-packages-py-9.4.7*
   ```
 
 3. Accept license agreements and complete the post-install configuration. Use the **mssql-conf** tool for this task.
@@ -457,19 +440,17 @@ mssql-server-extensibility-15.0.1000
 
 # R
 microsoft-openmpi-3.0.0
-microsoft-r-open-foreachiterators-3.4.4
-microsoft-r-open-mkl-3.4.4
-microsoft-r-open-mro-3.4.4
-mssql-mlservices-packages-r-9.4.6.523
-mssql-mlservices-mlm-r-9.4.6.523
-mssql-mlservices-mml-r-9.4.6.523
+microsoft-r-open-mkl-3.5.2
+microsoft-r-open-mro-3.5.2
+mssql-mlservices-packages-r-9.4.7.64
+mssql-mlservices-mlm-r-9.4.7.64
+
 
 # Python
 microsoft-openmpi-3.0.0
-mssql-mlservices-python-9.4.6.523
-mssql-mlservices-packages-py-9.4.6.523
-mssql-mlservices-mlm-py-9.4.6.523
-mssql-mlservices-mml-py-9.4.6.523
+mssql-mlservices-python-9.4.7.64
+mssql-mlservices-packages-py-9.4.7.64
+mssql-mlservices-mlm-py-9.4.7.64
 ```
 
 ## Add more R/Python packages 

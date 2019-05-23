@@ -65,9 +65,6 @@ For more information, see [View or Configure the backup compression default Serv
 
 This option allows you to toggle the sp_configure setting for the *backup checksum default*. This feature makes it easier for you to enable the backup checksum default.
 
-    > [!Note]
-    > This feature is considered a good *best practice*.
-
 ### Recovery interval (minutes)
 
 Sets the maximum number of minutes per database to recover databases. The default is 0, indicating automatic configuration by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In practice, this option means a recovery time of less than one minute and a checkpoint approximately every one minute for active databases. For more information, see [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  

@@ -60,7 +60,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
   
 - Use a derived table  
   
-- Bulk import the data by using the [**bcp** utility](../../tools/bcp-utility.md), the .NET [SqlBulkCopy class](../../../dotnet/api/system.data.sqlclient.sqlbulkcopy.md), [OPENROWSET (BULK ...)](../../t-sql/functions/openrowset-transact-sql.md), or the [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement  
+- Bulk import the data by using the [**bcp** utility](../../tools/bcp-utility.md), the .NET [SqlBulkCopy class](/dotnet/api/system.data.sqlclient.sqlbulkcopy), [OPENROWSET (BULK ...)](../../t-sql/functions/openrowset-transact-sql.md), or the [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement  
   
  Only single scalar values are allowed as a row value expression. A subquery that involves multiple columns is not allowed as a row value expression. For example, the following code results in a syntax error because the third row value expression list contains a subquery with multiple columns.  
   

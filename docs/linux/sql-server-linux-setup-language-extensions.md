@@ -179,6 +179,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. Restart the `mssql-launchpadd` service again.
 
+7. For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
 ## Verify installation
 
 Java feature integration does not include libraries, but you can run `grep -r JRE_HOME /etc` to confirm creation of the JAVA_HOME environment variable.

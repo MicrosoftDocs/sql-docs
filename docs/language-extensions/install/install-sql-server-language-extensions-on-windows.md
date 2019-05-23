@@ -171,6 +171,10 @@ Restarting the service also automatically restarts the related SQL Server Launch
 
 You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
+## Register external language extension
+
+For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
 ## Verify installation
 
 Check the installation status of the instance in the setup logs.
@@ -206,6 +210,7 @@ At the instance level, additional configuration might include:
 On the database, you might need the following configuration updates:
 
 * [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
+* [Give users permission to execute a specific language](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]
 > Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.

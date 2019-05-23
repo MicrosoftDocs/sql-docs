@@ -38,7 +38,7 @@ ms.reviewer: martinle
   
 5.  Run **dwloader**.  
   
-    Log in to the Loading server and run the executable **dwloader.exe** with the appropriate command-line options.  
+    Sign in to the Loading server and run the executable **dwloader.exe** with the appropriate command-line options.  
   
 6.  Verify the results.  
   

@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 Language Extensions are an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
-Package location for the Java extensions are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
+Package location for the Java extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
 
 Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -231,7 +231,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 #### Download site
 
-You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the packages for Java are co-located with database engine package. 
+You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the packages for Java are colocated with database engine package. 
 
 #### RedHat/7 paths
 

@@ -1,6 +1,6 @@
 ---
-title: Install SQL Server Machine Language Extensions (Java) on Linux | Microsoft Docs
-description: Learn how to install SQL Server Language Extensions (Java) on Red Hat,  Ubuntu, and SUSE.
+title: Install SQL Server Language Extensions (Java) on Linux | Microsoft Docs
+description: Learn how to install SQL Server Language Extensions (Java) on Red Hat, Ubuntu, and SUSE.
 author: dphansen
 ms.author: davidph
 manager: cgronlun
@@ -13,9 +13,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Install SQL Server 2019 Language Extensions (Java) on Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this preview release of SQL Server 2019. Follow the steps in this article to install the Java language extension. 
-
 Language Extensions are an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
+
+Follow the steps in this article to install the Java language extension.
 
 Package location for the Java extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
 
@@ -191,7 +191,7 @@ To validate installation, run a T-SQL script that executes a system stored proce
 
 ## Full install of SQL Server and Language Extensions
 
-You can install and configure the database engine and Machine Learning Services in one procedure by appending Java packages and parameters on a command that installs the database engine.
+You can install and configure the database engine and Language Extensions in one procedure by appending Java packages and parameters on a command that installs the database engine.
 
 1. Provide a command line that includes the database engine, plus language extension features.
 

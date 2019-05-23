@@ -106,7 +106,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -476,7 +477,10 @@ We recommend using **-m** only when loading into an empty table, so that you can
 Verify the target appliance has a valid SQL Server PDW certificate from a trusted authority. Use this to help ensure your data is not being hijacked by an attacker and sent to an unauthorized location. The certificate must already be installed on the appliance. The only supported way to install the certificate is for the appliance administrator to install it by using the Configuration Manager tool. Ask your appliance administrator if you are not sure whether the appliance has a trusted certificate installed.  
   
 **-se**  
-Skip loading empty files. This also skips uncompressing empty gzip files.  
+Skip loading empty files. This also skips uncompressing empty gzip files.
+
+**-l**
+Available with CU7.4 update, specifies the maximum row length (in bytes) that can be loaded. Valid values are integers between 32768 and 33554432. Only use when needed to load large rows (greater than 32KB) as this will allocate more memory on the client and server.
   
 ## Return Code Values  
 0 (success) or other integer value (failure)  

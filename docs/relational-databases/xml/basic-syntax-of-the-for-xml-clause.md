@@ -1,7 +1,7 @@
 ---
 title: "Basic Syntax of the FOR XML Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
+ms.custom: "fresh2019may"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,9 +17,11 @@ ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 author: MightyPen
 ms.author: genemi
 manager: craigg
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # Basic Syntax of the FOR XML Clause
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The FOR XML mode can be RAW, AUTO, EXPLICIT, or PATH. It determines the shape of the resulting XML.  
   
 > [!IMPORTANT]  

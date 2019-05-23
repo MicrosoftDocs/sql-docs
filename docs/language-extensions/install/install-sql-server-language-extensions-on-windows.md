@@ -117,7 +117,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 <a name="perms-nonwindows"></a>
 
-## Access to non-default JRE folder
+## Grant access to non-default JRE folder
 
 If you did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 

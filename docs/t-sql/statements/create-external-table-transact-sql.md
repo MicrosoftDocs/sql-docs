@@ -697,6 +697,15 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ### A. Create external table for Azure SQL Database
 
+```sql
+CREATE EXTERNAL TABLE [dbo].[CustomerInformation]
+( [CustomerID] [int] NOT NULL,
+  [CustomerName] [varchar](50) NOT NULL,
+  [Company] [varchar](50) NOT NULL)
+WITH
+( DATA_SOURCE = MyElasticDBQueryDataSrc)
+```
+
 ## See Also
 
 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)

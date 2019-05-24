@@ -12278,8 +12278,6 @@
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md
       - name: sys.dm_db_log_stats
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md
-      - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
-        href: ../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
       - name: sys.dm_db_page_info
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md
       - name: sys.dm_db_partition_stats
@@ -12292,14 +12290,20 @@
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md
       - name: sys.dm_db_uncontained_entities
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md
+      - name: sys.dm_database_copies (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
+      - name: sys.dm_database_replica_states (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
+      - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
+      - name: sys.dm_db_resource_stats (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md
       - name: sys.dm_db_wait_stats (Azure SQL Database)
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md
       - name: sys.dm_operation_status (Azure SQL Database)
         href: ../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md
-      - name: sys.dm_database_copies (Azure SQL Database)
-        href: ../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
-      - name: sys.dm_db_resource_stats (Azure SQL Database)
-        href: ../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md
+      - name: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md
     - name: Database Mirroring
       items:
       - name: sys.dm_db_mirroring_auto_page_repair

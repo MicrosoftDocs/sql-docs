@@ -1,7 +1,7 @@
 ---
 title: "Advanced Viewing of Target Data from Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2019"
+ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -36,7 +36,7 @@ The present article assumes you already know how to create and start an event se
 
 This article also assumes you have installed a very recent monthly release of SSMS. Installation help is at:
 
-- [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+- [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 

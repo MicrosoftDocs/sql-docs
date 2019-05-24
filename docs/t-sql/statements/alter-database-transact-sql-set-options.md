@@ -717,7 +717,8 @@ The current setting of this option can be determined by examining the is_paramet
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 ON | OFF | CLEAR [ ALL ]         
-Controls if the query store is enabled in this database, and also controls removing the contents of the query store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
+Controls if the query store is enabled in this database, and also controls removing the contents of the query store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).     
+
 ON         
 Enables the query store.
 
@@ -752,7 +753,7 @@ INTERVAL_LENGTH_MINUTES
 Determines the time interval at which runtime execution statistics data is aggregated into the query store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
 
 SIZE_BASED_CLEANUP_MODE { AUTO | OFF }         
-Controls whether cleanup automatically activates when total amount of data gets close to maximum size:
+Controls whether cleanup automatically activates when total amount of data gets close to maximum size.
 
 AUTO         
 Size-based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.This value is the default configuration value.

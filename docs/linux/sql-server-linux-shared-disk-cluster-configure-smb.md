@@ -71,7 +71,7 @@ Here are some tips and notes for successfully using SMB:
       mkdir <TempDir>
       ```
       
-      <TempDir> is the name of the folder. The following example creates a folder named /var/opt/mssql/tmp.
+      \<TempDir> is the name of the folder. The following example creates a folder named /var/opt/mssql/tmp.
       
       ```bash
       mkdir /var/opt/mssql/tmp

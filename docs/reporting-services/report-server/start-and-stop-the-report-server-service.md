@@ -29,13 +29,13 @@ ms.author: maggies
   
  You can't pause and resume the service. There aren't start parameters. Although there are no explicit dependencies, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must be running if you support any subscriptions or scheduled report operations on the report server.  
   
-## To start or stop the service using the *Reporting Services Configuration tool*  
+## Use the Reporting Services Configuration tool  
   
 1. Start [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool and connect to the report server.  
   
 2. On the Report Server Status page, select **Stop** or **Start**.  
   
-## To start or stop the service using services in administrative tools  
+## Use Administrative Tools  
 
 - In Administrative Tools, open Services, right-click **SQL Server  Reporting Services (MSSQLSERVER)**, and select **Stop** or **Restart**.  
   

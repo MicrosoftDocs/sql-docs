@@ -1,5 +1,5 @@
 ---
-title: "Predefined Roles | Microsoft Docs"
+title: "Predefined Roles - Reporting Services | Microsoft Docs"
 ms.date: 05/21/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -19,8 +19,8 @@ ms.author: maggies
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installs with predefined roles that you can use to grant access to report server operations. Each predefined role describes a collection of related tasks. You can assign groups and user accounts to predefined roles to provide immediate access to report server operations.  
   
 ## How to use predefined roles  
-  
-1.  Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define additional roles, you should do this before you begin assigning users to specific roles.  
+      
+    1.  Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define additional roles, you should do this before you begin assigning users to specific roles.  
   
 2.  Identify which users and groups require access to the report server, and at what level. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Very few users should be assigned to **Content Manager**.  
   
@@ -39,7 +39,7 @@ ms.author: maggies
 |[Publisher Role](#bkmk_publisher)|Item|May publish reports and linked reports to the Report Server.|  
 |[Browser Role](#bkmk_browser)|Item|May view folders, reports, and subscribe to reports.|  
 |[Report Builder Role](#bkmk_reportbuilder)|Item|May view report definitions.|  
-|[My Reports Role](#bkmk_myreports)|Item|May publish reports and linked reports; manage folders, reports, and resources in a users My Reports folder.|  
+|[My Reports Role](#bk                        mk_myreports)|Item|May publish reports and linked reports; manage folders, reports, and resources in a users My Reports folder.|  
 |[System Administrator Role](#bkmk_systemadministrator)|System|View and modify system role assignments, system role definitions, system properties, and shared schedules, in addition to create role definitions, and manage jobs in Management Studio.|  
 |[System User Role](#bkmk_systemuser)|System|View system properties, shared schedules, and allow use of Report Builder or other clients that execute report definitions.|  
   
@@ -75,7 +75,7 @@ ms.author: maggies
   
  The **Content Manager** role is used in default security.  
   
-##  <a name="bkmk_publisher"></a> Publisher Role  
+##  <a name="bkmk_publisher"></a> Publisher role  
  The **Publisher** role is a built-in role definition that includes tasks that enable users to add content to a report server. This role is predefined for your convenience. It is not used until you create role assignments that include it. This role is intended for users who author reports or models in Report Designer or Model Designer and then publish those items to a report server.  
   
 > [!CAUTION]  
@@ -123,10 +123,10 @@ ms.author: maggies
   
  At a minimum, this role should support both the "View reports" task and the "View folders" tasks to support viewing and folder navigation. You should not remove the "View folders" task unless you want to eliminate folder navigation. Likewise, you should not remove the "View reports task" unless you want to prevent users from seeing reports. These kinds of modifications suggest the need for a custom role definition that is applied selectively for a specific group of users.  
   
-##  <a name="bkmk_reportbuilder"></a> Report builder role  
+##  <a name="bkmk_reportbuilder"></a> Report Builder role  
  The **Report Builder** role is a predefined role that includes tasks for loading reports in Report Builder as well as viewing and navigating the folder hierarchy. To create and modify reports in Report Builder, you must also have a system role assignment that includes the "Execute report definitions" task, required for processing reports locally in Report Builder.  
   
-### Report builder tasks  
+### Report Builder tasks  
  The following table describes the tasks that are included in the **Report Builder** role:  
   
 |Task|Description|  
@@ -138,17 +138,17 @@ ms.author: maggies
 |View models|View models in the folder hierarchy, use models as data sources for a report, and run queries against the model to retrieve data.|  
 |Manage individual subscriptions|Create, view, modify, and delete user-owned subscriptions to reports and linked reports, and create schedules in support of those subscriptions.|  
   
-### Customizing the report builder role  
+### Customizing the Report Builder role  
  You can modify the **Report Builder** role to suit your needs. The recommendations are generally the same as for the **Browser** role: remove the "Manage individual subscriptions" task if you do not want to support subscriptions, remove the "View resources" task if you do not want users to see resources, and keep "View reports" task and the "View folders" tasks to support viewing and folder navigation.  
   
  The most important task in this role definition is "Consume reports", which allows a user to load a report definition from the report server into a local Report Builder instance. If you do not want to support this task, you can delete this role definition and use the **Browser** role to support general access to a report server.  
   
-##  <a name="bkmk_myreports"></a> My reports role  
+##  <a name="bkmk_myreports"></a> My Reports role  
  The **My Reports** role is a predefined role that includes a set of tasks that are useful for users of the My Reports feature. This role definition includes tasks that grant administrative permissions to users over the My Reports folder that they own.  
   
  Although you can choose another role to use with the My Reports feature, it is recommended that you choose one that is used exclusively for My Reports security. For more information, see [Secure My Reports](../../reporting-services/security/secure-my-reports.md).  
-  
-### My reports tasks  
+                          
+### My Reports tasks  
  The following table lists tasks that are included in the **My Reports** role:  
   
 |Task|Description|  

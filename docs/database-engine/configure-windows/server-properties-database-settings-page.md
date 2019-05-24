@@ -77,11 +77,11 @@ Specifies the default location for data files. Click the browse button to naviga
   
 Specifies the default location for log files. Click the browse button to navigate to a new default location. Doesn't take effect until [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted.  
   
-### Configured Values
+### Configured values
 
 Displays the configured values for the options on this pane. If you change these values, click **Running Values** to see whether the changes have taken effect. If they haven't, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be restated first.  
   
- ### Running Values
+### Running values
 
 View the currently running values for the options on this pane. These values are read-only.  
   

@@ -623,7 +623,7 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
 ## Arguments
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
-The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure SQL Database. No actual data is moved or stored in Azure SQL Database.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. However, you can't use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
@@ -706,20 +706,22 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql?view=azuresqldb)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
 ## Overview: Azure SQL Data Warehouse
 
-In Azure SQL Dta Warehouse, 
+In Azure SQL Data Warehouse, use an external table to:
 
-Use an external table to import and store data from Azure Data Lake Store into Azure SQL Data Warehouse.
+- Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
+- Import and store data from Hadoop or Azure blob storage into your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.
+- Import and store data from Azure Data Lake Store into Azure SQL Data Warehouse.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
 
-## Syntax  
+## Syntax
 
 ```
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -745,7 +747,7 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
 ## Arguments
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
-The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+The one to three-part name of the table to create. For an external table, SQL Data Warehouse stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored in SQL Data Warehouse.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. However, you can't use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) and [CREATE TABLE on Azure SQL Database](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).
@@ -753,11 +755,7 @@ CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNA
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
 LOCATION = '*folder_or_filepath*'
-Specifies the folder or the file path and file name for the actual data in Hadoop or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source.
-
-In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder if it doesn't already exist. You can then use INSERT INTO to export data from a local SQL Server table to the external data source. For more information, see [PolyBase Queries](/sql/relational-databases/polybase/polybase-queries). 
-
-In SQL Data Warehouse and Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. In these two products, CREATE EXTERNAL TABLE doesn't create the path and folder.
+Specifies the folder or the file path and file name for the actual data in Azure Data Lake, Hadoop, or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source. The [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
@@ -768,7 +766,7 @@ In this example, if LOCATION='/webdata/', a PolyBase query will return rows from
 To change the default and only read from the root folder, set the attribute \<polybase.recursive.traversal> to 'false' in the core-site.xml configuration file. This file is located under `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. For example, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *external_data_source_name*
-Specifies the name of the external data source that contains the location of the external data. This location is either a Hadoop or Azure blob storage. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Specifies the name of the external data source that contains the location of the external data. This location is in Azure Data Lake. To create an external data source, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *external_file_format_name*
 Specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
@@ -823,21 +821,6 @@ If the specified path doesn't exist, PolyBase will create one on your behalf. A 
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
 
-Sharded external table options
-Specifies the external data source (a non-SQL Server data source) and a distribution method for the [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
-
-DATA_SOURCE
-An external data source such as data stored in a Hadoop File System, Azure blob storage, or a [shard map manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
-
-SCHEMA_NAME
-The SCHEMA_NAME clause provides the ability to map the external table definition to a table in a different schema on the remote database. Use this clause to disambiguate between schemas that exist on both the local and remote databases.
-
-OBJECT_NAME
-The OBJECT_NAME clause provides the ability to map the external table definition to a table with a different name on the remote database. Use this clause to disambiguate between object names that exist on both the local and remote databases.
-
-DISTRIBUTION
-Optional. This argument is only required for databases of type SHARD_MAP_MANAGER. This argument controls whether a table is treated as a sharded table or a replicated table. With **SHARDED** (*column name*) tables, the data from different tables don't overlap. **REPLICATED** specifies that tables have the same data on every shard. **ROUND_ROBIN** indicates that an application-specific method is used to distribute the data.
-
 ## Permissions
 
 Requires these user permissions:
@@ -869,9 +852,9 @@ You can create many external tables that reference the same or different externa
 
 ## Limitations and Restrictions
 
-Since the data for an external table is off the appliance, it isn't under the control of PolyBase, and can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
+Since the data for an external table is under the control of SQL Data Warehouse, and can be changed or removed at any time by an external process. As a result, query results against an external table aren't guaranteed to be deterministic. The same query can return different results each time it runs against an external table. Similarly, a query might fail if the external data is moved or removed.
 
-You can create multiple external tables that each reference different external data sources. If you simultaneously run queries against different Hadoop data sources, then each Hadoop source must use the same 'hadoop connectivity' server configuration setting. For example, you can't simultaneously run a query against a Cloudera Hadoop cluster and a Hortonworks Hadoop cluster since these use different configuration settings. For the configuration settings and supported combinations, see [PolyBase Connectivity Configuration](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+You can create multiple external tables that each reference different external data sources.
 
 Only these Data Definition Language (DDL) statements are allowed on external tables:
 
@@ -890,17 +873,11 @@ PolyBase can consume a maximum of 33k files per folder when running 32 concurren
 
 Table width limitations:
 
-PolyBase in SQL Server 2016 has a row width limit of 32 KB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 32 KB, PolyBase can't query the data.
-
-In SQL Data Warehouse, this limitation has been raised to 1 MB.
+PolyBase in Azure Data Warehouse has a row width limit of 1 MB based on the maximum size of a single valid row by table definition. If the sum of the column schema is greater than 1 MB, PolyBase can't query the data.
 
 ## Locking
 
 Shared lock on the SCHEMARESOLUTION object.
-
-## Security
-
-The data files for an external table are stored in Hadoop or Azure blob storage. These data files are created and managed by your own processes. It is your responsibility to manage the security of the external data.
 
 ## Examples
 
@@ -1000,7 +977,7 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
 ## Arguments
 
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }*
-The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+The one to three-part name of the table to create. For an external table, Analytics Platform System stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in Analytics Platform System.
 
 \<column_definition> [ ,...*n* ]
 CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. However, you can't use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) and [CREATE TABLE on Azure SQL Database](https://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).
@@ -1010,9 +987,7 @@ The column definitions, including the data types and number of columns, must mat
 LOCATION = '*folder_or_filepath*'
 Specifies the folder or the file path and file name for the actual data in Hadoop or Azure blob storage. The location starts from the root folder. The root folder is the data location specified in the external data source.
 
-In SQL Server, the CREATE EXTERNAL TABLE statement creates the path and folder if it doesn't already exist. You can then use INSERT INTO to export data from a local SQL Server table to the external data source. For more information, see [PolyBase Queries](/sql/relational-databases/polybase/polybase-queries). 
-
-In SQL Data Warehouse and Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. In these two products, CREATE EXTERNAL TABLE doesn't create the path and folder.
+In Analytics Platform System, the [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) statement creates the path and folder if it doesn't exist. `CREATE EXTERNAL TABLE` doesn't create the path and folder.
 
 If you specify LOCATION to be a folder, a PolyBase query that selects from the external table will retrieve files from the folder and all of its subfolders. Just like Hadoop, PolyBase doesn't return hidden folders. It also doesn't return files for which the file name begins with an underline (_) or a period (.).
 
@@ -1077,21 +1052,6 @@ Specifies the directory within the External Data Source that the rejected rows a
 If the specified path doesn't exist, PolyBase will create one on your behalf. A child directory is created with the name "_rejectedrows". The "_" character ensures that the directory is escaped for other data processing unless explicitly named in the location parameter. Within this directory, there's a folder created based on the time of load submission in the format YearMonthDay -HourMinuteSecond (Ex. 20180330-173205). In this folder, two types of files are written, the _reason file and the data file.
 
 The reason files and the data files both have the queryID associated with the CTAS statement. Because the data and the reason are in separate files, corresponding files have a matching suffix.
-
-Sharded external table options
-Specifies the external data source (a non-SQL Server data source) and a distribution method for the [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
-
-DATA_SOURCE
-An external data source such as data stored in a Hadoop File System, Azure blob storage, or a [shard map manager](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
-
-SCHEMA_NAME
-The SCHEMA_NAME clause provides the ability to map the external table definition to a table in a different schema on the remote database. Use this clause to disambiguate between schemas that exist on both the local and remote databases.
-
-OBJECT_NAME
-The OBJECT_NAME clause provides the ability to map the external table definition to a table with a different name on the remote database. Use this clause to disambiguate between object names that exist on both the local and remote databases.
-
-DISTRIBUTION
-Optional. This argument is only required for databases of type SHARD_MAP_MANAGER. This argument controls whether a table is treated as a sharded table or a replicated table. With **SHARDED** (*column name*) tables, the data from different tables don't overlap. **REPLICATED** specifies that tables have the same data on every shard. **ROUND_ROBIN** indicates that an application-specific method is used to distribute the data.
 
 ## Permissions
 
@@ -1159,404 +1119,7 @@ The data files for an external table are stored in Hadoop or Azure blob storage.
 
 ## Examples
 
-### A. Create an external table with data in text-delimited format
-
-This example shows all the steps required to create an external table that has data formatted in text-delimited files. It defines an external data source *mydatasource* and an external file format *myfileformat*. These database-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
-
-```sql
-CREATE EXTERNAL DATA SOURCE mydatasource
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'
-)
-
-CREATE EXTERNAL FILE FORMAT myfileformat
-WITH (
-    FORMAT_TYPE = DELIMITEDTEXT,
-    FORMAT_OPTIONS (FIELD_TERMINATOR ='|')
-);
-
-CREATE EXTERNAL TABLE ClickStream (
-    url varchar(50),
-    event_date date,
-    user_IP varchar(50)
-)
-WITH (
-        LOCATION='/webdata/employee.tbl',
-        DATA_SOURCE = mydatasource,
-        FILE_FORMAT = myfileformat
-    )
-;
-```
-
-### B. Create an external table with data in RCFile format
-
-This example shows all the steps required to create an external table that has data formatted as RCFiles. It defines an external data source *mydatasource_rc* and an external file format *myfileformat_rc*. These database-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
-
-```sql
-CREATE EXTERNAL DATA SOURCE mydatasource_rc
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'
-)
-
-CREATE EXTERNAL FILE FORMAT myfileformat_rc
-WITH (
-    FORMAT_TYPE = RCFILE,
-    SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
-)
-;
-
-CREATE EXTERNAL TABLE ClickStream_rc (
-    url varchar(50),
-    event_date date,
-    user_ip varchar(50)
-)
-WITH (
-        LOCATION='/webdata/employee_rc.tbl',
-        DATA_SOURCE = mydatasource_rc,
-        FILE_FORMAT = myfileformat_rc
-    )
-;
-```
-
-### C. Create an external table with data in ORC format
-
-This example shows all the steps required to create an external table that has data formatted as ORC files. It defines an external data source mydatasource_orc and an external file format myfileformat_orc. These database-level objects are then referenced in the CREATE EXTERNAL TABLE statement. For more information, see [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
-
-```sql
-CREATE EXTERNAL DATA SOURCE mydatasource_orc
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://xxx.xxx.xxx.xxx:8020'
-)
-
-CREATE EXTERNAL FILE FORMAT myfileformat_orc
-WITH (
-    FORMAT = ORC,
-    COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
-)
-;
-
-CREATE EXTERNAL TABLE ClickStream_orc (
-    url varchar(50),
-    event_date date,
-    user_ip varchar(50)
-)
-WITH (
-        LOCATION='/webdata/',
-        DATA_SOURCE = mydatasource_orc,
-        FILE_FORMAT = myfileformat_orc
-    )
-;
-```
-
-### D. Querying Hadoop data
-
-Clickstream is an external table that connects to the employee.tbl delimited text file on a Hadoop cluster. The following query looks just like a query against a standard table. However, this query retrieves data from Hadoop and then computes the results.
-
-```sql
-SELECT TOP 10 (url) FROM ClickStream WHERE user_ip = 'xxx.xxx.xxx.xxx'
-;
-```
-
-### E. Join Hadoop data with SQL data
-
-This query looks just like a standard JOIN on two SQL tables. The difference is that PolyBase retrieves the Clickstream data from Hadoop and then joins it to the UrlDescription table. One table is an external table and the other is a standard SQL table.
-
-```sql
-SELECT url.description
-FROM ClickStream cs
-JOIN UrlDescription url ON cs.url = url.name
-WHERE cs.url = 'msdn.microsoft.com'
-;
-```
-
-### F. Import data from Hadoop into a SQL table
-
-This example creates a new SQL table ms_user that permanently stores the result of a join between the standard SQL table *user* and the external table *ClickStream*.
-
-```sql
-SELECT DISTINCT user.FirstName, user.LastName
-INTO ms_user
-FROM user INNER JOIN (
-    SELECT * FROM ClickStream WHERE cs.url = 'www.microsoft.com'
-    ) AS ms_user
-ON user.user_ip = ms.user_ip
-;
-```
-
-### G. Create an external table for a sharded data source
-
-This example remaps a remote DMV to an external table using the SCHEMA_NAME and OBJECT_NAME clauses.
-
-```sql
-CREATE EXTERNAL TABLE [dbo].[all_dm_exec_requests]([session_id] smallint NOT NULL,
-  [request_id] int NOT NULL,
-  [start_time] datetime NOT NULL,
-  [status] nvarchar(30) NOT NULL,
-  [command] nvarchar(32) NOT NULL,
-  [sql_handle] varbinary(64),
-  [statement_start_offset] int,
-  [statement_end_offset] int,
-  [cpu_time] int NOT NULL)
-WITH
-(
-  DATA_SOURCE = MyExtSrc,
-  SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
-);
-```
-
-### H. Create an external table for SQL Server
-
-```sql
-     -- Create a Master Key
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
-    GO
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
-     WITH IDENTITY = 'username', Secret = 'password';
-    GO
-
-    /* LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-    * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    * CREDENTIAL: the database scoped credential, created above.
-    */
-    CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
-    LOCATION = 'sqlserver://SqlServer',
-    -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = SQLServerCredentials
-    );
-    GO
-
-    CREATE SCHEMA sqlserver;
-    GO
-
-     /* LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
-     * DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE sqlserver.customer(
-     C_CUSTKEY INT NOT NULL,
-     C_NAME VARCHAR(25) NOT NULL,
-     C_ADDRESS VARCHAR(40) NOT NULL,
-     C_NATIONKEY INT NOT NULL,
-     C_PHONE CHAR(15) NOT NULL,
-     C_ACCTBAL DECIMAL(15,2) NOT NULL,
-     C_MKTSEGMENT CHAR(10) NOT NULL,
-     C_COMMENT VARCHAR(117) NOT NULL
-      )
-      WITH (
-      LOCATION='tpch_10.dbo.customer',
-      DATA_SOURCE=SqlServerInstance
-     );
- ```
-
-### I. Create an external table for Oracle
-
-```sql
-  -- Create a Master Key
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';
-   /*
-   * Specify credentials to external data source
-   * IDENTITY: user name for external source.
-   * SECRET: password for external source.
-   */
-   CREATE DATABASE SCOPED CREDENTIAL credential_name
-   WITH IDENTITY = 'username', Secret = 'password';
-
-   /* 
-   * LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-   * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-   * CONNECTION_OPTIONS: Specify driver location
-   * CREDENTIAL: the database scoped credential, created above.
-   */
-   CREATE EXTERNAL DATA SOURCE external_data_source_name
-   WITH ( 
-     LOCATION = 'oracle://<server address>[:<port>]',
-     -- PUSHDOWN = ON | OFF,
-     CREDENTIAL = credential_name)
-
-   /*
-   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
-   * DATA_SOURCE: the external data source, created above.
-   */
-   CREATE EXTERNAL TABLE customers(
-   [O_ORDERKEY] DECIMAL(38) NOT NULL,
-   [O_CUSTKEY] DECIMAL(38) NOT NULL,
-   [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
-   [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
-   [O_ORDERDATE] DATETIME2(0) NOT NULL,
-   [O_ORDERPRIORITY] CHAR(15) COLLATE Latin1_General_BIN NOT NULL,
-   [O_CLERK] CHAR(15) COLLATE Latin1_General_BIN NOT NULL,
-   [O_SHIPPRIORITY] DECIMAL(38) NOT NULL,
-   [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
-   )
-   WITH (
-    LOCATION='customer',
-    DATA_SOURCE= external_data_source_name
-   );
-   ```
-
-### J. Create an external table for a Teradata
-
-```sql
-  -- Create a Master Key
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';
-
-   /*
-   * Specify credentials to external data source
-   * IDENTITY: user name for external source.
-   * SECRET: password for external source.
-   */
-   CREATE DATABASE SCOPED CREDENTIAL credential_name
-   WITH IDENTITY = 'username', Secret = 'password';
-
-    /* LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-    * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    * CONNECTION_OPTIONS: Specify driver location
-    * CREDENTIAL: the database scoped credential, created above.
-    */
-    CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( 
-    LOCATION = teradata://<server address>[:<port>],
-   -- PUSHDOWN = ON | OFF,
-    CREDENTIAL =credential_name
-    );
-
-
-     /* LOCATION: Teradata table/view in '<database_name>.<object_name>' format
-      * DATA_SOURCE: the external data source, created above.
-      */
-     CREATE EXTERNAL TABLE customer(
-      L_ORDERKEY INT NOT NULL,
-      L_PARTKEY INT NOT NULL,
-     L_SUPPKEY INT NOT NULL,
-     L_LINENUMBER INT NOT NULL,
-     L_QUANTITY DECIMAL(15,2) NOT NULL,
-     L_EXTENDEDPRICE DECIMAL(15,2) NOT NULL,
-     L_DISCOUNT DECIMAL(15,2) NOT NULL,
-     L_TAX DECIMAL(15,2) NOT NULL,
-     L_RETURNFLAG CHAR NOT NULL,
-     L_LINESTATUS CHAR NOT NULL,
-     L_SHIPDATE DATE NOT NULL,
-     L_COMMITDATE DATE NOT NULL,
-     L_RECEIPTDATE DATE NOT NULL,
-     L_SHIPINSTRUCT CHAR(25) NOT NULL,
-     L_SHIPMODE CHAR(10) NOT NULL,
-     L_COMMENT VARCHAR(44) NOT NULL
-     )
-     WITH (
-     LOCATION='customer',
-     DATA_SOURCE= external_data_source_name
-     );
-```
-
-### K. Create an external table for MongoDB
-
-```sql
-  -- Create a Master Key
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';
-
-   /*
-   * Specify credentials to external data source
-   * IDENTITY: user name for external source.
-   * SECRET: password for external source.
-   */
-   CREATE DATABASE SCOPED CREDENTIAL credential_name
-   WITH IDENTITY = 'username', Secret = 'password';
-
-     /* LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    * PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    * CONNECTION_OPTIONS: Specify driver location
-    * CREDENTIAL: the database scoped credential, created above.
-    */
-    CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (
-    LOCATION = mongodb://<server>[:<port>],
-    -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = credential_name
-    );
-
-     /* LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
-     * DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE customers(
-     [O_ORDERKEY] DECIMAL(38) NOT NULL,
-     [O_CUSTKEY] DECIMAL(38) NOT NULL,
-     [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
-     [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
-     [O_ORDERDATE] DATETIME2(0) NOT NULL,
-     [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
-     )
-     WITH (
-     LOCATION='customer',
-     DATA_SOURCE= external_data_source_name
-     );
-```
-
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
-
-### L. Importing Data from ADLS into Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
-
-```sql
-
--- These values come from your Azure Active Directory Application used to authenticate to ADLS
-CREATE DATABASE SCOPED CREDENTIAL ADLUser
-WITH IDENTITY = '<clientID>@\<OAuth2.0TokenEndPoint>',
-SECRET = '<KEY>' ;
-
-CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
-WITH (TYPE = HADOOP,
-      LOCATION = 'adl://pbasetr.azuredatalakestore.net'
-)
-
-CREATE EXTERNAL FILE FORMAT TextFileFormat
-WITH
-(
-    FORMAT_TYPE = DELIMITEDTEXT 
-    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|'
-       , STRINGDELIMITER = ''
-      , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
-      , USETYPE_DEFAULT = FALSE
-      )
-)
-
-CREATE EXTERNAL TABLE [dbo].[DimProductexternal]
-( [ProductKey] [int] NOT NULL,
-  [ProductLabel] nvarchar NULL,
-  [ProductName] nvarchar NULL )
-WITH
-(
-    LOCATION='/DimProduct/' ,
-    DATA_SOURCE = AzureDataLakeStore ,
-    FILE_FORMAT = TextFileFormat ,
-    REJECT_TYPE = VALUE ,
-    REJECT_VALUE = 0
-) ;
-
-CREATE TABLE [dbo].[DimProduct]
-WITH (DISTRIBUTION = HASH([ProductKey] ) )
-AS SELECT * FROM
-[dbo].[DimProduct_external] ;
-```
-
-### M. Join external tables
-
-```sql
-SELECT url.description
-FROM ClickStream cs
-JOIN UrlDescription url ON cs.url = url.name
-WHERE cs.url = 'msdn.microsoft.com'
-;
-```
-
-### N. Join HDFS data with PDW data
+### A. Join HDFS data with Analytics Platform System data
 
 ```sql
 SELECT cs.user_ip FROM ClickStream cs
@@ -1565,7 +1128,7 @@ WHERE cs.url = 'www.microsoft.com'
 ;
 ```
 
-### O. Import row data from HDFS into a distributed PDW Table
+### B. Import row data from HDFS into a distributed Analytics Platform System Table
 
 ```sql
 CREATE TABLE ClickStream_PDW
@@ -1574,7 +1137,7 @@ AS SELECT url, event_date, user_ip FROM ClickStream
 ;
 ```
 
-### P. Import row data from HDFS into a replicated PDW Table
+### C. Import row data from HDFS into a replicated Analytics Platform System Table
 
 ```sql
 CREATE TABLE ClickStream_PDW

@@ -70,7 +70,7 @@ manager: craigg
 |**quorum_commit_time**|**datetime**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 
 
-### Permissions
+## Permissions
 
 Requires VIEW SERVER STATE permission on the server.  
 

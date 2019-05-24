@@ -8715,306 +8715,117 @@
       - name: DAC Framework Compatibility
         href: ../ssdt/dac-framework-compatibility.md
   - name: SQL Server Management Studio (SSMS)
-    href: ../ssms/sql-server-management-studio-ssms.md
     items:
-    - name: Download SSMS
+    - name: Download
       href: ../ssms/download-sql-server-management-studio-ssms.md
+    - name: Release Notes
+      href: ../ssms/release-notes-ssms.md
+    - name: Overview
       items:
-      - name: SSMS Release Notes and Previous Releases
-        href: ../ssms/release-notes-ssms.md
-      - name: Download related Release Notes
-        href: ../ssms/download-sql-server-management-studio-ssms.md#release-notes
-      - name: Install non-English SSMS
-        href: ../ssms/install-other-languages.md
-      - name: SSMS Support Policy
-        href: ../ssms/support-policy.md
-    - name: SQL Server Management Studio
-      href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+      - name: SSMS
+        items:
+        - name: SQL Server Management Studio (SSMS)
+          href: ../ssms/sql-server-management-studio-ssms.md
+        - name: Introduction to SSMS for BI
+          href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
+        - name: Install non-English SSMS
+          href: ../ssms/install-other-languages.md
+      - name: SQL Server Agent
+        items:
+        - name: SQL Server Agent
+          href: ../ssms/agent/sql-server-agent.md
+        - name: Post Download Instructions
+          href: ../ssms/agent/post-download-instructions.md
+        - name: Job Activity Monitor
+          href: ../ssms/agent/job-activity-monitor.md
+      - name: Register servers
+        items:
+        - name: Register servers
+          href: ../ssms/register-servers/register-servers.md
+      - name: Scripting
+        items:
+        - name: Scripting
+          href: ../ssms/scripting/database-engine-scripting.md
+        - name: Query & Text Editors
+          href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+        - name: Database Engine Query Editor
+          href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+        - name: XML Editor
+          href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+        - name: Configure Editors
+          href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
+        - name: Associate File Extensions to a Code Editor
+          href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+        - name: Change Font Color, Size, & Style
+          href: ../ssms/scripting/change-font-color-size-and-style.md
+        - name: Use the Properties Window in Management Studio
+          href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+        - name: Open an Editor
+          href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
+        - name: Manage the Editor & View Mode
+          href: ../ssms/scripting/manage-the-editor-and-view-mode.md
+        - name: Manage Code Formatting
+          href: ../ssms/scripting/manage-code-formatting.md
+        - name: Navigate Code & Text
+          href: ../ssms/scripting/navigate-code-and-text.md
+        - name: Color Coding in Query Editors
+          href: ../ssms/scripting/color-coding-in-query-editors.md
+    - name: Quickstarts
       items:
-      - name: Connect & Query SQL Server using SSMS
-        href: ../ssms/tutorials/connect-query-sql-server.md
-      - name: Scripting Objects in SSMS
-        href: ../ssms/tutorials/scripting-ssms.md
-      - name: Using Templates in SSMS
-        href: ../ssms/tutorials/templates-ssms.md
-      - name: SSMS Configuration
-        href: ../ssms/tutorials/ssms-configuration.md
-      - name: Tips & Tricks for using SSMS
-        href: ../ssms/tutorials/ssms-tricks.md
-    - name: General management
+      - name: SSMS
+        items: 
+        - name: Connect & query SQL Server
+          href: ../ssms/tutorials/connect-query-sql-server.md
+      - name: Register servers
+        items:
+        - name: Create a New Registered Server
+          href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
+    - name: Tutorials
       items:
-      - name: Introduction to SSMS for BI
-        href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
-      - name: Customize Menus & Shortcut Keys
-        href: ../ssms/customize-menus-and-shortcut-keys.md
-      - name: Tool Windows in SSMS
-        href: ../ssms/tool-windows-in-sql-server-management-studio.md
-      - name: Use SSMS to Build Database Projects
-        href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
-      - name: Understand SSMS Windows Management
-        href: ../ssms/understand-sql-server-management-studio-windows-management.md
-      - name: Administer Servers with SSMS
-        href: ../ssms/administer-servers-with-sql-server-management-studio.md
-      - name: Configure WMI to Show Server Status in SQL Server Tools
-        href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
-      - name: Arguments for External Tools
-        href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
-      - name: Add an External Tool to the Tools Menu
-        href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
-      - name: Configure Login Auditing
-        href: ../ssms/configure-login-auditing-sql-server-management-studio.md
-      - name: SSMS Utility
-        href: ../ssms/ssms-utility.md
-      - name: SSMS Keyboard Shortcuts
-        href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
-    - name: SQL Server Agent
-      href: ../ssms/agent/sql-server-agent.md
+      - name: SSMS
+        items:
+        - name: SQL Server Management Studio
+          href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+        - name: Connect & query SQL Server
+          href: ../ssms/tutorials/connect-query-sql-server.md
+        - name: Script objects
+          href: ../ssms/tutorials/scripting-ssms.md
+        - name: Templates in SSMS
+          href: ../ssms/tutorials/templates-ssms.md
+        - name: SSMS Configuration
+          href: ../ssms/tutorials/ssms-configuration.md
+      - name: Register servers
+        items:
+        - name: Register a Connected Server
+          href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
+        - name: Create a Central Management Server & Server Group
+          href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
+        - name: Execute Statements Against Multiple Servers Simultaneously
+          href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
+    - name: Concepts
       items:
-      - name: Post Download Instructions
-        href: ../ssms/agent/post-download-instructions.md
-      - name: Configure
-        href: ../ssms/agent/configure-sql-server-agent.md
+      - name: SSMS
         items:
-        - name: Assign a Job to a Job Category
-          href: ../ssms/agent/assign-a-job-to-a-job-category.md
-        - name: Assign Alerts to an Operator
-          href: ../ssms/agent/assign-alerts-to-an-operator.md
-        - name: Automatically Delete a Job
-          href: ../ssms/agent/automatically-delete-a-job.md
-        - name: Autostart SQL Server Agent
-          href: ../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md
-        - name: Change an Operator's Availability
-          href: ../ssms/agent/change-an-operator-s-availability.md
-        - name: Change the Membership of a Job Category
-          href: ../ssms/agent/change-the-membership-of-a-job-category.md
-        - name: Choose the Right Agent Service Account for Multiserver Environments
-          href: ../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
-        - name: Clear the Job History Log
-          href: ../ssms/agent/clear-the-job-history-log.md
-        - name: Configure a User to Create & Manage SQL Server Agent Jobs
-          href: ../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
-        - name: Enlist a Target Server to a Master Server
-          href: ../ssms/agent/enlist-a-target-server-to-a-master-server.md
-        - name: Force a Target Server to Poll the Master Server
-          href: ../ssms/agent/force-a-target-server-to-poll-the-master-server.md
-        - name: Format Pager Addresses for Alerts
-          href: ../ssms/agent/format-pager-addresses-for-alerts.md
-        - name: Give Others Ownership of a Job
-          href: ../ssms/agent/give-others-ownership-of-a-job.md
-        - name: Handle Multiple Job Steps
-          href: ../ssms/agent/handle-multiple-job-steps.md
-        - name: List Job Category Information
-          href: ../ssms/agent/list-job-category-information.md
-        - name: Make a Master Server
-          href: ../ssms/agent/make-a-master-server.md
-        - name: Make a Target Server
-          href: ../ssms/agent/make-a-target-server.md
-        - name: Manage Events
-          href: ../ssms/agent/manage-events.md
-        - name: Manage Job Steps
-          href: ../ssms/agent/manage-job-steps.md
-        - name: Manage Jobs Across an Enterprise
-          href: ../ssms/agent/manage-jobs-across-an-enterprise.md
-        - name: Manage Schedules
-          href: ../ssms/agent/manage-schedules.md
-        - name: Modify a Job
-          href: ../ssms/agent/modify-a-job.md
-        - name: Modify a SQL Server Agent Master Job
-          href: ../ssms/agent/modify-a-sql-server-agent-master-job.md
-        - name: Modify a SQL Server Agent Proxy
-          href: ../ssms/agent/modify-a-sql-server-agent-proxy.md
-        - name: Modify Target Server(s) Associated with an Agent Master Job
-          href: ../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
-        - name: Modify the Target Servers for a Job
-          href: ../ssms/agent/modify-the-target-servers-for-a-job.md
-        - name: Monitor Job Activity
-          href: ../ssms/agent/monitor-job-activity.md
-        - name: New Job Schedule - Job Schedule Properties
-          href: ../ssms/agent/new-job-schedule-job-schedule-properties.md
-        - name: Notify an Operator of Job Status
-          href: ../ssms/agent/notify-an-operator-of-job-status.md
-        - name: Operators
-          href: ../ssms/agent/operators.md
-        - name: Organize Jobs
-          href: ../ssms/agent/organize-jobs.md
-        - name: Pick Schedule for Job
-          href: ../ssms/agent/pick-schedule-for-job.md
-        - name: Poll Servers
-          href: ../ssms/agent/poll-servers.md
-        - name: Proxy Editor - Add Principal
-          href: ../ssms/agent/proxy-editor-add-principal.md
-        - name: Remove Steps from a SQL Server Agent Master Job
-          href: ../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md
-        - name: Resize the Job History Log
-          href: ../ssms/agent/resize-the-job-history-log.md
-        - name: Run Jobs
-          href: ../ssms/agent/run-jobs.md
-        - name: Schedule a Job
-          href: ../ssms/agent/schedule-a-job.md
-        - name: Select an Account for the SQL Server Agent Service
-          href: ../ssms/agent/select-an-account-for-the-sql-server-agent-service.md
-        - name: Send SQL Server Agent Error Messages
-          href: ../ssms/agent/send-sql-server-agent-error-messages.md
-        - name: Specify a Target Server's Location (SSMS)
-          href: ../ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md
-        - name: Specify Job Responses
-          href: ../ssms/agent/specify-job-responses.md
-        - name: SQL Server Agent Fixed Database Roles
-          href: ../ssms/agent/sql-server-agent-fixed-database-roles.md
-        - name: Synchronize Target Server Clocks (SSMS)
-          href: ../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md
-        - name: Troubleshoot Multiserver Jobs That Use Proxies
-          href: ../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md
-        - name: Tune Automated Administration Across an Enterprise
-          href: ../ssms/agent/tune-automated-administration-across-an-enterprise.md
-        - name: Use Performance Objects
-          href: ../ssms/agent/use-performance-objects.md
-        - name: Use Tokens in Job Steps
-          href: ../ssms/agent/use-tokens-in-job-steps.md
-        - name: Write Job Status to Windows Application Log
-          href: ../ssms/agent/write-the-job-status-to-the-windows-application-log.md
-      - name: Create
+        - name: Tool Windows in SSMS
+          href: ../ssms/tool-windows-in-sql-server-management-studio.md
+        - name: Use SSMS to Build Database Projects
+          href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
+        - name: Understand SSMS Windows Management
+          href: ../ssms/understand-sql-server-management-studio-windows-management.md
+        - name: Administer Servers with SSMS
+          href: ../ssms/administer-servers-with-sql-server-management-studio.md
+        - name: Arguments for External Tools
+          href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
+        - name: Add an External Tool to the Tools Menu
+          href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+        - name: SSMS Utility
+          href: ../ssms/ssms-utility.md
+        - name: SSMS Keyboard Shortcuts
+          href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
+      - name: SQL Server Agent
         items:
-        - name: a CmdExec Job Step
-          href: ../ssms/agent/create-a-cmdexec-job-step.md
-        - name: a Job Category
-          href: ../ssms/agent/create-a-job-category.md
-        - name: a Job
-          href: ../ssms/agent/create-a-job.md
-        - name: a Multiserver Environment
-          href: ../ssms/agent/create-a-multiserver-environment.md
-        - name: a PowerShell Script Job Step
-          href: ../ssms/agent/create-a-powershell-script-job-step.md
-        - name: a Schedule
-          href: ../ssms/agent/create-a-schedule.md
-        - name: a SQL Server Agent Master Job
-          href: ../ssms/agent/create-a-sql-server-agent-master-job.md
-        - name: a SQL Server Agent Proxy
-          href: ../ssms/agent/create-a-sql-server-agent-proxy.md
-        - name: a T-SQL Job Step
-          href: ../ssms/agent/create-a-transact-sql-job-step.md
-        - name: a User-Defined Event
-          href: ../ssms/agent/create-a-user-defined-event.md
-        - name: a WMI Event Alert
-          href: ../ssms/agent/create-a-wmi-event-alert.md
-        - name: an ActiveX Script Job Step
-          href: ../ssms/agent/create-an-activex-script-job-step.md
-        - name: an Alert Using an Error Number
-          href: ../ssms/agent/create-an-alert-using-an-error-number.md
-        - name: an Alert Using Severity Level
-          href: ../ssms/agent/create-an-alert-using-severity-level.md
-        - name: an Analysis Services Job Step
-          href: ../ssms/agent/create-an-analysis-services-job-step.md
-        - name: an Operator
-          href: ../ssms/agent/create-an-operator.md
-        - name: Create & Attach Schedules to Jobs
-          href: ../ssms/agent/create-and-attach-schedules-to-jobs.md
-        - name: Jobs
-          href: ../ssms/agent/create-jobs.md
-      - name: Defect
-        items:
-        - name: a Target Server from a Master Server
-          href: ../ssms/agent/defect-a-target-server-from-a-master-server.md
-        - name: Multiple Target Servers from a Master Server
-          href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
-      - name: Define
-        items:
-        - name: the Response to an Alert (SSMS)
-          href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
-        - name: T-SQL Job Step Options
-          href: ../ssms/agent/define-transact-sql-job-step-options.md
-      - name: Delete
-        items:
-        - name: a Job Category
-          href: ../ssms/agent/delete-a-job-category.md
-        - name: a Job Step Log
-          href: ../ssms/agent/delete-a-job-step-log.md
-        - name: a SQL Server Agent Proxy
-          href: ../ssms/agent/delete-a-sql-server-agent-proxy.md
-        - name: an Alert
-          href: ../ssms/agent/delete-an-alert.md
-        - name: an Operator
-          href: ../ssms/agent/delete-an-operator.md
-        - name: Jobs
-          href: ../ssms/agent/delete-jobs.md
-        - name: One or More Jobs
-          href: ../ssms/agent/delete-one-or-more-jobs.md
-        - name: Operator
-          href: ../ssms/agent/delete-operator.md
-      - name: Designate
-        items:
-        - name: a Fail-Safe Operator
-          href: ../ssms/agent/designate-a-fail-safe-operator.md
-        - name: an Events Forwarding Server (SSMS)
-          href: ../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md
-      - name: Disable
-        items:
-        - name: Disable or Enable a Job
-          href: ../ssms/agent/disable-or-enable-a-job.md
-        - name: Disable or Reactivate an Alert
-          href: ../ssms/agent/disable-or-reactivate-an-alert.md
-      - name: Edit
-        items:
-        - name: Edit an Alert
-          href: ../ssms/agent/edit-an-alert.md
-        - name: Edit an Operator
-          href: ../ssms/agent/edit-an-operator.md
-      - name: Set
-        items:
-        - name: an Alias for SQL Server Agent Service
-          href: ../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
-        - name: CPU Idle Time & Duration (SSMS)
-          href: ../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md
-        - name: Encryption Options on Target Servers
-          href: ../ssms/agent/set-encryption-options-on-target-servers.md
-        - name: Job Execution Shutdown (SSMS)
-          href: ../ssms/agent/set-job-execution-shutdown-sql-server-management-studio.md
-        - name: Job Step Success or Failure Flow
-          href: ../ssms/agent/set-job-step-success-or-failure-flow.md
-        - name: the Polling Interval for Target Servers
-          href: ../ssms/agent/set-the-polling-interval-for-target-servers.md
-        - name: the Service Startup Account for SQL Server Agent
-          href: ../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
-        - name: the SQL Server Connection for Agent Service
-          href: ../ssms/agent/set-sql-server-connection-for-sql-server-agent-service-ssms.md
-        - name: Up the Job History Log
-          href: ../ssms/agent/set-up-the-job-history-log.md
-      - name: Start & Stop
-        items:
-        - name: Start a Job
-          href: ../ssms/agent/start-a-job.md
-        - name: Start, Stop, or Pause the SQL Server Agent Service
-          href: ../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md
-        - name: Stop a Job
-          href: ../ssms/agent/stop-a-job.md
-      - name: View
-        items:
-        - name: a Job
-          href: ../ssms/agent/view-a-job.md
-        - name: Information About an Alert
-          href: ../ssms/agent/view-information-about-an-alert.md
-        - name: Information About an Operator
-          href: ../ssms/agent/view-information-about-an-operator.md
-        - name: Job Activity
-          href: ../ssms/agent/view-job-activity.md
-        - name: Job Step Information
-          href: ../ssms/agent/view-job-step-information.md
-        - name: View or Modify Jobs
-          href: ../ssms/agent/view-or-modify-jobs.md
-        - name: the Job History
-          href: ../ssms/agent/view-the-job-history.md
-      - name: Error Log
-        href: ../ssms/agent/sql-server-agent-error-log.md
-        items:
-        - name: View SQL Server Agent Error Log
-          href: ../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md
-        - name: Rename a SQL Server Agent Error Log (SSMS)
-          href: ../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md
-        - name: Write Execution Trace Messages to the SQL Server Agent Error Log (SSMS)
-          href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
-      - name: Automated Administration Tasks
-        href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
-        items:
+        - name: Automated Administration Tasks
+          href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
         - name: Implement Agent Security
           href: ../ssms/agent/implement-sql-server-agent-security.md
         - name: Implement Jobs
@@ -9023,15 +8834,10 @@
           href: ../ssms/agent/monitor-and-respond-to-events.md
         - name: Automated Administration Across an Enterprise
           href: ../ssms/agent/automated-administration-across-an-enterprise.md
-          items:
-          - name: Change Steps of a SQL Server Agent Master Job
-            href: ../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md
-          - name: Change Scheduling Details for Master Job
-            href: ../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md
-      - name: Reference
-        items:
-        - name: Job Activity Monitor
-          href: ../ssms/agent/job-activity-monitor.md
+        - name: Change Steps of a SQL Server Agent Master Job
+          href: ../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md
+        - name: Change Scheduling Details for Master Job
+          href: ../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md
         - name: F1 Help
           href: ../ssms/agent/sql-server-agent-f1-help.md
           items:
@@ -9122,60 +8928,436 @@
             href: ../ssms/agent/proxy-account-properties-new-proxy-account-general-page.md
           - name: New Proxy Account (Principals Tab)
             href: ../ssms/agent/proxy-account-properties-new-proxy-account-principals-tab.md
-    - name: Register servers
-      href: ../ssms/register-servers/register-servers.md
-      items:
-      - name: Register a Connected Server
-        href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
-      - name: Create a New Registered Server
-        href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
-      - name: View Registered Servers in SQL Server Management Studio
-        href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
-      - name: Remove a Registered Server
-        href: ../ssms/register-servers/remove-a-registered-server-sql-server-management-studio.md
-      - name: Change a Server's Registration
-        href: ../ssms/register-servers/change-a-server-s-registration-sql-server-management-studio.md
-      - name: Connect to a Registered Server
-        href: ../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md
-      - name: Disconnect from a Registered Server
-        href: ../ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md
-      - name: Move a Registered Server or Registered Server Group
-        href: ../ssms/register-servers/move-a-registered-server-or-registered-server-group.md
-      - name: Change the Name of a Registered Server or Registered Server Group
-        href: ../ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group.md
-      - name: Create or Edit a Server Group
-        href: ../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md
-      - name: Remove a Server Group
-        href: ../ssms/register-servers/remove-a-server-group-sql-server-management-studio.md
-      - name: Export Registered Server Information
-        href: ../ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
-      - name: Import Registered Server Information
-        href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-      - name: Create a Central Management Server & Server Group
-        href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
-      - name: Execute Statements Against Multiple Servers Simultaneously
-        href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
-      - name: Registered Servers F1 Help
-        href: ../ssms/register-servers/registered-servers-f1-help.md
-    - name: Scripting
-      href: ../ssms/scripting/database-engine-scripting.md
-      items:
-      - name: Query & Text Editors
-        href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+      - name: Register servers
         items:
-        - name: Database Engine Query Editor
-          href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
-        - name: XML Editor
-          href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+        - name: Registered Servers F1 Help
+          href: ../ssms/register-servers/registered-servers-f1-help.md
+      - name: Scripting
+        items:
+        - name: Query & Text Editors
+          items:
+          - name: Query & Text Editors
+            href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+          - name: Database Engine Query Editor
+            href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+          - name: XML Editor
+            href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+          - name: Color Coding in Query Editors
+            href: ../ssms/scripting/color-coding-in-query-editors.md
+        - name: Code Outlining
+          href: ../ssms/scripting/code-outlining.md
+        - name: Drag & Drop Text
+          href: ../ssms/scripting/drag-and-drop-text.md
+        - name: Search & Replace
+          href: ../ssms/scripting/search-and-replace.md
+          items:
+          - name: Search an Active Document Incrementally
+            href: ../ssms/scripting/search-an-active-document-incrementally.md
+          - name: Search Documents Interactively
+            href: ../ssms/scripting/search-documents-interactively.md
+          - name: Search Documents Using Results Lists
+            href: ../ssms/scripting/search-documents-using-results-lists.md
+          - name: Search Text with Wildcards
+            href: ../ssms/scripting/search-text-with-wildcards.md
+          - name: Search Text with Regular Expressions
+            href: ../ssms/scripting/search-text-with-regular-expressions.md
+          - name: Find & Replace
+            href: ../ssms/scripting/find-and-replace.md
+          - name: Find in Files
+            href: ../ssms/scripting/find-in-files.md
+          - name: Find Results Windows
+            href: ../ssms/scripting/find-results-windows.md
+          - name: Replace in Files
+            href: ../ssms/scripting/replace-in-files.md
+        - name: Manage Bookmarks
+          href: ../ssms/scripting/manage-bookmarks.md
+          items:
+          - name: Bookmarks F1 Help
+            href: ../ssms/scripting/bookmarks-f1-help.md
+        - name: Print Code & Results
+          href: ../ssms/scripting/print-code-and-results.md
+        - name: IntelliSense
+          href: ../ssms/scripting/intellisense-sql-server-management-studio.md
+          items:
+          - name: Configure IntelliSense
+            href: ../ssms/scripting/configure-intellisense-sql-server-management-studio.md
+          - name: Parameter Info (IntelliSense)
+            href: ../ssms/scripting/parameter-info-intellisense.md
+          - name: Quick Info (IntelliSense)
+            href: ../ssms/scripting/quick-info-intellisense.md
+          - name: Complete Word (IntelliSense)
+            href: ../ssms/scripting/complete-word-intellisense.md
+          - name: Automatic Matching of Syntax Pairs
+            href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
+          - name: Troubleshooting IntelliSense (SSMS)
+            href: ../ssms/scripting/troubleshooting-intellisense.md
+          - name: T-SQL Syntax Supported by IntelliSense
+            href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
+        - name: T-SQL Code Snippets
+          href: ../ssms/scripting/transact-sql-code-snippets.md
+          items:
+          - name: Insert T-SQL Snippets
+            href: ../ssms/scripting/insert-transact-sql-snippets.md
+          - name: Insert Surround-with T-SQL snippets
+            href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
+          - name: Complete T-SQL Snippets
+            href: ../ssms/scripting/complete-transact-sql-snippets.md
+          - name: Add T-SQL Snippets
+            href: ../ssms/scripting/add-transact-sql-snippets.md
+        - name: T-SQL Debugger
+          href: ../ssms/scripting/transact-sql-debugger.md
+          items:
+          - name: Configure firewall rules before running the T-SQL Debugger
+            href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
+          - name: Run the T-SQL Debugger
+            href: ../ssms/scripting/run-the-transact-sql-debugger.md
+          - name: Step Through T-SQL Code
+            href: ../ssms/scripting/step-through-transact-sql-code.md
+          - name: T-SQL Breakpoints
+            href: ../ssms/scripting/transact-sql-breakpoints.md
+            items:
+            - name: Toggle a Breakpoint
+              href: ../ssms/scripting/toggle-a-breakpoint.md
+            - name: Enable, Disable, & Delete Breakpoints
+              href: ../ssms/scripting/enable-disable-and-delete-breakpoints.md
+            - name: Specify a Breakpoint Condition
+              href: ../ssms/scripting/specify-a-breakpoint-condition.md
+            - name: Specify a Hit Count
+              href: ../ssms/scripting/specify-a-hit-count.md
+            - name: Specify a Breakpoint Filter
+              href: ../ssms/scripting/specify-a-breakpoint-filter.md
+            - name: Specify a Breakpoint Action
+              href: ../ssms/scripting/specify-a-breakpoint-action.md
+            - name: Edit a Breakpoint Location
+              href: ../ssms/scripting/edit-a-breakpoint-location.md
+          - name: T-SQL Debugger - Information
+            href: ../ssms/scripting/transact-sql-debugger-information.md
+            items:
+            - name: T-SQL Debugger - Error List Window
+              href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
+            - name: T-SQL Debugger - Breakpoints Window
+              href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
+            - name: T-SQL Debugger - Call Stack Window
+              href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
+            - name: T-SQL Debugger - Locals Window
+              href: ../ssms/scripting/transact-sql-debugger-locals-window.md
+            - name: T-SQL Debugger - Threads Window
+              href: ../ssms/scripting/transact-sql-debugger-threads-window.md
+            - name: T-SQL Debugger - Command Window
+              href: ../ssms/scripting/transact-sql-debugger-command-window.md
+            - name: T-SQL Debugger - Output Window
+              href: ../ssms/scripting/transact-sql-debugger-output-window.md
+            - name: T-SQL Debugger - Watch Window
+              href: ../ssms/scripting/transact-sql-debugger-watch-window.md
+            - name: T-SQL Debugger - QuickWatch Dialog Box
+              href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
+          - name: Status Bar (Database Engine Query Editor)
+            href: ../ssms/scripting/status-bar-database-engine-query-editor.md
+          - name: View Spatial Data in Object Explorer
+            href: ../ssms/scripting/view-spatial-data-in-object-explorer.md
+            items:
+            - name: Spatial Results Window
+              href: ../ssms/scripting/spatial-results-window.md
+            - name: Generate Scripts
+              href: ../ssms/scripting/generate-scripts-sql-server-management-studio.md
+              items:
+              - name: Generate & Publish Scripts Wizard
+                href: ../ssms/scripting/generate-and-publish-scripts-wizard.md
+                items:
+                - name: Objects Supported by the Generate Scripts Wizard
+                  href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+    - name: How-to guides
+      items:
+      - name: SSMS
+        items:
+        - name: Customize Menus & Shortcut Keys
+          href: ../ssms/customize-menus-and-shortcut-keys.md
+        - name: Configure WMI to Show Server Status in SQL Server Tools
+          href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
+        - name: Configure Login Auditing
+          href: ../ssms/configure-login-auditing-sql-server-management-studio.md
+        - name: Troubleshoot
+          items:
+          - name: Get full memory dump
+            href: ../ssms/troubleshoot/get-full-memory-dump.md
+      - name: SQL Server Agent
+        items:
+        - name: Configure
+          items:
+          - name: Configure
+            href: ../ssms/agent/configure-sql-server-agent.md
+          - name: Assign a Job to a Job Category
+            href: ../ssms/agent/assign-a-job-to-a-job-category.md
+          - name: Assign Alerts to an Operator
+            href: ../ssms/agent/assign-alerts-to-an-operator.md
+          - name: Automatically Delete a Job
+            href: ../ssms/agent/automatically-delete-a-job.md
+          - name: Autostart SQL Server Agent
+            href: ../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md
+          - name: Change an Operator's Availability
+            href: ../ssms/agent/change-an-operator-s-availability.md
+          - name: Change the Membership of a Job Category
+            href: ../ssms/agent/change-the-membership-of-a-job-category.md
+          - name: Choose the Right Agent Service Account for Multiserver Environments
+            href: ../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
+          - name: Clear the Job History Log
+            href: ../ssms/agent/clear-the-job-history-log.md
+          - name: Configure a User to Create & Manage SQL Server Agent Jobs
+            href: ../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
+          - name: Enlist a Target Server to a Master Server
+            href: ../ssms/agent/enlist-a-target-server-to-a-master-server.md
+          - name: Force a Target Server to Poll the Master Server
+            href: ../ssms/agent/force-a-target-server-to-poll-the-master-server.md
+          - name: Format Pager Addresses for Alerts
+            href: ../ssms/agent/format-pager-addresses-for-alerts.md
+          - name: Give Others Ownership of a Job
+            href: ../ssms/agent/give-others-ownership-of-a-job.md
+          - name: Handle Multiple Job Steps
+            href: ../ssms/agent/handle-multiple-job-steps.md
+          - name: List Job Category Information
+            href: ../ssms/agent/list-job-category-information.md
+          - name: Make a Master Server
+            href: ../ssms/agent/make-a-master-server.md
+          - name: Make a Target Server
+            href: ../ssms/agent/make-a-target-server.md
+          - name: Manage Events
+            href: ../ssms/agent/manage-events.md
+          - name: Manage Job Steps
+            href: ../ssms/agent/manage-job-steps.md
+          - name: Manage Jobs Across an Enterprise
+            href: ../ssms/agent/manage-jobs-across-an-enterprise.md
+          - name: Manage Schedules
+            href: ../ssms/agent/manage-schedules.md
+          - name: Modify a Job
+            href: ../ssms/agent/modify-a-job.md
+          - name: Modify a SQL Server Agent Master Job
+            href: ../ssms/agent/modify-a-sql-server-agent-master-job.md
+          - name: Modify a SQL Server Agent Proxy
+            href: ../ssms/agent/modify-a-sql-server-agent-proxy.md
+          - name: Modify Target Server(s) Associated with an Agent Master Job
+            href: ../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
+          - name: Modify the Target Servers for a Job
+            href: ../ssms/agent/modify-the-target-servers-for-a-job.md
+          - name: Monitor Job Activity
+            href: ../ssms/agent/monitor-job-activity.md
+          - name: New Job Schedule - Job Schedule Properties
+            href: ../ssms/agent/new-job-schedule-job-schedule-properties.md
+          - name: Notify an Operator of Job Status
+            href: ../ssms/agent/notify-an-operator-of-job-status.md
+          - name: Operators
+            href: ../ssms/agent/operators.md
+          - name: Organize Jobs
+            href: ../ssms/agent/organize-jobs.md
+          - name: Pick Schedule for Job
+            href: ../ssms/agent/pick-schedule-for-job.md
+          - name: Poll Servers
+            href: ../ssms/agent/poll-servers.md
+          - name: Proxy Editor - Add Principal
+            href: ../ssms/agent/proxy-editor-add-principal.md
+          - name: Remove Steps from a SQL Server Agent Master Job
+            href: ../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md
+          - name: Resize the Job History Log
+            href: ../ssms/agent/resize-the-job-history-log.md
+          - name: Run Jobs
+            href: ../ssms/agent/run-jobs.md
+          - name: Schedule a Job
+            href: ../ssms/agent/schedule-a-job.md
+          - name: Select an Account for the SQL Server Agent Service
+            href: ../ssms/agent/select-an-account-for-the-sql-server-agent-service.md
+          - name: Send SQL Server Agent Error Messages
+            href: ../ssms/agent/send-sql-server-agent-error-messages.md
+          - name: Specify a Target Server's Location (SSMS)
+            href: ../ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md
+          - name: Specify Job Responses
+            href: ../ssms/agent/specify-job-responses.md
+          - name: SQL Server Agent Fixed Database Roles
+            href: ../ssms/agent/sql-server-agent-fixed-database-roles.md
+          - name: Synchronize Target Server Clocks (SSMS)
+            href: ../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md
+          - name: Troubleshoot Multiserver Jobs That Use Proxies
+            href: ../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md
+          - name: Tune Automated Administration Across an Enterprise
+            href: ../ssms/agent/tune-automated-administration-across-an-enterprise.md
+          - name: Use Performance Objects
+            href: ../ssms/agent/use-performance-objects.md
+          - name: Use Tokens in Job Steps
+            href: ../ssms/agent/use-tokens-in-job-steps.md
+          - name: Write Job Status to Windows Application Log
+            href: ../ssms/agent/write-the-job-status-to-the-windows-application-log.md
+        - name: Create
+          items:
+          - name: a CmdExec Job Step
+            href: ../ssms/agent/create-a-cmdexec-job-step.md
+          - name: a Job Category
+            href: ../ssms/agent/create-a-job-category.md
+          - name: a Job
+            href: ../ssms/agent/create-a-job.md
+          - name: a Multiserver Environment
+            href: ../ssms/agent/create-a-multiserver-environment.md
+          - name: a PowerShell Script Job Step
+            href: ../ssms/agent/create-a-powershell-script-job-step.md
+          - name: a Schedule
+            href: ../ssms/agent/create-a-schedule.md
+          - name: a SQL Server Agent Master Job
+            href: ../ssms/agent/create-a-sql-server-agent-master-job.md
+          - name: a SQL Server Agent Proxy
+            href: ../ssms/agent/create-a-sql-server-agent-proxy.md
+          - name: a T-SQL Job Step
+            href: ../ssms/agent/create-a-transact-sql-job-step.md
+          - name: a User-Defined Event
+            href: ../ssms/agent/create-a-user-defined-event.md
+          - name: a WMI Event Alert
+            href: ../ssms/agent/create-a-wmi-event-alert.md
+          - name: an ActiveX Script Job Step
+            href: ../ssms/agent/create-an-activex-script-job-step.md
+          - name: an Alert Using an Error Number
+            href: ../ssms/agent/create-an-alert-using-an-error-number.md
+          - name: an Alert Using Severity Level
+            href: ../ssms/agent/create-an-alert-using-severity-level.md
+          - name: an Analysis Services Job Step
+            href: ../ssms/agent/create-an-analysis-services-job-step.md
+          - name: an Operator
+            href: ../ssms/agent/create-an-operator.md
+          - name: Create & Attach Schedules to Jobs
+            href: ../ssms/agent/create-and-attach-schedules-to-jobs.md
+          - name: Jobs
+            href: ../ssms/agent/create-jobs.md
+        - name: Defect
+          items:
+          - name: a Target Server from a Master Server
+            href: ../ssms/agent/defect-a-target-server-from-a-master-server.md
+          - name: Multiple Target Servers from a Master Server
+            href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
+        - name: Define
+          items:
+          - name: the Response to an Alert (SSMS)
+            href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
+          - name: T-SQL Job Step Options
+            href: ../ssms/agent/define-transact-sql-job-step-options.md
+        - name: Delete
+          items:
+          - name: a Job Category
+            href: ../ssms/agent/delete-a-job-category.md
+          - name: a Job Step Log
+            href: ../ssms/agent/delete-a-job-step-log.md
+          - name: a SQL Server Agent Proxy
+            href: ../ssms/agent/delete-a-sql-server-agent-proxy.md
+          - name: an Alert
+            href: ../ssms/agent/delete-an-alert.md
+          - name: an Operator
+            href: ../ssms/agent/delete-an-operator.md
+          - name: Jobs
+            href: ../ssms/agent/delete-jobs.md
+          - name: One or More Jobs
+            href: ../ssms/agent/delete-one-or-more-jobs.md
+          - name: Operator
+            href: ../ssms/agent/delete-operator.md
+        - name: Designate
+          items:
+          - name: a Fail-Safe Operator
+            href: ../ssms/agent/designate-a-fail-safe-operator.md
+          - name: an Events Forwarding Server (SSMS)
+            href: ../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md
+        - name: Disable
+          items:
+          - name: Disable or Enable a Job
+            href: ../ssms/agent/disable-or-enable-a-job.md
+          - name: Disable or Reactivate an Alert
+            href: ../ssms/agent/disable-or-reactivate-an-alert.md
+        - name: Edit
+          items:
+          - name: Edit an Alert
+            href: ../ssms/agent/edit-an-alert.md
+          - name: Edit an Operator
+            href: ../ssms/agent/edit-an-operator.md
+        - name: Set
+          items:
+          - name: an Alias for SQL Server Agent Service
+            href: ../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
+          - name: CPU Idle Time & Duration (SSMS)
+            href: ../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md
+          - name: Encryption Options on Target Servers
+            href: ../ssms/agent/set-encryption-options-on-target-servers.md
+          - name: Job Execution Shutdown (SSMS)
+            href: ../ssms/agent/set-job-execution-shutdown-sql-server-management-studio.md
+          - name: Job Step Success or Failure Flow
+            href: ../ssms/agent/set-job-step-success-or-failure-flow.md
+          - name: the Polling Interval for Target Servers
+            href: ../ssms/agent/set-the-polling-interval-for-target-servers.md
+          - name: the Service Startup Account for SQL Server Agent
+            href: ../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
+          - name: the SQL Server Connection for Agent Service
+            href: ../ssms/agent/set-sql-server-connection-for-sql-server-agent-service-ssms.md
+          - name: Up the Job History Log
+            href: ../ssms/agent/set-up-the-job-history-log.md
+        - name: Start & Stop
+          items:
+          - name: Start a Job
+            href: ../ssms/agent/start-a-job.md
+          - name: Start, Stop, or Pause the SQL Server Agent Service
+            href: ../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md
+          - name: Stop a Job
+            href: ../ssms/agent/stop-a-job.md
+        - name: View
+          items:
+          - name: a Job
+            href: ../ssms/agent/view-a-job.md
+          - name: Information About an Alert
+            href: ../ssms/agent/view-information-about-an-alert.md
+          - name: Information About an Operator
+            href: ../ssms/agent/view-information-about-an-operator.md
+          - name: Job Activity
+            href: ../ssms/agent/view-job-activity.md
+          - name: Job Step Information
+            href: ../ssms/agent/view-job-step-information.md
+          - name: View or Modify Jobs
+            href: ../ssms/agent/view-or-modify-jobs.md
+          - name: the Job History
+            href: ../ssms/agent/view-the-job-history.md
+        - name: Error Log
+          items:
+          - name: Error Log
+            href: ../ssms/agent/sql-server-agent-error-log.md
+          - name: View SQL Server Agent Error Log
+            href: ../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md
+          - name: Rename a SQL Server Agent Error Log (SSMS)
+            href: ../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md
+          - name: Write Execution Trace Messages to the SQL Server Agent Error Log (SSMS)
+            href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
+      - name: Register servers
+        items:
+        - name: View Registered Servers in SQL Server Management Studio
+          href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
+        - name: Remove a Registered Server
+          href: ../ssms/register-servers/remove-a-registered-server-sql-server-management-studio.md
+        - name: Change a Server's Registration
+          href: ../ssms/register-servers/change-a-server-s-registration-sql-server-management-studio.md
+        - name: Connect to a Registered Server
+          href: ../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md
+        - name: Disconnect from a Registered Server
+          href: ../ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md
+        - name: Move a Registered Server or Registered Server Group
+          href: ../ssms/register-servers/move-a-registered-server-or-registered-server-group.md
+        - name: Change the Name of a Registered Server or Registered Server Group
+          href: ../ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group.md
+        - name: Create or Edit a Server Group
+          href: ../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md
+        - name: Remove a Server Group
+          href: ../ssms/register-servers/remove-a-server-group-sql-server-management-studio.md
+        - name: Export Registered Server Information
+          href: ../ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
+        - name: Import Registered Server Information
+          href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
+      - name: Scripting
+        items:
         - name: Configure Editors
           href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
-          items:
-          - name: Associate File Extensions to a Code Editor
-            href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
-          - name: Change Font Color, Size, & Style
-            href: ../ssms/scripting/change-font-color-size-and-style.md
-          - name: Use the Properties Window in Management Studio
-            href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+        - name: Associate File Extensions to a Code Editor
+          href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+        - name: Change Font Color, Size, & Style
+          href: ../ssms/scripting/change-font-color-size-and-style.md
+        - name: Use the Properties Window in Management Studio
+          href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
         - name: Open an Editor
           href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
         - name: Manage the Editor & View Mode
@@ -9184,141 +9366,20 @@
           href: ../ssms/scripting/manage-code-formatting.md
         - name: Navigate Code & Text
           href: ../ssms/scripting/navigate-code-and-text.md
-        - name: Color Coding in Query Editors
-          href: ../ssms/scripting/color-coding-in-query-editors.md
-      - name: Code Outlining
-        href: ../ssms/scripting/code-outlining.md
-      - name: Drag & Drop Text
-        href: ../ssms/scripting/drag-and-drop-text.md
-      - name: Search & Replace
-        href: ../ssms/scripting/search-and-replace.md
-        items:
-        - name: Search an Active Document Incrementally
-          href: ../ssms/scripting/search-an-active-document-incrementally.md
-        - name: Search Documents Interactively
-          href: ../ssms/scripting/search-documents-interactively.md
-        - name: Search Documents Using Results Lists
-          href: ../ssms/scripting/search-documents-using-results-lists.md
-        - name: Search Text with Wildcards
-          href: ../ssms/scripting/search-text-with-wildcards.md
-        - name: Search Text with Regular Expressions
-          href: ../ssms/scripting/search-text-with-regular-expressions.md
-        - name: Find & Replace
-          href: ../ssms/scripting/find-and-replace.md
-        - name: Find in Files
-          href: ../ssms/scripting/find-in-files.md
-        - name: Find Results Windows
-          href: ../ssms/scripting/find-results-windows.md
-        - name: Replace in Files
-          href: ../ssms/scripting/replace-in-files.md
-      - name: Manage Bookmarks
-        href: ../ssms/scripting/manage-bookmarks.md
-        items:
-        - name: Bookmarks F1 Help
-          href: ../ssms/scripting/bookmarks-f1-help.md
-      - name: Print Code & Results
-        href: ../ssms/scripting/print-code-and-results.md
-      - name: Edit SQLCMD Scripts with Query Editor
-        href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
-      - name: IntelliSense
-        href: ../ssms/scripting/intellisense-sql-server-management-studio.md
-        items:
-        - name: Configure IntelliSense
-          href: ../ssms/scripting/configure-intellisense-sql-server-management-studio.md
-        - name: Parameter Info (IntelliSense)
-          href: ../ssms/scripting/parameter-info-intellisense.md
-        - name: Quick Info (IntelliSense)
-          href: ../ssms/scripting/quick-info-intellisense.md
-        - name: Complete Word (IntelliSense)
-          href: ../ssms/scripting/complete-word-intellisense.md
-        - name: Automatic Matching of Syntax Pairs
-          href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
-        - name: Troubleshooting IntelliSense (SSMS)
-          href: ../ssms/scripting/troubleshooting-intellisense.md
-        - name: T-SQL Syntax Supported by IntelliSense
-          href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
-      - name: T-SQL Code Snippets
-        href: ../ssms/scripting/transact-sql-code-snippets.md
-        items:
-        - name: Insert T-SQL Snippets
-          href: ../ssms/scripting/insert-transact-sql-snippets.md
-        - name: Insert Surround-with T-SQL snippets
-          href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
-        - name: Complete T-SQL Snippets
-          href: ../ssms/scripting/complete-transact-sql-snippets.md
-        - name: Add T-SQL Snippets
-          href: ../ssms/scripting/add-transact-sql-snippets.md
-      - name: T-SQL Debugger
-        href: ../ssms/scripting/transact-sql-debugger.md
-        items:
-        - name: Configure firewall rules before running the T-SQL Debugger
-          href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-        - name: Run the T-SQL Debugger
-          href: ../ssms/scripting/run-the-transact-sql-debugger.md
-        - name: Step Through T-SQL Code
-          href: ../ssms/scripting/step-through-transact-sql-code.md
-        - name: T-SQL Breakpoints
-          href: ../ssms/scripting/transact-sql-breakpoints.md
-          items:
-          - name: Toggle a Breakpoint
-            href: ../ssms/scripting/toggle-a-breakpoint.md
-          - name: Enable, Disable, & Delete Breakpoints
-            href: ../ssms/scripting/enable-disable-and-delete-breakpoints.md
-          - name: Specify a Breakpoint Condition
-            href: ../ssms/scripting/specify-a-breakpoint-condition.md
-          - name: Specify a Hit Count
-            href: ../ssms/scripting/specify-a-hit-count.md
-          - name: Specify a Breakpoint Filter
-            href: ../ssms/scripting/specify-a-breakpoint-filter.md
-          - name: Specify a Breakpoint Action
-            href: ../ssms/scripting/specify-a-breakpoint-action.md
-          - name: Edit a Breakpoint Location
-            href: ../ssms/scripting/edit-a-breakpoint-location.md
-        - name: T-SQL Debugger - Information
-          href: ../ssms/scripting/transact-sql-debugger-information.md
-          items:
-          - name: T-SQL Debugger - Error List Window
-            href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
-          - name: T-SQL Debugger - Breakpoints Window
-            href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
-          - name: T-SQL Debugger - Call Stack Window
-            href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
-          - name: T-SQL Debugger - Locals Window
-            href: ../ssms/scripting/transact-sql-debugger-locals-window.md
-          - name: T-SQL Debugger - Threads Window
-            href: ../ssms/scripting/transact-sql-debugger-threads-window.md
-          - name: T-SQL Debugger - Command Window
-            href: ../ssms/scripting/transact-sql-debugger-command-window.md
-          - name: T-SQL Debugger - Output Window
-            href: ../ssms/scripting/transact-sql-debugger-output-window.md
-          - name: T-SQL Debugger - Watch Window
-            href: ../ssms/scripting/transact-sql-debugger-watch-window.md
-          - name: T-SQL Debugger - QuickWatch Dialog Box
-            href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
-        - name: Status Bar (Database Engine Query Editor)
-          href: ../ssms/scripting/status-bar-database-engine-query-editor.md
-        - name: View Spatial Data in Object Explorer
-          href: ../ssms/scripting/view-spatial-data-in-object-explorer.md
-          items:
-          - name: Spatial Results Window
-            href: ../ssms/scripting/spatial-results-window.md
-          - name: Generate Scripts
-            href: ../ssms/scripting/generate-scripts-sql-server-management-studio.md
-            items:
-            - name: Generate & Publish Scripts Wizard
-              href: ../ssms/scripting/generate-and-publish-scripts-wizard.md
-              items:
-              - name: Objects Supported by the Generate Scripts Wizard
-                href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-    - name: Troubleshoot
-      items:
-      - name: Get Full Memory Dump
-        href: ../ssms/troubleshoot/get-full-memory-dump.md
+        - name: Edit SQLCMD Scripts with Query Editor
+          href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
     - name: References
       items:
-      - name: The SSMS Environment
-        href: ../ssms/the-sql-server-management-studio-environment.md
+      - name: SQL Server PowerShell
+        href: ../powershell/sql-server-powershell.md
+      - name: SQL Server Management Objects (SMO)
+        href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
+      - name: Transact-SQL Reference (Database Engine)
+        href: ../t-sql/language-reference.md
+      - name: SSMS environment
         items:
+        - name: The SSMS Environment
+          href: ../ssms/the-sql-server-management-studio-environment.md
         - name: General User Interface Elements
           href: ../ssms/general-user-interface-elements.md
         - name: Arguments Dialog Box
@@ -9337,9 +9398,10 @@
           href: ../ssms/output-window.md
         - name: Use the Toolbox
           href: ../ssms/use-the-toolbox.md
-      - name: F1 Help for Server Connections (SSMS)
-        href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+      - name: F1 help
         items:
+        - name: F1 Help for Server Connections (SSMS)
+          href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
         - name: Connect to Microsoft Azure Storage
           href: ../ssms/f1-help/connect-to-microsoft-azure-storage.md
         - name: Connect to Any SQL Server Component from SQL Server Management Studio
@@ -9430,9 +9492,10 @@
           href: ../ssms/object/object-explorer.md
         - name: Add Steps to a SQL Server Agent Master Job
           href: ../ssms/object/add-steps-to-a-sql-server-agent-master-job.md
-      - name: Manage Objects by Using Object Explorer
-        href: ../ssms/object/manage-objects-by-using-object-explorer.md
+      - name: Manage objects
         items:
+        - name: Manage Objects by Using Object Explorer
+          href: ../ssms/object/manage-objects-by-using-object-explorer.md
         - name: Use Custom Reports with Object Explorer Node Properties
           href: ../ssms/object/use-custom-reports-with-object-explorer-node-properties.md
         - name: Object Dependencies
@@ -9469,9 +9532,10 @@
           href: ../ssms/object/options-sql-server-object-explorer-commands.md
         - name: Unsuppress Run Custom Report Warnings
           href: ../ssms/object/unsuppress-run-custom-report-warnings.md
-      - name: Solution Explorer
-        href: ../ssms/solution/solution-explorer.md
+      - name: Solution explorer
         items:
+        - name: Solution Explorer
+          href: ../ssms/solution/solution-explorer.md
         - name: Copy Items in a Solution
           href: ../ssms/solution/copy-items-in-a-solution.md
         - name: Files That Manage Solutions & Projects
@@ -9516,16 +9580,18 @@
           href: ../ssms/solution/add-existing-items-to-a-project.md
         - name: Create a New Solution
           href: ../ssms/solution/create-a-new-solution.md
-      - name: Template Explorer
-        href: ../ssms/template/template-explorer.md
+      - name: Template explorer
         items:
+        - name: Template Explorer
+          href: ../ssms/template/template-explorer.md
         - name: Open a Template
           href: ../ssms/template/open-a-template.md
         - name: Replace Template Parameters
           href: ../ssms/template/replace-template-parameters.md
-      - name: Visual Database Tools
-        href: ../ssms/visual-db-tools/visual-database-tools.md
+      - name: Visual database tools
         items:
+        - name: Visual Database Tools
+          href: ../ssms/visual-db-tools/visual-database-tools.md
         - name: Add Table Dialog Box (Query & View Designers)
           href: ../ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md
         - name: Save Change Script Dialog Box
@@ -9818,7 +9884,7 @@
           href: ../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md
         - name: Arrange Tables in Diagrams
           href: ../ssms/visual-db-tools/arrange-tables-in-diagrams-visual-database-tools.md
-        - name: "Walkthrough: Adding & Changing a Database Diagram"
+        - name: Adding & Changing a Database Diagram
           href: ../ssms/visual-db-tools/walkthrough-adding-and-changing-a-database-diagram.md
         - name: Table-Valued Object (Column) Properties
           href: ../ssms/visual-db-tools/table-valued-object-column-properties-visual-database-tools.md
@@ -9886,6 +9952,26 @@
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Resources
       items:
+      - name: SQL Server Management Studio
+        href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+      - name: SSMS Support Policy
+        href: ../ssms/support-policy.md
+      - name: Support options for business users
+        href: https://support.microsoft.com/gp/support-options-for-business
+      - name: Contact Microsoft
+        href: https://support.microsoft.com/gp/contactus81?Audience=Commercial
+      - name: All the ways to get help
+        href: https://docs.microsoft.com/sql/sql-server/sql-server-get-help
+      - name: UserVoice - Suggestion to improve SQL Server?
+        href: https://feedback.azure.com/forums/908035-sql-server
+      - name: Setup and Upgrade -  MSDN Forums
+        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc
+      - name: Transact-SQL - MSDN Forums
+        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql
+      - name: Stack Overflow
+        href: https://stackoverflow.com/questions/tagged/sql-server
+      - name: Microsoft SQL Server License Terms and Information
+        href: https://www.microsoft.com/download/details.aspx?id=39299
       - name: User Assistance in SSMS
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data
@@ -12278,8 +12364,6 @@
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md
       - name: sys.dm_db_log_stats
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md
-      - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
-        href: ../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
       - name: sys.dm_db_page_info
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md
       - name: sys.dm_db_partition_stats
@@ -12292,14 +12376,20 @@
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md
       - name: sys.dm_db_uncontained_entities
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md
+      - name: sys.dm_database_copies (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
+      - name: sys.dm_database_replica_states (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
+      - name: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
+      - name: sys.dm_db_resource_stats (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md
       - name: sys.dm_db_wait_stats (Azure SQL Database)
         href: ../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md
       - name: sys.dm_operation_status (Azure SQL Database)
         href: ../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md
-      - name: sys.dm_database_copies (Azure SQL Database)
-        href: ../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
-      - name: sys.dm_db_resource_stats (Azure SQL Database)
-        href: ../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md
+      - name: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md
     - name: Database Mirroring
       items:
       - name: sys.dm_db_mirroring_auto_page_repair

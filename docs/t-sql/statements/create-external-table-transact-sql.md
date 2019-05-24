@@ -695,7 +695,7 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ## Examples
 
-### A. Create external tablel for Azure SQL Database
+### A. Create external table for Azure SQL Database
 
 ## See Also
 
@@ -706,7 +706,7 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -716,7 +716,7 @@ Shared lock on the SCHEMARESOLUTION object.
 In Azure SQL Data Warehouse, use an external table to:
 
 - Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
-- Import and store data from Hadoop or Azure blob storage into your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.
+- Import and store data from Hadoop or Azure blob storage into Azure SQL Data Warehouse.
 - Import and store data from Azure Data Lake Store into Azure SQL Data Warehouse.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).  
@@ -947,7 +947,7 @@ AS SELECT * FROM
 Use an external table to:
   
 - Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
-- Import and store data from Hadoop or Azure blob storage into your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.
+- Import and store data from Hadoop or Azure blob storage into Analytics Platform System.
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).
 

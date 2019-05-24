@@ -1,6 +1,6 @@
 ---
-title: Install SQL Server Machine Language Extensions (Java) on Linux | Microsoft Docs
-description: Learn how to install SQL Server Language Extensions (Java) on Red Hat,  Ubuntu, and SUSE.
+title: Install SQL Server Language Extensions (Java) on Linux | Microsoft Docs
+description: Learn how to install SQL Server Language Extensions (Java) on Red Hat, Ubuntu, and SUSE.
 author: dphansen
 ms.author: davidph
 manager: cgronlun
@@ -13,11 +13,11 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Install SQL Server 2019 Language Extensions (Java) on Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this preview release of SQL Server 2019. Follow the steps in this article to install the Java language extension. 
-
 Language Extensions are an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
-Package location for the Java extensions are in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
+Follow the steps in this article to install the Java language extension.
+
+Package location for the Java extensions is in the SQL Server Linux source repositories. If you already configured source repositories for the database engine install, you can run the **mssql-server-extensibility-java** package install commands using the same repo registration.
 
 Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -179,6 +179,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. Restart the `mssql-launchpadd` service again.
 
+7. For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
 ## Verify installation
 
 Java feature integration does not include libraries, but you can run `grep -r JRE_HOME /etc` to confirm creation of the JAVA_HOME environment variable.
@@ -189,7 +191,7 @@ To validate installation, run a T-SQL script that executes a system stored proce
 
 ## Full install of SQL Server and Language Extensions
 
-You can install and configure the database engine and Machine Learning Services in one procedure by appending Java packages and parameters on a command that installs the database engine.
+You can install and configure the database engine and Language Extensions in one procedure by appending Java packages and parameters on a command that installs the database engine.
 
 1. Provide a command line that includes the database engine, plus language extension features.
 
@@ -229,7 +231,7 @@ Follow the [Offline installation](sql-server-linux-setup.md#offline) instruction
 
 #### Download site
 
-You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the packages for Java are co-located with database engine package. 
+You can download packages from [https://packages.microsoft.com/](https://packages.microsoft.com/). All of the packages for Java are colocated with database engine package. 
 
 #### RedHat/7 paths
 

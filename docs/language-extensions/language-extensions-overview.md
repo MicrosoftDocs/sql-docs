@@ -20,7 +20,7 @@ Language Extensions is a feature of SQL Server used for executing external code.
 
 Language Extensions uses the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution. They let you execute code where the data resides, eliminating the need to pull data across the network.
 
-The system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is used as the interface for executing pre-compiled Java code.
+External languages are defined with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). The system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is used as the interface for executing the code.
 
 Language Extensions provides multiple advantages:
 
@@ -52,6 +52,18 @@ Developers typically write code on their own laptop or development workstation. 
 Execute Java code from within T-SQL script:
 
 + [Tutorial: Regular expressions with Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
+
+## Limitations in CTP 3.0
+
+SQL Server Language Extensions is currently in public preview. There are some limitations in CTP 3.0:
+
+* The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
+
+* Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
+
+* Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
+
+* Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
 
 ## Next steps
 

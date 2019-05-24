@@ -22,15 +22,30 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## CTP 3.0 May 2019
+## CTP 3.1 June 2019
 
-Community technology preview (CTP) 3.0 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
+Community technology preview (CTP) 3.1 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
 For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
 
 In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0.
+
+### Big data clusters
+
+| New feature or update | Details |
+|:---|:---|
+| &nbsp; | &nbsp; |
+
+### Database engine
+
+| New feature or update | Details |
+|:---|:---|
+| &nbsp; | &nbsp; |
+
+
+## CTP 3.0 May 2019
 
 ### Big data clusters
 
@@ -47,7 +62,6 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
-
 |Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 |More supported data types for Java|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
 |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
@@ -76,6 +90,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |:---|:---|
 |MDX query support for tabular models with calculation groups. |This release removes an earlier limitation in [calculation groups](#calc-ctp24). |
 |Dynamic formatting of measures using calculation groups. |This feature allows you to conditionally change format strings for measures with [calculation groups](#calc-ctp24). For example, with currency conversion, a measure can be displayed using different foreign currency formats.|
+| &nbsp; | &nbsp; |
 
 ## CTP 2.5 April 2019
 

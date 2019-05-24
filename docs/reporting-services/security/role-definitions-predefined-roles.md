@@ -1,6 +1,6 @@
 ---
-title: "Predefined Roles - Reporting Services | Microsoft Docs"
-ms.date: 05/21/2019
+title: "Role Definitions -predefined roles | Microsoft Docs"
+ms.date: 05/24/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security
@@ -16,15 +16,15 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Role definitions - predefined roles
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installs with predefined roles that you can use to grant access to report server operations. Each predefined role describes a collection of related tasks. You can assign groups and user accounts to predefined roles to provide immediate access to report server operations.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installs with predefined roles that you can use to grant access to report server operations. Each predefined role describes a collection of related tasks. You can assign groups and user accounts to predefined roles to provide immediate access to report server operations.  
   
 ## How to use predefined roles  
-      
-    1.  Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define additional roles, you should do this before you begin assigning users to specific roles.  
   
-2.  Identify which users and groups require access to the report server, and at what level. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Very few users should be assigned to **Content Manager**.  
+1. Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define additional roles, you should do this before you begin assigning users to specific roles.  
   
-3.  When you are ready to assign user and group accounts to specific roles, use the web portal. For more information, see [Grant User Access to a Report Server](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
+2. Identify which users and groups require access to the report server, and at what level. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Very few users should be assigned to **Content Manager**.  
+
+3. When you are ready to assign user and group accounts to specific roles, use the web portal. For more information, see [Grant User Access to a Report Server](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
 ##  <a name="bkmk_rolelist"></a> Predefined role definitions  
  Predefined roles are defined by the tasks that it supports. You can modify these roles or replace them with custom roles.  

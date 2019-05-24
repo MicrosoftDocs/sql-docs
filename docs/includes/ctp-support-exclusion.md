@@ -1,14 +1,14 @@
 ### Support
 
-CTP 3.0 is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](http://aka.ms/sqleap), may have support to run SQL Server 2019 CTP 3.0 by special agreement, in consultation with Microsoft. For CTP 3.0, this support includes:
+CTP 3.1 is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](http://aka.ms/sqleap), may have support to run SQL Server 2019 CTP 3.1 by special agreement, in consultation with Microsoft. For CTP 3.0, this support includes:
 
-- Side-by-side installation. SQL Server 2019 CTP 3.0 supports side-by-side installation with instances of SQL Server 2012 through SQL Server 2017, or other instances SQL Server 2019 CTP 3.0.
+- Side-by-side installation. SQL Server 2019 CTP 3.1 supports side-by-side installation with instances of SQL Server 2012 through SQL Server 2017, or other instances SQL Server 2019 CTP 3.0.
    >[!NOTE]
    >While side-by-side is not blocked with SQL Server 2008 and 2008 R2, there are no commonly supported Windows Operating system versions between them and SQL Server 2019.
-- SQL Server 2019 CTP 3.0 supports in-place upgrade from instances of SQL Server 2012 through SQL Server 2017. Upgrade from a previously released SQL Server 2019 CTP release to CTP 3.0 is not supported, a new installation must be performed. 
+- SQL Server 2019 CTP 3.1 supports in-place upgrade from instances of SQL Server 2012 through SQL Server 2017. Upgrade from a previously released SQL Server 2019 CTP release to CTP 3.1 is not supported, a new installation must be performed. 
    >[!NOTE]
    >While in-place upgrade from SQL Server 2008 and 2008 R2 is not blocked, there are no commonly supported Windows Operating system versions between them and SQL Server 2019.
-- Production support. Customers in early adopter programs can run SQL Server 2019 CTP 3.0 in production environments.
+- Production support. Customers in early adopter programs can run SQL Server 2019 CTP 3.1 in production environments.
 
 Specific exceptions to support are noted in [release notes](../sql-server/sql-server-ver15-release-notes.md#release-notes).
 

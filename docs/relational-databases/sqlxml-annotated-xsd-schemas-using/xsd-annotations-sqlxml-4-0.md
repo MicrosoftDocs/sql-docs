@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -12,7 +11,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], annotations"
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ""
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

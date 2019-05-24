@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -18,7 +17,8 @@ helpviewer_keywords:
   - "sql:use-cdata"
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ""
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

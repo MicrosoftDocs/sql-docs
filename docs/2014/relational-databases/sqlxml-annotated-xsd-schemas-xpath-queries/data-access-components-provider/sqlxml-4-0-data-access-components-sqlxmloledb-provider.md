@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "providers [SQLXML]"
   - "providers [SQLXML], listed"
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQLXML 4.0 Data Access Components

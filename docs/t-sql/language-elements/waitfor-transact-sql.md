@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "WAITFOR statement"
   - "timing executions"
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # WAITFOR (Transact-SQL)

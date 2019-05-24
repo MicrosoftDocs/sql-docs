@@ -61,6 +61,7 @@ The following example returns a table listing the table name, column name, label
 
 ```sql
 SELECT
+    SCHEMA_NAME(sys.all_objects.schema_id) as SchemaName,
     sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
     [Label], [Label_ID], [Information_Type], [Information_Type_ID]
 FROM

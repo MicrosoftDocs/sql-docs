@@ -38,14 +38,16 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |:---|:---|
 | **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
-| Updates to Spark mLeap samples | For more information, see [Export Spark machine learning models with MLeap](../big-data-cluster/export-model-with-spark-mleap.md). |
+| Multiple compute pool instances | Support for multiple compute pool instances. |
+| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
+| External table improvements | External tables of HADOOP data source type now supports reading rows up to 1 MB in size. External tables (ODBC, storage pool, data pool) now support rows as wide as a SQL Server table. |
 | &nbsp; | &nbsp; |
 
 ### Database engine
 
 | New feature or update | Details |
 |:---|:---|
-|SQL Server extensibility - Java extension|The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now open sourced and available on [GitHub](http://aka.ms/mssql-java-lang-extension). |
+
 |Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 |More supported data types for Java|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
 |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|

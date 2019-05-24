@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "augmented operators, &="
   - "&= (bitwise AND equals)"
 ms.assetid: f374c885-3fee-434a-93fb-dfe6e0bcd100
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

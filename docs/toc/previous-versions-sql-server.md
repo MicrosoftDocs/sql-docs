@@ -3,7 +3,7 @@ title: Previous versions of SQL Server | Microsoft Docs
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-ms.date: "05/24/2019"
+ms.date: "05/22/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
@@ -21,7 +21,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 >
 > The list value labeled **SQL Server previous versions** allows this article to be displayed, but the value hides most other articles.
 >
-> The documentation for a _newer_ version of SQL Server is available [here](../sql-server/sql-server-technical-documentation.md?view=sql-server-2017).
+> The documentation for a _newer_ version of SQL Server is available [here](../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json&view=sql-server-2017).
 
 ## Archived documentation
 
@@ -34,3 +34,7 @@ As of May 2019, the documentation has been archived for older versions of SQL Se
 Review the Microsoft Product Lifecycle for information about how a specific product, service, or technology is supported:
 
 - [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle/selectindex)
+
+## See also
+
+[](../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json&view=sql-server-2017)

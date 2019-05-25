@@ -12,6 +12,6 @@ These archives include the documentation for at least the following older versio
 
 [SQL Server 2014 documentation](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) is still processed by search engines.
 
-[SQL Server 2017 documentation](https://docs.microsoft.com/sql/sql-server/index?view=sql-server-2017) is available.
+[SQL Server 2017 documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json&view=sql-server-2017) is available.
 
 For more information about the documentation for previous versions of SQL Server, see [Previous versions of SQL Server documentation](/sql/toc/previous-versions-sql-server?view=sql-server-previousversions).

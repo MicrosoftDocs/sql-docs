@@ -8,8 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Outline and Add Snippets to Transact-SQL Script

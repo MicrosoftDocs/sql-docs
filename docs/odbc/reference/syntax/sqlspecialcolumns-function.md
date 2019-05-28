@@ -34,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSpecialColumns(  
      SQLHSTMT      StatementHandle,  

@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IsNull (geometry Data Type)"
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # IsNull (geometry Data Type)

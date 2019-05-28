@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "identity columns, current value"
   - "IDENT_CURRENT function"
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # IDENT_CURRENT (Transact-SQL)

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "BufferWithCurves method (geography)"
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # BufferWithCurves (geography Data Type)

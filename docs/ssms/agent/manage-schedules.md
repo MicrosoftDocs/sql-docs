@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.manageschedules.f1"
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

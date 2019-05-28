@@ -72,7 +72,7 @@ manager: craigg
  For more information, see [Specifying a User or Login Name](#_user) later in this topic.  
   
  NO REVERT  
- Specifies that the context switch cannot be reverted back to the previous context. The **NO REVERT** option can only be used at the adhoc level.  
+ Specifies that the context switch cannot be reverted back to the previous context. The **NO REVERT** option can only be used at the adhoc level.
   
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
@@ -120,7 +120,9 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 >  The EXECUTE AS statement can succeed as long as the [!INCLUDE[ssDE](../../includes/ssde-md.md)] can resolve the name. If a domain user exists, Windows might be able to resolve the user for the [!INCLUDE[ssDE](../../includes/ssde-md.md)], even though the Windows user does not have access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This can lead to a condition where a login with no access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appears to be logged in, though the impersonated login would only have the permissions granted to public or guest.  
   
 ## Using WITH NO REVERT  
- When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in affect until the session is dropped.  
+ When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in affect until the session is dropped.   Note that if connection pooling is enabled, `sp_reset_connection` will fail and the connection will drop.  The error message in the event log will be:
+ 
+> The connection has been dropped because the principal that opened it subsequently assumed a new security context, and then tried to reset the connection under its impersonated security context. This scenario is not supported. See "Impersonation Overview" in Books Online.
   
  When the WITH NO REVERT COOKIE = @*varbinary_variable* clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variable*. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *@varbinary_variable* value.  
   

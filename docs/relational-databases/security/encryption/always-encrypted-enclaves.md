@@ -49,7 +49,7 @@ With secure enclaves, Always Encrypted protects the confidentiality of sensitive
 > [!IMPORTANT]
 > In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], rich computations are pending several performance optimizations, include limited functionality (no indexing, etc), and are currently disabled by default. To enable rich computations, see  [Enable rich computations](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
+In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypted with secure enclaves uses [Virtualization-based Security (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) secure memory enclaves (also known as Virtual Secure Mode, or VSM enclaves) in Windows.
 
 ## Secure Enclave Attestation
 

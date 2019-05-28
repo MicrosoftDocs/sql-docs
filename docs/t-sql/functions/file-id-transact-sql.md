@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], files"
   - "file names [SQL Server], FILE_ID"
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # FILE_ID (Transact-SQL)

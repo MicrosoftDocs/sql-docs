@@ -10,7 +10,7 @@ f1_keywords:
   - "sql12.dqs.browseforservers.f1"
   - "sql12.dqs.connecttoserver.f1"
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "Properties window [SQL Server Management Studio]"
   - "SQL Server Management Studio Help [SQL Server], properties window"
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Properties Window F1 Help (Management Studio)

@@ -2,7 +2,7 @@
 title: "Define Colors on a Chart Using a Palette (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

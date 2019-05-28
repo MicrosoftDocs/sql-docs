@@ -31,7 +31,7 @@ Install and configure **RStudio Desktop** with the following steps:
 
 1. After installation completes, run the following commands inside of RStudio Desktop to install the required packages:
 
-   ```RStudio Desktop
+   ```RStudioDesktop
    install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
@@ -44,7 +44,7 @@ You can use sparklyr to connect from a client to the big data cluster using Livy
 In RStudio, create an R script and connect to Spark as in the following example:
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on [connecting to a big data cluster](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)

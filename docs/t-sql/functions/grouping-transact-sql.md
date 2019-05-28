@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "GROUPING function"
   - "CUBE operator"
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # GROUPING (Transact-SQL)

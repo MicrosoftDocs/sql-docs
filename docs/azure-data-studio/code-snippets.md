@@ -2,16 +2,17 @@
 title: Create reusable code snippets
 titleSuffix: Azure Data Studio
 description: Learn how to create and use SQL code snippets in Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
-ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "09/24/2018"
 ---
+
 # Create and use code snippets to quickly create Transact-SQL (T-SQL) scripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Code snippets in [!INCLUDE[name-sos](../includes/name-sos-short.md)] are templates that make it easy to create databases and database objects. 

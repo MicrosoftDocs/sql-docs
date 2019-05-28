@@ -1,6 +1,6 @@
 ---
 title: "Compatibility level for tabular models in Analysis Services | Microsoft Docs"
-ms.date: 05/07/2018
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -15,7 +15,7 @@ manager: kfile
 
   The *compatibility level* refers to release-specific behaviors in the Analysis Services engine. For example, DirectQuery and tabular object metadata have different implementations depending on the compatibility level. In-general, you should choose the latest compatibility level supported by your servers.
 
-  **The latest compatibility level is 1400** 
+  **The latest supported compatibility level is 1400** 
   
 Major features in the 1400 compatibility level include:
 
@@ -32,8 +32,9 @@ Major features in the 1400 compatibility level include:
 |||  
 |-|-|- 
 |**Compatibility level**|**Server version**| 
-|1400|Azure Analysis Services, SQL Server 2017 |  
-|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1470|SQL Server 2019 (CTP 2.3 and higher) | 
+|1400|Azure Analysis Services, SQL Server 2019, SQL Server 2017 |  
+|1200|Azure Analysis Services, SQL Server 2019, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
@@ -53,8 +54,11 @@ Major features in the 1400 compatibility level include:
   
 ## Check supported compatibility level for a server in SSMS  
  In SSMS, right-click the server name>  **Properties** > **Supported Compatibility Level**.  
-  
- This property specifies the highest compatibility level of a database that will run on the server. The supported compatibility level is read-only cannot be changed.  
+
+ This property specifies the highest compatibility level of a database that will run on the server. The supported compatibility level is read-only cannot be changed.
+ 
+> [!NOTE]  
+>  In SSMS, when connected to a SQL Server Analysis Services server, Azure Analysis Services server, or Power BI Premium workspace, the Supported Compatibility Level property will show 1200. This is a known issue and will be resolved in an upcoming SSMS update. When resolved, this property will show the highest supported compatibility level. 
   
 ## See also  
  [Compatibility Level of a multidimensional database](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

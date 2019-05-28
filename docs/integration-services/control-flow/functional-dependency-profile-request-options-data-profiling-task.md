@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Functional Dependency Profile Request Options (Data Profiling Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Functional Dependency Profile Request** selected in the requests pane. A Functional Dependency profile reports the extent to which the values in one column (the dependent column) depend on the values in another column or set of columns (the determinant column). This profile can also help you identify problems in your data such as invalid values. For example, you profile the dependency between a Zip Code/Postal Code column and a United States state column. In this profile, the same Zip Code should always have the same state, but the profile discovers violations of the dependency.  
   
 > [!NOTE]  
@@ -90,7 +94,7 @@ manager: craigg
 |Value|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifies whether the comparison distinguishes between uppercase and lowercase letters. If this option is set, the string comparison ignores case. For example, "ABC" becomes the same as "abc".|  
-|**IgnoreNonSpace**|Specifies whether the comparison distinguishes between spacing characters and diacritics. If this option is set, the comparison ignores diacritics. For example, "å" is equal to "a".|  
+|**IgnoreNonSpace**|Specifies whether the comparison distinguishes between spacing characters and diacritics. If this option is set, the comparison ignores diacritics. For example, "Ã¥" is equal to "a".|  
 |**IgnoreKanaType**|Specifies whether the comparison distinguishes between the two types of Japanese kana characters: hiragana and katakana. If this option is set, the string comparison ignores kana type.|  
 |**IgnoreWidth**|Specifies whether the comparison distinguishes between a single-byte character and the same character when it is represented as a double-byte character. If this option is set, the string comparison treats single-byte and double-byte representations of the same character as identical.|  
   

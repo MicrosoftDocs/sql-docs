@@ -5,7 +5,7 @@ ms.author: maggies
 manager: kfile
 ms.reviewer: jonhp
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.custom: ""

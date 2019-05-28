@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsClosed method"
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STIsClosed (geography Data Type)

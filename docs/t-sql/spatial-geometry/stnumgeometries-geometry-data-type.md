@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumGeometries (geometry Data Type)"
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STNumGeometries (geometry Data Type)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "wildcard characters [SQL Server]"
   - "[^] (wildcard - character(s) not to match)"
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 

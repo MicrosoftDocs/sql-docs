@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_columns_cursor"
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sp_help_fulltext_columns_cursor (Transact-SQL)

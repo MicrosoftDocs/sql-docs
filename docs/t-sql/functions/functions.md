@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "scalar functions"
   - "functions [SQL Server]"
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

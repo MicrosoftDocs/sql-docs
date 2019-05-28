@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # catalog.projects (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays the details for all projects that appear in the **SSISDB** catalog.  

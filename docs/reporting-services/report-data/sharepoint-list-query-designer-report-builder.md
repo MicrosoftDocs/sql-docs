@@ -2,7 +2,7 @@
 title: "SharePoint List Query Designer (Report Builder) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 

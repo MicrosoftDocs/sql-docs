@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], viewing keywords"
   - "troubleshooting [SQL Server], full-text search"
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl 
+ms.author: pelopes
 manager: craigg
 ---
 # sys.dm_fts_index_keywords (Transact-SQL)

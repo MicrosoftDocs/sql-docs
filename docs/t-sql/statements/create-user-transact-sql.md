@@ -1,7 +1,7 @@
 ---
 title: "CREATE USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2018"
+ms.date: "05/09/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -47,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   User based on a Windows user that has no login. `CREATE USER [Contoso\Fritz];`    
 -   User based on a Windows group that has no login. `CREATE USER [Contoso\Sales];`  
--   User in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] based on an Azure Active Directory user. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
+-   User in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] based on an Azure Active Directory user. `CREATE USER [Fritz@contoso.com] FROM EXTERNAL PROVIDER;`     
 
 -   Contained database user with password. (Not available in [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   

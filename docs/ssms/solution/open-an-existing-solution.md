@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "opening solutions"
   - "solutions [SQL Server Management Studio], opening"
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Open an Existing Solution

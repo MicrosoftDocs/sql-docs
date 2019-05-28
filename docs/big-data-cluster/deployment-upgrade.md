@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server 2019 big data clusters (preview) to
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -40,24 +40,24 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    pip3 uninstall mssqlctl
    ```
 
-   For CTP 2.3 or higher, run the following command. Replace `ctp-2.4` in the command with the version of **mssqlctl** that you are uninstalling:
+   For CTP 2.3 or higher, run the following command. Replace `ctp-2.5` in the command with the version of **mssqlctl** that you are uninstalling:
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
-1. Install the latest version of **mssqlctl**. The following commands install **mssqlctl** for CTP 2.5:
+1. Install the latest version of **mssqlctl**. The following commands install **mssqlctl** for CTP 3.0:
 
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

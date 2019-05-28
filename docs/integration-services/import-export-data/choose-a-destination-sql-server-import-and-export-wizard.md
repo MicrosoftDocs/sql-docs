@@ -14,6 +14,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Choose a Destination (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  After you provide info about the source of your data and about how to connect to it, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Choose a Destination**. On this page, you provide info about the destination for your data and about how to connect to it.
   
 For info about the data destinations that you can use, see [What data sources and destinations can I use?](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources). 

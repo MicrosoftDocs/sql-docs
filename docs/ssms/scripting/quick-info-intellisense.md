@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], Quick Info"
   - "identifier declarations [IntelliSense]"
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # || (Logical OR) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a logical OR operation. The expression evaluates to TRUE if one or both conditions are TRUE.  
   
 ## Syntax  

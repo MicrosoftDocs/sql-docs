@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Creating a Destination with the Script Component
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You use a destination component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to save data received from upstream sources and transformations to a data source. Ordinarily the destination component connects to the data source through an existing connection manager.  
   
  For an overview of the Script component, see [Extending the Data Flow with the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  

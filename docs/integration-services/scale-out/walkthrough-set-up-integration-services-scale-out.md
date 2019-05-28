@@ -10,10 +10,14 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-ms.reviewer: "douglasl"
+ms.reviewer: maghan
 manager: craigg
 ---
 # Walkthrough: Set up Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out by completing the following tasks. 
 
 > [!TIP]

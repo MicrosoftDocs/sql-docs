@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Hadoop Pig Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Hadoop Pig Task to run Pig script on a Hadoop cluster.  
   
  To add a Hadoop Pig Task, drag and drop it to the designer. Then double-click on the task, or right-click and click **Edit**, to see the **Hadoop Pig Task Editor** dialog box.  

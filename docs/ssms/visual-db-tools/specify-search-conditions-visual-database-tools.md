@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "search conditions [SQL Server], specifying"
   - "search criteria [SQL Server], specifying conditions"
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

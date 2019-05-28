@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "IDENT_INCR function"
   - "identity columns [SQL Server], IDENT_INCR function"
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # IDENT_INCR (Transact-SQL)

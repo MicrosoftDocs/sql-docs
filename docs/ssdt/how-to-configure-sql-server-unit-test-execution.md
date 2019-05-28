@@ -8,8 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Configure SQL Server Unit Test Execution

@@ -134,7 +134,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - Use a valid expiration period (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -171,7 +171,7 @@ If the port isn't specified, the default value is chosen using the current setti
 | 7                   | 8050                          |
 
 For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
-  
+
 > [!IMPORTANT]  
 > The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
 
@@ -226,7 +226,7 @@ For additional examples to other data sources such as MongoDB, see [Configure Po
 ### B. Create external data source to reference Hadoop
 
 To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -239,7 +239,7 @@ WITH
 ### C. Create external data source to reference Hadoop with push-down enabled
 
 Specify the `RESOURCE_MANAGER_LOCATION` option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase makes a cost-based decision to determine whether the query computation should be pushed to Hadoop.
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -253,7 +253,7 @@ WITH
 ### D. Create external data source to reference Kerberos-secured Hadoop
 
 To verify if the Hadoop cluster is Kerberos-secured, check the value of hadoop.security.authentication property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
@@ -438,7 +438,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - Use a valid expiration period (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -678,7 +678,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - Use a valid expiration period (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -914,7 +914,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - Use a valid expiration period (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 

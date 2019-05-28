@@ -1,7 +1,7 @@
 ---
 title: "OLE DB Connection Manager | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -86,7 +86,7 @@ manager: craigg
  Select a data connection, and then delete it by using the **Delete** button.  
   
 ### Managed Identities for Azure Resources Authentication
-When running SSIS packages in [Azure-SSIS integration runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use the [managed identity](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) that is associated with your data factory for Azure SQL Database (or Managed Instance) authentication. The designated factory can access and copy data from or to your database by using this identity.
+When running SSIS packages on [Azure-SSIS integration runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use the [managed identity](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) that is associated with your data factory for Azure SQL Database (or Managed Instance) authentication. The designated factory can access and copy data from or to your database by using this identity.
 
 To use managed identity authentication for Azure SQL Database, follow these steps to configure your database:
 
@@ -146,7 +146,7 @@ Then **configure OLE DB provider** for the OLE DB connection manager. There are 
     > [!NOTE]
     >  Other providers in the drop-down list MIGHT NOT support managed identity authentication.
     
-1. Configure at run time. When you execute the package via [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) or [Azure Data Factory Execute SQL Package activity](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the connection manager property **ConnectionString** for the OLE DB connection manager and update the connection property **Provider** to **MSOLEDBSQL** (i.e, Microsoft OLE DB Driver for SQL Server).
+1. Configure at run time. When you execute the package via [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) or [Azure Data Factory Execute SSIS Package activity](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the connection manager property **ConnectionString** for the OLE DB connection manager and update the connection property **Provider** to **MSOLEDBSQL** (i.e, Microsoft OLE DB Driver for SQL Server).
     ```vb
     Data Source=serverName;Initial Catalog=databaseName;Provider=MSOLEDBSQL;...
     ```

@@ -14,30 +14,39 @@ manager: kfile
  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures.
 
 
-Calculation groups provide many benefits, for example:
+This article describes:
 
 > [!div class="checklist"]
-> * Reduces the number of common measures
+> * Benefits
 > * Dynamic format strings
-> * MDX query support
+> * Sideways recursion
+> * Precedence
+> * How to create calculation groups
 
 Calculation groups are supported in Azure Analysis Services and SQL Server Analysis Services 2019 tabular models at the 1470 and higher [compatibility level](compatibility-level-for-tabular-models-in-analysis-services.md). Keep in mind, models at the 1470 compatibility level cannot be deployed to SQL Server 2017 or earlier, or downgraded to a lower compatibility level. 
 
-### Calculation items
-
 ## Benefits
 
-To users, calculated groups appear as a table with a single column.
+Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations.
+This is most common with time-intelligence calculations. For example, a sales analyst wants to view orders by month-to-date, quarter-to-date, year-to-date, orders year-to-date for the previous year, and so on. This can mean the data modeler has to create a different measure for each calculation, which can lead to dozens of measures. For the user, this can mean having to sort through just as many measures, and apply them individually to their report.  
 
-In the following animation, the user is analyzing sales data for years 2012 and 2013, with the InternetTotalSales measure calculating an aggregate sum for total sales for each month. 
+Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures.
 
-The user then applies a calculation group, **Time Intelligence** which appears as a table. A calculation item named **Time Calculation** appears as a column in the Time Intelligence table. When the user drags the Time Calculation item to **Columns**,  
+
+
+
+### Calculation items
+
+To users, calculated groups appear as a table with a single column. In the following animation, a user is analyzing sales data for years 2012 and 2013, with the **InternetTotalSales** measure calculating an aggregate sum for total sales for each month. The user then applies a  **Time Calculation**, which appears as a column in the Time Intelligence table. When the user drags the Time Calculation item to **Columns**,  each calculation item appears as a separate column, with values calculated for each row.
 
 ![Calculation group being applied in Power BI](media/as-calculation-groups/calc-groups-pbi.gif)
- 
+
+### Support for MDX
+
+Calculation groups support Multidimensional Data Expressions (MDX) queries. This means, Microsoft Excel users, which queries tabular data models by using MDX, can take full advantage of calculation groups in worksheet PivotTables and charts. 
+
 ## How they work 
 
 ## Example
@@ -343,8 +352,42 @@ Not:
 DIVIDE(CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date])), COUNTROWS(DimDate)))
 ```
 
+## Implicit measures
 
+Calculation groups work with query scope measures, but not inline DAX calculations. This is shown by the following query.
 
+```dax
+DEFINE
+MEASURE FactInternetSales[QueryScope] = SUM ( FactInternetSales[SalesAmount] )
+EVALUATE
+CALCULATETABLE (
+    SUMMARIZECOLUMNS (
+        DimDate[CalendarYear],
+        DimDate[EnglishMonthName],
+
+        //YTD applied successfully to model measure:
+        "Model Measure", CALCULATE (
+            [InternetTotalSales],
+            'Time Intelligence'[Time Calculation] = "YTD"
+        ),
+
+        //YTD applied successfully to query scope measure:
+        "Query Scope", CALCULATE (
+            [QueryScope],
+            'Time Intelligence'[Time Calculation] = "YTD"
+        ),
+
+        //YTD not applied to inline calculation:
+        "Inline", CALCULATE (
+            SUM ( FactInternetSales[SalesAmount] ),
+            'Time Intelligence'[Time Calculation] = "YTD"
+        )
+    ),
+    DimDate[CalendarYear] = 2012
+)
+```
+
+In Power BI, implicit measures are created when a user drags columns onto visuals to view aggregated values without creating an explicit measure. At time of writing, Power BI generates DAX for implicit measures written as inline DAX calculations. This means implicit measures do not work with calculation groups. To reserve the right to introduce this at a later date, a new model property visible in TOM has been introduced, **DiscourageImplicitMeasures**. In the current version, it must be set to true to create calculation groups. When set to true, Power BI Desktop in Live Connect mode disables creation of implicit measures.
 
 ## Create calculation groups
 
@@ -370,7 +413,15 @@ By using [Data Management Views](../instances/use-dynamic-management-views-dmvs-
 
 - TMSCHEMA_CALCULATION_GROUPS   
 - TMSCHEMA_CALCULATION_ITEMS   
- 
+
+## Limitations
+
+[Object level security](object-level-security.md) (OLS) defined on calculation group tables is not yet supported. However, OLS can be defined on other tables in the same model. If a calculation item refers to an OLS secured object, a generic error is returned. This is the planned behavior for SSAS 2019.
+
+[Row level security](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) is not yet supported. The planned behavior for SSAS 2019 is that you will be able to define RLS on tables in the same model, but not on calculation groups themselves (directly or indirectly).
+
+[Detail Rows Expressions](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) are not yet supported with calculation groups.
+
 ## See also  
 
   

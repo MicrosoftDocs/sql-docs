@@ -38,7 +38,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 ||||||
 |---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -373,7 +373,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-data-source.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -602,7 +602,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source.md?view=sql-server-2017)|[SQL Database](create-external-data-source.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-data-source.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -612,7 +612,7 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 Creates an external data source for PolyBase. External data sources are used to establish connectivity and support the following primary use case: Data virtualization and data load using [PolyBase][intro_pb]
 
 > [!IMPORTANT]  
-> To create an external data source to query a SQL Data Warehouse instances using SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source.md?view=azuresqldb-current).
+> To create an external data source to query a SQL Data Warehouse instances using SQL Database with [elastic query][remote_eq], see [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current).
 
 ## Syntax
 
@@ -841,7 +841,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source.md?view=sql-server-2017)|[SQL Database](create-external-data-source.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;

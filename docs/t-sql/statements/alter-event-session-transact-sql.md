@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], Transact-SQL"
   - "ALTER EVENT SESSION statement"
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # ALTER EVENT SESSION (Transact-SQL)

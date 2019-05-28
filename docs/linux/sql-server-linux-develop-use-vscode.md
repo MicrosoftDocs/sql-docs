@@ -96,10 +96,9 @@ Follow these steps to create a connection profile and connect to a SQL Server.
 
 1. Verify your connection in the lower status bar.
 
-  ![Connection status](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)
+   ![Connection status](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)
 
-> [!TIP] 
-> You can also create and edit connection profiles in the User Settings file (*settings.json*). To open the settings file, select **File** > **Preferences** > **Settings**. For more information, see [Manage connection profiles](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
+As an alternative to the previous steps, you can also create and edit connection profiles in the User Settings file (*settings.json*). To open the settings file, select **File** > **Preferences** > **Settings**. For more information, see [Manage connection profiles](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
 
 ## Create a SQL database
 

@@ -221,15 +221,13 @@ Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
-1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 CTP 3.0 preview on both Windows and Linux. 
+1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 CTP 3.0 preview on both Windows and Linux.
 
-+ Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
+    + Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
 
-+ Default installation path on Linux: **/opt/mssql/lib/mssql-java-lang-extension.jar**
+    + Default installation path on Linux: **/opt/mssql/lib/mssql-java-lang-extension.jar**
 
-The code is also open sourced and can be found on the [SQL Server Language Extensions GitHub repository](https://github.com/microsoft/sql-server-language-extensions).
-
-The following article provides more information about the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](../how-to/extensibility-sdk-java-sql-server.md) .
+    The code is also open sourced and can be found on the [SQL Server Language Extensions GitHub repository](https://github.com/microsoft/sql-server-language-extensions). For more information, see [Microsoft Extensibility SDK for Java for Microsoft SQL Server](../how-to/extensibility-sdk-java-sql-server.md).
 
 2. Create an external library for the SDK.
 

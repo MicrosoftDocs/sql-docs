@@ -23,10 +23,7 @@ The SDK is installed as part of SQL Server 2019 CTP 3.0 preview on both Windows 
 + Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
 + Default installation path on Linux: **/opt/mssql/lib/mssql-java-lang-extension.jar**
 
-You can also download the SDK and the source code:
-
-+ Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension).
-+ The code is open source and can be found on the [SQL Server Language Extensions GitHub repository](https://github.com/microsoft/sql-server-language-extensions).
+The code is open source and can be found on the [SQL Server Language Extensions GitHub repository](https://github.com/microsoft/sql-server-language-extensions).
 
 ## Implementation requirements
 

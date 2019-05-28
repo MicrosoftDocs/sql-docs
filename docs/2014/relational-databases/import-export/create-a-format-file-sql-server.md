@@ -28,7 +28,7 @@ manager: craigg
 ## Creating a Non-XML Format File  
  To use a **bcp** command to create a format file, specify the **format** argument and use **nul** instead of a data-file path. The **format** option also requires the **-f** option, such as:  
   
- **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
 >  To distinguish a non-XML format file, we recommend that you use .fmt as the file name extension, for example, MyTable.fmt.  

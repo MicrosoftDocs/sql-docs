@@ -65,20 +65,20 @@ Specifies the user-defined name for the data source. The name must be unique wit
 
 Provides the connectivity protocol and path to the external data source.
 
-| External Data Source        | Location prefix | Location path                                         | Supported locations by product / service    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera or Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                     |
-| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW             |
-| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
-| Azure Data Lake Store Gen 2 | `abfss`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
-| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| MongoDB or CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+) - Windows only           |
-| Bulk Operations             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB                  |
-| Elastic Query (shard)       | Not required    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                      |
-| Elastic Query (remote)      | Not required    | `<remote_server_name>.database.windows.net`           | SQL DB                                      |
+| External Data Source        | Location prefix | Location path                                         | Supported locations by product / service |
+| --------------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera or Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                  |
+| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW          |
+| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                   |
+| Azure Data Lake Store Gen 2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                   |
+| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                       |
+| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| MongoDB or CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+) - Windows only        |
+| Bulk Operations             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB               |
+| Elastic Query (shard)       | Not required    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                   |
+| Elastic Query (remote)      | Not required    | `<remote_server_name>.database.windows.net`           | SQL DB                                   |
 
 Location path:
 
@@ -129,7 +129,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - Use a valid expiration period (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -168,7 +168,7 @@ If the port isn't specified, the default value is chosen using the current setti
 | 7                   | 8050                          |
 
 For a complete list of supported Hadoop versions, see [PolyBase Connectivity Configuration (Transact-SQL)][connectivity_pb].
-  
+
 > [!IMPORTANT]  
 > The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
 
@@ -178,10 +178,10 @@ For a complete list of supported Hadoop versions, see [PolyBase Connectivity Con
 
 Configure this argument when the `TYPE` is set to `RDBMS` or `SHARD_MAP_MANAGER`.
 
-| TYPE              | Value of DATABASE_NAME                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | Value of DATABASE_NAME                                       |
+| ----------------- | ------------------------------------------------------------ |
 | RDBMS             | The name of the remote database on the server provided using `LOCATION` |
-| SHARD_MAP_MANAGER | Name of the database operating as the shard map manager                 |
+| SHARD_MAP_MANAGER | Name of the database operating as the shard map manager      |
 
 For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to [Create an RDBMS external data source](#g-create-an-rdbms-external-data-source)
 
@@ -243,7 +243,7 @@ For additional examples to other data sources such as MongoDB, see [Configure Po
 ### B. Create external data source to reference Hadoop
 
 To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -256,7 +256,7 @@ WITH
 ### C. Create external data source to reference Hadoop with push-down enabled
 
 Specify the `RESOURCE_MANAGER_LOCATION` option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase makes a cost-based decision to determine whether the query computation should be pushed to Hadoop.
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -270,7 +270,7 @@ WITH
 ### D. Create external data source to reference Kerberos-secured Hadoop
 
 To verify if the Hadoop cluster is Kerberos-secured, check the value of hadoop.security.authentication property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
@@ -434,12 +434,36 @@ WITH
 [;]
 ```
 
+### J. Create external data source to reference Azure Data Lake Store (ADLS) Gen 2 or Azure Blob Storage with Managed Identities
+
+Follow the [instructions](https://docs.microsoft.com/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) on registering and configuring RBAC access to your SQL Server before creating your database scoped credential.  
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+-- There is no need to specify SECRET because this mechanism uses Managed Identity under the covers.
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+     IDENTITY   = 'Managed Service Identity'
+;
+
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+(    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
+,    CREDENTIAL = ADLS_credential
+,    TYPE       = HADOOP
+)
+[;]
+```
+
 ## Examples: Bulk Operations
 
 > [!NOTE]
 > Do not put a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### J. Create an external data source for bulk operations retrieving data from Azure Blob storage
+### K. Create an external data source for bulk operations retrieving data from Azure Blob storage
 
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential must set `SHARED ACCESS SIGNATURE` as the identity, mustn't have the leading `?` in the SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].

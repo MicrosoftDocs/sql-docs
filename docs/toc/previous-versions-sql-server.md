@@ -3,7 +3,7 @@ title: Previous versions of SQL Server | Microsoft Docs
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-ms.date: "05/22/2019"
+ms.date: "05/28/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
@@ -25,9 +25,16 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 ## Archived documentation
 
-As of May 2019, the documentation has been archived for older versions of SQL Server ranging from 2012 back to 2005. The reliable updated list is maintained at:
+As of May 2019, the online documentation has been archived for older versions of SQL Server ranging from 2012 back to 2005. The reliable updated list is maintained at:
 
 - [SQL Server previous versions documentation](/previous-versions/sql/)
+
+### Offline documentation and the Help Viewer
+
+Offline editions of the SQL Server documentation are available for download, for the newer and older versions of SQL Server. On your local computer, you use the the _Help Viewer_ tool to both download and view any edition of the offline books. The Help Viewer is available in the Help menu in SQL Server Management Studio (SSMS).
+
+- [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [SQL Server offline help and Help Viewer](../sql-server/sql-server/sql-server-help-installation.md)
 
 ## Lifecycle policy
 
@@ -37,4 +44,4 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## See also
 
-[](../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json&view=sql-server-2017)
+[SQL Server Documentation, start](../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json&view=sql-server-2017)

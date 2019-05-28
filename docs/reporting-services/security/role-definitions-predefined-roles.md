@@ -39,7 +39,7 @@ ms.author: maggies
 |[Publisher Role](#bkmk_publisher)|Item|May publish reports and linked reports to the Report Server.|  
 |[Browser Role](#bkmk_browser)|Item|May view folders, reports, and subscribe to reports.|  
 |[Report Builder Role](#bkmk_reportbuilder)|Item|May view report definitions.|  
-|[My Reports Role](#bk                        mk_myreports)|Item|May publish reports and linked reports; manage folders, reports, and resources in a users My Reports folder.|  
+|[My Reports Role](#bkmk_myreports)|Item|May publish reports and linked reports; manage folders, reports, and resources in a users My Reports folder.|  
 |[System Administrator Role](#bkmk_systemadministrator)|System|View and modify system role assignments, system role definitions, system properties, and shared schedules, in addition to create role definitions, and manage jobs in Management Studio.|  
 |[System User Role](#bkmk_systemuser)|System|View system properties, shared schedules, and allow use of Report Builder or other clients that execute report definitions.|  
   

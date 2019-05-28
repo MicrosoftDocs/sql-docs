@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Customize the Behavior of Word Breakers with a Custom Dictionary

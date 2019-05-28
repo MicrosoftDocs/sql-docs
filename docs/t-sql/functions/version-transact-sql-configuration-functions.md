@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "versions [SQL Server], @@VERSION"
   - "processors [SQL Server], types"
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

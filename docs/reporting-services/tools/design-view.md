@@ -2,7 +2,7 @@
 title: "Design View | Microsoft Docs"
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "tuning automated administration [SQL Server]"
   - "monitoring performance [SQL Server], automated administration"
 ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DATEFROMPARTS function"
 ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

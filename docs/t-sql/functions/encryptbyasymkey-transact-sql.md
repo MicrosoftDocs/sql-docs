@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], asymmetric keys"
   - "asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function"
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ENCRYPTBYASYMKEY (Transact-SQL)

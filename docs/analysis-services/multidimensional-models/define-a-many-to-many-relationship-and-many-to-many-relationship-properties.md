@@ -177,7 +177,7 @@ manager: kfile
   
 ## See Also  
  [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md)   
+
  [Deploy Analysis Services Projects &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [Perspectives in Multidimensional Models](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   

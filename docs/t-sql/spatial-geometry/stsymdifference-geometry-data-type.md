@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STSymDifference (geometry Data Type)"
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STSymDifference (geometry Data Type)

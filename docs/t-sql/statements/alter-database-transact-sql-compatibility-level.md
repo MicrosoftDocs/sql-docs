@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/15/2019"
+ms.date: "05/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -234,9 +234,9 @@ This section describes new behaviors introduced with compatibility level 120.
 |When the database containment is set to partial, validating the `$action` field in the `OUTPUT` clause of a `MERGE` statement can return a collation error.|The collation of the values returned by the `$action` clause of a `MERGE` statement is the database collation instead of the server collation and a collation conflict error is not returned.|
 |A `SELECT INTO` statement always creates a single-threaded insert operation.|A `SELECT INTO` statement can create a parallel insert operation. When inserting a large numbers of rows, the parallel operation can improve performance.|
 
-## Differences Between Lower Compatibility Levels and Levels 110 and 120
+## Differences Between Lower Compatibility Levels and Levels 100 and 110
 
-This section describes new behaviors introduced with compatibility level 110. This section also applies to level 120.
+This section describes new behaviors introduced with compatibility level 110. This section also applies to compatibility levels above 110.
 
 |Compatibility-level setting of 100 or lower|Compatibility-level setting of at least 110|
 |--------------------------------------------------|--------------------------------------------------|

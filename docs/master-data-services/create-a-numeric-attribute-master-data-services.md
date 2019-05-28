@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "attributes [Master Data Services], creating number attributes"
   - "creating number attributes [Master Data Services]"
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

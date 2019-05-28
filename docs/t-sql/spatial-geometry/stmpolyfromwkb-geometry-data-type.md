@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPolyFromWKB (geometry Data Type)"
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STMPolyFromWKB (geometry Data Type)

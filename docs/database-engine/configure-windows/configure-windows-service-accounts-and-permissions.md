@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/08/2018"
+ms.date: "05/28/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -165,7 +165,7 @@ Managed service accounts, group managed service accounts, and virtual accounts a
   
 -   <a name="MSA"></a> **Managed Service Accounts**  
   
-     A Managed Service Account (MSA) is a type of domain account created and managed by the domain controller. It is assigned to a single member computer for use running a service. The password is managed automatically by the domain controller. You cannot use a MSA to log into a computer, but a computer can use a MSA to start a Windows service. An MSA has the ability to register Service Principal Name (SPN) with the Active Directory. A MSA is named with a **$** suffix, for example **DOMAIN\ACCOUNTNAME$**. When specifying a MSA, leave the password blank. Because a MSA is assigned to a single computer, it cannot be used on different nodes of a Windows cluster.  
+     A Managed Service Account (MSA) is a type of domain account created and managed by the domain controller. It is assigned to a single member computer for use running a service. The password is managed automatically by the domain controller. You cannot use a MSA to log into a computer, but a computer can use a MSA to start a Windows service. An MSA has the ability to register a Service Principal Name (SPN) within Active Directory when given read and write servicePrincipalName permissions. A MSA is named with a **$** suffix, for example **DOMAIN\ACCOUNTNAME$**. When specifying a MSA, leave the password blank. Because a MSA is assigned to a single computer, it cannot be used on different nodes of a Windows cluster.  
   
     > [!NOTE]  
     >  The MSA must be created in the Active Directory by the domain administrator before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup can use it for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  

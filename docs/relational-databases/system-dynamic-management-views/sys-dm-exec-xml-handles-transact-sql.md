@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_xml_handles dynamic management function"
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl 
+ms.author: pelopes
 manager: craigg
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

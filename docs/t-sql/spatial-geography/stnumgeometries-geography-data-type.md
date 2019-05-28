@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumGeometries method"
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STNumGeometries (geography Data Type)

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPolyFromWKB method"
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPolyFromWKB (geography Data Type)

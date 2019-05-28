@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], creating"
   - "SQL Server Agent jobs, creating"
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "InstanceOf (geometry Data Type)"
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # InstanceOf (geometry Data Type)

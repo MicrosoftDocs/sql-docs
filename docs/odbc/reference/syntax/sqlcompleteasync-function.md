@@ -33,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```vb  
+```cpp  
   
 SQLRETURN SQLCompleteAsync(  
       SQLSMALLINT HandleType,  

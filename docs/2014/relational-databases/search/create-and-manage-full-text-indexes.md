@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], about"
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create and Manage Full-Text Indexes

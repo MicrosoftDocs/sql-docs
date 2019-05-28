@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "disabling operators"
   - "operators (users) [Database Engine], changing availability with Management Studio"
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

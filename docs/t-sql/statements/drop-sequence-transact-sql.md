@@ -30,7 +30,7 @@ manager: craigg
 ## Syntax  
   
 ```  
-DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name. ]    sequence_name } [ ,...n ]  
+DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_name.sequence_name | sequence_name } [ ,...n ]  
  [ ; ]  
 ```  
   

@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLCloseCursor(  
      SQLHSTMT     StatementHandle);  

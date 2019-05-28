@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], ENCRYPTBYKEY function"
   - "ENCRYPTBYKEY function"
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ENCRYPTBYKEY (Transact-SQL)

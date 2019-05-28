@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EnvelopeAngle method"
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # EnvelopeAngle (geography Data Type)

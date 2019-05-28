@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_batch stored procedure"
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sys.sp_rda_reconcile_batch (Transact-SQL)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "mapping schema [SQLXML], scenarios for using"
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using Annotations in XSD Schemas (SQLXML 4.0)

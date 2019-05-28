@@ -130,7 +130,7 @@ manager: kfile
   
 -   [The Basic MDX Script &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## See Also  
  [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   

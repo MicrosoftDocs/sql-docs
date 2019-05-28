@@ -12,8 +12,8 @@ f1_keywords:
   - "sql.data.tools.datacompare.watermark.f1"
   - "sql.data.tools.datacompare.connection.objectselection.f1"
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Compare and Synchronize the Data of Two Databases

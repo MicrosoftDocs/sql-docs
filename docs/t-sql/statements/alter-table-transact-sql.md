@@ -1,7 +1,7 @@
 ---
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2019"
+ms.date: "05/17/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -84,7 +84,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 ## Syntax for disk-based tables
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -243,7 +243,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ## Syntax for memory-optimized tables
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -374,7 +374,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
-ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_name
+ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
     ALTER COLUMN column_name
         {
@@ -783,7 +783,7 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . h
 Either disables or enables system versioning of a table. To enable system versioning of a table, the system verifies that the datatype, nullability constraint, and primary key constraint requirements for system versioning are met. If you don't use the HISTORY_TABLE argument, the system generates a new history table matching the schema of the current table, creates a link between the two tables, and enables the system to record the history of each record in the current table in the history table. The name of this history table will be `MSSQL_TemporalHistoryFor<primary_table_object_id>`. If you use the HISTORY_TABLE argument to create a link to and use an existing history table, the system creates a link between the current table and the specified table. When creating a link to an existing history table, you can choose to do a data consistency check. This data consistency check ensures that existing records don't overlap. Running the data consistency check is the default. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} }
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies finite or infinite retention for historical data in a temporal table. If omitted, infinite retention is assumed.
 

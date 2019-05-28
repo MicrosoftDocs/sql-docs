@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STCurveN method (geometry)"
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STCurveN (geometry Data Type)

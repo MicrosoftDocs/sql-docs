@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], deleting"
   - "deleting solutions"
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Delete a Solution

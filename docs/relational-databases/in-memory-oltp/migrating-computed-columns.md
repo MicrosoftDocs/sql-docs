@@ -1,7 +1,7 @@
 ---
 title: "Migrating Computed Columns | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
+ms.date: "12/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -11,15 +11,15 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Migrating Computed Columns
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Computed columns are not supported in memory-optimized tables. However, you can simulate a computed column.
 
-**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, computed columns are supported in memory-optimized tables and indexes.
+Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], computed columns are supported in memory-optimized tables and indexes.
 
 You should consider the need to persist your computed columns when you migrate your disk-based tables to memory-optimized tables. The different performance characteristics of memory-optimized tables and natively compiled stored procedures may negate the need for persistence.  
   
@@ -58,14 +58,17 @@ CREATE VIEW dbo.v_order_details AS
 --  
 -- Total is computed as SalePrice * Quantity and is persisted.  
 -- we need to create insert and update procedures to calculate Total.  
+
 CREATE PROCEDURE sp_insert_order_details   
 @OrderId int, @ProductId int, @SalePrice money, @Quantity int  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH (LANGUAGE = N'english', TRANSACTION ISOLATION LEVEL = SNAPSHOT)  
+
 -- compute the value here.   
 -- this stored procedure works with single rows only.  
 -- for bulk inserts, accept a table-valued parameter into the stored procedure  
 -- and use an INSERT INTO SELECT statement.  
+
 DECLARE @total money = @SalePrice * @Quantity  
 INSERT INTO dbo.OrderDetails (OrderId, ProductId, SalePrice, Quantity, Total)  
 VALUES (@OrderId, @ProductId, @SalePrice, @Quantity, @total)  
@@ -76,8 +79,10 @@ CREATE PROCEDURE sp_update_order_details_by_id
 @OrderId int, @ProductId int, @SalePrice money, @Quantity int  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH (LANGUAGE = N'english', TRANSACTION ISOLATION LEVEL = SNAPSHOT)  
+
 -- compute the value here.   
 -- this stored procedure works with single rows only.  
+
 DECLARE @total money = @SalePrice * @Quantity  
 UPDATE dbo.OrderDetails   
 SET ProductId = @ProductId, SalePrice = @SalePrice, Quantity = @Quantity, Total = @total  

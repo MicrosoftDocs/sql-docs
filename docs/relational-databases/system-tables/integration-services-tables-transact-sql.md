@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "system tables [Integration Services]"
   - "SSIS, system tables"
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STUnion (geometry Data Type)"
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STUnion (geometry Data Type)

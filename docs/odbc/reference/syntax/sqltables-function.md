@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLTables(  
      SQLHSTMT       StatementHandle,  
@@ -156,7 +156,7 @@ SQLRETURN SQLTables(
 ## Example  
  The following sample code does not free handles and connections. See [SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md) and [SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md) for code samples to free handles and statements.  
   
-```  
+```cpp  
 // SQLTables.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

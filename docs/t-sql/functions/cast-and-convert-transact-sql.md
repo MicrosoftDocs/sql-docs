@@ -32,8 +32,8 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "roundtrip conversions"
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

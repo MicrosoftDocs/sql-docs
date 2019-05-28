@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STCurveToLine method (geometry)"
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STCurveToLine (geometry Data Type)

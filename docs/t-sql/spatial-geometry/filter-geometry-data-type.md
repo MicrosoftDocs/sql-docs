@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Filter method"
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Filter (geometry Data Type)

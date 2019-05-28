@@ -10,8 +10,8 @@ ms.topic: conceptual
 keywords: 
   - "install ssdt, download ssdt, latest ssdt"
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
@@ -32,7 +32,7 @@ If you already have a license to Visual Studio 2019:
 
 If you don’t already have a license to Visual Studio 2019:
 - Install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_content=sqlssdt) 
-- Install the Analysis Services, Integration Services or Reporting Services as appropriate
+- Install the Analysis Services, Integration Services or Reporting Services extension as appropriate
 
 ## Changes in SSDT for Visual Studio 2017 ##
 

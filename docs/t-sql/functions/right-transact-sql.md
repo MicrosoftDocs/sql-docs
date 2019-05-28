@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "RIGHT function"
   - "character strings [SQL Server], RIGHT"
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

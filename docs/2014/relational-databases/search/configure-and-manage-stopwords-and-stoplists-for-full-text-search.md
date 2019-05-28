@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure and Manage Stopwords and Stoplists for Full-Text Search

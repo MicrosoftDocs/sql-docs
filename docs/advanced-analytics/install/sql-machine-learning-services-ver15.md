@@ -3,11 +3,11 @@ title: Differences in SQL Server 2019 - SQL Server Machine Learning Services
 description: Learn what's new for R and Python SQL Server machine learning extensions in the SQL Server 2019 preview release.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018  
+ms.date: 05/22/2019
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Differences in SQL Server Machine Learning Services installation in SQL Server 2019  
@@ -15,12 +15,12 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes. This change replaces local worker accounts with [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), an isolation technology for client applications running on Windows. 
 
-There are no specific action items for the administrator as a result of the modification. On a new or upgraded server, all external scripts and code executed from [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) follow the new isolation model automatically. This applies to R, Python, and the new Java language extension introduced in SQL Server 2019.
+There are no specific action items for the administrator as a result of the modification. On a new or upgraded server, all external scripts and code executed from [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) follow the new isolation model automatically. 
 
 Summarized, the main differences in this release are:
 
 + Local user accounts under **SQL Restricted User Group (SQLRUserGroup)** are no longer created or used to run external processes. AppContainers replace them.
-+ **SQLRUserGroup** membership has changed. Instead of multiple local user accounts, membership consists of just the SQL Server Launchpad service account. R, Python, and Java processes now execute under the Launchpad service identity, isolated through AppContainers.
++ **SQLRUserGroup** membership has changed. Instead of multiple local user accounts, membership consists of just the SQL Server Launchpad service account. R and Python processes now execute under the Launchpad service identity, isolated through AppContainers.
 
 Although the isolation model has changed, the Installation wizard and command line parameters remain the same in SQL Server 2019. For help with installation, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md).
 
@@ -43,7 +43,7 @@ As part of the move to AppContainers, there are new firewall rules based on AppC
 
 ## Program file permissions
 
-As with previous releases, the **SQLRUserGroup** continues to provide read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories. In this release, the only member of **SQLRUserGroup** is the SQL Server Launchpad service account.  When Launchpad service starts an R, Python, or Java execution environment, the process runs as LaunchPad service.
+As with previous releases, the **SQLRUserGroup** continues to provide read and execute permissions on executables in the SQL Server **Binn**, **R_SERVICES**, and **PYTHON_SERVICES** directories. In this release, the only member of **SQLRUserGroup** is the SQL Server Launchpad service account.  When Launchpad service starts an R or Python execution environment, the process runs as LaunchPad service.
 
 ## Implied authentication
 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], Boolean operators"
   - "operators [SQLXML]"
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Specifying Boolean Operators in XPath Queries (SQLXML 4.0)

@@ -14,8 +14,8 @@ f1_keywords:
   - "vdt.designers.properties.Column.ColumnComputedColumnSpec"
   - "vdt.designers.properties.Column.ColumnFulltextSpec"
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

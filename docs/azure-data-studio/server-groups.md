@@ -2,16 +2,17 @@
 title: Server groups
 titleSuffix: Azure Data Studio
 description: Learn about server groups in Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "09/24/2018"
 ---
+
 # Server groups in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Server groups provide a way to organize your connections to the servers and databases you work with. When you create server groups, the configuration details are saved into *User Settings*.

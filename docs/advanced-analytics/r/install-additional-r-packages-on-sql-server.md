@@ -4,7 +4,7 @@ description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/29/2018  
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -26,7 +26,7 @@ This article describes how to install new R packages to an instance of SQL Serve
 
 The R package library is physically located in the Program Files folder of your SQL Server instance, in a secure folder with restricted access. Writing to this location requires administrator permissions.
 
-Non-administrators can install packages but doing so requires addititional configuration and capability not available in initial installations. There are two approaches for non-admin package installations: RevoScaleR using version 9.0.1 and later, or using CREATE EXTERNAL LIBRARY (SQL Server 2017 only). In SQL Server 2017, **dbo_owner** or another user with CREATE EXTERNAL LIBRARY permission can install R packages to the current database.
+Non-administrators can install packages but doing so requires additional configuration and capability not available in initial installations. There are two approaches for non-admin package installations: RevoScaleR using version 9.0.1 and later, or using CREATE EXTERNAL LIBRARY (SQL Server 2017 only). In SQL Server 2017, **dbo_owner** or another user with CREATE EXTERNAL LIBRARY permission can install R packages to the current database.
 
 R developers are accustomed to creating user libraries for the packages they need if centrally located libraries are off-limits. This practice is problematic for R code executing in a SQL Server database engine instance. SQL Server cannot load packages from external libraries, even if that library is on the same computer. Only packages from the instance library can be used in R code running in SQL Server.
 
@@ -37,7 +37,6 @@ File system access is typically restricted on the server, and even if you have a
 Before installing new packages, consider whether the capabilities enabled by a given package are suitable in a SQL Server environment. On a hardened SQL Server environment, you might want to avoid the following:
 
 + Packages that require network access
-+ Packages that require Java or other frameworks not typically used in a SQL Server environment
 + Packages that require elevated file system access
 + Package is used for web development or other tasks that don't benefit by running inside SQL Server
 
@@ -47,7 +46,7 @@ In general, servers that host production databases block internet connections. I
 
 Identifying all dependencies gets complicated. For R, we recommend that you use [miniCRAN to create a local repository](create-a-local-package-repository-using-minicran.md) and then transfer the fully defined repo to an isolated SQL Server instance.
 
-Alternativley, you can perform this steps manually:
+Alternatively, you can perform these steps manually:
 
 1. Identify all package dependencies. 
 2. Check whether any required packages are already installed on the server. If the package is installed, verify that the version is correct.

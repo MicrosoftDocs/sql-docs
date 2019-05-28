@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "string concatenation operators"
   - "+ (string concatenation)"
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # String Operators (Transact-SQL)

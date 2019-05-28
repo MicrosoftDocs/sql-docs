@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/24/2019
+ms.date: 05/29/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -50,10 +50,10 @@ This command creates an external table for PolyBase to access data stored in a H
 
 **APPLIES TO**: SQL Server 2016 (or higher)
 
-Use an external table to:
+Use an external table with an external data source for PolyBase queries. External data sources are used to establish connectivity and support these primary use cases:
 
-- Query Hadoop or Azure blob storage data with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
-- Import and store data from Hadoop or Azure blob storage into your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.
+- Data virtualization and data load using [PolyBase](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide)
+- Bulk load operations using SQL Server or SQL Database using `BULK INSERT` or `OPENROWSET`
 
 See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) and [DROP EXTERNAL TABLE](../../t-sql/statements/drop-external-table-transact-sql.md).
 
@@ -76,7 +76,6 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
     | REJECT_TYPE = value | percentage
     | REJECT_VALUE = reject_value
     | REJECT_SAMPLE_VALUE = reject_sample_value
-
 }
 ```
 

@@ -204,7 +204,7 @@ SET
     | MAX_STORAGE_SIZE_MB = number
     | INTERVAL_LENGTH_MINUTES = number
     | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
-    | QUERY_CAPTURE_MODE = { ALL | AUTO | NONE }
+    | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
     | MAX_PLANS_PER_QUERY = number
     | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
     | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )

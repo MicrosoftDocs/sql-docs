@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio (SSMS)
-ms.prod: sql
+description: Describing what is SQL Server Management Studio (SSMS) and what can it do.
 ms.technology: ssms
 ms.topic: overview
 author: markingmyname
@@ -17,6 +17,7 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 ms.custom: ""
 ms.date: 05/29/2019
+#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain them for my users.
 ---
 
 # What is SQL Server Management Studio (SSMS)?

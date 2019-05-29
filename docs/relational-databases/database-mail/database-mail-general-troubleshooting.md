@@ -60,7 +60,7 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
 
 ## Are users properly configured to send mail
 
-1. To send Database Mail, users must be a member of the DatabaseMailUserRole. Members of the sysadmin fixed server role and msdbdb_owner role are automatically members of the DatabaseMailUserRole role. To list all other members of the DatabaseMailUserRole execute the following statement:
+1. To send Database Mail, users must be a member of the DatabaseMailUserRole database role in the msdb database. Members of the sysadmin fixed server role and msdbdb_owner role are automatically members of the DatabaseMailUserRole role. To list all other members of the DatabaseMailUserRole execute the following statement:
 
     ```sql
     EXEC msdb.sys.sp_helprolemember 'DatabaseMailUserRole';

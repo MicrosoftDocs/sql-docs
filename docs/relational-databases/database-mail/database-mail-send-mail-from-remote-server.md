@@ -56,7 +56,7 @@ We recommend that the login account that is executing these troubleshooting proc
         </appSettings>
     </configuration>
     ```
-1. Save the file on the remote server in the same folder, \MSSQL\Binn, as DatabaseMail90.exe. The default path is `<drive>:\Program Files\Microsoft SQL Server\MSSQL???.MSSQLSERVER\MSSQL\Binn` where the question marks correspond to the version of SQL Server.
+1. Save the file on the remote server in the same folder, \MSSQL\Binn, as DatabaseMail.exe. The default path is `<drive>:\Program Files\Microsoft SQL Server\MSSQL???.MSSQLSERVER\MSSQL\Binn` where the question marks correspond to the version of SQL Server. If you are running a named instance of SQL Server, replace MSSQLSERVER with the name of the instance.
 1. To configure Database Mail to send e-mail from another server, run the following code on the remote server.
 
   > [!IMPORTANT]

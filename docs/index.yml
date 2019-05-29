@@ -212,17 +212,17 @@ additionalContent:
         summary: |
           [SQL Machine Learning Services (R & Python)](advanced-analytics/what-is-sql-server-machine-learning.md)<br />
           [SQL Server R Services](advanced-analytics/r/sql-server-r-services.md)<br />
-          [Azure Machine Learning](docs.microsoft.com/en-us/azure/machine-learning/)<br />
+          [Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/)<br />
       - title: Reporting
         summary: |
           [SQL Server Reporting Services (SSRS)](reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br />
-          [Power BI Service](docs.microsoft.com/en-us/power-bi/service-get-started)<br />
-          [Power BI Report Server](docs.microsoft.com/en-us/power-bi/report-server/get-started)<br />
+          [Power BI Service](https://docs.microsoft.com/en-us/power-bi/service-get-started)<br />
+          [Power BI Report Server](https://docs.microsoft.com/en-us/power-bi/report-server/get-started)<br />
       - title: Data Analytics
         summary: |
-          [Microsoft Analytics Platform System](analytics-platform-system/?view=aps-pdw-2016-au7)<br />
+          [Microsoft Analytics Platform System](analytics-platform-system)<br />
           [SQL Server Analysis Services (SSAS)](analysis-services/analysis-services.md)<br />
-          [Azure Analysis Services](docs.microsoft.com/en-us/azure/analysis-services/)<br />
+          [Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/)<br />
           [Polybase](relational-databases/polybase/polybase-guide.md)<br />
           [SQL Server 2019 big data clusters](big-data-cluster/big-data-cluster.md)<br />
       - title: Reference
@@ -230,8 +230,8 @@ additionalContent:
           [xQuery](xquery/xquery-language-reference-sql-server.md)<br />
           [SQL PowerShell](powershell/sql-server-powershell.md)<br />
           [Transact-SQL](t-sql/language-reference.md)<br />
-          [SQL Rest API](docs.microsoft.com/en-us/rest/api/sql/)<br />
-          [Archived content (SQL 2005-2012)](docs.microsoft.com/en-us/previous-versions/sql/)<br />
+          [SQL Rest API](https://docs.microsoft.com/en-us/rest/api/sql/)<br />
+          [Archived content (SQL 2005-2012)](https://docs.microsoft.com/en-us/previous-versions/sql/)<br />
           [Database samples](samples/sql-samples-where-are.md)<br />
           [DMVs](relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)<br />
           [System catalog views](relational-databases/system-catalog-views/catalog-views-transact-sql.md)<br />        

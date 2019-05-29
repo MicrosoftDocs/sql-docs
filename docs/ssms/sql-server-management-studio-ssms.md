@@ -7,13 +7,13 @@ ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-f1_keywords: "sql13.ssms.viewhelp.f1"
+f1_keywords: 
+  - "sql13.ssms.viewhelp.f1"
 helpviewer_keywords: 
   - "SQL Server Management Studio"
   - "SQL Server Management Studio for Integration Services"
   - "SQL Server Management Studio for Reporting Services"
   - "SQL Server Management Studio for Analysis Services"
-ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 ms.custom: ""
 ms.date: 05/29/2019
 #Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users.
@@ -76,9 +76,9 @@ You also manage the server by enabling and configuring various features, setting
 
 ## Non-English language versions of SQL Server Management Studio (SSMS)
 
-SSMS is available in several languages, but the SSMS installer blocks installation on computers when their system locale doesn't match the SSMS language.
+The block on mixed languages setup has been lifted. You can install SSMS German on a French Windows. If the OS language does not match the SSMS language, the user needs to change the language under Tools > Options > International Settings, otherwise SSMS shows the English UI.
 
-For more information, please reference [Install non-English language versions of SSMS](install-other-languages.md).
+For more information about different locale with previous versions, please reference [Install non-English language versions of SSMS](install-other-languages.md).
 
 ## Support Policy for SSMS
 

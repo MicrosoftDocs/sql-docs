@@ -8722,50 +8722,8 @@
       href: ../ssms/release-notes-ssms.md
     - name: Overview
       items:
-      - name: SSMS
-        items:
-        - name: SQL Server Management Studio (SSMS)
-          href: ../ssms/sql-server-management-studio-ssms.md
-      - name: SQL Server Agent
-        items:
-        - name: SQL Server Agent
-          href: ../ssms/agent/sql-server-agent.md
-        - name: Post Download Instructions
-          href: ../ssms/agent/post-download-instructions.md
-        - name: Job Activity Monitor
-          href: ../ssms/agent/job-activity-monitor.md
-      - name: Register servers
-        items:
-        - name: Register servers
-          href: ../ssms/register-servers/register-servers.md
-      - name: Scripting
-        items:
-        - name: Scripting
-          href: ../ssms/scripting/database-engine-scripting.md
-        - name: Query & Text Editors
-          href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
-        - name: Database Engine Query Editor
-          href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
-        - name: XML Editor
-          href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
-        - name: Configure Editors
-          href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
-        - name: Associate File Extensions to a Code Editor
-          href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
-        - name: Change Font Color, Size, & Style
-          href: ../ssms/scripting/change-font-color-size-and-style.md
-        - name: Use the Properties Window in Management Studio
-          href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
-        - name: Open an Editor
-          href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
-        - name: Manage the Editor & View Mode
-          href: ../ssms/scripting/manage-the-editor-and-view-mode.md
-        - name: Manage Code Formatting
-          href: ../ssms/scripting/manage-code-formatting.md
-        - name: Navigate Code & Text
-          href: ../ssms/scripting/navigate-code-and-text.md
-        - name: Color Coding in Query Editors
-          href: ../ssms/scripting/color-coding-in-query-editors.md
+      - name: SQL Server Management Studio (SSMS)
+        href: ../ssms/sql-server-management-studio-ssms.md
     - name: Quickstarts
       items:
       - name: SSMS
@@ -8820,6 +8778,12 @@
           href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
       - name: SQL Server Agent
         items:
+        - name: SQL Server Agent
+          href: ../ssms/agent/sql-server-agent.md
+        - name: Post Download Instructions
+          href: ../ssms/agent/post-download-instructions.md
+        - name: Job Activity Monitor
+          href: ../ssms/agent/job-activity-monitor.md
         - name: Automated Administration Tasks
           href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
         - name: Implement Agent Security
@@ -8926,6 +8890,8 @@
             href: ../ssms/agent/proxy-account-properties-new-proxy-account-principals-tab.md
       - name: Register servers
         items:
+        - name: Register servers
+          href: ../ssms/register-servers/register-servers.md
         - name: Registered Servers F1 Help
           href: ../ssms/register-servers/registered-servers-f1-help.md
       - name: Scripting
@@ -9348,6 +9314,32 @@
           href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
       - name: Scripting
         items:
+        - name: Scripting
+          href: ../ssms/scripting/database-engine-scripting.md
+        - name: Query & Text Editors
+          href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+        - name: Database Engine Query Editor
+          href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+        - name: XML Editor
+          href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+        - name: Configure Editors
+          href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
+        - name: Associate File Extensions to a Code Editor
+          href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+        - name: Change Font Color, Size, & Style
+          href: ../ssms/scripting/change-font-color-size-and-style.md
+        - name: Use the Properties Window in Management Studio
+          href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+        - name: Open an Editor
+          href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
+        - name: Manage the Editor & View Mode
+          href: ../ssms/scripting/manage-the-editor-and-view-mode.md
+        - name: Manage Code Formatting
+          href: ../ssms/scripting/manage-code-formatting.md
+        - name: Navigate Code & Text
+          href: ../ssms/scripting/navigate-code-and-text.md
+        - name: Color Coding in Query Editors
+          href: ../ssms/scripting/color-coding-in-query-editors.md
         - name: Configure Editors
           href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
         - name: Associate File Extensions to a Code Editor

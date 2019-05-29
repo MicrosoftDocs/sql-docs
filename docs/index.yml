@@ -68,6 +68,9 @@ conceptualContent:
         - text: Reporting Services (SSRS)
           url: reporting-services/install-windows/install-reporting-services.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/install-sql-and-services.md
     - title: Upgrade
       links:
         - text: SQL Server
@@ -84,7 +87,7 @@ conceptualContent:
           itemType: overview
       footerLink:
         text: See more
-        url: https://docs.microsoft.com/visualstudio/ide
+        url: lp/sql-server/install-sql-and-services.md
     - title: Migrate
       links:
         - text: Azure Database Migration Service (DMS)
@@ -99,6 +102,9 @@ conceptualContent:
         - text: SQL Server Migration Assistant (SSMA)
           url: ssma/sql-server-migration-assistant.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/load-move-data.md
     - title: Business Continuity
       links:
         - text: Backup & Restore
@@ -113,6 +119,9 @@ conceptualContent:
         - text: Transaction log management
           url: relational-databases/logs/the-transaction-log-sql-server.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/business-continuity.md
     - title: Security
       links:
         - text: Permissions
@@ -127,6 +136,9 @@ conceptualContent:
         - text: TDE
           url: relational-databases/security/encryption/transparent-data-encryption.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/secure-sql-server.md
     - title: Manage & Monitor
       links:
         - text: Maintenance plans
@@ -141,6 +153,9 @@ conceptualContent:
         - text: xEvents
           url: relational-databases/extended-events/extended-events.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/manage-monitor-tune.md
     - title: Tune
       links:
         - text: Automatic tuning
@@ -152,6 +167,9 @@ conceptualContent:
         - text: In-memory OLTP
           url: relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/manage-monitor-tune.md
     - title: Load & Move Data
       links:
         - text: Integration Services
@@ -166,6 +184,9 @@ conceptualContent:
         - text: Replication
           url: relational-databases/replication/sql-server-replication.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/load-move-data.md
     - title: Database Design
       links:
         - text: Databases
@@ -180,6 +201,9 @@ conceptualContent:
         - text: Statistics
           url: relational-databases/statistics/statistics.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/database-design.md
     - title: Query Data
       links:
         - text: Joins
@@ -194,6 +218,9 @@ conceptualContent:
         - text: User-defined functions
           url: relational-databases/user-defined-functions/user-defined-functions.md
           itemType: overview
+      footerLink:
+        text: See more
+        url: lp/sql-server/query-data.md
 
 additionalContent:
   sections:

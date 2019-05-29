@@ -78,18 +78,13 @@ You also manage the server by enabling and configuring various features, setting
 
 SSMS is available in several languages, but the SSMS installer blocks installation on computers when their system locale doesn't match the SSMS language.
 
-> [!NOTE]
-> This article applies to SSMS 17.x. For SSMS 18.x the block on mixed languages setup has been removed, and you can now, for example, install SSMS German on a French version of Windows. If the OS language does not match the SSMS language, set the desired language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI.
-
-The following directions differ depending on your version of Windows. The following are for Windows 10.
+For more information, please reference [Install non-English language versions of SSMS](install-other-languages.md).
 
 ## Support Policy for SSMS
 
 - Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 - Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy).
 - For more information, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
@@ -101,3 +96,5 @@ The following directions differ depending on your version of Windows. The follow
 - [Developing and Implementing Using SQL Server Data Tools](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)
 - [Reporting Services in SQL Server Data Tools](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
 - [Tutorial: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -32,7 +32,7 @@ When the remote server is sending e-mail that is generated on the local server, 
   > To run the following procedures, both the local and remote servers must be running SQL Server 2005 Service Pack 2 or later version.
 
 ## Permissions
-EXECUTE permission for **dbo.sysmail_start_sp** and **sysmail_configure_sp** and INSERT permission for **dbo.sysmail_configuration** are granted to members of the sysadmin fixed server role by default.
+EXECUTE permission for **dbo.sysmail_start_sp** and **dbo.sysmail_configure_sp** and INSERT permission for **dbo.sysmail_configuration** are granted to members of the sysadmin fixed server role by default.
 
 NTFS permission is required to create the configuration file in \MSSQL\Binn.
 

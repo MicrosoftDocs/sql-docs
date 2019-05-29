@@ -69,6 +69,9 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
 1. To add users to the DatabaseMailUserRole role, use the following statement:
 
     ```sql
+    USE msdb;
+    GO
+    
     sp_addrolemember @rolename = 'DatabaseMailUserRole'
    ,@membername = '<database user>';
     ```

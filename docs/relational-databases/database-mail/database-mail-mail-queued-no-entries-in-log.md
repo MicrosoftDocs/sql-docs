@@ -22,7 +22,7 @@ This topic describes how to troubleshoot a problem where e-mail messages are suc
 
 Database Mail relies on Service Broker for queuing e-mail messages. If Database Mail is stopped or if Service Broker message delivery is not activated in the **msdb** database, Database Mail queues messages in the database but cannot deliver the messages. In this case, the Service Broker messages remain in the Service Broker Mail queue. Service Broker does not activate the external program, so there are no log entries in **sysmail_event_log** and no updates to the item status in **sysmail_allitems** and the related views.
 
-Execute the following statement to check whether Database Mail is enabled:
+Execute the following statement to check whether Service Broker is enabled in the **msdb** database:
 
 ```sql
 SELECT is_broker_enabled FROM sys.databases WHERE name = 'msdb';

@@ -34,7 +34,7 @@ A value of 0 indicates that Service Broker message delivery is not activated in 
 USE master ;
 GO
 
-ALTER DATABASE [DatabaseName] SET ENABLE_BROKER ;
+ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 

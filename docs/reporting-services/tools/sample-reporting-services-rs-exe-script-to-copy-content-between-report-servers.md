@@ -261,7 +261,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 > [!TIP]  
-> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
+> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint mode -'bi' site collection to a native mode server on a Windows Azure virtual machine. 
  The following example migrates content:  

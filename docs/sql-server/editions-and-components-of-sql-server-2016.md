@@ -1,7 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2017"
+ms.custom: "sqlfreshmay19"
+ms.date: "05/29/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -108,7 +108,7 @@ For the latest release notes and what's new information, see the following:
 
 **Developer and Evaluation Editions**  
 For features supported by Developer and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
-For a list of features that were added to the Developer edition for [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, see [SQL Server 2016 SP1 editions](https://aka.ms/uw6cw4).  
+
 
 The Developer edition continues to support only 1 client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -377,7 +377,6 @@ For information about the Business Intelligence Client features supported by the
 > [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## See Also  
- [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   

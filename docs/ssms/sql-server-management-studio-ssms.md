@@ -76,9 +76,9 @@ You also manage the server by enabling and configuring various features, setting
 
 ## Non-English language versions of SQL Server Management Studio (SSMS)
 
-The block on mixed languages setup has been lifted. You can install SSMS German on a French Windows. If the OS language does not match the SSMS language, the user needs to change the language under Tools > Options > International Settings, otherwise SSMS shows the English UI.
+The block on mixed languages setup has been lifted. You can install SSMS German on a French Windows. If the OS language doesn't match the SSMS language, the user needs to change the language under Tools > Options > International Settings. Otherwise, SSMS shows the English UI.
 
-For more information about different locale with previous versions, please reference [Install non-English language versions of SSMS](install-other-languages.md).
+For more information about different locale with previous versions, reference [Install non-English language versions of SSMS](install-other-languages.md).
 
 ## Support Policy for SSMS
 

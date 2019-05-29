@@ -16504,8 +16504,6 @@
           href: ../t-sql/queries/table-value-constructor-transact-sql.md
         - name: TOP
           href: ../t-sql/queries/top-transact-sql.md
-        - name: UPDATE
-          href: ../t-sql/queries/update-transact-sql.md
         - name: UPDATETEXT
           href: ../t-sql/queries/updatetext-transact-sql.md
         - name: WITH common_table_expression
@@ -16578,6 +16576,8 @@
           href: ../t-sql/statements/insert-transact-sql.md
         - name: INSERT (SQL Graph)
           href: ../t-sql/statements/insert-sql-graph.md
+        - name: UPDATE
+          href: ../t-sql/queries/update-transact-sql.md
         - name: MERGE
           href: ../t-sql/statements/merge-transact-sql.md
         - name: RENAME

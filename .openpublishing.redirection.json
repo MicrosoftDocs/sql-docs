@@ -14383,7 +14383,7 @@
         {
             "source_path": "docs/ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md",
             "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
-            "redirect_document_id": false
+            "redirect_document_id": true
         }
     ]
 }

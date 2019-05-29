@@ -1,13 +1,13 @@
 ---
 title: SQL Server Management Studio (SSMS)
 description: Describing what is SQL Server Management Studio (SSMS) and what can it do.
+ms.prod: sql
 ms.technology: ssms
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-f1_keywords: 
-  - "sql13.ssms.viewhelp.f1"
+f1_keywords: "sql13.ssms.viewhelp.f1"
 helpviewer_keywords: 
   - "SQL Server Management Studio"
   - "SQL Server Management Studio for Integration Services"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 ms.custom: ""
 ms.date: 05/29/2019
-#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain them for my users.
+#Customer intent: As a database admin, I want to manage my databases so that I can monitor, track, and maintain the databases for my users.
 ---
 
 # What is SQL Server Management Studio (SSMS)?
@@ -26,7 +26,7 @@ ms.date: 05/29/2019
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment for managing any SQL infrastructure. Use SSMS to access, configure, manage, administer, and develop all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL Database, and SQL Data Warehouse. SSMS provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for developers and database administrators of all skill levels.
 
 - [**Download SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md)
-- [**Download SQL Server 2016 Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
+- [**Download SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Download Visual Studio**](https://www.visualstudio.com/downloads/)
 
 ## SQL Server Management Studio components  
@@ -34,7 +34,7 @@ ms.date: 05/29/2019
 |Description|Component|  
 |---------------|---------|  
 |Use **Object Explorer** to view and manage all of the objects in one or more instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Object Explorer](../ssms/object/object-explorer.md)|  
-|How to use **Template Explorer** to build and manage files of boilerplate text that can be used to speed the development of queries and scripts.|[Template Explorer](../ssms/template/template-explorer.md)|  
+|How to use **Template Explorer** to build and manage files of boilerplate text that you use to speed the development of queries and scripts.|[Template Explorer](../ssms/template/template-explorer.md)|  
 |How to use the deprecated **Solution Explorer** to build projects used to manage administration items such as scripts and queries.|[Solution Explorer](../ssms/solution/solution-explorer.md)|  
 |How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|

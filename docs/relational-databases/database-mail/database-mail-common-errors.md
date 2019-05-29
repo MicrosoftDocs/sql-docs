@@ -22,6 +22,16 @@ This article describes some common errors encountered with database mail and the
 
 ## Could not find stored procedure 'sp_send_dbmail'
 The [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) stored procedure is installed in the msdb database. You must either run **sp_send_dbmail** from the msdb database, or specify a three-part name for the stored procedure.
+Example:
+```sql
+EXEC msdb.dbo.sp_send_dbmail ...
+
+Or:
+```sql
+USE msdb;
+GO
+
+EXEC dbo.sp_send_dbmail ...
 
 Use [Database Mail Configuration Wizard](configure-database-mail.md) to enable and configure database mail.
 

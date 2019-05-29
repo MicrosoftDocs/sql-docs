@@ -25,7 +25,7 @@ This topic describes how to create a full database backup in [!INCLUDE[ssCurrent
 
 For information on SQL Server backup to the Azure Blob storage service, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) and [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
-#@  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   The BACKUP statement is not allowed in an explicit or implicit transaction.    
 -   Backups created by more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
@@ -33,10 +33,8 @@ For information on SQL Server backup to the Azure Blob storage service, see [SQL
   
 ## <a name="Recommendations"></a> Recommendations  
   
--   As a database increases in size full database backups take more time to complete, and require more storage space. For a large database, consider supplementing a full database backup with a series of [differential database backups](../../relational-databases/backup-restore/differential-backups-sql-server.md). For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
-  
--   Estimate the size of a full database backup by using the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure.  
-  
+-   As a database increases in size full database backups take more time to complete, and require more storage space. For a large database, consider supplementing a full database backup with a series of [differential database backups](../../relational-databases/backup-restore/differential-backups-sql-server.md). For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).    
+-   Estimate the size of a full database backup by using the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure.    
 -   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up frequently, these success messages will accumulate quickly, resulting in huge error logs! This can make finding other messages difficult. In such cases you can suppress these backup log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ##  <a name="Security"></a> Security  
@@ -156,7 +154,7 @@ In this example the `SQLTestDB` database will be backed up with encryption to th
 1.  From the **Certificate or Asymmetric key** drop-down list select `MyCertificate`.
 1.  Select **OK**.
 
-
+![Encrypted backup](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
 ### **D.  Back up to the Azure Blob storage service**
 
@@ -180,7 +178,7 @@ A stored access policy has been created with read, write, and list rights.  The 
    10.  Click **OK**.
    11.   Click **OK**.
 
-#### A shared access signature exists and a SQL Server Credential does not exist**
+#### A shared access signature exists and a SQL Server Credential does not exist
 
   5.	Enter `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` in the **Azure storage container:** text box  
   6.	Enter the shared access signature in the **Shared Access Policy:** text box.  
@@ -188,7 +186,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   8.	Click **OK**.
 
 
-#### A shared access signature does not exist**
+#### A shared access signature does not exist
 
   5.	Click the **New container** button and the **Connect to a Microsoft Subscription** dialog box will open.   
   6.	Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select Backup Destination** dialog box.  See [See Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.  

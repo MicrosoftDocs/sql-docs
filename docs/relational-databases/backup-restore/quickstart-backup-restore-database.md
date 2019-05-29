@@ -15,9 +15,9 @@ ms.assetid:
 # Quickstart: Backup and restore a SQL Server database on-premises
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you will create a new database, take a simple back up of it, delete the database, and then restore it. 
+In this quickstart, you will create a new database, take a simple back up of it, and then restore it. 
 
-For a more detailed how-to, see [Create a full database backup](create-a-full-database-backup-sql-server.md) and [Restore a backup using SSMS](restore-a-database-backup-using-ssms.md)
+For a more detailed how-to, see [Create a full database backup](create-a-full-database-backup-sql-server.md) and [Restore a backup using SSMS](restore-a-database-backup-using-ssms.md).
 
 ## Prerequisites
 To complete this quickstart, you will need the following: 
@@ -76,7 +76,8 @@ To take a backup of your database, do the following:
 Alternatively, you can run the following Transact-SQL command to back up your database: 
 
 ```sql
-BACKUP DATABASE [SQLTestDB] TO  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak' 
+BACKUP DATABASE [SQLTestDB] 
+TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak' 
 WITH NOFORMAT, NOINIT,  
 NAME = N'SQLTestDB-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  STATS = 10
 GO
@@ -102,14 +103,13 @@ Alternatively, you can run the following Transact-SQL script to restore your dat
 
 ```sql
 USE [master]
-BACKUP LOG [SQLTestDB] TO  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB_LogBackup_2019-05-29_02-12-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'SQLTestDB_LogBackup_2019-05-29_02-12-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5
-RESTORE DATABASE [SQLTestDB] FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak' WITH  FILE = 1,  NOUNLOAD,  STATS = 5
-
+RESTORE DATABASE [SQLTestDB] 
+FROM DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\SQLTestDB.bak' WITH  FILE = 1,  NOUNLOAD,  STATS = 5
 GO
 ```
 
 ### Clean up resources
-Run the following Transact-SQL command to remove the database you created:
+Run the following Transact-SQL command to remove the database you created, along with its backup history in the MSDB database:
 
 ```sql
 EXEC msdb.dbo.sp_delete_database_backuphistory @database_name = N'SQLTestDB'

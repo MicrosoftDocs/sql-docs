@@ -1,7 +1,7 @@
 ---
 title: "Create a Full Database Backup (SQL Server) | Microsoft Docs"
 ms.custom: "sqlfreshmay19"
-ms.date: "06/13/2017"
+ms.date: "05/29/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

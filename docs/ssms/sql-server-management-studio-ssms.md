@@ -19,7 +19,7 @@ ms.custom: ""
 ms.date: 05/29/2019
 ---
 
-# SQL Server Management Studio (SSMS)
+# What is SQL Server Management Studio (SSMS)?
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -39,12 +39,6 @@ ms.date: 05/29/2019
 |How to use the visual design tools included in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |How to use the [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] language editors to interactively build and debug queries and scripts.|[Query and Text Editors (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|
 
-## Support Policy for SSMS
-
-- Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
-- Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy).
-- For more information, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
-
 ## SQL Server Management Studio for Business Intelligence
 
 To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Although all three business intelligence technologies rely on [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the administrative tasks associated with each of these technologies are slightly different.
@@ -54,7 +48,7 @@ To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../include
   
 ### Managing Analysis Services Solutions Using SQL Server Management Studio
 
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] enables you to manage [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] objects, such as performing back-ups and processing objects. 
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] enables you to manage [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] objects, such as performing back-ups and processing objects.
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides an [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script project in which you develop and save scripts written in Multidimensional Expressions (MDX), Data Mining Extensions (DMX), and XML for Analysis (XMLA). You use [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Scripts projects to perform management tasks or re-create objects, such as database and cubes, on [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] instances. For example, you can develop an XMLA script in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Script project that creates new objects directly on an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] instance. The [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] Scripts projects can be saved as part of a solution and integrated with source code control.
   
@@ -89,40 +83,21 @@ SSMS is available in several languages, but the SSMS installer blocks installati
 
 The following directions differ depending on your version of Windows. The following are for Windows 10.
 
-### Install non-English SSMS on a computer running an English operating system (OS)
+## Support Policy for SSMS
 
-1. Install the Windows language pack for the language you want SSMS to use:
-   - **Settings** > **Time & language** > **Region & language** > **Add a language**
-2. Now set the system locale to use the language pack installed in the previous step by clicking the language installed, then select **Set as default**. (After installing SSMS, you can set the system locale back to English.)
-3. After your operating system is running in the desired language, install the SSMS language you want. The first time you install a new SSMS language, use the full package. You can use the upgrade package for subsequent installs.
-4. Run SSMS, and it should display as the language you installed in the previous step.
-5. Set your computer's system, locale back to English.
+- Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+- Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy).
+- For more information, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
-### Install SSMS in a language other than the language of the installed OS
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-1. Install the Windows language pack for the language you want SSMS to use:
-   - **Settings** > **Time & language** > **Region & language** > **Add a language**
-2. Now set the system locale to use the language pack installed in the previous step by clicking the language installed, then select **Set as default**.
-3. After your operating system is running in the desired language, install the SSMS language you want. The first time you install a new SSMS language, use the full package. You can use the upgrade package for subsequent installs.
-4. For each language you want to install that doesn't match the language of the first version of SSMS you installed, install the corresponding Visual Studio 2015 Shell (Isolated) Language Pack:
-   - Browse to [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (you may need to sign in and complete the *Connect Registration* process).
-   - Download the desired Visual Studio 2015 Shell (Isolated) Language Pack and install it.
-
-   > [!IMPORTANT]
-   > Use the previous steps to install the Visual Studio 2015 Isolated Shell Language Pack, do not use the **Get additional languages** link on **Tools** | **Options** | **International Settings**.
-
-5. Run SSMS and select the language you want to use in:
-   - **Tools** | **Options** | **International Settings**
-6. Close and restart SSMS.
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 ## Next steps
 
+- [Install non-English language versions of SQL Server Management Studio (SSMS)](install-other-languages.md)
 - [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
 - [Developing and Implementing Using SQL Server Data Tools](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)
 - [Reporting Services in SQL Server Data Tools](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
 - [Tutorial: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
-
-[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

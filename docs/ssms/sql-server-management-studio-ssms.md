@@ -43,7 +43,7 @@ ms.date: 05/29/2019
 
 - Starting with SSMS 17.0, the SQL Tools team has adopted the [Microsoft Modern Lifecycle Policy](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 - Read the original [Modern Lifecycle Policy announcement](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy).
-- For additional infomrmation, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
+- For more information, see [Modern Policy FAQs](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 
 ## SQL Server Management Studio for Business Intelligence
 
@@ -68,7 +68,7 @@ For more information about how to use [!INCLUDE[ssManStudioFull](../includes/ssm
 
 Use SQL Server Management Studio to enable Reporting Services features, administer the server and databases, and manage roles and jobs.
 
-You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following topics:  
+You manage shared schedules by using the Shared Schedules folder, and manage report server databases (ReportServer, ReportServerTempdb). You also create a RSExecRole in the Master system database when you move a report server database to a new or different SQL Server Database Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). For more information about these tasks, see the following topics:  
 
 - [Management Studio How-to Topics](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)
 - [Administering a Report Server Database](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
@@ -85,7 +85,7 @@ You also manage the server by enabling and configuring various features, setting
 SSMS is available in several languages, but the SSMS installer blocks installation on computers when their system locale doesn't match the SSMS language.
 
 > [!NOTE]
-> This article applies to SSMS 17.x. For SSMS 18.x the block on mixed languages setup has been removed and you can now, for example, install SSMS German on a French version of Windows. If the OS language does not match the SSMS language, set the desired language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI.
+> This article applies to SSMS 17.x. For SSMS 18.x the block on mixed languages setup has been removed, and you can now, for example, install SSMS German on a French version of Windows. If the OS language does not match the SSMS language, set the desired language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI.
 
 The following directions differ depending on your version of Windows. The following are for Windows 10.
 
@@ -93,18 +93,18 @@ The following directions differ depending on your version of Windows. The follow
 
 1. Install the Windows language pack for the language you want SSMS to use:
    - **Settings** > **Time & language** > **Region & language** > **Add a language**
-2. Now set the system locale to use the language pack installed in the previous step by clicking the language just installed, then select **Set as default**. (After installing SSMS, you can set the system locale back to English.)
+2. Now set the system locale to use the language pack installed in the previous step by clicking the language installed, then select **Set as default**. (After installing SSMS, you can set the system locale back to English.)
 3. After your operating system is running in the desired language, install the SSMS language you want. The first time you install a new SSMS language, use the full package. You can use the upgrade package for subsequent installs.
 4. Run SSMS, and it should display as the language you installed in the previous step.
-5. Set your computer's system locale back to English.
+5. Set your computer's system, locale back to English.
 
 ### Install SSMS in a language other than the language of the installed OS
 
 1. Install the Windows language pack for the language you want SSMS to use:
    - **Settings** > **Time & language** > **Region & language** > **Add a language**
-2. Now set the system locale to use the language pack installed in the previous step by clicking the language just installed, then select **Set as default**.
+2. Now set the system locale to use the language pack installed in the previous step by clicking the language installed, then select **Set as default**.
 3. After your operating system is running in the desired language, install the SSMS language you want. The first time you install a new SSMS language, use the full package. You can use the upgrade package for subsequent installs.
-4. For each language you want to install that does not match the language of the first version of SSMS you installed, install the corresponding Visual Studio 2015 Shell (Isolated) Language Pack:
+4. For each language you want to install that doesn't match the language of the first version of SSMS you installed, install the corresponding Visual Studio 2015 Shell (Isolated) Language Pack:
    - Browse to [https://connect.microsoft.com/VisualStudio/ExtendVS](https://connect.microsoft.com/VisualStudio/ExtendVS) (you may need to sign in and complete the *Connect Registration* process).
    - Download the desired Visual Studio 2015 Shell (Isolated) Language Pack and install it.
 

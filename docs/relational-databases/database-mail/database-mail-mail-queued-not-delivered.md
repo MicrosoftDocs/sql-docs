@@ -24,7 +24,13 @@ This topic describes how to troubleshoot a problem where e-mail messages are suc
 
 The Database Mail external program logs e-mail activity in the **msdb** database.
 
-First, to confirm that Database Mail is enabled, use the [Database Mail XPs Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) of the **sp_configure** system stored procedure.
+First, to confirm that Database Mail is enabled, use the [Database Mail XPs Option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) of the **sp_configure** system stored procedure, as in the following example:
+
+```sql 
+EXEC sp_configure 'show advanced', 1;  
+RECONFIGURE; 
+EXEC sp_configure; 
+GO
 
 Then, execute the following statement in the **msdb** database to check the status of the mail queue:
 

@@ -25,7 +25,7 @@ highlightedContent:
 productDirectory:
   items:
   - title: SQL Server on Windows
-    imageSrc: /media/index/windows.png
+    imageSrc: media/index/windows.png
     links:
       - url: sql-server/sql-server-technical-documentation.md
         text: On-Premises
@@ -34,7 +34,7 @@ productDirectory:
       - url: sql-server/what-s-new-in-sql-server-ver15.md
         text: What's new
   - title: SQL as an Azure Service
-    imageSrc: /media/index/azure.png
+    imageSrc: media/index/azure.png
     links:
       - url: https://docs.microsoft.com/azure/sql-database/
         text: Azure SQL Database
@@ -43,7 +43,7 @@ productDirectory:
       - url: https://azure.microsoft.com/updates/?status=all&product=sql-database
         text: What's new
   - title: SQL Server on Linux
-    imageSrc: /media/index/linux.png
+    imageSrc: media/index/linux.png
     links:
       - url: linux/sql-server-linux-overview.md
         text: On-Premises

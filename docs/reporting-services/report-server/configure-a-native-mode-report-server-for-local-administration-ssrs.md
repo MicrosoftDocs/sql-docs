@@ -97,7 +97,7 @@ ms.author: maggies
   
 2.  In the Manage folder page, click **Security** and then select **Add group or user**.  
   
-3.  In the **NewRole Assignment** page, in the **Group or user** field, type your Windows user account in this format: `<domain>\<user>`.  
+3.  In the **New Role Assignment** page, in the **Group or user** field, type your Windows user account in this format: `<domain>\<user>`.  
   
 5.  Select **Content Manager**.  
   

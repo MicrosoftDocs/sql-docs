@@ -15,7 +15,7 @@ ms.assetid:
 # Quickstart: Backup and restore a SQL Server database on-premises
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you will create a new database, take a simple back up of it, and then restore it. 
+In this quickstart, you will create a new database, take a simple backup of it, and then restore it. 
 
 For a more detailed how-to, see [Create a full database backup](create-a-full-database-backup-sql-server.md) and [Restore a backup using SSMS](restore-a-database-backup-using-ssms.md).
 
@@ -62,7 +62,7 @@ SELECT * FROM SQLTest
 GO
 ```
  
-## Take a back up
+## Take a backup
 To take a backup of your database, do the following: 
 
 1. Launch [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) and connect to your SQL Server instance.
@@ -84,7 +84,7 @@ GO
 ```
 
 
-## Restore a back up
+## Restore a backup
 To restore your database, do the following: 
 
 1. Launch [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) and connect to your SQL Server instance.

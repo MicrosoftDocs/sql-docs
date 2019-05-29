@@ -38,7 +38,14 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-Database Mail relies on a number of internal stored procedures. To reduce the surface area, these stored procedures are disabled on new installation of SQL Server. To enable these stored procedures, use the [Database Mail XPs option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) of the **sp_configure** system stored procedure.
+Database Mail relies on a number of internal stored procedures. To reduce the surface area, these stored procedures are disabled on new installation of SQL Server. To enable these stored procedures, use the [Database Mail XPs option](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) of the **sp_configure** system stored procedure, as in the following example:
+
+```sql
+EXEC sp_configure 'show advanced options', 1;  
+RECONFIGURE;
+EXEC sp_configure 'Database Mail XPs', 1;  
+RECONFIGURE  
+GO  
 
 Database Mail may be stopped in the **msdb** database. To check status of Database Mail, execute the following statement:
 

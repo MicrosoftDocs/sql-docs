@@ -256,7 +256,7 @@ ON SERVER
 GO  
 ```  
 
-### Code examples differ on cloud
+### Code examples can differ for Azure SQL Database
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 

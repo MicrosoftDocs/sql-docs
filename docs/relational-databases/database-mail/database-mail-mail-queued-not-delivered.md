@@ -42,7 +42,7 @@ For a detailed explanation of the columns, see [sysmail_help_queue_sp (Transact-
 
 Check the **sysmail_event_log** view for activity. The view should contain an entry stating that the Database Mail external program has been started. If there is no entry in the **sysmail_event_log** view, see the symptom **Messages Queued, No Entries** in **sysmail_event_log**. If there are errors in the **sysmail_event_log** view, troubleshoot the specific error.
 
-If there are entries in the **sysmail_event_log view**, check the **sysmail_allitems** view for the status of the messages.
+If there are entries in the **sysmail_event_log** view, check the **sysmail_allitems** view for the status of the messages.
 
 ## Message status unsent 
 

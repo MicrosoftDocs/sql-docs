@@ -8726,10 +8726,6 @@
         items:
         - name: SQL Server Management Studio (SSMS)
           href: ../ssms/sql-server-management-studio-ssms.md
-        - name: Introduction to SSMS for BI
-          href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
-        - name: Install non-English SSMS
-          href: ../ssms/install-other-languages.md
       - name: SQL Server Agent
         items:
         - name: SQL Server Agent
@@ -9070,6 +9066,8 @@
       items:
       - name: SSMS
         items:
+        - name: Install non-English SSMS
+          href: ../ssms/install-other-languages.md
         - name: Customize Menus & Shortcut Keys
           href: ../ssms/customize-menus-and-shortcut-keys.md
         - name: Configure WMI to Show Server Status in SQL Server Tools

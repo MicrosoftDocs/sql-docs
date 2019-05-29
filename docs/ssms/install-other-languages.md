@@ -5,11 +5,11 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ms.custom: ""
-ms.date: "04/25/2019"
+ms.date: 04/25/2019
 ---
 
 # Install non-English language versions of SQL Server Management Studio (SSMS)

@@ -14379,6 +14379,11 @@
             "source_path": "docs/reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md",
             "redirect_url": "/sql/reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": false
         }
     ]
 }

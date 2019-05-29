@@ -5,7 +5,6 @@ ms.technology: ssms
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ms.reviewer: ""
 f1_keywords: 
   - "sql13.ssms.viewhelp.f1"

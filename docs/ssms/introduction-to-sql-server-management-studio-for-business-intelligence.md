@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords: 
   - "SQL Server Management Studio for Integration Services"
   - "SQL Server Management Studio for Reporting Services"
@@ -14,7 +14,7 @@ author: "markingmyname"
 ms.author: "maghan"
 manager: craigg
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ---
 
 # Introduction to SQL Server Management Studio for Business Intelligence

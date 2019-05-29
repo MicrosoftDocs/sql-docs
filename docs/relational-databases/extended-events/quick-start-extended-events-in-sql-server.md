@@ -547,7 +547,7 @@ The system views for extended events include:
     - CREATE EVENT SESSION clauses.
     - The SSMS UI controls.
 
-## Code examples for Azure cloud differ slightly from on-premises
+## Code examples differ on cloud
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 

@@ -19,8 +19,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 
-For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).
-
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
 Basically we have switched from bullet lists to a 2-column table.

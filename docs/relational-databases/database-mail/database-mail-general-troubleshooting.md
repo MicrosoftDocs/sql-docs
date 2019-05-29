@@ -103,7 +103,15 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
     EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'mail';
     ```
   
-   The mail queue should have the state of RECEIVES_OCCURRING. The status queue may vary from moment to moment. If the mail queue state is not RECEIVES_OCCURRING, try stopping the queue using sysmail_stop_sp and then starting the queue using sysmail_start_sp.
+   The mail queue should have the state of RECEIVES_OCCURRING. The status queue may vary from moment to moment. If the mail queue state is not RECEIVES_OCCURRING, try restarting the queue. Stop the queue using the following statement:
+   
+```sql
+EXEC msdb.dbo.sysmail_stop_sp;
+
+Then start the queue using the following statement:
+
+```sql
+EXEC msdb.dbo.sysmail_start_sp;
 
   > [!NOTE]
   >  Use the length column in the result set of sysmail_help_queue_sp to determine the number of e-mails in the Mail queue.

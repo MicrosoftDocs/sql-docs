@@ -17,71 +17,72 @@ ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
 ---
+
 # Installation Wizard Help
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes some of the configuration pages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard. 
+This article describes some of the configuration pages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.
 
 ## Instance configuration
+
 Use the **Instance Configuration** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify whether to create a default instance or a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not already installed, a default instance will be created unless you specify a named instance.  
   
-Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consists of a distinct set of services that have specific settings for collations and other options. The directory structure, registry structure, and service names all reflect the instance name and a specific instance ID created during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
+Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consists of a distinct set of services that have specific settings for collations and other options. The directory structure, registry structure, and service names all reflect the instance name and a specific instance ID that were created during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
- An instance is either the default instance or a named instance. The default instance name is MSSQLSERVER. It does not require a client to specify the name of the instance to make a connection. A named instance is determined by the user during Setup. You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a named instance without installing the default instance first. Only one installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], regardless of version, can be the default instance at one time.  
+ An instance is either the default instance or a named instance. The default instance name is MSSQLSERVER. The default name doesn't require a client to specify the name of the instance to make a connection. A named instance is determined by the user during Setup. You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a named instance without installing the default instance first. Only one installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], regardless of version, can be the default instance at one time.  
   
 > [!NOTE]  
-> With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, you can specify the instance name when you complete a prepared instance on the **Instance Configuration** page. You can choose to configure the prepared instance you are completing as a default instance if there is no existing default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine.  
+> With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, you can specify the instance name when you complete a prepared instance on the **Instance Configuration** page. You can configure the prepared instance you're completing as a default instance if there is no existing default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine.  
   
-### Multiple instances  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a single server or processor, but only one instance can be the default instance. All others must be named instances. A computer can run multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concurrently, and each instance runs independently of other instances.  
+### Multiple instances
+  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a single server or processor, but only one instance can be the default instance. All others must be named instances. A computer can run multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concurrently, and each instance runs independently of the other instances.  
   
  For more information, see [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
-### Options  
- Failover cluster instances only - Specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster network name. This name identifies the failover cluster instance on the network.  
+### Options
+
+**Failover cluster instances only**: Specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster network name. This name identifies the failover cluster instance on the network.  
   
- Default or Named instance - Consider the following information when you decide whether to install a default or named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+**Decide between a default or a named instance**: Consider the following information when you decide whether to install a default or named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   If you plan to install a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a database server, it should be a default instance.  
+* If you plan to install a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a database server, it should be a default instance.  
   
--   Use a named instance for situations where you plan to have multiple instances on the same computer. A server can host only one default instance.  
+* Use a named instance for situations where you plan to have multiple instances on the same computer. A server can host only one default instance.  
+* Any application that installs [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] should install it as a named instance. This practice will minimize conflicts when multiple applications are installed on the same computer.
   
--   Any application that installs [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] should install it as a named instance. This will minimizes conflict when multiple applications are installed on the same computer.  
+ **Default instance**: Select this option to install a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A computer can host only one default instance; all other instances must be named. However, if you have a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed, you can add a default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to the same computer.  
   
- **Default instance**  
- Select this option to install a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A computer can host only one default instance; all other instances must be named. However, if you have a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed, you can add a default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to the same computer.  
+ **Named instance**: Select this option to create a new named instance. Be aware of the following when you name an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Named instance**  
- Select this option to create a new named instance. Be aware of the following when you name an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+* Instance names aren't case-sensitive.  
   
--   Instance names are not case sensitive.  
+* Instance names cannot start or end with an underscore (_).  
   
--   Instance names cannot start or end with an underscore (_).  
+* Instance names cannot contain the term "Default" or other reserved keywords. If a reserved keyword is used in an instance name, a Setup error will occur. For more information, see [Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
   
--   Instance names cannot contain the term "Default" or other reserved keywords. If a reserved keyword is used in an instance name, a Setup error will occur. For more information, see [Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
+* If you specify MSSQLServer for the instance name, a default instance will be created.  
   
--   If you specify MSSQLServer for the instance name, a default instance will be created.  
+* An installation of [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] is always installed as a named instance of "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]". You cannot specify a different instance name for this feature role.  
   
--   An installation of [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] is always installed as a named instance of '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]'. You cannot specify a different instance name for this feature role.  
+* Instance names are limited to 16 characters.  
   
--   Instance names are limited to 16 characters.  
+* The first character in the instance name must be a letter. Acceptable letters are those defined by the Unicode Standard 2.0. These include Latin characters a-z, A-Z, and letter characters from other languages.  
   
--   The first character in the instance name must be a letter. Acceptable letters are those defined by the Unicode Standard 2.0. These include Latin characters a-z, A-Z, and letter characters from other languages.  
+* Subsequent characters can be letters defined by the Unicode Standard 2.0, decimal numbers from Basic Latin or other national scripts, the dollar sign ($), or an underscore (_).  
   
--   Subsequent characters can be letters defined by the Unicode Standard 2.0, decimal numbers from Basic Latin or other national scripts, the dollar sign ($), or an underscore (_).  
+* Embedded spaces or other special characters are not allowed in instance names. The backslash (\\), comma (,), colon (:), semi-colon (;), single quote ('), ampersand (&), hyphen (-), and at sign (@) are also not allowed.  
   
--   Embedded spaces or other special characters are not allowed in instance names. The backslash (\\), comma (,), colon (:), semi-colon (;), single quote ('), ampersand (&), hyphen (-), and at sign (@) are also not allowed.  
+  Only characters that are valid in the current Windows code page can be used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. If an unsupported Unicode character is used, a Setup error will occur.  
   
-     Only characters that are valid in the current Windows code page can be used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. If an unsupported Unicode character is used, a Setup error will occur.  
+ **Detected instances and features**: View a list of installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and components on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running.  
   
- **Detected instances and features**  
- View a list of installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and components on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running.  
-  
- **Instance ID** - By default, the instance name is used as the Instance ID. This is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This is the case for default instances and named instances. For a default instance, the instance name and instance ID would be MSSQLSERVER. To use a non-default instance ID, specify it in the **Instance ID** field.  
+ **Instance ID**: By default, the instance name is used as the Instance ID. This ID is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The same behavior occurs for default instances and named instances. For a default instance, the instance name and instance ID are MSSQLSERVER. To use a nondefault instance ID, specify it in the **Instance ID** field.  
   
 > [!IMPORTANT]  
->  With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, the Instance ID displayed on this page is the Instance ID specified during the prepare image step of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep process. You will not be able to specify a different Instance ID during the complete image step.  
-  
+>  With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, the Instance ID displayed on this page is the Instance ID you specified during the prepare image step of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep process. You won't be able to specify a different Instance ID during the complete image step.
+
 > [!NOTE]  
 >  Instance IDs that begin with an underscore (_) or that contain the number sign (#) or the dollar sign ($) are not supported.  
   
@@ -91,11 +92,11 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
  All components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that share the same instance name must meet the following criteria:  
   
--   **Same version**   
--   **Same edition**    
--   **Same language settings**    
--   **Same clustered state**    
--   **Same operating system**  
+* **Same version**   
+* **Same edition**    
+* **Same language settings**    
+* **Same clustered state**    
+* **Same operating system**  
   
   
     > [!NOTE]  
@@ -133,21 +134,21 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
 ### Notes  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are deployed on a SharePoint farm store application files, data files, and properties in content databases and service application databases.  
+* [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are deployed on a SharePoint farm store application files, data files, and properties in content databases and service application databases.  
   
--   When you add features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature.  
+* When you add features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature.  
 
--   You might need to configure scanning software, such as antivirus and antispyware applications, to exclude SQL Server folders and file types. Review this support article for more information: [Antivirus software on computers running SQL Server](https://support.microsoft.com/kb/309422).
+* You might need to configure scanning software, such as antivirus and antispyware applications, to exclude SQL Server folders and file types. Review this support article for more information: [Antivirus software on computers running SQL Server](https://support.microsoft.com/kb/309422).
   
--   If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
+* If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
   
--   Program files and data files cannot be installed in the following situations:  
+* Program files and data files cannot be installed in the following situations:  
   
-    -   On a removable disk drive  
+    * On a removable disk drive  
   
-    -   On a file system that uses compression  
+    * On a file system that uses compression  
   
-    -   To a directory where system files are located  
+    * To a directory where system files are located  
   
 ### See Also  
  For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
@@ -167,21 +168,21 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
 #### Notes  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are deployed on a SharePoint farm store application files, data files, and properties in content databases and service application databases.  
+* [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are deployed on a SharePoint farm store application files, data files, and properties in content databases and service application databases.  
   
--   When you add features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature.  
+* When you add features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature.  
 
--   You might need to configure scanning software, such as antivirus and antispyware applications, to exclude SQL Server folders and file types. Review this support article for more information: [Antivirus software on computers running SQL Server](https://support.microsoft.com/kb/309422).
+* You might need to configure scanning software, such as antivirus and antispyware applications, to exclude SQL Server folders and file types. Review this support article for more information: [Antivirus software on computers running SQL Server](https://support.microsoft.com/kb/309422).
   
--   If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
+* If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
   
--   Program files and data files cannot be installed in the following situations:  
+* Program files and data files cannot be installed in the following situations:  
   
-    -   On a removable disk drive  
+    * On a removable disk drive  
   
-    -   On a file system that uses compression  
+    * On a file system that uses compression  
   
-    -   To a directory where system files are located  
+    * To a directory where system files are located  
   
 #### See Also  
  For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
@@ -239,24 +240,24 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
  **Strong Password Guidelines**  
  Strong passwords are not readily guessed by a person, and are not easily hacked using a computer program. Strong passwords cannot use prohibited conditions or terms, including:  
   
--   A blank or NULL condition    
--   "Password"    
--   "Admin"    
--   "Administrator"    
--   "sa"    
--   "sysadmin"  
--   
+* A blank or NULL condition    
+* "Password"    
+* "Admin"    
+* "Administrator"    
+* "sa"    
+* "sysadmin"  
+* 
  A strong password cannot be the following terms associated with the installation computer:  
   
--   The name of the user currently logged onto the machine.    
--   The computer name.  
+* The name of the user currently logged onto the machine.    
+* The computer name.  
   
  A strong password must be more than 8 characters in length and satisfy at least three of the following four criteria:  
   
--   It must contain uppercase letters.   
--   It must contain lowercase letters.  
--   It must contain numbers.    
--   It must contain non-alphanumeric characters; for example, #, %, or ^.  
+* It must contain uppercase letters.   
+* It must contain lowercase letters.  
+* It must contain numbers.    
+* It must contain non-alphanumeric characters; for example, #, %, or ^.  
   
  Passwords entered on this page must meet strong password policy requirements. If you have any automation that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, ensure that the password meets strong password policy requirements.  
   
@@ -301,24 +302,24 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
  The following recommendations apply to the SMB file server:  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must be a domain account if an SMB file server is used.  
+* The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must be a domain account if an SMB file server is used.  
   
--   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL NTFS permissions on the SMB file share folder used as the data directory.  
+* The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL NTFS permissions on the SMB file share folder used as the data directory.  
   
--   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the **Manage auditing and security log** policy. This setting is available in the **User Rights Assignments** section under **Local Policies** in the **Local Security Policy** console.  
+* The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the **Manage auditing and security log** policy. This setting is available in the **User Rights Assignments** section under **Local Policies** in the **Local Security Policy** console.  
   
 ### Notes  
   
--   When adding features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature.  
+* When adding features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature.  
   
--   If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
+* If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
   
--   Program files and data files cannot be installed in the following situations:  
+* Program files and data files cannot be installed in the following situations:  
   
-    -   On a removable disk drive    
-    -   On a file system that uses compression   
-    -   To a directory where system files are located    
-    -   On a mapped network drive on a failover cluster instance  
+    * On a removable disk drive    
+    * On a file system that uses compression   
+    * To a directory where system files are located    
+    * On a mapped network drive on a failover cluster instance  
   
  
 ## <a name="tempdb"><a/> Database Engine Configuration - TempDB
@@ -347,48 +348,48 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
 ### UIElement List  
  Configure the settings for **tempdb** according to your workload and requirements. The following settings apply to **tempdb** data files:  
   
--   **Number of files** is the total number of data files for **tempdb**. The default value is the lower of 8 or the number of logical cores detected by setup. As a general rule, if the number of logical processors is less than or equal to 8, use the same number of data files as logical processors. If the number of logical processors is greater than 8, use 8 data files and then if contention continues, increase the number of data files by multiples of 4 (up to the number of logical processors) until the contention is reduced to acceptable levels or make changes to the workload/code. 
+* **Number of files** is the total number of data files for **tempdb**. The default value is the lower of 8 or the number of logical cores detected by setup. As a general rule, if the number of logical processors is less than or equal to 8, use the same number of data files as logical processors. If the number of logical processors is greater than 8, use 8 data files and then if contention continues, increase the number of data files by multiples of 4 (up to the number of logical processors) until the contention is reduced to acceptable levels or make changes to the workload/code. 
   
--   **Initial size (MB)** is the initial size in MB for each **tempdb** data file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] had a maximum initial file size of 1024 MB. All **tempdb** data files are the same initial size. Because **tempdb** is recreated every time SQL Server starts or fails over you should specify a size that is close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during start-up, enable [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
+* **Initial size (MB)** is the initial size in MB for each **tempdb** data file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] had a maximum initial file size of 1024 MB. All **tempdb** data files are the same initial size. Because **tempdb** is recreated every time SQL Server starts or fails over you should specify a size that is close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during start-up, enable [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
   
--   **Total initial size (MB)** is the cumulative size of all of the **tempdb** data files.  
+* **Total initial size (MB)** is the cumulative size of all of the **tempdb** data files.  
   
--   **Autogrowth (MB)** is the amount of space in megabytes that each **tempdb** data file will automatically grow by when they run out of space. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] and later all data files will grow at the same time by the amount specified in this setting.  
+* **Autogrowth (MB)** is the amount of space in megabytes that each **tempdb** data file will automatically grow by when they run out of space. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] and later all data files will grow at the same time by the amount specified in this setting.  
   
--   **Total autogrowth (MB)** is the cumulative size of each autogrowth event.  
+* **Total autogrowth (MB)** is the cumulative size of each autogrowth event.  
   
--   **Data directories** shows all of the directories that hold **tempdb** data files. When there are multiple directories, data files are placed in directories in a round-robin manner. For example, if you create 3 directories and specify 8 data files, data files number 1, 4, and 7 will be created in the first directory. Data files 2, 5, and 8 will be created in the second directory. Data files 3 and 6 will be in the third directory.  
+* **Data directories** shows all of the directories that hold **tempdb** data files. When there are multiple directories, data files are placed in directories in a round-robin manner. For example, if you create 3 directories and specify 8 data files, data files number 1, 4, and 7 will be created in the first directory. Data files 2, 5, and 8 will be created in the second directory. Data files 3 and 6 will be in the third directory.  
   
--   To add directories, click **Add...**.  
+* To add directories, click **Add...**.  
   
--   To remove a directory, select the directory and click **Remove**.  
+* To remove a directory, select the directory and click **Remove**.  
   
  **TempDB log file** is the name of the log file. It is created automatically. The following settings apply only to **tempdb** log files:  
   
--   **Initial size (MB)** is the initial size of the **tempdb** log file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] had a maximum initial file size of 1024 MB. Because **tempdb** is recreated every time SQL Server starts or fails over you should specify a size that is close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during start-up, enable [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
+* **Initial size (MB)** is the initial size of the **tempdb** log file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] had a maximum initial file size of 1024 MB. Because **tempdb** is recreated every time SQL Server starts or fails over you should specify a size that is close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during start-up, enable [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
   
--   **Note:Tempdb** uses minimal logging. The **tempdb** log cannot be backed up. It is recreated every time SQL Server starts or when a cluster instance fails over.  
+* **Note:Tempdb** uses minimal logging. The **tempdb** log cannot be backed up. It is recreated every time SQL Server starts or when a cluster instance fails over.  
   
--   **Autogrowth (MB)** is the growth increment of the **tempdb** log in megabytes.  The default value of 64 MB creates the optimal number of virtual log files during initialization.  
+* **Autogrowth (MB)** is the growth increment of the **tempdb** log in megabytes.  The default value of 64 MB creates the optimal number of virtual log files during initialization.  
   
--   **Note:Tempdb** log files do not use instant file initialization.  
+* **Note:Tempdb** log files do not use instant file initialization.  
   
--   **Log directory** is the directory where **tempdb** log files are created. There is only one **tempdb** log directory.  
+* **Log directory** is the directory where **tempdb** log files are created. There is only one **tempdb** log directory.  
   
 ### Security considerations  
  Setup will configure ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and break inheritance as part of configuration.  
 
  The following recommendations apply to the SMB file server:  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must be a domain account if an SMB file server is used.  
+* The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account must be a domain account if an SMB file server is used.  
   
--   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL NTFS permissions on the SMB file share folder used as the data directory.  
+* The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL NTFS permissions on the SMB file share folder used as the data directory.  
   
--   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the **Manage auditing and security log** policy. This setting is available in the **User Rights Assignments** section under **Local Policies** in the **Local Security Policy** console.  
+* The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the **Manage auditing and security log** policy. This setting is available in the **User Rights Assignments** section under **Local Policies** in the **Local Security Policy** console.  
   
 ### Notes  
   
--   If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
+* If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
   
 ### See also  
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   

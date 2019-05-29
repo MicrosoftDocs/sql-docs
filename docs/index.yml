@@ -140,7 +140,7 @@ conceptualContent:
           itemType: overview
         - text: xEvents
           url: relational-databases/extended-events/extended-events.md
-          itemType: overview                            
+          itemType: overview
     - title: Tune
       links:
         - text: Automatic tuning
@@ -165,7 +165,7 @@ conceptualContent:
           itemType: overview
         - text: Replication
           url: relational-databases/replication/sql-server-replication.md
-          itemType: overview        
+          itemType: overview
     - title: Database Design
       links:
         - text: Databases
@@ -179,7 +179,7 @@ conceptualContent:
           itemType: overview
         - text: Statistics
           url: relational-databases/statistics/statistics.md
-          itemType: overview      
+          itemType: overview
     - title: Query Data
       links:
         - text: Joins
@@ -193,7 +193,7 @@ conceptualContent:
           itemType: overview
         - text: User-defined functions
           url: relational-databases/user-defined-functions/user-defined-functions.md
-          itemType: overview          
+          itemType: overview
 
 additionalContent:
   sections:
@@ -220,11 +220,11 @@ additionalContent:
           [Power BI Report Server](https://docs.microsoft.com/en-us/power-bi/report-server/get-started)<br />
       - title: Data Analytics
         summary: |
-          [Microsoft Analytics Platform System](analytics-platform-system)<br />
+          [Microsoft Analytics Platform System](analytics-platform-system/index.md)<br />
           [SQL Server Analysis Services (SSAS)](analysis-services/analysis-services.md)<br />
           [Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/)<br />
           [Polybase](relational-databases/polybase/polybase-guide.md)<br />
-          [SQL Server 2019 big data clusters](big-data-cluster/big-data-cluster.md)<br />
+          [SQL Server 2019 big data clusters](big-data-cluster/big-data-cluster-overview.md)<br />
       - title: Reference
         summary: |
           [xQuery](xquery/xquery-language-reference-sql-server.md)<br />
@@ -234,4 +234,4 @@ additionalContent:
           [Archived content (SQL 2005-2012)](https://docs.microsoft.com/en-us/previous-versions/sql/)<br />
           [Database samples](samples/sql-samples-where-are.md)<br />
           [DMVs](relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)<br />
-          [System catalog views](relational-databases/system-catalog-views/catalog-views-transact-sql.md)<br />        
+          [System catalog views](relational-databases/system-catalog-views/catalog-views-transact-sql.md)<br />

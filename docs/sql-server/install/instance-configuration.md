@@ -24,7 +24,7 @@ robots: noindex,nofollow
 
 This article describes some of the configuration pages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.
 
-## Instance configuration
+## Instance Configuration page
 
 Use the **Instance Configuration** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify whether to create a default instance or a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not already installed, a default instance will be created unless you specify a named instance.  
   
@@ -50,11 +50,12 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
 * If you plan to install a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a database server, it should be a default instance.  
   
 * Use a named instance for situations where you plan to have multiple instances on the same computer. A server can host only one default instance.  
-* Any application that installs [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] should install it as a named instance. This practice will minimize conflicts when multiple applications are installed on the same computer.
+* Any application that installs [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] should install it as a named instance. This practice
+minimizes conflicts when multiple applications are installed on the same computer.
   
  **Default instance**: Select this option to install a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A computer can host only one default instance; all other instances must be named. However, if you have a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed, you can add a default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to the same computer.  
   
- **Named instance**: Select this option to create a new named instance. Be aware of the following when you name an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ **Named instance**: Select this option to create a new named instance. Be aware of the following information when you name an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 * Instance names aren't case-sensitive.  
   
@@ -62,7 +63,7 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
 * Instance names cannot contain the term "Default" or other reserved keywords. If a reserved keyword is used in an instance name, a Setup error will occur. For more information, see [Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
   
-* If you specify MSSQLServer for the instance name, a default instance will be created.  
+* If you specify MSSQLSERVER for the instance name, a default instance will be created.  
   
 * An installation of [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] is always installed as a named instance of "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]". You cannot specify a different instance name for this feature role.  
   
@@ -72,7 +73,7 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
 * Subsequent characters can be letters defined by the Unicode Standard 2.0, decimal numbers from Basic Latin or other national scripts, the dollar sign ($), or an underscore (_).  
   
-* Embedded spaces or other special characters are not allowed in instance names. The backslash (\\), comma (,), colon (:), semi-colon (;), single quote ('), ampersand (&), hyphen (-), and at sign (@) are also not allowed.  
+* Embedded spaces or other special characters aren't allowed in instance names. The backslash (\\), comma (,), colon (:), semicolon (;), single quotation mark ('), ampersand (&), hyphen (-), and at sign (@) also aren't allowed.  
   
   Only characters that are valid in the current Windows code page can be used in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. If an unsupported Unicode character is used, a Setup error will occur.  
   
@@ -81,10 +82,10 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
  **Instance ID**: By default, the instance name is used as the Instance ID. This ID is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The same behavior occurs for default instances and named instances. For a default instance, the instance name and instance ID are MSSQLSERVER. To use a nondefault instance ID, specify it in the **Instance ID** field.  
   
 > [!IMPORTANT]  
->  With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, the Instance ID displayed on this page is the Instance ID you specified during the prepare image step of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep process. You won't be able to specify a different Instance ID during the complete image step.
+>  With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, the Instance ID displayed on the **Instance Configuration** page is the Instance ID you specified during the prepare image step of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep process. You won't be able to specify a different Instance ID during the complete image step.
 
 > [!NOTE]  
->  Instance IDs that begin with an underscore (_) or that contain the number sign (#) or the dollar sign ($) are not supported.  
+>  Instance IDs that begin with an underscore (_) or that contain the number sign (#) or the dollar sign ($) aren't supported.  
   
  For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
@@ -92,38 +93,41 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
  All components of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that share the same instance name must meet the following criteria:  
   
-* **Same version**   
-* **Same edition**    
-* **Same language settings**    
-* **Same clustered state**    
-* **Same operating system**  
-  
-  
-    > [!NOTE]  
-    > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is not cluster-aware.  
-
-
-## Analysis Services Configuration - Account Provisioning
-  Use this page to set the server mode, and to grant administrative permissions to users or services requiring unrestricted access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Setup does not automatically add the local Windows Group BUILTIN\Administrators to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server administrator role of the instance you are installing. If you want to add the local Administrators group to the server administrator role, you must explicitly specify that group.  
-  
- If you are installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], be sure to grant administrative permissions to SharePoint farm administrators or service administrators who are responsible for a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server deployment in a [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm.  
-  
-### Options  
- **Server Mode** - The server mode specifies the type of Analysis Services databases that can be deployed to the server. Server modes are determined during Setup and cannot be modified later. Each mode is mutually exclusive, which means that you will need two instances of Analysis Services, each configured for a different mode, to support both classic OLAP and tabular model solutions.  
-  
- **Specify Administrators** - You must specify at least one server administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The users or groups that you specify will become members of the server administrator role of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance you are installing. These must be Windows domain user accounts in the same domain as the computer on which you are installing the software.  
+* Same version
+* Same edition
+* Same language settings
+* Same clustered state
+* Same operating system  
   
 > [!NOTE]  
->  User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they are allowed to run. Because UAC is on by default, you will be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or customize UAC for specific programs. For more information about UAC and UAC configuration, see [User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
-  
-### See Also  
- [Configure Service Accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
- [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] isn't cluster-aware.  
 
- ## Analysis Services Configuration - Data Directories
-  The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that is created and provisioned during Setup.  
+## Analysis Services Configuration - Account Provisioning page
   
-### UIElement List  
+Use this page to set the server mode and to grant administrative permissions to users or services that require unrestricted access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Setup doesn't automatically add the local Windows Group BUILTIN\Administrators to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server administrator role of the instance you're installing. If you want to add the local Administrators group to the server administrator role, you must explicitly specify that group.  
+  
+If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], be sure to grant administrative permissions to SharePoint farm administrators or service administrators who are responsible for a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server deployment in a [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] farm.  
+  
+### Options
+
+**Server Mode**: The server mode specifies the type of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases that can be deployed to the server. Server modes are determined during Setup and cannot be modified later. Each mode is mutually exclusive, which means that you need two instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], each configured for a different mode, to support both classic online analytical processing (OLAP) and tabular model solutions.  
+  
+**Specify Administrators**: You must specify at least one server administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The users or groups that you specify will become members of the server administrator role of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance you're installing. These members must have Windows domain user accounts in the same domain as the computer on which you're installing the software.  
+  
+> [!NOTE]  
+>  User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they're allowed to run. Because UAC is on by default, you'll be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or you can customize UAC for specific programs. For more information about UAC and UAC configuration, see [User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
+  
+### See also
+  
+* [Configure Service Accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
+
+* [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+
+## Analysis Services Configuration - Data Directories page
+
+The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that's created and provisioned during Setup.  
+  
+### UIElement list  
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
@@ -161,120 +165,123 @@ Each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consi
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
-|Data root directory |C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest performing storage that is attached to the system. For failover cluster installations, ensure that data directories are placed on the shared disk.|  
-|Log file directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight recorder duration, ensure that the log directory has adequate space.|  
-|Temp directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Place the Temp directory on the high performance storage subsystem.|  
-|Backup directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories is not supported.|  
+|Data root directory |C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest performing storage that's attached to the system. For failover cluster installations, ensure that the data directories are placed on the shared disk.|  
+|Log file directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |This is the directory for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight-recorder duration, ensure that the log directory has adequate space.|  
+|Temp directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Place the Temp directory on the high-performance storage subsystem.|  
+|Backup directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it's also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
   
-#### Notes  
+#### Considerations
   
-* [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are deployed on a SharePoint farm store application files, data files, and properties in content databases and service application databases.  
+* [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances that are deployed on a SharePoint farm store application files, data files, and properties in content databases and service-application databases.  
   
 * When you add features to an existing installation, you cannot change the location of a previously installed feature, nor can you specify the location for a new feature.  
 
-* You might need to configure scanning software, such as antivirus and antispyware applications, to exclude SQL Server folders and file types. Review this support article for more information: [Antivirus software on computers running SQL Server](https://support.microsoft.com/kb/309422).
+* You might need to configure scanning software, such as antivirus and antispyware applications, to exclude SQL Server folders and file types. For more information, see [Antivirus software on computers running SQL Server](https://support.microsoft.com/kb/309422).
   
-* If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
+* If you specify nondefault installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] components within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should also be installed to separate directories.  
   
 * Program files and data files cannot be installed in the following situations:  
   
-    * On a removable disk drive  
+  * On a removable disk drive  
   
-    * On a file system that uses compression  
+  * On a file system that uses compression  
   
-    * To a directory where system files are located  
+  * To a directory where system files are located  
   
-#### See Also  
- For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
-  
-    
- [Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkID=206571) 
+#### See also
 
+* For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
-## <a name="serverconfig"></a> Database Engine Configuration - Server Configuration
-  Use this page to set the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security mode, and to add Windows users or groups as administrators of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+* [Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkID=206571) 
+
+## <a name="serverconfig"></a> Database Engine Configuration - Server Configuration page
+
+Use this page to set the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security mode and to add Windows users or groups as administrators of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-### Considerations for Running [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- On previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **BUILTIN\Administrators** group was provisioned as a login in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and members of the local Administrators group could login using their Administrator credentials. Using elevated permissions is not a best practice. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] the **BUILTIN\Administrators** group is not provisioned as a login. As a result, you should create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for each administrative user, and add that login to the sysadmin fixed server role during installation of a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. You should also do this for Windows accounts that are used to run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent jobs. These include replication agent jobs.  
+### Considerations for running [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **BUILTIN\Administrators** group was provisioned as a login in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and members of the local Administrators group could log in using their Administrator credentials. Using elevated permissions isn't a best practice. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the **BUILTIN\Administrators** group isn't provisioned as a login. As a result, you should create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for each administrative user, and add that login to the **sysadmin** fixed server role during installation of a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. You should also do this for Windows accounts that are used to run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent jobs, including replication agent jobs.  
   
-### Options  
- **Security Mode** - Select Windows Authentication or Mixed Mode Authentication for your installation.  
+### Options
+
+**Security Mode**: Select **Windows Authentication** or **Mixed Mode Authentication** for your installation.  
   
- **Windows Principal Provisioning** - In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Windows Builtin\Administrator local group was placed into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin server role, effectively granting Windows administrators access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the Builtin\Administrator group is not provisioned in the sysadmin server role. Instead, you should explicitly provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators for new installations during Setup.  
-  
-> [!IMPORTANT]  
->  You must explicitly provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators for new installations during Setup. Setup will not allow you to continue until you complete this step.  
-  
- **Specify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrators** - You must specify at least one Windows principal for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, click the **Current User** button. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- When you are finished editing the list, click **OK**, then verify the list of administrators in the configuration dialog. When the list is complete, click **Next**.  
-  
- If you select Mixed Mode Authentication, you must provide logon credentials for the builtin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator (SA) account.  
+**Windows Principal Provisioning**: In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the Windows **BUILTIN\Administrators** local group was placed into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** server role, effectively granting Windows administrators access to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the **BUILTIN\Administrators** group isn't provisioned in the **sysadmin** server role. Instead, you should explicitly provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators for new installations during Setup.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+> You must explicitly provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators for new installations during Setup. Setup won't allow you to continue until you complete this step.
   
- **Windows Authentication Mode**  
- When a user connects through a Windows user account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validates the account name and password using the Windows principal token in the operating system. This is the default authentication mode, and is much more secure than Mixed Mode. Windows Authentication utilizes Kerberos security protocol, provides password policy enforcement in terms of complexity validation for strong passwords, provides support for account lockout, and supports password expiration.  
+**Specify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrators**: You must specify at least one Windows principal for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select the **Current User** button. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+When you are finished editing the list, select **OK**, then verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.  
+  
+If you select **Mixed Mode Authentication**, you must provide login credentials for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator (**sa**) account.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+  
+**Windows Authentication Mode**: When a user connects through a Windows user account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validates the account name and password by using the Windows principal token in the operating system. Windows authentication is the default authentication mode, and it's much more secure than mixed mode authentication. Windows authentication uses the Kerberos security protocol, provides password-policy enforcement in terms of complexity validation for strong passwords, provides support for account lockout, and supports password expiration.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Never set a blank or weak sa password.  
+> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+
+> [!IMPORTANT]  
+> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Never set a blank or weak **sa** password.  
   
- **Mixed Mode (Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication)**  
- Allows users to connect by using Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Users who connect through a Windows user account can use trusted connections that are validated by Windows.  
+**Mixed Mode (Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication)**: Allows users to connect by using Windows authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. Users who connect through a Windows user account can use trusted connections that are validated by Windows.  
   
- If you must choose Mixed Mode Authentication and you have a requirement for using SQL logins to accommodate legacy applications, you must set strong passwords for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accounts.  
+If you must choose mixed mode authentication and you have a requirement for using SQL logins to accommodate legacy applications, you must set strong passwords for all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accounts.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is provided for backward compatibility only. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication is provided for backward compatibility only. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- **Enter Password**  
- Enter and confirm the system administrator (sa) login. Passwords are the first line of defense against intruders, so setting strong passwords is essential to the security of your system. Never set a blank or weak sa password.  
+**Enter Password**: Enter and confirm the system administrator (**sa**) login. Passwords are the first line of defense against intruders, so setting strong passwords is essential to the security of your system. Never set a blank or weak **sa** password.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passwords can contain from 1 to 128 characters, including any combination of letters, symbols, and numbers. If you choose Mixed Mode authentication, you must enter a strong sa password before you can continue to the next page of the Installation Wizard.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passwords can contain from 1 to 128 characters, including any combination of letters, symbols, and numbers. If you choose mixed mode authentication, you must enter a strong **sa** password before you can continue to the next page of the Installation Wizard.  
   
- **Strong Password Guidelines**  
- Strong passwords are not readily guessed by a person, and are not easily hacked using a computer program. Strong passwords cannot use prohibited conditions or terms, including:  
+#### Strong password guidelines
   
-* A blank or NULL condition    
-* "Password"    
-* "Admin"    
-* "Administrator"    
-* "sa"    
-* "sysadmin"  
-* 
- A strong password cannot be the following terms associated with the installation computer:  
+Strong passwords aren't readily guessed by a person and aren't easily hacked by using a computer program. Strong passwords cannot use prohibited conditions or terms, including:  
   
-* The name of the user currently logged onto the machine.    
-* The computer name.  
+* A blank or NULL condition
+* "Password"
+* "Admin"
+* "Administrator"
+* "sa"
+* "sysadmin"
+
+A strong password cannot be the following terms associated with the installation computer:  
   
- A strong password must be more than 8 characters in length and satisfy at least three of the following four criteria:  
+* The name of the user currently logged into the machine
+* The computer name  
   
-* It must contain uppercase letters.   
+A strong password must be more than 8 characters in length and satisfy at least three of the following four criteria:  
+  
+* It must contain uppercase letters.
 * It must contain lowercase letters.  
-* It must contain numbers.    
+* It must contain numbers.
 * It must contain non-alphanumeric characters; for example, #, %, or ^.  
   
- Passwords entered on this page must meet strong password policy requirements. If you have any automation that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, ensure that the password meets strong password policy requirements.  
+ Passwords entered on this page must meet strong-password-policy requirements. If you have any automation that uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, ensure that the password meets strong-password-policy requirements.  
   
-### Related content  
- For more information about choosing Windows Authentication vs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, see [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
- 
- 
- For more information about choosing an account to run the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], see 
-[Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
- 
-## <a name ="datadir"></a> Database Engine Configuration - Data Directories
-  Use this page to specify the installation location for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] program and data files. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
+### Related content
+
+For more information about choosing Windows authentication versus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, see [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
+
+For more information about choosing an account to run the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+
+## <a name ="datadir"></a> Database Engine Configuration - Data Directories page
+
+Use this page to specify the installation location for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] program and data files. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
   
- To specify an SMB file share as a directory, you must manually type the supported UNC path. Browsing to an SMB file share is not supported. The following is a supported UNC path format of an SMB file share: \\\Servername\ShareName\\....  
+To specify an SMB file share as a directory, you must manually type the supported UNC path. Browsing to an SMB file share is not supported. The following example shows a supported UNC path format of an SMB file share:
+
+`\\<ServerName>\<ShareName>\....`
+
+### Stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
-### Stand-Alone Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- The following table lists the supported storage types and the default directories for a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are user configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
+The following table lists the supported storage types and the default directories for a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are user configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  
   
 ### UIElement List  
   

@@ -95,7 +95,7 @@ ms.author: maggies
   
 1.  In the web portal, on the Home page, click **Manage folder**.  
   
-2.  In the Manage folder page, click **Security** and then select **Add group or user**.  
+2.  In the **Manage** folder page, click **Security** and then select **Add group or user**.  
   
 3.  In the **New Role Assignment** page, in the **Group or user** field, type your Windows user account in this format: `<domain>\<user>`.  
   

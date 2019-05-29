@@ -9042,7 +9042,7 @@
           href: ../ssms/configure-login-auditing-sql-server-management-studio.md
         - name: Troubleshoot
           items:
-          - name: Get full memory dump
+          - name: Get full memory dump 
             href: ../ssms/troubleshoot/get-full-memory-dump.md
       - name: SQL Server Agent
         items:

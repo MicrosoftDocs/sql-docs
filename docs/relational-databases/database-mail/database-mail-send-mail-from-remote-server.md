@@ -46,7 +46,7 @@ We recommend that the login account that is executing these troubleshooting proc
 
 1. Make sure that any Windows authenticated login account that is a member of the **DatabaseMailUserRole** on the local server is also a member of the same role on the remote server, if that membership is required to send e-mail generated on the local server.
 
-1. Create a text file that is named DatabaseMail90.exe.config with the following content. Replace LocalServerName with the name of the local server and keep msdb for DatabaseName.
+1. Create a text file that is named DatabaseMail.exe.config with the following content. Replace LocalServerName with the name of the local server and keep msdb for DatabaseName.
 
     ```
     <configuration>

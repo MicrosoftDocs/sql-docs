@@ -132,7 +132,7 @@ EXEC msdb.dbo.sysmail_start_sp;
     ```
 
    > [!NOTE]
-   > Database Mail considers mail to be sent, when it is successfully delivered to a SMTP mail server. Subsequent errors, such as an invalid recipient e-mail address, can still prevent mail from being delivered, but will not be contained in the Database Mail log.
+   > Database Mail considers mail to be sent when it is successfully delivered to a SMTP mail server. Subsequent errors, such as an invalid recipient e-mail address, can still prevent mail from being delivered, but will not be contained in the Database Mail log.
 
 ## Retry mail delivery
 

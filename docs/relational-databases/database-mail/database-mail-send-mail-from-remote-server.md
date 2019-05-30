@@ -60,23 +60,23 @@ We recommend that the login account that is executing these troubleshooting proc
   > [!IMPORTANT]
   > This code inserts a record into a system table. Do not modify the code. A constraint will prevent the record from being inserted more than one time. Do not otherwise directly modify the data in this system table.
 
-    ```sql
-    USE msdb;
-    GO
-    INSERT INTO [msdb].[dbo].[sysmail_configuration]
-        (
-        [paramname]
-        ,[paramvalue]
-        ,[description]
-        )
-    VALUES
-        (
-        N'ReadFromConfigurationFile'
-        ,N'1'
-        ,N'Send mail from mail server in configuration file'
-        );
-    GO
-    ```
+   ```sql
+   USE msdb;
+   GO
+   INSERT INTO [msdb].[dbo].[sysmail_configuration]
+       (
+       [paramname]
+       ,[paramvalue]
+       ,[description]
+       )
+   VALUES
+       (
+       N'ReadFromConfigurationFile'
+       ,N'1'
+       ,N'Send mail from mail server in configuration file'
+       );
+   GO
+   ```
 
 7. Restart Database Mail by executing dbo.sysmail_start_sp on the remote server. You must run this stored procedure every time that the **paramvalue** for the **ReadFromConfigurationFile** record in **dbo.sysmail_configuration** or the value of the DatabaseServerName key in the DatabaseMail90.exe.config configuration file is changed for the change to take effect.
 

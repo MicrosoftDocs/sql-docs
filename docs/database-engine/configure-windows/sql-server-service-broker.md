@@ -42,9 +42,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
   The messages in the queues can be fetched using the Transact-SQL `RECEIVE` command or by the activation procedure that will be called whenever the message arrives in the queue.
   
-### Creating Services
+### Creating services
  
-  Database services are created using the [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) Transact SQL statement. Service can be associated with the message queue create using the [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) statement:
+  Database services are created by using the [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) Transact SQL statement. Service can be associated with the message queue create by using the [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) statement:
   
 ```sql
 CREATE QUEUE dbo.ExpenseQueue;
@@ -66,11 +66,11 @@ TO SERVICE 'ExpensesService';
   
 SEND ON CONVERSATION @dialog_handle (@Message) ;  
 ```
-   The message will be sent to the `ExpenssesService` and placed in `dbo.ExpenseQueue`. Since there is no activation procedure associated to this queue, the message will remain in the queue until someone read it.
+   The message will be sent to the `ExpenssesService` and placed in `dbo.ExpenseQueue`. Because there is no activation procedure associated to this queue, the message will remain in the queue until someone reads it.
 
 ### Processing messages
 
-   The messages that are placed in queue can be selected using standard `SELECT` query. `SELECT` statement will not modify the queue and remove the messages. In order to read and pull the messages from the queue, you can use the [RECEIVE](../../t-sql/statements/receive-transact-sql.md) Transact-SQL statement.
+   The messages that are placed in the queue can be selected by using a standard `SELECT` query. The `SELECT` statement will not modify the queue and remove the messages. To read and pull the messages from the queue, you can use the [RECEIVE](../../t-sql/statements/receive-transact-sql.md) Transact-SQL statement.
 
 ```sql
 RECEIVE conversation_handle, message_type_name, message_body  

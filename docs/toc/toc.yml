@@ -6317,8 +6317,6 @@
           href: ../relational-databases/database-mail/database-mail-common-errors.md
         - name: Mail queued, not delivered 
           href: ../relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
-        - name: Mail queued, no entries in log
-          href: ../relational-databases/database-mail/database-mail-mail-queued-no-entries-in-log.md 
         - name: Send mail from remote server
           href: ../relational-databases/database-mail/database-mail-send-mail-from-remote-server.md
     - name: Data compression

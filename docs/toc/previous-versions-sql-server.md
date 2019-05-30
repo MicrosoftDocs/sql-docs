@@ -3,7 +3,7 @@ title: Previous versions of SQL Server | Microsoft Docs
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-ms.date: "05/28/2019"
+ms.date: "05/30/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
@@ -36,7 +36,7 @@ As of June 2019, the archives range from version 2012 back to 2005. The reliable
 Offline editions of the SQL Server documentation are available for download, for the newer and older versions of SQL Server. On your local computer, you use the _Help Viewer_ tool to both download and view any edition of the offline books. The Help Viewer is available in the Help menu in SQL Server Management Studio (SSMS).
 
 - [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [SQL Server offline help and Help Viewer](../sql-server/sql-server/sql-server-help-installation.md)
+- [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md)
 
 ## Lifecycle policy
 

@@ -36,12 +36,49 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Overview
 
-  Service Broker is a message delivery framework that enables you to create in-database service-oriented applications. Service Broker enables you to create native database services that can exchange the messages. Every service has a queue where the messages are placed until they are processed.
+  Service Broker is a message delivery framework that enables you to create native in-database service-oriented applications. Unlike classic query processing functionalities that constantly read data from the tables and process them during the query lifecycle, in service-oriented application you have database services that are exchanging the messages. Every service has a queue where the messages are placed until they are processed.
   
 ![Service broker](media/service-broker.png)
   
-  The messages in the queues can be fetched using Transact-SQL `RECEIVE` command or by the activation procedure that will be called whenever the message arrives in the queue.
+  The messages in the queues can be fetched using the Transact-SQL `RECEIVE` command or by the activation procedure that will be called whenever the message arrives in the queue.
   
+### Creating Services
+ 
+  Database services are created using the [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) Transact SQL statement. Service can be associated with the message queue create using the [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) statement:
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### Sending messages
+  
+  Messages are sent on the conversation between the services using the [SEND](../../t-sql/statements/send-transact-sql.md) Transact-SQL statement. A conversation is a communication channel that is extablished between the services using the `BEGIN DIALOG` Transact-SQL statement. 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   The message will be sent to the `ExpenssesService` and placed in `dbo.ExpenseQueue`. Since there is no activation procedure associated to this queue, the message will remain in the queue until someone read it.
+
+### Processing messages
+
+   The messages that are placed in queue can be selected using standard `SELECT` query. `SELECT` statement will not modify the queue and remove the messages. In order to read and pull the messages from the queue, you can use the [RECEIVE](../../t-sql/statements/receive-transact-sql.md) Transact-SQL statement.
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  Once you process all messages from the queue, you should close the conversation using the [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact-SQL statement.
+
 ## Where is the documentation for Service Broker?  
  The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
   

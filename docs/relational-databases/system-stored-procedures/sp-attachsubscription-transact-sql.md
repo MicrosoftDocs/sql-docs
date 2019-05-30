@@ -18,7 +18,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # sp_attachsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   Attaches an existing subscription database to any Subscriber. This stored procedure is executed at the new Subscriber on the master database.  
   

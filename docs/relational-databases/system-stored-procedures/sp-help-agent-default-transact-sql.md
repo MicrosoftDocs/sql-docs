@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_help_agent_default (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retrieves the ID of the default configuration for the agent type passed as parameter. This stored procedure is executed at Distributor on any database.  
   

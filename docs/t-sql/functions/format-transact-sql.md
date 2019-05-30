@@ -209,7 +209,26 @@ SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
-  
+### <a name="ExampleE"></a> E. FORMAT DATETIME/DATETIMEOFFSET with AM/PM
+```sql
+DECLARE 
+	@StopAT_datetime_AM datetime = '2020-04-15 10:00:00.000',
+	@StopAT_datetimeoffset_AM datetimeoffset = '2020-04-15 10:00:00.0000000 -04:00',
+	@StopAT_datetime_PM datetime = '2020-04-15 12:00:00.000',
+	@StopAT_datetimeoffset_PM datetimeoffset = '2020-04-15 12:00:00.0000000 -04:00',
+	@FORMAT NVARCHAR(MAX)
+-- Example Matching Restore with StopAT formatting.
+select 
+	FORMAT (@StopAT_datetime_AM ,'MMM dd, yyyy hh:mm tt') "DATETIME_AM",
+	FORMAT (@StopAT_datetimeoffset_AM,'MMM dd, yyyy hh:mm tt') "DATETIMEOFFSET_AM", 
+	FORMAT (@StopAT_datetime_PM ,'MMM dd, yyyy hh:mm tt') "DATETIME_PM",
+	FORMAT (@StopAT_datetimeoffset_PM,'MMM dd, yyyy hh:mm tt') "DATETIMEOFFSET_PM"
+```
+```
+DATETIME_AM                    DATETIMEOFFSET_AM              DATETIME_PM                    DATETIMEOFFSET_PM
+------------------------------ ------------------------------ ------------------------------ ------------------------------
+Apr 15, 2020 10:00 AM          Apr 15, 2020 10:00 AM          Apr 15, 2020 12:00 PM          Apr 15, 2020 12:00 PM
+```
 ## See Also
 
  [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  

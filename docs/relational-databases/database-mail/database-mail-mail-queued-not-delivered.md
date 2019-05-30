@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Common errors with database mail 
+# Database mail: Mail queued, not delivered 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic describes how to troubleshoot a problem where e-mail messages are successfully queued, but the messages are not delivered.
@@ -31,6 +31,7 @@ EXEC sp_configure 'show advanced', 1;
 RECONFIGURE; 
 EXEC sp_configure; 
 GO
+```
 
 Then, execute the following statement in the **msdb** database to check the status of the mail queue:
 
@@ -40,7 +41,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 For a detailed explanation of the columns, see [sysmail_help_queue_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-queue-sp-transact-sql.md#result-set).
 
-Check the **sysmail_event_log** view for activity. The view should contain an entry stating that the Database Mail external program has been started. If there is no entry in the **sysmail_event_log** view, see the symptom **Messages Queued, No Entries** in **sysmail_event_log**. If there are errors in the **sysmail_event_log** view, troubleshoot the specific error.
+Check the **sysmail_event_log** view for activity. The view should contain an entry stating that the Database Mail external program has been started. If there is no entry in the **sysmail_event_log** view, see the symptom [Messages Queued, No Entries](database-mail-common-errors.md#database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log) in **sysmail_event_log**. If there are errors in the **sysmail_event_log** view, troubleshoot the specific error.
 
 If there are entries in the **sysmail_event_log** view, check the **sysmail_allitems** view for the status of the messages.
 

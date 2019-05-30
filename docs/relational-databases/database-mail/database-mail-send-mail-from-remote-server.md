@@ -28,9 +28,6 @@ E-mail can be sent from only one server at a time. When Database Mail on the rem
 
 When the remote server is sending e-mail that is generated on the local server, all insertions into msdb tables for that e-mail and any Database Mail Log error entries for that e-mail occur on the local server. If the local server resumes sending e-mail when the remote server is configured to send the local server's e-mail, either server can send any e-mail message. If you want to know which server sent an e-mail message, you must examine the header of the message.
 
-  > [!NOTE]
-  > To run the following procedures, both the local and remote servers must be running SQL Server 2005 Service Pack 2 or later version.
-
 ## Permissions
 EXECUTE permission for **dbo.sysmail_start_sp** and **dbo.sysmail_configure_sp** and INSERT permission for **dbo.sysmail_configuration** are granted to members of the sysadmin fixed server role by default.
 
@@ -56,6 +53,7 @@ We recommend that the login account that is executing these troubleshooting proc
         </appSettings>
     </configuration>
     ```
+
 1. Save the file on the remote server in the same folder, \MSSQL\Binn, as DatabaseMail.exe. The default path is `<drive>:\Program Files\Microsoft SQL Server\MSSQL???.MSSQLSERVER\MSSQL\Binn` where the question marks correspond to the version of SQL Server. If you are running a named instance of SQL Server, replace MSSQLSERVER with the name of the instance.
 1. To configure Database Mail to send e-mail from another server, run the following code on the remote server.
 

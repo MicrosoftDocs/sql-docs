@@ -73,7 +73,7 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
     GO
     
     sp_addrolemember @rolename = 'DatabaseMailUserRole'
-   ,@membername = '<database user>';
+    ,@membername = '<database user>';
     ```
 
 1. To send Database Mail, users must have access to at least one Database Mail profile. To list the users (principals) and the profiles to which they have access, execute the following statement.
@@ -107,11 +107,13 @@ You must be a member of the sysadmin fixed server role to troubleshoot all aspec
    
 ```sql
 EXEC msdb.dbo.sysmail_stop_sp;
+```
 
 Then start the queue using the following statement:
 
 ```sql
 EXEC msdb.dbo.sysmail_start_sp;
+```
 
   > [!NOTE]
   >  Use the length column in the result set of sysmail_help_queue_sp to determine the number of e-mails in the Mail queue.

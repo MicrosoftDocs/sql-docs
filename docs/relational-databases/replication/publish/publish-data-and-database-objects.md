@@ -44,7 +44,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Publish Data and Database Objects
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   When creating a publication, you choose the tables and other database objects that you want to publish. You can publish the following database objects using replication.  
   
 |Database object|Snapshot replication and transactional replication|Merge replication|  

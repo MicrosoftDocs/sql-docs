@@ -23,7 +23,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Replication Agent Security Model
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
   
 > [!IMPORTANT]  

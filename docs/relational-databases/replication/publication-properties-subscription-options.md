@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Publication Properties, Subscription Options
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Subscription Options** page of the **Publication Properties** dialog box allows you to view and set publication level properties associated with subscriptions. The properties are grouped into the following categories:  
   
 -   Properties that apply to all publications.  

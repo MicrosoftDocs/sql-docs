@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Publisher Information, Publications
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Publications** tab provides summary information for all publications at the Publisher selected in the left pane.  
   
 ## Options  

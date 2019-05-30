@@ -24,7 +24,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Enhance General Replication Performance
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   You can enhance the general performance for all types of replication in your application and on your network by using the guidelines described in this topic.  
   
 ## Server and Network  

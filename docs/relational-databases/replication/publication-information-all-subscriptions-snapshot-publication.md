@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Publication Information, All Subscriptions (Snapshot Publication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **All Subscriptions** tab displays information on all subscriptions to the selected snapshot publication.  
   
 ## Options  

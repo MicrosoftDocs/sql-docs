@@ -19,7 +19,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Errors and Events Reference (Replication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This section of the documentation contains cause and resolution information for a number of errors related to replication.  
   
 |Error|Message|  

@@ -21,7 +21,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Replication Backward Compatibility
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Backward compatibility is important to understand if you are upgrading, or if you have more than one version of SQL Server in a replication topology. 
 

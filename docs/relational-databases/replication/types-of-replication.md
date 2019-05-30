@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Types of Replication
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of replication for use in distributed applications:  
   
 -   Transactional replication. For more information, see [Transactional Replication](../../relational-databases/replication/transactional/transactional-replication.md) 

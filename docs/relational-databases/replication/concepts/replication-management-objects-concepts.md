@@ -23,7 +23,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Replication Management Objects Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Replication Management Objects (RMO) is a managed code assembly that encapsulates replication functionalities for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO is implemented by the <xref:Microsoft.SqlServer.Replication> namespace.  
   

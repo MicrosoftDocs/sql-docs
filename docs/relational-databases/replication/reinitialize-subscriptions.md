@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Reinitialize Subscriptions
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Reinitializing a subscription involves applying a new snapshot of one or more articles to one or more Subscribers: transactional and snapshot replication allow individual articles to be reinitialized; merge replication requires all articles to be reinitialized. Nodes in a peer-to-peer transactional replication topology cannot be reinitialized. If you need to ensure a node has a new copy of the data, restore a backup at the node. Reinitialization occurs for one of two reasons:  
   
 -   You explicitly mark a subscription for reinitialization.  

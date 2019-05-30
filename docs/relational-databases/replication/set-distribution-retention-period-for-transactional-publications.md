@@ -16,7 +16,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Set Distribution Retention Period for Transactional Publications
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Specify the minimum distribution retention period and maximum distribution retention period on the **Distribution Database Properties - \<DistributionDatabase>** dialog box. This is available from the **General** page of the **Distributor Properties - \<Distributor>** dialog box. For more information about accessing this dialog box, see [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 ### To specify the distribution retention period  

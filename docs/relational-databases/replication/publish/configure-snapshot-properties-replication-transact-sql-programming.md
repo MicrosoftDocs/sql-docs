@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Configure Snapshot Properties (Replication Transact-SQL Programming)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Snapshot properties can be defined and modified programmatically using replication stored procedures, where the stored procedures used depend on the type of publication.  
   
 ### To configure snapshot properties when creating a snapshot or transactional publication  

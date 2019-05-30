@@ -16,7 +16,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Modify Snapshot Initialization Options for SQL Replication 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 There are a number of options to specify when [initializing a subscription with a snapshot](initialize-a-subscription-with-a-snapshot.md).
 

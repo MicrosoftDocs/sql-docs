@@ -13,7 +13,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # SQL Server Management Studio Replication Dialog Boxes
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This section includes information on a number of replication dialog boxes that are available in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Snapshot Agent Security](../../relational-databases/replication/snapshot-agent-security.md)  

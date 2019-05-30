@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Synchronize a Pull Subscription
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This topic describes how to synchronize a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](../../relational-databases/replication/agents/replication-agents-overview.md), or Replication Management Objects (RMO).  
   
  **In This Topic**  

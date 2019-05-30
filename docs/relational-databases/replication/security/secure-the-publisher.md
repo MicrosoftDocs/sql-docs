@@ -20,7 +20,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Secure the Publisher
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   
 The following replication agents connect to the Publisher:  
   

@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Transactional Articles - Specify How Changes Are Propagated
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Transactional replication allows you to specify how data changes are propagated from the Publisher to Subscribers. For each published table, you can specify one of four ways that each operation (INSERT, UPDATE, or DELETE) should be propagated to the Subscriber:  
   
 -   Specify that transactional replication should script out and subsequently call a stored procedure to propagate changes to Subscribers (the default).  

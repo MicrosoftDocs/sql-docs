@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Article Properties - &lt;Article&gt;
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Article Properties** dialog box is available from the New Publication Wizard and the **Publication Properties** dialog box. It allows you to view and set properties for all types of articles. Some properties can be set only when the publication is created, and others can be set only if the publication has no active subscriptions. Properties that cannot be set are displayed as read-only.  
   
 > [!NOTE]  

@@ -24,7 +24,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Enhance Transactional Replication Performance
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to transactional replication.  
   
 ## Database Design  

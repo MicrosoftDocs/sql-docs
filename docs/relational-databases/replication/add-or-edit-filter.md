@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Add or Edit Filter
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Add Filter** and **Edit Filter** dialog boxes allow you to add and edit static row filters and parameterized row filters.  
   
 > [!NOTE]  

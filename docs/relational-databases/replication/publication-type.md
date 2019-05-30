@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Publication Type
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Replication provides the following types of publications:  
   
 -   Snapshot publication  

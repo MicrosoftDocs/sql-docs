@@ -13,7 +13,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Replication Language Reference
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Replication Language Reference contains the following sections.  
   

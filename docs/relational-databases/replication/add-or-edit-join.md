@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Add or Edit Join
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Add Join** and **Edit Join** dialog boxes allow you to add and edit join filters for merge publications.  
   
 > [!NOTE]  

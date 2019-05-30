@@ -16,28 +16,32 @@ manager: kfile
 
 Calculation groups are supported in Azure Analysis Services and SQL Server Analysis Services 2019 tabular models at the 1470 and higher [compatibility level](compatibility-level-for-tabular-models-in-analysis-services.md). Keep in mind, models at the 1470 compatibility level are in **Preview**.  
 
-While in Preview, calculation groups  are not yet supported in SQL Server Data Tools, Visual Studio with Analysis Services extensions. However, calculation groups can be created by using Tabular Model Scripting Language or the open source [Tabular Editor](https://github.com/otykier/TabularEditor).
+
+
+## Tools
+
+Calculation groups  are not yet supported in SQL Server Data Tools, Visual Studio with Analysis Services extensions. However, calculation groups can be created by using Tabular Model Scripting Language (TMSL) or the open source [Tabular Editor](https://github.com/otykier/TabularEditor).
 
 ## Benefits
 
-Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations. This is most common with time-intelligence calculations. For example, a sales analyst wants to view sales totals or orders by month-to-date, quarter-to-date, year-to-date, orders year-to-date for the previous year, and so on. This can mean the data modeler has to create a different measure for each calculation, which can lead to dozens of measures. For the user, this can mean having to sort through just as many measures, and apply them individually to their report.  
+Calculation groups address a common issue in complex models where there can be a proliferation of redundant measures using the same calculations. This is most common with time-intelligence calculations. For example, a sales analyst wants to view sales totals or orders by month-to-date, quarter-to-date, year-to-date, orders year-to-date for the previous year, and so on. This can mean the data modeler has to create separate measures for each calculation, which can lead to dozens of measures. For the user, this can mean having to sort through just as many measures, and apply them individually to their report. Calculation groups can significantly reduce the number of redundant measures by grouping common measure expressions as *calculation items* within a calculation group.
 
 Let's first take a look at how calculation groups appear to users in a reporting tool like Power BI. We'll then take a look at what makes up a calculation group, and how they're created in a model.
 
-Calculation groups are shown in reporting clients as a table with a single column. The column isn't like a typical column or dimension, instead, it represents one or more reusable calculations, or *calculation items*, that can be applied to any measure already added to the Values filter for a visualization.
+Calculation groups are shown in reporting clients as a table with a single column. The column isn't like a typical column or dimension, instead it represents one or more reusable calculations, or *calculation items* that can be applied to any measure already added to the Values filter for a visualization.
 
-In the following animation, the user is analyzing sales data for years 2012 and 2013. Before applying a calculation group, the **Sales** measure calculates a sum of total sales for each month. The user wants to apply time intelligence calculations to get sales totals for quarter to date, year to date, prior year, and so on. 
+In the following animation, a user is analyzing sales data for years 2012 and 2013. Before applying a calculation group, the common base measure **Sales**  calculates a sum of total sales for each month. The user then wants to apply time-intelligence calculations to get sales totals for month to date, quarter to date, year to date, and so on. Without calculation groups, the user would have to select individual time-intelligence measures.
 
-The user then applies **Time Calculation**, which appears as a column in the **Time Intelligence** table, as a column filter. When the user drags the Time Calculation item to the **Columns** filter area, each calculation item appears as a separate column, with values calculated for each row.
+With a calculation group, the user applies **Time Calculation**, which appears as a column in the **Time Intelligence** table, as a column filter. When the user drags the **Time Calculation** item to the **Columns** filter area, each calculation item in the calculation group appears as a separate column, with values calculated for each row.
 
-![Calculation group being applied in Power BI](media/as-calculation-groups/calc-groups-pbi.gif)
+![Calculation group being applied in Power BI](media/as-calculation-groups/as-calc-groups-pbi.gif)
 
 
 ## How they work
 
-Now that you've seen how calculation groups benefit users, let's take a look at how the Time Intelligence calculation group example shown here is created.
+Now that you've seen how calculation groups benefit users, let's take a look at how the Time Intelligence calculation group example shown is created.
 
-Before we go into specifics, let's introduce three new DAX functions specifically for calculation groups. 
+Before we go into specifics, let's introduce some new DAX functions specifically for calculation groups: 
 
 [SELECTEDMEASURE](https://docs.microsoft.com/dax/selectedmeasure-function-dax) - Used by expressions for calculation items to reference the measure that is in context. In the example shown above, the Sales measure.
 
@@ -45,7 +49,9 @@ Before we go into specifics, let's introduce three new DAX functions specificall
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) - Used by expressions for calculation items to determine the measure that is in context is one of those specified in a list of measures.
 
-### Example
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) - Used by expressions for calculation items to retrieve the format string of the measure that is in context.
+
+### Calculation group example
 
 Table name - **Time Intelligence**   
 Column name - **Time Calculation**   
@@ -138,7 +144,7 @@ DIVIDE(
 )
 ```
 
-To test this calculation group, you can create and execute a DAX query in SSMS or DAX Editor. 
+To test this calculation group, you can create and execute a DAX query in SSMS or the open-source [DAX Editor](http://daxstudio.org/). Note: YOY and YOY% are omitted from this query example.
 
 ### Query
 
@@ -172,19 +178,31 @@ The return shows the calculations applied. For example, you can see QTD for Marc
 
 Tabular models support dynamic formatting of measures by using DAX's [FORMAT](https://docs.microsoft.com/dax/format-function-dax) function. However, the FORMAT function has the disadvantage of returning a string, forcing measures that would otherwise be numeric to also be returned as a string. This can have some limitations, such as not working with most Power BI visuals depending on numeric values, like charts.
 
-If we look at the time-intelligence example shown above, all the calculation items except **YOY%** should use the format of the current measure in context. **Sales YTD** should be currency and **Orders YTD** should be a whole number. **YOY%**, however, should be a percentage regardless of the format of the base measure.
+### Dynamic format strings for time-intelligence
+
+If we look at the time-intelligence example shown above, all the calculation items except **YOY%** should use the format of the current measure in context. For example, **YTD** calculated on the Sales base measure should be currency. If this were a calculation group for something like an Orders base measure, the format would be numeric. **YOY%**, however, should be a percentage regardless of the format of the base measure.
 
 For **YOY%**, we can override the format string by setting the format string expression property to **0.00%;-0.00%;0.00%**. To learn more about format string expression properties, see [MDX Cell Properties - FORMAT STRING  Contents](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
 
-In this matrix visual in Power BI, you see **Sales Current/YOY** and **Orders Current/YOY** retain their respective base measure format strings. **Sales YOY%** and **Orders YOY%**, however, override the format string to use *percentage* format.
+In this matrix visual in Power BI, you see **Sales Current/YOY** and **Orders Current/YOY** retain their respective base measure format strings. **Sales YOY%** and **Orders YOY%**, however, overrides the format string to use *percentage* format.
 
-![Time intelligence in matrix visual](media/as-calculation-groups/as-cacl-groups-dynamicstring-timeintel.png)
+![Time intelligence in matrix visual](media/as-calculation-groups/as-calc-groups-dynamicstring-timeintel.png)
 
-The following calculation group is defined:
+### Dynamic format string for currency conversion
 
-Table name - **Time Intelligence**   
-Column name - **Time Calculation**   
-Precedence - **20**   
+Dynamic format strings provide easy currency conversion. Consider the following Adventure Works data model. It's modeled for *one-to-many* currency conversion as defined by  [Conversion types](../currency-conversions-analysis-services.md#conversion-types).
+
+![Currency rate in tabular model](media/as-calculation-groups/as-calc-groups-currency-conversion.png)
+
+A **FormatString** column is added to the DimCurrency table and populated with format strings for the respective currencies.
+
+![Format string column](media/as-calculation-groups/as-calc-groups-formatstringcolumn.png)
+
+For this example, the following calculation group is then defined as:
+
+Table name - **Currency Conversion**   
+Column name - **Conversion Calculation**   
+Precedence - **5**   
 
 ### Calculation items
 
@@ -216,40 +234,16 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
+The format string expression must return a scalar string. It uses the new [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) function to revert to the base measure format string if there are multiple currencies in filter context.
 
-The format string expression must return a scalar string. It uses the new SELECTEDMEASUREFORMATSTRING() function to revert to the base measure format string if there are multiple currencies in filter context.
+The following animation shows the dynamic format currency conversion of the Sales measure in a report.
 
-The following visual shows the dynamic format of the Sales measure.
+![Currency conversion dynamic format string applied](media/as-calculation-groups/as-calc-groups-dynamic-format-string.gif)
 
-![Currency conversion dynamic format string applied](media/as-calculation-groups/as-cacl-groups-dynamic-format-string.gif)
-
-#### QTD
-
-```dax
-CALCULATE(SELECTEDMEASURE(), DATESQTD(DimDate[Date]))
-```
-
-#### YTD
-
-```dax
-CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date]))
-```
-
-
-
-### Dynamic format string for currency conversion
-
-Currency conversion takes dynamic format strings to the next level. Consider the following Adventure Works data model. It is modeled for *one-to-many* currency conversion as defined by this [Conversion types](../currency-conversions-analysis-services.md#conversion-types).
-
-![Currency rate in tabular model](media/as-calculation-groups/as-calc-groups-currency-conversion.png)
-
-The **FormatString** column is added to the DimCurrency table and populated with format strings for the respective currencies.
-
-![Format string column](media/as-calculation-groups/as-calc-groups-formatstringcolumn.png)
 
 ## Sideways recursion
 
-Some of the calculation items refer to others in the same calculation group. This is called *sideways recursion*. For example, YOY% (shown below for easy reference) refers to 2 other calculation items, but they are evaluated separately using different calculate statements. Other types of recursion are not supported (see below).
+In the time-intelligence example above, some of the calculation items refer to others in the same calculation group. This is called *sideways recursion*. For example, **YOY%** references both **YOY** and **PY**.
 
 ```dax
 DIVIDE(
@@ -264,9 +258,11 @@ DIVIDE(
 )
 ```
 
+In this case, both expressions are evaluated separately because they are using different calculate statements. Other types of recursion are not supported.
+
 ## Single calculation item in filter context
 
-Here's the definition of **PY YTD**:
+In our time-intelligence example, the **PY YTD** calculation item has a single calculate expression:
 
 ```dax
 CALCULATE(
@@ -304,33 +300,35 @@ CALCULATETABLE (
 
 ### Return table
 
-![Query return of a single calculation item](media/as-calculation-groups/as-cacl-groups-single-calc-item.png)
+![Query return of a single calculation item](media/as-calculation-groups/as-calc-groups-single-calc-item.png)
 
 A calculation group should be designed so that each calculation item within it is shown to the end user only makes sense when applied *one-at-a-time*. If there is a business requirement to allow the user to apply more than one calculation item at a time, multiple calculation groups should be used with different precedence.
 
 ## Precedence
 
-Precedence is a property defined for a calculation group. It specifies the order of evaluation when there are more than one calculation groups. A higher number indicates greater precedence, meaning it will be evaluated before calculation groups with lower precedence.
+Precedence is a property defined for a calculation group. It specifies the order of evaluation when there are more than one calculation group. A higher number indicates greater precedence, meaning it will be evaluated before calculation groups with lower precedence.
 
-In the same model as the time-intelligence example above, the following calculation group also exists. It contains average calculations that are independent of traditional time intelligence in that they don’t change the date filter context; they just apply average calculations within it.
+For this example, we'll use same model as the time-intelligence example above, but also add an Averages calculation group. The Averages calculation group contains average calculations that are independent of traditional time intelligence in that they don’t change the date filter context - they just apply average calculations within it.
 
-In this example, a daily average calculation is defined. It is common in oil-and-gas applications to use calculations such as “barrels of oil per day”. Other common business examples include “store sales average” in the retail industry.
+In this example, a daily average calculation is defined. This is common in oil-and-gas applications to use calculations such as barrels of oil per day. Other common business examples include store sales average in retail.
 
-While such calculations are calculated independently of time-intelligence calculations, there may well be a requirement to combine them. For example, the end-user might want to see “YTD barrels of oil per day” to view the daily-oil rate from the beginning of the year to the current date. In this scenario, precedence should be set for calculation items.
+While such calculations are calculated independently of time-intelligence calculations, there may well be a requirement to combine them. For example, a user might want to see YTD barrels of oil per day to view the daily-oil rate from the beginning of the year to the current date. In this scenario, precedence should be set for calculation items.
 
-Table name is **Time Intelligence**.   
-Column name is **Time Calculation**.   
-Precedence is **20**.   
+### Calculation group
 
-### Calculation item
+Table name is **Averages**.   
+Column name is **Average Calculation**.   
+Precedence is **10**.   
 
-#### "No Average"
+### Calculation items for Averages
+
+#### No Average
 
 ```dax
 SELECTEDMEASURE()
 ```
 
-#### "Daily Average"
+#### Daily Average
 
 ```dax
 DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate))

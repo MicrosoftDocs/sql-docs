@@ -1222,7 +1222,7 @@
           href: ../relational-databases/databases/rebuild-system-databases.md
       - name: Contained databases
         items:
-        - name: Overvivew
+        - name: Overview
           href: ../relational-databases/databases/contained-databases.md
         - name: Modified Features
           href: ../relational-databases/databases/modified-features-contained-database.md

@@ -229,6 +229,8 @@
     href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
   - name: Azure SQL DW Upload Task
     href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+  - name: Flexible File Task
+    href: ../integration-services/control-flow/flexible-file-task.md
   - name: Back Up Database Task
     href: ../integration-services/control-flow/back-up-database-task.md
   - name: Bulk Insert Task
@@ -407,6 +409,10 @@
   href: ../integration-services/data-flow/azure-data-lake-store-source.md
 - name: Azure Data Lake Store Destination
   href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: Flexible File Source
+  href: ../integration-services/data-flow/flexible-file-source.md
+- name: Flexible File Destination
+  href: ../integration-services/data-flow/flexible-file-destination.md
 - name: CDC Flow Components
   href: ../integration-services/data-flow/cdc-flow-components.md
   items:
@@ -441,7 +447,7 @@
 - name: Dimension Processing Destination
   href: ../integration-services/data-flow/dimension-processing-destination.md
   items:
-  - name: Dimension Processing Destination Custom Properies
+  - name: Dimension Processing Destination Custom Properties
     href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
 - name: Excel Source
   href: ../integration-services/data-flow/excel-source.md

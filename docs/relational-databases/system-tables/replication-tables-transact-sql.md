@@ -84,9 +84,7 @@ manager: craigg
  
 ### Replication Tables in the Publication Database  
 
-
-[MSrepl_identity_range](msrepl-identity-range-transact-sql.md)   
-  
+ 
 |||  
 |-|-|  
 |[conflict_\<schema>_\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|  |  
@@ -109,11 +107,13 @@ manager: craigg
 |[MSmerge_tombstone](msmerge-tombstone-transact-sql.md)                     |[syspublications](syspublications-transact-sql.md)|  
 |[MSpeer_conflictdetectionconfigrequest](mspeer-conflictdetectionconfigrequest-transact-sql.md)|[sysschemaarticles](sysschemaarticles-transact-sql.md)|  
 |[MSpeer_conflictdetectionconfigresponse](mspeer-conflictdetectionconfigresponse-transact-sql.md)|[syssubscriptions](syssubscriptions-transact-sql.md)|  
-|[MSpeer_lsns](mspeer-lsns-transact-sql.md)                                  |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| |[MSpeer_originatorid_history](mspeer-originatorid-history-transact-sql.md)  ||
+|[MSpeer_lsns](mspeer-lsns-transact-sql.md)                                  |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
+|[MSpeer_originatorid_history](mspeer-originatorid-history-transact-sql.md)| | 
 | &nbsp; | &nbsp; | 
 ### Replication Tables in the Subscription Database  
 
 
+|[MSpeer_originatorid_history](mspeer-originatorid-history-transact-sql.md)  ||
   
 |||  
 |-|-|  

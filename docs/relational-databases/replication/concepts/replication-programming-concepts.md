@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Replication Programming Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Before developing an application that uses replication functionalities, you should follow the following general planning steps:  
   

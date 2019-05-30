@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   Adds a subscription to a publication and sets the Subscriber status. This stored procedure is executed at the Publisher on the publication database.  
   

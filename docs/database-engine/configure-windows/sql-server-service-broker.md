@@ -34,6 +34,14 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
  Use Service Broker components to implement native in-database asynchronous message processing functionalities. Application developers who use [!INCLUDE[ssSB](../../includes/sssb-md.md)] can distribute data workloads across several databases without programming complex communication and messaging internals. This reduces development and test work because [!INCLUDE[ssSB](../../includes/sssb-md.md)] handles the communication paths in the context of a conversation. It also improves performance. For example, front-end databases supporting Web sites can record information and send process intensive tasks to queue in back-end databases. [!INCLUDE[ssSB](../../includes/sssb-md.md)] ensures that all tasks are managed in the context of transactions to assure reliability and technical consistency.  
   
+## Overview
+
+  Service Broker is a message delivery framework that enables you to create in-database service-oriented applications. Service Broker enables you to create native database services that can exchange the messages. Every service has a queue where the messages are placed until they are processed.
+  
+![Service broker](media/service-broker.png)
+  
+  The messages in the queues can be fetched using Transact-SQL `RECEIVE` command or by the activation procedure that will be called whenever the message arrives in the queue.
+  
 ## Where is the documentation for Service Broker?  
  The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
   

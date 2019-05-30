@@ -8768,10 +8768,6 @@
         items:
         - name: SQL Server Agent
           href: ../ssms/agent/sql-server-agent.md
-        - name: Post Download Instructions
-          href: ../ssms/agent/post-download-instructions.md
-        - name: Job Activity Monitor
-          href: ../ssms/agent/job-activity-monitor.md
       - name: Register servers
         items:
         - name: Register servers

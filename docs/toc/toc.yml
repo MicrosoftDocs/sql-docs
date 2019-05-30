@@ -8772,6 +8772,20 @@
           href: ../ssms/agent/post-download-instructions.md
         - name: Job Activity Monitor
           href: ../ssms/agent/job-activity-monitor.md
+        - name: Automated Administration Tasks
+          href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
+        - name: Implement Agent Security
+          href: ../ssms/agent/implement-sql-server-agent-security.md
+        - name: Implement Jobs
+          href: ../ssms/agent/implement-jobs.md
+        - name: Monitor & Respond to Events
+          href: ../ssms/agent/monitor-and-respond-to-events.md
+        - name: Automated Administration Across an Enterprise
+          href: ../ssms/agent/automated-administration-across-an-enterprise.md
+        - name: Change Steps of a SQL Server Agent Master Job
+          href: ../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md
+        - name: Change Scheduling Details for Master Job
+          href: ../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md
       - name: Register servers
         items:
         - name: Register servers

@@ -1,7 +1,7 @@
 ---
 title: "Azure Storage Connection Manager | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -19,23 +19,19 @@ manager: craigg
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-  The **Azure Storage connection manager** enables an SSIS package to connect to an Azure Storage account by using the values you specify for the properties: Storage Account Name and Account Key.  
+  The **Azure Storage connection manager** enables an SSIS package to connect to an Azure Storage account.
    
  The **Azure Storage connection manager** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
-1.  In the **Add SSIS Connection Manager** dialog box, select **AzureStorage**, and click **Add**.  
+In the **Add SSIS Connection Manager** dialog box, select **AzureStorage**, and click **Add**.  
   
-2.  In the Azure Storage Connection Manager Editor dialog box, choose **Use Azure account** to connect to an Azure Storage Service via internet or choose **Use local developer account** to connect to the local service hosted by the Azure Storage Emulator.  
-  
-3.  If you selected **Use Azure account** option, do the following:  
-  
-    1.  Specify values for the **Storage account name** and **Account key** field. These values will be stored as sensitive data in SSIS package.  
-  
-    2.  Select **Use HTTPS** if you want to use HTTPS instead of HTTP to connect to the Azure Storage Service.  
-  
-4.  Click **OK** to close the dialog box.  
-  
-5.  You can see the properties of the connection manager you created in the **Properties** window.  
-  
-  
+Following properties are available.
+
+- **Service:** Specifies the storage service to connect to.
+- **Account name:** Specifies the storage account name.
+- **Authentication:** Specifies the authentication method to use. **AccessKey** and **ServicePrincipal** authentication are supported.
+    - **AccessKey:** For this authentication method, specify the **Account key**.
+    - **ServicePrincipal:** For this authentication method, specify the **Application ID**, **Application key**, **Tenant ID** of the service principal.
+      The service principal should be assigned **Storage Blob Data Contributor** role to the storage account.
+      Refer to [this](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) page for details.
+- **Environment:** Specifies the cloud environment hosting the storage account.

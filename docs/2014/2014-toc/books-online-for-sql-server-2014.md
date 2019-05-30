@@ -51,7 +51,7 @@ SQL Server 2016, and later versions, are documented [here](https://docs.microsof
   
 -   [SQL Server on Microsoft.com](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server Resource Center](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
 -   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   

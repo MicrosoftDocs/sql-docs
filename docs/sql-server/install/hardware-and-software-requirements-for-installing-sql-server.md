@@ -163,7 +163,7 @@ For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent
   
 ###  <a name="TOP_Principal"></a> OS Compatibility   
 
- The following table shows the which editions of SQL Server are compatible with which versions of Windows:  
+ The following table shows which editions of SQL Server are compatible with which versions of Windows:  
   
 
 | SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  

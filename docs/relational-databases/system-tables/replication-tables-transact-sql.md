@@ -112,9 +112,7 @@ manager: craigg
 | &nbsp; | &nbsp; | 
 ### Replication Tables in the Subscription Database  
 
-
-|[MSpeer_originatorid_history](mspeer-originatorid-history-transact-sql.md)  ||
-  
+ 
 |||  
 |-|-|  
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSmerge_tombstone](msmerge-tombstone-transact-sql.md)  

@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_addmergefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Adds a new merge filter to create a partition based on a join with another table. This stored procedure is executed at the Publisher on the publication database.  
   

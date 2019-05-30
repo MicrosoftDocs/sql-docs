@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_replcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns the commands for transactions marked for replication. This stored procedure is executed at the Publisher on the publication database.  
   

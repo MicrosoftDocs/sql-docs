@@ -18,7 +18,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # sp_articlefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Filters data that are published based on a table article. This stored procedure is executed at the Publisher on the publication database.  
   

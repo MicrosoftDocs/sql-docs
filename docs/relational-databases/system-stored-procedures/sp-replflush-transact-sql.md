@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_replflush (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Flushes the article cache. This stored procedure is executed at the Publisher on the publication database.  
   

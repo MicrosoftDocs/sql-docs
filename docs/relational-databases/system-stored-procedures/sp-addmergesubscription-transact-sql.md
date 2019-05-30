@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_addmergesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Creates a push or pull merge subscription. This stored procedure is executed at the Publisher on the publication database.  
   

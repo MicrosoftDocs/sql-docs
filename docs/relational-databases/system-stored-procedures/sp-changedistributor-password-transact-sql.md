@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Changes the password for a Distributor. This stored procedure is executed at the Distributor on any database.  
   

@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_copymergesnapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Copies the snapshot folder of the specified publication to the folder listed in the **@destination_folde**_r_. This stored procedure is executed at the Publisher on the publication database.  
   

@@ -18,7 +18,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # sp_change_subscription_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Updates information for pull subscriptions. This stored procedure is executed at the Subscriber on the subscription database.  
   

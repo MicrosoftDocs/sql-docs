@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_replmonitorhelppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns current status information for one or more publications at a Publisher. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   

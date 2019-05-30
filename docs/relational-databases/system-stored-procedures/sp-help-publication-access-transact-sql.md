@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_help_publication_access (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns a list of all granted logins for a publication. This stored procedure is executed at the Publisher on the publication database.  
   

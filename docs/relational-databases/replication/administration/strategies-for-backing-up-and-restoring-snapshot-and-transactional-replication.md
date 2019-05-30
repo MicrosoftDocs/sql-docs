@@ -23,7 +23,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   When you design a backup and restore strategy for snapshot and transactional replication, there are three areas to consider:  
   
 -   Which databases to back up.

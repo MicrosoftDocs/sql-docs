@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_helpsubscriptionerrors (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns all transactional replication errors for a given subscription. This stored procedure is executed at the Distributor on the distribution database.  
   

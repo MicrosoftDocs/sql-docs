@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_helpdistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns properties of the Publishers using a Distributor. This stored procedure is executed at the Distributor on any database.  
   

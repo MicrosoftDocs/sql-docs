@@ -18,7 +18,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Replication Distribution Agent
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   The Replication Distribution Agent is an executable that moves the snapshot (for snapshot replication and transactional replication) and the transactions held in the distribution database tables (for transactional replication) to the destination tables at the Subscribers.  
   
 > [!NOTE]  

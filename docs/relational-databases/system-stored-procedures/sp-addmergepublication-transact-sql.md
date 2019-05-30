@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_addmergepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Creates a new merge publication. This stored procedure is executed at the Publisher on the database that is being published.  
   

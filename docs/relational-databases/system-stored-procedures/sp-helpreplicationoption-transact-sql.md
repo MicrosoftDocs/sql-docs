@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Shows the types of replication options enabled for a server. This stored procedure is executed at any server on any database.  
   

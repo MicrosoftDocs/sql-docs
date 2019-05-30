@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Changes the properties of the distribution database. This stored procedure is executed at the Distributor on any database.  
   

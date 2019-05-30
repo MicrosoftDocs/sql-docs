@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Changes the status of an existing Subscriber. This stored procedure is executed at the Publisher on the publication database.  
   

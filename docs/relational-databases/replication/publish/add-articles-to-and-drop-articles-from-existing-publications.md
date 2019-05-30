@@ -22,7 +22,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Add Articles to and Drop Articles from Existing Publications
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   After a publication is created, it is possible to add and drop articles. Articles can be added at any time, but the actions required for dropping articles depend on the type of replication and when the article is dropped.  
   
 ## Adding Articles  

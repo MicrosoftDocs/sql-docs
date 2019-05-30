@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Run Replication Maintenance Jobs (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Replication uses the following maintenance jobs:  
   
 -   **Reinitialize subscriptions having data validation failures**  

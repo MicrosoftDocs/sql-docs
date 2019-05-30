@@ -18,7 +18,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Subscription Validation Options (Transactional Subscriptions)
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use the **Subscription Validation Options** dialog box to specify whether validation should use a row count only, or a row count and a binary checksum. 
 
   > [!NOTE] 

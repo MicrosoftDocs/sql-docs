@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Adds a new Subscriber to a Publisher, enabling it to receive publications. This stored procedure is executed at the Publisher on the publication database for snapshot and transactional publications; and for merge publications using a remote Distributor, this stored procedure is executed at the Distributor.  
   

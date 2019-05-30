@@ -22,11 +22,17 @@ Currently, creating calculation groups in SQL Server Data Tools or Visual Studio
 
 ## By using Tabular Editor
 
-[Tabular Editor](https://github.com/otykier/TabularEditor) is an open source tool available on GitHub. Version 2.9.1 and higher support creating calculation groups.
+[Tabular Editor](https://github.com/otykier/TabularEditor) is an open source tool available on GitHub. Version 2.9.1 and higher support creating calculation groups. 
+
+#### To create a new calculation group and calculation items
+
+1. Press **Alt** + **7**, or right click **Tables** > **Create New**, **Calculation Group**.
+2. Rename your new calculation group, for example Time Intelligence.
+1. Right click the calculation group, 
 
 ## By using TMSL
 
-
+1. In SSMS, right click the model database > **Script** > **Script Database as** > **CREATE OR REPLACE to ** > **New Query Editor Window**.
 
 
 

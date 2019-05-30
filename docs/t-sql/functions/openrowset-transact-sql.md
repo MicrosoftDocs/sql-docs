@@ -416,7 +416,7 @@ from openrowset('MSDASQL'
 ```
 
 > [!IMPORTANT]
-> - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [OBDC Data Sources](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There is 32-bit "Microsoft Text Driver (*.txt, *.csv)" that will not work with a 64-bit version of sqlservr.exe. 
+> - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [OBDC Data Sources](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There is 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of sqlservr.exe. 
 > - Azure SQL Database does not support reading from Windows files.
 
 

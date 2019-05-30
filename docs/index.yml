@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft SQL documentation
-summary: Learn how to use Microsoft SQL to develop applications, services, and tools for your platforms and devices. !! UPDATE THIS !!
+summary: Your access point for SQL Server technical documentation
 brand: sql
 metadata:
-   title: Microsoft SQL documentation | Microsoft Docs
-   description: Learn how to use Microsoft SQL to develop applications, services, and tools for your platforms and devices. !! UPDATE THIS !!
+   title: Microsoft SQL Server documentation | Microsoft Docs
+   description: Learn how to use Microsoft SQL Server to manage your database needs, both on-premises, and in the cloud!
    ms.topic: hub-page
 
 highlightedContent:
@@ -20,7 +20,7 @@ highlightedContent:
      url: /ssms/download-sql-server-management-studio-ssms.md
    - title: SQL Server Education Center
      itemType: learn
-     url: lp/sql-server/sql-education-center.md
+     url: lp/sql-education-center.md
 
 productDirectory:
   items:

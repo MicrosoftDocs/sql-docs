@@ -33,7 +33,7 @@ You can use the following tools to import data from Excel:
 
 If you want to import multiple worksheets from an Excel workbook, you typically have to run each of these tools once for each sheet.
 
-A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this list. To learn more about the solution that interests you, follow the links provided for more info. 
+A complete description of complex tools and services like SSIS or Azure Data Factory is beyond the scope of this list. To learn more about the solution that interests you, follow the provided links. 
 
 > [!IMPORTANT]
 > For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).

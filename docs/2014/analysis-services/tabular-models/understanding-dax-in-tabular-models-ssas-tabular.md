@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
@@ -411,9 +410,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> Additional Resources  
  The [Tabular Modeling &#40;Adventure Works Tutorial&#41;](../tabular-modeling-adventure-works-tutorial.md) provides step-by-step instructions on how to create a tabular model that includes many calculations in calculated columns, measures, and row filters. For most formulas, a description about what the formula is meant to do is provided.  
   
- The [Analysis Services and PowerPivot Team Blog](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) provides information, tips, news and announcements about [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] and PowerPivot.  
+ The [Analysis Services and PowerPivot Team Blog](https://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) provides information, tips, news and announcements about [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] and PowerPivot.  
   
- The [DAX Resource Center](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) provides both internal and external information on DAX, including numerous DAX solutions submitted by leading Business Intelligence professionals.  
+ The [DAX Resource Center](https://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) provides both internal and external information on DAX, including numerous DAX solutions submitted by leading Business Intelligence professionals.  
   
 ## See Also  
  [Data Analysis Expressions &#40;DAX&#41; Reference](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   

@@ -1,12 +1,13 @@
 ---
-title: Build an R model and save to SQL Server (walkthrough) | Microsoft Docs
+title: Build an R model and save to SQL Server (walkthrough) - SQL Server Machine Learning
+description: Tutorial showing how to build an R language model used for SQL Server in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/26/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Build an R model and save to SQL Server (walkthrough)
@@ -29,7 +30,7 @@ This step uses a stored procedure to save a trained model to SQL Server. Creatin
 
 Run the following T-SQL code in a query windows in Management Studio to create the stored procedure.
 
-```tsql
+```sql
 USE [NYCTaxi_Sample]
 GO
 

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -50,7 +50,7 @@ WITH IDENTITY = 'identity_name'
   
  SECRET **='**_secret_**'**  
  Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage. To load from Azure Blob storage into SQL DW or Parallel Data Warehouse, the Secret must be the Azure Storage Key.  
->  [!WARNING]
+> [!WARNING]
 >  The SAS key value might begin with a '?' (question mark). When you use the SAS key, you must remove the leading '?'. Otherwise your efforts might be blocked.  
   
 ## Remarks  

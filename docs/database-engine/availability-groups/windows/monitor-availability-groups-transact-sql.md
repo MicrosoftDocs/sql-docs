@@ -1,6 +1,7 @@
 ---
-title: "Monitor Availability Groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Monitor availability groups using Transact-SQL (T-SQL)"
+description: "A description of how to monitor Always On availability groups using Transact-SQL (T-SQL)."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -25,25 +26,6 @@ manager: craigg
 > [!TIP]  
 >  Many of these views can be joined using their ID columns to return information from multiple views in a single query.  
   
- **In This Topic:**  
-  
--   [Permissions](#Permissions)  
-  
--   **Using Transact-SQL to monitor:**  
-  
-     [Always On Availability Groups feature on a server instance](#AoAgFeatureOnSI)  
-  
-     [Availability groups on the WSFC cluster](#WSFC)  
-  
-     [Availability groups](#AvGroups)  
-  
-     [Availability replicas](#AvReplicas)  
-  
-     [Availability databases](#AvDbs)  
-  
-     [Availability group listeners](#AGlisteners)  
-  
--   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] catalog views require VIEW ANY DEFINITION permission on the server instance. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dynamic management views require VIEW SERVER STATE permission on the server.  

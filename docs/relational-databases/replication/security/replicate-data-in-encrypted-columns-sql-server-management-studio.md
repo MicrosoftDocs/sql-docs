@@ -82,7 +82,7 @@ manager: craigg
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../relational-databases/replication/codesnippet/tsql/replicate-data-in-encryp_3.sql)]  
   
 ## See Also  
- [Security Overview &#40;Replication&#41;](../../../relational-databases/replication/security/security-overview-replication.md)   
+ [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Create Identical Symmetric Keys on Two Servers](../../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

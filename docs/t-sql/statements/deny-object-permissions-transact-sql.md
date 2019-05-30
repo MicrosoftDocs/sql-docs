@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "DENY statement, objects"
   - "table permissions [SQL Server]"
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Object Permissions (Transact-SQL)

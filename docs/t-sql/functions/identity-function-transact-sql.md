@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "columns [SQL Server], creating"
   - "identity columns [SQL Server], IDENTITY function"
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # IDENTITY (Function) (Transact-SQL)

@@ -30,7 +30,7 @@ manager: craigg
  This policy rolls up the connection state of all availability replicas and checks if there are any availability replicas that are not in a healthy role. The policy is in an unhealthy state when any availability replica is neither primary nor secondary. The policy is otherwise in a healthy state.  
   
 > [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Some availability replicas do not have a healthy role](http://go.microsoft.com/fwlink/p/?LinkId=220854) on the TechNet Wiki.  
+>  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Some availability replicas do not have a healthy role](https://go.microsoft.com/fwlink/p/?LinkId=220854) on the TechNet Wiki.  
   
 ## Possible Causes  
  In this availability group, at least one availability replica does not currently have the primary or secondary role.  

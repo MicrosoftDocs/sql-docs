@@ -36,7 +36,7 @@ manager: craigg
   
  DLM begins with discussion of project design and intent, continues with database develop, test, build, deploy, maintain, monitor, and backup activities, and ends with data archive. This topic provides an overview of the stages of DLM that begin with database development and progress through build, deploy, and monitor actions (Figure 1). Also included are data management activities, and data portability operations like import/export, backup, migrate, and sync.  
   
- To read the complete topic, see [Database Lifecycle Management (DLM)](http://go.microsoft.com/fwlink/?LinkId=276949).  
+ To read the complete topic, see [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## See Also  
  [Windows Azure Home Page](http://www.windowsazure.com/)   

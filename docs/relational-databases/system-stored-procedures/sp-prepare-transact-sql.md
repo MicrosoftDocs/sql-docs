@@ -23,14 +23,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 # sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Prepares a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and returns a statement *handle* for execution. sp_prepare is invoked by specifying ID = 11 in a tabular data stream (TDS) packet.  
+Prepares a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and returns a statement *handle* for execution.  `sp_prepare` is invoked by specifying ID = 11 in a tabular data stream (TDS) packet.  
   
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
@@ -52,20 +51,57 @@ sp_prepare handle OUTPUT, params, stmt, options
 |0x0001|RETURN_METADATA|  
   
 ## Examples  
- The following example prepares and executes a simple statement.  
+A. The following example prepares and executes a simple statement.  
   
-```  
-Declare @P1 int;  
-Exec sp_prepare @P1 output,   
+```sql  
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
     N'@P1 nvarchar(128), @P2 nvarchar(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
-Exec sp_execute @P1, N'tempdb', N'ONLINE';  
+EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
-```  
+```
 
+B. The following example prepares a statement in the AdventureWorks2016 database, and later executes it using the handle.
+
+```sql
+-- Prepare query
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
+    N'@Param int',  
+    N'SELECT *
+FROM Sales.SalesOrderDetail AS sod
+INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID
+WHERE SalesOrderID = @Param
+ORDER BY Style DESC;';  
+
+-- Return handle for calling application
+SELECT @P1;
+GO
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+-----------
+1
+
+(1 row affected)
+```
+
+Then the application executes the query twice using the handle value 1, before discarding the prepared plan.
+
+```sql
+EXEC sp_execute 1, 49879;  
+GO
+
+EXEC sp_execute 1, 48766;
+GO
+
+EXEC sp_unprepare 1; 
+GO
+```
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   
 

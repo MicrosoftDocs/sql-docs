@@ -34,13 +34,13 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## Arguments  
- [ **@table_name=**] **'**_table_name_**'**  
+`[ @table_name = ] 'table_name'`
  Is the name of the table. *table_name* is **sysname**, with no default.  
   
- [ **@owner_name=**] **'**_owner_name_**'**  
+`[ @owner_name = ] 'owner_name'`
  Is the name of the owner of the table. *owner_name* is **sysname**, with a default of NULL.  
   
- [ **@filter_clause=** ] **'**_filter_clause_**'**  
+`[ @filter_clause = ] 'filter_clause'`
  Specifies a filter clause that controls which rows of the newly-loaded data should be added to the merge tracking tables. *filter_clause* is **nvarchar(4000)**, with a default value of NULL. If *filter_clause* is **null**, all bulk loaded rows are added.  
   
 ## Return Code Values  

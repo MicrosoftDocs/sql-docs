@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLServer:Transactions"
   - "Transactions object"
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Transactions Object

@@ -50,11 +50,11 @@ Because port 1433 is the known standard for [!INCLUDE[ssNoVersion](../../include
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  In the **IP***n* **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**. Multiple ports may be specified by separating them with a comma.
+4.  In the **IP**_n_ **Properties** area box, in the **TCP Port** box, type the port number you want this IP address to listen on, and then click **OK**. Multiple ports may be specified by separating them with a comma.
 
     > [!NOTE] 
-    > If the **Listen All** setting on the **Protocol** tab is set to "Yes", then only **TCP Port** and **TCP Dynamic Port** values under the **IPAll** section will be used and individual **IP***n* sections will be ignored in their entirety. If the **Listen All** setting is set to "No", then the **TCP Port** and **TCP Dynamic Port** settings under the **IPAll** section will be ignored and the **TCP Port**, **TCP Dynamic Port**, and **Enabled** settings on the individual **IP***n* sections will be used instead.
-    > Each **IP***n* section has an **Enabled** setting with a default value of "No" which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to ignore this IP address even if it has a port defined.  
+    > If the **Listen All** setting on the **Protocol** tab is set to "Yes", then only **TCP Port** and **TCP Dynamic Port** values under the **IPAll** section will be used and individual **IP**_n_ sections will be ignored in their entirety. If the **Listen All** setting is set to "No", then the **TCP Port** and **TCP Dynamic Port** settings under the **IPAll** section will be ignored and the **TCP Port**, **TCP Dynamic Port**, and **Enabled** settings on the individual **IP**_n_ sections will be used instead.
+    > Each **IP**_n_ section has an **Enabled** setting with a default value of "No" which causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to ignore this IP address even if it has a port defined.  
   
 5.  In the console pane, click **SQL Server Services**.  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
@@ -45,11 +44,11 @@ manager: craigg
   
  At the system level, you can create email alerts that notify you when disk space is low. Microsoft System Center includes an email alert feature. You can also use File Server Resource Manager, Task Scheduler, or PowerShell script to set up alerts. The following links provide useful information for setting up notifications about low disk space:  
   
--   [What's New in File Server Resource Manager](http://technet.microsoft.com/library/hh831746.aspx) (http://technet.microsoft.com/library/hh831746.aspx).  
+-   [What's New in File Server Resource Manager](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [File Server Resource Manager Step-by-Step Guide for Windows Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=204875) (http://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [File Server Resource Manager Step-by-Step Guide for Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Setting low disk space alerts on Windows Server 2008](http://go.microsoft.com/fwlink/?LinkID=204870) ( http://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Setting low disk space alerts on Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## How to limit the amount of disk space used for storing cached files  
   

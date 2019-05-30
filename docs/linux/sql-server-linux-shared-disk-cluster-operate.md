@@ -25,10 +25,10 @@ There are times you may want to manually fail the FCI to another node. The proce
 
 The way to failover depends on the Linux distribution. Follow the instructions for your linux distribution.
 
-- [RHEL or Ubuntu](#rhelFailover)
-- [SLES](#slesFailover)
+- [RHEL or Ubuntu](#-manual-failover-rhel-or-ubuntu)
+- [SLES](#-manual-failover-sles)
 
-## <a name = "#rhelFailover"></a> Manual Failover (RHEL or Ubuntu)
+## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Manual Failover (RHEL or Ubuntu)
 
 To perform a manual failover, onn Red Hat Enterprise Linux (RHEL) or Ubuntu servers execute the following steps.
 1.	Issue the following command: 
@@ -49,7 +49,7 @@ To perform a manual failover, onn Red Hat Enterprise Linux (RHEL) or Ubuntu serv
 
 \<FCIResourceName> is the Pacemaker resource name for the FCI. 
 
-## <a name = "#slesFailover"></a> Manual Failover (SLES)
+## <a name = "#-manual-failover-sles"></a> Manual Failover (SLES)
 
 
 In Suse Linux Enterprise Server (SLES), use the `migrate` command to manually failover a SQL Server FCI. For example:
@@ -64,10 +64,12 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 
 <!---
+
 |Distribution |Topic 
 |----- |-----
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
+
 --->
 
 ## Next Steps

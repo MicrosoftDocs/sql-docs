@@ -30,11 +30,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLNumParams(  
-     SQLHSTMT        StatementHandle,  
-     SQLSMALLINT *   ParameterCountPtr);  
+     SQLHSTMT        StatementHandle,  
+     SQLSMALLINT *   ParameterCountPtr);  
 ```  
   
 ## Arguments  

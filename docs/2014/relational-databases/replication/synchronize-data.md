@@ -63,6 +63,6 @@ manager: craigg
 -   Business logic handlers are supported for merge replication. Using the business logic handler framework you can write a managed code assembly that is called during the merge synchronization process. The assembly includes business logic that can respond to a number of conditions during synchronization: data changes, conflicts, and errors. For more information, see [Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md).  
   
 ## See Also  
- [Detect and Resolve Merge Replication Conflicts](merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)  
+ [Detect and Resolve Merge Replication Conflicts](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

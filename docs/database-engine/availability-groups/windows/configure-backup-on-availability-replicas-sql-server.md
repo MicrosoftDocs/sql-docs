@@ -1,6 +1,7 @@
 ---
-title: "Configure Backup on Availability Replicas (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Configure backups on secondary replicas of an availability group"
+description: "Describes how to configure backups on secondary replicas of an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -19,41 +20,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Configure Backup on Availability Replicas (SQL Server)
+# Configure backups on secondary replicas of an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to configure backup on secondary replicas for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
 >  For an introduction to backup on secondary replicas, see [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To configure backup on secondary replicas , using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:**  [After configuring backup on secondary replicas](#FollowUp)  
-  
--   [To Obtain Information About Backup Preference Settings](#ForInfoAboutBuPref)  
-  
--   [Related Content](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
  You must be connected to the server instance that hosts the primary replica.  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 |Task|Permissions|  
 |----------|-----------------|  
@@ -126,7 +104,7 @@ manager: craigg
   
 2.  Optionally, configure the backup priority of each availability replica that you are adding or modifying. This priority is used by the server instance that hosts the primary replica to decide which replica should service an automated backup request on a database in the availability group (the replica with highest priority is chosen). This priority can be any number between 0 and 100, inclusive. A priority of 0 indicates that the replica should not be considered as a candidate for servicing backup requests.  The default setting is 50.  
   
-     When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. In either case, specify the **BackupPriority***n* parameter, where *n* is a value from 0 to 100.  
+     When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. In either case, specify the **BackupPriority**_n_ parameter, where *n* is a value from 0 to 100.  
   
      For example, the following command sets the backup priority of the availability replica `MyReplica` to **60**.  
   

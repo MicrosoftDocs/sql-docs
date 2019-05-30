@@ -1,6 +1,7 @@
 ---
-title: "Remote Blob Store (RBS) and Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Use Remote Blob Store (RBS) with availability groups"
+description: "A description of how to use the Remote Blob Store (RBS) with databases that are part of an Always On availability group. "
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Remote Blob Store (RBS) and Always On Availability Groups (SQL Server)
+# Use Remote Blob Store (RBS) with Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] can provide a high-availability and disaster recovery solution for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][Remote Blob Store (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB objects (blobs). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] protects any RBS metadata and schemas stored in an availability database by replicating them to the secondary replicas. This is the SharePoint Content Database. Generally speaking, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stores this RBS metadata independently from the blob.  

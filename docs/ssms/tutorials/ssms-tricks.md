@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -211,7 +211,7 @@ The path for your SQL Server errog log can vary depending on your configuration 
 You have a few options for finding the name of your SQL server before and after you connect to SQL Server.  
 
 ### Before you connect to SQL Server
-1. Follow the steps to locate the [SQL Server error log on disk](#finding-your-error-log-if-you-cannot-connect-to-sql). Your path may vary from the path in the image below.
+1. Follow the steps to locate the [SQL Server error log on disk](#find-the-error-log-location-if-you-cant-connect-to-sql-server). Your path may vary from the path in the image below.
 2. Open the errorlog.log file in Notepad.  
 3. Search for the text *Server name is*.
     
@@ -248,5 +248,3 @@ If you're connected to an alias or to an Availability Group listener, that infor
 4. View the results of the query to identify the name of the SQL Server instance you're connected to: 
     
     ![Query the SQL Server name](media/ssms-tricks/queryservername.png)
-
-

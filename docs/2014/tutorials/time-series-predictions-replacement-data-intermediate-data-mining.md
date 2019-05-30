@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Time Series Predictions using Replacement Data (Intermediate Data Mining Tutorial)
   In this task, you will build a new model based on worldwide sales data. Then, you will create a prediction query that applies the worldwide sales model to one of the individual regions.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "file storage types [SQL Server]"
   - "data formats [SQL Server], file storage types"
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -38,15 +38,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     |File storage type|Enter at command prompt|  
     |-----------------------|-----------------------------|  
-    |**char***|**c**[**har**]|  
+    |**char**|**c**[**har**]|  
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text***\*|**T**[**ext**]|  
+    |**text**|**T**[**ext**]|  
     |**ntext2**|**W**|  
     |**binary**|**x**|  
     |**varbinary**|**x**|  
-    |**image***\*|**I**[**mage**]|  
+    |**image**|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -79,15 +79,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |File storage type|Host file data type|  
 |-----------------------|-------------------------|  
-|**char***|SQLCHAR|  
+|**char**|SQLCHAR|  
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**text***\*|SQLCHAR|  
-|**ntext***\*|SQLNCHAR|  
+|**text**|SQLCHAR|  
+|**ntext**|SQLNCHAR|  
 |**binary**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**image***\*|SQLBINARY|  
+|**image**|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  

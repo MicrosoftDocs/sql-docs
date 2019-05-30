@@ -30,10 +30,10 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## Arguments  

@@ -35,16 +35,16 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## Arguments  
- [ **@srv_orig =** ] **'***original_server_name***'**  
+`[ @srv_orig = ] 'original_server_name'`
  The name of the server where the back up was created. *original_server_name* is **sysname**, with no default.  
   
- [ **@db_orig =** ] **'***original_database_name***'**  
+`[ @db_orig = ] 'original_database_name'`
  The name of the database that was backed up. *original_database_name* is **sysname**, with no default.  
   
- [ **@keep_replication =** ] *keep_replication*  
+`[ @keep_replication = ] keep_replication`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@perform_upgrade=** ] *perform_upgrade*  
+`[ @perform_upgrade = ] perform_upgrade`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

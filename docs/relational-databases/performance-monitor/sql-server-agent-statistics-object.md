@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Statistics object"
   - "SQLAgent:Statistics"
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server Agent, Statistics Object

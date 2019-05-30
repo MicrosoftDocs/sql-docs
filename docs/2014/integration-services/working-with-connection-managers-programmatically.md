@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "connection managers [Integration Services], programming"
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Working with Connection Managers Programmatically
@@ -59,7 +59,7 @@ manager: craigg
 |WMI|WMI Connection Manager|`System.Management.ManagementScope`||  
 |SQLMOBILE|SQL Server Compact Connection Manager|`System.Data.SqlServerCe.SqlCeConnection`||  
   
-![Integration Services icon (small)](media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
+![Integration Services icon (small)](media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
   
 ## See Also  
  [Connecting to Data Sources in the Script Task](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   

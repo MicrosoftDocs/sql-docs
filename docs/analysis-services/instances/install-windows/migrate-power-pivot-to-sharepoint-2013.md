@@ -27,8 +27,8 @@ manager: kfile
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>Prepare the SharePoint 2013 Farm  
   
-  > [!TIP]  
-    >  Review the authentication method your existing web applications are configured for. SharePoint 2013 web applications default to claims-based authentication. SharePoint 2010 web applications configured for classic-mode authentication require additional steps to migrate databases from SharePoint 2010 to SharePoint 2013. If your web applications are configured for classic-mode authentication, review the SharePoint 2013 documentation.  
+> [!TIP]
+>  Review the authentication method your existing web applications are configured for. SharePoint 2013 web applications default to claims-based authentication. SharePoint 2010 web applications configured for classic-mode authentication require additional steps to migrate databases from SharePoint 2010 to SharePoint 2013. If your web applications are configured for classic-mode authentication, review the SharePoint 2013 documentation.  
   
 1.  Install a new SharePoint Server 2013 farm.  
   

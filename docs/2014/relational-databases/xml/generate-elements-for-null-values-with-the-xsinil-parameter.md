@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ELEMENTS directive"
   - "XSINIL parameter"
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Generate Elements for NULL Values with the XSINIL Parameter

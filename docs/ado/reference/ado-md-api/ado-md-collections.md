@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADO MD Collections
+
 |||  
 |-|-|  
 |[Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Contains the **Axis** objects that define a cellset.|  

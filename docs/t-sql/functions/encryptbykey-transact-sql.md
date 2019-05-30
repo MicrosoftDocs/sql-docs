@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], ENCRYPTBYKEY function"
   - "ENCRYPTBYKEY function"
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ENCRYPTBYKEY (Transact-SQL)
@@ -122,7 +122,7 @@ GO
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  
-ALTER TABLE Sales.CreditCard.   
+ALTER TABLE Sales.CreditCard   
     ADD CardNumber_Encrypted varbinary(128);   
 GO  
   

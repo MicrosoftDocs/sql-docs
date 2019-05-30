@@ -1,5 +1,5 @@
 ---
-title: "Process Tabular Model Partitions | Microsoft Docs"
+title: "Process Analysis Services tabular model partitions | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

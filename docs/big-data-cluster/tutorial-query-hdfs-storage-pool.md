@@ -1,17 +1,22 @@
 ---
-title: How to Query HDFS in a SQL Server big data cluster | Microsoft Docs
+title: Query HDFS data in the storage pool
+titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to query HDFS data in a SQL Server 2019 big data cluster (preview). You create an external table over data in the storage pool and then run a query.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/11/2018
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # Tutorial: Query HDFS in a SQL Server big data cluster
 
-This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster.
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster (preview).
 
 In this tutorial, you learn how to:
 
@@ -22,32 +27,32 @@ In this tutorial, you learn how to:
 > [!TIP]
 > If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Data virtualization samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) on GitHub.
 
-## Prerequisites
+## <a id="prereqs"></a> Prerequisites
 
-- [Deploy a big data cluster on Kubernetes](deployment-guidance.md).
-- [Install Azure Data Studio and the SQL Server 2019 extension](deploy-big-data-tools.md).
-- [Load sample data into the cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big data tools](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Create an external table to HDFS
 
 The storage pool contains web clickstream data in a CSV file stored in HDFS. Use the following steps to define an external table that can access the data in that file.
 
-1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
+1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](connect-to-big-data-cluster.md#master).
 
-2. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
+1. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
 
    ![SQL Server master instance query](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. Run the following Transact-SQL command to change the context to the **Sales** database in the master instance.
+1. Run the following Transact-SQL command to change the context to the **Sales** database in the master instance.
 
    ```sql
    USE Sales
    GO
    ```
 
-4. Define the format of the CSV file to read from HDFS. Press F5 to run the statement.
+1. Define the format of the CSV file to read from HDFS. Press F5 to run the statement.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -61,7 +66,17 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
    );
    ```
 
-5. Create an external table that can read the `/clickstream_data` from the storage pool. The **SqlStoragePool** is accessible from the master instance of a big data cluster.
+1. Create an external data source to the storage pool if it does not already exist.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+   BEGIN
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   END
+   ```
+
+1. Create an external table that can read the `/clickstream_data` from the storage pool. The **SqlStoragePool** is accessible from the master instance of a big data cluster.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

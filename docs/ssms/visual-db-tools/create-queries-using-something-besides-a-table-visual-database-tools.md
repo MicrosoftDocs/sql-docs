@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], queries"
   - "queries [SQL Server], creating"
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

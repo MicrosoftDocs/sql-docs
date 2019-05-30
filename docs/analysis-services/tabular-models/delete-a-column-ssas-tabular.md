@@ -1,5 +1,5 @@
 ---
-title: "Delete a Column | Microsoft Docs"
+title: "Delete a column in an Analysis Services tabular model | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

@@ -60,7 +60,7 @@ manager: craigg
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, click **Save***table_name*.  
+8.  On the **File** menu, click **Save**_table_name_.  
   
 #### To rename an index by using Object Explorer  
   

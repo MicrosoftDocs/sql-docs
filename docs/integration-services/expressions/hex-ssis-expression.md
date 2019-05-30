@@ -11,11 +11,15 @@ helpviewer_keywords:
   - "hexadecimal data"
   - "HEX function"
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # HEX (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a string representing the hexadecimal value of an integer.  
   
 ## Syntax  

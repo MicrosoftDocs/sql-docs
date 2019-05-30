@@ -1,7 +1,7 @@
 ---
 title: "Using Advanced Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -26,10 +26,13 @@ The following table lists the default mappings between the advanced [!INCLUDE[ss
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|byte[] \(default), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String (default), Clob, InputStream|  
-|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob (Java SE 6.0)|  
-|xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (default), InputStream, Clob, byte[], Blob, SQLXML (Java SE 6.0)|  
+|ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob|  
+|xml|LONGVARCHAR<br /><br /> SQLXML|String (default), InputStream, Clob, byte[], Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (default), byte[], InputStream|  
-  
+|sqlvariant|SQLVARIANT|Object|  
+|geometry<br /><br /> geography|VARBINARY|byte[]|  
+
+
 <sup>1</sup> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports sending and retrieving CLR UDTs as binary data but doesn't support manipulation of the CLR metadata.  
   
 The following sections provide examples of how you can use the JDBC driver and the advanced data types.  
@@ -162,6 +165,14 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a UDT can be used 
   
 For more information about user-defined data types, see "Using and Modifying Instances of User-defined Types" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
+## Sql_variant Data Type
+
+For information about sql_variant data type, see [Using Sql_variant Data Type](../../connect/jdbc/using-sql-variant-datatype.md).  
+
+## Spatial Data Types
+
+For information about spatial data types, see [Using Spatial Datatypes](../../connect/jdbc/use-spatial-datatypes.md).  
+
 ## See Also
 
 [Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

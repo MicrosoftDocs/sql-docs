@@ -58,7 +58,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  The number of events to be persisted in a view. For example, if 100 is specified, the 100 most recent events matching the filter criteria will be persisted to the diagnostics session. If fewer than 100 matching events are found, the diagnostics session will contain less than 100 events. *max_item_count_num* must be at least 100 and less than or equal to 100,000.  
   
  *event_name*  
- Defines the actual events to be collected in the diagnostics session.  *event_name* is one of the events listed in [sys.pdw_diag_events](https://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587) where `sys.pdw_diag_events.is_enabled='True'`.  
+ Defines the actual events to be collected in the diagnostics session.  *event_name* is one of the events listed in [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) where `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
  The name of the property on which to restrict results. For example, if you want to limit based on session id, *filter_property_name* should be *SessionId*. See *property_name* below for a list of potential values for *filter_property_name*.  
@@ -84,7 +84,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|The Service Process ID.|  
   
 ## Remarks  
- Each user is allowed a maximum of 10 concurrent diagnostics sessions. See [sys.pdw_diag_sessions](https://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) for a list of your current sessions, and drop any unneeded sessions using `DROP DIAGNOSTICS SESSION`.  
+ Each user is allowed a maximum of 10 concurrent diagnostics sessions. See [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) for a list of your current sessions, and drop any unneeded sessions using `DROP DIAGNOSTICS SESSION`.  
   
  Diagnostics sessions will continue to collect metadata until dropped.  
   

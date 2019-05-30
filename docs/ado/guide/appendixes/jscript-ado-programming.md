@@ -52,7 +52,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 <%  
 var Source = "SELECT * FROM Authors";  
 var Connect =  "Provider=sqloledb;Data Source=srv;" +  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
 var Rs1 = Server.CreateObject( "ADODB.Recordset.2.5" );  
 Rs1.Open(Source,Connect,adOpenForwardOnly);  
 Response.Write("Success!");  

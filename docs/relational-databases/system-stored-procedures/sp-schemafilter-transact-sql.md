@@ -35,7 +35,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## Arguments  
  [**@publisher** = ] **'***publisher***'**  
- Is the name of the non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with no default.  
+ Is the name of the non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with no default.  
   
  [**@schema** = ] **'***schema***'**  
  Is the name of the schema. *schema* is **sysname**, with a default value of NULL.  

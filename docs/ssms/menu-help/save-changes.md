@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Save Changes dialog box"
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Save Changes

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptions.FontsAndColors.ColorPicker"
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

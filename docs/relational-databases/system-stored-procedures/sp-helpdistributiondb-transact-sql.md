@@ -32,7 +32,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## Arguments  
- [ **@database=**]  **'***database_name***'**  
+`[ @database = ] 'database_name'`
  Is the database name for which properties are returned. *database_name* is **sysname**, with a default of **%** for all databases associated with the Distributor and on which the user has permissions.  
   
 ## Result Sets  

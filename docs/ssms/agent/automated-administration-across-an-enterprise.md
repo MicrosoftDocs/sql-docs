@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "multiple instances of SQL Server"
   - "target servers [SQL Server]"
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -62,7 +62,7 @@ Contains information about how to create and manage master and target servers.
 Contains information about how using nonadministrative Windows accounts or the Local System account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service can affect multiserver environments.  
   
 [Set Encryption Options on Target Servers](../../ssms/agent/set-encryption-options-on-target-servers.md)  
-Contains information about setting the MsxEncryptChannelOptions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registry subkey on target servers.  
+Contains information about setting the MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent registry subkey on target servers.  
   
 [Manage Jobs Across an Enterprise](../../ssms/agent/manage-jobs-across-an-enterprise.md)  
 Contains information about checking job status, changing target servers for jobs, synchronizing target server clocks, and polling master servers for their current job status.  

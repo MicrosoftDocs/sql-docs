@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sp_renamedb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Changes the name of a database.  
   
@@ -37,10 +37,10 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## Arguments  
- [ **@dbname=**] **'***old_name***'**  
+`[ @dbname = ] 'old_name'`
  Is the current name of the database. *old_name* is **sysname**, with no default.  
   
- [ **@newname=**] **'***new_name***'**  
+`[ @newname = ] 'new_name'`
  Is the new name of the database. *new_name* must follow the rules for identifiers. *new_name* is **sysname**, with no default.  
   
 ## Return Code Values  

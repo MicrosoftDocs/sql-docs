@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SSIS Script component, configuring"
   - "Script component [Integration Services], configuring"
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configuring the Script Component in the Script Component Editor
@@ -120,7 +120,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  For more information, see [Connecting to Data Sources in the Script Component](connecting-to-data-sources-in-the-script-component.md).  
   
-![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
+![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
   
 ## See Also  
  [Coding and Debugging the Script Component](coding-and-debugging-the-script-component.md)  

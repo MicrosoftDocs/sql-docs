@@ -1,23 +1,23 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
-ms.date: 11/17/2017
+ms.date: 04/10/2019 
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-
+description: In this article you learn about altering the appearance of the web portal by branding it to your business through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Branding the web portal
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package has been designed so you don't need deep cascading style sheet (CSS) knowledge to create it.  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-   
+You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## Creating the brand package
   
 A brand package for Reporting Services consists of three items and is packaged as a zip file.   
@@ -235,5 +235,7 @@ You can also **Download** or **Remove** the package. Removing the package will r
             "altTableAccent":"#fdc336"  
         }  
     }  
+
+## Next steps
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,11 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Text_Editor.SQL.Advanced"
+  - "VS.ToolsOptionsPages.Text_Editor.SQL_Server_Tools.Advanced"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950

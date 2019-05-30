@@ -1,7 +1,7 @@
 ---
 title: "ODBC Driver on Linux and macOS - High Availability and Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2018"
+ms.date: "04/05/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -99,4 +99,4 @@ An ODBC application that uses [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]
 
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)  
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

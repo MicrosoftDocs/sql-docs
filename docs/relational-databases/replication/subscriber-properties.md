@@ -36,7 +36,6 @@ manager: craigg
   
 ## See Also  
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

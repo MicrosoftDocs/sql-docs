@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "scenarios [CLR integration]"
@@ -23,7 +21,7 @@ manager: craigg
 # Usage Scenarios and Examples for Common Language Runtime (CLR) Integration
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes sample applications, package samples, and numerous coding samples that you can use to learn about the programmability features of common language runtime (CLR) integration.  
   
- For complete Visual Studio projects implementing these samples and additional materials, visit [Microsoft SQL Server Community Projects & Samples on CodePlex](http://go.microsoft.com/fwlink/?LinkID=193935).  
+ For complete Visual Studio projects implementing these samples and additional materials, visit [Microsoft SQL Server Community Projects & Samples on CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
 |Name|Description|  
 |----------|-----------------|  

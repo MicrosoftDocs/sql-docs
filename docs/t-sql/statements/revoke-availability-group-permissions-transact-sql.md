@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "revoking permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Availability Group Permissions (Transact-SQL)
@@ -47,7 +47,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be revoked on an availability group. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  Specifies the availability group on which the permission is being revoked. The scope qualifier (**::**) is required.  
   
  { FROM | TO } \<server_principal> 
@@ -96,7 +96,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## Permissions  
- Requires CONTROL permission on the availability group or ALTER ANY AVAILABILTIY GROUP permission on the server.  
+ Requires CONTROL permission on the availability group or ALTER ANY AVAILABILITY GROUP permission on the server.  
   
 ## Examples  
   

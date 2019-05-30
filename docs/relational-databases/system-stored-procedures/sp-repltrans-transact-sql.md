@@ -37,7 +37,7 @@ sp_repltrans
 ## Remarks  
  **sp_repltrans** is used in transactional replication.  
   
- **sp_repltrans** is not supported for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+ **sp_repltrans** is not supported for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_repltrans**.  

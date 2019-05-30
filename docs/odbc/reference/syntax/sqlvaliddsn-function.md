@@ -30,10 +30,10 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLValidDSN(  
-     LPCSTR    lpszDSN);  
+     LPCSTR    lpszDSN);  
 ```  
   
 ## Arguments  

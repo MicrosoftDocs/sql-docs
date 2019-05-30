@@ -8,8 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Run SQL Server Unit Tests from Team Foundation Build
@@ -256,7 +256,7 @@ In this procedure, you check in all the files of your solution. These files incl
   
 9. Click **OK**.  
   
-10. In the **Basic** group, in **Automated Tests**, specify the tests that you want to run. By default, the tests that are contained in files named *test\*.dll from your solution will be run.  
+10. In the **Basic** group, in **Automated Tests**, specify the tests that you want to run. By default, the tests that are contained in files named \*test\*.dll from your solution will be run.  
   
 11. On the **File** menu, click **Save** *ProjectName*.  
   

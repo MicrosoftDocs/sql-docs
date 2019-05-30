@@ -35,6 +35,6 @@ manager: craigg
  ![Small File Folder Icon](../../2014/integration-services/media/filefolder-small.gif "Small File Folder Icon") [XQuery Reference](/sql/xquery/xquery-language-reference-sql-server)  
   
 ## See Also  
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?LinkId=219676)  
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?LinkId=219676)  
   
   

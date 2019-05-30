@@ -2,8 +2,7 @@
 title: "sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: sql-data-warehouse
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"

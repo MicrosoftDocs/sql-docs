@@ -30,18 +30,18 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumns(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      CatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      SchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      TableName,  
-     SQLSMALLINT    NameLength3,  
-     SQLCHAR *      ColumnName,  
-     SQLSMALLINT    NameLength4);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      CatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      SchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      TableName,  
+     SQLSMALLINT    NameLength3,  
+     SQLCHAR *      ColumnName,  
+     SQLSMALLINT    NameLength4);  
 ```  
   
 ## Arguments  
@@ -176,7 +176,7 @@ SQLRETURN SQLColumns(
 ## Code Example  
  In the following example, an application declares buffers for the result set returned by **SQLColumns**. It calls **SQLColumns** to return a result set that describes each column in the EMPLOYEE table. It then calls **SQLBindCol** to bind the columns in the result set to the buffers. Finally, the application fetches each row of data with **SQLFetch** and processes it.  
   
-```  
+```cpp  
 // SQLColumns_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

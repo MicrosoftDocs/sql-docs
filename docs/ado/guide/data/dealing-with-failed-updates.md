@@ -26,8 +26,8 @@ When an update concludes with errors, how you resolve the errors depends on the 
 objRs.Filter = adFilterConflictingRecords  
 objRs.MoveFirst  
 Do While Not objRst.EOF  
-   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
-   objRs.MoveNext  
+   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
+   objRs.MoveNext  
 Loop  
 ```  
   

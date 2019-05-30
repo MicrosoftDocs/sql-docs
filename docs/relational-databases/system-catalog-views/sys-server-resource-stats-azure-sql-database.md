@@ -2,10 +2,8 @@
 title: "sys.server_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2018"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: carlrab, edmaca
-ms.technology: 
 ms.topic: "language-reference"
 f1_keywords: 
   - "resource_stats"
@@ -21,6 +19,7 @@ ms.assetid:
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
+monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

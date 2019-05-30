@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|Name of current database|  
 |**SCHEMA_NAME**|**nvarchar(**128**)**|Returns the name of the schema.|  
-|**SCHEMA_OWNER**|**nvarchar(**128**)**|Schema owner name.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of an object is to query the sys.objects catalog view.|  
+|**SCHEMA_OWNER**|**nvarchar(**128**)**|Schema owner name.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of an object is to query the sys.objects catalog view.|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**varchar(**6**)**|Always returns NULL.|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar(**3**)**|Always returns NULL.|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|Returns the name of the default character set.|  

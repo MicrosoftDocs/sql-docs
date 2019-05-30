@@ -1,5 +1,6 @@
 ---
-title: Always On availability groups for SQL Server containers
+title: Always On availability groups for containers running Linux
+titleSuffix: SQL Server
 description: This article introduces availability groups on SQL Server containers
 author: MikeRayMSFT
 ms.author: mikeray
@@ -7,13 +8,13 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Always On availability groups for SQL Server containers
 
-SQL Server 2019 supports availability groups on containers in a Kubernetes. For availability groups, deploy the SQL Server [Kubernetes operator](https://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
+SQL Server 2019 supports availability groups on containers in a Kubernetes cluster. For availability groups, deploy the SQL Server [Kubernetes operator](https://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
 
 ![AG in Kubernetes Container](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 

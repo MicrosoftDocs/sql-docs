@@ -100,7 +100,7 @@ manager: craigg
 |Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|These stored procedures return information that was correct in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. The output does not reflect changes to the permissions hierarchy implemented in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. For more information, see [Permissions of Fixed Server Roles](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|These stored procedures return information that was correct in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. The output does not reflect changes to the permissions hierarchy implemented in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. For more information, see [Permissions of Fixed Server Roles](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT, DENY, and REVOKE specific permissions.|ALL Permission|35|  
 |Security|PERMISSIONS intrinsic function|Query sys.fn_my_permissions instead.|PERMISSIONS|170|  
 |Security|SETUSER|EXECUTE AS|SETUSER|165|  

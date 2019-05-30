@@ -1,13 +1,13 @@
 ---
-title: Use Python with revoscalepy to create a model in SQL Server | Microsoft Docs
+title: Use Python with revoscalepy to create a model - SQL Server Machine Learning
 description: Write Python script using revoscalepy functions to create data science models that run remotely in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 10/25/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Use Python with revoscalepy to create a model that runs remotely on SQL Server
@@ -125,7 +125,7 @@ A data source is different from a compute context. The *data source* defines the
 
     Pass these variables to the [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) constructor to implement the **data source object** named `data_source`.
 
-+ You create a **compute context object** by using the [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) constructor. The resulting **compute context object** is named `sql_cc`.
++ You create a **compute context object** by using the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) constructor. The resulting **compute context object** is named `sql_cc`.
 
     This example re-uses the same connection string that you used in the data source, on the assumption that the data is on the same SQL Server instance that you will be using as the compute context. 
     

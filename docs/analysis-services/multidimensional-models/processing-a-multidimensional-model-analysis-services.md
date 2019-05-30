@@ -1,5 +1,5 @@
 ---
-title: "Processing a multidimensional model (Analysis Services) | Microsoft Docs"
+title: "Processing an Analysis Services  multidimensional model | Microsoft Docs"
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "Resource Governor, properties"
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # View Resource Governor Properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   You can create or configure Resource Governor entities, such as resource pools and workload groups, by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -65,7 +65,7 @@ manager: craigg
  Enable or disable Resource Governor by selecting or clearing the check box.  
   
  **Resource pools**  
- Create or change resource pool and external resource pool configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default pools. Select a pool to work with by clicking the first column in the row for the pool. To create a new resource pool, click the row that is prefixed by the asterisk (**\***).  
+ Create or change resource pool and external resource pool configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default pools. Select a pool to work with by clicking the first column in the row for the pool. To create a new resource pool, click the row that is prefixed by the asterisk (**&#42;**).  
   
  **Name**  
  Specify the name of the resource pool.  
@@ -85,7 +85,7 @@ manager: craigg
  For more information, see [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) and [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
  **Workload groups for resource pool**  
- Create or change the workload group configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default groups. Select a group to work with by clicking the first column in the row for the pool. To create a new workload group, click the row that is prefixed by the asterisk (**\***).  
+ Create or change the workload group configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default groups. Select a group to work with by clicking the first column in the row for the pool. To create a new workload group, click the row that is prefixed by the asterisk (**&#42;**).  
   
  **Name**  
  Specify the name of the workload group.  

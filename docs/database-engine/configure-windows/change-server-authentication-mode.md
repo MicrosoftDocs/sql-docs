@@ -67,15 +67,27 @@ manager: craigg
   
 2.  On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The following example enables the sa login and sets a new password.  
+3.  Copy and paste one of the following examples into the query window and click **Execute**. 
+
+
+    -  The following example enables the sa login and sets a new password.  
   
-    ```  
-    ALTER LOGIN sa ENABLE ;  
-    GO  
-    ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
-    GO  
-  
-    ```  
+       ```sql  
+       ALTER LOGIN sa ENABLE ;  
+       GO  
+       ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
+       GO  
+       ```  
+    -  The following example changes Server Authentication from mixed mode (Windows + SQL) to Windows only.
+
+       ```sql
+       USE [master]
+       GO
+       EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', 
+                                 N'Software\Microsoft\MSSQLServer\MSSQLServer',      
+                                 N'LoginMode', REG_DWORD, 1
+       GO
+       ```
   
 ## See Also  
  [Strong Passwords](../../relational-databases/security/strong-passwords.md)   

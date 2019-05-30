@@ -22,7 +22,7 @@ ODBCCONF.exe is a command-line tool that allows you to configure ODBC drivers an
   
 ## Syntax  
   
-```  
+```console  
 ODBCCONF [switches] action  
 ```  
   

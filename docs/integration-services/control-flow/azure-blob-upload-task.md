@@ -11,11 +11,15 @@ f1_keywords:
   - "sql13.dts.designer.afpblobuptask.f1"
   - "sql14.dts.designer.afpblobuptask.f1"
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Blob Upload Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 The **Azure Blob Upload Task** enables an SSIS package to upload files to an Azure blob storage.
     
 To add an **Azure Blob Upload Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure Blob Upload Task Editor** dialog box.  

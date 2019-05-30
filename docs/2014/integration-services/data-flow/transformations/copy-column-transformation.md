@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "copying columns"
   - "Copy Column transformation"
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Copy Column Transformation

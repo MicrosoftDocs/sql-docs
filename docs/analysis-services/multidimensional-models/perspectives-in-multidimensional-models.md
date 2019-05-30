@@ -1,5 +1,5 @@
 ---
-title: "Perspectives in Multidimensional Models | Microsoft Docs"
+title: "Perspectives in Analysis Services Multidimensional Models | Microsoft Docs"
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services

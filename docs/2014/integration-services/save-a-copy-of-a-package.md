@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, saving"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "SSIS packages, saving"
   - "SQL Server Integration Services packages, saving"
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Save a Copy of a Package

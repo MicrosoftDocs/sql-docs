@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.findreplace.findinfiles"
-  - "vs.findinfiles"
 helpviewer_keywords: 
   - "Find in Files dialog box"
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
@@ -131,5 +127,3 @@ manager: craigg
   
 ## See Also  
  [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

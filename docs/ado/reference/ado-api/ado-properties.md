@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADO Properties
+
 |||  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Indicates on which page the current record resides.|  

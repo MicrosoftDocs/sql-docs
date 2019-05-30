@@ -25,7 +25,7 @@ manager: craigg
 > [!NOTE]  
 >  In order for a filtered data snapshot job to be created, a standard snapshot job for the publication must already exist.  
   
- For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,16 +51,16 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to which the filtered data snapshot job is being added. *publication* is **sysname**, with no default.  
   
- [ **@suser_sname**= ] **'***suser_sname***'**  
+`[ @suser_sname = ] 'suser_sname'`
  Is the value used when creating a filtered data snapshot for a subscription that is filtered by the value of the [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) function at the Subscriber. *suser_sname* is **sysname**, with no default. *suser_sname* should be NULL if this function is not used to dynamically filter the publication.  
   
- [ **@host_name**= ] **'***host_name***'**  
+`[ @host_name = ] 'host_name'`
  Is the value used when creating a filtered data snapshot for a subscription that is filtered by the value of the [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) function at the Subscriber. *host_name* is **sysname**, with no default. *host_name* should be NULL if this function is not used to dynamically filter the publication.  
   
- [ **@dynamic_snapshot_jobname**= ] **'***dynamic_snapshot_jobname***'**  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`
  Is the name of the filtered data snapshot job created. *dynamic_snapshot_jobname* is **sysname**, with default of NULL, and is an optional OUTPUT parameter. If specified, *dynamic_snapshot_jobname* must resolve to a unique job at the Distributor. If unspecified, a job name will be automatically generated and returned in the result set, where the name is created as follows:  
   
 ```  
@@ -70,10 +70,10 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  When generating the name of the dynamic snapshot job, you may truncate the name of the standard snapshot job.  
   
- [ **@dynamic_snapshot_jobid**= ] **'***dynamic_snapshot_jobid***'**  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`
  Is an identifier for the filtered data snapshot job created. *dynamic_snapshot_jobid* is **uniqueidentifier**, with default of NULL, and is an optional OUTPUT parameter.  
   
- [ **@frequency_type=**] *frequency_type*  
+`[ @frequency_type = ] frequency_type`
  Is the frequency with which to schedule the filtered data snapshot job. *frequency_type* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -87,7 +87,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|Autostart|  
 |**128**|Recurring|  
   
- [ **@frequency_interval =** ] *frequency_interval*  
+`[ @frequency_interval = ] frequency_interval`
  Is the period (measured in days) when the filtered data snapshot job is executed. *frequency_interval* is **int**, with a default value of 1, and depends on the value of *frequency_type*.  
   
 |Value of *frequency_type*|Effect on *frequency_interval*|  
@@ -100,7 +100,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|*frequency_interval* is unused.|  
 |**128**|*frequency_interval* is unused.|  
   
- [ **@frequency_subday=**] *frequency_subday*  
+`[ @frequency_subday = ] frequency_subday`
  Specifies the units for *frequency_subday_interval*. *frequency_subday* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -110,10 +110,10 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** (default)|Minute|  
 |**8**|Hour|  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
+`[ @frequency_subday_interval = ] frequency_subday_interval`
  Is the number of *frequency_subday* periods that occur between each execution of the job. *frequency_subday_interval* is **int**, with a default of 5.  
   
- [ **@frequency_relative_interval=**] *frequency_relative_interval*  
+`[ @frequency_relative_interval = ] frequency_relative_interval`
  Is the occurrence of the filtered data snapshot job in each month. This parameter is used when *frequency_type* is set to **32** (monthly relative). *frequency_relative_interval* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -124,19 +124,19 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Fourth|  
 |**16**|Last|  
   
- [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`
  Is the recurrence factor used by *frequency_type*. *frequency_recurrence_factor* is **int**, with a default of 0.  
   
- [ **@active_start_date=**] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  Is the date when the filtered data snapshot job is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of NULL.  
   
- [ **@active_end_date=**] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  Is the date when the filtered data snapshot job stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of NULL.  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
+`[ @active_start_time_of_day = ] active_start_time_of_day`
  Is the time of day when the filtered data snapshot job is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with a default of NULL.  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
+`[ @active_end_time_of_day = ] active_end_time_of_day`
  Is the time of day when the filtered data snapshot job stops being scheduled, formatted as HHMMSS. *active_end_time_of_day* is **int**, with a default of NULL.  
   
 ## Result Set  

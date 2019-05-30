@@ -1,7 +1,7 @@
 ---
 title: "uniqueidentifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/1/2017"
+ms.date: "12/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, pdw, sql-database"
 ms.reviewer: ""

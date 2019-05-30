@@ -1,10 +1,8 @@
 ---
 title: "Parameter Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,6 +13,7 @@ helpviewer_keywords:
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: MightyPen
 ms.author: genemi
+ms.reviewer: ""
 manager: craigg
 ---
 # Parameter Data Types

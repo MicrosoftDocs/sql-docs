@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "alerts [SQL Server], operators"
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -47,7 +47,7 @@ Every operator must have a name. Operator names must be unique within the [!INCL
 ### Contact Information  
 An operator's contact information defines how the operator is notified. Operators can be notified by e-mail, pager, or through the **net send** command:  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The Pager and **net send** options will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these features in new development work, and plan to modify applications that currently use these features.  
   
 -   **E-mail notification**  

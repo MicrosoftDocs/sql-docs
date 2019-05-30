@@ -155,7 +155,7 @@ manager: craigg
 8.  Close all connections.  
   
 ## See Also  
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
+ [View information and perform tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
   

@@ -25,7 +25,7 @@ manager: craigg
  **SQLProcedures** returns information about any procedures whose names match *ProcName* and can be executed by the current user, or for which the current user has been granted VIEW DEFINITION permission.  
   
 ## See Also  
- [SQLProcedures Function](http://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures Function](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

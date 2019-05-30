@@ -116,13 +116,13 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [View Events and Logs for a Failover Cluster](http://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## See Also  
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)   
- [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

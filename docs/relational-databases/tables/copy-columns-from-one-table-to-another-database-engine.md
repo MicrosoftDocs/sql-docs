@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
      [Security](#Security)  
   
--   **To coy columns, using:**  
+-   **To copy columns, using:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

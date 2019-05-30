@@ -2,13 +2,13 @@
 title: "Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode | Microsoft Docs"
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
 
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Enable and disable RDL sandboxing for Reporting Services in SharePoint integrated mode
 

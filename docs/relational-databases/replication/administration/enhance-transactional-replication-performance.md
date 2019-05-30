@@ -96,9 +96,9 @@ The Log Reader Agent and Distribution Agent support batch sizes for transaction 
 The **-PollingInterval** parameter specifies how often the transaction log of a published database is queried for transactions to replicate. The default is 5 seconds. If you decrease this value, the log is polled more frequently, which can result in lower latency for the delivery of transactions from the publication database to the distribution database. However, you should balance the need for lower latency against the increased load on the server from polling more frequently.   
   
 #### MaxCmdsInTran
-- To resolve accidental, one-time bottlenecks use the **-MaxCmdsInTran** parameter for the Log Reader Agent.  
+- To resolve accidental, one-time bottlenecks use the **–MaxCmdsInTran** parameter for the Log Reader Agent.  
   
-The **-MaxCmdsInTran** parameter specifies the maximum number of statements grouped into a transaction as the Log Reader writes commands to the distribution database. Using this parameter allows the Log Reader Agent and Distribution Agent to divide large transactions (consisting of many commands) at the Publisher into several smaller transactions when applying commands at the Subscriber. Specifying this parameter can reduce contention at the Distributor and reduce latency between the Publisher and Subscriber. Because the original transaction is applied in smaller units, the Subscriber can access rows of a large logical Publisher transaction prior to the end of the original transaction, breaking strict transactional atomicity. The default is **0**, which preserves the transaction boundaries of the Publisher. This parameter does not apply to Oracle Publishers.  
+The **–MaxCmdsInTran** parameter specifies the maximum number of statements grouped into a transaction as the Log Reader writes commands to the distribution database. Using this parameter allows the Log Reader Agent and Distribution Agent to divide large transactions (consisting of many commands) at the Publisher into several smaller transactions when applying commands at the Subscriber. Specifying this parameter can reduce contention at the Distributor and reduce latency between the Publisher and Subscriber. Because the original transaction is applied in smaller units, the Subscriber can access rows of a large logical Publisher transaction prior to the end of the original transaction, breaking strict transactional atomicity. The default is **0**, which preserves the transaction boundaries of the Publisher. This parameter does not apply to Oracle Publishers.  
   
    > [!WARNING]  
    >  **MaxCmdsInTran** was not designed to be always turned on. It exists to work around cases where someone accidentally performed a large number of DML operations in a single transaction (causing delay in distribution of commands until the entire transaction is in distribution database, locks being held, etc.). If you routinely fall into this situation,review your applications and find ways to reduce the transaction size.  
@@ -106,9 +106,9 @@ The **-MaxCmdsInTran** parameter specifies the maximum number of statements grou
 ### Distribution Agent
 
 #### SubscriptionStreams
-- Increase the **-SubscriptionStreams** parameter for the Distribution Agent.  
+- Increase the **–SubscriptionStreams** parameter for the Distribution Agent.  
   
-The **-SubscriptionStreams** parameter can greatly improve aggregate replication throughput. It allows multiple connections to a Subscriber to apply batches of changes in parallel, while maintaining many of the transactional characteristics present when using a single thread. If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
+The **–SubscriptionStreams** parameter can greatly improve aggregate replication throughput. It allows multiple connections to a Subscriber to apply batches of changes in parallel, while maintaining many of the transactional characteristics present when using a single thread. If one of the connections fails to execute or commit, all connections will abort the current batch, and the agent will use a single stream to retry the failed batches. Before this retry phase completes, there can be temporary transactional inconsistencies at the Subscriber. After the failed batches are successfully committed, the Subscriber is brought back to a state of transactional consistency.  
   
 A value for this agent parameter can be specified using the **@subscriptionstreams** of [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).  
 
@@ -152,7 +152,7 @@ Distribution Agent uses one session to retry the batch that could not be applied
 Committing a set of transactions has a fixed overhead; by committing a larger number of transactions less frequently, the overhead is spread across a larger volume of data.  Increasing CommitBatchSize (up to 200) can improve performance as more transactions are committed to the subscriber. However, the benefit of increasing this parameter drops off as the cost of applying changes is gated by other factors, such as the maximum I/O of the disk that contains the log. Additionally, there is a trade-off to be considered: any failure that causes the Distribution Agent to start over must roll back and reapply a larger number of transactions. For unreliable networks, a lower value can result in fewer failures and a smaller number of transactions to roll back and reapply if a failure occurs.  
   
 
-##See more
+## See more
   
 [Work with Replication Agent Profiles](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [View and Modify Replication Agent Command Prompt Parameters &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  

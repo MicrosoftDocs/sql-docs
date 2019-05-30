@@ -64,7 +64,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell** can be enabled and disabled by using the Policy-Based Management or by executing **sp_configure**. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md) and [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  If **xp_cmdshell** is executed within a batch and returns an error, the batch will fail. This is a change of behavior. In earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the batch would continue to execute.  
   
 ## xp_cmdshell Proxy Account  

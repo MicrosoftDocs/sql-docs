@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
@@ -17,7 +16,7 @@ manager: craigg
   
  After completing this lesson and re-deploying the model to a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance integrated with SharePoint and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], you can create a data source, specify the data connection information, launch Power View, and design reports against the model.  
   
- This lesson does not describe how to create and use Power View reports. This lesson is meant to provide tabular model authors an introduction to those properties and settings that affect how model data will appear in Power View. To learn more about creating Power View reports, see [Tutorial: Create a Sample Report in Power View](http://go.microsoft.com/fwlink/?LinkId=221204).  
+ This lesson does not describe how to create and use Power View reports. This lesson is meant to provide tabular model authors an introduction to those properties and settings that affect how model data will appear in Power View. To learn more about creating Power View reports, see [Tutorial: Create a Sample Report in Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
  Estimated time to complete this lesson: **30 minutes**  
   
@@ -216,6 +215,6 @@ manager: craigg
 ## Next Steps  
  You can now use Power View to visualize data from the model. Ensure the Analysis Services and Reporting Services accounts on the SharePoint site have read permissions to the Analysis Services instance where you deployed your model.  
   
- To create a Reporting Services report data source that points to your model, see [Table Model Connection Type (SSRS)](http://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
+ To create a Reporting Services report data source that points to your model, see [Table Model Connection Type (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  
   
   

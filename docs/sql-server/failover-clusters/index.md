@@ -1,3 +1,3 @@
 --- 
-redirect_url: /sql/sql-server/failover-clusters/high-availability-solutions-sql-server
+redirect_url: /sql/database-engine/sql-server-business-continuity-dr
 --- 

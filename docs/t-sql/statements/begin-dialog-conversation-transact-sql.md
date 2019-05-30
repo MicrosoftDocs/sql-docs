@@ -57,7 +57,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## Arguments  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  Is a variable used to store the system-generated dialog handle for the new dialog that is returned by the BEGIN DIALOG CONVERSATION statement. The variable must be of type **uniqueidentifier**.  
   
  FROM SERVICE *initiator_service_name*  

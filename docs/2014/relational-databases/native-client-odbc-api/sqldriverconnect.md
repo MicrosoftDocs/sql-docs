@@ -72,7 +72,7 @@ SQLDriverConnect(hdbc, hwnd,
 ```  
   
 ## See Also  
- [SQLDriverConnect Function](http://go.microsoft.com/fwlink/?LinkId=59340)   
+ [SQLDriverConnect Function](https://go.microsoft.com/fwlink/?LinkId=59340)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   

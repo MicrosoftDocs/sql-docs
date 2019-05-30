@@ -35,16 +35,16 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. If the publication is specified, all conflicts qualified by the publication are returned.  
   
- [ **@source_object=**] **'***source_object***'**  
+`[ @source_object = ] 'source_object'`
  Is the name of the source object. *source_object* is **nvarchar(386)**, with a default of NULL.  
   
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher.*publisher* is **sysname**, with a default of NULL.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publisher database.*publisher_db* is **sysname**, with a default of NULL.  
   
 ## Result Sets  

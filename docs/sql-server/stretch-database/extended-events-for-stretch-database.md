@@ -1,13 +1,12 @@
 ---
 title: "Extended Events for Stretch Database | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Extended Events for Stretch Database

@@ -20,7 +20,7 @@ manager: craigg
  Set the AUTO_SHRINK database option to OFF. If you know that the space that you are reclaiming will not be needed in the future, you can reclaim the space by manually shrinking the database.  
   
 ## For More Information  
- Microsoft Knowledge Base article [315512](http://go.microsoft.com/fwlink/?linkid=117750)  
+ Microsoft Knowledge Base article [315512](https://go.microsoft.com/fwlink/?linkid=117750)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

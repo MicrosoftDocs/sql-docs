@@ -71,9 +71,9 @@ manager: craigg
   
     2.  Under **From this location**, click **Locations...** to open the **Locations** dialog box and select one of the available server locations. When finished, click **OK**.  
   
-    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](http://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Under **Enter the object name to select (examples)**, enter the user or group name that you want to find. For more information, see [Select Users, Computers, or Groups Dialog Box](https://technet.microsoft.com/library/cc771712.aspx).  
   
-    4.  Click **Advanced...** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](http://technet.microsoft.com/library/cc733110.aspx).  
+    4.  Click **Advanced...** for more advanced search options. For more information, see [Select Users, Computers, or Groups Dialog Box - Advanced Page](https://technet.microsoft.com/library/cc733110.aspx).  
   
     5.  Click **OK**.  
   
@@ -140,7 +140,7 @@ manager: craigg
  The **User Mapping** page lists all possible databases and the database role memberships on those databases that can be applied to the login. The databases selected determine the role memberships that are available for the login. The following options are available on this page:  
   
  **Users mapped to this login**  
- Select the databases that this login can access. When you select a database, its valid database roles are displayed in the **Database role membership for:** *database_name* pane.  
+ Select the databases that this login can access. When you select a database, its valid database roles are displayed in the **Database role membership for:** _database_name_ pane.  
   
  **Map**  
  Allow the login to access the databases listed below.  
@@ -154,10 +154,10 @@ manager: craigg
  **Default Schema**  
  Specifies the default schema of the user. When a user is first created, its default schema is **dbo**. It is possible to specify a default schema that does not yet exist. You cannot specify a default schema for a user that is mapped to a Windows group, a certificate, or an asymmetric key.  
   
- **Guest account enabled for:**  *database_name*  
+ **Guest account enabled for:**  _database_name_  
  Read-only attribute indicating whether the Guest account is enabled on the selected database. Use the **Status** page of the **Login Properties** dialog box of the Guest account to enable or disable the Guest account.  
   
- **Database role membership for:**  *database_name*  
+ **Database role membership for:**  _database_name_  
  Select the roles for the user in the specified database. All users are members of the **public** role in every database and cannot be removed. For more information about database roles, see [Database-Level Roles](database-level-roles.md).  
   
 ### Securables  
@@ -170,10 +170,10 @@ manager: craigg
   
 1.  Click **Search**.  
   
-2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server***server_name*. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  In the **Add Objects** dialog box, select one of the following options: **Specific objects...**, **All objects of the types...**, or **The server**_server_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Selecting **The server***server_name* automatically fills the upper grid with all of that servers' securable objects.  
+    >  Selecting **The server**_server_name_ automatically fills the upper grid with all of that servers' securable objects.  
   
 3.  If you select **Specific objects...**:  
   

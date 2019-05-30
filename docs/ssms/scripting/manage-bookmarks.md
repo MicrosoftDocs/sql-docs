@@ -7,13 +7,11 @@ ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.BookmarkWindow"
 helpviewer_keywords: 
   - "bookmarks [SQL Server Management Studio]"
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -91,5 +89,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  

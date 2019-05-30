@@ -37,12 +37,12 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of the new application role. *role* is **sysname**, with no default. *role* must be a valid identifier and cannot already exist in the current database.  
   
  Application role names can contain from 1 up to 128 characters, including letters, symbols, and numbers. Role names cannot contain a backslash (\\) nor be NULL or an empty string ('').  
   
- [ **@password =** ] **'***password***'**  
+`[ @password = ] 'password'`
  Is the password required to activate the application role. *password* is **sysname**, with no default. *password* cannot be NULL.  
   
 ## Return Code Values  

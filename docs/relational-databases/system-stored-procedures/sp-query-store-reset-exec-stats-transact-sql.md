@@ -38,7 +38,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## Arguments  
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan to being cleared. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  

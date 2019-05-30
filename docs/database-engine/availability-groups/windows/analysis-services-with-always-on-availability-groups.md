@@ -1,6 +1,7 @@
 ---
-title: "Analysis Services with Always On Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "Analysis Services with availability groups"
+description: "If you are using Always On availability groups as your high availability solution, you can use a database in that group as a data source in an Analysis Services tabular or multidimensional solution."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -19,18 +20,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   An Always On availability group is a predefined collection of SQL Server relational databases that failover together when conditions trigger a failover in any one database, redirecting requests to a mirrored database on another instance in the same availability group. If you are using availability groups as your high availability solution, you can use a database in that group as a data source in an Analysis Services tabular or multidimensional solution. All of the following Analysis Services operations work as expected when using an availability database: processing or importing data, querying relational data directly (using ROLAP storage or DirectQuery mode), and writeback.  
   
  Processing and querying are read-only workloads. You can improve performance by offloading these workloads to a readable secondary replica. Additional configuration is required for this scenario. Use the checklist in this topic to ensure you follow all the steps.  
-  
- [Prerequisites](#bkmk_prereq)  
-  
- [Checklist: Use a secondary replica for read-only operations](#bkmk_UseSecondary)  
-  
- [Create an Analysis Services data source using an Always On availability database](#bkmk_ssasAODB)  
-  
- [Test the configuration](#bkmk_test)  
-  
- [What happens after a failover occurs](#bkmk_whathappens)  
-  
- [Writeback when using an Always On availability database](#bkmk_writeback)  
   
 ##  <a name="bkmk_prereq"></a> Prerequisites  
  You must have a SQL Server login on all replicas. You must be a **sysadmin** to configure availability groups, listeners, and databases, but users only need **db_datareader** permissions to access the database from an Analysis Services client.  

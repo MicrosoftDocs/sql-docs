@@ -30,11 +30,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLNumResultCols(  
-     SQLHSTMT        StatementHandle,  
-     SQLSMALLINT *   ColumnCountPtr);  
+     SQLHSTMT        StatementHandle,  
+     SQLSMALLINT *   ColumnCountPtr);  
 ```  
   
 ## Arguments  

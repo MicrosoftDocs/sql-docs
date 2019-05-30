@@ -22,7 +22,7 @@ manager: craigg
 ODBC applications can be classified as follows:  
   
 -   **Pure ODBC 2.**  
-     ***x* Application** A 32-bit application that:  
+     **_x_ Application** A 32-bit application that:  
   
     -   Calls only ODBC 2.*x* functions (including the ODBC 1.0 function **SQLSetParam**). These include ODBC 1.*x* applications that have been ported to 32-bit.  
   
@@ -31,10 +31,10 @@ ODBC applications can be classified as follows:
     -   Has not been recompiled with ODBC 3.5 headers.  
   
 -   **Pure ODBC 2.**  
-     ***x* Recompiled Application** A pure ODBC 2.*x* application that has been recompiled using the ODBC 3.5 header files, by setting ODBCVER=0x0250.  
+     **_x_ Recompiled Application** A pure ODBC 2.*x* application that has been recompiled using the ODBC 3.5 header files, by setting ODBCVER=0x0250.  
   
 -   **Pure ODBC 2.**  
-     ***x* Unicode Application** A pure ODBC 2.*x* recompiled application that is Unicode-compliant and uses the SQL_WCHAR data type.  
+     **_x_ Unicode Application** A pure ODBC 2.*x* recompiled application that is Unicode-compliant and uses the SQL_WCHAR data type.  
   
 -   **Pure Open Group and ISO**-**compliant ODBC Application** A 32-bit application that:  
   

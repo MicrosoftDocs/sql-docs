@@ -25,7 +25,7 @@ manager: craigg
 ##  <a name="VisualElement"></a> SQL Server Multi-Subnet Failover Cluster (Two-Nodes, Two-Subnets)  
  The following illustration represents a two node, two subnet failover cluster instance (FCI) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Multi-Subnet Architecture with MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Multi-Subnet Architecture with MultiSubnetFailover")  
+ ![Multi-Subnet Architecture with MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Multi-Subnet Architecture with MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Multi-Subnet Failover Cluster Instance Configurations  

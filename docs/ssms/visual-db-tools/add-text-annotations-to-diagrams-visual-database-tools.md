@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "annotations [SQL Server]"
   - "database diagrams [SQL Server], annotations"
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

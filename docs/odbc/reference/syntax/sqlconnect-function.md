@@ -30,16 +30,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLConnect(  
-     SQLHDBC        ConnectionHandle,  
-     SQLCHAR *      ServerName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      UserName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      Authentication,  
-     SQLSMALLINT    NameLength3);  
+     SQLHDBC        ConnectionHandle,  
+     SQLCHAR *      ServerName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      UserName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      Authentication,  
+     SQLSMALLINT    NameLength3);  
 ```  
   
 ## Arguments  
@@ -187,7 +187,7 @@ SQLRETURN SQLConnect(
 ### Code Example  
  In the following example, an application allocates environment and connection handles. It then connects to the SalesOrders data source with the user ID JohnS and the password Sesame and processes data. When it has finished processing data, it disconnects from the data source and frees the handles.  
   
-```  
+```cpp  
 // SQLConnect_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

@@ -11,11 +11,15 @@ f1_keywords:
   - "sql13.dts.designer.afpblobdltask.f1"
   - "sql14.dts.designer.afpblobdltask.f1"
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Blob Download Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 The Azure Blob Download Task enables an SSIS package to download files from an Azure blob storage.
 
 To add an **Azure Blob Download Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure Blob Download Task Editor** dialog box.  

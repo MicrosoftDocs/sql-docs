@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
@@ -83,7 +82,7 @@ manager: craigg
  You can also set properties that let you tune the server and control security for client usage. For more information, see [Feature Properties](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  For more information about Support for plug-in algorithms by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  For more information about Support for plug-in algorithms by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## Programmatic Access to Data Mining Objects  
  You can use the following object models to create a connection to an Analysis Services database and work with data mining objects:  

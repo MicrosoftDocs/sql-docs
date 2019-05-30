@@ -1,6 +1,7 @@
 ---
-title: "Domain Independent Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Create a domain-independent availability group"
+description: "Steps to create an availability group that uses a Workgroup Cluster. This allows SQL Server 2016 (and greater) to deploy an Always On availability group on top of a WSFC that does not require Active Directory Domain Services and therefore does not require each server to be part of the same domain."
+ms.custom: "seodec18"
 ms.date: "09/25/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,7 +14,7 @@ author: "MashaMSFT"
 ms.author: mathoma
 manager: craigg
 ---
-# Domain Independent Availability Groups
+# Create a domain-independent availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Always On Availability Groups (AGs) require an underlying Windows Server failover cluster (WSFC). Deploying a WSFC through Windows Server 2012 R2 has always required that the servers participating in a WSFC, also known as nodes, are joined to the same domain. For more information on Active Directory Domain Services (AD DS), see [here](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
@@ -71,7 +72,7 @@ A common DNS suffix is necessary for a Domain Independent Availability Group's W
 
 Creating a Domain Independent Availability Group cannot currently be achieved completely using SQL Server Management Studio. While creating the Domain Independent Availability Group is basically the same as the creation of a normal availability group, certain aspects (such as creating the certificates) are only possible with Transact-SQL. The example below assumes an availability group configuration with two replicas: one primary and one secondary. 
 
-1. [Using the instructions at this link](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), deploy a Workgroup Cluster composed of all servers that will participate in the availability group. Ensure that the common DNS suffix is already configured before configuring the Workgroup Cluster.
+1. [Using the instructions at this link](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), deploy a Workgroup Cluster composed of all servers that will participate in the availability group. Ensure that the common DNS suffix is already configured before configuring the Workgroup Cluster.
 2. [Enable the Always On Availability Groups feature](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) on each instance that will be participating in the availability group. This will require a restart of each SQL Server instance.
 3. Each instance that will host the primary replica requires a database master key. If a master key does not exist already, run the following command:
 
@@ -164,4 +165,4 @@ Creating a Domain Independent Availability Group cannot currently be achieved co
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png
+[4]: ./media/diag-successful-dns-suffix.png 

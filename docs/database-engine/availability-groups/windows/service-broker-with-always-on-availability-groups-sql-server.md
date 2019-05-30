@@ -19,11 +19,6 @@ manager: craigg
 
   This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **In This Topic:**  
-  
--   [Requirements for a Service in an Availability Group to Receive Remote Messages](#ReceiveRemoteMessages)  
-  
--   [Requirements for Sending Messages to a Remote Service in an Availability Group](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> Requirements for a Service in an Availability Group to Receive Remote Messages  
   

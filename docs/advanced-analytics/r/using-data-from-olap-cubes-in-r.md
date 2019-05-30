@@ -1,12 +1,12 @@
 ---
-title: Using data from OLAP cubes in R (SQL Server Machine Learning) | Microsoft Docs
+title: Using data from OLAP cubes in R - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 04/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Using data from OLAP cubes in R
@@ -92,7 +92,7 @@ See the following article for general information about the two types of models:
 
 See the following article for information about querying server properties:
 
-+ [OLE DB for OLAP Schema Rowsets](https://docs.microsoft.com/sql/analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB for OLAP Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
 
 ### Writeback is not supported
 

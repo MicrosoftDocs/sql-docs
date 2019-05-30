@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent, errors"
   - "errors [SQL Server Agent]"
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -71,7 +71,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 4.  Right-click the error log you want to view and select **View Agent Log**.  
   
-    The following options are available in the **Log File Viewer -***server_name* dialog box:  
+    The following options are available in the **Log File Viewer -**_server_name_ dialog box:  
   
     **Load Log**  
     Open a dialog box where you can specify a log file to load.  

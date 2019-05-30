@@ -38,7 +38,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name = ] '*instance_name*'  
  Is the instance name. *instance_name* is **sysname** and defaults to the local instance if NULL.  
   
-> **NOTE:**  *instance_name* must be the fully qualified instance name, which consists of the computer name and the instance name in the form *computerName*\\*instanceName*.  
+> **NOTE:**  _instance_name_ must be the fully qualified instance name, which consists of the computer name and the instance name in the form *computerName*\\*instanceName*.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

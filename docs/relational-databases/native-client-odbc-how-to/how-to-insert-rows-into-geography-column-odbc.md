@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  For more information about spatial storage, see [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## Example  
- The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by this sample.  
+ The first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by this sample.  
   
  Compile the second (C++) code listing with odbc32.lib and user32.lib. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installs to a named instance.  
   
- The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
+ The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
   
 ```sql
 use tempdb  

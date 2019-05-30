@@ -81,7 +81,7 @@ Get-WmiObject Win32_Volume -ErrorAction Stop | Out-Null
 Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null  
 ```  
   
- For more information about troubleshooting WMI, see [Troubleshooting WMI](http://go.microsoft.com/fwlink/?LinkId=178250). Note that queries in these SQL Server Utility operations are running locally, so the DCOM and remote troubleshooting content does not apply.  
+ For more information about troubleshooting WMI, see [Troubleshooting WMI](https://go.microsoft.com/fwlink/?LinkId=178250). Note that queries in these SQL Server Utility operations are running locally, so the DCOM and remote troubleshooting content does not apply.  
   
 ## Failed Data Collection  
  If [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility data collection events fail, consider the following possibilities:  

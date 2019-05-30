@@ -26,8 +26,8 @@ Creates the proxy for the target business object and returns a pointer to it. Th
   
 |Protocol|Syntax|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "https://awebsrvr")|  
-|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https://awebsrvr")|  
+|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |In-process|Set object = DataSpace.CreateObject("ProgId", "")|  
   

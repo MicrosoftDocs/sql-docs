@@ -167,7 +167,7 @@ manager: craigg
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     The Database Engine Tuning Advisor XML schema is also available online at [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta).  
+     The Database Engine Tuning Advisor XML schema is also available online at [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta).  
   
 6.  After creating a workload and an XML input file, you are ready to submit the input file to the **dta** command-line utility for analysis. Make sure that you specify an XML output file name for the **-ox** utility argument. This creates an XML output file with a recommended configuration specified in the `Configuration` element. If you want to run Database Engine Tuning Advisor again to check another hypothetical configuration that is based on the output, you can copy and paste the `Configuration` element contents from the output file into a new or your original XML input file. For information about using an XML input file with the **dta** utility, see the section "Tune a Database by Using the dta Utility" in [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
   

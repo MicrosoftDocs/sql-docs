@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---
@@ -38,7 +38,7 @@ manager: craigg
   
  [How Permissions Are Determined &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
- [Troubleshooting Master Data Manager Security](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
+ [Troubleshooting Master Data Manager Security](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
 ## See Also  
  [Master Data Manager Web Application](../../2014/master-data-services/master-data-manager-web-application.md)  

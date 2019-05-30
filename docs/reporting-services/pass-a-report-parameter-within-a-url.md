@@ -2,7 +2,7 @@
 title: "Pass a Report Parameter Within a URL | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "URL access [Reporting Services], passing parameters"
   - "passing parameters [Reporting Services]"
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Pass a Report Parameter Within a URL
   You can pass report parameters to a report by including them in a report URL. These URL parameters are not prefixed because they are passed directly to the report processing engine.  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
 > [!IMPORTANT]  
 >  It is important the URL include the `_vti_bin` proxy syntax to route the request through SharePoint and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP proxy. The proxy adds some context to the HTTP request, context that is required to ensure proper execution of the report for SharePoint mode report servers.  
@@ -24,12 +27,12 @@ ms.author: maghan
   
  All query parameters can have corresponding report parameters. You pass a query parameter to a report by passing the corresponding report parameter. For more information, see [Build a Query in the Relational Query Designer &#40;Report Builder and SSRS&#41;](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Report parameters are case-sensitive.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  Report parameters are case-sensitive and utilize the following special characters:  
->   
+> 
 >  -   Any space characters in the URL string are replaced with the characters "%20," according to URL encoding standards.  
 > -   A space character in the parameter portion of the URL is replaced with a plus character (+).  
 > -   A semicolon in any portion of the string is replaced with the characters "%3A."  

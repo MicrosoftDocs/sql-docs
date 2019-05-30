@@ -3,9 +3,8 @@ title: "sys.dm_pdw_node_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

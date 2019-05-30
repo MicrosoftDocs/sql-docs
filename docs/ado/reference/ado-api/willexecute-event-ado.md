@@ -59,7 +59,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** allows you to examine and modify the pending execution parameters. This event may return a request that the pending command be canceled.  
   
 > [!NOTE]
->  If the original source for a **Command** is a stream specified by the [CommandStream Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) property, assigning a new string to the **WillExecute***Source* parameter changes the source of the **Command**. The **CommandStream** property will be cleared and the [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) property will be updated with the new source. The original stream specified by **CommandStream** will be released and cannot be accessed.  
+>  If the original source for a **Command** is a stream specified by the [CommandStream Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) property, assigning a new string to the **WillExecute**_Source_ parameter changes the source of the **Command**. The **CommandStream** property will be cleared and the [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) property will be updated with the new source. The original stream specified by **CommandStream** will be released and cannot be accessed.  
   
  If the dialect of the new source string differs from the original setting of the [Dialect Property](../../../ado/reference/ado-api/dialect-property.md) property (which corresponded to the **CommandStream**), the correct dialect must be specified by setting the **Dialect** property of the command object referenced by *pCommand*.  
   

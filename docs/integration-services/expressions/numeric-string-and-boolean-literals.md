@@ -15,11 +15,15 @@ helpviewer_keywords:
   - "literals [Integration Services]"
   - "mapping literals [Integration Services]"
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Numeric, string, and Boolean literals
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Expressions can include numeric, string, and Boolean literals. The expression evaluator supports a variety of numeric literals such as integers, decimals, and floating-point constants. The expression evaluator also supports the long and float suffixes, which specify how the expression evaluator handles values, and scientific notation in numeric literals.  
   
 ## Numeric Literals  

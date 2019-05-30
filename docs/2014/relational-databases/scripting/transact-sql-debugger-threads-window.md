@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.threads"
 helpviewer_keywords: 
   - "Threads Window [Transact-SQL]"
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
@@ -56,5 +53,3 @@ manager: craigg
  [Transact-SQL Debugger Information](transact-sql-debugger-information.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql)   
  [sys.sysprocesses &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql)  
-  
-  

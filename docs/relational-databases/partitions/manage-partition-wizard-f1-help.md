@@ -21,8 +21,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "wizards [SQL Server Management Studio] See Manage Partition Wizard"
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Manage Partition Wizard F1 Help

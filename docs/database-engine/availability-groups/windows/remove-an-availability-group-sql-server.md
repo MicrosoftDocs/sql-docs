@@ -24,38 +24,16 @@ manager: craigg
   
 > [!IMPORTANT]  
 >  If possible, remove the availability group only while connected to the server instance that hosts the primary replica. When the availability group is dropped from the primary replica, changes are allowed in the former primary databases (without high availability protection). Deleting an availability group from a secondary replica leaves the primary replica in the RESTORING state, and changes are not allowed on the databases.  
+
   
--   **Before you begin:**  
+## <a name="Restrictions"></a> Limitations and Recommendations  
   
-     [Limitations and Recommendations](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To delete an availability group, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [Related Content](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Recommendations  
-  
--   When the availability group is online, deleting it from a secondary replica causes the primary replica to transition to the RESTORING state. Therefore, if possible, remove the availability group only from the server instance that hosts the primary replica.  
-  
--   If you delete an availability group from a computer that has been removed or evicted from the WSFC failover cluster, the availability group is only deleted locally.  
-  
--   Avoid dropping an availability group when the Windows Server Failover Clustering (WSFC) cluster has no quorum. If you must drop an availability group while the cluster lacks quorum, the metadata availability group that is stored in the cluster is not removed. After the cluster regains quorum, you will need to drop the availability group again to remove it from the WSFC cluster.  
-  
+-   When the availability group is online, deleting it from a secondary replica causes the primary replica to transition to the RESTORING state. Therefore, if possible, remove the availability group only from the server instance that hosts the primary replica.    
+-   If you delete an availability group from a computer that has been removed or evicted from the WSFC failover cluster, the availability group is only deleted locally. 
+-   Avoid dropping an availability group when the Windows Server Failover Clustering (WSFC) cluster has no quorum. If you must drop an availability group while the cluster lacks quorum, the metadata availability group that is stored in the cluster is not removed. After the cluster regains quorum, you will need to drop the availability group again to remove it from the WSFC cluster.    
 -   On a secondary replica, DROP AVAILABILITY GROUP should only be used only for emergency purposes. This is because dropping an availability group takes the availability group offline. If you drop the availability group from a secondary replica, the primary replica cannot determine whether the OFFLINE state occurred because of quorum loss, a forced failover, or a DROP AVAILABILITY GROUP command. The primary replica transitions to the RESTORING state to prevent a possible split-brain situation. For more information, see [How It Works: DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server Engineers blog).  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission. To drop an availability group that is not hosted by the local server instance you need CONTROL SERVER permission or CONTROL permission on that Availability Group.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  

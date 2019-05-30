@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.spatialindexes"
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---
@@ -106,7 +106,7 @@ Provides pages in this index the same percentage of empty space (padding) that i
 **Page Locks Allowed**  
 Specifies whether page-level locking is allowed on this index. Allowing or disallowing page-level locking affects database performance.  
   
-**Re-compute** **Statistics**  
+**Re-compute Statistics**  
 Specifies whether to compute new statistics when the index is created. Recomputing statistics slows the building of indexes but usually improves query performance.  
   
 **Row Locks Allowed**  

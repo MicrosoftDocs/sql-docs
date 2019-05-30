@@ -130,7 +130,7 @@ manager: craigg
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Current primary replica|Ensure that the READ_ONLY_ROUTING_LIST contains only server instances that are hosting a readable secondary replica.|**To identify readable secondary replicas:** sys.availability_replicas  (**secondary_role_allow_connections_desc** column)<br /><br /> **To view a read-only routing list:** sys.availability_read_only_routing_lists<br /><br /> **To change a read-only routing list:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Every replica in the read_only_routing_list|Ensure that the Windows firewall is not blocking the READ_ONLY_ROUTING_URL port.|-|[Configure a Windows Firewall for Database Engine Access](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Every replica in the read_only_routing_list|In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager, verify that:<br /><br /> SQL Server remote connectivity is enabled.<br /><br /> TCP/IP is enabled.<br /><br /> The IP addresses are configured correctly.|-|[View or Change Server Properties &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configure a Server to Listen on a Specific TCP Port &#40;SQL Server Configuration Manager&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Every replica in the read_only_routing_list|Ensure that the READ_ONLY_ROUTING_URL (TCP**://*`system-address`*:***port*) contains the correct fully-qualified domain name (FQDN) and port number.|-|[Calculating read_only_routing_url for AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Every replica in the read_only_routing_list|Ensure that the READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*port*) contains the correct fully-qualified domain name (FQDN) and port number.|-|[Calculating read_only_routing_url for AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Client system|Verify that the client driver supports read-only routing.|-|[AlwaysOn Client Connectivity (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
@@ -151,11 +151,11 @@ manager: craigg
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## See Also  
  [Transport Security for Database Mirroring and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

@@ -4,7 +4,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 12/1/2017
+ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"

@@ -1,10 +1,8 @@
 ---
 title: "Back Up and Restore Full-Text Catalogs and Indexes | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,8 +13,9 @@ helpviewer_keywords:
   - "full-text indexes [SQL Server], restoring"
   - "restore operations [full-text search]"
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # Back Up and Restore Full-Text Catalogs and Indexes

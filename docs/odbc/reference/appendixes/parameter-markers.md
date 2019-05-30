@@ -3,8 +3,6 @@ title: "Parameter Markers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 07213d04-cd31-45fd-a8c8-2e16e09eeaf4
 author: MightyPen
 ms.author: genemi
+ms.reviewer: ""
 manager: craigg
 ---
 # Parameter Markers

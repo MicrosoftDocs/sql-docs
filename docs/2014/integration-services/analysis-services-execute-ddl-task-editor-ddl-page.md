@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.asexecuteddltask.ddl.f1"
 helpviewer_keywords: 
   - "Analysis Services Execute DDL Task Editor"
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Analysis Services Execute DDL Task Editor (DDL Page)

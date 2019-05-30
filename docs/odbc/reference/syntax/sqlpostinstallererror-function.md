@@ -30,11 +30,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 RETCODE SQLPostInstallerError(  
-     DWORD    fErrorCode,  
-     LPSTR    szErrorMsg);  
+     DWORD    fErrorCode,  
+     LPSTR    szErrorMsg);  
 ```  
   
 ## Arguments  

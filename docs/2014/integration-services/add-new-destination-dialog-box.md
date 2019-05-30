@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.destinationassistant.f1"
   - "SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1"
 ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add New Destination Dialog Box

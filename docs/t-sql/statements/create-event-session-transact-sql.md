@@ -1,7 +1,7 @@
 ---
 title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "05/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -177,7 +177,7 @@ ON SERVER
  Specifies options to use with the event session.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value.  
+ Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount cannot exceed 2 GB (less than 2048 MB). However, using memory  values in GB range is not recommended.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Specifies the event retention mode to use for handling event loss.  
@@ -255,7 +255,11 @@ ON SERVER
     WITH (MAX_MEMORY=4MB, MAX_EVENT_SIZE=4MB);  
 GO  
 ```  
-  
+
+### Code examples can differ for Azure SQL Database
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## See Also  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:Memory Broker Clerks"
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Memory Broker Clerks Object

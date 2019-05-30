@@ -34,16 +34,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverEx(  
-     LPCSTR    lpszDriver,  
-     LPCSTR    lpszPathIn,  
-     LPSTR     lpszPathOut,  
-     WORD      cbPathOutMax,  
-     WORD *    pcbPathOut,  
-     WORD      fRequest,  
-     LPDWORD   lpdwUsageCount);  
+     LPCSTR    lpszDriver,  
+     LPCSTR    lpszPathIn,  
+     LPSTR     lpszPathOut,  
+     WORD      cbPathOutMax,  
+     WORD *    pcbPathOut,  
+     WORD      fRequest,  
+     LPDWORD   lpdwUsageCount);  
 ```  
   
 ## Arguments  

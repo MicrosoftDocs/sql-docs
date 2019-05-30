@@ -2,7 +2,7 @@
 title: "Dataset Properties Dialog Box, Query (Report Builder) | Microsoft Docs"
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
@@ -12,8 +12,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.datasetproperties.query.f1"
   - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Dataset Properties Dialog Box, Query (Report Builder)
  

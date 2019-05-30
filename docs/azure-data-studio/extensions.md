@@ -1,16 +1,18 @@
 ---
-title: Extend the functionality of Azure Data Studio | Microsoft Docs
-description: Add extensions to Azure Data Studio
-ms.custom: "tools|sos"
-ms.date: "09/24/2018"
-ms.reviewer: "alayu; sstein"
+title: Add extensions
+titleSuffix: Azure Data Studio
+description: Add extensions from the Extensions Marketplace to Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "09/24/2018"
 ---
+
 # Extend the functionality of [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Extensions in [!INCLUDE[name-sos](../includes/name-sos-short.md)] provide an easy way to add more functionality to the base [!INCLUDE[name-sos](../includes/name-sos-short.md)] installation. 

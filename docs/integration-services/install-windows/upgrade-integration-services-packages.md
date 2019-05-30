@@ -16,6 +16,10 @@ ms.author: "mikeray"
 manager: "erikre"
 ---
 # Upgrade Integration Services Packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When you upgrade an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], your existing [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages are not automatically upgraded to the package format that the current release [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses. You will have to select an upgrade method and manually upgrade your packages.  
   
  For information on upgrading packages when you convert a project to the project deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)
@@ -37,7 +41,7 @@ manager: "erikre"
 ## Custom Applications and Custom Components  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] custom components will not work with the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- You can use the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tools to run and manage packages that include [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] custom components. We added four binding redirection rules to the following files to help redirect the runtime assemblies from version 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), version 11.0.0.0 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or version 12.0.0.0 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) to version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ You can use the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tools to run and manage packages that include [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], or [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)] custom components. We added four binding redirection rules to the following files to help redirect the runtime assemblies from version 10.0.0.0 ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), version 11.0.0.0 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), or version 12.0.0.0 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) to version 13.0.0.0 ( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 -   DTExec.exe.config  
   

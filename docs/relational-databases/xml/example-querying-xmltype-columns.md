@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, querying XML example"
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Example: Querying XMLType Columns
@@ -90,7 +90,7 @@ go
  This is the result:  
   
 ```  
-<MyRoot xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    ...  
   <ProductModelData>  
     <ProductModelID>6</ProductModelID>  

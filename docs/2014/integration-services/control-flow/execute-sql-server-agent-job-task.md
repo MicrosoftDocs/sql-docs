@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "jobs [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Execute SQL Server Agent Job Task

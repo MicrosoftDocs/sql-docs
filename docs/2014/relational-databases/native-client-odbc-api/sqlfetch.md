@@ -22,7 +22,7 @@ manager: craigg
  `SQLFetch` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=80703)   
+ [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

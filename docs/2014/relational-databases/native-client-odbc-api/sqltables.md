@@ -48,7 +48,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## See Also  
- [SQLTables Function](http://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables Function](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

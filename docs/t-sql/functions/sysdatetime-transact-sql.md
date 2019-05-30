@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "dates [SQL Server], system date and time"
   - "time [SQL Server], system"
 ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

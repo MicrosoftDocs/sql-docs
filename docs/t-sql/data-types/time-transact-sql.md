@@ -1,7 +1,7 @@
 ---
 title: "time (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "6/7/2017"
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Syntax|**time** [ (*fractional second scale*) ]|  
 |Usage|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|Specifies the number of digits for the fractional part of the seconds.<br /><br /> This can be an integer from 0 to 7. For Informatica, this can be an integer from 0 to 3.<br /><br /> The default fractional scale is 7 (100ns).|  
-|Default string literal format<br /><br /> (used for down-level client)|hh:mm:ss[.nnnnnnn] for Informatica)<br /><br /> For more information, see the "Backward Compatibility for Down-level Clients" section that follows..|  
+|Default string literal format<br /><br /> (used for down-level client)|hh:mm:ss[.nnnnnnn] for Informatica)<br /><br /> For more information, see the [Backward Compatibility for Down-level Clients](#BackwardCompatibilityforDownlevelClients) section.|  
 |Range|00:00:00.0000000 through 23:59:59.9999999 (00:00:00.000 through 23:59:59.999 for Informatica)|  
 |Element ranges|hh is two digits, ranging from 0 to 23, that represent the hour.<br /><br /> mm is two digits, ranging from 0 to 59, that represent the minute.<br /><br /> ss is two digits, ranging from 0 to 59, that represent the second.<br /><br /> n\* is zero to seven digits, ranging from 0 to 9999999, that represent the fractional seconds. For Informatica, n\* is zero to three digits, ranging from 0 to 999.|  
 |Character length|8 positions minimum (hh:mm:ss) to 16 maximum (hh:mm:ss.nnnnnnn). For Informatica, the maximum is 12 (hh:mm:ss.nnn).|  
@@ -115,8 +115,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- If the conversion is to  
-                    **date**, the conversion fails, and error message 206 is raised: "Operand type clash: date is incompatible with time".  
+ If the conversion is to **date**, the conversion fails, and error message 206 is raised: "Operand type clash: date is incompatible with time".  
   
  When the conversion is to **datetime**, hour, minute, and second values are copied; and the date component is set to '1900-01-01'. When the fractional seconds precision of the **time(n)** value is greater than three digits, the **datetime** result will be truncated. The following code shows the results of converting a `time(4)` value to a `datetime` value.  
   

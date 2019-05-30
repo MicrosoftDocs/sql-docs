@@ -49,13 +49,13 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## Arguments  
- [ **@schedule_name =** ] **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule. *schedule_name* is **sysname**, with no default.  
   
- [ **@enabled =** ] *enabled*  
+`[ @enabled = ] enabled`
  Indicates the current status of the schedule. *enabled* is **tinyint**, with a default of **1** (enabled). If **0**, the schedule is not enabled. When the schedule is not enabled, no jobs will run on this schedule.  
   
- [ **@freq_type =** ] *freq_type*  
+`[ @freq_type = ] freq_type`
  A value indicating when a job is to be executed. *freq_type* is **int**, with a default of **0**, and can be one of these values.  
   
 |Value|Description|  
@@ -68,7 +68,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|Run when SQLServerAgent service starts|  
 |**128**|Run when the computer is idle|  
   
- [ **@freq_interval =** ] *freq_interval*  
+`[ @freq_interval = ] freq_interval`
  The days that a job is executed. *freq_interval* is **int**, with a default of **1**, and depends on the value of *freq_type*.  
   
 |Value of *freq_type*|Effect on *freq_interval*|  
@@ -81,7 +81,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64** (when SQLServerAgent service starts)|*freq_interval* is unused.|  
 |**128**|*freq_interval* is unused.|  
   
- [ **@freq_subday_type =** ] *freq_subday_type*  
+`[ @freq_subday_type = ] freq_subday_type`
  Specifies the units for *freq_subday_interval*. *freq_subday_type* is **int**, with a default of **0**, and can be one of these values.  
   
 |Value|Description (unit)|  
@@ -91,10 +91,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Minutes|  
 |**0x8**|Hours|  
   
- [ **@freq_subday_interval =** ] *freq_subday_interval*  
+`[ @freq_subday_interval = ] freq_subday_interval`
  The number of *freq_subday_type* periods to occur between each execution of a job. *freq_subday_interval* is **int**, with a default of **0**. Note: Interval should be longer than 10 seconds. *freq_subday_interval* is ignored in those cases where *freq_subday_type* is equal to **1**.  
   
- [ **@freq_relative_interval =** ] *freq_relative_interval*  
+`[ @freq_relative_interval = ] freq_relative_interval`
  A job's occurrence of *freq_interval* in each month, if *freq_interval* is 32 (monthly relative). *freq_relative_interval* is **int**, with a default of **0**, and can be one of these values. *freq_relative_interval* is ignored in those cases where *freq_type* is not equal to 32.  
   
 |Value|Description (unit)|  
@@ -105,35 +105,35 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**8**|Fourth|  
 |**16**|Last|  
   
- [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor`
  The number of weeks or months between the scheduled execution of a job. *freq_recurrence_factor* is used only if *freq_type* is **8**, **16**, or **32**. *freq_recurrence_factor* is **int**, with a default of **0**.  
   
- [ **@active_start_date =** ] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  The date on which execution of a job can begin. *active_start_date* is **int**, with a default of NULL, which indicates today's date. The date is formatted as YYYYMMDD. If *active_start_date* is not NULL, the date must be greater than or equal to 19900101.  
   
  After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  For weekly or monthly schedules, the Agent ignores if active_start_date is in the past, and instead uses the current date. When a SQL Agent schedule is created using sp_add_schedule there is an option to specify the parameter active_start_date that is the date that job execution will begin. If the schedule type is weekly or monthly and the active_start_date parameter is set to a date in the past, the active_start_date parameter is ignored and the current date will be used for active_start_date.  
   
- [ **@active_end_date =** ] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  The date on which execution of a job can stop. *active_end_date* is **int**, with a default of **99991231**, which indicates December 31, 9999. Formatted as YYYYMMDD.  
   
- [ **@active_start_time =** ] *active_start_time*  
+`[ @active_start_time = ] active_start_time`
  The time on any day between *active_start_date* and *active_end_date* to begin execution of a job. *active_start_time* is **int**, with a default of **000000**, which indicates 12:00:00 A.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@active_end_time =** ] *active_end_time*  
+`[ @active_end_time = ] active_end_time`
  The time on any day between *active_start_date* and *active_end_date* to end execution of a job. *active_end_time* is **int**, with a default of **235959**, which indicates 11:59:59 P.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@owner_login_name**= ] **'***owner_login_name***'**  
+`[ @owner_login_name = ] 'owner_login_name'`
  The name of the server principal that owns the schedule. *owner_login_name* is **sysname**, with a default of NULL, which indicates that the schedule is owned by the creator.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+`[ @schedule_uid = ] _schedule_uidOUTPUT`
  A unique identifier for the schedule. *schedule_uid* is a variable of type **uniqueidentifier**.  
   
- [ **@schedule_id**= ] *schedule_id***OUTPUT**  
+`[ @schedule_id = ] _schedule_idOUTPUT`
  An identifier for the schedule. *schedule_id* is a variable of type **int**.  
   
- [ **@originating_server**= ] *server_name*  
+`[ @originating_server = ] server_name`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

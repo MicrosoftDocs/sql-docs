@@ -26,7 +26,7 @@ manager: craigg
   
  **sp_update_jobschedule** is provided for backward compatibility only.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  For more information about syntax used in earlier versions of Microsoft SQL Server, see the Transact-SQL Referencefor Microsoft SQL Server 2000*.*  
   
 ## Remarks  

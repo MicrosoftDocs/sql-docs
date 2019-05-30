@@ -32,7 +32,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## Arguments  
- [ **@password=**] **'***password***'**  
+`[ @password = ] 'password'`
  Is the new password. *password* is **sysname**, with no default. If the Distributor is local, the password of the **distributor_admin** system login is changed.  
   
 ## Return Code Values  

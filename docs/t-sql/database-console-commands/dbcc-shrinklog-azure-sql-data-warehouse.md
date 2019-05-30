@@ -8,7 +8,7 @@ ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"

@@ -16,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor [SQL Server], starting"
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Start and Use the Database Engine Tuning Advisor

@@ -93,7 +93,7 @@ manager: craigg
   
 ### To use the Interactive Resolver  
   
-1.  Enable the article and subscription to use interactive resolution. For more information, see [Specify Interactive Conflict Resolution for Merge Articles](../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md).  
+1.  Enable the article and subscription to use interactive resolution. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
 2.  After the subscription begins synchronizing in Synchronization Manager, the Interactive Resolver launches automatically if interactive conflict resolution is enabled and there are conflicts for one or more articles. The Interactive Resolver displays conflicts one at a time, with a suggested resolution for each conflict (based on the resolver specified when the publication and subscription were created).  
   

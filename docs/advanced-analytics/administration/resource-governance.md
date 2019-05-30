@@ -1,13 +1,13 @@
 ---
-title: Resource governance for machine learning in SQL Server | Microsoft Docs
+title: Resource governance for R and Python script execution - SQL Server Machine Learning
 description: Allocate RAM memory, CPU, and IO for R and Python workloads on SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 10/10/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Resource governance for machine learning in SQL Server

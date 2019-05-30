@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 

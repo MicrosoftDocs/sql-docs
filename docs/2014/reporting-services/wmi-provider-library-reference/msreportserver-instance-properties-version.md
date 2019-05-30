@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Version property"
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Version Property (WMI MSReportServer_Instance)
   Returns the version of the report server in the format Major.Minor.Build.Revision. Read-only.  

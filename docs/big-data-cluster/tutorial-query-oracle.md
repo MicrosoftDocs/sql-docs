@@ -1,15 +1,20 @@
 ---
-title: How to query Oracle from a SQL Server big data cluster | Microsoft Docs
+title: Query external data in Oracle
+titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to query Oracle data from a SQL Server 2019 big data cluster (preview). You create an external table over data in Oracle and then run a query.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/12/2018
+ms.date: 12/12/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # Tutorial: Query Oracle from a SQL Server big data cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This tutorial demonstrates how to Query Oracle data from a SQL Server 2019 big data cluster. To run this tutorial, you will need to have access to an Oracle server. If you do not have access, this tutorial can give you a sense of how data virtualization works for external data sources in SQL Server big data cluster.
 
@@ -24,11 +29,11 @@ In this tutorial, you learn how to:
 
 ## <a id="prereqs"></a> Prerequisites
 
-* [Deploy a big data cluster on Kubernetes](deployment-guidance.md).
-* [Install Azure Data Studio and the SQL Server 2019 extension](deploy-big-data-tools.md).
-* [Load sample data into the cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big data tools](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Create an Oracle table
 
@@ -56,7 +61,7 @@ The following steps create a sample table named `INVENTORY` in Oracle.
 
 The first step is to create an external data source that can access your Oracle server.
 
-1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](deploy-big-data-tools.md#master).
+1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](connect-to-big-data-cluster.md#master).
 
 1. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
 

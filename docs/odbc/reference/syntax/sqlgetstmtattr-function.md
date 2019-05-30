@@ -33,14 +33,14 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetStmtAttr(  
-     SQLHSTMT        StatementHandle,  
-     SQLINTEGER      Attribute,  
-     SQLPOINTER      ValuePtr,  
-     SQLINTEGER      BufferLength,  
-     SQLINTEGER *    StringLengthPtr);  
+     SQLHSTMT        StatementHandle,  
+     SQLINTEGER      Attribute,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
 ```  
   
 ## Arguments  

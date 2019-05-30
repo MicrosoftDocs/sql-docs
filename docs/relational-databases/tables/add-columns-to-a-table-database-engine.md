@@ -52,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     > [!NOTE]  
     >  The default values for your column properties are added when you create a new column, but you can change them in the **Column Properties** tab.  
   
-6.  When you are finished adding columns, from the **File** menu, choose **Save** *table name*.  
+6.  When you are finished adding columns, from the **File** menu, choose **Save** _table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

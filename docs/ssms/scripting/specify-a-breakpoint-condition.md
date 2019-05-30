@@ -6,13 +6,11 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.breakpt.condition"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint conditions"
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -43,5 +41,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## See Also  
  [Specify a Hit Count](../../relational-databases/scripting/specify-a-hit-count.md)   
  [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
-  
-  

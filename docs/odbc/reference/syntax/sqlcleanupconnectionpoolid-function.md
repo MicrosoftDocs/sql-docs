@@ -23,7 +23,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLCleanupConnectionPoolID (  
                 SQLHENV    EnvironmentHandle  
                 SQLPOOLID  PoolID );  

@@ -38,7 +38,7 @@ manager: craigg
   
 -   [Implementing IDENTITY in a Memory-Optimized Table](implementing-identity-in-a-memory-optimized-table.md)  
   
- For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## See Also  
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](in-memory-oltp-in-memory-optimization.md)   

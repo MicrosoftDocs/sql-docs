@@ -14,11 +14,15 @@ helpviewer_keywords:
   - "SQL Server Compact, destination"
   - "inserting data"
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQL Server Compact Edition Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact destination writes data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact databases.  
   
 > [!NOTE]  

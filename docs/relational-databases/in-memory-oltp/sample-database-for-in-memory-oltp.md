@@ -381,7 +381,7 @@ END
  The below instructions and measurements use a workload that inserts 10 million sales orders. For instructions to run a scaled-down workload inserting 1 million sales orders, see the instructions in 'In-Memory OLTP\readme.txt' that is part of the SQLServer2016CTP3Samples.zip archive.  
   
 ##### Memory-optimized tables  
- We will start by running the workload on memory-optimized tables. The following command opens 100 threads, each running for 5,000 iterations.  Each iteration inserts 20 sales orders in separate transactions. There are 20 inserts per iteration to compensate for the fact that the database is used to generate the data to be inserted. This yield a total of 20 * 5,000 \* 100 = 10,000,000 sales order inserts.  
+ We will start by running the workload on memory-optimized tables. The following command opens 100 threads, each running for 5,000 iterations.  Each iteration inserts 20 sales orders in separate transactions. There are 20 inserts per iteration to compensate for the fact that the database is used to generate the data to be inserted. This yield a total of 20 \* 5,000 \* 100 = 10,000,000 sales order inserts.  
   
  Open the RML Cmd Prompt, and execute the following command:  
   

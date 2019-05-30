@@ -2,10 +2,8 @@
 title: "sys.resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/13/2018"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - resource_stats

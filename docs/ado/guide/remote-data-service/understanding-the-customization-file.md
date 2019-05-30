@@ -49,7 +49,7 @@ identifier
   
  A particular section is used under the following circumstances:  
   
--   A **connect** section is used if the value part of the client connect string keyword, "**Data Source=***value*", matches a **connect** section identifier*.*  
+-   A **connect** section is used if the value part of the client connect string keyword, "**Data Source=**_value_", matches a **connect** section identifier*.*  
   
 -   An **sql** section is used if the client command string contains a string that matches an **sql** section identifier.  
   

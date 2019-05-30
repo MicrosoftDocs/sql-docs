@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_xml_preparedocument"
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sp_xml_preparedocument (Transact-SQL)

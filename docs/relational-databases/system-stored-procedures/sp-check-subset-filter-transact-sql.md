@@ -39,13 +39,13 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## Arguments  
- [ **@filtered_table**= ] **'***filtered_table***'**  
+`[ @filtered_table = ] 'filtered_table'`
  Is the name of a filtered table. *filtered_table* is **nvarchar(400)**, with no default.  
   
- [ **@subset_filterclause** = ] **'***subset_filterclause***'**  
+`[ @subset_filterclause = ] 'subset_filterclause'`
  Is the filter clause being tested. *subset_filterclause* is **nvarchar(1000)**, with no default.  
   
- [ **@has_dynamic_filters**= ] *has_dynamic_filters*  
+`[ @has_dynamic_filters = ] has_dynamic_filters`
  Is if the filter clause is a parameterized row filter. *has_dynamic_filters* is **bit**, with a default of NULL and is an output parameter. Returns a value of **1** when the filter clause is a parameterized row filter.  
   
 ## Result Sets  

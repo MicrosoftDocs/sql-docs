@@ -23,7 +23,7 @@ helpviewer_keywords:
   - "table integrity checks [SQL Server]"
   - "checking database objects"
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

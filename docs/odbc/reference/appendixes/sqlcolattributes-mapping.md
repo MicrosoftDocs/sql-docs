@@ -18,7 +18,7 @@ manager: craigg
 # SQLColAttributes Mapping
 When an application calls **SQLColAttributes** through an ODBC 3*.x* driver, the call to **SQLColAttributes** is mapped to **SQLColAttribute** as follows:  
   
-> [!NOTE]  
+> [!NOTE]
 >  The prefix used in *FieldIdentifier* values in ODBC 3*.x* has been changed from that used in ODBC 2.*x*. The new prefix is "SQL_DESC"; the old prefix was "SQL_COLUMN".  
   
 1.  If the application is an ODBC 2.*x* application, *fDescType* is SQL_COLUMN_TYPE, and the returned type is a concise DATETIME type, the Driver Manager maps the return values for date, time, and timestamp codes.  

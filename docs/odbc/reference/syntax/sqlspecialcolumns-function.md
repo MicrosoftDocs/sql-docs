@@ -34,19 +34,19 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSpecialColumns(  
-     SQLHSTMT      StatementHandle,  
-     SQLSMALLINT   IdentifierType,  
-     SQLCHAR *     CatalogName,  
-     SQLSMALLINT   NameLength1,  
-     SQLCHAR *     SchemaName,  
-     SQLSMALLINT   NameLength2,  
-     SQLCHAR *     TableName,  
-     SQLSMALLINT   NameLength3,  
-     SQLSMALLINT   Scope,  
-     SQLSMALLINT   Nullable);  
+     SQLHSTMT      StatementHandle,  
+     SQLSMALLINT   IdentifierType,  
+     SQLCHAR *     CatalogName,  
+     SQLSMALLINT   NameLength1,  
+     SQLCHAR *     SchemaName,  
+     SQLSMALLINT   NameLength2,  
+     SQLCHAR *     TableName,  
+     SQLSMALLINT   NameLength3,  
+     SQLSMALLINT   Scope,  
+     SQLSMALLINT   Nullable);  
 ```  
   
 ## Arguments  

@@ -67,7 +67,7 @@ manager: craigg
  Enable or disable Resource Governor by selecting or clearing the check box.  
   
  **Resource pools**  
- Create or change resource pool configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default pools. Select a pool to work with by clicking the first column in the row for the pool. To create a new resource pool, click the row that is prefixed by the asterisk (**\***).  
+ Create or change resource pool configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default pools. Select a pool to work with by clicking the first column in the row for the pool. To create a new resource pool, click the row that is prefixed by the asterisk (**&#42;**).  
   
  **Name**  
  Specify the name of the resource pool.  
@@ -87,7 +87,7 @@ manager: craigg
  For more information, see [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  **Workload groups for resource pool**  
- Create or change the workload group configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default groups. Select a group to work with by clicking the first column in the row for the pool. To create a new workload group, click the row that is prefixed by the asterisk (**\***).  
+ Create or change the workload group configuration by using the grid that is provided. This grid is populated with information for the predefined internal and default groups. Select a group to work with by clicking the first column in the row for the pool. To create a new workload group, click the row that is prefixed by the asterisk (**&#42;**).  
   
  **Name**  
  Specify the name of the workload group.  

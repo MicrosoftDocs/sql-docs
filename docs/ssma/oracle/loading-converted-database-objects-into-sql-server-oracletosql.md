@@ -93,7 +93,7 @@ You can run a script, or individual statements, in [!INCLUDE[ssManStudioFull](..
   
 4.  To run a set of statements, select the statements in the query editor window, and then press the **F5** key.  
   
-For more information about how to use the query editor to run scripts, see "[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Query" in SQL Server Books Online.  
+For more information about how to use the query editor to run scripts, see " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Query" in SQL Server Books Online.  
   
 You can also run scripts from the command line by using the **sqlcmd** utility, and from the SQL Server Agent. For more information about **sqlcmd**, see "sqlcmd Utility" in SQL Server Books Online. For more information about SQL Server Agent, see "Automating Administrative Tasks (SQL Server Agent)" in SQL Server Books Online.  
   

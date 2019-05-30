@@ -1,6 +1,6 @@
 ---
-title: "Tabular model object-level security | Microsoft Docs"
-ms.date: 05/07/2018
+title: "Analysis Services tabular model object-level security | Microsoft Docs"
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Object-level security
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

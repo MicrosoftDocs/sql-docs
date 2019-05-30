@@ -28,7 +28,7 @@ manager: craigg
 ## Table-Valued Parameter with Fully Bound Multirow Buffers (Send Data as a TVP with All Values in Memory)  
  When used with fully bound multirow buffers, all parameter values are available in memory. This is typical, for example, of an OLTP transaction, in which table-valued parameters can be packaged into a single stored procedure. Without table-valued parameters, this would involve either generating a complex multi-statement batch dynamically, or making multiple calls to the server.  
   
- The table-valued parameter itself is bound by using [SQLBindParameter](http://go.microsoft.com/fwlink/?LinkId=59328) along with the other parameters. After all parameters have been bound, the application sets the parameter focus attribute, SQL_SOPT_SS_PARAM_FOCUS, on each table-valued parameter and calls SQLBindParameter for the columns of the table-valued parameter.  
+ The table-valued parameter itself is bound by using [SQLBindParameter](https://go.microsoft.com/fwlink/?LinkId=59328) along with the other parameters. After all parameters have been bound, the application sets the parameter focus attribute, SQL_SOPT_SS_PARAM_FOCUS, on each table-valued parameter and calls SQLBindParameter for the columns of the table-valued parameter.  
   
  The server type for a table-valued parameter is a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific type, SQL_SS_TABLE. The binding C type for SQL_SS_TABLE must always be SQL_C_DEFAULT. No data is transferred for the table-valued parameter bound parameter; it is used to pass table metadata and to control how to pass data in the constituent columns of the table-valued parameter.  
   

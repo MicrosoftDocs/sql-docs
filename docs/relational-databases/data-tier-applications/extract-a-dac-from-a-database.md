@@ -22,7 +22,7 @@ ms.author: "sstein"
 manager: craigg
 ---
 # Extract a DAC From a Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use either the **Extract Data-tier Application Wizard** or a Windows PowerShell script to extract a data-tier application (DAC) package from an existing SQL Server database. The extraction process creates a DAC package file that contains definitions of the database objects and their related instance-level elements. For example, a DAC package file contains the database tables, stored procedures, views, and users, along with the logins that map to the database users.  
   
  

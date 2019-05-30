@@ -50,28 +50,28 @@ To review what is new in the other SQL Server components, see [What's New in SQL
 ##  <a name="Feature"></a> SQL Server 2016 RTM
 This section contains the following subsections:
 
--   [Columnstore Indexes](#columnstore)
--   [Database Scoped Configurations](#scopedconfiguration)
--   [In-Memory OLTP](#InMemory)
--   [Query Optimizer](#QueryOptimizer)
--   [Live Query Statistics](#LiveStats)
--   [Query Store](#QueryStore)
--   [Temporal Tables](#TT)
--   [Striped Backups to Microsoft Azure Blob Storage](#StripedBackupToAzure)
--   [File-Snapshot Backups to Microsoft Azure Blob Storage](#FileSnapshotBackup)
--   [Managed Backup](#ManagedBackup)
--   [TempDB Database](#multipleTempDB)
--   [Built-in JSON Support](#ForJson)
--   [PolyBase](#bkPolyBase)
--   [Stretch Database](#stretch)
--   [Support for UTF-8](#UTF8)
--   [New Default Database Size and Autogrow Values](#DefaultDB)
--   [Transact-SQL Enhancements](#TSQL)
--   [System View Enhancements](#SystemTable)
--   [Security Enhancements](#Security)
--   [High Availability Enhancements](#HighAvailability)
--   [Replication Enhancements](#Repl)
--   [Tools Enhancements](#Tools)
+-   [Columnstore Indexes](#columnstore-indexes)
+-   [Database Scoped Configurations](#database-scoped-configurations)
+-   [In-Memory OLTP](#in-memory-oltp)
+-   [Query Optimizer](#query-optimizer)
+-   [Live Query Statistics](#live-query-statistics)
+-   [Query Store](#query-store)
+-   [Temporal Tables](#temporal-tables)
+-   [Striped Backups to Microsoft Azure Blob Storage](#striped-backups-to-microsoft-azure-blob-storage)
+-   [File-Snapshot Backups to Microsoft Azure Blob Storage](#file-snapshot-backups-to-microsoft-azure-blob-storage)
+-   [Managed Backup](#managed-backup)
+-   [TempDB Database](#tempdb-database)
+-   [Built-in JSON Support](#built-in-json-support)
+-   [PolyBase](#polybase)
+-   [Stretch Database](#stretch-database)
+-   [Support for UTF-8](#support-for-utf-8)
+-   [New Default Database Size and Autogrow Values](#new-default-database-size-and-autogrow-values)
+-   [Transact-SQL Enhancements](#transact-sql-enhancements)
+-   [System View Enhancements](#system-view-enhancements)
+-   [Security Enhancements](#security-enhancements)
+-   [High Availability Enhancements](#high-availability-enhancements)
+-   [Replication Enhancements](#replication-enhancements)
+-   [Tools Enhancements](#tools-enhancements)
 
 ## Columnstore indexes
 
@@ -432,10 +432,8 @@ Direct seeding allows a secondary replica to be automatically seeded over the ne
 Download the latest [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] supports the Active Directory Authentication Library (ADAL) which is under development for connecting to Microsoft Azure. This replaces the certificate-based authentication used in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6 as a pre-requisite. .NET 4.6 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is installed.
 - A new query result grid option supports keeping Carriage Return/Line Feed (newline characters) when copying or saving text from the results grid. Set this from the Tools/Options menu.
 - SQL Server Management Tools is no longer installed from the main feature tree; for details see [Install SQL Server Management Tools with SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381).
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installation requires installing .NET 4.6.1 as a pre-requisite. .NET 4.6.1 will be automatically installed by setup when [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] is installed.
 
 ### Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users of prior versions to run a set of upgrade rules against their SQL Server database to pinpoint breaking and behavior changes and deprecated features as well as providing help with the adoption of new features such as Stretch Database.

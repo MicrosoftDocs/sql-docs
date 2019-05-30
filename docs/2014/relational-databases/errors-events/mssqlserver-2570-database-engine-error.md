@@ -30,7 +30,7 @@ manager: craigg
  The column value that is contained in the specified column is outside the range of possible values for the column data type.  
   
 ## User Action  
- The error is not repairable. Update the column to a value within the range for the data type of the column and run the command again.  For more information, see this KB article [923247](http://support.microsoft.com/kb/923247).  
+ The error is not repairable. Update the column to a value within the range for the data type of the column and run the command again.  For more information, see this KB article [923247](https://support.microsoft.com/kb/923247).  
   
 ## See Also  
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)   

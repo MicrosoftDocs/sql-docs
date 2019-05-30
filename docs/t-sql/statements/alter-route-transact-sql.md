@@ -78,7 +78,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='**_next\_hop\_address_'  
 
- For Azure SQL Database Managed Instance, `ADDRESS` must be local.
+ For Azure SQL Database managed instance, `ADDRESS` must be local.
 
  Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   

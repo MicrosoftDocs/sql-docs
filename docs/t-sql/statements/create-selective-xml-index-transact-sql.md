@@ -10,9 +10,9 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ CREATE SELECTIVE XML INDEX index_name
     [WITH (<index_options>)]  
   
 <table_object> ::=  
- { [database_name. [schema_name ] . | schema_name. ] table_name }  
+ { database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <promoted_node_path_list> ::=   
 <named_promoted_node_path_item> [, <promoted_node_path_list>]  

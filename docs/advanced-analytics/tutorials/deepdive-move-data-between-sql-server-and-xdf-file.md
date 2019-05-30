@@ -1,12 +1,13 @@
 ---
-title: Move data between SQL Server and XDF file (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Move data between SQL Server and XDF file using RevoScaleR - SQL Server Machine Learning
+description: Tutorial walkthrough on how to move data using XDF and the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Move data between SQL Server and XDF file (SQL Server and RevoScaleR tutorial)
@@ -87,7 +88,7 @@ For this exercise, you use the credit card fraud data again. In this scenario, y
 
     **Results**
     
-    ```
+    ```R
     rxGetVarInfo(data = localDS)
     Var 1: gender, Type: factor, no factor levels available
     Var 2: cardholder, Type: factor, no factor levels available

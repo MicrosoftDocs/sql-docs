@@ -41,6 +41,6 @@ manager: craigg
 2.  In the **Subscription \<SubscriptionName>** detail window, click **Action**, and then click **Auto Refresh**. The refresh rate is determined by the **Refresh rate** setting in the **Publisher Settings** dialog box.  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

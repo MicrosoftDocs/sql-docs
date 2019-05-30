@@ -50,7 +50,7 @@ To configure WSUS, you need to:
   
     1.  In the **Server Manager Dashboard**, on the **Tools** menu, click **Windows Server Update Services**.  
   
-    2.  In the left pane of the **Update Services** window, click to expand the Virtual Machine Management node server (***appliance_domain*-VMM**), and then click **Options**.  
+    2.  In the left pane of the **Update Services** window, click to expand the Virtual Machine Management node server (**_appliance_domain_-VMM**), and then click **Options**.  
   
     3.  In the **Options** pane, click **WSUS Server Configuration Wizard** to launch the configuration wizard.  
   

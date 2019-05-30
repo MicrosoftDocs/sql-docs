@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADO MD Objects
+
 |||  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Represents a positional or filter axis of a cellset, containing selected members of one or more dimensions.|  

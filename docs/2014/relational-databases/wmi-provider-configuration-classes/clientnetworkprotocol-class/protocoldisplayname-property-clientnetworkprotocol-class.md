@@ -20,7 +20,7 @@ ms.author: carlrab
 manager: craigg
 ---
 # ProtocolDisplayName Property (ClientNetworkProtocol Class)
-  Gets the display name of the client network protocol specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
+  Gets the display name of the client network protocol specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## Syntax  
   
@@ -40,6 +40,6 @@ object
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

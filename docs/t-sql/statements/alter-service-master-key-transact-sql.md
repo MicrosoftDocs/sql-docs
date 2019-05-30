@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], Service Master Key"
   - "service master key [SQL Server], modifying"
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)

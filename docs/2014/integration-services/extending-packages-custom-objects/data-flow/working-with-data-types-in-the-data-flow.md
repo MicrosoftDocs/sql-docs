@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data flow components [Integration Services], mapping data types"
   - "data types [Integration Services], converting"
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Working with Data Types in the Data Flow
@@ -149,7 +149,7 @@ manager: craigg
 > [!NOTE]  
 >  The <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> method does not return a value for the DT_DBTIMESTAMPOFFSET data type, and a <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> occurs. You must convert the DT_DBTIMESTAMPOFFSET data type to one of the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data type. For a list of [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] date/time data types that can be mapped to a managed data types, see the table in the previous section, "Mapping between Integration Services and Managed Data Types." For information about converting data types, see [Integration Services Data Types](../../data-flow/integration-services-data-types.md).  
   
-![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
+![Integration Services icon (small)](../../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
   
 ## See Also  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   

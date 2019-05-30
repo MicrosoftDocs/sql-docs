@@ -1,6 +1,7 @@
 ---
-title: "Change the HADR Cluster Context of Server Instance (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Change which cluster manages the metadata for replicas in an availability group"
+description: "When doing a cross-cluster migration, change which cluster manages the metadata for availability replicas within an Always On availability group by changing the HADR cluster context for an instance of SQL Server."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Change the HADR Cluster Context of Server Instance (SQL Server)
+# Change which cluster manages the metadata for replicas in an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -23,30 +24,10 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
  Switch the HADR cluster context only during a cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] to an instance of [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] on a new WSFC cluster. Cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports OS upgrade to [!INCLUDE[win8](../../../includes/win8-md.md)] or [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] with minimal downtime of availability groups. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](https://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To switch the cluster context of an availability replica, using:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Follow Up:**  [After Switching the Cluster Context of an Availability Replica](#FollowUp)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
 > [!CAUTION]  
 >  Switch the HADR cluster context only during cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deployments.  
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   You can switch the HADR cluster context only from the local WSFC cluster to a remote cluster and then back from the remote cluster to the local cluster. You cannot switch the HADR cluster context from one remote cluster to another remote cluster.  
   
@@ -54,7 +35,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 -   A remote HADR cluster context can be switched back to the local cluster at any time. However, the context cannot be switched again as long as the server instance is hosting any availability replicas.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   The server instance on which you change the HADR cluster context must be running [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] or above (Enterprise edition or above).  
   
@@ -71,7 +52,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 -   Before you can switch from a remote cluster to the local cluster, all synchronous-commit replicas must be SYNCHRONIZED.  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
   
 -   We recommend that you specify the full domain name. This is because to find the target IP address of a short name, ALTER SERVER CONFIGURATION uses DNS resolution. Under some situations, depending on the DNS searching order, using a short name could cause confusion. For example, consider the following command, which is executed on a node in the `abc` domain, (`node1.abc.com`). The intended destination cluster is the `CLUS01` cluster in the `xyz` domain (`clus01.xyz.com`). However, the local  domain hosts also hosts a cluster named `CLUS01` (`clus01.abc.com`).  
   
@@ -81,9 +62,8 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 -   **SQL Server login**  
   

@@ -14,14 +14,44 @@ ms.reviewer: "martinle"
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.4"></a>
+## APS CU7.4
+Release date - May 2019
+
+### Loading large rows with dwloader
+Starting from APS CU7.4, customers will be able to use a new dwloader to load rows into tables that are larger than 32 KB (32,768 bytes). The new dwloader supports the -l switch that takes an integer value between 32768 and 33554432 (in bytes) to load rows larger than 32 KB. Only use this option when loading large rows (greater than 32 KB) as this switch will allocate more memory on the client and the server and may slow down loads. You can download the new dwloader from [download site](https://www.microsoft.com/download/details.aspx?id=57472).  
+
+### HDP 3.0 and 3.1 support with PolyBase
+PolyBase on APS now supports HDP 3.0 and 3.1 with this update. Use option 7 for HDP 3.x versions. For more information, see [PolyBase connectivity](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) page.
+
+### UTF16 file support with PolyBase
+PolyBase now support reading delimited text files that are in UTF16 (LE) encoding. See [create external file format](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) for setup details. 
+
+<a name="h2-aps-cu7.3"></a>
+## APS CU7.3
+Release date - December 2018
+
+### Common subexpression elimination
+APS CU7.3 improves query performance with common subexpression elimination in SQL query optimizer. The improvement improves queries in two ways. The first benefit is the ability to identify and eliminate such expressions help reduce SQL compilation time. The second and more important benefit is data movement operations for these redundant subexpressions are eliminated thus execution time for queries becomes faster. Detailed explanation of this feature can be found [here](common-sub-expression-elimination.md).
+
+### APS Informatica connector for Informatica 10.2.0 published
+We have released a new version of Informatica connectors for APS that works with Informatica version 10.2.0 and 10.2.0 Hotfix 1. The new connectors can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
+
+#### Supported Versions
+
+| APS Version | Informatica PowerCenter | Driver |
+|:---|:---|:---|
+| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
+| APS 2016 and later | 10.2.0, 10.2.0 Hotfix 1 | SQL Server Native Client 11.x |
+
 <a name="h2-aps-cu7.2"></a>
 ## APS CU7.2
 Release date - October 2018
 
 ### Support for TLS 1.2
-APS CU7.2 supports TLS 1.2. Client machine to APS and APS intra-node communication can now be set to communicate only over TLS1.2. Tools like SSDT, SSIS, and Dwloader installed on client machines that are set to communicate only over TLS 1.2 can now connect to APS using TLS 1.2. By default, APS will support all TLS (1.0, 1.1 and 1.2) versions for backward compatibility. If you wish to set your APS appliance to stictly use TLS 1.2, you can do so by changing registry settings. 
+APS CU7.2 supports TLS 1.2. Client machine to APS and APS intra-node communication can now be set to communicate only over TLS1.2. Tools like SSDT, SSIS, and Dwloader installed on client machines that are set to communicate only over TLS 1.2 can now connect to APS using TLS 1.2. By default, APS will support all TLS (1.0, 1.1 and 1.2) versions for backward compatibility. If you wish to set your APS appliance to strictly use TLS 1.2, you can do so by changing registry settings. 
 
-See [configuring TLS1.2 on APS](configure-tls12-aps.md) for more information.
+For more information, see [configuring TLS1.2 on APS](configure-tls12-aps.md).
 
 ### Hadoop encryption zone support for PolyBase
 PolyBase now can communicate to Hadoop encryption zones. See APS configuration changes that are needed in [configure Hadoop security](polybase-configure-hadoop-security.md#encryptionzone).
@@ -95,9 +125,9 @@ APS 2016 is a prerequisite to upgrade to AU7. The following are new features in 
 APS AU7 creates and updates statistics automatically, by default. To update statistics settings, administrators can use a new feature switch menu item in the [Configuration Manager](appliance-configuration.md#CMTasks). The [feature switch](appliance-feature-switch.md) controls the auto-create, auto-update, and asynchronous update behavior of statistics. You can also update statistics settings with the [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) statement.
 
 ### T-SQL
-Select @var is now supported. For more information, see [select local variable] (/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+Select @var is now supported. For more information, see [select local variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query ] (/sql/t-sql/queries/hints-transact-sql-query)
+Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### Feature Switch
 APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.

@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2/20/2018"
+ms.date: 02/20/2018
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
@@ -98,7 +98,7 @@ WITH (
  *file_format_name*  
  Specifies a name for the external file format.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET]
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT]
  Specifies the format of the external data.
   
    -   PARQUET
@@ -232,7 +232,7 @@ Notes about the table:
  TRUE  
  When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:  
   
--   0 if the column is defined as a numeric column.
+-   0 if the column is defined as a numeric column. Decimal columns are not supported and will error.
   
 -   Empty string "" if the column is a string column.
   
@@ -242,7 +242,7 @@ Notes about the table:
  Store all missing values as NULL. Any NULL values that are stored by using the word NULL in the delimited text file are imported as the string 'NULL'.
   
    Encoding = {'UTF8' | 'UTF16'}  
- In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server and PDW, PolyBase doesn't support reading UTF16 encoded files.
+ In Azure SQL Data Warehouse and PDW (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
   
  DATA_COMPRESSION = *data_compression_method*  
  Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.

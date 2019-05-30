@@ -19,6 +19,6 @@ manager: craigg
 ## Best Practices Recommendations  
  Review the following Microsoft Knowledge Base article for more information about how to troubleshoot this error:  
   
--   [Microsoft Knowledge Base article 311081](http://go.microsoft.com/fwlink/?linkid=117744)  
+-   [Microsoft Knowledge Base article 311081](https://go.microsoft.com/fwlink/?linkid=117744)  
   
   

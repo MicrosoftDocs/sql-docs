@@ -42,7 +42,7 @@ manager: craigg
 ## User Action  
  The following steps can help you to troubleshoot the problem. If any step allows the Log Reader Agent to start without errors, there is no need to complete the remaining steps.  
   
--   Check the history of the Log Reader agent for any other errors that could be contributing to this error. For information about viewing agent status and error details in Replication Monitor, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   Check the history of the Log Reader agent for any other errors that could be contributing to this error. For information about viewing agent status and error details in Replication Monitor, see [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Check the output of [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) for specific process identification numbers (SPIDs) that are connected to the published database. Close any connections that might have run **sp_repldone**, **sp_replcmds**, or **sp_replshowcmds**.  
   

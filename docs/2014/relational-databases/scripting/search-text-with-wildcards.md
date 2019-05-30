@@ -4,11 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.wildcards"
+f1_keywords:
   - "vswildcardsbuilder"
 helpviewer_keywords: 
   - "searches [SQL Server Management Studio], wildcards"
@@ -41,5 +39,3 @@ manager: craigg
 ## See Also  
  [Search and Replace](search-and-replace.md)   
  [Search Text with Regular Expressions](search-text-with-regular-expressions.md)  
-  
-  

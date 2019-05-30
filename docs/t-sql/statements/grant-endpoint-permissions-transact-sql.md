@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "GRANT statement, endpoints"
   - "permissions [SQL Server], endpoints"
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Endpoint Permissions (Transact-SQL)

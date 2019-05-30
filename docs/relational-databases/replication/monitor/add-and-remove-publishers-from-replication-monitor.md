@@ -102,6 +102,6 @@ manager: craigg
   
 ## See Also  
  [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)   
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

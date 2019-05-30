@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "xsd:simpleType declarations"
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Values for &lt;xsd:simpleType&gt; Declarations

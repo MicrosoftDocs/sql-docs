@@ -30,10 +30,10 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## Arguments  

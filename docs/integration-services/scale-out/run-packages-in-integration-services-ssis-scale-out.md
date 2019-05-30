@@ -10,12 +10,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-ms.reviewer: "douglasl"
+ms.reviewer: maghan
 manager: craigg
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
 ---
 # Run packages in Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 After you deploy packages to the Integration Services server, you can run them in Scale Out by using one of the following methods:
 
 -   [Execute Package in Scale Out dialog box](#scale_out_dialog)
@@ -112,7 +116,7 @@ To set the default execution mode for packages to **Scale Out**, do the followin
 
 After you set this default execution mode, you no longer have to specify the **@runinscaleout** parameter when you call the `[catalog].[create_execution]` stored procedure. Packages are run in Scale Out automatically. 
 
-![Exe mode](media\exe-mode.PNG)
+![Exe mode](media/exe-mode.PNG)
 
 To switch the default execution mode back so that packages no longer run by default in Scale Out mode, set  **Server-wide Default execution mode** to **Server**.
 

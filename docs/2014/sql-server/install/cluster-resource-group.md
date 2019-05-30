@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "Cluster Resource Group"
@@ -25,6 +24,6 @@ manager: craigg
 -   Type the name of a new group to create. Note that the name "Available storage" is not a valid group name.  
   
 ## See Also  
- [How to: Create a New SQL Server Failover Cluster](http://go.microsoft.com/fwlink/?LinkId=190960)  
+ [How to: Create a New SQL Server Failover Cluster](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

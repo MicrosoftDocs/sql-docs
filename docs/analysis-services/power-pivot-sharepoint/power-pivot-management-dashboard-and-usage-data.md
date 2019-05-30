@@ -49,7 +49,7 @@ manager: kfile
 ### Change the current service application.  
  To change current [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] service application in the management dashboard:  
   
-1.  At the top of the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] management dashboard, note the name of the current service application, for example **Default [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Serivce Application**.  
+1.  At the top of the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] management dashboard, note the name of the current service application, for example **Default [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service Application**.  
   
 2.  In the **Actions** dashboard, click **List Service Applications**.  
   

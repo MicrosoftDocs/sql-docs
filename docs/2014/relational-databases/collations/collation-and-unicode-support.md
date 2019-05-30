@@ -63,9 +63,9 @@ manager: craigg
  SQL Server collations  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations (SQL_*) provide sort order compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The dictionary sorting rules for non-Unicode data are incompatible with any sorting routine that is provided by Windows operating systems. However, sorting Unicode data is compatible with a particular version of Windows sorting rules. Because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations use different comparison rules for non-Unicode and Unicode data, you will see different results for comparisons of the same data, depending on the underlying data type. For more information, see [SQL Server Collation Name &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).  
   
-> [!NOTE]  
+> [!NOTE]
 >  When you upgrade an English-language instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations (SQL_*) can be specified for compatibility with existing instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Because the default collation for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is defined during setup, make sure that you specify collation settings carefully when the following are true:  
->   
+> 
 >  -   Your application code depends on the behavior of previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations.  
 > -   You must store character data that reflects multiple languages.  
   
@@ -95,7 +95,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Locale_Defn"></a> Locale  
- A locale is a set of information that is associated with a location or a culture. This can include the name and identifier of the spoken language, the script that is used to write the language, and cultural conventions. Collations can be associated with one or more locales. For more information, see [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx).  
+ A locale is a set of information that is associated with a location or a culture. This can include the name and identifier of the spoken language, the script that is used to write the language, and cultural conventions. Collations can be associated with one or more locales. For more information, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).  
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
@@ -204,11 +204,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Related_Content"></a> Related Content  
- [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)  
+ [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)  
   
- ["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890)  
+ ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890)  
   
- [Unicode Consortium Web site](http://go.microsoft.com/fwlink/?LinkId=48619)  
+ [Unicode Consortium Web site](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## See Also  
  [Contained Database Collations](../databases/contained-database-collations.md)   

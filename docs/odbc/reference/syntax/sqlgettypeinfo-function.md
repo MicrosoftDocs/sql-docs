@@ -33,11 +33,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetTypeInfo(  
-     SQLHSTMT      StatementHandle,  
-     SQLSMALLINT   DataType);  
+     SQLHSTMT      StatementHandle,  
+     SQLSMALLINT   DataType);  
 ```  
   
 ## Arguments  

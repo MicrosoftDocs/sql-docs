@@ -1,7 +1,7 @@
 ---
 title: "Collation and Unicode Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2017"
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -115,7 +115,7 @@ A locale is a set of information that is associated with a location or a culture
  Sort order specifies how data values are sorted. This affects the results of data comparison. Data is sorted by using collations, and it can be optimized by using indexes.    
     
 ##  <a name="Unicode_Defn"></a> Unicode Support    
-Unicode is a standard for mapping code points to characters. Because it is designed to cover all the characters of all the languages of the world, there is no need for different code pages to handle different sets of characters. If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. 
+Unicode is a standard for mapping code points to characters. Because it is designed to cover all the characters of all the languages of the world, there is no need for different code pages to handle different sets of characters. If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. 
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] does not change the behavior of previously existing Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**).   
@@ -141,15 +141,20 @@ To use the UTF-8 collations available in [!INCLUDE[sql-server-2019](../../includ
     
     -   Version 100 collations    
     
-    -   Version 140 collations    
+    -   Version 140 collations   
+    
+    -   BIN2<sup>1</sup> binary collation
     
 -   The UTF8 flag cannot be applied to:    
     
     -   Version 90 collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS)    
     
-    -   The BIN or BIN2 binary collations    
+    -   The BIN or BIN2<sup>2</sup> binary collations    
     
-    -   The SQL\* collations       
+    -   The SQL\* collations  
+    
+<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It is a good practice to standardize the collation that is used on systems across your organization, and deploy Unicode servers and clients wherever possible.    
     
@@ -240,7 +245,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 All of the new collations have built-in support for supplementary characters, so none of the new collations have (or need) the SC flag.
 
 These collations are supported in Database Engine indexes, memory-optimized tables, columnstore indexes, and natively compiled modules.
-    
+
+<a name="ctp23"></a>
+
+## UTF-8 support
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. 
+
+For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
+
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII (Latin) strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
+
 ##  <a name="Related_Tasks"></a> Related Tasks    
     
 |Task|Topic|    
@@ -255,6 +270,7 @@ These collations are supported in Database Engine indexes, memory-optimized tabl
 ##  <a name="Related_Content"></a> Related Content    
 [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - No longer maintained   
 [Unicode Consortium Web site](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

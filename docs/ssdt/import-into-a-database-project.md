@@ -12,8 +12,8 @@ f1_keywords:
   - "SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG"
   - "SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY"
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Import into a Database Project
@@ -53,8 +53,7 @@ All objects from the import source that *do not* already exist in the project wi
   
 The Import from Script process will not comprehend Pre/Post-Deployment scripts, SQLCMD variables, or RefactorLog files. These and any other unsupported constructs that are detected on import will be placed in a **ScriptsIgnoredOnImport.sql** file in a **Scripts** folder in your project.  
   
-For more information, see the SSDT team forum at [https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads](https://social.msdn.microsoft.com/Forums/en-US/ssdt/threads).  
-  
+ 
 ## <a name="bkmk_import_encrypted"></a>Import Encrypted Objects  
 When importing encrypted objects into a database project, the full body of the object definition cannot always be retrieved from the server. As such, import behavior can be different when dealing with this class of objects.  
   

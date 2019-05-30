@@ -1,8 +1,7 @@
 ---
 title: "Identify databases and tables for Stretch Database | Microsoft Docs"
-ms.custom: ""
 ms.date: "10/30/2017"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,8 +10,8 @@ helpviewer_keywords:
   - "identifying databases for Stretch Database"
   - "identifying tables for Stretch Database"
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Identify databases and tables for Stretch Database with Data Migration Assistant

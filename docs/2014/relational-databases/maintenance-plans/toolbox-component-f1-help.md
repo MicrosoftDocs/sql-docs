@@ -6,8 +6,6 @@ ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: supportability
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.toolbox"
 helpviewer_keywords: 
   - "Toolbox [SQL Server Management Studio]"
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
@@ -16,9 +14,10 @@ ms.author: mikeray
 manager: craigg
 ---
 # Toolbox Component F1 Help
-  **Toolbox** displays a variety of items for use in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects. You can open the **Toolbox** from the **View** menu, and dock this window as you wish. While docked, the **Toolbox** can either be pinned open or set to **Auto Hide** when not in use.  
+
+**Toolbox** displays a variety of items for use in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects. You can open the **Toolbox** from the **View** menu, and dock this window as you wish. While docked, the **Toolbox** can either be pinned open or set to **Auto Hide** when not in use.  
   
- **Toolbox** icons can be dragged and dropped or copied and pasted into code editors or onto design view surfaces within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+**Toolbox** icons can be dragged and dropped or copied and pasted into code editors or onto design view surfaces within [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## Using the Toolbox  
  The Toolbox is a sliding tree control that behaves much like [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer, but without grid or connection lines. Multiple segments of the **Toolbox** (called "tabs") can be expanded simultaneously, and the entire tree scrolls inside the **Toolbox** window. To expand any tab of the **Toolbox**, click the plus (**+**) sign next to its name. To collapse an expanded tab, click the minus (**-**) sign next to its name.  
@@ -33,5 +32,3 @@ manager: craigg
 ## See Also  
  [Use the Toolbox](../../ssms/use-the-toolbox.md)   
  [Choose Toolbox Items &#40;Maintenance Tasks Page&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
-  
-  

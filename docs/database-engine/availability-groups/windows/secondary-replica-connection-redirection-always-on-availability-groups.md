@@ -1,7 +1,7 @@
 ---
 title: "SQL Server secondary to primary replica read/write connection redirection-Always On Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2018"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -20,6 +20,7 @@ manager: "craigg"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Secondary to primary replica read/write connection redirection (Always On Availability Groups)
+
 [!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduces *secondary to primary replica read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. It allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
@@ -47,8 +48,8 @@ To configure read/write connection redirection, set `READ_WRITE_ROUTING_URL` for
 
 In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], `READ_WRITE_ROUTING_URL` has been added to the `<add_replica_option>` specification. See the following topics: 
 
-* [CREATE AVAILABILITY GROUP](../../../t-sql\statements\create-availability-group-transact-sql.md)
-* [ALTER AVAILABILITY GROUP](../../../t-sql\statements\alter-availability-group-transact-sql.md)
+* [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
+* [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
 ### PRIMARY_ROLE(READ_WRITE_ROUTING_URL) not set (default) 
@@ -150,7 +151,8 @@ In the following diagram, the primary replica has been manually failed over to C
 
 If the instance of SQL Server specified in the connection string is not available (has an outage), the connection will fail regardless of the role that the replica on the target server plays. To avoid prolonged application downtime, configure an alternative `FailoverPartner` in the connection string. The application has to implement retry logic to accommodate primary and secondary replicas not being online during the actual failover. For information about connection strings, see [SqlConnection.ConnectionString Property](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
-## See Also  
+## See Also
+
 [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   

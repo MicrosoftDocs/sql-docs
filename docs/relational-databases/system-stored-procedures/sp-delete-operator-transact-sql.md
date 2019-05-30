@@ -35,10 +35,10 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the operator to delete. *name* is **sysname**, with no default.  
   
- [ **@reassign_to_operator=** ]  **'***reassign_operator***'**  
+`[ @reassign_to_operator = ] 'reassign_operator'`
  The name of an operator to whom the specified operator's alerts can be reassigned. *reassign_operator* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

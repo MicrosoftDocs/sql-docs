@@ -96,5 +96,5 @@ If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](htt
 
 
 ## See also
-[Tutorials for SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+[Tutorials for SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [Tutorials for SQL Server database engine](../relational-databases/database-engine-tutorials.md)

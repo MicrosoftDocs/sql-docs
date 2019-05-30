@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -71,16 +71,15 @@ SELECT TOP ( number )
  It is recommended that the new spatial index tessellations be used for indexes used in Nearest Neighbor queries. For more information on spatial index tessellations, see [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ## Example  
- The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in `AdventureWorks2012` database.  
+ The following code example shows a Nearest Neighbor query that can use a spatial index. The example uses the `Person.Address` table in `AdventureWorks2016` database.  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 WHERE SpatialLocation.STDistance(@g) IS NOT NULL  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  Create a spatial index on the column SpatialLocation to see how a Nearest Neighbor query uses a spatial index. For more information on creating spatial indexes, see [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
@@ -89,12 +88,11 @@ ORDER BY SpatialLocation.STDistance(@g);
  The following code example shows a Nearest Neighbor query that cannot use a spatial index.  
   
 ```sql  
-USE AdventureWorks2012  
+USE AdventureWorks2016  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
 SELECT TOP(7) SpatialLocation.ToString(), City FROM Person.Address  
 ORDER BY SpatialLocation.STDistance(@g);  
-  
 ```  
   
  The query lacks a **WHERE** clause that uses `STDistance()` in a form specified in the syntax section so the query cannot use a spatial index.  

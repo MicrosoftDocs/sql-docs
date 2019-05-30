@@ -1,5 +1,5 @@
 ---
-title: "Create and Manage Partitions in the Workspace Database | Microsoft Docs"
+title: "Create and manage partitions in the Analysis Services workspace database | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -54,6 +54,6 @@ manager: kfile
   
 ## See also  
  [Partitions](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
- [Process partitions in the workspace databse](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [Process partitions in the workspace database](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

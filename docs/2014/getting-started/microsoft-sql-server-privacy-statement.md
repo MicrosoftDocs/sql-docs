@@ -13,6 +13,6 @@ ms.author: genemi
 manager: craigg
 ---
 # Microsoft SQL Server Privacy Statement
-  For information about user data collection components in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see the [SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=282418).  
+  For information about user data collection components in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], see the [SQL Server Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=282418).  
   
   

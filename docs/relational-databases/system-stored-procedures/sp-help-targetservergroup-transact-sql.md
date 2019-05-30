@@ -35,7 +35,7 @@ sp_help_targetservergroup
 ```  
   
 ## Argument  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the target server group for which to return information. *name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

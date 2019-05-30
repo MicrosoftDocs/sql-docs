@@ -199,7 +199,7 @@ In this section, you add a subscription to the merge publication that you create
 
    ![Selections for adding a database to the subscriber](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. On the **Merge Agent Security** page, select the ellipsis (**...**) button. Enter <*Subscriber_Machine_Name*>**\repl_merge** in the **Process account** box, and supply the password for this account. Select **OK**, select **Next**, and then select **Next** again.  
+8. On the **Merge Agent Security** page, select the ellipsis (**…**) button. Enter <*Subscriber_Machine_Name*>**\repl_merge** in the **Process account** box, and supply the password for this account. Select **OK**, select **Next**, and then select **Next** again.  
 
    ![Selections for Merge Agent security](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -245,7 +245,7 @@ In this section, you add a subscription to the merge publication that you create
 For more information, see:  
 - [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Create a pull subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Snapshots for merge publications with parameterized filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Snapshots for merge publications with parameterized filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## Synchronize the subscription to the merge publication
 

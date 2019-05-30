@@ -2,14 +2,14 @@
 title: "SharePoint List Connection Type (SSRS) | Microsoft Docs"
 ms.date: 05/10/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # SharePoint List Connection Type (SSRS)
 

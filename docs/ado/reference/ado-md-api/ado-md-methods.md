@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADO MD Methods
+
 |||  
 |-|-|  
 |[Close](../../../ado/reference/ado-md-api/close-method-ado-md.md)|Closes an open cellset.|  

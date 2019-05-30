@@ -32,13 +32,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLConfigDataSource(  
-     HWND     hwndParent,  
-     WORD     fRequest,  
-     LPCSTR   lpszDriver,  
-     LPCSTR   lpszAttributes);  
+     HWND     hwndParent,  
+     WORD     fRequest,  
+     LPCSTR   lpszDriver,  
+     LPCSTR   lpszAttributes);  
 ```  
   
 ## Arguments  

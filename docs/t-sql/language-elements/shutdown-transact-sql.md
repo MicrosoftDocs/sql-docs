@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "stopping SQL Server"
   - "immediately stopping SQL Server"
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SHUTDOWN (Transact-SQL)
@@ -59,7 +59,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   By using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
--   By running **net stop mssqlserver** from a command prompt for a default instance, or by running **net stop mssql$***instancename* from a command prompt for a named instance.  
+-   By running **net stop mssqlserver** from a command prompt for a default instance, or by running **net stop mssql$**_instancename_ from a command prompt for a named instance.  
   
 -   By using Services in Control Panel.  
   

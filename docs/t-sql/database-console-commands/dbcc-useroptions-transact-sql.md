@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "active SET options"
   - "SET statement, active SET options"
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

@@ -30,11 +30,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL ConfigTranslator(  
-     HWND     hwndParent,  
-     DWORD *  pvOption);  
+     HWND     hwndParent,  
+     DWORD *  pvOption);  
 ```  
   
 ## Arguments  

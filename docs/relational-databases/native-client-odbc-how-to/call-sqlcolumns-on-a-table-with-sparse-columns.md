@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Compile with /EHsc /D, "UNICODE", and odbc32.lib.  
   
- The second ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table created by this sample.  
+ The second ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table created by this sample.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

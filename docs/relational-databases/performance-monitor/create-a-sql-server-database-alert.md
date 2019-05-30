@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "database monitoring [SQL Server], alerts"
   - "server performance [SQL Server], alerts"
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Create a SQL Server Database Alert

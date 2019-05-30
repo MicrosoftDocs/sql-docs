@@ -42,9 +42,9 @@ manager: craigg
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Microsoft Knowledge Base article 325335](http://go.microsoft.com/fwlink/?linkid=117751)  
+ [Microsoft Knowledge Base article 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [How to: Install SQL Server 2008 from the Command Prompt](http://go.microsoft.com/fwlink/?LinkId=81585)  
+ [How to: Install SQL Server 2008 from the Command Prompt](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

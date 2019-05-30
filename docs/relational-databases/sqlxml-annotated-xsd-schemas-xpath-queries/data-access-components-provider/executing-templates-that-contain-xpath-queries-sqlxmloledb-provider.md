@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Mapping Schema property"
   - "XML templates [SQLXML]"
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -82,7 +82,7 @@ End Sub
  This is the schema:  
   
 ```  
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
    xmlns:sql='urn:schemas-microsoft-com:mapping-schema'>  
  <xsd:element name= 'root' sql:is-constant='1'>   
     <xsd:complexType>  

@@ -32,19 +32,19 @@ ODBC defines escape sequences for date, time, and timestamp literals. The syntax
 ```  
   
       ODBC-date-time-escape ::=  
-     ODBC-date-escape  
-     | ODBC-time-escape  
-     | ODBC-timestamp-escapeODBC-date-escape ::=  
-     ODBC-esc-initiator d 'date-value' ODBC-esc-terminatorODBC-time-escape ::=  
-     ODBC-esc-initiator t 'time-value' ODBC-esc-terminatorODBC-timestamp-escape ::=  
-     ODBC-esc-initiator ts 'timestamp-value' ODBC-esc-terminatorODBC-esc-initiator ::= {  
+     ODBC-date-escape  
+     | ODBC-time-escape  
+     | ODBC-timestamp-escapeODBC-date-escape ::=  
+     ODBC-esc-initiator d 'date-value' ODBC-esc-terminatorODBC-time-escape ::=  
+     ODBC-esc-initiator t 'time-value' ODBC-esc-terminatorODBC-timestamp-escape ::=  
+     ODBC-esc-initiator ts 'timestamp-value' ODBC-esc-terminatorODBC-esc-initiator ::= {  
 ODBC-esc-terminator ::= }  
 date-value ::=   
-     years-value date-separator months-value date-separator days-valuetime-value ::=   
-     hours-value time-separator minutes-value time-separatorseconds-valuetimestamp-value ::= date-value timestamp-separator time-valuedate-separator ::= -  
+     years-value date-separator months-value date-separator days-valuetime-value ::=   
+     hours-value time-separator minutes-value time-separatorseconds-valuetimestamp-value ::= date-value timestamp-separator time-valuedate-separator ::= -  
 time-separator ::= :  
 timestamp-separator ::=  
-     (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
+     (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
 ```  
   
 ## Remarks  

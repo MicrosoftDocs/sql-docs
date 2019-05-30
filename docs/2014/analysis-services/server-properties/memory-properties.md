@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "LowMemoryLimit property"
@@ -26,7 +25,7 @@ ms.author: owend
 manager: craigg
 ---
 # Memory Properties
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the server memory properties listed in the following table. For guidance in setting these properties, see [SQL Server 2008 R2 Analysis Services Operations Guide](http://go.microsoft.com/fwlink/?LinkID=225539).  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the server memory properties listed in the following table. For guidance in setting these properties, see [SQL Server 2008 R2 Analysis Services Operations Guide](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Values between 1 and 100 represent percentages of **Total Physical Memory** or **Virtual Address Space**, whichever is less. Values over 100 represent memory limits in bytes.  
   

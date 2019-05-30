@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "default schemas"
   - "modifying default schemas"
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -53,7 +53,7 @@ ALTER USER userName
 ```
 
 > [!IMPORTANT]
-> Azure AD logins for SQL Database Managed Instance is in **public preview**. Only the following options are supported for Azure SQL Database Managed Instance when applying to users with Azure AD logins:
+> Azure AD logins for SQL Database managed instance is in **public preview**. Only the following options are supported for Azure SQL Database managed instance when applying to users with Azure AD logins:
 > `DEFAULT_SCHEMA = { schemaName | NULL }` and
 > `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
 

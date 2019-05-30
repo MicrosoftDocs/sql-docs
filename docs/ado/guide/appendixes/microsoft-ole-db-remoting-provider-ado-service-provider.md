@@ -78,7 +78,7 @@ cn.Properties("Internet Timeout") = 5000
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
 cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=https://YourServer"
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
 ...                'Edit the recordset
 rs.UpdateBatch     'Equivalent of RDS SubmitChanges

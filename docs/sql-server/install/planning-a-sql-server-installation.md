@@ -71,6 +71,6 @@ manager: craigg
   
 ## See Also  
  [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [High Availability Solutions &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [High Availability Solutions &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [Before Installing Failover Clustering](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  

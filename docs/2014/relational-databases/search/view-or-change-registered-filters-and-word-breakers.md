@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "filters [full-text search]"
   - "word breakers [full-text search]"
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # View or Change Registered Filters and Word Breakers
@@ -72,7 +72,7 @@ manager: craigg
   
      **To install and load Microsoft Filter Pack IFilters**  
   
-    -   [How to register Microsoft Filter Pack IFilters with SQL Server](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [How to register Microsoft Filter Pack IFilters with SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  Use **sp_fulltext_service** to load newly installed word breakers and filters in the server instance, as follows:  
   

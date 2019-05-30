@@ -4,22 +4,21 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.wmidatareadertask.wmiquery.f1"
 helpviewer_keywords: 
   - "WMI Data Reader Task Editor"
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # WMI Data Reader Task Editor (WMI Options Page)
   Use the **WMI Options** page of the **WMI Data Reader Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and the destination of the query result.  
   
- To learn about this task, see [WMI Data Reader Task](control-flow/wmi-data-reader-task.md). For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+ To learn about this task, see [WMI Data Reader Task](control-flow/wmi-data-reader-task.md). For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
   
 ## Static Options  
  **WMIConnectionName**  

@@ -1,5 +1,5 @@
 ---
-title: "Create and manage hierarchies | Microsoft Docs"
+title: "Create and manage hierarchies in Analysis Services tabular models | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -88,7 +88,7 @@ manager: kfile
 -   Or, click the parent hierarchy level, and then press Delete. This also removes all the child levels.  
   
 ## See Also  
- [Tabular Model Designer ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Tabular Model Designer](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   

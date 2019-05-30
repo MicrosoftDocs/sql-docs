@@ -1,8 +1,7 @@
 ---
 title: "Pause and resume data migration (Stretch Database) | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -10,8 +9,8 @@ helpviewer_keywords:
   - "pausing Stretch Database"
   - "resuming Stretch Database"
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Pause and resume data migration (Stretch Database)

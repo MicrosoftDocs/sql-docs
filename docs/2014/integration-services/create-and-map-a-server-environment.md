@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.ssms.isenvprop.variables.f1"
@@ -13,8 +12,8 @@ f1_keywords:
   - "sql12.ssis.ssms.isenvprop.permissions.f1"
   - "sql12.ssis.ssms.isenvprop.general.f1"
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create and Map a Server Environment

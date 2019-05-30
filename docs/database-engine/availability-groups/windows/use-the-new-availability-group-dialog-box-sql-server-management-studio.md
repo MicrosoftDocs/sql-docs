@@ -19,26 +19,12 @@ manager: craigg
   
 > [!NOTE]  
 >  For an introduction to availability groups, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
--   **Before you begin:**  
-  
-     [Prerequisites](#PrerequisitesRestrictions)  
-  
-     [Limitations](#Limitations)  
-  
-     [Security](#Security)  
-  
--   **To create an availability group, using:**  [The New Availability Group Dialog Box](#SSMSProcedure)  
-  
--   **Follow up:**  [After Using the New Availability Group Dialog Box to Create an Availability Group](#FollowUp)  
-  
+   
 > [!NOTE]  
 >  For information about alternative ways to create an availability group, see [Related Tasks](#RelatedTasks), later in this topic.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
- We strongly recommend that you read this section before attempting to create your first availability group.  
   
-###  <a name="PrerequisitesRestrictions"></a> Prerequisites  
+##  <a name="PrerequisitesRestrictions"></a> Prerequisites  
   
 -   Before creating an availability group, verify that the instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that host availability replicas reside on different Windows Server Failover Clustering (WSFC) node within the same WSFC failover cluster. Also, verify that each of the server instance is enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and meets all other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prerequisites. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -46,20 +32,16 @@ manager: craigg
   
 -   To use the **New Availability Group** dialog box, you need to know the names of the server instances that will host availability replicas. Also, you need know the names of any databases that you intend to add to your new availability group, and you need to ensure that these databases meet the availability database prerequisites and restrictions described in [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). If you enter invalid values, the new availability group will not work.  
   
-###  <a name="Limitations"></a> Limitations  
+## <a name="Limitations"></a> Limitations  
  The **New Availability Group** dialog box does not:  
   
--   Create an availability group listener.  
-  
--   Join secondary replicas to the availability group.  
-  
+-   Create an availability group listener.    
+-   Join secondary replicas to the availability group.    
 -   Perform initial data synchronization.  
   
  For information about these configuration tasks, see [Follow Up: After Creating an Availability Group](#FollowUp), later in this topic.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using the New Availability Group Dialog Box (SQL Server Management Studio)  

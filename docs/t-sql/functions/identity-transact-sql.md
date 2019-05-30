@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "identity values [SQL Server], last-inserted"
   - "@@IDENTITY function"
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # &#x40;&#x40;IDENTITY (Transact-SQL)

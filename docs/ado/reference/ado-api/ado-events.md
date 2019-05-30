@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADO Events
+
 |||  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Called after the **BeginTrans** operation.|  

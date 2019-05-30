@@ -26,27 +26,22 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Returns information about a page in a database.  The function returns one row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`.  This function replaces the need to use `DBCC PAGE` in most cases.
 
-## Syntax  
-  
+## Syntax   
 ```  
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
 ## Arguments  
- *DatabaseId* | NULL | DEFAULT  
-
- Is the ID of the database. *DatabaseId* is **smallint**. Valid input is the ID number of a database. The default is NULL, however sending a NULL value for this parameter will result in an error.
+*DatabaseId* | NULL | DEFAULT     
+Is the ID of the database. *DatabaseId* is **smallint**. Valid input is the ID number of a database. The default is NULL, however sending a NULL value for this parameter will result in an error.
  
-*FileId* | NULL | DEFAULT
-
+*FileId* | NULL | DEFAULT   
 Is the ID of the file. *FileId* is **int**.  Valid input is the ID number of a file in the database specified by *DatabaseId*. The default is NULL, however sending a NULL value for this parameter will result in an error.
 
-*PageId* | NULL | DEFAULT
-
+*PageId* | NULL | DEFAULT   
 Is the ID of the page.  *PageId* is **int**.  Valid input is the ID number of a page in the file specified by *FileId*. The default is NULL, however sending a NULL value for this parameter will result in an error.
 
-*Mode* | NULL | DEFAULT
-
+*Mode* | NULL | DEFAULT   
 Determines the level of detail in the output of the function. 'LIMITED' will return NULL values for all description columns, 'DETAILED' will populate description columns.  DEFAULT is 'LIMITED.'
 
 ## Table Returned  
@@ -112,7 +107,7 @@ The `sys.dm_db_page_info` dynamic management function returns page information l
 `sys.dm_db_page_info` can be used in place of the `DBCC PAGE` statement in many cases, but it returns only the page header information, not the body of the page. `DBCC PAGE` will still be needed for use cases where the entire contents of the page are required.
 
 ## Using in Conjunction With Other DMVs
-One of the important use cases of `sys.dm_db_page_info` is to join it with other DMVs that expose page information.  To facilitate this use case, a new column called `page_resource` has been added which exposes page information in an 8-byte hex format. This column has been added to `sys.dm_exec_processes` and `sys.sysprocesses` and will be added to other DMVs in the future as needed.
+One of the important use cases of `sys.dm_db_page_info` is to join it with other DMVs that expose page information.  To facilitate this use case, a new column called `page_resource` has been added which exposes page information in an 8-byte hex format. This column has been added to `sys.dm_exec_requests` and `sys.sysprocesses` and will be added to other DMVs in the future as needed.
 
 A new function, `sys.fn_PageResCracker`, takes the `page_resource` as input and outputs a single row that contains `database_id`, `file_id` and `page_id`.  This function can then be used to facilitate joins between `sys.dm_exec_requests` or `sys.sysprocesses` and `sys.dm_db_page_info`.
 
@@ -143,6 +138,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ## See Also  
 [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

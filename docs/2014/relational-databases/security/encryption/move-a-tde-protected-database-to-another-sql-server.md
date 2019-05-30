@@ -185,7 +185,7 @@ manager: craigg
   
     -   When a database is involved with replication, the **Status** is **Not ready** and the **Message** column displays **Database replicated**.  
   
-    -   When a database has one or more active connections, the **Status** is **Not ready** and the **Message** column displays *<number_of_active_connections>***Active connection(s)** - for example: **1 Active connection(s)**. Before you can detach the database, you need to disconnect any active connections by selecting **Drop Connections**.  
+    -   When a database has one or more active connections, the **Status** is **Not ready** and the **Message** column displays _<number_of_active_connections>_**Active connection(s)** - for example: **1 Active connection(s)**. Before you can detach the database, you need to disconnect any active connections by selecting **Drop Connections**.  
   
      To obtain more information about a message, click the hyperlinked text to open Activity Monitor.  
   
@@ -203,7 +203,7 @@ manager: craigg
   
 8.  In the **Attach Databases** dialog box, under **Databases to attach**, click **Add**.  
   
-9. In the **Locate Database Files -***server_name* dialog box, select the database file to attach to the new server and click **OK**.  
+9. In the **Locate Database Files -**_server_name_ dialog box, select the database file to attach to the new server and click **OK**.  
   
      The following options are available in the **Attach Databases** dialog box.  
   
@@ -246,7 +246,7 @@ manager: craigg
      **Remove**  
      Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **" database details**  
+     **"** _<database_name>_ **" database details**  
      Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  

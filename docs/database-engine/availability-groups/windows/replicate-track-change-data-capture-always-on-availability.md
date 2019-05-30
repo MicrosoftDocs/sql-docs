@@ -224,7 +224,7 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
   
 -   [Maintaining an Always On Publication Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

@@ -32,7 +32,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## Arguments  
- [ **@profile_id=**] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile to be dropped. *profile_id* is **int**, with no default.  
   
 ## Return Code Values  

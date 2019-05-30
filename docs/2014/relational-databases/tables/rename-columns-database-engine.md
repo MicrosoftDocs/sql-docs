@@ -58,7 +58,7 @@ manager: craigg
   
 2.  Under **Column Name**, select the name you want to change and type a new one.  
   
-3.  On the **File** menu, click **Save***table name*.  
+3.  On the **File** menu, click **Save**_table name_.  
   
 > [!NOTE]  
 >  You can also change the name of a column in the **Column Properties** tab. Select the column whose name you want to change and type a new value for **Name**.  

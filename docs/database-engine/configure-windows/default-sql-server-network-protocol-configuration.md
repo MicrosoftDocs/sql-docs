@@ -1,7 +1,7 @@
 ---
 title: "Default SQL Server Network Protocol Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2017"
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -26,16 +26,16 @@ Use the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Network Con
 
 The following table describes the configuration after installation.
 
-Edition	| New installation vs. previous installation is present	| Shared memory	| TCP/IP	| Named pipes
+|Edition | New installation vs. previous installation is present | Shared memory | TCP/IP | Named pipes|
 | -------- | -- | -- | -- | --  |  
-Enterprise	| New installation	| Enabled	| Enabled	| Disabled for network connections.
-Standard	| New installation	| Enabled	| Enabled	| Disabled for network connections.
-Web	| New installation	| Enabled	| Enabled	| Disabled for network connections.
-Developer	| New installation	| Enabled	| Disabled	| Disabled for network connections.
-Evaluation	| New installation	| Enabled	| Enabled	| Disabled for network connections.
-SQL Server Express	| New installation	| Enabled	| Disabled	| Disabled for network connections.
-All editions	| Previous installation is present but is not being upgraded.	| Same as new installation	| Same as new installation	| Same as new installation
-All editions	| Upgrade	| Enabled	| Settings from the previous installation are preserved.	| Settings from the previous installation are preserved.
+|Enterprise | New installation | Enabled | Enabled | Disabled for network connections.|
+|Standard | New installation | Enabled | Enabled | Disabled for network connections.|
+|Web | New installation | Enabled | Enabled | Disabled for network connections.|
+|Developer | New installation | Enabled | Disabled | Disabled for network connections.|
+|Evaluation | New installation | Enabled | Enabled | Disabled for network connections.|
+|SQL Server Express | New installation | Enabled | Disabled | Disabled for network connections.|
+|All editions | Previous installation is present but is not being upgraded. | Same as new installation | Same as new installation | Same as new installation|
+|All editions | Upgrade | Enabled | Settings from the previous installation are preserved. | Settings from the previous installation are preserved.|
 
 
 >[!NOTE]

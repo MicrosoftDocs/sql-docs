@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], SAVE TRANSACTION statement"
   - "duplicate savepoints"
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # SAVE TRANSACTION (Transact-SQL)
@@ -33,7 +33,7 @@ manager: craigg
   Sets a savepoint within a transaction.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-.|  
+
  ## Syntax  
   
 ```  

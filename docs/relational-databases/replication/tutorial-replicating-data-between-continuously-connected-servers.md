@@ -176,7 +176,7 @@ In this section, you add a subscriber to the publication that you previously cre
   
    ![Entering a name for the subscription database](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. On the **Distribution Agent Security** page, select the ellipsis (**...**) button. Enter <*Publisher_Machine_Name*>**\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**.
+8. On the **Distribution Agent Security** page, select the ellipsis (**…**) button. Enter <*Publisher_Machine_Name*>**\repl_distribution** in the **Process account** box, enter the password for this account, select **OK**, and then select **Next**.
 
    ![Distribution account information in the "Distribution Agent Security" dialog box](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   

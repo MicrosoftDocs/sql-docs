@@ -23,8 +23,8 @@ A shape COMPUTE clause generates a parent **Recordset**, whose columns consist o
   
 ```  
 SHAPE child-command [AS] child-alias  
-   COMPUTE child-alias [[AS] name], [appended-column-list]  
-   [BY grp-field-list]  
+   COMPUTE child-alias [[AS] name], [appended-column-list]  
+   [BY grp-field-list]  
 ```  
   
 ## Description  

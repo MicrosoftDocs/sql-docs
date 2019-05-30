@@ -105,7 +105,7 @@ manager: craigg
   
 6.  Under **Index key columns**, click **Add...**.  
   
-7.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
+7.  In the **Select Columns from**_table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   
 8.  Click **OK**.  
   

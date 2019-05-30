@@ -42,7 +42,7 @@ Analysis Services provides many ways to customize a solution through code, but m
 - Although it is possible to build a solution based on the open standards of XMLA and MDX, it's quite rare to do so. There is no documentation other than XMLA and MDX reference to help you, and most community and forum support draws from experiences with .NET or native (MSOLAP) technologies.
 
 ## Programming in Analysis Services
-[Data Mining Programming](../analysis-services/data-mining-programming.md)
+[Data Mining Programming](../analysis-services/data-mining/data-mining-programming.md)
 Describes the approaches building solutions that include data mining objects.
 
 [Multidimensional Model Programming](../analysis-services/multidimensional-models/multidimensional-model-programming.md)
@@ -76,5 +76,5 @@ TMSL is a JSON representation of Tabular models at compatibility level 1200 and 
 Documents the cmdlets used for administrative functions, plus the general-purpose **Invoke-ASCmd** cmdlet that accepts any script or query as input.
 
 ## See Also
-[Technical Reference ](../analysis-services/powershell/technical-reference-ssas.md)
+[Technical Reference](../analysis-services/powershell/technical-reference-ssas.md)
 [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10013"
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "Hyperion Essbase query designer"
   - "query designers, Hyperion"
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Hyperion Essbase Query Designer User Interface (Report Builder)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides a graphical query designer for building Multidimensional Expression (MDX) queries for a [!INCLUDE[extEssbase](../includes/extessbase-md.md)] data source. The MDX graphical query designer has two modes: Design mode and Query mode. Each mode provides a Metadata pane from which you can drag members from a cube defined on the data source to build an MDX query that retrieves data when the report is processed.  

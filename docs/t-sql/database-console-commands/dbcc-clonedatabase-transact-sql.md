@@ -1,7 +1,7 @@
 ---
 title: "DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2018"
+ms.date: 04/23/2019
 ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -34,7 +34,7 @@ helpviewer_keywords:
   - "database cloning [SQL Server]"
   - "DBCC CLONEDATABASE statement"
 ms.assetid: 
-author: "pamela" 
+author: "bluefooted" 
 ms.author: "pamela"
 manager: "amitban"
 ---
@@ -52,8 +52,8 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
-)  
+)
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]     
 ```  
   
 ## Arguments  
@@ -109,9 +109,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> If you have columnstore indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.  Starting with SQL Server 2019, the manual steps outlined in the article above will no longer be required as the **DBCC CLONEDATABASE** command gathers this information automatically.
+> If you have columnstore indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.  Starting with SQL Server 2019, the manual steps outlined in the article above will no longer be required as the **DBCC CLONEDATABASE** command gathers this information automatically.
 
-For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
+<a name="ctp23"></a>
+
+## Stats blob for columnstore indexes
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps are required.`DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data. In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information.
+
+For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287).
 
 ## Internal Database Snapshot
 DBCC CLONEDATABASE uses an internal database snapshot of the source database for the transactional consistency that is needed to perform the copy. Using this snapshot prevents blocking and concurrency problems when these commands are executed. If a snapshot can't be created, DBCC CLONEDATABASE will fail. 
@@ -200,7 +206,7 @@ The following messages are an example of the messages logged in the error log du
 ## Examples  
   
 ### A. Creating a clone of a database that includes schema, statistics and query store 
-The following example creates a clone of the AdventureWorks database that includes schema, statistics and query store data ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
+The following example creates a clone of the AdventureWorks database that includes schema, statistics and query store data ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
@@ -208,7 +214,7 @@ GO
 ```  
   
 ### B. Creating a schema-only clone of a database without statistics 
-The following example creates a clone of the AdventureWorks database that does not include statistics ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and later versions)
+The following example creates a clone of the AdventureWorks database that does not include statistics ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 and later versions)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS;    
@@ -216,7 +222,7 @@ GO
 ```  
 
 ### C. Creating a schema-only clone of a database without statistics and query store 
-The following example creates a clone of the AdventureWorks database that does not include statistics and query store data ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
+The following example creates a clone of the AdventureWorks database that does not include statistics and query store data ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 and later versions)
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
@@ -224,7 +230,7 @@ GO
 ```  
 
 ### D. Creating a clone of a database that is verified for production use
-The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
+The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
@@ -232,7 +238,7 @@ GO
 ```  
   
 ### E. Creating a clone of a database that is verified for production use that includes a backup of the cloned database
-The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database.  A verified backup of the cloned database will also be created ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
+The following example creates a schema-only clone of the AdventureWorks database without statistics and query store data that is verified for use as a production database.  A verified backup of the cloned database will also be created ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and later versions).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    

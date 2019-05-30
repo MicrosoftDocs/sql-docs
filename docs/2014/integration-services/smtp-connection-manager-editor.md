@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.smtpconnection.f1"
 helpviewer_keywords: 
   - "SMTP Connection Manager Editor"
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SMTP Connection Manager Editor

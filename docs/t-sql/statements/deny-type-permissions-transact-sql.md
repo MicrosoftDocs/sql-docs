@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "type permissions [SQL Server]"
   - "denying permissions [SQL Server], types"
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Type Permissions (Transact-SQL)

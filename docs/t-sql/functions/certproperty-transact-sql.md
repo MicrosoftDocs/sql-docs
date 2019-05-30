@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "schemas [SQL Server], names"
   - "CERTPROPERTY function"
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CERTPROPERTY (Transact-SQL)

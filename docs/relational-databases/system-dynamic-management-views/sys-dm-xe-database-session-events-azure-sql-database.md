@@ -2,10 +2,9 @@
 title: "sys.dm_xe_database_session_events (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: ""
+ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
 author: MightyPen

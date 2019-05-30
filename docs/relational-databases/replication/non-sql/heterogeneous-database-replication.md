@@ -24,6 +24,7 @@ manager: craigg
 -   Publishing data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
 
 -   Publishing data to and from Oracle has the following restrictions:  
+
   | |2016 or earlier |2017 or later |
   |-------|-------|--------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
@@ -47,7 +48,7 @@ manager: craigg
  For more information, see [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
 ## Publishing Data to Non-SQL Server Subscribers  
- The following non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases are supported as Subscribers to snapshot and transactional publications:  
+ The following non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases are supported as Subscribers to snapshot and transactional publications:  
   
 -   Oracle for all platforms that Oracle supports.  
   

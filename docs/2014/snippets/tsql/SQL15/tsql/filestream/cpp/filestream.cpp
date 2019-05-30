@@ -1883,7 +1883,7 @@ void main()
             cbTransactionToken) == TRUE )
             mode = SQL_COMMIT;
 
-        //Commit the TRANSACTION if the BLOB was succesfully udpated;
+        //Commit the TRANSACTION if the BLOB was successfully udpated;
         //ROLLBACK the TRANSACTION if it was not.
         SQLTransact(henv, hdbc, mode);
     }

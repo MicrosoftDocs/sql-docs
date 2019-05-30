@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Comparing Predictions for Forecasting Models (Intermediate Data Mining Tutorial)
   In the previous steps of this tutorial, you created multiple time series models:  

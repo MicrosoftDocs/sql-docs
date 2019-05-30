@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.watch"
 helpviewer_keywords: 
   - "Watch Window [Transact-SQL]"
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
@@ -59,5 +56,3 @@ manager: craigg
  [Call Stack Window](transact-sql-debugger-call-stack-window.md)   
  [QuickWatch Dialog Box](transact-sql-debugger-quickwatch-dialog-box.md)   
  [Expressions &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
-  
-  

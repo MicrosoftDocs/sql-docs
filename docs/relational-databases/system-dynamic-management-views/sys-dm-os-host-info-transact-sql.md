@@ -43,7 +43,7 @@ This view is similar to [sys.dm_os_windows_info](../../relational-databases/syst
 ### Permissions  
 The `SELECT` permission on `sys.dm_os_host_info` is granted to the `public` role by default. If revoked, requires `VIEW SERVER STATE` permission on the server.   
  
->  [!CAUTION]
+> [!CAUTION]
 >  Beginning with version [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3, [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] version 17 requires `SELECT` permission on `sys.dm_os_host_info` in order to connect to [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. If `SELECT` permission is revoked from `public`, only logins with `VIEW SERVER STATE` permission can connect with the newest version of SSMS. (Other tools, such as `sqlcmd.exe` can connect without `SELECT` permission on `sys.dm_os_host_info`.)
 
   

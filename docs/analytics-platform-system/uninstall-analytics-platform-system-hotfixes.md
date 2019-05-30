@@ -21,13 +21,13 @@ To perform these steps, you will need:
   
 -   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance.  
   
--   The Domain Administrator account to login to the *<appliance_domain>***-HST01** node.  
+-   The Domain Administrator account to login to the <em><appliance_domain></em>**-HST01** node.  
   
 -   The Knowledge Base article number for the hotfix to uninstall.  
   
 ## <a name="HowToUninstallPDW"></a>To uninstall a SQL Server PDW hotfix  
   
-1.  Log on to the *<appliance_domain>***-HST01** node as the Fabric Domain Administrator.  
+1.  Log on to the <em><appliance_domain></em>**-HST01** node as the Fabric Domain Administrator.  
   
 2.  Use the Run as Administrator option to open a Command Prompt.  
   

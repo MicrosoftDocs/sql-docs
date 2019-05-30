@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], opening"
   - "OPEN SYMMETRIC KEY statement"
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)

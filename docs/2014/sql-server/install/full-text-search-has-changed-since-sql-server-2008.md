@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
@@ -27,7 +26,7 @@ manager: craigg
 ## External Resources  
  [Full-Text Search Backward Compatibility](../../../2014/database-engine/full-text-search-backward-compatibility.md)  
   
- [Full-Text Search Upgrade](http://go.microsoft.com/fwlink/?LinkId=112291)  
+ [Full-Text Search Upgrade](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
  [Breaking Changes to Full-Text Search](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   

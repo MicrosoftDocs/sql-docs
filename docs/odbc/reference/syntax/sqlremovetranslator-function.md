@@ -30,11 +30,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLRemoveTranslator(  
-     LPCSTR    lpszTranslator,  
-     LPDWORD   lpdwUsageCount);  
+     LPCSTR    lpszTranslator,  
+     LPDWORD   lpdwUsageCount);  
 ```  
   
 ## Arguments  

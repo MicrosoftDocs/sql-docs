@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 Convert a rowstore table to a clustered columnstore index or create a nonclustered columnstore index. Use a columnstore index to efficiently run real-time operational analytics on an OLTP workload or to improve data compression and query performance for data warehousing workloads.  
   
-> [!NOTE]  
+> [!NOTE]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create the table as a clustered columnstore index.   It is no longer necessary to first create a rowstore table and then convert it to a clustered columnstore index.  
 
 > [!TIP]
@@ -58,23 +58,24 @@ Learn more:
   
 ## Syntax  
   
-```  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
-    ON [database_name. [schema_name ] . | schema_name . ] table_name  
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
+    [ ON <on_option> ] 
+    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
-    ON [database_name. [schema_name ] . | schema_name . ] table_name   
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
         ( column  [ ,...n ] )  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]   
+    [ ON <on_option> ]
 [ ; ]  
   
 <with_option> ::=  
@@ -86,9 +87,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
       [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]  
   
 <on_option>::=  
-      partition_scheme_name ( column_name )   
-    | filegroup_name   
-    | "default"   
+      partition_scheme_name ( column_name )
+    | filegroup_name
+    | "default"
   
 <filter_expression> ::=  
       column_name IN ( constant [ ,...n ]  
@@ -96,14 +97,14 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name   
-    ON [ database_name . [ schema_name ] . | schema_name . ] table_name  
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
-```  
+```
   
 ## Arguments  
 
@@ -118,7 +119,8 @@ Some of the options are not available in all database engine versions. The follo
 
 All options are available in Azure SQL Database.
 
-### CREATE CLUSTERED COLUMNSTORE INDEX  
+### CREATE CLUSTERED COLUMNSTORE INDEX
+
 Create a clustered columnstore index in which all of the data is compressed and stored by column. The index includes all of the columns in the table, and stores the entire table. If the existing table is a heap or clustered index, the table is converted to a clustered columnstore index. If the table is already stored as a clustered columnstore index, the existing index is dropped and rebuilt.  
   
 *index_name*  
@@ -126,11 +128,14 @@ Specifies the name for the new index.
   
 If the table already has a clustered columnstore index, you can specify the same name as the existing index, or you can use the DROP EXISTING option to specify a new name.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+
+Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index. To convert to an ordered clustered column store index the existing index must be a clustered columnstore index.
   
-#### WITH options  
-##### DROP_EXISTING = [OFF] | ON  
+#### WITH options
+
+##### DROP_EXISTING = [OFF] | ON
+
    `DROP_EXISTING = ON` specifies to drop the existing index, and create a new columnstore index.  
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -150,6 +155,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH (MAXDOP = 2);
 ```
+
    For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
 ###### COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
@@ -186,7 +192,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 #### ON options 
    With the ON options you can specify options for data storage, such as a partition scheme, a specific filegroup, or the default filegroup. If the ON option is not specified, the index uses the settings partition or filegroup settings of the existing table.  
   
-   *partition_scheme_name* **(** *column_name* **)**  
+   *partition_scheme_name* **(** _column_name_ **)**  
    Specifies the partition scheme for the table. The partition scheme must already exist in the database. To create the partition scheme, see [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md).  
  
    *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using.  
@@ -205,7 +211,7 @@ Create an in-memory nonclustered columnstore index on a rowstore table stored as
 *index_name*  
    Specifies the name of the index. *index_name*  must be unique within the table, but does not have to be unique within the database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- **(** *column*  [ **,**...*n* ] **)**  
+ **(** _column_  [ **,**...*n* ] **)**  
     Specifies the columns to store. A nonclustered columnstore index is limited to 1024 columns.  
    Each column must be of a supported data type for columnstore indexes. See [Limitations and Restrictions](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) for a list of the supported data types.  
 
@@ -228,7 +234,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
    For more information, see [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Parallel index operations are not available in every edition of [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ###### ONLINE = [ON | OFF]   
@@ -266,7 +272,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 #### ON options  
    These options specify the filegroups on which the index is created.  
   
-*partition_scheme_name* **(** *column_name* **)**  
+*partition_scheme_name* **(** _column_name_ **)**  
    Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index is mapped. The partition scheme must exist within the database by executing [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md). 
    *column_name* specifies the column against which a partitioned index is partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. When partitioning a columnstore index, [!INCLUDE[ssDE](../../includes/ssde-md.md)] adds the partitioning column as a column of the index, if it is not already specified.  
    If *partition_scheme_name* or *filegroup* is not specified and the table is partitioned, the index is placed in the same partition scheme, using the same partitioning column, as the underlying table.  
@@ -730,10 +736,18 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### E. Convert a columnstore table back to a rowstore heap  
- Use [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
+ Use [DROP INDEX (SQL Server PDW)](drop-index-transact-sql.md) to drop the clustered columnstore index and convert the table to a rowstore heap. This example converts the cci_xDimProduct table to a rowstore heap. The table continues to be distributed, but is stored as a heap.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
+### F. Create an ordered clustered columnstore index
+
+Create an ordered clustered columnstore index ordered on SHIPDATE.
+
+```sql 
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+```

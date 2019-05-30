@@ -71,7 +71,7 @@ go
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="s" type="string"/>  
       <element name="b" type="boolean"/>  
 </schema>'  

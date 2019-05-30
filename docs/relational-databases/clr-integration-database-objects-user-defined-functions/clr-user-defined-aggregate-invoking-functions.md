@@ -1,7 +1,7 @@
 ---
 title: "Invoking CLR User-Defined Aggregate Functions | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/15/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: clr
@@ -59,7 +59,7 @@ public class Concatenate : IBinarySerialize
     /// <summary>  
     /// The variable that holds the intermediate result of the concatenation  
     /// </summary>  
-    private StringBuilder intermediateResult;  
+    public StringBuilder intermediateResult;  
   
     /// <summary>  
     /// Initialize the internal data structures  
@@ -138,7 +138,7 @@ Public Class Concatenate
     ''' <summary>  
     ''' The variable that holds the intermediate result of the concatenation  
     ''' </summary>  
-    Private intermediateResult As StringBuilder  
+    Public intermediateResult As StringBuilder  
   
     ''' <summary>  
     ''' Initialize the internal data structures  

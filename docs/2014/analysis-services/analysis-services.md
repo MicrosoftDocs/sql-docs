@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services, about Analysis Services - Multidimensional Data"
@@ -61,7 +60,7 @@ manager: craigg
  [Analysis Services Tutorials &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Installation for SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Developer's Guide &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)   
- [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

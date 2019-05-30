@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "reactivating alerts"
   - "removing alerts"
 ms.assetid: 4cb37dc6-1134-405d-8590-58b44dcf63b2
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

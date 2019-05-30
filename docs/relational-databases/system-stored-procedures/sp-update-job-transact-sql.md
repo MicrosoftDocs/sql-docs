@@ -51,33 +51,33 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## Arguments  
- [ **@job_id =**] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job to be updated. *job_id*is **uniqueidentifier**.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **nvarchar(128)**.  
   
 > **NOTE:** Either *job_id* or *job_name* must be specified but both cannot be specified.  
   
- [ **@new_name =**] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  The new name for the job. *new_name* is **nvarchar(128)**.  
   
- [ **@enabled =**] *enabled*  
+`[ @enabled = ] enabled`
  Specifies whether the job is enabled (**1**) or not enabled (**0**). *enabled* is **tinyint**.  
   
- [ **@description =**] **'***description***'**  
+`[ @description = ] 'description'`
  The description of the job. *description* is **nvarchar(512)**.  
   
- [ **@start_step_id =**] *step_id*  
+`[ @start_step_id = ] step_id`
  The identification number of the first step to execute for the job. *step_id* is **int**.  
   
- [ **@category_name =**] **'***category***'**  
+`[ @category_name = ] 'category'`
  The category of the job. *category* is **nvarchar(128)**.  
   
- [ **@owner_login_name =**] **'***login***'**  
+`[ @owner_login_name = ] 'login'`
  The name of the login that owns the job. *login* is **nvarchar(128)** Only members of the **sysadmin** fixed server role can change job ownership.  
   
- [ **@notify_level_eventlog =**] *eventlog_level*  
+`[ @notify_level_eventlog = ] eventlog_level`
  Specifies when to place an entry in the Microsoft Windows application log for this job. *eventlog_level*is **int**, and can be one of these values.  
   
 |Value|Description (action)|  
@@ -87,28 +87,28 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**2**|On failure|  
 |**3**|Always|  
   
- [ **@notify_level_email =**] *email_level*  
+`[ @notify_level_email = ] email_level`
  Specifies when to send an e-mail upon the completion of this job. *email_level*is **int**. *email_level*uses the same values as *eventlog_level*.  
   
- [ **@notify_level_netsend =**] *netsend_level*  
+`[ @notify_level_netsend = ] netsend_level`
  Specifies when to send a network message upon the completion of this job. *netsend_level*is **int**. *netsend_level*uses the same values as *eventlog_level*.  
   
- [ **@notify_level_page =**] *page_level*  
+`[ @notify_level_page = ] page_level`
  Specifies when to send a page upon the completion of this job. *page_level* is **int**. *page_level*uses the same values as *eventlog_level*.  
   
- [ **@notify_email_operator_name =**] **'***operator_name***'**  
+`[ @notify_email_operator_name = ] 'operator_name'`
  The name of the operator to whom the e-mail is sent when *email_level* is reached. *email_name* is **nvarchar(128)**.  
   
- [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'`
  The name of the operator to whom the network message is sent. *netsend_operator* is **nvarchar(128)**.  
   
- [ **@notify_page_operator_name =**] **'***page_operator***'**  
+`[ @notify_page_operator_name = ] 'page_operator'`
  The name of the operator to whom a page is sent. *page_operator* is **nvarchar(128)**.  
   
- [ **@delete_level =**] *delete_level*  
+`[ @delete_level = ] delete_level`
  Specifies when to delete the job. *delete_value*is **int**. *delete_level*uses the same values as *eventlog_level*.  
   
- [ **@automatic_post =**] *automatic_post*  
+`[ @automatic_post = ] automatic_post`
  Reserved.  
   
 ## Return Code Values  

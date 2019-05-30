@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "database scoped credential [SQL Server], permissions"
   - "GRANT statement, database scoped credentials"
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -43,7 +43,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be granted on a database scoped credential. Listed below.  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
  Specifies the database scoped credential on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

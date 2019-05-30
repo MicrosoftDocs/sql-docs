@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "text value searches [SQL Server]"
   - "numeric value searches [SQL Server]"
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

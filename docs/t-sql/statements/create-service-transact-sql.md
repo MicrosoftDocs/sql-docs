@@ -51,7 +51,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Sets the owner of the service to the specified database user or role. When the current user is **dbo** or **sa**, *owner_name* may be the name of any valid user or role. Otherwise, *owner_name* must be the name of the current user, the name of a user that the current user has IMPERSONATE permission for, or the name of a role to which the current user belongs.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Specifies the queue that receives messages for the service. The queue must exist in the same database as the service. If no *schema_name* is provided, the schema is the default schema for the user that executes the statement.  
   
  *contract_name*  

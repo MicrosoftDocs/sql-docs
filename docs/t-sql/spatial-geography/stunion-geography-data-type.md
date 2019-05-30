@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STUnion method"
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STUnion (geography Data Type)
@@ -74,7 +74,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-### C. Producing a triagonal hole from a union of a CurvePolygon and a traigonal hole.  
+### C. Producing a triagonal hole from a union of a CurvePolygon and a triagonal hole.  
  The following example produces a triagonal hole from the union of a `CurvePolygon` with a `Polygon` instance.  
   
 ```

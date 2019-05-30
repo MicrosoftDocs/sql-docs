@@ -1,17 +1,16 @@
 ---
 title: "Semantic Search DDL, Functions, Stored Procedures, and Views | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], database objects"
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # Semantic Search DDL, Functions, Stored Procedures, and Views

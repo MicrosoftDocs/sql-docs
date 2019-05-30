@@ -38,10 +38,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## Arguments  
- [ **@functname =** ] **'***procedure***'**  
+`[ @functname = ] 'procedure'`
  Is the name of the function to call within the dynamic-link library (DLL). *procedure* is **nvarchar(517)**, with no default. *procedure* optionally can include the owner name in the form *owner.function*.  
   
- [ **@dllname =** ] **'***dll***'**  
+`[ @dllname = ] 'dll'`
  Is the name of the DLL that contains the function. *dll* is **varchar(255)**, with no default. It is recommended that you specify the complete path of the DLL.  
   
 ## Return Code Values  

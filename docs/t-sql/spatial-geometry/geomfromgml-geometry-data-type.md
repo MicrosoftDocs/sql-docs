@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GeomFromGML (geometry Data Type)"
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # GeomFromGml (geometry Data Type)

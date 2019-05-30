@@ -30,18 +30,18 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLStatistics(  
-     SQLHSTMT        StatementHandle,  
-     SQLCHAR *       CatalogName,  
-     SQLSMALLINT     NameLength1,  
-     SQLCHAR *       SchemaName,  
-     SQLSMALLINT     NameLength2,  
-     SQLCHAR *       TableName,  
-     SQLSMALLINT     NameLength3,  
-     SQLUSMALLINT    Unique,  
-     SQLUSMALLINT    Reserved);  
+     SQLHSTMT        StatementHandle,  
+     SQLCHAR *       CatalogName,  
+     SQLSMALLINT     NameLength1,  
+     SQLCHAR *       SchemaName,  
+     SQLSMALLINT     NameLength2,  
+     SQLCHAR *       TableName,  
+     SQLSMALLINT     NameLength3,  
+     SQLUSMALLINT    Unique,  
+     SQLUSMALLINT    Reserved);  
 ```  
   
 ## Arguments  

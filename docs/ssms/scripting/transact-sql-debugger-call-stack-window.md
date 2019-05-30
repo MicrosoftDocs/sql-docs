@@ -6,13 +6,11 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.callstack"
 helpviewer_keywords: 
   - "Call Stack Window [Transact-SQL]"
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -67,5 +65,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL Debugger Information](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Step Through Transact-SQL Code](../../relational-databases/scripting/step-through-transact-sql-code.md)  
-  
-  

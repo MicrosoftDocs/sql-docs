@@ -56,6 +56,6 @@ object
  The value indicates the action taken by the startup program if a failure occurs. All errors are logged by the computer system.  
   
 ## See Also  
- [Starting and Stopping Services](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -136,7 +136,7 @@ manager: kfile
   
 -   Set **NullProcessing**=**Error** to exclude records with null values. This produces the **NullKeyNotAllowed** error, which is logged and counts toward the key error limit. You can set error configuration property on **Null Key Not Allowed** to **IgnoreError** to allow processing to continue.  
   
- Nulls can be problem for non-key fields, in that MDX queries return different results depending on whether null is interpreted as zero or empty. For this reason, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides null processing options that let you predefine the conversion behavior you want. See [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) and <xref:Microsoft.AnalysisServices.NullProcessing> for details.  
+ Nulls can be problem for non-key fields, in that MDX queries return different results depending on whether null is interpreted as zero or empty. For this reason, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides null processing options that let you predefine the conversion behavior you want.  
   
 #### Set NullProcessing property on a dimension attribute  
   
@@ -168,10 +168,10 @@ manager: kfile
 ##  <a name="bkmk_next"></a> Next step  
  Decide whether errors will stop processing or be ignored. Remember that only the error is ignored. The record that caused the error is not ignored; it is either discarded or converted to unknown member. Records that violate data integrity rules are never added to the database. By default, processing stops when the first error occurs, but you can change this by raising the error limit. In cube development, it can be useful to relax error configuration rules, allowing processing to continue, so that there is data to test with.  
   
- Decide whether to change default null processing behaviors. By default, nulls in a string column are processed as empty values, while nulls in a numeric column are processed as zero. See [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) for instructions on setting null processing on an attribute.  
+ Decide whether to change default null processing behaviors. By default, nulls in a string column are processed as empty values, while nulls in a numeric column are processed as zero.  
   
 ## See Also  
  [Log Properties](../../analysis-services/server-properties/log-properties.md)   
- [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Defining the Unknown Member and Null Processing Properties](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

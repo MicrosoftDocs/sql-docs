@@ -6,14 +6,12 @@ ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.output"
 helpviewer_keywords: 
   - "Output Window [Transact-SQL]"
   - "Output Window [SQL Server Management Studio]"
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -34,5 +32,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [Transact-SQL Debugger](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
-  

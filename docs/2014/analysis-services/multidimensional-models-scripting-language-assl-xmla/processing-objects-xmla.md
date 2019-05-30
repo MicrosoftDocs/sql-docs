@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "errors [XML for Analysis]"
@@ -114,7 +112,7 @@ manager: craigg
 ### Code  
   
 ```  
-<Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
   </Object>  
@@ -129,7 +127,7 @@ manager: craigg
 ### Code  
   
 ```  
-<Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+<Process ProcessAffectedObjects="true" xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Object>  
     <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
     <CubeID>Adventure Works DW</CubeID>  

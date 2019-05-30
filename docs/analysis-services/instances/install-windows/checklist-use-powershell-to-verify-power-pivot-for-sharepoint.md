@@ -68,7 +68,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running  
 ```  
   
-##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService and PowerPivotEngineSerivce  
+##  <a name="bkmk_engine_and_system_service"></a> PowerPivotSystemService and PowerPivotEngineService  
  The scripts in this section verify the [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] system services. There is one system service for a SharePoint 2013 deployment and two services for a SharePoint 2010 deployment.  
   
  **PowerPivotSystemService**  
@@ -87,7 +87,7 @@ TypeName                                  Status Applications                   
 SQL Server PowerPivot Service Application Online {Default PowerPivot Service Application} SPFarm Name=SharePoint_Config_77d8ab0744a34e8aa27c806a2b8c760c  
 ```  
   
- **PowerPivotEngineSerivce**  
+ **PowerPivotEngineService**  
   
 > [!NOTE]  
 >  **Skip this script if** you are using SharePoint 2013. The PowerPivotEngineService is not part of a SharePoint 2013 deployment. If you run the Get-PowerPivotEngineService cmdlet on SharePoint 2013, you will see an error message similar to the following. This error message is returned even if you have run the Add-PSSnapin command described in the prerequisites section of this topic.  
@@ -448,7 +448,7 @@ Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 get-service | select name, displayname, status | where {$_.Name -eq "msolap`$powerpivot"} | format-table -property * -autosize | out-default  
   
 #Write-Host ""  
-Write-Host -ForegroundColor Green "PowerPivotEngineSerivce and PowerPivotSystemService"  
+Write-Host -ForegroundColor Green "PowerPivotEngineService and PowerPivotSystemService"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
   
 Get-PowerPivotSystemService | select typename, status, applications, farm | format-table -property * -autosize | out-default  

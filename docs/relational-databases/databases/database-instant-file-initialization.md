@@ -1,7 +1,7 @@
 ---
 title: "Database Instant File Initialization | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2018"
+ms.date: "03/07/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -33,9 +33,9 @@ File initialization causes these operations to take longer. However, when data i
 ## Instant File Initialization (IFI)  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], data files can be initialized instantaneously to avoid zeroing operations. Instant file initialization allows for fast execution of the previously mentioned file operations. Instant file initialization reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.  
   
-> [!NOTE]  
+> [!NOTE]
 > Instant file initialization is available only on [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] or [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] or later versions.  
-
+> 
 > [!IMPORTANT]
 > Instant file initialization is available only for data files. Log files will always be zeroed when being created, or growing in size.
   
@@ -46,15 +46,17 @@ Instant file initialization is only available if the [!INCLUDE[ssNoVersion](../.
   
 To grant an account the `Perform volume maintenance tasks` permission:  
   
-1.  On the computer where the backup file will be created, open the **Local Security Policy** application (`secpol.msc`).  
+1.  On the computer where the data file will be created, open the **Local Security Policy** application (`secpol.msc`).  
   
 2.  In the left pane, expand **Local Policies**, and then click **User Rights Assignment**.  
   
 3.  In the right pane, double-click **Perform volume maintenance tasks**.  
   
-4.  Click **Add User or Group** and add any user accounts that are used for backups.  
+4.  Click **Add User or Group** and add the account that runs the SQL Server service.  
   
 5.  Click **Apply**, and then close all **Local Security Policy** dialog boxes.  
+
+1. Restart the SQL Server service.
 
 > [!NOTE]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], this permission can be granted to the service account at install time, during setup. If using the [command prompt install](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), add the /SQLSVCINSTANTFILEINIT argument, or check the box *Grant Perform Volume Maintenance Task privilege to SQL Server Database Engine Service* in the [installation wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
@@ -65,15 +67,11 @@ To grant an account the `Perform volume maintenance tasks` permission:
 ## Remarks
 If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account is granted *SE_MANAGE_VOLUME_NAME*, an informational message that resembles the following is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log at startup: 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account has **not** been granted *SE_MANAGE_VOLUME_NAME*, an informational message that resembles the following is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log at startup: 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 **Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 

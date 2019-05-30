@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.findresults1"
-  - "findresultswindow"
+f1_keywords:
   - "vs.findresults2"
 helpviewer_keywords: 
   - "Find Results Windows dialog box"
@@ -91,5 +88,3 @@ manager: craigg
  and might conclude with this line of statistics:  
   
  `Total replaced: 57  Matching files: 23  Total files searched: 59`  
-  
-  

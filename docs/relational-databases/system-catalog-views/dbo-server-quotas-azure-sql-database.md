@@ -2,10 +2,8 @@
 title: "dbo.server_quotas (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
 ms.date: "08/02/2016"
-ms.prod: 
+ms.service: sql-database 
 ms.reviewer: ""
-ms.prod_service: sql-database
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.server_quotas"

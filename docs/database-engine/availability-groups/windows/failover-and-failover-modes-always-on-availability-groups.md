@@ -1,6 +1,7 @@
 ---
-title: "Failover and Failover Modes (Always On Availability Groups) | Microsoft Docs"
-ms.custom: ""
+title: "Failover modes for availability groups"
+description: "A description of the different failover modes available for databases participating in an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -62,7 +63,7 @@ manager: craigg
  A failover that can be initiated by a database administrator when no secondary replica is SYNCHRONIZED with the primary replica or the primary replica is not running and no secondary replica is failover ready. Forced failover risks possible data loss and is recommended strictly for disaster recovery. Forced failover is also known as forced manual failover because it can only be initiated manually. This is the only form of failover supported by in asynchronous-commit availability mode.  
   
  [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
- Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
+ Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
   
  [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)]  
  Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
@@ -77,9 +78,9 @@ manager: craigg
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Planned manual failover|No|Yes|Yes|  
-|Forced failover|Yes|Yes|Yes**\***|  
+|Forced failover|Yes|Yes|Yes**&#42;**|  
   
- **\***If you issue a forced failover command on a synchronized secondary replica, the secondary replica behaves the same as for a manual failover.  
+ **&#42;**If you issue a forced failover command on a synchronized secondary replica, the secondary replica behaves the same as for a manual failover.  
   
  The amount of time that the database is unavailable during a failover depends on the type of failover and its cause.  
   

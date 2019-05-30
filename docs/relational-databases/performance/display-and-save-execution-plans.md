@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], execution plans"
   - "tuning queries [SQL Server]"
 ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

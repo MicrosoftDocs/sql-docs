@@ -1,7 +1,7 @@
 ---
 title: "PolyBase scale-out groups | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: polybase
@@ -14,6 +14,7 @@ ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
 author: rothja
 ms.author: jroth
 manager: craigg
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # PolyBase scale-out groups
 
@@ -40,7 +41,7 @@ When querying external SQL Server, Oracle or Teradata instances, partitioned tab
 For e.g., let's say you have an external SQL Server table with 12 monthly partitions and a 3-node PolyBase scale-out group, each node will use 4 PolyBase readers to process each of the 12 partitions. This is illustrated in the image below. 
 
 > [!NOTE]
- that this is different from scale-out reads over Hadoop. 
+>  that this is different from scale-out reads over Hadoop. 
 
 ![PolyBase scale-out groups](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase scale-out groups")
   

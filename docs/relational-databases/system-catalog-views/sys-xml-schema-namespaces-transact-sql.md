@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_namespaces catalog view"
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sys.xml_schema_namespaces (Transact-SQL)

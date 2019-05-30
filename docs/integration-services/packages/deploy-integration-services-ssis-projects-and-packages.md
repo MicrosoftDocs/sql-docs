@@ -16,11 +16,15 @@ f1_keywords:
   - "sql13.ssis.ssms.isenvprop.variables.f1"
   - "sql13.ssis.migrationwizard.f1"
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Deploy Integration Services (SSIS) Projects and Packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the legacy package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
 For more information about the legacy package deployment model, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
@@ -404,13 +408,13 @@ Launch the wizard by either:
   
  You can also use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to deploy the project and execute the packages. For more information, see the topics in the **See Also** section.  
   
-> [!TIP]  
+> [!TIP]
 >  You can easily generate the Transact-SQL statements for the stored procedures listed in the procedure below, with the exception of catalog.deploy_project, by doing the following:  
->   
+> 
 >  1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand the **Integration Services Catalogs** node in Object Explorer and navigate to the package you want to execute.  
 > 2.  Right-click the package, and then click **Execute**.  
 > 3.  As needed, set parameters values, connection manager properties, and options in the **Advanced** tab such as the logging level.  
->   
+> 
 >      For more information about logging levels, see [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
 > 4.  Before clicking **OK** to execute the package, click **Script**. The Transact-SQL appears in a Query Editor window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

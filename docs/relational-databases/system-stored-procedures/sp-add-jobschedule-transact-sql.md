@@ -46,22 +46,22 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  Job identification number of the job to which the schedule is added. *job_id* is **uniqueidentifier**, with no default.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  Name of the job to which the schedule is added. *job_name* is **nvarchar(128)**, with no default.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  Name of the schedule. *name* is **nvarchar(128)**, with no default.  
   
- [ **@enabled=** ] *enabled_flag*  
+`[ @enabled = ] enabled_flag`
  Indicates the current status of the schedule. *enabled_flag* is **tinyint**, with a default of **1** (enabled). If **0**, the schedule is not enabled. When the schedule is disabled, the job will not be run.  
   
- [ **@freq_type=** ] *frequency_type*  
+`[ @freq_type = ] frequency_type`
  Value that indicates when the job is to be executed. *frequency_type* is **int**, with a default of **0**, and can be one of the following values:  
   
 |Value|Description|  
@@ -74,7 +74,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64**|Run when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service starts.|  
 |**128**|Run when the computer is idle.|  
   
- [ **@freq_interval=** ] *frequency_interval*  
+`[ @freq_interval = ] frequency_interval`
  Day that the job is executed. *frequency_interval* is **int**, with a default of 0, and depends on the value of *frequency_type* as indicated in the following table:  
   
 |Value|Effect|  
@@ -87,7 +87,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64** (when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service starts)|*frequency_interval* is unused.|  
 |**128**|*frequency_interval* is unused.|  
   
- [ **@freq_subday_type=** ] *frequency_subday_type*  
+`[ @freq_subday_type = ] frequency_subday_type`
  Specifies the units for *frequency_subday_interval*. *frequency_subday_type* is **int**, with no default, and can be one of the following values:  
   
 |Value|Description (unit)|  
@@ -96,10 +96,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**0x4**|Minutes|  
 |**0x8**|Hours|  
   
- [ **@freq_subday_interval=** ] *frequency_subday_interval*  
+`[ @freq_subday_interval = ] frequency_subday_interval`
  Number of *frequency_subday_type* periods to occur between each execution of the job. *frequency_subday_interval* is **int**, with a default of 0.  
   
- [ **@freq_relative_interval=** ] *frequency_relative_interval*  
+`[ @freq_relative_interval = ] frequency_relative_interval`
  Further defines the *frequency_interval* when *frequency_type* is set to **32** (monthly relative).  
   
  *frequency_relative_interval* is **int**, with no default, and can be one of the following values:  
@@ -114,27 +114,27 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* indicates the occurrence of the interval. For example, if *frequency_relative_interval* is set to **2**, *frequency_type* is set to **32**, and *frequency_interval* is set to **3**, the scheduled job would occur on the second Tuesday of each month.  
   
- [ **@freq_recurrence_factor=** ] *frequency_recurrence_factor*  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor`
  Number of weeks or months between the scheduled execution of the job. *frequency_recurrence_factor* is used only if *frequency_type* is set to **8**, **16**, or **32**. *frequency_recurrence_factor* is **int**, with a default of 0.  
   
- [ **@active_start_date=** ] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  Date on which job execution can begin. *active_start_date* is **int**, with no default. The date is formatted as YYYYMMDD. If *active_start_date* is set, the date must be greater than or equal to 19900101.  
   
  After the schedule is created, review the start date and confirm that it is the correct date. For more information, see the section "Scheduling Start Date" in [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- [ **@active_end_date=** ] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  Date on which job execution can stop. *active_end_date* is **int**, with no default. The date is formatted as YYYYMMDD.  
   
- [ **@active_start_time=** ] *active_start_time*  
+`[ @active_start_time = ] active_start_time`
  Time on any day between *active_start_date* and *active_end_date* to begin job execution. *active_start_time* is **int**, with no default. The time is formatted as HHMMSS on a 24-hour clock.  
   
- [ **@active_end_time=***active_end_time*  
+`[ @active_end_time = active_end_time_`
  Time on any day between *active_start_date* and *active_end_date* to end job execution. *active_end_time* is **int**, with no default. The time is formatted as HHMMSS on a 24-hour clock.  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+`[ @schedule_id = schedule_idOUTPUT`
  Schedule identification number assigned to the schedule if it is created successfully. *schedule_id* is an output variable of type **int**, with no default.  
   
- [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  
+`[ @schedule_uid = ] _schedule_uidOUTPUT`
  A unique identifier for the schedule. *schedule_uid* is a variable of type **uniqueidentifier**.  
   
 ## Return Code Values  

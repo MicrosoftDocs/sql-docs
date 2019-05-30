@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Documentation | Microsoft Docs"
-ms.date: "08/11/2018"
+ms.date: "08/12/2018"
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -25,9 +25,6 @@ monikerRange: ">= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproduc
 # SQL Server Documentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
-
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on both Windows and Linux. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
@@ -36,11 +33,14 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on Windows. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
 
+SQL Server 2014, and older versions including SQL Server 2005, have documentation available [here](#previous-versions-gm66).
+
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
 -->
 
 ::: moniker range="= sqlallproducts-allversions"
+
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 Release Notes](../sql-server/sql-server-ver15-release-notes.md)        |
@@ -51,12 +51,15 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 ::: moniker-end
 
 ::: moniker range="= sql-server-ver15"
+
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 Release Notes](../sql-server/sql-server-ver15-release-notes.md)        |
+
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)        |
@@ -66,16 +69,16 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
+
 |What's new  | Release notes  |
 |---------|---------|
 |[What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)        |
+
 ::: moniker-end
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 **Try SQL Server 2016!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
@@ -83,10 +86,10 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 **Try SQL Server!**
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Download SQL Server for Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Install SQL Server on Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Install SQL Server on Linux](../linux/sql-server-linux-setup.md)
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Download from Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Create Virtual Machine](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Get a Virtual Machine with SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
+
+[!INCLUDE[get-sql-tools](../includes/paragraph-content/get-sql-tools.md)]
 
 ## SQL Server Technologies
 
@@ -130,6 +133,10 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Wide World Importers sample database](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
 - [AdventureWorks sample databases and scripts for SQL Server 2016](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples)
+
+## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005
+
+[!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

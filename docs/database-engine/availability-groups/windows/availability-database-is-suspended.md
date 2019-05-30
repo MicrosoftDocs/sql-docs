@@ -1,6 +1,7 @@
 ---
-title: "Availability database is suspended | Microsoft Docs"
-ms.custom: ""
+title: "Availability database is suspended for an availability group"
+description: "Identify possible causes for why a database in an Always On availability group might be suspended."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability database is suspended
+# Availability database is suspended for an availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  

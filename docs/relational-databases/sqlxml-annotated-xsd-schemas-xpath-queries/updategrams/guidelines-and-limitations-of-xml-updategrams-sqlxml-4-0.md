@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "updategrams [SQLXML], about updategrams"
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

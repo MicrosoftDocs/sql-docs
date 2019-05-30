@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor, performance improvements"
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Performance Improvements using DTA recommendations

@@ -76,7 +76,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, select **Save***table_name*.  
+8.  On the **File** menu, select **Save**_table_name_.  
   
 #### To modify the properties of an index in Object Explorer  
   
@@ -94,7 +94,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 7.  Change the settings of any and all properties to customize the index.  
   
-8.  To add, remove, or change the position of an index column, select the **General** page from the **Index Properties -** *index_name* dialog box. For more information, see [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
+8.  To add, remove, or change the position of an index column, select the **General** page from the **Index Properties -** _index_name_ dialog box. For more information, see [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

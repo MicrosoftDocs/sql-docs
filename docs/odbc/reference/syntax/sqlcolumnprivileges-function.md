@@ -30,18 +30,18 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumnPrivileges(  
-     SQLHSTMT      StatementHandle,  
-     SQLCHAR *     CatalogName,  
-     SQLSMALLINT   NameLength1,  
-     SQLCHAR *     SchemaName,  
-     SQLSMALLINT   NameLength2,  
-     SQLCHAR *     TableName,  
-     SQLSMALLINT   NameLength3,  
-     SQLCHAR *     ColumnName,  
-     SQLSMALLINT   NameLength4);  
+     SQLHSTMT      StatementHandle,  
+     SQLCHAR *     CatalogName,  
+     SQLSMALLINT   NameLength1,  
+     SQLCHAR *     SchemaName,  
+     SQLSMALLINT   NameLength2,  
+     SQLCHAR *     TableName,  
+     SQLSMALLINT   NameLength3,  
+     SQLCHAR *     ColumnName,  
+     SQLSMALLINT   NameLength4);  
 ```  
   
 ## Arguments  

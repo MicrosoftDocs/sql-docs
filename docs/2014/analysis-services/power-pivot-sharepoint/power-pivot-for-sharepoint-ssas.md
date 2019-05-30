@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
@@ -83,7 +82,7 @@ manager: craigg
  [Example License Topologies and Costs  for SQL Server 2014 Self-Service Business Intelligence](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## See Also  
- [PowerPivot Planning and Deployment](http://go.microsoft.com/fwlink/?linkID=220972)   
- [Disaster Recovery for PowerPivot for SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [PowerPivot Planning and Deployment](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [Disaster Recovery for PowerPivot for SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

@@ -2,10 +2,9 @@
 title: "sys.database_usage (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: ""
+ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "database_usage"

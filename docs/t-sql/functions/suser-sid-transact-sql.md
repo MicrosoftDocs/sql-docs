@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], logins"
   - "SUSER_SID function"
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SUSER_SID (Transact-SQL)
@@ -66,7 +66,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## Examples  
   
 ### A. Using SUSER_SID  
- The followng example returns the security identification number (SID) for the current security context.  
+ The following example returns the security identification number (SID) for the current security context.  
   
 ```  
 SELECT SUSER_SID();  

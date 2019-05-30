@@ -1,6 +1,7 @@
 ---
-title: "Data synchronization state of availability database is not healthy | Microsoft Docs"
-ms.custom: ""
+title: "Data synchronization state of availability database is not healthy"
+description: "Identify possible causes for why the data synchronization state of database in an Always On availability group is not healthy."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: "erikre"
 ---
-# Data synchronization state of availability database is not healthy
+# Data synchronization state of availability database is not healthy for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  

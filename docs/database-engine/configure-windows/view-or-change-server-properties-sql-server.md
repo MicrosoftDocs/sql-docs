@@ -149,9 +149,9 @@ GO
   
 2.  In **SQL Server Configuration Manager**, click **SQL Server Services**.  
   
-3.  In the details pane, right-click **SQL Server (\<***instancename***>)**, and then click **Properties**.  
+3.  In the details pane, right-click **SQL Server (\<**_instancename_**>)**, and then click **Properties**.  
   
-4.  In the **SQL Server (\<***instancename***>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
+4.  In the **SQL Server (\<**_instancename_**>) Properties** dialog box, change the server properties on the **Service** tab or the **Advanced** tab, and then click **OK**.  
   
 ##  <a name="FollowUp"></a> Follow Up: After you change server properties  
  For some properties, the server might have to be restarted before the change can take effect.  

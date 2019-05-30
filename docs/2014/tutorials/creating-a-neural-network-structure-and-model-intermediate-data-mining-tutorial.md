@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "discretization [Analysis Services]"
@@ -16,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Creating a Neural Network Structure and Model (Intermediate Data Mining Tutorial)
   To create a data mining model, you must first use the Data Mining Wizard to create a new mining structure based on the new data source view. In this task you will use the wizard to create a mining structure, and at the same time create an associated mining model that is based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm.  

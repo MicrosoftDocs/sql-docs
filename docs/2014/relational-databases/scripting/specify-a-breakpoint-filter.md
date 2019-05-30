@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.breakpt.contraints"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint filter"
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
@@ -44,5 +41,3 @@ manager: craigg
  [Specify a Breakpoint Condition](specify-a-breakpoint-condition.md)   
  [Specify a Hit Count](specify-a-hit-count.md)   
  [Specify a Breakpoint Action](specify-a-breakpoint-action.md)  
-  
-  

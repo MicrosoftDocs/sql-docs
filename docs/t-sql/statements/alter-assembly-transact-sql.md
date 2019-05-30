@@ -30,7 +30,7 @@ manager: craigg
 
   Alters an assembly by modifying the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] catalog properties of an assembly. ALTER ASSEMBLY refreshes it to the latest copy of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] modules that hold its implementation and adds or removes files associated with it. Assemblies are created by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
->  [!WARNING]
+> [!WARNING]
 >  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -79,11 +79,11 @@ ALTER ASSEMBLY assembly_name
  Separate ALTER ASSEMBLY statements must be issued for any dependent assemblies that also require updating.  
   
  PERMISSION_SET = { SAFE | EXTERNAL_ACCESS | UNSAFE }   
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  The `PERMISSION_SET` option is affected by the `clr strict security` option, described in the opening warning. When `clr strict security` is enabled, all assemblies are treated as `UNSAFE`.  
- Specifies the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] code access permission set property of the assembly. For more information about this property, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
-  
-> [!NOTE]  
+>  Specifies the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] code access permission set property of the assembly. For more information about this property, see [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
+> 
+> [!NOTE]
 >  The EXTERNAL_ACCESS and UNSAFE options are not available in a contained database.  
   
  VISIBILITY = { ON | OFF }  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Alerts object"
   - "SQLAgent:Alerts"
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server Agent, Alerts Object

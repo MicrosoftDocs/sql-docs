@@ -2,7 +2,7 @@
 title: "Reporting Services in SQL Server Management Studio (SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], how-to topics"
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Reporting Services in SQL Server Management Studio (SSRS)
   Report server administrators can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to:  

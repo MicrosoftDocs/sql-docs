@@ -88,7 +88,7 @@ where ProductModelID=19
   
       <myNS:Result xmlns:myNS="uri:SomeNamespace">  
   <Summary xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-   <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
+   <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
      Our top-of-the-line competition mountain bike. Performance-enhancing   
      options include the innovative HL Frame, super-smooth front   
      suspension, and traction for all terrain.</p1:p>  
@@ -130,7 +130,7 @@ where ProductModelID=19
   
       <Result xmlns="uri:SomeNamespace">  
   <PD:Summary xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-   <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
+   <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
          Our top-of-the-line competition mountain bike. Performance-  
          enhancing options include the innovative HL Frame, super-smooth   
          front suspension, and traction for all terrain.</p1:p>  

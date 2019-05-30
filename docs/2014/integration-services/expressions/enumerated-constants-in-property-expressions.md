@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "enumerated constants [Integration Services]"
   - "property expressions [Integration Services]"
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Enumerated Constants in Property Expressions
@@ -574,7 +574,7 @@ manager: craigg
 |Failure|1|  
 |Completion|2|  
   
- `IsolationLevel` property-Set by the .NET Framework `IsolationLevel` enumeration. For more information, see the .NET Framework Class Library in the [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel` property-Set by the .NET Framework `IsolationLevel` enumeration. For more information, see the .NET Framework Class Library in the [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
   
  `LoggingMode` property-Set by using values from the `DTSLoggingMode` enumeration.  
   

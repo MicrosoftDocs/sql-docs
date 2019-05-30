@@ -33,14 +33,14 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## Arguments  
- [ **@no_checks=**] *no_checks*  
+`[ @no_checks = ] no_checks`
  Indicates whether to check for dependent objects before dropping the Distributor. *no_checks* is **bit**, with a default of 0.  
   
  If **0**, **sp_dropdistributor** checks to make sure that all publishing and distribution objects in addition to the Distributor have been dropped.  
   
  If **1**, **sp_dropdistributor** drops all the publishing and distribution objects prior to uninstalling the distributor.  
   
- [ **@ignore_distributor=**] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Indicates whether this stored procedure is executed without connecting to the Distributor. *ignore_distributor* is **bit**, with a default of **0**.  
   
  If **0**, **sp_dropdistributor** connects to the Distributor and removes all replication objects. If **sp_dropdistributor** is unable to connect to the Distributor, the stored procedure fails.  

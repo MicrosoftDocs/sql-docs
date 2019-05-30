@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], symmetric keys"
   - "cryptography [SQL Server], symmetric keys"
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Symmetric Key Permissions (Transact-SQL)

@@ -30,16 +30,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedures(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      CatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      SchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      ProcName,  
-     SQLSMALLINT    NameLength3);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      CatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      SchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      ProcName,  
+     SQLSMALLINT    NameLength3);  
 ```  
   
 ## Arguments  

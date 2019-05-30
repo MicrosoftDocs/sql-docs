@@ -25,7 +25,7 @@ manager: craigg
   
 -   Generate transaction performance analysis reports to identify performance-critical tables and stored procedures.  
   
- For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx).  
+ For information about migration methodologies, see [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  The transaction performance collector and the transaction performance analysis reports help you accomplish the following tasks:  
   
@@ -180,13 +180,13 @@ manager: craigg
   
 -   Contention Statistics Section  
   
-     This section includes a table that shows contention on the database table. For more information regarding database latches and locks, please see [Locking Architecture](http://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). The columns are as follows:  
+     This section includes a table that shows contention on the database table. For more information regarding database latches and locks, please see [Locking Architecture](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). The columns are as follows:  
   
     -   Percent of total waits. The percentage of latch and lock waits on this database table compared to activity of the database. The higher this percentage, the more heavily used the table is compared to other tables in the database.  
   
-    -   Latch Statistics. These columns record the number of latch waits for queries involving for this table. For information on latches, see [Latching](http://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). The higher this number, the more latch contention on the table.  
+    -   Latch Statistics. These columns record the number of latch waits for queries involving for this table. For information on latches, see [Latching](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). The higher this number, the more latch contention on the table.  
   
-    -   Lock Statistics. This group of columns record the number of page lock acquisitions and waits for queries for this table. For more information on locks, see [Understanding Locking in SQL Server](http://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). The more waits, the more lock contention on the table.  
+    -   Lock Statistics. This group of columns record the number of page lock acquisitions and waits for queries for this table. For more information on locks, see [Understanding Locking in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). The more waits, the more lock contention on the table.  
   
 -   Migration Difficulties Section  
   

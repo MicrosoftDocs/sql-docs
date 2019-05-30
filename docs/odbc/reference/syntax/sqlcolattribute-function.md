@@ -33,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLColAttribute (  
       SQLHSTMT        StatementHandle,  
@@ -186,7 +186,7 @@ SQLRETURN SQLColAttribute (
 ## Example  
  The following sample code does not free handles and connections. See [SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md), [Sample ODBC Program](../../../odbc/reference/sample-odbc-program.md), and [SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md) for code samples to free handles and statements.  
   
-```  
+```cpp  
 // SQLColAttibute.cpp  
 // compile with: user32.lib odbc32.lib  
   
@@ -206,11 +206,12 @@ struct DataBinding {
 void printStatementResult(SQLHSTMT hstmt) {  
    int bufferSize = 1024, i;  
    SQLRETURN retCode;  
-   SQLSMALLINT numColumn = 0, bufferLenUsed;  
+   SQLSMALLINT numColumn = 0, bufferLenUsed;
+   
+   retCode = SQLNumResultCols(hstmt, &numColumn);  
+   
    SQLPOINTER* columnLabels = (SQLPOINTER *)malloc( numColumn * sizeof(SQLPOINTER*) );  
    struct DataBinding* columnData = (struct DataBinding*)malloc( numColumn * sizeof(struct DataBinding) );  
-  
-   retCode = SQLNumResultCols(hstmt, &numColumn);  
   
    printf( "Columns from that table:\n" );  
    for ( i = 0 ; i < numColumn ; i++ ) {  

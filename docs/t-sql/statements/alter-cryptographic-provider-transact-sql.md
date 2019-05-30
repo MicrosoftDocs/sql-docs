@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER CRYPTOGRAPHIC PROVIDER"
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)

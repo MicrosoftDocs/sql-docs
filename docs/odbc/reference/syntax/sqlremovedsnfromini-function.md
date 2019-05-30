@@ -30,10 +30,10 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## Arguments  

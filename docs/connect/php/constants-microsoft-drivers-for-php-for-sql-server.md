@@ -1,7 +1,7 @@
 ---
 title: "Constants (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "02/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -62,6 +62,11 @@ You can select direct query execution or prepared statement execution with the P
 ### Handling Numeric Fetches
 The PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE attribute can be used to handle numeric fetches from columns with numeric SQL types (bit, integer, smallint, tinyint, float, and real). When PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is set to true, the results from an integer column are represented as ints, while SQL floats and reals are represented as floats. This attribute can be set with  [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
+You can modify the default decimal formatting behaviour with the PDO::SQLSRV_ATTR_FORMAT_DECIMALS and PDO::SQLSRV_ATTR_DECIMAL_PLACES attributes. The behaviour of these attributes is identical to the corresponding options on the SQLSRV side (**FormatDecimals** and **DecimalPlaces**), except that output params are not supported for formatting. These attributes may be set at either the connection or statement level with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) or [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), but any statement attribute will override the corresponding connection attribute. For more details, see [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+
+### Handling Date and Time Fetches
+
+The PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE specifies whether to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects. If left false, the default behaviour is to return them as strings. This attribute may be set at either the connection or statement level with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) or [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), but the statement attribute will override the corresponding connection attribute. For more information, see [How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## SQLSRV Driver Constants  
 The following sections list the constants used by the SQLSRV driver.  

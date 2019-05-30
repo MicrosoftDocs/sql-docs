@@ -15,11 +15,15 @@ helpviewer_keywords:
   - "data flow [Integration Services]"
   - "errors [Integration Services], data flow outputs"
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Flow
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, transformations, and destinations. Sources extract data from data stores such as tables and views in relational databases, files, and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases. Transformations modify, summarize, and clean data. Destinations load data into data stores or create in-memory datasets.  
   
 > [!NOTE]  
@@ -184,7 +188,7 @@ manager: craigg
  For more information, see [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).  
   
 ### Columns  
- Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type-input, output, or external-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
+ Inputs, outputs, and error outputs are collections of columns. Each column is configurable and depending on the column type-input, output, or external- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides different properties for the column. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides three different ways of setting column properties: programmatically, by using component-specific dialog boxes, or by using the **Advanced Editor** dialog box.  
   
 ## Paths  
  Paths connect data flow components. In [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, you can view and modify the path properties, view the output metadata for the path start point, and attach data viewers to a path.  

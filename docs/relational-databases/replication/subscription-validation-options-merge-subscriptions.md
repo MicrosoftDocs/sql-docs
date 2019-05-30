@@ -30,6 +30,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## See Also  
  [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

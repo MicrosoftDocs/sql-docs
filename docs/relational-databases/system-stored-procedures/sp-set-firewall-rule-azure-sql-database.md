@@ -2,10 +2,8 @@
 title: "sp_set_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2016"
-ms.prod: ""
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_set_firewall_rule"

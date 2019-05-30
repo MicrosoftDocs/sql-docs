@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Native Client Support for High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-31"
+ms.date: 08/31/2016
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: native-client

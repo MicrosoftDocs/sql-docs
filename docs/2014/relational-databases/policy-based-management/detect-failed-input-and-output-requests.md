@@ -19,8 +19,8 @@ manager: craigg
 ## Best Practices Recommendations  
  Review the following [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base articles for more information about how to troubleshoot this error:  
   
--   [Microsoft Knowledge Base article 311081](http://go.microsoft.com/fwlink/?linkid=117744)  
+-   [Microsoft Knowledge Base article 311081](https://go.microsoft.com/fwlink/?linkid=117744)  
   
--   [Microsoft Knowledge Base article 885688](http://go.microsoft.com/fwlink/?linkid=117745)  
+-   [Microsoft Knowledge Base article 885688](https://go.microsoft.com/fwlink/?linkid=117745)  
   
   

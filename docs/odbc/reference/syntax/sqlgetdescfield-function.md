@@ -30,15 +30,15 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDescField(  
-     SQLHDESC        DescriptorHandle,  
-     SQLSMALLINT     RecNumber,  
-     SQLSMALLINT     FieldIdentifier,  
-     SQLPOINTER      ValuePtr,  
-     SQLINTEGER      BufferLength,  
-     SQLINTEGER *    StringLengthPtr);  
+     SQLHDESC        DescriptorHandle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     FieldIdentifier,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
 ```  
   
 ## Arguments  

@@ -35,7 +35,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## Arguments  
- [ **@maxtrans=**]  *maxtrans*  
+`[ @maxtrans = ] maxtrans`
  Is the number of transactions to return information about. *maxtrans* is **int**, with a default of **1**, which specifies the next transaction waiting for distribution.  
   
 ## Result Sets  

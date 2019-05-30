@@ -30,12 +30,12 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
-     SQLHDBC           ConnectionHandle,  
-     SQLUSMALLINT      FunctionId,  
-     SQLUSMALLINT *    SupportedPtr);  
+     SQLHDBC           ConnectionHandle,  
+     SQLUSMALLINT      FunctionId,  
+     SQLUSMALLINT *    SupportedPtr);  
 ```  
   
 ## Arguments  
@@ -136,13 +136,13 @@ SQLRETURN SQLGetFunctions(
 ## SQL_FUNC_EXISTS Macro  
  The SQL_FUNC_EXISTS(*SupportedPtr*, *FunctionID*) macro is used to determine support of ODBC 3*.x* or earlier functions after **SQLGetFunctions** has been called with a *FunctionId* argument of SQL_API_ODBC3_ALL_FUNCTIONS. The application calls SQL_FUNC_EXISTS with the *SupportedPtr* argument set to the *SupportedPtr* passed in *SQLGetFunctions*, and with the *FunctionID* argument set to the **#define** for the function. SQL_FUNC_EXISTS returns SQL_TRUE if the function is supported, and SQL_FALSE otherwise.  
   
-> [!NOTE]  
+> [!NOTE]
 >  When working with an ODBC 2*.x* driver, the ODBC 3*.x* Driver Manager will return SQL_TRUE for **SQLAllocHandle** and **SQLFreeHandle** because **SQLAllocHandle** is mapped to **SQLAllocEnv**, **SQLAllocConnect**, or **SQLAllocStmt**, and because **SQLFreeHandle** is mapped to **SQLFreeEnv**, **SQLFreeConnect**, or **SQLFreeStmt**. **SQLAllocHandle** or **SQLFreeHandle** with a *HandleType* argument of SQL_HANDLE_DESC is not supported, however, even though SQL_TRUE is returned for the functions, because there is no ODBC 2*.x* function to map to in this case.  
   
 ## Code Example  
  The following three examples show how an application uses **SQLGetFunctions** to determine if a driver supports **SQLTables**, **SQLColumns**, and **SQLStatistics**. If the driver does not support these functions, the application disconnects from the driver. The first example calls **SQLGetFunctions** once for each function.  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -165,7 +165,7 @@ SQLDisconnect(hdbc);
   
  In the second example, an ODBC 3.x application calls **SQLGetFunctions** and passes it an array in which **SQLGetFunctions** returns information about all ODBC 3.x and earlier functions.  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -174,8 +174,8 @@ retcode = SQLGetFunctions(hdbc, SQL_API_ODBC3_ALL_FUNCTIONS, fExists);
 // SQLGetFunctions is completed successfully and SQLTables, SQLColumns, and SQLStatistics are supported by the driver.  
 if (reccode == SQL_SUCCESS &&   
 SQL_FUNC_EXISTS(fExists, SQL_API_SQLTABLES) == SQL_TRUE &&  
-   SQL_FUNC_EXISTS(fExists, SQL_API_SQLCOLUMNS) == SQL_TRUE &&  
-   SQL_FUNC_EXISTS(fExists, SQL_API_SQLSTATISTICS) == SQL_TRUE)   
+   SQL_FUNC_EXISTS(fExists, SQL_API_SQLCOLUMNS) == SQL_TRUE &&  
+   SQL_FUNC_EXISTS(fExists, SQL_API_SQLSTATISTICS) == SQL_TRUE)   
 {  
   
    // Continue with application  
@@ -187,7 +187,7 @@ SQLDisconnect(hdbc);
   
  The third example is an ODBC 2.x application calls **SQLGetFunctions** and passes it an array of 100 elements in which **SQLGetFunctions** returns information about all ODBC 2.x and earlier functions.  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
@@ -198,11 +198,11 @@ retcode = SQLGetFunctions(hdbc, SQL_API_ALL_FUNCTIONS, fExists);
 /* SQLGetFunctions is completed successfully and SQLTables, SQLColumns, and SQLStatistics are supported by the driver. */  
 if (retcode == SQL_SUCCESS &&   
 fExists[SQL_API_SQLTABLES] == SQL_TRUE &&  
-   fExists[SQL_API_SQLCOLUMNS] == SQL_TRUE &&  
-   fExists[SQL_API_SQLSTATISTICS] == SQL_TRUE)   
+   fExists[SQL_API_SQLCOLUMNS] == SQL_TRUE &&  
+   fExists[SQL_API_SQLSTATISTICS] == SQL_TRUE)   
 {  
   
-   /* Continue with application */  
+   /* Continue with application */  
   
 }  
   

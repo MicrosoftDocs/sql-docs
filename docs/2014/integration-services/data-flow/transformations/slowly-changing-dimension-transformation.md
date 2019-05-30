@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SCD transformation"
   - "updating slowly changing dimensions"
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Slowly Changing Dimension Transformation
@@ -101,6 +101,6 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481), on blogs.msdn.com.  
+-   Blog entry, [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481), on blogs.msdn.com.  
   
   

@@ -30,17 +30,17 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLDrivers(  
-     SQLHENV         EnvironmentHandle,  
-     SQLUSMALLINT    Direction,  
-     SQLCHAR *       DriverDescription,  
-     SQLSMALLINT     BufferLength1,  
-     SQLSMALLINT *   DescriptionLengthPtr,  
-     SQLCHAR *       DriverAttributes,  
-     SQLSMALLINT     BufferLength2,  
-     SQLSMALLINT *   AttributesLengthPtr);  
+     SQLHENV         EnvironmentHandle,  
+     SQLUSMALLINT    Direction,  
+     SQLCHAR *       DriverDescription,  
+     SQLSMALLINT     BufferLength1,  
+     SQLSMALLINT *   DescriptionLengthPtr,  
+     SQLCHAR *       DriverAttributes,  
+     SQLSMALLINT     BufferLength2,  
+     SQLSMALLINT *   AttributesLengthPtr);  
 ```  
   
 ## Arguments  

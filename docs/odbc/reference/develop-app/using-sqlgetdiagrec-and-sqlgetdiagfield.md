@@ -41,8 +41,8 @@ GetSQLStmt(SQLStmt);
 rc1 = SQLExecDirect(hstmt, SQLStmt, SQL_NTS);  
 if ((rc1 == SQL_SUCCESS_WITH_INFO) || (rc1 == SQL_ERROR)) {
    SQLLEN numRecs = 0;
-   SQLGetDiagField(SQL_HANDLE_STMT, hstmt, 0, SQL_DIAG_NUMBER, &numRecs, 0, 0);
-   // Get the status records.
+   SQLGetDiagField(SQL_HANDLE_STMT, hstmt, 0, SQL_DIAG_NUMBER, &numRecs, 0, 0);
+   // Get the status records.
    i = 1;  
    while (i <= numRecs && (rc2 = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, i, SqlState, &NativeError,  
             Msg, sizeof(Msg), &MsgLen)) != SQL_NO_DATA) {  

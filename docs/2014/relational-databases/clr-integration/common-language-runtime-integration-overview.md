@@ -49,7 +49,7 @@ manager: craigg
  Describes how to enable CLR integration.  
   
 ## See Also  
- [Installing the .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installing the .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Performance of CLR Integration](clr-integration-architecture-performance.md)  
   
   

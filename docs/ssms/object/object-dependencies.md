@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.objectdependencies.f1"
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Object Dependencies
@@ -23,10 +23,10 @@ The **Object Dependencies (Advanced Page)** for the current object lists the [!I
 Use this dialog box to understand the dependencies before changing or deleting the selected object.  
   
 ## UIElement List  
-**Objects that depend on** *<selected object>*  
+**Objects that depend on** _\<selected object>_  
 Clicking this button displays a list of those objects that are dependency-tracked and that depend on the selected object.  
   
-**Objects on which** *<selected object>* **depends**  
+**Objects on which** _\<selected object>_ **depends**  
 Clicking this button displays a list of those objects that are dependency-tracked, on which the selected object depends.  
   
 **Dependencies**  

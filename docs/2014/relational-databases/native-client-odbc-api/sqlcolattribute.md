@@ -101,7 +101,7 @@ manager: craigg
  For more information, see [Sparse Columns Support &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLColAttribute Function](http://go.microsoft.com/fwlink/?LinkId=59334)   
+ [SQLColAttribute Function](https://go.microsoft.com/fwlink/?LinkId=59334)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](sqlsetstmtattr.md)  
   

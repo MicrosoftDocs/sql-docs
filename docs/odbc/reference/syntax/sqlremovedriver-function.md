@@ -30,12 +30,12 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLRemoveDriver(  
-     LPCSTR   lpszDriver,  
-     BOOL     fRemoveDSN,  
-     LPDWORD  lpdwUsageCount);  
+     LPCSTR   lpszDriver,  
+     BOOL     fRemoveDSN,  
+     LPDWORD  lpdwUsageCount);  
 ```  
   
 ## Arguments  

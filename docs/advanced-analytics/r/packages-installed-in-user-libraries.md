@@ -1,12 +1,12 @@
 ---
-title: Tips for using R packages installed in user libraries on SQL Server | Microsoft Docs
+title: Tips for using R packages installed in user libraries - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 05/30/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Tips for using R packages in SQL Server

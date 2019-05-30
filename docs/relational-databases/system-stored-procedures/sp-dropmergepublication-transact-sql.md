@@ -35,16 +35,16 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to drop. *publication* is **sysname**, with no default. If **all**, all existing merge publications are removed as well as the Snapshot Agent job associated with them. If you specify a particular value for *publication*, only that publication and its associated Snapshot Agent job are dropped.  
   
- [ **@ignore_distributor =**] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Used to drop a publication without doing cleanup tasks at the Distributor. *ignore_distributor* is **bit**, with a default of **0**. This parameter is also used when reinstalling the Distributor.  
   
- [ **@reserved=**] *reserved*  
+`[ @reserved = ] reserved`
  Is reserved for future use. *reserved* is **bit**, with a default of **0**.  
   
- [ **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata`
  Internal use only.  
   
 ## Return Code Values  

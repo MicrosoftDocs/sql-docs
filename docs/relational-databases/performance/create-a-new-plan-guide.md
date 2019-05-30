@@ -12,12 +12,12 @@ helpviewer_keywords:
   - "creating plan guides"
   - "plan guides [SQL Server]. creating"
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Create a New Plan Guide
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Plan guides influence query optimization by attaching query hints or a fixed query plan to them. In the plan guide, you specify the statement that you want optimized, and either an OPTION clause that contains query hints you want to use. or a specific query plan you want to use to optimize the query. When the query executes, the query optimizer matches the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to the plan guide and either attaches the OPTION clause to the query at run time or uses the specified query plan.  
 
 A Plan Guide applies either a fixed query plan, and/or query hints, to a query.

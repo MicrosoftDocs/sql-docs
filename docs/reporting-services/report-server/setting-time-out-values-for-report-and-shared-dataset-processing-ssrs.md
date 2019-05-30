@@ -2,7 +2,7 @@
 title: "Setting Time-out Values for Report and Shared Dataset Processing (SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "report processing [Reporting Services], time-outs"
   - "report execution time-outs [Reporting Services]"
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Setting Time-out Values for Report and Shared Dataset Processing (SSRS)
   You can [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specify time-out values to set limits on how system resources are used. Report server supports two time-out values:  

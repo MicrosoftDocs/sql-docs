@@ -1,11 +1,9 @@
 ---
 title: "History Cleanup Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.reviewer: ""
-ms.technology: supportability"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.historycleanup.f1"
@@ -14,6 +12,7 @@ helpviewer_keywords:
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
+ms.reviewer: ""
 manager: craigg
 ---
 # History Cleanup Task (Maintenance Plan)

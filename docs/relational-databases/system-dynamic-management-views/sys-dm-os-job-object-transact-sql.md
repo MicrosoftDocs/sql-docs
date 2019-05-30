@@ -2,10 +2,8 @@
 title: "sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_db_resource_stats"

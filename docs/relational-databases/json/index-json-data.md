@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "JSON, indexing JSON data"
   - "indexing JSON data"
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -145,10 +145,6 @@ ORDER BY JSON_VALUE(json,'$.name')
  
 ## Learn more about JSON in SQL Server and Azure SQL Database  
   
-### Microsoft blog posts  
-  
-For specific solutions, use cases, and recommendations, see these [blog posts](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
-
 ### Microsoft videos
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:

@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  Ensure that the schema and data exist on the subscription database. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber**, the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **pull** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For more information, see [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **\@publication**, **\@subscriber**, the name of the database at the Subscriber containing the published data for **\@destination_db**, a value of **pull** for **\@subscription_type**, and a value of **replication support only** for **\@sync_type**. For more information, see [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 3.  At the Subscriber, execute [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
   
@@ -58,7 +58,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  Ensure that the schema and data exist on the subscription database. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify the name of the database at the Subscriber containing the published data for **@destination_db**, a value of **push** for **@subscription_type**, and a value of **replication support only** for **@sync_type**. For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specify the name of the database at the Subscriber containing the published data for **\@destination_db**, a value of **push** for **\@subscription_type**, and a value of **replication support only** for **\@sync_type**. For updating subscriptions, see [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
   
 3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). For more information, see [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -68,9 +68,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  Ensure that the schema and data exist on the subscription database. This can be done by restoring a backup of the publication database at the Subscriber.  
   
-2.  At the Publisher, execute [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify **@publication**, **@subscriber**, **@subscriber_db**, and a value of **pull** for **@subscription_type**. This registers the pull subscription.  
+2.  At the Publisher, execute [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify **\@publication**, **\@subscriber**, **\@subscriber_db**, and a value of **pull** for **\@subscription_type**. This registers the pull subscription.  
   
-3.  At the Subscriber on the database containing the published data, execute [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specify a value of **none** for **@sync_type**.  
+3.  At the Subscriber on the database containing the published data, execute [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specify a value of **none** for **\@sync_type**.  
   
 4.  At the Subscriber, execute [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). For more information, see [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
@@ -80,7 +80,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  Ensure that the schema and data exist on the subscription database. This can be done by restoring a backup of the publication database at the Subscriber.  
   
-2.  At the Publisher on the publication database, execute [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify the name of the database at the Subscriber containing the published data for **@subscriber_db**, a value of **push** for **@subscription_type**, and a value of **none** for **@sync_type**.  
+2.  At the Publisher on the publication database, execute [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specify the name of the database at the Subscriber containing the published data for **\@subscriber_db**, a value of **push** for **\@subscription_type**, and a value of **none** for **\@sync_type**.  
   
 3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). For more information, see [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   

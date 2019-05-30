@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "statements [SQL Server], last statement"
   - "counting rows"
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # &#x40;&#x40;ROWCOUNT (Transact-SQL)
@@ -58,7 +58,7 @@ manager: craigg
   
  EXECUTE statements preserve the previous @@ROWCOUNT.  
   
- Statements such as USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION, or COMMIT TRANSACTION reset the ROWCOUNT value to 0.  
+ Statements such as USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION, or COMMIT TRANSACTION reset the ROWCOUNT value to 0.  
   
  Natively compiled stored procedures preserve the previous @@ROWCOUNT. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements inside natively compiled stored procedures do not set @@ROWCOUNT. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   

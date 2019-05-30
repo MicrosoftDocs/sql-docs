@@ -30,14 +30,14 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetInfo(  
-     SQLHDBC         ConnectionHandle,  
-     SQLUSMALLINT    InfoType,  
-     SQLPOINTER      InfoValuePtr,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLengthPtr);  
+     SQLHDBC         ConnectionHandle,  
+     SQLUSMALLINT    InfoType,  
+     SQLPOINTER      InfoValuePtr,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLengthPtr);  
 ```  
   
 ## Arguments  
@@ -719,7 +719,7 @@ SQLRETURN SQLGetInfo(
  SQL_DATABASE_NAME(ODBC 1.0)  
  A character string with the name of the current database in use, if the data source defines a named object called "database".  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 3*.x*, the value returned for this *InfoType* can also be returned by calling **SQLGetConnectAttr** with an *Attribute* argument of SQL_ATTR_CURRENT_CATALOG.  
   
  SQL_DATETIME_LITERALS(ODBC 3.0)  
@@ -1799,7 +1799,7 @@ SQLRETURN SQLGetInfo(
   
  For another example of using **SQLGetInfo**, see [SQLTables Function](../../../odbc/reference/syntax/sqltables-function.md).  
   
-```  
+```cpp  
 SQLUINTEGER fFuncs;  
   
 SQLGetInfo(hdbc,   

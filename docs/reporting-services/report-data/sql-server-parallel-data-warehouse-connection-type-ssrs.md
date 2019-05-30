@@ -2,14 +2,14 @@
 title: "SQL Server Parallel Data Warehouse Connection Type (SSRS) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
 ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # SQL Server Parallel Data Warehouse Connection Type (SSRS)

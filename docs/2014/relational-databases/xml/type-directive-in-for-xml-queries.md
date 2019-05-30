@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "FOR XML clause, TYPE directive"
   - "TYPE directive"
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # TYPE Directive in FOR XML Queries
@@ -55,8 +55,8 @@ SET @x = (
           FirstName,   
           LastName,   
           AdditionalContactInfo.query('  
-declare namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace aci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
               //act:telephoneNumber/act:number') as MorePhoneNumbers  
    FROM Person.Person  
    FOR XML AUTO, TYPE);  
@@ -73,8 +73,8 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT (SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-DECLARE namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
-DECLARE namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+DECLARE namespace aci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+DECLARE namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
  //act:telephoneNumber/act:number  
 ') AS PhoneNumbers  
 FROM Person.Person  
@@ -89,9 +89,9 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `<PhoneNumbers>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">111-111-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">111-111-1111</act:number>`  
   
- `<act:number xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">112-111-1111</act:number>`  
+ `<act:number xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">112-111-1111</act:number>`  
   
  `</PhoneNumbers>`  
   
@@ -105,13 +105,13 @@ GO
 DECLARE @FirstPhoneFromAdditionalContactInfo varchar(40);  
 SELECT @FirstPhoneFromAdditionalContactInfo =   
  ( SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
-declare namespace aci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace aci="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
    //act:telephoneNumber/act:number  
    ') AS PhoneNumbers  
    FROM Person.Person Contact  
    FOR XML AUTO, TYPE).value('  
-declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
+declare namespace act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
   /Contact[@BusinessEntityID="1"][1]/PhoneNumbers[1]/act:number[1]', 'varchar(40)'  
  )  
 SELECT @FirstPhoneFromAdditionalContactInfo;  

@@ -80,11 +80,11 @@ manager: craigg
   
 -   When you create the index, the IGNORE_DUP_KEY option must be set to OFF (the default setting).  
   
--   Tables must be referenced by two-part names, *schema***.***tablename* in the view definition.  
+-   Tables must be referenced by two-part names, _schema_**.**_tablename_ in the view definition.  
   
 -   User-defined functions referenced in the view must be created by using the WITH SCHEMABINDING option.  
   
--   Any user-defined functions referenced in the view must be referenced by two-part names, *schema***.***function*.  
+-   Any user-defined functions referenced in the view must be referenced by two-part names, _schema_**.**_function_.  
   
 -   The data access property of a user-defined function must be NO SQL, and external access property must be NO.  
   

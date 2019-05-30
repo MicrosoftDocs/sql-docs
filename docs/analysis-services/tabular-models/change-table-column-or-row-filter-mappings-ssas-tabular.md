@@ -1,5 +1,5 @@
 ---
-title: "Change table, column, or row filter mappings | Microsoft Docs"
+title: "Change Analysis Services tabular model table, column, or row filter mappings | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

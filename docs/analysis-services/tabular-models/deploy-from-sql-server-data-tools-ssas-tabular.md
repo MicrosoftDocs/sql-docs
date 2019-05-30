@@ -1,5 +1,5 @@
 ---
-title: "Deploy From SQL Server Data Tools | Microsoft Docs"
+title: "Deploy Analysis Services tabular models from SQL Server Data Tools | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

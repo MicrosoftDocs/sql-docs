@@ -32,6 +32,6 @@ manager: craigg
 2.  At the Distributor on the distribution database, execute [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql). (Optional) Specify the article ID from step 2 for **@article_id**. (Optional) Specify the ID of the publication database for **@publisher_database_id**, which can be obtained from the **database_id** column in the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view.  
   
 ## See Also  
- [Programmatically Monitor Replication](monitoring-replication-overview.md)  
+ [Programmatically Monitor Replication](../monitoring-replication.md)  
   
   

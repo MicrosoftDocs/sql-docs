@@ -2,10 +2,9 @@
 title: "Azure SQL Database Catalog Views | Microsoft Docs"
 ms.custom: 
 ms.date: "08/20/2015"
-ms.prod: 
+ms.service: sql-database 
 ms.reviewer: ""
 ms.prod_service: sql-database
-ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"

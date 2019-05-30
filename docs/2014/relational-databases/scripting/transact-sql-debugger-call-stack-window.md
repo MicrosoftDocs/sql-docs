@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.callstack"
 helpviewer_keywords: 
   - "Call Stack Window [Transact-SQL]"
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
@@ -66,5 +63,3 @@ manager: craigg
  [Transact-SQL Debugger](transact-sql-debugger.md)   
  [Transact-SQL Debugger Information](transact-sql-debugger-information.md)   
  [Step Through Transact-SQL Code](step-through-transact-sql-code.md)  
-  
-  

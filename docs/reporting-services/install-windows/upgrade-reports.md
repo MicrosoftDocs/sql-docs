@@ -2,7 +2,7 @@
 title: "Upgrade Reports (SSRS) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 
 
 ms.topic: conceptual
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "report definition files [Reporting Services]"
   - ".rdl files"
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Upgrade Reports (SSRS)

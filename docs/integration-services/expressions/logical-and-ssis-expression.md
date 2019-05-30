@@ -12,11 +12,15 @@ helpviewer_keywords:
   - "AND, logical AND"
   - "logical AND (&&)"
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # &amp;&amp; (Logical AND) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a logical AND operation. The expression evaluates to TRUE if all conditions are TRUE.  
   
 ## Syntax  

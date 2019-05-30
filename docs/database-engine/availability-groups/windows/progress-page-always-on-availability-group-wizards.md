@@ -1,6 +1,7 @@
 ---
-title: "Progress Page (Always On Availability Group Wizards) | Microsoft Docs"
-ms.custom: ""
+title: "Progress Page (Always On Availability Group Wizards)"
+description: "A description of the options found on the 'Progress Page' of the Always On Availability Group Wizard' within SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""

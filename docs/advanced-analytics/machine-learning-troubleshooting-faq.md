@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting and FAQ for machine learning in SQL Server | Microsoft Docs
+title: Troubleshooting and FAQ for machine learning - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 05/31/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 

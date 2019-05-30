@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, executing XPath queries"
   - "namespaces [SQLXML], XPath queries"
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In SQLXML 4.0, specify this XPath query with a namespace prefix. An example is **x:Contact**, where **x** is the namespace prefix. Consider the following XSD schema:  
   
 ```  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:con="urn:myschema:Contacts"  
             targetNamespace="urn:myschema:Contacts">  

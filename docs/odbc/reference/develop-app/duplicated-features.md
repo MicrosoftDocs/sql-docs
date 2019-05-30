@@ -45,5 +45,5 @@ The following ODBC 2.*x* functions have been duplicated by ODBC 3.*x* functions.
   
  [1]   The function **SQLExtendedFetch** is duplicated functionality; **SQLFetchScroll** provides the same functionality in ODBC 3.*x*. However, the Driver Manager does not map **SQLExtendedFetch** to **SQLFetchScroll** when going against an ODBC 3.*x* driver. For more information, see [What the Driver Manager Does](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) in Appendix G: Driver Guidelines for Backward Compatibility. The Driver Manager maps **SQLFetchScroll** to **SQLExtendedFetch** when going against an ODBC 2.*x* driver.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The function **SQLBindParam** is a special case. **SQLBindParam** is duplicated functionality. This is not an ODBC 2*.x* function, but a function that is present in the Open Group and ISO standards. The functionality provided by this function is completely subsumed by that of **SQLBindParameter**. As a result, the Driver Manager maps a call to **SQLBindParam** to **SQLBindParameter** when the underlying driver is an ODBC 3.*x* driver. However, when the underlying driver is an ODBC 2*.x* driver, the Driver Manager does not perform this mapping.

@@ -4,14 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "data-quality-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
@@ -19,10 +12,12 @@ ms.author: genemi
 manager: craigg
 ---
 # Features Supported by the Editions of SQL Server 2014
-  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
-> **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](http://go.microsoft.com/fwlink/?LinkId=190955).  
-  
+
+
+  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+
+ > **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
+> 
 > **NOTE:** For features supported by Evaluation and Developer editions see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise feature set.  
   
  To navigate to the table for a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] technology, click on its link:  
@@ -442,7 +437,7 @@ manager: craigg
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Yes|Yes||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Yes|Yes||||||  
   
-> [!NOTE]  
+> [!NOTE]
 >  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] is an Excel addin and does not depend on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] is required for sharing and collaborating with [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] workbooks in SharePoint and this capability is available as part of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise and Business Intelligence editions.  
 > 2.  The above table identifies the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] editions that are required to enable these client tools; however these features can access data hosted on any edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

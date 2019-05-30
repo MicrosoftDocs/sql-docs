@@ -62,7 +62,7 @@ manager: craigg
 |[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
 |[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
   
- These tables in the distribution database are used for replicating data from non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. For more information, see [Non-SQL Server Publishers](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ These tables in the distribution database are used for replicating data from non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. For more information, see [Non-SQL Server Publishers](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  

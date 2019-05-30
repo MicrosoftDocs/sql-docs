@@ -82,7 +82,7 @@ Network=dbnmpntw;
 #### Server Attribute  
  The connection string must contain a **Server** attribute that supplies the initial partner name, which should identify the current principal server instance.  
   
- The simplest way to identify the server instance is by specifying its name , *<server_name>*[**\\***<SQL_Server_instance_name>*]. For example:  
+ The simplest way to identify the server instance is by specifying its name , *<server_name>*[**\\**_<SQL_Server_instance_name>_]. For example:  
   
  `Server=Partner_A;`  
   
@@ -126,7 +126,7 @@ Server=123.34.45.56,4724;
 |ODBC Driver|**Failover_Partner**|  
 |ActiveX Data Objects (ADO)|**Failover Partner**|  
   
- The simplest way to identify the server instance is by its system name, *<server_name>*[**\\***<SQL_Server_instance_name>*].  
+ The simplest way to identify the server instance is by its system name, *<server_name>*[**\\**_<SQL_Server_instance_name>_].  
   
  Alternatively, the IP address and port number can be supplied in the **Failover Partner** attribute. If the initial connection attempt fails during the first connection to the database, the attempt to connect to the failover partner will be freed from relying on DNS and SQL Server Browser. Once a connection is established, the failover partner name will be overwritten with the failover partner name, so if a failover occurs, the redirected connections will require DNS and SQL Server Browser.  
   
@@ -163,7 +163,7 @@ Server=123.34.45.56,4724;
   
  The retry time is calculated using the following formula:  
   
- *RetryTime* **=** *PreviousRetryTime* **+(** 0.08 **\****LoginTimeout***)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  Where *PreviousRetryTime* is initially 0.  
   
@@ -171,10 +171,10 @@ Server=123.34.45.56,4724;
   
 |Round|*RetryTime* calculation|Retry time per attempt|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+(**0.08 **\*** 15**)**|1.2 seconds|  
-|2|1.2 **+(**0.08 **\*** 15**)**|2.4 seconds|  
-|3|2.4 **+(**0.08 **\*** 15**)**|3.6 seconds|  
-|4|3.6 **+(**0.08 **\*** 15**)**|4.8 seconds|  
+|1|0 **+(**0.08 **&#42;** 15**)**|1.2 seconds|  
+|2|1.2 **+(**0.08 **&#42;** 15**)**|2.4 seconds|  
+|3|2.4 **+(**0.08 **&#42;** 15**)**|3.6 seconds|  
+|4|3.6 **+(**0.08 **&#42;** 15**)**|4.8 seconds|  
   
  The following figure illustrates these retry times for successive connection attempts, each of which times out.  
   

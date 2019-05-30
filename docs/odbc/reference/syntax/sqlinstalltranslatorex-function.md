@@ -32,16 +32,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLInstallTranslatorEx(  
-     LPCSTR    lpszTranslator,  
-     LPCSTR    lpszPathIn,  
-     LPSTR     lpszPathOut,  
-     WORD      cbPathOutMax,  
-     WORD *    pcbPathOut,  
-     WORD      fRequest,  
-     LPDWORD   lpdwUsageCount);  
+     LPCSTR    lpszTranslator,  
+     LPCSTR    lpszPathIn,  
+     LPSTR     lpszPathOut,  
+     WORD      cbPathOutMax,  
+     WORD *    pcbPathOut,  
+     WORD      fRequest,  
+     LPDWORD   lpdwUsageCount);  
 ```  
   
 ## Arguments  

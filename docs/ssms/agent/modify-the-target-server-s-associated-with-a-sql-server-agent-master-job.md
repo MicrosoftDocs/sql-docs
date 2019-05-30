@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -57,7 +57,7 @@ Unless you are a member of the **sysadmin** fixed server role, you can only modi
   
 4.  Right-click the job where you want to modify the target server and select **Properties**.  
   
-5.  In the **Job Properties -***job_name* dialog box, under **Select a page**, select **Targets**. For more information on the available options on this page, see [Job Properties - New Job &#40;Targets Page&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
+5.  In the **Job Properties -**_job_name_ dialog box, under **Select a page**, select **Targets**. For more information on the available options on this page, see [Job Properties - New Job &#40;Targets Page&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   
 6.  When finished, click **OK**.  
   

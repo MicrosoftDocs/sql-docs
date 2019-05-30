@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "staging process [Master Data Services], viewing errors"
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---
@@ -44,6 +44,6 @@ manager: craigg
   
 ## See Also  
  [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [Troubleshooting the Staging Process (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
+ [Troubleshooting the Staging Process (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

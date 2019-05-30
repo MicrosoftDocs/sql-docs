@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [Integration Services]"
   - "Integration Services, backward compatibility"
 ms.assetid: 7e0a28b1-324b-4a0b-862b-aabe476f06e5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Deprecated Integration Services Features in SQL Server 2014

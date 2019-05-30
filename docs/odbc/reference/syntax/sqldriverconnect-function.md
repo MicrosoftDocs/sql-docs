@@ -42,17 +42,17 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLDriverConnect(  
-     SQLHDBC         ConnectionHandle,  
-     SQLHWND         WindowHandle,  
-     SQLCHAR *       InConnectionString,  
-     SQLSMALLINT     StringLength1,  
-     SQLCHAR *       OutConnectionString,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLength2Ptr,  
-     SQLUSMALLINT    DriverCompletion);  
+     SQLHDBC         ConnectionHandle,  
+     SQLHWND         WindowHandle,  
+     SQLCHAR *       InConnectionString,  
+     SQLSMALLINT     StringLength1,  
+     SQLCHAR *       OutConnectionString,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLength2Ptr,  
+     SQLUSMALLINT    DriverCompletion);  
 ```  
   
 ## Arguments  
@@ -285,7 +285,7 @@ SQLRETURN SQLDriverConnect(
   
  For more information, see [Connecting with SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
   
-```  
+```cpp  
 // SQLDriverConnect_ref.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  

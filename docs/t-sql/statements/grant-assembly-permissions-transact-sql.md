@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], permissions"
   - "GRANT statement, assemblies"
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Assembly Permissions (Transact-SQL)

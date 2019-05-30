@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database audit specification"
   - "DROP DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)

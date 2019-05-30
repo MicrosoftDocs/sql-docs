@@ -32,6 +32,6 @@ manager: craigg
  Click this button to clear all filters that have been defined. To remove a single filter, select the filter row and press the Delete key.  
   
 ## See Also  
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

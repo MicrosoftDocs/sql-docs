@@ -58,8 +58,8 @@ SET CONCAT_NULL_YIELDS_NULL ON
 >  SET CONCAT_NULL_YIELDS_NULL is the same setting as the CONCAT_NULL_YIELDS_NULL setting of ALTER DATABASE.  
   
  The setting of SET CONCAT_NULL_YIELDS_NULL is set at execute or run time and not at parse time.  
-  
- SET CONCAT_NULL_YIELDS_NULL must be ON when you are creating or changing indexes on computed columns or indexed views. If SET CONCAT_NULL_YIELDS_NULL is OFF, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
+
+SET CONCAT_NULL_YIELDS_NULL must be **ON** when creating or altering indexed views, indexes on computed columns, filtered indexes or spatial indexes. If SET CONCAT_NULL_YIELDS_NULL is **OFF**, any CREATE, UPDATE, INSERT, and DELETE statements on tables with indexes on computed columns, filtered indexes, spatial indexes or indexed views will fail. For more information about required SET option settings with indexed views and indexes on computed columns, see "Considerations When You Use the SET Statements" in [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).
   
  When CONCAT_NULL_YIELDS_NULL is set to OFF, string concatenation across server boundaries cannot occur.  
   

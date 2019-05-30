@@ -2,7 +2,7 @@
 title: "ReportingServicesService Configuration File | Microsoft Docs"
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Report Server Windows service, ReportingServicesService configuration file"
   - "ReportingServicesService configuration file"
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-author: markingmyname
-ms.author: maghan 
+author: maggiesMSFT
+ms.author: maggies 
 ---
 # ReportingServicesService Configuration File
 

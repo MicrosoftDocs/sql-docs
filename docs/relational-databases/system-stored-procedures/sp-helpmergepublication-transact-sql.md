@@ -37,7 +37,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ @publication**=** ] **'***publication***'**  
+ [ @publication**=** ] **'**_publication_**'**  
  The name of the publication. *publication*is **sysname**, with a default of **%**, which returns information about all merge publications in the current database.  
   
  [ @found**=** ] **'***found***'** OUTPUT  

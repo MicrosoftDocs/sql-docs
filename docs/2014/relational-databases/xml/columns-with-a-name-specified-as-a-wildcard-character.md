@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Columns with a Name Specified as a Wildcard Character
@@ -40,7 +40,7 @@ FOR XML PATH;
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
                 /MI:root/MI:Location   
               ') as "*"  
 FROM Production.ProductModel  

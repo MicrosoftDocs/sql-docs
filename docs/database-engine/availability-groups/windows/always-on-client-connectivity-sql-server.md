@@ -1,6 +1,7 @@
 ---
-title: "Always On Client Connectivity (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Driver and client connectivity support for availability groups"
+description: "This topic describes considerations for client connectivity to Always On availability groups, including prerequisites, restrictions, and recommendations for client configurations and settings. "
+ms.custom: "seodec18"
 ms.date: "04/26/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -18,14 +19,9 @@ manager: craigg
 # Always On Client Connectivity (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  This topic describes considerations for client connectivity to Always On Availability Groups, including prerequisites, restrictions, and recommendations for client configurations and settings.  
+  This topic describes considerations for client connectivity to Always On availability groups, including prerequisites, restrictions, and recommendations for client configurations and settings.  
   
- **In this Topic:**  
-  
--   [Client Connectivity Support](#ClientConnSupport)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
+ 
 ##  <a name="ClientConnSupport"></a> Client Connectivity Support  
  The section below provides information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] support for client connectivity.  
   
@@ -46,7 +42,7 @@ manager: craigg
   
  **Download the connectivity patch for ADO.NET with .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
- *Download the new Microsoft OLE DB Driver for SQL Server: [https://www.microsoft.com/download/details.aspx?id=56730 ](https://www.microsoft.com/download/details.aspx?id=56730).  
+ *Download the new Microsoft OLE DB Driver for SQL Server: [https://www.microsoft.com/download/details.aspx?id=56730](https://www.microsoft.com/download/details.aspx?id=56730).  
 
 > [!IMPORTANT]  
 >  To connect to an availability group listener, a client must use a TCP connection string.  

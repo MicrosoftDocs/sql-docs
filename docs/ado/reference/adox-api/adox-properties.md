@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADOX Properties
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indicates the ADO **Connection** object to which the catalog belongs.|  

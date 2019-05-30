@@ -51,13 +51,13 @@ MSDAOSP
 
 ```console
 Portfolio
-   Stock
-      Shares
-      Symbol
-      Price
-      Info
-         Company Name
-         WebSite
+   Stock
+      Shares
+      Symbol
+      Price
+      Info
+         Company Name
+         WebSite
 ```
 
  The XML DSO uses built-in heuristics to convert the nodes in an XML tree to chapters in a hierarchical **Recordset**.
@@ -67,8 +67,8 @@ Portfolio
 ```console
 Parent Recordset
 Shares, Symbol, Price, $Text
-   Child Recordset
-      Company Name, WebSite, $Text
+   Child Recordset
+      Company Name, WebSite, $Text
 ```
 
  Note that the Portfolio and Info tags are not represented in the hierarchical **Recordset**. For an explanation of how the XML DSO converts XML trees to hierarchical **Recordsets**, see the following rules. The $Text column is discussed in the following section.

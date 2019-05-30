@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "application roles [SQL Server], removing"
   - "DROP APPLICATION ROLE statement"
 ms.assetid: 44121ee7-ef40-405d-b03b-f8ddb4e3c559
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DROP APPLICATION ROLE (Transact-SQL)

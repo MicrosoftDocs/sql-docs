@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CREATE APPLICATION ROLE statement"
   - "application roles [SQL Server], creating"
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)

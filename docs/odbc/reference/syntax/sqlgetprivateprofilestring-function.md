@@ -30,15 +30,15 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 int SQLGetPrivateProfileString(  
-     LPCSTR   lpszSection,  
-     LPCSTR   lpszEntry,  
-     LPCSTR   lpszDefault,  
-     LPCSTR   RetBuffer,  
-     INT      cbRetBuffer,  
-     LPCSTR   lpszFilename);  
+     LPCSTR   lpszSection,  
+     LPCSTR   lpszEntry,  
+     LPCSTR   lpszDefault,  
+     LPCSTR   RetBuffer,  
+     INT      cbRetBuffer,  
+     LPCSTR   lpszFilename);  
 ```  
   
 ## Arguments  

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
   - "logins [SQL Server], denying access"
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Server Principal Permissions (Transact-SQL)

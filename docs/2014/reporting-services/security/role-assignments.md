@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "users [Reporting Services]"
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "groups [Reporting Services]"
   - "security [Reporting Services], role assignments"
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Role Assignments
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], *role assignments* determine access to stored items and to the report server itself. A role assignment has the following parts:  

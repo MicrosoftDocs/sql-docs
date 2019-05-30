@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "COMPRESS function"
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # COMPRESS (Transact-SQL)
@@ -75,10 +75,10 @@ VALUES (N'Michael', N'Raheem', compress(@info));
 This statement first deletes old player records from the `player` table. To save space, it then stores the records in the `inactivePlayer` table, in a compressed format.
   
 ```sql
-DELETE player  
-WHERE datemodified < @startOfYear  
-OUTPUT id, name, surname datemodifier, COMPRESS(info)   
-INTO dbo.inactivePlayers ;  
+DELETE FROM player  
+OUTPUT deleted.id, deleted.name, deleted.surname, deleted.datemodifier, COMPRESS(deleted.info)   
+INTO dbo.inactivePlayers
+WHERE datemodified < @startOfYear; 
 ```  
   
 ## See also

@@ -3,8 +3,7 @@ title: "sys.pdw_diag_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
-ms.reviewer: ""
+ms.technology: data-warehouse
 ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 

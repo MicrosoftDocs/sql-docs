@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ""
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---
@@ -247,7 +247,7 @@ there is something you should check". For example, figure 7 shows a
 being busy on other tasks temporarily, and you may ignore it. You
 should check the online document for each warning and error message
 for more details. See Figure 7.
- 
+ 
     ![Validate Configuration Wizard, Validating page](media/Fig6_ValidationTests.png)
 
     Figure 6
@@ -452,27 +452,26 @@ other nodes as replicas. See Figure 17.
     Figure 17
 
     For each replica, configure the following **Synchronous Commit**,
-**Automatic Failover**, and **Readable Secondary** settings. See Figure
-17.
+**Automatic Failover**, and **Readable Secondary** settings. See Figure 17.
 
-    **Synchronous Commit**: This guarantees that if a transaction is
+**Synchronous Commit**: This guarantees that if a transaction is
 committed on the primary replica of a database, then the transaction
 is also committed on all other synchronous replicas. Asynchronous
 commit does not guarantee this, and it may lag behind the primary
 replica.
 
-    You should usually enable synchronous commit only when the two nodes
+You should usually enable synchronous commit only when the two nodes
 are in the same data center. If they are in different data centers,
 synchronous commit may slow down the database performance.
 
-    If this checkbox is not selected, then asynchronous commit is used.
+If this checkbox is not selected, then asynchronous commit is used.
 
-    **Automatic Failover:** When the primary replica is down, the AG will
+**Automatic Failover:** When the primary replica is down, the AG will
 automatically failover to its secondary replica when automatic
 failover is selected. This can only be enabled on the replicas with
 synchronous commits.
 
-    **Readable Secondary:** By default, users cannot connect to any
+**Readable Secondary:** By default, users cannot connect to any
 secondary replicas. This will enable users to connect to the secondary
 replica with read-only access.
 
@@ -540,7 +539,7 @@ lists other options.
     asynchronous replica. This is to verify that failover happens
     correctly without issues.
 
- The AlwaysOn setup is completed.
+ The AlwaysOn setup is completed.
 
 For more information about AlwaysOn Availability Group, see [SQL Server
 2016 AlwaysOn Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).

@@ -7,13 +7,11 @@ ms.prod_service: "sql-tools"
 ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.breakpt.location.file"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint location"
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -41,5 +39,3 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  [Specify a Breakpoint Action](../../relational-databases/scripting/specify-a-breakpoint-action.md)   
  [Specify a Breakpoint Condition](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [Specify a Breakpoint Filter](../../relational-databases/scripting/specify-a-breakpoint-filter.md)  
-  
-  

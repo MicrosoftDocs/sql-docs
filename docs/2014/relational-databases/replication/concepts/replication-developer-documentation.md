@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: replication
 ms.topic: "reference"
 helpviewer_keywords: 
   - "developer's guide [SQL Server replication]"
@@ -20,18 +20,12 @@ manager: craigg
   
  The following are scenarios in which your applications might benefit from programmatic access to replication services:  
   
--   Adding replication functionalities to an existing end-user application, such as synchronizing a pull subscription when the user clicks a button.  
-  
--   Creating a Web-based user interface for remotely administering replication.  
-  
--   Creating a custom user interface that exposes only a subset of administration functionality, can be used to remotely administer multiple replication topologies from a single location, or that combine administration and synchronization functionalities.  
-  
--   Improving an existing monitoring tool by adding the ability to monitor the status of a publication, subscription, or at the Distributor.  
-  
--   Creating a custom application to administer or synchronize subscriptions to an Oracle publisher.  
-  
--   Writing customized business rules that are executed when a merge subscription is synchronized.  
-  
+-   Adding replication functionalities to an existing end-user application, such as synchronizing a pull subscription when the user clicks a button.   
+-   Creating a Web-based user interface for remotely administering replication.    
+-   Creating a custom user interface that exposes only a subset of administration functionality, can be used to remotely administer multiple replication topologies from a single location, or that combine administration and synchronization functionalities.    
+-   Improving an existing monitoring tool by adding the ability to monitor the status of a publication, subscription, or at the Distributor.    
+-   Creating a custom application to administer or synchronize subscriptions to an Oracle publisher.    
+-   Writing customized business rules that are executed when a merge subscription is synchronized.    
 -   Generating [!INCLUDE[tsql](../../../includes/tsql-md.md)] scripts that can be run repeated when configuring new Subscribers.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enables you to programmatically control replication agents and to programmatically administer and monitor a replication topology. To learn more about programming replication, see [Replication Programming Concepts](replication-programming-concepts.md).  
@@ -48,8 +42,6 @@ manager: craigg
   
  [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)  
  Describes the use of Replication Agent Executable files.  
-  
- [Developer's Guide: How-to Topics &#40;Replication&#41;](../developer-s-guide-how-to-topics-replication.md)  
- Provides a list of how-to topics that are related to replication.  
+
   
   

@@ -30,11 +30,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLCreateDataSource(  
-     HWND    hwnd,  
-     LPSTR   lpszDS);  
+     HWND    hwnd,  
+     LPSTR   lpszDS);  
 ```  
   
 ## Arguments  

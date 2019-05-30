@@ -19,7 +19,7 @@ manager: craigg
   **SQLStatistics** can be executed on a static cursor. An attempt to execute **SQLStatistics** on an updatable (keyset-driven or dynamic) returns SQL_SUCCESS_WITH_INFO indicating the cursor type is changed.  
   
 ## See Also  
- [SQLStatistics Function](http://go.microsoft.com/fwlink/?LinkId=59372)   
+ [SQLStatistics Function](https://go.microsoft.com/fwlink/?LinkId=59372)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

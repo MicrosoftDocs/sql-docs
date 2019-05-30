@@ -38,19 +38,19 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## Arguments  
- [ **@alert_name =**] **'***alert_name***'**  
+`[ @alert_name = ] 'alert_name'`
  The alert name. *alert_name* is **nvarchar(128)**. If *alert_name* is not specified, information about all alerts is returned.  
   
- [ **@order_by =**] **'***order_by***'**  
+`[ @order_by = ] 'order_by'`
  The sorting order to use for producing the results. *order_by*is **sysname**, with a default of N '*name*'.  
   
- [ **@alert_id =**] *alert_id*  
+`[ @alert_id = ] alert_id`
  The identification number of the alert to report information about. *alert_id*is **int**, with a default of NULL.  
   
- [ **@category_name =**]  **'***category***'**  
+`[ @category_name = ] 'category'`
  The category for the alert. *category* is **sysname**, with a default of NULL.  
   
- [ **@legacy_format**=] *legacy_format*  
+`[ @legacy_format = ] legacy_format`
  Is whether to produce a legacy result set. *legacy_format* is **bit**, with a default of **0**. When *legacy_format* is **1**, **sp_help_alert** returns the result set returned by **sp_help_alert** in Microsoft SQL Server 2000.  
   
 ## Return Code Values  

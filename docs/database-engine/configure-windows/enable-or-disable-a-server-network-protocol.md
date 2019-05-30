@@ -46,7 +46,7 @@ manager: craigg
   
 1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, in the console pane, expand **SQL Server  Network Configuration**.  
   
-2.  In the console pane, click **Protocols for** *\<instance name>*.  
+2.  In the console pane, click **Protocols for** _\<instance name>_.  
   
 3.  In the details pane, right-click the protocol you want to change, and then click **Enable** or **Disable**.  
   

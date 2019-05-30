@@ -29,16 +29,16 @@ manager: craigg
 ## Before Upgrading Integration Services  
  We recommended that you run Upgrade Advisor before you upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Upgrade Advisor reports issues that you might encounter if you migrate existing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to the new package format that [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] uses. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
-> [!NOTE]  
+> [!NOTE]
 >  Support for migrating or running Data Transformation Services (DTS) packages has been discontinued in the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. The following DTS functionality has been discontinued.  
->   
+> 
 >  -   DTS runtime  
 > -   DTS API  
 > -   Package Migration Wizard for migrating DTS packages to the next version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
 > -   Support for DTS package maintenance in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   Execute DTS 2000 Package task  
 > -   Upgrade Advisor scan of DTS packages.  
->   
+> 
 >  For information about other discontinued features, see [Discontinued Integration Services Functionality in SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md).  
   
 ## Upgrading Integration Services  
@@ -138,6 +138,6 @@ manager: craigg
 -   You cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs on [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] computers to run [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] or [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages that are stored in the upgraded instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## External Resources  
- Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](http://go.microsoft.com/fwlink/?LinkId=238157), on blogs.msdn.com.  
+ Blog entry, [Making your Existing Custom SSIS Extensions and Applications Work in Denali](https://go.microsoft.com/fwlink/?LinkId=238157), on blogs.msdn.com.  
   
   

@@ -17,17 +17,17 @@ helpviewer_keywords:
   - "plan guides [SQL Server]"
   - "USE PLAN query hint"
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Plan Guides
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Plan guides let you optimize the performance of queries when you cannot or do not want to directly change the text of the actual query in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Plan guides influence the optimization of queries by attaching query hints or a fixed query plan to them. Plan guides can be useful when a small subset of queries in a database application provided by a third-party vendor are not performing as expected. In the plan guide, you specify the Transact-SQL statement that you want optimized and either an OPTION clause that contains the query hints you want to use or a specific query plan you want to use to optimize the query. When the query executes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] matches the Transact-SQL statement to the plan guide and attaches the OPTION clause to the query at run time or uses the specified query plan.  
   
  The total number of plan guides you can create is limited only by available system resources. Nevertheless, plan guides should be limited to mission-critical queries that are targeted for improved or stabilized performance. Plan guides should not be used to influence most of the query load of a deployed application.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Plan guides cannot be used in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Plan guides are visible in any edition. You can also attach a database that contains plan guides to any edition. Plan guides remain intact when you restore or attach a database to an upgraded version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Types of Plan Guides  
@@ -90,7 +90,25 @@ sp_create_plan_guide
 @params = NULL,   
 @hints = N'OPTION (MAXDOP 1)';  
 ```  
-  
+As another example, consider the following SQL statement submitted using [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).
+
+```sql  
+exec sp_executesql N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id', N'@so_id int', @so_id = 43662;  
+```  
+ To create a unique plan for every execution of this query, create the following plan guide and use the `OPTION (RECOMPILE)` query hint  in the `@hints` parameter. 
+
+```sql  
+exec sp_create_plan_guide   
+@name = N'PlanGuide1_SalesOrders',   
+@stmt = N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id',
+@type = N'SQL',  
+@module_or_batch = NULL,   
+@params = N'@so_id int',   
+@hints = N'OPTION (recompile)';
+```
+
 > [!IMPORTANT]  
 >  The values that are supplied for the `@module_or_batch` and `@params` arguments of the `sp_create_plan guide` statement must match the corresponding text submitted in the actual query. For more information, see [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) and [Use SQL Server Profiler to Create and Test Plan Guides](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   

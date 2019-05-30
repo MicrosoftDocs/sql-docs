@@ -1,7 +1,7 @@
 ---
 title: "sp_addrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "01/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -32,18 +32,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-sp_addrolemember [ @rolename = ] 'role',  
-    [ @membername = ] 'security_account'  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-sp_addrolemember 'role', 'security_account'  
-```  
+```
+sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
+
+```    
   
 ## Arguments  
  [ @rolename= ] '*role*'  
@@ -97,7 +89,7 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Adding a Windows login  
  The following example adds the login `LoginMary` to the `AdventureWorks2008R2` database as user `UserMary`. The user `UserMary` is then added to the `Production` role.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "displaying alerts"
   - "status information [SQL Server], alerts"
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

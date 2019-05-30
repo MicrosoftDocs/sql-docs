@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EnvelopeAggregate method (geometry)"
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # EnvelopeAggregate (geometry Data Type)

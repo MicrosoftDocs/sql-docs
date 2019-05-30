@@ -11,11 +11,15 @@ f1_keywords:
   - "SQL13.SSIS.AZURE.F1"
   - "SQL14.SSIS.AZURE.F1"
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Feature Pack for Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
 
 [![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Download**

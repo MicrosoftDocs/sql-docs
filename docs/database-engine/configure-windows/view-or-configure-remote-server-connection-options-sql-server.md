@@ -47,7 +47,7 @@ manager: craigg
   
 1.  In Object Explorer, right-click a server, and then click **Properties**.  
   
-2.  In the **SQL Server Properties - \<***server_name***>** dialog box, click **Connections**.  
+2.  In the **SQL Server Properties - \<**_server_name_**>** dialog box, click **Connections**.  
   
 3.  On the **Connections** page, review the **Remote server connections** settings, and modify them if necessary.  
   

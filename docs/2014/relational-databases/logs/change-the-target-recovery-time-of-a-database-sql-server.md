@@ -51,7 +51,7 @@ manager: craigg
   
 2.  Use the following [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)statement, as follows:  
   
-     TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      When greater than 0 (the default), specifies the upper-bound on the recovery time for the specified database in the event of a crash.  

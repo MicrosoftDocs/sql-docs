@@ -28,7 +28,7 @@ manager: craigg
      **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
   
     > [!IMPORTANT]  
-    >  Unlike regular stored procedures, parameters of all SQL Server Profiler stored procedures (**sp_trace_*xx***) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
+    >  Unlike regular stored procedures, parameters of all SQL Server Profiler stored procedures (<strong>sp_trace_*xx*</strong>) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
 ## Example  
  The following code demonstrates creating a trace using [!INCLUDE[tsql](../../includes/tsql-md.md)]. It is in three sections: creating the trace, populating the trace file, and stopping the trace. Customize the trace by adding the events that you want to trace. For the list of events and columns, see [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql).  

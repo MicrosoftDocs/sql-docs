@@ -66,7 +66,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 8.  Click **Close**.  
   
-9. On the **File** menu, click **Save***table_name*.  
+9. On the **File** menu, click **Save**_table_name_.  
   
 #### To create a nonclustered index by using Object Explorer  
   
@@ -82,7 +82,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 6.  Under **Index key columns**, click **Add...**.  
   
-7.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
+7.  In the **Select Columns from**_table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
   
 8.  Click **OK**.  
   

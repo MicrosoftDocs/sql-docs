@@ -1,7 +1,8 @@
 ---
-title: "Add a Secondary Replica to an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
+title: "Add a secondary replica to an availability group"
+description: "Learn how to add a secondary replica to an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or the Availability Group Wizard in SQL Server Management Studio (SSMS)."
+ms.custom: "seodec18"
+ms.date: "05/18/2016"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -14,40 +15,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Add a Secondary Replica to an Availability Group (SQL Server)
+# Add a secondary replica to an Always On Availability Group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to add a secondary replica to an existing Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
--   **Before you begin:**  
-  
-     [Prerequisites and Restrictions](#PrerequisitesRestrictions)  
-  
-     [Security](#Security)  
-  
--   **To add a replica, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:**  [After Adding a Secondary Replica](#FollowUp)  
-  
-## Before You Begin  
- We strongly recommend that you read this section before attempting to create your first availability group.  
+
   
 ##  <a name="PrerequisitesRestrictions"></a> Prerequisites and Restrictions  
   
 -   You must be connected to the server instance that hosts the primary replica.  
   
  For more information, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
-  
+
 ##  <a name="Security"></a> Security  
   
 ###  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
-  
+
+[!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To add a replica**  
   

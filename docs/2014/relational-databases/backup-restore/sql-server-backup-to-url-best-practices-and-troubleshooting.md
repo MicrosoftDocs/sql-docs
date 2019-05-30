@@ -35,7 +35,7 @@ manager: craigg
   
 ## Handling Large Files  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. [Windows Azure storage SLA's](http://go.microsoft.com/fwlink/?LinkId=271619) have maximum processing times for blobs that you can take into consideration.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. [Windows Azure storage SLA's](https://go.microsoft.com/fwlink/?LinkId=271619) have maximum processing times for blobs that you can take into consideration.  
   
 -   Using the `WITH COMPRESSION` option as recommended in the **Managing Backup** section, it is very important when backing up large files.  
   
@@ -119,7 +119,7 @@ manager: craigg
   
      BACKUP DATABASE is terminating abnormally.  
   
--   BackupIoRequest::ReportIoError: write failure on backup device http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.  
+-   BackupIoRequest::ReportIoError: write failure on backup device 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.  
   
  If you turn on the verbose logging using the trace flag 3051 you may also see the following message in the logs:  
   

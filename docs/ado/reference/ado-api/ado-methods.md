@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADO Methods
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Creates a new record for an updatable **Recordset** object.|  

@@ -30,11 +30,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLParamData(  
-     SQLHSTMT       StatementHandle,  
-     SQLPOINTER *   ValuePtrPtr);  
+     SQLHSTMT       StatementHandle,  
+     SQLPOINTER *   ValuePtrPtr);  
 ```  
   
 ## Arguments  

@@ -1,12 +1,12 @@
 ---
-title: "Extended Events | Microsoft Docs"
+title: "XEvents overview - SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/23/2016"
+ms.date: "05/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords: 
   - "extended events [SQL Server]"
   - "xe"
@@ -16,17 +16,15 @@ ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Extended Events
+# Extended events overview
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events has a highly scalable and highly configurable architecture that allows users to collect as much or as little information as is necessary to troubleshoot or identify a performance problem.  
 
-You can find more information about Extended Events at:
+You can find more information about Extended Events at [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-- [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
-- Blogs: [SQL Server Extended Events](https://blogs.msdn.com/b/extended_events/)
 
-  
 ## Benefits of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
  Extended Events is a light weight performance monitoring system that uses very few performance resources. Extended Events provides two graphical user interfaces (**New Session Wizard** and **New Session**) to create, modify, display, and analyze your session data.  
   
@@ -99,7 +97,10 @@ Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsq
 |Describes how to use Extended Events with Event Tracing for Windows to monitor system activity.|[Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | Using the Catalog views and the Dynamic management views (DMVs) for extended events | [SELECTs and JOINs From System Views for Extended Events in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
-  
+## Code examples can differ for Azure SQL Database
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## See Also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
@@ -107,5 +108,4 @@ Using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or [!INCLUDE[tsq
  [Monitor Data-tier Applications](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [Extended Events Dynamic Management Views](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
-  
-  
+ [XELite: Cross-platform library to read XEvents from XEL files or live SQL streams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), released May 2019.  

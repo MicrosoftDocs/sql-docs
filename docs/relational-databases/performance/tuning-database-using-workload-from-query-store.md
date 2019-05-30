@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor, Query Store"
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Tuning Database Using Workload from Query Store
@@ -41,6 +41,6 @@ The difference between the Query Store and Plan Cache options is that the former
 
 ## See Also  
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Tutorial: Database Engine Tuning Advisor](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
+[Tutorial: Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [How Query Store Collects Data](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Query Store Best Practices](../../relational-databases/performance/best-practice-with-the-query-store.md)

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, specifying XSINIL example"
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive
@@ -57,7 +57,7 @@ FOR XML RAW, ELEMENTS XSINIL ;
  This is the partial result:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <ProductID>1</ProductID>  
   <Name>Adjustable Race</Name>  
   <Color xsi:nil="true" />  

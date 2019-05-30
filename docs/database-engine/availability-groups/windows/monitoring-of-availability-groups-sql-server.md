@@ -1,6 +1,7 @@
 ---
-title: "Monitoring of Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Tools to monitor availability groups"
+description: "A reference for the various tools available to monitor the performance and health of Always On availability groups. "
+ms.custom: "seodec18"
 ms.date: "06/08/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -14,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Monitoring of Availability Groups (SQL Server)
+# "Tools to monitor Always On availability groups"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To monitor the properties and state of an Always On availability group you can use the following tools.  
   
@@ -51,7 +52,7 @@ manager: craigg
   
      [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
+     [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## See Also  
  [Always On Availability Groups Catalog Views &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   

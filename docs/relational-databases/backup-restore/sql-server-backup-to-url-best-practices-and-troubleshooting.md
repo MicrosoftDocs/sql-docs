@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Backup to URL Best Practices and Troubleshooting | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2018"
+ms.date: "03/25/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -13,7 +13,7 @@ ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Backup to URL Best Practices and Troubleshooting
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Windows Azure Blob service.  
   
@@ -146,7 +146,7 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
   
 If you turn on the verbose logging using the trace flag 3051 you may also see the following message in the logs:  
   
-`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.) ` 
+`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
  **Default Proxy Settings not picked up:**  
   

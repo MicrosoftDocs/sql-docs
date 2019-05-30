@@ -64,7 +64,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses the [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) system function to return the status of the AUTO_SHRINK database option in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. A return value of 1 means that the option is set to ON, and a return value of 0 means that the option is set to OFF.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
@@ -80,7 +80,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) catalog view to view several properties of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. This example returns the database ID number (`database_id`), whether the database is read-only or read-write (`is_read_only`), the collation for the database (`collation_name`), and the database compatibility level (`compatibility_level`).  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT database_id, is_read_only, collation_name, compatibility_level  

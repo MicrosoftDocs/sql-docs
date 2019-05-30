@@ -2,7 +2,7 @@
 title: "Script Deployment and Administrative Tasks | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "transferrng reports"
   - "reports [Reporting Services], migrating"
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Script Deployment and Administrative Tasks

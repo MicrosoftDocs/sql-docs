@@ -28,7 +28,7 @@ To provide the maximum privacy protection, APS ships without enabling telemetry.
   
 #### To Enable Feedback  
   
-1.  Using an appliance domain administrator account, connect to the Control node (***appliance_domain*-CTL01**) and open a command prompt using your Windows administrator credentials.  
+1.  Using an appliance domain administrator account, connect to the Control node (<strong>*appliance_domain*-CTL01</strong>) and open a command prompt using your Windows administrator credentials.  
   
 2.  Navigate to the following directory: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
@@ -78,7 +78,7 @@ Disabling telemetry will stop all operations which communicate information about
   
 #### To Disable telemetry  
   
-1.  Using an appliance domain administrator account, connect to the Control node (***appliance_domain*-CTL01**) and open a PowerShell window with administrator privileges.  
+1.  Using an appliance domain administrator account, connect to the Control node (<strong>*appliance_domain*-CTL01</strong>) and open a PowerShell window with administrator privileges.  
   
 2.  Navigate to the following directory: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   

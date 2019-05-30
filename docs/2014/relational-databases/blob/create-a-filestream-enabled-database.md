@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], FILESTREAM-enabled databases"
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create a FILESTREAM-Enabled Database
@@ -32,7 +32,7 @@ manager: craigg
 ## Example  
  The following code example creates a database that is named `Archive`. The database contains three filegroups: `PRIMARY`, `Arch1`, and `FileStreamGroup1`. `PRIMARY` and `Arch1` are regular filegroups that cannot contain FILESTREAM data. `FileStreamGroup1` is the `FILESTREAM` filegroup.  
   
-```tsql  
+```sql  
 CREATE DATABASE Archive   
 ON  
 PRIMARY ( NAME = Arch1,  

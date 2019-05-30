@@ -30,23 +30,23 @@ manager: craigg
 |0..*|Zero or more|  
 |1..2|One or two|  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  To elaborate further:  
->   
+> 
 >  1.  A virtual machine is allocated one or more virtual processors.  
 > 2.  One or more virtual processors are allocated to exactly one virtual machine.  
 > 3.  Zero or one virtual processor is mapped to zero or more logical processors. When the virtual processor to logical processor mapping is:  
->   
+> 
 >      -   One-to-zero, it represents an unbound logical processor not used by the guest operating systems.  
 >     -   One-to-many, it represents an overcommit.  
 >     -   Zero-to-many, it represents the absence of virtual machine on the host system, so no logical processors are used by VMs.  
 > 4.  A socket is mapped to zero or more cores. When the socket to core mapping is:  
->   
+> 
 >      -   One-to-zero, it represents an empty socket (no chip installed).  
 >     -   One-to-one, it represents a single-core chip installed into the socket (very rare these days).  
 >     -   One-to-many, it represents a multi-core ship installed into the socket (typical values are 2,4,8).  
 > 5.  A core is mapped to one or two logical processors. When the core to logical processor mapping is:  
->   
+> 
 >      -   One-to-one, hyperthreading is off.  
 >     -   One-to-two, hyperthreading is on.  
   

@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: filestream
 ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # FILESTREAM DDL, Functions, Stored Procedures, and Views
@@ -56,6 +56,6 @@ manager: craigg
   
 -   [Access FILESTREAM Data with OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   
--   [Managed API - SqlFileStream Class](http://go.microsoft.com/fwlink/?LinkId=220875)  
+-   [Managed API - SqlFileStream Class](https://go.microsoft.com/fwlink/?LinkId=220875)  
   
   

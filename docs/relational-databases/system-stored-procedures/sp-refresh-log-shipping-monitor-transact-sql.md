@@ -38,10 +38,10 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## Arguments  
- [ **@agent_id=** ] **'***agent_id***'**  
+`[ @agent_id = ] 'agent_id'`
  The primary ID for backup or the secondary ID for copy or restore. *agent_id* is **uniqueidentifier** and cannot be NULL.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
+`[ @agent_type = ] 'agent_type'`
  The type of log shipping job.  
   
  0 = Backup.  
@@ -52,10 +52,10 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* is **tinyint** and cannot be NULL.  
   
- [ **@database=** ] **'***database***'**  
+`[ @database = ] 'database'`
  The primary or secondary database used by logging by backup or restore agents.  
   
- [ **@mode** ] *n*  
+`[ @mode ] n`
  Specifies whether to refresh the monitor data or clean it. The data type of *m* is tinyint, and the supported values are:  
   
  1 = refresh (This is the default value.)  

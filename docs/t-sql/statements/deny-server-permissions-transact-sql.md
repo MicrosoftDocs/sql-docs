@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
   - "DENY statement, servers"
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Server Permissions (Transact-SQL)

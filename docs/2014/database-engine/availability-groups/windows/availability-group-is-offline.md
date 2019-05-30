@@ -32,7 +32,7 @@ manager: craigg
  The policy state is healthy when the cluster resource of the availability group is online and the availability group has a primary replica.  
   
 > [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability group is offline](http://go.microsoft.com/fwlink/p/?LinkId=220850) on the TechNet Wiki.  
+>  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability group is offline](https://go.microsoft.com/fwlink/p/?LinkId=220850) on the TechNet Wiki.  
   
 ## Possible Causes  
  This issue can be caused by a failure in the server instance that hosts the primary replica or by the Windows Server Failover Cluster (WSFC) availability group resource going offline. Following are possible causes for the availability group to be offline:  

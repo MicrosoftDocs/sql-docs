@@ -62,7 +62,7 @@ Then you must edit the strings for server name, password, and so on. You can fin
 NOTE: The connection string for server name is geared toward Azure SQL Database, because it includes the four character prefix of **tcp:**. But you can adjust the server string to connect to your Microsoft SQL Server.  
   
   
-```CSharp  
+```csharp
     using System;  // C#  
     using CG = System.Collections.Generic;  
     using QC = System.Data.SqlClient;  

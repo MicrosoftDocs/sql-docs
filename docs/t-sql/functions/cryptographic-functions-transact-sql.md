@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "security functions"
   - "encryption [SQL Server], functions"
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Cryptographic functions (Transact-SQL)
@@ -41,7 +41,7 @@ These functions support digital signing, digital signature validation, encryptio
 |||  
 |-|-|  
 |[ENCRYPTBYASYMKEY](../../t-sql/functions/encryptbyasymkey-transact-sql.md)|[DECRYPTBYASYMKEY](../../t-sql/functions/decryptbyasymkey-transact-sql.md)|  
-|[ENCRYPTBYCert](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
+|[ENCRYPTBYCERT](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
 |[ASYMKEYPROPERTY](../../t-sql/functions/asymkeyproperty-transact-sql.md)|[ASYMKEY_ID](../../t-sql/functions/asymkey-id-transact-sql.md)|  
   
 ## Signing and signature verification

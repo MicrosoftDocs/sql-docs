@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADO MD Properties
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indicates to which ADO **Connection** object the current cellset or catalog currently belongs.|  

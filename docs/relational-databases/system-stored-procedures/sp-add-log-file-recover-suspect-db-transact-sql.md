@@ -39,24 +39,24 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ```  
   
 ## Arguments  
- [ **@dbName =** ] **'**_database_**'**  
+`[ @dbName = ] 'database'`
  Is the name of the database. *database* is **sysname**, with no default.  
   
- [ **@name=** ] **'**_logical_file_name_**'**  
+`[ @name = ] 'logical_file_name'`
  Is the name used in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] when referencing the file. The name must be unique in the server. *logical_file_name* is **nvarchar(260)**, with no default.  
   
- [ **@filename =** ] **'**_os_file_name_**'**  
+`[ @filename = ] 'os_file_name'`
  Is the path and file name used by the operating system for the file. The file must reside in the server in which the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is installed. *os_file_name* is **nvarchar(260)**, with no default.  
   
- [ **@size=** ] **'**_size_ **'**  
+`[ @size = ] 'size_ '`
  Is the initial size of the file. *size* is **nvarchar(20)**, with a default of NULL. Specify a whole number; do not include a decimal. The MB and KB suffixes can be used to specify megabytes or kilobytes. The default is MB. The minimum value is 512 KB. If *size* is not specified, the default is 1 MB.  
   
- [ **@maxsize=** ] **'**_max_size_ **'**  
+`[ @maxsize = ] 'max_size_ '`
  Is the maximum size to which the file can grow. *max_size* is **nvarchar(20)**, with a default of NULL. Specify a whole number; do not include a decimal. The MB and KB suffixes can be used to specify megabytes or kilobytes. The default is MB.  
   
  If *max_size* is not specified, the file will grow until the disk is full. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log warns an administrator when a disk is about to become full.  
   
- [ **@filegrowth=** ] **'**_growth_increment_ **'**  
+`[ @filegrowth = ] 'growth_increment_ '`
  Is the amount of space added to the file each time new space is required. *growth_increment* is **nvarchar(20)**, with a default of NULL. A value of 0 indicates no growth. Specify a whole number; do not include a decimal. The value can be specified in MB, KB, or percent (%). When % is specified, the growth increment is the specified percentage of the size of the file at the time the increment occurs. If a number is specified without an MB, KB, or % suffix, the default is MB.  
   
  If *growth_increment* is NULL, the default value is 10%, and the minimum size value is 64 KB. The size specified is rounded to the nearest 64 KB.  

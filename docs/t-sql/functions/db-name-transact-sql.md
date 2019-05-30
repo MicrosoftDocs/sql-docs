@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "displaying database names"
   - "DB_NAME function"
 ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

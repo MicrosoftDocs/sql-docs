@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Errors and Events Reference (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This section contains selected [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages that need further explanation.  
   
 ## In This Section  

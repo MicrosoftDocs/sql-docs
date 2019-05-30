@@ -24,7 +24,7 @@ manager: craigg
 
   The **MSsubscriber_schedule** table contains default merge and transactional synchronization schedules for each Publisher/Subscriber pair. This table is stored in the distribution database.  
   
-> [!NOTE]  
+> [!NOTE]
 >  This system table has been deprecated and is being maintained to support earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Column name|Data type|Description|  

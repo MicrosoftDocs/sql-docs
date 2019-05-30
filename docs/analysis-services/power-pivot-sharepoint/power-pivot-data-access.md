@@ -35,6 +35,6 @@ manager: kfile
   
 ## See Also  
  [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [Tabular Model Data Access](../../analysis-services/tabular-models/tabular-model-data-access.md)  
+
   
   

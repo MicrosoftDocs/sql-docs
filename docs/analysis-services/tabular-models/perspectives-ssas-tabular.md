@@ -1,5 +1,5 @@
 ---
-title: "Perspectives | Microsoft Docs"
+title: "Perspectives in Analysis Services tabular models | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ---
-# Perspectives
+# Perspectives in tabular models
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Perspectives, in tabular models, define viewable subsets of a model that provide focused, business-specific, or application-specific viewpoints of the model.  
   

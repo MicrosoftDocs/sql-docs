@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Step 2: Creating a Corrupted File
@@ -22,7 +22,7 @@ manager: craigg
   
      The sample data is included with the SSIS Lesson packages. To download the sample data and the lesson packages, do the following.  
   
-    1.  Navigate to [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Navigate to [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Click the **DOWNLOADS** tab.  
   

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Filter method"
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Filter (geography Data Type)

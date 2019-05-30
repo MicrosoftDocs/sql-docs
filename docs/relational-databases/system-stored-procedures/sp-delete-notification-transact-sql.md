@@ -36,10 +36,10 @@ sp_delete_notification
 ```  
   
 ## Arguments  
- [ **@alert_name=** ] **'***alert***'**  
+`[ @alert_name = ] 'alert'`
  The name of the alert. *alert* is **sysname**, with no default.  
   
- [ **@operator_name=** ] **'***operator***'**  
+`[ @operator_name = ] 'operator'`
  The name of the operator. *operator* is **sysname**, with no default.  
   
 ## Return Code Values  

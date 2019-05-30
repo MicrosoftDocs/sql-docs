@@ -90,7 +90,7 @@ Persist Security Info=False;Connection Pooling=True;
  Most of the options in the string are specific to the DB2 server you are configuring, but the **Process Binary as Character** option should always be set to **False**. A value is required for the **Initial Catalog** option to identify the subscription database. For more information, see [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## See Also  
- [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

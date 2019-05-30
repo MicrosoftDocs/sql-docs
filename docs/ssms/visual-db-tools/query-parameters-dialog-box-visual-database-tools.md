@@ -11,8 +11,8 @@ f1_keywords:
   - "vdtsql.chm:69645"
   - "vdt.dlgbox.definequeryparameters"
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

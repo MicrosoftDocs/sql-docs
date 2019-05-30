@@ -94,7 +94,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 The first two sub-clauses return row versions that overlap with a specified period (i.e. those that started before given period and ended after it), while CONTAINED IN returns only those that existed within specified period boundaries.  
   
 > [!IMPORTANT]  
->  If you search for non-current row versions only, we recommend you to use **CONTAINED IN** as it works only with the history table and will yield the best query performance. Use **ALL** when you need to query current and historical data without any restrictions.  
+>  If you search for non-current row versions only, we recommend you query the history table directly as this will yield the best query performance. Use **ALL** when you need to query current and historical data without any restrictions.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "UNICODE function"
   - "Unicode [SQL Server], UNICODE function"
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

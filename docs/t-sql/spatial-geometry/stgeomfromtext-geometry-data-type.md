@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomFromText (geometry Data Type)"
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STGeomFromText (geometry Data Type)
@@ -49,7 +49,7 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
  This method will throw a **FormatException** if the input is not well-formatted.  
   
 ## Examples  
- The following example uses `STGeomeFromText()` to create a `geometry` instance.  
+ The following example uses `STGeomFromText()` to create a `geometry` instance.  
   
 ```  
 DECLARE @g geometry;  

@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+
 ---
 # Task 3: Importing Domain Values from an Excel File
   In this task, you import values for the **State** domain from a worksheet of an Excel file.  

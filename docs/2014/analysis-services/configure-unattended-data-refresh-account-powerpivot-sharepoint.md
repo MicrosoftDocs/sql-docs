@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
@@ -153,7 +152,7 @@ manager: craigg
   
  If an error occurs, you can click **Configure schedule** in the data refresh history page to try different credentials. You might also need to inspect the data source connection information in the original workbook to view the connection string that is used during data refresh. The connection string will provide information about the server location and database that you can use to troubleshoot the problem.  
   
- For more information about troubleshooting, see [Troubleshooting PowerPivot Data Refresh](http://go.microsoft.com/fwlink/p/?LinkID=223279) on the TechNet Wiki.  
+ For more information about troubleshooting, see [Troubleshooting PowerPivot Data Refresh](https://go.microsoft.com/fwlink/p/?LinkID=223279) on the TechNet Wiki.  
   
 ##  <a name="bkmk_use"></a> Using the PowerPivot Unattended Data Refresh Account  
  Of the three credential options in PowerPivot data refresh scheduling page, only the first one corresponds to the unattended data refresh account. Be sure to select this option when setting up the data refresh schedule.  

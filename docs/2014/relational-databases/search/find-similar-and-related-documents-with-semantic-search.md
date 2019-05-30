@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], document similarity queries"
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Find Similar and Related Documents with Semantic Search
@@ -60,7 +60,7 @@ GO
 ###  <a name="HowToSimilarPhrases"></a> Example: Find the Top Key Phrases That Are Similar between Documents  
  The following example retrieves the 5 key phrases that have the highest similarity score between the specified candidates in **HumanResources.JobCandidate** table of the AdventureWorks2012 sample database.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROM SEMANTICSIMILARITYDETAILSTABLE  
     (  

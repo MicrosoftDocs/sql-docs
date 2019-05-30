@@ -34,7 +34,7 @@ manager: craigg
 -   **In PowerShell:** Create a new asymmetric key (with a different name from your current TDE asymmetric key) in the Key Vault.  
   
     ```powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
@@ -286,7 +286,7 @@ SQL Server Version  |Redistributable Install Link
   
 -   [Get Started with Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   
--   PowerShell [Azure Key Vault Cmdlets](https://msdn.microsoft.com/library/dn868052.aspx) reference  
+-   PowerShell [Azure Key Vault Cmdlets](/powershell/module/azurerm.keyvault/) reference  
   
 ## See Also  
  [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "deleting data"
   - "inserting data"
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

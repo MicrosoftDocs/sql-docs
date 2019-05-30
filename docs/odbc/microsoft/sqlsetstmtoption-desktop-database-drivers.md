@@ -15,6 +15,7 @@ ms.author: genemi
 manager: craigg
 ---
 # SQLSetStmtOption (Desktop Database Drivers)
+
 |*fOption*|Comments|  
 |---------------|--------------|  
 |SQL_ASYNC_ENABLE|Asynchronous processing is not supported. The SQL_ASYNC_ENABLE fOption will return SQLSTATE S1C00 (Driver not capable).|  

@@ -21,12 +21,16 @@ ms.author: craigg
 manager: craigg
 ---
 # Books Online for SQL Server 2014
+
   Welcome to [!INCLUDE[msCoName](../includes/msconame-md.md)]® Books Online for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Books Online contains the task descriptions and reference documentation that describes how to perform data management and business intelligence work by using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-  
+
+SQL Server 2016, and later versions, are documented [here](https://docs.microsoft.com/sql/sql-server/index). SQL Server 2012, and older versions, are documented [here](#previous-versions-gm2014). <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
+
  **Try it out:**  
- ![Azure Virtual Machine small](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed. For more information on SQL Server 2014 (SP1), see [SQL Server 2014 Service Pack 1 release information ](https://support.microsoft.com/en-us/kb/3058865). 
+ ![Azure Virtual Machine small](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed. For more information on SQL Server 2014 (SP1), see [SQL Server 2014 Service Pack 1 release information](https://support.microsoft.com/en-us/kb/3058865). 
   
 ## SQL Server Technologies  
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] includes several data management and analysis technologies. Click on the links in the following table to find the feature, task, and reference documentation for each technology.  
   
 |||  
@@ -40,23 +44,29 @@ manager: craigg
 |![Reporting Services icon](media/reportingservices.gif "Reporting Services icon")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services delivers enterprise, Web-enabled reporting functionality so you can create reports that draw content from a variety of data sources, publish reports in various formats, and centrally manage security and subscriptions.|  
   
 ## SQL Server Information on the Web  
+
  [!INCLUDE[msCoName](../includes/msconame-md.md)] publishes additional information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in several Web sites.  
   
  **SQL Server Web Sites**  
   
--   [SQL Server on Microsoft.com](http://go.microsoft.com/fwlink/?linkid=8504)  
+-   [SQL Server on Microsoft.com](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkid=218841)  
   
--   [SQL Server TechCenter](http://go.microsoft.com/fwlink/?linkid=28107)  
+-   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   
--   [SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=42457)  
+-   [SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42457)  
   
--   [Data Platform Developer Center](http://go.microsoft.com/fwlink/?LinkId=17386)  
+-   [Data Platform Developer Center](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
--   [XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)  
-  
+-   [XML Developer Center](https://go.microsoft.com/fwlink/?LinkId=42458)  
+
+## <a name="previous-versions-gm2014"></a> SQL Server 2005, 2008, 2012, 2016+
+
+[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## See Also  
+
  [SQL Server Configuration Manager Help](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

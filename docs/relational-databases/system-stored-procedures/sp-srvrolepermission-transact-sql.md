@@ -37,7 +37,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## Arguments  
- [ **@srvrolename =** ] **'***role***'**  
+`[ @srvrolename = ] 'role'`
  Is the name of the fixed server role for which permissions are returned. *role* is **sysname**, with a default of NULL. If no role is specified, the permissions for all fixed server roles are returned. *role* can have one of the following values.  
   
 |Value|Description|  

@@ -30,17 +30,17 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLDataSources(  
-     SQLHENV          EnvironmentHandle,  
-     SQLUSMALLINT     Direction,  
-     SQLCHAR *        ServerName,  
-     SQLSMALLINT      BufferLength1,  
-     SQLSMALLINT *    NameLength1Ptr,  
-     SQLCHAR *        Description,  
-     SQLSMALLINT      BufferLength2,  
-     SQLSMALLINT *    NameLength2Ptr);  
+     SQLHENV          EnvironmentHandle,  
+     SQLUSMALLINT     Direction,  
+     SQLCHAR *        ServerName,  
+     SQLSMALLINT      BufferLength1,  
+     SQLSMALLINT *    NameLength1Ptr,  
+     SQLCHAR *        Description,  
+     SQLSMALLINT      BufferLength2,  
+     SQLSMALLINT *    NameLength2Ptr);  
 ```  
   
 ## Arguments  

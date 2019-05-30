@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
@@ -78,7 +77,7 @@ manager: craigg
   
 21. Select **Create a snapshot immediately**, clear **Schedule the snapshot agent to run at the following times**, and click **Next**.  
   
-22. On the Agent Security page, click **Security Settings**, type \<*Machine_Name>***\repl_snapshot** in the **Process account** box, supply the password for this account, and then click **OK**. Click **Finish**.  
+22. On the Agent Security page, click **Security Settings**, type \<_Machine_Name>_**\repl_snapshot** in the **Process account** box, supply the password for this account, and then click **OK**. Click **Finish**.  
   
 23. On the Complete the Wizard page, enter **AdvWorksSalesOrdersMerge** in the **Publication name** box and click **Finish**.  
   
@@ -102,7 +101,7 @@ manager: craigg
   
 3.  Select the **Publication Access List** page, and click **Add**.  
   
-4.  In the Add Publication Access dialog box, select *<Machine_Name>***\repl_merge** and click **OK**. Click **OK**.  
+4.  In the Add Publication Access dialog box, select _<Machine_Name>_**\repl_merge** and click **OK**. Click **OK**.  
   
 ## Next Steps  
  You have successfully created the merge publication. Next, you will subscribe to this publication. See [Lesson 2: Creating a Subscription to the Merge Publication](lesson-2-creating-a-subscription-to-the-merge-publication.md).  

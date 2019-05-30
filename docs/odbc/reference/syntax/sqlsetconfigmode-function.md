@@ -30,10 +30,10 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLSetConfigMode(  
-     UWORD     wConfigMode);  
+     UWORD     wConfigMode);  
 ```  
   
 ## Arguments  

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "mixed types [SQL Server]"
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Mixed Type and Simple Content
@@ -23,8 +23,8 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns"  
-xmlns:ns1="https://ns1">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns"  
+xmlns:ns1="http://ns1">  
   
     <complexType name="myComplexTypeA" mixed="true">  
         <sequence>  

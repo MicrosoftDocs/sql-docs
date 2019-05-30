@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "time [SQL Server], system"
 ms.assetid: 8423c753-cebe-4edd-871d-0138e092199f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -65,12 +65,12 @@ SYSDATETIMEOFFSET ( )
  The following example shows the different formats that are returned by the date and time functions.  
   
 ```  
-SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
+SELECT SYSDATETIME() AS [SYSDATETIME()]  
+    ,SYSDATETIMEOFFSET() AS [SYSDATETIMEOFFSET()]  
+    ,SYSUTCDATETIME() AS [SYSUTCDATETIME()]  
     ,CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
+    ,GETDATE() AS [GETDATE()]  
+    ,GETUTCDATE() AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -111,12 +111,12 @@ SELECT CONVERT (date, SYSDATETIME())
  The following example shows you how to convert date and time values to `time`.  
   
 ```  
-SELECT CONVERT (time, SYSDATETIME()) AS SYSDATETIME()  
-    ,CONVERT (time, SYSDATETIMEOFFSET()) AS SYSDATETIMEOFFSET()  
-    ,CONVERT (time, SYSUTCDATETIME()) AS SYSUTCDATETIME()  
-    ,CONVERT (time, CURRENT_TIMESTAMP) AS CURRENT_TIMESTAMP  
-    ,CONVERT (time, GETDATE()) AS GETDATE()  
-    ,CONVERT (time, GETUTCDATE()) AS GETUTCDATE();  
+SELECT CONVERT (time, SYSDATETIME()) AS [SYSDATETIME()]  
+    ,CONVERT (time, SYSDATETIMEOFFSET()) AS [SYSDATETIMEOFFSET()]  
+    ,CONVERT (time, SYSUTCDATETIME()) AS [SYSUTCDATETIME()]  
+    ,CONVERT (time, CURRENT_TIMESTAMP) AS [CURRENT_TIMESTAMP]  
+    ,CONVERT (time, GETDATE()) AS [GETDATE()]  
+    ,CONVERT (time, GETUTCDATE()) AS [GETUTCDATE()];  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

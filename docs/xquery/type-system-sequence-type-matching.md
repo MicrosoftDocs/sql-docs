@@ -40,7 +40,7 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" nillable="true" type="byte"/>  
 </schema>'  
 GO  
@@ -60,7 +60,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" />'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />'  
 SELECT @var.query('data(/root[1]) instance of  empty() ')  
 GO  
 ```  
@@ -73,7 +73,7 @@ GO
 -- DROP XML SCHEMA COLLECTION SC.  
 -- GO  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
   <element name="root">  
     <complexType>  
        <sequence/>  
@@ -111,7 +111,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" nillable="true" type="byte"/>  
 </schema>'  
 GO  
@@ -130,7 +130,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"></root>'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></root>'  
 SELECT @var.query('data(/root[1]) instance of  xs:byte ')   
 GO  
 -- result = false  
@@ -140,7 +140,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<root xsi:nil="true" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"></root>'  
+SET @var = '<root xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"></root>'  
 SELECT @var.query('data(/root[1]) instance of  xs:byte? ')   
 GO  
 -- result = true  
@@ -254,7 +254,7 @@ element(*, ElementType?)
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
 targetNamespace="myNS" xmlns:ns="myNS">  
   <complexType name="CustomerType">  
      <sequence>  
@@ -307,7 +307,7 @@ GO
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
           targetNamespace="myNS"  xmlns:ns="myNS">  
   <complexType name="CustomerType">  
     <sequence>  
@@ -339,7 +339,7 @@ SET @var = '
    <firstName>FirstName1</firstName>  
    <lastName>LastName1</lastName>  
 </x:customer>  
-<x:customer xsi:type="x:SpecialCustomerType" xmlns:x="myNS" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<x:customer xsi:type="x:SpecialCustomerType" xmlns:x="myNS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <firstName> FirstName2</firstName>  
    <lastName> LastName2</lastName>  
    <Age>21</Age>  
@@ -360,7 +360,7 @@ SELECT @var.query('declare namespace x="myNS";
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
        targetNamespace="myNS" xmlns:ns="myNS">  
 <complexType name="CustomerType">  
   <sequence>  

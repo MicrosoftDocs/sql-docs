@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: "master-data-services"
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
 ---
 # Master Data Services
@@ -31,7 +30,7 @@ manager: craigg
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], which you use to manage data and create new entities and attributes.  
   
- For a summary of MDS resources, see the [SQL Server Master Data Services Portal](http://go.microsoft.com/fwlink/?LinkID=214272).  
+ For a summary of MDS resources, see the [SQL Server Master Data Services Portal](https://go.microsoft.com/fwlink/?LinkID=214272).  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: "I O Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
+title: "I/O Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ---
-# I O Related Dynamic Management Views and Functions (Transact-SQL)
+# I/O Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This section contains the following dynamic management objects.  

@@ -17,13 +17,13 @@ dev_langs:
 helpviewer_keywords: 
   - "server instance event data [SQL Server]"
   - "event notifications [SQL Server], event status"
-  - "events [SQL Server], status infromation"
+  - "events [SQL Server], status information"
   - "EVENTDATA function"
   - "status information [SQL Server], events"
   - "DDL triggers, returning event data"
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # EVENTDATA (Transact-SQL)

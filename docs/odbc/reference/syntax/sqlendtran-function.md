@@ -33,12 +33,12 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLEndTran(  
-     SQLSMALLINT   HandleType,  
-     SQLHANDLE     Handle,  
-     SQLSMALLINT   CompletionType);  
+     SQLSMALLINT   HandleType,  
+     SQLHANDLE     Handle,  
+     SQLSMALLINT   CompletionType);  
 ```  
   
 ## Arguments  

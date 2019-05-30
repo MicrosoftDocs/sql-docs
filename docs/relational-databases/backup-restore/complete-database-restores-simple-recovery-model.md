@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "simple recovery model [SQL Server]"
   - "restoring [SQL Server], database"
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Complete Database Restores (Simple Recovery Model)

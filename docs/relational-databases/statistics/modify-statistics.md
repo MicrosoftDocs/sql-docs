@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "statistics [SQL Server], modifying"
   - "modifying statistics"
 ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

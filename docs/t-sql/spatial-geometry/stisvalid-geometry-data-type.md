@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsValid (geometry Data Type)"
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STIsValid (geometry Data Type)

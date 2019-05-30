@@ -1,6 +1,6 @@
 ---
-title: Give users permission to SQL Server Machine Learning Services | Microsoft Docs
-description: How to give users permission to SQL Server Machine Learning Services.
+title: Grant database permissions for R and Python script execution - SQL Server Machine Learning Services
+description: How to grant database user permissions for R and Python script execution on SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -25,7 +25,7 @@ If you installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] yours
 
 Most users, however, do not have such elevated permissions. For example, users in an organization who use SQL logins to access the database generally do not have elevated permissions. Therefore, for each user who is using R or Python, you must grant users of Machine Learning Services the permission to run external scripts in each database where the language is used. Here's how:
 
-```SQL
+```sql
 USE <database_name>
 GO
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
@@ -44,7 +44,7 @@ For each Windows user account or SQL login that is running R or Python scripts, 
 
 For example, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement gives the SQL login *MySQLLogin* the rights to run T-SQL queries in the *ML_Samples* database. To run this statement, the SQL login must already exist in the security context of the server.
 
-```SQL
+```sql
 USE ML_Samples
 GO
 EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'

@@ -3,7 +3,7 @@ title: "sys.pdw_database_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"

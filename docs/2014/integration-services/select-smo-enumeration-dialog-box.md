@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.selectsmoenumeration.f1"
 helpviewer_keywords: 
   - "Select SMO Enumeration dialog box"
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select SMO Enumeration Dialog Box

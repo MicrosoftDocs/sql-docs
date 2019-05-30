@@ -14,7 +14,7 @@ manager: craigg
 # What&#39;s New in SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] installs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. There is no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  
   
- There will be no more updates to the ODBC driver in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. The successor to the ODBC driver in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, which is called the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows, is installed with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. For more information about the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows, see [Microsoft ODBC Driver 11 for SQL Server - Windows](http://www.microsoft.com/download/details.aspx?id=36434).  
+ There will be no more updates to the ODBC driver in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. The successor to the ODBC driver in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, which is called the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows, is installed with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. For more information about the [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Windows, see [Microsoft ODBC Driver 11 for SQL Server - Windows](https://www.microsoft.com/download/details.aspx?id=36434).  
   
  The OLE DB Provider in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client was last updated in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. Developers who wish to use an OLE DB provider to connect to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must use the OLE DB provider that shipped in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client.  
   
@@ -32,13 +32,13 @@ manager: craigg
   
  In addition, ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client now supports three features that were added to standard ODBC in the Windows 7 SDK:  
   
--   Asynchronous execution on connection-related operations. For more information, see [Asynchronous Execution](http://go.microsoft.com/fwlink/?LinkID=191493).  
+-   Asynchronous execution on connection-related operations. For more information, see [Asynchronous Execution](https://go.microsoft.com/fwlink/?LinkID=191493).  
   
--   C Data Type Extensibility. For more information, see [C Data Types in ODBC](http://go.microsoft.com/fwlink/?LinkID=191495).  
+-   C Data Type Extensibility. For more information, see [C Data Types in ODBC](https://go.microsoft.com/fwlink/?LinkID=191495).  
   
      To support this feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, SQLGetDescField can return `SQL_C_SS_TIME2` (for `time` types) or `SQL_C_SS_TIMESTAMPOFFSET` (for `datetimeoffset`) instead of `SQL_C_BINARY`, if your application uses ODBC 3.8. For more information, see [Data Type Support for ODBC Date and Time Improvements](features/date-and-time-improvements.md).  
   
--   Calling `SQLGetData` with a small buffer multiple times to retrieve a large parameter value. For more information, see [Retrieving Output Parameters Using SQLGetData](http://go.microsoft.com/fwlink/?LinkID=191494).  
+-   Calling `SQLGetData` with a small buffer multiple times to retrieve a large parameter value. For more information, see [Retrieving Output Parameters Using SQLGetData](https://go.microsoft.com/fwlink/?LinkID=191494).  
   
  The following topics describe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client behavior changes in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   

@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
   Creates a managed application module that contains class metadata and managed code as an object in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By referencing this module, common language runtime (CLR) functions, stored procedures, triggers, user-defined aggregates, and user-defined types can be created in the database.  
   
->  [!WARNING]
+> [!WARNING]
 >  CLR uses Code Access Security (CAS) in the .NET Framework, which is no longer supported as a security boundary. A CLR assembly created with `PERMISSION_SET = SAFE` may be able to access external system resources, call unmanaged code, and acquire sysadmin privileges. Beginning with [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], an `sp_configure` option called `clr strict security` is introduced to enhance the security of CLR assemblies. `clr strict security` is enabled by default, and treats `SAFE` and `EXTERNAL_ACCESS` assemblies as if they were marked `UNSAFE`. The `clr strict security` option can be disabled for backward compatibility, but this is not recommended. Microsoft recommends that all assemblies be signed by a certificate or asymmetric key with a corresponding login that has been granted `UNSAFE ASSEMBLY` permission in the master database. For more information, see [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -79,8 +79,8 @@ Specifies the local path or network location where the assembly that is being up
  Is an expression of type **varbinary**.  
   
  PERMISSION_SET { **SAFE** | EXTERNAL_ACCESS | UNSAFE }  
- >  [!IMPORTANT]  
- >  The `PERMISSION_SET` option is affected by the `clr strict security` option, described in the opening warning. When `clr strict security` is enabled, all assemblies are treated as `UNSAFE`.
+> [!IMPORTANT]
+>  The `PERMISSION_SET` option is affected by the `clr strict security` option, described in the opening warning. When `clr strict security` is enabled, all assemblies are treated as `UNSAFE`.
  
  Specifies a set of code access permissions that are granted to the assembly when it is accessed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If not specified, SAFE is applied as the default.  
   

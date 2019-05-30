@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "security [SQLXML], about security"
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Partitions | Microsoft Docs"
+title: "Partitions in Analysis Services tabular models | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -37,7 +37,7 @@ manager: kfile
 |Topic|Description|  
 |-----------|-----------------|  
 |[Create and Manage Partitions in the Workspace Database](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Describes how to create and manage partitions in the model workspace database by using Partition Manager in SSDT.|  
-|[Process Partitions in the Workspace Databse](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|Describes how to process (refresh) partitions in the model workspace database.|  
+|[Process Partitions in the Workspace Database](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)|Describes how to process (refresh) partitions in the model workspace database.|  
   
 ## See also  
  [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   

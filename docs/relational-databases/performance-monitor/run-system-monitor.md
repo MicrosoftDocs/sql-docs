@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "starting Windows NT System Monitor"
   - "RPC"
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Run System Monitor

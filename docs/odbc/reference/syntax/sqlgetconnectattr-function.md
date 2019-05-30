@@ -28,19 +28,19 @@ manager: craigg
  **Summary**  
  **SQLGetConnectAttr** returns the current setting of a connection attribute.  
   
-> [!NOTE]  
+> [!NOTE]
 >  For more information about what the Driver Manager maps this function to when an ODBC 3*.x* application is working with an ODBC 2*.x* driver, see [Mapping Replacement Functions for Backward Compatibility of Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetConnectAttr(  
-     SQLHDBC        ConnectionHandle,  
-     SQLINTEGER     Attribute,  
-     SQLPOINTER     ValuePtr,  
-     SQLINTEGER     BufferLength,  
-     SQLINTEGER *   StringLengthPtr);  
+     SQLHDBC        ConnectionHandle,  
+     SQLINTEGER     Attribute,  
+     SQLPOINTER     ValuePtr,  
+     SQLINTEGER     BufferLength,  
+     SQLINTEGER *   StringLengthPtr);  
 ```  
   
 ## Arguments  

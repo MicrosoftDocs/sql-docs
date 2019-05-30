@@ -3,7 +3,6 @@ title: "Binding Relational Data Inside XML Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -17,9 +16,9 @@ helpviewer_keywords:
   - "variables [XML in SQL Server], relational data binding"
   - "columns [XML in SQL Server], relational data binding"
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # Binding Relational Data Inside XML Data
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "RS.exe Utility (SSRS) | Microsoft Docs"
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "scripts [Reporting Services], command prompt"
   - "deploying reports [Reporting Services]"
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  
@@ -52,7 +52,7 @@ rs {-?}
  (Required) Specifies the .rss file to execute. This value can be a relative or fully qualified path to the .rss file.  
   
  **-s** *serverURL*  
- (Required) Specifies the Web server name and report server virtual directory name to execute the file against. An example of a report server URL is `https://examplewebserver/reportserver`. The prefix https:// or https:// at the beginning of the server name is optional. If you omit the prefix, the report server script host tries to use https first, and then uses http if https does not work.  
+ (Required) Specifies the Web server name and report server virtual directory name to execute the file against. An example of a report server URL is `https://examplewebserver/reportserver`. The prefix http:// or https:// at the beginning of the server name is optional. If you omit the prefix, the report server script host tries to use https first, and then uses http if https does not work.  
   
  **-u** [*domain*\\]*username*  
  (Optional) Specifies a user account used to connect to the report server. If **-u** and **-p** are omitted, the current Windows user account is used.  

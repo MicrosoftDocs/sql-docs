@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
@@ -45,7 +44,7 @@ manager: craigg
   
 10. On the Agent Security page, clear **Use the security settings from the Snapshot Agent** check box.  
   
-11. Click **Security Settings** for the Snapshot Agent, enter \<*Machine_Name>***\repl_snapshot** in the **Process account** box, supply the password for this account, and then click **OK**.  
+11. Click **Security Settings** for the Snapshot Agent, enter \<_Machine_Name>_**\repl_snapshot** in the **Process account** box, supply the password for this account, and then click **OK**.  
   
 12. Repeat the previous step to set repl_logreader as the process account for the Log Reader Agent, and then click **Finish**.  
   
@@ -71,7 +70,7 @@ manager: craigg
   
 3.  Select the **Publication Access List** page, and click **Add**.  
   
-4.  \In the **Add Publication Access** dialog box, select *<Machine_Name>***\repl_distribution** and click **OK**. Click **OK**.  
+4.  \In the **Add Publication Access** dialog box, select _<Machine_Name>_**\repl_distribution** and click **OK**. Click **OK**.  
   
 ## Next Steps  
  You have successfully created the transactional publication. Next, you will subscribe to this publication. See [Lesson 2: Creating a Subscription to the Transactional Publication](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Environment.Help.Online"
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Options (Environment - Help - Online Page)

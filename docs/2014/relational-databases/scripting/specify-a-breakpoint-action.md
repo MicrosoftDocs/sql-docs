@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.breakpt.action"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint action"
   - "Transact-SQL debugger, breakpoint when hit action"
@@ -64,5 +61,3 @@ manager: craigg
 ## See Also  
  [Specify a Breakpoint Condition](specify-a-breakpoint-condition.md)   
  [Specify a Hit Count](specify-a-hit-count.md)  
-  
-  

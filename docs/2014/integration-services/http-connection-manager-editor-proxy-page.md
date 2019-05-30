@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.httpconnection.proxy.f1"
 helpviewer_keywords: 
   - "HTTP Connection Manager Editor"
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # HTTP Connection Manager Editor (Proxy Page)

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.editor.howto.navigate"
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Navigate Between Scripts

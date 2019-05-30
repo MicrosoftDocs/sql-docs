@@ -67,7 +67,7 @@ manager: craigg
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

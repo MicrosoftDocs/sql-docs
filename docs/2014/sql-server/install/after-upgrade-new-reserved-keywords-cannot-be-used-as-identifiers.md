@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "keywords [SQL Server], after upgrade"
@@ -51,7 +50,7 @@ manager: craigg
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   
- [Delimited Identifiers (Database Engine)](http://go.microsoft.com/fwlink/?LinkId=112509)  
+ [Delimited Identifiers (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=112509)  
   
  [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   

@@ -11,11 +11,15 @@ helpviewer_keywords:
   - "conditional operator (?:)"
   - "?: (conditional operator)"
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ? : (Conditional) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns one of two expressions based on the evaluation of a Boolean expression. If the Boolean expression evaluates to TRUE, then the first expression is evaluated and the result is the expression result. If the Boolean expression evaluates to FALSE then the second expression is evaluated and its result is the expression result.  
   
 ## Syntax  

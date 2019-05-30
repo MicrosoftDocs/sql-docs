@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML for Analysis, data mining"
@@ -56,7 +54,7 @@ manager: craigg
 ## Namespace and Schema  
   
 ### Namespace  
- The schema defined in this specification uses the XML namespace http://schemas.microsoft.com/AnalysisServices/2003/Engine and the standard abbreviation "DDL."  
+ The schema defined in this specification uses the XML namespace https://schemas.microsoft.com/AnalysisServices/2003/Engine and the standard abbreviation "DDL."  
   
 ### Schema  
  The definition of an XML Schema definition language (XSD) schema for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object definition language is based on the definition of the schema elements and hierarchy in this section.  

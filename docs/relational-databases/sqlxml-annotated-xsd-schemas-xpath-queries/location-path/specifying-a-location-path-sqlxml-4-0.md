@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "relative location path [SQLXML]"
   - "location path for XPath query"
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

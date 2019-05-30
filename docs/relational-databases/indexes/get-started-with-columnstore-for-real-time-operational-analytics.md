@@ -199,7 +199,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
 -   **OLTP workload:** If the workload is DML heavy (i.e. heavy mix of Update, Delete and Insert), you may see columnstore index fragmentation by examining the DMV sys. dm_db_column_store_row_group_physical_stats. If you see that > 10% rows are marked deleted in recently compressed rowgroups, you can use COMPRESSION_DELAY option to add time delay when rows become eligible for compression. For example, if for your workload, the newly inserted stays 'hot' (i.e. gets updated multiple times) for say 60 minutes, you should choose COMPRESSION_DELAY to be 60.  
   
- We expect most customers do not need to anything. The default value of COMPRESSION_DELAY option should work for them.  
+ We expect most customers do not need to do anything. The default value of COMPRESSION_DELAY option should work for them.  
 For advance users, we recommend running the query below and collect % of deleted rows over the last 7 days.  
   
 ```  

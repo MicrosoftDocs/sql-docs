@@ -29,12 +29,12 @@ SQLGetDescField has the following syntax:
 
 ```  
 SQLRETURN SQLGetDescField(  
-     SQLHDESC        DescriptorHandle,  
-     SQLSMALLINT     RecNumber,  
-     SQLSMALLINT     FieldIdentifier,  
-     SQLPOINTER      ValuePtr,  
-     SQLINTEGER      BufferLength,  
-     SQLINTEGER *    StringLengthPtr);  
+     SQLHDESC        DescriptorHandle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     FieldIdentifier,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
  [Input] IRD(Implementation Row Descriptor) handle. Can be retrieved by a call to SQLGetStmtAttr with SQL_ATTR_IMP_ROW_DESC statement attribute

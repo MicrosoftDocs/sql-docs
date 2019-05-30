@@ -28,13 +28,13 @@ manager: kfile
   
  **Scenario 1: Service is not started**  
   
- The SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) instance is not started. An expired password will cause the service to stop running. For more information about changing the password, see [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) and [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
+ The SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) instance is not started. An expired password will cause the service to stop running. For more information about changing the password, see [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) and [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
  **Scenario 2a: Opening an earlier version workbook n the server**  
   
  The workbook you are attempting to open might have been created in the SQL Server 2008 R2 version of [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel. Most likely, the Analysis Services data provider that is specified in the data connection string is not present on the computer that is handling the request.  
   
- If this is the case, you will find this message in the ULS log: "Refresh failed for '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t Data' in the workbook '\<URL to workbook>'", followed by "Unable to get a connection".  
+ If this is the case, you will find this message in the ULS log: "Refresh failed for ' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t Data' in the workbook '\<URL to workbook>'", followed by "Unable to get a connection".  
   
  To determine the version of the workbook, open it in Excel and check which data provider is specified in the connection string. A SQL Server 2008 R2 workbook uses MSOLAP.4 as its data provider.  
   

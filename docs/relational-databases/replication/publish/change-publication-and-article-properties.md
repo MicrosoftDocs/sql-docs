@@ -89,8 +89,8 @@ manager: craigg
 |Change destination table owner.|**sp_changemergearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
 ## See Also  
- [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
- [Create and Apply the Snapshot](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
+ [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Create and Apply the Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

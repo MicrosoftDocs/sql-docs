@@ -50,8 +50,8 @@ manager: craigg
 ## See Also  
  [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
- [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Security and Protection &#40;Replication&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

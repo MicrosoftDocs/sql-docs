@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "switching execution context"
   - "functions [SQL Server], execution context"
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # EXECUTE AS Clause (Transact-SQL)

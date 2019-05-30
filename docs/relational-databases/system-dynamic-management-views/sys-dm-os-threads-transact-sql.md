@@ -65,12 +65,16 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
 
+## Notes on Linux version
+
+Due to how the SQL engine works in Linux, some of this information doesn't match Linux diagnostics data. For example, `os_thread_id` does not match the result of tools like `ps`,`top` or the procfs (/proc/`pid`).  This is due the Platform Abstraction Layer (SQLPAL), a layer between SQL Server components and the operating system.
+
 ## Examples  
  Upon startup, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts threads and then associates workers with those threads. However, external components, such as an extended stored procedure, can start threads under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has no control of these threads. sys.dm_os_threads can provide information about rogue threads that consume resources in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process.  
   
  The following query is used to find workers, along with time used for execution, that are running threads not started by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-> [!NOTE]  
+> [!NOTE]
 >  For conciseness, the following query uses an asterisk (`*`) in the `SELECT` statement. You should avoid using the asterisk (*), especially against catalog views, dynamic management views, and system table-valued functions. Future upgrades and releases of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may add columns and change the order of columns to these views and functions. These changes might break applications that expect a particular order and number of columns.  
   
 ```  

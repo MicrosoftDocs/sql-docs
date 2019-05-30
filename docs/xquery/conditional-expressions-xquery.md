@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "conditional expressions [XQuery]"
   - "EBV"
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Conditional Expressions (XQuery)

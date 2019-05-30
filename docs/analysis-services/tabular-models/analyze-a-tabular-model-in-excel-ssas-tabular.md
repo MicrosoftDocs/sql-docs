@@ -1,5 +1,5 @@
 ---
-title: "Analyze a tabular model in Excel | Microsoft Docs"
+title: "Analyze an Analysis Services tabular model in Excel | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services

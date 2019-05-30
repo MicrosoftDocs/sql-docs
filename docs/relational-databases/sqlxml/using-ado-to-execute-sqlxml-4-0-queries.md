@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [SQLXML], ADO"
   - "SQLXML, ADO"
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

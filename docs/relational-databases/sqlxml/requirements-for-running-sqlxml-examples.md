@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLXML, samples"
   - "examples [SQLXML], requirements"
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

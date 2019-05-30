@@ -41,7 +41,7 @@ manager: craigg
   
  For each registered database, the following information is displayed:  
   
- *<Database_name>* **(** *\<Status>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Database_name>*  
  The name of a mirrored database that is registered with the Database Mirroring Monitor.  
@@ -60,9 +60,9 @@ manager: craigg
  *<PRINCIPAL_SERVER>*  
  The name of the partner that is currently the principal server instance. The name is in the following format:  
   
- *<SYSTEM_NAME>*[**\\***<instance_name>*]  
+ *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
   
- where *<SYSTEM_NAME>* is the name of the system on which the server instance resides. For a non-default server instance, the instance name is also displayed: *<SYSTEM_NAME>***\\***<instance_name>*.  
+ where *<SYSTEM_NAME>* is the name of the system on which the server instance resides. For a non-default server instance, the instance name is also displayed: _<SYSTEM_NAME>_**\\**_<instance_name>_.  
   
  *<MIRROR_SERVER>*  
  The name of the partner that is currently the mirror server instance. The format is the same as for the principal server.  
@@ -77,7 +77,7 @@ manager: craigg
   
  A system administrator can view the current configuration of warnings for the database by selecting the **Warnings** tabbed page. From there, the administrator can launch the **Set Warning Thresholds** dialog box to enable and configure one or more warning thresholds.  
   
- In the banner above the tabs, the detail pane displays the last time the monitor refreshed the status information as, **Last refresh:***\<date>**\<time>*. Usually, the Database Mirroring Monitor retrieves status information from the principal and mirror server instances at different times. The older of these two refresh times is displayed.  
+ In the banner above the tabs, the detail pane displays the last time the monitor refreshed the status information as, **Last refresh:**_\<date>\<time>_. Usually, the Database Mirroring Monitor retrieves status information from the principal and mirror server instances at different times. The older of these two refresh times is displayed.  
   
 ## Action Menu  
  The **Action** menu always contains the following commands:  

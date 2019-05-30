@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "ActiveX scripting jobs [SQL Server]"
   - "job steps [Analysis Services]"
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
@@ -106,7 +106,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell s
   
 ## ActiveX Scripting Job Steps  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The ActiveX scripting job step will be removed from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in a future version of [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
   
 When you create an ActiveX scripting job step, you must:  

@@ -2,7 +2,7 @@
 title: "Set Report Processing Properties | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "report snapshots [Reporting Services], running reports from"
   - "report execution snapshots [Reporting Services]"
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Set Report Processing Properties
   Report execution properties control how a report is processed. Execution properties must be set for each report individually.  

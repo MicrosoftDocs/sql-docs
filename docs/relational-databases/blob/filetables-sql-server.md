@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "FileTable [SQL Server], see FileTables [SQL Server]"
   - "FileTable [SQL Server]"
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray"
 manager: craigg
 ---
 # FileTables (SQL Server)
@@ -77,6 +77,8 @@ manager: craigg
 -   Windows API operations are non-transactional in nature, and are not associated with user transactions. However, transactional access to FILESTREAM data stored in a FileTable is fully supported, as is the case for any FILESTREAM column in a regular table.  
   
 -   FileTables can also be queried and updated through normal [!INCLUDE[tsql](../../includes/tsql-md.md)] access. They are also integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools, and features such as backup.  
+
+-   You are unable to send an email request through dbmail and attach a file located in a filestream directory (and therefore filetable). The filesystem filter driver RsFx0420 inspects incoming I/O requests going in and out of the filestream folder. If the request is not both from the SQLServer executable and Filestream code, they are explicitly disallowed.
   
 ##  <a name="additional"></a> Additional Considerations for Using FileTables  
   

@@ -62,7 +62,7 @@ manager: craigg
   
 4.  Right-click the function of which you want to view the properties and select **Properties**.  
   
-     The following properties appear in the **Function Properties -** *function_name* dialog box.  
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
      **Database**  
      The name of the database containing this function.  

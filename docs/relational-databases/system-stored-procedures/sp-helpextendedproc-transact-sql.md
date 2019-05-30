@@ -37,7 +37,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## Arguments  
- [ **@funcname =**] **'***procedure***'**  
+`[ @funcname = ] 'procedure'`
  Is the name of the extended stored procedure for which information is reported. *procedure* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

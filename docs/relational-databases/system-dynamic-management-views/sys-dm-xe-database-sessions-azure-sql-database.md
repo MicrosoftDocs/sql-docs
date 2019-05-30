@@ -2,10 +2,8 @@
 title: "sys.dm_xe_database_sessions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: MightyPen
@@ -33,7 +31,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
  Requires VIEW DATABASE STATE permission.  
   
 ### Relationship Cardinalities  
-As of 2015-07-13, 'sys.dm_xe_objects' is one of these XEvents DMVs that do Not contain '_database' in their name. Not a typo or error in the following table's right-side column. The name is the same in Microsoft SQL Server and Azure SQL Database. GeneMi.  
+As of 2015-07-13, 'sys.dm_xe_objects' is one of these XEvents DMVs that do Not contain '_database' in their name. Not a typo or error in the following table's right-side column. The name is the same in Microsoft SQL Server and Azure SQL Database.  
   
 |From|To|Relationship|  
 |--------|------|----------------|  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], property expressions"
   - "property expressions [Integration Services]"
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Use Property Expressions in Packages
@@ -161,9 +161,9 @@ manager: craigg
   
 ## External Resources  
   
--   [Expression and Configuration Highlighter (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=146625)  
+-   [Expression and Configuration Highlighter (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146625)  
   
--   Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+-   Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
  [Use Variables in Packages](../use-variables-in-packages.md)  

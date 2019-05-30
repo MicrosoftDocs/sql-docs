@@ -16,6 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # ADOX Methods
+
 |||  
 |-|-|  
 |[Append (Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Adds a new **Column** object to the **Columns** collection.|  

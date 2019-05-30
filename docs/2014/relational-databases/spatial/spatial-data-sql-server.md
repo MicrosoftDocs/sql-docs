@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "spatial storage [SQL Server]"
   - "geodetic spatial data [SQL Server], designing"
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 ---
 # Spatial Data (SQL Server)
@@ -30,7 +30,7 @@ manager: craigg
  Both data types are implemented as .NET common language runtime (CLR) data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], download the white paper, [New Spatial Features in SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  
+>  For a detailed description and examples of spatial features introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], download the white paper, [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
 ##  <a name="reltasks"></a> Related Tasks  
  [Create, Construct, and Query geometry Instances](create-construct-and-query-geometry-instances.md)  

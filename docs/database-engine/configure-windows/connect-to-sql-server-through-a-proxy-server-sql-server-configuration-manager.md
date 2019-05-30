@@ -33,7 +33,7 @@ manager: craigg
   
 2.  In your proxy server define the local address table (LAT) for the proxy server so that the listening node address is outside the range of LAT entries. For more information, see your proxy server documentation.  
   
->  [!NOTE]
+> [!NOTE]
 >  This topic applies to on-premises [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. For connection issues related to [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Troubleshoot connection issues to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-troubleshoot-common-connection-issues).  
 
 

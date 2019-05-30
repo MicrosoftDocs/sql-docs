@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ReadOnly property"
@@ -131,7 +130,7 @@ manager: craigg
   
 4.  Copy the following script template for XMLA:  
   
- `<Detach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">`  
+ `<Detach xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">`  
   
  `<Object>`  
   
@@ -149,11 +148,11 @@ manager: craigg
   
 3.  Copy the following script template for XMLA in a new XMLA tab  
   
- `<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
+ `<Attach xmlns="https://schemas.microsoft.com/analysisservices/2003` `/engine` `">`  
   
  `<Folder>%dbFolder%</Folder>`  
   
- `<ReadWriteMode xmlns="http://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
+ `<ReadWriteMode xmlns="https://schemas.microsoft.com/analysisservices/2008/engine/100">%ReadOnlyMode%</ReadWriteMode>`  
   
  `</Attach>`  
   

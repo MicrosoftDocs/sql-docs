@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "tied rows [SQL Server]"
   - "ranking rows"
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -93,7 +93,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### B. Ranking all rows in a result set  
-This example returns the top ten employees ranked by their salary. Because the `SELECT` statement did not specifiy a `PARTITION BY` clause, the `DENSE_RANK` function applied to all result set rows.  
+This example returns the top ten employees ranked by their salary. Because the `SELECT` statement did not specify a `PARTITION BY` clause, the `DENSE_RANK` function applied to all result set rows.  
   
 ```  
 USE AdventureWorks2012;  

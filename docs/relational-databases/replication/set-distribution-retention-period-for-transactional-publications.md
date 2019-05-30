@@ -21,7 +21,7 @@ manager: craigg
   
 ### To specify the distribution retention period  
   
-1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**...**) for the distribution database.  
+1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**…**) for the distribution database.  
   
 2.  To specify the minimum distribution retention period, enter a value in the **At least** box; to specify the maximum distribution retention period, enter a value in the **But not more than** box.  
   

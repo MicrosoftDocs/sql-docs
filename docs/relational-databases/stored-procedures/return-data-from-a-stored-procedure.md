@@ -268,7 +268,7 @@ END
 ELSE IF @ret_code = 1  
    PRINT 'ERROR: You must specify a last name for the sales person.'  
 ELSE IF @ret_code = 2   
-   PRINT 'EERROR: You must enter a valid last name for the sales person.'  
+   PRINT 'ERROR: You must enter a valid last name for the sales person.'  
 ELSE IF @ret_code = 3  
    PRINT 'ERROR: An error occurred getting sales value.'  
 ELSE IF @ret_code = 4  

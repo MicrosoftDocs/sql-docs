@@ -37,7 +37,7 @@ manager: craigg
   
 3.  Execute the statement.  
   
-4.  Each call to [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
+4.  Each call to [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
   
 ### To use row-wise binding  
   
@@ -61,7 +61,7 @@ manager: craigg
   
 4.  Execute the statement.  
   
-5.  Each call to [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
+5.  Each call to [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) or [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) retrieves R rows and transfers the data into the bound columns.  
   
 ## See Also  
  [Using Cursors How-to Topics &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   

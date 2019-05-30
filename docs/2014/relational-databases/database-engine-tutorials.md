@@ -49,6 +49,6 @@ manager: craigg
   
 ## See Also  
  [Tutorials for SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [TechNet WIKI: SQL Server 2012 Samples](http://go.microsoft.com/fwlink/?linkID=220734)  
+ [TechNet WIKI: SQL Server 2012 Samples](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

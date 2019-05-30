@@ -30,13 +30,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetEnvAttr(  
-     SQLHENV      EnvironmentHandle,  
-     SQLINTEGER   Attribute,  
-     SQLPOINTER   ValuePtr,  
-     SQLINTEGER   StringLength);  
+     SQLHENV      EnvironmentHandle,  
+     SQLINTEGER   Attribute,  
+     SQLPOINTER   ValuePtr,  
+     SQLINTEGER   StringLength);  
 ```  
   
 ## Arguments  

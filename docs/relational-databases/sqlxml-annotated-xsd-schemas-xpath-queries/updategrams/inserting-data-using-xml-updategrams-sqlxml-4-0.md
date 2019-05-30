@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "at-identity attribute"
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -382,7 +382,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  The following schema (CustOrderSchema.xml) describes a **\<CustOrder>** element that consists of the **OrderID** and **EmployeeID** attributes. To make the schema more interesting, a default value is assigned to the **EmployeeID** attribute. An updategram uses an attribute's default value only for insert operations, and then only if the updategram does not specify that attribute.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="CustOrder" >  
    <xsd:complexType>  
@@ -452,7 +452,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0"?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:element name="Student" sql:relation="Students">  
   <xsd:complexType>  
@@ -483,7 +483,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
       xmlns:updg="urn:schemas-microsoft-com:xml-updategram"  
-      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   
 <updg:sync mapping-schema='StudentSchema.xml'>  
   <updg:before/>  
@@ -558,7 +558,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
  The following schema (XSD-ElementHavingNamespace.xml) shows how the corresponding element and attributes must be declared.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
      xmlns:dt="urn:schemas-microsoft-com:datatypes"   
      xmlns:sql="urn:schemas-microsoft-com:mapping-schema"    
      xmlns:x="https://server/xyz/schemas/"   
@@ -630,7 +630,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
         <p1:ProductDescription xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
               xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
               xmlns:wf="https://www.adventure-works.com/schemas/OtherFeatures"   
-              xmlns:html="https://www.w3.org/1999/xhtml"   
+              xmlns:html="http://www.w3.org/1999/xhtml"   
               xmlns="">  
   <p1:Summary>  
      <html:p>Insert Example</html:p>  
@@ -681,7 +681,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
            xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
            xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">   
   <xsd:element name="ProductModel"  sql:relation="Production.ProductModel" >  

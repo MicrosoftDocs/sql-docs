@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling task [Integration Services], configuring"
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Setup of the Data Profiling Task
@@ -91,7 +91,7 @@ manager: craigg
   
 -   To build custom tools that work with data quality information.  
   
- The target namespace is identified in the schema as [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ The target namespace is identified in the schema as [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## Next Step  
  [Data Profile Viewer](data-profile-viewer.md).  

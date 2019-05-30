@@ -53,10 +53,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
-   APPEND (child-recordset [ [[AS] child-alias]   
-      RELATE parent-column TO child-column | PARAMETER param-number, ... ])  
-   [[AS] chapter-alias]   
-   [, ... ]  
+   APPEND (child-recordset [ [[AS] child-alias]   
+      RELATE parent-column TO child-column | PARAMETER param-number, ... ])  
+   [[AS] chapter-alias]   
+   [, ... ]  
 ```  
   
 ## Remarks  

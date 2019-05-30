@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.bulkinserttask.general.f1"
 helpviewer_keywords: 
   - "Bulk Insert Task Editor"
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Bulk Insert Task Editor (General Page)

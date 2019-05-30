@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "modulo operator (%)"
   - "modulus operator (%)"
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

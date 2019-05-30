@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "deploying cache files for Lookup transformation"
   - "Lookup transformation cache files"
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create and Deploy a Cache for the Lookup Transformation

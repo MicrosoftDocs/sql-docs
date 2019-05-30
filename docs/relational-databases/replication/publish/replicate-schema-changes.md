@@ -47,7 +47,7 @@ manager: craigg
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   The ALTER TABLE ... DROP COLUMN statement is always replicated to all Subscribers whose subscription contains the columns being dropped, even if you disable the replication of schema changes.  
+-   The ALTER TABLE … DROP COLUMN statement is always replicated to all Subscribers whose subscription contains the columns being dropped, even if you disable the replication of schema changes.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  If you do not want to replicate schema changes for a publication, disable the replication of schema changes in the **Publication Properties - \<Publication>** dialog box. For more information about accessing this dialog box, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  

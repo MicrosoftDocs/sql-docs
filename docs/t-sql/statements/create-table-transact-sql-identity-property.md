@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "identity columns [SQL Server], IDENTITY property"
   - "autonumbers, identity numbers"
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -1,6 +1,7 @@
 ---
-title: "Availability group is offline | Microsoft Docs"
-ms.custom: ""
+title: "Availability group is offline"
+description: "Identify possible causes for why an Always On availability group is offline."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability group is offline
+# Always On Availability group is offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  

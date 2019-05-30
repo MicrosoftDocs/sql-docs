@@ -3,6 +3,7 @@ title: "Metadata Discovery | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5

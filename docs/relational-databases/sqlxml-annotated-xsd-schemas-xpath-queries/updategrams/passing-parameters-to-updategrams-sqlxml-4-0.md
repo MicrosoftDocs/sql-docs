@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "updategrams [SQLXML], passing parameters"
   - "null values [SQLXML]"
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

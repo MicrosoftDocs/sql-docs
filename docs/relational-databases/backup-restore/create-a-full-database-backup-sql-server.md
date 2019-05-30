@@ -29,13 +29,13 @@ For information on SQL Server backup to the Azure Blob storage service, see [SQL
   
 -   The BACKUP statement is not allowed in an explicit or implicit transaction.    
 -   Backups created by more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
--   For an overview of, and deeper dive into, backup concepts and tasks, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) before proceding.  
+-   For an overview of, and deeper dive into, backup concepts and tasks, see [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) before proceeding.  
   
 ## <a name="Recommendations"></a> Recommendations  
   
 -   As a database increases in size full database backups take more time to complete, and require more storage space. For a large database, consider supplementing a full database backup with a series of [differential database backups](../../relational-databases/backup-restore/differential-backups-sql-server.md). For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).    
 -   Estimate the size of a full database backup by using the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure.    
--   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up frequently, these success messages will accumulate quickly, resulting in huge error logs! This can make finding other messages difficult. In such cases you can suppress these backup log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+-   By default, every successful backup operation adds an entry in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and in the system event log. If you back up frequently, these success messages will accumulate quickly, resulting in huge error logs! This can make finding other messages difficult. In such cases, you can suppress these backup log entries by using trace flag 3226 if none of your scripts depend on those entries. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 ##  <a name="Security"></a> Security  
  TRUSTWORTHY is set to OFF on a database backup. For information about how to set TRUSTWORTHY to ON, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
@@ -106,7 +106,7 @@ GO
 ```
 
 ### A. Full back up to disk to default location
-In this example the `SQLTestDB` database will be backed up to disk at the default backup location.  A back up of `SQLTestDB` has never been taken.
+In this example, the `SQLTestDB` database will be backed up to disk at the default backup location.  A backup of `SQLTestDB` has never been taken.
 1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 2.  Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
 3.  Select **OK**.
@@ -115,7 +115,7 @@ In this example the `SQLTestDB` database will be backed up to disk at the defaul
  
 
 ### **B.  Full back up to disk to non-default location**
-In this example the `SQLTestDB` database will be backed up to disk at `F:\MSSQL\BAK`.  Previous back ups of `SQLTestDB` have been taken.
+In this example, the `SQLTestDB` database will be backed up to disk at `F:\MSSQL\BAK`.  Previous back ups of `SQLTestDB` have been taken.
 1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 2.  Expand **Databases**, right-click `Sales`, point to **Tasks**, and then click **Back Up...**.
 3.  On the **General** page in the **Destination** section select **Disk** from the **Back up to:** drop-down list.
@@ -128,7 +128,7 @@ In this example the `SQLTestDB` database will be backed up to disk at `F:\MSSQL\
 ![Change DB location](media/create-a-full-database-backup-sql-server/change-db-location.png)
 
 ### **C.  Create an encrypted backup**
-In this example the `SQLTestDB` database will be backed up with encryption to the default backup location.  
+In this example, the `SQLTestDB` database will be backed up with encryption to the default backup location.  
 
 1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 1. Open a **New Query** window and execute the following commands to create a [**database master key**](../../relational-databases/security/encryption/create-a-database-master-key.md) and a [**certificate**](../../t-sql/statements/create-certificate-transact-sql.md) within your `SQLTestDB` database. 
@@ -150,7 +150,7 @@ In this example the `SQLTestDB` database will be backed up with encryption to th
 1.  In **Object Explorer**, Expand **Databases**, right-click `SQLTestDB`, point to **Tasks**, and then click **Back Up...**.
 1.  On the **Media Options** page, in the **Overwrite media** section select **Back up to a new media set, and erase all existing backup sets**.
 1.  On the **Backup Options** page in the **Encryption** section select the **Encrypt backup** check box.
-1.  From the **Algorithm** drop-down list select **AES 256**.
+1.  From the Algorithm drop-down list, select **AES 256**.
 1.  From the **Certificate or Asymmetric key** drop-down list select `MyCertificate`.
 1.  Select **OK**.
 

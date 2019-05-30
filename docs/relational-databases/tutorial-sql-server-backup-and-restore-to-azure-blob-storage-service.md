@@ -32,7 +32,7 @@ A container provides a grouping of a set of blobs. All blobs must be in a contai
 
 To create a Container, follow these steps:
 
-1. Open the Azure Portal. 
+1. Open the Azure portal. 
 1. Navigate to your Storage Account. 
    1. Select the storage account, scroll down to **Blob Services**.
    1. Select **Blobs** and then select  +**Container** to add a new container. 
@@ -90,9 +90,9 @@ A SQL Server credential is an object that is used to store authentication inform
   >The requirements for creating a SQL Server credential described below are specific to SQL Server backup processes ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md), and [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server uses the storage account name and access key information when accessing Azure storage to write or read backups.
 
 ### Access keys
-Since the Azure Portal is still open, save the access keys necessary for creating the credential. 
+Since the Azure portal is still open, save the access keys necessary for creating the credential. 
 
-1. Navigate to the **Storage Account** in the Azure Portal. 
+1. Navigate to the **Storage Account** in the Azure portal. 
 1. Scroll down to **Settings** and select **Access Keys**. 
 1. Save both the key and connection string to use later in this quickstart. 
 
@@ -113,7 +113,7 @@ Using the access key you saved, create the SQL Server credential following the s
 
 1. Execute the statement to create the credential. 
 
-## Backup database to the Windows Azure Blob Storage Service
+## Back up database to the Windows Azure Blob Storage Service
 In this section, you will use a T-SQL statement to perform a full database backup to the Windows Azure Blob Storage service. 
 
 1. Connect to your SQL Server using SQL Server Management Studio. 

@@ -4,7 +4,7 @@ description: R and Python CAB and package downloads for SQL Server 2017 Machine 
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 04/01/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -31,7 +31,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release  |Component | Download link  | Issues addressed | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Binaries within the package are now signed. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| Binaries within the package are now signed. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| Binaries within the package are now signed. |

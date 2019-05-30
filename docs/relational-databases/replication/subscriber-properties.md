@@ -17,8 +17,12 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Subscriber Properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   The **Subscriber Properties** dialog box contains information relevant to Subscribers running versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+
+  > [!NOTE] 
+  > Azure SQL Database managed instance can be a publisher, distributor, and subscriber for snapshot and transactional replication. Azure SQL database single and pooled databases can only be push subscribers for snapshot and transactional replication. For more information, see [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
+
   
 ## Options  
  **Agent Connection to the Subscriber**  

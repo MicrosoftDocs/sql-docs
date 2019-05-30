@@ -19,7 +19,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Replication Agent Executables Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Replication agents can be controlled programmatically in the following ways:  
   

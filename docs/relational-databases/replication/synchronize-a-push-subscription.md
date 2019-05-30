@@ -18,19 +18,12 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Synchronize a Push Subscription
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   This topic describes how to synchronize a push subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [replication agents](../../relational-databases/replication/agents/replication-agents-overview.md), or Replication Management Objects (RMO).  
   
- **In This Topic**  
-  
--   **To synchronize a push subscription, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Replication Agents](#ReplProg)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
-  
+  > [!NOTE] 
+  > Azure SQL Database managed instance can be a publisher, distributor, and subscriber for snapshot and transactional replication. Azure SQL database single and pooled databases can only be push subscribers for snapshot and transactional replication. For more information, see [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
+
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  Subscriptions are synchronized by the Distribution Agent (for snapshot and transactional replication) or the Merge Agent (for merge replication). Agents can run continuously, run on demand, or run on a schedule. For more information about specifying synchronization schedules, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

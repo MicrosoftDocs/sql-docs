@@ -28,8 +28,11 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Subscribe to Publications
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   A subscription is a request for a copy of the data and database objects in a publication. A subscription defines which publication will be received, and where and when it will be received. When planning for subscriptions, consider where you want agent processing to occur. The type of subscription you choose controls where the agent runs. With a push subscription, the Merge Agent or Distribution Agent runs at the Distributor, whereas with a pull subscription, agents run at the Subscribers. After a subscription is created, it cannot be changed from one type to another.  
+
+  > [!NOTE] 
+  > Azure SQL Database managed instance can be a publisher, distributor, and subscriber for snapshot and transactional replication. Azure SQL database single and pooled databases can only be push subscribers for snapshot and transactional replication. For more information, see [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication).
   
 |Subscription|Characteristics|Use When|  
 |------------------|---------------------|--------------|  

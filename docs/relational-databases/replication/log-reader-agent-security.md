@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Log Reader Agent Security
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Log Reader Agent Security** dialog box allows you to specify:  
   
 -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Log Reader Agent runs at the Distributor. The Windows account is also referred to as the *process account*, because the agent process runs under this account.  

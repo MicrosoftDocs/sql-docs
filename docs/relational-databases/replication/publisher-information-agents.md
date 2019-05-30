@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Publisher Information, Agents
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Agents** tab displays information about the agents and maintenance jobs that are associated with the Publisher:  
   
 -   Snapshot Agent, which is displayed for all publications.  

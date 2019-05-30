@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # SQL Server Replication Distributor Properties dialog box 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 This page describes the pages found within the Distributor properties dialog box. 
 

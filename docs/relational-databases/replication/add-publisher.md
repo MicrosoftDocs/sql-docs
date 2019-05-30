@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Add Publisher
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Add Publisher** dialog box allows you to add to one or more Publishers to the left pane of Replication Monitor. After adding a Publisher, selecting the Publisher in the left pane shows information on the Publisher in the right pane.  
   
 ## Options  

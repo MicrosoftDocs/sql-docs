@@ -19,7 +19,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Change Publication and Article Properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   After a publication has been created, most publication and article properties can be changed, but some require that the snapshot be regenerated and/or subscriptions be reinitialized. This topic provides information about all properties that require one or both of these actions if they are changed.  
   
 ## Publication Properties for Snapshot and Transactional Replication  

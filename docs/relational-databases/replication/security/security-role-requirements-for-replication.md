@@ -16,7 +16,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Security Role Requirements for Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Replication restricts the specific actions that a user can perform based on the roles to which the user's login is mapped. Replication has granted certain permissions to the **sysadmin** fixed server role, the **db_owner** fixed database role, and the logins in the publication access list (PAL).  
   
 ## Security Role Requirements for Replication Setup  

@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Article Issues
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Article Issues** page lists conditions that have been found for articles and any changes required as a result of these conditions. The following table lists possible issues and the actions required to ensure replication and existing applications function properly.  
   
 |Article issue|Details|Action required|  

@@ -13,6 +13,8 @@ ms.author: mathoma
 manager: craigg
 ---
 # Troubleshooter: Find errors with SQL Server transactional replication 
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step in creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 
 
 This process creates the publication and puts it in the *synchronizing* state. Synchronization works in three phases:

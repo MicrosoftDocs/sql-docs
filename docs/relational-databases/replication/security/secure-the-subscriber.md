@@ -17,8 +17,11 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Secure the Subscriber
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   Merge Agents and Distribution Agents connect to the Subscriber. These connections can be made under the context of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] login or a Windows login. It is important to provide an appropriate login for these agents while following the principle of granting the minimal rights necessary and also protecting the storage of all passwords. For information about the permissions required for each agent, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+
+  > [!NOTE]
+  > > Azure SQL Database managed instance can be a publisher, distributor, and subscriber for snapshot and transactional replication. Azure SQL database single and pooled databases can only be push subscribers for snapshot and transactional replication. For more information, see [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## Distribution Agent  
  There is either one Distribution Agent per subscription (an independent agent, the default for publications created in the New Publication Wizard) or one Distribution Agent per publication database and subscription database pair (a shared agent). T  

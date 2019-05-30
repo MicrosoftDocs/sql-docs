@@ -23,16 +23,17 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   When you design a backup and restore strategy for snapshot and transactional replication, there are three areas to consider:  
   
--   Which databases to back up.  
-  
--   Backup settings for transactional replication.  
-  
+-   Which databases to back up.
+-   Backup settings for transactional replication.
 -   The steps that are required to restore a database. These depend on the type of replication and options chosen.  
   
  This topic covers each of these areas in the next three sections. For information about backup and restore for Oracle publishing, see [Backup and Restore for Oracle Publishers](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md).  
+
+  > [!NOTE] 
+  > Azure SQL Database managed instance can be a publisher, distributor, and subscriber for snapshot and transactional replication. Azure SQL database single and pooled databases can only be push subscribers for snapshot and transactional replication. For more information, see [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## Backing up Databases  
  For snapshot and transactional replication, you should regularly back up the following databases:  

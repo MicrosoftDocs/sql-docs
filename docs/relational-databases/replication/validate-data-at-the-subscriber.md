@@ -20,7 +20,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Validate Replicated Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
   This topic describes how to validate data at the Subscriber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
 Transactional and merge replication allow you to validate that data at the Subscriber matches data at the Publisher. Validation can be performed for specific subscriptions or for all subscriptions to a publication. Specify one of the following validation types and the Distribution Agent or Merge Agent will validate data the next time it runs:  
@@ -29,6 +29,9 @@ Transactional and merge replication allow you to validate that data at the Subsc
 -   **Row count and binary checksum**. In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the checksum algorithm. If the row count fails, the checksum is not performed.  
   
  In addition to validating that data at the Subscriber and Publisher match, merge replication provides the ability to validate that data is partitioned correctly for each Subscriber. For more information, see [Validate Partition Information for a Merge Subscriber](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
+
+  > [!NOTE] 
+  > Azure SQL Database managed instance can be a publisher, distributor, and subscriber for snapshot and transactional replication. Azure SQL database single and pooled databases can only be push subscribers for snapshot and transactional replication. For more information, see [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
    
 ## How Data Validation Works  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validates data by calculating a row count or a checksum at the Publisher and then comparing those values to the row count or checksum calculated at the Subscriber. One value is calculated for the entire publication table and one value is calculated for the entire subscription table, but data in **text**, **ntext**, or **image** columns is not included in the calculations.  

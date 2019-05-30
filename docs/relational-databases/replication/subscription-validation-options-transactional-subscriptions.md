@@ -18,8 +18,11 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Subscription Validation Options (Transactional Subscriptions)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Use the **Subscription Validation Options** dialog box to specify whether validation should use a row count only, or a row count and a binary checksum.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md.md](../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+  Use the **Subscription Validation Options** dialog box to specify whether validation should use a row count only, or a row count and a binary checksum. 
+
+  > [!NOTE] 
+  > Azure SQL Database managed instance can be a publisher, distributor, and subscriber for snapshot and transactional replication. Azure SQL database single and pooled databases can only be push subscribers for snapshot and transactional replication. For more information, see [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## Options  
  **Verify that the Subscriber has the same number of rows of replicated data as the Publisher**  

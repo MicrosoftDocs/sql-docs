@@ -28,7 +28,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Back Up and Restore Replicated Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Replicated databases require special attention with regards to backing up and restoring data. This topic provides introductory information and links to further information on backup and restore strategies for each type of replication.  
   

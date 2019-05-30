@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Agent Security (New Publication Wizard)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Agent Security** page allows you to specify the accounts under which the following agents run and make connections to the computers in a replication topology:  
   
 -   The Snapshot Agent for all publications.  

@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Configure Distribution Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This section provides information on the following pages of the Configure Distribution Wizard:  
   
 -   [Distributor](../../relational-databases/replication/distributor.md)  

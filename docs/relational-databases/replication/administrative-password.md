@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Administrative Password
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   If, on the **Distributors** page of this wizard, you selected a remote Distributor for this Publisher, you must enter a password for the connection replication makes between the Publisher and the Distributor using the **distributor_admin** login. The password must match the password specified on the **Distributor Password** page of the Configure Distribution Wizard or the **Publishers** page of the **Distributor Properties** dialog box.  
   
 ## Options  

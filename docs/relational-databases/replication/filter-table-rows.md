@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Filter Table Rows
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Filter Table Rows** page allows you to:  
   
 -   Apply static row filters to table articles in snapshot, transactional, and merge publications.  

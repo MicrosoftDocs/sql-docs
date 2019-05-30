@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Republish Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   In a republishing model, the Publisher sends data to a Subscriber, which then republishes the data to any number of other Subscribers. This is useful when a Publisher must send data to Subscribers over a slow or expensive communications link. If there are a number of Subscribers on the far side of that link, using a republisher shifts the bulk of the distribution load to that side of the link.  
   
  Republishing data involves the following steps:  

@@ -16,7 +16,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Breaking Changes in SQL Server Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This topic describes breaking changes in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade.  
   
 ## Breaking Changes Made in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  

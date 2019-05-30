@@ -17,7 +17,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Reinitialize Subscription(s) - One Subscription
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Reinitialize Subscription(s)** dialog box allows you to mark a subscription for reinitialization. Reinitialization involves applying a snapshot to the Subscriber; it is performed by the Distribution Agent for subscriptions to transactional publications and by the Merge Agent for subscriptions to merge publications.  
   
 ## Options  

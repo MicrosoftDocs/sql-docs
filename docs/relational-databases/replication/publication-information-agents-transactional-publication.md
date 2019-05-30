@@ -15,7 +15,7 @@ ms.author: "mathoma"
 manager: craigg
 ---
 # Publication Information, Agents (Transactional Publication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   The **Agents** tab displays summary information on the agents for the selected publication. Information on the Snapshot Agent and Log Reader Agent is displayed for all transactional publications. Information on the Queue Reader Agent is displayed for those transactional publications that are enabled for queued updating subscriptions.  
   
 ## Options  

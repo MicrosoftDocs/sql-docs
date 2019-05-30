@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "05/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
@@ -62,6 +62,10 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 |**last_elapsed_time**|**bigint**|Elapsed time, in microseconds, for the most recently completed execution of this function.|  
 |**min_elapsed_time**|**bigint**|Minimum elapsed time, in microseconds, for any completed execution of this function.|  
 |**max_elapsed_time**|**bigint**|Maximum elapsed time, in microseconds, for any completed execution of this function.|  
+|**total_page_server_reads**|**bigint**|Total number of remote page server reads performed by executions of this function since it was compiled.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|  
+|**last_physical_reads**|**bigint**|Number of remote page server reads performed the last time the function was executed.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|  
+|**min_physical_reads**|**bigint**|Minimum number of remote page server reads that this function has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|  
+|**max_physical_reads**|**bigint**|Maximum number of remote page server reads that this function has ever performed during a single execution.<br /><br /> **Applies To:** Azure SQL Database Hyperscale.|
   
 ## Permissions  
 

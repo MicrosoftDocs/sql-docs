@@ -165,7 +165,7 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
 ### Ordered Clustered columnstore index option (Preview)
 
-Clustered columnstore index is the default for creating tables in Azure SQL Data Warehouse.  The ORDER specification defaults to COMPOUND keys.  Sorting will always be ascending order. If no ORDER clause is specified, columnstore will not be sorted. Due to the ordering process, a table with ordered clustered columnstore index may experience longer data loading times than non-ordered clustered columnstore indexes. If you need more tempdb space while loading data, you can also decrease the amount of data per insert.
+Clustered columnstore index is the default for creating tables in Azure SQL Data Warehouse.  The ORDER specification defaults to COMPOUND keys.  Sorting will always be ascending order. If no ORDER clause is specified, columnstore will not be sorted. Due to the ordering process, a table with ordered clustered columnstore index may experience longer data loading times than non-ordered clustered columnstore indexes. If you need more tempdb space while loading data, you can decrease the amount of data per insert.
 
 During preview, you can run this query to check the column(s) with ORDER enabled.  A catalog view will be provided later to provide this information and the column ordinal if multiple columns are specified in ORDER.
 

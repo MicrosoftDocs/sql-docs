@@ -89,6 +89,7 @@ FROM Person.Person;
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 `NULL` values found in `name` cells are not returned in result.   
+The `GROUP BY` clause is not required when the `STRING_AGG` function is the only item in the select list.   
 > [!NOTE]  
 >  If using the Management Studio Query Editor, the **Results to Grid** option cannot implement the carriage return. Switch to **Results to Text** to see the result set properly.   
 

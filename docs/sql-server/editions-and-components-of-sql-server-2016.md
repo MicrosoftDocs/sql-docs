@@ -1,6 +1,6 @@
 ---
 title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
-ms.custom: "sqlfreshmay19"
+ms.custom: sqlfreshmay19
 ms.date: "05/29/2019"
 ms.prod: sql
 ms.reviewer: ""

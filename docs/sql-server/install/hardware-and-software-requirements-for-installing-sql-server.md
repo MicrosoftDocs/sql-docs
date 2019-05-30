@@ -161,8 +161,9 @@ For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] and later server operating systems are not available as 32-bit architectures. All supported server operating systems are only available as 64-bit. All features are supported on 64-bit server operating systems.  
   
-###  <a name="TOP_Principal"></a> Principal Editions of [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]  
- The following table shows the operating system requirements for the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
+###  <a name="TOP_Principal"></a> OS Compatibility   
+
+ The following table shows the which editions of SQL Server are compatible with which versions of Windows:  
   
 
 | SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  

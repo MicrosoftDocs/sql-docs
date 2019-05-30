@@ -1,6 +1,6 @@
 ---
 title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
-ms.custom: "sqlfreshmay19"
+ms.custom: sqlfreshmay19
 ms.date: "05/15/2019"
 ms.prod: sql
 ms.reviewer: ""
@@ -88,7 +88,7 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
     -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](https://support.microsoft.com/kb/947709)    
 
     
-- **For Linux**: On Linux, you also need to open the ports associated with the services you need access to. Different distributions of Linux and different firewalls have their own procedures. For two examples, see [SQL Server on Red Hat](../../linux/quickstart-install-connect-red-hat.md), and [SQL Server on SUSE](../../linux/quickstart-install-connect-suse). 
+- **For Linux**: On Linux, you also need to open the ports associated with the services you need access to. Different distributions of Linux and different firewalls have their own procedures. For two examples, see [SQL Server on Red Hat](../../linux/quickstart-install-connect-red-hat.md), and [SQL Server on SUSE](../../linux/quickstart-install-connect-suse.md). 
   
 ## Ports Used By [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The following tables can help you identify the ports being used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

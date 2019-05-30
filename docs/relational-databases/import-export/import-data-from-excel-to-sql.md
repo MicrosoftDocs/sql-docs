@@ -1,7 +1,7 @@
 ---
 title: "Import data from Excel to SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/23/2018"
+ms.custom: sqlfreshmay19
+ms.date: "05/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -21,13 +21,13 @@ There are several ways to import data from Excel files to SQL Server or to Azure
 
 You can use the following tools to import data from Excel: 
 
-| Directly from Excel  | Export to text first |
-| :----------------------------------------------- | :------------------------------------------ |
-| [SQL Server Import and Export Wizard](#wiz)      | [Import Flat File Wizard](#import-wiz)      |
-| [SQL Server Integration Services (SSIS)](#ssis)  | [BULK INSERT](#bulk-insert) statement       |
-| [OPENROWSET](#openrowset) function               | [BCP](#bcp)                                 |
-|                                                  | [Copy Wizard (Azure Data Factory)](#adf-wiz)| 
-|                                                  | [Azure Data Factory](#adf)                  | 
+| Export to text first                        | Directly from Excel                             |
+| :------------------------------------------ |:----------------------------------------------- |
+| [Import Flat File Wizard](#import-wiz)      |[SQL Server Import and Export Wizard](#wiz)      |
+| [BULK INSERT](#bulk-insert) statement       |[SQL Server Integration Services (SSIS)](#ssis)  |
+| [BCP](#bcp)                                 |[OPENROWSET](#openrowset) function               |
+| [Copy Wizard (Azure Data Factory)](#adf-wiz)|                                                 |
+| [Azure Data Factory](#adf)                  |                                                 |
 | &nbsp; | &nbsp; |
 
 

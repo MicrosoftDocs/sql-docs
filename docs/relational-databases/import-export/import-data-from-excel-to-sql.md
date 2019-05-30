@@ -59,7 +59,7 @@ Import data directly from Excel files by stepping through the pages of the SQL S
 
 For an example of using the wizard to import from Excel to SQL Server, see [Get started with this simple example of the Import and Export Wizard](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
 
-To learn about about other ways to launch the Import and Export wizard, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
+To learn about other ways to launch the Import and Export wizard, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
 ## <a name="ssis"></a> SQL Server Integration Services (SSIS)
 
@@ -173,7 +173,7 @@ For more examples and info about both linked servers and distributed queries, se
 ## <a name="prereq"></a> Prerequisite - Save Excel data as text
 To use the rest of the methods described on this page - the BULK INSERT statement, the BCP tool, or Azure Data Factory - first you have to export your Excel data to a text file.
 
-In Excel, select **File | Save As** and then select **Text (Tab delimited) (\*.txt)** or **CSV (Comma delimited) (\*.csv)** as the destination file type.
+In Excel, select **File | Save As** and then select **Text (Tab-delimited) (\*.txt)** or **CSV (Comma-delimited) (\*.csv)** as the destination file type.
 
 If you want to export multiple worksheets from the workbook, select each sheet and then repeat this procedure. The **Save as** command exports only the active sheet.
 

@@ -30,11 +30,11 @@ productDirectory:
       - url: sql-server/sql-server-technical-documentation.md
         text: On-Premises
       - url: sql-server/what-s-new-in-sql-server-ver15.md
-        text:     What's new
+        text:     ~ What's new
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
       - url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
-        text:     What's new
+        text:     ~ What's new
   - title: SQL as an Azure Service
     imageSrc: media/index/azure.png
     links:

@@ -225,7 +225,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |Object Explorer|Extended logic to request confirmation when renaming a database to all the schema objects (the setting can be configured).|
 |Object Explorer|Added proper escaping in Object Explorer filtering. For details, see https://feedback.azure.com/forums/908035/suggestions/36678803. |
 |Object Explorer|Fixed/improved the view in Object Explorer Details to show numbers with proper separators. For details, see https://feedback.azure.com/forums/908035/suggestions/32900944. |
-|Object Explorer|Fixed context menu on "Tables" node when connected to SQL Express, where the "New" fly-out was missing, Graph tables were incorrectly listed, and System-Versioned table was missing. For details, see https://feedback.azure.com/forums/908035/suggestions/37245529.|
+|Object Explorer|Fixed context menu on "Tables" node when connected to SQL Express, where the "New" fly-out was missing, Graph tables were incorrectly listed, and System-Versioned table was missing. For details, see https://feedback.azure.com/forums/908035/suggestions/37245529. |
 |Object Scripting|Overall perf improvements - Generate Scripts of WideWorldImporters takes half the time compared to SSMS 17.7.|
 |Object Scripting|When scripting objects, DB Scoped configuration which have default values are omitted.|
 |Object Scripting|Don't generate dynamic T-SQL when scripting. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391. |

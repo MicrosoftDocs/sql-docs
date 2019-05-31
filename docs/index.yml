@@ -28,7 +28,7 @@ productDirectory:
     imageSrc: media/index/windows.png
     links:
       - url: sql-server/sql-server-technical-documentation.md
-        text: On-Premises
+        text: On-premises
       - url: sql-server/what-s-new-in-sql-server-ver15.md
         text:     ~ What's new
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
@@ -50,7 +50,7 @@ productDirectory:
     imageSrc: media/index/linux.png
     links:
       - url: linux/sql-server-linux-overview.md
-        text: On-Premises
+        text: On-premises
       - url: linux/quickstart-install-connect-clouds.md
         text: On an Azure VM
       - url: linux/sql-server-linux-whats-new.md

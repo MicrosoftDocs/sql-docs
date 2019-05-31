@@ -30,11 +30,11 @@ productDirectory:
       - url: sql-server/sql-server-technical-documentation.md
         text: On-Premises
       - url: sql-server/what-s-new-in-sql-server-ver15.md
-        text:    ~ What's new
+        text:    What's new
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
       - url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
-        text:    ~ What's new
+        text:    What's new
   - title: SQL as an Azure Service
     imageSrc: media/index/azure.png
     links:
@@ -146,9 +146,9 @@ conceptualContent:
         - text: Maintenance plans
           url: relational-databases/maintenance-plans/maintenance-plans.md
           itemType: overview
-        - text: Profiler
-          url: tools/sql-server-profiler/sql-server-profiler.md
-          itemType: overview         
+        - text: Policy-based management
+          url: relational-databases/policy-based-management/administer-servers-by-using-policy-based-management?view=sql-server-2017
+          itemType: overview
         - text: Transaction log management
           url: relational-databases/logs/the-transaction-log-sql-server.md
           itemType: overview
@@ -231,39 +231,44 @@ additionalContent:
     - items:
       - title: Develop
         summary: |
-          [SQL Server client connectivity](connect/homepage-sql-connection-programming.md)<br />
+          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-)<br />        
           [Azure SQL DB connectivity libraries](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries)<br />
-          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-)<br />
-      - title: Tools
-        summary: |
-          [Azure Data Studio](azure-data-studio/download.md)<br />
-          [SQL Server Data Tools](ssdt/download-sql-server-data-tools-ssdt.md)<br />
-          [SQL Server Management Studio](ssms/download-sql-server-management-studio-ssms.md)<br />
-
-      - title: AI & Machine Learning
-        summary: |
-          [SQL Machine Learning Services (R & Python)](advanced-analytics/what-is-sql-server-machine-learning.md)<br />
-          [SQL Server R Services](advanced-analytics/r/sql-server-r-services.md)<br />
-          [Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/)<br />
+          [SQL Server client connectivity](connect/homepage-sql-connection-programming.md)<br />
       - title: Reporting
         summary: |
-          [SQL Server Reporting Services (SSRS)](reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br />
-          [Power BI Service](https://docs.microsoft.com/en-us/power-bi/service-get-started)<br />
           [Power BI Report Server](https://docs.microsoft.com/en-us/power-bi/report-server/get-started)<br />
+          [Power BI Service](https://docs.microsoft.com/en-us/power-bi/service-get-started)<br />
+          [SQL Server Reporting Services (SSRS)](reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br />
+      - title: AI & Machine Learning
+        summary: |
+          [Azure Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/)<br />
+          [SQL Machine Learning Services (R & Python)](advanced-analytics/what-is-sql-server-machine-learning.md)<br />
+          [SQL Server R Services](advanced-analytics/r/sql-server-r-services.md)<br />
       - title: Data Analytics
         summary: |
-          [Microsoft Analytics Platform System](analytics-platform-system/index.md)<br />
-          [SQL Server Analysis Services (SSAS)](analysis-services/analysis-services.md)<br />
           [Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/)<br />
+          [Microsoft Analytics Platform System](analytics-platform-system/index.md)<br />
           [Polybase](relational-databases/polybase/polybase-guide.md)<br />
+          [SQL Server Analysis Services (SSAS)](analysis-services/analysis-services.md)<br />
           [SQL Server 2019 big data clusters](big-data-cluster/big-data-cluster-overview.md)<br />
+      - title: Tools
+        summary: |
+          [Azure Data Studio](azure-data-studio/download.md)<br />      
+          [Distributed replay](tools/distributed-replay/sql-server-distributed-replay.md)<br />
+          [SQL Server Data Tools (SSDT)](ssdt/download-sql-server-data-tools-ssdt.md)<br />
+          [SQL Server Management Studio (SSMS)](ssms/download-sql-server-management-studio-ssms.md)<br />
+          [SQL Server Profiler](tools/sql-server-profiler/sql-server-profiler.md)<br />
+          [See more tools](tools/overview-sql-tools.md)<br />
       - title: Reference
         summary: |
-          [xQuery](xquery/xquery-language-reference-sql-server.md)<br />
-          [SQL PowerShell](powershell/sql-server-powershell.md)<br />
-          [Transact-SQL](t-sql/language-reference.md)<br />
-          [SQL Rest API](https://docs.microsoft.com/en-us/rest/api/sql/)<br />
-          [Archived content (SQL 2005-2012)](https://docs.microsoft.com/en-us/previous-versions/sql/)<br />
           [Database samples](samples/sql-samples-where-are.md)<br />
-          [DMVs](relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)<br />
+          [Database Management Views (DMVs)](relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)<br />
+          [Previous version content (SQL 2005-2012)](https://docs.microsoft.com/en-us/previous-versions/sql/)<br />
+          [SQL PowerShell](powershell/sql-server-powershell.md)<br />
+          [SQL Rest API](https://docs.microsoft.com/en-us/rest/api/sql/)<br />
           [System catalog views](relational-databases/system-catalog-views/catalog-views-transact-sql.md)<br />
+          [Transact-SQL](t-sql/language-reference.md)<br />
+          [xQuery](xquery/xquery-language-reference-sql-server.md)<br />
+
+
+

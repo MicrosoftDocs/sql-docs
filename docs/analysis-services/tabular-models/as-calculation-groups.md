@@ -154,7 +154,7 @@ DIVIDE(
 
 To test this calculation group, you can execute a DAX query in SSMS or the open-source [DAX Editor](http://daxstudio.org/). Note: YOY and YOY% are omitted from this query example.
 
-### Time Intelligence query
+#### Time Intelligence query
 
 ```dax
 EVALUATE
@@ -173,7 +173,7 @@ CALCULATETABLE (
 )
 ```
 
-### Time Intelligence query return
+#### Time Intelligence query return
 
 The return table shows calculations for each calculation item applied. For example, you can see QTD for March 2012 is the sum of January, February and March 2012.
 

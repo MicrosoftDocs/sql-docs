@@ -8766,7 +8766,7 @@
         href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
       - name: SQL Server Agent
         items:
-        - name: "Sample: Creating a SQL Server Agent Alert with the WMI Provider"
+        - name: SQL Server Agent
           href: ../ssms/agent/sql-server-agent.md
       - name: Register servers
         items:

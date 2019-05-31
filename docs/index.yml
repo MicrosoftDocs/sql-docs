@@ -35,15 +35,17 @@ productDirectory:
         text: On an Azure VM
       - url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
         text:     ~ What's new
-  - title: SQL as an Azure Service
+  - title: SQL on Azure 
     imageSrc: media/index/azure.png
     links:
       - url: https://docs.microsoft.com/azure/sql-database/
         text: Azure SQL Database
+      - url: /azure/sql-database/sql-database-release-notes
+        text:     ~ What's new
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
         text: Azure SQL Data Warehouse
-      - url: https://azure.microsoft.com/updates/?status=all&product=sql-database
-        text: What's new
+      - url: /azure/sql-data-warehouse/release-notes-10-0-10106-0
+        text:     ~ What's new
   - title: SQL Server on Linux
     imageSrc: media/index/linux.png
     links:
@@ -180,7 +182,7 @@ conceptualContent:
         - text: BCP
           url: tools/bcp-utility.md
           itemType: overview
-        - text: Import + Export Wizard
+        - text: Import or Export Wizard
           url: integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
           itemType: overview
         - text: Integration Services
@@ -230,9 +232,9 @@ conceptualContent:
 additionalContent:
   sections:
     - items:
-      - title: Develop
+      - title: Development
         summary: |
-          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-)<br />        
+          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-)<br />
           [Azure SQL DB connectivity libraries](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries)<br />
           [SQL Server client connectivity](connect/homepage-sql-connection-programming.md)<br />
       - title: Reporting
@@ -254,7 +256,7 @@ additionalContent:
           [SQL Server 2019 big data clusters](big-data-cluster/big-data-cluster-overview.md)<br />
       - title: Tools
         summary: |
-          [Azure Data Studio](azure-data-studio/download.md)<br />      
+          [Azure Data Studio](azure-data-studio/download.md)<br />
           [Distributed replay](tools/distributed-replay/sql-server-distributed-replay.md)<br />
           [SQL Server Data Tools (SSDT)](ssdt/download-sql-server-data-tools-ssdt.md)<br />
           [SQL Server Management Studio (SSMS)](ssms/download-sql-server-management-studio-ssms.md)<br />

@@ -3,7 +3,7 @@ title: Microsoft SQL documentation
 summary: Learn how to use Microsoft SQL Server to address your database needs, both on-premises, and in the cloud!
 brand: sql
 metadata:
-   title: Microsoft SQL Server documentation | Microsoft Docs
+   title: Microsoft SQL documentation | Microsoft Docs
    description: Learn how to use Microsoft SQL Server to manage your database needs, both on-premises, and in the cloud!
    ms.topic: hub-page
 
@@ -15,9 +15,9 @@ highlightedContent:
    - title: Get an Azure VM with SQL Server
      itemType: overview
      url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
-   - title: Download SQL Server Management Studio
+   - title: Download query data tools
      itemType: download
-     url: /ssms/download-sql-server-management-studio-ssms.md
+     url: tools/overview-sql-tools
    - title: SQL Server Education Center
      itemType: learn
      url: lp/sql-server/sql-education-center.md
@@ -58,6 +58,20 @@ productDirectory:
 
 conceptualContent:
   items:
+    - title: Getting started 
+      links:
+        - text: SQL Server Management Studio 
+          url: ssms/tutorials/tutorial-sql-server-management-studio.md
+          itemType: overview
+        - text: Azure Data Studio
+          url: azure-data-studio/quickstart-sql-server.md
+          itemType: overview
+        - text: Writing Transact-SQL
+          url: t-sql/tutorial-writing-transact-sql-statements.md
+          itemType: overview
+        - text: SQL Server on Ubuntu
+          url: linux/quickstart-install-connect-ubuntu.md
+          itemType: overview
     - title: Install
       links:
         - text: SQL Server
@@ -75,20 +89,6 @@ conceptualContent:
       footerLink:
         text: See more
         url: lp/sql-server/install-sql-and-services.md
-    - title: Upgrade
-      links:
-        - text: SQL Server
-          url: database-engine/install-windows/upgrade-sql-server.md
-          itemType: overview
-        - text: Analysis Services (SSAS)
-          url: database-engine/install-windows/upgrade-analysis-services.md
-          itemType: overview
-        - text: Integration Services (SSIS)
-          url: integration-services/install-windows/upgrade-integration-services.md
-          itemType: overview
-        - text: Reporting Services (SSRS)
-          url: reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
-          itemType: overview
       footerLink:
         text: See more
         url: lp/sql-server/install-sql-and-services.md

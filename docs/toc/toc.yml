@@ -8766,8 +8766,10 @@
         href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
       - name: SQL Server Agent
         items:
-        - name: SQL Server Agent
-          href: ../ssms/agent/sql-server-agent.md
+        - name: Register servers
+          href: ../ssms/register-servers/register-servers.md
+        - name: Registered Servers F1 Help
+          href: ../ssms/register-servers/registered-servers-f1-help.md
       - name: Register servers
         items:
         - name: Register servers

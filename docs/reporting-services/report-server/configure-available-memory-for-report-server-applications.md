@@ -22,7 +22,7 @@ ms.author: maggies
 ## Memory management policies  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] responds to system resource constraints by adjusting the amount of memory that is allocated to specific applications and types of processing requests. Applications that run in the Report Server service and that are subject to memory management include:  
   
--   RThe web portal, a Web front-end application for the report server.  
+-   The web portal, a Web front-end application for the report server.  
   
 -   Report Server Web service, used for interactive report processing and on-demand requests.  
   

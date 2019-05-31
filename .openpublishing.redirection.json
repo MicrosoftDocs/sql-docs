@@ -14379,6 +14379,11 @@
             "source_path": "docs/reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md",
             "redirect_url": "/sql/reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/encryption/service-master-key.md",
+            "redirect_url": "/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine",
+            "redirect_document_id": true
         }
     ]
 }

@@ -7957,7 +7957,7 @@
         items:
         - name: Configure Always Encrypted with Secure Enclaves
           href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
-        - name: SQL Server Management Studio
+        - name: Configure with SQL Server Management Studio
           href: ../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
         - name: Configure with PowerShell
           href: ../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
@@ -8090,8 +8090,6 @@
       - name: Encryption keys
         href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
         items:
-        - name: Service master key
-          href: ../relational-databases/security/encryption/service-master-key.md
         - name: Extensible key management (EKM)
           href: ../relational-databases/security/encryption/extensible-key-management-ekm.md
         - name: EKM using Azure Key Vault

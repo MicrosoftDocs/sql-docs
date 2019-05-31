@@ -20,7 +20,7 @@ highlightedContent:
      url: /ssms/download-sql-server-management-studio-ssms.md
    - title: SQL Server Education Center
      itemType: learn
-     url: lp/sql-education-center.md
+     url: lp/sql-server/sql-education-center.md
 
 productDirectory:
   items:
@@ -30,12 +30,11 @@ productDirectory:
       - url: sql-server/sql-server-technical-documentation.md
         text: On-Premises
       - url: sql-server/what-s-new-in-sql-server-ver15.md
-        text:    \- What's new
+        text:    * What's new
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
       - url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
-        text:    \- What's new
-
+        text:    * What's new
   - title: SQL as an Azure Service
     imageSrc: media/index/azure.png
     links:
@@ -113,11 +112,14 @@ conceptualContent:
         - text: Backup & Restore
           url: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
           itemType: overview
+        - text: Always On availability group
+          url: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+          itemType: overview
         - text: Failover cluster
           url: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
           itemType: overview
-        - text: AG
-          url: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+        - text: Database mirroring
+          url: database-engine/database-mirroring/database-mirroring-sql-server.md
           itemType: overview
         - text: Transaction log management
           url: relational-databases/logs/the-transaction-log-sql-server.md

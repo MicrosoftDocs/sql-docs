@@ -152,7 +152,7 @@ DIVIDE(
 )
 ```
 
-To test this calculation group, you can execute a DAX query in SSMS or the open-source [DAX Editor](http://daxstudio.org/). Note: YOY and YOY% are omitted from this query example.
+To test this calculation group, you can execute a DAX query in SSMS or the open-source [DAX Studio](http://daxstudio.org/). Note: YOY and YOY% are omitted from this query example.
 
 #### Time Intelligence query
 
@@ -385,48 +385,11 @@ CALCULATE(
 )
 ```
 
-The YTD argument to the CALCULATE() function overrides the filter context to reuse the logic already defined in the YTD calculation item. It's not possible to apply both PY and YTD in a single evaluation. Calculation groups are *only applied* if a single calculation item from the calculation group is in filter context, as shown in the following query and return table:
-
-#### Query
-
-```dax
-EVALUATE
-CALCULATETABLE (
-    SUMMARIZECOLUMNS (
-        DimDate[CalendarYear],
-        DimDate[EnglishMonthName],
-
-        //No time intelligence applied: all calc items in filter context:
-        "Sales", [Sales],
-
-        //No time intelligence applied: 2 calc items in filter context:
-        "PY || YTD", CALCULATE ( [Sales],
-            'Time Intelligence'[Time Calculation] = "PY" || 'Time Intelligence'[Time Calculation] = "YTD"
-        ),
-
-        //YTD applied: exactly 1 calc item in filter context:
-        "YTD", CALCULATE ( [Sales], 'Time Intelligence'[Time Calculation] = "YTD" )
-    ),
-    DimDate[CalendarYear] = 2012
-)
-```
-
-#### Query return
-
-![Query return of a single calculation item](media/as-calculation-groups/as-calc-groups-single-calc-item.png)
-
-A calculation group should be designed so that each calculation item within it is shown to the end user only makes sense when applied *one-at-a-time*. If there is a business requirement to allow the user to apply more than one calculation item at a time, multiple calculation groups should be used with different precedence.
+The YTD argument to the CALCULATE() function overrides the filter context to reuse the logic already defined in the YTD calculation item. It's not possible to apply both PY and YTD in a single evaluation. Calculation groups are *only applied* if a single calculation item from the calculation group is in filter context.
 
 ## MDX support
 
 Calculation groups support Multidimensional Data Expressions (MDX) queries. This means, Microsoft Excel users, which query tabular data models by using MDX, can take full advantage of calculation groups in worksheet PivotTables and charts.
-
-## Data Management View (DMV) queries
-
-By using [Data Management Views](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md), you can query schema rowsets that return information about calculation groups in your model. The following schema rowsets have been introduced for calculation groups: 
-
-- TMSCHEMA_CALCULATION_GROUPS   
-- TMSCHEMA_CALCULATION_ITEMS   
 
 ## Tools
 
@@ -434,9 +397,9 @@ Calculation groups  are not yet supported in SQL Server Data Tools, Visual Studi
 
 ## Limitations
 
-[Object level security](object-level-security.md) (OLS) defined on calculation group tables is not yet supported. However, OLS can be defined on other tables in the same model. If a calculation item refers to an OLS secured object, a generic error is returned. This is the planned behavior for SSAS 2019.
+[Object level security](object-level-security.md) (OLS) defined on calculation group tables is not yet supported. However, OLS can be defined on other tables in the same model. If a calculation item refers to an OLS secured object, a generic error is returned.
 
-[Row level security](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) is not yet supported. The planned behavior for SSAS 2019 is that you will be able to define RLS on tables in the same model, but not on calculation groups themselves (directly or indirectly).
+[Row level security](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) is not yet supported. 
 
 [Detail Rows Expressions](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) are not yet supported with calculation groups.
 

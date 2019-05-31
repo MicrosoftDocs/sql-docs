@@ -83,6 +83,6 @@ To learn more about some of our other partners, see [High availability and disas
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
 
 <!--LinkedIn-->
-[sentryone_linkedin]:https://www.linkedin.com/company/sentryone 
+[sentryone_linkedin]:https://www.linkedin.com/company/sentryone
 [redgate_linkedin]:https://www.linkedin.com/company/red-gate-software/
 [solarwinds_linkedin]:https://linkedin.com/showcase/solarwinds-database-performance

@@ -65,7 +65,7 @@ To verify that your SQL Server connection succeeded, expand and explore the obje
   ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > In this tutorial, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
+  > In this tutorial, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management). 
 
 ## Create a database
 Create a database named TutorialDB by doing the following: 

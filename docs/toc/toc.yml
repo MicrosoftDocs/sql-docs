@@ -8736,8 +8736,6 @@
           href: ../ssms/tutorials/connect-query-sql-server.md
     - name: Tutorials
       items:
-      - name: SQL Server Management Studio
-        href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
       - name: Script objects
         href: ../ssms/tutorials/scripting-ssms.md
       - name: SSMS Configuration

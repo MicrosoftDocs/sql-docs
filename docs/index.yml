@@ -30,11 +30,11 @@ productDirectory:
       - url: sql-server/sql-server-technical-documentation.md
         text: On-Premises
       - url: sql-server/what-s-new-in-sql-server-ver15.md
-        text:    What's new
+        text:     What's new
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
       - url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
-        text:    What's new
+        text:     What's new
   - title: SQL as an Azure Service
     imageSrc: media/index/azure.png
     links:
@@ -135,7 +135,7 @@ conceptualContent:
         - text: Permissions
           url: relational-databases/security/permissions-database-engine.md
           itemType: overview
-        - text: TDE
+        - text: Transparent Data Encryption (TDE)
           url: relational-databases/security/encryption/transparent-data-encryption.md
           itemType: overview
       footerLink:
@@ -171,6 +171,7 @@ conceptualContent:
           itemType: overview
         - text: Query data Store
           url: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
+          itemType: overview
       footerLink:
         text: See more
         url: lp/sql-server/manage-monitor-tune.md

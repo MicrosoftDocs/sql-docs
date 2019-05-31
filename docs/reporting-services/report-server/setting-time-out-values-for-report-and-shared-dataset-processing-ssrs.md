@@ -27,7 +27,7 @@ ms.author: maggies
   
  Most time-out errors occur during query processing. If you are encountering time-out errors, try increasing the query time-out value. Make sure to adjust the report execution time-out value so that it is larger than the query time-out. The time period should be sufficient to complete both query and report processing.  
   
-## Setting a query time-Out for an embedded dataset in a report  
+## Setting a query time-out for an embedded dataset in a report  
  Query time-out values are specified during report authoring when you define an embedded dataset. The time-out value is stored with the report, in the **Timeout** element of the report definition. By default, this value is set to 30 seconds. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Users who have permission to modify the properties of a published report can reset this value by editing the report definition file.  

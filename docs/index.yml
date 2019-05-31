@@ -17,7 +17,7 @@ highlightedContent:
      url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
    - title: Download query data tools
      itemType: download
-     url: tools/overview-sql-tools
+     url: tools/overview-sql-tools.md
    - title: SQL Server Education Center
      itemType: learn
      url: lp/sql-server/sql-education-center.md

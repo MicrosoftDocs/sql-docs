@@ -30,11 +30,11 @@ productDirectory:
       - url: sql-server/sql-server-technical-documentation.md
         text: On-Premises
       - url: sql-server/what-s-new-in-sql-server-ver15.md
-        text:    * What's new
+        text:    ~ What's new
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
       - url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
-        text:    * What's new
+        text:    ~ What's new
   - title: SQL as an Azure Service
     imageSrc: media/index/azure.png
     links:
@@ -61,7 +61,7 @@ conceptualContent:
         - text: SQL Server
           url: database-engine/install-windows/install-sql-server.md
           itemType: overview
-        - text: Analysis Servis (SSAS)
+        - text: Analysis Services (SSAS)
           url: analysis-services/instances/install-windows/install-analysis-services.md
           itemType: overview
         - text: Integration Services (SSIS)
@@ -78,7 +78,7 @@ conceptualContent:
         - text: SQL Server
           url: database-engine/install-windows/upgrade-sql-server.md
           itemType: overview
-        - text: Analysis Servis (SSAS)
+        - text: Analysis Services (SSAS)
           url: database-engine/install-windows/upgrade-analysis-services.md
           itemType: overview
         - text: Integration Services (SSIS)
@@ -107,36 +107,33 @@ conceptualContent:
       footerLink:
         text: See more
         url: lp/sql-server/load-move-data.md
-    - title: Business Continuity
+    - title: Business continuity
       links:
-        - text: Backup & Restore
-          url: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-          itemType: overview
         - text: Always On availability group
           url: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
           itemType: overview
-        - text: Failover cluster
-          url: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
+        - text: Backup & Restore
+          url: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
           itemType: overview
         - text: Database mirroring
           url: database-engine/database-mirroring/database-mirroring-sql-server.md
           itemType: overview
-        - text: Transaction log management
-          url: relational-databases/logs/the-transaction-log-sql-server.md
+        - text: Failover cluster
+          url: sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
           itemType: overview
       footerLink:
         text: See more
         url: lp/sql-server/business-continuity.md
     - title: Security
       links:
-        - text: Permissions
-          url: relational-databases/security/permissions-database-engine.md
+        - text: Always Encrypted
+          url: relational-databases/security/encryption/always-encrypted-database-engine.md
           itemType: overview
         - text: Authentication & Access
           url: relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
           itemType: overview
-        - text: Always Encrypted
-          url: relational-databases/security/encryption/always-encrypted-database-engine.md
+        - text: Permissions
+          url: relational-databases/security/permissions-database-engine.md
           itemType: overview
         - text: TDE
           url: relational-databases/security/encryption/transparent-data-encryption.md
@@ -144,16 +141,16 @@ conceptualContent:
       footerLink:
         text: See more
         url: lp/sql-server/secure-sql-server.md
-    - title: Manage & Monitor
+    - title: Manage & monitor
       links:
         - text: Maintenance plans
           url: relational-databases/maintenance-plans/maintenance-plans.md
           itemType: overview
-        - text: SQL Server agent
-          url: ssms/agent/sql-server-agent.md
-          itemType: overview
         - text: Profiler
           url: tools/sql-server-profiler/sql-server-profiler.md
+          itemType: overview         
+        - text: Transaction log management
+          url: relational-databases/logs/the-transaction-log-sql-server.md
           itemType: overview
         - text: xEvents
           url: relational-databases/extended-events/extended-events.md
@@ -172,19 +169,21 @@ conceptualContent:
         - text: In-memory OLTP
           url: relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
           itemType: overview
+        - text: Query data Store
+          url: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       footerLink:
         text: See more
         url: lp/sql-server/manage-monitor-tune.md
-    - title: Load & Move Data
+    - title: Load & move data
       links:
-        - text: Integration Services
-          url: integration-services/sql-server-integration-services.md
-          itemType: overview
         - text: BCP
           url: tools/bcp-utility.md
           itemType: overview
         - text: Import + Export Wizard
           url: integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+          itemType: overview
+        - text: Integration Services
+          url: integration-services/sql-server-integration-services.md
           itemType: overview
         - text: Replication
           url: relational-databases/replication/sql-server-replication.md
@@ -192,7 +191,7 @@ conceptualContent:
       footerLink:
         text: See more
         url: lp/sql-server/load-move-data.md
-    - title: Database Design
+    - title: Database design
       links:
         - text: Databases
           url: relational-databases/databases/databases.md
@@ -200,11 +199,11 @@ conceptualContent:
         - text: Indexes
           url: relational-databases/indexes/indexes.md
           itemType: overview
-        - text: Stored procedures
-          url: relational-databases/stored-procedures/stored-procedures-database-engine.md
-          itemType: overview
         - text: Statistics
           url: relational-databases/statistics/statistics.md
+          itemType: overview
+        - text: Stored procedures
+          url: relational-databases/stored-procedures/stored-procedures-database-engine.md
           itemType: overview
       footerLink:
         text: See more
@@ -232,14 +231,15 @@ additionalContent:
     - items:
       - title: Develop
         summary: |
-          [Connect with client applications](connect/homepage-sql-connection-programming.md)<br />
+          [SQL Server client connectivity](connect/homepage-sql-connection-programming.md)<br />
           [Azure SQL DB connectivity libraries](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries)<br />
           [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-)<br />
       - title: Tools
         summary: |
-          [SSMS](ssms/download-sql-server-management-studio-ssms.md)<br />
-          [SSDT](ssdt/download-sql-server-data-tools-ssdt.md)<br />
           [Azure Data Studio](azure-data-studio/download.md)<br />
+          [SQL Server Data Tools](ssdt/download-sql-server-data-tools-ssdt.md)<br />
+          [SQL Server Management Studio](ssms/download-sql-server-management-studio-ssms.md)<br />
+
       - title: AI & Machine Learning
         summary: |
           [SQL Machine Learning Services (R & Python)](advanced-analytics/what-is-sql-server-machine-learning.md)<br />

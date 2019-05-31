@@ -1,7 +1,7 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/09/2018"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -66,6 +66,8 @@ The download pages also include information about prerequisites. Make sure you i
 
     -   [Azure SQL DW Upload Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Flexible File Task](../integration-services/control-flow/flexible-file-task.md)
+
 -   Data Flow Components
 
     -   [Azure Blob Source](../integration-services/data-flow/azure-blob-source.md)
@@ -76,7 +78,11 @@ The download pages also include information about prerequisites. Make sure you i
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob & Azure Data Lake Store File Enumerator. See [Foreach Loop Container](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+    -   [Flexible File Source](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [Flexible File Destination](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Azure Blob, Azure Data Lake Store, and Data Lake Storage Gen2 File Enumerator. See [Foreach Loop Container](../integration-services/control-flow/foreach-loop-container.md)
 
 ## Scenario: Processing big data
  Use Azure Connector to complete following big data processing work:

@@ -659,7 +659,7 @@ To rebuild a clustered columnstore index, [!INCLUDE[ssNoVersion](../../includes/
   
 1. Requires space on the physical media to store two copies of the columnstore index while the rebuild is taking place. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original clustered columnstore index.
 
-1. For an Azure SQL Data Warehouse table with an ordered clustered columnstore index, ALTER INDEX REBUILD will re-sort the data.  
+1. For an Azure SQL Data Warehouse table with an ordered clustered columnstore index, ALTER INDEX REBUILD will re-sort the data. Monitor tempdb during rebuild operations. If you need more tempdb space, you can scale up the data warehouse. Scale back down once the index rebuild is complete.
   
 ## <a name="reorganizing-indexes"></a> Reorganizing Indexes
 Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value. To view the fill factor setting, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  

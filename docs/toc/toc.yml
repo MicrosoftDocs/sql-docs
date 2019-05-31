@@ -227,6 +227,12 @@
         href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
       - name: Azure blob storage
         href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
+    - name: Quickstarts
+      items:
+      - name: Backup & restore 
+        href: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+      - name: To Azure Blob Storage 
+        href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
     - name: How-to
       items:
       - name: Backup to Azure
@@ -1216,7 +1222,7 @@
           href: ../relational-databases/databases/rebuild-system-databases.md
       - name: Contained databases
         items:
-        - name: Overvivew
+        - name: Overview
           href: ../relational-databases/databases/contained-databases.md
         - name: Modified Features
           href: ../relational-databases/databases/modified-features-contained-database.md
@@ -10125,8 +10131,6 @@
         href: ../relational-databases/lesson-1-connecting-to-the-database-engine.md
       - name: "Lesson 2: Connecting from Another Computer"
         href: ../relational-databases/lesson-2-connecting-from-another-computer.md
-    - name: Backup & Restore to Azure Blob Storage Service
-      href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
     - name: Signing Stored Procedures with a Certificate
       href: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
     - name: Ownership Chains & Context Switching
@@ -16504,8 +16508,6 @@
           href: ../t-sql/queries/table-value-constructor-transact-sql.md
         - name: TOP
           href: ../t-sql/queries/top-transact-sql.md
-        - name: UPDATE
-          href: ../t-sql/queries/update-transact-sql.md
         - name: UPDATETEXT
           href: ../t-sql/queries/updatetext-transact-sql.md
         - name: WITH common_table_expression
@@ -16578,6 +16580,8 @@
           href: ../t-sql/statements/insert-transact-sql.md
         - name: INSERT (SQL Graph)
           href: ../t-sql/statements/insert-sql-graph.md
+        - name: UPDATE
+          href: ../t-sql/queries/update-transact-sql.md
         - name: MERGE
           href: ../t-sql/statements/merge-transact-sql.md
         - name: RENAME

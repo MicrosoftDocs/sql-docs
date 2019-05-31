@@ -1,7 +1,7 @@
 ---
 title: "Editions and supported features of SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2017"
+ms.custom: sqlfreshmay19
+ms.date: "05/29/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -38,7 +38,7 @@ manager: craigg
 # Editions and supported features of SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-This topic provides details of features supported by the SQL Server editions. At this time there are no changes to features supported by editions for SQL Server 2017.  
+This topic provides details of features supported by the SQL Server editions. At this time, there are no changes to features supported by editions for SQL Server 2017.  
   
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
@@ -61,11 +61,11 @@ For the latest release notes and what's new information, see the following:
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Definition|  
 |---------------------------------------|----------------|  
-|Enterprise|The premium offering, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance, unlimited virtualization, and end-to-end business intelligence - enabling high service levels for mission-critical workloads and end user access to data insights.|  
+|Enterprise|The premium offering, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition delivers comprehensive high-end datacenter capabilities with blazing-fast performance, unlimited virtualization, and end-to-end business intelligence - enabling high service levels for mission-critical workloads and end-user access to data insights.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition delivers basic data management and business intelligence database for departments and small organizations to run their applications and supports common development tools for on-premise and cloud - enabling effective database management with minimal IT resources.|  
-|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large scale Web properties.|  
+|Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web edition is a low total-cost-of-ownership option for Web hosters and Web VAPs to provide scalability, affordability, and manageability capabilities for small to large-scale Web properties.|  
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer edition lets developers build any kind of application on top of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It includes all the functionality of Enterprise edition, but is licensed for use as a development and test system, not as a production server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer is an ideal choice for people who build [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] and test applications.|  
-|Express editions|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, a lightweight version of Express that has all of its programmability features, yet runs in user mode and has a fast, zero-configuration installation and a short list of prerequisites.|  
+|Express editions|Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications. It is the best choice for independent software vendors, developers, and hobbyists building client applications. If you need more advanced database features, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express can be seamlessly upgraded to other higher end versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, a lightweight version of Express that has all of its programmability features, yet runs in user mode, and has a fast, zero-configuration installation and a short list of prerequisites.|  
   
 ## Using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with an Internet Server  
  On an Internet server, such as a server that is running Internet Information Services (IIS), you will typically install the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] client tools. Client tools include the client connectivity components used by an application connecting to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -108,7 +108,7 @@ For the latest release notes and what's new information, see the following:
 
 **Developer and Evaluation Editions**  
 For features supported by Developer and Evaluation editions, see features listed for the SQL Server Enterprise Edition in the tables below.
-For a list of features that were added to the Developer edition for [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, see [SQL Server 2016 SP1 editions](https://aka.ms/uw6cw4).  
+
 
 The Developer edition continues to support only 1 client for [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -127,7 +127,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions. 
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions. 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -155,7 +155,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>2</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
-<sup>3</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1 as part of creating a common programmability surface area (CPSA) accross editions. 
+<sup>3</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1 as part of creating a common programmability surface area (CPSA) across editions. 
   
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
@@ -180,11 +180,11 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.  
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.  
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
 
-<sup>4</sup> Standard Edition and SQL Server + CAL based licensing can restrict how many processors SQL Server Standard can use, but SQL Server Standard is NUMA aware. 
+<sup>4</sup> Standard Edition and SQL Server + CAL-based licensing can restrict how many processors SQL Server Standard can use, but SQL Server Standard is NUMA aware. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|  
@@ -200,7 +200,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Contained databases|Yes|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|No|  
 
-<sup>1</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.      
+<sup>1</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.      
 
 ##  <a name="Replication"></a> Replication  
   
@@ -261,7 +261,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
  <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.      
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.      
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -299,7 +299,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> Scale out with multiple compute nodes requires a head node.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.     
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.     
   
 ## <a name="IS"></a> Integration Services
 
@@ -314,14 +314,14 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Create cubes without a database|Yes|Yes|No|No|No |   
-|Auto-generate staging and data warehouse schema|Yes|Yes|No|No|No| 
+|Autogenerate staging and data warehouse schema|Yes|Yes|No|No|No| 
 |Change data capture|Yes|Yes <sup>1</sup>|No|No|No| 
 |Star join query optimizations|Yes|No|No|No|No| 
 |Scalable read-only Analysis Services configuration|Yes|No|No|No|No| 
 |Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|   
 |Global batch aggregation|Yes|No|No|No|No| 
 
-<sup>1</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.     
+<sup>1</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) across editions.     
 
 ##  <a name="SSAS"></a> Analysis Services  
   
@@ -377,7 +377,6 @@ For information about the Business Intelligence Client features supported by the
 > [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## See Also  
- [Product Specifications for SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   

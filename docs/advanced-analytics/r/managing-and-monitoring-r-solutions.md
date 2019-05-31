@@ -54,7 +54,7 @@ Least-privilege accounts are created during setup and placed in a Windows *user 
 As a DBA, you can use SQL Server data security to specify who has permission to execute scripts, and that data used in jobs is managed under the same security roles that control access through T-SQL queries. As a system administrator, you can explicitly deny **SQLRUserGroup** access to sensitive data on the local server by creating ACLs.
 
 >[!NOTE]
-> By default, the **SQLRUserGroup** does not have a login or permissions in SQL Server itself. Should worker accounts require a login for data access, you must create it yourself. A scenario that specifically calls for the creation of a login is to support requests from a script in execution, for data or operations on the database engine instance, when the user identity is a Windows user and the connection string specifies a trusted user. For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+> By default, the **SQLRUserGroup** does not have a login or permissions in SQL Server itself. Should worker accounts require a login for data access, you must create it yourself. A scenario that specifically calls for the creation of a login is to support requests from a script in execution, for data or operations on the database engine instance, when the user identity is a Windows user and the connection string specifies a trusted user. For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## Disable script execution
 

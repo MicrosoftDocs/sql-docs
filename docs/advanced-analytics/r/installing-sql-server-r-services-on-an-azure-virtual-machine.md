@@ -39,7 +39,7 @@ To enable access from remote data science clients:
 
 If you expect that clients calling the server will need to issue ODBC queries as part of their machine learning solutions, you must ensure that the Launchpad can make ODBC calls on behalf of the remote client. 
 
-To do this, you must allow the SQL worker accounts that are used by Launchpad to log into the instance. For more information, see [Add SQLRUserGroup as a database user](../security/add-sqlrusergroup-to-database.md).
+To do this, you must allow the SQL worker accounts that are used by Launchpad to log into the instance. For more information, see [Add SQLRUserGroup as a database user](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 

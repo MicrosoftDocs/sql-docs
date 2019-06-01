@@ -16533,7 +16533,7 @@
           href: ../t-sql/queries/select-order-by-clause-transact-sql.md
         - name: SELECT - OVER Clause
           href: ../t-sql/queries/select-over-clause-transact-sql.md
-      - name: FROM
+      - name: FROM plus JOIN, APPLY, PIVOT
         href: ../t-sql/queries/from-transact-sql.md
         items:
         - name: FROM - Using PIVOT & UNPIVOT

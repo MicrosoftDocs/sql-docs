@@ -10,14 +10,14 @@ ms.author: mathoma
 ms.reviewer: sstein
 manager: craigg
 helpviewer_keywords:
-  * "source controls [SQL Server Management Studio], tutorials"
-  * "Help [SQL Server], SQL Server Management Studio"
-  * "tutorials [SQL Server Management Studio]"
-  * "Transact-SQL tutorials"
-  * "SQL Server Management Studio [SQL Server], tutorials"
-  * "Find SQL Server Instance"
-  * "find instance name"
-  * "find sql server instance name"
+  - "source controls [SQL Server Management Studio], tutorials"
+  - "Help [SQL Server], SQL Server Management Studio"
+  - "tutorials [SQL Server Management Studio]"
+  - "Transact-SQL tutorials"
+  - "SQL Server Management Studio [SQL Server], tutorials"
+  - "Find SQL Server Instance"
+  - "find instance name"
+  - "find sql server instance name"
 ms.custom: ""
 ms.date: 03/13/2018
 ---
@@ -107,7 +107,7 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
     USE master
       GO
 
-      -- Drop the database if it already exists
+      --Drop the database if it already exists
       IF  EXISTS (
     	    SELECT name
     		    FROM sys.databases

@@ -115,4 +115,4 @@ You can also create a new template in Template Browser. The following steps show
 The next article provides additional tips and tricks for using SQL Server Management Studio. 
 
 > [!div class="nextstepaction"]
-> [Additional tips and tricks for using SSMS](ssms-tricks.md)
+> [Additional tips and tricks for using SSMS](../tutorials/ssms-tricks.md)

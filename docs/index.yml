@@ -24,6 +24,13 @@ highlightedContent:
 
 productDirectory:
   items:
+  - title: SQL on Azure 
+    imageSrc: media/index/azure.png
+    links:
+      - url: https://docs.microsoft.com/azure/sql-database/
+        text: Azure SQL Database
+      - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+        text: Azure SQL Data Warehouse
   - title: SQL Server on Windows
     imageSrc: media/index/windows.png
     links:
@@ -33,13 +40,6 @@ productDirectory:
         text: On an Azure VM
       - url: https://docs.microsoft.com/en-us/previous-versions/sql/
         text: Previous Versions (SQL 2005 - 2012)
-  - title: SQL on Azure 
-    imageSrc: media/index/azure.png
-    links:
-      - url: https://docs.microsoft.com/azure/sql-database/
-        text: Azure SQL Database
-      - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-        text: Azure SQL Data Warehouse
   - title: SQL Server on Linux
     imageSrc: media/index/linux.png
     links:
@@ -47,15 +47,6 @@ productDirectory:
         text: On-premises
       - url: linux/quickstart-install-connect-clouds.md
         text: On an Azure VM
-  - title: What's new
-    imageSrc: media/index/linux.png
-    links:
-      - url: big-data-cluster/big-data-cluster-overview.md
-        text: SQL Server big data cluster
-      - url: azure-data-studio/what-is.md
-        text: Azure Data Studio
-      - url: docs.microsoft.com/en-us/azure/dms/dms-overview
-        text: Azure Database Migration Assistant
 
 
 conceptualContent:
@@ -73,6 +64,20 @@ conceptualContent:
           itemType: overview
         - text: SQL Server on Ubuntu
           url: linux/quickstart-install-connect-ubuntu.md
+          itemType: overview
+    - title: What's New
+      links:
+        - text: SQL Server big data cluster
+          url: big-data-cluster/big-data-cluster-overview.md
+          itemType: overview
+        - text: Azure Data Studio
+          url: azure-data-studio/what-is.md
+          itemType: overview
+        - text: Azure Database Migration Service
+          url: https://docs.microsoft.com/en-us/azure/dms/dms-overview
+          itemType: overview
+        - text: SQL Machine Learning Services
+          url: reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
           itemType: overview
     - title: Release notes 
       links:
@@ -105,27 +110,10 @@ conceptualContent:
       footerLink:
         text: See more
         url: lp/sql-server/install-sql-and-services.md
-    - title: Upgrade
-      links:
-        - text: SQL Server
-          url: database-engine/install-windows/upgrade-sql-server.md
-          itemType: overview
-        - text: Analysis Services (SSAS)
-          url: database-engine/install-windows/upgrade-analysis-services.md
-          itemType: overview
-        - text: Integration Services (SSIS)
-          url: integration-services/install-windows/upgrade-integration-services.md
-          itemType: overview
-        - text: Reporting Services (SSRS)
-          url: reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
-          itemType: overview
-      footerLink:
-        text: See more
-        url: lp/sql-server/install-sql-and-services.md
     - title: Migrate
       links:
         - text: Azure Database Migration Service (DMS)
-          url: docs.microsoft.com/en-us/azure/dms/dms-overview
+          url: https://docs.microsoft.com/en-us/azure/dms/dms-overview
           itemType: overview
         - text: Database Migration Assistant (DMA)
           url: dma/dma-overview.md

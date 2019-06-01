@@ -14381,7 +14381,6 @@
             "redirect_document_id": false
         },
         {
-<<<<<<< HEAD
             "source_path": "docs/ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md",
             "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
             "redirect_document_id": true
@@ -14389,10 +14388,11 @@
         {
             "source_path": "docs/ssms/tutorials/templates-ssms.md",
             "redirect_url": "docs/ssms/templates/templates-ssms",
-=======
+            "redirect_document_id": true
+        },
+        {        
             "source_path": "docs/relational-databases/security/encryption/service-master-key.md",
             "redirect_url": "/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine",
->>>>>>> 46b87c210cd9a13b1e8f95de7c178527754e98df
             "redirect_document_id": true
         }
     ]

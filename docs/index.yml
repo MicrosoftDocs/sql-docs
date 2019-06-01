@@ -24,28 +24,22 @@ highlightedContent:
 
 productDirectory:
   items:
-  - title: SQL Server on Windows
-    imageSrc: media/index/windows.png
-    links:
-      - url: sql-server/sql-server-technical-documentation.md
-        text: On-premises
-      - url: sql-server/what-s-new-in-sql-server-ver15.md
-        text:     ~ What's new
-      - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
-        text: On an Azure VM
-      - url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
-        text:     ~ What's new
   - title: SQL on Azure 
     imageSrc: media/index/azure.png
     links:
       - url: https://docs.microsoft.com/azure/sql-database/
         text: Azure SQL Database
-      - url: /azure/sql-database/sql-database-release-notes
-        text:     ~ What's new
       - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
         text: Azure SQL Data Warehouse
-      - url: /azure/sql-data-warehouse/release-notes-10-0-10106-0
-        text:     ~ What's new
+  - title: SQL Server on Windows
+    imageSrc: media/index/windows.png
+    links:
+      - url: sql-server/sql-server-technical-documentation.md
+        text: On-premises
+      - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+        text: On an Azure VM
+      - url: https://docs.microsoft.com/en-us/previous-versions/sql/
+        text: Previous Versions (SQL 2005 - 2012)
   - title: SQL Server on Linux
     imageSrc: media/index/linux.png
     links:
@@ -53,8 +47,7 @@ productDirectory:
         text: On-premises
       - url: linux/quickstart-install-connect-clouds.md
         text: On an Azure VM
-      - url: linux/sql-server-linux-whats-new.md
-        text: What's new
+
 
 conceptualContent:
   items:
@@ -71,6 +64,34 @@ conceptualContent:
           itemType: overview
         - text: SQL Server on Ubuntu
           url: linux/quickstart-install-connect-ubuntu.md
+          itemType: overview
+    - title: What's New
+      links:
+        - text: SQL Server big data cluster
+          url: big-data-cluster/big-data-cluster-overview.md
+          itemType: overview
+        - text: Azure Data Studio
+          url: azure-data-studio/what-is.md
+          itemType: overview
+        - text: Azure Database Migration Service
+          url: https://docs.microsoft.com/en-us/azure/dms/dms-overview
+          itemType: overview
+        - text: SQL Machine Learning Services
+          url: reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+          itemType: overview
+    - title: Release notes 
+      links:
+        - text: SQL Server 2019
+          url: sql-server/what-s-new-in-sql-server-ver15.md
+          itemType: overview
+        - text: SQL Server on an Azure VM
+          url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
+          itemType: overview
+        - text: Azure SQL Database
+          url: /azure/sql-database/sql-database-release-notes
+          itemType: overview
+        - text: Azure SQL Data Warehouse
+          url: /azure/sql-data-warehouse/release-notes-10-0-10106-0
           itemType: overview
     - title: Install
       links:
@@ -89,13 +110,10 @@ conceptualContent:
       footerLink:
         text: See more
         url: lp/sql-server/install-sql-and-services.md
-      footerLink:
-        text: See more
-        url: lp/sql-server/install-sql-and-services.md
     - title: Migrate
       links:
         - text: Azure Database Migration Service (DMS)
-          url: docs.microsoft.com/en-us/azure/dms/dms-overview
+          url: https://docs.microsoft.com/en-us/azure/dms/dms-overview
           itemType: overview
         - text: Database Migration Assistant (DMA)
           url: dma/dma-overview.md
@@ -266,7 +284,6 @@ additionalContent:
         summary: |
           [Database samples](samples/sql-samples-where-are.md)<br />
           [Database Management Views (DMVs)](relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)<br />
-          [Previous version content (SQL 2005-2012)](https://docs.microsoft.com/en-us/previous-versions/sql/)<br />
           [SQL PowerShell](powershell/sql-server-powershell.md)<br />
           [SQL Rest API](https://docs.microsoft.com/en-us/rest/api/sql/)<br />
           [System catalog views](relational-databases/system-catalog-views/catalog-views-transact-sql.md)<br />

@@ -35,11 +35,11 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 
 ## Use Template Browser
 
-In this section, you learn how to locate and use Template Browser. 
+In this section, you learn how to locate and use Template Browser.
 
 1. Open SQL Server Management Studio.
 
-2. In the **View** menu, select **Template Browser** (Ctrl+Alt+T): 
+2. In the **View** menu, select **Template Browser** (Ctrl+Alt+T):
 
     ![Open Template Browser](media/templates-ssms/templatebrowser.png)
 
@@ -51,7 +51,7 @@ In this section, you learn how to locate and use Template Browser.
 
     You can also double-click the template name to open it.
 
-4. A new query window opens. The T-SQL script is already populated. 
+4. A new query window opens. The T-SQL script is already populated.
 
 5. Modify the template to suit your needs, and then select **Execute** to run the query:
 

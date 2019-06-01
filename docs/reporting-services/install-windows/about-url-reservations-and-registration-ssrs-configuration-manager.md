@@ -85,10 +85,9 @@ ms.author: maggies
 |SQL Server Express|Web portal|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Authentication and Service Identity for Reporting Services URLs  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL reservations specify the service account of the Report Server service. The account under which the service runs is used for all URLs that are created for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications that run in the same instance. The service identity of the report server instance is stored in the RSReportServer.config file.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL reservations display the account of the URL reservation. The virtual service account is used for all URLs that are created for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications that run in the same instance.
   
- The service account has no default value. However, specifying a service account is required during Setup and is specified in **URLReservation** in RSReportServer.config even if you install the server in files-only mode. Valid values for the service account include a domain user account, **LocalSystem**, or **NetworkService**.  
-  
+ 
  Anonymous access is disabled because the default security is **RSWindowsNegotiate**. For intranet access, report server URLs use network computer names. If you want to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for Internet connections, you must use different settings. For more information about authentication, see [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ##  <a name="URLlocalAdmin"></a> URLs for Local Administration  

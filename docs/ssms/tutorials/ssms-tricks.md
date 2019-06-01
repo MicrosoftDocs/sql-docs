@@ -1,7 +1,6 @@
 ---
-Title: Additional tips and tricks for using SQL Server Management Studio
+title: Additional tips and tricks for using SQL Server Management Studio
 description: A tutorial that covers some additional tips and tricks for using SSMS.
-keywords: SQL Server, SSMS, SQL Server Management Studio
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -54,15 +53,15 @@ You can comment and uncomment portions of your text by using the **Comment** but
 
 4. Paste the following T-SQL code in your text window.
 
-      ```sql
-        USE master
+    ```sql
+    USE master
         GO
 
-        -* Drop the database if it already exists
+        -- Drop the database if it already exists
         IF  EXISTS (
-    	    SELECT name 
-    		    FROM sys.databases 
-    		    WHERE name = N'TutorialDB'
+            SELECT name 
+                FROM sys.databases 
+                WHERE name = N'TutorialDB'
                 )
 
         DROP DATABASE TutorialDB
@@ -73,7 +72,7 @@ You can comment and uncomment portions of your text by using the **Comment** but
 
         ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
         GO
-     ```
+   ```
 
 5. Highlight the **Alter Database** portion of the text, and then select the **Comment** button on the toolbar: 
 
@@ -85,7 +84,7 @@ You can comment and uncomment portions of your text by using the **Comment** but
     ![Comment everything](media/ssms-tricks/commenteverything.png)
 
     > [!NOTE]
-    > The keyboard shortcut to comment text is **CTRL + K, CTRL + C**. 
+    > The keyboard shortcut to comment text is **CTRL + K, CTRL + C**.
 
 8. Highlight the **Alter Database** portion of the text, and then select the **Uncomment** button to uncomment it:
 
@@ -104,26 +103,26 @@ You can use the indentation buttons on the toolbar to increase or decrease the i
 
 2. Paste the following T-SQL code in your text window:
 
-      ```sql
-        USE master
-        GO
+    ```sql
+    USE master
+      GO
 
-        -* Drop the database if it already exists
-        IF  EXISTS (
-        SELECT name
-        FROM sys.databases
-        WHERE name = N'TutorialDB'
-                )
+      -- Drop the database if it already exists
+      IF  EXISTS (
+    	    SELECT name
+    		    FROM sys.databases
+    		    WHERE name = N'TutorialDB'
+              )
 
-        DROP DATABASE TutorialDB
-        GO
+      DROP DATABASE TutorialDB
+      GO
 
-        CREATE DATABASE TutorialDB
-        GO
+      CREATE DATABASE TutorialDB
+      GO
 
-        ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
-        GO
-     ```
+      ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON
+      GO
+    ```
 
 3. Highlight the **Alter Database** portion of the text, and then select the **Increase Indent** button on the toolbar to move this text forward:
 

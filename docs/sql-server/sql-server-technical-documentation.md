@@ -36,10 +36,6 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 
 SQL Server 2014, and older versions including SQL Server 2005, have documentation available [here](#previous-versions-gm66).
 
-::: moniker range="=sql-server-previousversions"
-Documentation for a _newer_ version of Microsoft SQL Server is [here](../sql-server/sql-server-technical-documentation.md?view=sql-server-2017).
-::: moniker-end
-
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
 -->

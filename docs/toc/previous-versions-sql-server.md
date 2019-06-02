@@ -3,7 +3,7 @@ title: Previous versions of SQL Server | Microsoft Docs
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-ms.date: "05/30/2019"
+ms.date: "06/02/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
@@ -16,7 +16,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 - [SQL Server previous versions documentation](/previous-versions/sql/) <!-- https://docs.microsoft.com/previous-versions/sql/ -->
 
-> [!CAUTION]
+> [!TIP]
 > Use the _Version_ dropdown list control to select the version of SQL Server you want to see documentation for. The control is available near the top of this webpage.
 >
 > In the dropdown list, the value labeled **SQL Server previous versions** allows this article to be displayed. This version value also hides most other articles. Almost every other version value hides this article.
@@ -37,14 +37,7 @@ The documentation for SQL Server 2014 is online, and is indexed by Bing.com and 
 
 - [SQL Server 2014 online documentation](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
-
-
-
-
-
-
-
-## Offline documentation and the Help Viewer
+## Offline books and the Help Viewer
 
 ### SQL Server 2014 and earlier
 
@@ -60,14 +53,14 @@ Offline documentation books are available for SQL Server 2014 and earlier versio
 
 Starting with SQL Server 2016, the SQL Server offline books have their version year as part of their title. This name enhancement enables any later version of the Help Viewer to download and view the SQL Server offline books for version 2016 or 2017 and so on. You can use the following steps to download and view the offline documentation for SQL Server versions 2016 and later:
 
-1. [Download the latest SSMS](../ssms/download-sql-server-management-studio-ssms.md).
+1. [Download the latest SSMS](../ssms/download-sql-server-management-studio-ssms.md?view=sql-server-2017).
 2. Start SSMS on your local computer.
 3. Use the SSMS **Help** menu to start the updated version of the Help Viewer tool.
 4. Use the Help Viewer to download and view the offline books. Scroll to see the various versions of SQL Server books that are available for download, starting with SQL Server 2016.
 
 ### Help Viewer
 
-For additional details about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md).
+For additional details about the Help Viewer tool, see [SQL Server offline help and Help Viewer](../sql-server/sql-server-help-installation.md?view=sql-server-2017).
 
 ## Lifecycle policy
 

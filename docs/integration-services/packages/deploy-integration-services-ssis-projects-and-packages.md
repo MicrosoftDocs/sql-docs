@@ -340,7 +340,7 @@ Launch the wizard by either:
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
   
- You can query views for a list of server environments, environment references, and environment variables. You can also call stored to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ You can query views for a list of server environments, environment references, and environment variables. You can also call stored procedures to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### To create and use a server environment  
   

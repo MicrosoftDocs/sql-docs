@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "viewing filegroup properties"
   - "displaying filegroup properties"
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # FILEGROUPPROPERTY (Transact-SQL)

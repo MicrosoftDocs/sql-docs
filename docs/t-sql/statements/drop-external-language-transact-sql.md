@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 05/16/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ReorientObject method (geography)"
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # ReorientObject (geography Data Type)

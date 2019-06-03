@@ -10,8 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 

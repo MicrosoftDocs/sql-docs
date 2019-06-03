@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "UnionAggregate method (geometry)"
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # UnionAggregate (geometry Data Type)

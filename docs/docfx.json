@@ -180,12 +180,12 @@
     "groups": {
 
       "gr-sql-2014-b": {
-        "moniker_range": "= sql-server-2014",
+        "moniker_range": "sql-server-2014",
         "dest": "temp2014b"
       },
 
       "gr-sql-2016-a": {
-        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions",
         "dest": "temp2016a"
       }
     },

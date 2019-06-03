@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STStartPoint (geometry Data Type)"
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STStartPoint (geometry Data Type)

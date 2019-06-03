@@ -17,7 +17,7 @@ You can install R and Python integration with Machine Learning Services on a SQL
  
 For step by step instructions, see [How to provision a Windows SQL Server virtual machine in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
 
-The [Configure SQL server settings](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#4-configure-sql-server-settings) step is where you add machine learning to your instance.
+The [Configure SQL server settings](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) step is where you add machine learning to your instance.
 
 <a name="firewall"></a>
 
@@ -39,7 +39,7 @@ To enable access from remote data science clients:
 
 If you expect that clients calling the server will need to issue ODBC queries as part of their machine learning solutions, you must ensure that the Launchpad can make ODBC calls on behalf of the remote client. 
 
-To do this, you must allow the SQL worker accounts that are used by Launchpad to log into the instance. For more information, see [Add SQLRUserGroup as a database user](../security/add-sqlrusergroup-to-database.md).
+To do this, you must allow the SQL worker accounts that are used by Launchpad to log into the instance. For more information, see [Add SQLRUserGroup as a database user](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 

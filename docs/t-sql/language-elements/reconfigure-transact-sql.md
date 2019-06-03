@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "RECONFIGURE"
   - "RECONFIGURE, WITH OVERRIDE statement"
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # RECONFIGURE (Transact-SQL)

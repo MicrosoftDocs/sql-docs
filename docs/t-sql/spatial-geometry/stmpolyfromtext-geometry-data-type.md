@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPolyFromText (geometry Data Type)"
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STMPolyFromText (geometry Data Type)

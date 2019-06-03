@@ -6,7 +6,7 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -43,16 +43,16 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 Now that you have prepared a credential file with access keys, you can start mounting. The following steps mount the remote HDFS storage in S3 to the local HDFS storage of your big data cluster.
 
-1. Use **kubectl** to find the IP Address for the **controller-svc** service in your big data cluster. Look for the **External-IP**.
+1. Use **kubectl** to find the IP Address for the endpoint **controller-svc-external** service in your big data cluster. Look for the **External-IP**.
 
    ```bash
-   kubectl get svc controller-svc -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Log in with **mssqlctl** using the external IP address of the management proxy endpoint with your cluster username and password:
+1. Log in with **mssqlctl** using the external IP address of the controller endpoint with your cluster username and password:
 
    ```bash
-   mssqlctl login -e https://<IP-of-controller-svc>:30080/
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
 1. Mount the remote HDFS storage in Azure using **mssqlctl cluster storage-pool mount create**. Replace the placeholder values before running the following command:

@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to ingest data into the data pool of
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -75,7 +75,7 @@ The following steps create an external table in the data pool named **web_clicks
 
 The next step is to create a Spark streaming job that loads web clickstream data from the storage pool (HDFS) into the external table you created in the data pool.
 
-1. In Azure Data Studio, connect to the **HDFS/Spark gateway** of your big data cluster. For more information, see [Connect to the HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+1. In Azure Data Studio, connect to the master instance of your big data cluster. For more information, see [Connect to a big data cluster](connect-to-big-data-cluster.md).
 
 1. Double-click on the HDFS/Spark gateway connection in the **Servers** window. Then select **New Spark Job**.
 

@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,7 +20,8 @@ helpviewer_keywords:
   - "ID relationships [SQLXML]"
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ""
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

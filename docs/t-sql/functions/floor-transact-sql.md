@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "largest integers"
   - "FLOOR function [Transact-SQL]"
 ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

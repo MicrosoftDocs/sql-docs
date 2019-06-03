@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CollectionAggregate method (geometry)"
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # CollectionAggregate (geometry Data Type)

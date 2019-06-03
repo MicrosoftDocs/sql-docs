@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "annotated XSD schemas, examples"
   - "XML views [SQLXML]"
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)

@@ -74,9 +74,12 @@ Public Class ScriptMain      ' VB
 
         If componentMetaData130 IsNot Nothing Then
 
-            If 0 = Row.ErrorColumn Then
+            If Row.ErrorColumn = 0 Then
                 ' 0 means no specific column is identified by ErrorColumn, this time.
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            ELSE If Row.ErrorColumn = -1 Then
+                ' -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables."
             Else
                 Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
             End If
@@ -100,6 +103,11 @@ public class ScriptMain:      // C#
             if (Row.ErrorColumn == 0)
             {
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            // -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+            else if (Row.ErrorColumn == -1)
+            {
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables.";
             }
             else
             {

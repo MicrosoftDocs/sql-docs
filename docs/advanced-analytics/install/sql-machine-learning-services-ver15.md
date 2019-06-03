@@ -3,7 +3,7 @@ title: Differences in SQL Server 2019 - SQL Server Machine Learning Services
 description: Learn what's new for R and Python SQL Server machine learning extensions in the SQL Server 2019 preview release.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/17/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -47,7 +47,7 @@ As with previous releases, the **SQLRUserGroup** continues to provide read and e
 
 ## Implied authentication
 
-As before, additional configuration is still required for *implied authentication* in cases where script or code has to connect back to SQL Server using trusted authentication to retrieve data or resources. The additional configuration involves creating a database login for **SQLRUserGroup**, whose sole member is now the single SQL Server Launchpad service account instead of multiple worker accounts. For more information about this task, see [Add SQLRUserGroup as a database user](../security/add-sqlrusergroup-to-database.md).
+As before, additional configuration is still required for *implied authentication* in cases where script or code has to connect back to SQL Server using trusted authentication to retrieve data or resources. The additional configuration involves creating a database login for **SQLRUserGroup**, whose sole member is now the single SQL Server Launchpad service account instead of multiple worker accounts. For more information about this task, see [Add SQLRUserGroup as a database user](../security/create-a-login-for-sqlrusergroup.md).
 
 
 ## Symbolic link created by Setup

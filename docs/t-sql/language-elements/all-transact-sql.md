@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "single-column set of values [SQL Server]"
   - "ALL (Transact-SQL)"
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # ALL (Transact-SQL)

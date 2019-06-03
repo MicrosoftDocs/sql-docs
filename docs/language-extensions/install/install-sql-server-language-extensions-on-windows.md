@@ -5,7 +5,7 @@ description: Language extensions installation steps for SQL Server 2019 in Windo
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/14/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -15,10 +15,10 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Starting in SQL Server 2019, Language Extensions and Java support is provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
+Starting in SQL Server 2019, Language Extensions and Java support are provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 > [!NOTE]
-> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions.md)
+> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions)
 
 <a name="prerequisites"></a> 
 
@@ -41,7 +41,7 @@ Starting in SQL Server 2019, Language Extensions and Java support is provided. T
 
 ## Java JRE or JDK prerequisite
 
-Java 8 is currently the supported version. Newer versions, like Java 11, should with the language extension but is currently not supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
+Java 8 is currently the supported version. Newer versions, like Java 11, should work with the language extension but is currently not supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
 You can use your preferred Java 8 distribution. Below are two suggested distributions:
 
@@ -52,7 +52,7 @@ You can use your preferred Java 8 distribution. Below are two suggested distribu
 
 On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
-> [!Note]
+> [!NOTE]
 > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for this early CTP release is Java 8. 
 
 ## Get the installation media
@@ -117,7 +117,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 <a name="perms-nonwindows"></a>
 
-## Grant access to non-default JRE folder (Windows only)
+## Grant access to non-default JRE folder
 
 If you did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
@@ -152,7 +152,7 @@ If you did not install the JDK or JRE under program files, you need to perform t
     sp_configure
     ```
 
-    The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run Java code.
+    The value for the property, `external scripts enabled`, should be **0** at this point. The feature is turned off by default and must be explicitly enabled by an administrator before you can run Java code.
     
 3.  To enable the external scripting feature, run the following statement:
     
@@ -171,6 +171,10 @@ Restarting the service also automatically restarts the related SQL Server Launch
 
 You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
+## Register external language
+
+For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
 ## Verify installation
 
 Check the installation status of the instance in the setup logs.
@@ -183,7 +187,7 @@ Use the following steps to verify that all components used to launch external sc
     EXEC sp_configure  'external scripts enabled'
     ```
 
-    The **run_value** should now be set to 1.
+    The **run_value** is now set to 1.
     
 2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has language extensions installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
    
@@ -206,6 +210,7 @@ At the instance level, additional configuration might include:
 On the database, you might need the following configuration updates:
 
 * [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
+* [Give users permission to execute a specific language](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql#permissions)
 
 > [!NOTE]
 > Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.
@@ -224,17 +229,7 @@ To ensure that language extensions jobs are prioritized and resourced appropriat
   
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources. 
-
-## Limitations in CTP 3.0
-
-* The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
-
-* Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
-
-* Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
-
-* Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
+If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources.
 
 ## Next steps
 

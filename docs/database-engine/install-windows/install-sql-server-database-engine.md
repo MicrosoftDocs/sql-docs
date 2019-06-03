@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/05/2017"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

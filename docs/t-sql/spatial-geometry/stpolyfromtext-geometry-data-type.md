@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPolyFromText (geometry Data Type)"
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPolyFromText (geometry Data Type)

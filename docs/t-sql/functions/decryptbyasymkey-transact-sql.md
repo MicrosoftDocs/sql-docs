@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "DECRYPTBYASYMKEY function"
   - "decryption [SQL Server], asymmetric keys"
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)

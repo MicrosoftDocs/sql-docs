@@ -5,7 +5,7 @@ description: This tutorial shows you how to use SQL Server Language Extensions a
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/17/2019
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -28,7 +28,7 @@ This particular sample uses a regular expression that checks if a text contains 
 
 + Java SE Development Kit (JDK) 8 or JRE 8 on Windows or Linux.
 
-+ [Microsoft Java Extensibility SDK for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) mssql-java-lang-extension.jar.
++ The **mssql-java-lang-extension.jar** file from the [Microsoft Java Extensibility SDK for Microsoft SQL Server](../how-to/extensibility-sdk-java-sql-server.md) .
 
 Command-line compilation using **javac** is sufficient for this tutorial.
 
@@ -175,7 +175,7 @@ If you are not using a Java IDE, you can manually create a `.jar` file. For more
 
 ## Create external language
 
-In CTP 3.0, you need to create an external language in the database. This is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
+In CTP 3.0, you need to create an external language in the database. The external language is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
 
 ### Create external language on Windows
 
@@ -221,13 +221,19 @@ Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
-1. Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) **mssql-java-lang-extension.jar**.
+1. The SDK jar file **mssql-java-lang-extension.jar** is installed as part of SQL Server 2019 CTP 3.0 preview on both Windows and Linux.
+
+    + Default installation path on Windows: **[instance installation home directory]\MSSQL\Binn\mssql-java-lang-extension.jar**
+
+    + Default installation path on Linux: **/opt/mssql/lib/mssql-java-lang-extension.jar**
+
+    The code is also open sourced and can be found on the [SQL Server Language Extensions GitHub repository](https://github.com/microsoft/sql-server-language-extensions). For more information, see [Microsoft Extensibility SDK for Java for Microsoft SQL Server](../how-to/extensibility-sdk-java-sql-server.md).
 
 2. Create an external library for the SDK.
 
     ```sql
     CREATE EXTERNAL LIBRARY sdk
-    FROM (CONTENT = '<path>/mssql-java-lang-extension.jar')
+    FROM (CONTENT = '<OS specific path from above>/mssql-java-lang-extension.jar')
     WITH (LANGUAGE = 'Java');
     GO
     ```

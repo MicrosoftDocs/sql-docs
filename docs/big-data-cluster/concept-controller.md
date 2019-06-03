@@ -33,11 +33,7 @@ The controller service provides the following core functionality:
 
 ## Deploying the controller service
 
-The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a big data cluster. This service is installed by a Kubernetes administrator during cluster bootstrap, using the mssqlctl command-line utility:
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a big data cluster. This service is installed by a Kubernetes administrator during cluster bootstrap, using the **mssqlctl** command-line utility. For more information, see [Get started with SQL Server big data clusters](deploy-get-started.md).
 
 The buildout workflow will layout on top of Kubernetes a fully functional SQL Server big data cluster that includes all the components described in the [Overview](big-data-cluster-overview.md) article. The bootstrap workflow first creates the controller service, and once this is deployed, the controller service will coordinate the installation and configuration of rest of the services part of master, compute, data, and storage pools.
 

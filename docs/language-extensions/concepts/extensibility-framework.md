@@ -5,7 +5,7 @@ description: External code support for the SQL Server database engine, with dual
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -34,7 +34,7 @@ The architecture is designed such that external code run in a separate process f
 
   ![Component architecture](../media/generic-architecture.png "Component architecture")
 
-Components include a **Launchpad** service used to invoke language-specific launchers (for example,, Java), language and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. 
+Components include a **Launchpad** service used to invoke language-specific launchers (for example, Java), language, and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. 
 
 <a name="launchpad"></a>
 

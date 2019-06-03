@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: "sql-server-2019"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. 
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 The article summarizes the features in each release and points to more details for each feature. The [Details](#details) section provides technical details of features that may not be available in core documentation. The other sections of this article provide details about all of the features released to date for this [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -38,24 +38,30 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |:---|:---|
 | **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
-| Updates to Spark mLeap samples | For more information, see [Export Spark machine learning models with MLeap](../big-data-cluster/export-model-with-spark-mleap.md). |
+| Multiple compute pool instances | Support for multiple compute pool instances. |
+| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
+| External table improvements | External tables of HADOOP data source type now supports reading rows up to 1 MB in size. External tables (ODBC, storage pool, data pool) now support rows as wide as a SQL Server table. |
 | &nbsp; | &nbsp; |
 
 ### Database engine
 
 | New feature or update | Details |
 |:---|:---|
-|SQL Server extensibility - Java extension|The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now open sourced and available on [GitHub](http://aka.ms/mssql-java-lang-extension). |
-|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See Register external language. |
-|More supported data types for Java|See Java and SQL Server supported data types.|
+|SQL Server Language Extensions - [Java language extension](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open sourced and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
+|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+|More supported data types for Java|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
 |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
-|New DDL syntax to control the hybrid buffer pool. A trace flag is no longer required to enable the hybrid buffer pool.|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
+|[In-memory database](../relational-databases/in-memory-database.md) adds new DDL syntax to control the hybrid buffer pool. <sup>2</sup>|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
+|New in-memory database feature, memory-optimized tempdb metadata added.|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 |Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |`sys.dm_exec_query_plan_stats` returns more information about degree of parallelism and memory grants for query plans. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
 
 ><sup>1</sup>
 >This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
+>
+><sup>2</sup>
+>A trace flag is no longer required to enable the hybrid buffer pool.
 
 ### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
@@ -164,7 +170,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |Improved indirect checkpoint scalability. |[Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |Define cascaded delete actions on an edge constraint in a graph database. |[Edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
-|Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+|Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### Tools
@@ -426,7 +432,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is [enabled by request during public preview](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). After it is enabled, the feature is on by default.
+> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is [enabled by request during public preview](/azure/sql-database/sql-database-accelerated-database-recovery). After it is enabled, the feature is on by default.
 
 If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "10/22/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Reporting Services], defaults"

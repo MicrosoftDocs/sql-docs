@@ -4,7 +4,7 @@ description: R and Python in SQL Server, with built-in data science modeling and
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/16/2019
+ms.date: 05/22/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph

@@ -1,7 +1,7 @@
 ---
 title: "Master Data Services Installation and Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2017"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""

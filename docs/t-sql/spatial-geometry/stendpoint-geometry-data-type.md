@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STEndpoint (geometry Data Type)"
 ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STEndpoint (geometry Data Type)

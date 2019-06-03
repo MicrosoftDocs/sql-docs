@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryN method"
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STGeometryN (geography Data Type)

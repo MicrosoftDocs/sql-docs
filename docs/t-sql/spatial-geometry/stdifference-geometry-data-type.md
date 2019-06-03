@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDifference (geometry Data Type)"
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STDifference (geometry Data Type)

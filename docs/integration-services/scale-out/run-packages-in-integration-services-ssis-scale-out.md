@@ -10,7 +10,7 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-ms.reviewer: "douglasl"
+ms.reviewer: maghan
 manager: craigg
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"

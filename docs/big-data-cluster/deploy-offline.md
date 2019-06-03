@@ -5,7 +5,7 @@ description: Learn how to perform an offline deployment of a SQL Server big data
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -169,16 +169,17 @@ To install **kubectl** to an offline machine, use the following steps.
 
 1. Copy the folder to the target machine.
 
-## Deploy with from repository
+## Deploy from private repository
 
-To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but customize the following environment variables to match your private Docker repository.
+To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **mssqlctl** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **custom.json**:
 
-- **DOCKER_REGISTRY**  
-- **DOCKER_REPOSITORY**
-- **DOCKER_USERNAME**
-- **DOCKER_PASSWORD**  
-- **DOCKER_EMAIL**
-- **DOCKER_IMAGE_TAG**
+```bash
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+```
+
+The deployment prompts you for the docker username and password, or you can specify them in the **DOCKER_USERNAME** and **DOCKER_PASSWORD** environment variables.
 
 ## Next steps
 

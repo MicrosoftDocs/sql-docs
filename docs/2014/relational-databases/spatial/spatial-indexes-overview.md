@@ -8,8 +8,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "spatial indexes [SQL Server]"
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 ---
 # Spatial Indexes Overview

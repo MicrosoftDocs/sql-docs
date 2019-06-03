@@ -274,12 +274,11 @@ additionalContent:
           [SQL Server 2019 big data clusters](big-data-cluster/big-data-cluster-overview.md)<br />
       - title: Reference
         summary: |
-          [Database samples](samples/sql-samples-where-are.md)<br />
-          [Database Management Views (DMVs)](relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)<br />
-          [SQL PowerShell](powershell/sql-server-powershell.md)<br />
           [Azure SQL PowerShell](https://docs.microsoft.com/en-us/powershell/module/az.sql/)<br />
-          [Azure SQL CLI](https://docs.microsoft.com/en-us/cli/azure/sql)<br />
+          [Azure SQL CLI](https://docs.microsoft.com/en-us/cli/azure/sql)<br />          [Database samples](samples/sql-samples-where-are.md)<br />
+          [Database Management Views (DMVs)](relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)<br />
           [SQL Rest API](https://docs.microsoft.com/en-us/rest/api/sql/)<br />
+          [SQL PowerShell](powershell/sql-server-powershell.md)<br />
           [System catalog views](relational-databases/system-catalog-views/catalog-views-transact-sql.md)<br />
           [Transact-SQL](t-sql/language-reference.md)<br />
           [xQuery](xquery/xquery-language-reference-sql-server.md)<br />

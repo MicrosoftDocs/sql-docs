@@ -1,5 +1,7 @@
 - name: Welcome
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+- name: Previous versions 2014-2005
+  href: ../toc/previous-versions-sql-server.md
 - name: Overview
   items:
   - name: New with SQL Server
@@ -16507,7 +16509,7 @@
           href: ../t-sql/queries/select-order-by-clause-transact-sql.md
         - name: SELECT - OVER Clause
           href: ../t-sql/queries/select-over-clause-transact-sql.md
-      - name: FROM
+      - name: FROM plus JOIN, APPLY, PIVOT
         href: ../t-sql/queries/from-transact-sql.md
         items:
         - name: FROM - Using PIVOT & UNPIVOT

@@ -313,7 +313,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
     );
 ```
 
-**4. Create Schema** 
+**3. Create Schema** 
 
 ```sql
      CREATE SCHEMA sqlserver;

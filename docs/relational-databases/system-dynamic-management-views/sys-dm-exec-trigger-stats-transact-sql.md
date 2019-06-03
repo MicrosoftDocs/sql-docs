@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_trigger_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/10/2018"
+ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -62,6 +62,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**last_spills**|**bigint**|The number of pages spilled the last time the trigger was executed.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|The minimum number of pages that this trigger has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|The maximum number of pages that this trigger has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_page_server_reads**|**bigint**|The total number of page server reads performed by executions of this trigger since it was compiled.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**last_page_server_reads**|**bigint**|The number of page server reads performed the last time the trigger was executed.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**min_page_server_reads**|**bigint**|The minimum number of page server reads that this trigger has ever performed during a single execution.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**max_page_server_reads**|**bigint**|The maximum number of page server reads that this trigger has ever performed during a single execution.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+
   
 ## Remarks  
  In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dynamic management views cannot expose information that would impact database containment or expose information about other databases the user has access to. To avoid exposing this information, every row that contains data that doesn't belong to the connected tenant is filtered out.  

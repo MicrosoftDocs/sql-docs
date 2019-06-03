@@ -21,7 +21,7 @@ In a traditional system without PMEM, SQL Server caches data pages in the buffer
 
 Only clean pages can be accessed directly on a PMEM device. When a page is marked as dirty it is copied to the DRAM buffer pool before eventually being written back to the PMEM device and marked as clean again. This will occur during regular checkpoint operations.
 
-The hybrid buffer pool feature is available for both Windows and Linux. The PMEM device must be formatted with a filesystem that supports DAX (DirectAccess). XFS, EXT4, NTFS and ReFS file systems all have support for DAX. SQL Server will automatically detect if data files reside on an appropriately formatted PMEM device and perform memory mapping in user space upon startup, when a new database is attached, restored or created or when the hybrid buffer pool feature is enabled.
+The hybrid buffer pool feature is available for both Windows and Linux. The PMEM device must be formatted with a filesystem that supports DAX (DirectAccess). XFS, EXT4 and NTFS file systems all have support for DAX. SQL Server will automatically detect if data files reside on an appropriately formatted PMEM device and perform memory mapping in user space upon startup, when a new database is attached, restored or created or when the hybrid buffer pool feature is enabled.
 
 For more on Windows Server support for PMEM, also referred to as Storage Class Memory (SCM) see [deploy persistent memory on Windows Server](/windows-server/storage/storage-spaces/deploy-pmem/).
 
@@ -89,7 +89,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## Best Practices for hybrid buffer pool
 
-When formatting your PMEM device on Windows use the largest allocation unit size available for NTFS or ReFS (2MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
+When formatting your PMEM device on Windows use the largest allocation unit size available for NTFS (2MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
 
 If the server scoped setting for Hybrid buffer pool is set to disabled, Hybrid buffer pool will not be used by any user database.
 

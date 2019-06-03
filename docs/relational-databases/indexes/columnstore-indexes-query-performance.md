@@ -51,7 +51,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 -   Columnstore indexes read compressed data from disk, which means fewer bytes of data need to be read into memory.    
     
--   Columnstore indexes store data in compressed form in memory which reduces I/O by reducing the number of times the same data is read into memory. For example, with 10x compression, columnstore indexes can keep 10x more data in memory compared to storing the data in uncompressed form. With more data in memory, it is more likely that the columnstore index will find the data it needs in memory with incurring additional reads from disk.    
+-   Columnstore indexes store data in compressed form in memory which reduces I/O by reducing the number of times the same data is read into memory. For example, with 10x compression, columnstore indexes can keep 10x more data in memory compared to storing the data in uncompressed form. With more data in memory, it is more likely that the columnstore index will find the data it needs in memory without incurring additional reads from disk.    
     
 -   Columnstore indexes compress data by columns instead of by rows which achieves high compression rates and reduces the size of the data stored on disk. Each column is compressed and stored independently.  Data within a column always has the same data type and tends to have similar values. Data compression techniques are very good at achieving higher compression rates when values are similar.    
     

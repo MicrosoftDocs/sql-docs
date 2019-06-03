@@ -20,7 +20,7 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 manager: craigg
-monikerRange: ">=sql-server-linux-2017||>=sql-server-2016||=sql-server-previousversions||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Documentation
 
@@ -35,10 +35,6 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 ::: moniker-end
 
 SQL Server 2014, and older versions including SQL Server 2005, have documentation available [here](#previous-versions-gm66).
-
-::: moniker range="=sql-server-previousversions"
-Documentation for a _newer_ version of Microsoft SQL Server is [here](../sql-server/sql-server-technical-documentation.md?view=sql-server-2017).
-::: moniker-end
 
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.

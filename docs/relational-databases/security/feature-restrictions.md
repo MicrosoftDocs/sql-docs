@@ -129,7 +129,7 @@ which executes the following database query:
 SELECT Name FROM EMPLOYEES WHERE Id=$EmpId
 ```
 
-If the value passed as the id parameter to the web application requests is copied to replace $EmpId in the database query, an attacker can make the following request:
+If the value passed as the `Id` parameter to the web application requests is copied to replace $EmpId in the database query, an attacker can make the following request:
 
 ```html
 http://www.contoso.com/employee.php?id=1; IF SYSTEM_USER='sa' WAITFOR DELAY '00:00:05'

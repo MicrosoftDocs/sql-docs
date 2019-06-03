@@ -177,7 +177,7 @@ You can find information about the connection properties under the results of yo
     ![Connection properties](media/connect-query-sql-server/connectionproperties.png)
 
     > [!Note]
-    > [In the image, the results are displayed in **Text View**.]
+    > In the image, the results are displayed in **Text View**.
 
 ## Change the server based on the query window
 

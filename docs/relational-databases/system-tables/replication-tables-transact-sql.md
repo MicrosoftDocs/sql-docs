@@ -51,21 +51,21 @@ manager: craigg
 |[MSarticles](msarticles-transact-sql.md)                          |[MSrepl_commands](msrepl-commands-transact-sql.md)
 |[MScached_peer_lsns](mscached-peer-lsns-transact-sql.md)          |[MSrepl_errors](msrepl-errors-transact-sql.md)|
 |[MSdistribution_agents](msdistribution-agents-transact-sql.md)    |[MSrepl_identity_range](msrepl-identity-range-transact-sql.md) |
-|[MSdistribution_history](msdistribution-history-transact-sql.md)  |[MSreplication_objects](msreplication-objects-transact-sql.md)|  
-|[MSlogreader_agents](mslogreader-agents-transact-sql.md)          |[MSreplication_subscriptions](msreplication-subscriptions-transact-sql.md)|
-|[MSlogreader_history](mslogreader-history-transact-sql.md)        |[MSrepl_originators](msrepl-originators-transact-sql.md)|
-|[MSmerge_agents](msmerge-agents-transact-sql.md)                  |[MSrepl_transactions](msrepl-transactions-transact-sql.md)      | 
-|[MSmerge_articlehistory](msmerge-articlehistory-transact-sql.md)  |[MSrepl_version](msrepl-version-transact-sql.md)|  
-|[MSmerge_history](msmerge-history-transact-sql.md)                |[MSreplication_monitordata](msreplication-monitordata-transact-sql.md)|  
-|[MSmerge_identity_range_allocations](msmerge-identity-range-allocations-transact-sql.md)| [MSsnapshot_agents](mssnapshot-agents-transact-sql.md)|
-|[MSmerge_sessions](msmerge-sessions-transact-sql.md)              |[MSsnapshot_history](mssnapshot-history-transact-sql.md)|  
-|[MSmerge_subscriptions](msmerge-subscriptions-transact-sql.md)    |[MSsubscriber_info](mssubscriber-info-transact-sql.md)         |  
-|[MSpublication_access](mspublication-access-transact-sql.md)      |[MSsubscriber_schedule](mssubscriber-schedule-transact-sql.md) |  
-|[MSpublications](mspublications-transact-sql.md)                  |[MSsubscriptions](mssubscriptions-transact-sql.md)             |  
-|[MSpublicationthresholds](mspublicationthresholds-transact-sql.md)|[MSsubscription_properties](mssubscription-properties-transact-sql.md)|
-|[MSpublisher_databases](mspublisher-databases-transact-sql.md)    |[MSsync_states](mssync-states-transact-sql.md) | 
-|[MSqreader_agents](msqreader-agents-transact-sql.md)              |[MStracer_history](mstracer-history-transact-sql.md)|  
-|[MSqreader_history](msqreader-history-transact-sql.md)            |[MStracer_tokens](mstracer-tokens-transact-sql.md)|  
+|[MSdistribution_history](msdistribution-history-transact-sql.md)  |[MSrepl_originators](msrepl-originators-transact-sql.md)|
+|[MSlogreader_agents](mslogreader-agents-transact-sql.md)          |[MSrepl_transactions](msrepl-transactions-transact-sql.md)      | 
+|[MSlogreader_history](mslogreader-history-transact-sql.md)        |[MSrepl_version](msrepl-version-transact-sql.md)|  
+|[MSmerge_agents](msmerge-agents-transact-sql.md)                  |[MSreplication_monitordata](msreplication-monitordata-transact-sql.md)|  
+|[MSmerge_articlehistory](msmerge-articlehistory-transact-sql.md)  |[MSsnapshot_agents](mssnapshot-agents-transact-sql.md)
+|[MSmerge_history](msmerge-history-transact-sql.md)                |[MSsnapshot_history](mssnapshot-history-transact-sql.md)
+|[MSmerge_identity_range_allocations](msmerge-identity-range-allocations-transact-sql.md)|[MSsubscriber_info](mssubscriber-info-transact-sql.md) |
+|[MSmerge_sessions](msmerge-sessions-transact-sql.md)              |[MSsubscriber_schedule](mssubscriber-schedule-transact-sql.md) |           |  
+|[MSmerge_subscriptions](msmerge-subscriptions-transact-sql.md)    |[MSsubscriptions](mssubscriptions-transact-sql.md)             |  
+|[MSpublication_access](mspublication-access-transact-sql.md)      |[MSsubscription_properties](mssubscription-properties-transact-sql.md)|
+|[MSpublications](mspublications-transact-sql.md)                  |[MSsync_states](mssync-states-transact-sql.md) | 
+|[MSpublicationthresholds](mspublicationthresholds-transact-sql.md)|[MStracer_history](mstracer-history-transact-sql.md)|  
+|[MSpublisher_databases](mspublisher-databases-transact-sql.md)    |[MStracer_tokens](mstracer-tokens-transact-sql.md)|  
+|[MSqreader_agents](msqreader-agents-transact-sql.md)              ||
+|[MSqreader_history](msqreader-history-transact-sql.md)            ||
 |[MSrepl_backup_lsns](msrepl-backup-lsns-transact-sql.md)||
 | &nbsp; | &nbsp; |
   
@@ -82,8 +82,8 @@ manager: craigg
 |[IHpublishercolumnconstraints](ihpublishercolumnconstraints-transact-sql.md)|[IHsubscriptions](ihsubscriptions-transact-sql.md)|  
 | &nbsp; | &nbsp; | 
  
-### Replication Tables in the Publication Database  
 
+### Replication Tables in the Publication Database  
  
 |||  
 |-|-|  
@@ -110,32 +110,32 @@ manager: craigg
 |[MSpeer_lsns](mspeer-lsns-transact-sql.md)                                  |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 |[MSpeer_originatorid_history](mspeer-originatorid-history-transact-sql.md)| | 
 | &nbsp; | &nbsp; | 
-### Replication Tables in the Subscription Database  
 
+
+### Replication Tables in the Subscription Database  
  
 |||  
 |-|-|  
-|[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSmerge_tombstone](msmerge-tombstone-transact-sql.md)  
-|[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_lsns](mspeer-lsns-transact-sql.md)|  
-|[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSrepl_identity_range](msrepl-identity-range-transact-sql.md)|  
-|[MSmerge_conflicts_info](msmerge-conflicts-info-transact-sql.md)           |[MSrepl_queuedtraninfo](msrepl-queuedtraninfo-transact-sql.md)|  
-|[MSmerge_contents](msmerge-contents-transact-sql.md)                       |[MSsnapshotdeliveryprogress](mssnapshotdeliveryprogress-transact-sql.md)|  
-|[MSmerge_current_partition_mappings](msmerge-current-partition-mappings.md)|[MSsubscription_properties](mssubscription-properties-transact-sql.md)|  
-|[MSmerge_dynamic_snapshots](msmerge-dynamic-snapshots-transact-sql.md)     |[sysmergearticlecolumns](sysmergearticlecolumns-transact-sql.md)|  
-|[MSmerge_errorlineage](msmerge-errorlineage-transact-sql.md)               |[sysmergearticles](sysmergearticles-transact-sql.md)|  
-|[MSmerge_generation_partition_mappings](msmerge-generation-partition-mappings-transact-sql.md)|[sysmergepartitioninfo](sysmergepartitioninfo-transact-sql.md)|  
-|[MSmerge_genhistory](msmerge-genhistory-transact-sql.md)                   |[sysmergepublications](sysmergepublications-transact-sql.md)|  
-|[MSmerge_identity_range](msmerge-identity-range-transact-sql.md)           |[sysmergeschemaarticles](sysmergeschemaarticles-transact-sql.md)|  
-|[MSmerge_metadataaction_request](msmerge-metadataaction-request-transact-sql.md)|[sysmergeschemachange](sysmergeschemachange-transact-sql.md)|  
-|[MSmerge_partition_groups](msmerge-partition-groups-transact-sql.md)       |[sysmergesubscriptions](sysmergesubscriptions-transact-sql.md)|  
-|[MSmerge_past_partition_mappings](msmerge-past-partition-mappings-transact-sql.md)|[sysmergesubsetfilters](sysmergesubsetfilters-transact-sql.md)|  
-|[MSmerge_replinfo](msmerge-replinfo-transact-sql.md)                       |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
-|[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)         ||
+|[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)              |[MSmerge_tombstone](msmerge-tombstone-transact-sql.md)|  
+|[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)            |[MSpeer_lsns](mspeer-lsns-transact-sql.md)|  
+|[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)          |[MSrepl_identity_range](msrepl-identity-range-transact-sql.md)|  
+|[MSmerge_conflicts_info](msmerge-conflicts-info-transact-sql.md)            |[MSrepl_queuedtraninfo](msrepl-queuedtraninfo-transact-sql.md)|  
+|[MSmerge_contents](msmerge-contents-transact-sql.md)                        |[MSreplication_objects](msreplication-objects-transact-sql.md)|
+|[MSmerge_current_partition_mappings](msmerge-current-partition-mappings.md) |[MSreplication_subscriptions](msreplication-subscriptions-transact-sql.md)|
+|[MSmerge_dynamic_snapshots](msmerge-dynamic-snapshots-transact-sql.md)      |[MSsnapshotdeliveryprogress](mssnapshotdeliveryprogress-transact-sql.md)|  
+|[MSmerge_errorlineage](msmerge-errorlineage-transact-sql.md)                |[MSsubscription_properties](mssubscription-properties-transact-sql.md)|  
+|[MSmerge_generation_partition_mappings](msmerge-generation-partition-mapping|[sysmergearticles](sysmergearticles-transact-sql.md)|  
+|[MSmerge_genhistory](msmerge-genhistory-transact-sql.md)                    |[sysmergepartitioninfo](sysmergepartitioninfo-transact-sql.md)|  
+|[MSmerge_identity_range](msmerge-identity-range-transact-sql.md)            |[sysmergepublications](sysmergepublications-transact-sql.md)|  
+|[MSmerge_metadataaction_request](msmerge-metadataaction-request-transact-sql|[sysmergeschemaarticles](sysmergeschemaarticles-transact-sql.md)|  
+|[MSmerge_partition_groups](msmerge-partition-groups-transact-sql.md)        |[sysmergeschemachange](sysmergeschemachange-transact-sql.md)|  
+|[MSmerge_past_partition_mappings](msmerge-past-partition-mappings-transact-s|[sysmergesubscriptions](sysmergesubscriptions-transact-sql.md)|  
+|[MSmerge_replinfo](msmerge-replinfo-transact-sql.md)                        |[sysmergesubsetfilters](sysmergesubsetfilters-transact-sql.md)|  
+|[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)          |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| |
 | &nbsp; | &nbsp; |
 
 ## See Also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
-  
   

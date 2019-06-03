@@ -34,7 +34,7 @@ productDirectory:
   - title: SQL Server on Windows
     imageSrc: media/index/windows.png
     links:
-      - url: sql-server/sql-server-technical-documentation.md
+      - url: https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?toc=../toc/toc.json
         text: On-premises
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
@@ -65,7 +65,7 @@ conceptualContent:
         - text: SQL Server on Ubuntu
           url: linux/quickstart-install-connect-ubuntu.md
           itemType: overview
-    - title: What's New
+    - title: What's new
       links:
         - text: SQL Server big data cluster
           url: big-data-cluster/big-data-cluster-overview.md
@@ -229,7 +229,7 @@ conceptualContent:
       footerLink:
         text: See more
         url: lp/sql-server/database-design.md
-    - title: Query Data
+    - title: Query data
       links:
         - text: Joins
           url: relational-databases/performance/joins.md

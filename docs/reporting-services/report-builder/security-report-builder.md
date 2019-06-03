@@ -90,7 +90,7 @@ ms.author: maggies
   
 -   [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- For more information about data sources, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ For more information about data sources, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Understanding Models and Security Filters  

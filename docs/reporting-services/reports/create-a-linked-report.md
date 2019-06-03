@@ -30,7 +30,7 @@ ms.author: maggies
   
 3. Enter a name for the new linked report. Optionally enter a description.  
   
-4. To select a different folder for the report, select the ellipsis button to the right of ***Location***.  Navigate to the new folder for the report and select **Select**. If you do not select a different folder, the linked report is created in the current folder.  
+4. To select a different folder for the report, select the ellipsis button (...) to the right of ***Location***.  Navigate to the new folder for the report and select **Select**. If you do not select a different folder, the linked report is created in the current folder.  
   
 5. Select **Create**. The linked report is created.  
 

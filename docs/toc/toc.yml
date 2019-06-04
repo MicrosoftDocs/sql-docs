@@ -15906,8 +15906,6 @@
           href: ../t-sql/functions/col-name-transact-sql.md
         - name: COLUMNPROPERTY
           href: ../t-sql/functions/columnproperty-transact-sql.md
-        - name: DATABASE_PRINCIPAL_ID
-          href: ../t-sql/functions/database-principal-id-transact-sql.md
         - name: DATABASEPROPERTYEX
           href: ../t-sql/functions/databasepropertyex-transact-sql.md
         - name: DB_ID
@@ -16011,6 +16009,8 @@
           href: ../t-sql/functions/certprivatekey-transact-sql.md
         - name: CURRENT_USER
           href: ../t-sql/functions/current-user-transact-sql.md
+        - name: DATABASE_PRINCIPAL_ID
+          href: ../t-sql/functions/database-principal-id-transact-sql.md
         - name: HAS_DBACCESS
           href: ../t-sql/functions/has-dbaccess-transact-sql.md
         - name: HAS_PERMS_BY_NAME

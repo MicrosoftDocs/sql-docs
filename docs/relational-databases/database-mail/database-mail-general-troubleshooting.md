@@ -146,7 +146,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 
 
-##  <a name="RelatedContent"></a> Database Mail Component Topics  
+##  <a name="RelatedContent"></a> See also
   
 -   [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

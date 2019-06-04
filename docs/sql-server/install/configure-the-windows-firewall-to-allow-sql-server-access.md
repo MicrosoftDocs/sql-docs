@@ -96,7 +96,7 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
 ###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  
 
-By default, the ports used by SQL Server and associated services are: TCP **1433**, **4022**, **135**, UDP **1434**. A named instance uses [dynamic ports](#BKMK_dynamic_ports). The table below explains these ports in greater detail. 
+By default, the typical ports used by SQL Server and associated database engine services are: TCP **1433**, **4022**, **135**, **1434**, UDP **1434**. The table below explains these ports in greater detail. A named instance uses [dynamic ports](#BKMK_dynamic_ports).
  
  The following table lists the ports that are frequently used by the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -141,7 +141,7 @@ For more information about endpoints, see [Configure the Database Engine to List
   
 ###  <a name="BKMK_ssas"></a> Ports Used By Analysis Services  
  
-By default, the ports used by SQL Server Analysis Services and associated services are: TCP 2382, 2383. The table below explains these ports in greater detail.  
+By default, the typical ports used by SQL Server Analysis Services and associated services are: TCP **2382**, **2383**, **80**, **443**. The table below explains these ports in greater detail.  
  
  The following table lists the ports that are frequently used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -158,7 +158,7 @@ By default, the ports used by SQL Server Analysis Services and associated servic
   
 ###  <a name="BKMK_ssrs"></a> Ports Used By Reporting Services  
 
-By default, the ports used by SQL Server Reporting SErvices and associated services are: TCP **80**, **443**, **135**, UDP **1434**. The table below explains these ports in greater detail. 
+By default, the typical ports used by SQL Server Reporting SErvices and associated services are: TCP **80**, **443**. The table below explains these ports in greater detail. 
 
 
 The following table lists the ports that are frequently used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

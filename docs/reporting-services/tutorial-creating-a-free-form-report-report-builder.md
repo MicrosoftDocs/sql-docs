@@ -500,7 +500,7 @@ For more information about lists, see:
 * [Create Invoices and Forms with Lists](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-For more information about query designers, see [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+For more information about query designers, see [Query Design Tools (SSRS)](report-data/query-design-tools-ssrs.md) and [Text-based Query Designer User Interface &#40;Report Builder&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## See Also  
 [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md) 

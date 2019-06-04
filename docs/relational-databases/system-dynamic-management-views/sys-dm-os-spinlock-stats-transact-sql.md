@@ -41,7 +41,7 @@ Returns information about all spinlock waits organized by type.
 |spins|**bigint**|The number of times a thread executes a loop while waiting for the spinlock.|  
 |spins_per_collision|**real**|Ratio of spins per collision.|  
 |sleep_time|**bigint**|The amount of time in milliseconds that threads spent sleeping in the event of a backoff.|  
-|backoffs|**int**|The number of times a thread that is "spinning" yields the scheduler.|  
+|backoffs|**int**|The number of times a thread that is "spinning" fails to acquire the spinlock and yields the scheduler.|  
 
 
 ## Permissions  

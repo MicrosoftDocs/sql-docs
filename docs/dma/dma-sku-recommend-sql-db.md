@@ -36,7 +36,7 @@ The following are instructions to help you determine the Azure SQL Database SKU 
 
 ## Prerequisites
 
-- Download and install the latest version of [DMA](https://aka.sm/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
+- Download and install the latest version of [DMA](https://aka.ms/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
 - Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about findoug out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.

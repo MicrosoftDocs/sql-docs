@@ -100,8 +100,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-CREATE CLUSTERED COLUMNSTORE INDEX index_name   
-    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    [ORDER (column [,...n] ) ]
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 ```
@@ -747,7 +748,7 @@ DROP INDEX cci_xdimProduct ON xdimProduct;
 
 Create an ordered clustered columnstore index ordered on SHIPDATE.
 
-```sql 
+```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( SHIPDATE );
 ```

@@ -415,7 +415,7 @@ public partial class HierarchyId_Operations
   
     public static HierarchyId CommonAncestor(SqlHierarchyId h1, HierarchyId h2)  
     {  
-        while (!h1.IsDescendant(h2))  
+        while (!h1.IsDescendantOf(h2))  
             h1 = h1.GetAncestor(1);  
   
         return h1;  

@@ -34,7 +34,7 @@ productDirectory:
   - title: SQL Server on Windows
     imageSrc: media/index/windows.png
     links:
-      - url: sql-server/sql-server-technical-documentation.md
+      - url: https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?toc=../toc/toc.json
         text: On-premises
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
@@ -65,10 +65,10 @@ conceptualContent:
         - text: SQL Server on Ubuntu
           url: linux/quickstart-install-connect-ubuntu.md
           itemType: overview
-    - title: What's New
+    - title: What's new
       links:
         - text: SQL Server big data cluster
-          url: big-data-cluster/big-data-cluster-overview.md
+          url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
           itemType: overview
         - text: Azure Data Studio
           url: azure-data-studio/what-is.md
@@ -82,7 +82,7 @@ conceptualContent:
     - title: Release notes 
       links:
         - text: SQL Server 2019
-          url: sql-server/what-s-new-in-sql-server-ver15.md
+          url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
           itemType: overview
         - text: SQL Server on an Azure VM
           url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
@@ -229,7 +229,7 @@ conceptualContent:
       footerLink:
         text: See more
         url: lp/sql-server/database-design.md
-    - title: Query Data
+    - title: Query data
       links:
         - text: Joins
           url: relational-databases/performance/joins.md
@@ -272,7 +272,7 @@ additionalContent:
           [Microsoft Analytics Platform System](analytics-platform-system/index.md)<br />
           [Polybase](relational-databases/polybase/polybase-guide.md)<br />
           [SQL Server Analysis Services (SSAS)](analysis-services/analysis-services.md)<br />
-          [SQL Server 2019 big data clusters](big-data-cluster/big-data-cluster-overview.md)<br />
+          [SQL Server 2019 big data clusters](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15)<br />
       - title: Reference
         summary: |
           [Azure SQL CLI](https://docs.microsoft.com/cli/azure/sql)<br />

@@ -29,8 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -65,10 +64,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
 `[ @step_id = ] step_id`
- The sequence identification number for the job step. Step identification numbers start at **1** and increment without gaps. If a step is inserted in the existing sequence, the sequence numbers are adjusted automatically. A value is provided if *step_id* is not specified. *step_id*is **int**, with a default of NULL.  
+ The sequence identification number for the job step. Step identification numbers start at **1** and increment without gaps. If a step is inserted in the existing sequence, the sequence numbers are adjusted automatically. A value is provided if *step_id* is not specified. *step_id* is **int**, with a default of NULL.  
   
 `[ @step_name = ] 'step_name'`
- The name of the step. *step_name*is **sysname**, with no default.  
+ The name of the step. *step_name* is **sysname**, with no default.  
   
 `[ @subsystem = ] 'subsystem'`
  The subsystem used by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to execute *command*. *subsystem* is **nvarchar(40)**, and can be one of these values.  
@@ -107,10 +106,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *parameters* is **ntext**, with a default of NULL.  
   
 `[ @cmdexec_success_code = ] code`
- The value returned by a **CmdExec** subsystem command to indicate that *command* executed successfully. *code*is **int**, with a default of **0**.  
+ The value returned by a **CmdExec** subsystem command to indicate that *command* executed successfully. *code* is **int**, with a default of **0**.  
   
 `[ @on_success_action = ] success_action`
- The action to perform if the step succeeds. *success_action*is **tinyint**, and can be one of these values.  
+ The action to perform if the step succeeds. *success_action* is **tinyint**, and can be one of these values.  
   
 |Value|Description (action)|  
 |-----------|----------------------------|  
@@ -120,10 +119,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**4**|Go to step *on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`
- The ID of the step in this job to execute if the step succeeds and *success_action*is **4**. *success_step_id*is **int**, with a default of **0**.  
+ The ID of the step in this job to execute if the step succeeds and *success_action* is **4**. *success_step_id* is **int**, with a default of **0**.  
   
 `[ @on_fail_action = ] fail_action`
- The action to perform if the step fails. *fail_action*is **tinyint**, and can be one of these values.  
+ The action to perform if the step fails. *fail_action* is **tinyint**, and can be one of these values.  
   
 |Value|Description (action)|  
 |-----------|----------------------------|  
@@ -133,10 +132,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**4**|Go to step *on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`
- The ID of the step in this job to execute if the step fails and *fail_action*is **4**. *fail_step_id*is **int**, with a default of **0**.  
+ The ID of the step in this job to execute if the step fails and *fail_action* is **4**. *fail_step_id* is **int**, with a default of **0**.  
   
 `[ @server = ] 'server'`
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*is **nvarchar(30)**, with a default of NULL.  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server* is **nvarchar(30)**, with a default of NULL.  
   
 `[ @database_name = ] 'database'`
  The name of the database in which to execute a [!INCLUDE[tsql](../../includes/tsql-md.md)] step. *database* is **sysname**, with a default of NULL, in which case the **master** database is used. Names that are enclosed in brackets ([ ]) are not allowed. For an ActiveX job step, the *database* is the name of the scripting language that the step uses.  
@@ -154,7 +153,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Reserved.  
   
 `[ @output_file_name = ] 'file_name'`
- The name of the file in which the output of this step is saved. *file_name*is **nvarchar(200)**, with a default of NULL. *file_name*can include one or more of the tokens listed under *command*. This parameter is valid only with commands running on the [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], or [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] subsystems.  
+ The name of the file in which the output of this step is saved. *file_name* is **nvarchar(200)**, with a default of NULL. *file_name* can include one or more of the tokens listed under *command*. This parameter is valid only with commands running on the [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], or [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] subsystems.  
   
 `[ @flags = ] flags`
  Is an option that controls behavior. *flags* is **int**, and can be one of these values.  

@@ -82,7 +82,7 @@ A query designer helps you specify which data to retrieve from an external data 
 1.  On the query designer toolbar, click **Run Query (!)**.  
   
     > [!NOTE]  
-    >  The query designer uses design time credentials to run the query and retrieve the result set. For more information, see [Specify Credentials in Report Builder](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+    >  The query designer uses design time credentials to run the query and retrieve the result set. For more information, see [Specify Credential and Connection Information for Report Data Sources](specify-credential-and-connection-information-for-report-data-sources.md).  
   
  The query runs on the data source and returns example data in the Query results pane.  
   

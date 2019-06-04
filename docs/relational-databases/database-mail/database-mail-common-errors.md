@@ -108,7 +108,7 @@ Service Broker examines the dialog lifetime for messages when it is activated; t
 
 
 
-##  <a name="RelatedContent"></a> Related content 
+##  <a name="RelatedContent"></a> See also
   
 -  [Database mail overview](database-mail.md)
 -  [Create a database mail profile](create-a-database-mail-profile.md)

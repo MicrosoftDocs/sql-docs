@@ -54,21 +54,21 @@ Check the most recent modification date for successfully delivered messages. If 
    > [!NOTE]
    > To delete old unsent messages, wait until the undeliverable messages are the oldest messages in the queue, and then use [sysmail_delete_mailitems_sp](../system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) to delete them.
 
-## Message Status retrying
+## Message status retrying
 
 A status of retrying indicates that Database Mail has tried to deliver the message to the SMTP server but could not. Usually this is caused by a network interruption, a failure of the SMTP server, or an incorrectly configured Database Mail account. The message should eventually succeed or fail and post a message to the event log.
 
-## Message Status sent
+## Message status sent
 
 A status of **sent** indicates that the Database Mail external program successfully delivered the e-mail message to the SMTP server. If the message did not arrive at the destination, the SMTP server accepted the message from Database Mail, but did not deliver the message to the final recipient. Check the logs of the SMTP server, or contact the administrator of the SMTP server. You can also test the SMTP mail server by using another client such as Outlook Express.
 
-## Message Status failed
+## Message status failed
 
 A status of failed indicates that the Database Mail external program was unable to deliver the message to the SMTP server. In this case, the **sysmail_event_log** view contains the detailed information from the external program. For a sample query that joins **sysmail_faileditems** and **sysmail_event_log** to retrieve detailed error messages, see [Check the Status of E-Mail Messages Sent With Database Mail](check-the-status-of-e-mail-messages-sent-with-database-mail.md). The most common causes for failure are an incorrect destination address, or network problems that prevent the external program from reaching one or more of the failover accounts. Problems at the SMTP server can also cause that server to reject mail. By using the Database Mail Configuration Wizard, change the **Logging Level** to **Verbose** and send a test mail to investigate the point of failure.
 
 
 
-##  <a name="RelatedContent"></a> Related content 
+##  <a name="RelatedContent"></a> See also
   
 -  [Database mail overview](database-mail.md)
 

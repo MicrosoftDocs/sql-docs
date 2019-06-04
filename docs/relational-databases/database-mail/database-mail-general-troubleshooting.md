@@ -1,5 +1,5 @@
 ---
-title: "General database mail troubleshooting | Microsoft Docs"
+title: "General database mail troubleshooting with SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"
 ms.prod: sql

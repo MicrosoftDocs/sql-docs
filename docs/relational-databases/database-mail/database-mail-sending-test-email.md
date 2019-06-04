@@ -50,7 +50,7 @@ You must be a member of the sysadmin fixed server role to use the Send Test E-Ma
     ```
 
 
-##  <a name="RelatedContent"></a> Database Mail Component Topics  
+##  <a name="RelatedContent"></a> See also 
   
 -   [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)
 -   [Database Mail Messaging Objects](../../relational-databases/database-mail/database-mail-messaging-objects.md)

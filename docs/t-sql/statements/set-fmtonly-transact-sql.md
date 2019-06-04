@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Returns only metadata to the client. Can be used to test the format of the response without actually running the query.  
 
 > [!NOTE]
-> This feature is **deprecated**. Do not use this feature. This feature has been replaced by the following items:
+> Do not use this feature. This feature has been replaced by the following items:
 >
 > - [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
 > - [sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)

@@ -1,7 +1,7 @@
 ---
 title: "sp_add_jobstep (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -20,7 +20,8 @@ ms.author: "sstein"
 manager: craigg
 ---
 # sp_add_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Adds a step (operation) to a job.  
   
@@ -144,10 +145,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  The name of the user account to use when executing a [!INCLUDE[tsql](../../includes/tsql-md.md)] step. *user* is **sysname**, with a default of NULL. When *user* is NULL, the step runs in the job owner's user context on *database*.  SQL Server Agent will include this parameter only if the job owner is a SQL Server sysadmin. If so, the given Transact-SQL step will be executed in the context of the given SQL Server user name. If the job owner is not a SQL Server sysadmin, then the Transact-SQL step will always be executed in the context of the login that owns this job, and the @database_user_name parameter will be ignored.  
   
 `[ @retry_attempts = ] retry_attempts`
- The number of retry attempts to use if this step fails. *retry_attempts*is **int**, with a default of **0**, which indicates no retry attempts.  
+ The number of retry attempts to use if this step fails. *retry_attempts* is **int**, with a default of **0**, which indicates no retry attempts.  
   
 `[ @retry_interval = ] retry_interval`
- The amount of time in minutes between retry attempts. *retry_interval*is **int**, with a default of **0**, which indicates a **0**-minute interval.  
+ The amount of time in minutes between retry attempts. *retry_interval* is **int**, with a default of **0**, which indicates a **0**-minute interval.  
   
 `[ @os_run_priority = ] run_priority`
  Reserved.  
@@ -208,14 +209,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  This example assumes that the `Weekly Sales Data Backup` job already exists.  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  

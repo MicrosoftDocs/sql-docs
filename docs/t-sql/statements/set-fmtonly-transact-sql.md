@@ -59,9 +59,9 @@ The default value is `OFF`.
 
 ## Examples
 
-The following Transact-SQL code example set `FMTONLY` to `ON`. This setting causes SQL Server to return only metadata information about the selected columns. No data rows are returned.
+The following Transact-SQL code example sets `FMTONLY` to `ON`. This setting causes SQL Server to return only metadata information about the selected columns. Specifically, the column names are returned. No data rows are returned.
 
-The test stored procedure `prc_gm29` returns the following:
+In the example, the test execution of stored procedure `prc_gm29` returns the following:
 
 - Multiple rowsets.
 - Columns from multiple tables, in one of its `SELECT` statements.

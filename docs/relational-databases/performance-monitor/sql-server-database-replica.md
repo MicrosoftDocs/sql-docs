@@ -35,7 +35,7 @@ manager: craigg
 |**Redo Bytes Remaining**|The amount of log in kilobytes remaining to be redone to finish the reverting phase.|Secondary replica|  
 |**Redone Bytes/sec**|Amount of log records redone on the secondary database in the last second.|Secondary replica|  
 |**Total Log requiring undo**|Total kilobytes of log that must be undone.|Secondary replica|  
-|**Transaction Delay**|Delay in waiting for unterminated commit acknowledgement, in milliseconds.|Primary replica|  
+|**Transaction Delay**|Delay in waiting for unterminated commit acknowledgement for all the current transactions, in milliseconds. Divide by *Mirrored Write Transaction/sec* to get *Avg Transaction Delay*. Find more information at https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/|Primary replica|  
   
 ## See Also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   

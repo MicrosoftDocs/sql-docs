@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Calculation groups (Preview)
  

@@ -1,6 +1,6 @@
 ---
 author: minewiskan
-ms.service: analysis-dervices  
+ms.service: analysis-services  
 ms.topic: include
 ms.date: 06/05/2019
 ms.author: owend

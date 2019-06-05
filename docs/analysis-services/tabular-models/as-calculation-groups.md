@@ -1,6 +1,6 @@
 ---
 title: "Calculation groups in Analysis Services tabular models | Microsoft Docs"
-ms.date: 06/03/2019
+ms.date: 06/05/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models

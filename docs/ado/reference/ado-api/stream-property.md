@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Stream Property
 Gets or sets an OLE DB **Stream** object from/on an **ADOStreamConstruction** object.  

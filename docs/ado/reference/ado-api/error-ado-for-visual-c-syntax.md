@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Error (ADO for Visual C++ Syntax)
 ## Properties  

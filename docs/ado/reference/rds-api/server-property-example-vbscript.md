@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Server Property Example (VBScript)
 > [!IMPORTANT]

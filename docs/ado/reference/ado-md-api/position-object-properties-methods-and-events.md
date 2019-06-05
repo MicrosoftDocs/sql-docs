@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Position Object Properties, Methods, and Events
 ## Properties/Collections  

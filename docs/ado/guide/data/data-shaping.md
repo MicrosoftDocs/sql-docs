@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Data Shaping
 This section contains the following topics.  

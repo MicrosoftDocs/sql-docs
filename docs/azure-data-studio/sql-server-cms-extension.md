@@ -17,6 +17,8 @@ The Central Management Servers extension allows users to store a list of instanc
 
 This experience is currently in its initial preview. Report issues and feature requests [here.](https://github.com/microsoft/azuredatastudio/issues)
 
+![CMS extension](media/sql-server-cms-extension/cms-list.png)
+
 ## Install the SQL Server Central Management Servers extension
 
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # AffectEnum
 Specifies which records are affected by an operation.  

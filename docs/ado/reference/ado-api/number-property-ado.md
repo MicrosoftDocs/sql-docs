@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Number Property (ADO)
 Indicates the number that uniquely identifies an [Error](../../../ado/reference/ado-api/error-object.md) object.  

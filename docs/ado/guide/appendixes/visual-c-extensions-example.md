@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Visual C++ Extensions Example
 This program shows how values are retrieved from fields and converted to C/C++ variables.  

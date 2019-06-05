@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Views Collection, CommandText Property Example (VB)
 The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property to update the text of a view.  

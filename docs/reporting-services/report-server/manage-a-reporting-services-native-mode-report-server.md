@@ -25,7 +25,7 @@ ms.author: maggies
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Provides steps for starting the Reporting Services Configuration tool.  
   
- [Configure a Service Account &#40;SSRS Configuration Manager&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Explains how to specify account and password information for the Report Server service.  
   
  [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -41,7 +41,7 @@ ms.author: maggies
  [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Provides steps for configuring multiple report servers to share a report server database.  
   
- [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [E-Mail Delivery in Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   
  Provides steps for configuring a report server for e-mail distribution.  
   
  [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

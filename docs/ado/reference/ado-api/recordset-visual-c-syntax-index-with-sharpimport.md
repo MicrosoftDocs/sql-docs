@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Recordset (Visual C++ Syntax Index with #import)
 ## Methods  

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # ErrorValueEnum
 Specifies the type of ADO run-time error.  

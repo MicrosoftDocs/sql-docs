@@ -189,9 +189,9 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Resource Governor|Yes|No|No|No|No|  
 |Partitioned Table Parallelism|Yes|No|No|No|No|
 |Multiple Filestream containers|Yes|Yes|Yes|Yes|Yes|
-|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
+|NUMA Aware Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
-|IO Resource Governance|Yes|No|No|No|No|  
+|I/O Resource Governance|Yes|No|No|No|No|  
 |Read-Ahead|Yes|No|No|No|No|
 |Advanced Scanning|Yes|No|No|No|No|
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|

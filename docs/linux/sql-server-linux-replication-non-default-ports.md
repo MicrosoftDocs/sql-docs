@@ -8,7 +8,6 @@ ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
-ms.custom: "sql-linux"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Configure replication with non-default ports

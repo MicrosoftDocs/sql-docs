@@ -7,7 +7,6 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: tbd
 ---

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.custom: "sql-linux"
 ---
 # Walkthrough for the performance features of SQL Server on Linux
 

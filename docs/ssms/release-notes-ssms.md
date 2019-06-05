@@ -37,7 +37,7 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## 18.1 (GA), June 2019
+## 18.1 (GA), June 2019 
 
 Download: &nbsp; &nbsp; [Download SSMS 18.1 (GA)](download-sql-server-management-studio-ssms.md)<br/>
 Build number: &nbsp; &nbsp; [build number here]<br/>

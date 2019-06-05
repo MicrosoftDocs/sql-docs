@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Solutions for Remote Data Access
 ## The Issue  

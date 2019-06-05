@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Append Method (ADOX Keys)
 Adds a new [Key](../../../ado/reference/adox-api/key-object-adox.md) object to the [Keys](../../../ado/reference/adox-api/keys-collection-adox.md) collection.  

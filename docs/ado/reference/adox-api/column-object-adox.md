@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Column Object (ADOX)
 Represents a column from a table, index, or key.  

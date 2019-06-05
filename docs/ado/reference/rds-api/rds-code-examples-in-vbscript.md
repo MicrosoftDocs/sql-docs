@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # RDS Code Examples in VBScript
 > [!IMPORTANT]

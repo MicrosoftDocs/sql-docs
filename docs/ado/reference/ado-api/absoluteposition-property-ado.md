@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # AbsolutePosition Property (ADO)
 Indicates the ordinal position of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's current record.  

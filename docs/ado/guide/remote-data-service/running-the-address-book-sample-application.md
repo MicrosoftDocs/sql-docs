@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Running the Address Book Sample Application
 > [!IMPORTANT]

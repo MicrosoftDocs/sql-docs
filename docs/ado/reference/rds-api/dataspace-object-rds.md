@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # DataSpace Object (RDS)
 > [!IMPORTANT]

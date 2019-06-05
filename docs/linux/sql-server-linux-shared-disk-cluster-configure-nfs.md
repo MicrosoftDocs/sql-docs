@@ -7,7 +7,6 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Configure failover cluster instance - NFS - SQL Server on Linux

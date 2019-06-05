@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # LockType Property (ADO)
 Indicates the type of locks placed on records during editing.  

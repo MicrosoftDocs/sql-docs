@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Field Object Properties, Methods, and Events
 ## Properties/Collections  

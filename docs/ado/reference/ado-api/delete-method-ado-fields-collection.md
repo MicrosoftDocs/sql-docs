@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Delete Method (ADO Fields Collection)
 Deletes an object from the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  

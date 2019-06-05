@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # JScript Code Example to Return a Recordset
 ## JScript Code (rs.js)  

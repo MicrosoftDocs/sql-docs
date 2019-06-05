@@ -74,7 +74,7 @@ If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 ## <a id="CU15"></a> CU15 (May 2018)
 
-This is the Cumulative Update 15 (CU15) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3162.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/help/4484710](https://support.microsoft.com/help/4484710).
+This is the Cumulative Update 15 (CU15) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3162.1. For information about the fixes and improvements in this release, see [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951).
 
 ### Package details
 

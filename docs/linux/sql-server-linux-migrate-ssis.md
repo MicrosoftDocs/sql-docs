@@ -8,7 +8,6 @@ manager: craigg
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Extract, transform, and load data on Linux with SSIS

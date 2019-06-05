@@ -8,7 +8,6 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf

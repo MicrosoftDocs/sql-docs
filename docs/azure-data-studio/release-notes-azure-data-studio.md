@@ -34,6 +34,23 @@ June 6, 2019 &nbsp; / &nbsp; version: 1.8.0
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
 
+### Known Issues
+- Database Administration Tool Extensions for Windows
+    - Can’t launch properties from disconnected server node
+        - This requires some additional work to enable so for now I’ve disabled that functionality
+    - Can’t launch properties for Azure servers
+        - The SSMS property dialog doesn’t support Azure yet
+    - Not all objects have property dialogs
+        - The majority of the objects that have dialogs in SSMS are supported here. If there’s an object that you think should really have one and doesn’t let me know
+    - Dialogs take a long time to start up
+        - I’m working on improving this – but for the time being yes it can take up to 30seconds for a dialog to launch
+    - Errors launching servers with some types of connections (such as AAD)
+        - Working on fixing these but let me know of any you run in to so I can keep track of any I might have missed
+- Notebooks
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) Allow users to use system Python for Notebooks
+- Schema Compare
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Schema Compare tasks show default cancel context menu which does nothing
+
 ## May 2019
 
 May 8, 2019 &nbsp; / &nbsp; version: 1.7.0 

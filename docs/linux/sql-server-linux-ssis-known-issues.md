@@ -8,7 +8,6 @@ manager: craigg
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Limitations and known issues for SSIS on Linux

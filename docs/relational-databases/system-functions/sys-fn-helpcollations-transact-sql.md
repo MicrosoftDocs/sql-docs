@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallpr
 ---
 # sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss-asdbmi-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss-asdbmi-asdb-xxxx-pdw-md)]
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss-asdb-xxxx-pdw-md)]
 
   Returns a list of all supported collations.  
   

@@ -62,7 +62,7 @@ WITH
 [,   CREDENTIAL                = <credential_name> ]
 [,   PUSHDOWN                  = ON | OFF]
 [,   TYPE                      = HADOOP | BLOB_STORAGE ]
-[,   RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]
+[,   RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]'
 )
 [;]
 ```
@@ -839,9 +839,8 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
-[,   PUSHDOWN                  = ON | OFF]
 [,   TYPE                      = HADOOP | BLOB_STORAGE ]
-[,   RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]
+[,   RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]'
 )
 [;]
 ```
@@ -874,14 +873,6 @@ Additional notes and guidance when setting the location:
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
 - `wasb` is the default protocol for Azure blob storage. `wasbs` is optional but recommended as data will be sent using a secure SSL connection.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
-
-### PUSHDOWN = *ON | OFF*
-
-States whether computation can be pushed down to the external data source. It is on by default.
-
-`PUSHDOWN` is supported when connecting to SQL Server, Oracle, Teradata, MongoDB, or ODBC at the external data source level.
-
-Enabling or disabling push-down at the query level is achieved through a [hint][hint_pb].
 
 ### CREDENTIAL = *credential_name*
 

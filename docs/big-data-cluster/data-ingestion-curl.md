@@ -20,14 +20,14 @@ This article explains how to use **curl** to load data into HDFS on SQL Server 2
 
 ## Obtain the service external IP
 
-WebHDFS is started when deployment is completed, and its access goes through Knox. The Knox endpoint is exposed through a Kubernetes service called **gateway-svc-external**.  To create the necessary WebHDFS URL to upload/download files, you need the **gateway-svc-external** service external IP address and the name of your cluster. You can get the **gateway-svc-external** service external IP address by running the following command:
+WebHDFS is started when deployment is completed, and its access goes through Knox. The Knox endpoint is exposed through a Kubernetes service called **gateway-svc-external**.  To create the necessary WebHDFS URL to upload/download files, you need the **gateway-svc-external** service external IP address and the name of your big data cluster. You can get the **gateway-svc-external** service external IP address by running the following command:
 
 ```bash
-kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> The `<cluster name>` here is the name of the cluster that you specified in the deployment configuration file. The default name is `mssql-cluster`.
+> The `<big data cluster name>` here is the name of the cluster that you specified in the deployment configuration file. The default name is `mssql-cluster`.
 
 ## Construct the URL to access WebHDFS
 

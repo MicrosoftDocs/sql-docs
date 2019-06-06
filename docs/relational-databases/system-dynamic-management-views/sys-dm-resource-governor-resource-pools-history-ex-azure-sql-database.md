@@ -96,7 +96,7 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 
 ## Permissions
 
-This view requires VIEW DATABASE STATE permission.
+This view requires VIEW SERVER STATE permission.
 
 ## Remarks
 

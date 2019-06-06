@@ -8189,16 +8189,20 @@
         href: ../azure-data-studio/sql-server-2019-extension.md
       - name: SQL Server Agent (preview)
         href: ../azure-data-studio/sql-server-agent-extension.md
+      - name: SQL Server Central Management Servers extension (preview)
+        href: ../azure-data-studio/sql-server-cms-extension.md        
       - name: SQL Server dacpac extension (preview)
         href: ../azure-data-studio/sql-server-dacpac-extension.md
       - name: SQL Server Import (preview)
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (preview)
         href: ../azure-data-studio/sql-server-profiler-extension.md
+      - name: Schema Compare extension (preview)
+        href: ../azure-data-studio/schema-compare-extension.md        
+      - name: PowerShell extension
+        href: ../azure-data-studio/powershell-extension.md        
       - name: SandDance extension (preview)
         href: ../azure-data-studio/sanddance-extension.md
-      - name: PowerShell extension
-        href: ../azure-data-studio/powershell-extension.md
     - name: Extension Authoring
       items:
       - name: Extensibility overview
@@ -9367,8 +9371,6 @@
         href: ../powershell/sql-server-powershell.md
       - name: SQL Server Management Objects (SMO)
         href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-      - name: Transact-SQL Reference (Database Engine)
-        href: ../t-sql/language-reference.md
       - name: SSMS environment
         items:
         - name: The SSMS Environment
@@ -15006,7 +15008,7 @@
       href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
     - name: systranschemas (T-SQL)
       href: ../relational-databases/system-views/systranschemas-transact-sql.md
-  - name: Transact-SQL (T-SQL)
+  - name: Transact-SQL (T-SQL) Reference
     displayName: tsql
     href: ../t-sql/language-reference.md
     items:

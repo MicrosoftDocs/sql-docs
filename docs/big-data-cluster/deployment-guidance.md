@@ -87,8 +87,10 @@ You can deploy a big data cluster by running **mssqlctl cluster create**. This p
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> In this example, you are prompted for any settings that are not part of the default configuration, such as passwords. Note that the Docker information is provided to you by Microsoft as part of the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup).
+In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. Note that the Docker information is provided to you by Microsoft as part of the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup).
+
+> [!IMPORTANT]
+> The default name of the big data cluster is **mssql-cluster**. This is important to know in order to run any of the **kubectl** commands that specify the Kubernetes namespace with the `-n` parameter.
 
 ## <a id="customconfig"></a> Custom configurations
 
@@ -217,6 +219,9 @@ After the deployment script has completed successfully, you can obtain the IP ad
    ```bash
    kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
+
+   > [!TIP]
+   > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
 1. Log in to the big data cluster with **mssqlctl login**. Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 

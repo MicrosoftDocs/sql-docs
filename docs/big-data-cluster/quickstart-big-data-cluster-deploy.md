@@ -113,7 +113,7 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 
 ## Inspect the cluster
 
-At any time during deployment, you can use kubectl or the Cluster Administration Portal to inspect the status and details about the running big data cluster.
+At any time during deployment, you can use **kubectl** or **mssqlctl** to inspect the status and details about the running big data cluster.
 
 ### Use kubectl
 
@@ -124,6 +124,9 @@ Open a new command window to use **kubectl** during the deployment process.
    ```
    kubectl get all -n <your-cluster-name>
    ```
+
+   > [!TIP]
+   > If you did not change the big data cluster name, the script defaults to **sqlbigdata**.
 
 1. Inspect the kubernetes services and their internal and external endpoints with the following **kubectl** command:
 
@@ -145,19 +148,6 @@ Open a new command window to use **kubectl** during the deployment process.
 
 > [!TIP]
 > For more details about how to monitor and troubleshoot a deployment, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
-
-### Use the Cluster Administration Portal
-
-Once the Controller pod is running, you can also use the Cluster Administration Portal to monitor the deployment. You can access the portal using the external IP address and port number for the `mgmtproxy-svc-external` (for example: **https://\<ip-address\>:30777/portal**). The credentials used to log into the portal match the values for **Controller user** and **Password** that you specified in the deployment script.
-
-You can get the IP address of the **mgmtproxy-svc-external** service by running this command in a bash or cmd window:
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> In CTP 3.0, you will see a security warning when accessing the web page, because big data clusters is currently using auto-generated SSL certificates.
 
 ## Connect to the cluster
 

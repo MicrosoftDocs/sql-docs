@@ -48,7 +48,11 @@ manager: craigg
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
-    -   You can view more than one .XEL file by selecting **Merge Extended Event Files** from the File -> Open menu.  
+    -   You can view more than one .XEL file by selecting **Merge Extended Event Files** from the File -> Open menu.
+    
+    -   Use Powershell Read-SQLXevent in [SQLServer.XEvent module](https://www.powershellgallery.com/packages/SqlServer.XEvent)
+    
+    -   Programmatically consume XEvents by using the [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite)
   
 ### Watching Live Data  
  You can watch live data as it is being captured.  

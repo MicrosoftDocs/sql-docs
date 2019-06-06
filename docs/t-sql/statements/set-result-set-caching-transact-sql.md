@@ -16,7 +16,7 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# SET RESULT SET CACHING (Transact-SQL)
+# SET RESULT SET CACHING (Transact-SQL) (Preview for Gen2)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -82,7 +82,7 @@ SET RESULT_SET_CACHING OFF;
 ### Check result set caching setting for a database
 
 ```sql
-SELECT name, is_result_set_caching  
+SELECT name, is_result_set_caching_on  
 FROM sys.databases
 ```
 

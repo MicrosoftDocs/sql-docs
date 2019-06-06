@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # DataSpace Object and CreateObject Method Example (VBScript)
 > [!IMPORTANT]

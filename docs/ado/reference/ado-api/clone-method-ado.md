@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Clone Method (ADO)
 Creates a duplicate [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object from an existing **Recordset** object. Optionally, specifies that the clone be read-only.  

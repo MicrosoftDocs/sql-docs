@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # ADO Object Model
 The following figures show the ADO objects and their collections.  

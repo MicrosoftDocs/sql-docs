@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # InternetTimeout Property Example (VB)
 > [!IMPORTANT]

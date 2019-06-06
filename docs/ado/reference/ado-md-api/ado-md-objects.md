@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # ADO MD Objects
 

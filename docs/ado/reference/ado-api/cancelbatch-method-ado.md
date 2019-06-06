@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # CancelBatch Method (ADO)
 Cancels a pending batch update.  

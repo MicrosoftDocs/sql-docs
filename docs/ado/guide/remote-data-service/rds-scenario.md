@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # RDS Scenario
 > [!IMPORTANT]

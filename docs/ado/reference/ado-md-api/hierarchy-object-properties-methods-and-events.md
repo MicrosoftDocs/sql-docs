@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Hierarchy Object Properties, Methods, and Events
 ## Properties/Collections  

@@ -8189,16 +8189,20 @@
         href: ../azure-data-studio/sql-server-2019-extension.md
       - name: SQL Server Agent (preview)
         href: ../azure-data-studio/sql-server-agent-extension.md
+      - name: SQL Server Central Management Servers extension (preview)
+        href: ../azure-data-studio/sql-server-cms-extension.md        
       - name: SQL Server dacpac extension (preview)
         href: ../azure-data-studio/sql-server-dacpac-extension.md
       - name: SQL Server Import (preview)
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (preview)
         href: ../azure-data-studio/sql-server-profiler-extension.md
+      - name: Schema Compare extension (preview)
+        href: ../azure-data-studio/schema-compare-extension.md        
+      - name: PowerShell extension
+        href: ../azure-data-studio/powershell-extension.md        
       - name: SandDance extension (preview)
         href: ../azure-data-studio/sanddance-extension.md
-      - name: PowerShell extension
-        href: ../azure-data-studio/powershell-extension.md
     - name: Extension Authoring
       items:
       - name: Extensibility overview

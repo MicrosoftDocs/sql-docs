@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/02/2017"
+ms.date: "06/06/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sys.dm_os_volume_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008R2SP1-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Returns information about the operating system volume (directory) on which the specified databases and files are stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this dynamic management function to check the attributes of the physical disk drive or return available free space information about the directory.  
   

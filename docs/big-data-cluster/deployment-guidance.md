@@ -217,7 +217,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
 1. After the deployment, find the IP address of the controller endpoint by looking at the EXTERNAL-IP output of the following **kubectl** command:
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
@@ -267,7 +267,7 @@ minikube ip
 Irrespective of the platform you are running your Kubernetes cluster on, to get all the service endpoints deployed for the cluster, run following command:
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> Connect to the cluster

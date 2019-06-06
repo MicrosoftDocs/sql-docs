@@ -75,7 +75,7 @@ If you are using AKS, you need to run the following command to get the IP addres
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 ```
 
 ## Kubeadm or Minikube

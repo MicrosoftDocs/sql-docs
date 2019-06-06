@@ -77,7 +77,7 @@ Use the following steps to run the deployment script. This script will create an
    | **Azure region** | The Azure region for the new AKS cluster (default **westus**). |
    | **Machine size** | The [machine size](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) to use for nodes in the AKS cluster (default **Standard_L8s**). |
    | **Worker nodes** | The number of worker nodes in the AKS cluster (default **1**). |
-   | **Cluster name** | The name of both the AKS cluster and the big data cluster. The name of your cluster must be only lower case alpha-numeric characters, and no spaces. (default **sqlbigdata**). |
+   | **Cluster name** | The name of both the AKS cluster and the big data cluster. The name of your big data cluster must be only lower case alpha-numeric characters, and no spaces. (default **sqlbigdata**). |
    | **Password** | Password for the controller, HDFS/Spark gateway, and master instance (default **MySQLBigData2019**). |
    | **Controller user** | Username for the controller user (default: **admin**). |
 
@@ -122,7 +122,7 @@ Open a new command window to use **kubectl** during the deployment process.
 1. Run the following command to get a summary of the status of the whole cluster:
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
@@ -131,19 +131,19 @@ Open a new command window to use **kubectl** during the deployment process.
 1. Inspect the kubernetes services and their internal and external endpoints with the following **kubectl** command:
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. You can also inspect the status of the kubernetes pods with the following command:
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. Find out more information about a specific pod with the following command:
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]

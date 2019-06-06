@@ -45,7 +45,7 @@ mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-clust
 ```
 
 > [!IMPORTANT]
-> The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
+> The name of your big data cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
 
 ## <a id="ports"></a> Update endpoint ports
 

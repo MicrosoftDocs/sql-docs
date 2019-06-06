@@ -71,7 +71,9 @@ And here is the returned JSON.
 
 ### 2.b - Example with JOIN and NULL
 
-The following example of `SELECT...FOR JSON AUTO` includes a display of what the JSON results look like when there is a 1:Many relationship between data from `JOIN`'ed tables. The return of a null value, in the output JSON, is also illustrated.
+The following example of `SELECT...FOR JSON AUTO` includes a display of what the JSON results look like when there is a 1:Many relationship between data from `JOIN`'ed tables.
+
+The absence of the null value from the returned JSON is also illustrated. However, you can override this default behavior by use of the `INCLUDE_NULL_VALUES` keyword on the `FOR` clause.
 
 ```sql
 go
@@ -127,7 +129,9 @@ SELECT
    order by
       c.ClassName,
       s.StudentName
-   for JSON AUTO
+   FOR
+      JSON AUTO
+      --, INCLUDE_NULL_VALUES
 ;
 
 go

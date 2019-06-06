@@ -48,6 +48,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**has_filter**|**bit**|1 = Index has a filter and only contains rows that satisfy the filter definition.<br /><br /> 0 = Index does not have a filter.|  
 |**filter_definition**|**nvarchar(max)**|Expression for the subset of rows included in the filtered index.<br /><br /> NULL for heap or non-filtered index.|  
 |**auto_created**|**bit**|1 = Index was created by the automatic tuning.<br /><br />0 = Index was created by the user.
+|**optimize_for_sequential_key**|**bit**|1 = Index has last-page insert optimization enabled.<br><br>0 = Default value. Index has last-page insert optimization disabled.|
+
   
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

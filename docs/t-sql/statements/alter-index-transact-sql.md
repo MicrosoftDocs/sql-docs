@@ -95,6 +95,7 @@ ALTER INDEX { index_name | ALL } ON <object>
     | MAX_DURATION = <time> [MINUTES}     
     | ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | MAXDOP = max_degree_of_parallelism  
     | COMPRESSION_DELAY = {0 | delay [Minutes]}  
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }   
@@ -463,7 +464,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 > [!NOTE]
 >  An index cannot be reorganized when ALLOW_PAGE_LOCKS is set to OFF.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.
+
+Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](./create-index-transact-sql.md#sequential-keys) section of the CREATE INDEX page for more information.
+
  MAXDOP **=** max_degree_of_parallelism  
  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) and [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

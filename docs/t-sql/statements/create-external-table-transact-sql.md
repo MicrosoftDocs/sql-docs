@@ -77,6 +77,11 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
     | REJECT_VALUE = reject_value
     | REJECT_SAMPLE_VALUE = reject_sample_value
 }
+
+<column_definition> ::=
+column_name <data_type>
+    [ COLLATE collation_name ]
+    [ NULL | NOT NULL ]
 ```
 
 ## Arguments
@@ -85,7 +90,7 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
 The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. However, you can't use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -599,6 +604,11 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
     ( <column_definition> [ ,...n ] )  
     WITH ( <sharded_external_table_options> )  
 [;]  
+
+<column_definition> ::=
+column_name <data_type>
+    [ COLLATE collation_name ]
+    [ NULL | NOT NULL ]
   
 <sharded_external_table_options> ::=  
         DATA_SOURCE = external_data_source_name,
@@ -615,7 +625,7 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
 The one to three-part name of the table to create. For an external table, SQL stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure SQL Database. No actual data is moved or stored in Azure SQL Database.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. However, you can't use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -731,6 +741,11 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
         [ , <reject_options> [ ,...n ] ]  
     )  
 [;]  
+
+<column_definition> ::=
+column_name <data_type>
+    [ COLLATE collation_name ]
+    [ NULL | NOT NULL ]
   
 <reject_options> ::=  
 {  
@@ -748,7 +763,7 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
 The one to three-part name of the table to create. For an external table, SQL Data Warehouse stores only the table metadata along with basic statistics about the file or folder that is referenced in Azure Data Lake, Hadoop, or Azure blob storage. No actual data is moved or stored in SQL Data Warehouse.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. However, you can't use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 
@@ -961,7 +976,12 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
         [ , <reject_options> [ ,...n ] ]  
     )  
 [;]  
-  
+
+<column_definition> ::=
+column_name <data_type>
+    [ COLLATE collation_name ]
+    [ NULL | NOT NULL ]
+
 <reject_options> ::=  
 {  
     | REJECT_TYPE = value | percentage,  
@@ -978,7 +998,7 @@ CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table
 The one to three-part name of the table to create. For an external table, Analytics Platform System stores only the table metadata along with basic statistics about the file or folder that is referenced in Hadoop or Azure blob storage. No actual data is moved or stored in Analytics Platform System.
 
 \<column_definition> [ ,...*n* ]
-CREATE EXTERNAL TABLE allows one or more column definitions. Both CREATE EXTERNAL TABLE and CREATE TABLE use the same syntax for defining a column. However, you can't use the DEFAULT CONSTRAINT on external tables. For the full details about column definitions and their data types, see [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).
+CREATE EXTERNAL TABLE supports the ability to configure column name, data type, nullability and collation. You can't use the DEFAULT CONSTRAINT on external tables.
 
 The column definitions, including the data types and number of columns, must match the data in the external files. If there's a mismatch, the file rows will be rejected when querying the actual data.
 

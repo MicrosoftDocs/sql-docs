@@ -9367,8 +9367,6 @@
         href: ../powershell/sql-server-powershell.md
       - name: SQL Server Management Objects (SMO)
         href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-      - name: Transact-SQL Reference (Database Engine)
-        href: ../t-sql/language-reference.md
       - name: SSMS environment
         items:
         - name: The SSMS Environment
@@ -15006,7 +15004,7 @@
       href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
     - name: systranschemas (T-SQL)
       href: ../relational-databases/system-views/systranschemas-transact-sql.md
-  - name: Transact-SQL (T-SQL)
+  - name: Transact-SQL (T-SQL) Reference
     displayName: tsql
     href: ../t-sql/language-reference.md
     items:

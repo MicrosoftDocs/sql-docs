@@ -48,9 +48,9 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use the followi
 
 ||||
 |----------------|-----------------|-----------------|
-|Server with single NUMA node|Less than 16 logical processors|Keep MAXDOP at or below # of logical processors|
-|Server with single NUMA node|Greater than 16 logical processors|Keep MAXDOP at half the number of logical processors with a MAX value of 16|
-|Server with multiple NUMA nodes|Less than 16 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
+|Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
+|Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
+|Server with multiple NUMA nodes|Less than or equal to 16 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
 |Server with multiple NUMA nodes|Greater than 16 logical processors per NUMA node|Keep MAXDOP at half the number of logical processors per NUMA node with a MAX value of 16|
   
 > [!NOTE]
@@ -61,9 +61,9 @@ From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL
 
 ||||
 |----------------|-----------------|-----------------|
-|Server with single NUMA node|Less than 8 logical processors|Keep MAXDOP at or below # of logical processors|
+|Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
 |Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
-|Server with multiple NUMA nodes|Less than 8 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
+|Server with multiple NUMA nodes|Less than or equal to 8 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
 |Server with multiple NUMA nodes|Greater than 8 logical processors per NUMA node|Keep MAXDOP at 8|
   
 ###  <a name="Security"></a> Security  

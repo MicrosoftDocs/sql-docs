@@ -10,7 +10,7 @@ author: "markingmyname"
 ms.author: "maghan"
 manager: craigg
 ms.custom: ""
-ms.date: 06/06/2019
+ms.date: 06/11/2019
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -40,8 +40,8 @@ GeneMi. 2019/04/02.
 ## 18.1 (GA), June 2019
 
 Download: &nbsp; &nbsp; [Download SSMS 18.1 (GA)](download-sql-server-management-studio-ssms.md)<br/>
-Build number: &nbsp; &nbsp; [build number here]<br/>
-Release date: &nbsp; &nbsp; June 06, 2019
+Build number: &nbsp; &nbsp; 15.0.18131.0<br/>
+Release date: &nbsp; &nbsp; June 11, 2019
 
 The general availability (GA) release of SSMS 18.1 is available. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
@@ -60,6 +60,7 @@ The general availability (GA) release of SSMS 18.1 is available. If you need a p
 | Accessibility | Improved accessibility of the Agent Job UI. |
 | Accessibility | Improved accessibility on Stretch Monitor page by adding accessible name for *Auto Refresh* button and also adding an intelligent Accessible Name that will help users know not only what button they are on but the impact of pressing it. |
 | ADS integration| Fixed a possible crash in SSMS when trying to use the ADS registered servers.|
+| Database designer | Added support for Latin1_General_100_BIN2_UTF8 collation (available in SQL Server 2019 CTP3.0) |
 | Database diagrams | Added back the feature that was removed from SSMS 18.0. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37507828) for more details. |
 | Data classification | Prevent adding sensitivity labels to columns in history table, which isn't supported. |
 | Data classification | Addressed issue related to incorrect handling of compatibility level (server vs database). |
@@ -72,11 +73,13 @@ The general availability (GA) release of SSMS 18.1 is available. If you need a p
 | High DPI | Fixed layout of controls in error dialogs for unsupported query options. |
 | High DPI | Fixed layout of controls in *New Availability Group* page which on some localized version of SSMS. |
 | High DPI | Fixed layout of *New Job Schedule* page. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37632094) for more details. |
+| Import flat file | Fixed in issue where rows could be silently lost during the import.|
 | Intellisense/editor | Reduced SMO-based query traffic to Azure SQL databases for intellisense. |
 | Intellisense/editor | Fixed grammatical error in the tooltip displayed when typing T-SQL to create a user. Also, fixed the error message to disambiguate between users and logins. |
 | Log Viewer | Fixed an issue were SSMS always opens the current server (or agent) log, even if double-clicking an older archive sign in the Object explorer. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37633648) for more details. |
 | SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
 | SSMS setup | Fixed an issue where SSMS was exiting immediately after showing the splash screen. </br> See these sites for more details: [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37502512), [SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start), and [Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up). |
+|SSBDIAGNOSE.EXE |SQL Server Diagnose tool (command line) added back into the SSMS package.|
 | Object explorer | Lifted restriction on enabling *start PowerShell* when connected to SQL on Linux. |
 | Object explorer | Fixed an issue that was causing SSMS to crash when trying to expand the Polybase/Scale-out Group node (when connected to a compute node). |
 | Object explorer | Fixed an issue where the *Disabled* menu item was still enabled, even after disabling a given Index. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37735375) for more details. |
@@ -104,6 +107,8 @@ Download previous SSMS versions by clicking the title links in the following sec
 - Release number: 18.0<br>
 - Build number: 15.0.18118.0<br>
 - Release date: April 24, 2019
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
 ## What's new in 18.0
 

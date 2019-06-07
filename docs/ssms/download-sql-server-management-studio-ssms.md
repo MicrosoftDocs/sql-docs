@@ -24,7 +24,7 @@ ms.author: dinethi
 ms.reviewer: sstein
 manager: craigg
 ms.custom: ""
-ms.date: 06/06/2019
+ms.date: 06/11/2019
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -44,15 +44,15 @@ SSMS is free!
 
 **SSMS 18.1 General Availability release (GA) is now available, and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.1 (GA)](https://go.microsoft.com/fwlink/?linkid=2088649)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.1 (GA)](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
-SSMS 18.1 is no longer in preview and is the first general availability (GA) version of SSMS 18.1. If you have a preview versions of SSMS 18.1 installed, uninstall it before installing SSMS 18.1 GA.
+SSMS 18.1 is the latest general availability (GA) version of SSMS 18.1. If you have a preview version of SSMS 18.0 installed, uninstall it before installing SSMS 18.1.
 
 **Version Information**
 
 - Release number: 18.1 (GA)<br>
-- Build number: [build number here]<br>
-- Release date: June 06, 2019
+- Build number: 15.0.18131.0<br>
+- Release date: June 11, 2019
 
 If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -65,7 +65,7 @@ If a computer contains side by side installations of SSMS, verify you start the 
 This release of SSMS can be installed in the following languages:
 
 SQL Server Management Studio 18.1 (GA):<br>
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
 SQL Server Management Studio 18.1 Upgrade Package (upgrades to 18.1):<br>
 No upgrade option is available at this time. If you have a previous SSMS 18.1 preview installed, uninstall it before installing SSMS 18.1 GA.

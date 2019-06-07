@@ -155,7 +155,7 @@ The default directories in the following table are user-configurable during [!IN
 
 For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
-### Analysis Services Configuration - Data Directories
+### Analysis Services Configuration - Data Directories page
 
 The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that's created and provisioned during Setup.  
   

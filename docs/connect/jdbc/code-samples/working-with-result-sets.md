@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 
 # Working with Result Sets

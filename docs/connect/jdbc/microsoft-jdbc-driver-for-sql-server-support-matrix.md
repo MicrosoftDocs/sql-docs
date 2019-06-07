@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Microsoft JDBC Driver for SQL Server Support Matrix
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

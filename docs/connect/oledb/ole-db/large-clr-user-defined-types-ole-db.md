@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "large CLR user-defined types [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Large CLR User-Defined Types (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

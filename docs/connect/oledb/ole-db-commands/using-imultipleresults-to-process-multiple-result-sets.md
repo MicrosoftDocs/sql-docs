@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "multiple-rowset results"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Using IMultipleResults to Process Multiple Result Sets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

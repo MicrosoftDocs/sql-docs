@@ -12,7 +12,7 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
+manager: jroth
 ---
 
 # Get started with Database Experimentation Assistant

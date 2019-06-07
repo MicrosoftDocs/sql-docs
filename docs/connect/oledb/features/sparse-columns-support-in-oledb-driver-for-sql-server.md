@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "sparse columns, OLE DB"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Sparse Columns Support in OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

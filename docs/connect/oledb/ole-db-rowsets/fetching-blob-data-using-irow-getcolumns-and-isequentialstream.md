@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "BLOBs, fetching"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

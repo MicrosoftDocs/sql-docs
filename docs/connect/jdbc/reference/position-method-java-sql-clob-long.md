@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # position Method (java.sql.Clob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

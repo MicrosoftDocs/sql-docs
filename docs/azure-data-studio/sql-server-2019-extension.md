@@ -10,7 +10,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-manager: craigg
+manager: jroth
 ---
 # SQL Server 2019 extension (preview)
 

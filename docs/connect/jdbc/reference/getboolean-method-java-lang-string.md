@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: c9ee851f-1827-42f5-a50a-bdef3e323a5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getBoolean Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

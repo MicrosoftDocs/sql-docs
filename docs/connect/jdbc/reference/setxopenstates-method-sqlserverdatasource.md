@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 9723591f-e987-426f-b70a-07f5c70dc094
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setXopenStates Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

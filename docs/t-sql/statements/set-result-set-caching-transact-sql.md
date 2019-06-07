@@ -16,7 +16,7 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# SET RESULT SET CACHING (Transact-SQL)
+# SET RESULT SET CACHING (Transact-SQL) (Preview for Azure SQL Data Warehouse Gen2)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -82,7 +82,7 @@ SET RESULT_SET_CACHING OFF;
 ### Check result set caching setting for a database
 
 ```sql
-SELECT name, is_result_set_caching  
+SELECT name, is_result_set_caching_on  
 FROM sys.databases
 ```
 
@@ -128,7 +128,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0
 ```
 
-## See Also
+## See also
 
 [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)

@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 ms.reviewer: genemi
-manager: craigg
+manager: jroth
 ---
 # Driver history for Microsoft SQL Server
 

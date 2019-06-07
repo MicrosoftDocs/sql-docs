@@ -27,7 +27,7 @@ Report Builder is not available in every edition of [!INCLUDE[msCoName](../../in
 
 The client computer must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 or 4.6.1 installed for SSRS 2016 and 2017 respectively. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications.  
 
-You must use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 or later or another modern browser.  
+You must use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 or later, or another modern browser.  
 
 Report Builder always runs in full trust; you cannot configure it to run in partial trust. In previous releases, it was possible to run Report Builder in partial trust, but that option is not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions.  
 

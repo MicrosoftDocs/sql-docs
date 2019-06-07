@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # next Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

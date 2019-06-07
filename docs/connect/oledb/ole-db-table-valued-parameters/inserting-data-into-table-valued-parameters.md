@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "table-valued parameters, inserting data into"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Inserting Data into Table-Valued Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

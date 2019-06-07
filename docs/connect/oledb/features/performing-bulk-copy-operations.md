@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL, bulk copy operations"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Performing Bulk Copy Operations
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

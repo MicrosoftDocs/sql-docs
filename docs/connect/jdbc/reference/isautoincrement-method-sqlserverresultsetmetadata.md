@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # isAutoIncrement Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

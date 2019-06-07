@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "results [OLE DB Driver for SQL Server]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Processing Results
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Supporting XML Data
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

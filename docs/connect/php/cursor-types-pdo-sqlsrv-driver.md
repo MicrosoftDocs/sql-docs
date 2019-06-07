@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Cursor Types (PDO_SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

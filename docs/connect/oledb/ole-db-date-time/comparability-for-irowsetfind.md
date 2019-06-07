@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "IRowsetFind comparability"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Comparability for IRowsetFind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

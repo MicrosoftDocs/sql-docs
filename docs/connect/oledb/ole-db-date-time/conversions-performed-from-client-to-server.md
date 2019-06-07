@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "conversions [OLE DB], client to server"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Conversions Performed from Client to Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

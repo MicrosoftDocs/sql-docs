@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # prepareStatement Method (java.lang.String)
 

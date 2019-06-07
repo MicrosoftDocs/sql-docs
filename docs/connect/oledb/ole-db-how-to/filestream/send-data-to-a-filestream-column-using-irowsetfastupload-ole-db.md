@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: "reference"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

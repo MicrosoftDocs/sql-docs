@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: abb5a204-76ff-4381-ab2b-896a19b202f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getMaxRowSize Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Configure Advanced Settings for DQS Log Files
 

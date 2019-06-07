@@ -15,7 +15,7 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
+manager: jroth
 ---
 # Building applications with OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

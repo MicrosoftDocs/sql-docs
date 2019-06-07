@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Export and Import DQS Knowledge Bases Using DQSInstaller.exe
 

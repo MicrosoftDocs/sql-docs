@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getExtraNameCharacters Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

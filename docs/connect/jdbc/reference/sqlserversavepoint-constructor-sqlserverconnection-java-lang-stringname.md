@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: fb77db6b-ebf8-4b12-8153-2c4bdb8d72f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # SQLServerSavepoint Constructor (SQLServerConnection, java.lang.StringName)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

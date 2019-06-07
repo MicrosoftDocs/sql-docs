@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Securing JDBC Driver Applications
 

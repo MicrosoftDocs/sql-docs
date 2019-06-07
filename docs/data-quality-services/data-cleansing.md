@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Data Cleansing
 

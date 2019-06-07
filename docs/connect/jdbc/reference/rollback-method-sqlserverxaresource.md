@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 93d9d7e6-54b6-4d86-8f8c-386c6057e85e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # rollback Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

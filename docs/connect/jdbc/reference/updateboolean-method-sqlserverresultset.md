@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # updateBoolean Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

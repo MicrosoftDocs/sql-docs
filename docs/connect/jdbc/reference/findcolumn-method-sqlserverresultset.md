@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # findColumn Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

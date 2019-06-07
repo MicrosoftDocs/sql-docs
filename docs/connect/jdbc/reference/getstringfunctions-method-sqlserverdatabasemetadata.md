@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getStringFunctions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

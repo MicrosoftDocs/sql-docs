@@ -5,7 +5,7 @@ description: This article describes how to install the SQL Server Tools on Linux
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 05/28/2019
+ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
-manager: craigg
+manager: jroth
 ---
 
 # Migrate on-premises SQL Server or SQL Server on Azure VMs to Azure SQL Database using the Data Migration Assistant

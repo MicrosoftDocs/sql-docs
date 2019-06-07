@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 ---
 # Server Properties - Processors Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

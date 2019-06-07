@@ -18,9 +18,9 @@ manager: kenvh
 # Retrieving ParameterMetaData via useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  The Microsoft SQL Server JDBC Driver includes an alternative way to query ParameterMetaData from the server, **useFmtOnly**. This feature was first introduced in version 7.3 of the driver, and is required as a workaround for known issues in `sp_describe_undeclared_parameters`.
+  The Microsoft JDBC Driver for SQL Server includes an alternative way to query Parameter Metadata from the server, **useFmtOnly**. This feature was first introduced in version 7.4 of the driver, and is required as a workaround for known issues in `sp_describe_undeclared_parameters`.
   
-  The driver primarily uses `sp_describe_undeclared_parameters` to query ParameterMetaData, and this stored procedure is the recommended approach for ParameterMetaData retrieval under most circumstances. However, executing the stored procedure currently fails under the following use cases:
+  The driver primarily uses `sp_describe_undeclared_parameters` to query Parameter Metadata, and this stored procedure is the recommended approach for Parameter Metadata retrieval under most circumstances. However, executing the stored procedure currently fails under the following use cases:
   
 -   Against Always Encrypted columns
   
@@ -28,7 +28,7 @@ manager: kenvh
   
 -   Against views 
   
-  The proposed solution for these use cases is to parse the user's sql query for parameters and table targets, then execute a SELECT query with FMTONLY enabled. The following snippet will help visualize the feature.
+  The proposed solution for these use cases is to parse the user's sql query for parameters and table targets, then execute a `SELECT` query with `FMTONLY` enabled. The following snippet will help visualize the feature.
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'
@@ -47,7 +47,7 @@ SET FMTONLY OFF;
 ```
  
 ## Turning the feature on/off 
- The feature **useFmtOnly** is off by default. Users can enable this feature through the connections string by specifying `useFmtOnly=true`. For example, `-Dconnectionstring=jdbc:sqlserver://localhost;databaseName=tempdb;username=<user>;password=<password>;useFmtOnly=true;`.
+ The feature **useFmtOnly** is off by default. Users can enable this feature through the connections string by specifying `useFmtOnly=true`. For example: `-Dconnectionstring=jdbc:sqlserver://localhost;databaseName=tempdb;username=<user>;password=<password>;useFmtOnly=true;`.
  
  Alternatively, the feature is available through `SQLServerDataSource`.
  ```java
@@ -67,7 +67,7 @@ try (Connection c = ds.getConnection()) {
 >  The driver will prioritize the Statement level property over the Connection level property.
 
 ## Using the feature
-  Once enabled, the driver will internally start using the new feature instead of `sp_describe_undeclared_parameters` when querying ParameterMetaData. There's no further action necessary from the end user.
+  Once enabled, the driver will internally start using the new feature instead of `sp_describe_undeclared_parameters` when querying Parameter Metadata. There is no further action necessary from the end user.
 ```java
 final String sql = "INSERT INTO #Bar VALUES (?)";
 try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
@@ -83,7 +83,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  The feature only supports SELECT/INSERT/UPDATE/DELETE queries. Queries should start with one of the 4 supported key words or a Common Table Expression. Parameters within Common Table Expressions are not supported.
+>  The feature only supports `SELECT/INSERT/UPDATE/DELETE` queries. Queries should start with one of the 4 supported key words or a [Common Table Expression](https://docs.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) followed by one of the supported queries. Parameters within Common Table Expressions are not supported.
 
 ## Known issues
   There are currently some issues with the feature, which are caused by deficiencies in SQL parsing logic. These issues may be addressed in a future update to the feature, and are documented below along with workaround suggestions.

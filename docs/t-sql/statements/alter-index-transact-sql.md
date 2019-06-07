@@ -95,7 +95,6 @@ ALTER INDEX { index_name | ALL } ON <object>
     | MAX_DURATION = <time> [MINUTES}     
     | ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
-    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | MAXDOP = max_degree_of_parallelism  
     | COMPRESSION_DELAY = {0 | delay [Minutes]}  
     | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }   
@@ -122,6 +121,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  

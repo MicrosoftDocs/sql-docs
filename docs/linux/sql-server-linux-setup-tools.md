@@ -5,7 +5,7 @@ description: This article describes how to install the SQL Server Tools on Linux
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 05/28/2019
+ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -44,7 +44,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 1. Download the Microsoft Red Hat repository configuration file.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum/repos.d/msprod.repo
    ```
 
 1. Exit superuser mode.

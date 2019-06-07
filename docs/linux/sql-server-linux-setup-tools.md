@@ -44,7 +44,7 @@ Use the following steps to install the **mssql-tools** on Red Hat Enterprise Lin
 1. Download the Microsoft Red Hat repository configuration file.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum/repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. Exit superuser mode.

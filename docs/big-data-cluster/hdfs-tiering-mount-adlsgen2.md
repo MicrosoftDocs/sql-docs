@@ -98,7 +98,7 @@ Now that you have prepared a credential file with either access keys or using OA
 1. Use **kubectl** to find the IP Address for the endpoint **controller-svc-external** service in your big data cluster. Look for the **External-IP**.
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
 1. Log in with **mssqlctl** using the external IP address of the controller endpoint with your cluster username and password:

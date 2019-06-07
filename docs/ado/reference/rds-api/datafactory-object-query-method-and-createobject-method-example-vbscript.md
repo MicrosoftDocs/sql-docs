@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # DataFactory Object, Query Method, and CreateObject Method Example (VBScript)
 > [!IMPORTANT]

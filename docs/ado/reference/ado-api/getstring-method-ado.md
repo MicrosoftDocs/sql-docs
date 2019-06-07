@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # GetString Method (ADO)
 Returns the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) as a string.  

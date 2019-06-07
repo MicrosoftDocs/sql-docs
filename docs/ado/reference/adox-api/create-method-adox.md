@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Create Method (ADOX)
 Creates a new catalog.  

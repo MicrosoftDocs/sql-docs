@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Connection (ADO for Visual C++ Syntax)
 ## Methods  

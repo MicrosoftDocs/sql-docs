@@ -32,8 +32,11 @@ To connect to a big data cluster with Azure Data Studio, make a new connection t
 1. From the command line, find the IP of your master instance with the following command:
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > The big data cluster name defaults to **mssql-cluster** unless you customized the name in a deployment configuration file. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md#clustername).
 
 1. In Azure Data Studio, press **F1** > **New Connection**.
 

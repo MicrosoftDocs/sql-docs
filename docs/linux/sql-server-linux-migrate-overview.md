@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.custom: "sql-linux"
 ---
 # Migrate databases and structured data to SQL Server on Linux 
 

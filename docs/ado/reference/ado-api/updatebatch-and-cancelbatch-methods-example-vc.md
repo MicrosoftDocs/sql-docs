@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # UpdateBatch and CancelBatch Methods Example (VC++)
 This example demonstrates the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) method in conjunction with the [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) method.  

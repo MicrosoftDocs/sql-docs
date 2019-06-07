@@ -7,7 +7,6 @@ manager: craigg
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"

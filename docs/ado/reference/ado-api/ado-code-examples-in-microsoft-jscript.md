@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # ADO Code Examples in Microsoft JScript
 Use the following code examples to learn how to use the ADO methods, properties, and events when writing in JScript.  

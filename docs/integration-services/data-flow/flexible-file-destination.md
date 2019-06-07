@@ -29,7 +29,7 @@ Drag-drop **Flexible File Destination** to the data flow designer and double-cli
   
 The **Flexible File Destination** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
-Following properties are available.
+Following properties are available on the **Flexible File Destination Editor**.
 
 - **File Connection Manager Type:** Specifies the source connection manager type. Then choose an existing one of the specified type or create a new one.
 - **Folder Path:** Specifies the destination folder path.
@@ -40,7 +40,17 @@ Following properties are available.
 - **Compress the file:** Specifies whether to compress the file.
 - **Compression Type:** Specifies the compression format to use. Supported formats are **GZIP**, **DEFLATE**, **BZIP2**.
 - **Compression Level:** Specifies the compression level to use.
-  
+
+Following properties are available on the **Advanced Editor**.
+
+- **rowDelimiter:** The character used to separate rows in a file. Only one character is allowed. The **default** value is \r\n.
+- **escapeChar:** The special character used to escape a column delimiter in the content of input file. You cannot specify both escapeChar and quoteChar for a table. Only one character is allowed. No default value.
+- **quoteChar:** The character used to quote a string value. The column and row delimiters inside the quote characters would be treated as part of the string value. This property is applicable to both input and output datasets. You cannot specify both escapeChar and quoteChar for a table. Only one character is allowed. No default value.
+- **nullValue:** One or more characters used to represent a null value. The **default** value is \N.
+- **encodingName:** Specify the encoding name. See [Encoding.EncodingName](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8) Property.
+- **skipLineCount:**  Indicates the number of non-empty rows to skip when reading data from input files. If both skipLineCount and firstRowAsHeader are specified, the lines are skipped first and then the header information is read from the input file.
+- **treatEmptyAsNull:** Specifies whether to treat null or empty string as a null value when reading data from an input file. The **default** value is True.
+
 After specifying the connection information, switch to the **Columns** page to map source columns to destination columns for the SSIS data flow.
 
 **Prerequisite for ORC/Parquet File Format**

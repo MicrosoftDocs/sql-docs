@@ -56,7 +56,7 @@ A report definition file specifies the RDL namespace for the version of the repo
   
 ### How to: Identify the RDL schema version on the Report Server  
   
--   In web portal, type the URL for the report server. For example, the following URL specifies a report server on the local computer:  
+-   In the web portal, type the URL for the report server. For example, the following URL specifies a report server on the local computer:  
   
      `https://localhost/reportserver/reportdefinition.xsd`  
   

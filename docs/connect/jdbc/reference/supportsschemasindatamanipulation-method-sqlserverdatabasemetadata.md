@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 812dc551-c718-494e-80d9-75732464c8ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # supportsSchemasInDataManipulation Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

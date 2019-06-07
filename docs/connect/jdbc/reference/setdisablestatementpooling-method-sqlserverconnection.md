@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid:
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setDisableStatementPooling Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

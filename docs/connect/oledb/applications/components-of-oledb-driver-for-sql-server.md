@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "MSOLEDBSQL, about OLE DB Driver for SQL Server"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Components of OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

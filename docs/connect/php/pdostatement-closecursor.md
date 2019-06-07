@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

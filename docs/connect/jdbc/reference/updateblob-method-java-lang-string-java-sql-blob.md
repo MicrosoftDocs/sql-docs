@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # updateBlob Method (java.lang.String, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

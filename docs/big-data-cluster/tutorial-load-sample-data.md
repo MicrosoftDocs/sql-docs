@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to load sample data into a SQL Server big data cluster. The sample data includes relational data in the SQL Server master instance. It also includes HDFS data in the storage pool. This data supports other tutorials in this section.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql

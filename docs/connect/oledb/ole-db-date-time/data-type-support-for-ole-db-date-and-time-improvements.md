@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "OLE DB, date/time improvements"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Data Type Support for OLE DB Date and Time Improvements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

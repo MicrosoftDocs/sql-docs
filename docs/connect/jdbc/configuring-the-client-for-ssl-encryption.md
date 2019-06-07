@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Configuring the Client for SSL Encryption
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

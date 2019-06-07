@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 
 # Using Holdability

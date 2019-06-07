@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # SQLServerException Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: e6418b27-793b-4b36-8dfb-756aec7bcbba
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # end Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

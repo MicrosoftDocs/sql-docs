@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 6ea23386-201f-41af-8232-225de3476765
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setAsciiStream Method  (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

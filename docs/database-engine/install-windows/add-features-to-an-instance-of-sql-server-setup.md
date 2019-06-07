@@ -14,7 +14,7 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
+manager: jroth
 ---
 # Add Features to an Instance of SQL Server (Setup)
 

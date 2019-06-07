@@ -36,7 +36,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 2. Click **Edit schedule**.
 3. In **Schedule Details**, click **Once**.  
 4. Specify a start time that is a few minutes ahead of the current time.  
-5. Specify the *Start and end dates**.
+5. Specify the **Start and end dates**.
 6. Select **Apply**.
 
 ## Destination  

@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # acceptsURL Method (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

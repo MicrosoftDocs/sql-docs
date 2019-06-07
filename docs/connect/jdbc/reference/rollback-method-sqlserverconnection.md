@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # rollback Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

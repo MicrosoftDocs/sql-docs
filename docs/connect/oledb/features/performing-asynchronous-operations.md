@@ -19,7 +19,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, asynchronous operations"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Performing Asynchronous Operations
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

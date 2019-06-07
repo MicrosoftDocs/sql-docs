@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getExportedKeys Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

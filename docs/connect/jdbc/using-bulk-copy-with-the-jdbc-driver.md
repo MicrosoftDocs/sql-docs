@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Using Bulk Copy with the JDBC Driver
 

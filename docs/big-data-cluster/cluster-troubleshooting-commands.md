@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: This article provides useful commands for monitoring and troubleshooting a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql

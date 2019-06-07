@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ---
 # Some synchronous replicas are not synchronized
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

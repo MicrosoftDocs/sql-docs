@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Import Domains from an Excel File in Knowledge Discovery
 

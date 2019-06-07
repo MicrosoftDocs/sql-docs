@@ -16,7 +16,7 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
+manager: jroth
 ---
 # Install SQL Server replication
 

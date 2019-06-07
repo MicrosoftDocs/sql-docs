@@ -175,7 +175,7 @@ The following item is for SQL Server 2016-2017
     >  
     > If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
    
-    For more information, see [Analysis Services Configuration - Data Directories](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories).  
+    For more information, see [Analysis Services Configuration - Data Directories](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).  
    
 17. Use the Distributed Replay Controller Configuration page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions will have unlimited access to the Distributed Replay controller service.  
   

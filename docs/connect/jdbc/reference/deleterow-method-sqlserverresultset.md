@@ -1,7 +1,7 @@
 ---
 title: "deleteRow Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/20/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -18,14 +18,14 @@ ms.author: genemi
 manager: craigg
 ---
 # deleteRow Method (SQLServerResultSet)
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Deletes the current row from this[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object and from the underlying database.  
   
 ## Syntax  
   
-```  
-  
+```cpp
 public void deleteRow()  
 ```  
   
@@ -37,7 +37,7 @@ public void deleteRow()
   
  This method cannot be called when the cursor is on the insert row.  
   
- When using keyset cursors, this method leaves a hole in the result set. You can test for this hole by using the [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) method. The row numbers of the rows in the result set do not change.  
+ When using keyset cursors, this method leaves a gap in the result set. You can test for this gap by using the [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) method. The row numbers of the rows in the result set do not change.  
   
 ## See Also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

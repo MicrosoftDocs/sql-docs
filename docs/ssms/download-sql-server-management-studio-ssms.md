@@ -46,13 +46,13 @@ SSMS is free!
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.1 (GA)](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
-SSMS 18.1 is no longer in preview and is the first general availability (GA) version of SSMS 18.1. If you have a preview versions of SSMS 18.1 installed, uninstall it before installing SSMS 18.1 GA.
+SSMS 18.1 is the latest general availability (GA) version of SSMS 18.1. If you have a preview version of SSMS 18.0 installed, uninstall it before installing SSMS 18.1.
 
 **Version Information**
 
 - Release number: 18.1 (GA)<br>
 - Build number: 15.0.18131.0<br>
-- Release date: June 06, 2019
+- Release date: June 11, 2019
 
 If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).
 

@@ -24,7 +24,7 @@ ms.author: dinethi
 ms.reviewer: sstein
 manager: craigg
 ms.custom: ""
-ms.date: 06/11/2019
+ms.date: 06/12/2019
 ---
 
 # Download SQL Server Management Studio (SSMS)
@@ -40,17 +40,17 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS is free!
 
-## Download SSMS 18.1 (GA)
+## Download SSMS 18.1
 
-**SSMS 18.1 General Availability release (GA) is now available, and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
+**SSMS 18.1 is now available, and is the latest general availability (GA) version of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.1 (GA)](https://go.microsoft.com/fwlink/?linkid=2094583)**
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.1 ](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
-SSMS 18.1 is the latest general availability (GA) version of SSMS 18.1. If you have a preview version of SSMS 18.0 installed, uninstall it before installing SSMS 18.1.
+SSMS 18.1 is the latest general availability (GA) version of SSMS. If you have 18.0 (GA) installed, SSMS will upgrade it to 18.1. If you have a *preview* version of SSMS 18.0 installed, you must uninstall it before installing SSMS 18.1.
 
 **Version Information**
 
-- Release number: 18.1 (GA)<br>
+- Release number: 18.1<br>
 - Build number: 15.0.18131.0<br>
 - Release date: June 11, 2019
 

@@ -95,7 +95,8 @@ When the subscription runs, four report files will be delivered to the file shar
 ![List of files created by the subscription](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "List of files created by the subscription")  
   
 The subscription page in the web portal will contain the **Last Run** date and **Status** of the subscription. 
-**Note:** Refresh the page after the subscription runs to see the updated information.  
+> [!NOTE]
+> Refresh the page after the subscription runs to see the updated information.  
     
 ![Subscription results in the web portal](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Subscription results in the web portal")  
   

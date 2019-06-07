@@ -85,7 +85,7 @@ After you create the role assignments, users will have permission to do the foll
 
     3. In Name, type **Report Builder**.  
 
-    4. In Description, enter a description for the role so that users in web portal know what the role is for.  
+    4. In Description, enter a description for the role so that users in the web portal know what the role is for.  
 
     5. Add the following tasks: **Consume reports**, **View reports**, **View models**, **View resources**, **View folders**, and **Manage individual subscription**s.  
 

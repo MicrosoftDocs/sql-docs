@@ -68,7 +68,7 @@ A report definition file specifies the RDL namespace for the version of the repo
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" elementFormDefault="qualified">  
     ```  
   
-     The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition`  
+     The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition`  
 
 ## Next steps
 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   

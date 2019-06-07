@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: jtoland
-manager: craigg
+manager: jroth
 ---
 
 # Upgrade on-premises SQL Server to SQL Server or SQL Server on Azure VMs using the Data Migration Assistant

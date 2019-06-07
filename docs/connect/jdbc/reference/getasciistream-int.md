@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 9d8b235e-4208-40ee-b5a5-bc76f73b82f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getAsciiStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

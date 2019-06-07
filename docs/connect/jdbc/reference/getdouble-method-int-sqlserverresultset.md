@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getDouble Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

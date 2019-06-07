@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Managing Transaction Size
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

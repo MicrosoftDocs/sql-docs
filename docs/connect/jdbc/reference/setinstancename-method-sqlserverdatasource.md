@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 58833726-3a7e-46be-ac0e-4c602d865262
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setInstanceName Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

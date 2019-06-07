@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 
 # Using an SQL Statement with Parameters

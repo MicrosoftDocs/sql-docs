@@ -10,7 +10,7 @@ ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
 author: "meet-bhagdev"
 ms.author: "meetb"
-manager: craigg
+manager: jroth
 ---
 # Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 

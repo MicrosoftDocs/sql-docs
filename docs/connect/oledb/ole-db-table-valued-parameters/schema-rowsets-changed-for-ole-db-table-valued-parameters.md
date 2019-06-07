@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Schema Rowsets Changed for OLE DB Table-Valued Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

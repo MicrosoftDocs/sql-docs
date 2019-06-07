@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Python SQL Driver
 

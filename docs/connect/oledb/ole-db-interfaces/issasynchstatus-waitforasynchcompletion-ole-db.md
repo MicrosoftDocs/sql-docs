@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "WaitForAsynchCompletion method"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

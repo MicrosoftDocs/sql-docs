@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "native data access [OLE DB Driver for SQL Server]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

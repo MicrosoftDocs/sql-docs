@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # nullPlusNonNullIsNull Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Reference article for mssqlctl cluster status commands.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql

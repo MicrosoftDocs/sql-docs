@@ -5,7 +5,7 @@ description: This article describes security concepts for SQL Server 2019 big da
 author: nelgson 
 ms.author: negust
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql

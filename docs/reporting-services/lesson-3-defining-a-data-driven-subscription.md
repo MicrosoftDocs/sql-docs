@@ -63,7 +63,7 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
 ## Query      
 1.  In the query box, type the following query:  
   
-    ```sql
+    ```
     Select * from OrderInfo  
     ```  
   

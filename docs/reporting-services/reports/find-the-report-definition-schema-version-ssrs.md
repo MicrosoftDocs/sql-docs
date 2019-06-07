@@ -62,7 +62,7 @@ A report definition file specifies the RDL namespace for the version of the repo
   
      The .xsd file opens in the browser.  
   
-     The XML schema element specifies the schema namespace. For example, the following schema element specifies three namespaces: the targetNamespace reference that is used internally by [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], the xsd reference for the schema itself (xsd), and the report definition reference.  
+     The XML schema element specifies the schema namespace. For example, the following schema element specifies three namespaces: the targetNamespace reference that is used internally by [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], the xsd reference for the schema itself (xsd), and the report definition reference.  *Year* represents the year of the schema the report is using. For example, 2010 or 2016.
   
     ``` XML  
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" elementFormDefault="qualified">  

@@ -641,8 +641,8 @@ In the case of the optional interfaces, the Scenarios column indicates one or mo
 | |`ICommandProperties`|Yes|Use to specify required properties on rowsets returned by the   command.|Remote query, pass-through query.|
 | |`ICommandWithParameters`|No|Use for parameterized query execution.|Remote query, performance.|
 | |`ICommandPrepare`|No|Use for preparing a command to get meta data (used in   pass-through queries if available).|Remote query, performance.|
-|Error object|`IErrorRecords`|Yes|Use for getting a pointer to an IErrorInfo interface corresponding to a single error record.| |
-| |`IErrorInfo`|Yes|Use for getting a pointer to an IErrorInfo interface corresponding to a single error record.| |
+|Error object|`IErrorRecords`|Yes|Use for getting a pointer to an `IErrorInfo` interface corresponding to a single error record.| |
+| |`IErrorInfo`|Yes|Use for getting a pointer to an `IErrorInfo` interface corresponding to a single error record.| |
 |Any object|`ISupportErrorInfo`|No|Use to verify whether a given interface supports error objects.| |
 |  |  |  |  |  |
 

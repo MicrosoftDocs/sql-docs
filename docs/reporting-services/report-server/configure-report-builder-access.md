@@ -37,7 +37,7 @@ Report Builder is enabled by default. Report server administrators have the opti
 
  To set report server system properties, you can use Management Studio or script:  	
 
- - To use Management Studio, connect to the report server and use the Advanced Server Properties page to set **EnableReportDesignClientDownload** to **false**. For more information about how to open this page, see [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  	
+ - To use Management Studio, connect to the report server and use the Advanced Server Properties page to set **ShowDownloadMenu**to **false**. For more information about how to open this page, see [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  	
 
  - To view a sample script that sets a report server property, see [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
 

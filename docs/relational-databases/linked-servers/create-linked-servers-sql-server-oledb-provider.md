@@ -617,7 +617,19 @@ In the case of the optional interfaces, the Scenarios column indicates one or mo
 | |`IDBCreateSession`|Yes|Create DB session object.| |
 | |`IDBProperties`|Yes|Get information about capabilities of provider, set initialization properties, required property: DBPROP_INIT_TIMEOUT.| |
 | |`IDBInfo`|No|Get quoting literal, catalog, name, part, separator, character, and so on.|Remote query.|
-
+|DB Session object|`IDBSchemaRowset`|No|Get table/column meta data. Rowsets needed: `TABLES`, `COLUMNS`, `PROVIDER_TYPES`; others that are used if available: `INDEXES`, `TABLE_STATISTICS`.|Performance, indexed access.|
+| |`IOpenRowset`|Yes|Open a rowset on a table, index or histogram.| |
+| |`IGetDataSource`|Yes|Use to get back to the DSO from a DB session object.| |
+| |`IDBCreateCommand`|No|Use to create a command object (query) for providers that   support querying.|Remote query, pass-through query.|
+| |`ITransactionLocal`|No|Use for transacted updates.|`UPDATE` and `DELETE`, `INSERT` statements.|
+| |`ITransactionJoin`|No|Use for distributed transaction support.|`UPDATE` and `DELETE`, `INSERT` statements if in a user transaction.|
+|Rowset object|IRowset|Yes|Scan rows.| |
+| |`IAccessor`|Yes|Bind to columns in a rowset.| |
+| |`IColumnsInfo`|Yes|Get information about columns in a rowset.| |
+| |`IRowsetInfo`|Yes|Get information about rowset properties.| |
+| |`IRowsetLocate`|No|Needed for `UPDATE`/`DELETE` operations and to do index-based lookups; used to look up rows by bookmarks.|Indexed access, `UPDATE` and `DELETE` statements.|
+| |`IRowsetChange`|No|Needed for `INSERTS`/`UPDATES`/ `DELETES` on a rowset. Rowsets against base tables should support this interface for `INSERT`, `UPDATE` and   `DELETE` statements.|`UPDATE` and `DELETE`, INSE`RT statements.|
+| |`IConvertType`|Yes|Use to verify whether the rowset supports specific data type conversions on its columns.| |
 
 |Object|Interface|Required|Comments|Scenarios|
 |:-----|:-----|:-----|:-----|:-----|

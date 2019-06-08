@@ -51,9 +51,9 @@ The general availability (GA) release of SSMS 18.1 is available. If you need a p
 
 | New item| Details|
 | :-------| :------|
-| Database diagrams | Added back the feature that was removed from SSMS 18.0. For details, see the [Database Diagrams](https://feedback.azure.com/forums/908035/suggestions/37507828). |
-|SSBDIAGNOSE.EXE |The SQL Server Diagnose (command line tool) was added back into the SSMS package.|
-|Integration Services (SSIS)| Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.|
+| Database diagrams | Database diagrams were added back into SSMS. For details, see [Database Diagrams](https://feedback.azure.com/forums/908035/suggestions/37507828). |
+| SSBDIAGNOSE.EXE |The SQL Server Diagnose (command line tool) was added back into the SSMS package.|
+| Integration Services (SSIS) | Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.|
 
 ## Bug fixes in 18.1
 

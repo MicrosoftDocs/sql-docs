@@ -46,7 +46,7 @@ SSMS is free!
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.1 ](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
-SSMS 18.1 is the latest general availability (GA) version of SSMS. If you have 18.0 (GA) installed, SSMS will upgrade it to 18.1. If you have a *preview* version of SSMS 18.0 installed, you must uninstall it before installing SSMS 18.1.
+SSMS 18.1 is the latest general availability (GA) version of SSMS. If you have SSMS 18.0 (GA) installed, installing SSMS 18.1 upgrades it to 18.1. If you have an older *preview* version of SSMS 18.0 installed, you must uninstall it before installing SSMS 18.1.
 
 **Version Information**
 
@@ -73,19 +73,19 @@ No upgrade option is available at this time. If you have a previous SSMS 18.1 pr
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 
-## New in this Release (SSMS 18.1 GA)
+## New in this Release (SSMS 18.1)
 
-SSMS 18.1 (GA) is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
+SSMS 18.1 is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
 
 For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
 
-## Supported SQL offerings (SSMS 18.1 GA)
+## Supported SQL offerings (SSMS 18.1)
 
 * This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
 * Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 * SQL Server Integration Services (SSIS) - SSMS version 17.x or later does not support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side-by-side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
-## Supported Operating systems (SSMS 18.1 GA)
+## Supported Operating systems (SSMS 18.1)
 
 This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
 
@@ -101,9 +101,13 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 > [!NOTE]
 > SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
   
-## Release Notes (SSMS 18.1 GA)
+## Release Notes (SSMS 18.1)
 
-- **SSIS Integration Runtime Creation Wizard** only shows SQL databases under one tenant when the customer account belongs to more than one tenant.
+- **Database diagrams** - Database diagrams were added back into SSMS. For details, see [Database Diagrams](https://feedback.azure.com/forums/908035/suggestions/37507828).
+- **SSBDIAGNOSE.EXE** - The SQL Server Diagnose command line tool was added back into the SSMS package.
+- **Integration Services (SSIS)** - Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.
+
+For additional information, see [Release notes](release-notes-ssms.md).
 
 ## Previous SSMS releases
 

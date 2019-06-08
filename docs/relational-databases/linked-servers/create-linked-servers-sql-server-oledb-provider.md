@@ -213,7 +213,7 @@ If the provider does not support the separator literals, SQL Server uses a perio
 >[!NOTE]
 >If the provider's name separator literals do not match these default values, the provider must expose them through `IDBInfo` for SQL Server to access its tables through four-part names. If these literals are not exposed, only pass-through queries can be used against such a provider.
 
-For information about exposing the `SQLPROP_DYNAMICSQL` and `SQLPROP_NESTEDQUERIES` properties, see [SQL Server Specific Properties](#sqlspecificproperties).
+For information about exposing the `SQLPROP_DYNAMICSQL` and `SQLPROP_NESTEDQUERIES` properties, see [SQL Server Specific Properties](#appendixc).
 
 ### Table Name Resolution and Meta Data Retrieval
 

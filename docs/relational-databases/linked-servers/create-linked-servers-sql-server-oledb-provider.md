@@ -73,7 +73,7 @@ Against such providers, SQL Server can only perform table scans during distribut
 
 Providers that support the `Command` object and its mandatory interfaces, but do not support an SQL standard dialect recognized by SQL Server, fall into this category.
 
-Two examples of Non-SQL Command Providers are the Microsoft OLE DB Provider for Indexing Service and the Microsoft Windows NT Active Directory Service Interfaces (ADSI) OLE DB Provider.
+Two examples of Non-SQL Command Providers are the Microsoft OLE DB Provider for Indexing Service and the Microsoft Windows Active Directory Service Interfaces (ADSI) OLE DB Provider.
 
 ### Transact-SQL Subset
 

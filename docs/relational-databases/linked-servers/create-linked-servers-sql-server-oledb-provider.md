@@ -628,7 +628,7 @@ In the case of the optional interfaces, the Scenarios column indicates one or mo
 | |`IColumnsInfo`|Yes|Get information about columns in a rowset.| |
 | |`IRowsetInfo`|Yes|Get information about rowset properties.| |
 | |`IRowsetLocate`|No|Needed for `UPDATE`/`DELETE` operations and to do index-based lookups; used to look up rows by bookmarks.|Indexed access, `UPDATE` and `DELETE` statements.|
-| |`IRowsetChange`|No|Needed for `INSERTS`/`UPDATES`/ `DELETES` on a rowset. Rowsets against base tables should support this interface for `INSERT`, `UPDATE` and   `DELETE` statements.|`UPDATE` and `DELETE`, INSE`RT statements.|
+| |`IRowsetChange`|No|Needed for `INSERTS`/`UPDATES`/ `DELETES` on a rowset. Rowsets against base tables should support this interface for `INSERT`, `UPDATE` and   `DELETE` statements.|`UPDATE` and `DELETE`, `INSERT` statements.|
 | |`IConvertType`|Yes|Use to verify whether the rowset supports specific data type conversions on its columns.| |
 
 |Object|Interface|Required|Comments|Scenarios|
@@ -648,7 +648,7 @@ In the case of the optional interfaces, the Scenarios column indicates one or mo
 | |`IColumnsInfo`|Yes|Get information about columns in a rowset.| |
 | |`IRowsetInfo`|Yes|Get information about rowset properties.| |
 | |`IRowsetLocate`|No|Needed for `UPDATE`/`DELETE` operations and to do index-based lookups; used to look up rows by bookmarks.|Indexed access, `UPDATE` and `DELETE` statements.|
-| |`IRowsetChange`|No|Needed for `INSERTS`/`UPDATES`/ `DELETES` on a rowset. Rowsets against base tables should support this interface for `INSERT`, `UPDATE` and   `DELETE` statements.|`UPDATE` and `DELETE`, INSE`RT statements.|
+| |`IRowsetChange`|No|Needed for `INSERTS`/`UPDATES`/ `DELETES` on a rowset. Rowsets against base tables should support this interface for `INSERT`, `UPDATE` and   `DELETE` statements.|`UPDATE` and `DELETE`, `INSERT` statements.|
 | |`IConvertType`|Yes|Use to verify whether the rowset supports specific data type conversions on its columns.| |
 |Index|`IRowset`|Yes|Scan rows.|Indexed access, performance.|
 | |`IAccessor`|Yes|Bind to columns in a rowset.|Indexed access, performance.|

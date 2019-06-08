@@ -36,7 +36,7 @@ The following is a categorization of OLE DB providers based on their capabilitie
 
 - Non-SQL Command Providers
 
-### SQL Command Providers
+#### SQL Command Providers
 
 Providers that support the `Command` object with an SQL standard dialect recognized by SQL Server belong to this category. The specific requirements for a given OLE DB provider to be treated as a SQL Command Provider by SQL Server are:
 
@@ -46,7 +46,7 @@ Providers that support the `Command` object with an SQL standard dialect recogni
 
 Examples of SQL Command Providers are the Microsoft OLE DB Provider for SQL Server and the Microsoft OLE DB Provider for ODBC.
 
-### Index Providers
+#### Index Providers
 
 Index providers are those that support and expose indexes according to OLE DB and allow index-based lookup of base tables. The specific requirements for a given OLE DB provider to be treated as an Index provider by SQL Server are:
 
@@ -63,19 +63,19 @@ If the OLE DB provider meets the above requirements, users can set the `Index As
 >[!NOTE]
 >SQL Server supports various options that influence how SQL Server accesses an OLE DB provider. The `Linked Server Properties` dialog box in SQL Server Enterprise Manager can be used to set these options.
 
-### Simple Table Providers
+#### Simple Table Providers
 
 These are providers that expose the opening of a rowset against a base table through the `IOpenRowset` interface. Such providers are neither SQL Command Providers nor Index providers; rather, they are the simplest class of providers that SQL Server distributed queries can work with.
 
 Against such providers, SQL Server can only perform table scans during distributed query evaluation.
 
-### Non-SQL Command Providers
+#### Non-SQL Command Providers
 
 Providers that support the `Command` object and its mandatory interfaces, but do not support an SQL standard dialect recognized by SQL Server, fall into this category.
 
 Two examples of Non-SQL Command Providers are the Microsoft OLE DB Provider for Indexing Service and the Microsoft Windows NT Active Directory Service Interfaces (ADSI) OLE DB Provider.
 
-Transact-SQL Subset -------------------
+### Transact-SQL Subset
 
 Each of the following classes of Transact-SQL statements is supported for distributed queries if the provider supports the required OLE DB interfaces.
 
@@ -85,7 +85,7 @@ Each of the following classes of Transact-SQL statements is supported for distri
 
 - `UPDATE` and DELETE statements are allowed against remote tables if the provider satisfies the OLE DB interface requirements on the specified table. For the OLE DB interface requirements and conditions under which a remote table can be updated or deleted, see \"UPDATE and DELETE Statements\" later in this article.
 
-Cursor Support --------------
+### Cursor Support
 
 Both snapshot and keyset cursors are supported against distributed queries if the provider supports the necessary OLE DB functionality. Dynamic cursors are not supported against distributed queries. A user request for a dynamic cursor against a distributed query is downgraded to a keyset cursor.
 
@@ -95,7 +95,7 @@ Keyset cursors are populated at cursor open time and the result set remains unch
 
 A remote table can be updated or deleted through a cursor that is defined on a distributed query and references the remote table if the provider meets the conditions for updates and deletes on the remote table, for example, table `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. For more information, see \"UPDATE and DELETE Statements\" later in this article.
 
-### Keyset Cursor Support Requirements
+#### Keyset Cursor Support Requirements
 
 A keyset cursor is supported on a distributed query if all the Transact-SQL syntax requirements are met and either of these exist:
 
@@ -105,7 +105,7 @@ A keyset cursor is supported on a distributed query if all the Transact-SQL synt
 
 Keyset cursors are not supported against distributed queries that involve the *OpenQuery* function.
 
-### Updatable Keyset Cursor Requirements
+#### Updatable Keyset Cursor Requirements
 
 A remote table can be updated or deleted through a keyset cursor that is defined on a distributed query, for example, `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`. The following are the conditions under which updatable cursors against distributed queries are allowed:
 
@@ -253,7 +253,7 @@ SQL Server opens the rowset corresponding to the table by calling `IOpenRowset::
 
 If `IDBSchemaRowset` is not supported with TABLES, COLUMNS, and TABLES_INFO rowsets, SQL Server opens the rowset against the base table twice: once during query compilation to retrieve meta data, and once during query execution. Providers that incur side effects from opening the rowset (for example, run code that alters the state of a real-time device, send e-mail, run arbitrary user-supplied code) must be aware of this behavior.
 
-### Statistics retrieval`
+### Statistics retrieval
 
 If the provider supports distribution statistics on the base tables, then SQL Server will use these statistics. There are two kinds of statistics that are of interest to the SQL Server query processor:
 
@@ -349,7 +349,8 @@ SQL Server and OLE-DB data type mapping table.
 
 \* Indicate some form of translation to the SQL Server type's representation, as there is no exact equivalent data type in SQL Server. Such conversions could result in loss of precision, overflow, or underflow. The default implicit mappings can be changed in the future if the corresponding data types are supported by future versions of SQL Server.
 
-`Note: numeric(p,s)` indicates SQL Server data type `numeric` with precision *p* and scale *s*. The maximum allowed precision for `DBTYPE_NUMERIC` and `DBTYPE_DECIMAL` is 38. The provider must support binding to the `DBTYPE_BSTR` column as `DBTYPE_WSTR` while creating an accessor. `DBTYPE_VARIANT`columns are consumed as Unicode character strings `nvarchar`. This requires support for conversion from `DBTYPE_VARIANT` to `DBTYPE_WSTR` from the provider. The provider is expected to implement this conversion as defined in OLE DB. For more information, see [Data Types of the OLE DB Specification](#appendixa).
+>[!NOTE]
+>`numeric(p,s)` indicates SQL Server data type `numeric` with precision `p` and scale `s`. The maximum allowed precision for `DBTYPE_NUMERIC` and `DBTYPE_DECIMAL` is 38. The provider must support binding to the `DBTYPE_BSTR` column as `DBTYPE_WSTR` while creating an accessor. `DBTYPE_VARIANT`columns are consumed as Unicode character strings `nvarchar`. This requires support for conversion from `DBTYPE_VARIANT` to `DBTYPE_WSTR` from the provider. The provider is expected to implement this conversion as defined in OLE DB. For more information, see [Data Types of the OLE DB Specification](#appendixa).
 
 #### Interpreting Data Type Mapping
 
@@ -377,7 +378,7 @@ To use export-side mapping in the case of `UPDATE` and `INSERT` statements again
 
 - There is an allowed implicit conversion of `S1` to another SQL Server type `S2` such that `S2` maps to type `T` in the mapping table.
 
-### Large Object (LOB) Handling
+#### Large Object (LOB) Handling
 
 As indicated in the mapping table, if columns of the type `DBTYPE_STR`, `DBTYPE_WSTR`, or `DBTYPE_BSTR` also report `DBCOLUMNFLAGS_ISLONG`, or if their maximum length exceeds 4,000 characters (or if no maximum length is reported), SQL Server treats them as a `text` or `ntext` column as appropriate. Similarly, for `DBTYPE_BYTES` columns, if `DBCOLUMNFLAGS_ISLONG` is set or if the maximum length is higher than 8,000 bytes (or if maximum length is not reported), the columns are treated as `image` columns. `Text`, `ntext` and `image` columns are called LOB columns.
 
@@ -387,7 +388,7 @@ SQL Server uses the structured storage interfaces on LOB columns if the provider
 
 If the provider does not support any of the structured storage interfaces on LOB columns, SQL Server materializes this interface on its own and still exposes them as `text`, `ntext` or `image` columns.
 
-### Accessing LOB Columns
+#### Accessing LOB Columns
 
 If the provider supports one of the structured storage interfaces, SQL Server performs the following steps to retrieve LOB columns during query execution:
 
@@ -395,7 +396,7 @@ If the provider supports one of the structured storage interfaces, SQL Server pe
 
 4. After the rowset is opened, SQL Server uses `IRowsetInfo::GetProperties` to identify the actual interfaces available in the rowset. The last or most preferable interface that the provider returned is used. When SQL Server creates an accessor against the large object column, the column is bound as DBTYPE_IUNKNOWN with the *iid* element of the DBOBJECT structure in the binding set to the interface.
 
-### Reading from LOB Columns
+#### Reading from LOB Columns
 
 Use the interface pointer for the requested structured storage interface returned in the row buffer from `IRowset::GetData` to read from the large object column. If the provider does not support multiple open LOBs at the same time (that is, if it does not support `DBPROP_MULTIPLE_STORAGEOBJECTS`) and if the row has multiple large object columns, SQL Server copies the LOB columns into a local work table.
 
@@ -427,7 +428,7 @@ When a consumer connects to an OLE DB provider, the provider typically requires 
 
 These mappings can be specified by the user for a given linked server and can be set up and managed by the system stored procedures `sp_addlinkedsrvlogin` and `sp_droplinkedsrvlogin`. By setting the initialization group properties DBPROP_AUTH_USERID and DBPROP_AUTH_PASSWORD through `IDBProperties::SetProperties`, the user ID and password determined by the mapping are passed to the provider during connection establishment.
 
-When a client connects to SQL Server through Microsoft Windows NT Authentication, and if the login has a \"self\" mapping set up using `sp_addlinkedsrvlogin`, then SQL Server attempts to impersonate the client's security context and sets the DBPROP_AUTH_INTEGRATED property on the provider during connection establishment. This process is called *delegation*.
+When a client connects to SQL Server through Windows Authentication, and if the login has a `self` mapping set up using `sp_addlinkedsrvlogin`, then SQL Server attempts to impersonate the client's security context and sets the `DBPROP_AUTH_INTEGRATED` property on the provider during connection establishment. This process is called *delegation*.
 
 After the security context used for the connection is determined, the authentication of this security context and the permission checking for that context against data objects in the data source are entirely up to the OLE DB provider.
 
@@ -455,7 +456,7 @@ SQL Server generates an SQL query that evaluates a portion of the original query
 
 1. By indicating SQL Minimum, ODBC Core or SQL-92 Entry level support through the `DBPROP_SQLSUPPORT` property. The SQL Minimum syntax level is a new level that is supported in SQL Server that allows SQL Server to send remote queries to simple providers that support a simple subset of SQL. This level encompasses a basic `SELECT` statement that does not include subqueries, multiple tables in the `FROM` clause (hence no joins) and GROUP BY. For the subset of the SQL grammar that is used by SQL Server for generating remote queries against providers of each of these syntax levels, see [SQL Subset Used for Generating Remote Queries](#appendixb).
 
-8. By supporting various SQL Server specific properties to indicate support for individual SQL features that are not otherwise included in the syntax level as reported by DBPROP_SQLSUPPORT. The list of properties and how they are used by SQL Server are described later in this section.
+1. By supporting various SQL Server specific properties to indicate support for individual SQL features that are not otherwise included in the syntax level as reported by DBPROP_SQLSUPPORT. The list of properties and how they are used by SQL Server are described later in this section.
 
 SQL Server uses parameterized query execution with a question mark (?) as the parameter marker in the Transact-SQL string. Parameterized query execution is used against the SQL Server, Microsoft Jet, and Oracle OLE DB providers. Against other providers, parameterized query execution is used if the provider supports `ICommandWithParameters` on the `Command` object and at least one of the following conditions are met:
 
@@ -530,37 +531,33 @@ In the case of SQL Server linked servers, SQL Server automatically determines co
 
 The option Collation Compatible supported in SQL Server 7.0 is still supported, for backward compatibility reasons. Setting it to true is equivalent to setting the Collation Name option to the default collation of the master database of SQL Server. New applications should use the Collation Name option instead of the Collation Compatible option.
 
-Indexed Access --------------
+### Indexed Access
 
 SQL Server uses an index exposed by the provider to evaluate certain predicates of the distributed query. This scenario is possible only against Index providers and when the user sets the `Index as Access Path` provider option. The following are the major high-level steps that SQL Server performs against the provider while using an index to execute a query:
 
 1. Opens the index rowset through `IOpenRowset::OpenRowset` with the full table name and index name. The full table and index names are generated as described earlier in the Remote Query scenario.
 
-<!-- -->
+1. Opens the base table rowset through `IOpenRowset::OpenRowset` with the full table name.
 
-14. Opens the base table rowset through `IOpenRowset::OpenRowset` with the full table name.
+1. Sets ranges on the index rowset based on the query predicate through `IRowsetIndex::SetRange`.
 
-15. Sets ranges on the index rowset based on the query predicate through `IRowsetIndex::SetRange`.
+1. Scans rows off the index rowset through `IRowset` on the index rowset.
 
-16. Scans rows off the index rowset through `IRowset` on the index rowset.
+1. Uses the bookmark column from the retrieved index rows to fetch corresponding rows from the base table rowset through `IRowsetLocate::GetRowsByBookmark`.
 
-17. Uses the bookmark column from the retrieved index rows to fetch corresponding rows from the base table rowset through `IRowsetLocate::GetRowsByBookmark`.
+The rowset properties `DBPROP_IRowsetLocate` and `DBPROP_BOOKMARKS` are required on the rowset opened against the base table.
 
-The rowset properties DBPROP_IRowsetLocate and DBPROP_BOOKMARKS are required on the rowset opened against the base table.
-
-Pure Table Scans ----------------
+### Pure Table Scans
 
 SQL Server scans the entire remote table from the provider and performs all query evaluation locally. The rowset corresponding to the table is opened by calling `IOpenRowset::OpenRowset`. SQL Server constructs the table name supplied to `OPENROWSET` from the catalog, schema, and object name parts as follows:
 
-1. Each of the name parts are quoted with the provider's quoting character (DBLITERAL_QUOTE) and then concatenated with the DBLITERAL_CATALOG_SEPARATOR character embedded between them.
+1. Each of the name parts are quoted with the provider's quoting character (`DBLITERAL_QUOTE`) and then concatenated with the `DBLITERAL_CATALOG_SEPARATOR` character embedded between them.
 
-<!-- -->
+1. After the rowset object is opened, SQL Server uses the `IColumnsInfo` interface to verify that the execution-time meta data is the same as compile-time meta data for the table.
 
-18. After the rowset object is opened, SQL Server uses the `IColumnsInfo` interface to verify that the execution-time meta data is the same as compile-time meta data for the table.
+1. SQL Server uses the `IRowset` interface to navigate and consume rows from the table. Use `IRowset::GetNextRows` to fetch rows, `IRowset::RestartPosition` to reposition to the beginning of the rowset, and `IRowset::ReleaseRows` to release rows.
 
-19. SQL Server uses the `IRowset` interface to navigate and consume rows from the table. Use `IRowset::GetNextRows` to fetch rows, `IRowset::RestartPosition` to reposition to the beginning of the rowset, and `IRowset::ReleaseRows` to release rows.
-
-UPDATE and DELETE Statements--
+### `UPDATE` and `DELETE` Statements
 
 The following conditions must be satisfied for a remote table to be updated or deleted from a SQL Server distributed query:
 
@@ -570,27 +567,25 @@ The following conditions must be satisfied for a remote table to be updated or d
 
 - The `IRowsetChange` interface must support update (`SetData`) and delete (`DeleteRows`) methods.
 
-- If the provider does not support `ITransactionLocal`, UPDATE/DELETE statements are allowed only if the `Non-transacted` option is set for that provider and if the statement is not in a user transaction.
+- If the provider does not support `ITransactionLocal`, `UPDATE` and `DELETE` statements are allowed only if the `Non-transacted` option is set for that provider and if the statement is not in a user transaction.
 
-- If the provider does not support `ITransactionJoin`, an UPDATE/DELETE statement is allowed only if it is not in a user transaction.
+- If the provider does not support `ITransactionJoin`, an `UPDATE` or `DELETE` statement is allowed only if it is not in a user transaction.
 
-The following rowset properties are required on the rowset opened against the updated table: DBPROP_IRowsetLocate, DBPROP_IRowsetChange, and DBPROP_BOOKMARKS. The DBPROP_UPDATABILITY rowset property is set to DBPROPVAL_UP_CHANGE or DBPROPVAL_UP_DELETE depending on whether the operation performed is an `UPDATE`or a DELETE, respectively.
+The following rowset properties are required on the rowset opened against the updated table: `DBPROP_IRowsetLocate`, `DBPROP_IRowsetChange`, and `DBPROP_BOOKMARKS`. The `DBPROP_UPDATABILITY` rowset property is set to `DBPROPVAL_UP_CHANGE` or `DBPROPVAL_UP_DELETE` depending on whether the operation performed is an `UPDATE` or a `DELETE`, respectively.
 
-The following high-level steps against the provider for processing an `UPDATE`or DELETE operation are performed:
+The following high-level steps against the provider for processing an `UPDATE`or `DELETE` operation are performed:
 
 1. SQL Server opens the base table rowset through the `IOpenRowset` interface. SQL Server requires the above-mentioned properties on the rowset.
 
-<!-- -->
+1. SQL Server determines the set of qualifying rows to be updated or deleted.
 
-20. SQL Server determines the set of qualifying rows to be updated or deleted.
+1. SQL Server uses the bookmarks to position on the qualifying rows through the `IRowsetLocate` interface.
 
-21. SQL Server uses the bookmarks to position on the qualifying rows through the `IRowsetLocate` interface.
+1. Use `IRowsetChange::SetData` for `UPDATE`operations or `IRowsetChange::DeleteRows` for delete operations to perform the required changes on the qualifying rows.
 
-22. Use `IRowsetChange::SetData` for `UPDATE`operations or `IRowsetChange::DeleteRows` for delete operations to perform the required changes on the qualifying rows.
+### `INSERT` Statement
 
-INSERT Statement ----------------
-
-The conditions for supporting `INSERT` statements against a remote table are less stringent than for `UPDATE`and DELETE statements:
+The conditions for supporting `INSERT` statements against a remote table are less stringent than for `UPDATE`and `DELETE` statements:
 
 - The provider must support `IRowsetChange::InsertRow` on the rowset opened on the base table being inserted into.
 
@@ -600,13 +595,13 @@ The conditions for supporting `INSERT` statements against a remote table are les
 
 SQL Server uses `IOpenRowset::OpenRowset` to open a rowset on the base table and calls `IRowsetChange::InsertRow` to insert new rows into the base rowset.
 
-Pass-through Queries --------------------
+### Pass-through Queries
 
-This scenario is similar to the scenario in \"Remote Query\" except that the command text given to `ICommand` is a command string submitted by the user and is not interpreted by SQL Server. SQL Server uses DBGUID_DEFAULT as the dialect identifier when it calls `ICommandText::SetCommandText`. DBGUID_DEFAULT indicates that the provider should use its default dialect. If this command text returns more than one result set, for example, if the command invokes a stored procedure that returns multiple result sets, SQL Server would use only the first result set from the command.
+This scenario is similar to the scenario in remote query except that the command text given to `ICommand` is a command string submitted by the user and is not interpreted by SQL Server. SQL Server uses `DBGUID_DEFAULT` as the dialect identifier when it calls `ICommandText::SetCommandText`. `DBGUID_DEFAULT` indicates that the provider should use its default dialect. If this command text returns more than one result set, for example, if the command invokes a stored procedure that returns multiple result sets, SQL Server would use only the first result set from the command.
 
 For a list of all OLE DB interfaces that SQL Server uses, see [OLE DB Interfaces Consumed by SQL Server](#appendixa).
 
-Conclusion ----------
+### Conclusion
 
 Microsoft SQL Server offers the most robust set of tools for accessing data from heterogeneous data sources. By understanding the OLE-DB interfaces exposed by SQL Server, developers can exert a high degree of control and sophistication in distributed queries.
 
@@ -616,75 +611,44 @@ The following table lists all the OLE DB interfaces that are used by SQL Server.
 
 In the case of the optional interfaces, the Scenarios column indicates one or more of the six scenarios that use the specified interface. For example, the `IRowsetChange` interface on base table rowsets is an optional interface; this interface is used in the `UPDATE`and DELETE statements and `INSERT` statement scenarios. If this interface is not supported, UPDATE, DELETE, and `INSERT` statements cannot be supported against that provider. Some of the other optional interfaces are marked \"performance\" in the Scenarios column, indicating that the interface results in better general performance. For example, if the `IDBSchemaRowset` interface is not supported, SQL Server must open the rowset twice: once for its meta data and once for query execution. By supporting `IDBSchemaRowset`, SQL Server performance is improved.
 
-Figure 4: Interfaces consumed by SQL Server
-
-  - ------------------ Object   Interface    Required   Comments                       Scenarios
-
-  Data Source object   `IDBInitialize`    Yes    Initialize and set up data and security context.              
-
-       `IDBCreateSession`     Yes    Create DB session object.                     
-
-       `IDBProperties`    Yes    Get information about capabilities of provider, set initialization properties, required property: DBPROP_INIT_TIMEOUT.  
-
-       `IDBInfo`      No     Get quoting literal, catalog, name, part, separator, character, and so on.            Remote query.
-
-  DB Session object    `IDBSchemaRowset`  No     Get table/column meta data.\                   Performance, indexed access.               Rowsets needed:\                                   TABLES, COLUMNS, PROVIDER_TYPES;\                                 others that are used if available: INDEXES, TABLE_STATISTICS.            
-
-       `IOpenRowset`      Yes    Open a rowset on a table, index or histogram.                 
-
-       `IGetDataSource`   Yes    Use to get back to the DSO from a DB session object.              
-
-       `IDBCreateCommand`     No     Use to create a command object (query) for providers that support querying.           Remote query, pass-through query.
-
-       `ITransactionLocal`    No     Use for transacted updates.                   `UPDATE`and DELETE, `INSERT` statements.
-
-       `ITransactionJoin`     No     Use for distributed transaction support.                  `UPDATE`and DELETE, `INSERT` statements if in a user transaction.
-
-  Rowset object    `IRowset`      Yes    Scan rows.                        
-
-       `IAccessor`    Yes    Bind to columns in a rowset.                  
-
-       `IColumnsInfo`     Yes    Get information about columns in a rowset.                
-
-       `IRowsetInfo`      Yes    Get information about rowset properties.                  
-
-       `IRowsetLocate`    No     Needed for UPDATE/DELETE operations and to do index-based lookups; used to look up rows by bookmarks.     Indexed access, `UPDATE` and DELETE statements.
-
-       `IRowsetChange`    No     Needed for INSERTS/UPDATES/\                   `UPDATE` and DELETE, `INSERT` statements.               DELETES on a rowset. Rowsets against base tables should support this interface for INSERT, `UPDATE` and\                 DELETE statements.                    
-
-       `IConvertType`     Yes    Use to verify whether the rowset supports specific data type conversions on its columns.      
-
-  Index    `IRowset`      Yes    Scan rows.                        Indexed access, performance.
-
-       `IAccessor`    Yes    Bind to columns in a rowset.                  Indexed access, performance.
-
-       `IColumnsInfo`     Yes    Get information about columns in a rowset.                Indexed access, performance.
-
-       `IRowsetInfo`      Yes    Get information about rowset properties.                  Indexed access, performance.
-
-       `IRowsetIndex`     Yes    Needed only for rowsets on an index; used for indexing functionality (set range, seek).       Indexed access, performance.
-
-  Command      `ICommand`     Yes                           Remote query, pass-through query.
-
-       `ICommandText`     Yes    Use for defining the query text.                  Remote query, pass-through query.
-
-       `IColumnsInfo`     Yes    Use for getting column meta data for query results.               Remote query, pass-through query.
-
-       `ICommandProperties`   Yes    Use to specify required properties on rowsets returned by the command.            Remote query, pass-through query.
-
-       `ICommandWithParameters`   No     Use for parameterized query execution.                Remote query, performance.
-
-       `ICommandPrepare`  No     Use for preparing a command to get meta data (used in pass-through queries if available).         Remote query, performance.
-
-  Error object     `IErrorRecords`    Yes    Use for getting a pointer to an IErrorInfo interface corresponding to a single error record.      
-
-       `IErrorInfo`   Yes    Use for getting a pointer to an IErrorInfo interface corresponding to a single error record.      
-
-  Any object   `ISupportErrorInfo`    No     Use to verify whether a given interface supports error objects.              - ------------------
+|Object|Interface|Required|Comments|Scenarios|
+|:-----|:-----|:-----|:-----|:-----|
+|Data Source object|`IDBInitialize`|Yes|Initialize and set up data and security context.| |
+| |`IDBCreateSession`|Yes|Create DB session object.| |
+| |`IDBProperties`|Yes|Get information about capabilities of provider, set   initialization properties, required property: DBPROP_INIT_TIMEOUT.| |
+| |`IDBInfo`|No|Get quoting literal, catalog, name, part, separator, character,   and so on.|Remote query.|
+|DB Session object|`IDBSchemaRowset`|No|Get table/column meta data. Rowsets needed: `TABLES`, `COLUMNS`, `PROVIDER_TYPES`; others that are used if available: `INDEXES`, `TABLE_STATISTICS`.|Performance, indexed access.|
+| |`IOpenRowset`|Yes|Open a rowset on a table, index or histogram.| |
+| |`IGetDataSource`|Yes|Use to get back to the DSO from a DB session object.| |
+| |`IDBCreateCommand`|No|Use to create a command object (query) for providers that   support querying.|Remote query, pass-through query.|
+| |`ITransactionLocal`|No|Use for transacted updates.|`UPDATE` and `DELETE`, `INSERT` statements.|
+| |`ITransactionJoin`|No|Use for distributed transaction support.|`UPDATE` and `DELETE`, `INSERT` statements if in a user transaction.|
+|Rowset object|IRowset|Yes|Scan rows.| |
+| |`IAccessor`|Yes|Bind to columns in a rowset.| |
+| |`IColumnsInfo`|Yes|Get information about columns in a rowset.| |
+| |`IRowsetInfo`|Yes|Get information about rowset properties.| |
+| |`IRowsetLocate`|No|Needed for `UPDATE`/`DELETE` operations and to do index-based lookups; used to look up rows by bookmarks.|Indexed access, `UPDATE` and `DELETE` statements.|
+| |`IRowsetChange`|No|Needed for `INSERTS`/`UPDATES`/ `DELETES` on a rowset. Rowsets against base tables should support this interface for `INSERT`, `UPDATE` and   `DELETE` statements.|`UPDATE` and `DELETE`, INSE`RT statements.|
+| |`IConvertType`|Yes|Use to verify whether the rowset supports specific data type conversions on its columns.| |
+|Index|`IRowset`|Yes|Scan rows.|Indexed access, performance.|
+| |`IAccessor`|Yes|Bind to columns in a rowset.|Indexed access, performance.|
+| |`IColumnsInfo`|Yes|Get information about columns in a rowset.|Indexed access, performance.|
+| |`IRowsetInfo`|Yes|Get information about rowset properties.|Indexed access, performance.|
+| |`IRowsetIndex`|Yes|Needed only for rowsets on an index; used for indexing functionality (set range, seek).|Indexed access, performance.|
+|Command|`ICommand`|Yes| |Remote query, pass-through query.|
+| |`ICommandText`|Yes|Use for defining the query text.|Remote query, pass-through query.|
+| |`IColumnsInfo`|Yes|Use for getting column meta data for query results.|Remote query, pass-through query.|
+| |`ICommandProperties`|Yes|Use to specify required properties on rowsets returned by the   command.|Remote query, pass-through query.|
+| |`ICommandWithParameters`|No|Use for parameterized query execution.|Remote query, performance.|
+| |`ICommandPrepare`|No|Use for preparing a command to get meta data (used in   pass-through queries if available).|Remote query, performance.|
+|Error object|`IErrorRecords`|Yes|Use for getting a pointer to an IErrorInfo interface corresponding to a single error record.| |
+| |`IErrorInfo`|Yes|Use for getting a pointer to an IErrorInfo interface corresponding to a single error record.| |
+|Any object|`ISupportErrorInfo`|No|Use to verify whether a given interface supports error objects.||
+|  |  |  |  |  |
 
 `Note:` The `Index` object, `Command` object, and `Error` object are not mandatory. However, if they are supported, the listed interfaces are mandatory as specified in the Required column.
 
-## <a name="appendixb"></a>SQL Subset Used for Generating Remote Queries ==
+## <a name="appendixb"></a>SQL Subset Used for Generating Remote Queries
 
 The SQL subset that SQL Server query processor generates against a SQL Command Provider depends on the syntax level that the provider supports as indicated by the `DBPROP_SQLSUPPORT` property.
 
@@ -692,43 +656,41 @@ SQL Command Providers that support SQL Entry level or ODBC Core
 
 SQL Server uses the following subset of the SQL language for queries evaluated by SQL Command Providers that support either SQL-92 Entry level or ODBC Core:
 
-1. `SELECT` statements with SELECT, FROM, WHERE, GROUP BY, UNION, UNION ALL, ORDER BY DESC, ASC, and HAVING clauses.
+1. `SELECT` statements with `SELECT`, `FROM`, `WHERE`, `GROUP BY`, `UNION`, `UNION ALL`, `ORDER BY DESC`, `ASC`, and `HAVING` clauses.
 
-<!-- -->
+1. `UNION` and `UNION ALL` are generated only against providers that support SQL-92 entry level, not against those supporting ODBC Core.
 
-23. UNION and UNION ALL are generated only against providers that support SQL-92 entry level, not against those supporting ODBC Core.
+1. `SELECT` clause:
 
-24. `SELECT` clause:
+   - Scalar subqueries in the `SELECT` list.
 
-- Scalar subqueries in the `SELECT` list.
+   - Column aliases without the `AS` keyword.
 
-- Column aliases without the AS keyword.
+1. `FROM` clause:
 
-25. `FROM` clause:
+   - Explicit join keywords are not used; comma-separated table names are used to specify inner joins, and outer joins are not specified in remote queries.
 
-- Explicit join keywords are not used; comma-separated table names are used to specify inner joins, and outer joins are not specified in remote queries.
+   - Nested queries of the form `FROM` ( `<nested query>` ) `<alias>`.
 
-- Nested queries of the form `FROM` ( `<nested query>` ) `<alias>`.
+   - Table aliases without the AS keyword.
 
-- Table aliases without the AS keyword.
+1. `WHERE` clause uses subqueries with `NOT` `EXISTS`, `ANY`, `ALL`.
 
-26. `WHERE` clause uses subqueries with \[NOT\] EXISTS, ANY, ALL.
+1. Expressions:
 
-27. Expressions:
+   - Aggregate functions used: `MIN([DISTINCT])`, `MAX([DISTINCT])`, `COUNT([DISTINCT])`, `SUM([DISTINCT])`, `AVG([DISTINCT])`, and `COUNT(*)`.
 
-- Aggregate functions used: MIN(\[DISTINCT\]), MAX(\[DISTINCT\]), COUNT(\[DISTINCT\]), SUM(\[DISTINCT\]), AVG(\[DISTINCT\]), and COUNT(\*).
+   - Comparison operators: `<`, `=`, `<=`, `>`, `<>`, `>=`, `IS NULL`, and `IS NOT NULL`.
 
-- Comparison operators: `<, =, `<=, >`, `<>`, >`=, IS NULL, and IS NOT NULL.
+   - Boolean operators: `AND`, `OR`, and `NOT`.
 
-- Boolean operators: AND, OR, and NOT.
+ - Arithmetic operators: `+`, `-`, `*`, and `/`.
 
-- Arithmetic operators: +, -, \*, and /.
+1. Constants:
 
-28. Constants:
+- Numeric and money literals are always surrounded by `( )`.
 
-- Numeric and money literals are always surrounded by ( ).
-
-- Character literals are quoted with \'\'.
+- Character literals are quoted with `' '`.
 
 SQL Command Providers that support the SQL Minimum level
 
@@ -736,7 +698,7 @@ Against SQL Command Providers that support the SQL Minimum level, SQL Server gen
 
 This grammar was derived using the SQL Minimum grammar described in ODBC 3.0. All differences from this grammar are highlighted. The items shown in `*bold italics`* are those added to the SQL Minimum grammar described in ODBC 3.0. The items shown deleted in green are those removed from this grammar.
 
-`*select-statement* ::=`
+*select-statement* ::=
 
 SELECT \[ALL \| DISTINCT\] *select-list*\ `FROM` *table-reference-list*\ \[WHERE *search-condition*\]\ \[order-by-clause\]
 
@@ -825,3 +787,30 @@ unsigned-integer ::= {digit}...
 digit ::= 0 \| 1 \| 2 \| 3 \| 4 \| 5 \| 6 \| 7 \| 8 \| 9
 
 period ::= . 
+
+## <name = "appendixc"></a> SQL Server-Specific Properties
+
+```
+enum SQLPROPERTIES
+       {
+       SQLPROP_NOHPNEEDED = 0x1,
+       SQLPROP_FREETHREADED = 0x2,
+       SQLPROP_UMSENABLED = 0x3,
+       SQLPROP_NESTEDQUERIES = 0x4,
+       SQLPROP_DYNAMICSQL = 0x5,
+       SQLPROP_GROUPBY = 0x6,
+       SQLPROP_DATELITERALS = 0x7,
+       SQLPROP_ANSILIKE = 0x8,
+       SQLPROP_INNERJOIN = 0x9,
+       SQLPROP_SUBQUERIES = 0x10, 
+       SQLPROP_PARALLELSCAN = 0x11,
+       SQLPROP_COLUMNCOLLATION = 0x12,
+       SQLPROP_CARDINALITY = 0x13,
+       SQLPROP_SIMPLEUPDATES = 0x14,
+       SQLPROP_SQLLIKE = 0x15,
+       SQLPROP_BITREMOTING = 0x16,
+       SQLPROP_UNICODELITERALS = 0x17,
+       SQLPROP_USELATESTCOLLATIONVERSION = 0x18
+       };
+
+```

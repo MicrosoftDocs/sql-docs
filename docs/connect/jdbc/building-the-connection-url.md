@@ -119,5 +119,5 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
 ## See Also  
  [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
-  
+ [Connection String Generator for JDBC](https://aireforge.com/Tools/JdbcSqlServerConnectionStringGenerator)  
   

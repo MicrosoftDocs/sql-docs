@@ -614,6 +614,7 @@ In the case of the optional interfaces, the Scenarios column indicates one or mo
 |Object|Interface|Required|Comments|Scenarios|
 |:-----|:-----|:-----|:-----|:-----|
 |Data Source object|`IDBInitialize`|Yes|Initialize and set up data and security context.| |
+| |`IDBCreateSession`|Yes|Create DB session object.| |
 
 |Object|Interface|Required|Comments|Scenarios|
 |:-----|:-----|:-----|:-----|:-----|

@@ -700,13 +700,13 @@ This grammar was derived using the SQL Minimum grammar described in ODBC 3.0. Al
 
 *select-statement* ::=
 
-SELECT \[ALL \| DISTINCT\] *select-list*\ `FROM` *table-reference-list*\ \[WHERE *search-condition*\]\ \[order-by-clause\]
+`SELECT [ALL | DISTINCT] *select-list* FROM *table-reference-list*[WHERE *search-condition*] [order-by-clause]`
 
-`SELECT clause`
+`SELECT` clause
 
-select-list ::= \* \| select-sublist \[, select-sublist\]\...
+select-list ::= `*` | `select-sublist [, select-sublist]...`
 
-select-sublist ::= expression *\[`alias`\]*
+select-sublist ::= expression * [`alias`]*
 
 `*alias ::= user-defined-name`*
 

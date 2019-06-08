@@ -14,7 +14,7 @@ manager: rothj
 
 # Microsoft SQL Server Distributed Queries: OLE DB Connectivity
 
-This article describes how the Microsoft SQL Server query processor interacts with an OLE DB provider to enable distributed and heterogeneous queries. It is intended primarily for OLE DB provider developers, and assumes a solid understanding of the OLE DB specification. The emphasis is on the OLE DB interface between the SQL Server query processor and the OLE DB provider, and not on the distributed query functionality itself. For a full description of distributed querying functionality, see SQL Server Books Online.
+This article describes how the Microsoft SQL Server query processor interacts with an OLE DB provider to enable distributed and heterogeneous queries. It is intended primarily for OLE DB provider developers, and assumes a solid understanding of the OLE DB specification. The emphasis is on the OLE DB interface between the SQL Server query processor and the OLE DB provider, and not on the distributed query functionality itself. For a full description of distributed querying functionality, see [Linked servers](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ## Overview and Terminology
 
@@ -157,7 +157,7 @@ These are the high-level steps that SQL Server performs when it connects to an O
 
    SQL Server instantiates the provider's DSO through the OLE DB service component interface `IDataInitialize`. This allows the Service Component Manager to aggregate its services, such as scrolling and update support, above the native functionality of the provider. Further, instantiating the provider through `IDataInitialize` allows the OLE DB service component to pool connections to the provider, thereby reducing some of the connection and initialization overhead.
 
-   A given provider can be configured to be instantiated either in the same process as SQL Server or in its own process. Instantiating in a separate process protects the SQL Server process from failures in the provider. At the same time, there is a performance overhead associated with marshalling OLE DB calls out-of-process from SQL Server. A provider can be configured to be instantiated in-process or out-of-process by setting the `Allow In Process` provider option. Please see SQL Server Books Online for information on setting provider options.
+   A given provider can be configured to be instantiated either in the same process as SQL Server or in its own process. Instantiating in a separate process protects the SQL Server process from failures in the provider. At the same time, there is a performance overhead associated with marshalling OLE DB calls out-of-process from SQL Server. A provider can be configured to be instantiated in-process or out-of-process by setting the `Allow In Process` provider option. For more information, see [setting provider options](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md).
 
    To learn more about the OLE DB service components and session pooling, refer to the OLE DB documentation for provider requirements.
 
@@ -432,7 +432,7 @@ When a client connects to SQL Server through Windows Authentication, and if the 
 
 After the security context used for the connection is determined, the authentication of this security context and the permission checking for that context against data objects in the data source are entirely up to the OLE DB provider.
 
-For more information about `sp_addlinkedsrvlogin` and `sp_droplinkedsrvlogin`, see SQL Server Books Online.
+For more information, see [`sp_addlinkedsrvlogin`](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) and [`sp_droplinkedsrvlogin`](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md).
 
 ## Query Execution Scenarios
 

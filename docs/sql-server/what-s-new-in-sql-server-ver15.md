@@ -41,6 +41,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 ### Database engine
 
 | New feature or update | Details |
+|:---|:---|
 |SQL Server Setup includes Max Server Memory recommendations for a single instance deployment that follow the documented guidelines. |[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)|
 | &nbsp; | &nbsp; |
 

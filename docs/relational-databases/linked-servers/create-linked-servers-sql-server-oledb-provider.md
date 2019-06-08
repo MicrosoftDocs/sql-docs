@@ -614,6 +614,10 @@ In the case of the optional interfaces, the Scenarios column indicates one or mo
 |Object|Interface|Required|Comments|Scenarios|
 |:-----|:-----|:-----|:-----|:-----|
 |Data Source object|`IDBInitialize`|Yes|Initialize and set up data and security context.| |
+
+|Object|Interface|Required|Comments|Scenarios|
+|:-----|:-----|:-----|:-----|:-----|
+|Data Source object|`IDBInitialize`|Yes|Initialize and set up data and security context.| |
 | |`IDBCreateSession`|Yes|Create DB session object.| |
 | |`IDBProperties`|Yes|Get information about capabilities of provider, set   initialization properties, required property: DBPROP_INIT_TIMEOUT.| |
 | |`IDBInfo`|No|Get quoting literal, catalog, name, part, separator, character,   and so on.|Remote query.|
@@ -646,7 +650,8 @@ In the case of the optional interfaces, the Scenarios column indicates one or mo
 |Any object|`ISupportErrorInfo`|No|Use to verify whether a given interface supports error objects.||
 |  |  |  |  |  |
 
-`Note:` The `Index` object, `Command` object, and `Error` object are not mandatory. However, if they are supported, the listed interfaces are mandatory as specified in the Required column.
+>[!NOTE]
+>The `Index` object, `Command` object, and `Error` object are not mandatory. However, if they are supported, the listed interfaces are mandatory as specified in the Required column.
 
 ## <a name="appendixb"></a>SQL Subset Used for Generating Remote Queries
 

@@ -269,7 +269,7 @@ The OLE DB provider should support distribution statistics as follows:
 
 - **Mandatory**. The `TABLE_STATISTICS` schema rowset. The `TABLE_STATISTICS` schema rowset lists the statistics available in a given database. It also includes the column and tuple cardinalities in the schema rowset itself and indicates whether histograms are supported on the specific columns. For SQL Server to use statistics, the columns `TABLE_NAME`, `STATISTICS_NAME`, `STATISTICS_TYPE`, `COLUMN_NAME`, and `ORDINAL_POSITION` are mandatory in this schema rowset. At least one of `COLUMN_CARDINALITY` or `TUPLE_CARDINALITY` are mandatory. If histograms are supported then `NO_OF_RANGES` is also mandatory.
 
-- `Optional`. Optionally, if the provider supports histograms, it should support an enhancement to the `IOpenRowset::OpenRowset` method that allows opening a histogram rowset by specifying the `DBID` of the corresponding statistic.
+- **Optional**. Optionally, if the provider supports histograms, it should support an enhancement to the `IOpenRowset::OpenRowset` method that allows opening a histogram rowset by specifying the `DBID` of the corresponding statistic.
 
 For complete information on the statistics interfaces, refer to the OLE DB 2.6 specification.
 

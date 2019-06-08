@@ -10,7 +10,7 @@ author: "markingmyname"
 ms.author: "maghan"
 manager: craigg
 ms.custom: ""
-ms.date: 06/11/2019
+ms.date: 06/12/2019
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
@@ -51,7 +51,9 @@ The general availability (GA) release of SSMS 18.1 is available. If you need a p
 
 | New item| Details|
 | :-------| :------|
-|Integration Services (SSIS)| Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.|
+| Database diagrams | Database diagrams were added back into SSMS. For details, see [Database Diagrams](https://feedback.azure.com/forums/908035/suggestions/37507828). |
+| SSBDIAGNOSE.EXE |The SQL Server Diagnose (command line tool) was added back into the SSMS package.|
+| Integration Services (SSIS) | Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.|
 
 ## Bug fixes in 18.1
 
@@ -61,7 +63,6 @@ The general availability (GA) release of SSMS 18.1 is available. If you need a p
 | Accessibility | Improved accessibility on Stretch Monitor page by adding accessible name for *Auto Refresh* button and also adding an intelligent Accessible Name that will help users know not only what button they are on but the impact of pressing it. |
 | ADS integration| Fixed a possible crash in SSMS when trying to use the ADS registered servers.|
 | Database designer | Added support for Latin1_General_100_BIN2_UTF8 collation (available in SQL Server 2019 CTP3.0) |
-| Database diagrams | Added back the feature that was removed from SSMS 18.0. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37507828) for more details. |
 | Data classification | Prevent adding sensitivity labels to columns in history table, which isn't supported. |
 | Data classification | Addressed issue related to incorrect handling of compatibility level (server vs database). |
 | Database designer | Added support for Latin1_General_100_BIN2_UTF8 collation (available in SQL2019 CTP3.0). |
@@ -79,7 +80,6 @@ The general availability (GA) release of SSMS 18.1 is available. If you need a p
 | Log Viewer | Fixed an issue were SSMS always opens the current server (or agent) log, even if double-clicking an older archive sign in the Object explorer. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37633648) for more details. |
 | SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
 | SSMS setup | Fixed an issue where SSMS was exiting immediately after showing the splash screen. </br> See these sites for more details: [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37502512), [SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start), and [Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up). |
-|SSBDIAGNOSE.EXE |SQL Server Diagnose tool (command line) added back into the SSMS package.|
 | Object explorer | Lifted restriction on enabling *start PowerShell* when connected to SQL on Linux. |
 | Object explorer | Fixed an issue that was causing SSMS to crash when trying to expand the Polybase/Scale-out Group node (when connected to a compute node). |
 | Object explorer | Fixed an issue where the *Disabled* menu item was still enabled, even after disabling a given Index. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37735375) for more details. |

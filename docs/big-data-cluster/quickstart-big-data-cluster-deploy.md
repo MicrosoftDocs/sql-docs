@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Walkthrough a deployment of SQL Server 2019 big data clusters (preview) on Azure Kubernetes Service (AKS).
 author: rothja 
 ms.author: jroth 
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: quickstart
 ms.prod: sql

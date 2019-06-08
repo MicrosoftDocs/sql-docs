@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, additional resources"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Finding More OLE DB Driver for SQL Server Information
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

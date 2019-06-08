@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

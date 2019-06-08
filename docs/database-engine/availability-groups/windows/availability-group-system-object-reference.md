@@ -8,7 +8,7 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: ">=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Always On availability group system object reference

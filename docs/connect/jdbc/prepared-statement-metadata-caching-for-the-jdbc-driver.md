@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Prepared Statement Metadata Caching for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

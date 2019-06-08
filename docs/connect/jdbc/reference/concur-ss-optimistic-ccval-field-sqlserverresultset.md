@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 5314cee7-fef0-47fc-bfb4-284b8700d612
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # CONCUR_SS_OPTIMISTIC_CCVAL Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

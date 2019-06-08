@@ -5,7 +5,7 @@ description: Learn how to export Spark machine learning models with MLeap.
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql

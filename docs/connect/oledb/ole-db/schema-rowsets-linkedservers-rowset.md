@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "enumerating data sources [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Schema Rowsets - LINKEDSERVERS Rowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Tracing Driver Operation
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

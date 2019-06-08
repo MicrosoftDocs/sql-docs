@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 
 # Using Database Mirroring (JDBC)

@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "ISQLServerErrorInfo interface"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # SQL Server Error Detail
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

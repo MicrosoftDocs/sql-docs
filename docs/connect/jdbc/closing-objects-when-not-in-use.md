@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Closing Objects when Not In Use
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

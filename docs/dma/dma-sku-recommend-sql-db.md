@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: jtoland
-manager: craigg
+manager: jroth
 ---
 
 # Identify the right Azure SQL Database/Managed Instance SKU for your on-premises database

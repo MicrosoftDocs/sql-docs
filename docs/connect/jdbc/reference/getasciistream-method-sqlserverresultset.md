@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 57560f0a-0fb8-40dd-bbe5-49feb502b9bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getAsciiStream Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getHoldability Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

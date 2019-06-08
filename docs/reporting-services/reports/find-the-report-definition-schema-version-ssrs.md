@@ -22,7 +22,7 @@ A report definition file specifies the RDL namespace for the version of the repo
   
 ## How to: Identify the RDL schema version of a report  
   
-1.  Open the report .rdl file in an application such as Notepad or XML Notepad 2007 in which you can view the xml.  
+1. Open the report .rdl file in an application such as Notepad or XML Notepad, in which you can view the XML.  
   
      The XML Report element specifies the schema namespace. For example, the following Report element specifies the namespace for Report Designer and the namespace for the report definition.  
   
@@ -30,7 +30,7 @@ A report definition file specifies the RDL namespace for the version of the repo
     <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" MustUnderstand="df">  
     ```  
   
-     The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition`.  
+     The most recent report definition namespace is 2016. However, the most recent published report definition namespace is 2010, specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition`..
   
 ### How to: Identify the RDL schema version of Report Designer  
   
@@ -46,13 +46,13 @@ A report definition file specifies the RDL namespace for the version of the repo
   
 6.  On the **View** menu, click **Code**. The report definition is displayed as an XML file.  
   
-     The XML Report element specifies the schema namespace. For example, the following Report element specifies the namespace for Report Designer and the namespace for the report definition.  
+    The XML Report element specifies the schema namespace. For example, the following Report element specifies the namespace for Report Designer and the namespace for the report definition.  
   
     ``` XML 
-    <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" MustUnderstand="df">  
+    <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition/defaultfontfamily" MustUnderstand="df">  
     ```  
   
-     The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition`  
+     The report definition namespace is specified by the following URL: `https://schemas.microsoft.com/sqlserver/reporting/*year*/01/reportdefinition`  
   
 ### How to: Identify the RDL schema version on the Report Server  
   
@@ -72,5 +72,6 @@ A report definition file specifies the RDL namespace for the version of the repo
 
 ## Next steps
 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)   
+[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

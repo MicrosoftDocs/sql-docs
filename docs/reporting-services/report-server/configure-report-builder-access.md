@@ -31,6 +31,16 @@ You must use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explor
 
 Report Builder always runs in full trust; you cannot configure it to run in partial trust. In previous releases, it was possible to run Report Builder in partial trust, but that option is not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later versions.  
 
+## Enabling and Disabling Report Builder  
+
+Report Builder is enabled by default. Report server administrators have the option of disabling the Report Builder feature by setting the report server system property **ShowDownloadMenu** to **false**. Setting this property will disable Report Builder, Mobile Report Publisher, and Power BI Mobile downloads for that report server.  
+
+ To set report server system properties, you can use Management Studio or script:  	
+
+ - To use Management Studio, connect to the report server and use the Advanced Server Properties page to set **EnableReportDesignClientDownload** to **false**. For more information about how to open this page, see [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  	
+
+ - To view a sample script that sets a report server property, see [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
+
 ## Role Assignments granting Report Builder access on a native mode Report Server  
 
 On a native mode report server, create user role assignments that include tasks for using Report Builder. You must be a Content Manager and System Administrator to create or modify role definitions and role assignments on items and at the site level.  

@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

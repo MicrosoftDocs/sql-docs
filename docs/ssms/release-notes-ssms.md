@@ -37,13 +37,13 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## 18.1 (GA), June 2019
+## SSMS 18.1
 
-Download: &nbsp; &nbsp; [Download SSMS 18.1 (GA)](download-sql-server-management-studio-ssms.md)<br/>
+Download: &nbsp; &nbsp; [Download SSMS 18.1](download-sql-server-management-studio-ssms.md)<br/>
 Build number: &nbsp; &nbsp; 15.0.18131.0<br/>
 Release date: &nbsp; &nbsp; June 11, 2019
 
-The general availability (GA) release of SSMS 18.1 is available. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
+SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
 18.1 is a small update to 18.0 with the following new item and bug fixes.
 
@@ -110,7 +110,7 @@ Download previous SSMS versions by clicking the title links in the following sec
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [English (United States)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [French](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [German](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [Italian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [Japanese](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [Korean](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [Russian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [Spanish](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
-## What's new in 18.0
+### What's new in 18.0
 
 | New item| Details|
 | :-------| :------|
@@ -197,7 +197,7 @@ Download previous SSMS versions by clicking the title links in the following sec
 |Vulnerability Assessment|Added a new exporting feature to export the vulnerability assessment scan results to Excel.|
 |XEvent Viewer|XEvent Viewer: enabled showplan window for more XEvents.|
 
-## Bug fixes in 18.0
+### Bug fixes in 18.0
 
 | New item| Details|
 | :-------| :------|
@@ -341,7 +341,7 @@ Download previous SSMS versions by clicking the title links in the following sec
 |XEvent Profiler|Fixed an issue where XEvent Profiler failed to launch when connected to a 96-core SQL Server.|
 |XEvent Viewer|Fixed an issue where XEvent Viewer was crashing when trying to group the events using the "Extended Event Toolbar Options".|
 
-## Deprecated and removed features in 18.0
+### Deprecated and removed features in 18.0
 
 Deprecated / Removed Features
 - T-SQL Debugger

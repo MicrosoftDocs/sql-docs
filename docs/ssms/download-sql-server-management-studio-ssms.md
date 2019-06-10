@@ -60,24 +60,25 @@ The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or ear
 
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
 
-## Available Languages (SSMS 18.1 GA)
+## Available Languages (SSMS 18.1)
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 18.1 (GA):<br>
+SQL Server Management Studio 18.1:<br>
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-SQL Server Management Studio 18.1 Upgrade Package (upgrades to 18.1):<br>
-No upgrade option is available at this time. If you have a previous SSMS 18.1 preview installed, uninstall it before installing SSMS 18.1 GA.
 
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 
 ## New in this Release (SSMS 18.1)
 
-SSMS 18.1 is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
+- **Database diagrams** - Database diagrams were added back into SSMS. For details, see [Database Diagrams](https://feedback.azure.com/forums/908035/suggestions/37507828).
+- **SSBDIAGNOSE.EXE** - The SQL Server Diagnose command line tool was added back into the SSMS package.
+- **Integration Services (SSIS)** - Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.
 
 For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
+
 
 ## Supported SQL offerings (SSMS 18.1)
 
@@ -100,14 +101,12 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 > [!NOTE]
 > SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
-  
+
 ## Release Notes (SSMS 18.1)
 
-- **Database diagrams** - Database diagrams were added back into SSMS. For details, see [Database Diagrams](https://feedback.azure.com/forums/908035/suggestions/37507828).
-- **SSBDIAGNOSE.EXE** - The SQL Server Diagnose command line tool was added back into the SSMS package.
-- **Integration Services (SSIS)** - Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.
+There are no known issues with this release.
 
-For additional information, see [Release notes](release-notes-ssms.md).
+For details about this release, see [the SSMS release notes](release-notes-ssms.md).
 
 ## Previous SSMS releases
 

@@ -6,9 +6,9 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
-ms.reviewer: genemi
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ""
 manager: jroth
 ---
 # Driver history for Microsoft SQL Server

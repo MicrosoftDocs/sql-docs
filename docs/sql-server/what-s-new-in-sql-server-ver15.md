@@ -36,6 +36,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+|New `mssqlctl` status commands and removal of the Cluster Administration Portal.|The Cluster Administration Portal is removed in this release. New status commands have been added to `mssqlctl` that complement existing monitoring commands.|
 | &nbsp; | &nbsp; |
 
 ### Database engine

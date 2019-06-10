@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.reviewer: maghan
-author: casualoak
-ms.author: RhysSchmidtke
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Field (ADO for Visual C++ Syntax)
 ## Methods  

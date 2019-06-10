@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, sessions"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Sessions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.custom: "sql-linux"
 ---
 # Automate database migration to Linux with the SQL Server Migration Assistant
 

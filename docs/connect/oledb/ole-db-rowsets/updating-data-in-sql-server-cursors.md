@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Updating Data in SQL Server Cursors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

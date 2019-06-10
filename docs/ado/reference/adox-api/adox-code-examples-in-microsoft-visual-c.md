@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # ADOX Code Examples in Microsoft Visual C++
 These topics provide sample code to help you understand how to use ADOX. All code examples are written using Microsoft Visual C++.  

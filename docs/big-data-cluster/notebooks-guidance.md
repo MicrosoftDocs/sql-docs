@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: This article explains how to run Jupyter Notebooks in Azure Data Studio connected to a SQL Server 2019 big data cluster.
 author: achatter
 ms.author: jroth 
-manager: craigg
+manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql

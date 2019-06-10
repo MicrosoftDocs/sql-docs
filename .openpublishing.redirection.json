@@ -3632,7 +3632,12 @@
             "redirect_url":"/sql/tools/sql-server-profiler/start-sql-server-profiler",
             "redirect_document_id":false
         },
-                {
+        {
+            "source_path": "docs/relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-stored-procedures/",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
             "redirect_document_id": false
@@ -14381,6 +14386,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md",
+            "redirect_url": "/sql/ssms/sql-server-management-studio-ssms",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssms/tutorials/templates-ssms.md",
+            "redirect_url": "docs/ssms/templates/templates-ssms",
+            "redirect_document_id": true
+        },
+        {        
             "source_path": "docs/relational-databases/security/encryption/service-master-key.md",
             "redirect_url": "/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine",
             "redirect_document_id": true

@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Learn how to install tools used with SQL Server 2019 big data clusters (preview).
 author: rothja 
 ms.author: jroth 
-manager: craigg
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql

@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Name Property (ADO MD)
 Indicates the name of an object.  

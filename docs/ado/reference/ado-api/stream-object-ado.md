@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Stream Object (ADO)
 Represents a stream of binary data or text.  

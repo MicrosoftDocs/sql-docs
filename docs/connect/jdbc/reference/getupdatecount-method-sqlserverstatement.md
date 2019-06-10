@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getUpdateCount Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

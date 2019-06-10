@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 54741cfd-32ac-46c5-8b09-fd60fd8833d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # supportsConvert Method (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

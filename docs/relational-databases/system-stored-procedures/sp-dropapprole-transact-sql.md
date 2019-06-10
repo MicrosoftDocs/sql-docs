@@ -16,10 +16,11 @@ helpviewer_keywords:
   - "sp_dropapprole"
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
+manager: jroth
 ---
 # sp_dropapprole (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes an application role from the current database.  
@@ -32,7 +33,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_dropapprole [@rolename = ] 'role'  
 ```  
   
@@ -54,7 +54,7 @@ sp_dropapprole [@rolename = ] 'role'
 ## Examples  
  The following example removes the `SalesApp` application role from the current database.  
   
-```  
+```sql
 EXEC sp_dropapprole 'SalesApp';  
 ```  
   

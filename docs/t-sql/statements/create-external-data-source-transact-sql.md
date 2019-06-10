@@ -839,7 +839,7 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
-[,   TYPE                      = HADOOP | BLOB_STORAGE ]
+[,   TYPE                      = HADOOP ]
 [,   RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]'
 )
 [;]
@@ -882,23 +882,12 @@ Additional notes and guidance when creating a credential:
 
 - To load data from either Azure Blob storage or Azure Data Lake Store (ADLS) Gen 2 into SQL DW or PDW, use an Azure Storage Key.
 - `CREDENTIAL` is only required if the blob has been secured. `CREDENTIAL` isn't required for data sets that allow anonymous access.
-- When the `TYPE` = `BLOB_STORAGE` the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
-  - Exclude the leading `?` when configured as the secret
-  - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
-  - Use a valid expiration period (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
-
-To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
-
-### TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### TYPE = *[ HADOOP ]*
 
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
 - Use HADOOP when the external data source is Cloudera, Hortonworks, or Azure Blob Storage.
-- Use RDBMS for cross-database queries using elastic query from SQL Database.  
-- Use SHARD_MAP_MANAGER when creating an external data source when connecting to a sharded SQL Database.
-- Use BLOB_STORAGE when executing bulk operations with [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.

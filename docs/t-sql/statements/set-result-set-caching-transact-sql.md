@@ -16,7 +16,7 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# SET RESULT SET CACHING (Transact-SQL) (Preview for Azure SQL Data Warehouse Gen2)
+# SET RESULT SET CACHING (Transact-SQL) Applies to Azure SQL Data Warehouse Gen2 only (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

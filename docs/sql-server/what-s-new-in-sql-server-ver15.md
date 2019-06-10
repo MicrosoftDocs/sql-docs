@@ -42,6 +42,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+|Index encrypted columns with Always Encrypted with secure enclaves.|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |SQL Server Setup includes Max Server Memory recommendations for a single instance deployment that follow the documented guidelines. |[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)|
 | &nbsp; | &nbsp; |
 

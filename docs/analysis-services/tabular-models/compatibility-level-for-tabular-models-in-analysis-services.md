@@ -20,8 +20,8 @@ manager: kfile
 Major features in the 1400 compatibility level include:
 
 *  New infrastructure for data connectivity and import into tabular models with support for TOM APIs and TMSL scripting. This enables support for additional data sources such as Azure Blob storage. Additional data sources will be included in future updates.
-*  Data transformation and data mashup capabilities by using Get Data and M expressions in SSDT.
-*  Measures now support a Detail Rows property with a DAX expression, enabling BI tools such as Microsoft Excel drill-down to detailed data from an aggregated report. For example, when end-users view total sales for a region and month, they can view the associated order details. 
+*  Data transformation and data mashup capabilities by using Get Data and M expressions in SQL Server Data Tools (SSDT).
+*  Measures now support a Detail Rows property with a DAX expression, enabling BI tools such as Microsoft Excel drill down to detailed data from an aggregated report. For example, when users view total sales for a region and month, they can view the associated order details. 
 *  Object-level security for table and column names, in addition to the data within them.
 *  Enhanced support for ragged hierarchies.
 *  Performance and monitoring improvements.

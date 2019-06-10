@@ -7,11 +7,12 @@ ms.prod_service: connectivity
 ms.reviewer: "craigg"
 ms.technology: connectivity
 ms.topic: conceptual
-author: "David-Engel"
-ms.author: "v-daveng"
+author: MightyPen
+ms.author: genemi
 manager: "kenvh"
 ---
 # FIPS Mode
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 The Microsoft JDBC Driver for SQL Server supports running in JVMs configured to be *FIPS 140 Compliant*.

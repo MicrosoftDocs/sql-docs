@@ -888,7 +888,6 @@ Additional notes and guidance when creating a credential:
 Specifies the type of the external data source being configured. This parameter isn't always required.
 
 - Use HADOOP when the external data source is Cloudera, Hortonworks, or Azure Blob Storage.
-- Use BLOB_STORAGE when executing bulk operations with [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.

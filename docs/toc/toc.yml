@@ -14310,8 +14310,6 @@
         href: ../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md
       - name: sp_drop_trusted_assembly
         href: ../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md
-      - name: sp_dropalias
-        href: ../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md
       - name: sp_dropapprole
         href: ../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md
       - name: sp_droplogin

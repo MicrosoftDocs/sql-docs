@@ -39,7 +39,7 @@ An instance is either the default instance or a named instance. The default inst
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a single server or processor, but only one instance can be the default instance. All others must be named instances. A computer can run multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concurrently, and each instance runs independently of the other instances.  
   
- For more information, see [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ For more information, see [Maximum capacity specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
 ### Options
 
@@ -61,7 +61,7 @@ minimizes conflicts when multiple applications are installed on the same compute
   
 * Instance names can't start or end with an underscore (_).  
   
-* Instance names can't contain the term "Default" or other reserved keywords. If a reserved keyword is used in an instance name, a Setup error occurs. For more information, see [Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
+* Instance names can't contain the term "Default" or other reserved keywords. If a reserved keyword is used in an instance name, a Setup error occurs. For more information, see [Reserved keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
   
 * If you specify MSSQLSERVER for the instance name, a default instance is created.  
   
@@ -87,7 +87,7 @@ minimizes conflicts when multiple applications are installed on the same compute
 > [!NOTE]  
 >  Instance IDs that begin with an underscore (_) or that contain the number sign (#) or the dollar sign ($) aren't supported.  
   
-For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
+For more information about directories, file locations, and instance ID naming, see [File locations for default and named instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
 All components of a given instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are managed as a unit. All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service packs and upgrades apply to every component of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -119,8 +119,8 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
   
 ### See also
   
-* [Configure Service Accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
-* [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+* [Configure service accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
+* [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## Analysis Services Configuration - Data Directories page
 
@@ -153,7 +153,7 @@ The default directories in the following table are user-configurable during [!IN
   
 ### See also
 
-For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
+For more information about directories, file locations, and instance ID naming, see [File locations for default and named instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
 ### Analysis Services Configuration - Data Directories page
 
@@ -186,8 +186,8 @@ The default directories in the following table are user-configurable during [!IN
   
 #### See also
 
-* For more information about directories, file locations, and instance ID naming, see [File Locations for Default and Named Instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
-* [Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkID=206571)
+* For more information about directories, file locations, and instance ID naming, see [File locations for default and named instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md)  
+* [Share and NTFS permissions on a file server](https://go.microsoft.com/fwlink/?LinkID=206571)
 
 ## <a name="serverconfig"></a> Database Engine Configuration - Server Configuration page
 
@@ -264,9 +264,9 @@ Passwords entered on this page must meet strong-password-policy requirements. If
   
 ### See also
 
-For more information about choosing Windows authentication versus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, see [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md).  
+For more information about choosing Windows authentication versus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication, see [Choose an authentication mode](../../relational-databases/security/choose-an-authentication-mode.md).  
 
-For more information about choosing an account to run the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+For more information about choosing an account to run the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 ## <a name ="datadir"></a> Database Engine Configuration - Data Directories page
 
@@ -405,8 +405,8 @@ The following recommendations apply to the SMB file server:
   
 ### See also
 
-* [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
-* [Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkID=206571)  
+* [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+* [Share and NTFS permissions on a file server](https://go.microsoft.com/fwlink/?LinkID=206571)  
 
 <!--
 The MaxDOP setting applies only to SQL Server 2019 and later.
@@ -438,7 +438,7 @@ Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent]
   
 ### See also
 
-* [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)
+* [Enable and configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)
 * [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
 
 ## Database Engine Configuration - User Instance page

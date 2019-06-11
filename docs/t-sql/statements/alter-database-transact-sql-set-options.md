@@ -215,7 +215,7 @@ SET
     STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
     | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
-    | TOTAL_EXECUTION_CPU_TIME_MS = number      
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <recovery_option> ::=
@@ -281,25 +281,26 @@ SET
 
 ## Arguments
 
-*database_name*         
+*database_name*
 Is the name of the database to be modified.
 
-CURRENT         
+CURRENT
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Runs the action in the current database. `CURRENT` is not supported for all options in all contexts. If `CURRENT` fails, provide the database name.
 
-**\<auto_option> ::=**        
+**\<auto_option> ::=**
 
-Controls automatic options.        
+Controls automatic options.
 
-<a name="auto_close"></a> AUTO_CLOSE { ON | OFF }         
-ON         
+<a name="auto_close"></a> AUTO_CLOSE { ON | OFF }
+
+ON</br>
 The database is shut down cleanly and its resources are freed after the last user exits.
 
 The database automatically reopens when a user tries to use the database again. For example, by issuing a `USE database_name` statement. The database may shut down cleanly with AUTO_CLOSE set to ON. If so, the database doesn't reopen until a user tries to use the database the next time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] restarts.
 
-OFF         
+OFF</br>
 The database remains open after the last user exits.
 
 The AUTO_CLOSE option is useful for desktop databases because it allows for database files to be managed as regular files. They can be moved, copied to make backups, or even e-mailed to other users. The AUTO_CLOSE process is asynchronous; repeatedly opening and closing the database doesn't reduce performance.
@@ -315,12 +316,12 @@ The AUTO_CLOSE option is useful for desktop databases because it allows for data
 When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and higher, for each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
-ON         
+ON</br>
 The Query Optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when the Query Optimizer compiles queries. The single-column statistics are created only on columns that are not already the first column of an existing statistics object.
 
 The default is ON. We recommend that you use the default setting for most databases.
 
-OFF         
+OFF</br>
 The Query Optimizer doesn't create statistics on single columns in query predicates when it is compiling queries. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
 
 You can determine this option's status by examining the is_auto_create_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoCreateStatistics property of the DATABASEPROPERTYEX function.
@@ -332,8 +333,9 @@ INCREMENTAL = ON | OFF
 
 Set AUTO_CREATE_STATISTICS to ON, and set INCREMENTAL to ON. This setting creates automatically created stats as incremental whenever incremental stats are supported. The default value is OFF. For more information, see [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
-<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }     
-ON         
+<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }
+
+ON</br>
 The database files are candidates for periodic shrinking.
 
 Both data file and log files can be automatically shrunk. AUTO_SHRINK reduces the size of the transaction log only if you set the database to SIMPLE recovery model or if you back up the log. When set to OFF, the database files aren't automatically shrunk during periodic checks for unused space.
@@ -345,7 +347,7 @@ The AUTO_SHRINK option causes files to be shrunk when more than 25 percent of th
 
 You can't shrink a read-only database.
 
-OFF         
+OFF</br>
 The database files are not automatically shrunk during periodic checks for unused space.
 
 You can determine this option's status by examining the is_auto_shrink_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoShrink property of the DATABASEPROPERTYEX function.
@@ -353,8 +355,9 @@ You can determine this option's status by examining the is_auto_shrink_on column
 > [!NOTE]
 > The AUTO_SHRINK option isn't available in a Contained Database.
 
-<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
-ON         
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }
+
+ON</br>
 Specifies that the Query Optimizer updates statistics when they're used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
 
 The Query Optimizer checks for out-of-date statistics before it compiles a query and it runs a cached query plan. The Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. The Query Optimizer determines this information before it compiles a query. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
@@ -365,7 +368,7 @@ The default is ON. We recommend that you use the default setting for most databa
 
 Use the AUTO_UPDATE_STATISTICS_ASYNC option to specify whether the statistics are updated synchronously or asynchronously.
 
-OFF         
+OFF</br>
 Specifies that the Query Optimizer doesn't update statistics when they're used by a query. The Query Optimizer also doesn't update statistics when they might be out-of-date. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
 
 You can determine this option's status by examining the is_auto_update_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoUpdateStatistics property of the DATABASEPROPERTYEX function.
@@ -2906,8 +2909,11 @@ SET
 ;
 
 <auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+{
+    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] }
+  | AUTO_UPDATE_STATISTICS { ON | OFF }
+  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
+  | RESULT_SET_CACHING { ON | OFF}
 }
 ```
 
@@ -2928,8 +2934,62 @@ Requires these permissions:
 
 The owner of the database cannot alter the database unless the owner is a member of the dbmanager role.
 
+<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
+ON         
+The Query Optimizer creates statistics on single columns in query predicates, as necessary, to improve query plans and query performance. These single-column statistics are created when the Query Optimizer compiles queries. The single-column statistics are created only on columns that are not already the first column of an existing statistics object.
+
+The default is ON. We recommend that you use the default setting for most databases.
+
+OFF         
+The Query Optimizer doesn't create statistics on single columns in query predicates when it is compiling queries. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
+
+You can determine this option's status by examining the is_auto_create_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoCreateStatistics property of the DATABASEPROPERTYEX function.
+
+For more information, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
+
+INCREMENTAL = ON | OFF         
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+Set AUTO_CREATE_STATISTICS to ON, and set INCREMENTAL to ON. This setting creates automatically created stats as incremental whenever incremental stats are supported. The default value is OFF. For more information, see [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
+
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
+ON         
+Specifies that the Query Optimizer updates statistics when they're used by a query and when they might be out-of-date. Statistics become out-of-date after insert, update, delete, or merge operations change the data distribution in the table or indexed view. The Query Optimizer determines when statistics might be out-of-date by counting the number of data modifications since the last statistics update and comparing the number of modifications to a threshold. The threshold is based on the number of rows in the table or indexed view.
+
+The Query Optimizer checks for out-of-date statistics before it compiles a query and it runs a cached query plan. The Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. The Query Optimizer determines this information before it compiles a query. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.
+
+The AUTO_UPDATE_STATISTICS option applies to statistics created for indexes, single-columns in query predicates, and statistics that are created by using the CREATE STATISTICS statement. This option also applies to filtered statistics.
+
+The default is ON. We recommend that you use the default setting for most databases.
+
+Use the AUTO_UPDATE_STATISTICS_ASYNC option to specify whether the statistics are updated synchronously or asynchronously.
+
+OFF         
+Specifies that the Query Optimizer doesn't update statistics when they're used by a query. The Query Optimizer also doesn't update statistics when they might be out-of-date. Setting this option to OFF can cause suboptimal query plans and degraded query performance.
+
+You can determine this option's status by examining the is_auto_update_stats_on column in the sys.databases catalog view. You can also determine the status by examining the IsAutoUpdateStatistics property of the DATABASEPROPERTYEX function.
+
+For more information, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
+
+<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
+ON         
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are asynchronous. The Query Optimizer doesn't wait for statistics updates to complete before it compiles queries.
+
+Setting this option to ON has no effect unless AUTO_UPDATE_STATISTICS is set to ON.
+
+By default, the AUTO_UPDATE_STATISTICS_ASYNC option is set to OFF, and the Query Optimizer updates statistics synchronously.
+
+OFF         
+Specifies that statistics updates for the AUTO_UPDATE_STATISTICS option are synchronous. The Query Optimizer waits for statistics updates to complete before it compiles queries.
+
+Setting this option to OFF has no effect unless AUTO_UPDATE_STATISTICS is set to ON.
+
+You can determine this option's status by examining the is_auto_update_stats_async_on column in the sys.databases catalog view.
+
+For more information that describes when to use synchronous or asynchronous statistics updates, see the section "Using the Database-Wide Statistics Options" in [Statistics](../../relational-databases/statistics/statistics.md).
+
 > [!Note]
-> While this feature is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.
+> While `RESULT_SET_CACHING` is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } Applies to Azure SQL Data Warehouse Gen2 only (preview)
 This command must be run while connected to the master database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data warehouse storage. A new column called is_result_set_caching_on is introduced in the sys.databases to show the result caching setting for a database.  
@@ -2950,6 +3010,27 @@ command|Like|%DWResultCacheDb%|
 | | |
 
 ## Examples
+
+### Enable AUTO_UPDATE_STATISTICS for a database
+
+```sql
+ALTER DATABASE MyDatabase
+SET AUTO_UPDATE_STATISTICS ON
+```
+
+### Configure statistics to be automatically updated asynchronously for a database.
+
+```sql
+ALTER DATABASE MyDatabase
+SET AUTO_UPDATE_STATISTICS_ASYNC ON
+```
+
+### Check statistics setting for a database
+
+```sql
+SELECT name, is_auto_create_stats_on , is_auto_update_stats_on, is_auto_update_stats_async_on
+FROM sys.databases
+```
 
 ### Enable result set caching for a database
 

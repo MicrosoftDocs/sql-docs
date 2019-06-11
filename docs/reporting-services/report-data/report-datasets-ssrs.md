@@ -127,6 +127,6 @@ ms.author: maggies
   
 ## See Also  
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)
   
   

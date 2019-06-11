@@ -1,6 +1,6 @@
 ---
 title: "Calculation groups in Analysis Services tabular models | Microsoft Docs"
-ms.date: 06/05/2019
+ms.date: 06/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -13,9 +13,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Calculation groups (Preview)
  
-[!INCLUDE[ssas-appliesto-sql2019](../../includes/ssas-appliesto-sql2019.md)]
+[!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-Calculation groups can significantly reduce the number of redundant measures by grouping common measure expressions as *calculation items*. Calculation groups are supported in SQL Server Analysis Services 2019 tabular models at the 1470 and higher [compatibility level](compatibility-level-for-tabular-models-in-analysis-services.md). Models at the 1470 compatibility level are currently in **Preview**.  
+Calculation groups can significantly reduce the number of redundant measures by grouping common measure expressions as *calculation items*. Calculation groups are supported in Azure Analysis Services and SQL Server Analysis Services 2019 tabular models at the 1470 and higher [compatibility level](compatibility-level-for-tabular-models-in-analysis-services.md). Models at the 1470 compatibility level are currently in **Preview**.  
 
 This article describes: 
 

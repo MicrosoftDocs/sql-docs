@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 ---
 # Pause or Resume a Database Mirroring Session (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

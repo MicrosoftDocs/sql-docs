@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MashaMSFT"
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ---
 # Use automatic seeding to initialize a secondary replica for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

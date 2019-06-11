@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "CreateTable function"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Creating SQL Server Tables
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

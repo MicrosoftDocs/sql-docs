@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: dc61c774-dcd9-49c0-8dfa-2e775fe2afa8
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getArray Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

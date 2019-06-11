@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Understanding Cursor Types
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

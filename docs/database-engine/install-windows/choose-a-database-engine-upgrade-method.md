@@ -10,7 +10,7 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
+manager: jroth
 ---
 # Choose a database engine upgrade method
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

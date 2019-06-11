@@ -10,7 +10,7 @@ ms.technology: connectivity
 ms.topic: "reference"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

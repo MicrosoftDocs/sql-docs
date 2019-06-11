@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setPoolable Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

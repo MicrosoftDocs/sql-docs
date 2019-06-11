@@ -7,7 +7,7 @@ ms.technology: azure-data-studio
 ms.topic: "overview"
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18, sqlfreshmay19"
 ms.date: "05/14/2019"

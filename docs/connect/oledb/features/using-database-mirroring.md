@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, database mirroring"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Using Database Mirroring
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

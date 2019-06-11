@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, large value data types"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Using Large Value Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

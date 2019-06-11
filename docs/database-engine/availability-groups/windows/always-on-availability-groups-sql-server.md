@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ---
 # Always On availability groups: a high-availability and disaster-recovery solution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

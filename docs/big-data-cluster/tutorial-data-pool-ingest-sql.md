@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql

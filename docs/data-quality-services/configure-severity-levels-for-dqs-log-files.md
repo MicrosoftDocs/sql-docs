@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Configure Severity Levels for DQS Log Files
 

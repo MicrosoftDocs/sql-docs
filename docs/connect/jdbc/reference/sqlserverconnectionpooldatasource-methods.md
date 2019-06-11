@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: b021a248-e046-4709-bece-9966d3961677
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # SQLServerConnectionPoolDataSource Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "errors [OLE DB], return codes"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Return Codes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

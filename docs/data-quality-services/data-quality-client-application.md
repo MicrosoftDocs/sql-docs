@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Data Quality Client Application
 

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setNCharacterStream Method (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -915,7 +915,7 @@
         {
             "source_path": "docs/reporting-services/report-builder/glossary-report-builder.md",
             "redirect_url": "/sql/reporting-services/reporting-services-concepts-ssrs",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/reporting-services/troubleshooting/troubleshoot-reporting-services.md.md",

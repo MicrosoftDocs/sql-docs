@@ -190,7 +190,7 @@ During cluster bootstrap, the client command window will output the deployment s
 In less than 15 to 30 minutes, you should be notified that the controller pod is running:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -201,11 +201,8 @@ In less than 15 to 30 minutes, you should be notified that the controller pod is
 When the deployment finishes, the output notifies you of success:
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-Note the URL of the **Portal Endpoint** in the previous output for use in the next section.
 
 > [!TIP]
 > The default name for the deployed big data cluster is `mssql-cluster` unless modified by a custom configuration.
@@ -247,7 +244,6 @@ After the deployment script has completed successfully, you can obtain the IP ad
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

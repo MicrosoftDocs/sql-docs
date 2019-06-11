@@ -253,7 +253,7 @@ SELECT type
    FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
- The sample output shows that the total memory allocated is 18 MB system-level memory consumption and 1358MB allocated to database ID of 5. Since this database is mapped to a dedicated resource pool, this memory is accounted for in that resource pool.  
+ The sample output shows that the total memory allocated is 18 MB system-level memory consumption and 1358MB allocated to database idS of 5. Since this database is mapped to a dedicated resource pool, this memory is accounted for in that resource pool.  
   
  **Sample Output**  
   

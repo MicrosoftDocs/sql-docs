@@ -226,7 +226,7 @@ The November 2006 release of SSMA for Access contains the following changes:
 * Added new global settings:
   * You can opt to show line numbers in editor windows.  
   * You can configure SSMA to prompt to replace duplicate objects, or always or never replace duplicate objects during schema conversion.  
-* dded a new conversion option that lets you specify whether SSMA displays a warning when a complex query contains a wildcard.  
+* Added a new conversion option that lets you specify whether SSMA displays a warning when a complex query contains a wildcard.  
   
 ## July 2006
 

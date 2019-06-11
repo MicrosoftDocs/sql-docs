@@ -22,7 +22,9 @@ The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.m
 The ODBC Driver 13 and 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], in addition to the above, supports SQL Server 2016. 
 
 The ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports all the above ones and also SQL Server 2017.
-  
+
+The ODBC Driver 17 for SQL Server supports SQL Server 2019 starting with driver version 17.3.
+
 The driver name that you specify in a connection string is `ODBC Driver 11 for SQL Server` or `ODBC Driver 13 for SQL Server` (for both 13 and 13.1) or `ODBC Driver 17 for SQL Server`.
   
 ## Supported Operating Systems

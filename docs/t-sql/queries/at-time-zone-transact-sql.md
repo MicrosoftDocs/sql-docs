@@ -1,6 +1,6 @@
 ---
 title: "AT TIME ZONE (Transact-SQL) | Microsoft Docs"
-ms.date: "11/16/2016"
+ms.date: "06/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -119,7 +119,7 @@ Since some information (such as timezone rules) is maintained outside of [!INCLU
 ### A. Add target time zone offset to datetime without offset information  
  Use **AT TIME ZONE** to add offset based on time zone rules when you know that the original **datetime** values are provided in the same time zone:  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -131,21 +131,20 @@ FROM Sales.SalesOrderHeader;
 ### B. Convert values between different time zones  
  The following example converts values between different time zones:  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
 SELECT SalesOrderID, OrderDate,   
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,  
-    OrderDate AT TIME ZONE 'Pacific Standard Time'   
-    AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
+    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
 FROM Sales.SalesOrderHeader;  
 ```  
   
 ### C. Query Temporal Tables using local time zone  
  The following example selects data from a temporal table.  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   

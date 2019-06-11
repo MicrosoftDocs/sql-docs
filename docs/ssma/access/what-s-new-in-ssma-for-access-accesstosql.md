@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-author: "Shamikg"
+author: "HJToland3"
 ms.author: "Shamikg"
 manager: craigg
 ---

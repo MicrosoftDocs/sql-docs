@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 4959a0a9-ae55-4c4e-80a8-21119aaceb92
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # updateAsciiStream Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

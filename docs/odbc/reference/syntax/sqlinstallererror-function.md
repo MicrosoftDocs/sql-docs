@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 RETCODE SQLInstallerError(  
      WORD      iError,  

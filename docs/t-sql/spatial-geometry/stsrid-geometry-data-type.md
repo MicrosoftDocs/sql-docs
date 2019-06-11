@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STSrid (geometry Data Type)"
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STSrid (geometry Data Type)

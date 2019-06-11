@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "OLE DB data sources [SQL Server]"
   - "ad hoc connection information"
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
@@ -407,8 +407,17 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
+```sql
+select *
+from openrowset('MSDASQL'
+				,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
+				,'select * from E:\Tlog\TerritoryData.csv') 
+;
+```
+
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [OBDC Data Sources](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There is 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of sqlservr.exe. 
+> - Azure SQL Database does not support reading from Windows files.
 
 
 ### I. Accessing data from a file stored on Azure Blob storage   

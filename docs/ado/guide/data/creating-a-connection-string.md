@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Creating a Connection String
 A connection string consists of a list of argument/value pairs (that is, parameters), separated by semi-colons. For example:  

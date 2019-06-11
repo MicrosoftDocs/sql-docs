@@ -1,10 +1,9 @@
 ---
 title: Manage SQL Server on Linux with PowerShell Core | Microsoft Docs
-description: This article provides an overview of using PowerShell Core with SQL Server on Linux
+description: This article provides an overview of using PowerShell Core with SQL Server on Linux.
 ms.date: "04/22/2019"
 ms.reviewer: jroth
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.topic: conceptual
 author: "SQLvariant"

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STAsBinary (geometry Data Type)"
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STAsBinary (geometry Data Type)

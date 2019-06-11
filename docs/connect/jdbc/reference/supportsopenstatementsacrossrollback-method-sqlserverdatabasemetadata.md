@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # supportsOpenStatementsAcrossRollback Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -2,7 +2,7 @@
 title: "Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 10/17/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
@@ -112,7 +112,7 @@ Use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

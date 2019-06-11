@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Install Data Quality Services
 

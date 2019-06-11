@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # RDS Code Examples in Visual Basic
 > [!IMPORTANT]

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "ACOS function"
   - "arccosine"
 ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

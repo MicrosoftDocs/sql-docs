@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], IDs"
   - "IDs [SQL Server], symmetric keys"
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # KEY_ID (Transact-SQL)

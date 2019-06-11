@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # recover Method (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

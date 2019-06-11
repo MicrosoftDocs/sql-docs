@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQRT function"
   - "square root values"
 ms.assetid: 26e244e8-e82d-4664-a445-1226230ee1c5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

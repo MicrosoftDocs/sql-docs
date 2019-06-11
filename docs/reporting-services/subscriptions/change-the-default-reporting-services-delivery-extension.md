@@ -2,7 +2,7 @@
 title: "Change the Default Reporting Services Delivery Extension | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
 
 
@@ -110,18 +110,4 @@ ms.author: maggies
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
- [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
-  
-<!-- TODO:
-The above See Also link to the old MSDN at...
-https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83
 
-...is redirected to the following Docs link, for SQL Server 2014...
-
-https://docs.microsoft.com/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
-
-...So if I was not presently resolving conflicts with public repo PR, related to private repo PR 7827,
-the better fix would be to replace the whole MSDN link with the newer Docs link (to which the older MSDN link is redirected).
-Maybe later someone can perform this replacement, and under docs/reporting-services/ there are multiple similar replacement opportunities.
-GeneMi , 2018/10/25
--->

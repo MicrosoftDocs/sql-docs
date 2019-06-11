@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetCursorName(  
      SQLHSTMT      StatementHandle,  
@@ -83,7 +83,7 @@ SQLRETURN SQLSetCursorName(
   
  For another code example, see [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 10  
   

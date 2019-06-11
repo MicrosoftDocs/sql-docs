@@ -3,7 +3,7 @@ title: Disaster recovery for SQL Server | Microsoft Docs
 description: 
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: mikeray
 ms.date: 09/14/2017
 ms.topic: conceptual

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
-manager: craigg
+manager: jroth
 ---
 
 # Assess an enterprise and consolidate assessment reports with DMA

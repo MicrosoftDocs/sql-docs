@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "IDs [SQL Server], schemas"
   - "default schema IDs"
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

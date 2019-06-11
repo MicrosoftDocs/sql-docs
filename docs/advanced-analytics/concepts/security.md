@@ -106,7 +106,7 @@ By default, members of **SQLRUserGroup** have read and execute permissions on fi
 
 To protect sensitive resources on SQL Server, you can optionally define an access control list (ACL) that denies access to **SQLRUserGroup**. Conversely, you could also grant permissions to local data resources that exist on host computer, apart from SQL Server itself. 
 
-By design, **SQLRUserGroup** does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loop back connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+By design, **SQLRUserGroup** does not have a database login or permissions to any data. Under certain circumstances, you might want to create a login to allow loop back connections, particularly when a trusted Windows identity is the calling user. This capability is called [*implied authentication*](#implied-authentication). For more information, see [Add SQLRUserGroup as a database user](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## Identity mapping
 
@@ -122,7 +122,7 @@ During execution, Launchpad creates temporary folders to store session data, del
 
 Trusted connections are workable from R and Python script, but only with additional configuration. In the extensibility architecture, R and Python processes run under worker accounts, inheriting permissions from the parent **SQLRUserGroup**. When a connection string specifies `Trusted_Connection=True`, the identity of the worker account is presented on the connection request, which is unknown by default to SQL Server.
 
-To make trusted connections successful, you must create a database login for the **SQLRUserGroup**. After doing so, any trusted connection from any member of **SQLRUserGroup** has login rights to SQL Server. For step-by-step instructions, see [Add SQLRUserGroup to a database login](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+To make trusted connections successful, you must create a database login for the **SQLRUserGroup**. After doing so, any trusted connection from any member of **SQLRUserGroup** has login rights to SQL Server. For step-by-step instructions, see [Add SQLRUserGroup to a database login](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 Trusted connections are not the most widely used formulation of a connection request. When R or Python script specifies a connection, it can be more common to use a SQL login, or a fully-specified user name and password if the connection is to an ODBC data source.
 
@@ -148,4 +148,4 @@ In the case of [Always Encrypted](../../relational-databases/security/encryption
 
 In this article, you learned the components and interaction model of the security architecture built into the [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Key points covered in this article include the purpose of Launchpad, SQLRUserGroup and worker accounts, process isolation of R and Python, and how user identities are mapped to worker accounts. 
 
-As a next step, review the instructions for [granting permissions](../../advanced-analytics/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](../../advanced-analytics/security/add-sqlrusergroup-to-database.md) to learn when additional configuration is required.
+As a next step, review the instructions for [granting permissions](../../advanced-analytics/security/user-permission.md). For servers that use Windows authentication, you should also review [Add SQLRUserGroup to a database login](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) to learn when additional configuration is required.

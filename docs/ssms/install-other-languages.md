@@ -1,17 +1,18 @@
 ---
 title: "Install non-English language versions of SQL Server Management Studio (SSMS) | Microsoft Docs"
 description: "Install non-English language versions of SQL Server Management Studio (SSMS)"
-ms.custom: ""
-ms.date: "04/25/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
+ms.custom: ""
+ms.date: 04/25/2019
 ---
-# Install non-English language versions of SQL Server Management Studio (SSMS) 
+
+# Install non-English language versions of SQL Server Management Studio (SSMS)
 
 SSMS is available in several languages, but the SSMS installer blocks installation on computers when their system locale doesn't match the SSMS language.
 

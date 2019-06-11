@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
-manager: craigg
+manager: jroth
 ---
 
 # Perform a SQL Server migration assessment with Data Migration Assistant

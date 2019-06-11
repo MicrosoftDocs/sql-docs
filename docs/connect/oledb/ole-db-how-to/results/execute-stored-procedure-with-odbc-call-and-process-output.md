@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "ODBC CALL syntax"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Execute Stored Procedure with ODBC CALL and Process Output
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -23,7 +23,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLPoolConnect(  
                 SQLHDBC              hDbc,  
                 SQLHDBC_INFO_TOKEN   hDbcInfoToken,  

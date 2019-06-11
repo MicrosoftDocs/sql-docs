@@ -13,11 +13,15 @@ f1_keywords:
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
 author: "yanancai"
 ms.author: "yanacai"
-ms.reviewer: "douglasl"
+ms.reviewer: maghan
 manager: craigg
 ---
 
 # Azure Data Lake Analytics task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 You can submit U-SQL jobs to Azure Data Lake Analytics service with the Data Lake Analytics task. This task is a component of the [SQL Server Integration Services (SSIS) feature pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "column testing [SQL Server]"
   - "updated columns"
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # COLUMNS_UPDATED (Transact-SQL)

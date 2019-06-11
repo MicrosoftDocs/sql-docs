@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Handler Property Example (VB)
 > [!IMPORTANT]

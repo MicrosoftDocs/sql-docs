@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Type Property (Key) (ADOX)
 Indicates the type of the key.  

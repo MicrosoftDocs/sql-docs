@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux  
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0  
-ms.custom: "sql-linux"
 ---
 # Walkthrough for the security features of SQL Server on Linux
 

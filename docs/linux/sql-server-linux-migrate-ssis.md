@@ -1,14 +1,13 @@
 ---
 title: Extract, transform, and load data on Linux with SSIS | Microsoft Docs
 description: This article describes SQL Server Integration Services (SSIS) for Linux computers
-author: leolimsft 
+author: lrtoyou1223 
 ms.author: lle 
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Extract, transform, and load data on Linux with SSIS

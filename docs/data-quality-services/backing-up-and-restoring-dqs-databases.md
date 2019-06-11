@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Backing Up and Restoring DQS Databases
 

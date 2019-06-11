@@ -35,7 +35,7 @@ CREATE TABLE AS SELECT (CTAS) is one of the most important T-SQL features availa
 ## Syntax   
 
 ```  
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
       <distribution_option> -- required

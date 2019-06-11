@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Query Editor [Database Engine], Features"
   - "SQL Server Management Studio [SQL Server], Database Engine Query Editor"
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Using Statements with SQL
 

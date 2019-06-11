@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_PARSE function"
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # TRY_PARSE (Transact-SQL)

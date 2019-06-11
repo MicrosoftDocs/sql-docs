@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "annotations [Master Data Services], for transactions"
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

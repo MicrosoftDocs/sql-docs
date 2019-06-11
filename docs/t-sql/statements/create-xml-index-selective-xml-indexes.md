@@ -32,7 +32,7 @@ CREATE XML INDEX index_name
     [WITH ( <index_options> )]  
   
 <table_object> ::=   
-{ [database_name. [schema_name ] . | schema_name. ] table_name }  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <xquery_or_sql_values_path>::=   
 <path_name>   

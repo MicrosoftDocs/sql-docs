@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsRing (geometry Data Type)"
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STIsRing (geometry Data Type)

@@ -2,7 +2,7 @@
 title: "Text-based Query Designer User Interface (Report Builder) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
@@ -100,6 +100,6 @@ uspGetWhereUsedProductID
   
 ## See Also  
  [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
- [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Query Design Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

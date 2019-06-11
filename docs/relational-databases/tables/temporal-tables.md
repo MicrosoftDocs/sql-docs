@@ -77,7 +77,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Period start column: The system records the start time for the row in this column, typically denoted as the **SysStartTime** column.  
   
--   Period end column: The system records the end time for the row in this column, typically denoted at the **SysEndTime** column.  
+-   Period end column: The system records the end time for the row in this column, typically denoted as the **SysEndTime** column.  
   
  The current table contains the current value for each row. The history table contains each previous value for each row, if any, and the start time and end time for the period for which it was valid.  
   

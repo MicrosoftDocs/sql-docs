@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Step 4: Server Returns the Recordset (RDS Tutorial)
 > [!IMPORTANT]

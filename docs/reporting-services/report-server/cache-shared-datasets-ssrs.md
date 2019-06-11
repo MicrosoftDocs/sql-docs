@@ -1,8 +1,8 @@
 ---
 title: "Cache Shared Datasets (SSRS) | Microsoft Docs"
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -47,7 +47,7 @@ ms.author: maggies
   
  While the query results for a specific parameter combination are in the cache, each report that is launched for processing and that includes a reference to the shared dataset with those parameter values will use the cached data.  
   
- You can specify how long to keep data in the cache before it expires. For more information, see [Caching Page, Shared Datasets &#40;Report Manager&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ You can specify how long to keep data in the cache before it expires. For more information, see [Working with shared datasets](../../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## Preloading the Cache  
  You can preload the cache by creating a cache refresh plan. With a refresh plan, you can specify how often to refresh the cache by using an item-specific schedule or a shared schedule. To avoid multiple cache entries for the same item, the schedule that you specify should allow enough time for query processing on the external data source. For example, if the query takes 20 minutes to run, the refresh schedule should be greater than 20 minutes. For more information, see [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -64,7 +64,7 @@ ms.author: maggies
   
 -   You must have ReadPolicy and UpdatePolicy permissions on the shared dataset.  
   
- Cache refresh plans apply to both shared datasets and reports. For more information, see [Cache Refresh Options &#40;Report Manager&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Cache refresh plans apply to both shared datasets and reports. For more information, see [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
 ## Conditions that Cause Cache Expiration  
  The following conditions can cause a shared dataset cache to become not valid.  
@@ -89,7 +89,7 @@ ms.author: maggies
   
  Updates to cache refresh plans for shared datasets do not affect reports that are already being processed. Updating a cache refresh plan affects only future launches of reports that reference the shared dataset.  
   
-## See Also  
- [Manage Shared Datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
+## See also
   
+ [Manage Shared Datasets](../../reporting-services/report-data/manage-shared-datasets.md)  
   

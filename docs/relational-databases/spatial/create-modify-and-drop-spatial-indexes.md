@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "indexes [SQL Server], modifying"
   - "spatial indexes [SQL Server], modifying"
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

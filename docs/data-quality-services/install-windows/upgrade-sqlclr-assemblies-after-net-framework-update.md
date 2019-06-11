@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Upgrade SQLCLR Assemblies After .NET Framework Update
 

@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2019"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ""
@@ -84,7 +84,7 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
+manager: jroth
 ---
 # Install SQL Server from the Command Prompt
 
@@ -207,7 +207,7 @@ Use the following guidelines to develop installation commands that have correct 
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Optional**|Specifies the password for the engine service account.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Optional**|Specifies the startup mode for the PolyBase engine service: Automatic (default) , Disabled,  and Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Optional**|Specifies a port range with at least 6 ports for PolyBase services. Example:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Specifies if the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance will be used as a part of PolyBase Scale-out computational group. Supported values: **True**, **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Optional**|Specifies if the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance will be used as a part of PolyBase Scale-out computational group. Use this option if you are configuring a PolyBase Scale-out computational group including the head node. Supported values: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/PID<br /><br /> **Optional**|Specifies the product key for the edition of SQL Server. If this parameter is not specified, Evaluation is used.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/Q or /QUIET<br /><br /> **Optional**|Specifies that Setup runs in a quiet mode without any user interface. This is used for unattended installations. The /Q parameter overrides the input of the /QS parameter.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup Control|/QS or /QUIETSIMPLE <br /><br /> **Optional**|Specifies that Setup runs and shows progress through the UI, but does not accept any input or show any error messages.|  
@@ -255,6 +255,7 @@ Use the following guidelines to develop installation commands that have correct 
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **Optional**|Specifies the directory for the data files for user databases.<br /><br /> Default value: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **Optional**|Enables instant file initialization for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. For security and performance considerations, see [Database Instant File Initialization](../../relational-databases/databases/database-instant-file-initialization.md).<br /><br /> Default value: "False"<br /><br /> Optional value: "True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **Optional**|Specifies the directory for the log files for user databases.<br /><br /> Default value: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **Optional** If omitted on unattended (silent) installs, MAXDOP will align with the [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). |Specifies the max degree of parallelism, which determines how many processors a single statement can utilize during execution. Only available starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. <br /><br /> Default value will align with the [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **Optional**|Specifies the access level for the FILESTREAM feature. Supported values:<br /><br /> 0 =Disable FILESTREAM support for this instance. (Default value)<br /><br /> 1=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access.<br /><br /> 2=Enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] and file I/O streaming access. (Not valid for cluster scenarios)<br /><br /> 3=Allow remote clients to have streaming access to FILESTREAM data.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **Optional**<br /><br /> **Required when FILESTREAMLEVEL is greater than 1.**|Specifies the name of the windows share in which the FILESTREAM data will be stored.|  
 |SQL Server Full Text|/FTSVCACCOUNT<br /><br /> **Optional**|Specifies the account for Full-Text filter launcher service.<br /><br /> This parameter is ignored in [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] or higher. ServiceSID is used to help secure the communication between SQL Server and Full-text Filter Daemon. If the values are not provided, the Full-text Filter Launcher Service is disabled. You have to use SQL Server Control Manager to change the service account and enable full-text functionality.<br /><br /> Default value: Local Service Account|  
@@ -269,7 +270,7 @@ Use the following guidelines to develop installation commands that have correct 
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for the startup account for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Python/Machine Learning Services (In-Database)|MPYCACHEDIRECTORY|Reserved for future use. Use %TEMP% to store Python .CAB files for installation on a computer that does not have an internet connection. |  
-|R/Machine Learning Services (In-Database)|MRCACHEDIRECTORY|Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server 2017 Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|R/Machine Learning Services (In-Database)|MRCACHEDIRECTORY|Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server 2017 Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
   
 ###### Sample Syntax:  
  To install a new, stand-alone instance with the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Replication, and Full-Text Search components and enable instant file initialization for [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 

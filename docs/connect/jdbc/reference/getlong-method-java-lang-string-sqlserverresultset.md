@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getLong Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

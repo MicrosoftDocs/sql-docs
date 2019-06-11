@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AsTextZM (geometry Data Type)"
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # AsTextZM (geometry Data Type)

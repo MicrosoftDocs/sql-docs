@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setAutoCommit Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

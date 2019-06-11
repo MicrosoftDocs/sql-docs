@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "applying business rules [Master Data Services]"
   - "business rules [Master Data Services], applying to select members"
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

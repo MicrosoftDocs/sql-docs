@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "BCPSetBulkMode function"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

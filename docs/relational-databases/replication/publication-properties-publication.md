@@ -158,8 +158,8 @@ To maximize application performance and reduce the amount of remote storage requ
  If an agent job has been created, click **Security settings** to access a dialog box that allows you to change the security settings for an agent. If an agent job has not been created, click **Create Agent** to create one and specify security settings.  
 
 ## Data Partitions
-Data Partitions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Data Partitions  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   The **Data Partitions** page of the **Publication Properties** dialog box allows you to define data partitions for merge publications that use parameterized filtering. After defining partitions, you can then generate snapshots for these partitions, providing different initial data sets for different Subscribers based on the connection properties (login and/or computer name) of the Subscribers. You can also select to allow Subscribers to request snapshot delivery and generation if they do not have a snapshot available for their partition the first time they synchronize. For more information, see [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### Options  
@@ -182,8 +182,8 @@ Data Partitions
  Select this option if you want to allow Subscribers to request snapshot generation and application. Subscribers might require this option if they do not have a snapshot available for their partition the first time they synchronize.  
 
 ## Snapshot
-Snapshot
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Snapshot  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   The **Snapshot** page of the **Publication Properties** dialog box allows you to set the snapshot format, snapshot folder location, and scripts to run before and after the application of the snapshot. The snapshot folder must be designated as a share and have sufficient permissions for the agents that read and write files to the folder. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 > [!NOTE]  

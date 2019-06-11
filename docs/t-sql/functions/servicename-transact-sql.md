@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "names [SQL Server], registry keys"
   - "registry keys [SQL Server]"
 ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

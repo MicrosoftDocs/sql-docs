@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # CancelUpdate Method Example (VBScript)
 > [!IMPORTANT]

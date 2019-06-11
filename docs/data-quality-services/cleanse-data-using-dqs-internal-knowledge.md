@@ -13,9 +13,9 @@ f1_keywords:
   - "sql13.dqs.dqproject.correction.f1"
   - "sql13.dqs.dqproject.export.f1"
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Cleanse Data Using DQS (Internal) Knowledge
 

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FORMAT function"
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
@@ -209,6 +209,27 @@ SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
+
+Format returns a formatted current time with AM or PM specified
+
+```sql
+SELECT FORMAT(SYSDATETIME(), N'hh:mm tt'); -- returns 03:46 PM
+SELECT FORMAT(SYSDATETIME(), N'hh:mm t'); -- returns 03:46 P
+```
+
+Format returns the specified time, displaying AM
+
+```sql
+select FORMAT(CAST('2018-01-01 01:00' AS datetime2), N'hh:mm tt') -- returns 01:00 AM
+select FORMAT(CAST('2018-01-01 01:00' AS datetime2), N'hh:mm t')  -- returns 01:00 A
+```
+
+Format returns the specified time, displaying PM
+
+```sql
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm tt') -- returns 02:00 PM
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm t') -- returns 02:00 P
+```
   
 ## See Also
 

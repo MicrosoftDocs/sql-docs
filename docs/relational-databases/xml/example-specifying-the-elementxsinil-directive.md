@@ -20,7 +20,7 @@ manager: craigg
   
  The following query constructs XML that includes an employee address. For `AddressLine2` and `City` columns, the column names specify the `ELEMENTXSINIL` directive. This generates the element for NULL values in the `AddressLine2` and `City` columns in the rowset.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT 1    as Tag,  
@@ -54,24 +54,19 @@ FOR XML EXPLICIT;
 ```  
   
  This is the partial result:  
-  
- `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
-  
- `EmpID="1" AddressID="249">`  
-  
- `<Address AddressID="249">`  
-  
- `<AddressLine1>4350 Minute Dr.</AddressLine1>`  
-  
- `<AddressLine2 xsi:nil="true" />`  
-  
- `<City>Minneapolis</City>`  
-  
- `</Address>`  
-  
- `</Employee>`  
-  
- `...`  
+
+```xml
+<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          EmpID="1"
+          AddressID="249">
+  <Address AddressID="249">
+    <AddressLine1>4350 Minute Dr.</AddressLine1>
+    <AddressLine2 xsi:nil="true" />
+    <City>Minneapolis</City>
+  </Address>
+</Employee>
+...
+```
   
 ## See Also  
  [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  

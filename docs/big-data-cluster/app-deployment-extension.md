@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: jroth 
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql

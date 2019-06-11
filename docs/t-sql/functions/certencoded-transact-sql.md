@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CERTENCODED"
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CERTENCODED (Transact-SQL)

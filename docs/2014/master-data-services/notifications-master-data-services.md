@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "e-mail [Master Data Services]"
   - "e-mail [Master Data Services], about e-mail notifications"
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

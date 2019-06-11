@@ -46,7 +46,7 @@ sp_OADestroy objecttoken
  If **sp_OADestroy** is not called, the created OLE object is automatically destroyed at the end of the batch.  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
  The following example destroys the previously created **SQLServer** object.  

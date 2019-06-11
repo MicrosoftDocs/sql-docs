@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Getting the Driver Version
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

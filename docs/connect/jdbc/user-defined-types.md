@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 
 # User Defined Types

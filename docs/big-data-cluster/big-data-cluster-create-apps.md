@@ -5,8 +5,8 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: jroth
-manager: craigg
-ms.date: 04/23/2019
+manager: jroth
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -40,7 +40,7 @@ The following types of apps are supported:
 
 ## Capabilities
 
-In SQL Server 2019 (preview) CTP 2.5 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
+In SQL Server 2019 (preview) CTP 3.0 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
 
 |Command |Description |
 |:---|:---|
@@ -63,10 +63,10 @@ The following sections describe these commands in more detail.
 
 ## Sign in
 
-Before you deploy or interact with applications, first sign in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `mgmtproxy-svc-external` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before you deploy or interact with applications, first sign in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `controller-svc-external` service (for example: `https://ip-address:30080`) along with the user name and password to the cluster.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
+mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## AKS
@@ -75,7 +75,7 @@ If you are using AKS, you need to run the following command to get the IP addres
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 ```
 
 ## Kubeadm or Minikube

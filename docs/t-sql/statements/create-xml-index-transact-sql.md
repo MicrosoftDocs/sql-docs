@@ -52,10 +52,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_name  
-}  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }
   
 <xml_index_option> ::=  
 {   

@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
 author: rothja 
 ms.author: jroth 
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -81,7 +81,7 @@ An Azure resource group is a logical group in which Azure resources are deployed
     --generate-ssh-keys \
     --node-vm-size Standard_L8s \
     --node-count 1 \
-    --kubernetes-version 1.12.6
+    --kubernetes-version 1.12.8
     ```
 
    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes.

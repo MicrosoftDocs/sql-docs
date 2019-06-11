@@ -49,8 +49,8 @@ helpviewer_keywords:
   - "functions, ODBC WEEK"
   - "HOUR ODBC function"
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

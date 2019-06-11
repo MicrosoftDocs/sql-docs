@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: This article shows how to restore a database into the master instance of a SQL Server 2019 big data cluster (preview).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -32,7 +32,7 @@ This article shows how to restore the AdventureWorks database, but you can use a
 Copy the backup file to the SQL Server container in the master instance pod of the Kubernetes cluster.
 
 ```bash
-kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your cluster>
+kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
 Example:
@@ -44,7 +44,7 @@ kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c ms
 Then, verify that the backup file was copied to the pod container.
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your cluster> -c mssql-server -- bin/bash
+kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
 cd /var/
 ls /tmp
 exit

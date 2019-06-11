@@ -6374,6 +6374,15 @@
           href: ../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
         - name: Check the Status of E-Mail Messages Sent With Database Mail
           href: ../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
+      - name: Troubleshooting
+        href: ../relational-databases/database-mail/database-mail-general-troubleshooting.md
+        items:
+        - name: Sending test email
+          href: ../relational-databases/database-mail/database-mail-sending-test-email.md
+        - name: Common errors
+          href: ../relational-databases/database-mail/database-mail-common-errors.md
+        - name: Mail queued, not delivered 
+          href: ../relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
     - name: Data compression
       href: ../relational-databases/data-compression/data-compression.md
       items:
@@ -8023,6 +8032,8 @@
       items:
       - name: SQL injection
         href: ../relational-databases/security/sql-injection.md
+      - name: Feature restrictions
+        href: ../relational-databases/security/feature-restrictions.md
       - name: TRUSTWORTHY database property
         href: ../relational-databases/security/trustworthy-database-property.md
       - name: Password policy
@@ -8178,16 +8189,20 @@
         href: ../azure-data-studio/sql-server-2019-extension.md
       - name: SQL Server Agent (preview)
         href: ../azure-data-studio/sql-server-agent-extension.md
+      - name: SQL Server Central Management Servers extension (preview)
+        href: ../azure-data-studio/sql-server-cms-extension.md        
       - name: SQL Server dacpac extension (preview)
         href: ../azure-data-studio/sql-server-dacpac-extension.md
       - name: SQL Server Import (preview)
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (preview)
         href: ../azure-data-studio/sql-server-profiler-extension.md
+      - name: Schema Compare extension (preview)
+        href: ../azure-data-studio/schema-compare-extension.md        
+      - name: PowerShell extension
+        href: ../azure-data-studio/powershell-extension.md        
       - name: SandDance extension (preview)
         href: ../azure-data-studio/sanddance-extension.md
-      - name: PowerShell extension
-        href: ../azure-data-studio/powershell-extension.md
     - name: Extension Authoring
       items:
       - name: Extensibility overview
@@ -9356,8 +9371,6 @@
         href: ../powershell/sql-server-powershell.md
       - name: SQL Server Management Objects (SMO)
         href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-      - name: Transact-SQL Reference (Database Engine)
-        href: ../t-sql/language-reference.md
       - name: SSMS environment
         items:
         - name: The SSMS Environment
@@ -12044,6 +12057,8 @@
         href: ../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
       - name: sys.server_role_members
         href: ../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
+      - name: sys.sql_feature_restrictions
+        href: ../relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
       - name: sys.sql_logins
         href: ../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
       - name: sys.symmetric_keys
@@ -14295,8 +14310,6 @@
         href: ../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md
       - name: sp_drop_trusted_assembly
         href: ../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md
-      - name: sp_dropalias
-        href: ../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md
       - name: sp_dropapprole
         href: ../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md
       - name: sp_droplogin
@@ -14993,7 +15006,7 @@
       href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
     - name: systranschemas (T-SQL)
       href: ../relational-databases/system-views/systranschemas-transact-sql.md
-  - name: Transact-SQL (T-SQL)
+  - name: Transact-SQL (T-SQL) Reference
     displayName: tsql
     href: ../t-sql/language-reference.md
     items:
@@ -15897,8 +15910,6 @@
           href: ../t-sql/functions/col-name-transact-sql.md
         - name: COLUMNPROPERTY
           href: ../t-sql/functions/columnproperty-transact-sql.md
-        - name: DATABASE_PRINCIPAL_ID
-          href: ../t-sql/functions/database-principal-id-transact-sql.md
         - name: DATABASEPROPERTYEX
           href: ../t-sql/functions/databasepropertyex-transact-sql.md
         - name: DB_ID
@@ -16002,6 +16013,8 @@
           href: ../t-sql/functions/certprivatekey-transact-sql.md
         - name: CURRENT_USER
           href: ../t-sql/functions/current-user-transact-sql.md
+        - name: DATABASE_PRINCIPAL_ID
+          href: ../t-sql/functions/database-principal-id-transact-sql.md
         - name: HAS_DBACCESS
           href: ../t-sql/functions/has-dbaccess-transact-sql.md
         - name: HAS_PERMS_BY_NAME

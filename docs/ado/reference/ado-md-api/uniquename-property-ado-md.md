@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # UniqueName Property (ADO MD)
 Indicates an unambiguous name for the current object.  

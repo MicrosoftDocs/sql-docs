@@ -1,5 +1,5 @@
 ---
-Title: "Tutorial: Script objects in SQL Server Management Studio"
+title: "Tutorial: Script objects in SQL Server Management Studio"
 description: "A tutorial for scripting out objects in SSMS"
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
 author: MashaMSFT
@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], tutorials"
   - "scripts [SQL Server], SQL Server Management Studio"
 ---
-
 # Tutorial: Script objects in SQL Server Management Studio
+
 This tutorial teaches you to generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS). In this tutorial, you find examples of how to script the following objects:
 
 > [!div class="checklist"]

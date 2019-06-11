@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "SPNs [SQL Server]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Service Principal Name (SPN) Support in Client Connections
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

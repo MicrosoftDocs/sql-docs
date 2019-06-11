@@ -16,7 +16,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, updating applications"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Updating an Application to OLE DB Driver for SQL Server from MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

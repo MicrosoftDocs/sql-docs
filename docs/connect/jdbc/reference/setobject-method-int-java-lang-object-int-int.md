@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: d190ee20-d669-4c6f-a081-d5cfec2f72ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setObject Method (int, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

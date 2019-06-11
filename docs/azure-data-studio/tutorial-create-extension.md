@@ -10,7 +10,7 @@ ms.reviewer: "alayu; sstein"
 ms.topic: "tutorial"
 author: "kevcunnane"
 ms.author: "kcunnane"
-manager: craigg
+manager: jroth
 ---
 
 # Tutorial: Create an Azure Data Studio extension

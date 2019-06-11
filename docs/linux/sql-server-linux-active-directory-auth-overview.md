@@ -8,7 +8,6 @@ ms.author: jroth
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"

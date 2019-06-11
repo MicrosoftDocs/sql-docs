@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: This article describes the latest updates and known issues for SQL Server 2019 big data clusters (preview). 
 author: rothja 
 ms.author: jroth 
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -492,7 +492,7 @@ The following sections describe the known issues and limitations with this relea
 The cluster administration portal does not display the endpoint for the SQL Server master instance. To find the IP address and port for the master instance, use the following **kubectl** command:
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### External tables

@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # RDS Methods
 > [!IMPORTANT]

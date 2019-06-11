@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: "sql-linux"
 ---
 # Use Visual Studio to create databases for SQL Server on Linux
 

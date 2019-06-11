@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: f45fcf45-b9e7-4d14-a90a-ebc542ac7755
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getMaxStatementLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

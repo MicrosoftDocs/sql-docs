@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 
 # Retrieving Result Set Data Sample

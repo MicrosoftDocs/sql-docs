@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # ADO Events
 

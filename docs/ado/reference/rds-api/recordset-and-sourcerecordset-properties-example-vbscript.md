@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Recordset and SourceRecordset Properties Example (VBScript)
 > [!IMPORTANT]

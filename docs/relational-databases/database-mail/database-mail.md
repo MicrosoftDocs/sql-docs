@@ -110,7 +110,7 @@ manager: craigg
 -   A scheduled task, such as a database backup or replication event, succeeds or fails. For example, you can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Mail to notify operators if an error occurs during processing at the end of a month.  
   
   
-##  <a name="RelatedContent"></a> Database Mail Component Topics  
+##  <a name="RelatedContent"></a> See also  
   
 -   [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

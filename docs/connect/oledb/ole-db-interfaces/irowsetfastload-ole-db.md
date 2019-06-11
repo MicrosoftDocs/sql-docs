@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "IRowsetFastLoad interface"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

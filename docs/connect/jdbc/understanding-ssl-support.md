@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Understanding SSL Support
 

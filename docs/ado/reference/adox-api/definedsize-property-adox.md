@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # DefinedSize Property (ADOX)
 Indicates the stated maximum size of the column.  

@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], features"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # OLE DB Driver for SQL Server Features
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

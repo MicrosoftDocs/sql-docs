@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # State Property (ADO MD)
 Indicates the current state of the cellset.  

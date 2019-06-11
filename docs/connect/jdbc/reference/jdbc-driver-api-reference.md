@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # JDBC Driver API Reference
 

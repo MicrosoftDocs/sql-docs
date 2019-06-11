@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Understanding the JDBC Driver Data Types
 

@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Configuring RDS
 > [!IMPORTANT]

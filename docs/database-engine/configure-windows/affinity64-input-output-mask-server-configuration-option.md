@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: d304eae7-5116-40ee-a0fa-0a3c0bc20c01
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 ---
 # affinity64 Input-Output mask Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

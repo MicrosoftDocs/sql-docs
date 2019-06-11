@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Group Object (ADOX)
 Represents a group account that has access permissions within a secured database.  

@@ -96,9 +96,11 @@ SELECT EmployeeID, Title
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
-FETCH NEXT FROM Employee_Cursor;  
+FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
+      Print '   ' + CAST(@EmployeeID as varchar(10)) +'      '+  
+        cast(@Title as varchar(20)) 
       FETCH NEXT FROM Employee_Cursor;  
    END;  
 CLOSE Employee_Cursor;  

@@ -15,7 +15,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Turn Reporting Services Features On or Off
-  You can turn off report server features that you do not use as part of a lockdown strategy for reducing the attack surface of a production report server. In most cases, you will want to run [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features concurrently to use all of the functionality provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. However, depending on your deployment model, you can disable the features that you do not require. For example, you can enable only the background processing if all report processing is configured as scheduled operations. Similarly, you can run just the Report Server Web service if you only want interactive, on-demand reporting.  
+  You can turn off report server features that you do not use as part of a lockdown strategy for reducing the attack surface of a production report server. In most cases, you will want to run [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features concurrently to use all of the functionality provided in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. However, depending on your deployment model, you can disable the features that you do not require. For example, you can enable only the background processing if all report processing is configured as scheduled operations. Similarly, you can run just the Report Server web service if you only want interactive, on-demand reporting.  
   
  The procedures in this article show you how to turn off native mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features. Features can be configured in different ways, such as by editing the `RsReportServer.config` file directly or by using the **Surface Area Configuration for Reporting Services** facet of Policy-Based Management in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use the links to locate the procedure or procedures that explain how to turn a feature on or off:  
   
@@ -33,13 +33,13 @@ ms.author: maggies
   
 1.  Open the `RsReportServer.config` file in a text editor. For more information, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-2.  To turn on the Report Server Web service, set **IsWebServiceEnabled** to **true**:  
+2.  To turn on the Report Server web service, set **IsWebServiceEnabled** to **true**:  
   
     ```  
     <IsWebServiceEnabled>true</IsWebServiceEnabled>  
     ```  
   
-3.  To turn off the Report Server Web service, set **IsWebServiceEnabled** to **false**:  
+3.  To turn off the Report Server web service, set **IsWebServiceEnabled** to **false**:  
   
     ```  
     <IsWebServiceEnabled>false</IsWebServiceEnabled>  
@@ -67,7 +67,7 @@ ms.author: maggies
   
 #### To turn on or off scheduled events and delivery by editing configuration  
   
-1.  Open the RsReportServer.config file in a text editor. For more information, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+1.  Open the RsReportServer.config file in a text editor. For more information, see [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 2.  To turn on scheduled report processing and delivery, set **IsSchedulingService**, **IsNotificationService**, and **IsEventService** to **true**:  
   
@@ -96,17 +96,17 @@ As of SQL Server 2016 Reporting Services Cumulative Update 2, the web portal wil
   
 ##  <a name="WinIntSec"></a> Windows Integrated Security  
   
-### To turn on or off Windows Integrated security by using SQL Server Management Studio  
+### To turn on or off Windows integrated security by using SQL Server Management Studio  
   
 1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instance that you want to configure.  
   
 2.  In Object Explorer, right-click the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] node, and click **Properties**.  
   
-3.  In the **Server Properties** dialog box, under **Select a page**, click **Security**.  
+3.  In the **Server Properties** dialog box, under **Select a page**, select **Security**.  
   
-    -   To turn on Windows Integrated security, select the **Enable Windows Integrated security for report data sources** option.  
+    -   To turn on Windows integrated security, select the **Enable Windows integrated security for report data sources** option.  
   
-    -   To turn off Windows integrated security, unselect the **Enable Windows Integrated security for report data sources** option.  
+    -   To turn off Windows integrated security, unselect the **Enable Windows integrated security for report data sources** option.  
   
 4.  Select **OK**.  
   

@@ -52,6 +52,6 @@ ms.author: maggies
 ## See also  
  [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Create, Modify, and Delete Snapshots in Report History](create-modify-and-delete-snapshots-in-report-history.md)
+ [Create, Modify, and Delete Snapshots in Report History](create-modify-and-delete-snapshots-in-report-history.md)   
  [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

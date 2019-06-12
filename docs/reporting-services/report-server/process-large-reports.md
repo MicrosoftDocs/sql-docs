@@ -35,7 +35,7 @@ ms.author: maggies
 -   Design the report to support pagination. The report server sends a report one page at a time. If the report includes pagination, you can control how much data is streamed to the browser. For more information, see  [Preload the Cache (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
   
 -   Configure the report to run as a scheduled report snapshot to prevent it from being run on demand. Do not set a time-out value for report execution. Run the report during off-peak hours.  
-  `
+  
 -   Configure the report to use a shared data source if you want to control whether the report is processed. One advantage to using a shared data source is that you can disable it. Disabling the data source prevents report processing.  
   
 -   Disable report history if you want to conserve disk space. To disable report history, clear all the check boxes on the History properties page.  

@@ -81,7 +81,7 @@ The following issue has been fixed:
 | Text size is not scaling if pageHeight is less than 0.5 inches. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
-| Users added to SCOM Reporting Role have access blocked to SSRS web portal. | &nbsp; |
+| Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |
 | Thai character is not exported correctly into the PDF. | &nbsp; |
 | Browser Role Behavior Change. | &nbsp; |
 | rc:Toolbar=false does not work in Express edition. | &nbsp; |

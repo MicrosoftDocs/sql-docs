@@ -918,7 +918,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/reporting-services/troubleshooting/troubleshoot-reporting-services.md.md",
+            "source_path": "docs/reporting-services/troubleshooting/troubleshoot-reporting-services.md",
             "redirect_url": "/sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services",
             "redirect_document_id": true
         },

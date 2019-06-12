@@ -31,9 +31,6 @@ ms.date: 06/12/2019
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs hub page!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
-
 SQL Server Management Studio (SSMS) is an integrated environment for managing any SQL infrastructure, from SQL Server to Azure SQL Database. SSMS provides tools to configure, monitor, and administer instances of SQL Server and databases. Use SSMS to deploy, monitor, and upgrade the data-tier components used by your applications, as well as build queries and scripts.
 
 Use SSMS to query, design, and manage your databases and data warehouses, wherever they are - on your local computer, or in the cloud.

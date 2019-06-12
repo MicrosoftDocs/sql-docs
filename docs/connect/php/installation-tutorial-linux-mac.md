@@ -88,12 +88,6 @@ yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ### Step 2. Install prerequisites
 Install the ODBC driver for Red Hat 7 by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-Compiling the PHP drivers with PECL with PHP 7.2 or 7.3 requires a more recent GCC than the default:
-```
-sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
-sudo yum install devtoolset-7
-scl enable devtoolset-7 bash
-```
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
 sudo pecl install sqlsrv
@@ -103,16 +97,7 @@ echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini file
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
 exit
 ```
-An issue in PECL may prevent correct installation of the latest version of the drivers even if you have upgraded GCC. To install, download the packages and compile manually (similar steps for pdo_sqlsrv):
-```
-pecl download sqlsrv
-tar xvzf sqlsrv-5.6.1.tgz
-cd sqlsrv-5.6.1/
-phpize
-./configure --with-php-config=/usr/bin/php-config
-make
-sudo make install
-```
+
 You can alternatively download the prebuilt binaries from the [Github project page](https://github.com/Microsoft/msphpsql/releases), or install from the Remi repo:
 ```
 sudo yum install php-sqlsrv

@@ -117,6 +117,10 @@
     href: ../reporting-services/browser-support-for-reporting-services-and-power-view.md
   - name: Plan for report design and report deployment
     href: ../reporting-services/plan-for-report-design-and-report-deployment-reporting-services.md
+  - name: Planning a Report
+    href: ../reporting-services/report-design/planning-a-report-report-builder.md
+  - name: Report Design Tips
+    href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
   - name: Reporting Services features in editions of SQL Server
     href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
 - name: Install Reporting Services
@@ -424,22 +428,31 @@
     href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Pin to Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
-- name: Report Builder in SQL Server Overview
-  href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
-- name: Start Report Builder
-  href: ../reporting-services/report-builder/start-report-builder.md
+- name: Report Builder in Reporting Services (SSRS)
   items:
-  - name: Set default options for Report Builder
-    href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
-- name: Report Design View
-  href: ../reporting-services/report-builder/report-design-view-report-builder.md
-  items:
-  - name: Previewing Reports in Report Builder
-    href: ../reporting-services/report-builder/previewing-reports-in-report-builder.md
-- name: Shared Dataset Design View
-  href: ../reporting-services/report-builder/shared-dataset-design-view-report-builder.md
-- name: Keyboard Shortcuts
-  href: ../reporting-services/report-builder/keyboard-shortcuts-report-builder.md
+  - name: Report Builder in SQL Server Overview
+    href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
+  - name: Start Report Builder
+    href: ../reporting-services/report-builder/start-report-builder.md
+    items:
+    - name: Set default options for Report Builder
+      href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+  - name: Report Design View
+    href: ../reporting-services/report-builder/report-design-view-report-builder.md
+    items:
+    - name: Previewing Reports in Report Builder
+      href: ../reporting-services/report-builder/previewing-reports-in-report-builder.md
+  - name: Shared Dataset Design View
+    href: ../reporting-services/report-builder/shared-dataset-design-view-report-builder.md
+  - name: Keyboard Shortcuts
+    href: ../reporting-services/report-builder/keyboard-shortcuts-report-builder.md
+  - name: Saving Reports
+    href: ../reporting-services/report-builder/saving-reports-report-builder.md
+    items:
+    - name: Save Reports to a Report Server
+      href: ../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md
+    - name: Save a Report to a SharePoint Library
+      href: ../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md
 - name: Finding, Viewing, and Managing Reports
   href: ../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md
   items:
@@ -449,8 +462,524 @@
     href: ../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
   - name: Convert CRI Dialog Box
     href: ../reporting-services/report-builder/convert-cri-dialog-box-report-builder.md
-- name: Hide an Item (Report Builder and SSRS)
-  href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
+- name: Report design
+  items:
+  - name: Hide an Item (Report Builder and SSRS)
+    href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
+  - name: Reports, Report Parts, and Report Definitions
+    href: ../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
+  - name: Data Regions and Maps
+    href: ../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md
+  - name: Tables, Matrices, and Lists
+    href: ../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md
+    items:
+    - name: Tables
+      href: ../reporting-services/report-design/tables-report-builder-and-ssrs.md
+    - name: Create a Matrix
+      href: ../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md
+    - name: Create Invoices and Forms with Lists
+      href: ../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
+    - name: Tablix Data Region
+      href: ../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md
+      items:
+      - name: Tablix Data Region Areas
+        href: ../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md
+      - name: Tablix Data Region Cells, Rows, and Columns
+        href: ../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
+    - name: Preparing Data for Display in a Tablix Data Region
+      href: ../reporting-services/report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Adding Data to a Tablix Data Region
+      href: ../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Exploring the Flexibility of a Tablix Data Region
+      href: ../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Controlling the Tablix Data Region Display on a Report Page
+      href: ../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md
+    - name: Controlling Row and Column Headings
+      href: ../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md
+    - name: Understanding Groups
+      href: ../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md
+    - name: Creating Recursive Hierarchy Groups
+      href: ../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
+    - name: Add a Details Group
+      href: ../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md
+    - name: Add a Total to a Group or Tablix Data Region
+      href: ../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
+    - name: Change an Item Within a Cell
+      href: ../reporting-services/report-design/change-an-item-within-a-cell-report-builder-and-ssrs.md
+    - name: Change Row Height or Column Width
+      href: ../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md
+    - name: Insert or Delete a Column
+      href: ../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md
+    - name: Insert or Delete a Row
+      href: ../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md
+    - name: Merge Cells in a Data Region
+      href: ../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md
+    - name: Create a Recursive Hierarchy Group
+      href: ../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
+    - name: Add or Delete a Group in a Data Region
+      href: ../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
+    - name: Display Headers and Footers with a Group
+      href: ../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
+    - name: Create a Stepped Report
+      href: ../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md
+    - name: Add, Move, or Delete a Table, Matrix, or List
+      href: ../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
+  - name: Report Parts
+    items:
+    - name: Report Parts Introduction
+      href: ../reporting-services/report-design/report-parts-report-builder-and-ssrs.md
+    - name: Publish and Republish Report Parts (Report Builder and SSRS)
+      href: ../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md
+    - name: Browse for Report Parts and Set a Default Folder (Report Builder and SSRS)
+      href: ../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
+    - name: Report Parts in Report Designer
+      href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
+    - name: Managing Report Parts
+      href: ../reporting-services/report-design/managing-report-parts.md
+  - name: Charts
+    href: ../reporting-services/report-design/charts-report-builder-and-ssrs.md
+    items:
+    - name: Add a Chart to a Report (Report Builder and SSRS)
+      href: ../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md
+    - name: Chart Types (Report Builder and SSRS)
+      href: ../reporting-services/report-design/chart-types-report-builder-and-ssrs.md
+      items:
+      - name: Change a Chart Type (Report Builder and SSRS)
+        href: ../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md
+      - name: Area Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/area-charts-report-builder-and-ssrs.md
+      - name: Bar Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md
+      - name: Column Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/column-charts-report-builder-and-ssrs.md
+      - name: Line Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/line-charts-report-builder-and-ssrs.md
+      - name: Pie Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md
+      - name: Polar Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md
+      - name: Range Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/range-charts-report-builder-and-ssrs.md
+      - name: Scatter Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md
+      - name: Shape Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md
+      - name: Stock Charts (Report Builder and SSRS)
+        href: ../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md
+      - name: Tree Map and Sunburst Charts in Reporting Services
+        href: ../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md
+    - name: Formatting a Chart (Report Builder and SSRS)
+      href: ../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md
+      items:
+      - name: Formatting Series Colors on a Chart (Report Builder and SSRS)
+        href: ../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
+        items:
+        - name: Specify Consistent Colors across Multiple Shape Charts (Report Builder and SSRS)
+          href: ../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
+        - name: Define Colors on a Chart Using a Palette (Report Builder and SSRS)
+          href: ../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
+        - name: Highlight Chart Data by Adding Strip Lines (Report Builder and SSRS)
+          href: ../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
+      - name: Formatting Axis Labels on a Chart (Report Builder and SSRS)
+        href: ../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
+        items:
+        - name: Format Axis Labels as Dates or Currencies (Report Builder and SSRS)
+          href: ../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
+        - name: Position Labels in a Chart (Report Builder and SSRS)
+          href: ../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md
+        - name: Specify an Axis Interval (Report Builder and SSRS)
+          href: ../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md
+        - name: Add or Remove Margins from a Chart (Report Builder and SSRS)
+          href: ../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
+        - name: Specify a Logarithmic Scale (Report Builder and SSRS)
+          href: ../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md
+      - name: Chart Legend - Formatting
+        href: ../reporting-services/report-design/chart-legend-formatting-report-builder.md
+      - name: Chart Legend - Hide Items
+        href: ../reporting-services/report-design/chart-legend-hide-items-report-builder.md
+      - name: Chart Legend - Change Item Text
+        href: ../reporting-services/report-design/chart-legend-change-item-text-report-builder.md
+      - name: Formatting Data Points on a Chart (Report Builder and SSRS)
+        href: ../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md
+        items:
+        - name: Show ToolTips on a Series (Report Builder and SSRS)
+          href: ../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md
+        - name: Display Data Point Labels Outside a Pie Chart (Report Builder and SSRS)
+          href: ../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
+        - name: Display Percentage Values on a Pie Chart (Report Builder and SSRS)
+          href: ../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
+      - name: Chart Effects - 3D, Bevel, and Other
+        href: ../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md
+      - name: Chart Effects - Add 3D Effects
+        href: ../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md
+      - name: Chart Effects - Add Bevel, Emboss, or Texture
+        href: ../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md
+      - name: Add a Border Frame to a Chart (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
+      - name: Start Pie Chart Values at the Top of the Pie (Report Builder and SSRS)
+        href: ../reporting-services/report-design/start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
+    - name: Empty and Null Data Points in Charts (Report Builder and SSRS)
+      href: ../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
+      items:
+      - name: Add Empty Points to a Chart (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md
+    - name: Displaying a Series with Multiple Data Ranges on a Chart (Report Builder and SSRS)
+      href: ../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md
+      items:
+      - name: Add Scale Breaks to a Chart (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
+    - name: Multiple Series on a Chart (Report Builder and SSRS)
+      href: ../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md
+      items:
+      - name: Specify a Chart Area for a Series (Report Builder and SSRS)
+        href: ../reporting-services/report-design/specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
+      - name: Plot Data on a Secondary Axis (Report Builder and SSRS)
+        href: ../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
+    - name: Linking Multiple Data Regions to the Same Dataset (Report Builder and SSRS)
+      href: ../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
+      items:
+      - name: Display the Same Data on a Matrix and a Chart
+        href: ../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
+    - name: Add or Delete a Group in a Chart (Report Builder and SSRS)
+      href: ../reporting-services/report-design/add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
+    - name: Add a Moving Average to a Chart (Report Builder and SSRS)
+      href: ../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
+    - name: Collect Small Slices on a Pie Chart (Report Builder and SSRS)
+      href: ../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
+    - name: Troubleshoot Charts (Report Builder and SSRS)
+      href: ../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md
+  - name: Sparklines and Data Bars
+    href: ../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md
+    items:
+    - name: Add Sparklines and Data Bars (Report Builder and SSRS)
+      href: ../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md
+    - name: Align the Data in a Chart in a Table or Matrix (Report Builder and SSRS)
+      href: ../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
+  - name: Gauges
+    href: ../reporting-services/report-design/gauges-report-builder-and-ssrs.md
+    items:
+    - name: Formatting Scales on a Gauge
+      href: ../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md
+    - name: Formatting Pointers on a Gauge
+      href: ../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
+    - name: Formatting Ranges on a Gauge
+      href: ../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
+    - name: Add a Gauge to a Report
+      href: ../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md
+    - name: Set a Minimum or Maximum on a Gauge
+      href: ../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
+  - name: Indicators
+    href: ../reporting-services/report-design/indicators-report-builder-and-ssrs.md
+    items:
+    - name: Add or Delete an Indicator
+      href: ../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md
+    - name: Change Indicator Icons and Indicator Sets
+      href: ../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
+    - name: Set and Configure Measurement Units
+      href: ../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md
+    - name: Set Synchronization Scope
+      href: ../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md
+    - name: Specify the Size of an Indicator Using an Expression
+      href: ../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
+    - name: Include Indicators and Gauges in a Gauge Pane
+      href: ../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
+  - name: Maps
+    href: ../reporting-services/report-design/maps-report-builder-and-ssrs.md
+    items:
+    - name: Plan a Map Report
+      href: ../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md
+    - name: Map Wizard and Map Layer Wizard
+      href: ../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
+    - name: Customize the Data and Display of a Map or Map Layer
+      href: ../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
+    - name: Vary Polygon, Line, and Point Display by Rules and Analytical Data
+      href: ../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
+    - name: Add, Change, or Delete a Map or Map Layer
+      href: ../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
+    - name: Change Map Legends, Color Scale, and Associated Rules
+      href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
+    - name: Add Custom Locations to a Map
+      href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
+    - name: "Troubleshoot Reports: Map Reports"
+      href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
+  - name: Images, Text Boxes, Rectangles, and Lines
+    href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+    items:
+    - name: Text Boxes (Report Builder and SSRS)
+      href: ../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md
+      items:
+      - name: Add, Move, or Delete a Text Box (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md
+      - name: Set Text Box Orientation (Report Builder and SSRS)
+        href: ../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md
+      - name: Allow a Text Box to Grow or Shrink (Report Builder and SSRS)
+        href: ../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
+    - name: Rectangles and Lines (Report Builder and SSRS)
+      href: ../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md
+      items:
+      - name: Add a Rectangle or Container (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md
+      - name: Add and Modify a Line (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md
+      - name: Add a Border to a Report (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md
+    - name: Images (Report Builder and SSRS)
+      href: ../reporting-services/report-design/images-report-builder-and-ssrs.md
+      items:
+      - name: Add an External Image (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md
+      - name: Embed an Image in a Report (Report Builder and SSRS)
+        href: ../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md
+      - name: Add a Background Image (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md
+      - name: Add a Data-Bound Image (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md
+  - name: Formatting Report Items
+    href: ../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md
+    items:
+    - name: Formatting Text and Placeholders (Report Builder and SSRS)
+      href: ../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md
+      items:
+      - name: Format Text in a Text Box (Report Builder and SSRS)
+        href: ../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md
+    - name: Importing HTML into a Report (Report Builder and SSRS)
+      href: ../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md
+      items:
+      - name: Add HTML into a Report (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md
+    - name: Formatting Numbers and Dates (Report Builder and SSRS)
+      href: ../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md
+    - name: Formatting Lines, Colors, and Images (Report Builder and SSRS)
+      href: ../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md
+    - name: Set the Locale for a Report or Text Box
+      href: ../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md
+  - name: Report Parameters
+    items:
+    - name: Report Parameters Overview
+      href: ../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md
+    - name: Report Parameters Concepts
+      href: ../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md
+    - name: Add, Change, or Delete a Report Parameter
+      href: ../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
+    - name: Add, Change, or Delete Available Values for a Report Parameter
+      href: ../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md
+    - name: Add, Change, or Delete Default Values for a Report Parameter
+      href: ../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md
+    - name: Change the Order of a Report Parameter
+      href: ../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
+    - name: Add Cascading Parameters to a Report
+      href: ../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
+    - name: Add a multi-value parameter to a Report
+      href: ../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md
+    - name: Set Parameters on a Published Report
+      href: ../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md
+    - name: Customize the Parameters Pane in a Report
+      href: ../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md
+  - name: Filter, Group, and Sort Data
+    href: ../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md
+    items:
+    - name: Group Expression Examples
+      href: ../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md
+    - name: Filter Equation Examples
+      href: ../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md
+    - name: Add Dataset Filters, Data Region Filters, and Group Filters
+      href: ../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md
+    - name: Add a Filter
+      href: ../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md
+    - name: Sort Data in a Data Region
+      href: ../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md
+    - name: Commonly Used Filters
+      href: ../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md
+    - name: Grouping Pane
+      href: ../reporting-services/report-design/grouping-pane-report-builder.md
+  - name: Drillthrough, Drilldown, Subreports, and Nested Data Regions
+    href: ../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md
+    items:
+    - name: Drillthrough Reports (Report Builder and SSRS)
+      href: ../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md
+      items:
+      - name: Add a Drillthrough Action on a Report (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
+    - name: Subreports (Report Builder and SSRS)
+      href: ../reporting-services/report-design/subreports-report-builder-and-ssrs.md
+      items:
+      - name: Add a Subreport and Parameters (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md
+    - name: Drilldown Action (Report Builder and SSRS)
+      href: ../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md
+      items:
+      - name: Add an Expand or Collapse Action to an Item (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
+    - name: Nested Data Regions (Report Builder and SSRS)
+      href: ../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md
+    - name: Specifying Paths to External Items (Report Builder and SSRS)
+      href: ../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md
+  - name: Expressions
+    href: ../reporting-services/report-design/expressions-report-builder-and-ssrs.md
+    items:
+    - name: Add an Expression
+      href: ../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md
+    - name: Expression Examples
+      href: ../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md
+    - name: Expression Uses in Reports
+      href: ../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md
+    - name: Expression Scope for Totals, Aggregates, and Built-in Collections
+      href: ../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md
+    - name: Custom Code and Assembly References in Expressions in Report Designer
+      href: ../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
+      items:
+      - name: Add an Assembly Reference to a Report
+        href: ../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md
+      - name: Add Code to a Report
+        href: ../reporting-services/report-design/add-code-to-a-report-ssrs.md
+    - name: Expression Reference
+      href: ../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md
+      items:
+      - name: Report Builder Functions - Aggregate Functions Reference
+        href: ../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md
+        items:
+        - name: Report Builder Functions - Aggregate Function
+          href: ../reporting-services/report-design/report-builder-functions-aggregate-function.md
+        - name: Report Builder Functions - Avg Function
+          href: ../reporting-services/report-design/report-builder-functions-avg-function.md
+        - name: Report Builder Functions - Count Function
+          href: ../reporting-services/report-design/report-builder-functions-count-function.md
+        - name: Report Builder Functions - CountDistinct Function
+          href: ../reporting-services/report-design/report-builder-functions-countdistinct-function.md
+        - name: Report Builder Functions - CountRows Function
+          href: ../reporting-services/report-design/report-builder-functions-countrows-function.md
+        - name: Report Builder Functions - First Function
+          href: ../reporting-services/report-design/report-builder-functions-first-function.md
+        - name: Report Builder Functions - InScope Function
+          href: ../reporting-services/report-design/report-builder-functions-inscope-function.md
+        - name: Report Builder Functions - Last Function
+          href: ../reporting-services/report-design/report-builder-functions-last-function.md
+        - name: Report Builder Functions - Level Function
+          href: ../reporting-services/report-design/report-builder-functions-level-function.md
+        - name: Report Builder Functions - Lookup Function
+          href: ../reporting-services/report-design/report-builder-functions-lookup-function.md
+        - name: Report Builder Functions - LookupSet Function
+          href: ../reporting-services/report-design/report-builder-functions-lookupset-function.md
+        - name: Report Builder Functions - Max Function
+          href: ../reporting-services/report-design/report-builder-functions-max-function.md
+        - name: Report Builder Functions - Min Function
+          href: ../reporting-services/report-design/report-builder-functions-min-function.md
+        - name: Report Builder Functions - Multilookup Function
+          href: ../reporting-services/report-design/report-builder-functions-multilookup-function.md
+        - name: Report Builder Functions - Previous Function
+          href: ../reporting-services/report-design/report-builder-functions-previous-function.md
+        - name: Report Builder Functions - RowNumber Function
+          href: ../reporting-services/report-design/report-builder-functions-rownumber-function.md
+        - name: Report Builder Functions - RunningValue Function
+          href: ../reporting-services/report-design/report-builder-functions-runningvalue-function.md
+        - name: Report Builder Functions - StDev Function
+          href: ../reporting-services/report-design/report-builder-functions-stdev-function.md
+        - name: Report Builder Functions - StDevP Function
+          href: ../reporting-services/report-design/report-builder-functions-stdevp-function.md
+        - name: Report Builder Functions - Sum Function
+          href: ../reporting-services/report-design/report-builder-functions-sum-function.md
+        - name: Report Builder Functions - Union Function
+          href: ../reporting-services/report-design/report-builder-functions-union-function.md
+        - name: Report Builder Functions - Var Function
+          href: ../reporting-services/report-design/report-builder-functions-var-function.md
+        - name: Report Builder Functions - VarP Function
+          href: ../reporting-services/report-design/report-builder-functions-varp-function.md
+      - name: Data Types in Expressions
+        href: ../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md
+      - name: Constants in Expressions
+        href: ../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md
+      - name: Operators in Expressions
+        href: ../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md
+      - name: Built-in Collections in Expressions
+        href: ../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md
+        items:
+        - name: Built-in Collections - Globals and Users References
+          href: ../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md
+        - name: Built-in Collections - Parameters Collection References
+          href: ../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md
+        - name: Built-in Collections - Dataset Fields Collection References
+          href: ../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md
+        - name: Built-in Collections - DataSources and DataSets References
+          href: ../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md
+        - name: Built-in Collections - Report and Group Variables References
+          href: ../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md
+        - name: Built-in Collections - ReportItems Collection References
+          href: ../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md
+  - name: Interactive Sort, Document Maps, and Links
+    href: ../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+    items:
+    - name: Interactive Sort (Report Builder and SSRS)
+      href: ../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md
+      items:
+      - name: Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)
+        href: ../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
+    - name: Add a Hyperlink to a URL (Report Builder and SSRS)
+      href: ../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
+    - name: Add a Bookmark to a Report (Report Builder and SSRS)
+      href: ../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md
+    - name: Create a Document Map (Report Builder and SSRS)
+      href: ../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md
+  - name: Page Layout and Rendering
+    href: ../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md
+    items:
+    - name: Rendering Behaviors
+      href: ../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md
+      items:
+      - name: Rendering Data Regions
+        href: ../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md
+      - name: Rendering Report Items
+        href: ../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md
+      - name: Rendering Data
+        href: ../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md
+    - name: Pagination in Reporting Services
+      href: ../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md
+    - name: Page Headers and Footers
+      href: ../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md
+    - name: Controlling Page Breaks, Headings, Columns, and Rows
+      href: ../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
+    - name: Add a Page Break
+      href: ../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md
+    - name: Display Row and Column Headers on Multiple Pages
+      href: ../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
+    - name: Add or Remove a Page Header or Footer
+      href: ../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
+    - name: Keep Headers Visible When Scrolling Through a Report
+      href: ../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
+    - name: Display Page Numbers or Other Report Properties
+      href: ../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
+    - name: Hide a Page Header or Footer on the First or Last Page
+      href: ../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
+- name: Reporting Services reports
+  items:
+  - name: Reporting Services Reports Overview
+    href: ../reporting-services/reports/reporting-services-reports-ssrs.md
+  - name: Publishing Data Sources and Reports
+    href: ../reporting-services/reports/publishing-data-sources-and-reports.md
+    items:
+    - name: Previewing Reports
+      href: ../reporting-services/reports/previewing-reports.md
+    - name: Publishing Reports to a Report Server
+      href: ../reporting-services/reports/publishing-reports-to-a-report-server.md
+    - name: Publish a Report to a SharePoint Library
+      href: ../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md
+    - name: Publish a Shared Data Source to a SharePoint Library
+      href: ../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md
+  - name: Report Definition Language
+    href: ../reporting-services/reports/report-definition-language-ssrs.md
+  - name: Find the Report Definition Schema Version
+    href: ../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md
+  - name: Find Text, Numbers, or Dates in a Report
+    href: ../reporting-services/reports/find-text-numbers-or-dates-in-a-report.md
+  - name: Configure Execution Properties for a Report
+    href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
+  - name: Limit Report History
+    href: ../reporting-services/reports/limit-report-history-report-manager.md
+  - name: Open and Close a Report
+    href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
+  - name: Upload a File or Report
+    href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
+  - name: Create a Linked Report
+    href: ../reporting-services/reports/create-a-linked-report.md
 - name: Export Reports
   href: ../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md
   items:
@@ -487,533 +1016,6 @@
     href: ../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md
   - name: Print a Report (Reporting Services in SharePoint Mode)
     href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
-- name: Saving Reports
-  href: ../reporting-services/report-builder/saving-reports-report-builder.md
-  items:
-  - name: Save Reports to a Report Server
-    href: ../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md
-  - name: Save a Report to a SharePoint Library
-    href: ../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md
-- name: Security
-  href: ../reporting-services/report-builder/security-report-builder.md
-- name: Planning a Report
-  href: ../reporting-services/report-design/planning-a-report-report-builder.md
-- name: Report Design Tips
-  href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
-- name: Reports, Report Parts, and Report Definitions
-  href: ../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
-- name: Data Regions and Maps
-  href: ../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md
-- name: Tables, Matrices, and Lists
-  href: ../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md
-  items:
-  - name: Tables
-    href: ../reporting-services/report-design/tables-report-builder-and-ssrs.md
-  - name: Create a Matrix
-    href: ../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md
-  - name: Create Invoices and Forms with Lists
-    href: ../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
-  - name: Tablix Data Region
-    href: ../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md
-    items:
-    - name: Tablix Data Region Areas
-      href: ../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md
-    - name: Tablix Data Region Cells, Rows, and Columns
-      href: ../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
-  - name: Preparing Data for Display in a Tablix Data Region
-    href: ../reporting-services/report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
-  - name: Adding Data to a Tablix Data Region
-    href: ../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
-  - name: Exploring the Flexibility of a Tablix Data Region
-    href: ../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
-  - name: Controlling the Tablix Data Region Display on a Report Page
-    href: ../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md
-  - name: Controlling Row and Column Headings
-    href: ../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md
-  - name: Understanding Groups
-    href: ../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md
-  - name: Creating Recursive Hierarchy Groups
-    href: ../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
-  - name: Add a Details Group
-    href: ../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md
-  - name: Add a Total to a Group or Tablix Data Region
-    href: ../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
-  - name: Change an Item Within a Cell
-    href: ../reporting-services/report-design/change-an-item-within-a-cell-report-builder-and-ssrs.md
-  - name: Change Row Height or Column Width
-    href: ../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md
-  - name: Insert or Delete a Column
-    href: ../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md
-  - name: Insert or Delete a Row
-    href: ../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md
-  - name: Merge Cells in a Data Region
-    href: ../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md
-  - name: Create a Recursive Hierarchy Group
-    href: ../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
-  - name: Add or Delete a Group in a Data Region
-    href: ../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
-  - name: Display Headers and Footers with a Group
-    href: ../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
-  - name: Create a Stepped Report
-    href: ../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md
-  - name: Add, Move, or Delete a Table, Matrix, or List
-    href: ../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
-- name: Report Parts
-  items:
-  - name: Report Parts Introduction
-    href: ../reporting-services/report-design/report-parts-report-builder-and-ssrs.md
-  - name: Publish and Republish Report Parts (Report Builder and SSRS)
-    href: ../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md
-  - name: Browse for Report Parts and Set a Default Folder (Report Builder and SSRS)
-    href: ../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
-  - name: Report Parts in Report Designer
-    href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
-  - name: Managing Report Parts
-    href: ../reporting-services/report-design/managing-report-parts.md
-- name: Charts
-  href: ../reporting-services/report-design/charts-report-builder-and-ssrs.md
-  items:
-  - name: Add a Chart to a Report (Report Builder and SSRS)
-    href: ../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md
-  - name: Chart Types (Report Builder and SSRS)
-    href: ../reporting-services/report-design/chart-types-report-builder-and-ssrs.md
-    items:
-    - name: Change a Chart Type (Report Builder and SSRS)
-      href: ../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md
-    - name: Area Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/area-charts-report-builder-and-ssrs.md
-    - name: Bar Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md
-    - name: Column Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/column-charts-report-builder-and-ssrs.md
-    - name: Line Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/line-charts-report-builder-and-ssrs.md
-    - name: Pie Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md
-    - name: Polar Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md
-    - name: Range Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/range-charts-report-builder-and-ssrs.md
-    - name: Scatter Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md
-    - name: Shape Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md
-    - name: Stock Charts (Report Builder and SSRS)
-      href: ../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md
-    - name: Tree Map and Sunburst Charts in Reporting Services
-      href: ../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md
-  - name: Formatting a Chart (Report Builder and SSRS)
-    href: ../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md
-    items:
-    - name: Formatting Series Colors on a Chart (Report Builder and SSRS)
-      href: ../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
-      items:
-      - name: Specify Consistent Colors across Multiple Shape Charts (Report Builder and SSRS)
-        href: ../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
-      - name: Define Colors on a Chart Using a Palette (Report Builder and SSRS)
-        href: ../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
-      - name: Highlight Chart Data by Adding Strip Lines (Report Builder and SSRS)
-        href: ../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
-    - name: Formatting Axis Labels on a Chart (Report Builder and SSRS)
-      href: ../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
-      items:
-      - name: Format Axis Labels as Dates or Currencies (Report Builder and SSRS)
-        href: ../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
-      - name: Position Labels in a Chart (Report Builder and SSRS)
-        href: ../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md
-      - name: Specify an Axis Interval (Report Builder and SSRS)
-        href: ../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md
-      - name: Add or Remove Margins from a Chart (Report Builder and SSRS)
-        href: ../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
-      - name: Specify a Logarithmic Scale (Report Builder and SSRS)
-        href: ../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md
-    - name: Chart Legend - Formatting
-      href: ../reporting-services/report-design/chart-legend-formatting-report-builder.md
-    - name: Chart Legend - Hide Items
-      href: ../reporting-services/report-design/chart-legend-hide-items-report-builder.md
-    - name: Chart Legend - Change Item Text
-      href: ../reporting-services/report-design/chart-legend-change-item-text-report-builder.md
-    - name: Formatting Data Points on a Chart (Report Builder and SSRS)
-      href: ../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md
-      items:
-      - name: Show ToolTips on a Series (Report Builder and SSRS)
-        href: ../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md
-      - name: Display Data Point Labels Outside a Pie Chart (Report Builder and SSRS)
-        href: ../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
-      - name: Display Percentage Values on a Pie Chart (Report Builder and SSRS)
-        href: ../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
-    - name: Chart Effects - 3D, Bevel, and Other
-      href: ../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md
-    - name: Chart Effects - Add 3D Effects
-      href: ../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md
-    - name: Chart Effects - Add Bevel, Emboss, or Texture
-      href: ../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md
-    - name: Add a Border Frame to a Chart (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
-    - name: Start Pie Chart Values at the Top of the Pie (Report Builder and SSRS)
-      href: ../reporting-services/report-design/start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
-  - name: Empty and Null Data Points in Charts (Report Builder and SSRS)
-    href: ../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
-    items:
-    - name: Add Empty Points to a Chart (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md
-  - name: Displaying a Series with Multiple Data Ranges on a Chart (Report Builder and SSRS)
-    href: ../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md
-    items:
-    - name: Add Scale Breaks to a Chart (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
-  - name: Multiple Series on a Chart (Report Builder and SSRS)
-    href: ../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md
-    items:
-    - name: Specify a Chart Area for a Series (Report Builder and SSRS)
-      href: ../reporting-services/report-design/specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
-    - name: Plot Data on a Secondary Axis (Report Builder and SSRS)
-      href: ../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
-  - name: Linking Multiple Data Regions to the Same Dataset (Report Builder and SSRS)
-    href: ../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
-    items:
-    - name: Display the Same Data on a Matrix and a Chart
-      href: ../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
-  - name: Add or Delete a Group in a Chart (Report Builder and SSRS)
-    href: ../reporting-services/report-design/add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
-  - name: Add a Moving Average to a Chart (Report Builder and SSRS)
-    href: ../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
-  - name: Collect Small Slices on a Pie Chart (Report Builder and SSRS)
-    href: ../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
-  - name: Troubleshoot Charts (Report Builder and SSRS)
-    href: ../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md
-- name: Sparklines and Data Bars
-  href: ../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md
-  items:
-  - name: Add Sparklines and Data Bars (Report Builder and SSRS)
-    href: ../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md
-  - name: Align the Data in a Chart in a Table or Matrix (Report Builder and SSRS)
-    href: ../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
-- name: Gauges
-  href: ../reporting-services/report-design/gauges-report-builder-and-ssrs.md
-  items:
-  - name: Formatting Scales on a Gauge
-    href: ../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md
-  - name: Formatting Pointers on a Gauge
-    href: ../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
-  - name: Formatting Ranges on a Gauge
-    href: ../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
-  - name: Add a Gauge to a Report
-    href: ../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md
-  - name: Set a Minimum or Maximum on a Gauge
-    href: ../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
-- name: Indicators
-  href: ../reporting-services/report-design/indicators-report-builder-and-ssrs.md
-  items:
-  - name: Add or Delete an Indicator
-    href: ../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md
-  - name: Change Indicator Icons and Indicator Sets
-    href: ../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
-  - name: Set and Configure Measurement Units
-    href: ../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md
-  - name: Set Synchronization Scope
-    href: ../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md
-  - name: Specify the Size of an Indicator Using an Expression
-    href: ../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
-  - name: Include Indicators and Gauges in a Gauge Pane
-    href: ../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
-- name: Maps
-  href: ../reporting-services/report-design/maps-report-builder-and-ssrs.md
-  items:
-  - name: Plan a Map Report
-    href: ../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md
-  - name: Map Wizard and Map Layer Wizard
-    href: ../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
-  - name: Customize the Data and Display of a Map or Map Layer
-    href: ../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
-  - name: Vary Polygon, Line, and Point Display by Rules and Analytical Data
-    href: ../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
-  - name: Add, Change, or Delete a Map or Map Layer
-    href: ../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
-  - name: Change Map Legends, Color Scale, and Associated Rules
-    href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
-  - name: Add Custom Locations to a Map
-    href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-  - name: "Troubleshoot Reports: Map Reports"
-    href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
-- name: Images, Text Boxes, Rectangles, and Lines
-  href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
-  items:
-  - name: Text Boxes (Report Builder and SSRS)
-    href: ../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md
-    items:
-    - name: Add, Move, or Delete a Text Box (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md
-    - name: Set Text Box Orientation (Report Builder and SSRS)
-      href: ../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md
-    - name: Allow a Text Box to Grow or Shrink (Report Builder and SSRS)
-      href: ../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
-  - name: Rectangles and Lines (Report Builder and SSRS)
-    href: ../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md
-    items:
-    - name: Add a Rectangle or Container (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md
-    - name: Add and Modify a Line (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md
-    - name: Add a Border to a Report (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md
-  - name: Images (Report Builder and SSRS)
-    href: ../reporting-services/report-design/images-report-builder-and-ssrs.md
-    items:
-    - name: Add an External Image (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md
-    - name: Embed an Image in a Report (Report Builder and SSRS)
-      href: ../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md
-    - name: Add a Background Image (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md
-    - name: Add a Data-Bound Image (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md
-- name: Formatting Report Items
-  href: ../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md
-  items:
-  - name: Formatting Text and Placeholders (Report Builder and SSRS)
-    href: ../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md
-    items:
-    - name: Format Text in a Text Box (Report Builder and SSRS)
-      href: ../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md
-  - name: Importing HTML into a Report (Report Builder and SSRS)
-    href: ../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md
-    items:
-    - name: Add HTML into a Report (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md
-  - name: Formatting Numbers and Dates (Report Builder and SSRS)
-    href: ../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md
-  - name: Formatting Lines, Colors, and Images (Report Builder and SSRS)
-    href: ../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md
-  - name: Set the Locale for a Report or Text Box
-    href: ../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md
-- name: Report Parameters
-  items:
-  - name: Report Parameters Overview
-    href: ../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md
-  - name: Report Parameters Concepts
-    href: ../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md
-  - name: Add, Change, or Delete a Report Parameter
-    href: ../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
-  - name: Add, Change, or Delete Available Values for a Report Parameter
-    href: ../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md
-  - name: Add, Change, or Delete Default Values for a Report Parameter
-    href: ../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md
-  - name: Change the Order of a Report Parameter
-    href: ../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
-  - name: Add Cascading Parameters to a Report
-    href: ../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
-  - name: Add a multi-value parameter to a Report
-    href: ../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md
-  - name: Set Parameters on a Published Report
-    href: ../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md
-  - name: Customize the Parameters Pane in a Report
-    href: ../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md
-- name: Filter, Group, and Sort Data
-  href: ../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md
-  items:
-  - name: Group Expression Examples
-    href: ../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md
-  - name: Filter Equation Examples
-    href: ../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md
-  - name: Add Dataset Filters, Data Region Filters, and Group Filters
-    href: ../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md
-  - name: Add a Filter
-    href: ../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md
-  - name: Sort Data in a Data Region
-    href: ../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md
-  - name: Commonly Used Filters
-    href: ../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md
-  - name: Grouping Pane
-    href: ../reporting-services/report-design/grouping-pane-report-builder.md
-- name: Drillthrough, Drilldown, Subreports, and Nested Data Regions
-  href: ../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md
-  items:
-  - name: Drillthrough Reports (Report Builder and SSRS)
-    href: ../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md
-    items:
-    - name: Add a Drillthrough Action on a Report (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
-  - name: Subreports (Report Builder and SSRS)
-    href: ../reporting-services/report-design/subreports-report-builder-and-ssrs.md
-    items:
-    - name: Add a Subreport and Parameters (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md
-  - name: Drilldown Action (Report Builder and SSRS)
-    href: ../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md
-    items:
-    - name: Add an Expand or Collapse Action to an Item (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
-  - name: Nested Data Regions (Report Builder and SSRS)
-    href: ../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md
-  - name: Specifying Paths to External Items (Report Builder and SSRS)
-    href: ../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md
-- name: Expressions
-  href: ../reporting-services/report-design/expressions-report-builder-and-ssrs.md
-  items:
-  - name: Add an Expression
-    href: ../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md
-  - name: Expression Examples
-    href: ../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md
-  - name: Expression Uses in Reports
-    href: ../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md
-  - name: Expression Scope for Totals, Aggregates, and Built-in Collections
-    href: ../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md
-  - name: Custom Code and Assembly References in Expressions in Report Designer
-    href: ../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
-    items:
-    - name: Add an Assembly Reference to a Report
-      href: ../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md
-    - name: Add Code to a Report
-      href: ../reporting-services/report-design/add-code-to-a-report-ssrs.md
-  - name: Expression Reference
-    href: ../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md
-    items:
-    - name: Report Builder Functions - Aggregate Functions Reference
-      href: ../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md
-      items:
-      - name: Report Builder Functions - Aggregate Function
-        href: ../reporting-services/report-design/report-builder-functions-aggregate-function.md
-      - name: Report Builder Functions - Avg Function
-        href: ../reporting-services/report-design/report-builder-functions-avg-function.md
-      - name: Report Builder Functions - Count Function
-        href: ../reporting-services/report-design/report-builder-functions-count-function.md
-      - name: Report Builder Functions - CountDistinct Function
-        href: ../reporting-services/report-design/report-builder-functions-countdistinct-function.md
-      - name: Report Builder Functions - CountRows Function
-        href: ../reporting-services/report-design/report-builder-functions-countrows-function.md
-      - name: Report Builder Functions - First Function
-        href: ../reporting-services/report-design/report-builder-functions-first-function.md
-      - name: Report Builder Functions - InScope Function
-        href: ../reporting-services/report-design/report-builder-functions-inscope-function.md
-      - name: Report Builder Functions - Last Function
-        href: ../reporting-services/report-design/report-builder-functions-last-function.md
-      - name: Report Builder Functions - Level Function
-        href: ../reporting-services/report-design/report-builder-functions-level-function.md
-      - name: Report Builder Functions - Lookup Function
-        href: ../reporting-services/report-design/report-builder-functions-lookup-function.md
-      - name: Report Builder Functions - LookupSet Function
-        href: ../reporting-services/report-design/report-builder-functions-lookupset-function.md
-      - name: Report Builder Functions - Max Function
-        href: ../reporting-services/report-design/report-builder-functions-max-function.md
-      - name: Report Builder Functions - Min Function
-        href: ../reporting-services/report-design/report-builder-functions-min-function.md
-      - name: Report Builder Functions - Multilookup Function
-        href: ../reporting-services/report-design/report-builder-functions-multilookup-function.md
-      - name: Report Builder Functions - Previous Function
-        href: ../reporting-services/report-design/report-builder-functions-previous-function.md
-      - name: Report Builder Functions - RowNumber Function
-        href: ../reporting-services/report-design/report-builder-functions-rownumber-function.md
-      - name: Report Builder Functions - RunningValue Function
-        href: ../reporting-services/report-design/report-builder-functions-runningvalue-function.md
-      - name: Report Builder Functions - StDev Function
-        href: ../reporting-services/report-design/report-builder-functions-stdev-function.md
-      - name: Report Builder Functions - StDevP Function
-        href: ../reporting-services/report-design/report-builder-functions-stdevp-function.md
-      - name: Report Builder Functions - Sum Function
-        href: ../reporting-services/report-design/report-builder-functions-sum-function.md
-      - name: Report Builder Functions - Union Function
-        href: ../reporting-services/report-design/report-builder-functions-union-function.md
-      - name: Report Builder Functions - Var Function
-        href: ../reporting-services/report-design/report-builder-functions-var-function.md
-      - name: Report Builder Functions - VarP Function
-        href: ../reporting-services/report-design/report-builder-functions-varp-function.md
-    - name: Data Types in Expressions
-      href: ../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md
-    - name: Constants in Expressions
-      href: ../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md
-    - name: Operators in Expressions
-      href: ../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md
-    - name: Built-in Collections in Expressions
-      href: ../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md
-      items:
-      - name: Built-in Collections - Globals and Users References
-        href: ../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md
-      - name: Built-in Collections - Parameters Collection References
-        href: ../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md
-      - name: Built-in Collections - Dataset Fields Collection References
-        href: ../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md
-      - name: Built-in Collections - DataSources and DataSets References
-        href: ../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md
-      - name: Built-in Collections - Report and Group Variables References
-        href: ../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md
-      - name: Built-in Collections - ReportItems Collection References
-        href: ../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md
-- name: Interactive Sort, Document Maps, and Links
-  href: ../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
-  items:
-  - name: Interactive Sort (Report Builder and SSRS)
-    href: ../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md
-    items:
-    - name: Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)
-      href: ../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
-  - name: Add a Hyperlink to a URL (Report Builder and SSRS)
-    href: ../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
-  - name: Add a Bookmark to a Report (Report Builder and SSRS)
-    href: ../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md
-  - name: Create a Document Map (Report Builder and SSRS)
-    href: ../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md
-- name: Page Layout and Rendering
-  href: ../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md
-  items:
-  - name: Rendering Behaviors
-    href: ../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md
-    items:
-    - name: Rendering Data Regions
-      href: ../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md
-    - name: Rendering Report Items
-      href: ../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md
-    - name: Rendering Data
-      href: ../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md
-  - name: Pagination in Reporting Services
-    href: ../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md
-  - name: Page Headers and Footers
-    href: ../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md
-  - name: Controlling Page Breaks, Headings, Columns, and Rows
-    href: ../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
-  - name: Add a Page Break
-    href: ../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md
-  - name: Display Row and Column Headers on Multiple Pages
-    href: ../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
-  - name: Add or Remove a Page Header or Footer
-    href: ../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
-  - name: Keep Headers Visible When Scrolling Through a Report
-    href: ../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
-  - name: Display Page Numbers or Other Report Properties
-    href: ../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
-  - name: Hide a Page Header or Footer on the First or Last Page
-    href: ../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
-- name: Reporting Services reports
-  items:
-  - name: Reporting Services Reports Overview
-    href: ../reporting-services/reports/reporting-services-reports-ssrs.md
-  - name: Publishing Data Sources and Reports
-    href: ../reporting-services/reports/publishing-data-sources-and-reports.md
-    items:
-    - name: Previewing Reports
-      href: ../reporting-services/reports/previewing-reports.md
-    - name: Publishing Reports to a Report Server
-      href: ../reporting-services/reports/publishing-reports-to-a-report-server.md
-    - name: Publish a Report to a SharePoint Library
-      href: ../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md
-    - name: Publish a Shared Data Source to a SharePoint Library
-      href: ../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md
-  - name: Report Definition Language
-    href: ../reporting-services/reports/report-definition-language-ssrs.md
-  - name: Find the Report Definition Schema Version
-    href: ../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md
-  - name: Find Text, Numbers, or Dates in a Report
-    href: ../reporting-services/reports/find-text-numbers-or-dates-in-a-report.md
-  - name: Configure Execution Properties for a Report
-    href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
-  - name: Limit Report History
-    href: ../reporting-services/reports/limit-report-history-report-manager.md
-  - name: Open and Close a Report
-    href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
-  - name: Upload a File or Report
-    href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
-  - name: Create a Linked Report
-    href: ../reporting-services/reports/create-a-linked-report.md
 - name: Report data in SSRS
   items:
   - name: Report Data in SSRS Overview
@@ -1187,6 +1189,8 @@
       href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
 - name: Reporting Services Security and Protection
   items: 
+  - name: Security
+    href: ../reporting-services/report-builder/security-report-builder.md
   - name: Reporting Services Security and Protection Overview
     href: ../reporting-services/security/reporting-services-security-and-protection.md
   - name: Extended Protection for Authentication with Reporting Services

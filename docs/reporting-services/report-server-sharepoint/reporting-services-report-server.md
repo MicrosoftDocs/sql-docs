@@ -1,5 +1,5 @@
 ---
-title: "Comparing Reporting Services report servers | Microsoft Docs"
+title: "Comparing native and SharePoint Reporting Services report servers | Microsoft Docs"
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -11,7 +11,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Comparing Reporting Services report servers
+# Comparing native and SharePoint Reporting Services report servers
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 

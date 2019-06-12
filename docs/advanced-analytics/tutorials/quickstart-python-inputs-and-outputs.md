@@ -51,9 +51,9 @@ SELECT * FROM PythonTestData
 
 Let's look at the default input and output variables of sp_execute_external_script: `InputDataSet` and `OutputDataSet`.
 
-1. You can get the data from the table as input to your R script. Run the statement below. It gets the data from the table, makes a round trip through the R runtime, and returns the values with the column name *NewColName*.
+1. You can get the data from the table as input to your Python script. Run the statement below. It gets the data from the table, makes a round trip through the Python runtime, and returns the values with the column name *NewColName*.
 
-    The data returned by the query is passed to the R runtime, which returns the data to SQL Database as a data frame. The WITH RESULT SETS clause defines the schema of the returned data table for SQL Database.
+    The data returned by the query is passed to the Python runtime, which returns the data to SQL Database as a pandas DataFrame. The WITH RESULT SETS clause defines the schema of the returned data table for SQL Database.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -67,7 +67,7 @@ Let's look at the default input and output variables of sp_execute_external_scri
 
     ![Output from Python script that returns data from a table](./media/python-output-pythontestdata.png)
 
-2. Let's change the name of the input or output variables. The script above used the default input and output variable names, _InputDataSet_ and _OutputDataSet_. To define the input data associated with _InputDatSet_, you use the *@input_data_1* variable.
+2. Let's change the name of the input or output variables. The script above used the default input and output variable names, _InputDataSet_ and _OutputDataSet_. To define the input data associated with _InputDataSet_, you use the *@input_data_1* variable.
 
     In this script, the names of the output and input variables for the stored procedure have been changed to *SQL_out* and *SQL_in*:
 

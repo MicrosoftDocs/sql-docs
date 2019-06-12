@@ -92,7 +92,7 @@ manager: craigg
   
     -   [Get Started with Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   PowerShell [Azure Key Vault Cmdlets](https://go.microsoft.com/fwlink/?LinkId=521403) reference  
+    -   PowerShell [Azure Key Vault Cmdlets](/powershell/module/azurerm.keyvault/) reference  
   
 ##  <a name="Step2"></a> Step 2: Install the SQL Server Connector  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is downloaded and installed by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer. The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is available as a download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Search for **SQL Server Connector for Microsoft Azure Key Vault**, review the details, system requirements and install instructions and choose to download the connector and start the installation using **Run**. Review the license and accept the license and continue.  

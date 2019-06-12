@@ -52,7 +52,7 @@ SET FMTONLY OFF;
  Alternatively, the feature is available through `SQLServerDataSource`.
  ```java
 SQLServerDataSource ds = new SQLServerDataSource();
-ds.setURL("jdbc:sqlserver://<server>");
+ds.setServerName(<server>);
 ds.setPortNumber(<port>);
 ds.setDatabaseName("<databaseName>");
 ds.setUser("<user>");

@@ -1,6 +1,6 @@
 ---
 title: "What is PolyBase? | Microsoft Docs"
-ms.date: 04/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -115,5 +115,6 @@ Before using PolyBase, you must [install the PolyBase feature](polybase-installa
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
+- [ODBC Generic Types](../../relational-databases/polybase/polybase-installation.md)
 
 ::: moniker-end

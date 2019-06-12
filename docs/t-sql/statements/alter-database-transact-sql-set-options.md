@@ -2931,7 +2931,7 @@ The owner of the database cannot alter the database unless the owner is a member
 > [!Note]
 > While this feature is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } (Preview for Azure SQL Data Warehouse Gen2)
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } Applies to Azure SQL Data Warehouse Gen2 only (preview)
 This command must be run while connected to the master database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data warehouse storage. A new column called is_result_set_caching_on is introduced in the sys.databases to show the result caching setting for a database.  
 
 ON

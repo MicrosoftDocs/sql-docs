@@ -1,6 +1,6 @@
 ---
 title: "Create, Modify, and Delete Schedules | Microsoft Docs"
-ms.date: 06/11/2017
+ms.date: 06/11/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
@@ -28,9 +28,9 @@ ms.author: maggies
 
  Use one of the following methods to determine if a shared schedule is actively used:
 
--   **Web portal:** On the Site Settings page Shared Schedules page, review the values in the Last Run date, Next Run date, and Status fields. If a schedule no longer runs because it has expired, the expiration date appears in the Status field. For more information, see [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
+-   **Web portal:** On the **Schedules** tab of the **Site Settings**, review the values in the Last Run date, Next Run date, and Status fields. If a schedule no longer runs because it has expired, the expiration date appears in the Status field. For more information, see [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
--   **SQL Server Management Studio:** Viewing the Reports page of a given shared schedule. This page lists all reports and shared datasets that use the shared schedule. For more information, see [Reporting Services in SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **SQL Server Management Studio:** Viewing the **Reports** page of a given shared schedule. This page lists all reports and shared datasets that use the shared schedule. For more information, see [Reporting Services in SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
 
 -  **Logs:** Viewing the report execution log files or trace logs to determine whether reports have been run at the times specified by the schedule. For more information, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).
 

@@ -47,7 +47,7 @@ SET FMTONLY OFF;
 ```
  
 ## Turning the feature on/off 
- The feature **useFmtOnly** is off by default. Users can enable this feature through the connections string by specifying `useFmtOnly=true`. For example: `-Dconnectionstring=jdbc:sqlserver://localhost;databaseName=tempdb;username=<user>;password=<password>;useFmtOnly=true;`.
+ The feature **useFmtOnly** is off by default. Users can enable this feature through the connection string by specifying `useFmtOnly=true`. For example: `jdbc:sqlserver://localhost;databaseName=tempdb;username=<user>;password=<password>;useFmtOnly=true;`.
  
  Alternatively, the feature is available through `SQLServerDataSource`.
  ```java
@@ -58,7 +58,7 @@ ds.setUser("<user>");
 ds.setPassword("<password>");
 ds.setUseFmtOnly(true);
 try (Connection c = ds.getConnection()) {
-	// do work with connection
+    // do work with connection
 }
  ```
  
@@ -71,15 +71,15 @@ try (Connection c = ds.getConnection()) {
 ```java
 final String sql = "INSERT INTO #Bar VALUES (?)";
 try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
-	try (Statement s = c.createStatement()) {
-		s.execute("CREATE TABLE #Bar(c1 int)");
-	}
-	try (PreparedStatement p1 = c.prepareStatement(sql);PreparedStatement p2 = c.prepareStatement(sql)) {
-		((SQLServerPreparedStatement)p1).setUseFmtOnly(true);
-		ParameterMetaData pmd1 = p1.getParameterMetaData();
-		System.out.println(pmd1.getParameterTypeName(1)); // prints int
-		ParameterMetaData pmd2 = p2.getParameterMetaData(); // throws exception, Invalid object name '#Bar'
-	}
+    try (Statement s = c.createStatement()) {
+        s.execute("CREATE TABLE #Bar(c1 int)");
+    }
+    try (PreparedStatement p1 = c.prepareStatement(sql); PreparedStatement p2 = c.prepareStatement(sql)) {
+        ((SQLServerPreparedStatement) p1).setUseFmtOnly(true);
+        ParameterMetaData pmd1 = p1.getParameterMetaData();
+        System.out.println(pmd1.getParameterTypeName(1)); // prints int
+        ParameterMetaData pmd2 = p2.getParameterMetaData(); // throws exception, Invalid object name '#Bar'
+    }
 }
 ```
 > [!NOTE]  

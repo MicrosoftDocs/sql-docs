@@ -98,7 +98,7 @@ The following item is for SQL Server 2016-2017
   
      The prerequisites for the selected features are displayed in the **Prerequisites for selected features** pane. Setup installs the prerequisites that aren't already installed during the installation step described later in this procedure.  
   
-     You can also specify a custom directory for shared components by using the field at the bottom of the **Feature Selection** page. To change the installation path for shared components, either update the path in the field at the bottom of the dialog box, or select **Browse** to go to an installation directory. The default installation path is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)].  
+     You can also specify a custom directory for shared components by using the field at the bottom of the **Feature Selection** page. To change the installation path for shared components, either update the path in the field at the bottom of the dialog box or select **Browse** to go to an installation directory. The default installation path is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)].  
   
      The path specified for the shared components must be an absolute path. The folder must not be compressed or encrypted. Mapped drives aren't supported.  
   
@@ -126,7 +126,7 @@ The following item is for SQL Server 2016-2017
   
 14. Use the **Server Configuration - Service Accounts** page to specify the login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
   
-     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, are started manually, or are disabled. We recommend that you configure service accounts individually to provide the least privileges for each service. Make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      To specify the same login account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.  
   
@@ -138,7 +138,7 @@ The following item is for SQL Server 2016-2017
   
      Use the **Server Configuration - Collation** page to specify nondefault collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-15. Use the **Database Engine Configuration - Server Configuration** page to specify the following:  
+15. Use the **Database Engine Configuration - Server Configuration** page to specify the following options:  
   
     * **Security Mode**: Select **Windows Authentication** or **Mixed Mode Authentication** for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select **Mixed Mode Authentication**, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account.  
   
@@ -149,7 +149,7 @@ The following item is for SQL Server 2016-2017
      Use the **Database Engine Configuration - Data Directories** page to specify nondefault installation directories. To install to the default directories, select **Next**.  
   
     > [!IMPORTANT]  
-    > If you specify nondefault installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories frm other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > If you specify nondefault installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
@@ -165,11 +165,11 @@ The following item is for SQL Server 2016-2017
   
 16. Use the **Analysis Services Configuration - Account Provisioning** page to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, select the default server mode option, **Multidimensional and Data Mining**.
 
-    Regarding administrator permissions, you must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
+    You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
 
     For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning-page).
 
-    When you are finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. When the list is complete, select **Next**.
+    When you're finished editing the list, select **OK**. Verify the list of administrators in the configuration dialog box. After the list is complete, select **Next**.
 
     Use the **Analysis Services Configuration - Data Directories** page to specify nondefault installation directories. To install to the default directories, select **Next**.  
 
@@ -179,10 +179,10 @@ The following item is for SQL Server 2016-2017
     > If you specify nondefault installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
     For more information, see [Analysis Services Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories-page).  
-   
+
 17. Use the **Distributed Replay Controller Configuration** page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions have unlimited access to the Distributed Replay controller service.  
   
-     * To add the users to whom you want to grant access permissions for the Distributed Replay controller service, select the **Add Current User** button.
+     * To add the users you want to grant access permissions to for the Distributed Replay controller service, select the **Add Current User** button.
 
      * To add access permissions for the Distributed Replay controller service, select the **Add** button.
 
@@ -192,7 +192,7 @@ The following item is for SQL Server 2016-2017
   
 18. Use the **Distributed Replay Client Configuration** page to specify the users you want to grant administrative permissions to for the Distributed Replay client service. Users that have administrative permissions have unlimited access to the Distributed Replay client service.  
   
-     * **Controller Name** is optional. The default value is \<*blank*>. Enter the name of the controller that the client computer will communicate with for the Distributed Replay client service. Note the following:  
+     * **Controller Name** is optional. The default value is \<*blank*>. Enter the name of the controller that the client computer will communicate with for the Distributed Replay client service:  
   
        * If you've already set up a controller, enter the name of the controller while configuring each client.  
   
@@ -206,17 +206,19 @@ The following item is for SQL Server 2016-2017
   
 19. The **Ready to Install** page shows a tree view of the installation options that you specified during Setup. On this page, Setup indicates whether the **Product Update** feature is enabled or disabled and the final update version.  
   
-     To continue, select **Install**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features followed by the feature installation.  
+     To continue, select **Install**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup first installs the required prerequisites for the selected features, then it installs the selected features.  
   
-20. During installation, the **Installation Progress** page provides status updates so that you can monitor installation progress as Setup continues.  
+20. During installation, the **Installation Progress** page provides status updates so that you can monitor the installation progress as Setup continues.  
   
-21. After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes. To complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation process, select **Close**.  
+21. After installation, the **Complete** page provides a link to the summary log file for the installation and other important notes.
+  
+    > [!IMPORTANT]
+    > Make sure you read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
+
+    To complete the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation process, select **Close**.  
   
 22. If you're instructed to restart the computer, do so now.
 
-> [!IMPORTANT]
-> Make sure you read the message from the Installation Wizard when you've finished with Setup. For more information, see [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
-  
 ## Next steps
 
 Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  

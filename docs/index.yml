@@ -252,7 +252,7 @@ additionalContent:
     - items:
       - title: Development
         summary: |
-          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-)<br />
+          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-developent-overview)<br />
           [Azure SQL DB connectivity libraries](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries)<br />
           [SQL Server client connectivity](connect/homepage-sql-connection-programming.md)<br />
       - title: Reporting

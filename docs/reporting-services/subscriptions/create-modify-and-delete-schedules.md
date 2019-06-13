@@ -5,7 +5,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
 
-'
+
 ms.topic: conceptual
 helpviewer_keywords:
   - "report-specific schedules [Reporting Services]"

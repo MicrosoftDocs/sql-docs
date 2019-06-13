@@ -4,7 +4,7 @@ description: Learn how to embed R programming language code in SQL Server stored
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/18/2018  
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -50,7 +50,7 @@ This tutorial assumes familiarity with basic database operations such as creatin
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) or [SQL Server 2017 Machine Learning Services with R enabled](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R libraries](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [R libraries](../package-management/installed-package-information.md#get-the-r-library-location)
 
 + [Permissions](../security/user-permission.md)
 

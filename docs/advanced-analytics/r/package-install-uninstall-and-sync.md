@@ -4,7 +4,7 @@ description: Update R libraries on SQL Server with newer versions installed on t
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -43,7 +43,7 @@ You must also enable the [package management feature](r-package-how-to-enable-or
 
 This feature is available in SQL Server 2017 CTP 2 or later.
 
-You can add this feature to an instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to upgrade SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+You can add this feature to an instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to upgrade SQL Server R Services](../install/upgrade-r-and-python.md).
 
 ### Enable the package management feature
 

@@ -4,7 +4,7 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
@@ -58,7 +58,7 @@ You can upgrade your version of SQL Server by re-running the setup wizard.
 + [Upgrade SQL Server Using the Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 You can upgrade just the machine learning components by using a process called binding: 
-+ [Use SqlBindR to upgrade machine learning components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Use SqlBindR to upgrade machine learning components](../install/upgrade-r-and-python.md)
 
 ### End of support for in-place upgrades from prerelease versions
 

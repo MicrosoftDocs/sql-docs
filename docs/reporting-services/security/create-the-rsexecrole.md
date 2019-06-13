@@ -113,10 +113,9 @@ ms.author: maggies
   
 7.  In Owner, type **dbo**.  
   
-8.  
-Select the **Securables** page.  
+8.  Select the **Securables** page.  
   
-9. Click **Search**. The **Add Objects** dialog box appears. The **Specify Objects** option is selected by default.  
+9.  Click **Search**. The **Add Objects** dialog box appears. The **Specify Objects** option is selected by default.  
   
 10. Click **OK**.  
   
@@ -214,7 +213,7 @@ Select the **Securables** page.
   
 8.  On the Database, select the report server database.  
   
-9. Click **Next** and complete the wizard.  
+9.  Click **Next** and complete the wizard.  
   
 10. Click **Encryption Keys**.  
   

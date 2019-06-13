@@ -99,6 +99,6 @@ ms.author: maggies
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Working with subscriptions (web portal)](../../reporting-services/subscriptions/working-with-subscriptions-web-portal.md)
- [Use My Subscriptions (Native Mode Report Server)](use-my-subscriptions-native-mode-report-server.md)  
+ [Working with subscriptions (web portal)](../../reporting-services/working-with-subscriptions-web-portal.md)
+ [Use My Subscriptions (Native Mode Report Server)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   

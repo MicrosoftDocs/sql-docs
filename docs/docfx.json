@@ -99,6 +99,7 @@
       "feedback_system": {
         "advanced-analytics/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
+        "big-data-cluster/**/*.md": "GitHub",
         "database-engine/**/*.md": "GitHub",
         "linux/**/*.md": "GitHub",
         "powershell/**/*.md": "GitHub",

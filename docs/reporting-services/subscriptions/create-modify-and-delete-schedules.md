@@ -82,7 +82,7 @@ A report-specific schedule that has expired remains attached to the report. You 
 
  Shared schedules are easier to maintain and give you more flexibility in managing scheduled operations. For example, you can pause and resume shared schedules. Also, if you find that too many scheduled operations are running at the same time, you can create multiple shared schedules that run at different times and then adjust the schedule information until the processing load evens out across the report server.
 
-### To create or modify a shared schedule (Management Studio)
+#### To create or modify a shared schedule (Management Studio)
 
 1.  Start [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] and connect to a report server instance.
 2.  In Object Explorer, expand a report server node.

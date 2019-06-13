@@ -20,7 +20,7 @@ ms.author: maggies
   
 -   View custom reports. In Object Explorer, most nodes display a custom reports option. You must have administrator permissions. The schema of a custom report must match the schema of the installed reports. For more information, see [Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md) and [Find the Report Definition Schema Version &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
- The next section contains links to articles that contain step-by-step instructions for performing various reporting tasks using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Creating and managing shared schedules can also be performed using the web portal.  
+ The next section contains links to articles that contain step-by-step instructions for performing various reporting tasks using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. You can also create and manage shared schedules in the web portal.  
   
 ## In this section  
   

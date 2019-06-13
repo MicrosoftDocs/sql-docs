@@ -44,11 +44,11 @@ ms.author: maggies
   
 ### To create a data-driven subscription (Native Mode)  
   
-1.  In the web portal, navigate to the folder containing the report, right-click the report and select **Manage.** from the dropdown menu.  
+1.  In the web portal, navigate to the folder containing the report, right-click the report and select **Manage** from the dropdown menu.  
   
 2.  Select the **Subscriptions** tab.  
   
-3.  Select the **+ New subscription** button.  
+3.  Select the **New subscription** button.  
   
 ### To create a data-driven subscription (SharePoint Mode)  
   
@@ -58,11 +58,11 @@ ms.author: maggies
   
 ### To modify an existing data-driven subscription (Native Mode)  
   
-1.  In the web portal navigate to the folder containing the report, right-click the report and select **Manage.** from the dropdown menu.  
+1.  In the web portal navigate to the folder containing the report, right-click the report and select **Manage** from the dropdown menu.  
   
-2.  Select the **Subscriptions** tab. Alternatively select the gear icon at the top of the web portal home page and select **My subscriptions** from the drop down menu.  
+2.  Select the **Subscriptions** tab. Alternatively, select the gear icon at the top of the web portal home page and select **My subscriptions** from the drop-down menu.  
   
-3.  Select **Edit** for the subscription you want to modify. Data driven subscriptions have the value "Data-driven" in the **Type** column.  
+3.  Select **Edit** for the subscription you want to modify. Data-driven subscriptions have the value "Data-driven" in the **Type** column.  
   
 ### To modify an existing data-driven subscription (SharePoint Mode)  
   

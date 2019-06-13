@@ -157,7 +157,7 @@ ms.author: maggies
   
 19. Repeat for each of the remaining stored procedures. RSExecRole must be granted Execute permissions for all ten stored procedures.  
   
-20. Still on the **Securables** page, and click **Search** again. The **Add Objects** dialog box appears. The **Specify Objects** option is selected by default.  
+20. Still on the **Securables** page, click **Search** again. The **Add Objects** dialog box appears. The **Specify Objects** option is selected by default.  
   
 21. Click **OK**.  
   
@@ -207,7 +207,7 @@ ms.author: maggies
   
 5.  Enter the server name of the Database Engine. If you attached the report server databases to a named instance, you must type the instance name in this format: \<servername>\\<instancename\>.  
   
-6.  Click **Test Connection**. YOu should see a dialog box appear that sates "Test Connection Succeeded.".
+6.  Click **Test Connection**. You should see a dialog box that states, "Test Connection Succeeded."
   
 7.  Select **Ok** to close the dialog box and then select **Next**.  
   

@@ -47,7 +47,7 @@ ms.author: maggies
   
 2. Select the **Subscriptions** tab.  
   
-3. Select **+ New subscription** on the **Subscriptions** page.  
+3. Select **New subscription** on the **Subscriptions** page.  
   
 ### To create a data-driven subscription (SharePoint Mode)  
   
@@ -61,7 +61,7 @@ ms.author: maggies
   
 2. Select the **Subscriptions** tab.  
   
-3. Select the checkbox next to the subscription you want to modify, and select **Edit**. Data-driven subscriptions will have the value "Data-driven" in the **Type** column.  
+3. Select the checkbox next to the subscription you want to modify, and select **Edit**. Data-driven subscriptions have the value "Data-driven" in the **Type** column.  
   
 ### To modify an existing data-driven subscription (SharePoint Mode)  
   

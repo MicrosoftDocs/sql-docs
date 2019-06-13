@@ -9,9 +9,9 @@ ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
 ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
+ms.author: mibar
+author: mibar
+manager: gilade
 ---
 # SQL Data Discovery and Classification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

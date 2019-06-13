@@ -913,6 +913,21 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/reporting-services/report-builder/glossary-report-builder.md",
+            "redirect_url": "/sql/reporting-services/reporting-services-concepts-ssrs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/troubleshooting/troubleshoot-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md",
+            "redirect_url": "/sql/reporting-services/reporting-services-concepts-ssrs",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/reporting-services/report-builder/report-sections-dialog-box-report-builder.md",
             "redirect_url": "/sql/reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs",
             "redirect_document_id": true

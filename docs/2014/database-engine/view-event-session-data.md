@@ -46,9 +46,11 @@ manager: craigg
   
     -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right click on a running Extended Events session and select View Target Data.  
   
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
     -   You can view more than one .XEL file by selecting **Merge Extended Event Files** from the File -> Open menu.  
+    
+    -   .XEL files can be read by the [SqlServer.XEvent PowerShell module](https://www.powershellgallery.com/packages/SqlServer.XEvent).
   
 ### Watching Live Data  
  You can watch live data as it is being captured.  
@@ -62,7 +64,9 @@ manager: craigg
      To add additional columns to the trace window, click the **Choose Columns** button on the Extended Events toolbar. The **Details** tab shows all of the event details for the selected event.  
   
      Events are usually displayed in approximately 30 seconds. If you want to change the latency period, you can change the **Maximum dispatch latency** on the **Advanced** page of the of the **New Session** dialog.  
-  
+     
+-    Live data can be streamed by the [SqlServer.XEvent PowerShell module](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+     
 ### To Refresh Target Data  
  Refreshing target data is not supported for event_files targets:  
   

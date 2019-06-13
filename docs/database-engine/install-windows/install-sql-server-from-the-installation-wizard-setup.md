@@ -80,7 +80,7 @@ The following item is for SQL Server 2016-2017
    >[!NOTE]
    > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
 
-5. In the **Global Rules** page, the Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
+5. In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
   
 6. The **Microsoft Update** page will appear next if the **Microsoft Update** check box in **Control Panel** > **All Control Panel Items** > **Windows Update** > **Change settings** isn't selected. Selecting the **Microsoft Update** check box changes the computer settings to include the latest updates for all Microsoft products when you scan for Windows updates.  
 
@@ -90,7 +90,7 @@ The following item is for SQL Server 2016-2017
   
 9. On the **Install Rules** page, Setup checks for potential problems that might occur while running Setup. If failures occur, select an item in the **Status** column for more information. Otherwise, select **Next**.
 
-10. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation or to add features to an existing installation. Select **Next**.
+10. If this is the first installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, Setup skips the **Installation Type** page and goes directly to the **Feature Selection** page. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is already installed on the system, you can use the **Installation Type** page to select either to perform a new installation or to add features to an existing installation. To continue, select **Next**.
   
 11. On the **Feature Selection** page, select the components for your installation. For example, to install a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], select **Database Engine Services**.
 
@@ -100,14 +100,16 @@ The following item is for SQL Server 2016-2017
   
      You can also specify a custom directory for shared components by using the field at the bottom of the **Feature Selection** page. To change the installation path for shared components, either update the path in the field at the bottom of the dialog box or select **Browse** to go to an installation directory. The default installation path is [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)].  
   
-     The path specified for the shared components must be an absolute path. The folder must not be compressed or encrypted. Mapped drives aren't supported.  
+     > [!NOTE]
+     > The path specified for the shared components must be an absolute path. The folder must not be compressed or encrypted. Mapped drives aren't supported.  
   
      SQL Server uses two directories for shared features:
   
      * Shared feature directory  
      * Shared feature directory (x86)  
   
-     The path specified for each of the above options must be different.  
+     > [!NOTE]
+     > The path specified for each of the above options must be different.  
   
 12. The **Feature Rules** page automatically advances if all rules pass.  
   
@@ -165,7 +167,11 @@ The following item is for SQL Server 2016-2017
   
 16. Use the **Analysis Services Configuration - Account Provisioning** page to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, select the default server mode option, **Multidimensional and Data Mining**.
 
-    You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, select **Add Current User**. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
+    You must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:
+
+    * To add the account under which SQL Server Setup is running, select **Add Current User**.
+
+    * To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
 
     For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning page](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning-page).
 

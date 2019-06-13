@@ -79,10 +79,10 @@ minimizes conflicts when multiple applications are installed on the same compute
   
 **Detected instances and features**: View a list of installed [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and components on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running.  
   
-**Instance ID**: By default, the instance name is used as the Instance ID. This ID is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The same behavior occurs for default instances and named instances. For a default instance, the instance name and instance ID are MSSQLSERVER. To use a nondefault instance ID, specify it in the **Instance ID** field.  
+**Instance ID**: By default, the instance name is used as the instance ID. This ID is used to identify installation directories and registry keys for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The same behavior occurs for default instances and named instances. For a default instance, the instance name and instance ID are MSSQLSERVER. To use a nondefault instance ID, specify it in the **Instance ID** field.  
   
 > [!IMPORTANT]  
->  With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, the Instance ID displayed on the **Instance Configuration** page is the Instance ID you specified during the prepare image step of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep process. You won't be able to specify a different Instance ID during the complete image step.
+>  With [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, the instance ID displayed on the **Instance Configuration** page is the instance ID you specified during the prepare image step of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep process. You won't be able to specify a different instance ID during the complete image step.
 
 > [!NOTE]  
 >  Instance IDs that begin with an underscore (_) or that contain the number sign (#) or the dollar sign ($) aren't supported.  
@@ -115,7 +115,7 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
 **Specify Administrators**: You must specify at least one server administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The users or groups that you specify become members of the server administrator role of the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance you're installing. These members must have Windows domain user accounts in the same domain as the computer on which you're installing the software.  
   
 > [!NOTE]  
-> User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they're allowed to run. Because UAC is on by default, you'll be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or you can customize UAC for specific programs. For more information about UAC and UAC configuration, see [User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
+> User Account Control (UAC) is a Windows security feature that requires an administrator to specifically approve administrative actions or applications before they're allowed to run. Because UAC is on by default, you'll be prompted to allow specific operations that require elevated privileges. You can configure UAC to change the default behavior or you can customize UAC for specific programs. For more information about UAC and UAC configuration, see the [User Account Control step-by-step guide](https://go.microsoft.com/fwlink/?linkid=196350) and [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### See also
   
@@ -126,14 +126,14 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
 
 The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that's created and provisioned during Setup.  
   
-### UIElement list  
+### UI element list  
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
-|Data root directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest-performing storage that is attached to the system. For failover cluster installations, ensure that data directories are placed on the shared disk.|  
-|Log file directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight recorder duration, ensure that the log directory has adequate space.|  
-|Temp directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |Place the Temp directory on a high-performance storage subsystem.|  
-|Backup directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, this directory is also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
+|**Data root directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest-performing storage that is attached to the system. For failover cluster installations, ensure that data directories are placed on the shared disk.|  
+|**Log file directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight recorder duration, ensure that the log directory has adequate space.|  
+|**Temp directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |Place the Temp directory on a high-performance storage subsystem.|  
+|**Backup directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, this directory is also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
   
 ### Considerations  
   
@@ -159,14 +159,14 @@ For more information about directories, file locations, and instance ID naming, 
 
 The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that's created and provisioned during Setup.  
   
-#### UIElement list
+#### UI element list
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
-|Data root directory |C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest-performing storage that's attached to the system. For failover cluster installations, ensure that the data directories are placed on the shared disk.|  
-|Log file directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight-recorder duration, ensure that the log directory has adequate space.|  
-|Temp directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Place the Temp directory on the high-performance storage subsystem.|  
-|Backup directory|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it's also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
+|**Data root directory** |\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Ensure that the \Program files\Microsoft SQL Server\ folder is protected with limited permissions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] performance depends, in many configurations, on the performance of the storage on which the data directory is located. Place this directory on the highest-performing storage that's attached to the system. For failover cluster installations, ensure that the data directories are placed on the shared disk.|  
+|**Log file directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] log files, and it includes the FlightRecorder log. If you increase the flight-recorder duration, ensure that the log directory has adequate space.|  
+|**Temp directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Place the Temp directory on a high-performance storage subsystem.|  
+|**Backup directory**|\<Drive:>\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |This directory is for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] default backup files. For [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installations, it's also where the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System Services caches [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data files.<br /><br /> Ensure appropriate permissions are set to prevent data loss, and that the user group for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
   
 #### Considerations
   
@@ -197,7 +197,7 @@ Use this page to set the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 In previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the BUILTIN\Administrators group was provisioned as a login in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and members of the local Administrators group could log in by using their Administrator credentials. However, using elevated permissions isn't a best practice.
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the BUILTIN\Administrators group isn't provisioned as a login. Make sure you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for each administrative user, and add that login to the **sysadmin** fixed server role during the installation of a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Do the same for Windows accounts that are used to run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent jobs, including replication agent jobs.  
+In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the BUILTIN\Administrators group isn't provisioned as a login. Make sure you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for each administrative user, and add that login to the **sysadmin** fixed server role during the installation of a new instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Do the same for Windows accounts that run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent jobs, including replication agent jobs.  
   
 ### Options
 
@@ -208,7 +208,7 @@ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the BUILTIN\Administra
 > [!IMPORTANT]  
 > You must explicitly provision [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrators for new installations during Setup. Setup won't allow you to continue until you complete this step.
   
-**Specify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrators**: You must specify at least one Windows principal for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select the **Current User** button. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+**Specify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrators**: You must specify at least one Windows principal for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, select the **Add Current User** button. To add or remove accounts from the list of system administrators, select **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 When you're finished editing the list, select **OK**, then verify the list of administrators in the configuration dialog box. If the list is complete, select **Next**.  
   
@@ -270,37 +270,37 @@ For more information about choosing an account to run the [!INCLUDE[ssDEnoversio
 
 ## <a name ="datadir"></a> Database Engine Configuration - Data Directories page
 
-Use this page to specify the installation location for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] program and data files. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
+Use this page to specify the installation location for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] program and data files. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
   
 To specify an SMB file share as a directory, you must manually type the supported UNC path. Browsing to an SMB file share isn't supported. The following example shows the supported UNC path format of an SMB file share:
 
-`\\<ServerName>\<ShareName>\....`
+`\\<ServerName>\<ShareName>\...`
 
 ### Standalone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
-For a standalone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the following table lists the supported storage types and the default directories that are user configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  
+For a standalone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the following table lists the supported storage types and the default directories that you can configure during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  
   
-### UIElement list
+### UI element list
   
 |Description|Supported storage types|Default directory|Recommendations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Data root directory|Local disk, SMB file server, shared storage* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures access control lists (ACLs) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.|  
-|User database directory|Local disk, SMB file server, shared storage*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Best practices for user data directories depend on workload and performance requirements.|  
-|User database log directory|Local disk, SMB file server, shared storage*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Ensure that the log directory has adequate space.|  
-|Backup directory|Local disk, SMB file server, shared storage*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Set appropriate permissions to prevent data loss, and ensure that the user account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
+|**Data root directory**|Local disk, SMB file server, shared storage* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures access control lists (ACLs) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.|  
+|**User database directory**|Local disk, SMB file server, shared storage*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Best practices for user data directories depend on workload and performance requirements.|  
+|**User database log directory**|Local disk, SMB file server, shared storage*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Ensure that the log directory has adequate space.|  
+|**Backup directory**|Local disk, SMB file server, shared storage*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Set appropriate permissions to prevent data loss, and ensure that the user account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
   
 \* Although shared disks are supported, we don't recommend their use for a standalone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### Failover cluster instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-For a failover cluster instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the following table lists the supported storage types and the default directories that are user configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
+For a failover cluster instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the following table lists the supported storage types and the default directories that you can configure during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
 |Description|Supported storage types|Default directory|Recommendations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|Data root directory|Shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.|  
-|User database directory|Shared storage, SMB file server|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Best practices for user data directories depend on workload and performance requirements.|  
-|User database log directory|Shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Ensure that the log directory has adequate space.|  
-|Backup directory|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Set appropriate permissions to prevent data loss, and ensure that the user account for the SQL Server service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
+|**Data root directory**|Shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.|  
+|**User database directory**|Shared storage, SMB file server|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Best practices for user data directories depend on workload and performance requirements.|  
+|**User database log directory**|Shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Ensure that the log directory has adequate space.|  
+|**Backup directory**|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Set appropriate permissions to prevent data loss, and ensure that the user account for the SQL Server service has adequate permissions to write to the backup directory. Using a mapped drive for backup directories isn't supported.|  
   
 ### Security considerations
   
@@ -329,7 +329,7 @@ The following recommendations apply to SMB file servers:
   
 ## <a name="tempdb"><a/> Database Engine Configuration - TempDB page
 
-Use this page to specify the **tempdb** data and log file location, size, growth settings, and number of files for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
+Use this page to specify the **tempdb** data and log file location, size, growth settings, and number of files for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
   
 To specify an SMB file share as a directory, you must manually type the supported UNC path. Browsing to an SMB file share isn't supported. The following example shows the supported UNC path format of an SMB file share:
 
@@ -341,25 +341,25 @@ For standalone instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
   
 |Description|Supported storage type|Default directory|Recommendations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**Data directories**|Local disk, SMB file server, shared storage* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.<br /><br /> Best practices for the **tempdb** directories depend on workload and performance requirements. To spread the data files across several volumes, specify multiple folders or drives.|  
-|**Log directory**|Local disk,  SMB file server, shared storage*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Ensure that the log directory has adequate space.|  
+|**Data directories**|Local disk, SMB file server, shared storage* |\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.<br /><br /> Best practices for the **tempdb** directories depend on workload and performance requirements. To spread the data files across several volumes, specify multiple folders or drives.|  
+|**Log directory**|Local disk,  SMB file server, shared storage*|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Ensure that the log directory has adequate space.|  
   
 \* Although shared disks are supported, we don't recommend their use for a standalone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### Data and log directories for a failover cluster instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-For a failover cluster instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the following table lists the supported storage types and the default directories that are user configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
+For a failover cluster instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the following table lists the supported storage types and the default directories that you can configure during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
 |Description|Supported storage type|Default directory|Recommendations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb** data directory|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.<br /><br /> Ensure that the specified directory or directories (if multiple files are specified) are valid for all the cluster nodes. During failover, if the **tempdb** directories aren't available on the failover target node, the SQL Server resource fails to come online.|  
-|**tempdb** log directory|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Best practices for user data directories depend on workload and performance requirements.<br /><br /> Ensure that the specified directory is valid for all the cluster nodes. During failover, if the **tempdb** directories aren't available on the failover target node, the SQL Server resource fails to come online.<br /><br /> Ensure that the log directory has adequate space.|  
+|**tempdb data directory**|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.<br /><br /> Ensure that the specified directory or directories (if multiple files are specified) are valid for all the cluster nodes. During failover, if the **tempdb** directories aren't available on the failover target node, the SQL Server resource fails to come online.|  
+|**tempdb log directory**|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Best practices for user data directories depend on workload and performance requirements.<br /><br /> Ensure that the specified directory is valid for all the cluster nodes. During failover, if the **tempdb** directories aren't available on the failover target node, the SQL Server resource fails to come online.<br /><br /> Ensure that the log directory has adequate space.|  
   
-### UIElement list
+### UI element list
 
 Configure the settings for **tempdb** according to your workload and requirements. The following settings apply to **tempdb** data files:  
   
-* **Number of files** is the total number of data files for **tempdb**. The default value is the lower of 8 or the number of logical cores detected by setup. As a general rule, if the number of logical processors is less than or equal to 8, use the same number of data files as logical processors. If the number of logical processors is greater than 8, use 8 data files. If contention occurs, increase the number of data files by multiples of 4 (up to the number of logical processors) until contention falls to acceptable levels, or make changes to the workload or code.
+* **Number of files** is the total number of data files for **tempdb**. The default value is the lower of 8 or the number of logical cores detected by Setup. As a general rule, if the number of logical processors is less than or equal to 8, use the same number of data files as logical processors. If the number of logical processors is greater than 8, use 8 data files. If contention occurs, increase the number of data files by multiples of 4 (up to the number of logical processors) until contention falls to acceptable levels, or make changes to the workload or code.
   
 * **Initial size (MB)** is the initial size in megabytes for each **tempdb** data file. The default value is 8 MB (or 4 MB for [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] introduces a maximum initial file size of 262,144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] has a maximum initial file size of 1024 MB. All **tempdb** data files are the same initial size. Because **tempdb** is re-created every time SQL Server starts or fails over, specify a size that's close to the size required by your workload for normal operation. To further optimize the creation of **tempdb** during startup, enable [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md).  
   
@@ -368,7 +368,7 @@ Configure the settings for **tempdb** according to your workload and requirement
 * **Autogrowth (MB)** is the amount of space in megabytes that each **tempdb** data file automatically grows by when it runs out of space. In [!INCLUDE[sssql15](../../includes/sssql15-md.md)] and later, all data files grow at the same time by the amount specified in this setting.  
   
 * **Total autogrowth (MB)** is the cumulative size of each autogrowth event.  
-* **Data directories** shows all the directories that hold **tempdb** data files. When there are multiple directories, data files are placed in directories in a round-robin manner. For example, if you create 3 directories and specify 8 data files, data files number 1, 4, and 7 are created in the first directory. Data files 2, 5, and 8 are created in the second directory. Data files 3 and 6 are in the third directory.  
+* **Data directories** shows all the directories that hold **tempdb** data files. When there are multiple directories, data files are placed in directories in a round-robin manner. For example, if you create 3 directories and specify 8 data files, data files 1, 4, and 7 are created in the first directory. Data files 2, 5, and 8 are created in the second directory. Data files 3 and 6 are in the third directory.  
   
 * To add directories, select **Add...**.  
   
@@ -384,7 +384,7 @@ Configure the settings for **tempdb** according to your workload and requirement
 * **Autogrowth (MB)** is the growth increment of the **tempdb** log in megabytes.  The default value of 64 MB creates the optimal number of virtual log files during initialization.  
 
   > [!NOTE]
-  > **Tempdb** log files don't use instant file initialization.
+  > **Tempdb** log files don't use database instant file initialization.
   
 * **Log directory** is the directory where **tempdb** log files are created. There's only one **tempdb** log directory.  
   
@@ -426,7 +426,7 @@ You can manually configure this setting on this page, and you can modify this se
 
 Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integrates the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with an NTFS file system by storing **varbinary(max)** binary large object (BLOB) data as files in the file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can insert, update, query, search, and back up FILESTREAM data. Microsoft Win32 file-system interfaces provide streaming access to the data. 
   
-### UIElement list
+### UI element list
   
 **Enable FILESTREAM for Transact-SQL access**: Select to enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access. This check box must be selected before the other options will be available.  
   
@@ -448,14 +448,14 @@ Use the **User Instance** page to:
 * Generate a separate instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for users without administrator permissions.
 * Add users to the administrator role.  
   
-### Option
+### Options
   
-**Enable User Instances**: The default is on. To disable the ability to enable user instances, clear the check box.  
+**Enable User Instances**: The default is on. To turn off the ability to enable user instances, clear the check box.  
   
 The user instance, also known as a child or client instance, is an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is generated by the parent instance (the primary instance that runs as a service, like [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) on behalf of a user. The user instance runs as a user process under the security context of that user. The user instance is isolated from the parent instance and any other user instances that are running on the computer. The user instance feature is also referred to as "run as normal user" (RANU).  
   
 > [!NOTE]  
-> Logins provisioned as members of the **sysadmin** fixed server role during setup are provisioned as administrators in the template database. They're members of the **sysadmin** fixed server role on the user instance unless they're removed.  
+> Logins provisioned as members of the **sysadmin** fixed server role during Setup are provisioned as administrators in the template database. They're members of the **sysadmin** fixed server role on the user instance unless they're removed.  
   
 **Add user to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrator role**:  Default is off. To add the current Setup user to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrator role, select the check box.  
   
@@ -465,7 +465,7 @@ To make any changes to the user roles after this installation program ends, use 
 
 1. To update the list of users in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] System Administrator role, select the **Add New Administrator** link.  
 
-1. Ensure that the **User to provision** field lists the DomainName\UserName of the user whose permissions you want to update.
+1. Ensure that the **User to provision** field lists the \<DomainName>\\\<UserName> of the user whose permissions you want to update.
 
 1. Select the role to be updated from the list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in the **Available privileges** pane, and then select the right arrow.
 

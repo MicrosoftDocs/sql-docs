@@ -365,7 +365,7 @@ Deprecated / Removed Features
 
 ### Known issue(s)
 
-You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, please follow the steps from the [SSMS2018 - Installed, but will not run article](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run).
+You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, please follow the steps from the [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) article.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -440,7 +440,7 @@ Azure SQL:
 - Fixed an issue where SSMS Query Editor was silently closing and reopening connections during MFA token renewal. This prevents side effects unbeknownst to the user (like closing a transaction and never reopening again) from happening. The change adds the token expiration time to the properties window. 
 - Fixed an issue where SSMS wasn't enforcing password prompts for imported MSA accounts for AAD with MFA login. 
 
-Activity Monitor: 
+Activity Monitor:
 
 - Fixed an issue that was causing "Live Query Statistics" to hang when launched from Activity Monitor and SQL Authentication was used. 
 

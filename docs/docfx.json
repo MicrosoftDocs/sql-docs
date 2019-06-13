@@ -113,6 +113,10 @@
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
       },
 
+      "manager": {
+        "**/*.md": "jroth"
+      },
+
       "titleSuffix": {
         "2014/analysis-services/**/*.md": "SQL Server 2014 Analysis Services",
         "2014/database-engine/availability-groups/**/*.md": "SQL Server Always On",

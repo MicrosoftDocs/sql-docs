@@ -3,12 +3,12 @@ title: Previous versions of SQL Server | Microsoft Docs
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-ms.date: "06/02/2019"
+ms.date: "06/12/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
 ms.custom: ""
-monikerRange: "=sql-server-previousversions||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-previousversions||=sqlallproducts-allversions"
 ---
 # Previous versions of SQL Server documentation
 

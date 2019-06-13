@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -75,7 +75,7 @@ If you are using AKS, you need to run the following command to get the IP addres
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 ```
 
 ## Kubeadm or Minikube

@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Learn the steps and resources for deploying SQL Server 2019 big data clusters (preview).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -46,7 +46,7 @@ After configuring Kubernetes, you deploy a big data cluster with the `mssqlctl c
 
 - If you are deploying to a dev-test environment, you can choose to use one of the [default configurations](deployment-guidance.md#deploy) provided by **mssqlctl**.
 
-- To customize your deployment, you can create and use your own [deployment configuration files](deployment-guidance.md#configfile). 
+- To customize your deployment, you can create and use your own [deployment configuration files](deployment-guidance.md#configfile).
 
 - For a completely unattended installation, you can pass all other settings in  environment variables. For more information, see [unattended deployments](deployment-guidance.md#unattended).
 

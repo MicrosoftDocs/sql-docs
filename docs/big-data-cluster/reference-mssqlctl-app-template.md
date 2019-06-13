@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Reference article for mssqlctl app template commands.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql

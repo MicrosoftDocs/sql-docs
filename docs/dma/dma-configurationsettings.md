@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
-manager: craigg
+manager: jroth
 ---
 
 # Configure settings for Data Migration Assistant

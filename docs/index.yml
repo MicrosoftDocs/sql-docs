@@ -39,7 +39,7 @@ productDirectory:
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
       - url: https://docs.microsoft.com/previous-versions/sql/
-        text: Previous Versions (SQL 2005 - 2012)
+        text: Previous Versions (SQL 2005-2012)
   - title: SQL Server on Linux
     imageSrc: media/index/linux.png
     links:

@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "ISSCommandWithParameters interface"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Using User-Defined Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

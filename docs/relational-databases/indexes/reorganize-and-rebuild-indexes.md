@@ -88,7 +88,13 @@ An index cannot be reorganized or rebuilt if the filegroup in which it is locate
 ### <a name="Security"></a> Security  
   
 #### <a name="Permissions"></a> Permissions  
-Requires ALTER permission on the table or view. User must be a member of the **sysadmin** fixed server role or the **db_ddladmin** and **db_owner** fixed database roles.  
+Requires ALTER permission on the table or view. User must be a member of at least one of the following roles:
+
+* **db_ddladmin** database role <sup>1</sup> 
+* **db_owner** database role
+* **sysadmin** server role  
+
+<sup>1</sup>**db_ddladmin** database role is the [least privileged](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models).
   
 ## <a name="SSMSProcedureFrag"></a> Check index fragmentation using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

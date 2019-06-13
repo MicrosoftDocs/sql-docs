@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 3326b1b0-53e2-42ae-9ff7-98e8c7017ffa
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # supportsSchemasInTableDefinitions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

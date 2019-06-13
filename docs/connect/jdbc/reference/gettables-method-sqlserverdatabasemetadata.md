@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getTables Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

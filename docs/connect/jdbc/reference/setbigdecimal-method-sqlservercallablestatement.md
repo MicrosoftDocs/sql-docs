@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setBigDecimal Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

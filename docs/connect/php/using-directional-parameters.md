@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Using Directional Parameters
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

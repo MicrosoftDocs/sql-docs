@@ -60,6 +60,10 @@ manager: jroth
      If the database contains a database master key, enter the password for the database master key in the **Password** column.  
   
 5.  On the **Select Initial Data Synchronization** page, choose how you want your new secondary databases to be created and joined to the availability group. Choose one of the following options:  
+
+    - **Automatic Seeding**
+      
+      Select this option to use automatic seeding. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This restores the back up of the database on the secondary replica without having to do so manually. For more information about automatic seeding, see https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas?view=sql-server-2017
   
     -   **Full**  
   

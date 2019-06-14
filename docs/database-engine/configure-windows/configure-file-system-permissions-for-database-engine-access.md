@@ -36,7 +36,7 @@ ms.author: mikeray
   
 7. Click **Apply**, and then click **OK** twice to exit.  
   
-## See Also  
+## See also  
  [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Move System Databases](../../relational-databases/databases/move-system-databases.md)   
  [Move User Databases](../../relational-databases/databases/move-user-databases.md)  

@@ -83,7 +83,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the max text repl size option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

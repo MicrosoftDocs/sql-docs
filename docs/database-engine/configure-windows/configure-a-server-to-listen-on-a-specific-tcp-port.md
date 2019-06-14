@@ -66,7 +66,7 @@ After you have configured [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 -   Create an alias on the client, specifying the port number.  
 -   Program the client to connect using a custom connection string.  
   
-## See Also  
+## See also  
  [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [SQL Server Browser Service](../../tools/configuration-manager/sql-server-browser-service.md)  
   

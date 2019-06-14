@@ -66,7 +66,7 @@ In a distributed availability group, backups can be performed on secondary repli
   
 -   [Implement Jobs](../../../ssms/agent/implement-jobs.md)  
   
-## See Also  
+## See also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Copy-Only Backups &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   

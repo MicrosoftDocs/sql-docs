@@ -35,7 +35,7 @@ ms.author: mikeray
  **Witness server instance**  
  Select to configure security for the witness server (if present).  
   
-## See Also  
+## See also  
  [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

@@ -221,7 +221,7 @@ $Tcp
   
  You can launch the utility on the administrator command prompt on the Server Core, using the syntax specified in the article: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
   
-## See Also  
+## See also  
  [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
  [Installation How-to articles](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   

@@ -89,5 +89,5 @@ You can complete the prepared instances of [!INCLUDE[ssNoVersion](../../includes
   
 - Access the **Image completion of a prepared stand-alone instance** step on the **Advanced** page of the **Installation Center**.  
   
-## See Also  
+## See also  
 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)  

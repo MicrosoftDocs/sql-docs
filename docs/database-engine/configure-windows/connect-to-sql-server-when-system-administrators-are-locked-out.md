@@ -110,7 +110,7 @@ ms.author: mikeray
   
  Now you should be able to connect normally with one of the accounts which is now a member of the **sysadmin** fixed server role.  
   
-## See Also  
+## See also  
  [Start SQL Server in Single-User Mode](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   

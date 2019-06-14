@@ -60,7 +60,7 @@ ms.author: mikeray
   
  When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
-## See Also  
+## See also  
  [Create a Database Master Key](../../relational-databases/security/encryption/create-a-database-master-key.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

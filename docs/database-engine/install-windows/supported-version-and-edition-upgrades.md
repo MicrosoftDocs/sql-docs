@@ -166,7 +166,7 @@ Additionally you can also perform an edition upgrade between [!INCLUDE[sssql15-m
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation to [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard.  
   
-## See Also  
+## See also  
 
 [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     

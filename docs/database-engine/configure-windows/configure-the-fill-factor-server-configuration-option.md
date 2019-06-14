@@ -83,7 +83,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the fill factor option  
  The server must be restarted before the setting can take effect.  
   
-## See Also  
+## See also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   

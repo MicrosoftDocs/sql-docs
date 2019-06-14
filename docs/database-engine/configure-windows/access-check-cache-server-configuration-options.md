@@ -20,7 +20,7 @@ ms.author: mikeray
   
  The default values of 0 indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is managing these options. Microsoft recommends only changing these options when directed by Microsoft Customer Support Services.  
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

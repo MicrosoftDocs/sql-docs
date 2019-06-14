@@ -29,7 +29,7 @@ ms.author: mikeray
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ft notify bandwidth Server Configuration Option](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

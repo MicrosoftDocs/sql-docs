@@ -81,7 +81,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the default language option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   

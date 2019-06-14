@@ -43,7 +43,7 @@ ms.author: mikeray
 > [!NOTE]  
 >  For connections to Azure Active Directory Authentication for SQL Database install the latest driver, such as [ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
   
-## See Also  
+## See also  
  [Check the ODBC SQL Server Driver Version &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   

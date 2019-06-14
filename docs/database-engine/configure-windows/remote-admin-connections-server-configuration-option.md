@@ -41,7 +41,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Diagnostic Connection for Database Administrators](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   
   

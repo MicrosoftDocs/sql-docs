@@ -27,7 +27,7 @@ ms.author: mikeray
   
  When attempting to fetch a data row, if the protocol handler cannot connect to SQL Server within the specified time, it reports a time-out error for that row. The full-text gatherer will retry the row later. For more information about the full-text gatherer, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## See Also  
+## See also  
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

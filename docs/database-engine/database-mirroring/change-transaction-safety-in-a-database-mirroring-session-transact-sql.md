@@ -43,7 +43,7 @@ ms.author: mikeray
   
      where *\<database>* is the mirrored database.  
   
-## See Also  
+## See also  
  [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   

@@ -347,7 +347,7 @@ ms.author: mikeray
     $DfltInstance  
     ```  
   
-## See Also  
+## See also  
  [Overview of SQL Server Setup Documentation](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   

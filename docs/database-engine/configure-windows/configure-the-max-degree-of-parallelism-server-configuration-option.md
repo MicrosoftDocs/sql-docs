@@ -115,7 +115,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the max degree of parallelism option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)      
  [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/help/2806535)     
  [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   

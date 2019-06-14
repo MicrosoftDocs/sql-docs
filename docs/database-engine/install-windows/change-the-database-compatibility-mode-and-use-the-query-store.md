@@ -43,7 +43,7 @@ The recommended workflow for upgrading the query processor to the latest version
 
 Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, users can be guided through the recommended workflow using the Query Tuning Assistant. For more information, see [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  
-## See Also  
+## See also  
 [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
 [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md)     
 [ALTER DATABASE &#40;Transact-SQL&#41; Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)     

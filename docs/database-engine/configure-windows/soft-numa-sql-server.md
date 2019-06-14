@@ -131,7 +131,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 > [!NOTE]
 > While you can view the running value for automatic soft-NUMA using [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), you cannot change its value using **sp_configure**. You must use the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the `SET SOFTNUMA` argument.  
   
-## See Also  
+## See also  
 [Map TCP IP Ports to NUMA Nodes &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)    
 [affinity mask Server Configuration Option](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)    
 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)     

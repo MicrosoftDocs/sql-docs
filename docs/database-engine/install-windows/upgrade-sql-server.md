@@ -40,7 +40,7 @@ This section contains the following articles:
 -   [Upgrade SQL Server using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 -   [Upgrade to a different edition of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)  
   
-## See Also  
+## See also  
  [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)   
  [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)   
  [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

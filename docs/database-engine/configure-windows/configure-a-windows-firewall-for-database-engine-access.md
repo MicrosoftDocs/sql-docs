@@ -89,7 +89,7 @@ ms.author: mikeray
   
 7.  In the **Name** dialog box, type a name and description for this rule, and then click **Finish**.  
   
-## See Also  
+## See also  
  [How to: Configure Firewall Settings (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

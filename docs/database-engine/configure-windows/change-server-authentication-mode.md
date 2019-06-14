@@ -88,7 +88,7 @@ ms.author: mikeray
        GO
        ```
   
-## See Also  
+## See also  
  [Strong Passwords](../../relational-databases/security/strong-passwords.md)   
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

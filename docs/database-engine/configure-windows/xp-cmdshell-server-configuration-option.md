@@ -35,7 +35,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

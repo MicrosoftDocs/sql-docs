@@ -73,7 +73,7 @@ For local installations, you must run Setup as an administrator. If you install 
   
 -   Template databases remain on the computer after the upgrade.  
   
-## See Also  
+## See also  
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

@@ -50,7 +50,7 @@ ms.author: mikeray
 ## After Forcing Service  
  After service is forced to the mirror server (with possible data loss), start a full crawl. The method to use for starting a full crawl depends on whether the full-text index is change tracked. For more information, see "Full-Text Indexes After Failover," earlier in this topic.  
   
-## See Also  
+## See also  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   

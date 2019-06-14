@@ -298,7 +298,7 @@ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 - [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## See Also  
+## See also  
  [What is Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [How does Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
   

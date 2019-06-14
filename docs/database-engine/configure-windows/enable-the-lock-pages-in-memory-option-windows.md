@@ -42,7 +42,7 @@ ms.author: mikeray
   
 8.  Restart the SQL Server Service for this setting to take effect.
   
-## See Also  
+## See also  
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   

@@ -92,7 +92,7 @@ ms.author: mikeray
   
  If this job does not exist or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is stopped, the status becomes increasingly stale and may no longer reflect the configuration of the mirroring session. For example, after a failover, the partners might appear to share the same role-principal or mirror, or the current principal server might be shown as the mirror, while the current mirror server is shown as the principal.  
   
-## See Also  
+## See also  
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

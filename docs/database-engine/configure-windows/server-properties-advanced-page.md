@@ -122,7 +122,7 @@ ms.author: mikeray
  **Query Wait**  
  Specifies the time in seconds (from 0 through 2147483647) that a query waits for resources before timing out. If the default value of -1 is used, the time-out is calculated as 25 times of the estimated query cost. For more information, see [Configure the query wait Server Configuration Option](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

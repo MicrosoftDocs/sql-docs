@@ -80,7 +80,7 @@ ms.author: mathoma
 > [!NOTE]  
 >  Log shipping also supports the option to [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md), and optionally [Change Roles Between Primary and Secondary Log Shipping Servers &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). However, since log shipping is rarely configured as a high availability solution anymore (newer options are much more robust), failing over generally will not minimize downtime because system database objects will not be synchronized and enabling clients to easily locate and connect to a promoted secondary can be an ordeal.  
   
-## See Also  
+## See also  
  [Upgrade to SQL Server 2016 Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Configure Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   

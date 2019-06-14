@@ -40,7 +40,7 @@ To avoid this, create an alias in all the nodes of the clustered instance or all
  If you hide a clustered named instance, cluster service may not be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if the **LastConnect** registry key (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) has a different port than the port that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is listening on. If the cluster service is unable to make a connection to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you might see an error similar to the following:  
 **Event ID: 1001: Event Name: Failover clustering resource deadlock.**  
   
-## See Also  
+## See also  
  [Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)   
  [Description of SQL Virtual Server client connections](https://support.microsoft.com/kb/273673)   
  [How to assign a static port to a SQL Server named instance - and avoid a common pitfall](https://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  

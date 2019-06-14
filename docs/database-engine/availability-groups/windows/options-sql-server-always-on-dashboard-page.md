@@ -33,7 +33,7 @@ ms.author: mathoma
  **Enable your user-defined Always On policy.**  
  If you have defined your own Always On policy, click this option to enable your policy.  
   
-## See Also  
+## See also  
  [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

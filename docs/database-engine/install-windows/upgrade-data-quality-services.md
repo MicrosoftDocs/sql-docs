@@ -90,7 +90,7 @@ This article provides information on how to upgrade your existing installation o
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
-## See Also  
+## See also  
  [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Remove Data Quality Server Objects](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  

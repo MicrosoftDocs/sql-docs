@@ -157,7 +157,7 @@ GO
 ## .NET Framework Security  
  When copying a certificate to another system, use a secure copy method. Be extremely careful to keep all of your certificates secure.  
   
-## See Also  
+## See also  
  [Transport Security for Database Mirroring and Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

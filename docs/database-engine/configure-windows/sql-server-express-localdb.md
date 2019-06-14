@@ -134,6 +134,6 @@ An instance of [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]LocalD
 >[!NOTE]
 >LocalDB always runs under the users security context; that is, LocalDB never runs with credentials from the local Administrator's group. This means that all database files used by a LocalDB instance must be accessible using the owning user's Windows account, without considering membership in the local Administrators group.
 
-## See Also
+## See also
 
 [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md)

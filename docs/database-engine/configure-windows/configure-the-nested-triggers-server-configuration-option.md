@@ -76,7 +76,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the nested triggers option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [Create Nested Triggers](../../relational-databases/triggers/create-nested-triggers.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

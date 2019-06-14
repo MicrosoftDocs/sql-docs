@@ -122,7 +122,7 @@ If you are planning to upgrade your SQL Server instance to SQL Server 2016 (or g
 ## Restoring a Replicated Database from an Earlier Version  
  To ensure replication settings are retained when restoring a backup of a replicated database from a previous version: restore to a server and database with the same names as the server and database at which the backup was taken.  
   
-## See Also  
+## See also  
  [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)  
  [Replication Administration FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)   

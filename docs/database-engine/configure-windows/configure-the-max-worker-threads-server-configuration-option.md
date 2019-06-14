@@ -140,7 +140,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the max worker threads option  
  The change will take effect immediately after executing [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), without requiring the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to restart.  
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

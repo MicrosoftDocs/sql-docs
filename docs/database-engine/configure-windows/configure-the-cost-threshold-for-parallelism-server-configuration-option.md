@@ -109,7 +109,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the cost threshold for parallelism option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md)   
  [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   

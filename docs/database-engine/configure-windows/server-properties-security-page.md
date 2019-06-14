@@ -66,7 +66,7 @@ ms.author: mikeray
  **Cross database ownership chaining**  
  Select to allow the database to be the source or target of a cross-database ownership chain. For more information, see [cross db ownership chaining Server Configuration Option](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

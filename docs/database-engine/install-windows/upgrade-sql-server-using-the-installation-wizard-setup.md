@@ -134,7 +134,7 @@ You must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](..
   
 -   **Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation** - To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information about surface area configuration, see the readme file for this release.  
   
-## See Also  
+## See also  
  [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

@@ -39,7 +39,7 @@ ms.author: mathoma
 | &nbsp; | &nbsp; |
 
 
-## See Also  
+## See also  
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
 
   

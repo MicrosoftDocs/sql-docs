@@ -53,7 +53,7 @@ ms.author: mathoma
  **Exclude Replica**  
  Select if you never want this availability replica to be chosen for performing backups. This is useful, for example, for a remote availability replica to which you never want backups to fail over.  
   
-## See Also  
+## See also  
  [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   

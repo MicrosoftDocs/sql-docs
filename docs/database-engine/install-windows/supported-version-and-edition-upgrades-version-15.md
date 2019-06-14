@@ -136,7 +136,7 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Evaluation to [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] Standard.  
   
-## See Also  
+## See also  
 
  [Editions and supported features of [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]](../../sql-server/editions-and-components-of-sql-server-version-15.md)
 

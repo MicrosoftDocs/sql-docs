@@ -93,7 +93,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the default full-text language option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

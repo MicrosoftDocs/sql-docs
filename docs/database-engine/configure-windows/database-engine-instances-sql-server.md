@@ -46,7 +46,7 @@ ms.author: mikeray
 |Describes the capabilities of Service Broker for messaging and queueing applications and provides pointers to the Service Broker documentation.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |Describes how the buffer pool extension can be used to provide seamless integration of nonvolatile random access storage (solid-state drives) to the Database Engine buffer pool to significantly improve I/O throughput.|[Buffer Pool Extension File](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
-## See Also  
+## See also  
  [sqlservr Application](../../tools/sqlservr-application.md)   
  [Database Features](../../relational-databases/database-features.md)   
  [Database Engine Cross-Instance Features](../../relational-databases/database-engine-cross-instance-features.md)  

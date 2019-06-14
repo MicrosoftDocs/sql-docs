@@ -149,7 +149,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
  This issue may also occur if you did not stop and restart the **MDS Application Pool** in IIS when upgrading the MDS database schema. Restart the **MDS Application Pool** to correct the issue.  
   
-## See Also  
+## See also  
  [Install Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

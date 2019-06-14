@@ -171,7 +171,7 @@ For step-by-step instructions on how to perform an edition upgrade, see [Upgrade
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Evaluation to [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Standard.  
   
-## See Also  
+## See also  
 
  [Editions and Supported Features for SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)
  

@@ -94,7 +94,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the media retention option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

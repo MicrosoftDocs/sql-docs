@@ -98,7 +98,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the index create memory option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   

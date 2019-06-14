@@ -161,7 +161,7 @@ SELECT c.value, c.value_in_use
 FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
 ```
   
-## See Also  
+## See also  
  [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md)   
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

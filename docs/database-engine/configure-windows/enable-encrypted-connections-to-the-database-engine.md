@@ -155,7 +155,7 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
 ## Internet Protocol Security (IPSec)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data can be encrypted during transmission by using IPSec. IPSec is provided by the client and server operating systems and requires no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration. For information about IPSec, see your Windows or networking documentation.
 
-## See Also
+## See also
 [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
 [SQL Server Encryption](../../relational-databases/security/encryption/sql-server-encryption.md)

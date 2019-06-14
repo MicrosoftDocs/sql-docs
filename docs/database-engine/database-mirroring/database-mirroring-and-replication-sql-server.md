@@ -155,7 +155,7 @@ ms.author: mikeray
 |High-performance mode|If the mirror is unavailable, the principal database is running exposed (that is, unmirrored). However, the Log Reader Agent only replicates those transactions that are hardened on the mirror. If service is forced and the mirror server assumes the role of the principal, the Log Reader Agent will work against the mirror and start picking up the new transactions.<br /><br /> Be aware that replication latency will increase if the mirror falls behind the principal.|  
 |High-safety mode without automatic failover|All committed transactions are guaranteed to be hardened to disk on the mirror. The Log Reader Agent replicates only those transactions that are hardened on the mirror. If the mirror is unavailable, the principal disallows further activity in the database; therefore the Log Reader Agent has no transactions to replicate.|  
   
-## See Also  
+## See also  
  [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   
  [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   

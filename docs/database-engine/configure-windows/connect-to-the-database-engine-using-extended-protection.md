@@ -95,7 +95,7 @@ ms.author: vanto
   
  When using IIS to access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data using an HTTP or HTTPs connection, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] can take advantage of Extended Protection provided by IIS. For more information about how to configure IIS to use Extended Protection, see [Configure Extended Protection in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105).  
   
-## See Also  
+## See also  
  [Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)   
  [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md)   
  [Extended Protection for Authentication Overview](https://go.microsoft.com/fwlink/?LinkID=177943)   

@@ -141,7 +141,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 -   To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and activates key services and features. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-## See Also  
+## See also  
  [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Validate a SQL Server Installation](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
  [Repair a Failed SQL Server 2016 Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   

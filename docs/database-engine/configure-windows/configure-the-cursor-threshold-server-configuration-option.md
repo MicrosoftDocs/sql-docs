@@ -94,7 +94,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the cursor threshold option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

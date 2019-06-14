@@ -126,7 +126,7 @@ GO
 ### Reconfigure  
  If a specified affinity mask violates the licensing policy when running [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE command, an error message is reported to the client session and to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log, requiring the database administrator to reconfigure the affinity mask. No RECONFIGURE WITH OVERRIDE command is accepted in this case.  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

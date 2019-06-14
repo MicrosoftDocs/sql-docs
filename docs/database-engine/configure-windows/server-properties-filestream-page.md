@@ -32,7 +32,7 @@ ms.author: mikeray
  **Allow remote clients to have streaming access to FILESTREAM data**  
  Select this control to allow remote clients to access this FILESTREAM data on this server.  
   
-## See Also  
+## See also  
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

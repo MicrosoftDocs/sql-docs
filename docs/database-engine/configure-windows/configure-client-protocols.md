@@ -59,7 +59,7 @@ ms.author: mikeray
   
  The shared memory protocol is enabled separately by checking the **Enabled Shared Memory Protocol** box.  
   
-## See Also  
+## See also  
  [Configure the remote login timeout Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
   
   

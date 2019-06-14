@@ -917,7 +917,7 @@ The instance-aware components are installed to the following locations:
 > [!NOTE]
 > If INSTANCEID is not specified on the command line, then by default Setup substitute \<INSTANCEID> with the \<INSTANCENAME>. 
   
-## See Also  
+## See also  
  [Install SQL Server 2016 from the Installation Wizard](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Install SQL Server 2016 Business Intelligence Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)     

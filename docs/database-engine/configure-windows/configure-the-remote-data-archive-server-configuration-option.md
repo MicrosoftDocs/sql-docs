@@ -39,7 +39,7 @@ GO
   
  To disable the option, set the value to 0.  
   
-## See Also  
+## See also  
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

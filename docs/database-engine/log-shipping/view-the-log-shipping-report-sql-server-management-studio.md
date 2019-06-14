@@ -41,7 +41,7 @@ ms.author: mathoma
   
 3.  Click **Transaction Log Shipping Status**.  
   
-## See Also  
+## See also  
  [Monitor Log Shipping &#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
   

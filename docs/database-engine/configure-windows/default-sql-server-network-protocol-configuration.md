@@ -61,7 +61,7 @@ The [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser service
 * When installing a named instance of the Database Engine including all instances of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Express.
 * When installing a named instance of Analysis Services.
 
-## See Also
+## See also
 
 [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 

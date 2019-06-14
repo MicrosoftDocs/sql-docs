@@ -36,7 +36,7 @@ ms.author: mikeray
 |PENDING_FAILOVER|This state is found only on the principal server after a failover has begun, but the server has not transitioned into the mirror role.<br /><br /> When the failover is initiated, the principal database goes into the PENDING_FAILOVER state, quickly terminates any user connections, and takes over the mirror role soon thereafter.|  
 |DISCONNECTED|The partner has lost communication with the other partner.|  
   
-## See Also  
+## See also  
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

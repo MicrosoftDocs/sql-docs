@@ -42,7 +42,7 @@ EXEC sp_configure 'clr enabled' , '1';
 RECONFIGURE;    
 ```  
   
-## See Also  
+## See also  
  [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

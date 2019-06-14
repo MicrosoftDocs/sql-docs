@@ -30,7 +30,7 @@ ms.author: mikeray
  **No**  
  Click to configure security without a witness.  
   
-## See Also  
+## See also  
  [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)  

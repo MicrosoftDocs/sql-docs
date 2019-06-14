@@ -85,7 +85,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the remote query timeout option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Rowset Properties and Behaviors](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

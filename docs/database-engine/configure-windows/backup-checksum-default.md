@@ -26,7 +26,7 @@ ms.author: mikeray
   
  The setting takes effect immediately.  
   
-## See Also  
+## See also  
  [Enable or Disable Backup Checksums During Backup or Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

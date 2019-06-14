@@ -39,7 +39,7 @@ ms.author: mikeray
  **Running Values**  
  Shows the currently running values for the options on this pane. These values are read-only.  
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   

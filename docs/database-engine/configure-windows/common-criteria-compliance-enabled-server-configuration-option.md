@@ -56,5 +56,5 @@ GO
 
 Restart [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

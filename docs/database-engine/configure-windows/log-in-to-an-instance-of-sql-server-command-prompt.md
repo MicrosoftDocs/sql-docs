@@ -41,7 +41,7 @@ ms.author: mikeray
   
     ```  
   
-## See Also  
+## See also  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
  [osql Utility](../../tools/osql-utility.md)  
   

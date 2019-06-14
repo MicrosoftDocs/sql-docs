@@ -50,7 +50,7 @@ ms.author: mikeray
   
 -   Program the client to connect using a custom connection string.  
   
-## See Also  
+## See also  
  [Create or Delete a Server Alias for Use by a Client &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [Server Network Configuration](../../database-engine/configure-windows/server-network-configuration.md)  
   

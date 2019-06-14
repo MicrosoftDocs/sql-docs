@@ -41,7 +41,7 @@ RECONFIGURE
 GO  
 ```  
   
-## See Also  
+## See also  
  [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

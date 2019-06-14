@@ -154,7 +154,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
  |HealthCheck timeout  </br> **Default: 30000** | Indicate timeout while trying to determine health of the Primary replica | Cluster to Primary </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Used in both | Failure conditions met, OS not responding, low virtual memory, working set trim, generating dump, WSFC (loss of quroum), scheduler issues (dead locked schedulers)| AG resouce Offline-oline or Failover, FCI restart/failover |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
-## See Also    
+## See also    
 
 [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)
 

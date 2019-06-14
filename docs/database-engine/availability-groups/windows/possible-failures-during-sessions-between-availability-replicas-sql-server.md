@@ -96,7 +96,7 @@ Physical, operating system, or [!INCLUDE[ssNoVersion](../../../includes/ssnovers
   
 -   Query **session_timeout** in [sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md).  
   
-## See Also  
+## See also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

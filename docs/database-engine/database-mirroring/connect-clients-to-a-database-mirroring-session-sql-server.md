@@ -240,7 +240,7 @@ Server=123.34.45.56,4724;
 |Service is manually failed over to Partner_C (disconnecting clients).|Partner_C|Partner_B|Client attempts to connect to Partner_A initially, and then to Partner_B. Both names fail, and eventually the connection request times out and fails.|  
   
   
-## See Also  
+## See also  
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
   

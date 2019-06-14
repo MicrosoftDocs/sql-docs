@@ -76,7 +76,7 @@ ms.author: mikeray
 |**Restore Rate**|Rate at which transactions are being restored into the mirror database, in KB per second.|  
 |**Mirror Commit Overhead**|Average delay per transaction in milliseconds (only in synchronous modes). This delay is the amount of overhead incurred while the principal server instance waits for the mirror server instance to write the transaction's log record into the redo queue.|  
   
-## See Also  
+## See also  
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

@@ -168,7 +168,7 @@ manager: erikre
   
 -   After the database failover completes and after the report server service is re-started, SQL Server Agent jobs will be re-created automatically. Until the SQL agent jobs are recreated, any background executions associated with SQL Server Agent jobs will not be processed. This includes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] subscriptions, schedules, an snapshots.  
   
-## See Also  
+## See also  
  [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Getting Started with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   

@@ -61,5 +61,5 @@ BEGIN
 END
 ```
 
-## See Also
+## See also
 [Database Mail](../../relational-databases/database-mail/database-mail.md)  

@@ -39,7 +39,7 @@ ms.author: mikeray
   
      The mirror server immediately transitions to principal server, and mirroring is suspended.  
   
-## See Also  
+## See also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   

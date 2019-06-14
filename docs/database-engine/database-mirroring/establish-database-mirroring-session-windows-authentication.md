@@ -73,7 +73,7 @@ ms.author: mikeray
     > [!NOTE]  
     >  To remove the witness, delete its server network address from the **Witness** field. If you switch from high-safety mode with automatic failover to high-performance mode, the **Witness** field is automatically cleared.  
   
-## See Also  
+## See also  
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

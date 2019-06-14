@@ -83,7 +83,7 @@ ms.author: mikeray
   
  An event is written to the event log for a performance only if its value is at or above its threshold when the status table is being updated. If a peak value reaches the threshold momentarily between status updates that peak is missed.  
   
-## See Also  
+## See also  
  [Start Database Mirroring Monitor &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Start the Configuring Database Mirroring Security Wizard &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

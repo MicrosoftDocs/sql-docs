@@ -53,7 +53,7 @@ ms.author: mathoma
 |[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Retrieves secondary-database settings from the **log_shipping_secondary**, **log_shipping_secondary_databases** and **log_shipping_monitor_secondary** tables.|Secondary server|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|This stored procedure retrieves the settings for a given primary database on the secondary server.|Secondary server|  
   
-## See Also  
+## See also  
  [View the Log Shipping Report &#40;SQL Server Management Studio&#41;](../../database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md)   
  [Log Shipping Stored Procedures and Tables](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

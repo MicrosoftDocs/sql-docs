@@ -63,7 +63,7 @@ ms.author: mikeray
   
      To enable the witness and change the session to high-safety mode with automatic failover, Click **OK**.  
   
-## See Also  
+## See also  
  [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Database Properties &#40;Mirroring Page&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-lin
 
 SQL Server 2019 does not deprecate any features.
 
-### See Also  
+### See also  
 
 - [Breaking changes to database engine features in SQL Server 2019](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
 - [Discontinued database engine functionality in SQL Server](../database-engine/discontinued-database-engine-functionality-in-sql-server.md)

@@ -96,7 +96,7 @@ ms.author: mikeray
   
  In Scenario 2, the witness loses quorum, while the partners, **Partner_A** and **Partner_B**, retain quorum with each other, and the database remains online. Then the partners lose their quorum, too, and the database goes offline. Later, the principal server, **Partner_A**, reconnects to the witness regaining quorum. The witness confirms that **Partner_A** still owns the principal role, and **Partner_A** brings the database back online.  
   
-## See Also  
+## See also  
  [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Role Switching During a Database Mirroring Session &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   

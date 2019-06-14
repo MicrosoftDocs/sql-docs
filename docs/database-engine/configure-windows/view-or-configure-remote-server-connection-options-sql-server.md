@@ -84,7 +84,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ##  <a name="FollowUp"></a> Follow Up: After you configure remote server connection options  
  The remote server must be stopped and restarted before the setting can take effect.  
   
-## See Also  
+## See also  
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Remote Servers](../../database-engine/configure-windows/remote-servers.md)   
  [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   

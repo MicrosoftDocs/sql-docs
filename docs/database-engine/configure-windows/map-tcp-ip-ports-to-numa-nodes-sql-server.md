@@ -49,7 +49,7 @@ ms.author: mikeray
   
 3.  On the **IP Addresses** tab, in the section corresponding to the IP address to configure, in the **TCP Port** box, add the NUMA node identifier in brackets after the port number. For example, for TCP port 1500 and nodes 0, 2, and 5, use **1500[37]**, or **1500[0x25]**.  
   
-## See Also  
+## See also  
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
   

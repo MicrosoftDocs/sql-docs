@@ -122,7 +122,7 @@ ms.author: mikeray
 ### Using a Firewall  
  To communicate with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service on a server behind a firewall, open UDP port 1434, in addition to the TCP port used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (e.g., 1433). For information about working with a firewall, see "How to: Configure a Firewall for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-## See Also  
+## See also  
  [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)  
  [Hide an Instance of SQL Server Database Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

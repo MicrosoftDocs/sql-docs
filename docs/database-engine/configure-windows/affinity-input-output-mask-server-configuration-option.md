@@ -59,7 +59,7 @@ ms.author: mikeray
 > [!CAUTION]  
 >  Do not configure CPU affinity in the Windows operating system and also configure the affinity mask in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These settings are attempting to achieve the same result, and if the configurations are inconsistent, you may have unpredictable results. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU affinity is best configured using the **sp_configure** option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

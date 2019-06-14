@@ -102,7 +102,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the recovery internal option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [Change the Target Recovery Time of a Database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
  [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

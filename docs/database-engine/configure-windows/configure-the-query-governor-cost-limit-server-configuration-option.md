@@ -90,7 +90,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the query governor cost limit option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET QUERY_GOVERNOR_COST_LIMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

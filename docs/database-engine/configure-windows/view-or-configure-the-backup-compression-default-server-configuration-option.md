@@ -108,7 +108,7 @@ GO
 ##  <a name="FollowUp"></a> Follow Up: After you configure the backup compression default option  
  The setting takes effect immediately without restarting the server.  
   
-## See Also  
+## See also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   

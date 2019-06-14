@@ -37,7 +37,7 @@ ms.author: mikeray
     |Failover|On the principal server instance, a manual failover (role swap) has begun but has not yet accepted by the mirror.|  
     |Synchronized|The mirror database contains the same data as the principal database. Manual and automatic failover are possible *only* in the synchronized state.|  
   
-## See Also  
+## See also  
  [Mirroring States &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   

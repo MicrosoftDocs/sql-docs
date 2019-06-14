@@ -64,6 +64,8 @@ The expression order affects the computed `CHECKSUM` value. The order of columns
   
 The `CHECKSUM` value depends on the collation. The same value stored with a different collation will return a different `CHECKSUM` value.
   
+`CHECKSUM ()` does not guarantee unique results. For unique results use [`HASHBYTES()`](../../t-sql/functions/hashbytes-transact-sql.md) with encryption.
+
 ## Examples  
 These examples show the use of `CHECKSUM` to build hash indexes.
   

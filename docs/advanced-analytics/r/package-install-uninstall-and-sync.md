@@ -66,7 +66,7 @@ Whenever you add a new package using the package management functions, both the 
 
 + To synchronize packages marked as **private**, either the owner of the package or the administrator must run the function, and the packages must be private.
 
-+ To synchronize packages on behalf of other users, the owner must bhe a member of the **db_owner** database role.
++ To synchronize packages on behalf of other users, the owner must be a member of the **db_owner** database role.
 
 ## How package synchronization works
 

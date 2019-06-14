@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "05/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: "jrasnick"
+ms.reviewer: jrasnick
 ms.technology: data-warehouse
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,7 +22,7 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# ALTER MATERIALIZED VIEW (Transact-SQL)
+# ALTER MATERIALIZED VIEW (Transact-SQL) (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

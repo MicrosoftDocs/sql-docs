@@ -6,8 +6,8 @@ ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ms.custom: ""
 ms.date: 06/12/2019
@@ -96,7 +96,6 @@ SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a
 | SQL Agent | Fixed an issue where the "View" button on the *Job-Step Properties* wasn't always enabled, thus preventing viewing the output of a given job step. |
 | XEvent UI | Added "Package" column to XEvents list to   disambiguate events with identical names. |
 | XEvent UI | Added missing "EXTERNAL LIBRARY" class type mapping to XEventUI. |
-
 
 ## Previous SSMS releases
 
@@ -366,7 +365,7 @@ Deprecated / Removed Features
 
 ### Known issue(s)
 
-You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, please follow the steps from the [forum](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run).
+You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, please follow the steps from the [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) article.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -441,7 +440,7 @@ Azure SQL:
 - Fixed an issue where SSMS Query Editor was silently closing and reopening connections during MFA token renewal. This prevents side effects unbeknownst to the user (like closing a transaction and never reopening again) from happening. The change adds the token expiration time to the properties window. 
 - Fixed an issue where SSMS wasn't enforcing password prompts for imported MSA accounts for AAD with MFA login. 
 
-Activity Monitor: 
+Activity Monitor:
 
 - Fixed an issue that was causing "Live Query Statistics" to hang when launched from Activity Monitor and SQL Authentication was used. 
 

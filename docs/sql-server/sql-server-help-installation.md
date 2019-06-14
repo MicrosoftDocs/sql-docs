@@ -19,6 +19,9 @@ You can use the Microsoft Help Viewer to download and install SQL Server help pa
 
 Internet access is required to download the Help Viewer content. You can then migrate the content to a computer that does not have internet access.
 
+>[!NOTE]
+> To get local content for the current versions of SQL server, install the current version of SQL Server Management Studio [SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+
 ## What tools Install the Help Viewer versions?
 
 There are two major versions of the Microsoft Help Viewer.  Versions 1.x and 2.x. Each version supports different versions of SQL Server content.  The format of the offline books has changed over time and the older versions of Help Viewer do not support the newer versions of the books

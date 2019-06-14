@@ -4,7 +4,7 @@ description: R and Python in SQL Server, with built-in data science modeling and
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/22/2019
+ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -12,10 +12,11 @@ manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Machine Learning Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## SQL Server Machine Learning Services (R and Python) Documentation
 
-Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in [SQL Server machine learning](what-is-sql-server-machine-learning.md) include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network.
+Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
@@ -36,7 +37,7 @@ Learn how to use R and Python external libraries and languages on resident, rela
 
 ## Step-by-Step Tutorials
 
-- [How to add machine learning and extensibility framework to SQL Server](install/sql-machine-learning-services-windows-install.md)
+- [How to install Machine Learning Services to SQL Server](install/sql-machine-learning-services-windows-install.md)
 
 - [How to execute R from T-SQL and stored procedures](tutorials/sqldev-in-database-r-for-sql-developers.md)
 

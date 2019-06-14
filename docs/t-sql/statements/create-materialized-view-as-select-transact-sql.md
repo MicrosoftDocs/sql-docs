@@ -45,7 +45,7 @@ monikerRange: ||=azure-sqldw-latest||=sqlallproducts-allversions"
 
 This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in Azure SQL Data Warehouse for developing solutions. The article also provides code examples.
 
-A Materialized View persists the data returned from the view definition query and automatically gets updated as data changes in the underlying tables .   It improves the performance of complex queries (typically queries with joins and aggregations) while offering simple maintenance operations.   With its execution plan auto-matching capability, a materialized view does not have to be referenced in the query for the optimizer to consider the view for substitution.  This allows data engineers to implement indexed views as a mechanism for improving query response time, without having to change queries.  
+A Materialized View persists the data returned from the view definition query and automatically gets updated as data changes in the underlying tables.   It improves the performance of complex queries (typically queries with joins and aggregations) while offering simple maintenance operations.   With its execution plan automatching capability, a materialized view does not have to be referenced in the query for the optimizer to consider the view for substitution.  This allows data engineers to implement indexed views as a mechanism for improving query response time, without having to change queries.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -93,10 +93,10 @@ Only CLUSTERED COLUMNSTORE INDEX is supported.
 
 *select_statement*
 The SELECT list in the materialized view definition needs to meet at least one of these two criteria:
-- The SELECT list contains an aggregate function. 
+- The SELECT list contains an aggregate function.
 - GROUP BY is used in the Materialized view definition and all columns in GROUP BY are included in the SELECT list.  
 
-Aggregate functions are required in the SELECT list of the materialized view definition.  Supported aggregations include MAX, MIN, AVG, COUNT, COUNT_BIG, SUM,VAR, STDEV.
+Aggregate functions are required in the SELECT list of the materialized view definition.  Supported aggregations include MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 
 MIN/MAX aggregates used in the SELECT list of the materialized view definition cause the materialized view to be disabled when an UPDATE or DELETE occurs in the referenced base tables.   To re-enable the materialized view, run ALTER MATERIALIZED INDEX with REBUILD.  Inserts into the base table don’t impact the materialized view.
 
@@ -106,7 +106,7 @@ Cannot schema bind %S_MSG '%.*ls'. '%.*ls' is not schema bound.
 
 The definition of a MATERIALIZED VIEW must be deterministic.  A view is deterministic if all expressions in the select list, as well as the WHERE and GROUP BY clauses, are deterministic. For details, see **Deterministic Views NEED LINK**.
 
-Only INNER JOINs  are supported in the FROM clause.  SELF JOINs, OUTER JOINs, or CROSS APPLY are not supported.  
+Only inner joins  are supported in the FROM clause.  Self joins, outer joins, or cross apply are not supported.  
   
 ## Permissions
 
@@ -137,7 +137,7 @@ Once created, materialized views are visible within SQL Server Management Studio
 Users can run [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) and [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) to determine the space being consumed by an materialized view.  
 
 EXPLAIN plan and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution. and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution.  
-To find out if a SQL statement can benefit from a new materialized view, run EXPLAIN command with WITH_RECOMMENDATIONS.  For details, check EXPLAIN (Transact-SQL).    
+To find out if a SQL statement can benefit from a new materialized view, run EXPLAIN command with WITH_RECOMMENDATIONS.  For details, check EXPLAIN (Transact-SQL).
   
 ## Examples  
 

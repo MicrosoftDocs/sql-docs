@@ -77,7 +77,7 @@ conceptualContent:
           url: https://docs.microsoft.com/azure/dms/dms-overview
           itemType: overview
         - text: SQL Machine Learning Services
-          url: reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+          url: advanced-analytics/what-is-sql-server-machine-learning.md
           itemType: overview
     - title: Release notes 
       links:

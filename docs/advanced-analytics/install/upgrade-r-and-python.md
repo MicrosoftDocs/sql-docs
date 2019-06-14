@@ -4,7 +4,7 @@ description: Upgrade R and Python in SQL Server 2016 Services or SQL Server 2017
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/30/2018  
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -265,7 +265,7 @@ Alternatively, this is more work, but you could also fully uninstall and reinsta
 
 ### Step 3: Add any third-party packages
 
-You might have added other open-source or third-party packages to your package library. Since reversing the binding switches the location of the default package library, you must reinstall the packages to the library that R and Python are now using. For more information, see [Default packages](installing-and-managing-r-packages.md), [Install new R packages](install-additional-r-packages-on-sql-server.md), and [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md).
+You might have added other open-source or third-party packages to your package library. Since reversing the binding switches the location of the default package library, you must reinstall the packages to the library that R and Python are now using. For more information, see [Default packages](../package-management/default-packages.md), [Install new R packages](../r/install-additional-r-packages-on-sql-server.md), and [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md).
 
 ## SqlBindR.exe command syntax
 
@@ -310,7 +310,7 @@ If you upgraded to Microsoft R Server 9.0.1, the version of SqlBindR.exe for tha
 
 Later version of SqlBindR automatically restore the original R features, eliminating the need for reinstallation of R components or re-patch the server. However, you must install any R package updates that might have been added after the initial installation.
 
-If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](install-additional-r-packages-on-sql-server.md).
+If you have used the package management roles to install and share package, this task is much easier: you can use R commands to synchronize installed packages to the file system using records in the database, and vice versa. For more information, see [R package management for SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ### Problems with multiple upgrades from SQL Server
 

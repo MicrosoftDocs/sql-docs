@@ -1,5 +1,5 @@
 ---
-title: "SET RESULT SET CACHING  (Transact-SQL) | Microsoft Docs"
+title: "SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/03/2019"
 ms.prod: sql
@@ -16,7 +16,7 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# SET RESULT SET CACHING (Transact-SQL) Applies to Azure SQL Data Warehouse Gen2 only (preview)
+# SET RESULT_SET_CACHING (Transact-SQL) Applies to Azure SQL Data Warehouse Gen2 only (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -43,7 +43,14 @@ Specifies that query result sets returned from this database will be cached in A
 **OFF**
 Specifies that query result sets returned from this database will not be cached in Azure SQL Data Warehouse storage.
 
-Users can tell if a query was executed with a result cache hit or miss by querying [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) with a specific request_id. If there is a cache hit, the query result will have a single step with following details:
+Users can tell if a query was executed with a result cache hit or miss by querying [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) with a specific request_id.
+
+```sql
+From sys.dm_pdw_exec_requests
+Where request_id = 'QID58286'
+```
+
+If there is a cache hit, the query result will have a single step with following details:
 
 |**Column name**|**Operator**|**Value**|
 |----|----|----|
@@ -130,5 +137,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0
 
 ## See also
 
-[SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)</br>
-[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)
+[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
+[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
+[DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)
+[DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)

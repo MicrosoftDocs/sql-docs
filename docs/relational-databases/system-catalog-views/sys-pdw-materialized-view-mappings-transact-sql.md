@@ -15,16 +15,17 @@ manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_materialized_view_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Ties the materialized view to internal object names by object_id.
 
 The columns physical_name and object_id form the key for this catalog view.
   
-|Column Name|Data Type|Description|Range|  
-|-----------------|---------------|-----------------|-----------|  
-|physical_name |**nvarchar(36) **|The physical name for the materialized view.||  
-|object_id  |**int**|The object ID for the materialized view. See sys.objects (Transact-SQL).  ||  
+|Column Name|Data Type|Description|  
+|-----------------|---------------|-----------------|  
+|physical_name |**nvarchar(36) **|The physical name for the materialized view.|  
+|object_id  |**int**|The object ID for the materialized view. See [sys.objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).|  
   
 ## See also
 

@@ -7,12 +7,13 @@ ms.reviewer: ""
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-author: shkale-msft
-ms.author: shkale
+author: XiaoyuL-Preview 
+ms.author: xiaoyul
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # EXPLAIN (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Returns the query plan for a [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement without running the statement. Use **EXPLAIN** to preview which operations will require data movement and to view the estimated costs of the query operations.  
@@ -21,17 +22,15 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-
-```  
+```
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
- 
 ```  
   
 ## Arguments
 
  *SQL_statement*  
- The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which **EXPLAIN** will run. *SQL_statement* can be any of these commands: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**. 
+ The [!INCLUDE[DWsql](../../includes/dwsql-md.md)] statement on which **EXPLAIN** will run. *SQL_statement* can be any of these commands: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.
 
 *WITH_RECOMMENDATIONS*
 Return the query plan with recommendations to optimize the SQL statement performance.  
@@ -67,7 +66,7 @@ Return the query plan with recommendations to optimize the SQL statement perform
 |\<dsql_query>|Top level/document element.|
 |\<sql>|Echoes *SQL_statement*.|  
 |\<params>|This tag is not used at this time.|
-|\<materialized_view_candidate>|Contains the CREATE statement of the recommended materialized view for the SQL statement’s better performance.| 
+|\<materialized_view_candidates>|Contains the CREATE statement of the recommended materialized view for the SQL statement’s better performance.| 
 |\<dsql_operations>|Summarizes and contains the query steps, and includes cost information for the query. Also contains all of the `<dsql_operation>` blocks. This tag contains count information for the entire query:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* is the total estimated time for the query to run, in ms.<br /><br /> *total_number_operations* is the total number of operations for the query. An operation that will be parallelized and run on multiple nodes is counted as a single operation.|  
 |\<dsql_operation>|Describes a single operation within the query plan. The \<dsql_operation> tag contains the operation type as an attribute:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* is one of the values found in [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> The content in the `\<dsql_operation>` block is dependent on the operation type.<br /><br /> See the table below.|  
   
@@ -609,5 +608,5 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
   </dsql_operations>
 </dsql_query>
 ```
- 
 
+##See also

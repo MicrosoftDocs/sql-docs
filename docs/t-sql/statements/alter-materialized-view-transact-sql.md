@@ -1,5 +1,5 @@
 ---
-title: "ALTER Materialized VIEW (Transact-SQL) | Microsoft Docs"
+title: "ALTER MATERIALIZED VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2018"
 ms.prod: sql
@@ -17,21 +17,23 @@ helpviewer_keywords:
   - "views [SQL Server], modifying"
   - "modifying views"
   - "ALTER VIEW statement"
-author: CarlRabeler
-ms.author: 
+author: XiaoyuL-Preview 
+ms.author: xiaoyul
 manager: craigg
+monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # ALTER MATERIALIZED VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxx-xxxx-asdw-xxx-md.md)]
 
-  Modifies a previously created materialized view. ALTER VIEW does not affect dependent stored procedures or triggers and does not change permissions.  
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+Modifies a previously created materialized view. ALTER VIEW does not affect dependent stored procedures or triggers and does not change permissions.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```
-ALTER MATERIALIZED VIEW <view_name>
+ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 {
       REBUILD | DISABLE
 }
@@ -45,15 +47,10 @@ ALTER MATERIALIZED VIEW <view_name>
  *view_name*  
  Is the view to change.  
   
- *column*  
- Is the name of one or more columns, separated by commas, that are to be part of the specified view.  
-  
 > [!IMPORTANT]  
 >  Column permissions are maintained only when columns have the same name before and after ALTER VIEW is performed.  
   
-> [!NOTE]  
->  In the columns for the view, the permissions for a column name apply across a CREATE VIEW or ALTER VIEW statement, regardless of the source of the underlying data. For example, if permissions are granted on the **SalesOrderID** column in a CREATE VIEW statement, an ALTER VIEW statement can rename the **SalesOrderID** column, such as to **OrderRef**, and still have the permissions associated with the view using **SalesOrderID**.  
-  
+ ## Does any of the rest of this section apply?
  ENCRYPTION  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -80,7 +77,11 @@ ALTER MATERIALIZED VIEW <view_name>
  WITH CHECK OPTION  
  Forces all data modification statements that are executed against the view to follow the criteria set within *select_statement*.  
   
-## Remarks  
+## Remarks
+
+If users want to suspend maintenance on the materialized view while maintaining metadata and permissions, they can disable the materialized view.  All queries against the materialized view while in a disabled state resolve against the underlying tables.  `Alter Materialized View REBUILD` resumes the materialized view.
+
+##Does any of this section apply?
  For more information about ALTER VIEW, see Remarks in [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  
@@ -92,9 +93,10 @@ ALTER MATERIALIZED VIEW <view_name>
   
 ## Permissions
 
-ALTER permission on the table or view is required. 
+ALTER permission on the table or view is required.
   
-## Examples  
+## Examples
+
 This example disables a materialized view and puts it in suspended mode.
   
 ```sql

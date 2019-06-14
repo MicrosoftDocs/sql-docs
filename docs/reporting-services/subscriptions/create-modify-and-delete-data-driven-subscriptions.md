@@ -1,7 +1,6 @@
 ---
 title: "Create, Modify, and Delete Data-Driven Subscriptions | Microsoft Docs"
-ms.date: 06/10/2019
-
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: subscriptions
@@ -20,49 +19,49 @@ ms.author: maggies
 # Create, Modify, and Delete Data-Driven Subscriptions
   A data-driven subscription is a query-based subscription that gets the data values used for processing the subscription at run time. When the subscription is triggered, a query is processed to get up-to-date information about recipients, report delivery options, rendering formats, and parameter settings. The query results are combined with the subscription definition to create a dynamic subscription that uses data you already maintain in an employee database, a customer database, or any other database that contains information that can be used as subscriber data.  
   
- To create a new data-driven subscription or modify an existing subscription, use the Create Data-Driven Subscription pages in the web portal. These pages walk you through each step of creating or modifying a subscription. To access a subscription after it is created, use the My Subscriptions page and the Subscriptions list of a report. To learn how to create a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ To create a new data-driven subscription or modify an existing subscription, use the **Manage** > **Subscriptions** page in the web portal. The **Subscriptions** page walks you through each step of creating or modifying a subscription. To access a subscription after it is created, use the **My Subscriptions** page or the Subscriptions list of a report. To learn how to create a data-driven subscription, see [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  In this article:  
   
--   [Managing and deleting a data driven subscription](#bkmk_manage_and_delete)  
+-   [Managing and deleting a data-driven subscription](#bkmk_manage_and_delete)  
   
--   [Creating and modifying a data driven subscription](#bkmk_create_and_modify)..
+-   [Creating and modifying a data-driven subscription](#bkmk_create_and_modify)  
   
--   [Defining a query that retrieves subscription information](#bkmk_define_query)
+-   [Defining a query that retrieves subscription information](#bkmk_define_query)  
   
 -   [Running the subscription](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete"></a> Managing and Deleting a Data-Driven Subscription  
- A data-driven subscription that is in progress cannot be stopped or deleted through the web portal. For this reason, it is advantageous to use a shared schedule to trigger data-driven subscription. That way, if you want to temporarily prevent a subscription from processing, you can pause the schedule that triggers the subscription. For more information, see [Create and Manage Subscriptions for Native Mode Report Servers](create-and-manage-subscriptions-for-native-mode-report-servers.md).  
+##  <a name="bkmk_manage_and_delete"></a> Managing and deleting a data-driven subscription  
+ A data-driven subscription that is in progress cannot be stopped or deleted via the web portal. For this reason, it is advantageous to use a shared schedule to trigger data-driven subscription. That way, if you want to temporarily prevent a subscription from processing, you can pause the schedule that triggers the subscription. For more information, see [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- To delete a data-driven subscription, select the checkbox next to it on the My Subscriptions page or the Subscriptions page of a report, and then select the **Delete** button.  
+ To delete a data-driven subscription, select the checkbox next to the report on the **Subscriptions** page, and then select **Delete**.  
   
  For instructions on how to cancel a data-driven subscription, see [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
-##  <a name="bkmk_create_and_modify"></a> Creating and Modifying a Data-Driven Subscription  
+##  <a name="bkmk_create_and_modify"></a> Creating and modifying a data-driven subscription  
  To create a data-driven subscription, select a report that uses stored credentials or no credentials. When you create the data-driven subscription, consider using a naming convention for the description field so you can easily differentiate standard subscriptions from data-driven subscriptions.  
   
 ### To create a data-driven subscription (Native Mode)  
   
-1.  In the web portal, navigate to the folder containing the report, right-click the report and select **Manage** from the dropdown menu.  
+1. In the web portal, navigate to the folder containing the report, right-click the report, and select **Manage** from the dropdown menu.  
   
-2.  Select the **Subscriptions** tab.  
+2. Select the **Subscriptions** tab.  
   
-3.  Select the **New subscription** button.  
+3. Select **+ New subscription** on the **Subscriptions** page.  
   
 ### To create a data-driven subscription (SharePoint Mode)  
   
-1.  In the SharePoint document library, hover over the report, open the options menu and Click **Manage Subscriptions**.  
+1. In the SharePoint document library, hover over the report, open the options menu and Click **Manage Subscriptions**.  
   
-2.  Click **Add Data-Driven Subscription**.  
+2. Click **Add Data-Driven Subscription**.  
   
 ### To modify an existing data-driven subscription (Native Mode)  
   
-1.  In the web portal navigate to the folder containing the report, right-click the report and select **Manage** from the dropdown menu.  
+1. In the web portal, navigate to the folder containing the report, right-click the report, and select **Manage** from the dropdown menu.  
   
-2.  Select the **Subscriptions** tab. Alternatively, select the gear icon at the top of the web portal home page and select **My subscriptions** from the drop-down menu.  
+2. Select the **Subscriptions** tab.  
   
-3.  Select **Edit** for the subscription you want to modify. Data-driven subscriptions have the value "Data-driven" in the **Type** column.  
+3. Select the checkbox next to the subscription you want to modify, and select **Edit**. Data-driven subscriptions will have the value "Data-driven" in the **Type** column.  
   
 ### To modify an existing data-driven subscription (SharePoint Mode)  
   
@@ -70,10 +69,10 @@ ms.author: maggies
   
 2.  Select the subscription you want to modify.  
   
-> [!NOTE]  
->  You can modify any value that is already specified. All values are presented as they were first created, except for the password that is used to access the subscriber data store. You must retype the password every time you modify values on the second page or any subsequent page.  
+    > [!NOTE]  
+    > You can modify any value that is already specified. All values are presented as they were first created, except for the password that is used to access the subscriber data store. You must retype the password every time you modify values on the second page or any subsequent page.  
   
- Before you can create a data-driven subscription, ensure that you satisfy the following requirements:  
+  Before you can create a data-driven subscription, ensure that you satisfy the following requirements:  
   
 -   **Report requirements**. The report must use stored credentials or no credentials to retrieve data at run time. You cannot subscribe to a report that uses impersonated or delegated credentials to connect to an external data source; the credentials of the user who creates or owns the subscription will not be available when the subscription is processed. The stored credentials can be a Windows account or a database user account. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -98,8 +97,8 @@ ms.author: maggies
 ## See also  
  [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [The web portal of a report server (SSRS Native Mode)](../web-portal-ssrs-native-mode.md)   
+ [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Create and Manage Subscriptions for Native Mode Report Servers](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Working with subscriptions (web portal)](../working-with-subscriptions-web-portal.md)   
- [Use My Subscriptions (Native Mode Report Server)](use-my-subscriptions-native-mode-report-server.md)   
-  
+ [Working with subscriptions (web portal)](../../reporting-services/working-with-subscriptions-web-portal.md)
+ [Use My Subscriptions (Native Mode Report Server)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ 

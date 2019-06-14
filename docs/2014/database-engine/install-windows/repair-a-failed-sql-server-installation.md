@@ -1,5 +1,5 @@
 ---
-title: "Drop a SQL Server 2014 Installation | Microsoft Docs"
+title: "Repair a SQL Server 2014 Installation | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"

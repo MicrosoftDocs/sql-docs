@@ -291,6 +291,41 @@
             "redirect_document_id": false
         },   
         {
+            "source_path": "docs/advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/sql-server-machine-learning-services",
+            "redirect_document_id": true
+        },   
+        {
+            "source_path": "docs/advanced-analytics/install/sql-machine-learning-services-ver15.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-server-machine-learning-services-2019",
+            "redirect_document_id": true
+        },   
+        {
+            "source_path": "docs/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/install/upgrade-r-and-python",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/installing-sql-server-r-services-on-an-azure-virtual-machine.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-azure-virtual-machine",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/sql-server-machine-learning-tasks.md",
+            "redirect_url": "/sql/advanced-analytics/sql-server-machine-learning-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/installing-and-managing-r-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/default-packages",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/installed-package-information",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/advanced-analytics/java/extension-java.md",
             "redirect_url": "/sql/language-extensions/language-extensions-overview",
             "redirect_document_id": false

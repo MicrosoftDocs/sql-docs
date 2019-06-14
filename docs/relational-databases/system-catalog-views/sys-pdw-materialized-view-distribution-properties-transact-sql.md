@@ -14,7 +14,7 @@ ms.author:
 manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sys.pdw_materialized_view_column_distribution_properties (Transact-SQL)
+# sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

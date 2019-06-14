@@ -39,7 +39,7 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
-# CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
+# CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

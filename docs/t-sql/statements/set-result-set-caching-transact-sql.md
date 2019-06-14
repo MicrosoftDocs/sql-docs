@@ -41,16 +41,18 @@ This command must be run while connected to the master database.  Change to this
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
 
 **OFF**
-Specifies that query result sets returned from this database will not be cached in Azure SQL Data Warehouse storage.
+Specifies that query result sets returned from this database won't be cached in Azure SQL Data Warehouse storage.
 
-Users can tell if a query was executed with a result cache hit or miss by querying [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) with a specific request_id.
+Query [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) with a specific request_id to see if a query was executed with a result cache hit or miss.
+
+
 
 ```sql
 From sys.dm_pdw_exec_requests
 Where request_id = 'QID58286'
 ```
 
-If there is a cache hit, the query result will have a single step with following details:
+If there's a cache hit, the query result will have a single step with following details:
 
 |**Column name**|**Operator**|**Value**|
 |----|----|----|
@@ -68,7 +70,7 @@ Requires these permissions:
   or
 - Member of the dbmanager database role.
 
-The owner of the database cannot alter the database unless the owner is a member of the dbmanager role.
+A database owner can't alter the database unless the owner is a member of the dbmanager role.
   
 ## Examples
 

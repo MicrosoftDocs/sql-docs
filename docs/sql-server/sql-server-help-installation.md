@@ -24,7 +24,7 @@ Internet access is required to download the Help Viewer content. You can then mi
 
 ## What tools Install the Help Viewer versions?
 
-There are two major versions of the Microsoft Help Viewer.  Versions 1.x and 2.x. Each version supports different versions of SQL Server content.  The format of the offline books has changed over time and the older versions of Help Viewer do not support the newer versions of the books
+There are two major versions of the Microsoft Help Viewer.  Versions 1.x and 2.x. Each version supports different versions of SQL Server content.  The format of the offline books has changed over time, and the older versions of Help Viewer do not support the newer versions of the books.
 
 |**Content Set**|**Tools that install Help Viewer**|**Help Viewer version**|
 |-|-|-|

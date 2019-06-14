@@ -109,7 +109,7 @@
         href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
       - name: 2. Data exploration
         href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
-      - name: 3, Graphs and plots
+      - name: 3. Graphs and plots
         href: ../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md
       - name: 4. Feature engineering
         href: ../advanced-analytics/tutorials/walkthrough-create-data-features.md

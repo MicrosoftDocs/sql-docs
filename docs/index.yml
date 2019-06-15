@@ -77,7 +77,7 @@ conceptualContent:
           url: https://docs.microsoft.com/azure/dms/dms-overview
           itemType: overview
         - text: SQL Machine Learning Services
-          url: reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+          url: advanced-analytics/what-is-sql-server-machine-learning.md
           itemType: overview
     - title: Release notes 
       links:
@@ -252,7 +252,7 @@ additionalContent:
     - items:
       - title: Development
         summary: |
-          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-)<br />
+          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview)<br />
           [Azure SQL DB connectivity libraries](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries)<br />
           [SQL Server client connectivity](connect/homepage-sql-connection-programming.md)<br />
       - title: Reporting

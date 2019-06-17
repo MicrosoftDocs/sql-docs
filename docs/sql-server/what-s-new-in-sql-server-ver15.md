@@ -37,6 +37,9 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | New feature or update | Details |
 |:---|:---|
 |New `mssqlctl` status commands and removal of the Cluster Administration Portal.|The Cluster Administration Portal is removed in this release. New status commands have been added to `mssqlctl` that complement existing monitoring commands.|
+|Score a MLeap model in SQL Server using SQL Java extensions.| |
+|Create Spark pools at deployment and run spark nodes outside of the storage pods. | |
+| | |
 | &nbsp; | &nbsp; |
 
 ### Database engine
@@ -44,7 +47,9 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | New feature or update | Details |
 |:---|:---|
 |Index encrypted columns with Always Encrypted with secure enclaves.|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
-|SQL Server Setup includes Max Server Memory recommendations for a single instance deployment that follow the documented guidelines. |[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)|
+|SQL Server Setup includes Max Server Memory recommendations for a single instance deployment that follow the documented guidelines. |[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)
+|New SQL Graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
+|Partition tables and indexes for SQL Graph nodes and indexes. |The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. |
 | &nbsp; | &nbsp; |
 
 

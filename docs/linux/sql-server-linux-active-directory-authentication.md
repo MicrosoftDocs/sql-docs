@@ -96,7 +96,7 @@ To configure the SQL Server service keytab file:
 
    ```bash
    kinit user@CONTOSO.COM
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
+   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
    ```
 
    > [!NOTE]

@@ -363,7 +363,7 @@ Deprecated / Removed Features
 - Removed node "Maintenance > Legacy" in Object Explorer.
   - The really old "Database Maintenance Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
 
-### Known issue(s)
+### Known issues
 
 You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, please follow the steps from the [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) article.
 

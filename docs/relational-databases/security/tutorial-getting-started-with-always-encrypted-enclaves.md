@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/05/2019"
+ms.date: "06/20/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -46,7 +46,8 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 As an alternative, you can install SSMS on another machine.
 
 >[!WARNING] 
->In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted.
+>In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted. See [Security Considerations for Key Management](./encryption/overview-of-key-management-for-always-encrypted#SecurityForKeyManagement) for details.
+
 
 ### HGS computer requirements
 
@@ -92,7 +93,7 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
 
 ## Step 2: Configure the SQL Server computer as a guarded host
 In this step, you will configure the SQL Server computer as a guarded host registered with HGS using host key attestation.
->[!NOTE]
+>[!WARNING]
 >Host key attestation is only recommended for use in test environments. You should use TPM attestation for production environments.
 
 1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and retrieve the name of your computer by accessing the computername variable.
@@ -158,8 +159,14 @@ If all else fails, run Clear-HgsClientHostKey and repeat steps 4-7.
 
 In this step, you will enable the functionality of Always Encrypted using enclaves in your SQL Server instance.
 
-1. Open SSMS, connect to your SQL Server instance as sysadmin, and open a new query window.
-2. Set the secure enclave type to Virtualization Based Security (VBS).
+1. Using SSMS, connect to your SQL Server instance as sysadmin **without** Always Encrypted enabled for the database connection.
+    1. Start SSMS.
+    1. In the **Connect to Server** dialog, specify your server name, select an authentication method and specify your credentials.
+    1. Click **Options >>** and select the **Always Encrypted** tab.
+    1. Make sure the **Enable Always Encrypted (column encryption)** checkbox is **not** selected.
+    1. Select **Connect**.
+
+2. Open a new query window, and execute the below statement to set the secure enclave type to Virtualization Based Security (VBS).
 
    ```sql
    EXEC sys.sp_configure 'column encryption enclave type', 1;
@@ -193,14 +200,13 @@ In this step, you will enable the functionality of Always Encrypted using enclav
 ## Step 4: Create a sample database
 In this step, you will create a database with some sample data, which you will encrypt later.
 
-1. Connect to your SQL Server instance using SSMS.
-2. Create a new database, named ContosoHR.
+1. Using the SSMS instance from the previous step, execute the below statement in a query window to create a new database, named **ContosoHR**.
 
     ```sql
     CREATE DATABASE [ContosoHR];
     ```
 
-3. Make sure you are connected to the newly created database. Create a new table, named Employees.
+3. Create a new table, named **Employees**.
 
     ```sql
     USE [ContosoHR];
@@ -216,9 +222,12 @@ In this step, you will create a database with some sample data, which you will e
     ) ON [PRIMARY];
     ```
 
-4. Add a few employee records to the Employees table.
+4. Add a few employee records to the **Employees** table.
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -246,11 +255,10 @@ In this step, you will create a database with some sample data, which you will e
 
 In this step, you will create a column master key and a column encryption key that allow enclave computations.
 
-1. Connect to your database using SSMS.
-2. In **Object Explorer**, expand your database and navigate to **Security** > **Always Encrypted Keys**.
+1. Using the SSMS instance from the previous step, in **Object Explorer**, expand your database and navigate to **Security** > **Always Encrypted Keys**.
 3. Provision a new enclave-enabled column master key:
     1. Right-click **Always Encrypted Keys** and select **New Column Master Key...**.
-    2. Select your column master key name: CMK1.
+    2. Select your column master key name: **CMK1**.
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
     4. Select **Allow enclave computations**.
     5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
@@ -262,31 +270,28 @@ In this step, you will create a column master key and a column encryption key th
 4. Create a new enclave-enabled column encryption key:
 
     1. Right-click **Always Encrypted Keys** and select **New Column Encryption Key**.
-    2. Enter a name for the new column encryption key: CEK1.
+    2. Enter a name for the new column encryption key: **CEK1**.
     3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
     4. Select **OK**.
 
 ## Step 6: Encrypt some columns in place
 
-In this step, you will encrypt the data stored in the SSN and Salary columns inside the server-side enclave, and then test a SELECT query of the data.
+In this step, you will encrypt the data stored in the **SSN** and **Salary** columns inside the server-side enclave, and then test a SELECT query on the data.
 
-1. In SSMS, configure a new query window with Always Encrypted enabled for the database connection.
-    1. In SSMS, open a new query window.
-    2. Right-click anywhere in the new query window.
-    3. Select Connection \> Change Connection.
-    4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
-    5. Select **Connect**.
-    6. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
-2. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
-    1. In SSMS, open a new query window.
-    2. Right-click anywhere in the new query window.
-    3. Select Connection \> Change Connection.
-    4. Select on **Options**. Navigate to the **Always Encrypted** tab, make sure **Enable Always Encrypted** is not selected.
-    5. Select **Connect**.
-    6. Change the database context to the ContosoHR database.
-1. Encrypt the SSN and Salary columns. In the query window with Always Encrypted enabled, paste in and execute the below script:
+1.  Open a new SSMS instance and connect to your SQL Server instance **with** Always Encrypted enabled for the database connection.
+    1. Start a new instance of SSMS.
+    1. In the **Connect to Server** dialog, specify your server name, select an authentication method and specify your credentials.
+    1. Click **Options >>** and select the **Always Encrypted** tab.
+    1. Select the **Enable Always Encrypted (column encryption)** checkbox and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
+    6. Select **Connect**.
+    7. If you are prompted to enable Parameterization for Always Encrypted queries, select **Enable**.
+
+1. Using the same SSMS instance (with Always Encrypted enabled), open a new query window and encrypt the **SSN** and **Salary** columns by running the below queries.
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
@@ -304,7 +309,7 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
     > [!NOTE]
     > Notice the ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE statement to clear the query plan cache for the database in the above script. After you have altered the table, you need to clear the plans for all batches and stored procedures that access the table, to refresh parameters encryption information. 
 
-4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns. With the Always Encrypted enabled query window, try the same query to see the data decrypted.
+4. To verify the **SSN** and **Salary** columns are now encrypted, open a new query window in the SSMS instance **without** Always Encrypted enabled for the database connection and execute the below statement. The query window should return encrypted values in the **SSN** and **Salary** columns. If you execute the same query using the SSMS instance with Always Encrypted enabled, you should see the data decrypted.
 
     ```sql
     SELECT * FROM [dbo].[Employees];
@@ -314,13 +319,13 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
 
 Now, you can run rich queries against the encrypted columns. Some query processing will be performed inside your server-side enclave. 
 
-1. Make sure that Parameterization for Always Encrypted is enabled.
-    1. Select **Query** from the main menu of SSMS.
-    2. Select **Query Options...**.
-    3. Navigate to **Execution** > **Advanced**.
-    4. Ensure that Enable Parameterization for Always Encrypted is checked.
-    5. Select OK.
-2. In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
+1. In the SSMS instance **with** Always Encrypted enabled, make sure Parameterization for Always Encrypted is also enabled.
+    1. Select **Tools** from the main menu of SSMS.
+    2. Select **Options...**.
+    3. Navigate to **Query Execution** > **SQL Server** > **Advanced**.
+    4. Ensure that **Enable Parameterization for Always Encrypted** is checked.
+    5. Select **OK**.
+2. Open a new query window, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
     ```sql
     DECLARE @SSNPattern [char](11) = '%6818';
@@ -328,10 +333,12 @@ Now, you can run rich queries against the encrypted columns. Some query processi
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
-3. Try the same query again in the query window that does not have Always Encrypted enabled, and note the failure that occurs.
+3. Try the same query again in the SSMS instance that does not have Always Encrypted enabled, and note the failure that occurs.
 
 ## Next Steps
-See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases. You can also try the following:
+Go to [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), which is the continuation of this tutorial.
+
+See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for information on other use cases for Always Encrypted with secure enclaves. For example:
 
 - [Configuring TPM attestation.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
 - [Configuring HTTPS for your HGS instance.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)

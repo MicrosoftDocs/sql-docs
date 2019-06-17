@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted with Secure Enclaves (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/24/2018"
+ms.date: "06/20/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -171,7 +171,7 @@ The following following limitations are specific to Always Encrypted with secure
 -  Using enclave-enabled keys for columns in in-memory tables is not supported.
 - The only supported key stores for storing enclave-enabled column master keys are Windows Certificate Store and Azure Key Vault.
 
-The following limitations apply to the current Preview, but are on the roadmap to be addressed:
+The following limitations apply to [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], but are on the roadmap to be addressed:
 
 - The only client driver supporting Always Encrypted with secure enclaves is .NET Framework Data Provider for SQL Server (ADO.NET) in .NET Framework 4.7.2. There is no ODBC/JDBC support.
 - Tooling support for Always Encrypted with secure enclaves is currently incomplete. In particular:

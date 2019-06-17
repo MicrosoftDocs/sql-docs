@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted with Secure Enclaves | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2019"
+ms.date: "06/20/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -32,7 +32,7 @@ To setup Always Encrypted with secure enclaves, use the following workflow:
 
 ## Configure your environment
 
-To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0 (preview), .NET Framework, and several other components. The following sections provide details and links to get the required components.
+To use secure enclaves with Always Encrypted, your environment requires Windows Server 2019 Preview, and SQL Server Management Studio (SSMS) 18.0, .NET Framework, and several other components. The following sections provide details and links to get the required components.
 
 ### SQL Server computer requirements
 
@@ -91,7 +91,7 @@ On the client/development computer:
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
     The query should return a row that looks like the following:  
@@ -103,8 +103,8 @@ On the client/development computer:
 3. Configure the secure enclave type to VBS enclaves.
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 4. Restart your SQL Server instance for the previous change to take effect. You can restart the instance in SSMS by right-clicking on it in Object Explorer and selecting Restart. Once the instance restarts, reconnect to it.
@@ -113,7 +113,7 @@ On the client/development computer:
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```   
 
     The query should return a row that looks like the following:  
@@ -125,7 +125,7 @@ On the client/development computer:
 6. To enable rich computations on encrypted columns, run the following query:
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -146,7 +146,7 @@ The following limitations currently apply to provisioning enclave-enabled keys:
 
 - Enclave-enabled **column master keys must be stored in Windows Certificate Store or in Azure Key Vault**. Storing enclave-enabled column master keys in other types of key stores (hardware security modules or custom key stores) is not currently supported.
 
-### **Provision enclave-enabled keys using SQL Server Management Studio (SSMS)**
+### Provision enclave-enabled keys using SQL Server Management Studio (SSMS)
 
 The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
 
@@ -171,12 +171,11 @@ The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
     3. In the **Column master key** dropdown, select the column master key you created in the previous steps.
     4. Click **OK**.
 
-### **Provision enclave-enabled keys using PowerShell**
+### Provision enclave-enabled keys using PowerShell
 
 The following sections provide sample PowerShell scripts for provisioning enclave-enabled keys. The steps that are specific (new) to Always Encrypted with secure enclaves are highlighted. For more information (not specific to Always Encrypted with secure enclaves) about provisioning keys using PowerShell, see [Configure Always Encrypted Keys using PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
-**Provisioning Enclave-Enabled Keys - Windows Certificate Store**
-
+#### Provisioning Enclave-Enabled Keys - Windows Certificate Store
 On the client/development computer, open Windows PowerShell ISE, and run the following script.
 
 Important to note is the use of the `-AllowEnclaveComputations` parameter in the [**New-SqlCertificateStoreColumnMasterKeySettings**](https://docs.microsoft.com/powershell/module/sqlserver/new-sqlcertificatestorecolumnmasterkeysettings) cmdlet.
@@ -208,7 +207,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 
-### Provisioning Enclave-Enabled Keys - Azure Key Vault
+#### Provisioning Enclave-Enabled Keys - Azure Key Vault
 
 On the client/development computer, open Windows PowerShell ISE, and run the following script.
 
@@ -281,7 +280,7 @@ To list column master keys, configured in your database, you can query the [sys.
 
 ```sql
 SELECT name, allow_enclave_computations
-FROM sys.column_master_keys
+FROM sys.column_master_keys;
 ```
 
 To determine which column encryption keys are encrypted with enclave-enabled column encryption keys (and, thus, are enclave-enabled), you need to join [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md), [sys.column_encryption_key_values](../../system-catalog-views/sys-column-encryption-key-values-transact-sql.md), and [sys.column_encryption_keys](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md).
@@ -295,7 +294,7 @@ FROM sys.column_master_keys cmk
 JOIN sys.column_encryption_key_values cekv
    ON cmk.column_master_key_id = cekv.column_master_key_id
 JOIN sys.column_encryption_keys cek
-   ON cekv.column_encryption_key_id = cek.column_encryption_key_id
+   ON cekv.column_encryption_key_id = cek.column_encryption_key_id;
 ```
 
 To determine which columns are enclave-enabled (the columns that are encrypted with column encryption keys that are enclave-enabled), use the following query:
@@ -311,7 +310,7 @@ ON c.column_encryption_key_id = cek.column_encryption_key_id
 JOIN sys.column_encryption_key_values cekv 
 ON cekv.column_encryption_key_id = cek.column_encryption_key_id 
 JOIN sys.column_master_keys cmk 
-ON cmk.column_master_key_id = cekv.column_master_key_id
+ON cmk.column_master_key_id = cekv.column_master_key_id;
 ```
 
 
@@ -332,7 +331,7 @@ The below table summarizes the functionality for enclave-enabled string columns,
 
 In SQL Server, collations can be set at the server, database, or column level. For general instructions on how to determine the current collation and change a collation at the server, database or column level, see [Collation and Unicode Support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
 
-**Special considerations for non-UNICODE string columns**:
+### Special considerations for non-UNICODE string columns
 
 The following additional restriction, imposed by a limitation in SQL client drivers (not related to Always Encrypted), applies to non-UNICODE (ASCII) string columns. If you overwrite the database collation for a non-UNICODE (char, varchar) string column, you must ensure the column collation uses the same code page as the database collation.
 To list all collations along with their code page identifiers, use the following query:
@@ -341,7 +340,7 @@ To list all collations along with their code page identifiers, use the following
 SELECT [Name]
    , [Description]
    , [CodePage] = COLLATIONPROPERTY([Name], 'CodePage')
-FROM ::fn_helpcollations()
+FROM ::fn_helpcollations();
 ```
 
 For example, Chinese_Traditional_Stroke_Order_100_CI_AI_WS and Chinese_Traditional_Stroke_Order_100_BIN2 have the same code page (950), but Chinese_Traditional_Stroke_Order_100_CI_AI_WS and Latin1_General_100_BIN2 have different code pages (950 and 1252, respectively). The above restriction does not apply to UNICODE (nchar, nvarchar) string columns. Therefore, as a workaround, you may consider setting a UNICODE data type for your new encrypted columns, you are creating, or changing the type to a UNICODE type before encrypting an existing column.
@@ -379,7 +378,7 @@ CREATE TABLE [dbo].[Employees]
     CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
 [EmployeeID] ASC
 )
-) ON [PRIMARY]
+) ON [PRIMARY];
 GO
 ```
 
@@ -404,7 +403,7 @@ ALTER TABLE [dbo].[Employees]
 ADD [BirthDate] [Date] ENCRYPTED WITH (
 COLUMN_ENCRYPTION_KEY = [CEK1],
 ENCRYPTION_TYPE = Randomized,
-ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL
+ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;
 ```
 
 
@@ -440,7 +439,7 @@ To encrypt a column using a key that is not enclave-enabled, you need to use cli
 - [Configure Column Encryption using PowerShell](configure-column-encryption-using-powershell.md)
 
 
-### Prerequisites
+#### Prerequisites
 
 - Your existing column is not encrypted.
 - You have provisioned enclave-enabled keys.
@@ -454,15 +453,18 @@ To encrypt a column using a key that is not enclave-enabled, you need to use cli
     > [!NOTE]
     > If your column master key is stored in Azure Key Vault, you might be prompted to sign in to Azure.
 
-3. (Optionally) clear the plan cache using [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md) to ensure the plans for any query against the columns you have encrypted gets re-created on the first query execution.
-  
+3. Clear the plan cache for all batches and stored procedures that access the table, to refresh parameters encryption information. 
+ 
+    ```sql
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
+    ```
     > [!NOTE]
     > If you do not remove the plan for the impacted query from the cache, the first execution of the query after encryption may fail.
 
     > [!NOTE]
-    > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only.
+    > Use ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE or DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only.
 
-4.  (Optionally) call [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that may have been invalidated by encrypting the columns.
+4.  Call [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that are persisted in [sys.parameters](../..//system-catalog-views/sys-parameters-transact-sql.md) and may have been invalidated by encrypting the columns.
 
 #### Example
 
@@ -474,16 +476,16 @@ The below example assumes:
 
 The statement encrypts the SSN column using randomized encryption and enclave-enabled column encryption key. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
 
-The operation is performed online (ONLINE = ON). Also note the call to **DBCC FREEPROCCACHE** which recreates the plans of the queries impacted by the table schema change.
+The operation is performed online (ONLINE = ON). Also note the call to **ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE** which recreates the plans of the queries impacted by the table schema change.
 
 ```sql
 ALTER TABLE [dbo].[Employees]
 ALTER COLUMN [SSN] [char] COLLATE Latin1_General_BIN2
 ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
 WITH
-(ONLINE = ON)
+(ONLINE = ON);
 GO
-DBCC FREEPROCCACHE
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 GO
 ```
 
@@ -622,15 +624,18 @@ After you have made your column enclave-enabled, you can perform the following o
        > [!NOTE]
        > If your column master key is stored in Azure Key Vault, you might be prompted to sign in to Azure.
 
-3. (Optionally) clear the plan cache using [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md) to ensure the plans for any query against the columns you have re-encrypted gets re-created on the first query execution.
-    
-    If you do not remove the plan for the impacted query from the cache, the first execution of the query after re-encryption may fail.
-    
+3. Clear the plan cache for all batches and stored procedures that access the table, to refresh parameters encryption information. 
+ 
+    ```sql
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
+    ```
     > [!NOTE]
-    > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md).aspx) for details.
+    > If you do not remove the plan for the impacted query from the cache, the first execution of the query after encryption may fail.
 
-4. (Optionally) call
-    [sp_refresh_parameter_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that may have been invalidated by re-encrypting the columns.
+    > [!NOTE]
+    > Use ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE or DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only.
+
+4.  Call [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that are persisted in [sys.parameters](../..//system-catalog-views/sys-parameters-transact-sql.md) and may have been invalidated by re-encrypting the columns.
 
 #### Examples
 
@@ -642,9 +647,9 @@ ALTER TABLE [dbo].[Employees]
 ALTER COLUMN [SSN] [char](11) COLLATE Latin1_General_BIN2
 ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1]
 , ENCRYPTION_TYPE = Randomized
-, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL;
 GO
-DBCC FREEPROCCACHE
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 GO
 ```
 
@@ -656,9 +661,9 @@ ALTER TABLE [dbo].[Employees]
 ALTER COLUMN [SSN] [char](11) 
 ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK2]
 , ENCRYPTION\_TYPE = Deterministic
-, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
+, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL;
 GO
-DBCC FREEPROCCACHE
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 GO
 ```
 
@@ -671,9 +676,9 @@ ALTER COLUMN [SSN] [char](11)
 ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1]
 , ENCRYPTION_TYPE = Randomized
 , ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL 
-WITH (ONLINE = ON)
+WITH (ONLINE = ON);
 GO
-DBCC FREEPROCCACHE
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 GO
 ```
 
@@ -714,16 +719,18 @@ the online mode.
     > [!NOTE]
     > If your column master key is stored in Azure Key Vault, you might be prompted to sign in to Azure.
 
-3.  (Optionally) clear the plan cache using [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md) to ensure the plans for any query against the columns you have decrypted gets re-created on the first query execution.
-    
+3. Clear the plan cache for all batches and stored procedures that access the table, to refresh parameters encryption information. 
+ 
+    ```sql
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
+    ```
     > [!NOTE]
-    > If you do not remove the plan for the impacted query from the cache, the first execution of the query after decryption may fail.
-    
-    > [!NOTE]
-    > Use DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only. See the [DBCC FREEPROCCACHE](../../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md) for details.
+    > If you do not remove the plan for the impacted query from the cache, the first execution of the query after encryption may fail.
 
-4.  (Optionally) call
-    [sp\_refresh\_parameter\_encryption](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that may have been invalidated by decrypting the columns.
+    > [!NOTE]
+    > Use ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE or DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only.
+
+4.  Call [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that are persisted in [sys.parameters](../..//system-catalog-views/sys-parameters-transact-sql.md) and may have been invalidated by decrypting the columns.
 
 #### Example
 
@@ -733,9 +740,9 @@ Assuming the SSN column is encrypted and the current collation, set at the colum
 ```sql
 ALTER TABLE [dbo].[Employees]
 ALTER COLUMN [SSN] [char](11) COLLATE Latin1_General_BIN2
-WITH (ONLINE = ON)
+WITH (ONLINE = ON);
 GO
-DBCC FREEPROCCACHE
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 GO
 ```
 
@@ -792,7 +799,7 @@ CREATE TABLE [dbo].[Employees]
     CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
 [EmployeeID] ASC
 )
-) ON [PRIMARY]
+) ON [PRIMARY];
 GO
 ```
 
@@ -811,7 +818,49 @@ WHERE SSN LIKE @SSNPattern
     AND [Salary] >= @MinSalary;
 GO;
 ```
+## Create and Use Indexes on Enclave-enabled Columns using Randomized Encryption
+Because an index on an enclave-enabled column using randomized encryption stores the encrypted index key values while the values are sorted based on plaintext, SQL Server Engine must use the enclave for any operation that involves creating or updating an index, including:
+- Creating or rebuilding an index.
+- Inserting, updating or deleting a row in the table (containing an indexed/encrypted column), which triggers inserting or/and removing an index key to/from the index.
+- Running DBCC commands that involve checking the integrity of indexes, e.g. [DBCC CHECKDB (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) or [DBCC CHECKTABLE (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).
+- Database recovery (e.g. after SQL Server fails and restarts), if SQL Server needs to undo any changes to the index (see more details below).
 
+All the above operations require the enclave has the column encryption key for the indexed column, so that it can decrypt the index keys. In general, the enclave can obtain a column encryption key in one of two ways:
+- Directly from the client application.
+- From the cache of column encryption keys.
+
+### Invoke indexing operations with column encryption keys provided directly by the client
+For this method for invoking indexing operations to work, the application issuing a query that triggers an operation on an index must:
+- Connect to the database with both Always Encrypted and enclave computations enabled in the database connection.
+- The application must have access to the column master key protecting the column encryption key for the indexed column. 
+
+Once SQL Server Engine parses the application query and it determines it will need to update an index on an encrypted column to execute the query, it instructs the client driver to provide the required CEK to the enclave over a secure channel. Note this is exactly the same the same mechanism that is used to provide the enclave with column encryption keys for processing queries that do not involve indexing operations.
+
+This method is useful to ensure the presence of indexes on encrypted columns is transparent to applications that already connect to the database with Always Encrypted and enclave computations enabled for the connection and use the enclave for query processing. After you create an index on a column, the driver inside your app will transparently provide column encryption keys to the enclave for indexing operations. Note that creating indexes may increase the number of queries that require the application to send the column encryption keys to the enclave.
+
+For step-by-step instructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
+
+### Invoke indexing operations using cached column encryption keys 
+Once a client application sends a column encryption key to the enclave (for processing any query that requires enclave computations), the enclave caches the column encryption key in an internal cache (located inside the enclave and inaccessible from the outside). 
+
+If the same or another client application (used by the same or a different user) triggers an operation on an index without providing the required column encryption directly, the enclave will look up the column encryption key in the cache. As a result, the operation on the index succeeds, although the client application has not provided the key.
+
+For this method of invoking indexing operations to work, the application must connect to the database without Always Encrypted enabled for the connection and the required column encryption key must be available in the cache inside the enclave. 
+
+Note that this method of invoking operations is supported only for queries that do not require column encryption keys for other operations, not related to indexes. For example, an application inserting a row using an INSERT statement to a table that contains an encrypted column, is required to connect to the database with Always Encrypted enabled in the connection string and it must have access to the keys, regardless if the encrypted column has an index or not.
+
+This method is useful to:
+- Ensure the presence of indexes on enclave-enabled columns using randomized encryption is transparent to applications and users that do not have access to the keys and the data in plaintext. It ensures creating an index on an encrypted column does not brake existing queries, i.e. if an application issues a query on a table containing encrypted columns without having to have access to the keys, the application can continue to run without having access to the keys after a DBA creates an index. For example, consider an application that runs the below query on the **Employees** table used in the previous example, before a DBA creates an index on any encrypted column. 
+
+   ```sql
+   DELETE FROM [dbo].[Employees] WHERE [EmployeeID] = 1;
+   GO
+   ```
+   If the application submits the query over a connection without Always Encrypted and enclave computations enabled, the query will succeed, as it does not trigger any computations on encrypted columns. After a DBA creates an index on any encrypted columns, the query triggers the removal of index keys from indexes, which the enclave needs the column encryption keys for. However, the application will be able to continue to run this query over the same connection, as long as a data owner has supplied the column encryption keys to the enclave.
+
+- To achieve role separation when managing indexes, as it enables DBAs to create and alter indexes on encrypted columns, without having access to sensitive data. 
+
+For step-by-step intructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
 
 ## Develop Applications issuing Rich Queries in Visual Studio
 
@@ -886,7 +935,7 @@ CREATE TABLE [dbo].[Employees]
     CONSTRAINT [PK_dbo.Employees] PRIMARY KEY CLUSTERED (
 [EmployeeID] ASC
 )
-) ON [PRIMARY]
+) ON [PRIMARY];
 GO
 ```
 

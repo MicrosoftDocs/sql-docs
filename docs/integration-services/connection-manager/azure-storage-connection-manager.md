@@ -56,7 +56,7 @@ Then **configure managed identity authentication** for the Azure storage connect
     
 1. Configure at run time. When you execute the package via [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) or [Azure Data Factory Execute SSIS Package activity](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the Azure storage connection manager and update its property **ConnectUsingManagedIdentity** to **True**.
     > [!NOTE]
-    >  In Azure-SSIS integration runtime, all other authentication methods (e.g., access key, service principle) preconfigured on the Azure storage connection manager will be **overridden** when managed identity authentication is used for storage operations.
+    >  In Azure-SSIS integration runtime, all other authentication methods (e.g., access key, service principal) preconfigured on the Azure storage connection manager will be **overridden** when managed identity authentication is used for storage operations.
 
 > [!NOTE]
 >  To configure managed identity authentication on existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) at least once and redeploy that SSIS project to your Azure-SSIS integration runtime so that the new connection manager property **ConnectUsingManagedIdentity** will automatically be added to all Azure storage connection managers in your SSIS project. The alternative way is to directly use property override with property path **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** at run time.

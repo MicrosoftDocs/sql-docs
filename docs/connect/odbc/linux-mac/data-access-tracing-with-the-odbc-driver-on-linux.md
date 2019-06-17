@@ -25,6 +25,7 @@ To trace your application's ODBC behavior, edit the `odbcinst.ini` file's `[ODBC
 to the path of the file which is to contain the trace output; for example:
 
 ```ini
+[ODBC]
 Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```

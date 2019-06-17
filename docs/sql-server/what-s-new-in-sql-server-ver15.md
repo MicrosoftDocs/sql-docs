@@ -36,6 +36,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](reference-mssqlctl.md). |
 |New `mssqlctl` status commands and removal of the Cluster Administration Portal.|The Cluster Administration Portal is removed in this release. New status commands have been added to `mssqlctl` that complement existing monitoring commands.|
 |Score a MLeap model in SQL Server using SQL Java extensions.| |
 |Create Spark pools at deployment and run spark nodes outside of the storage pods. | |

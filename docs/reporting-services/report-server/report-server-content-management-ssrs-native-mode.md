@@ -54,7 +54,7 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
   
   ![Report server icons for moveable items](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
- Not all items that you work with can be moved. You cannot move items that are associated with a report, such as subscriptions or report history. Those items move with their associated reports. Similarly, you cannot move items, such as shared schedules, that exist outside of the folder hierarchy. You cannot move items if you lack permission to do so. Permission to move an item is conveyed when the following tasks are selected in your role assignment for the item in question: "Manage reports," "Manage models", "Manage folders," and "Manage data sources."  
+ Not all items that you work with can be moved. You cannot move items that are associated with a report, such as subscriptions or report history. Those items move with their associated reports. Similarly, you cannot move items, such as shared schedules, that exist outside of the folder hierarchy. You cannot move items if you lack permission to do so. Permission to move an item is conveyed when the following tasks are selected in your role assignment for the item in question: "Manage reports," "Manage folders," and "Manage data sources."  
   
 ##  <a name="bkmk_Folders"></a> Folders  
  A folder hierarchy is used for addressing items that are stored and managed by a report server.  By default, the folder structure consists of a root node named Home, and reserved folders that support the optional My Reports feature. Additional folders are user-defined. Report server folders are useful if you want to grant the same level of access to multiple items. Permissions that you set on the folder can be inherited by items in the folder and to additional folders that branch from that folder. For example, you can create a set of folders under the Home folder, assign team permissions to each folder, and then let team members customize folders under the team folder as needed.  
@@ -119,7 +119,7 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
   
 |Operation|File type|  
 |---------------|---------------|  
-|Upload|To upload a resource, you must use the web portal if the report server runs in native mode or an application page on a SharePoint site if the server runs in SharePoint integrated mode. For more information, see [UUpload a File or Report in the Report Server](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) or [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Upload|To upload a resource, you must use the web portal if the report server runs in native mode or an application page on a SharePoint site if the server runs in SharePoint integrated mode. For more information, see [Upload a File or Report in the Report Server](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) or [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publish|All files in a project that are not reports, report parts, data sources, or datasets, are uploaded as resources. To publish a resource, add an existing item to a project in Report Designer and then publish the project to a report server.|  
   
  All resources originate as files on a file system, which are subsequently uploaded to a report server. Except for the 4 megabyte default file size limitations imposed by ASP.NET, there are no restrictions on the kinds of files you can upload. However, when published to a report server as a resource, file types that have equivalent MIME types are more optimal than others. For example, resources that are based on HTML and JPG files will open in a browser window when the user clicks the resource, rendering the HTML as a Web page and the JPG as an image that the user can see. In contrast, resources that do not have equivalent MIME types, such as desktop application files, for example, may not be rendered in the browser window.  
@@ -155,8 +155,6 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
   
 |Character|Escape value|Example|  
 |---------------|------------------|-------------|  
-|(space)|[ ]|*Firstname Lastname* becomes *Firstname[ ]Lastname*|  
-|\ (backslash)|Replaced with a single space character|*DomainName\Username* becomes *DomainName Username*|  
 |@ (at symbol)|[at]|*username*@hotmail.com becomes *username*[at]hotmail.com|  
 |& (ampersand)|[amp]|*username*@*company*&*company.com* becomes *username*[at]*company*[amp]*company.com*|  
 |$ (dollar sign)|[dollar]|*User* $*Name* becomes *User*[ ][dollar]*Name*|  

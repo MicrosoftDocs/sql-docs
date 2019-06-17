@@ -101,7 +101,7 @@ Complete details about support and licensing for CTP releases are in `license_Ev
 
 - **Applies to**: CTP 3.0
 
-### Rich computations
+### Rich computations performance
 
 - **Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc.), and are currently disabled by default.
 

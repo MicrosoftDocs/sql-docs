@@ -4,7 +4,7 @@ description: Install local R libraries and tools on a development workstation fo
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -194,9 +194,9 @@ Point your IDE to the local R libraries: base R, RevoScaleR, and so forth. Runni
 
 When using [RStudio](https://www.rstudio.com/), you can configure the environment to use the R libraries and executables that correspond to those on a remote SQL Server.
 
-1. Check R package versions installed on SQL Server. For more information, see [Get R package information](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
+1. Check R package versions installed on SQL Server. For more information, see [Get R package information](../package-management/installed-package-information.md).
 
-1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as on the server. For version information, see the version map in this article: [Upgrade R and Python components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as on the server. For version information, see the version map in this article: [Upgrade R and Python components](../install/upgrade-r-and-python.md).
 
 1. In RStudio, [update your R path](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) to point to the R environment providing RevoScaleR, Microsoft R Open, and other Microsoft packages. 
 

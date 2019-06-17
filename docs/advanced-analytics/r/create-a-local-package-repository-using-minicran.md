@@ -4,7 +4,7 @@ description: Use miniCran to detect, assemble, and install R package dependencie
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/29/2018  
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -88,7 +88,7 @@ Do **not** add dependencies to this initial list. The **igraph** package used by
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Create the local repo. Be sure to change the R version if necessary to the version installed on your SQL Server instance. Version 3.2.2 is on SQL Server 2016, version 3.3 is on SQL Server 2017. If you did a component upgrade, your version might be newer. For more information, see [Get R and Python package information](determine-which-packages-are-installed-on-sql-server.md).
+3. Create the local repo. Be sure to change the R version if necessary to the version installed on your SQL Server instance. Version 3.2.2 is on SQL Server 2016, version 3.3 is on SQL Server 2017. If you did a component upgrade, your version might be newer. For more information, see [Get R and Python package information](../package-management/installed-package-information.md).
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -154,8 +154,5 @@ After you have a local repository with the packages you need, move the package r
 
 ## See also
 
-+ [Get package information](determine-which-packages-are-installed-on-sql-server.md)
++ [Get package information](../package-management/installed-package-information.md)
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
-+ [How-to guides](sql-server-machine-learning-tasks.md)
-
-

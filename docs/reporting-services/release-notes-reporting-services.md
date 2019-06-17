@@ -1,14 +1,14 @@
 ---
 title: "Release notes for (SSRS) 2017 and later | Microsoft Docs"
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 
 ms.topic: conceptual
-ms.reviewer: maghan
-author: maggiesMSFT
-ms.author: maggies
+ms.reviewer: maggies
+author: casualoak
+ms.author: rhys
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
@@ -81,7 +81,7 @@ The following issue has been fixed:
 | Text size is not scaling if pageHeight is less than 0.5 inches. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
-| Users added to SCOM Reporting Role have access blocked to SSRS web portal. | &nbsp; |
+| Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |
 | Thai character is not exported correctly into the PDF. | &nbsp; |
 | Browser Role Behavior Change. | &nbsp; |
 | rc:Toolbar=false does not work in Express edition. | &nbsp; |

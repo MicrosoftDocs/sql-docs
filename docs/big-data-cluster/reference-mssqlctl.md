@@ -5,7 +5,7 @@ description: Reference article for mssqlctl commands.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,9 +21,11 @@ The following article provides reference for the **mssqlctl** tool for [SQL Serv
 |     |     |
 | --- | --- |
 |[mssqlctl app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications. |
-|[mssqlctl cluster](reference-mssqlctl-cluster.md) | Select, manage, and operate clusters. |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | The HDFS module provides commands to access an HDFS file system. |
 [mssqlctl login](#mssqlctl-login) | Log in to the cluster's controller endpoint.
 [mssqlctl logout](#mssqlctl-logout) | Log out of cluster.
+|[mssqlctl sql](reference-mssqlctl-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
 ## mssqlctl login
 When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to login.  If you do not know the controller endpoint, you may login by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, i.e. export KUBECONFIG=path/to/.kube/config.
 ```bash

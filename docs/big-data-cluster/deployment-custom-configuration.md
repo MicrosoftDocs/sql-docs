@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-To customize your cluster deployment configuration file, you can use any json format editor like VSCode. For scripting these edits for automation purposes, we provide a **mssqlctl cluster config section** command. This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
+To customize your cluster deployment configuration file, you can use any json format editor like VSCode. For scripting these edits for automation purposes, we provide a **mssqlctl bdc config section** command. This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ To customize your cluster deployment configuration file, you can use any json fo
 - Each of the examples in this section assume that you have created a copy of one of the standard configuration files. For more information, see [Create a custom configuration file](deployment-guidance.md#customconfig). For example, the following command creates a **custom.json** file based on the default **aks-dev-test.json** configuration:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+   mssqlctl bdc config init --src aks-dev-test.json --target custom.json
    ```
 
 ## <a id="clustername"></a> Change cluster name
@@ -41,7 +41,7 @@ The cluster name is both the name of the big data cluster and the Kubernetes nam
 The following command sends a key-value pair to the **--json-values** parameter to change the big data cluster name to **test-cluster**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
+mssqlctl bdc config section set -c custom.json -j ".metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -79,7 +79,7 @@ Endpoints are defined for the control plane as well as for individual pools. The
 The following example uses inline JSON to change the port for the **Controller** endpoint:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl bdc config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> Configure pool replicas
@@ -116,17 +116,17 @@ The characteristics of each pool, such as the storage pool, is defined in the co
 You can configure the number of instances in a pool by modifying the **replicas** value for each pool. The following example uses inline JSON to change these values for the storage and data pools to `10` and `4` respectively:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl bdc config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl bdc config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
 ```
 
 ## <a id="storage"></a> Configure storage
 
-You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool and updates the size of the persistent volume claim for storing data to 100Gb. You must have this section in the configuration file to update the settings using the *mssqlctl cluster config set* command, see below how to use a patch file to add this section:
+You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool and updates the size of the persistent volume claim for storing data to 100Gb. You must have this section in the configuration file to update the settings using the *mssqlctl bdc config set* command, see below how to use a patch file to add this section:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+mssqlctl bdc config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl bdc config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
@@ -157,7 +157,7 @@ Create a file named **patch.json** in your current directory with the following 
 ```
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set -c custom.json -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> JSON patch files
@@ -263,10 +263,10 @@ The following **patch.json** file performs the following changes:
 > [!TIP]
 > For more information about the structure and options for changing a deployment configuration file, see [Deployment configuration file reference for big data clusters](reference-deployment-config.md).
 
-Use **mssqlctl cluster config section set** to apply the changes in the JSON patch file. The following example applies the **patch.json** file to a target deployment configuration file **custom.json**.
+Use **mssqlctl bdc config section set** to apply the changes in the JSON patch file. The following example applies the **patch.json** file to a target deployment configuration file **custom.json**.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set -c custom.json -p ./patch.json
 ```
 
 ## Next steps

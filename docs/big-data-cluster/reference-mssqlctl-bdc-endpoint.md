@@ -1,36 +1,35 @@
 ---
-title: mssqlctl cluster status reference
+title: mssqlctl bdc endpoint reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl cluster status commands.
+description: Reference article for mssqlctl bdc endpoint commands.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl cluster status
+# mssqlctl bdc endpoint
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **cluster status** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **cluster endpoint** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl cluster status show](#mssqlctl-cluster-status-show) | Shows the status of the cluster.
-## mssqlctl cluster status show
-Shows the status of the cluster.
+[mssqlctl bdc endpoint list](#mssqlctl-bdc-endpoint-list) | Lists the endpoints for the Big Data Cluster.
+## mssqlctl bdc endpoint list
+Lists the endpoints for the Big Data Cluster.
 ```bash
-mssqlctl cluster status show 
+mssqlctl bdc endpoint list [--endpoint-name -e] 
+                           
 ```
-### Examples
-Cluster status where the user is logged in.
-```bash
-mssqlctl cluster status show
-```
+### Optional Parameters
+#### `--endpoint-name -e`
+BDC endpoint name.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

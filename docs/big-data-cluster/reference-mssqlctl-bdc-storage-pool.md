@@ -1,17 +1,17 @@
 ---
-title: mssqlctl cluster storage-pool reference
+title: mssqlctl bdc storage-pool reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl cluster storage-pool commands.
+description: Reference article for mssqlctl bdc storage-pool commands.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl cluster storage-pool
+# mssqlctl bdc storage-pool
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -20,7 +20,7 @@ The following article provides reference for the **cluster storage-pool** comman
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl cluster storage-pool mount](reference-mssqlctl-cluster-storage-pool-mount.md) | Manage mounting of remote stores in HDFS.
+[mssqlctl bdc storage-pool mount](reference-mssqlctl-bdc-storage-pool-mount.md) | Manage mounting of remote stores in HDFS.
 
 ## Next steps
 

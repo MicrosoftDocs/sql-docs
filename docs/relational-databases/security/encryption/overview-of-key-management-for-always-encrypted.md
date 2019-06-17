@@ -76,7 +76,7 @@ Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)]
     - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> Security Considerations for Key Management
+## Security Considerations for Key Management
 
 The primary objective of Always Encrypted is to ensure sensitive data stored in a database is safe, even if the database system or its hosting environment gets compromised. Examples of security attacks where Always Encrypted can help prevent sensitive data leaks include:
 

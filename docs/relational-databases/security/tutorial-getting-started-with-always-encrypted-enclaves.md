@@ -46,7 +46,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 As an alternative, you can install SSMS on another machine.
 
 >[!WARNING] 
->In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted. See [Security Considerations for Key Management](./encryption/overview-of-key-management-for-always-encrypted#SecurityForKeyManagement) for details.
+>In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted. See [Security Considerations for Key Management](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management) for details.
 
 
 ### HGS computer requirements

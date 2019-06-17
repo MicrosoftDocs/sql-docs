@@ -838,7 +838,7 @@ Once SQL Server Engine parses the application query and it determines it will ne
 
 This method is useful to ensure the presence of indexes on encrypted columns is transparent to applications that already connect to the database with Always Encrypted and enclave computations enabled for the connection and use the enclave for query processing. After you create an index on a column, the driver inside your app will transparently provide column encryption keys to the enclave for indexing operations. Note that creating indexes may increase the number of queries that require the application to send the column encryption keys to the enclave.
 
-For step-by-step instructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
+For step-by-step instructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
 
 ### Invoke indexing operations using cached column encryption keys 
 Once a client application sends a column encryption key to the enclave (for processing any query that requires enclave computations), the enclave caches the column encryption key in an internal cache (located inside the enclave and inaccessible from the outside). 
@@ -860,7 +860,7 @@ This method is useful to:
 
 - To achieve role separation when managing indexes, as it enables DBAs to create and alter indexes on encrypted columns, without having access to sensitive data. 
 
-For step-by-step intructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
+For step-by-step intructions on how to use this method, see [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
 
 ## Develop Applications issuing Rich Queries in Visual Studio
 

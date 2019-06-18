@@ -18,7 +18,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Shows the space used by storing result set cache for a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database.
+Shows the storage space used result set caching for an Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -31,7 +31,7 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 ## Remarks
 
-The `DBCC SHOWRESULTCACHESPACEUSED' command doesn't take any parameters and returns the space used by the database where the command is run.
+The `DBCC SHOWRESULTCACHESPACEUSED` command doesn't take any parameters and returns the space used by the database where the command is run.
 
 The maximum size of result set cache is 1 TB per database.  Azure SQL Data Warehouse automatically evicts entries in the result set cache:
 

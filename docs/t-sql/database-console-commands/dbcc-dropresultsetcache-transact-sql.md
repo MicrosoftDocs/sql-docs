@@ -18,7 +18,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Remove all result set cache entries from an [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database.
+Removes all result set cache entries from an Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

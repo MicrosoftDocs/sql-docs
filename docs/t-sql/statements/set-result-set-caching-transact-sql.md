@@ -43,13 +43,13 @@ Specifies that query result sets returned from this database will be cached in A
 **OFF**
 Specifies that query result sets returned from this database won't be cached in Azure SQL Data Warehouse storage.
 
-Query [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) with a specific request_id to see if a query was executed with a result cache hit or miss.
-
-
+Query the result_cache_hit column in sys.dm_pdw_exec_requests with a query’s request_id to see if this query was executed with a result cache hit or miss.
 
 ```sql
+Select result_cache_hit 
 From sys.dm_pdw_exec_requests
 Where request_id = 'QID58286'
+;
 ```
 
 If there's a cache hit, the query result will have a single step with following details:
@@ -74,67 +74,25 @@ A database owner can't alter the database unless the owner is a member of the db
   
 ## Examples
 
-### Enable result set caching for a database
+### Enable `RESULT_SET_CACHING` for a database
 
 ```sql
 ALTER DATABASE myTestDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### Disable result set caching for a database
+### Disable `RESULT_SET_CACHING` for a database
 
 ```sql
 ALTER DATABASE myTestDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### Check result set caching setting for a database
+### Check `RESULT_SET_CACHING` setting for a database
 
 ```sql
 SELECT name, is_result_set_caching_on  
 FROM sys.databases
-```
-
-### Check for number of queries with result set cache hit and cache miss
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses,
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A
-```
-
-### Check for result set cache hit or cache miss for a query
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286'
-      and operation_type = 'ReturnOperation'
-      and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit
-```
-
-### Check for all queries with result set cache hits
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0
 ```
 
 ## See also

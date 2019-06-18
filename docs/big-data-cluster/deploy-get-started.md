@@ -42,7 +42,7 @@ Big data clusters are deployed as a series of interrelated containers that are m
 
 ## Deploy a big data cluster
 
-After configuring Kubernetes, you deploy a big data cluster with the `mssqlctl cluster create` command. When deploying, you can take several different approaches.
+After configuring Kubernetes, you deploy a big data cluster with the `mssqlctl bdc create` command. When deploying, you can take several different approaches.
 
 - If you are deploying to a dev-test environment, you can choose to use one of the [default configurations](deployment-guidance.md#deploy) provided by **mssqlctl**.
 

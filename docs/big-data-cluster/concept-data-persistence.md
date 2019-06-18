@@ -76,10 +76,10 @@ Kubeadm does not come with a built-in storage class. You must create your own st
 For all customizations, you must first create a copy of the built in configuration file you want to use. For example, the following command creates a copy of the *aks-dev-test.json* deployment configuration file in the current directory:
 
 ```bash
-mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+mssqlctl bdc config init --src aks-dev-test.json --target custom.json
 ```
 
-Then, you can customize your config file either by editing it manually, or you can use *mssqlctl cluster config section set* command. This set command uses a combination of jsonpath and jsonpatch libraries to provide ways to edit your config file.
+Then, you can customize your config file either by editing it manually, or you can use *mssqlctl bdc config section set* command. This set command uses a combination of jsonpath and jsonpatch libraries to provide ways to edit your config file.
 
 ### Configure size
 
@@ -88,13 +88,13 @@ By default, the size of the persistent volume claims provisioned for each of the
 The following example only updates the size of persistent volume claims for data stored in the storage pool to 100Gi. Note that storage section must exist in the configuration file for the storage pool before you run this command:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
+mssqlctl bdc config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
 ```
 
 The following example updates the size of persistent volume claims for all pools to 32Gi:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
+mssqlctl bdc config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
 ```
 
 ### <a id="config-samples"></a> Configure storage class
@@ -102,7 +102,7 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.
 Following example shows how to modify the storage class for the control plane:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
+mssqlctl bdc config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
 ```
 
 Another option is to manually edit the custom configuration file or to use jsonpatch like in the following example that changes the storage class for Storage pool. Create a *patch.json*
@@ -131,10 +131,10 @@ Another option is to manually edit the custom configuration file or to use jsonp
 }
 ```
 
-Apply the patch file. Use *mssqlctl cluster config section set* command to apply the changes in the JSON patch file. The following example applies the patch.json file to a target deployment configuration file custom.json.
+Apply the patch file. Use *mssqlctl bdc config section set* command to apply the changes in the JSON patch file. The following example applies the patch.json file to a target deployment configuration file custom.json.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set -c custom.json -p ./patch.json
 ```
 
 ## Next steps

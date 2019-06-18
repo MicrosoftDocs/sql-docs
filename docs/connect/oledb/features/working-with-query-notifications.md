@@ -57,7 +57,6 @@ To use query notifications a queue and a service must exist on the server. These
 ```sql
 CREATE QUEUE myQueue
 CREATE SERVICE myService ON QUEUE myQueue
-
 ([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])
 ```
 
@@ -86,7 +85,7 @@ The notification subscription is always committed, regardless of whether the sta
 Another connection or thread can check the destination queue for notifications. For example:
 
 ```sql
-WAITFOR (RECEIVE * FROM MyQueue); // Where MyQueue is the queue name.
+WAITFOR (RECEIVE * FROM MyQueue); -- Where MyQueue is the queue name.
 ```
 
 > [!NOTE]

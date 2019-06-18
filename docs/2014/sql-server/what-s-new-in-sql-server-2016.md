@@ -37,7 +37,7 @@ manager: craigg
   
 ## [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) did not introduce significant new features.
--  [SQL Server 2014 Service Pack 1 release information ](https://support.microsoft.com/en-us/kb/3058865).
+-  [SQL Server 2014 Service Pack 1 release information](https://support.microsoft.com/en-us/kb/3058865).
 -  [![Download Service Pack 1 for Microsoft?? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft?? SQL Server?? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 

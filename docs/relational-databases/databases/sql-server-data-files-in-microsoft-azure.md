@@ -24,7 +24,7 @@ manager: craigg
   
  This topic introduces concepts and considerations that are central to storing SQL Server data files in Microsoft Azure Storage Service.  
   
- For a practical hands-on experience on how to use this new feature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ For a practical hands-on experience on how to use this new feature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ## Why use SQL Server data files in Microsoft Azure? 
   
@@ -94,7 +94,7 @@ ON
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
   
--   In the current release of this feature, storing **FileStream** data in Azure Storage is not supported. You can store **Filestream** data in an Azure storage integrated local database but you cannot move Filestream data between machines using Azure Storage. For **FileStream** data, we recommend that you continue using the traditional techniques to move the files (.mdf, .ldf) associated with Filestream between different machines.  
+-   In the current release of this feature, storing **FileStream** data in Azure Storage is not supported. You can store **FileStream** data in a database that also contains data files stored in Azure Storage, but all FileStream data files must be stored on local storage.  Since the FileStream data must reside on local storage, it cannot be moved between machines using Azure Storage, therefore we recommend that you continue using the [traditional techniques](../../relational-databases/blob/move-a-filestream-enabled-database.md) to move the data associated with FileStream between different machines.  
   
 -   Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in  Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error code **5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**.  
   
@@ -145,7 +145,7 @@ ON
     Resolution: You may see this error when you try to drop a credential that is still being used by an active database file in Azure Storage. To drop the credential, first you must delete the associated blob that has this database file. To delete a blob that has an active lease, you must first break the lease.  
   
 -   *Shared Access Signature has not been created on the container correctly.*   
-     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
+     Resolution: Make sure that you have created a Shared Access Signature on the container correctly. Review the instructions given in Lesson 2 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
   
 -   *SQL Server credential has not been not created correctly.*   
     Resolution: Make sure that you have used 'Shared Access Signature' for the **Identity** field and created a secret correctly. Review the instructions given in Lesson 3 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../lesson-3-database-backup-to-url.md).  

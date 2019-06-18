@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], surround with snippets"
   - "Transact-SQL snippets, surround with"
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

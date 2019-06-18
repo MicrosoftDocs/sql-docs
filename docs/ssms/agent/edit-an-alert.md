@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "alerts [SQL Server], modifying"
   - "modifying alerts"
 ms.assetid: f518e528-cc8f-446a-b37d-98505b86e430
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

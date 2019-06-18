@@ -396,7 +396,11 @@ Module Module1
       cmd.CommandText = "INSERT INTO dbo.Points (Pnt) VALUES (@Point)"  
       cmd.CommandType = CommandType.Text  
   
-      Dim param As New SqlParameter("@Point", SqlDbType.Udt)      param.UdtTypeName = "TestPoint.dbo.Point"      param.Direction = ParameterDirection.Input      param.Value = New Point(5, 6)      cmd.Parameters.Add(param)  
+      Dim param As New SqlParameter("@Point", SqlDbType.Udt)      
+      param.UdtTypeName = "TestPoint.dbo.Point"      
+      param.Direction = ParameterDirection.Input      
+      param.Value = New Point(5, 6)      
+      cmd.Parameters.Add(param)  
   
       cnn.Open()  
       cmd.ExecuteNonQuery()  

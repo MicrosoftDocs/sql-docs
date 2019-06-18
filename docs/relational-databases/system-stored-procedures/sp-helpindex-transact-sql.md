@@ -35,7 +35,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## Arguments  
- [ **@objname=** ] **'***name***'**  
+`[ @objname = ] 'name'`
  Is the qualified or nonqualified name of a user-defined table or view. Quotation marks are required only if a qualified table or view name is specified. If a fully qualified name, including a database name, is provided, the database name must be the name of the current database. *name* is **nvarchar(776)**, with no default.  
   
 ## Return Code Values  

@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 12/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # sqlrutils (R library in SQL Server)

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], connections"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "registering report servers"
   - "report servers [Reporting Services], registering"
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Connect to a Report Server in Management Studio

@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "08/21/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "development [Integration Services]"
   - "Integration Services, programming"
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Features and Tasks

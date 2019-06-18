@@ -38,10 +38,10 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## Arguments  
- [ **@secondary_database =** ] '*secondary_database*'  
+`[ @secondary_database = ] 'secondary_database'`
  Is the name of the secondary database. *secondary_database* is **sysname**, with no default.  
   
- [ **@secondary_id =** ] '*secondary_id*'  
+`[ @secondary_id = ] 'secondary_id'`
  The ID for the secondary server in the log shipping configuration. *secondary_id* is **uniqueidentifier** and cannot be NULL.  
   
 ## Return Code Values  

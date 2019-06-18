@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Backup and Restore with Microsoft Azure Blob Storage Service | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/25/2016"
+ms.date: "03/25/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -13,7 +13,7 @@ ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Backup and Restore with Microsoft Azure Blob Storage Service
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ![Backup to Azure blob graphic](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Backup to Azure blob graphic")  
   

@@ -1,7 +1,7 @@
 ---
 title: Planning for Reporting Services and Power View Browser Support (Reporting Services 2014)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ""
 ms.prod: sql-server-2014

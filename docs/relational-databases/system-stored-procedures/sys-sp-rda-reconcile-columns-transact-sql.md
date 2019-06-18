@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_columns stored procedure"
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sys.sp_rda_reconcile_columns (Transact-SQL)

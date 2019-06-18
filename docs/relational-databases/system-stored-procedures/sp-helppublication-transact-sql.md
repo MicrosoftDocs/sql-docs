@@ -34,13 +34,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to be viewed. *publication* is sysname, with a default of **%**, which returns information about all publications.  
   
- [ **@found =** ] **'***found***'** OUTPUT  
+`[ @found = ] 'found' OUTPUT`
  Is a flag to indicate returning rows. *found*is **int** and an OUTPUT parameter, with a default of **23456**. **1** indicates the publication is found. **0** indicates the publication is not found.  
   
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is sysname, with a default of NULL.  
   
 > [!NOTE]  

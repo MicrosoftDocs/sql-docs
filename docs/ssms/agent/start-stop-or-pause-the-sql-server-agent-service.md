@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Agent, pausing"
   - "SQL Server Agent, stopping"
 ms.assetid: c95a9759-dd30-4ab6-9ab0-087bb3bfb97c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

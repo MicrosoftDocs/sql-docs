@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "navigating code"
   - "Go To command"
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

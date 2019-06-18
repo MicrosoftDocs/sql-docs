@@ -44,28 +44,28 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## Arguments  
- [ **@artid=** ] **'**_artid_**'**  
+`[ @artid = ] 'artid'`
  Is the name of the article ID. *artid* is **int**, with no default  
   
- [ **@article=**] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article to be scripted. *article* is **sysname**, with no default  
   
- [ **@publisher=**] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher server. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to be scripted. *publication* is **sysname**, with no default.  
   
- [ **@dest_table=** ] _'dest_table_**'**  
+`[ @dest_table = ] _'dest_table'`
  Is the name of the destination table. *dest_table* is **sysname**, with no default.  
   
  [**@owner =** ] **'**_owner_**'**  
  Is the owner of the subscription. *owner* is **sysname**, with no default.  
   
- [ **@cft_table=** ] **'**_cft_table_**'**  
+`[ @cft_table = ] 'cft_table'`
  Name of the queued updating conflict table for this article. *cft_table*is **sysname**, with no default.  
   
 ## Return Code Values  

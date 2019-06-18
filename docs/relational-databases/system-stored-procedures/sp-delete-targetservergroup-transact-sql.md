@@ -34,7 +34,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the target server group to remove. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

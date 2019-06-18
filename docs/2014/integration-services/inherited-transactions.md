@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Integration Services], inherited"
   - "child packages"
   - "inherited transactions [Integration Services]"
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Inherited Transactions

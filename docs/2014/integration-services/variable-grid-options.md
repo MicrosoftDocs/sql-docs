@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.variableoptionswindow.f1"
 helpviewer_keywords: 
   - "Choose Variable Columns dialog box"
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Variable Grid Options

@@ -34,17 +34,17 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the Publisher to drop. *publisher* is **sysname**, with no default.  
   
- [ **@no_checks=** ] *no_checks*  
+`[ @no_checks = ] no_checks`
  Specifies whether **sp_dropdistpublisher** checks that the Publisher has uninstalled the server as the Distributor. *no_checks* is **bit**, with a default of **0**.  
   
  If **0**, replication verifies that the remote Publisher has uninstalled the local server as the Distributor. If the Publisher is local, replication verifies that there are no publication or distribution objects remaining on the local server.  
   
  If **1**, all the replication objects associated with the distribution Publisher are dropped even if a remote Publisher cannot be reached. After doing this, the remote Publisher must uninstall replication using [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) with **@ignore_distributor** = **1**.  
   
- [ **@ignore_distributor=** ] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Specifies whether distribution objects are left at the Distributor when the Publisher is removed. *ignore_distributor* is **bit** and can be one of these values:  
   
  **1** = distribution objects belonging to the *publisher* remain at the Distributor.  

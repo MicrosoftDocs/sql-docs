@@ -2,7 +2,7 @@
 title: "SetEmailConfiguration Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SetEmailConfiguration method"
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - SetEmailConfiguration
   Configures the e-mail delivery extension used by the report server to send e-mail.  

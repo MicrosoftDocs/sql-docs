@@ -11,8 +11,8 @@ f1_keywords:
   - "vdtsql.chm:65541"
   - "vdt.dlgbox.save"
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

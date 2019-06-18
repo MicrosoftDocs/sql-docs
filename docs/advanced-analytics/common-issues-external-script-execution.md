@@ -2,10 +2,10 @@
 title: Common issues with Launchpad service and external script execution - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: 
-ms.date: 05/31/2018  
+ms.date: 06/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Common issues with Launchpad service and external script execution in SQL Server
@@ -180,7 +180,7 @@ EXEC sp_execute_external_script @language = N'R',
 To resolve the issue, you must reinstall the package to the SQL Server instance library.
 
 >[!NOTE]
->If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+>If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](install/upgrade-r-and-python.md).
 
 ## Launchpad shuts down due to mismatched DLLs
 

@@ -41,24 +41,24 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## Arguments  
- [ **@procedure_name =** ] **'***name***'**  
+`[ @procedure_name = ] 'name'`
  Is the name of the procedure used to return catalog information. *name* is **nvarchar(**390**)**, with a default of %, which means all tables in the current database. Wildcard pattern matching is supported.  
   
- [ **@procedure_owner =**] **'***owner***'**  
+`[ @procedure_owner = ] 'owner'`
  Is the name of the owner of the procedure. *owner*is **nvarchar(**384**)**, with a default of NULL. Wildcard pattern matching is supported. If *owner* is not specified, the default procedure visibility rules of the underlying DBMS apply.  
   
  If the current user owns a procedure with the specified name, information about that procedure is returned. If *owner*is not specified and the current user does not own a procedure with the specified name, **sp_sproc_columns** looks for a procedure with the specified name that is owned by the database owner. If the procedure exists, information about its columns is returned.  
   
- [ **@procedure_qualifier =**] **'***qualifier***'**  
+`[ @procedure_qualifier = ] 'qualifier'`
  Is the name of the procedure qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables (*qualifier.owner.name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this parameter represents the database name. In some products, it represents the server name of the table's database environment.  
   
- [ **@column_name =**] **'***column_name***'**  
+`[ @column_name = ] 'column_name'`
  Is a single column and is used when only one column of catalog information is desired. *column_name* is **nvarchar(**384**)**, with a default of NULL. If *column_name* is omitted, all columns are returned. Wildcard pattern matching is supported. For maximum interoperability, the gateway client should assume only ISO standard pattern matching (the % and _ wildcard characters).  
   
- [ **@ODBCVer =**] **'***ODBCVer***'**  
+`[ @ODBCVer = ] 'ODBCVer'`
  Is the version of ODBC being used. *ODBCVer* is **int**, with a default of 2, which indicates ODBC version 2.0. For more information about the difference between ODBC version 2.0 and ODBC version 3.0, refer to the ODBC **SQLProcedureColumns** specification for ODBC version 3.0  
   
- [ **@fUsePattern =**] **'***fUsePattern***'**  
+`[ @fUsePattern = ] 'fUsePattern'`
  Determines whether the underscore (_), percent (%), and bracket ([ ]) characters are interpreted as wildcard characters. Valid values are 0 (pattern matching is off) and 1 (pattern matching is on). *fUsePattern* is **bit**, with a default of 1.  
   
 ## Return Code Values  

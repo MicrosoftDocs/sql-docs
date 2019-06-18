@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10014"
 helpviewer_keywords: 
   - "query designers, SAP"
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SAP NetWeaver BI Query Designer User Interface (Report Builder)

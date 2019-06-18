@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], discarding changes"
   - "diagrams [SQL Server], discarding changes"
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

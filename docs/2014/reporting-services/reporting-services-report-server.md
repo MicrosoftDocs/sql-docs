@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/12/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Reporting Services], extensions"
@@ -22,8 +21,8 @@ helpviewer_keywords:
   - "Web service [Reporting Services], report server"
   - "storage [Reporting Services]"
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Report Server
@@ -177,6 +176,6 @@ manager: kfile
  [Implementing a Security Extension](extensions/security-extension/implementing-a-security-extension.md)   
  [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [How to Administer SSRS using PowerShell (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321992)  
+ [How to Administer SSRS using PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

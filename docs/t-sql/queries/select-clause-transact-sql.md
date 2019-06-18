@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "$ROWGUID keyword"
   - "queries [SQL Server], results"
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SELECT Clause (Transact-SQL)

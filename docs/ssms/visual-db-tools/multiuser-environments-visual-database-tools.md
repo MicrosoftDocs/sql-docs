@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "version control [Visual Database Tools]"
   - "Visual Database Tools [SQL Server], multiuser environments"
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

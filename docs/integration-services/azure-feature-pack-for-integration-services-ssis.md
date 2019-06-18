@@ -1,7 +1,7 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/09/2018"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -11,11 +11,15 @@ f1_keywords:
   - "SQL13.SSIS.AZURE.F1"
   - "SQL14.SSIS.AZURE.F1"
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Feature Pack for Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
 
 [![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Download**
@@ -62,6 +66,8 @@ The download pages also include information about prerequisites. Make sure you i
 
     -   [Azure SQL DW Upload Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Flexible File Task](../integration-services/control-flow/flexible-file-task.md)
+
 -   Data Flow Components
 
     -   [Azure Blob Source](../integration-services/data-flow/azure-blob-source.md)
@@ -72,7 +78,11 @@ The download pages also include information about prerequisites. Make sure you i
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob & Azure Data Lake Store File Enumerator. See [Foreach Loop Container](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+    -   [Flexible File Source](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [Flexible File Destination](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Azure Blob, Azure Data Lake Store, and Data Lake Storage Gen2 File Enumerator. See [Foreach Loop Container](../integration-services/control-flow/foreach-loop-container.md)
 
 ## Scenario: Processing big data
  Use Azure Connector to complete following big data processing work:

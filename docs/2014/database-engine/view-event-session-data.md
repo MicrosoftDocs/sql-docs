@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
@@ -39,23 +38,27 @@ manager: craigg
   
 -   For an event_file target, view the file target data (.XEL file) using one of the following methods:  
   
-    -   Use File -> Open in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
-    -   Drag and Drop the file into [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
+    -   Use File -> Open in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    
+    -   Drag and drop the file into [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    
     -   Double click the .XEL file.  
-  
-    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right click on a running Extended Events session and select View Target Data.  
-  
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
-  
-    -   You can view more than one .XEL file by selecting **Merge Extended Event Files** from the File -> Open menu.  
-  
+    
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], right click on a running Extended Events session and select View Target Data. 
+    
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
+    
+    -   Use Powershell Read-SQLXevent in [SQLServer.XEvent module](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    
+    -   Programmatically consume XEvents by using the [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    
+    -   You can view more than one .XEL file by selecting **Merge Extended Event Files** from the File -> Open menu.
+
 ### Watching Live Data  
  You can watch live data as it is being captured.  
   
 -   In Object Explorer, expand the **Management**, **Extended Events**, and then **Sessions** nodes.  
-  
+
 -   Right-click the session name and then click **Watch Live Data** to start displaying the tracing data.  
   
      The default display columns are **Event Name** and **TimeStamp**.  
@@ -63,7 +66,9 @@ manager: craigg
      To add additional columns to the trace window, click the **Choose Columns** button on the Extended Events toolbar. The **Details** tab shows all of the event details for the selected event.  
   
      Events are usually displayed in approximately 30 seconds. If you want to change the latency period, you can change the **Maximum dispatch latency** on the **Advanced** page of the of the **New Session** dialog.  
-  
+     
+-    Live data can be streamed by the [SqlServer.XEvent PowerShell module](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+     
 ### To Refresh Target Data  
  Refreshing target data is not supported for event_files targets:  
   

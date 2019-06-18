@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "HAVING clause"
   - "HAVING clause, about HAVING clause"
 ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

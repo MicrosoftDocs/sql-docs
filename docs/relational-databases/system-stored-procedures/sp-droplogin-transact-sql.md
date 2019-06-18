@@ -37,7 +37,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the login to be removed. *login* is **sysname**, with no default. *login* must already exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Return Code Values  

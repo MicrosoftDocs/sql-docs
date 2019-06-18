@@ -35,16 +35,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## Arguments  
- [ **@ownername**= ] **'***ownername***'**  
+`[ @ownername = ] 'ownername'`
  Is the name of the table owner. *ownername* is **sysname**, with a default of NULL. This parameter is useful to differentiate tables if a database contains multiple tables with the same name, but each table has a different owner.  
   
- [ **@tablename =**] **'***tablename***'**  
+`[ @tablename = ] 'tablename'`
  Is the name of the table that contains the row for which the information is returned. *tablename* is **sysname**, with a default of NULL.  
   
- [ **@rowguid =**] *rowguid*  
+`[ @rowguid = ] rowguid`
  Is the unique identifier of the row. *rowguid* is **uniqueidentifier**, with no default.  
   
- [ **@show**= ] **'***show***'**  
+`[ @show = ] 'show'`
  Determines the amount of information to return in the result set. *show* is **nvarchar(20)** with a default of BOTH. If **row**, only row version information is returned. If **columns**, only column version information is returned. If **both**, both row and column information is returned.  
   
 ## Result Sets for Row Information  

@@ -37,7 +37,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## Arguments  
- [ **@name_in_db =**] **'***user***'**  
+`[ @name_in_db = ] 'user'`
  Is the name of the user to remove. *user* is a **sysname**, with no default. *user* must exist in the current database. When specifying a Windows login, use the name by which the database knows that login.  
   
 ## Return Code Values  

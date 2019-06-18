@@ -2,13 +2,13 @@
 title: "Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site | Microsoft Docs"
 ms.date: 11/15/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
 
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Deploy the SQL Server Reporting Services Report Viewer web part on a SharePoint site

@@ -12,11 +12,15 @@ helpviewer_keywords:
   - "TRIM function"
   - "trailing blanks"
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # TRIM (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression after removing leading and trailing spaces.  
   
 > [!NOTE]  

@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/16/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Lesson 4: Run predictions using R embedded in a stored procedure

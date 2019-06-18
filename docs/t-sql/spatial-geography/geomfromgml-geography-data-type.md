@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "GeomFromGML (geography Data Type)"
   - "GeomFromGML method"
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # GeomFromGML (geography Data Type)

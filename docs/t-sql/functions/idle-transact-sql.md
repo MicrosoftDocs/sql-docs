@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "status information [SQL Server], idle time"
   - "idle time [SQL Server]"
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # &#x40;&#x40;IDLE (Transact-SQL)

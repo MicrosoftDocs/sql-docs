@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "geography data type [SQL Server], Transact-SQL"
   - "spatial data types [SQL Server]"
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Spatial Types - geography

@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "08/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.foreachloopcontainer.collection.f1"
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Foreach Loop Editor (Collection Page)
@@ -67,7 +66,7 @@ manager: craigg
 >   
 >  When you specify a file name extension, the enumerator also returns files that have the same extension with additional characters appended. (This is the same behavior as that of the **dir** command in the operating system, which also compares 8.3 file names for backward compatibility.) This behavior of the enumerator could cause unexpected results. For example, you want to enumerate only Excel 2003 files, and you specify "*.xls". However, the enumerator will also return Excel 2007 files because those files have the extension, ".xlsx".  
 >   
->  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (...) to add the property expression. For more information about dynamically selecting specified files, see [SSIS-Dynamically set File Mask : FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154)  
+>  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (...) to add the property expression. For more information about dynamically selecting specified files, see [SSIS-Dynamically set File Mask : FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)  
   
  **Fully qualified**  
  Select to retrieve the fully qualified path of file names. If wildcard characters are specified in the Files option, then the fully-qualified paths that are returned match the filter.  
@@ -287,7 +286,7 @@ Specifies whether to search recursively within the specified directory.
   
 -   Blog entry, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
   
--   Blog entry, [SSIS-Dynamically set File Mask : FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154), on beyondrelational.com.  
+-   Blog entry, [SSIS-Dynamically set File Mask : FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html).  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   

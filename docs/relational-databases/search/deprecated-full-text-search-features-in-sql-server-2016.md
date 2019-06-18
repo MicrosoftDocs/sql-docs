@@ -4,16 +4,16 @@ ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [full-text search]"
   - "full-text search [SQL Server], deprecated features"
   - "full-text queries [SQL Server], proximity"
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

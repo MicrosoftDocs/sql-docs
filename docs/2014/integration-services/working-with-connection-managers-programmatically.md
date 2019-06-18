@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "connection managers [Integration Services], programming"
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Working with Connection Managers Programmatically

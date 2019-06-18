@@ -2,7 +2,7 @@
 title: "Feature Reference (Reporting Services) | Microsoft Docs"
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "tools [Reporting Services]"
   - "F1 Help [Reporting Services]"
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Feature Reference (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] includes several tools and applications that you can use to create, manage, and view reports. This section provides specific topics describing the dialog boxes, Web pages, and wizards of these tools and applications.  

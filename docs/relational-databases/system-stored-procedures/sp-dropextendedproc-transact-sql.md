@@ -37,7 +37,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## Arguments  
- [ **@functname =**] **'***procedure***'**  
+`[ @functname = ] 'procedure'`
  Is the name of the extended stored procedure to drop. *procedure* is **nvarchar(517)**, with no default.  
   
 ## Return Code Values  

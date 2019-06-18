@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Concepts (SSRS)
@@ -71,7 +70,7 @@ manager: kfile
  **Reports and report definitions**  
  **RDL.** A report definition is an XML file that conforms to an XML grammar called Report Definition Language (RDL). In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], you create a report definition in a tool such as Report Builder or Report Designer. It includes elements that define data source connections, queries used to retrieve data, expressions, parameters, images, text boxes, tables, and any other design-time layout. For more information, see [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** A report definition in RDLX is an RDL file with internal extensions that enable the [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] visualization experience. For more information, see [Power View Overview](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** A report definition in RDLX is an RDL file with internal extensions that enable the [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] visualization experience. For more information, see [Power View Overview](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684).  
   
  **RDLC.** The Visual Studio Report Designer produces client report definition (.rdlc) files in XML format for use with the ReportViewer control.  
   

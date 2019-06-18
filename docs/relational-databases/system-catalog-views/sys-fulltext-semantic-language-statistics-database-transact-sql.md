@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,8 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.fulltext_semantic_language_statistics_database catalog view"
 ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # sys.fulltext_semantic_language_statistics_database (Transact-SQL)

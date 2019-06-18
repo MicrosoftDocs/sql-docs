@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial lesson 12: Analyze in Excel | Microsoft Docs"
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Analyze in Excel
 
@@ -26,7 +27,7 @@ This article is part of a tabular modeling tutorial, which should be completed i
   
 ## Browse using the Default and Internet Sales perspectives  
 
-In these first tasks, you browse your model by using both the default perspective, which includes all model objects, and also by using the Internet Sales perspective you earlier. The Internet Sales perspective excludes the Customer table object.  
+In these first tasks, you browse your model by using both the default perspective, which includes all model objects, and also by using the Internet Sales perspective you created earlier. The Internet Sales perspective excludes the Customer table object.  
   
 #### To browse by using the Default perspective  
   

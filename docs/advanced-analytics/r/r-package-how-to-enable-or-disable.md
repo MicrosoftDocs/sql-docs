@@ -4,10 +4,10 @@ description: Enable remote R package management on SQL Server 2016 R Services or
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/10/2018  
+ms.date: 06/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Enable or disable remote package management for SQL Server
@@ -93,4 +93,4 @@ After you have enabled this feature, you can use RevoScaleR function to install 
 
 + [Use RevoScaleR to install new R packages](use-revoscaler-to-manage-r-packages.md)
 + [Tips for installing R packages](packages-installed-in-user-libraries.md)
-+ [Default packages](installing-and-managing-r-packages.md)
++ [Default packages](../package-management/default-packages.md)

@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: e87ef65f-4b5a-4e1c-8db5-7f0932390bb0
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getCatalog Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

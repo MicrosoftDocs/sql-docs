@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, modifying"
   - "displaying jobs"
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

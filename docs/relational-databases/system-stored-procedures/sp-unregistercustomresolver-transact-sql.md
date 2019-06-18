@@ -32,7 +32,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## Arguments  
- [ **@article_resolver =** ] **'***article_resolver***'**  
+`[ @article_resolver = ] 'article_resolver'`
  Specifies the name of the custom business logic being unregistered. *article_resolver* is **nvarchar(255)**, with no default. If the business logic being removed is a COM component, this parameter is the friendly name of the component. If the business logic is a .NET Framework assembly, this parameter is the name of the assembly.  
   
 ## Return Code Values  

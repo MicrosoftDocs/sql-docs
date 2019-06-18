@@ -126,7 +126,7 @@ After the redistribution, each Compute node will contain less actual data and mo
   
 |Backup and Restore Task|Description|  
 |---------------------------|---------------|  
-|Prepare a server as a backup server.|[Acquire and configure a backup server ](acquire-and-configure-backup-server.md)|  
+|Prepare a server as a backup server.|[Acquire and configure a backup server](acquire-and-configure-backup-server.md)|  
 |Backup a database.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Restore a database.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

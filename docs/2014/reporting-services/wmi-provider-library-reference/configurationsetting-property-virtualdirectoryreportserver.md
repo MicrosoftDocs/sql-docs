@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "VirtualDirectoryReportServer property"
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # VirtualDirectoryReportServer Property (WMI MSReportServer_ConfigurationSetting)

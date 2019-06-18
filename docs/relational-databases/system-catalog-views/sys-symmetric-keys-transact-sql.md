@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Name of the key. Unique within the c4database.|  
+|**name**|**sysname**|Name of the key. Unique within the database.|  
 |**principal_id**|**int**|ID of the database principal who owns the key.|  
 |**symmetric_key_id**|**int**|ID of the key. Unique within the database.|  
 |**key_length**|**int**|Length of the key in bits.|  

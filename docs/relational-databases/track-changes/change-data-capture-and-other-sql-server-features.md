@@ -37,7 +37,7 @@ manager: craigg
   
 2.  Create the capture job and cleanup job on the new principal database (the former mirror database). To create the jobs, use the [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) stored procedure.  
   
- To view the current configuration of a cleanup or capture job, use the [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) stored procedure on the new principal server instance. For a given database, the capture job is named cdc.*database_name*_capture, and the cleanup job is named cdc.*database_name*_cleanup, where *database_name* is the name of the database.  
+ To view the current configuration of a cleanup or capture job, use the [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) stored procedure on the new principal server instance. For a given database, the capture job is named cdc.*database\_name*\_capture, and the cleanup job is named cdc.*database\_name*\_cleanup, where *database_name* is the name of the database.  
   
  To change the configuration of a job, use the [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) stored procedure.  
   

@@ -1,7 +1,7 @@
 ---
 title: Preview Reports
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ""
 ms.prod: reporting-services-2014, sql-server-2014

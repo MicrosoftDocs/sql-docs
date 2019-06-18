@@ -122,7 +122,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ### Database Mirroring and SQL Server Audit  
  A database that has a database audit specification defined and that uses database mirroring will include the database audit specification. To work correctly on the mirrored SQL instance, the following items must be configured:  
   
--   The mirror server must have an audit with the same GUID to enable the database audit specification to write audit records. This can be configured by using the command CREATE AUDIT WITH GUID**=**_\<GUID from source Server Audit_>.  
+-   The mirror server must have an audit with the same GUID to enable the database audit specification to write audit records. This can be configured by using the command CREATE AUDIT WITH GUID **=**_\<GUID from source Server Audit_>.  
   
 -   For binary file targets, the mirror server service account must have appropriate permissions to the location where the audit trail is being written.  
   

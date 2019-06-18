@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "decryption [SQL Server], certificates"
   - "DECRYPTBYCERT function"
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DECRYPTBYCERT (Transact-SQL)

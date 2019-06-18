@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Scale Out support for high availability
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 In SSIS Scale Out, high availability on the Scale Out Worker side is provided by executing packages with multiple Scale Out Workers.
 
 High availability on the Scale Out Master side is achieved with [Always On for SSIS Catalog](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) and Windows failover clustering. In this solution, multiple instances of Scale Out Master are hosted in a Windows failover cluster. When the Scale Out Master service or SSISDB is down on the primary node, the service or SSISDB on the secondary node continues to accept user requests and communicate with Scale Out Workers.
@@ -37,7 +41,7 @@ This account must be able to access SSISDB on the secondary node in the Windows 
 
 ### 2.2 Include the DNS host name for the Scale Out Master service in the CNs of the Scale Out Master certificate
 
-This host name is used in the Scale Out Master endpoint. (Be sure to provide a DNS host name and not a server name.)
+This host name is the Scale Out Master endpoint, which is created as a clustered Generic Service in the failover cluster (see Step 7).   (Be sure to provide a DNS host name and not a server name.)
 
 ![HA master configuration](media/ha-master-config.PNG)
 
@@ -71,7 +75,7 @@ Logging in SSISDB is done by the login **##MS_SSISLogDBWorkerAgentLogin##**, for
 ### 6.3 Update the connection string used for logging.
 Call the stored procedure `[catalog].[update_logdb_info]` with the following parameter values:
 
--   `@server_name = '[Availability Group Listener DNS name],[Port]' `
+-   `@server_name = '[Availability Group Listener DNS name],[Port]'`
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
@@ -89,7 +93,7 @@ Call the stored procedure `[catalog].[update_logdb_info]` with the following par
 
 On Azure virtual machines, this configuration step requires additional steps. A full explanation of these concepts and these steps is beyond the scope of this article.
 
-1.  You have to set up an Azure domain. Windows Server Failover Clustering requires all computers in the cluster to be members of the same domain. For more info, see [Enable Azure Active Directory Domain Services using the Azure portal](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+1.  You have to set up an Azure domain. Windows Server Failover Clustering requires all computers in the cluster to be members of the same domain. For more info, see [Enable Azure Active Directory Domain Services using the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
 
 2. You have to set up an Azure load balancer. This is a requirement for the availability group listener. For more info, see [Tutorial: Load balance internal traffic with Basic Load Balancer to VMs using the Azure portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

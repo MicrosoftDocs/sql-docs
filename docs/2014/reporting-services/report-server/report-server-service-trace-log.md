@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Reporting Services], trace"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "system information [Reporting Services]"
   - "versions [Reporting Services]"
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Server Service Trace Log

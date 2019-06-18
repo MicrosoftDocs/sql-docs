@@ -35,16 +35,16 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## Arguments  
- [ **@job_id =** ] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@server_name =** ] **'***server***'**  
+`[ @server_name = ] 'server'`
  The name of the server at which to target the job. *server* is **nvarchar(30)**, with a default of N'(LOCAL)'. *server* can be either **(LOCAL)** for a local server, or the name of an existing target server.  
   
 ## Return Code Values  

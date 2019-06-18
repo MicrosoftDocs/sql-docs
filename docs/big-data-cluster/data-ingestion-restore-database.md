@@ -1,17 +1,20 @@
 ---
 title: Restore a database
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This article shows how to restore a database into the master instance of a SQL Server 2019 big data cluster (preview).
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.date: 12/06/2018
+manager: jroth
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
-# Restore a database into the SQL Server 2019 big data cluster master instance
+
+# Restore a database into the SQL Server big data cluster master instance
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes how to restore an existing database into the master instance of a SQL Server 2019 big data cluster (preview). The recommended method is to use a backup, copy, and restore approach.
 
@@ -29,7 +32,7 @@ This article shows how to restore the AdventureWorks database, but you can use a
 Copy the backup file to the SQL Server container in the master instance pod of the Kubernetes cluster.
 
 ```bash
-kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your cluster>
+kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
 Example:
@@ -41,7 +44,7 @@ kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c ms
 Then, verify that the backup file was copied to the pod container.
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your cluster> -c mssql-server -- bin/bash
+kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
 cd /var/
 ls /tmp
 exit
@@ -87,14 +90,16 @@ Now, for the SQL Server master instance to access data pools and HDFS, run the d
 
 ```sql
 USE AdventureWorks2016CTP3
-GO 
+GO
+-- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-    CREATE EXTERNAL DATA SOURCE SqlDataPool
-    WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+  CREATE EXTERNAL DATA SOURCE SqlDataPool
+  WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
 
+-- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   CREATE EXTERNAL DATA SOURCE SqlStoragePool
+   WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
 GO
 ```
 

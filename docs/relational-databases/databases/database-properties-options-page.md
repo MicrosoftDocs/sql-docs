@@ -38,7 +38,7 @@ manager: craigg
 ## Automatic  
  **Auto Close**  
  Specify whether the database shuts down cleanly and frees resources after the last user exits. Possible values are **True** and **False**. When **True**, the database is shut down cleanly and its resources are freed after the last user logs off.  
-  
+
  **Auto Create Incremental Statistics**  
  Specify whether to use the incremental option when per partition statistics are created. For information about incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
@@ -57,6 +57,18 @@ manager: craigg
  When **False**, queries that initiate an automatic update of out-of-date statistics, wait until the updated statistics can be used in the query optimization plan.  
   
  Setting this option to **True** has no effect unless **Auto Update Statistics** is also set to **True**.  
+
+## Azure
+When connected to Azure SQL Database, this section has settings to control the Service Level Objective (SLO). The default SLO for a new database is Standard S2.
+
+  **Current Service Level Objective**
+  The specific SLO to use. Valid values are constrained by the selected edition. If your desired SLO value is not in the list, you can type the value.
+
+  **Edition**
+  The Azure SQL Database edition to use, such as Basic or Premium. If the edition value you need is not in the list, you can type the value, which must match the value used in Azure REST APIs.
+  
+  **Max Size**
+  The maximum size of the database. If the desired size value is not in the list, you can type the value. Leave blank for the default size of the given edition and SLO.
   
 ## Containment  
  In a contained database, some settings usually configured at the server level can be configured at the database level.  

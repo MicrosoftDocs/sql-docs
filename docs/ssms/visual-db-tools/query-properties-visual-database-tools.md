@@ -11,8 +11,8 @@ f1_keywords:
   - "vdtsql.chm:69636"
   - "vdt.ppg.querydesigner.query"
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

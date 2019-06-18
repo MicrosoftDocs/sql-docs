@@ -69,7 +69,7 @@ manager: craigg
   
  The following sample shows retry logic in an interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure that contains a call either to a natively compiled stored procedure or to a cross-container transaction.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  

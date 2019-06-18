@@ -11,6 +11,7 @@ apiname:
   - "SQLBindParameter"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBindParameter"
@@ -34,7 +35,8 @@ manager: craigg
   
 ## Syntax  
   
-```cpp  
+```cpp
+  
 SQLRETURN SQLBindParameter(  
       SQLHSTMT        StatementHandle,  
       SQLUSMALLINT    ParameterNumber,  

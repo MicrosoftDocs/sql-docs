@@ -2,7 +2,7 @@
 title: "SqlPackage.exe | Microsoft Docs"
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
@@ -30,7 +30,7 @@ manager: "craigg"
   
 The **SqlPackage.exe** command line allows you to specify these actions along with action-specific parameters and properties.  
 
-**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](sqlpackage-release-notes.md).
+**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
   
 ## Command-Line Syntax
 

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "planar spatial data [SQL Server], geometry data type"
   - "spatial data types [SQL Server]"
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Transform data using R (SQL Server and RevoScaleR tutorial)

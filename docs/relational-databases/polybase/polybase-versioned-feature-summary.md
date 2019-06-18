@@ -56,6 +56,8 @@ Partial aggregation means that a final aggregation must occur after the data rea
 
 PolyBase has the following limitations:
 
+- In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
+
 - The maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in SQL Server or 1 MB in Azure SQL Data Warehouse.
 
 - When data is exported into an ORC file format from SQL Server or SQL Data Warehouse, text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.

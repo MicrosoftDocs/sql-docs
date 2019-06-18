@@ -21,7 +21,7 @@ helpviewer_keywords:
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

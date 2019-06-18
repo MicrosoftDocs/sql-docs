@@ -19,7 +19,7 @@ manager: craigg
 ## Non-Persisted Computed Columns  
  To simulate the effects of a non-persisted computed column, create a view on the memory-optimized table. In the SELECT statement that defines the view, add the computed column definition into the view. Except in a natively compiled stored procedure, queries that use values from the computed column should read from the view. Inside natively compiled stored procedures, you should update any select, update, or delete statement according to your computed column definition.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -41,7 +41,7 @@ CREATE VIEW dbo.v_order_details AS
 ## Persisted Computed Columns  
  To simulate the effects of a persisted computed column, create a stored procedure for inserting into the table and another stored procedure for updating the table. When inserting or updating the table, invoke these stored procedures to perform these tasks. Inside the stored procedures, calculate the value for the computed field according to the inputs, much like how the computed column is defined on the original disk-based table. Then, insert or update the table as needed inside the stored procedure.  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
@@ -879,7 +877,7 @@ GO
   
  This is `test.sql`, which tests the sample by executing the functions.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

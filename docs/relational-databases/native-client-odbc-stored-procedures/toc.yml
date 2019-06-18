@@ -1,8 +1,0 @@
-- name: Running Stored Procedures
-  href: running-stored-procedures.md
-- name: Batching Stored Procedure Calls
-  href: batching-stored-procedure-calls.md
-- name: Calling a Stored Procedure
-  href: calling-a-stored-procedure.md
-- name: Processing Stored Procedure Results
-  href: processing-stored-procedure-results.md

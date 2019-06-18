@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "LogProvider object"
   - "packages [Integration Services], logs"
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Enabling Logging Programmatically

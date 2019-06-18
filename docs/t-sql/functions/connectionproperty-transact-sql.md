@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CONNECTIONPROPERTY statement"
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # CONNECTIONPROPERTY (Transact-SQL)

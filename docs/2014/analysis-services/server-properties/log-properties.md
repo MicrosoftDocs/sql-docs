@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "QueryLogFileSize property"
@@ -193,7 +192,7 @@ manager: craigg
  The default value for this property is false, which indicates the server will not automatically create the log table and will not log query events.  
   
 > [!NOTE]  
->  For more information about configuring the query log, see [Configuring the Analysis Services Query Log](https://go.microsoft.com/fwlink/?LinkId=81890).  
+>  For more information about configuring the query log, see [Log operations in Analysis Services](../instances/log-operations-in-analysis-services.md).  
   
 ## Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

@@ -3,10 +3,10 @@ title: Data science scenarios and solution templates - SQL Server Machine Learni
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 03/29/2019
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Data science scenarios and solution templates
@@ -19,8 +19,6 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 > [!TIP]
 > 
 > Most of the templates come in multiple versions supporting both on-premises and cloud platforms for machine learning. For example, you can build the solution using only SQL Server, or you can build the solution in Microsoft R Server, or in Azure Machine Learning.
-
-+ For details and updates, see this announcement: [Exciting new templates in Azure ML](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + For download and setup instructions, see [How to use the templates](#bkmk_HowTo).
 
@@ -51,7 +49,7 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 
 ## Customer churn
 
-[Customer churn prediction template (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[Customer churn prediction template (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **What:** Analyzing and predicting customer churn is important in any industry where the loss of customers to competitors must be managed and prevented:  banking, telecommunications, and retail, to name a few. The goal of churn analysis is to identify which customers are likely to churn, and then take appropriate actions to retain such customers and keep their business.
 
@@ -59,11 +57,9 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
   
 ## Predictive maintenance
 
-[Predictive maintenance template (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[Predictive maintenance template (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **What:** Predictive maintenance aims to increase the efficiency of maintenance tasks by capturing past failures and using that information to predict when or where a device might fail. The ability to forecast device obsolescence is especially valuable for applications that rely on distributed data or sensors. this method could also be applied to monitor or predict error in IoT (Internet of Things) devices.
-
-See this announcement for more information: [New predictive maintenance template](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **How:** This solution focuses on answering the question, "When will an in-service machine fail?" The input data represents simulated sensor measurements for aircraft engines. Data obtained from monitoring the engine's current operation conditions, such as the current working cycle, settings, and sensor measurements, are used to create three types of predictive models:
 

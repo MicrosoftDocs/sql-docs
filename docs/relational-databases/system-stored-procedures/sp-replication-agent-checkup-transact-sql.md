@@ -32,7 +32,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## Arguments  
- [ **@heartbeat_interval** = ] **'***heartbeat_interval***'**  
+`[ @heartbeat_interval = ] 'heartbeat_interval'`
  Is the maximum number of minutes that an agent can go without logging a progress message. *heartbeat_interval* is **int**, with a default of 10 minutes.  
   
 ## Return Code Values  

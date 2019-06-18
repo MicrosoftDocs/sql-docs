@@ -35,19 +35,19 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## Arguments  
- [ **@job_id=**] *job_id*  
+`[ @job_id = ] job_id`
  Is the job ID of the Distribution Agent for the push subscription. *job_id* is **varbinary(16)**, with no default. To find the Distribution Job ID, run **sp_helpsubscription** or **sp_helppullsubscription**.  
   
- [ **@dts_package_name**= ] **'**_dts_package_name_**'**  
+`[ @dts_package_name = ] 'dts_package_name'`
  Specifies the name of the DTS package. *dts_package_name* is a **sysname**, with a default of NULL. For example, to specify a package named **DTSPub_Package**, you would specify `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**= ] **'**_dts_package_password_**'**  
+`[ @dts_package_password = ] 'dts_package_password'`
  Specifies the password on the package. *dts_package_password* is **sysname** with a default of NULL, which specifies that the password property is to be left unchanged.  
   
 > [!NOTE]  
 >  A DTS package must have a password.  
   
- [ **@dts_package_location**= ] **'**_dts_package_location_**'**  
+`[ @dts_package_location = ] 'dts_package_location'`
  Specifies the package location. *dts_package_location* is a **nvarchar(12)**, with a default of NULL, which specifies that the package location is to be left unchanged. The location of the package can be changed to **distributor** or **subscriber**.  
   
 ## Return Code Values  

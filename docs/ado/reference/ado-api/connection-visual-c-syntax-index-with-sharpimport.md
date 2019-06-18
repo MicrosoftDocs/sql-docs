@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Connection (Visual C++ Syntax Index with #import)
 ## Methods  

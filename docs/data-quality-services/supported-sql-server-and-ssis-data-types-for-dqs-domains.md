@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # Supported SQL Server and SSIS Data Types for DQS Domains
 

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.subreportproperties.parameters.f1"
@@ -15,8 +14,8 @@ f1_keywords:
   - "10070"
   - "sql12.rtp.rptdesigner.reportparameters.advanced.f1"
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Parameters (Report Builder and Report Designer)
@@ -213,13 +212,13 @@ manager: kfile
   
 -   [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [How to use SSRS parameters with stored procedures](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [SSRS Report For Parameterized Stored Procedure](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
   
 ## Did this Article Help You? We're Listening  
  What information are you looking for, and did you find it? We're listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> Related Content  
- [Configuring SSRS Report Parameters (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Configuring SSRS Report Parameters (quiz)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
  [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   

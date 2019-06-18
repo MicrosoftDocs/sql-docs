@@ -35,13 +35,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## Arguments  
- [ **@alert_name=** ] **'***alert***'**  
+`[ @alert_name = ] 'alert'`
  The alert for this notification. *alert* is **sysname**, with no default.  
   
- [ **@operator_name=** ] **'***operator***'**  
+`[ @operator_name = ] 'operator'`
  The operator to be notified when the alert occurs. *operator* is **sysname**, with no default.  
   
- [ **@notification_method=** ] *notification_method*  
+`[ @notification_method = ] notification_method`
  The method by which the operator is notified. *notification_method* is **tinyint**, with no default. *notification_method* can be one or more of these values combined with an **OR** logical operator.  
   
 |Value|Description|  

@@ -35,7 +35,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of a role in the current database. *role* is **sysname**, with a default of NULL. *role* must exist in the current database. If *role* is not specified, information about all roles in the current database is returned.  
   
 ## Return Code Values  

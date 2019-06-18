@@ -32,7 +32,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## Arguments  
- [ **@session_id** = ] *session_id*  
+`[ @session_id = ] session_id`
  Specifies an agent session. *session_id* is **int** with no default.  
   
 ## Result Sets  

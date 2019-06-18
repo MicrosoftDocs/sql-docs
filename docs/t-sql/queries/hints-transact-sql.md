@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], hints"
   - "DELETE statement [SQL Server], hints"
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Hints (Transact-SQL)

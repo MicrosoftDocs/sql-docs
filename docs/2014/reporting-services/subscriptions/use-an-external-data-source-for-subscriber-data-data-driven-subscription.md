@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriber data sources [Reporting Services]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "data-driven subscriptions"
   - "data sources [Reporting Services], subscriptions"
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Use an External Data Source for Subscriber Data (Data-Driven Subscription)

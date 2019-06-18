@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 2: Define a Data Connection and Data Table for Parent Report
 After you create a new website project using the ASP.NET website template for Visual C#, your next step is to create a data connection and a data table for the parent report. In this tutorial the data connection is to the AdventureWorks2014 database.  
@@ -21,7 +21,7 @@ After you create a new website project using the ASP.NET website template for Vi
   
     This adds a new XSD file **DataSet1.xsd** to the project and opens the DataSet Designer.  
   
-3.  From the Toolbox window, drag a **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
+3.  From the Toolbox window, drag a **[TableAdapter](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
   
 4.  On the **Choose Your Data Connection** page, select **New Connection**.  
   

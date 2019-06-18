@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ReportViewer controls"
   - "integrating reports [Reporting Services]"
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Integrating Reporting Services Using the ReportViewer Controls
@@ -38,6 +36,6 @@ manager: kfile
   
 ## See Also  
  [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)   
- [Create SSRS Reports Using Visual Studio (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321991)  
+ [Create SSRS Reports Using Visual Studio (Blog)](https://jwcooney.com/2015/01/07/ssrs-basics-set-up-visual-studio-to-write-a-new-ssrs-report/)  
   
   

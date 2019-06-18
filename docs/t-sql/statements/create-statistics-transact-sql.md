@@ -87,7 +87,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
-    ON [ database_name . [schema_name ] . | schema_name. ] table_name   
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( column_name  [ ,...n ] )   
     [ WHERE <filter_predicate> ]  
     [ WITH {  

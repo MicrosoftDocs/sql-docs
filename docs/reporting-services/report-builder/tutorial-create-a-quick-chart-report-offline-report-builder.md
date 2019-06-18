@@ -2,7 +2,7 @@
 title: "Tutorial: Create a Quick Chart Report Offline (Report Builder) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "tutorials, getting started"
   - "creating reports"
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
@@ -223,7 +223,7 @@ Notice the design surface gets larger as you drag.
   
  Finally, to save your reports to a report server or a SharePoint site that is integrated with a report server, you need the URL and permissions. You can run any report you create directly from your computer, but reports have more functionality when run from the report server or SharePoint site. You need permissions to run your reports or others from the report server or SharePoint site where they are published. Talk to your system administrator to obtain access.  
   
- It may help to read about some of the concepts and terms before you get started. See [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Also, spend some time planning, before you create your first report. It will be time well spent. See [Planning a Report &#40;Report Builder&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ It may help to read about some of the concepts and terms before you get started. See [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md). Also, spend some time planning, before you create your first report. It will be time well spent. See [Planning a Report &#40;Report Builder&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## Next steps
 

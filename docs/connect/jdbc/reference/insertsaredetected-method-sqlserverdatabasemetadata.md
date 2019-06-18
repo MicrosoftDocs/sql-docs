@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # insertsAreDetected Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

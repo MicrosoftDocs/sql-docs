@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10013"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "Hyperion Essbase query designer"
   - "query designers, Hyperion"
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Hyperion Essbase Query Designer User Interface (Report Builder)

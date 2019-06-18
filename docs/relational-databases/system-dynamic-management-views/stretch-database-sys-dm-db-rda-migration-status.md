@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_rda_migration_status dynamic management view"
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl 
+ms.author: pelopes
 manager: craigg
 ---
 # Stretch Database - sys.dm_db_rda_migration_status

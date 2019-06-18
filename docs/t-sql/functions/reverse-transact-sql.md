@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "REVERSE function"
   - "reverse character expressions"
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPolyFromText method"
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STMPolyFromText (geography Data Type)

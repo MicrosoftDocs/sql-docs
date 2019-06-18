@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "number of connection attempts"
   - "attempted connections"
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # &#x40;&#x40;CONNECTIONS (Transact-SQL)

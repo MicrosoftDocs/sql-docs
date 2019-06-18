@@ -2,7 +2,7 @@
 title: "Formatting Lines, Colors, and Images (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -21,8 +21,8 @@ f1_keywords:
   - "10066"
   - "sql13.rtp.rptdesigner.subreportproperties.border.f1"
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Formatting Lines, Colors, and Images (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gives you the ability to format lines, colors, data regions, images, and other report items.  

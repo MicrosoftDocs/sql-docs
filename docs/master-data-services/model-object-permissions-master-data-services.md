@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "permissions [Master Data Services], model objects"
   - "models [Master Data Services], object permissions"
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

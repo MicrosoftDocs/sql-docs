@@ -11,11 +11,15 @@ helpviewer_keywords:
   - "DAY function"
   - "dates [Integration Services], DAY"
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # DAY (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns an integer that represents the day datepart of a date.  
   
 ## Syntax  

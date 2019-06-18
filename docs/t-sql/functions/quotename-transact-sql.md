@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "QUOTENAME function"
   - "valid identifiers [SQL Server]"
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

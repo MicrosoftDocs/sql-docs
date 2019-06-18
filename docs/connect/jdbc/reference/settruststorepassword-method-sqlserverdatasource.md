@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # setTrustStorePassword Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

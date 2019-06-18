@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "seed values [SQL Server]"
   - "IDENT_SEED function"
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # IDENT_SEED (Transact-SQL)

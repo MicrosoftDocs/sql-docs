@@ -38,19 +38,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'**_table_server_**'**  
+`[ @table_server = ] 'table_server'`
  Is the name of the linked server for which to return information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'**_table_name_**'**]  
+`[ @table_name = ] 'table_name']`
  Is the name of the table for which to provide table privilege information. *table_name* is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'**_table_schema_**'**  
+`[ @table_schema = ] 'table_schema'`
  Is the table schema. This in some DBMS environments is the table owner. *table_schema* is **sysname**, with a default of NULL.  
   
- [ **@table_catalog =** ] **'**_table_catalog_**'**  
+`[ @table_catalog = ] 'table_catalog'`
  Is the name of the database in which the specified *table_name* resides. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@fUsePattern =**] **'**_fUsePattern_**'**  
+`[ @fUsePattern = ] 'fUsePattern'`
  Determines whether the characters '_', '%', '[', and ']' are interpreted as wildcard characters. Valid values are 0 (pattern matching is off) and 1 (pattern matching is on). *fUsePattern* is **bit**, with a default of 1.  
   
 ## Return Code Values  

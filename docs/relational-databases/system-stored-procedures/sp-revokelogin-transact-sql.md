@@ -37,7 +37,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame=**] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the Windows user or group. *login* is **sysname**, with no default. *login* can be any existing Windows user name or group in the form *Computer name*\\*User or Domain*\\*User*.  
   
 ## Return Code Values  

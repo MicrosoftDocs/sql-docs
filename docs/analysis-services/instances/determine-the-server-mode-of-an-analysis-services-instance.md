@@ -14,7 +14,7 @@ manager: kfile
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services can be installed in one of three server modes: Multidimensional and Data Mining (default), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, and Tabular. The server mode of an Analysis Services instance is determined during setup when you choose options for installing the server.  
   
- The server mode determines the type of solution that you create and deploy. If you did not install the server software and you want to know in which mode the server was installed, you can use the information in this topic to determine the mode. For more information about feature availability in a specific mode, see [Comparing Tabular and Multidimensional Solutions ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ The server mode determines the type of solution that you create and deploy. If you did not install the server software and you want to know in which mode the server was installed, you can use the information in this topic to determine the mode. For more information about feature availability in a specific mode, see [Comparing Tabular and Multidimensional Solutions](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
  If you do not want to use the server mode that you installed, you must uninstall and then reinstall the software, choosing the mode that you prefer. Alternatively, you can install an additional instance of Analysis Services on the same computer so that you have multiple instances running different modes.  
   
@@ -48,7 +48,7 @@ manager: kfile
  [Power Pivot for SharePoint 2010 Installation](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Tabular Model Solutions](../../analysis-services/tabular-models/tabular-models-ssas.md)   
- [Multidimensional Model Solutions ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Multidimensional Model Solutions](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Mining Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

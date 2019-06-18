@@ -63,7 +63,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query. This example shows how to use [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) to delete a backup device. Execute the first example to create the `mybackupdisk` backup device and the physical name `c:\backup\backup1.bak`. Execute `sp_dropdevice` to delete the `mybackupdisk` backup device. The `delfile` parameter deletes the physical name.  
   
-```tsql  
+```sql  
 --Define a backup device and physical name.   
 USE AdventureWorks2012 ;  
 GO  

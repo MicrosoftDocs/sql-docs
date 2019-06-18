@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Axes Collection Properties, Methods, and Events
 ## Properties  

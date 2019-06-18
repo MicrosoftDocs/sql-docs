@@ -11,11 +11,15 @@ helpviewer_keywords:
   - "- (subtract)"
   - "subtract operator (-)"
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # - (Subtract) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Subtracts the second numeric expression from the first one.  
   
 ## Syntax  

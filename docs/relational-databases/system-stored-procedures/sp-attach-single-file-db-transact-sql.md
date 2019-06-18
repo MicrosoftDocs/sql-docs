@@ -41,10 +41,10 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database to be attached to the server. The name must be unique. *dbname* is **sysname**, with a default of NULL.  
   
- [ **@physname=** ] **'***physical_name***'**  
+`[ @physname = ] 'physical_name'`
  Is the physical name, including path, of the database file. *physical_name* is **nvarchar(260)**, with a default of NULL.  
   
 > [!NOTE]  

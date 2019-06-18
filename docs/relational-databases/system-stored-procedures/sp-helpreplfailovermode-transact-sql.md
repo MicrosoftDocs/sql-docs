@@ -36,16 +36,16 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher that is participating in the update of this Subscriber. *publisher* is **sysname**, with no default. The Publisher must already be configured for publishing.  
   
- [ **@publisher_db =**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that is participating in the update of this Subscriber. *publication*is **sysname**, with no default.  
   
- [ **@failover_mode_id=**] **'***failover_mode_id***' OUTPUT**  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`
  Returns the integer value of the failover mode and is an **OUTPUT** parameter. *failover_mode_id* is a **tinyint** with a default of **0**. It returns **0** for immediate updating and **1** for queued updating.  
   
  [**@failover_mode=**] **'***failover_mode***'OUTPUT**  

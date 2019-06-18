@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Expression Builder [Integration Services]"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "SSIS, expressions"
   - "tools [Integration Services], Expression Builder"
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Expression Builder (Integration Services)

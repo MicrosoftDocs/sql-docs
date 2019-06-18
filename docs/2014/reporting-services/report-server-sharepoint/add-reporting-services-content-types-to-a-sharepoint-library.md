@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], viewing reports"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], Web Parts"
   - "Report Viewer Web Part [Reporting Services]"
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Add the Report Viewer Web Part to a Web Page (Reporting Services in SharePoint Integrated Mode)

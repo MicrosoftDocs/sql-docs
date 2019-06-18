@@ -32,7 +32,7 @@ sp_generatefilters [ @publication =] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to be filtered. *publication* is **sysname**, with no default.  
   
 ## Return Code Values  

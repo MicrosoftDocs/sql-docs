@@ -40,17 +40,17 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which returns information on all filtered data snapshot jobs that match the specified *dynamic_snapshot_jobid*and *dynamic_snapshot_jobname*for all publications.  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`
  Is the name of a filtered data snapshot job. *dynamic_snapshot_jobname*is **sysname**, with default of **%**', which returns all dynamic jobs for a publication with the specified *dynamic_snapshot_jobid*. If a job name was not explicitly specified when the job was created, the job name is in the following format:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`
  Is an identifier for a filtered data snapshot job. *dynamic_snapshot_jobid*is **uniqueidentifier**, with default of NULL, which returns all snapshot jobs that match the specified *dynamic_snapshot_jobname*.  
   
 ## Result Sets  

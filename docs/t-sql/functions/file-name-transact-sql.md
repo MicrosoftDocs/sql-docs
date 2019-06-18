@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "FILE_NAME function"
   - "logical file names [SQL Server]"
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # FILE_NAME (Transact-SQL)

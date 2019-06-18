@@ -40,10 +40,10 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## Arguments  
- [ **@defname=** ] **'***default***'**  
+`[ @defname = ] 'default'`
  Is the name of the default that is created by CREATE DEFAULT. *default* is **nvarchar(776)**, with no default.  
   
- [ **@objname=** ] **'***object_name***'**  
+`[ @objname = ] 'object_name'`
  Is the name of table and column or the alias data type to which the default is to be bound. *object_name* is **nvarchar(776)** with no default. *object_name* cannot be defined with the **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, or CLR user-defined types.  
   
  If *object_name* is a one-part name, it is resolved as an alias data type. If it is a two- or three-part name, it is first resolved as a table and column; and if this resolution fails, it is resolved as an alias data type. By default, existing columns of the alias data type inherit *default*, unless a default has been bound directly to the column. A default cannot be bound to a **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **timestamp**, or CLR user-defined type column, a column with the IDENTITY property, a computed column, or a column that already has a DEFAULT constraint.  
@@ -51,7 +51,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *object_name* can contain brackets **[]** as delimited identifiers. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+`[ @futureonly = ] 'futureonly_flag'`
  Is used only when binding a default to an alias data type. *futureonly_flag* is **varchar(15)** with a default of NULL. When this parameter is set to **futureonly**, existing columns of that data type cannot inherit the new default. This parameter is never used when binding a default to a column. If *futureonly_flag* is NULL, the new default is bound to any columns of the alias data type that currently have no default or that are using the existing default of the alias data type.  
   
 ## Return Code Values  

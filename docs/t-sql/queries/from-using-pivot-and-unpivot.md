@@ -21,16 +21,13 @@ helpviewer_keywords:
   - "FROM clause, PIVOT operator"
   - "rotating columns"
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FROM - Using PIVOT and UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 You can use the `PIVOT` and `UNPIVOT` relational operators to change a table-valued expression into another table. `PIVOT` rotates a table-valued expression by turning the unique values from one column in the expression into multiple columns in the output, and runs aggregations where they're required on any left over column values that are wanted in the final output. `UNPIVOT` carries out the opposite operation to PIVOT by rotating columns of a table-valued expression into column values.  
   

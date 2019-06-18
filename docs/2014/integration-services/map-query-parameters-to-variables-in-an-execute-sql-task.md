@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [Integration Services], parameter mapping"
@@ -15,14 +14,11 @@ helpviewer_keywords:
   - "Execute SQL task [Integration Services]"
   - "variables [Integration Services], mapping parameters to"
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Map Query Parameters to Variables in an Execute SQL Task
-
-  > [!div class="nextstepaction"]
-  > [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
   This topic describes how to use a parameterized SQL statement in the Execute SQL task and create mappings between variables and the parameters in the SQL statement.  
   

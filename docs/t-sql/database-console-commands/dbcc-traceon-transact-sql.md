@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "DBCC TRACEON statement"
   - "trace flags [SQL Server], enabling"
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

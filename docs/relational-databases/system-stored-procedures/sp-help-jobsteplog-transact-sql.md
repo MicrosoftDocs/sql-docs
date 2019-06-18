@@ -37,19 +37,19 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## Arguments  
- [ **@job_id =**] **'***job_id***'**  
+`[ @job_id = ] 'job_id'`
  The job identification number for which to return job step log information. *job_id* is **int**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@step_id =**] *step_id*  
+`[ @step_id = ] step_id`
  The identification number of the step in the job. If not included, all steps in the job are included. *step_id* is **int**, with a default of NULL.  
   
- [ **@step_name =**] **'***step_name***'**  
+`[ @step_name = ] 'step_name'`
  The name of the step in the job. *step_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

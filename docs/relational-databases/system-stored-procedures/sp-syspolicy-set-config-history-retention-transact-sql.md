@@ -34,7 +34,7 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## Arguments  
- [ **@value=** ] *value*  
+`[ @value = ] value`
  Is the number of days to retain Policy-Based Management history. *value* is **sqlvariant**.  
   
 ## Return Code Values  

@@ -35,13 +35,13 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## Arguments  
- [ **@name =** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the policy category that you want to rename. *name* is **sysname**, and must be specified if *policy_category_id* is NULL.  
   
- [ **@policy_category_id=** ] *policy_category_id*  
+`[ @policy_category_id = ] policy_category_id`
  Is the identifier for the policy category that you want to rename. *policy_category_id* is **int**, and must be specified if *name* is NULL.  
   
- [ **@new_name=** ] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  Is the new name for the policy category. *new_name* is **sysname**, and is required. Cannot be NULL or an empty string.  
   
 ## Return Code Values  

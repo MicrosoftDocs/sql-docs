@@ -8,7 +8,6 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for Red Hat Enterprise Linux
@@ -44,7 +43,7 @@ MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 MSSQL_PID='evaluation'
 
 # Install SQL Server Agent (recommended)
-SQL_INSTALL_AGENT='y'
+SQL_ENABLE_AGENT='y'
 
 # Install SQL Server Full Text Search (optional)
 # SQL_INSTALL_FULLTEXT='y'
@@ -80,11 +79,12 @@ echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 
-# Optional SQL Server Agent installation:
-if [ ! -z $SQL_INSTALL_AGENT ]
+# Optional Enable SQL Server Agent :
+if [ ! -z $SQL_ENABLE_AGENT ]
 then
-  echo Installing SQL Server Agent...
-  sudo yum install -y mssql-server-agent
+  echo Enable SQL Server Agent...
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+  sudo systemctl restart mssql-server
 fi
 
 # Optional SQL Server Full Text Search installation:
@@ -167,7 +167,7 @@ To run the script
 
 ## Understanding the script
 
-The first thing the Bash script does is set a few variables.  These can be either scripting variables, like the sample, or environment variables.  The variable ``` MSSQL_SA_PASSWORD ``` is **required** by SQL Server installation, the others are custom variables created for the script.  The sample script performs the following steps:
+The first thing the Bash script does is set a few variables.  These can be either scripting variables, like the sample, or environment variables.  The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script.  The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 

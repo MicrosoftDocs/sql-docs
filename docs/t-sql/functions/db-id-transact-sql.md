@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "displaying database ID numbers"
   - "DB_ID function"
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

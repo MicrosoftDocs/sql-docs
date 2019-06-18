@@ -63,7 +63,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
 ```  
   
  The HMAC value truncation is performed in order to fit 1 block of data as needed for the IV.    
-As a result, deterministic encryption always produces the same ciphertext for a given plaintext values, which enables inferring whether two plaintext values are equal by comparing their corresponding ciphertext values. This limited information disclosure allows the database system to support equality comparison on encrypted column values.  
+As a result, deterministic encryption always produces the same ciphertext for a given plaintext value, which enables inferring whether two plaintext values are equal by comparing their corresponding ciphertext values. This limited information disclosure allows the database system to support equality comparison on encrypted column values.  
   
  Deterministic encryption is more effective in concealing patterns, compared to alternatives, such as using a pre-defined IV value.  
   

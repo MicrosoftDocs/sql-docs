@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "validation [Integration Services], design-time tasks"
   - "SSIS custom tasks, validating"
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Coding a Custom Task

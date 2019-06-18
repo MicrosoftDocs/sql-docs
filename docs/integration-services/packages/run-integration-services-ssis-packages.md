@@ -19,11 +19,15 @@ helpviewer_keywords:
   - "running packages [Integration Services]"
   - "Integration Services, (See also Integration Services packages)"
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Run Integration Services (SSIS) Packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can use one of several tools depending on where those packages are stored. The tools are listed in the table below.  
 
 > [!NOTE]

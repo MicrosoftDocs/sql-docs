@@ -39,7 +39,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'**_plan\_id_**'**  
+`[ @plan_id = ] 'plan\_id'`
  Specifies the plan ID of the maintenance plan. *plan_id* is **UNIQUEIDENTIFIER**. The default is NULL.  
   
 ## Return Code Values  

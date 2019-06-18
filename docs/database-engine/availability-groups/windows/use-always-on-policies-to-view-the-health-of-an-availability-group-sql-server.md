@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ---
 # Use Always On Policies to View the Health of an Availability Group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,19 +21,9 @@ manager: craigg
 > [!IMPORTANT]  
 >  For Always On policies, the category names are used as IDs. Changing the name of an Always On category would break its health-evaluation functionality. Therefore, the names of Always On category should never be modified.  
   
--   **Before you begin:** [Security](#Security)  
   
--   **Use Always On policies to view the health of an availability group, using:**  
   
-     [Always On Dashboard](#SSMSProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  <a name="SSMSProcedure"></a> Using the Always On Dashboard  

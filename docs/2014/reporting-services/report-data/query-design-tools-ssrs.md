@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "graphical query designer [Reporting Services]"
@@ -18,8 +17,8 @@ helpviewer_keywords:
   - "semantic queries [Reporting Services]"
   - "Report Model Query Designer"
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Query Design Tools in Report Designer SQL Server Data Tools (SSRS)

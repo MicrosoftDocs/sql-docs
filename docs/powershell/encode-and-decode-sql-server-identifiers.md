@@ -31,7 +31,7 @@ Characters that are not supported in Windows PowerShell path names can be repres
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**Character**|\|/|:|%|\<|>|*|?|[|]|&#124;|  
+|**Character**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**Hexadecimal Encoding**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> Encoding an Identifier  

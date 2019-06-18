@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "stored procedures [OLE DB], about OLE DB stored procedures"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Stored Procedures
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

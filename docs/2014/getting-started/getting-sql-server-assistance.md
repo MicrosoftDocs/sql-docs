@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "offline resources [SQL Server]"

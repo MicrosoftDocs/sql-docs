@@ -35,7 +35,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## Arguments  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'`
  Indicates the time interval at which the stored procedure will run repeatedly to send health information.  
   
  *repeat_interval_in_seconds* is **int** with the default of 0. The valid parameter values are 0, or any value equal to or more than 5. The stored procedure has to run at least 5 seconds to return complete data. The minimum value for the stored procedure to run in the repeat mode is 5 seconds.  

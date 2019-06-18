@@ -36,10 +36,10 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## Arguments  
- [ **@log_id =** ] *log_id*  
+`[ @log_id = ] log_id`
  Is the unique identifier for the collection set log. *log_id* is **int**.  
   
- [ **@from_collection_set =** ] *from_collection_set*  
+`[ @from_collection_set = ] from_collection_set`
  Is the identifier for the collection set. *from_collection_set* is **bit=1**.  
   
 ## Return Code Values  

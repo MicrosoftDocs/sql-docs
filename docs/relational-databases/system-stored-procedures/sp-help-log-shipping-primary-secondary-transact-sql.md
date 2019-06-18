@@ -35,7 +35,7 @@ sp_help_log_shipping_primary_secondary
 ```  
   
 ## Arguments  
- [ **@primary_database =** ] '*primary_database*'  
+`[ @primary_database = ] 'primary_database'`
  Is the name of the database on the primary server. *primary_database* is **sysname**, with no default.  
   
 ## Return Code Values  

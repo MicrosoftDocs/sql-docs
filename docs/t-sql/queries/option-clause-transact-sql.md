@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "clauses [SQL Server], OPTION"
   - "OPTION clause"
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

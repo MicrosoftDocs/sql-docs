@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "system functions [SQL Server]"
@@ -60,7 +59,7 @@ manager: craigg
 -   "Resource Database"  
   
 ## See Also  
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)   
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Remove statements that modify system objects](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [Remove statements that drop system objects](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

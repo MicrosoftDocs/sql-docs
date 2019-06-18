@@ -1,7 +1,7 @@
 ---
 title: "T-SQL Tutorial: Configure permissions on database objects | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ""
@@ -29,7 +29,9 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
-  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Create a login
 To access the [!INCLUDE[ssDE](../includes/ssde-md.md)], users require a login. The login can represent the user's identity as a Windows account or as a member of a Windows group, or the login can be a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login that exists only in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Whenever possible you should use Windows Authentication.  
   

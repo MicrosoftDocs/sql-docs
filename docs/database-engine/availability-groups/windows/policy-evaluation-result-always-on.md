@@ -13,19 +13,13 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ---
 # Policy Evaluation Result Page (Always On Dashboard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use the **Policy Evaluation Result** page of the Always On Dashboard to view any current policy issues.  
-  
- **In This Topic:**  
-  
--   [Dialog-Box Options](#Options)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
+    
 ##  <a name="Options"></a> Dialog-Box Options  
  **Detected Issue**  
  Displays a row for each detected issue. The icon associated with an issue provides a visual indicator to indicate the severity of the issue, as follows:  

@@ -32,8 +32,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please share your feedback about the SQL Docs Table of Contents!](https://aka.ms/sqldocsurvey)
 
 Controls the locking and row versioning behavior of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements issued by a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

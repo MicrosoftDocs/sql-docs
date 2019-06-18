@@ -53,7 +53,7 @@ manager: kfile
 |Data Mining Query transformation|Executes a prediction query within a data flow, using data supplied by a data flow source.<br /><br /> The task editor provides the Prediction Query Builder, and a text box for modifying the DMX query manually.<br /><br /> The transformation can only be used for creating queries that use data in the data flow; that is, queries that use the PREDICTION JOIN syntax. This component cannot be used for executing content queries or other kinds of DMX statements.|  
   
 ##  <a name="bkmk_API"></a> Application Programming Interfaces  
- You can create custom applications that execute queries against data mining models by using a variety of programming languages, in combination with server protocols such as OLE DB or Analysis Services ADOMD client. For more information, see [Data Mining Programming](../../analysis-services/data-mining-programming.md).  
+ You can create custom applications that execute queries against data mining models by using a variety of programming languages, in combination with server protocols such as OLE DB or Analysis Services ADOMD client. For more information, see [Data Mining Programming](../../analysis-services/data-mining/data-mining-programming.md).  
   
  However, XMLA constitutes the underlying message format for all interactions with an Analysis Service server. Within an XMLA message, queries are represented differently depending on whether you are sending a prediction query based on DMX, a content query, or a query that retrieves model metadata using the data mining schema rowsets.  
   

@@ -33,10 +33,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## Arguments  
- [ **@subscriber =** ] **'**_subscriber_**'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of **%**, which returns all information.  
   
- [ **@publisher =** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, and defaults to the name of the current server.  
   
 > [!NOTE]  

@@ -98,4 +98,4 @@ Microsoft provides a number of R packages pre-installed with Machine Learning Se
 Now that you have confirmed your instance is ready to work with R, take a closer look at a basic R interaction.
 
 > [!div class="nextstepaction"]
-> [Quickstart: "Hello world" R script in SQL Server ](quickstart-r-run-using-tsql.md)
+> [Quickstart: "Hello world" R script in SQL Server](quickstart-r-run-using-tsql.md)

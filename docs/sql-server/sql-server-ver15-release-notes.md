@@ -93,6 +93,16 @@ Complete details about support and licensing for CTP releases are in `license_Ev
 
 ## Always Encrypted with secure enclaves
 
+### Loading enclave fails
+
+- **Issue and customer impact**: Loading the enclave for Always Encrypted fails with the following message captured in the error log: `Internal enclave error: Cannot initialize the 1 enclave`.
+
+- **Workaround**: None. A resolution is scheduled for CTP 3.1.
+
+- **Applies to**: CTP 3.0
+
+### Rich computations performance
+
 - **Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc.), and are currently disabled by default.
 
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).

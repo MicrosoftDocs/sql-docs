@@ -155,6 +155,8 @@ Tools for managing report server content include [!INCLUDE[ssManStudio](../../in
   
 |Character|Escape value|Example|  
 |---------------|------------------|-------------|  
+|(space)|[ ]|*Firstname Lastname* becomes *Firstname[ ]Lastname*|  
+|\ (backslash)|Replaced with a single space character|*DomainName\Username* becomes *DomainName Username*|  
 |@ (at symbol)|[at]|*username*@hotmail.com becomes *username*[at]hotmail.com|  
 |& (ampersand)|[amp]|*username*@*company*&*company.com* becomes *username*[at]*company*[amp]*company.com*|  
 |$ (dollar sign)|[dollar]|*User* $*Name* becomes *User*[ ][dollar]*Name*|  

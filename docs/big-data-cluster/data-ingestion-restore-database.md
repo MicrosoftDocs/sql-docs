@@ -5,7 +5,7 @@ description: This article shows how to restore a database into the master instan
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

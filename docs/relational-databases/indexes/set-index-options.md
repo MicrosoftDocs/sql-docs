@@ -1,7 +1,7 @@
 ---
 title: "Set Index Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/17/2017"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""

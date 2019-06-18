@@ -6,7 +6,7 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

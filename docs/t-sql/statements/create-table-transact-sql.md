@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2019"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

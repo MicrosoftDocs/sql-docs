@@ -5,7 +5,7 @@ description: Learn about SQL Server 2019 big data clusters (preview) that run on
 author: rothja 
 ms.author: jroth 
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster

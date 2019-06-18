@@ -223,6 +223,10 @@
           href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
         - name: mssqlctl hdfs
           href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+      - name: SQL
+        items: 
+        - name: mssqlctl bdc sql
+          href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: Business continuity
   items:
   - name: Overview

@@ -193,6 +193,6 @@ The next article introduces you to the prebuilt T-SQL templates found within SSM
 
 Go to the next article to learn more:
 > [!div class="nextstepaction"]
-> [Next steps](templates-ssms.md)
+> [Next steps](ssms-configuration.md)
 
 

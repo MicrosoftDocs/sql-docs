@@ -4,7 +4,7 @@ description: R language and Python features in SQL Server, integrating with rela
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/06/2018  
+ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
@@ -13,7 +13,7 @@ manager: cgronlun
 # Machine Learning Services (R, Python) in SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 Machine Learning Services is an add-on to a database engine instance, used for executing R and Python code on SQL Server. The feature includes [Microsoft R and Python packages](#components) for high-performance predictive analytics and machine learning. Code runs in an extensibility framework, isolated from core engine processes, but fully available to relational data as stored procedures, as T-SQL script containing R or Python statements, or as R or Python code containing T-SQL. 
+Machine Learning Services is a feature of SQL Server, used for executing in-database R and Python scripts. The feature includes [Microsoft R and Python packages](#components) for high-performance predictive analytics and machine learning. The relational data can be used in R and Python scripts through stored procedures, T-SQL script containing R and Python statements, or R and Python code containing T-SQL.
 
 If you previously used [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services in SQL Server 2017 is the next generation of R support, with updated versions of base R, RevoScaleR, MicrosoftML, and other libraries introduced in 2016. 
 
@@ -135,7 +135,7 @@ SQL Server 2017 Machine Learning Services is the next generation of SQL Server 2
 | SQL Server 2016 R Services (In-Database) | R Server 9.1  | July 2017  |
 | SQL Server 2016 R Server (Standalone)  |  R Server 9.1 | July 2017 |
 
-For package versions by release, see the version map in [Upgrade R and Python components](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map).
+For package versions by release, see the version map in [Upgrade R and Python components](install/upgrade-r-and-python.md#version-map).
 
 ## Portability and related products
 

@@ -77,7 +77,7 @@ You can also publish a paginated report to the Power BI service. Read more about
  [Planning a Report &#40;Report Builder&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Provides information on what you should consider before you start to build your report.  
   
- [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services Concepts (SSRS)](../reporting-services-concepts-ssrs.md)  
  Defines key concepts used in throughout [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] documentation.  
   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  

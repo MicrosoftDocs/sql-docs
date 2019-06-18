@@ -72,7 +72,7 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    BEGIN
      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+     WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    END
    ```
 

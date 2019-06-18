@@ -41,7 +41,7 @@ The syntax of the query notifications options string is:
 
 `service=mySSBService;local database=mydb`
 
-Notification subscriptions outlive the process that initiates them, as an application may create a notification subscription and then terminate. The subscription remains valid, and the notification will occur if the data changes within the time-out period specified when the subscription was created. A notification is identified by the query executed, the notification options, and the message text, and may be cancelled by setting its time-out value to zero.
+Notification subscriptions outlive the process that initiates them, as an application may create a notification subscription and then terminate. The subscription remains valid, and the notification will occur if the data changes within the time-out period specified when the subscription was created. A notification is identified by the query executed, the notification options, and the message text, and may be canceled by setting its time-out value to zero.
 
 Notifications are sent only once. For continuous notification of data change, a new subscription must be created by re-executing the query after each notification is processed.
 

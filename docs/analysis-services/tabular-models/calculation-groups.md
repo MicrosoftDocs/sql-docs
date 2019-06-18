@@ -1,6 +1,6 @@
 ---
 title: "Calculation groups in Analysis Services tabular models | Microsoft Docs"
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -401,8 +401,6 @@ Calculation groups  are not yet supported in SQL Server Data Tools, Visual Studi
 [Object level security](object-level-security.md) (OLS) defined on calculation group tables is not supported. However, OLS can be defined on other tables in the same model. If a calculation item refers to an OLS secured object, a generic error is returned.
 
 [Row level security](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) is not supported. You can define RLS on tables in the same model, but not on calculation groups themselves (directly or indirectly).
-
-[Detail Rows Expressions](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) are not supported with calculation groups.
 
 ## See also  
 

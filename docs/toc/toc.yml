@@ -199,24 +199,34 @@
           href: ../big-data-cluster/reference-mssqlctl-app-template.md
       - name: Cluster
         items:
-        - name: mssqlctl cluster
-          href: ../big-data-cluster/reference-mssqlctl-cluster.md
-        - name: mssqlctl cluster config
-          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
-        - name: mssqlctl cluster config section
-          href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
-        - name: mssqlctl cluster debug
-          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
-        - name: mssqlctl cluster endpoint
-          href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
-        - name: mssqlctl cluster status
-          href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
+        - name: mssqlctl bdc
+          href: ../big-data-cluster/reference-mssqlctl-bdc.md
+        - name: mssqlctl bdc config
+          href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+        - name: mssqlctl bdc config section
+          href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+        - name: mssqlctl bdc control
+          href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+        - name: mssqlctl bdc debug
+          href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+        - name: mssqlctl bdc endpoint
+          href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+        - name: mssqlctl bdc pool
+          href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+        - name: mssqlctl bdc status
+          href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
       - name: Storage
         items:
-        - name: mssqlctl cluster storage-pool
+        - name: mssqlctl bdc storage-pool
           href: ../big-data-cluster/reference-mssqlctl-storage.md
-        - name: mssqlctl cluster storage-pool mount
+        - name: mssqlctl bdc storage-pool mount
           href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+        - name: mssqlctl hdfs
+          href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+      - name: SQL
+        items: 
+        - name: mssqlctl bdc sql
+          href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: Business continuity
   items:
   - name: Overview
@@ -9367,8 +9377,6 @@
           href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
     - name: References
       items:
-      - name: SQL Server PowerShell
-        href: ../powershell/sql-server-powershell.md
       - name: SQL Server Management Objects (SMO)
         href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
       - name: SSMS environment

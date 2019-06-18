@@ -36,7 +36,11 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](../big-data-cluster/reference-mssqlctl.md). |
 |New `mssqlctl` status commands and removal of the Cluster Administration Portal.|The Cluster Administration Portal is removed in this release. New status commands have been added to `mssqlctl` that complement existing monitoring commands.|
+|Score a MLeap model in SQL Server using SQL Java extensions.| |
+|Create Spark pools at deployment and run spark nodes outside of the storage pods. | |
+| | |
 | &nbsp; | &nbsp; |
 
 ### Database engine
@@ -44,7 +48,9 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | New feature or update | Details |
 |:---|:---|
 |Index encrypted columns with Always Encrypted with secure enclaves.|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
-|SQL Server Setup includes Max Server Memory recommendations for a single instance deployment that follow the documented guidelines. |[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)|
+|SQL Server Setup includes Max Server Memory recommendations for a single instance deployment that follow the documented guidelines. |[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)
+|New SQL Graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
+|Partition tables and indexes for SQL Graph nodes and indexes. |The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. |
 | &nbsp; | &nbsp; |
 
 
@@ -72,6 +78,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |[In-memory database](../relational-databases/in-memory-database.md) adds new DDL syntax to control the hybrid buffer pool. <sup>2</sup>|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
 |New in-memory database feature, memory-optimized tempdb metadata added.|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 |Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|BIN2_UTF8 collation name changed to Latin1_General_100_BIN2_UTF8. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |SQL Server Setup includes MaxDOP recommendations that follow the documented guidelines. |[Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` returns more information about degree of parallelism and memory grants for query plans. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |

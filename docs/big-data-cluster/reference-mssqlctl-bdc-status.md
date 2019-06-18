@@ -1,35 +1,35 @@
 ---
-title: mssqlctl cluster status reference
+title: mssqlctl bdc status reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl cluster status commands.
+description: Reference article for mssqlctl bdc status commands.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl cluster status
+# mssqlctl bdc status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **cluster status** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc status** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl cluster status show](#mssqlctl-cluster-status-show) | Shows the status of the cluster.
-## mssqlctl cluster status show
-Shows the status of the cluster.
+[mssqlctl bdc status show](#mssqlctl-bdc-status-show) | Shows the status of the Big Data Cluster.
+## mssqlctl bdc status show
+Shows the status of the Big Data Cluster.
 ```bash
-mssqlctl cluster status show 
+mssqlctl bdc status show 
 ```
 ### Examples
-Cluster status where the user is logged in.
+BDC status where the user is logged in.
 ```bash
-mssqlctl cluster status show
+mssqlctl bdc status show
 ```
 ### Global Arguments
 #### `--debug`

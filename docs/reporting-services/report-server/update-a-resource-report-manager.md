@@ -21,7 +21,7 @@ ms.author: maggies
   
 1.  Start [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
-2.  Navigate to, or search for the resource you want to update.  
+2.  Navigate to or search for the resource you want to update.  
   
 3.  Right-click the resource and select **Manage** from the drop-down menu.  
   

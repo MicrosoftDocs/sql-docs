@@ -94,12 +94,12 @@ GO
 -- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
   CREATE EXTERNAL DATA SOURCE SqlDataPool
-  WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+  WITH (LOCATION = 'sqldatapool://controller-svc/default');
 
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-   WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 GO
 ```
 

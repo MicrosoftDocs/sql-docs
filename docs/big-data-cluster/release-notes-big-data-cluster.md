@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: rothja 
 ms.author: jroth 
 manager: jroth
-ms.date: 06/19/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -28,7 +28,10 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 |:---|:---|
-| New **mssqlctl** status commands and removal of the Cluster Administration Portal | The Cluster Administration Portal is removed in this release. New status commands have been added to **mssqlctl** that complement existing monitoring commands. |
+| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](../big-data-cluster/reference-mssqlctl.md). |
+| New `mssqlctl` status commands and removal of the Cluster Administration Portal. | The Cluster Administration Portal is removed in this release. New status commands have been added to `mssqlctl` that complement existing monitoring commands. |
+| Score a MLeap model in SQL Server using SQL Java extensions. | |
+| Create Spark pools at deployment and run spark nodes outside of the storage pods. | |
 
 ### Known issues
 
@@ -70,11 +73,11 @@ The following sections describe the known issues and limitations with this relea
    -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
        CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+       WITH (LOCATION = 'sqldatapool://controller-svc/default');
  
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    ```
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
@@ -169,11 +172,11 @@ The following sections describe the known issues and limitations with this relea
    -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
        CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+       WITH (LOCATION = 'sqldatapool://controller-svc/default');
  
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    ```
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:

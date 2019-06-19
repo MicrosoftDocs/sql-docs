@@ -2921,16 +2921,8 @@ RESULT_SET_CACHING {ON | OFF}
 
 Is the name of the database to be modified.
 
-## Permissions
-
-Requires these permissions:
-
-- Server-level principal login (the one created by the provisioning process), or
-- Member of the `dbmanager` database role.
-
-The owner of the database cannot alter the database unless the owner is a member of the dbmanager role.
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } Applies to Azure SQL Data Warehouse Gen2 only (preview)
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+Applies to Azure SQL Data Warehouse (preview)
 
 This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data war ehouse storage. A new column called is_result_set_caching_on is introduced in `sys.databases` to show the result cache setting for a database.  
 
@@ -2948,6 +2940,15 @@ Users can tell if a query was executed with a result cache hit or miss by queryi
 |location_type|=|Control|
 command|Like|%DWResultCacheDb%|
 | | |
+
+## Permissions
+
+Requires these permissions:
+
+- Server-level principal login (the one created by the provisioning process), or
+- Member of the `dbmanager` database role.
+
+The owner of the database cannot alter the database unless the owner is a member of the dbmanager role.
 
 ## Examples
 

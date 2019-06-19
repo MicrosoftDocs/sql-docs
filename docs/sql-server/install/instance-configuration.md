@@ -126,7 +126,7 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
 
 The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that's created and provisioned during Setup.  
   
-### UI element list  
+### UIElement list  
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
@@ -159,7 +159,7 @@ For more information about directories, file locations, and instance ID naming, 
 
 The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that's created and provisioned during Setup.  
   
-#### UI element list
+#### UIElement list
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
@@ -280,7 +280,7 @@ To specify an SMB file share as a directory, you must manually type the supporte
   
 For a standalone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the following table lists the supported storage types and the default directories that you can configure during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  
   
-### UI element list
+### UIElement list
   
 |Description|Supported storage types|Default directory|Recommendations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
@@ -312,7 +312,9 @@ The following recommendations apply to SMB file servers:
   
 * The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have Full Control NTFS permissions on the SMB file share folder used as the data directory.  
   
-* The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the **Manage auditing and security log** policy. This setting is in the **User Rights Assignments** section under **Local Policies** in the Local Security Policy console.  
+* The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the **Manage auditing and security log** policy. This setting is in the **User Rights Assignments** section under **Local Policies** in the Local Security Policy console.
+
+To make changes to the user roles after this installation program ends, use [SQL Server Management Studio](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/join-a-role?view=sql-server-2017) or [Transact-SQL](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=sql-server-2017).
   
 ### Considerations
   
@@ -355,7 +357,7 @@ For a failover cluster instance of [!INCLUDE[ssNoVersion](../../includes/ssnover
 |**tempdb data directory**|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.<br /><br /> Ensure that the specified directory or directories (if multiple files are specified) are valid for all the cluster nodes. During failover, if the **tempdb** directories aren't available on the failover target node, the SQL Server resource fails to come online.|  
 |**tempdb log directory**|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Best practices for user data directories depend on workload and performance requirements.<br /><br /> Ensure that the specified directory is valid for all the cluster nodes. During failover, if the **tempdb** directories aren't available on the failover target node, the SQL Server resource fails to come online.<br /><br /> Ensure that the log directory has adequate space.|  
   
-### UI element list
+### UIElement list
 
 Configure the settings for **tempdb** according to your workload and requirements. The following settings apply to **tempdb** data files:  
   
@@ -426,7 +428,7 @@ You can manually configure this setting on this page, and you can modify this se
 
 Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integrates the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with an NTFS file system by storing **varbinary(max)** binary large object (BLOB) data as files in the file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can insert, update, query, search, and back up FILESTREAM data. Microsoft Win32 file-system interfaces provide streaming access to the data. 
   
-### UI element list
+### UIElement list
   
 **Enable FILESTREAM for Transact-SQL access**: Select to enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access. This check box must be selected before the other options will be available.  
   

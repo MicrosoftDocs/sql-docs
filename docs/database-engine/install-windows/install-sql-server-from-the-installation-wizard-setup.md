@@ -126,11 +126,11 @@ The following item is for SQL Server 2016-2017
   
      The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages.  
   
-14. Use the **Server Configuration - Service Accounts** page to specify the login accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
+14. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
   
-     You can assign the same login account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     You can assign the same logon account to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, or you can configure each service account individually. You can also specify whether services start automatically, start manually, or are disabled. We recommend you configure service accounts individually to provide the least privileges for each service. Make sure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services are granted the minimum permissions they must have to complete their tasks. For more information, see [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-     To specify the same login account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.  
+     To specify the same logon account for all service accounts in this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provide the credentials in the fields at the bottom of the page.  
   
     > [!IMPORTANT]  
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -234,7 +234,7 @@ To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../
 ## See also
   
 * [Validate a SQL Server installation](../../database-engine/install-windows/validate-a-sql-server-installation.md)  
-* [Repair a failed SQL Server 2016 installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
+* [Repair a failed SQL Server installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [View and read SQL Server Setup log files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
-* [Upgrade to SQL Server 2016 by using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Install SQL Server 2016 from the command prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [Upgrade to SQL Server by using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
+* [Install SQL Server from the command prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 

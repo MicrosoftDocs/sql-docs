@@ -18,31 +18,32 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Displays the number of delta rows held for materialized views in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS) 
+Displays the number of  incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax
 
 ```
-DBCC PDW_SHOWMATERIZLIEDVIEWOVERHEAD ( " [ schema_name .] table_name  " )
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_name  " )
 [;]
 ```
   
 ## Arguments
 
- *schema_name*  
- Is the name of the schema to which the view belongs.
+ *schema_name*     
+ Is the name of the schema to    which the view belongs.
 
-*table_name*
+*materialized_view_name*   
+Is the name of the materialized view.
 
 ## Remarks
 
-As the underlying tables in the definition of a materialized view are modified, a materialized view delta store is maintained.  Selecting from a materialized view includes scanning the clustered columnstore structure for the materialized view and applying the delta changes from the materialized view delta store.   If the number of materialized view delta store records is high, `select` performance will degrade.  Users can rebuild the materialized view to recreate the clustered columnstore structure and eliminate the rows in the materialized view delta store.
+As the underlying tables in the definition of a materialized view are modified, all incremental changes in the base tables are maintained for the materialized view.  Selecting from a materialized view includes scanning the clustered columnstore structure for the materialized view and applying these incremental changes.   If the number of maintained incremental changes is high, select performance will degrade.  Users can rebuild the materialized view to recreate the clustered columnstore structure and consolidate all the incremental changes in the base tables.
   
 ## Permissions  
   
-Requires VIEW-SERVER-STATE permission on the Appliance.
+
   
 ## Example  
 

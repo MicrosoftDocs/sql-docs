@@ -23,8 +23,8 @@ Displays distribution information materialized views.
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|ID of the materialized view for which thee properties were specified.| 
-|distribution_policy |**tinyint**|1 = HASH</br>2 = ROUND_ROBIN|  
-|distribution_policy_desc |**nvarchar(60) **|Ordinal (1-based) within set of distribution.|HASH, ROUND_ROBIN|  
+|distribution_policy |**tinyint**|2 = HASH</br>4 = ROUND_ROBIN|  
+|distribution_policy_desc |**nvarchar(60)**|Ordinal (1-based) within set of distribution.|HASH, ROUND_ROBIN|  
   
 ## See also
 

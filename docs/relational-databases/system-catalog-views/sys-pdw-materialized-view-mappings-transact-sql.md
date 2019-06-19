@@ -24,7 +24,7 @@ The columns physical_name and object_id form the key for this catalog view.
   
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36) **|The physical name for the materialized view.|  
+|physical_name |**nvarchar(36)**|The physical name for the materialized view.|  
 |object_id  |**int**|The object ID for the materialized view. See [sys.objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).|  
   
 ## See also

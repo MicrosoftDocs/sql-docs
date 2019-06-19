@@ -5,7 +5,7 @@ description: Learn how to customize a big data cluster deployment with configura
 author: rothja 
 ms.author: jroth 
 manager: jroth
-ms.date: 06/25/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

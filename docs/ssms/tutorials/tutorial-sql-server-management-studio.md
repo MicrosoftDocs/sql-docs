@@ -47,7 +47,7 @@ Here is what the tutorials cover:
 
     In this Tutorial, you learn how to script out various objects in SSMS, including databases and queries. 
 
-- [Tutorial: Using Templates in SSMS](templates-ssms.md)
+- [Tutorial: Using Templates in SSMS](../template/templates-ssms.md)
    
     In this Tutorial, you learn how to work with the pre-built Templates within SSMS. The templates are a little-known feature that stores a number of Transact-SQL code snippets for various database administration tasks. 
 

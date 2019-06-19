@@ -32,10 +32,10 @@ SET RESULT_SET_CACHING { ON | OFF };
   
 ## Remarks  
 
-**ON**
+**ON**   
 Enables result set caching for the current client session.  Result set caching cannot be turned ON for a session if it is turned OFF at the database level.
 
-**OFF**
+**OFF**   
 Disable result set caching for the current client session.
 
 ## Permissions

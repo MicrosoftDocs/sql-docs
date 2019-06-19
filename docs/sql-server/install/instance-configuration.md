@@ -314,8 +314,6 @@ The following recommendations apply to SMB file servers:
   
 * The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be granted SeSecurityPrivilege privileges on the SMB file server. To grant this privilege, use the Local Security Policy console on the file server to add the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup account to the **Manage auditing and security log** policy. This setting is in the **User Rights Assignments** section under **Local Policies** in the Local Security Policy console.
 
-To make changes to the user roles after this installation program ends, use [SQL Server Management Studio](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/join-a-role?view=sql-server-2017) or [Transact-SQL](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=sql-server-2017).
-  
 ### Considerations
   
 * When adding features to an existing installation, you can't change the location of a previously installed feature, nor can you specify the location for a new feature.  
@@ -463,14 +461,4 @@ The user instance, also known as a child or client instance, is an instance of [
   
 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] users that are members of BUILTIN\Administrators aren't automatically added to the **sysadmin** fixed server role when they connect to [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Only [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] users who have been explicitly added to a server-level administrator role can administer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Members of the Built-In\Users group can connect to the [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] instance, but they'll have limited permissions to do database tasks. For this reason, users whose [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] privileges are inherited from BUILTIN\Administrators and Built-In\Users in previous releases of Windows must be explicitly granted administrative privileges in instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] that are running on [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
   
-To make any changes to the user roles after this installation program ends, use the [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Surface Area Configuration Tool (SQLSAC.exe):
-
-1. To update the list of users in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] System Administrator role, select the **Add New Administrator** link.  
-
-1. Ensure that the **User to provision** field lists the \<DomainName>\\\<UserName> of the user whose permissions you want to update.
-
-1. Select the role to be updated from the list of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in the **Available privileges** pane, and then select the right arrow.
-
-1. To add the user to all available roles for all available instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances and all available roles, select the double right arrow.
-
-1. To implement the changes when your selections are complete, select **OK**. To end the tool without making changes, select **Cancel**.
+To make changes to the user roles after this installation program ends, use [SQL Server Management Studio](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/join-a-role?view=sql-server-2017) or [Transact-SQL](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=sql-server-2017).

@@ -15,6 +15,7 @@ ms.author: genemi
 manager: craigg
 ---
 # In-Memory OLTP (In-Memory Optimization)
+
   New in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] can significantly improve OLTP database application performance. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] is a memory-optimized database engine integrated into the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] engine, optimized for OLTP.  
   
 |||  
@@ -84,7 +85,11 @@ manager: craigg
   
 -   [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [SQL Server In-Memory OLTP Internals Overview](https://msdn.microsoft.com/library/dn720242.aspx)  
+-   [SQL Server In-Memory OLTP Internals Overview](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+    <!--
+         (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
+         (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)
+    -->
   
 ## See Also  
  [Database Features](../database-features.md)  

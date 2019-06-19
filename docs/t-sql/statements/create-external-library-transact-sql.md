@@ -122,6 +122,8 @@ Specifies the content of the package for a specific platform. Only one file arti
 
 The file can be specified in the form of a local path, or network path.
 
+When attempting to access the file specified in **<client_library_specifier>**, SQL Server impersonates the security context of the current Windows login. If **<client_library_specifier>** specifies a network location (UNC path), the impersonation of the current login is not carried forward to the network location because of delegation limitations. In this case, access is made using the security context of the SQL Server service account. For more information, see [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
+
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 
 **library_bits**

@@ -4,7 +4,7 @@ description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/30/2018  
+ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -64,6 +64,5 @@ EXEC sp_execute_external_script
 
 ## See also
 
-+ [Get package information](determine-which-packages-are-installed-on-sql-server.md)
++ [Get package information](../package-management/installed-package-information.md)
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
-+ [How-to guides](sql-server-machine-learning-tasks.md)

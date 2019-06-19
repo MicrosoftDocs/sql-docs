@@ -20,11 +20,11 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Returns a list of all supported collations.  
   
@@ -49,7 +49,10 @@ fn_helpcollations ()
   
 ## Examples
 
- The following example returns all collation names starting with the letter `L` and that are binary sort collations.  
+ The following example returns all collation names starting with the letter `L` and that are binary sort collations.
+
+> [!Note]
+> Azure SQL Data Warehouse queries against fn_helpcollations() must be run in the master database.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  

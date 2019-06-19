@@ -75,6 +75,6 @@ What we want to see here is a table containing columns and rows of data that con
   
 ## See also  
 
-[SELECTCOLUMNS Function (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
+[SELECTCOLUMNS Function (DAX)](/dax/selectcolumns-function-dax)  
 [Supplemental lesson - Dynamic security](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Supplemental lesson - Ragged hierarchies](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

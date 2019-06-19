@@ -13,7 +13,7 @@ manager: kfile
 # Analysis Services Language Reference
 
 
-  [Data Analysis Expressions (DAX) Reference](https://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)  
+  [Data Analysis Expressions (DAX) Reference](/dax/data-analysis-expressions-dax-reference)  
   
  [Multidimensional Expressions &#40;MDX&#41; Reference](../mdx/multidimensional-expressions-mdx-reference.md)  
   

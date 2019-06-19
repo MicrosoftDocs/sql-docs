@@ -77,9 +77,9 @@ Big data cluster deployment options are defined in JSON configuration files. The
 
 | Deployment profile | Kubernetes environment |
 |---|---|
-| **aks-dev-test.json** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test.json** | Multiple machines (kubeadm) |
-| **minikube-dev-test.json** | minikube |
+| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test** | Multiple machines (kubeadm) |
+| **minikube-dev-test** | minikube |
 
 You can deploy a big data cluster by running **mssqlctl bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
@@ -94,7 +94,7 @@ In this scenario, you are prompted for any settings that are not part of the def
 
 ## <a id="customconfig"></a> Custom configurations
 
-It is also possible to customize your own deployment configuration file. You can do this with the following steps:
+It is also possible to customize your own deployment configuration profile. You can do this with the following steps:
 
 1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **mssqlctl bdc config list** command to list them:
 
@@ -102,27 +102,30 @@ It is also possible to customize your own deployment configuration file. You can
    mssqlctl bdc config list
    ```
 
-1. To customize your deployment, create a copy of the deployment profile with the **mssqlctl bdc config init** command. For example, the following command creates a copy of the **aks-dev-test.json** deployment configuration file in the current directory:
+1. To customize your deployment, create a copy of the deployment profile with the **mssqlctl bdc config init** command. For example, the following command creates a copy of the **aks-dev-test** deployment configuration file in a target directory named `custom`:
 
    ```bash
-   mssqlctl bdc config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. To customize settings in your deployment configuration file, you can edit it in a tool that is good for editing json docs like VS Code. For scripted automation, you can edit the custom configuration file using **mssqlctl bdc config section set** command. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
-
-   ```bash
-   mssqlctl bdc config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
+   > The `--target` specifies a directory that contains the configuration file based on the `--source` parameter.
+
+1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **mssqlctl bdc config section set** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > The `--config-profile` specifies a directory name for your custom deployment profile, but the actual modifications happen on the deployment configuration JSON file within that directory. A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 
    In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 
 1. Then pass the custom configuration file to **mssqlctl bdc create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
 
    ```bash
-   mssqlctl bdc create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -163,10 +166,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-Upon setting the environment variables, you must run `mssqlctl bdc create` to trigger the deployment. This example uses the cluster configuration file created above:
+After setting the environment variables, you must run `mssqlctl bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
 
 ```
-mssqlctl bdc create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 Please note the following guidelines:

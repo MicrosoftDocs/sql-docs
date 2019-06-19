@@ -98,7 +98,7 @@ In this step, you will create an index on an encrypted column, pretending to be 
    >[!NOTE]
    >Unless you have restarted your SQL Server instance after **Step 2: Create and test an index without role separation**, this step is redundant as the **CEK1** is already present in the cache. We have added it to demonstrate how a data owner can provide a key to the enclave, if it is not already present in the enclave.
  
-    1. In the SSMS instance **with** Always Encrypted enabled, execute the below statements in a query window. The statement sends all enclave-enabled column encryption keys used in indexes to the enclave.
+    1. In the SSMS instance **with** Always Encrypted enabled, execute the below statements in a query window. The statement sends all enclave-enabled column encryption keys to the enclave. See [sp_enclave_send_keys](../system-stored-procedures/sp-enclave-send-keys-sql.md) for details.
         ```sql
         USE [ContosoHR];
         GO
@@ -114,7 +114,7 @@ In this step, you will create an index on an encrypted column, pretending to be 
         SELECT * FROM [dbo].[Employees] WHERE [LastName] LIKE @LastNamePrefix;
         GO
 
-1. Acting as a DBA, try to create the index again.
+1. Acting as a DBA, create the index.
     1. In the SSMS instance **without** Always Encrypted enabled, execute the below statements in a query window.
         ```sql
         USE [ContosoHR];
@@ -123,7 +123,6 @@ In this step, you will create an index on an encrypted column, pretending to be 
         CREATE INDEX IX_LastName ON [Employees] ([LastName])
         INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
         GO; 
-   1. Observe the statement now succeeds.    
 1. As a data owner, run a rich query on the **LastName** column and verify SQL Server uses the index when executing the query.
     1. In the SSMS instance **with** Always Encrypted enabled, select an existing query window or open a new query window, and make sure the **Include Live Query Statistics** button on the toolbar is on.
     1. Execute the below query. 
@@ -137,8 +136,4 @@ In this step, you will create an index on an encrypted column, pretending to be 
     1. In the **Live Query Statistics** (in the bottom part of the query window), observe that the query uses the index.   
 
 ## Next Steps
-See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for information on other use cases for Always Encrypted with secure enclaves. For example:
-
-- [Configuring TPM attestation.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Configuring HTTPS for your HGS instance.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
-- Developing applications that issue rich queries against encrypted columns.
+See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for information on other use cases for Always Encrypted with secure enclaves.

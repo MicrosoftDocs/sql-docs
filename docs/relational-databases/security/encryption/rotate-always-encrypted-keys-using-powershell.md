@@ -90,7 +90,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 The column master key rotation workflow described in this section ensures the separation between a Security Administrator and a DBA.
 
 > [!IMPORTANT]
-> Before executing any steps where *Accesses plaintext keys/keystore*=**Yes** in the table below (steps that access plaintext keys or the key store), make sure that the PowerShell environment runs on a secure machine that is different from a computer hosting your database. For more information, see [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+> Before executing any steps where *Accesses plaintext keys/keystore*=**Yes** in the table below (steps that access plaintext keys or the key store), make sure that the PowerShell environment runs on a secure machine that is different from a computer hosting your database. For more information, see [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 
 ### Part 1: DBA

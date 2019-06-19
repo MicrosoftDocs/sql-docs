@@ -173,7 +173,7 @@ The following steps create enclave-enabled keys (requires SSMS 18.0 or later):
 
 ### Provision enclave-enabled keys using PowerShell
 
-The following sections provide sample PowerShell scripts for provisioning enclave-enabled keys. The steps that are specific (new) to Always Encrypted with secure enclaves are highlighted. For more information (not specific to Always Encrypted with secure enclaves) about provisioning keys using PowerShell, see [Configure Always Encrypted Keys using PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
+The following sections provide sample PowerShell scripts for provisioning enclave-enabled keys. The steps that are specific (new) to Always Encrypted with secure enclaves are highlighted. For more information (not specific to Always Encrypted with secure enclaves) about provisioning keys using PowerShell, see [Configure Always Encrypted Keys using PowerShell](configure-always-encrypted-keys-using-powershell.md).
 
 #### Provisioning Enclave-Enabled Keys - Windows Certificate Store
 On the client/development computer, open Windows PowerShell ISE, and run the following script.
@@ -329,7 +329,7 @@ The below table summarizes the functionality for enclave-enabled string columns,
 
 ### Determining and changing collations
 
-In SQL Server, collations can be set at the server, database, or column level. For general instructions on how to determine the current collation and change a collation at the server, database or column level, see [Collation and Unicode Support](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support).
+In SQL Server, collations can be set at the server, database, or column level. For general instructions on how to determine the current collation and change a collation at the server, database or column level, see [Collation and Unicode Support](../../collations/collation-and-unicode-support.md).
 
 ### Special considerations for non-UNICODE string columns
 
@@ -348,14 +348,14 @@ For example, Chinese_Traditional_Stroke_Order_100_CI_AI_WS and Chinese_Tradition
 
 ## Create a New Table with Enclave-enabled Columns
 
-You can create a new table with encrypted columns using the [CREATE TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql) statement. Always Encrypted with secure enclaves does not change the syntax of this statement.
+You can create a new table with encrypted columns using the [CREATE TABLE (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql.md) statement. Always Encrypted with secure enclaves does not change the syntax of this statement.
 
 1. Using SSMS, connect to your database and open a query window.
    
      > [!NOTE]
      > Always Encrypted does not have to be enabled in the connection string for this task.
 
-2. In the query window, issue a CREATE TABLE statement to create your new table, specifying the ENCRYPTED WITH clause in the [column definition](https://docs.microsoft.com/sql/t-sql/statements/alter-table-column-definition-transact-sql) for each column to be encrypted. To make a column enclave-enabled, make sure you specify an enclave-enabled column encryption key. You may also need to specify a BIN2 collation for string columns if the default collation for your database is not a BIN2 collation. See the Collation Setup section for details.
+2. In the query window, issue a CREATE TABLE statement to create your new table, specifying the ENCRYPTED WITH clause in the [column definition](../../../t-sql/statements/alter-table-column-definition-transact-sql.md) for each column to be encrypted. To make a column enclave-enabled, make sure you specify an enclave-enabled column encryption key. You may also need to specify a BIN2 collation for string columns if the default collation for your database is not a BIN2 collation. See the Collation Setup section for details.
 
 ### Example
 
@@ -385,14 +385,13 @@ GO
 
 ## Add a new Enclave-enabled Column to an Existing Table
 
-You can add a new encrypted column to an existing table using the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql)
-/ ADD statement. Always Encrypted with secure enclaves does not change the syntax of this statement.
+You can add a new encrypted column to an existing table using the [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) / ADD statement. Always Encrypted with secure enclaves does not change the syntax of this statement.
 
 1. Using SSMS, connect to your database and open a query window.
     
    Always Encrypted does not have to be enabled in the connection string for this task.
 
-2. In the query window, issue the ALTER TABLE statement with the ADD clause, specifying the ENCRYPTED WITH clause in the [column definition](https://docs.microsoft.com/sql/t-sql/statements/alter-table-column-definition-transact-sql), and using an enclave-enabled column encryption key. You may also need to specify a BIN2 collation if your new column is a string column and if the default collation for your database is not a BIN2 collation. See the Collation Setup section for details.
+2. In the query window, issue the ALTER TABLE statement with the ADD clause, specifying the ENCRYPTED WITH clause in the [column definition](../../../t-sql/statements/alter-table-column-definition-transact-sql.md), and using an enclave-enabled column encryption key. You may also need to specify a BIN2 collation if your new column is a string column and if the default collation for your database is not a BIN2 collation. See the Collation Setup section for details.
 
 ### Example
 
@@ -431,7 +430,7 @@ Alternatively, if you already have a query window open, here is how you can upda
 
 ### Encrypt an Existing Plaintext Column In-place
 
-You can encrypt an existing plaintext column in-place using the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) / ALTER COLUMN statement, providing you use an enclave-enabled column encryption key.
+You can encrypt an existing plaintext column in-place using the [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) / ALTER COLUMN statement, providing you use an enclave-enabled column encryption key.
 
 To encrypt a column using a key that is not enclave-enabled, you need to use client-side tools, such as the Always Encrypted wizard in SSMS, or the Set-SqlColumnEncryption cmdlet in the SqlServer PowerShell module. For details, see:
 
@@ -613,7 +612,7 @@ After you have made your column enclave-enabled, you can perform the following o
 
 1. Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 
-2. In the query window, issue the use the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) statement with the ALTER COLUMN clause, specifying the following in the ENCRYPTED WITH clause:
+2. In the query window, issue the use the [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement with the ALTER COLUMN clause, specifying the following in the ENCRYPTED WITH clause:
     
     1. The name of the new enclave-enabled column encryption key if you are rotating the current key. If you are not changing the column encryption key, you need to specify the name of the current key.
     
@@ -714,7 +713,7 @@ the online mode.
 
 1.  Prepare an SSMS query window with Always Encrypted and enclave computations enabled for the database connection. For details, see [Prepare an SSMS Query Window with Always Encrypted Enabled](#prepare-an-ssms-query-window-with-always-encrypted-enabled).
 
-2.  In the query window, issue the [ALTER TABLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-table-transact-sql) statement with the ALTER COLUMN clause, specifying the desired column configuration **without** the ENCRYPTED WITH clause.
+2.  In the query window, issue the [ALTER TABLE (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) statement with the ALTER COLUMN clause, specifying the desired column configuration **without** the ENCRYPTED WITH clause.
     
     > [!NOTE]
     > If your column master key is stored in Azure Key Vault, you might be prompted to sign in to Azure.
@@ -822,7 +821,7 @@ GO;
 Because an index on an enclave-enabled column using randomized encryption stores the encrypted index key values while the values are sorted based on plaintext, SQL Server Engine must use the enclave for any operation that involves creating or updating an index, including:
 - Creating or rebuilding an index.
 - Inserting, updating or deleting a row in the table (containing an indexed/encrypted column), which triggers inserting or/and removing an index key to/from the index.
-- Running DBCC commands that involve checking the integrity of indexes, e.g. [DBCC CHECKDB (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) or [DBCC CHECKTABLE (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).
+- Running DBCC commands that involve checking the integrity of indexes, e.g. [DBCC CHECKDB (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) or [DBCC CHECKTABLE (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
 - Database recovery (e.g. after SQL Server fails and restarts), if SQL Server needs to undo any changes to the index (see more details below).
 
 All the above operations require the enclave has the column encryption key for the indexed column, so that it can decrypt the index keys. In general, the enclave can obtain a column encryption key in one of two ways:
@@ -834,7 +833,7 @@ For this method for invoking indexing operations to work, the application issuin
 - Connect to the database with both Always Encrypted and enclave computations enabled in the database connection.
 - The application must have access to the column master key protecting the column encryption key for the indexed column. 
 
-Once SQL Server Engine parses the application query and it determines it will need to update an index on an encrypted column to execute the query, it instructs the client driver to provide the required CEK to the enclave over a secure channel. Note this is exactly the same the same mechanism that is used to provide the enclave with column encryption keys for processing queries that do not involve indexing operations.
+Once SQL Server Engine parses the application query and it determines it will need to update an index on an encrypted column to execute the query, it instructs the client driver to provide the required CEK to the enclave over a secure channel. Note this is exactly the same mechanism that is used to provide the enclave with column encryption keys for processing queries that do not involve indexing operations.
 
 This method is useful to ensure the presence of indexes on encrypted columns is transparent to applications that already connect to the database with Always Encrypted and enclave computations enabled for the connection and use the enclave for query processing. After you create an index on a column, the driver inside your app will transparently provide column encryption keys to the enclave for indexing operations. Note that creating indexes may increase the number of queries that require the application to send the column encryption keys to the enclave.
 

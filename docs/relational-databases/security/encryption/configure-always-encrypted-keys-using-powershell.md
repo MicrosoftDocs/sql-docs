@@ -180,7 +180,7 @@ Before running any steps that involves access to plaintext keys or the key store
 1.  The PowerShell environment runs on a secure machine that is different from a computer hosting your database.
 2.  DBAs in your organization have no access to the machine (that would defeat the purpose of role separation).
 
-For more information, see [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+For more information, see [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 
 Task  |Article  |Accesses plaintext keys/key store  |Accesses database  

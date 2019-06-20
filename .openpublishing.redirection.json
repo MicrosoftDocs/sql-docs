@@ -14449,6 +14449,11 @@
             "source_path": "docs/relational-databases/security/encryption/service-master-key.md",
             "redirect_url": "/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine",
             "redirect_document_id": true
+        },
+        {        
+            "source_path": "/t-sql/queries/select-sql-graph.md",
+            "redirect_url": "/sql/t-sql/queries/select-transact-sql",
+            "redirect_document_id": false
         }
     ]
 }

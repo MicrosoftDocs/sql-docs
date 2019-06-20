@@ -231,7 +231,6 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |The new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|[Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.|[Static data masking](../relational-databases/security/static-data-masking.md) |
 |Use derived table or view aliases in graph match query |[Graph Edge Constraints](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

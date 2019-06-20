@@ -14454,6 +14454,11 @@
             "source_path": "docs/t-sql/queries/select-sql-graph.md",
             "redirect_url": "/sql/t-sql/queries/select-transact-sql",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/mdx/analysis-services-language-reference.md",
+            "redirect_url": "/sql/mdx/multidimensional-expressions-mdx-reference",
+            "redirect_document_id": false
         }
     ]
 }

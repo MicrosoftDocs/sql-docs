@@ -188,9 +188,9 @@ The following item is for SQL Server 2016-2017
 
 17. Use the **Distributed Replay Controller Configuration** page to specify the users you want to grant administrative permissions to for the Distributed Replay controller service. Users that have administrative permissions have unlimited access to the Distributed Replay controller service.  
   
-     * To add the users you want to grant access permissions to for the Distributed Replay controller service, select the **Add Current User** button.
+     * To grant access permissions for the Distributed Replay controller service to the user who's running SQL Server Setup, select the **Add Current User** button.
 
-     * To add access permissions for the Distributed Replay controller service, select the **Add** button.
+     * To grant access permissions for the Distributed Replay controller service to other users, select the **Add** button.
 
      * To remove access permissions from the Distributed Replay controller service, select the **Remove** button.
 
@@ -227,7 +227,7 @@ The following item is for SQL Server 2016-2017
 
 ## Next steps
 
-Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+[Configure your new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-instances-sql-server?view=sql-server-2017).  
   
 To reduce the attackable surface area of a system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and enables key services and features. For more information, see [Surface area configuration](../../relational-databases/security/surface-area-configuration.md).  
   

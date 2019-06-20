@@ -187,7 +187,7 @@ The default directories in the following table are user-configurable during [!IN
 #### See also
 
 * For more information about directories, file locations, and instance ID naming, see [File locations for default and named instances of SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md)  
-* [Share and NTFS permissions on a file server](https://go.microsoft.com/fwlink/?LinkID=206571)
+* [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
 ## <a name="serverconfig"></a> Database Engine Configuration - Server Configuration page
 
@@ -461,4 +461,4 @@ The user instance, also known as a child or client instance, is an instance of [
   
 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] users that are members of BUILTIN\Administrators aren't automatically added to the **sysadmin** fixed server role when they connect to [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Only [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] users who have been explicitly added to a server-level administrator role can administer [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Members of the Built-In\Users group can connect to the [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] instance, but they'll have limited permissions to do database tasks. For this reason, users whose [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] privileges are inherited from BUILTIN\Administrators and Built-In\Users in previous releases of Windows must be explicitly granted administrative privileges in instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] that are running on [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
   
-To make changes to the user roles after this installation program ends, use [SQL Server Management Studio](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/join-a-role?view=sql-server-2017) or [Transact-SQL](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=sql-server-2017).
+To make changes to the user roles after the installation program ends, use [SQL Server Management Studio](../../relational-databases/security/authentication-access/join-a-role.md) or [Transact-SQL](../../t-sql/statements/alter-role-transact-sql.md).

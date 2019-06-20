@@ -25,7 +25,7 @@ ms.author: maggies
   
  Setup configures the minimum settings if you select either of the following installation options: Native mode default configuration or SharePoint integrated mode default configuration. If you installed the report server in files-only mode (this is the **Install but do not configure** option in the Installation wizard), only the service account is configured. The Web service URL and report server database must be configured after Setup is finished.  
   
- The web portal is an optional feature for a native mode report server, but it is recommended that you configure web portal so that you can grant user access to the report server and manage report server content. If you deploy a report server in SharePoint integrated mode, use the Web front-end of a SharePoint server to grant access.  
+ The web portal is an optional feature for a native mode report server, but it is recommended that you configure web portal so that you can grant user access to the report server and manage report server content. If you deploy a report server in SharePoint integrated mode, use the Web front end of a SharePoint server to grant access.  
   
  Additional features, such as report server e-mail and the unattended execution account, can be configured as needed. For more information, see [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
@@ -44,7 +44,7 @@ ms.author: maggies
 5.  Follow the instructions in "Next Steps" to complete your deployment.  
   
 ## Next Steps  
- To complete your deployment, you should configure the web portal or SharePoint integration. For more information, see [Configure the web portal](../../reporting-services/configure-web-portal.md).  
+ To complete your deployment, you should configure the web portal or SharePoint integration. For more information, see [Configure the web portal](../../reporting-services/report-server/configure-web-portal.md).  
   
  If Windows Firewall is turned on, the port that the report server is configured to use is most likely closed. One indication that a port might be closed is a blank page when you attempt to open the web portal from a remote client computer. For information on configuring the firewall, see [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   

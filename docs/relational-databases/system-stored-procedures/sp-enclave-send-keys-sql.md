@@ -44,7 +44,7 @@ This stored procedure has no result sets.
 ## Remarks  
  **sp_enclave_send_keys** sends enclave-enabled column encryption keys to the enclave if all of the following conditions are met:
 - The enclave is enabled in the SQL Server instance.
-- **sp_enclave_send_keys** has been invoked from an application using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client driver, supporting Always Encrypted with secure enclaves using a database connection that has both Always Encrypted and enclave computations enabled.
+- **sp_enclave_send_keys** has been invoked from an application using a [!INCLUDE[ssNoVersion](../../[Examples](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md#examples)includes/ssnoversion-md.md)] client driver, supporting Always Encrypted with secure enclaves using a database connection that has both Always Encrypted and enclave computations enabled.
 
 ## Permissions  
  Require the **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** and **VIEW ANY COLUMN MASTER KEY DEFINITION** permissions in the database.  
@@ -56,5 +56,10 @@ EXEC sp_enclave_send_keys;
 ```    
 ## See Also  
  [Always Encrypted with secure enclaves &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+ [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../security/tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)
+ [Invoke indexing operations using cached column encryption keys](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)
+ [Indexes on Enclave-enabled Columns using Randomized Encryption](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)
+ [Considerations for AlwaysOn and Database Migration](../security/encryption/always-encrypted-enclaves.md#considerations-for-alwayson-and-database-migration)
+
   
   

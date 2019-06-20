@@ -14449,6 +14449,11 @@
             "source_path": "docs/relational-databases/security/encryption/service-master-key.md",
             "redirect_url": "/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/mdx/analysis-services-language-reference.md",
+            "redirect_url": "/sql/mdx/multidimensional-expressions-mdx-reference",
+            "redirect_document_id": false
         }
     ]
 }

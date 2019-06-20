@@ -21,5 +21,4 @@ Static Data Masking released as a component of [SQL Server Management Studio](..
 >
 
 ## See Also  
- [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md)   
- [Get started with SQL Database Static Data Masking](https://azure.microsoft.com/documentation/articles/sql-database-static-data-masking-get-started/)  
+ [Dynamic Data Masking](../../relational-databases/security/dynamic-data-masking.md)

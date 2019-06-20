@@ -105,7 +105,7 @@ The **Detail Rows Expression** property for measures allows model authors to cus
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-The [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX function is commonly used in a Detail Rows Expression. The following example defines the columns to be returned for rows in the Internet Sales table in the sample Adventure Works tabular model:
+The [SELECTCOLUMNS](/dax/selectcolumns-function-dax) DAX function is commonly used in a Detail Rows Expression. The following example defines the columns to be returned for rows in the Internet Sales table in the sample Adventure Works tabular model:
 
 ```
 SELECTCOLUMNS(
@@ -175,9 +175,9 @@ Now works with tabular 1200 and 1400 models. Tabular 1400 models show dependenci
 Improvements are included for this DMV, which is used by various client tools to show measure dimensionality. For example, the Explore feature in Excel Pivot Tables allows the user to cross-drill to dimensions related to the selected measures. This release corrects the cardinality columns, which were previously showing incorrect values.
 
 ## DAX enhancements
-This release includes support for new DAX functions and functionality. In order to take advantage, you need to use the latest version of SSDT. To learn more, see [New DAX functions](https://msdn.microsoft.com/library/mt704075.aspx).
+This release includes support for new DAX functions and functionality. In order to take advantage, you need to use the latest version of SSDT. To learn more, see [New DAX functions](/dax/new-dax-functions).
 
-One of the most important pieces of new DAX functionality is the new [IN Operator / CONTAINSROW Function](https://msdn.microsoft.com/library/mt842621.aspx) for DAX expressions. This is similar to the [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) operator commonly used to specify multiple values in a `WHERE` clause.
+One of the most important pieces of new DAX functionality is the new [IN Operator / CONTAINSROW Function](/dax/in-operator-containsrow-function) for DAX expressions. This is similar to the [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) operator commonly used to specify multiple values in a `WHERE` clause.
 
 Previously, it was common to specify multi-value filters using the logical `OR` operator, like in the following measure expression:
 

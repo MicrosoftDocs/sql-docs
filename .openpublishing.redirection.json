@@ -14451,7 +14451,7 @@
             "redirect_document_id": true
         },
         {        
-            "source_path": "/t-sql/queries/select-sql-graph.md",
+            "source_path": "docs/t-sql/queries/select-sql-graph.md",
             "redirect_url": "/sql/t-sql/queries/select-transact-sql",
             "redirect_document_id": false
         }

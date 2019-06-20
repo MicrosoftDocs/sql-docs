@@ -5,7 +5,7 @@ description: Learn how to use the MSSQL Spark Connector in Spark to read and wri
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -15,7 +15,15 @@ ms.technology: big-data-cluster
 
 A key big data usage pattern is high volume data processing in Spark, followed by writing the data to SQL Server for access to line-of-business applications. These usage patterns benefit from a connector that utilizes key SQL optimizations and provides an efficient write mechanism.
 
-Big Data Clusters provides a new MSSQL Spark connector that uses SQL Server bulk write APIs for a performant Spark to SQL write. This article provides an example of how to read and write to SQL Server from Spark by using the MSSQL Spark Connector. In this example, data is read from HDFS in a big data cluster, processed by Spark, and then written to the SQL Server master instance in the cluster using the new MSSQL Spark connector.
+SQL Server 2019 preview provides an **MSSQL Spark connector** for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. This article provides an example of how to use the MSSQL Spark connector to read and write to a SQL Server master instance and data pool within a big data cluster.
+
+This sample does the following tasks:
+
+- Read a file from HDFS and do some basic processing.
+- Write the dataframe to a SQL server table and then read the table to a dataframe.
+- Write the dataframe to a SQL Server external table in the data pool and then read it back to a spark dataframe.
+
+![MSSQL Spark connector diagram](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
 ## MSSQL Spark Connector Interface
 

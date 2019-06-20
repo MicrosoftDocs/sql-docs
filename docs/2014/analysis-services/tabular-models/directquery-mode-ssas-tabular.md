@@ -76,7 +76,7 @@ manager: craigg
   
 -   **Client restrictions:** When a model is in DirectQuery mode, it can only be queried by using DAX. You cannot use MDX to create queries. This means that you cannot use the Excel Pivot Client, because Excel uses MDX.  
   
-     However, you can create queries against a DirectQuery model in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] if you use a DAX table query as part of an XMLA Execute statement, For more information, see [DAX Query Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
+     However, you can create queries against a DirectQuery model in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] if you use a DAX table query as part of an XMLA Execute statement, For more information, see [DAX Query Syntax Reference](/dax/dax-syntax-reference
   
  When you have resolved all the design issues and tested your model, you are ready for deployment. At this point, you can set the preferred method for answering queries against the model. Do you want users to have access to the cache, or always use only the relational data source?  
   

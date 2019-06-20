@@ -406,7 +406,7 @@ The following recommendations apply to the SMB file server:
 ### See also
 
 * [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
-* [Share and NTFS permissions on a file server](https://go.microsoft.com/fwlink/?LinkID=206571)  
+* [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
 
 <!--
 The MaxDOP setting applies only to SQL Server 2019 and later.

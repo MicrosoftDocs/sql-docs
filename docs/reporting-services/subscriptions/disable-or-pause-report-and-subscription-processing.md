@@ -39,7 +39,7 @@ There are several approaches you can use to disable or pause [!INCLUDE[ssRSnover
 ##  <a name="bkmk_disable_subscription"></a>Enable and disable subscriptions  
   
 >[!TIP]  
->New in SQL 2016 Reporting Services or later, *Enable and disable subscriptions*. New user interface options allow you to quickly enable and disable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily re-enabled. You can also programmatically enable and disable subscriptions, or audit which subscriptions are disabled.  
+>New in SQL 2016 Reporting Services, *enable and disable subscriptions*. New user interface options allow you to quickly enable and disable subscriptions. The disabled subscriptions maintain their other configuration properties such as schedule and can be easily re-enabled. You can also programmatically enable and disable subscriptions, or audit which subscriptions are disabled.  
   
   ![The Enable and Disable buttons of the Subscriptions page ](../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png)  
   

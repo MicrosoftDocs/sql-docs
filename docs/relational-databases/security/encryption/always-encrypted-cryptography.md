@@ -1,7 +1,7 @@
 ---
 title: "Always Encrypted Cryptography | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/29/2016"
+ms.date: "06/20/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security

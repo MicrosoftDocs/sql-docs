@@ -2924,14 +2924,13 @@ Is the name of the database to be modified.
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
 Applies to Azure SQL Data Warehouse (preview)
 
-This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data war ehouse storage. A new column called is_result_set_caching_on is introduced in `sys.databases` to show the result cache setting for a database.  
+This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in `sys.databases` to show the result cache setting for a database.  
 
 ON   
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
 
 OFF   
-Specifies that query result sets returned from this database will not be cached in Azure SQL Data warehouse storage.
-Users can tell if a query was executed with a result cache hit or miss by querying sys.pdw_request_steps with a specific request_id.   If there is a cache hit, the query result will have a single step with following details:
+Specifies that query result sets returned from this database will not be cached in Azure SQL Data warehouse storage. Users can tell if a query was executed with a result cache hit or miss by querying sys.pdw_request_steps with a specific request_id.   If there is a cache hit, the query result will have a single step with following details:
 
 |**Column name** |**Operator** |**Value** |
 |----|----|----|

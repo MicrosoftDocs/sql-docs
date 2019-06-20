@@ -16,11 +16,13 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# SET RESULT SET CACHING (Transact-SQL) Applies to Azure SQL Data Warehouse Gen2 only (preview)
+# SET RESULT SET CACHING (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Controls the result set caching behavior for the current client session.  
+
+Applies to Azure SQL Data Warehouse (preview) 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

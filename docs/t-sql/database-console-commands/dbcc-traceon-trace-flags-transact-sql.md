@@ -193,3 +193,6 @@ SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUER
 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
 [Query Hints (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)
 
+
+this is a test change
+

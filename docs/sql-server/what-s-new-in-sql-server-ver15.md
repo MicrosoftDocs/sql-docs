@@ -37,20 +37,20 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | New feature or update | Details |
 |:---|:---|
 | `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](../big-data-cluster/reference-mssqlctl.md). |
-|New `mssqlctl` status commands and removal of the Cluster Administration Portal.|The Cluster Administration Portal is removed in this release. New status commands have been added to `mssqlctl` that complement existing monitoring commands.|
+|New status commands for `mssqlsctl`|`mssqlctl` adds new commands to complement existing monitoring commands. These replace the cluster administration portal - which is removed in this release.|
 | Spark compute pools | Create additional nodes to increase Spark compute power without having to scale up storage. In addition, you can start storage pool nodes that aren't used for Spark. Spark and storage are decoupled. For more information, see [Configure storage without spark](../big-data-cluster/deployment-custom-configuration.md#sparkstorage). |
 | MSSQL Spark connector | Support for read/write to data pool external tables. Previous releases supported read/write to MASTER instance tables only. |
-| Score a MLeap model in SQL Server using SQL Java extensions. | |
+|New SQL Java extensions| New SQL Java extensions allow you to score an ML model with MLeap. |
 | &nbsp; | &nbsp; |
 
 ### Database engine
 
 | New feature or update | Details |
 |:---|:---|
-|Index encrypted columns with Always Encrypted with secure enclaves.|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
-|SQL Server Setup includes Max Server Memory recommendations for a single instance deployment that follow the documented guidelines. |[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)
-|New SQL Graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
-|Partition tables and indexes for SQL Graph nodes and indexes. |The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. |
+|Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
+|New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
+|Partition tables and indexes for graph databases|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
 | &nbsp; | &nbsp; |
 
 

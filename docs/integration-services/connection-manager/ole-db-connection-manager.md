@@ -88,6 +88,9 @@ manager: craigg
 ### Managed Identities for Azure Resources Authentication
 When running SSIS packages on [Azure-SSIS integration runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use the [managed identity](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) that is associated with your data factory for Azure SQL Database (or Managed Instance) authentication. The designated factory can access and copy data from or to your database by using this identity.
 
+> [!NOTE]
+>  When you use Azure AD authentication (including managed identity authentication) to connect to Azure SQL Database (or Managed Instance), there are known issues which may result in package execution failure or unexpected behavior change. Refer to [Azure AD features and limitations](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations) for more information.
+
 To use managed identity authentication for Azure SQL Database, follow these steps to configure your database:
 
 1. **Create a group in Azure AD.** Make the managed identity a member of the group.

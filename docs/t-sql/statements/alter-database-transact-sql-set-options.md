@@ -2940,6 +2940,16 @@ Specifies that query result sets returned from this database will not be cached 
 command|Like|%DWResultCacheDb%|
 | | |
 
+## Remarks
+
+Cached result set is reused for a query if all of the following requirements are all met:
+
+1. The user executing the query has access to all the tables referenced in the query.
+1. There is an exact match between the new query and the previous query that generated the result set cache.
+1. There is no data or schema changes in the tables where the cached result set was generated from.  
+
+Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except for queries with non-deterministic functions such as DateTime.Now().   Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
+
 ## Permissions
 
 Requires these permissions:

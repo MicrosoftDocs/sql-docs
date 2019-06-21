@@ -8119,7 +8119,7 @@
     - name: Always Encrypted with secure enclaves using SSMS
       href: ../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
     - name: Create and use indexes on Always Encrypted with secure enclaves columns
-      href: ../relational-databases/security/tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
+      href: ../relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
   - name: Reference
     items:
     - name: Permissions or Securables page

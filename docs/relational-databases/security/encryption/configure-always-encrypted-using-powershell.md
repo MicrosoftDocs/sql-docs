@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2017"
+ms.date: "06/25/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security

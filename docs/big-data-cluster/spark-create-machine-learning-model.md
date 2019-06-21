@@ -59,7 +59,7 @@ The data is first read into Spark and split into training and testing data sets.
 
 Now that the Spark ML pipeline model is in a common serialization [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) format, you can score the model in Java without the presence of Spark. 
 
-This sample uses the [Java Language Extension](https://docs.microsoft.com/en-us/sql/language-extensions/language-extensions-overview?view=sqlallproducts-allversions) in SQL Server. In order to score the model in SQL Server, you first need to build a Java application that can load the model into Java and score it. You can find the sample code for this Java application in the [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
+This sample uses the [Java Language Extension](../language-extensions/language-extensions-overview.md) in SQL Server. In order to score the model in SQL Server, you first need to build a Java application that can load the model into Java and score it. You can find the sample code for this Java application in the [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
 
 After building the sample, you can use Transact-SQL to call the Java application and score the model with a database table. This can be seen in thee [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) source file.
 

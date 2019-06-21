@@ -22,62 +22,46 @@ The following diagram illustrates the work performed in this sample:
 
 ## Prerequisites
 
-- A [SQL Server big data cluster](deploy-get-started.md).
-
-- [Azure Data Studio](../azure-data-studio/download.md).
-
 All files for this sample are located at [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml).
+
+To run the sample, you must also have the following prerequisites:
+
+- A [SQL Server big data cluster](deploy-get-started.md)
+
+- [Big data tools](deploy-big-data-tools.md)
+   - **kubectl**
+   - **curl**
+
+- [Azure Data Studio](../azure-data-studio/download.md)
 
 ## Model training with Spark ML
 
-In this sample code, AdultCensusIncome.csv is used to build a Spark ML pipeline model.  We can [download the dataset from internet](mleap_sql_test/setup.sh#L11) and [put it on HDFS on a SQL BDC cluster](mleap_sql_test/setup.sh#L12) so that it can be accessed by Spark.
+For this sample, census data (**AdultCensusIncome.csv**) is used to build a Spark ML pipeline model.
 
-The data is first [read into Spark](mleap_sql_test/mleap_pyspark.py#L25) and [split into training and testing datasets](mleap_sql_test/mleap_pyspark.py#L64).  We then [train a pipeline mode with the training data](mleap_sql_test/mleap_pyspark.py#L87) and [export the model to a mleap bundle](mleap_sql_test/mleap_pyspark.py#L204).
+1. Use the [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) file to download the data set from internet and put it on HDFS in your SQL Server big data cluster. This enables it to be accessed by Spark.
 
-An equivalent Jupyter notebook is also included [here](train_score_export_ml_models_with_spark.ipynb) if it is preferred over pure Python code.
+1. Then download the sample notebook [train_score_export_ml_models_with_spark.ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb). From a PowerShell or bash command line, run the following command to download the notebook:
+
+   ```PowerShell
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb"
+   ```
+
+   This notebook contains cells with the required commands for this section of the sample.
+
+1. Open the notebook in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+
+The data is first read into Spark and split into training and testing data sets. Then the code trains a pipeline model with the training data. Finally, it exports the model to an MLeap bundle.
+
+> [!TIP]
+> You can also review or run the Python code associated with these steps outside of the notebook in the [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) file.
 
 ## Model scoring with SQL Server
 
-Now that we have the Spark ML pipeline model in a common serialization [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) format, we can score the model in Java without the presence of Spark.  
+Now that the Spark ML pipeline model is in a common serialization [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) format, you can score the model in Java without the presence of Spark. 
 
-In order to score the model in SQL Server with its [Java Language Extension](https://docs.microsoft.com/en-us/sql/language-extensions/language-extensions-overview?view=sqlallproducts-allversions), we need first build a Java application that can load the model into Java and score it.  The [mssql-mleap-app folder](mssql-mleap-app/build.sbt) shows how that can be done.
+This sample uses the [Java Language Extension](https://docs.microsoft.com/en-us/sql/language-extensions/language-extensions-overview?view=sqlallproducts-allversions) in SQL Server. In order to score the model in SQL Server, you first need to build a Java application that can load the model into Java and score it. You can find the sample code for this Java application in the [mssql-mleap-app folder](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
 
-Then in T-SQL we can [call the Java application and score the model with some database table](mleap_sql_test/mleap_sql_tests.py#L101).
-
-## Create the target database
-
-1. Open Azure Data Studio, and [connect to the SQL Server master instance of your big data cluster](connect-to-big-data-cluster.md).
-
-1. Create a new query, and run the following command to create a sample database named **MyTestDatabase**.
-
-   ```sql
-   Create DATABASE MyTestDatabase
-   GO
-   ```
-
-## Load sample data into HDFS
-
-1. Download [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) to your local machine.
-
-1. In Azure Data Studio, right-click on the HDFS folder in your big data cluster, and select **New directory**. Name the directory **spark_data**.
-
-1. Right click on the **spark_data** directory, and select **Upload files**. Upload the **AdultCensusIncome.csv** file.
-
-   ![AdultCensusIncome CSV file](./media/spark-mssql-connector/spark_data.png)
-
-## Run the sample notebook
-
-To demonstrate the use of the MSSQL Spark Connector with this data, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
-
-1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector.ipynb** sample notebook:
-
-   ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark_to_sql/mssql_spark_connector.ipynb"
-   ```
-
-1. In Azure Data Studio, open the sample notebook file. Verify that it is connected to your HDFS/Spark Gateway for your big data cluster.
-
-1. Run each code cell in the sample to see usage of MSSQL Spark connector.
+After building the sample, you can use Transact-SQL to call the Java application and score the model with a database table. This can be seen in thee [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) source file.
 
 ## Next steps
 

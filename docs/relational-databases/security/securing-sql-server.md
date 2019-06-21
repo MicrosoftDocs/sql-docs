@@ -118,9 +118,7 @@ SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));
 
 ### Client programs
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security best practices include writing secure client applications.
-
-For more information about how to help secure client applications at the networking layer, see [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] security best practices include writing secure client applications. For more information about how to help secure client applications at the networking layer, see [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md).
 
 ### Windows Defender Application Control (WDAC)
 

@@ -17,16 +17,16 @@ A key big data usage pattern is high volume data processing in Spark, followed b
 
 This article provides an example of how to use the MSSQL Spark connector to read and write to the following locations within a big data cluster:
 
-- The SQL Server master instance
-- The SQL Server data pool
+1. The SQL Server master instance
+1. The SQL Server data pool
 
-This sample does the following tasks:
+   ![MSSQL Spark connector diagram](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-1. Read a file from HDFS and do some basic processing.
-1. Write the dataframe to a SQL Server master instance as a SQL table and then read the table to a dataframe.
-1. Write the dataframe to a SQL Server data pool as a SQL external table and then read the external table to a dataframe.
+The sample performs the following tasks:
 
-![MSSQL Spark connector diagram](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+- Read a file from HDFS and do some basic processing.
+- Write the dataframe to a SQL Server master instance as a SQL table and then read the table to a dataframe.
+- Write the dataframe to a SQL Server data pool as a SQL external table and then read the external table to a dataframe.
 
 ## MSSQL Spark Connector Interface
 
@@ -61,7 +61,9 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
 1. Download [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) to your local machine.
 
-1. In Azure Data Studio, right-click on the HDFS folder in your big data cluster, and select **New directory**. Name the directory **spark_data**.
+1. Launch Azure Data Studio, and [connect to your big data cluster](connect-to-big-data-cluster.md).
+
+1. Right-click on the HDFS folder in your big data cluster, and select **New directory**. Name the directory **spark_data**.
 
 1. Right click on the **spark_data** directory, and select **Upload files**. Upload the **AdultCensusIncome.csv** file.
 

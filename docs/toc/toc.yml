@@ -147,14 +147,10 @@
       items:
       - name: Data wrangling using PROSE Code Accelerator
         href: ../big-data-cluster/use-prose-for-big-data-automation.md
-      - name: Training and Creating Machine Learning Models with Spark
-        href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
-      - name: Exporting ML models with Spark/Mleap
-        href: ../big-data-cluster/export-model-with-spark-mleap.md
+      - name: Spark machine learning models with MLeap
+        href: ../big-data-cluster/spark-create-machine-learning-model.md
       - name: Use Sparklyr from RStudio
         href: ../big-data-cluster/sparklyr-from-RStudio.md
-      - name: GPU support and TensorFlow
-        href: ../big-data-cluster/spark-gpu-tensorflow.md
       - name: Integrate Spark with SQL Server
         href: ../big-data-cluster/spark-mssql-connector.md
     - name: Manage SQL Server big data cluster

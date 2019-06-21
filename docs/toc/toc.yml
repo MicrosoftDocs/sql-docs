@@ -217,16 +217,10 @@
           href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
       - name: Storage
         items:
-        - name: mssqlctl bdc storage-pool
-          href: ../big-data-cluster/reference-mssqlctl-storage.md
-        - name: mssqlctl bdc storage-pool mount
-          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
-        - name: mssqlctl hdfs
-          href: ../big-data-cluster/reference-mssqlctl-hdfs.md
-      - name: SQL
-        items: 
-        - name: mssqlctl bdc sql
-          href: ../big-data-cluster/reference-mssqlctl-sql.md
+        - name: mssqlctl cluster storage-pool
+          href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
+        - name: mssqlctl cluster storage-pool mount
+          href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
 - name: Business continuity
   items:
   - name: Overview
@@ -1392,7 +1386,7 @@
       - name: Index Properties F1 Help
         href: ../relational-databases/indexes/index-properties-f1-help.md
     - name: Columnstore indexes
-      hrefe: ../relational-databases/indexes/columnstore-indexes-overview.md
+      href: ../relational-databases/indexes/columnstore-indexes-overview.md
       items:
       - name: What's new
         href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md

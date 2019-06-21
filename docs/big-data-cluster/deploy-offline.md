@@ -79,7 +79,6 @@ The following big data cluster container images are required for an offline inst
  - **mssql-mlserver-r-runtime**
  - **mssql-mlserver-py-runtime**
  - **mssql-controller**
- - **mssql-portal**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
  - **mssql-monitor-kibana**
@@ -87,6 +86,8 @@ The following big data cluster container images are required for an offline inst
  - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
+ - **mssql-mleap-serving-runtime**
+  
 
 ## <a id="automated"></a> Automated script
 

@@ -62,16 +62,6 @@ Endpoints are defined for the control plane as well as for individual pools. The
         "name": "ServiceProxy",
         "serviceType": "LoadBalancer",
         "port": 30777
-    },
-    {
-        "name": "AppServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30778
-    },
-    {
-        "name": "Knox",
-        "serviceType": "LoadBalancer",
-        "port": 30443
     }
 ]
 ```
@@ -207,16 +197,6 @@ The following **patch.json** file performs the following changes:
             "serviceType": "LoadBalancer",
             "port": 30778,
             "name": "ServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30778,
-            "name": "AppServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30443,
-            "name": "Knox"
         }
       ]
     },
@@ -256,7 +236,6 @@ The following **patch.json** file performs the following changes:
             "size": "32Gi"
           }
         }
-      }
     },
     {
       "op": "replace",
@@ -305,6 +284,7 @@ The following **patch.json** file performs the following changes:
           }
         }
       }
+    }   
   ]
 }
 ```

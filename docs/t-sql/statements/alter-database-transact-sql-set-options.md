@@ -1322,7 +1322,7 @@ SET QUERY_STORE = ON
 
 ### F. Enabling the query store with wait statistics
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting wityh [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 The following example enables the query store and configures query store parameters.
 

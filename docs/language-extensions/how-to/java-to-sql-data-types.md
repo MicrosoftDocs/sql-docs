@@ -64,6 +64,21 @@ The following SQL and Java data types are currently supported for input paramete
 | varchar(n) | String | Only UTF8 Strings supported | |
 | varchar(max) | String | Only UTF8 Strings supported | |
 
+## Data types for outut parameters
+
+The following SQL and Java data types are currently supported for output parameters.
+
+| SQL data type        | Java data type | Comment | |
+| ------------- |-------------|-|-|
+| Bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| Int | int      | | |
+| Real | float      | | |
+| Bigint | long      | | |
+| float | double      | | |
+| uniqueidentifier | String | | |
+
 ## Next steps
 
 + [How to call Java in SQL Server](../how-to/call-java-from-sql.md)

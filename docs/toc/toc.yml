@@ -147,7 +147,7 @@
       items:
       - name: Data wrangling using PROSE Code Accelerator
         href: ../big-data-cluster/use-prose-for-big-data-automation.md
-      - name: Create and export Spark machine learning models with MLeap
+      - name: Spark machine learning models with MLeap
         href: ../big-data-cluster/spark-create-machine-learning-model.md
       - name: Use Sparklyr from RStudio
         href: ../big-data-cluster/sparklyr-from-RStudio.md

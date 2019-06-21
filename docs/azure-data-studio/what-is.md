@@ -17,7 +17,7 @@ ms.date: "05/14/2019"
 
 Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, MacOS, and Linux.
 
-Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with Intellisense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
+Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
 
 **[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

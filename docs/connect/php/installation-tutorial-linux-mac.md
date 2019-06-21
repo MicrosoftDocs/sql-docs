@@ -1,6 +1,6 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: "06/10/2019"
+ms.date: "06/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -50,7 +50,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-If there is only one php version in the system then the last step can be simplified to be `phpenmod sqlsrv pdo_sqlsrv`.
+If there is only one PHP version in the system then the last step can be simplified to `phpenmod sqlsrv pdo_sqlsrv`.
 
 ### Step 4. Install Apache and configure driver loading
 ```
@@ -151,7 +151,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-If there is only one php version in the system then the last step can be simplified to be `phpenmod sqlsrv pdo_sqlsrv`.
+If there is only one PHP version in the system then the last step can be simplified to `phpenmod sqlsrv pdo_sqlsrv`.
 
 ### Step 4. Install Apache and configure driver loading
 ```

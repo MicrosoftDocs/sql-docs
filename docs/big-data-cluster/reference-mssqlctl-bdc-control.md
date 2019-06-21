@@ -20,7 +20,7 @@ The following article provides reference for the **bdc control** commands in the
 ## Commands
 |     |     |
 | --- | --- |
-|||
+[mssqlctl bdc control status](bdc-control-status.md) | Control status commands.
 
 ## Next steps
 

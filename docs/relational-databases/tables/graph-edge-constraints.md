@@ -13,26 +13,16 @@ helpviewer_keywords:
   - "edge constraints [Azure SQL Database]"
   - "graph edge constraints"
   - "SQL Graph" 
-ms.assetid: 
 author: "shkale-msft"
 ms.author: "shkale"
-manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Edge constraints
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Edge constraints can be used to enforce data integrity and  specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database. 
-  
-This article contains the following sections.  
-  
-[Edge Constraints](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+Edge constraints can be used to enforce data integrity and specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database.
 
-[Edge Constraints](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[Related Tasks](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
 ##  <a name="Connection"></a> Edge Constraints
  In the first release of graph features, edge tables did not enforce anything for the endpoints of the edge. That is, an edge in a graph database could connect any node to any other node, regardless of the type. 
 
@@ -62,4 +52,5 @@ This article contains the following sections.
 |Describes how to delete an edge constraint.|[Delete Edge Constraint](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Describes how to modify an edge constraint.|[Modify Edge Constraint](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Describes how to view edge constraint properties.|[View Edge Constraint Properties](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| Graph processing with SQL Server and Azure SQL Database | [](../graphs/sql-graph-overview.md |
 | &nbsp; | &nbsp; |

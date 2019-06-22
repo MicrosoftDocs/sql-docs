@@ -143,7 +143,7 @@ To provision an enclave-enabled column encryption key, you need to make sure tha
 
 The following limitations currently apply to provisioning enclave-enabled keys:
 
-- Enclave-enabled column master keys must be stored in [Windows Certificate Store](windows/desktop/seccrypto/managing-certificates-with-certificate-stores) or in [Azure Key Vault](/azure/key-vault/key-vault-whatis). Storing enclave-enabled column master keys in other types of key stores, for example hardware security modules or custom key stores, isn't currently supported.
+- Enclave-enabled column master keys must be stored in [Windows Certificate Store](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) or in [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Storing enclave-enabled column master keys in other types of key stores, for example hardware security modules or custom key stores, isn't currently supported.
 
 ### Provision enclave-enabled keys using SQL Server Management Studio (SSMS)
 
@@ -550,7 +550,8 @@ For your convenience, a sample PowerShell script for rotating a column master ke
 - You have access to both the old and the new column master key.
 - All string columns, protected with the old column master key, use BIN2 collations.
 
-  > [!NOTE] Alternatively, you can change the collation of string columns after rotating the column master key.
+> [!NOTE]
+> Alternatively, you can change the collation of string columns after rotating the column master key.
 
 #### Steps for rotating the Column Master Key for enclave-enabled columns
 

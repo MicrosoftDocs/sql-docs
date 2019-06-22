@@ -79,7 +79,7 @@ Install the following tools on the client/development computer:
 6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet package](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider), version 2.2.0 or later.
 7. [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet package](https://www.nuget.org/packages?q=Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders).
 
-The NuGet packages are intended to be used in Visual Studio projects for developing applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. For details, see [Develop applications](#develop-applications-issuing-rich-queries-in-visual-studio).
+Use NuGet packages in Visual Studio projects to develop applications using Always Encrypted with secure enclaves. The first package is required only if you store your column master keys in Azure Key Vault. For details, see [Develop applications](#develop-applications-issuing-rich-queries-in-visual-studio).
 
 ### Configure a secure enclave
 
@@ -132,18 +132,18 @@ On the client/development computer:
 
 ## Provision enclave-enabled keys
 
-The introduction of enclave-enabled keys doesn't fundamentally change the [key provisioning and key management workflows for Always Encrypted](overview-of-key-management-for-always-encrypted.md). The only change is in the column master key provisioning workflow, where you can now mark the key as enclave-enabled (by default, column master keys aren't enclave-enabled). When you specify the new column master key is to be enclave-enabled (with SSMS, or PowerShell), the following happens:
+The introduction of enclave-enabled keys doesn't fundamentally change the [key provisioning and key management workflows for Always Encrypted](overview-of-key-management-for-always-encrypted.md). The only change is in the column master key provisioning workflow. You can now mark the key as enclave-enabled By default, column master keys aren't enclave-enabled. When you set the new column master key to enclave-enabled (with SSMS, or PowerShell), the following happens:
 
-- The **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database is set.
-- The column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**) are digitally signed. The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
+- The`ENCLAVE_COMPUTATIONS` property in the column master key metadata in the database is set.
+- The column master key property values, including the `ENCLAVE_COMPUTATIONS` setting, are digitally signed. The tool adds the signature, which is produced using the actual column master key, to the metadata. The signature prevents malicious tampering with the `ENCLAVE_COMPUTATIONS` setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
-The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable - you can't change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#make-columns-enclave-enabled-by-rotating-their-column-master-key). For more information about the **ENCLAVE_COMPUTATIONS** property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+The `ENCLAVE_COMPUTATIONS` property of a column master key is immutable. You can't change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the `ENCLAVE_COMPUTATIONS` property than the original key. To replace the column master key, [rotate the column master key](#make-columns-enclave-enabled-by-rotating-their-column-master-key). For more information about the `ENCLAVE_COMPUTATIONS` property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 To provision an enclave-enabled column encryption key, you need to make sure that the column master key that encrypts the column encryption key, is enclave-enabled.
 
 The following limitations currently apply to provisioning enclave-enabled keys:
 
-- Enclave-enabled **column master keys must be stored in Windows Certificate Store or in Azure Key Vault**. Storing enclave-enabled column master keys in other types of key stores (hardware security modules or custom key stores) isn't currently supported.
+- Enclave-enabled column master keys must be stored in [Windows Certificate Store](windows/desktop/seccrypto/managing-certificates-with-certificate-stores) or in [Azure Key Vault](/azure/key-vault/key-vault-whatis). Storing enclave-enabled column master keys in other types of key stores, for example hardware security modules or custom key stores, isn't currently supported.
 
 ### Provision enclave-enabled keys using SQL Server Management Studio (SSMS)
 
@@ -274,14 +274,14 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ## Identify enclave-enabled keys and columns
 
-To list column master keys, configured in your database, you can query the [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md) catalog view (for example, in SSMS). The new **allow_enclave_computations** column has been added to the view. It indicates whether a column master key is enclave-enabled.
+To list column master keys, configured in your database, query the [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md) catalog view (for example, in SSMS). The new **allow_enclave_computations** column indicates whether a column master key is enclave-enabled.
 
 ```sql
 SELECT name, allow_enclave_computations
 FROM sys.column_master_keys;
 ```
 
-To determine which column encryption keys are encrypted with enclave-enabled column encryption keys (and, thus, are enclave-enabled), you need to join [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md), [sys.column_encryption_key_values](../../system-catalog-views/sys-column-encryption-key-values-transact-sql.md), and [sys.column_encryption_keys](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md).
+When a column encryption key is encrypted with enclave-enabled column encryption keys, it is enclave-enabled. To return enclave-enabled column encryption keys, the following query joins [sys.column_master_keys](../../system-catalog-views/sys-column-master-keys-transact-sql.md), [sys.column_encryption_key_values](../../system-catalog-views/sys-column-encryption-key-values-transact-sql.md), and [sys.column_encryption_keys](../../system-catalog-views/sys-column-encryption-keys-transact-sql.md).
 
 ```sql
 SELECT cek.name AS [cek_name]
@@ -294,7 +294,7 @@ JOIN sys.column_encryption_keys cek
    ON cekv.column_encryption_key_id = cek.column_encryption_key_id;
 ```
 
-To determine which columns are enclave-enabled (the columns that are encrypted with column encryption keys that are enclave-enabled), use the following query:
+Columns encrypted with enclave-enabled keys are enclave-enabled. To determine which columns are enclave-enabled, use the following query:
 
 ```sql
 SELECT c.name AS column_name
@@ -312,9 +312,9 @@ ON cmk.column_master_key_id = cekv.column_master_key_id;
 
 ## Manage collations
 
-Since its initial release, Always Encrypted has had a restriction regarding the use of collations: non-BIN2 collations aren't allowed for character string columns encrypted using deterministic encryption. This restriction also applies to enclave-enabled string columns.
+Always Encrypted restricts collations. Non-BIN2 collations aren't allowed for character string columns encrypted using deterministic encryption. This restriction also applies to enclave-enabled string columns.
 
-The use of non-BIN2 collations is permitted for character string columns encrypted with randomized encryption and enclave-enabled column encryption keys. However, the only new functionality that is enabled for such columns is in-place encryption. To enable rich computations (pattern matching, comparison operations), you must ensure the column uses a BIN2 collation.
+The use of non-BIN2 collations is permitted for character string columns encrypted with randomized encryption and enclave-enabled column encryption keys. However, the only new functionality that is enabled for such columns is in-place encryption. To enable rich computations (pattern matching, comparison operations), the encrypted column requires a BIN2 collation.
 
 The below table summarizes the functionality for enclave-enabled string columns, depending on the encryption type and the collation sort order.
 
@@ -339,7 +339,7 @@ SELECT [Name]
 FROM ::fn_helpcollations();
 ```
 
-For example, Chinese_Traditional_Stroke_Order_100_CI_AI_WS and Chinese_Traditional_Stroke_Order_100_BIN2 have the same code page (950), but Chinese_Traditional_Stroke_Order_100_CI_AI_WS and Latin1_General_100_BIN2 have different code pages (950 and 1252, respectively). The above restriction doesn't apply to UNICODE (nchar, nvarchar) string columns. As a workaround, you may consider setting a UNICODE data type for your new encrypted columns that you're creating, or changing the type to a UNICODE type before encrypting an existing column.
+For example, `Chinese_Traditional_Stroke_Order_100_CI_AI_WS` and `Chinese_Traditional_Stroke_Order_100_BIN2` have the same code page (950), but `Chinese_Traditional_Stroke_Order_100_CI_AI_WS` and `Latin1_General_100_BIN2` have different code pages (950 and 1252, respectively). The above restriction doesn't apply to UNICODE (`nchar`, `nvarchar`) string columns. Consider setting a UNICODE data type for your new encrypted columns that you're creating, or changing the type to a UNICODE type before encrypting an existing column.
 
 ## Create a new table with enclave-enabled columns
 
@@ -350,7 +350,7 @@ You can create a new table with encrypted columns using the [CREATE TABLE (Trans
      > [!NOTE]
      > Always Encrypted does not have to be enabled in the connection string for this task.
 
-2. In the query window, issue a CREATE TABLE statement to create your new table, specifying the ENCRYPTED WITH clause in the [column definition](../../../t-sql/statements/alter-table-column-definition-transact-sql.md) for each column to be encrypted. To make a column enclave-enabled, make sure you specify an enclave-enabled column encryption key. You may also need to specify a BIN2 collation for string columns if the default collation for your database isn't a BIN2 collation. See the Collation Setup section for details.
+2. In the query window, issue a `CREATE TABLE` statement to create your new table, specifying the `ENCRYPTED WITH` clause in the [column definition](../../../t-sql/statements/alter-table-column-definition-transact-sql.md) for each column to be encrypted. To make a column enclave-enabled, make sure you specify an enclave-enabled column encryption key. You may also need to specify a BIN2 collation for string columns if the default collation for your database isn't a BIN2 collation. See the Collation Setup section for details.
 
 ### Example of creating a new table with enclave-enabled columns
 
@@ -454,7 +454,7 @@ To encrypt a column using a key that isn't enclave-enabled, you need to use clie
     > If you do not remove the plan for the impacted query from the cache, the first execution of the query after encryption may fail.
 
     > [!NOTE]
-    > Use ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE or DBCC FREEPROCCACHE to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only.
+    > Use `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` or `DBCC FREEPROCCACHE` to clear the plan cache carefully, as it may result in temporary query performance degradation. To minimize the negative impact of clearing the cache, you can selectively remove the plans for the impacted queries only.
 
 4.  Call [sp_refresh_parameter_encryption](../../system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md) to update the metadata for the parameters of each module (stored procedure, function, view, trigger) that are persisted in [sys.parameters](../..//system-catalog-views/sys-parameters-transact-sql.md) and may have been invalidated by encrypting the columns.
 
@@ -462,9 +462,9 @@ To encrypt a column using a key that isn't enclave-enabled, you need to use clie
 
 The below example assumes:
 
-  - CEK1 is an enclave-enabled column encryption key.
+- CEK1 is an enclave-enabled column encryption key.
 
-  - The SSN column is plaintext and is currently using a Latin1, non-BIN2 collation (for example, Latin1\_General\_CI\_AI\_KS\_WS).
+- The SSN column is plaintext and is currently using a Latin1, non-BIN2 collation (for example, Latin1\_General\_CI\_AI\_KS\_WS).
 
 The statement encrypts the SSN column using randomized encryption and enclave-enabled column encryption key. It also overwrites the default database collation with the corresponding (in the same code page) BIN2 collation.
 

@@ -147,14 +147,10 @@
       items:
       - name: Data wrangling using PROSE Code Accelerator
         href: ../big-data-cluster/use-prose-for-big-data-automation.md
-      - name: Training and Creating Machine Learning Models with Spark
-        href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
-      - name: Exporting ML models with Spark/Mleap
-        href: ../big-data-cluster/export-model-with-spark-mleap.md
+      - name: Spark machine learning models with MLeap
+        href: ../big-data-cluster/spark-create-machine-learning-model.md
       - name: Use Sparklyr from RStudio
         href: ../big-data-cluster/sparklyr-from-RStudio.md
-      - name: GPU support and TensorFlow
-        href: ../big-data-cluster/spark-gpu-tensorflow.md
       - name: Integrate Spark with SQL Server
         href: ../big-data-cluster/spark-mssql-connector.md
     - name: Manage SQL Server big data cluster
@@ -199,24 +195,28 @@
           href: ../big-data-cluster/reference-mssqlctl-app-template.md
       - name: Cluster
         items:
-        - name: mssqlctl cluster
-          href: ../big-data-cluster/reference-mssqlctl-cluster.md
-        - name: mssqlctl cluster config
-          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
-        - name: mssqlctl cluster config section
-          href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
-        - name: mssqlctl cluster debug
-          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
-        - name: mssqlctl cluster endpoint
-          href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
-        - name: mssqlctl cluster status
-          href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
+        - name: mssqlctl bdc
+          href: ../big-data-cluster/reference-mssqlctl-bdc.md
+        - name: mssqlctl bdc config
+          href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+        - name: mssqlctl bdc config section
+          href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+        - name: mssqlctl bdc control
+          href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+        - name: mssqlctl bdc debug
+          href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+        - name: mssqlctl bdc endpoint
+          href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+        - name: mssqlctl bdc pool
+          href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+        - name: mssqlctl bdc status
+          href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
       - name: Storage
         items:
         - name: mssqlctl cluster storage-pool
-          href: ../big-data-cluster/reference-mssqlctl-storage.md
+          href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
         - name: mssqlctl cluster storage-pool mount
-          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+          href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
 - name: Business continuity
   items:
   - name: Overview
@@ -1382,7 +1382,7 @@
       - name: Index Properties F1 Help
         href: ../relational-databases/indexes/index-properties-f1-help.md
     - name: Columnstore indexes
-      hrefe: ../relational-databases/indexes/columnstore-indexes-overview.md
+      href: ../relational-databases/indexes/columnstore-indexes-overview.md
       items:
       - name: What's new
         href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md
@@ -8217,12 +8217,12 @@
         href: ../azure-data-studio/extensibility-apis.md
     - name: Resources
       items:
+      - name: FAQ
+        href: ../azure-data-studio/faq.md
       - name: Azure Data Studio GitHub repo >
         href: https://www.github.com/Microsoft/azuredatastudio
       - name: SQL Server Blog >
         href: https://blogs.technet.microsoft.com/dataplatforminsider/
-      - name: FAQ
-        href: ../azure-data-studio/faq.md
       - name: Report issues & make suggestions >
         href: https://github.com/microsoft/azuredatastudio/issues
   - name: Command prompt utilities
@@ -9369,8 +9369,6 @@
           href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
     - name: References
       items:
-      - name: SQL Server PowerShell
-        href: ../powershell/sql-server-powershell.md
       - name: SQL Server Management Objects (SMO)
         href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
       - name: SSMS environment
@@ -14312,8 +14310,6 @@
         href: ../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md
       - name: sp_drop_trusted_assembly
         href: ../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md
-      - name: sp_dropalias
-        href: ../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md
       - name: sp_dropapprole
         href: ../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md
       - name: sp_droplogin

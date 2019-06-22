@@ -8,12 +8,13 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
-aauthor: ronortloff
-ms.author: rortloff
-manager: craigg
+aauthor: julieMSFT
+ms.author: jrasnick
+manager: jroth
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL Data Warehouse and Parallel Data Warehouse Catalog Views
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
  This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  

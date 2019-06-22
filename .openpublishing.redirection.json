@@ -1,6 +1,61 @@
 {
     "redirections": [
         {
+           "source_path": "docs/big-data-cluster/train-and-create-machinelearning-models-with-spark.md",
+           "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/export-model-with-spark-mleap.md",
+           "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-config-section.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-config-section",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-config.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-config",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-debug.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-debug",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-endpoint.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-endpoint",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-status.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-status",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-storage-pool.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-storage-pool",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/cluster-admin-portal.md",
+           "redirect_url": "/sql/big-data-cluster/cluster-troubleshooting-commands",
+           "redirect_document_id": false
+        },    
+        {
            "source_path": "docs/big-data-cluster/spark-gpu-tensorflow.md",
            "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
            "redirect_document_id": false
@@ -290,6 +345,41 @@
             "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-standalone-windows-install",
             "redirect_document_id": false
         },   
+        {
+            "source_path": "docs/advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/sql-server-machine-learning-services",
+            "redirect_document_id": true
+        },   
+        {
+            "source_path": "docs/advanced-analytics/install/sql-machine-learning-services-ver15.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-server-machine-learning-services-2019",
+            "redirect_document_id": true
+        },   
+        {
+            "source_path": "docs/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/install/upgrade-r-and-python",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/installing-sql-server-r-services-on-an-azure-virtual-machine.md",
+            "redirect_url": "/sql/advanced-analytics/install/sql-machine-learning-azure-virtual-machine",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/sql-server-machine-learning-tasks.md",
+            "redirect_url": "/sql/advanced-analytics/sql-server-machine-learning-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/installing-and-managing-r-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/default-packages",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/installed-package-information",
+            "redirect_document_id": true
+        },
         {
             "source_path": "docs/advanced-analytics/java/extension-java.md",
             "redirect_url": "/sql/language-extensions/language-extensions-overview",
@@ -910,6 +1000,21 @@
         {
             "source_path": "docs/relational-databases/relational-databases-new-updated-sql-docs-pr.md",
             "redirect_url": "/sql/relational-databases/new-updated-relational-databases",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/report-builder/glossary-report-builder.md",
+            "redirect_url": "/sql/reporting-services/reporting-services-concepts-ssrs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/troubleshooting/troubleshoot-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md",
+            "redirect_url": "/sql/reporting-services/reporting-services-concepts-ssrs",
             "redirect_document_id": true
         },
         {
@@ -3632,7 +3737,12 @@
             "redirect_url":"/sql/tools/sql-server-profiler/start-sql-server-profiler",
             "redirect_document_id":false
         },
-                {
+        {
+            "source_path": "docs/relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md",
+            "redirect_url": "/sql/relational-databases/system-stored-procedures/",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/system-dynamic-management-views/linux-process-dynamic-management-views-transact-sql.md",
             "redirect_url": "/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views",
             "redirect_document_id": false
@@ -14394,6 +14504,11 @@
             "source_path": "docs/relational-databases/security/encryption/service-master-key.md",
             "redirect_url": "/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/mdx/analysis-services-language-reference.md",
+            "redirect_url": "/sql/mdx/multidimensional-expressions-mdx-reference",
+            "redirect_document_id": false
         }
     ]
 }

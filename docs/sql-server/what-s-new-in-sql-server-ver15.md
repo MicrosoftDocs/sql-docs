@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 05/28/2019
-ms.prod: "sql-server-2019"
+ms.date: 06/26/2019
+ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
 ms.topic: "article"
@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -36,13 +36,21 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](../big-data-cluster/reference-mssqlctl.md). |
+|New status commands for `mssqlsctl`|`mssqlctl` adds new commands to complement existing monitoring commands. These replace the cluster administration portal - which is removed in this release.|
+| Spark compute pools | Create additional nodes to increase Spark compute power without having to scale up storage. In addition, you can start storage pool nodes that aren't used for Spark. Spark and storage are decoupled. For more information, see [Configure storage without spark](../big-data-cluster/deployment-custom-configuration.md#sparkstorage). |
+| MSSQL Spark connector | Support for read/write to data pool external tables. Previous releases supported read/write to MASTER instance tables only. |
+| Machine Learning using MLeap | [Train an MLeap machine learning model in Spark and score it in SQL Server using the Java language extension](../big-data-cluster/spark-create-machine-learning-model.md). |
 | &nbsp; | &nbsp; |
 
 ### Database engine
 
 | New feature or update | Details |
 |:---|:---|
-|SQL Server Setup includes Max Server Memory recommendations for a single instance deployment that follow the documented guidelines. |[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)|
+|Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
+|New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
+|Partition tables and indexes for graph databases|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
 | &nbsp; | &nbsp; |
 
 
@@ -70,6 +78,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |[In-memory database](../relational-databases/in-memory-database.md) adds new DDL syntax to control the hybrid buffer pool. <sup>2</sup>|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
 |New in-memory database feature, memory-optimized tempdb metadata added.|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 |Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|BIN2_UTF8 collation name changed to Latin1_General_100_BIN2_UTF8. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |SQL Server Setup includes MaxDOP recommendations that follow the documented guidelines. |[Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` returns more information about degree of parallelism and memory grants for query plans. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
@@ -247,7 +256,6 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |The new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|[Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.|[Static data masking](../relational-databases/security/static-data-masking.md) |
 |Use derived table or view aliases in graph match query |[Graph Edge Constraints](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

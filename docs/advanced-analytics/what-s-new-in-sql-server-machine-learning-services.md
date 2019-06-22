@@ -27,6 +27,7 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
+| CTP 3.0 | No changes. |
 | CTP 2.5 | No changes. |
 | CTP 2.4 | Linux support for [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for R and Python. |
 | CTP 2.3 | On Windows only, Python code can be accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. |

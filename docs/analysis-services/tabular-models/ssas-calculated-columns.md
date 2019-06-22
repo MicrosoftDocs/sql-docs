@@ -43,7 +43,7 @@ manager: kfile
   
 -   When you rename a calculated column, any formulas that rely on the column must be updated manually. Unless you are in manual update mode, updating the results of formulas takes place automatically. However, this operation might take some time.  
   
--   There are some characters that cannot be used within the names of columns. For more information, see "Naming Requirements" in [DAX Syntax Reference](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5).  
+-   There are some characters that cannot be used within the names of columns. For more information, see "Naming Requirements" in [DAX Syntax Reference](/dax/dax-syntax-reference).  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  The formula for a calculated column can be more resource-intensive than the formula used for a measure. One reason is that the result for a calculated column is always calculated for each row in a table, whereas a measure is only calculated for the cells defined by the filter used in a report, PivotTable, or PivotChart. For example, a table with a million rows will always have a calculated column with a million results, and a corresponding effect on performance. However, a PivotTable generally filters data by applying row and column headings; therefore, a measure is calculated only for the subset of data in each cell of the PivotTable.  

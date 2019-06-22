@@ -52,5 +52,5 @@ Edge constraints can be used to enforce data integrity and specific semantics on
 |Describes how to delete an edge constraint.|[Delete Edge Constraint](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Describes how to modify an edge constraint.|[Modify Edge Constraint](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Describes how to view edge constraint properties.|[View Edge Constraint Properties](../../relational-databases/tables/view-edge-constraint-properties.md)|  
-| Graph processing with SQL Server and Azure SQL Database | [](../graphs/sql-graph-overview.md |
+| Overview of the Graph technology in SQL Server | [Graph processing with SQL Server and Azure SQL Database](../graphs/sql-graph-overview.md) |
 | &nbsp; | &nbsp; |

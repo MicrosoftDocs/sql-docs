@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+           "source_path": "docs/big-data-cluster/train-and-create-machinelearning-models-with-spark.md",
+           "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/export-model-with-spark-mleap.md",
+           "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
+           "redirect_document_id": false
+        },
+        {
            "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-config-section.md",
            "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-config-section",
            "redirect_document_id": false

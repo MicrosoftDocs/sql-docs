@@ -1,7 +1,7 @@
 ---
 title: "Graph edge constraints | Microsoft Docs"
 ms.custom: ""
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,10 +17,11 @@ ms.assetid:
 author: "shkale-msft"
 ms.author: "shkale"
 manager: craigg
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # Edge constraints
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx.md](../../includes/appliesto-ss-asdb-xxxx-xxx.md)]
 
   Edge constraints can be used to enforce data integrity and  specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database. 
   
@@ -61,3 +62,4 @@ This article contains the following sections.
 |Describes how to delete an edge constraint.|[Delete Edge Constraint](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Describes how to modify an edge constraint.|[Modify Edge Constraint](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Describes how to view edge constraint properties.|[View Edge Constraint Properties](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| &nbsp; | &nbsp; |

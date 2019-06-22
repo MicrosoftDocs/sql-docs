@@ -548,7 +548,9 @@ For your convenience, a sample PowerShell script for rotating a column master ke
 
 - You have provisioned a new enclave-enabled column master key.
 - You have access to both the old and the new column master key.
-- All string columns, protected with the old column master key, use BIN2 collations. (Note: alternatively, you can change the collation of string columns after rotating the column master key).
+- All string columns, protected with the old column master key, use BIN2 collations.
+
+  > [!NOTE] Alternatively, you can change the collation of string columns after rotating the column master key.
 
 #### Steps for rotating the Column Master Key for enclave-enabled columns
 

@@ -65,7 +65,7 @@ EXEC sp_enclave_send_keys;
 ## See also
 
  [Always Encrypted with secure enclaves &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../security/tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
+ [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
  [Invoke indexing operations using cached column encryption keys](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
  [Indexes on Enclave-enabled Columns using Randomized Encryption](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
  [Considerations for AlwaysOn and Database Migration](../security/encryption/always-encrypted-enclaves.md#considerations-for-alwayson-and-database-migration)

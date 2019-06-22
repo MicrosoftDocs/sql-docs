@@ -335,9 +335,8 @@ Now, you can run rich queries against the encrypted columns. Some query processi
 
 3. Try the same query again in the SSMS instance that does not have Always Encrypted enabled, and note the failure that occurs.
 
-## Next steps
-
-Go to [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), which is the continuation of this tutorial.
+## Next Steps
+Go to [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md), which is the continuation of this tutorial.
 
 See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for information on other use cases for Always Encrypted with secure enclaves. For example:
 

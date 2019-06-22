@@ -37,7 +37,6 @@ The classification includes two metadata attributes:
 * Labels - The main classification attributes, used to define the sensitivity level of the data stored in the column.  
 * Information Types - Provide additional granularity into the type of data stored in the column.
 
-<br>
 **To classify your SQL Server database:**
 
 1. In SQL Server Management Studio (SSMS) connect to the SQL Server.

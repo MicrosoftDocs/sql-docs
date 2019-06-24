@@ -127,9 +127,9 @@ refresh|Processes the object. ASSL equivalent is PROCESS.
 Updates to the formula bar help you write formulas with more ease by differentiating functions, fields and measures using syntax coloring, it provides intelligent function and field suggestions and tells you if parts of your DAX expression are wrong using error *squiggles*. It also allows you to use multiple lines (Alt + Enter) and indentation (Tab). The formula bar now also allows you to write comments as part of your measures, just type "//" and everything after these characters on the same line will be considered a comment.
 
 ### DAX variables    
-This release now includes support for variables in DAX. Variables can now store the result of an expression as a named variable, which can then be passed as an argument to other measure expressions. Once resultant values have been calculated for a variable expression, those values do not change, even if the variable is referenced in another expression. For more information, see [VAR Function](http://msdn.microsoft.com/library/mt243785.aspx).    
+This release now includes support for variables in DAX. Variables can now store the result of an expression as a named variable, which can then be passed as an argument to other measure expressions. Once resultant values have been calculated for a variable expression, those values do not change, even if the variable is referenced in another expression. For more information, see [VAR Function](/dax/var-dax).    
 ### New DAX functions
-With this release, DAX introduces over fifty new functions to support faster calculations and enhanced visualizations in Power BI. To learn more, see [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx).
+With this release, DAX introduces over fifty new functions to support faster calculations and enhanced visualizations in Power BI. To learn more, see [New DAX Functions](/dax/new-dax-functions).
 ### Save incomplete measures
 You can now save incomplete DAX measures directly in a tabular 1200 model project and pick it up again when you are ready to continue.
 ### Additional DAX enhancements

@@ -16,11 +16,13 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# SET RESULT_SET_CACHING (Transact-SQL) Applies to Azure SQL Data Warehouse Gen2 only (preview)
+# SET RESULT SET CACHING (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Causes Azure SQL Data Warehouse to cache query result sets.
+Controls the result set caching behavior for the current client session.  
+
+Applies to Azure SQL Data Warehouse (preview) 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -32,68 +34,15 @@ SET RESULT_SET_CACHING { ON | OFF };
   
 ## Remarks  
 
-> [!Note]
-> While this feature is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.
-  
-This command must be run while connected to the master database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column called is_result_set_caching_on is introduced in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) to show the result caching setting for a database.  
+**ON**   
+Enables result set caching for the current client session.  Result set caching cannot be turned ON for a session if it is turned OFF at the database level.
 
-**ON**
-Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
+**OFF**   
+Disable result set caching for the current client session.
 
-**OFF**
-Specifies that query result sets returned from this database won't be cached in Azure SQL Data Warehouse storage.
-
-Query the result_cache_hit column in sys.dm_pdw_exec_requests with a query’s request_id to see if this query was executed with a result cache hit or miss.
-
-```sql
-Select result_cache_hit 
-From sys.dm_pdw_exec_requests
-Where request_id = 'QID58286'
-;
-```
-
-If there's a cache hit, the query result will have a single step with following details:
-
-|**Column name**|**Operator**|**Value**|
-|----|----|----|
-|operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-|command|Like|%DWResultCacheDb%|
-||||
-  
 ## Permissions
 
-Requires these permissions:
-
-- Server-level principal login (the one created by the provisioning process)
-  or
-- Member of the dbmanager database role.
-
-A database owner can't alter the database unless the owner is a member of the dbmanager role.
-  
-## Examples
-
-### Enable `RESULT_SET_CACHING` for a database
-
-```sql
-ALTER DATABASE myTestDW  
-SET RESULT_SET_CACHING ON;
-```
-
-### Disable `RESULT_SET_CACHING` for a database
-
-```sql
-ALTER DATABASE myTestDW  
-SET RESULT_SET_CACHING OFF;
-```
-
-### Check `RESULT_SET_CACHING` setting for a database
-
-```sql
-SELECT name, is_result_set_caching_on  
-FROM sys.databases
-```
+Requires membership in the public role
 
 ## See also
 

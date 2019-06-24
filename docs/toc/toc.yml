@@ -177,8 +177,8 @@
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Use extended Spark History Server
         href: ../big-data-cluster/spark-history-server.md
-  - name: Reference
-    items:
+- name: Reference
+  items:
     - name: Deployment reference
       items:
       - name: Deployment configuration file

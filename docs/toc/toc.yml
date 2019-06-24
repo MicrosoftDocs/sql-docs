@@ -189,34 +189,44 @@
         href: ../big-data-cluster/reference-mssqlctl.md
       - name: App Deploy
         items:
-        - name: mssqlctl app
+        - name: app
           href: ../big-data-cluster/reference-mssqlctl-app.md
-        - name: mssqlctl app template
+        - name: app template
           href: ../big-data-cluster/reference-mssqlctl-app-template.md
       - name: Cluster
         items:
-        - name: mssqlctl bdc
+        - name: bdc
           href: ../big-data-cluster/reference-mssqlctl-bdc.md
-        - name: mssqlctl bdc config
+        - name: bdc config
           href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
-        - name: mssqlctl bdc config section
+        - name: bdc config section
           href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
-        - name: mssqlctl bdc control
+        - name: bdc control
           href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
-        - name: mssqlctl bdc debug
+        - name: bdc control status
+          href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md          
+        - name: bdc debug
           href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
-        - name: mssqlctl bdc endpoint
+        - name: bdc endpoint
           href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
-        - name: mssqlctl bdc pool
+        - name: bdc pool
           href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
-        - name: mssqlctl bdc status
+        - name: bdc pool status
+          href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md        
+        - name: bdc status
           href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
       - name: Storage
         items:
-        - name: mssqlctl cluster storage-pool
-          href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
-        - name: mssqlctl cluster storage-pool mount
-          href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
+        - name: bdc storage
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: bdc storage mount
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+        - name: hdfs
+          href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+      - name: SQL
+        items: 
+        - name: sql
+          href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: Business continuity
   items:
   - name: Overview

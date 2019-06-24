@@ -6,7 +6,7 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/01/2018
+ms.date: 06/20/2019
 ---
 
 # SQL Server Reporting Services features supported by its editions
@@ -48,7 +48,7 @@ For features supported by the Evaluation and Developer editions, see the SQL Ser
 |Shared-component library|Yes|Yes|||Yes|  
 |Email and file share subscriptions and scheduling|Yes|Yes|||Yes|  
 |Report history, execution snapshots, and caching|Yes|Yes|||Yes|  
-|SharePoint integration|Yes|Yes|||Yes|  
+|SharePoint integration<sup>2</sup>|Yes|Yes|||Yes|  
 |Remote and non-SQL data source support<sup>1</sup>|Yes|Yes|||Yes|  
 |Data source, delivery, and rendering and RDCE extensibility|Yes|Yes|||Yes|  
 |Custom branding|Yes||||Yes|  

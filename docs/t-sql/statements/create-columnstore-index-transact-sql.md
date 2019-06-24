@@ -66,6 +66,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
     [ ON <on_option> ] 
+    [ORDER (column [,…n])]
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  

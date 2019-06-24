@@ -66,7 +66,7 @@ Complete details about support and licensing for CTP releases are in `license_Ev
 
 - **Workaround**: N/A
 
-- **Applies to**: SQL Server 2019 CTP 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **Applies to**: SQL Server 2019 CTP 3.1, 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
 ## Installation Wizard may wait between EULA pages
 
@@ -89,19 +89,9 @@ Complete details about support and licensing for CTP releases are in `license_Ev
  
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ## Always Encrypted with secure enclaves
-
-### Loading enclave fails
-
-- **Issue and customer impact**: Loading the enclave for Always Encrypted fails with the following message captured in the error log: `Internal enclave error: Cannot initialize the 1 enclave`.
-
-- **Workaround**: None. A resolution is scheduled for CTP 3.1.
-
-- **Applies to**: CTP 3.0
-
-### Rich computations performance
 
 - **Issue and customer impact**: Rich computations are pending performance optimizations and error-handling enhancements, and are currently disabled by default.
 

@@ -1,39 +1,39 @@
 ---
-title: mssqlctl cluster config reference
+title: mssqlctl bdc config reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl cluster commands.
+description: Reference article for mssqlctl bdc commands.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl cluster config
+# mssqlctl bdc config
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **cluster config** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc config** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl cluster config show](#mssqlctl-cluster-config-show) | Gets the SQL Server Big Data Cluster's current configuration.
-[mssqlctl cluster config init](#mssqlctl-cluster-config-init) | Initializes a cluster configuration profile that can be used with cluster create.
-[mssqlctl cluster config list](#mssqlctl-cluster-config-list) | Lists available configuration file choices.
-[mssqlctl cluster config section](reference-mssqlctl-cluster-config-section.md) | Commands for working with individual sections of the cluster configuration file.
-## mssqlctl cluster config show
-Gets the SQL Server Big Data Cluster's current configuration file and outputs it to the target file or pretty prints it to the console.
+[mssqlctl bdc config show](#mssqlctl-bdc-config-show) | Gets the Big Data Cluster's current configuration.
+[mssqlctl bdc config init](#mssqlctl-bdc-config-init) | Initializes a Big Data Cluster configuration profile that can be used with cluster create.
+[mssqlctl bdc config list](#mssqlctl-bdc-config-list) | Lists available configuration profile choices.
+[mssqlctl bdc config section](reference-mssqlctl-bdc-config-section.md) | Commands for working with individual sections of the Big Data Cluster configuration profile.
+## mssqlctl bdc config show
+Gets the Big Data Cluster's current configuration profile and outputs it to the target directory or pretty prints it to the console.
 ```bash
-mssqlctl cluster config show [--target -t] 
-                             [--force -f]
+mssqlctl bdc config show [--target -t] 
+                         [--force -f]
 ```
 ### Examples
-Show the cluster config in your console
+Show the BDC config in your console
 ```bash
-mssqlctl cluster config show
+mssqlctl bdc config show
 ```
 ### Optional Parameters
 #### `--target -t`
@@ -51,27 +51,27 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl cluster config init
-Initializes a cluster configuration  profile that can be used with cluster create. The specific source of the configuration profile can be specified in the arguments from 3 choices.
+## mssqlctl bdc config init
+Initializes a Big Data Cluster configuration  profile that can be used with cluster create. The specific source of the configuration profile can be specified in the arguments from 3 choices.
 ```bash
-mssqlctl cluster config init [--target -t] 
-                             [--src -s]  
-                             [--force -f]
+mssqlctl bdc config init [--target -t] 
+                         [--source -s]  
+                         [--force -f]
 ```
 ### Examples
-Guided cluster config init experience - you will receive prompts for needed values.
+Guided BDC config init experience - you will receive prompts for needed values.
 ```bash
-mssqlctl cluster config init
+mssqlctl bdc config init
 ```
-Cluster config init with arguments, creates a configuration profile of aks-dev-test in ./custom.json.
+BDC config init with arguments, creates a configuration profile of aks-dev-test in ./custom.
 ```bash
-mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+mssqlctl bdc config init --source aks-dev-test --target custom
 ```
 ### Optional Parameters
 #### `--target -t`
 File path of where you would like the config profile placed, defaults to cwd with custom-config.json.
-#### `--src -s`
-Config profile source: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
+#### `--source -s`
+Config profile source: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--force -f`
 Force overwrite of the target file.
 ### Global Arguments
@@ -85,24 +85,24 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl cluster config list
-Lists available configuration file choices for use in cluster config init
+## mssqlctl bdc config list
+Lists available configuration profile choices for use in `bdc config init`
 ```bash
-mssqlctl cluster config list [--config-file -c] 
-                             
+mssqlctl bdc config list [--config-profile -c] 
+                         
 ```
 ### Examples
 Shows all available configuration profile names.
 ```bash
-mssqlctl cluster config list
+mssqlctl bdc config list
 ```
 Shows json of a specific configuration profile.
 ```bash
-mssqlctl cluster config list --config-file aks-dev-test.json
+mssqlctl bdc config list --config-profile aks-dev-test
 ```
 ### Optional Parameters
-#### `--config-file -c`
-Default config file: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
+#### `--config-profile -c`
+Default config profile: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

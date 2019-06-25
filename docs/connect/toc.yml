@@ -1,9 +1,9 @@
-- name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-
-
 - name: Programming to interact with SQL Server
   href: ../connect/homepage-sql-connection-programming.md
+
+- name: Welcome to SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+
 - name: SQL Server Drivers
   href: ../connect/sql-connection-libraries.md
 - name: SQL Server Driver History

@@ -101,7 +101,7 @@ SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a
 
 - Users may see an error when dragging a table object from the Object Explorer into the Query Editor. We are aware of the issue, and the fix is planned for the next release.
 
-- The *Group connections* and *Single server connections* color options under the Options -> Text Editor -> Editor Tab and Status Bar -> Status Bar Layout and Colors do not persist after closing SSMS 18.1 and reverts to its default (white) when reopened.
+- The *Group connections* and *Single server connections* color options under the Options -> Text Editor -> Editor Tab and Status Bar -> Status Bar Layout and Colors do not persist after closing SSMS 18.1. After you reopen SSMS, the Status Bar Layout and Colors option reverts to default (white).
 
 ## Previous SSMS releases
 

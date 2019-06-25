@@ -458,10 +458,12 @@ Let us illustrate this with an example. Consider a user, Domain\user1. The user 
 ### 5.4 An Error Might Occur When Navigating in the Generate Script Wizard  
 **Issue:** After generating a script in the Generate Script Wizard by clicking **Save or Publish Scripts**, then navigating by clicking **Choose Options** or **Set Scripting Options**, clicking **Save or Publish Scripts** again might result in the following error:  
   
-<pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+<pre>
+An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
-Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)</pre>  
+Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
+</pre>  
   
 **Workaround:** Close and reopen the Generate Scripts Wizard.  
   

@@ -5,7 +5,7 @@ description: Learn how to perform an offline deployment of a SQL Server big data
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -37,7 +37,7 @@ The following steps describe how to pull the big data cluster container images f
    > [!TIP]
    > These commands use PowerShell as an example, but you can run them from cmd, bash, or any command shell that can run docker. On Linux, add `sudo` to each command.
 
-1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **ctp3.0**.  
+1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **ctp3.1**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -79,7 +79,6 @@ The following big data cluster container images are required for an offline inst
  - **mssql-mlserver-r-runtime**
  - **mssql-mlserver-py-runtime**
  - **mssql-controller**
- - **mssql-portal**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
  - **mssql-monitor-kibana**
@@ -87,6 +86,8 @@ The following big data cluster container images are required for an offline inst
  - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
+ - **mssql-mleap-serving-runtime**
+  
 
 ## <a id="automated"></a> Automated script
 
@@ -174,9 +175,9 @@ To install **kubectl** to an offline machine, use the following steps.
 To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **mssqlctl** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **custom.json**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 The deployment prompts you for the docker username and password, or you can specify them in the **DOCKER_USERNAME** and **DOCKER_PASSWORD** environment variables.

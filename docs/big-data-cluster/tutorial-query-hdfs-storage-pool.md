@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to query HDFS data in a SQL Server 2
 author: rothja 
 ms.author: jroth 
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -72,7 +72,7 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    BEGIN
      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+     WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    END
    ```
 

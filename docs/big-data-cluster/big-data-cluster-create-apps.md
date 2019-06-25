@@ -6,7 +6,7 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -40,7 +40,7 @@ The following types of apps are supported:
 
 ## Capabilities
 
-In SQL Server 2019 (preview) CTP 3.0 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
+In SQL Server 2019 (preview) you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
 
 |Command |Description |
 |:---|:---|

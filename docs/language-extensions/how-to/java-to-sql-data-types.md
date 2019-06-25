@@ -5,7 +5,7 @@ description: Map data types from Java to SQL Server for input and output data st
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -63,6 +63,21 @@ The following SQL and Java data types are currently supported for input paramete
 | char(n) | String | Only UTF8 Strings supported | |
 | varchar(n) | String | Only UTF8 Strings supported | |
 | varchar(max) | String | Only UTF8 Strings supported | |
+
+## Data types for outut parameters
+
+The following SQL and Java data types are currently supported for output parameters.
+
+| SQL data type        | Java data type | Comment | |
+| ------------- |-------------|-|-|
+| Bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| Int | int      | | |
+| Real | float      | | |
+| Bigint | long      | | |
+| float | double      | | |
+| uniqueidentifier | String | | |
 
 ## Next steps
 

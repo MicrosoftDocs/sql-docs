@@ -35,7 +35,7 @@ manager: craigg
   
 ```    
 CREATE EVENT SESSION event_session_name  
-ON SERVER  
+ON { SERVER | DATABASE }
 {  
     <event_definition> [ ,...n]  
     [ <event_target_definition> [ ,...n] ]  
@@ -237,7 +237,8 @@ ON SERVER
 The order of precedence for the logical operators is `NOT` (highest), followed by `AND`, followed by `OR`.  
   
 ## Permissions  
-Requires the `ALTER ANY EVENT SESSION` permission.  
+On SQL Server, requires the `ALTER ANY EVENT SESSION` permission. 
+On SQL Database, requires the `ALTER ANY DATABASE EVENT SESSION` permission in the database.
   
 ## Examples  
  The following example shows how to create an event session named `test_session`. This example adds two events and uses the Event Tracing for Windows target.  
@@ -265,7 +266,6 @@ GO
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
- [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
-  
+ [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)   
   
 

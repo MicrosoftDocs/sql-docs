@@ -1,7 +1,9 @@
-- name: Welcome
+- name: Welcome to SQL Server
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+
 - name: Previous versions 2014-2005
   href: ../toc/previous-versions-sql-server.md
+
 - name: Overview
   items:
   - name: New with SQL Server

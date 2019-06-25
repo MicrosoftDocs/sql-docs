@@ -89,7 +89,8 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 - Windows 10 (64-bit) <sup>*</sup>
 - Windows 8.1 (64-bit)
-- Windows Server 2016 <sup>*</sup>
+- Windows Server 2019 (64-bit)
+- Windows Server 2016 (64-bit) <sup>*</sup>
 - Windows Server 2012 R2 (64-bit)
 - Windows Server 2012 (64-bit)
 - Windows Server 2008 R2 (64-bit)

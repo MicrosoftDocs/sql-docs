@@ -1,8 +1,9 @@
-- name: SQL Server >>
+- name: SQL Server Integration Services (SSIS)
+  href: ../integration-services/sql-server-integration-services.md
+
+- name: Welcome to SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 
-- name: SQL Server Integration Services
-  href: ../integration-services/sql-server-integration-services.md
 - name: Overview
   items:
   - name: What's New in Integration Services in SQL Server 2016

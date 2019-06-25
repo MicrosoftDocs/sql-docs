@@ -1,8 +1,9 @@
-- name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-
 - name: SQL Server Machine Learning Services
   href: ../advanced-analytics/sql-server-machine-learning-services.md
+
+- name: Welcome to SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+
 - name: Overview
   items:
   - name: Machine Learning Services (R, Python)

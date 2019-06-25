@@ -149,14 +149,10 @@
       items:
       - name: Data wrangling using PROSE Code Accelerator
         href: ../big-data-cluster/use-prose-for-big-data-automation.md
-      - name: Training and Creating Machine Learning Models with Spark
-        href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
-      - name: Exporting ML models with Spark/Mleap
-        href: ../big-data-cluster/export-model-with-spark-mleap.md
+      - name: Spark machine learning models with MLeap
+        href: ../big-data-cluster/spark-create-machine-learning-model.md
       - name: Use Sparklyr from RStudio
         href: ../big-data-cluster/sparklyr-from-RStudio.md
-      - name: GPU support and TensorFlow
-        href: ../big-data-cluster/spark-gpu-tensorflow.md
       - name: Integrate Spark with SQL Server
         href: ../big-data-cluster/spark-mssql-connector.md
     - name: Manage SQL Server big data cluster
@@ -183,8 +179,8 @@
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Use extended Spark History Server
         href: ../big-data-cluster/spark-history-server.md
-  - name: Reference
-    items:
+- name: Reference
+  items:
     - name: Deployment reference
       items:
       - name: Deployment configuration file
@@ -195,30 +191,44 @@
         href: ../big-data-cluster/reference-mssqlctl.md
       - name: App Deploy
         items:
-        - name: mssqlctl app
+        - name: app
           href: ../big-data-cluster/reference-mssqlctl-app.md
-        - name: mssqlctl app template
+        - name: app template
           href: ../big-data-cluster/reference-mssqlctl-app-template.md
       - name: Cluster
         items:
-        - name: mssqlctl cluster
-          href: ../big-data-cluster/reference-mssqlctl-cluster.md
-        - name: mssqlctl cluster config
-          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
-        - name: mssqlctl cluster config section
-          href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
-        - name: mssqlctl cluster debug
-          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
-        - name: mssqlctl cluster endpoint
-          href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
-        - name: mssqlctl cluster status
-          href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
+        - name: bdc
+          href: ../big-data-cluster/reference-mssqlctl-bdc.md
+        - name: bdc config
+          href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+        - name: bdc config section
+          href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+        - name: bdc control
+          href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+        - name: bdc control status
+          href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md          
+        - name: bdc debug
+          href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+        - name: bdc endpoint
+          href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+        - name: bdc pool
+          href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+        - name: bdc pool status
+          href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md        
+        - name: bdc status
+          href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
       - name: Storage
         items:
-        - name: mssqlctl cluster storage-pool
-          href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
-        - name: mssqlctl cluster storage-pool mount
-          href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
+        - name: bdc storage
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: bdc storage mount
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+        - name: hdfs
+          href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+      - name: SQL
+        items: 
+        - name: sql
+          href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: Business continuity
   items:
   - name: Overview
@@ -8118,8 +8128,10 @@
         href: ../relational-databases/security/auditing/sql-server-audit-records.md
   - name: Tutorials
     items:
-    - name: Always Encrypted with secure enclaves using SSMS
+    - name: Getting started with Always Encrypted with secure enclaves using SSMS
       href: ../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+    - name: Create and use indexes on Always Encrypted with secure enclaves columns
+      href: ../relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
   - name: Reference
     items:
     - name: Permissions or Securables page
@@ -14326,6 +14338,8 @@
         href: ../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md
       - name: sp_dropuser
         href: ../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md
+      - name: sp_enclave_send_keys
+        href: ../relational-databases/system-stored-procedures/sp-enclave-send-keys-sql.md
       - name: sp_grantdbaccess
         href: ../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md
       - name: sp_grantlogin

@@ -5,7 +5,7 @@ description: Learn about SQL Server 2019 big data clusters (preview) that run on
 author: rothja 
 ms.author: jroth 
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -52,9 +52,7 @@ SQL Server big data clusters enable AI and machine learning tasks on the data st
 
 ### Management and Monitoring
 
-Management and monitoring are provided through a combination of command line tools, APIs, an administrator portal, and dynamic management views.
-
-The [cluster administrator portal](cluster-admin-portal.md) is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards for log analytics and monitoring dashboards.
+Management and monitoring are provided through a combination of command line tools, APIs, portals, and dynamic management views.
 
 You can use Azure Data Studio to perform a variety of tasks on the big data cluster. This is enabled by the new **SQL Server 2019 Extension (Preview)**. This extension provides:
 

@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server 2016 from the Installation Wizard (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -158,7 +158,9 @@ The following item is for SQL Server 2016-2017
      Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - TempDB** tab to configure file size, number of files, non-default installation directories, and file-growth settings for TempDB. For more information see [Database Engine Configuration - TempDB](../../sql-server/install/instance-configuration.md#tempdb).  
 
      ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** tab to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution, and the recommended value is automatically calculated during installation. For more information, see [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
+     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** tab to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution, and the recommended value is automatically calculated during installation. For more information, see [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). This option is only available starting with SQL Server 2019. 
+
+     Use the **Database Engine Configuration - Memory** tab to specify the MIN and MAX memory values that this instance of SQL Server will use after startup. You can use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option. This capability is only available within Setup starting with SQL Server 2019. 
      ::: moniker-end
 
      Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - FILESTREAM** tab to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  

@@ -28,7 +28,7 @@ The following diagram visually describes opportunities and benefits of the exten
 
 Any supported external language can be run by calling a stored procedure, and the results are returned as tabular results directly to SQL Server, making it easy to use the external language from any application that can send a SQL query and handle the results.
 
-## Architecture diagram
+## Architecture diagrams
 
 The architecture is designed such that external code run in a separate process from SQL Server, but with components that internally manage the chain of requests for data and operations on SQL Server. 
 

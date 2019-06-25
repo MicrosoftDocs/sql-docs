@@ -45,11 +45,11 @@ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], re
 
 ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement
 
-Microsoft has identified a problem with the Microsoft Visual C++ 2013 run-time binaries that are installed as a prerequisite by SQL Server. An update is available to fix this problem. If this update to the Visual C++ run-time binaries isn't installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server, follow the instructions in the [SQL Server release notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the Visual C++ run-time binaries.  
+Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime binaries that are installed as a prerequisite by SQL Server. An update is available to fix this problem. If this update to the Visual C++ runtime binaries isn't installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server, follow the instructions in the [SQL Server release notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the Visual C++ runtime binaries.  
   
 ## To install [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]  
   
-1. Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click *Setup.exe*. To install from a network share, locate the root folder on the share, and then double-click *Setup.exe*.  
+1. Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click **Setup.exe**. To install from a network share, locate the root folder on the share, and then double-click **Setup.exe**.  
   
 2. The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.  
 
@@ -63,7 +63,7 @@ The following item is for SQL Server 2019 or later
   
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-4. On the **License Terms** page, review the license agreement and, if you agree, select the **I accept the license terms and [privacy statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.  
+4. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [privacy statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.  
 
 ::: moniker-end
 
@@ -73,7 +73,7 @@ The following item is for SQL Server 2016-2017
 
 ::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-4. On the **License Terms** page, review the license agreement and, if you agree, select the **I accept the license terms** check box, and then select **Next**.  
+4. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms** check box, and then select **Next**.  
 
 ::: moniker-end
 

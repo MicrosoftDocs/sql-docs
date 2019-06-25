@@ -492,8 +492,8 @@ If no `MAXSIZE`value is set when using the vCore model, the default is 32 GB. Fo
 
 The following rules apply to MAXSIZE and EDITION arguments:
 
-- If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 500 MB.
-- If neither MAXSIZE nor EDITION is specified, the EDITION is set to Standard (S0), and MAXSIZE is set to 250 GB.
+- If EDITION is specified but MAXSIZE is not specified, the default value for the edition is used. For example, is the EDITION is set to Standard, and the MAXSIZE is not specified, then the MAXSIZE is automatically set to 250 MB.
+- If neither MAXSIZE nor EDITION is specified, the EDITION is set to General Purpose, and MAXSIZE is set to 32 GB.
 
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>)
 Specifies the performance level. The following example changes service objective of a premium database to `P6`:

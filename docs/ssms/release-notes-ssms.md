@@ -196,6 +196,10 @@ Download previous SSMS versions by clicking the title links in the following sec
 |Vulnerability Assessment|Added a new exporting feature to export the vulnerability assessment scan results to Excel.|
 |XEvent Viewer|XEvent Viewer: enabled showplan window for more XEvents.|
 
+### Known issues
+
+Some users may see an error when dragging a table object from the Object Explorer into the Query Editor. We are aware of the issue, and the fix is planned for the next release.
+
 ### Bug fixes in 18.0
 
 | New item| Details|

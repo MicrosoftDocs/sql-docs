@@ -1,7 +1,7 @@
 ---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/14/2019"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -128,6 +128,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -509,6 +510,12 @@ Page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../inclu
 OFF
 Page locks are not used.
 
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.
+
+Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](#sequential-keys) section for more information.
+
 MAXDOP = _max_degree_of_parallelism_
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -772,6 +779,13 @@ The following functionality is disabled for resumable index create operations:
 When ALLOW_ROW_LOCKS = ON and ALLOW_PAGE_LOCK = ON, row-, page-, and table-level locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock.
 
 When ALLOW_ROW_LOCKS = OFF and ALLOW_PAGE_LOCK = OFF, only a table-level lock is allowed when accessing the index.
+
+## Sequential Keys
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.
+
+Last-page insert contention is a common performance problem that occurs when a large number of concurrent threads attempt to insert rows into an index with a sequential key. An index is considered sequential when the leading key column contains values that are always increasing (or decreasing), such as an identity column or a date that defaults to the current date/time. Because the keys being inserted are sequential, all new rows will be inserted at the end of the index structure - in other words, on the same page. This leads to contention for the page in memory which can be observed as several threads waiting on PAGELATCH_EX for the page in question.
+
+Turning on the OPTIMIZE_FOR_SEQUENTIAL_KEY index option enables an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. It is intended for indexes that have a sequential key and thus are prone to last-page insert contention, but it may also help with indexes that have hot spots in other areas of the B-Tree index structure.
 
 ## Viewing Index Information
 

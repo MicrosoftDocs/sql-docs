@@ -1,53 +1,50 @@
 ---
-title: mssqlctl cluster storage-pool mount reference
+title: mssqlctl bdc storage-pool mount reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl cluster storage-pool mount commands.
+description: Reference article for mssqlctl bdc storage-pool mount commands.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl cluster storage-pool mount
+# mssqlctl bdc storage-pool mount
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **cluster storage-pool mount** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc storage-pool mount** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl cluster storage-pool mount create](#mssqlctl-cluster-storage-pool-mount-create) | Create mounts of remote stores in HDFS.
-[mssqlctl cluster storage-pool mount delete](#mssqlctl-cluster-storage-pool-mount-delete) | Delete mounts of remote stores in HDFS.
-[mssqlctl cluster storage-pool mount status](#mssqlctl-cluster-storage-pool-mount-status) | Status of mount(s).
-## mssqlctl cluster storage-pool mount create
-Create mounts of remote stores in HDFS.
+[mssqlctl bdc storage-pool mount create](#mssqlctl-bdc-storage-pool-mount-create) | Create mounts of remote stores in HDFS.
+[mssqlctl bdc storage-pool mount delete](#mssqlctl-bdc-storage-pool-mount-delete) | Delete mounts of remote stores in HDFS.
+[mssqlctl bdc storage-pool mount status](#mssqlctl-bdc-storage-pool-mount-status) | Status of mount(s).
+## mssqlctl bdc storage-pool mount create
+Create mounts of remote stores in HDFS. The credentials for accessing the remote store, if any, should be specified using the environment variable MOUNT_CREDENTIALS as a comma-separated list of key=value pairs. Any commas in the keys or values must be escaped.
 ```bash
-mssqlctl cluster storage-pool mount create --remote-uri 
-                                           --mount-path  
-                                           [--credential-file]
+mssqlctl bdc storage-pool mount create --remote-uri 
+                                       --mount-path
 ```
 ### Examples
 To mount container "data" in ADLS Gen 2 account "adlsv2example" on HDFS path /mounts/adlsv2/data using the shared key
 ```bash
-mssqlctl cluster storage-pool mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/
-    --mount-path /mounts/adlsv2/data --credentials credential_file
+Set the MOUNT_CREDENTIALS environment variable as "fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>".
+mssqlctl bdc storage-pool mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/
+    --mount-path /mounts/adlsv2/data
 ```
-To mount a remote HDFS cluster (hdfs://namenode1:8080/) on local HDFS path /mounts/hdfs/
+To mount a remote HDFS BDC (hdfs://namenode1:8080/) on local HDFS path /mounts/hdfs/
 ```bash
-mssqlctl cluster storage-pool mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
+mssqlctl bdc storage-pool mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
 ```
 ### Required Parameters
 #### `--remote-uri`
 URI of the remote store that is to be mounted (source of mount).
 #### `--mount-path`
 HDFS path where mount has to be created (destination of mount).
-### Optional Parameters
-#### `--credential-file`
-File that contains the credentials to access the remote store. The credentials have to be specified as key=value pairs with one key=value per line. Any equals in the keys or values have to be escaped. No credentials are required by default. The required keys depend on the type of remote store being mounted and the type of authorization used.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -59,16 +56,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl cluster storage-pool mount delete
+## mssqlctl bdc storage-pool mount delete
 Delete mounts of remote stores in HDFS.
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path 
-                                           
+mssqlctl bdc storage-pool mount delete --mount-path 
+                                       
 ```
 ### Examples
 Delete mount created at /mounts/adlsv2/data for a ADLS Gen 2 storage account.
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path /mounts/adlsv2/data
+mssqlctl bdc storage-pool mount delete --mount-path /mounts/adlsv2/data
 ```
 ### Required Parameters
 #### `--mount-path`
@@ -84,20 +81,20 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl cluster storage-pool mount status
+## mssqlctl bdc storage-pool mount status
 Status of mount(s).
 ```bash
-mssqlctl cluster storage-pool mount status [--mount-path] 
-                                           
+mssqlctl bdc storage-pool mount status [--mount-path] 
+                                       
 ```
 ### Examples
 Get mount status by path
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path /mounts/hdfs
+mssqlctl bdc storage-pool mount status --mount-path /mounts/hdfs
 ```
 Get status of all mounts.
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 ### Optional Parameters
 #### `--mount-path`

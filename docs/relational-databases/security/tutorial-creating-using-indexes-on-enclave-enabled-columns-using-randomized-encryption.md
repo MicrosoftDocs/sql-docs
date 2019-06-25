@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/25/2019"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto

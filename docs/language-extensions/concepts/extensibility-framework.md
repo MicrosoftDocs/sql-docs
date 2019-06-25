@@ -34,11 +34,11 @@ The architecture is designed such that external code run in a separate process f
 
   ![Component architecture on Windows](../media/generic-architecture-windows.png "Component architecture on Windows")
   
-  ***Component architecture on Windows***
+  ***Component architecture in Windows***
   
   ![Component architecture on Linux](../media/generic-architecture-linux.png "Component architecture on WindowsLinux")
   
-  ***Component architecture on Linux***
+  ***Component architecture in Linux***
   
 Components include a **Launchpad** service used to invoke language-specific launchers (for example, Java), language, and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. 
 

@@ -68,7 +68,7 @@ A common DNS suffix is necessary for a Domain Independent Availability Group's W
 ![Successful configuration of DNS suffix][4]
 
   > [!NOTE]
-  > If you have a static DNS that is being updated by a writeable DNS server, you will need to have a process in place to update the static DNS server before you perform a failover as otherwise the network name will not come online. 
+  > If you are using multiple subnets, and have a static DNS, you will need to have a process in place to update the DNS record associated with the listener before you perform a failover as otherwise the network name will not come online.
 
 ## Create a Domain Independent Availability Group
 

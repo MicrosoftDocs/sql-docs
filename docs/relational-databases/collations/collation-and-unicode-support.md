@@ -140,7 +140,7 @@ To use the UTF-16 collations available in [!INCLUDE[ssNoVersion](../../includes/
  
 To use the UTF-8 collations available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] to improve searching and sorting of some Unicode characters (Windows collations only), you must select UTF-8 encoding enabled collations(\_UTF8).
  
--   The \_UTF8 flag can be applied to:    
+-   The UTF8 flag can be applied to:    
     -   Version 90 collations 
         > [!NOTE]
         > Only when supplementary characters (\_SC) or variation-selector-sensitive (\_VSS) aware collations already exist in this version.
@@ -148,13 +148,13 @@ To use the UTF-8 collations available in [!INCLUDE[sql-server-2019](../../includ
     -   Version 140 collations   
     -   BIN2<sup>1</sup> binary collation
     
--   The \_UTF8 flag cannot be applied to:    
+-   The UTF8 flag cannot be applied to:    
     -   Version 90 collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS)    
     -   The BIN or BIN2<sup>2</sup> binary collations    
     -   The SQL\* collations  
     
-<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
-<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 introduces the collation *Latin1_General_100_BIN2_UTF8*.
+<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 replaced collation UTF8_BIN2 with Latin1_General_100_BIN2_UTF8.     
+<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. 
     
 To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It is a good practice to standardize the collation that is used on systems across your organization, and deploy Unicode servers and clients wherever possible.    
     

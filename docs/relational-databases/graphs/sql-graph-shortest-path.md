@@ -18,7 +18,7 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2019||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

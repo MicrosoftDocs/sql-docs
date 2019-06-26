@@ -4,7 +4,7 @@ description: Learn how to install SQL Server Language Extensions (Java) on Red H
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -179,6 +179,20 @@ sudo zypper install mssql-server-extensibility-java
 6. Restart the `mssql-launchpadd` service again.
 
 7. For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+## Register external language
+
+For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+The following example adds an external language called Java to a database on SQL Server on Linux.
+
+```SQL
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
+GO
+```
+
+For more information, see [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
 ## Verify installation
 

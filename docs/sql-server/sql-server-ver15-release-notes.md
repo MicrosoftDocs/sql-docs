@@ -19,9 +19,9 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 ## CTP 3.1
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 is available only as Evaluation Edition. No other editions are available.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2 is available only as Evaluation Edition. No other editions are available.
 
 Complete details about support and licensing for CTP releases are in `license_Eval.rtf` with your installation media.
 

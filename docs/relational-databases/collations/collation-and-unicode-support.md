@@ -264,7 +264,7 @@ The following table outlines the enconding storage bytes for each character rang
 
 <sup>1</sup> The storage bytes refer to the encoded byte lenght, not the respective data type on-disk storage size. For more information about on-disk storage sizes, see [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) and [char and varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
 
-<sup>2</sup> Code range for [supplementary characters](#Supplementary_Characters).
+<sup>2</sup> Code point range for [supplementary characters](#Supplementary_Characters).
 
 As seen above, choosing the appropriate Unicode enconding type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
 
@@ -273,6 +273,8 @@ Before choosing whether to use UTF-8 or UTF-16 encoding for a database or column
 -  Above the ASCII range, almost all Latin-based script, and also Greek, Cyrillic, Coptic, Armenian, Hebrew, Arabic, Syriac, Tāna and N’Ko will require 2-bytes per character in both UTF-8 and UTF-16. In these cases there aren't significant storage differences for comparable data types (for example between using **char** or **nchar**).
 -  If it is mostly East Asian script (such as Korean, Chinese and Japanese), then each character requires 3-bytes with UTF-8 and 2-bytes with UTF-16. Using UTF-16 provides storage benefits. 
 -  Characters in the 010000 to 10FFFF range require 4-bytes in both UTF-8 and UTF-16. In these cases there aren't storage differences for comparable data types (for example between using **char** or **nchar**).
+
+For other considerations, see [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
 ##  <a name="Related_Tasks"></a> Related Tasks    
     

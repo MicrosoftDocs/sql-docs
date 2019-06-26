@@ -110,7 +110,7 @@ n -  positive integer only.
 
 ## Arguments  
 *graph_search_pattern*  
-Specifies the pattern to search or path to traverse in the graph. This pattern uses ASCII art syntax to traverse a path in the graph. The pattern goes from one node to another via an edge, in the direction of the arrow provided. Edge names or aliases are provided inside parantheses. Node names or aliases appear at the two ends of the arrow. The arrow can go in either direction in the pattern.
+Specifies the pattern to search or path to traverse in the graph. This pattern uses ASCII art syntax to traverse a path in the graph. The pattern goes from one node to another via an edge, in the direction of the arrow provided. Edge names or aliases are provided inside parentheses. Node names or aliases appear at the two ends of the arrow. The arrow can go in either direction in the pattern.
 
 *node_alias*  
 Name or alias of a node table provided in the FROM clause.

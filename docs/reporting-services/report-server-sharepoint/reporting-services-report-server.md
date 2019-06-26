@@ -1,8 +1,8 @@
 ---
-title: "Reporting Services report server | Microsoft Docs"
-ms.date: 09/25/2017
+title: "Comparing native and SharePoint Reporting Services report servers | Microsoft Docs"
+ms.date: 06/10/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
 
 
@@ -11,7 +11,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 
-# Reporting Services report server
+# Comparing native and SharePoint Reporting Services report servers
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -49,7 +49,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 |**URL addressing**|Yes|URL addressing is different in SharePoint integrated mode. SharePoint URLs are used to reference reports, report models, shared data sources, and resources. The report server folder hierarchy is not used. If you have custom applications that rely on URL access as supported on a native mode report server, that functionality will no longer work when the report server is configured for SharePoint integration.<br /><br /> For more information on URL access, see [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md)|  
 |**Custom security extensions**|Yes|Reporting Services custom security extensions cannot be deployed or used on the report server. The report server includes a special-purpose security extension that is used whenever you configure a report server to run in SharePoint integrated mode. This security extension is an internal component, and it is required for integrated operations.|  
 |**Configuration Manager**|Yes|**\*\* Important \*\*** Configuration Manager cannot be used to manage a SharePoint mode report server. Instead, use SharePoint central administration.|  
-|**Report Manager**|Yes|Report Manager cannot be used to manage SharePoint mode. Use the SharePoint application pages. For more information, see [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
+|**Web portal**|Yes|You can't manage SharePoint mode in the web portal. Use the SharePoint application pages. For more information, see [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Linked Reports**|Yes|No.|  
 |**My Reports**|Yes|No|  
 |**My Subscriptions** and batching methods.|Yes|No|  
@@ -129,14 +129,12 @@ A Reporting Services report server runs in one of two deployment modes; Native m
   
 ## Related tasks
 
- The following topics provide additional information on installing, using, and maintaining a report server:  
+ The following articles provide additional information on installing, using, and maintaining a report server:  
   
 |Task|Link|  
 |----------|----------|  
 |Review Hardware and software requirements.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
 |Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|If you are a Web developer or have expertise in creating cascading style sheets, you can modify the default styles at your own risk to change the colors, fonts, and layout of the toolbar or Report Manager. Neither the default style sheets nor instructions for modifying the style sheets are documented in this release.|[Customize Style Sheets for HTML Viewer and Report Manager](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
-|Web developers who are familiar with HTML styles and Cascade Style Sheets (CSS) can use the information in this topic to determine which files can be modified to customize the appearance of Report Manager.|[Configure the Web Portal to Pass Custom Authentication Cookies](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |Explains how to tune the memory settings for the Report Server Web service and Windows service.|[Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explains recommended steps to configure are report server for remote administration.|[Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Provides instructions for configuring the availability of **My Reports** on a Native report server instance.|[Enable and Disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

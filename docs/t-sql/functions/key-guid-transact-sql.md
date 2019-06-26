@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "KEY_GUID function"
   - "GUIDs [SQL Server]"
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # KEY_GUID (Transact-SQL)

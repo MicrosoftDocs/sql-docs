@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AsBinaryZM geometry"
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # AsBinaryZM (geometry DataType)

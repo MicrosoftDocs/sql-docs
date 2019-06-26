@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Field Object
 Represents a column of data with a common data type.  

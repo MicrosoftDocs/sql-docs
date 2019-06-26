@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # DATEDIFF (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the number of date and time boundaries crossed between two specified dates. The *datepart* parameter identifies which date and time boundaries to compare.  
   
 ## Syntax  

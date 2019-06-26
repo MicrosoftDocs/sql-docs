@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can configure the Lookup transformation to use the partial cache or no cache mode:  
   
 -   Partial cache  

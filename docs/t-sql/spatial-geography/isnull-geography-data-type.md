@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IsNull method"
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # IsNull (geography Data Type)

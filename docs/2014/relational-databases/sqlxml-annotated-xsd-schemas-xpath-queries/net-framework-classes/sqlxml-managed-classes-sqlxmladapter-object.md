@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, SqlXmlAdapter object"
   - "Managed Classes [SQLXML], SqlXmlAdapter object"
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SqlXmlAdapter Object (SQLXML Managed Classes)

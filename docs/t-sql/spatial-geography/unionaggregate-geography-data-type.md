@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "UnionAggregate method (geography)"
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # UnionAggregate (geography Data Type)

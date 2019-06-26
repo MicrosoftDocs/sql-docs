@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -309,7 +309,7 @@ SQLRETURN SQLSetPos(
 ## Code Example  
  In the following example, an application allows a user to browse the ORDERS table and update order status. The cursor is keyset-driven with a rowset size of 20 and uses optimistic concurrency control comparing row versions. After each rowset is fetched, the application prints it and allows the user to select and update the status of an order. The application uses **SQLSetPos** to position the cursor on the selected row and performs a positioned update of the row. (Error handling is omitted for clarity.)  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

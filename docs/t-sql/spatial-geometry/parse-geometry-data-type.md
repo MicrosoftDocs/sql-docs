@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Parse (geometry Data Type)"
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Parse (geometry Data Type)

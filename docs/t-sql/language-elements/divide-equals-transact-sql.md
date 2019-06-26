@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "augmented operators, /="
   - "/= (divide equals)"
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

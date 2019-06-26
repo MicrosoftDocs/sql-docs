@@ -2,7 +2,7 @@
 title: "Power Pivot Connection Type (SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
@@ -28,7 +28,7 @@ ms.author: maggies
  The connection string is the URL to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook published on SharePoint in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery or other library, for example, `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## Credentials  
- Specify the credentials that you need to access the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook and SharePoint site, for example, Windows Authentication (Integrated Security). For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Specify the credentials that you need to access the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook and SharePoint site, for example, Windows Authentication (Integrated Security). For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credential and Connection Information for Report Data Sources](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## Queries  
  After you connect to the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source, use the MDX graphical query to build a query by browsing and selecting from the underlying data structures. After you build a query, run the query to see sample data in the results pane.  

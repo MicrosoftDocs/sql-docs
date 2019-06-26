@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "PWDENCRYPT function [Transact-SQL]"
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # PWDENCRYPT (Transact-SQL)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "IDs [SQL Server], certificates"
   - "certificates [SQL Server], IDs"
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CERT_ID (Transact-SQL)

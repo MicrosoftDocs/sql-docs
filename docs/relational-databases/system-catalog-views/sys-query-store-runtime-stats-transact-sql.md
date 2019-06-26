@@ -1,7 +1,7 @@
 ---
 title: "sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/23/2019"
+ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -35,8 +35,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sq
 |**runtime_stats_interval_id**|**bigint**|Foreign key. Joins to [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Determines type of query execution:<br /><br /> 0 - Regular execution (successfully finished)<br /><br /> 3 - Client initiated aborted execution<br /><br /> 4 -  Exception aborted execution|  
 |**execution_type_desc**|**nvarchar(128)**|Textual description of the execution type field:<br /><br /> 0 -  Regular<br /><br /> 3 -  Aborted<br /><br /> 4 -  Exception|  
-|**first_execution_time**|**datetimeoffset**|First execution time for the query plan within the aggregation interval.|  
-|**last_execution_time**|**datetimeoffset**|Last execution time for the query plan within the aggregation interval.|  
+|**first_execution_time**|**datetimeoffset**|First execution time for the query plan within the aggregation interval. This refers to the end time of the query execution.|  
+|**last_execution_time**|**datetimeoffset**|Last execution time for the query plan within the aggregation interval. This refers to the end time of the query execution.|  
 |**count_executions**|**bigint**|Total count of executions for the query plan within the aggregation interval.|  
 |**avg_duration**|**float**|Average duration for the query plan within the aggregation interval (reported in microseconds) .|  
 |**last_duration**|**bigint**|Last duration for the query plan within the aggregation interval (reported in microseconds).|  
@@ -87,7 +87,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sq
 |**last_log_bytes_used**|**bigint**|Number of bytes in the database log used by the last execution of the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**min_log_bytes_used**|**bigint**|Minimum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**max_log_bytes_used**|**bigint**|Maximum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**stdev_log_bytes_used**|**float**|Standard deviation of the number of bytes in the database log used by a query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**stdev_log_bytes_used**|**float**|Standard deviation of the number of bytes in the database log used by a query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|  
+|**avg_page_server_io_reads**|**float**|Average number of page server IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale</br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**last_page_server_io_reads**|**bigint**|Last number of page server IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale </br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**min_page_server_io_reads**|**bigint**|Minimum number of page server IO reads for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale </br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**max_page_server_io_reads**|**bigint**|Maximum number of page server IO reads for the query plan within the aggregation interval.(expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale </br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
+|**stdev_page_server_io_reads**|**float**|Number of page server IO reads standard deviation for the query plan within the aggregation interval. (expressed as a number of 8KB pages read).<br><br/>**Note:** Applies To: Azure SQL Database Hyperscale </br> Azure SQL Data Warehouse, Azure SQL DB, MI (non-hyperscale) will always return zero (0).|
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

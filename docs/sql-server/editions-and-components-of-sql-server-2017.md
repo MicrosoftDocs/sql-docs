@@ -38,6 +38,8 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 # Editions and supported features of SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [Please share your feedback about the SQL Docs hub page!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 This topic provides details of features supported by the various editions of SQL Server 2017. 
 
@@ -151,7 +153,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Always On availability groups<sup>3</sup>|Yes|No|No|No|No|
 |Basic availability groups <sup>4</sup>|No|Yes|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
-|Online indexing|Yes|No|No|No|No|
+|Online index create and rebuild|Yes|No|No|No|No|
 |Resumable online index rebuilds|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|
@@ -189,9 +191,9 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Resource Governor|Yes|No|No|No|No|  
 |Partitioned Table Parallelism|Yes|No|No|No|No|
 |Multiple Filestream containers|Yes|Yes|Yes|Yes|Yes|
-|NUMA Aware and Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
+|NUMA Aware Large Page Memory and Buffer Array Allocation|Yes|No|No|No|No|
 |Buffer Pool Extension|Yes|Yes|No|No|No|
-|IO Resource Governance|Yes|No|No|No|No|  
+|I/O Resource Governance|Yes|No|No|No|No|  
 |Read-Ahead|Yes|No|No|No|No|
 |Advanced Scanning|Yes|No|No|No|No|
 |Delayed Durability|Yes|Yes|Yes|Yes|Yes|

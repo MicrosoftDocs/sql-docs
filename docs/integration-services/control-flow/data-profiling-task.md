@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Data Profiling Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Data Profiling task computes various profiles that help you become familiar with a data source and identify problems in the data that have to be fixed.  
   
  You can use the Data Profiling task inside an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to profile data that is stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and to identify potential problems with data quality.  

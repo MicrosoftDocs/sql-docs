@@ -16,7 +16,7 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details. For more information related to SQL Server on Linux, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)
 
-[![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017:](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
 > In addition to the changes below, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [SQL Server 2017 Cumulative updates](https://aka.ms/sql2017cu).
@@ -82,7 +82,7 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 - Support for the **1400 Compatibility level** for tabular models. To create new or upgrade existing tabular model projects to the 1400 compatibility level, download and install [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
 - A modern **Get Data** experience for tabular models at the 1400 compatibility level. See the [Analysis Services Team Blog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
 - **Hide Members** property to hide blank members in ragged hierarchies. (CTP 1.1)
-- New **Detail Rows** end-user action to **Show Details** for aggregated information. [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) and **DETAILROWS** functions for creating Detail Rows expressions. (CTP 1.1)
+- New **Detail Rows** end-user action to **Show Details** for aggregated information. [SELECTCOLUMNS](/dax/selectcolumns-function-dax) and **DETAILROWS** functions for creating Detail Rows expressions. (CTP 1.1)
 - DAX **IN** operator for specifying multiple values. (CTP 1.1)
 
 For more information, see [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).

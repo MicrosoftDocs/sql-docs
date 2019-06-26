@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "rolling back transactions, ROLLBACK WORK"
   - "savepoints [SQL Server]"
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # ROLLBACK WORK (Transact-SQL)

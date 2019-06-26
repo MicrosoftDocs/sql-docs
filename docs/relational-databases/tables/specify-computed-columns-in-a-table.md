@@ -84,14 +84,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  Copy and paste the following example into the query window and then click **Execute**. The example creates a table with a computed column that multiplies the value in the `QtyAvailable` column times the value in the `UnitPrice` column.  
   
-    ```  
+    ```sql
     CREATE TABLE dbo.Products   
     (  
         ProductID int IDENTITY (1,1) NOT NULL  
       , QtyAvailable smallint  
       , UnitPrice money  
       , InventoryValue AS QtyAvailable * UnitPrice  
-    );  
+    );
   
     -- Insert values into the table.  
     INSERT INTO dbo.Products (QtyAvailable, UnitPrice)  
@@ -111,11 +111,17 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  Copy and paste the following example into the query window and then click **Execute**. The following example adds a new column to the table created in the previous example.  
   
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
     ```  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
+
+    Optionally, add the PERSISTED argument to physically store the computed values in the table:
   
-    ```  
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5) PERSISTED;
+    ```
   
+
 #### To change an existing column to a computed column  
   
 1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -124,13 +130,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  To change an existing column to a computed column you must drop and re-create the computed column. Copy and paste the following example into the query window and then click **Execute**. The following example modifies the column added in the previous example.  
   
-    ```  
+    ```sql
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
     GO  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);  
-  
-    ```  
-  
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
+    ```
+
      For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  

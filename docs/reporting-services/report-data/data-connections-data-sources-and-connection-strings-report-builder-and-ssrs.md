@@ -2,7 +2,7 @@
 title: "Data Connections, Data Sources, Connection Strings-Report Builder-SSRS | Microsoft Docs"
 ms.date: 08/21/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 

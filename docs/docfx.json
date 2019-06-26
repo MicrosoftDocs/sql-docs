@@ -99,6 +99,7 @@
       "feedback_system": {
         "advanced-analytics/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
+        "big-data-cluster/**/*.md": "GitHub",
         "database-engine/**/*.md": "GitHub",
         "linux/**/*.md": "GitHub",
         "powershell/**/*.md": "GitHub",
@@ -110,6 +111,10 @@
       },
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
+      },
+
+      "manager": {
+        "**/*.md": "jroth"
       },
 
       "titleSuffix": {
@@ -154,7 +159,7 @@
         "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "dmx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "integration-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "mdx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
@@ -180,12 +185,12 @@
     "groups": {
 
       "gr-sql-2014-b": {
-        "moniker_range": "= sql-server-2014",
+        "moniker_range": "sql-server-2014",
         "dest": "temp2014b"
       },
 
       "gr-sql-2016-a": {
-        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions",
         "dest": "temp2016a"
       }
     },

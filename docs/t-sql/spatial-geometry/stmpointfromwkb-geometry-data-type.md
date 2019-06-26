@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPointFromWKB (geometry Data Type)"
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STMPointFromWKB (geometry Data Type)

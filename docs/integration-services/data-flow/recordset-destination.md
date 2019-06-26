@@ -20,6 +20,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Recordset Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Recordset destination creates and populates an in-memory ADO recordset. The shape of the recordset is defined by the input to the Recordset destination at design time.  
   
 ## Configuration of the Recordset Destination  

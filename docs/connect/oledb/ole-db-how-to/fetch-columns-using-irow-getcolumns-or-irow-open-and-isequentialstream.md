@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "GetColumns method"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

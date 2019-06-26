@@ -64,7 +64,7 @@ Using Notepad, create an empty file `D:\BCP\myFirstImport.bcp` and insert the fo
 
 Alternatively, you can execute the following PowerShell script to create and populate the data file:
 ```powershell
-cls
+Clear-Host
 # revise directory as desired
 $dir = 'D:\BCP\';
 
@@ -87,7 +87,7 @@ Add-Content -Path $bcpFile -Value '3,Stella,Rosenhain,1992-03-02';
 
 #Review content
 Get-Content -Path $bcpFile;
-Invoke-Item $bcpFile;
+Notepad.exe $bcpfile;
 ```
 
 ## Creating the Format Files<a name="create_format_file"></a>

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryType method"
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STGeometryType (geography Data Type)

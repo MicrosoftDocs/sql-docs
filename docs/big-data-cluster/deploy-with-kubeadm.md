@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for SQL Server 2019 big data cluster (preview) deployments.
 author: rothja 
 ms.author: jroth 
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -75,7 +75,7 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 
 ## Configure the Kubernetes master
 
-After running the previous commands on each machine, choose one of the machines to be your Kubernetes master. Then fun the following commands on that machine.
+After running the previous commands on each machine, choose one of the machines to be your Kubernetes master. Then run the following commands on that machine.
 
 1. First, create an rbac.yaml file in your current directory with the following command. 
 

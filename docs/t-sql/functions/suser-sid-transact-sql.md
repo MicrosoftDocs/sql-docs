@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], logins"
   - "SUSER_SID function"
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SUSER_SID (Transact-SQL)

@@ -12,7 +12,7 @@ helpviewer_keywords:
   - "models [Master Data Services], creating a deployment package"
   - "creating packages [Master Data Services]"
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

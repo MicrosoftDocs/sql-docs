@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "geometry subtypes [SQL Server]"
   - "Polygon geometry subtype [SQL Server]"
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 ---
 # Polygon

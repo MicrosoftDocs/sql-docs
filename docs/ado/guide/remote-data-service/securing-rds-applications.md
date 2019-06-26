@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Securing RDS Applications
 This topic provides security information for RDS.  

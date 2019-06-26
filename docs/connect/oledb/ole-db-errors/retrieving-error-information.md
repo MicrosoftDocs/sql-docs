@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "OLE DB error handling, examples"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # Retrieving Error Information
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

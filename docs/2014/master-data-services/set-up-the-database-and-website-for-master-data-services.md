@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: "master-data-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.mds.configmanager.general.f1"
 ms.assetid: d50863e7-50d9-4ab8-aabb-fd68e2d132a1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

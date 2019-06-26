@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Field (Visual C++ Syntax Index with #import)
 ## Methods  

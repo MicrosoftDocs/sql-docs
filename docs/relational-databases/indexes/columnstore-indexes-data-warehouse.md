@@ -65,7 +65,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
   
  The result is a columnstore index with a nonclustered index that enforces a primary key constraint on both indexes.  
   
-```sql 
+```sql
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  

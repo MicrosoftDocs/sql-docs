@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "session IDs [SQL Server]"
   - "process ID of current user process"
 ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

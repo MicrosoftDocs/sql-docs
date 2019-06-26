@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "CURSOR_STATUS function"
   - "cursors [SQL Server], status information"
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # CURSOR_STATUS (Transact-SQL)

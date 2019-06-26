@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "OGC Static Geometry Methods [SQL Server]"
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # OGC Static Geometry Methods

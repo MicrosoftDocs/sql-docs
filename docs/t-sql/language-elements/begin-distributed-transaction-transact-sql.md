@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "remote servers [SQL Server], distributed transactions"
   - "starting transactions"
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)

@@ -23,6 +23,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Using Variables in the Script Task
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Variables make it possible for the Script task to exchange data with other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md).  
   
  The Script task uses the <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> property of the **Dts** object to read from and write to <xref:Microsoft.SqlServer.Dts.Runtime.Variable> objects in the package.  

@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AsGml method"
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 #  AsGml - geography Data Type

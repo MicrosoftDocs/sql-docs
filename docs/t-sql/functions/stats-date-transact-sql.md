@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "last time statistics updated"
   - "stats update date"
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

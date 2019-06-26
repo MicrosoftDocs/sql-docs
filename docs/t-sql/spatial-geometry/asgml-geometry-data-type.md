@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AsGml (geometry Data Type)"
 ms.assetid: f6c2e130-05f3-4ef3-921b-d78b51437d48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # AsGml (geometry Data Type)

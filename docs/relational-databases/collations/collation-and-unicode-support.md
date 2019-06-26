@@ -268,7 +268,7 @@ The following table outlines the enconding storage bytes for each character rang
 
 As seen above, choosing the appropriate Unicode enconding type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
 
-Before choosing whether to use UTF-8 or UTF-16 encoding for a database or table, consider the distribution of string data that will be stored:
+Before choosing whether to use UTF-8 or UTF-16 encoding for a database or column, consider the distribution of string data that will be stored:
 -  If it is mostly in the ASCII range (such as English), then each character requires 1-byte with UTF-8 and 2-bytes with UTF-16. Using UTF-8 provides storage benefits. 
 -  Above the ASCII range, almost all Latin-based script, and also Greek, Cyrillic, Coptic, Armenian, Hebrew, Arabic, Syriac, Tāna and N’Ko will require 2-bytes per character in both UTF-8 and UTF-16. In these cases there aren't significant storage differences for comparable data types (for example between using **char** or **nchar**).
 -  If it is mostly East Asian script (such as Korean, Chinese and Japanese), then each character requires 3-bytes with UTF-8 and 2-bytes with UTF-16. Using UTF-16 provides storage benefits. 

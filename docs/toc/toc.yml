@@ -179,8 +179,8 @@
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Use extended Spark History Server
         href: ../big-data-cluster/spark-history-server.md
-- name: Reference
-  items:
+  - name: Reference
+    items:
     - name: Deployment reference
       items:
       - name: Deployment configuration file
@@ -220,9 +220,9 @@
       - name: Storage
         items:
         - name: bdc storage
-          href: ../big-data-cluster/reference-mssqlctl-storage.md
+          href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
         - name: bdc storage mount
-          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+          href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
         - name: hdfs
           href: ../big-data-cluster/reference-mssqlctl-hdfs.md
       - name: SQL

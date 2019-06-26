@@ -30,7 +30,7 @@ Community technology preview (CTP) 3.1 is the latest public release of [!INCLUDE
 
 For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
 
-In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0.
+In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1.
 
 ### Big data clusters
 
@@ -51,6 +51,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
 |New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
 |Partition tables and indexes for graph databases|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
+|New option for indexes - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more information.|
 | &nbsp; | &nbsp; |
 
 

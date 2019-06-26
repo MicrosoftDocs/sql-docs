@@ -27,12 +27,12 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 ## Access keys
 
-1. Open a command-prompt on a client machine that can access your big data cluster.
+### Set environment variable for access key credentials
 
-1. Create a local file named **filename.creds** that contains your S3 account credentials using the following format:
+Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
 
    ```text
-    fs.s3a.access.key=<Access Key ID of the key>
+    set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
     fs.s3a.secret.key=<Secret Access Key of the key>
    ```
 
@@ -54,11 +54,13 @@ Now that you have prepared a credential file with access keys, you can start mou
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+   
+1. Set environment variable MOUNT_CREDENTIALS following the instructions above
 
 1. Mount the remote HDFS storage in Azure using **mssqlctl bdc storage-pool mount create**. Replace the placeholder values before running the following command:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

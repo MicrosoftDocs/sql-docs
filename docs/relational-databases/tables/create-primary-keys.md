@@ -108,7 +108,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     (  
        CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
        TransactionID int IDENTITY (1,1) NOT NULL,  
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)  
+       CONSTRAINT PK_TransactionHistoryArchive1_CustomerID PRIMARY KEY NONCLUSTERED (CustomerID)  
     );  
     GO  
 

@@ -66,7 +66,7 @@ Complete details about support and licensing for CTP releases are in `license_Ev
 
 - **Workaround**: N/A
 
-- **Applies to**: SQL Server 2019 CTP 3.1, 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **Applies to**: SQL Server 2019 CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
 ## Installation Wizard may wait between EULA pages
 
@@ -89,7 +89,7 @@ Complete details about support and licensing for CTP releases are in `license_Ev
  
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ## Always Encrypted with secure enclaves
 
@@ -98,6 +98,21 @@ Complete details about support and licensing for CTP releases are in `license_Ev
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1
+
+## SQL Server Configuration Manager may not start
+
+- **Issue and customer impact**: SQL Server Configuration Manager (SSCM) does not start on a machine without VCRuntime 140. When starting SSCM, the user may see the following dialog: 
+
+  `
+  MMC could not create the snap-in. The snap-in might not have been installed correctly.
+  `
+
+- **Workaround**:  Install the latest VC Runtime 2013 (x86):
+
+  - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+  - [Direct](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

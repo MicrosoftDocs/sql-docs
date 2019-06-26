@@ -22,9 +22,9 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## CTP 3.1 June 2019
+## CTP 3.2 July 2019
 
-Community technology preview (CTP) 3.1 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
+Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 

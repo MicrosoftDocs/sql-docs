@@ -42,7 +42,7 @@ MATCH (<graph_search_pattern>)
 
 <simple_match_pattern>::=
   {
-      LAST(<node_alias>) | <node_alias>   { 
+      LAST_NODE(<node_alias>) | <node_alias>   { 
           { <-( <edge_alias> )- } 
         | { -( <edge_alias> )-> }
         <node_alias> | LAST(<node_alias>)
@@ -68,17 +68,17 @@ MATCH (<graph_search_pattern>)
   } 
 
 <arbitrary_length_match_last_node_predicate> ::=
-  {  LAST( <node_alias> ) = LAST ( <node_alias> ) }
+  {  LAST_NODE( <node_alias> ) = LAST_NODE( <node_alias> ) }
 
 
 <arbitrary_length_pattern> ::=
-	{  LAST( <node_alias> )   | <node_alias>
+	{  LAST_NODE( <node_alias> )   | <node_alias>
      ( <edge_first_al_pattern> [<edge_first_al_pattern>…,n] )
      <al_pattern_quantifier> 
   }
  	|  ( {<node_first_al_pattern> [<node_first_al_pattern> …,n] )
   	  	<al_pattern_quantifier> 
-        LAST( <node_alias> ) | <node_alias> 
+        LAST_NODE( <node_alias> ) | <node_alias> 
  }
 	
 <edge_first_al_pattern> ::=

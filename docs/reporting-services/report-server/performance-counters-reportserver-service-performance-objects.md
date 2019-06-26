@@ -1,6 +1,6 @@
 ---
 title: "Performance Counters - ReportServer Service, Performance Objects | Microsoft Docs"
-ms.date: 03/07/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
-monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 
 ---
 # Performance Counters - ReportServer Service,  Performance Objects

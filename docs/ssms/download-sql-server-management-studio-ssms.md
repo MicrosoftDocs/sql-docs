@@ -64,7 +64,6 @@ This release of SSMS can be installed in the following languages:
 SQL Server Management Studio 18.1:<br>
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 
@@ -75,7 +74,6 @@ SQL Server Management Studio 18.1:<br>
 - **Integration Services (SSIS)** - Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.
 
 For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
-
 
 ## Supported SQL offerings (SSMS 18.1)
 
@@ -102,7 +100,7 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 
 ## Release Notes (SSMS 18.1)
 
-There are no known issues with this release.
+There are a few [known issues](release-notes-ssms.md#known-issues-181) with this release.
 
 For details about this release, see [the SSMS release notes](release-notes-ssms.md).
 

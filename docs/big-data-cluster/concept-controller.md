@@ -6,7 +6,7 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -39,17 +39,13 @@ The buildout workflow will layout on top of Kubernetes a fully functional SQL Se
 
 ## Managing the cluster through the controller service
 
-You can manage the cluster purely through the controller service using either `mssqlctl` APIs or the cluster administration portal that is hosted within the cluster. If you deploy additional Kubernetes objects like pods into the same namespace, they are not managed or monitored by the controller service.
+You can manage the cluster through the controller service using either **mssqlctl** commands. If you deploy additional Kubernetes objects like pods into the same namespace, they are not managed or monitored by the controller service. You can also use **kubectl** commands to manage the cluster at the Kubernetes level. For more information, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
-The controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) created for a big data cluster reside in a dedicated Kubernetes namespace. The controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy for this scenario is configured automatically as part of initial cluster deployment using `mssqlctl`. 
+The controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) created for a big data cluster reside in a dedicated Kubernetes namespace. The controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy for this scenario is configured automatically as part of initial cluster deployment using **mssqlctl**.
 
 ### mssqlctl
 
-`mssqlctl` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage big data clusters via the REST APIs exposed by the controller service.
-
-### Cluster Administration Portal
-
-Once the controller service is up and running, cluster administrator can use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment progress, detect, and troubleshoot issues with services within the cluster.
+**mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage big data clusters via the REST APIs exposed by the controller service.
 
 ## Controller service security
 

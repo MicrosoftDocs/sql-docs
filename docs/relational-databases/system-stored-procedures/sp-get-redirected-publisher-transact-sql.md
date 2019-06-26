@@ -34,7 +34,7 @@ sp_get_redirected_publisher
   
 ## Arguments  
 `[ @original_publisher = ] 'original_publisher'`
- The name of the database being published. *publisher_db* is **sysname**, with no default.  
+ The name of the instance of SQL Server that originally published the database. *original_publisher* is **sysname**, with no default.
   
 `[ @publisher_db = ] 'publisher_db'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  

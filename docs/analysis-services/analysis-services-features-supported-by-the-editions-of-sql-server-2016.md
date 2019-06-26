@@ -1,6 +1,6 @@
 ---
-title: "Analysis Services Features Supported by the Editions of SQL Server 2016 | Microsoft Docs"
-ms.date: 05/08/2018
+title: "Analysis Services Features Supported by the Editions of SQL Server | Microsoft Docs"
+ms.date: 06/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ---
-# Analysis Services features supported by SQL Server editions
+# Analysis Services features supported by SQL Server edition
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
-This topic provides details of features supported by the different editions of SQL Server 2016 Analysis Services. For features supported by Evaluation and Developer editions, see Enterprise edition.
+This article describes features supported by different editions of SQL Server 2016, 2017, 2019 Analysis Services. Evaluation edition supports Enterprise edition features.
 
 ## Analysis Services (servers)
   
@@ -36,8 +36,9 @@ This topic provides details of features supported by the different editions of S
 |DAX calculations, DAX queries, MDX queries|Yes|Yes|||||Yes|  
 |Row-level security|Yes|Yes|||||Yes|  
 |Multiple partitions|Yes||||||Yes|  
+|Calculation groups|Yes (beginning with SQL Server 2019)|Yes (beginning with SQL Server 2019)|||||Yes (beginning with SQL Server 2019)|  
 |In-memory storage mode|Yes|Yes|||||Yes|  
-|DirectQuery storage mode|Yes||||||Yes|  
+|DirectQuery mode|Yes|Yes (beginning with SQL Server 2019)|||||Yes|  
 
 ## Multidimensional models 
   
@@ -71,7 +72,6 @@ This topic provides details of features supported by the different editions of S
 |MOLAP, ROLAP, and HOLAP storage models|Yes|Yes|||||Yes|  
 |Binary and compressed XML transport|Yes|Yes|||||Yes|  
 |Push-mode processing|Yes||||||Yes|  
-|Direct writeback|Yes||||||Yes|  
 |Measure expressions|Yes||||||Yes|  
   
  <sup>1</sup> The LastChild semi-additive measure is supported in Standard edition, but other semi-additive measures, such as None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren, and ByAccount, are not. Additive measures, such as Sum, Count, Min, Max, and non-additive measures (DistinctCount) are supported on all editions.  
@@ -107,8 +107,5 @@ This topic provides details of features supported by the different editions of S
 |Sequence prediction|Yes||||||Yes|  
 |Multiple prediction targets for naïve Bayes, neural network and logistic regression|Yes||||||Yes|  
   
- ## See also  
- [Product Specifications for SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installation for SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

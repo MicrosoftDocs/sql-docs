@@ -1371,6 +1371,8 @@
       href: ../relational-databases/graphs/sql-graph-architecture.md
     - name: Sample
       href: ../relational-databases/graphs/sql-graph-sample.md
+    - name: SHORTEST_PATH
+      href: ../relational-databases/graphs/sql-graph-shortest-path.md
   - name: Sequence numbers
     href: ../relational-databases/sequence-numbers/sequence-numbers.md
     items:

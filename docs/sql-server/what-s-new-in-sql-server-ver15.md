@@ -30,7 +30,7 @@ Community technology preview (CTP) 3.1 is the latest public release of [!INCLUDE
 
 For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
 
-In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0.
+In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1.
 
 ### Big data clusters
 

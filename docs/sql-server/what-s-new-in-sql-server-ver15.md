@@ -58,7 +58,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:-----|:-----|
-| Tempdb improvements | By default, a new installation of SQL Server on Linux creates multiple tempdb data files based on the number of cores. This does not apply to upgrades. There is a maximum of 8 files, and each file is 8 MB with an associated 64 MB log file. This behavior matches the default Windows behavior. |
+| Tempdb improvements | By default, a new installation of SQL Server on Linux creates multiple tempdb data files based on the number of cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each data file is 8 MB with an associated 64 MB log file. This behavior matches the default SQL Server installation on Windows. |
 | &nbsp; | &nbsp; |
 
 ## CTP 3.0 May 2019

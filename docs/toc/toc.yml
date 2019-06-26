@@ -159,8 +159,6 @@
       items:
       - name: Connect to a big data cluster
         href: ../big-data-cluster/connect-to-big-data-cluster.md
-      - name: Cluster administration portal
-        href: ../big-data-cluster/cluster-admin-portal.md
       - name: Kubernetes troubleshooting
         href: ../big-data-cluster/cluster-troubleshooting-commands.md
     - name: Notebooks

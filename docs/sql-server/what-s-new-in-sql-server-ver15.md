@@ -54,6 +54,12 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |New option for indexes - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more information.|
 | &nbsp; | &nbsp; |
 
+### SQL Server on Linux
+
+| New feature or update | Details |
+|:-----|:-----|
+| . | By default when you install (not upgrade) SQL on Linux, there will be multiple (number of cores, up to max of 8) tempdb data files created with size of 8 MB each and log file of 64 MB. This is similar to behavior on SQL on Windows if they values are not modified during setup.  |
+| &nbsp; | &nbsp; |
 
 ## CTP 3.0 May 2019
 

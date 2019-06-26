@@ -1,6 +1,61 @@
 {
     "redirections": [
         {
+           "source_path": "docs/big-data-cluster/train-and-create-machinelearning-models-with-spark.md",
+           "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/export-model-with-spark-mleap.md",
+           "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-config-section.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-config-section",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-config.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-config",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-debug.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-debug",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-endpoint.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-endpoint",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-status.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-status",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-storage-pool.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-storage-pool",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/cluster-admin-portal.md",
+           "redirect_url": "/sql/big-data-cluster/cluster-troubleshooting-commands",
+           "redirect_document_id": false
+        },    
+        {
            "source_path": "docs/big-data-cluster/spark-gpu-tensorflow.md",
            "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
            "redirect_document_id": false

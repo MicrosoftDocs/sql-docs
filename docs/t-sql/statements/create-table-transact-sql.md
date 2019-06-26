@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2019"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -247,8 +247,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | IGNORE_DUP_KEY = { ON | OFF }
   | STATISTICS_NORECOMPUTE = { ON | OFF }
   | STATISTICS_INCREMENTAL = { ON | OFF }
-  | ALLOW_ROW_LOCKS = { ON | OFF}
-  | ALLOW_PAGE_LOCKS ={ ON | OFF}
+  | ALLOW_ROW_LOCKS = { ON | OFF }
+  | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
   | COMPRESSION_DELAY= {0 | delay [Minutes]}
   | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
        [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -800,6 +801,9 @@ When ON, row locks are allowed when you access the index. The [!INCLUDE[ssDE](..
 
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }       
 When ON, page locks are allowed when you access the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when page locks are used. When OFF, page locks are not used. The default is ON.
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later. <BR>
+Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](./create-index-transact-sql.md#sequential-keys) section of the CREATE INDEX page for more information.
 
 FILETABLE_DIRECTORY = *directory_name*      
 

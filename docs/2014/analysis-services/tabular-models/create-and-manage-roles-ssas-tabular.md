@@ -61,7 +61,7 @@ manager: kfile
  [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)   
  [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
  [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME Function &#40;DAX&#41;](/dax/username-function-dax)   
+ [CUSTOMDATA Function &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

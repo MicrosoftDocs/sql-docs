@@ -11,6 +11,8 @@ ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 ---
 # Monitoring Memory-Optimized System-Versioned Temporal Tables
 

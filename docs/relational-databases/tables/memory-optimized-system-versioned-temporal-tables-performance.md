@@ -11,6 +11,8 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 ---
 # Memory-Optimized System-Versioned Temporal Tables Performance
 

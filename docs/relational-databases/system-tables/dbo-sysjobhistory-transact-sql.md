@@ -1,7 +1,7 @@
 ---
 title: "dbo.sysjobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/03/2016"
+ms.date: "06/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -26,7 +26,7 @@ manager: craigg
 
   Contains information about the execution of scheduled jobs by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. This table is stored in the **msdb** database.  
   
-> **NOTE:** Data is updated only after the jobstep completes.  
+> **NOTE:** Data is updated only after the job step completes. The table contains no records for job steps that are currently in progress.
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -37,7 +37,7 @@ manager: craigg
 |**sql_message_id**|**int**|ID of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message returned if the job failed.|  
 |**sql_severity**|**int**|Severity of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
 |**message**|**nvarchar(4000)**|Text, if any, of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
-|**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled<br /><br /> **4** = In Progress|  
+|**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled|  
 |**run_date**|**int**|Date the job or step started execution. For an In Progress history, this is the date/time the history was written.|  
 |**run_time**|**int**|Time the job or step started.|  
 |**run_duration**|**int**|Elapsed time in the execution of the job or step in **HHMMSS** format.|  

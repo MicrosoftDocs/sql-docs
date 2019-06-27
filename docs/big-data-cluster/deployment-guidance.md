@@ -233,25 +233,25 @@ After the deployment script has completed successfully, you can obtain the IP ad
 1. Run [mssqlctl bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash
-   mssqlctl bdc endpoint list
+   mssqlctl bdc endpoint list -o table
    ```
 
    The following list shows sample output from this command:
 
    ```output
-   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
-   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
-   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
-   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
-   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
-   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
-   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
-   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
-   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
-   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
-   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
-   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   Description                                             Endpoint                                                   Ip              Name               Port    Protocol
+   ------------------------------------------------------  ---------------------------------------------------------  --------------  -----------------  ------  ----------
+   Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  gateway            30443   https
+   Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  spark-history      30443   https
+   Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  yarn-ui            30443   https
+   Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  app-proxy          30778   https
+   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  mgmtproxy          30777   https
+   Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  logsui             30777   https
+   Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  metricsui          30777   https
+   Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  controller         30080   https
+   SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  sql-server-master  31433   tcp
+   HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  webhdfs            30443   https
+   Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
 ### Minikube

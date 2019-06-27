@@ -254,18 +254,18 @@ After the deployment script has completed successfully, you can obtain the IP ad
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
+You can also get all the service endpoints deployed for the cluster by running the following **kubectl** command:
+
+```bash
+kubectl get svc -n <your-big-data-cluster-name>
+```
+
 ### Minikube
 
 If you are using minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to.
 
 ```bash
 minikube ip
-```
-
-Irrespective of the platform you are running your Kubernetes cluster on, to get all the service endpoints deployed for the cluster, run following command:
-
-```bash
-kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="status"></a> Verify the cluster status
@@ -297,7 +297,9 @@ In addition to this summary status, you can also get more detailed status with t
 - [mssqlctl bdc control status](reference-mssqlctl-bdc-control-status.md)
 - [mssqlctl bdc pool status](reference-mssqlctl-bdc-pool-status.md)
 
-The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
+The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis. 
+
+In addition to using **mssqlctl**, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with **mssqlctl** and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
 
 ## <a id="connect"></a> Connect to the cluster
 

@@ -31,8 +31,7 @@ To run the sample, you must also have the following prerequisites:
 - [Big data tools](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
-
-- [Azure Data Studio](../azure-data-studio/download.md)
+   - **Azure Data Studio**
 
 ## Model training with Spark ML
 

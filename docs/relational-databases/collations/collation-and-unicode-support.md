@@ -243,7 +243,6 @@ These collations are supported in [!INCLUDE[ssde_md](../../includes/ssde_md.md)]
 <a name="ctp23"></a>
 
 ## <a name="utf8"></a> UTF-8 support
-
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces full support for the widely used UTF-8 character encoding as an import or export encoding, and as database-level or column-level collation for string data. UTF-8 is allowed in the **char** and **varchar** data types, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
 
 UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **nchar** and **nvarchar** allow UCS-2 or UTF-16 encoding only, and remain unchanged.
@@ -266,7 +265,7 @@ The following table outlines the encoding storage bytes for each character range
 
 <sup>2</sup> Code point range for [supplementary characters](#Supplementary_Characters).
 
-As seen above, choosing the appropriate Unicode ght type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
+As seen above, choosing the appropriate Unicode encoding and data type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
 
 Before choosing whether to use UTF-8 or UTF-16 encoding for a database or column, consider the distribution of string data that will be stored:
 -  If it is mostly in the ASCII range (such as English), then each character requires 1-byte with UTF-8 and 2-bytes with UTF-16. Using UTF-8 provides storage benefits. 

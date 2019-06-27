@@ -254,12 +254,12 @@ The Unicode Consortium allocates each character a unique codepoint, which is a v
 
 The following table outlines the encoding storage bytes for each character range and encoding type:
 
-|Code Range (hexadecimal)|Storage bytes <sup>1</sup> with UTF-8|Storage bytes <sup>1</sup> with UTF-16|    
-|---------------------------------|--------------------------|-----------------------------|   
-|000000 – 00007F|1|2|
-|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|2|2|
-|000800 – 003FFF<br />004000 – 00FFFF|3|2|
-|010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|4|4|
+|Code Range (hexadecimal)|Code Range (decimal)|Storage bytes <sup>1</sup> with UTF-8|Storage bytes <sup>1</sup> with UTF-16|    
+|---------------------------------|---------------------------------|--------------------------|-----------------------------|   
+|000000 – 00007F|0 - 127|1|2|
+|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|128 – 159<br />160 – 1,023<br />1,024 – 2,047|2|2|
+|000800 – 003FFF<br />004000 – 00FFFF|2,048 - 16,383<br />16,384 – 65,535|3|2|
+|010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|65,536 – 262,143 <sup>2</sup><br /><br />262,144 – 1,114,111 <sup>2</sup>|4|4|
 
 <sup>1</sup> The storage bytes refer to the encoded byte length, not the respective data type on-disk storage size. For more information about on-disk storage sizes, see [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) and [char and varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
 

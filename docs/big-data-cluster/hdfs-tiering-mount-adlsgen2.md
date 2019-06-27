@@ -6,7 +6,7 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -77,7 +77,7 @@ Note that the credentials need to be in a comma separated list. The 'set' comman
 You can also mount using access keys which you can get for your ADLS account on the Azure portal.
 
  > [!TIP]
-   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View and copy access keys](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
+   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View account keys and connection string](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
 
 ### Set environment variable for access key credentials
 

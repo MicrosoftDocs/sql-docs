@@ -44,7 +44,7 @@ The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be 
 
 - A [SQL Server big data cluster](deploy-get-started.md).
 
-- [Azure Data Studio](../azure-data-studio/download.md).
+- [Azure Data Studio](https://aka.ms/azdata-insiders).
 
 ## Create the target database
 

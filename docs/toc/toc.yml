@@ -159,8 +159,8 @@
       items:
       - name: Connect to a big data cluster
         href: ../big-data-cluster/connect-to-big-data-cluster.md
-      - name: Cluster administration portal
-        href: ../big-data-cluster/cluster-admin-portal.md
+      - name: View cluster status
+        href: ../big-data-cluster/view-cluster-status.md
       - name: Kubernetes troubleshooting
         href: ../big-data-cluster/cluster-troubleshooting-commands.md
     - name: Notebooks
@@ -1417,6 +1417,8 @@
       href: ../relational-databases/graphs/sql-graph-architecture.md
     - name: Sample
       href: ../relational-databases/graphs/sql-graph-sample.md
+    - name: SHORTEST_PATH
+      href: ../relational-databases/graphs/sql-graph-shortest-path.md
   - name: Sequence numbers
     href: ../relational-databases/sequence-numbers/sequence-numbers.md
     items:
@@ -1613,6 +1615,8 @@
           href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
         - name: Query data
           href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+        - name: Security
+          href: ../relational-databases/tables/temporal-table-security.md  
         - name: Change the schema
           href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
         - name: Stop system-versioning

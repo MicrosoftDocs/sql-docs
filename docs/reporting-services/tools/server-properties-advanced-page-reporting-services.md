@@ -101,7 +101,7 @@ Specifies the number of seconds the results of the preflight request can be cach
 Set of extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”.
 
 **RestrictedResourceMimeTypeForUpload**
-Set of mime types users are not allowed to upload content with. Any resources that are already stored with a restricted mime type will only be allowed to be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but it is recommended organizations populate this to provide the most secure experience.
+Set of mime types users aren't allowed to upload content with. Any resources that are already stored with a restricted mime type can only be downloaded as an application/octet-stream instead of being opened/executed by the browser.  By default, there are no restricted items in this list, but we recommended that organizations populate this to provide the most secure experience.
 
 **EditSessionCacheLimit**  
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  

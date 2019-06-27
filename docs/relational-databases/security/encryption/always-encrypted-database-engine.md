@@ -175,11 +175,11 @@ The following clauses cannot be used for encrypted columns:
 The following features do not work on encrypted columns:
 
 - Transactional or merge replication
-- Distributed queries (linked servers)
+- Distributed queries (linked servers, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
 
 Tool Requirements
 
-- SQL Server Management Studio can decrypt the results retrieved from encrypted columns if you connect with the *column encryption setting=enabled* in the **Additional Properties** tab of the **Connect to Server** dialog. Requires at least SQL Server Management Studio version 17 to insert, update, or filter encrypted columns.
+- SQL Server Management Studio can decrypt the results retrieved from encrypted columns if you connect with the *column encryption setting=enabled* in the **Additional Properties** tab of the **Connect to Server** dialog. Requires at least SQL Server Management Studio version 17 to insert, update, or filter encrypted columns. For connection strings to be used in client applicaitons, see [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 
 - Encrypted connections from `sqlcmd` require at least version 13.1, which is available from the [Download Center](https://go.microsoft.com/fwlink/?LinkID=825643).
 

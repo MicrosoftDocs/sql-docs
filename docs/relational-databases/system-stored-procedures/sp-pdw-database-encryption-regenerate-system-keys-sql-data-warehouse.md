@@ -4,6 +4,7 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
@@ -15,6 +16,7 @@ manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Use **sp_pdw_database_encryption_regenerate_system_keys** to rotate the certificate and database encryption key for internal databases that are encrypted when TDE is enabled on the appliance. This includes `tempdb`. This will succeed only if TDE is enabled.  

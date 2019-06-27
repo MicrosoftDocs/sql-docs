@@ -243,7 +243,6 @@ These collations are supported in [!INCLUDE[ssde_md](../../includes/ssde_md.md)]
 <a name="ctp23"></a>
 
 ## <a name="utf8"></a> UTF-8 support
-
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces full support for the widely used UTF-8 character encoding as an import or export encoding, and as database-level or column-level collation for string data. UTF-8 is allowed in the **char** and **varchar** data types, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
 
 UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **nchar** and **nvarchar** allow UCS-2 or UTF-16 encoding only, and remain unchanged.
@@ -255,18 +254,18 @@ The Unicode Consortium allocates each character a unique codepoint, which is a v
 
 The following table outlines the encoding storage bytes for each character range and encoding type:
 
-|Code Range (hexadecimal)|Storage bytes <sup>1</sup> with UTF-8|Storage bytes <sup>1</sup> with UTF-16|    
-|---------------------------------|--------------------------|-----------------------------|   
-|000000 – 00007F|1|2|
-|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|2|2|
-|000800 – 003FFF<br />004000 – 00FFFF|3|2|
-|010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|4|4|
+|Code Range (hexadecimal)|Code Range (decimal)|Storage bytes <sup>1</sup> with UTF-8|Storage bytes <sup>1</sup> with UTF-16|    
+|---------------------------------|---------------------------------|--------------------------|-----------------------------|   
+|000000 – 00007F|0 - 127|1|2|
+|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|128 – 159<br />160 – 1,023<br />1,024 – 2,047|2|2|
+|000800 – 003FFF<br />004000 – 00FFFF|2,048 - 16,383<br />16,384 – 65,535|3|2|
+|010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|65,536 – 262,143 <sup>2</sup><br /><br />262,144 – 1,114,111 <sup>2</sup>|4|4|
 
 <sup>1</sup> The storage bytes refer to the encoded byte length, not the respective data type on-disk storage size. For more information about on-disk storage sizes, see [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) and [char and varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
 
 <sup>2</sup> Code point range for [supplementary characters](#Supplementary_Characters).
 
-As seen above, choosing the appropriate Unicode ght type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
+As seen above, choosing the appropriate Unicode encoding and data type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
 
 Before choosing whether to use UTF-8 or UTF-16 encoding for a database or column, consider the distribution of string data that will be stored:
 -  If it is mostly in the ASCII range (such as English), then each character requires 1-byte with UTF-8 and 2-bytes with UTF-16. Using UTF-8 provides storage benefits. 

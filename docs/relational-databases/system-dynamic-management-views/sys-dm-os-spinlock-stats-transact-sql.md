@@ -37,8 +37,8 @@ Returns information about all spinlock waits organized by type.
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Name of the spinlock type.|  
-|collisions|**bigint**|The number of times a thread attempts to access the spinlock and is blocked because another thread currently holds the spinlock.|  
-|spins|**bigint**|The number of times a thread executes a loop while waiting for the spinlock.|  
+|collisions|**bigint**|The number of times a thread attempts to acquire the spinlock and is blocked because another thread currently holds the spinlock.|  
+|spins|**bigint**|The number of times a thread executes a loop while attempting to acquire the spinlock.|  
 |spins_per_collision|**real**|Ratio of spins per collision.|  
 |sleep_time|**bigint**|The amount of time in milliseconds that threads spent sleeping in the event of a backoff.|  
 |backoffs|**int**|The number of times a thread that is "spinning" fails to acquire the spinlock and yields the scheduler.|  
@@ -65,7 +65,7 @@ GO
 >  These statistics are not persisted if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. All data is cumulative since the last time the statistics were reset, or since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was started.  
   
 ## Spinlocks  
- A spinlock is a lightweight synchronization object used to serialize access to data structures which are typically held for a short period of time. When a thread attempts to access a resource protected by a spinlock which is being held by another thread, the thread will execute a loop, or "spin" and try accessing the resource again, rather than immediately yielding the scheduler as with a latch or other resource wait. The thread will continue spinning until the resource is available, or the loop completes, at which point the thread will yield the scheduler and go back into the runnable queue. This practice helps reduce excessive CPU context switching, but when contention for a spinlock is high, this can lead to significant CPU overhead.
+ A spinlock is a lightweight synchronization object used to serialize access to data structures which are typically held for a short period of time. When a thread attempts to access a resource protected by a spinlock which is being held by another thread, the thread will execute a loop, or "spin" and try accessing the resource again, rather than immediately yielding the scheduler as with a latch or other resource wait. The thread will continue spinning until the resource is available, or the loop completes, at which point the thread will yield the scheduler and go back into the runnable queue. This practice helps reduce excessive thread context switching, but when contention for a spinlock is high, significant CPU utilization may be observed.
    
  The following table contains brief descriptions of some of the most common spinlock types.  
   

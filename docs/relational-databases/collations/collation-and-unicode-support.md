@@ -253,7 +253,7 @@ The Unicode Consortium allocates each character a unique codepoint, which is a v
 -  With UTF-8 encoding, characters in the ASCII range (000000 – 00007F) require 1 byte, code points 000080 to 0007FF require 2 bytes, code points 000800 to 00FFFF require 3 bytes, and code points 0010000 to 0010FFFF require 4 bytes. 
 -  With UTF-16 encoding, code points 000000 to 00FFFF require 2 bytes, and code points 0010000 to 0010FFFF require 4 bytes. 
 
-The following table outlines the enconding storage bytes for each character range and encoding type:
+The following table outlines the encoding storage bytes for each character range and encoding type:
 
 |Code Range (hexadecimal)|Storage bytes <sup>1</sup> with UTF-8|Storage bytes <sup>1</sup> with UTF-16|    
 |---------------------------------|--------------------------|-----------------------------|   
@@ -262,11 +262,11 @@ The following table outlines the enconding storage bytes for each character rang
 |000800 – 003FFF<br />004000 – 00FFFF|3|2|
 |010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|4|4|
 
-<sup>1</sup> The storage bytes refer to the encoded byte lenght, not the respective data type on-disk storage size. For more information about on-disk storage sizes, see [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) and [char and varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+<sup>1</sup> The storage bytes refer to the encoded byte length, not the respective data type on-disk storage size. For more information about on-disk storage sizes, see [nchar and nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) and [char and varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
 
 <sup>2</sup> Code point range for [supplementary characters](#Supplementary_Characters).
 
-As seen above, choosing the appropriate Unicode enconding type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
+As seen above, choosing the appropriate Unicode ght type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
 
 Before choosing whether to use UTF-8 or UTF-16 encoding for a database or column, consider the distribution of string data that will be stored:
 -  If it is mostly in the ASCII range (such as English), then each character requires 1-byte with UTF-8 and 2-bytes with UTF-16. Using UTF-8 provides storage benefits. 

@@ -1,7 +1,7 @@
 ---
 title: "Add Data from External Data Sources (SSRS)"
-ms.prod: "reporting-services"
-ms.technology: "reporting-services-native"
+ms.prod: "sql-server-2014"
+ms.technology: "reporting-services"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,6 @@ ms.reviewer: ""
 ms.custom: ""
 ms.date: "04/27/2017"
 ---
-
 # Add Data from External Data Sources (SSRS)
 
 To retrieve data from an external data source, you use a data connection. Data connection information is usually provided by the owner of the external data source, who is responsible for granting permissions and specifying which types of credentials to use. Data connection information is saved as a report data source. The data source type specifies which data extension to use to retrieve the data.  

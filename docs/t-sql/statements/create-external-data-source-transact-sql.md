@@ -453,7 +453,7 @@ Specifies the type of the external data source being configured. This parameter 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.
 
-For an example of using `TYPE` = `HADOOP` to load data from Azure Blob Storage, see [Create external data source to reference Azure blob storage](#e-create-external-data-source-to-reference-azure-blob-storage).
+For an example of using `TYPE` = `HADOOP` to load data from Azure Blob Storage, see [Create external data source to reference Azure blob storage](#d-create-external-data-source-to-reference-azure-blob-storage).
 
 ### DATABASE_NAME = *database_name*
 

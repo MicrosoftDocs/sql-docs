@@ -251,48 +251,74 @@ additionalContent:
   sections:
     - items:
       - title: Development
-        summary: |
-          [Azure SQL DB applications](https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview)<br />
-          [Azure SQL DB connectivity libraries](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries)<br />
-          [SQL Server client connectivity](connect/homepage-sql-connection-programming.md)<br />
+        links:
+          - text: Azure SQL DB applications
+            url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
+          - text: Azure SQL DB connectivity libraries
+            url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
+          - text: SQL Server client connectivity
+            url: connect/homepage-sql-connection-programming.md
       - title: Reporting
-        summary: |
-          [Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started)<br />
-          [Power BI Service](https://docs.microsoft.com/power-bi/service-get-started)<br />
-          [SQL Server Reporting Services (SSRS)](reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br />
+        links:
+          - text: Power BI Report Server
+            url: https://docs.microsoft.com/power-bi/report-server/get-started
+          - text: Power BI Service
+            url: https://docs.microsoft.com/power-bi/service-get-started
+          - text: SQL Server Reporting Services (SSRS)
+            url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
       - title: AI & Machine Learning
-        summary: |
-          [Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/)<br />
-          [SQL Machine Learning Services (R & Python)](advanced-analytics/what-is-sql-server-machine-learning.md)<br />
-          [SQL Server R Services](advanced-analytics/r/sql-server-r-services.md)<br />
+        links:
+          - text: Azure Machine Learning
+            url: https://docs.microsoft.com/azure/machine-learning/
+          - text: SQL Machine Learning Services (R & Python)
+            url: advanced-analytics/what-is-sql-server-machine-learning.md
+          - text: SQL Server R Services
+            url: advanced-analytics/r/sql-server-r-services.md
       - title: Data Analytics
-        summary: |
-          [Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/)<br />
-          [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/)<br />
-          [Microsoft Analytics Platform System](analytics-platform-system/index.md)<br />
-          [Polybase](relational-databases/polybase/polybase-guide.md)<br />
-          [SQL Server Analysis Services (SSAS)](analysis-services/analysis-services.md)<br />
-          [SQL Server 2019 big data clusters](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15)<br />
+        links:
+          - text: Azure Analysis Services
+            url: https://docs.microsoft.com/azure/analysis-services/
+          - text: Azure SQL Data Warehouse
+            url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+          - text: Microsoft Analytics Platform System
+            url: analytics-platform-system/index.md
+          - text: Polybase
+            url: relational-databases/polybase/polybase-guide.md
+          - text: SQL Server Analysis Services (SSAS)
+            url: analysis-services/analysis-services.md
+          - text: SQL Server 2019 big data clusters
+            url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
       - title: Reference
-        summary: |
-          [Azure SQL CLI](https://docs.microsoft.com/cli/azure/sql)<br />
-          [Azure SQL REST API](https://docs.microsoft.com/rest/api/sql/)<br />
-          [Azure SQL PowerShell](https://docs.microsoft.com/powershell/module/az.sql/)<br />
-          [Database Management Views (DMVs)](relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)<br />
-          [Database samples](samples/sql-samples-where-are.md)<br />
-          [SQL PowerShell](powershell/sql-server-powershell.md)<br />
-          [System catalog views](relational-databases/system-catalog-views/catalog-views-transact-sql.md)<br />
-          [Transact-SQL (T-SQL)](t-sql/language-reference.md)<br />
-          [xQuery](xquery/xquery-language-reference-sql-server.md)<br />
+        links:
+          - text: Azure SQL CLI
+            url: https://docs.microsoft.com/cli/azure/sql
+          - text: Azure SQL REST API
+            url: https://docs.microsoft.com/rest/api/sql/
+          - text: Azure SQL PowerShell
+            url: https://docs.microsoft.com/powershell/module/az.sql/
+          - text: Database Management Views (DMVs)
+            url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+          - text: Database samples
+            url: samples/sql-samples-where-are.md
+          - text: SQL PowerShell
+            url: powershell/sql-server-powershell.md
+          - text: System catalog views
+            url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
+          - text: Transact-SQL (T-SQL)
+            url: t-sql/language-reference.md
+          - text: xQuery
+            url: xquery/xquery-language-reference-sql-server.md
       - title: Tools
-        summary: |
-          [Azure Data Studio](azure-data-studio/download.md)<br />
-          [Distributed replay](tools/distributed-replay/sql-server-distributed-replay.md)<br />
-          [SQL Server Data Tools (SSDT)](ssdt/download-sql-server-data-tools-ssdt.md)<br />
-          [SQL Server Management Studio (SSMS)](ssms/download-sql-server-management-studio-ssms.md)<br />
-          [SQL Server Profiler](tools/sql-server-profiler/sql-server-profiler.md)<br />
-          [See more tools](tools/overview-sql-tools.md)<br />
-
-
-
-
+        links:
+          - text: Azure Data Studio
+            url: azure-data-studio/download.md
+          - text: Distributed replay
+            url: tools/distributed-replay/sql-server-distributed-replay.md
+          - text: SQL Server Data Tools (SSDT)
+            url: ssdt/download-sql-server-data-tools-ssdt.md
+          - text: SQL Server Management Studio (SSMS)
+            url: ssms/download-sql-server-management-studio-ssms.md
+          - text: SQL Server Profiler
+            url: tools/sql-server-profiler/sql-server-profiler.md
+          - text: See more tools
+            url: tools/overview-sql-tools.md

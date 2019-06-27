@@ -5,7 +5,7 @@ description: This article provides useful commands for monitoring and troublesho
 author: rothja 
 ms.author: jroth 
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -111,12 +111,11 @@ The following services support external connections to the big data cluster:
 |---|---|
 | **master-svc-external** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
 | **controller-svc-external** | Supports tools and clients that manage the cluster. |
-| **mgmtproxy-svc-external** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal) |
 | **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
 | **appproxy-svc-external** | Support application deployment scenarios. |
 
 > [!TIP]
-> This is a way of viewing the services with **kubectl**, but it is also possible to use `mssqlctl cluster endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).
+> This is a way of viewing the services with **kubectl**, but it is also possible to use `mssqlctl bdc endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).
 
 ## Get service details
 
@@ -219,10 +218,6 @@ The following example gets the IP address of the node that the `master-0` pod is
 ```bash
 kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
-
-## Cluster administration portal
-
-Use the [cluster administration portal](cluster-admin-portal.md) to monitor the status of your big data cluster. For example, during deployments, you can use the **Deployment** tab. You have to wait for the **mgmtproxy-svc-external** service to start before accessing this portal, so it won't be available at the beginning of a deployment.
 
 ## Kubernetes dashboard
 

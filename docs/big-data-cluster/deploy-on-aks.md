@@ -65,28 +65,44 @@ An Azure resource group is a logical group in which Azure resources are deployed
    az account set --subscription <subscription id>
    ```
 
-1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbigdatagroup` in the `westus2` location.
+1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbdcgroup` in the `westus2` location.
 
    ```azurecli
-   az group create --name sqlbigdatagroup --location westus2
+   az group create --name sqlbdcgroup --location westus2
    ```
 
 ## Create a Kubernetes cluster
 
 1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux agent node of size **Standard_L8s**. Make sure you create the AKS cluster in the same resource group that you used in the previous sections.
 
-    ```azurecli
+   **bash:**
+
+   ```bash
    az aks create --name kubcluster \
-    --resource-group sqlbigdatagroup \
-    --generate-ssh-keys \
-    --node-vm-size Standard_L8s \
-    --node-count 1 \
-    --kubernetes-version 1.12.8
-    ```
+   --resource-group sqlbdcgroup \
+   --generate-ssh-keys \
+   --node-vm-size Standard_L8s \
+   --node-count 1 \
+   --kubernetes-version 1.12.8
+   ```
+
+   **PowerShell:**
+
+   ```powershell
+   az aks create --name kubcluster `
+   --resource-group sqlbdcgroup `
+   --generate-ssh-keys `
+   --node-vm-size Standard_L8s `
+   --node-count 1 `
+   --kubernetes-version 1.12.8
+   ```
 
    You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes.
 
    After several minutes, the command completes and returns JSON-formatted information about the cluster.
+
+   > [!TIP]
+   > If you get any errors creating the cluster in AKS, see the [troubleshooting section](#troubleshoot) of this article.
 
 1. Save the JSON output from the previous command for later use.
 
@@ -95,17 +111,24 @@ An Azure resource group is a logical group in which Azure resources are deployed
 1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
 
    ```azurecli
-   az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
+   az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
 1. To verify the connection to your cluster, use the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) command to return a list of the cluster nodes.  The example below shows the output if you were to have 1 master and 3 agent nodes.
 
-   ```
+   ```bash
    kubectl get nodes
    ```
 
+## <a id="troubleshoot"></a> Troubleshooting
+
+If you have any problems creating an Azure Kubernetes Service with the previous commands, try the following resolutions:
+
+- Make sure that you have installed the [latest Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Try the same steps using a different resource group and cluster name.
+
 ## Next steps
 
-The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy SQL Server 2019 big data to the cluster. For more information on how to deploy big data clusters, see the following article:
+The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy a SQL Server 2019 big data cluster on the AKS Kubernetes cluster. For more information on how to deploy big data clusters, see the following article:
 
 [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)

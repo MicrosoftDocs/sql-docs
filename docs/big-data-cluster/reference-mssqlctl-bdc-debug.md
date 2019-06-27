@@ -1,39 +1,39 @@
 ---
-title: mssqlctl cluster debug reference
+title: mssqlctl bdc debug reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl cluster debug commands.
+description: Reference article for mssqlctl bdc debug commands.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl cluster debug
+# mssqlctl bdc debug
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **cluster debug** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc debug** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl cluster debug copy-logs](#mssqlctl-cluster-debug-copy-logs) | Copy logs.
-[mssqlctl cluster debug dump](#mssqlctl-cluster-debug-dump) | Trigger logging dump.
-## mssqlctl cluster debug copy-logs
-Copy the debug logs from the cluster - kube config is required on your system.
+[mssqlctl bdc debug copy-logs](#mssqlctl-bdc-debug-copy-logs) | Copy logs.
+[mssqlctl bdc debug dump](#mssqlctl-bdc-debug-dump) | Trigger logging dump.
+## mssqlctl bdc debug copy-logs
+Copy the debug logs from the Big Data Cluster - kube config is required on your system.
 ```bash
-mssqlctl cluster debug copy-logs --namespace -n 
-                                 [--container -c]  
-                                 [--target-folder -d]  
-                                 [--pod -p]  
-                                 [--timeout -t]
+mssqlctl bdc debug copy-logs --namespace -n 
+                             [--container -c]  
+                             [--target-folder -d]  
+                             [--pod -p]  
+                             [--timeout -t]
 ```
 ### Required Parameters
 #### `--namespace -n`
-Cluster name, used for kubernetes namespace.
+BDC name, used for kubernetes namespace.
 ### Optional Parameters
 #### `--container -c`
 Copy the logs for the containers with similar name, Optional, by default copies logs for all containers. Cannot be specified multiple times. If specified multiple times, last one will be used
@@ -54,16 +54,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl cluster debug dump
+## mssqlctl bdc debug dump
 Trigger logging dump and copy it out from container - kube config is required on your system.
 ```bash
-mssqlctl cluster debug dump --namespace -n 
-                            --container -c  
-                            [--target-folder -d]
+mssqlctl bdc debug dump --namespace -n 
+                        --container -c  
+                        [--target-folder -d]
 ```
 ### Required Parameters
 #### `--namespace -n`
-Cluster name, used for kubernetes namespace.
+BDC name, used for kubernetes namespace.
 #### `--container -c`
 Copy the logs for the containers with similar name, Optional, by default copies logs for all containers. Cannot be specified multiple times. If specified multiple times, last one will be used
 ### Optional Parameters

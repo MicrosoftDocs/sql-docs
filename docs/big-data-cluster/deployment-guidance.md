@@ -187,15 +187,14 @@ For an unattended deployment, you must set all required environment variables, u
 During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
 ```output
-2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
+Waiting for cluster controller to start.
 ```
 
 In less than 15 to 30 minutes, you should be notified that the controller pod is running:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
-2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
-2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
+Cluster controller endpoint is available at 11.111.111.11:30080.
+Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
@@ -204,7 +203,7 @@ In less than 15 to 30 minutes, you should be notified that the controller pod is
 When the deployment finishes, the output notifies you of success:
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
+Cluster deployed successfully.
 ```
 
 > [!TIP]
@@ -223,7 +222,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
    > [!TIP]
    > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
-1. Log in to the big data cluster with **mssqlctl login**. Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
+1. Log in to the big data cluster with [mssqlctl login](reference-mssqlctl.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 
    ```bash
    mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -231,7 +230,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
 
    Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
-1. Run **mssqlctl bdc endpoint list** to get a list with a description of each endpoint and their corresponding IP address and port values. 
+1. Run [mssqlctl bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash
    mssqlctl bdc endpoint list
@@ -268,6 +267,61 @@ Irrespective of the platform you are running your Kubernetes cluster on, to get 
 ```bash
 kubectl get svc -n <your-big-data-cluster-name>
 ```
+
+## <a id="status"></a> Verify the cluster status
+
+After deployment, you can check the status of the cluster with the [mssqlctl bdc status show](reference-mssqlctl-bdc-status.md) command.
+
+```bash
+mssqlctl bdc status show
+```
+
+> [!TIP]
+> To run the status commands, you must first log in with the **mssqlctl login** command, which was shown in the previous endpoints section.
+
+The following shows sample output from this command:
+
+```output
+[
+  {
+    "kind": "BDC",
+    "name": "mssql-cluster",
+    "state": "Ready"
+  },
+  {
+    "kind": "Control",
+    "name": "default",
+    "state": "Ready"
+  },
+  {
+    "kind": "Master",
+    "name": "default",
+    "state": "Ready"
+  },
+  {
+    "kind": "Compute",
+    "name": "default",
+    "state": "Ready"
+  },
+  {
+    "kind": "Data",
+    "name": "default",
+    "state": "Ready"
+  },
+  {
+    "kind": "Storage",
+    "name": "default",
+    "state": "Ready"
+  }
+]
+```
+
+In addition to this summary status, you can also get more detailed status with the following commands:
+
+- [mssqlctl bdc control status](reference-mssqlctl-bdc-control-status.md)
+- [mssqlctl bdc pool status](reference-mssqlctl-bdc-pool-status.md)
+
+The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
 
 ## <a id="connect"></a> Connect to the cluster
 

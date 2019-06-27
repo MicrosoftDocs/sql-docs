@@ -1614,7 +1614,7 @@
         - name: Query data
           href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
         - name: Security
-          href: ../../relational-databases/tables/temporal-table-security.md  
+          href: ../relational-databases/tables/temporal-table-security.md  
         - name: Change the schema
           href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
         - name: Stop system-versioning

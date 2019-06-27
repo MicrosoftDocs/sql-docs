@@ -273,7 +273,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 After deployment, you can check the status of the cluster with the [mssqlctl bdc status show](reference-mssqlctl-bdc-status.md) command.
 
 ```bash
-mssqlctl bdc status show
+mssqlctl bdc status show -o table
 ```
 
 > [!TIP]
@@ -282,38 +282,14 @@ mssqlctl bdc status show
 The following shows sample output from this command:
 
 ```output
-[
-  {
-    "kind": "BDC",
-    "name": "mssql-cluster",
-    "state": "Ready"
-  },
-  {
-    "kind": "Control",
-    "name": "default",
-    "state": "Ready"
-  },
-  {
-    "kind": "Master",
-    "name": "default",
-    "state": "Ready"
-  },
-  {
-    "kind": "Compute",
-    "name": "default",
-    "state": "Ready"
-  },
-  {
-    "kind": "Data",
-    "name": "default",
-    "state": "Ready"
-  },
-  {
-    "kind": "Storage",
-    "name": "default",
-    "state": "Ready"
-  }
-]
+Kind     Name           State
+-------  -------------  -------
+BDC      mssql-cluster  Ready
+Control  default        Ready
+Master   default        Ready
+Compute  default        Ready
+Data     default        Ready
+Storage  default        Ready
 ```
 
 In addition to this summary status, you can also get more detailed status with the following commands:

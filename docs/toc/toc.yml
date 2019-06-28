@@ -8772,7 +8772,7 @@
     - name: Tutorials
       items:
       - name: Design a relational database in a single database
-        items: https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017
+        href: https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017
     - name: Concepts
       items:
       - name: Tool Windows in SSMS

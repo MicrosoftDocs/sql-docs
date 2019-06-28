@@ -12845,6 +12845,8 @@
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md
       - name: sys.dm_os_server_diagnostics_log_configurations
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md
+      - name: sys.dm_os_spinlock_stats
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-os-spinlock-stats-transact-sql.md
       - name: sys.dm_os_stacks
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-stacks-transact-sql.md
       - name: sys.dm_os_sys_info

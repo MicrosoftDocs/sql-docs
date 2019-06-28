@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 manager: jroth
 ms.custom: "seodec18"
-ms.date: "06/06/2019"
+ms.date: "06/25/2019"
 ms.reviewer: "alayu; sstein"
 ---
 
@@ -119,7 +119,8 @@ The *user installer* is recommended because it does not require administrator pr
 
    sudo apt-get install libunwind8
    ```
-
+## Download Insiders build of Azure Data Studio
+In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 
 ## Uninstall Azure Data Studio
 

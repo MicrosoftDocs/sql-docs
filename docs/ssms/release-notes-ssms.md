@@ -51,7 +51,7 @@ SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a
 
 | New item| Details|
 | :-------| :------|
-| Database diagrams | Database diagrams were added back into SSMS. For details, see [Database Diagrams](https://feedback.azure.com/forums/908035/suggestions/37507828). |
+| Database diagrams | [Database diagrams were added back into SSMS](https://feedback.azure.com/forums/908035/suggestions/37507828).
 | SSBDIAGNOSE.EXE |The SQL Server Diagnose (command line tool) was added back into the SSMS package.|
 | Integration Services (SSIS) | Support for scheduling SSIS package, located in SSIS Catalog in Azure or File System, in Azure. There are three entries for launching the New Schedule dialog, *New Schedule…* menu item shown when right-clicking the SSIS package in SSIS Catalog in Azure, *Schedule SSIS Package in Azure* menu item under *Migrate to Azure* menu item under *Tools* menu item and "Schedule SSIS in Azure" shown when right-clicking Jobs folder under SQL Server agent of Azure SQL Database Managed Instance.|
 
@@ -96,6 +96,12 @@ SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a
 | SQL Agent | Fixed an issue where the "View" button on the *Job-Step Properties* wasn't always enabled, thus preventing viewing the output of a given job step. |
 | XEvent UI | Added "Package" column to XEvents list to   disambiguate events with identical names. |
 | XEvent UI | Added missing "EXTERNAL LIBRARY" class type mapping to XEventUI. |
+
+### Known issues (18.1)
+
+- Users may see an error when dragging a table object from the Object Explorer into the Query Editor. We are aware of the issue, and the fix is planned for the next release.
+
+- The *Group connections* and *Single server connections* color options under the Options -> Text Editor -> Editor Tab and Status Bar -> Status Bar Layout and Colors do not persist after closing SSMS 18.1. After you reopen SSMS, the Status Bar Layout and Colors option reverts to default (white).
 
 ## Previous SSMS releases
 
@@ -363,9 +369,9 @@ Deprecated / Removed Features
 - Removed node "Maintenance > Legacy" in Object Explorer.
   - The really old "Database Maintenance Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
 
-### Known issues
+### Known issues (18.0)
 
-You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, please follow the steps from the [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) article.
+- You might encounter an issue installing version 18.0, where you cannot run SQL Server Management Studio. If you encounter this issue, please follow the steps from the [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) article.
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -449,7 +455,7 @@ Microsoft Azure integration:
 - Fixed an issue where SSMS only shows the first 50 subscriptions (Always Encrypted dialogs, Backup/Restore from URL dialogs, and other dialogs).
 - Fixed an issue where SSMS was throwing an exception ("Index out of range") while trying to sign in to a Microsoft Azure account that did not have any storage account (in Restore Backup from URL dialog). 
 
-Object Scripting: 
+Object Scripting:
 
 - When scripting "Drop and Create", SSMS now avoids generating dynamic T-SQL.
 - When scripting a database object, SSMS now does not generate script to set database scoped configurations, if they are set to default values.

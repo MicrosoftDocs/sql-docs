@@ -1,7 +1,7 @@
 ---
 title: "Configure Always Encrypted using PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2017"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -19,7 +19,7 @@ The SqlServer PowerShell module provides cmdlets for configuring [Always Encrypt
 
 Always Encrypted cmdlets in the SqlServer module work with keys or sensitive data, so it is important that you run the cmdlets on a secure computer. When managing Always Encrypted, execute the cmdlets from a different computer than the computer hosting your SQL Server instance.
 
-Because the primary goal of Always Encrypted is to ensure encrypted sensitive data is safe, even if the database system gets compromised, executing a PowerShell script that processes keys or sensitive data on the SQL Server computer can reduce or defeat the benefits of the feature. For additional security-related recommendations, see [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+Because the primary goal of Always Encrypted is to ensure encrypted sensitive data is safe, even if the database system gets compromised, executing a PowerShell script that processes keys or sensitive data on the SQL Server computer can reduce or defeat the benefits of the feature. For additional security-related recommendations, see [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 Links to the individual cmdlet articles are at the [bottom of this page](#aecmdletreference).
 

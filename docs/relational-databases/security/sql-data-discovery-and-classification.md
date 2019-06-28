@@ -2,16 +2,16 @@
 title: SQL Data Discovery & Classification | Microsoft Docs
 description: SQL Data Discovery & Classification
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
 ---
 # SQL Data Discovery and Classification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +22,7 @@ Discovering and classifying your most sensitive data (business, financial, healt
 * Controlling access to and hardening the security of databases/columns containing highly sensitive data.
 
 > [!NOTE]
-> Data Discovery & Classification is **supported for SQL Server 2008 and later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).
+> Data Discovery & Classification is **supported for SQL Server 2008 and later, and can be used with SSMS 17.5 or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).
 
 ## <a id="subheading-1"></a>Overview
 Data Discovery & Classification introduces a set of advanced services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:

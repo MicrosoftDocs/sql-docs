@@ -1,7 +1,7 @@
 ---
 title: "Expressions (Report Builder and SSRS) | Microsoft Docs"
-ms.prod: "reporting-services"
-ms.technology: "reporting-services-native"
+ms.prod: "sql-server-2014"
+ms.technology: "reporting-services"
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
@@ -11,7 +11,6 @@ ms.reviewer: ""
 ms.custom: ""
 ms.date: "06/13/2017"
 ---
-
 # Expressions (Report Builder and SSRS)
 
 Expressions are widely used throughout a report to retrieve, calculate, display, group, sort, filter, parameterize, and format data. Many report item properties can be set to an expression. Expressions help you control the content, design, and interactivity of your report. Expressions are written in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], saved in the report definition, and evaluated by the report processor when you run the report.  

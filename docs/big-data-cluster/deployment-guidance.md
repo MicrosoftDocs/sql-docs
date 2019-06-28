@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server 2019 big data clusters (preview) on 
 author: rothja 
 ms.author: jroth 
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -77,14 +77,14 @@ Big data cluster deployment options are defined in JSON configuration files. The
 
 | Deployment profile | Kubernetes environment |
 |---|---|
-| **aks-dev-test.json** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test.json** | Multiple machines (kubeadm) |
-| **minikube-dev-test.json** | minikube |
+| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test** | Multiple machines (kubeadm) |
+| **minikube-dev-test** | minikube |
 
-You can deploy a big data cluster by running **mssqlctl cluster create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
+You can deploy a big data cluster by running **mssqlctl bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. Note that the Docker information is provided to you by Microsoft as part of the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup).
@@ -94,35 +94,38 @@ In this scenario, you are prompted for any settings that are not part of the def
 
 ## <a id="customconfig"></a> Custom configurations
 
-It is also possible to customize your own deployment configuration file. You can do this with the following steps:
+It is also possible to customize your own deployment configuration profile. You can do this with the following steps:
 
-1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **mssqlctl cluster config list** command to list them:
+1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **mssqlctl bdc config list** command to list them:
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. To customize your deployment, create a copy of the deployment profile with the **mssqlctl cluster config init** command. For example, the following command creates a copy of the **aks-dev-test.json** deployment configuration file in the current directory:
+1. To customize your deployment, create a copy of the deployment profile with the **mssqlctl bdc config init** command. For example, the following command creates a copy of the **aks-dev-test** deployment configuration file in a target directory named `custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. To customize settings in your deployment configuration file, you can edit it in a tool that is good for editing json docs like VS Code. For scripted automation, you can edit the custom configuration file using **mssqlctl cluster config section set** command. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
+   > The `--target` specifies a directory that contains the configuration file based on the `--source` parameter.
+
+1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **mssqlctl bdc config section set** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > The `--config-profile` specifies a directory name for your custom deployment profile, but the actual modifications happen on the deployment configuration JSON file within that directory. A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 
    In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 
-1. Then pass the custom configuration file to **mssqlctl cluster create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
+1. Then pass the custom configuration file to **mssqlctl bdc create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -141,7 +144,7 @@ The following environment variables are used for security settings that are not 
 | **KNOX_PASSWORD** | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
 
-These environment variables must be set prior to calling **mssqlctl cluster create**. If any variable is not set, you are prompted for it.
+These environment variables must be set prior to calling **mssqlctl bdc create**. If any variable is not set, you are prompted for it.
 
 The following example shows how to set the environment variables for Linux (bash) and Windows (PowerShell):
 
@@ -163,10 +166,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-Upon setting the environment variables, you must run `mssqlctl cluster create` to trigger the deployment. This example uses the cluster configuration file created above:
+After setting the environment variables, you must run `mssqlctl bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 Please note the following guidelines:
@@ -177,22 +180,21 @@ Please note the following guidelines:
 
 ## <a id="unattended"></a> Unattended install
 
-For an unattended deployment, you must set all required environment variables, use a configuration file, and call `mssqlctl cluster create` command with the `--accept-eula yes` parameter. The examples in the previous section demonstrate the syntax for an unattended installation.
+For an unattended deployment, you must set all required environment variables, use a configuration file, and call `mssqlctl bdc create` command with the `--accept-eula yes` parameter. The examples in the previous section demonstrate the syntax for an unattended installation.
 
 ## <a id="monitor"></a> Monitor the deployment
 
 During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
 ```output
-2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
+Waiting for cluster controller to start.
 ```
 
 In less than 15 to 30 minutes, you should be notified that the controller pod is running:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
-2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
-2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
+Cluster controller endpoint is available at 11.111.111.11:30080.
+Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
@@ -201,11 +203,8 @@ In less than 15 to 30 minutes, you should be notified that the controller pod is
 When the deployment finishes, the output notifies you of success:
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
-2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
+Cluster deployed successfully.
 ```
-
-Note the URL of the **Portal Endpoint** in the previous output for use in the next section.
 
 > [!TIP]
 > The default name for the deployed big data cluster is `mssql-cluster` unless modified by a custom configuration.
@@ -223,7 +222,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
    > [!TIP]
    > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
-1. Log in to the big data cluster with **mssqlctl login**. Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
+1. Log in to the big data cluster with [mssqlctl login](reference-mssqlctl.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 
    ```bash
    mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -231,30 +230,35 @@ After the deployment script has completed successfully, you can obtain the IP ad
 
    Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
-1. Run **mssqlctl cluster endpoint list** to get a list with a description of each endpoint and their corresponding IP address and port values. 
+1. Run [mssqlctl bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list -o table
    ```
 
    The following list shows sample output from this command:
 
    ```output
-   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
-   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
-   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
-   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
-   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
-   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
-   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
-   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
-   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
-   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
-   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
-   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
-   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   Description                                             Endpoint                                                   Ip              Name               Port    Protocol
+   ------------------------------------------------------  ---------------------------------------------------------  --------------  -----------------  ------  ----------
+   Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  gateway            30443   https
+   Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  spark-history      30443   https
+   Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  yarn-ui            30443   https
+   Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  app-proxy          30778   https
+   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  mgmtproxy          30777   https
+   Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  logsui             30777   https
+   Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  metricsui          30777   https
+   Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  controller         30080   https
+   SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  sql-server-master  31433   tcp
+   HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  webhdfs            30443   https
+   Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
+
+You can also get all the service endpoints deployed for the cluster by running the following **kubectl** command:
+
+```bash
+kubectl get svc -n <your-big-data-cluster-name>
+```
 
 ### Minikube
 
@@ -264,11 +268,38 @@ If you are using minikube, you need to run the following command to get the IP a
 minikube ip
 ```
 
-Irrespective of the platform you are running your Kubernetes cluster on, to get all the service endpoints deployed for the cluster, run following command:
+## <a id="status"></a> Verify the cluster status
+
+After deployment, you can check the status of the cluster with the [mssqlctl bdc status show](reference-mssqlctl-bdc-status.md) command.
 
 ```bash
-kubectl get svc -n <your-big-data-cluster-name>
+mssqlctl bdc status show -o table
 ```
+
+> [!TIP]
+> To run the status commands, you must first log in with the **mssqlctl login** command, which was shown in the previous endpoints section.
+
+The following shows sample output from this command:
+
+```output
+Kind     Name           State
+-------  -------------  -------
+BDC      mssql-cluster  Ready
+Control  default        Ready
+Master   default        Ready
+Compute  default        Ready
+Data     default        Ready
+Storage  default        Ready
+```
+
+In addition to this summary status, you can also get more detailed status with the following commands:
+
+- [mssqlctl bdc control status](reference-mssqlctl-bdc-control-status.md)
+- [mssqlctl bdc pool status](reference-mssqlctl-bdc-pool-status.md)
+
+The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis. 
+
+In addition to using **mssqlctl**, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with **mssqlctl** and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
 
 ## <a id="connect"></a> Connect to the cluster
 

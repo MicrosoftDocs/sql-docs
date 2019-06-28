@@ -39,10 +39,10 @@ These functions have not been optimized to work with DirectQuery. These function
 
 The reasons a particular function might not be optimized for DirectQuery is because the underlying relational engine cannot perform calculations equivalent to those performed by the xVelocity engine, or the formula cannot be converted to an equivalent SQL expression. In other cases, the performance of the converted expression and the resulting calculations may be unacceptable.
 
-To learn about all DAX functions, see the [DAX Function Reference].(https://msdn.microsoft.com/library/ee634396.aspx)
+To learn about all DAX functions, see the [DAX Function Reference](/dax/dax-function-reference).
 
 ## DAX operators in DirectQuery mode
-All DAX comparison and arithmetic operators are fully supported in DirectQuery mode. To learn more, see [DAX Operator Reference](https://msdn.microsoft.com/library/ee634237.aspx).
+All DAX comparison and arithmetic operators are fully supported in DirectQuery mode. To learn more, see [DAX Operator Reference](/dax/dax-operator-reference).
 
 
  
@@ -154,7 +154,7 @@ SQL Server handles nulls and blanks differently than the xVelocity engine. As a 
   
 The same limitations apply to the other logarithmic functions: LOG10 and LN.  
   
-For more information about the **blank** data type in DAX, see [DAX Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
+For more information about the **blank** data type in DAX, see [DAX Syntax Reference](/dax/dax-syntax-reference).  
   
 **Division by 0 and division by Blank**  
 In DirectQuery mode, division by zero (0) or division by BLANK will always result in an error. SQL Server does not support the notion of infinity, and because the natural result of any division by 0 is infinity, the result is an error. However, SQL Server supports division by nulls, and the result must always equal null.  

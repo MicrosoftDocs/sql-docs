@@ -4,13 +4,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ""
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint 
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ---
-
 # Preview Reports in SQL Server Reporting Services (SSRS)
 
   When you design a report, you may want to view it before publishing it to a production environment. You can do this in several ways: by switching to Preview mode in Report Designer, by using the preview window in Report Designer, and by publishing the report to a report server in a test environment.  

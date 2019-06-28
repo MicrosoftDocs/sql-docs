@@ -4,7 +4,7 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ""
-ms.prod: sql
+ms.prod: reporting-services
 ms.technology: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual

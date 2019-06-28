@@ -27,6 +27,25 @@ manager: craigg
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Trace flags are used to set specific server characteristics or to alter a particular behavior. For example, trace flag 3226 is a commonly used startup trace flag which suppresses successful backup messages in the error log. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems, but they may also be recommended by Microsoft Support to address behavior that is negatively impacting a specific workload.  All documented trace flags and those recommended by Microsoft Support are fully supported in a production environment when used as directed.  Note that trace flags in this list may have additional considerations regarding their particular usage, so it is advisable to carefully review all the recommendations given here and/or by your support engineer. Also, as with any configuration change in SQL Server, it is always best to thoroughly test the flag in a non-production environment before deploying.
+
+## Remarks  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are three types of trace flags: query, session and global. Query trace flags are active for the context of a specific query. Session trace flags are active for a connection and are visible only to that connection. Global trace flags are set at the server level and are visible to every connection on the server. Some flags can only be enabled as global, and some can be enabled at either global or session scope.  
+  
+ The following rules apply:  
+-   A global trace flag must be enabled globally. Otherwise, the trace flag has no effect. We recommend that you enable global trace flags at startup, by using the **-T** command line option. This ensures the trace flag remains active after a server restart. Restart SQL Server for the trace flag to take effect. 
+-   If a trace flag has either global, session or query scope, it can be enabled with the appropriate scope. A trace flag that is enabled at the session level never affects another session, and the effect of the trace flag is lost when the SPID that opened the session logs out.  
+  
+Trace flags are set on or off by using either of the following methods:
+-   Using the DBCC TRACEON and DBCC TRACEOFF commands.  
+     For example, to enable the 2528 trace flag globally, use [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) with the -1 argument: `DBCC TRACEON (2528, -1)`. The effect of enabling a global trace flag with DBCC TRACEON is lost on server restart. To turn off a global trace flag, use [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) with the -1 argument.  
+-   Using the **-T** startup option to specify that the trace flag be set on during startup.  
+     The **-T** startup option enables a trace flag globally. You cannot enable a session-level trace flag by using a startup option. This ensures the trace flag remains active after a server restart. For more information about startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+-   At the query level, by using the QUERYTRACEON [query hint](https://support.microsoft.com/kb/2801413). The QUERYTRACEON option is only supported for Query Optimizer trace flags documented in the table above.
+  
+Use the `DBCC TRACESTATUS` command to determine which trace flags are currently active.
+
+## Trace flags
+
   
 The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
@@ -150,21 +169,7 @@ The following table lists and describes the trace flags that are available in [!
 |**11023**|Disables the use of the last persisted sample rate for all subsequent statistics update, where a sample rate is not specified explicitly as part of the [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) statement. For more information, see this [Microsoft Support article](https://support.microsoft.com/kb/4039284).<br /><br />**Scope**: global or session|    
 |**11024**|Enables triggering the auto update of statistics when the modification count of any partition exceeds the local [threshold](../../relational-databases/statistics/statistics.md#AutoUpdateStats). For more information, see this [Microsoft Support article](https://support.microsoft.com/kb/4041811).<br /><br />**Note:** This trace flag applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and higher builds.<br /><br />**Scope**: global or session| 
   
-## Remarks  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], there are three types of trace flags: query, session and global. Query trace flags are active for the context of a specific query. Session trace flags are active for a connection and are visible only to that connection. Global trace flags are set at the server level and are visible to every connection on the server. Some flags can only be enabled as global, and some can be enabled at either global or session scope.  
-  
- The following rules apply:  
--   A global trace flag must be enabled globally. Otherwise, the trace flag has no effect. We recommend that you enable global trace flags at startup, by using the **-T** command line option. This ensures the trace flag remains active after a server restart.  
--   If a trace flag has either global, session or query scope, it can be enabled with the appropriate scope. A trace flag that is enabled at the session level never affects another session, and the effect of the trace flag is lost when the SPID that opened the session logs out.  
-  
-Trace flags are set on or off by using either of the following methods:
--   Using the DBCC TRACEON and DBCC TRACEOFF commands.  
-     For example, to enable the 2528 trace flag globally, use [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) with the -1 argument: `DBCC TRACEON (2528, -1)`. The effect of enabling a global trace flag with DBCC TRACEON is lost on server restart. To turn off a global trace flag, use [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) with the -1 argument.  
--   Using the **-T** startup option to specify that the trace flag be set on during startup.  
-     The **-T** startup option enables a trace flag globally. You cannot enable a session-level trace flag by using a startup option. This ensures the trace flag remains active after a server restart. For more information about startup options, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   At the query level, by using the QUERYTRACEON [query hint](https://support.microsoft.com/kb/2801413). The QUERYTRACEON option is only supported for Query Optimizer trace flags documented in the table above.
-  
-Use the `DBCC TRACESTATUS` command to determine which trace flags are currently active.
+
   
 ## Examples  
  The following example sets trace flag 3205 on for all sessions at the server level by using DBCC TRACEON.  

@@ -159,8 +159,8 @@
       items:
       - name: Connect to a big data cluster
         href: ../big-data-cluster/connect-to-big-data-cluster.md
-      - name: Cluster administration portal
-        href: ../big-data-cluster/cluster-admin-portal.md
+      - name: View cluster status
+        href: ../big-data-cluster/view-cluster-status.md
       - name: Kubernetes troubleshooting
         href: ../big-data-cluster/cluster-troubleshooting-commands.md
     - name: Notebooks
@@ -1615,6 +1615,8 @@
           href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
         - name: Query data
           href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+        - name: Security
+          href: ../relational-databases/tables/temporal-table-security.md  
         - name: Change the schema
           href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
         - name: Stop system-versioning
@@ -12843,6 +12845,8 @@
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md
       - name: sys.dm_os_server_diagnostics_log_configurations
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md
+      - name: sys.dm_os_spinlock_stats
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-os-spinlock-stats-transact-sql.md
       - name: sys.dm_os_stacks
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-stacks-transact-sql.md
       - name: sys.dm_os_sys_info

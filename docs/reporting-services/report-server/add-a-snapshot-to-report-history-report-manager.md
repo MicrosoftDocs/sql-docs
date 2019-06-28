@@ -1,7 +1,7 @@
 ---
 title: "Add a Snapshot to Report History (Report Manager) | Microsoft Docs"
-ms.prod: "reporting-services-2014"
-ms.technology: "reporting-services-native"
+ms.prod: reporting-services
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies
@@ -10,7 +10,6 @@ ms.reviewer: ""
 ms.custom: ""
 ms.date: 04/26/2019
 ---
-
 # Add a Snapshot to Report History (Report Manager)
 
 Report history is a collection of report snapshots that you create over time. A report snapshot is a report that contains layout information and query results that were retrieved at a specific point in time. Unlike on-demand reports, which get up-to-date query results when you select the report, report snapshots are processed on a schedule and then saved to a report server. When you select a report snapshot for viewing, the report server retrieves the stored report from the report server database and shows the data and layout that were current for the report at the time the snapshot was created.  
@@ -19,7 +18,7 @@ Report snapshots are not saved in a particular rendering format. Instead, report
   
 ## To manually add snapshots to report history
   
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the drop-down arrow.
   

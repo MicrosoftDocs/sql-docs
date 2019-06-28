@@ -33,12 +33,12 @@ The SHORTEST_PATH function lets you find:
 * Single source shortest path(s).
 * Shortest path from multiple source nodes to multiple target nodes.
 
-It takes an arbitrary length pattern as input and returns a shortest path that exists between two nodes. This function can only be used inside MATCH. It accepts an arbitrary length pattern and finds a shortest path in the graph, which matches that pattern. The function returns only one shortest path between any two given nodes. If there exists, two or more shortest paths of the same length between any pair of source and destination node(s), the function will return only one path that was found first during traversal. Note that, an arbitrary length pattern can only be specified inside a SHORTEST_PATH function. 
+It takes an arbitrary length pattern as input and returns a shortest path that exists between two nodes. This function can only be used inside MATCH. The function returns only one shortest path between any two given nodes. If there exists, two or more shortest paths of the same length between any pair of source and destination node(s), the function returns only one path that was found first during traversal. Note that, an arbitrary length pattern can only be specified inside a SHORTEST_PATH function. 
 
 Refer to the [MATCH (SQL Graph)](../../t-sql/queries/match-sql-graph.md) for syntax. 
 
 ## FOR PATH
-FOR PATH must be used with any node or edge table name in the FROM clause, which will participate in an arbitrary length pattern. FOR PATH tells the engine that the node or edge table will return an ordered collection representing the list of nodes or edges traversed along the path from the start node to the end node. The attributes from these tables cannot be projected directly in the SELECT clause. To project attributes from these tables, graph path aggregate functions must be used.  
+FOR PATH must be used with any node or edge table name in the FROM clause, which will participate in an arbitrary length pattern. FOR PATH tells the engine that the node or edge table will return an ordered collection representing the list of nodes or edges found along the path traversed. The attributes from these tables cannot be projected directly in the SELECT clause. To project attributes from these tables, graph path aggregate functions must be used.  
 
 ## Arbitrary Length Pattern
 This pattern includes the nodes and edges that must be traversed repeatedly until the desired node is reached or until the maximum number of iterations as specified in the pattern is met. Each time the query is executed, the result of executing this pattern will be an ordered collection of the nodes and edges traversed along the path from the start node to the end node. This is a regular expression style syntax pattern and the following two pattern quantifiers are supported:

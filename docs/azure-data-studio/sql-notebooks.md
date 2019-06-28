@@ -3,7 +3,7 @@ title: How to use SQL Notebooks in Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Learn how to use SQL Notebooks in Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "03/17/2019"
+ms.date: "06/28/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "achatter; alayu; sstein"
@@ -158,8 +158,6 @@ import <package-name>
 When you run this command, `Module not found` is returned. If your package exists, then you will not get the error.
 
 If it returns a `Module not Found` error, then click on **Manage Packages** to launch the wizard experience. 
-
-### Image goes Here.
 
 ![image17](media/sql-notebooks/manage-packages.png)
 

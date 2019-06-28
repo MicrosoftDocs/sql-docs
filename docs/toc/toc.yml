@@ -8771,10 +8771,8 @@
           href: ../ssms/tutorials/connect-query-sql-server.md
     - name: Tutorials
       items:
-      - name: Script objects
-        href: ../ssms/tutorials/scripting-ssms.md
-      - name: SSMS Configuration
-        href: ../ssms/tutorials/ssms-configuration.md
+      - name: Design a relational database in a single database
+        items: https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017
     - name: Concepts
       items:
       - name: Tool Windows in SSMS
@@ -9051,6 +9049,10 @@
         href: ../ssms/install-other-languages.md
       - name: Use templates in SSMS
         href: ../ssms/tutorials/templates-ssms.md
+      - name: Script objects
+        href: ../ssms/tutorials/scripting-ssms.md
+      - name: SSMS Configuration
+        href: ../ssms/tutorials/ssms-configuration.md
       - name: Customize Menus & Shortcut Keys
         href: ../ssms/customize-menus-and-shortcut-keys.md
       - name: Configure WMI to Show Server Status in SQL Server Tools

@@ -9,8 +9,8 @@ ms.suite: "sql"
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ""
-author: v-susanh
-ms.author: ""
+author: lilgreenbird
+ms.author: "v-susanh"
 manager: kenvh
 ---
 
@@ -29,11 +29,11 @@ The following properties must also be specified for NTLM integrated authenticati
 
 The driver will throw an error if any of the above properties are missing when the **NTLM** authenticationScheme property is used. 
 
-See [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) for more information on connection properties. For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](https://docs.microsoft.com/en-us/windows/desktop/SecAuthN/microsoft-ntlm).
+See [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md) for more information on connection properties. For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
 
 ## Remarks
 
-See [Network security: LAN Manager authentication level](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings which control the behavior of NTLM authentication. 
+See [Network security: LAN Manager authentication level](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) for description of the SQL server settings which control the behavior of NTLM authentication. 
 
 ## Logging
 

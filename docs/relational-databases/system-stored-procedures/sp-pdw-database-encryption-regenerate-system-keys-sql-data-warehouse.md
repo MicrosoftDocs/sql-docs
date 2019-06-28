@@ -2,8 +2,7 @@
 title: "sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.service: sql-data-warehouse
-ms.reviewer: ""
+# ms.service: sql-data-warehouse
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "language-reference"
@@ -12,7 +11,7 @@ dev_langs:
 ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
 author: ronortloff
 ms.author: rortloff
-manager: craigg
+ms.reviewer: ""
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)

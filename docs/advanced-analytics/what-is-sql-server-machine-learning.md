@@ -1,6 +1,6 @@
 ---
-title: R language and Python feature integration - SQL Server Machine Learning Services
-description: R language and Python features in SQL Server, integrating with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
+title: Overview of SQL Server Machine Learning Services (R, Python) - SQL Server Machine Learning Services
+description: Overview of the Machine Learning Services feature in SQL Server, where you can integrate Python and R with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Machine Learning Services (R, Python) in SQL Server 2017
+# SQL Server Machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning Services is a feature of SQL Server, used for executing in-database R and Python scripts. The feature includes [Microsoft R and Python packages](#components) for high-performance predictive analytics and machine learning. The relational data can be used in R and Python scripts through stored procedures, T-SQL script containing R and Python statements, or R and Python code containing T-SQL.
 
-If you previously used [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services in SQL Server 2017 is the next generation of R support, with updated versions of base R, RevoScaleR, MicrosoftML, and other libraries introduced in 2016. 
+If you previously used [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services in SQL Server 2017 and later is the next generation of R support, with updated versions of base R, RevoScaleR, MicrosoftML, and other libraries introduced in 2016.
 
 In Azure SQL Database, [Machine Learning Services (with R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) is currently in public preview.
 

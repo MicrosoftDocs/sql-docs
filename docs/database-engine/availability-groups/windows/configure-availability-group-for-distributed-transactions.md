@@ -84,6 +84,15 @@ ALTER AVAILABILITY GROUP MyaAG
 >[!NOTE]
 >Starting with [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] versions before Service Pack 2, you need to drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
 
+To disable distributed transactions, use the following Transact-SQL command:
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
+
 ## <a name="distTran"/>Distributed transactions - technical concepts
 
 A distributed transaction spans two or more databases. As the transaction manager, DTC coordinates the transaction between SQL Server instances, and other data sources. Each instance of the [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] database engine can operate as a resource manager. When an availability group is configured with `DTC_SUPPORT = PER_DB`, the databases can operate as resource managers. For more information, see the MS DTC documentation.

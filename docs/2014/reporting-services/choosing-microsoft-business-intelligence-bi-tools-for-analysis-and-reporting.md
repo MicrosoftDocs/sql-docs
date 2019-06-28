@@ -4,13 +4,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ""
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint 
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ---
-
 # Analysis and reporting with Microsoft business intelligence (BI) tools
 
   The following table maps workloads for data analysis and reporting to the Microsoft BI tools that are best suited for those workloads.  

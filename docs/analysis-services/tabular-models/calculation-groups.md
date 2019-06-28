@@ -58,7 +58,7 @@ Before we go into the details, let's introduce some new DAX functions specifical
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) - Used by expressions for calculation items to determine the measure that is in context is specified in a list of measures.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) - Used by expressions for calculation items to retrieve the format string of the measure that is in context.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) - Used by expressions for calculation items to retrieve the format string of the measure that is in context.
 
 ### Time Intelligence example
 
@@ -245,7 +245,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-The format string expression must return a scalar string. It uses the new [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) function to revert to the base measure format string if there are multiple currencies in filter context.
+The format string expression must return a scalar string. It uses the new [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) function to revert to the base measure format string if there are multiple currencies in filter context.
 
 The following animation shows the dynamic format currency conversion of the **Sales** measure in a report.
 

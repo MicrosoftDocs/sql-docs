@@ -1,7 +1,7 @@
 ---
 title: "Add a Snapshot to Report History - Reporting Services | Microsoft Docs"
-ms.prod: "reporting-services"
-ms.technology: "reporting-services-native"
+ms.prod: reporting-services
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies

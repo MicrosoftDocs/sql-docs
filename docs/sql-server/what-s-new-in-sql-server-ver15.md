@@ -39,7 +39,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](../big-data-cluster/reference-mssqlctl.md). |
 |New status commands for `mssqlsctl`|`mssqlctl` adds new commands to complement existing monitoring commands. These replace the cluster administration portal - which is removed in this release.|
 | Spark compute pools | Create additional nodes to increase Spark compute power without having to scale up storage. In addition, you can start storage pool nodes that aren't used for Spark. Spark and storage are decoupled. For more information, see [Configure storage without spark](../big-data-cluster/deployment-custom-configuration.md#sparkstorage). |
-| MSSQL Spark connector | Support for read/write to data pool external tables. Previous releases supported read/write to MASTER instance tables only. |
+| MSSQL Spark connector | Support for read/write to data pool external tables. Previous releases supported read/write to MASTER instance tables only. For more information, see [How to read and write to SQL Server from Spark using the MSSQL Spark Connector](../big-data-cluster/spark-mssql-connector.md). |
 | Machine Learning using MLeap | [Train an MLeap machine learning model in Spark and score it in SQL Server using the Java language extension](../big-data-cluster/spark-create-machine-learning-model.md). |
 | &nbsp; | &nbsp; |
 

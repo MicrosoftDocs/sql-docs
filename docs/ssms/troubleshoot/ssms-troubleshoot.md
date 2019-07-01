@@ -13,6 +13,7 @@ manager: jroth
 ms.custom: ""
 ms.date: 07/01/2019
 ---
+
 # Get diagnostic data after a SQL Server Management Studio (SSMS) crash
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)

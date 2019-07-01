@@ -46,6 +46,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 
+## 14.0.600.1274, 2019/07/02
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates | &nbsp; |
+| Unable to select week days for weekly schedule | &nbsp; |
+| Power BI Report Server/paginated report does not display carriage returns properly in Word format | &nbsp; |
+| SCOM 2019 no longer works with SSRS 2017 Custom Authentication | &nbsp; |
+| An error occurred when invoking the authorization extension - Dataset | &nbsp; |
+| Logic change on stored procedure GetAllProperties in SSRS 2017 and PBIRS. Which cause the Web service endpoint ReportingService2010.GetProperties method unable to get any data for linked report | &nbsp; |
+| Mobile Report - Simple Grid Row Header disappears when an Item within the Grid is clicked | &nbsp; |
+| Unable to use date field in Data Driven Subscription parameter | &nbsp; |
+| Nested tablix shows small font or partial font in SSRS 2016 and later | &nbsp; |
+| Subscriptions with DateTime Parameter error out after user with different Locale edits the Subscription | &nbsp; |
+| Creating a Data-driven Subscription with Null Delivery Extension is failing with "A delivery error has occurred" | &nbsp; |
+| URL encoding is incorrect when setting the value in Excel\Word format | &nbsp; |
+
 ## 14.0.600.1109, 2019/02/12
 
 | Fixed issue | Details |

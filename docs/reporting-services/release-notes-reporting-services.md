@@ -53,9 +53,9 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Security updates | &nbsp; |
 | Unable to select weekdays when creating a shared weekly schedule | &nbsp; |
 | Report does not display carriage returns properly in Word format | &nbsp; |
-| SCOM 2019 no longer works with SSRS 2017 Custom Authentication when upgrading from SSRS 2016 | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 no longer works with recent SSRS 2017 upgrades | &nbsp; |
 | An error occurred when invoking the authorization extension for shared Dataset | &nbsp; |
-| Logic change on stored procedure GetAllProperties in SSRS 2017 and PBIRS. Which cause the Web service endpoint ReportingService2010.GetProperties method unable to get any data for linked report | &nbsp; |
+| Logic changed on stored procedure GetAllProperties in SSRS 2017 and PBIRS, which causes the Web service endpoint ReportingService2010.GetProperties method unable to get any data for linked report | &nbsp; |
 | Simple Grid Row Header in Mobile Report disappears when an Item within the Grid is clicked | &nbsp; |
 | Unable to use date field in Data Driven Subscription parameter | &nbsp; |
 | Nested tablix shows small font or partial font in SSRS 2016 and later | &nbsp; |

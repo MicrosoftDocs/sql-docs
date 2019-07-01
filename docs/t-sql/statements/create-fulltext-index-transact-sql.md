@@ -61,7 +61,7 @@ CREATE FULLTEXT INDEX ON table_name
  }  
 ```  
   
-## Arguments  
+## Arguments
 *table_name*       
 Is the name of the table or indexed view that contains the column or columns included in the full-text index.  
   
@@ -79,9 +79,9 @@ Specify TYPE COLUMN *type_column_name* only if *column_name* specifies a **varbi
 > At indexing time, the Full-Text Engine uses the abbreviation in the type column of each table row to identify which full-text search filter to use for the document in *column_name*. The filter loads the document as a binary stream, removes the formatting information, and sends the text from the document to the word-breaker component. For more information, see [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
 LANGUAGE *language_term*       
- Is the language of the data stored in *column_name*.  
+Is the language of the data stored in *column_name*.  
   
- *language_term* is optional and can be specified as a string, integer, or hexadecimal value corresponding to the locale identifier (LCID) of a language. If no value is specified, the default language of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is used.  
+*language_term* is optional and can be specified as a string, integer, or hexadecimal value corresponding to the locale identifier (LCID) of a language. If no value is specified, the default language of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is used.  
   
 If *language_term* is specified, the language it represents will be used to index data stored in **char**, **nchar**, **varchar**, **nvarchar**, **text**, and **ntext** columns. This language is the default language used at query time if *language_term* is not specified as part of a full-text predicate against the column.  
   
@@ -100,53 +100,53 @@ For documents stored in XML- or BLOB-type columns, the language encoding within 
 STATISTICAL_SEMANTICS       
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 
   
- Creates the additional key phrase and document similarity indexes that are part of statistical semantic indexing. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
+Creates the additional key phrase and document similarity indexes that are part of statistical semantic indexing. For more information, see [Semantic Search &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- KEY INDEX *index_name*       
- Is the name of the unique key index on *table_name*. The KEY INDEX must be a unique, single-key, non-nullable column. Select the smallest unique key index for the full-text unique key.  For the best performance, we recommend an integer data type for the full-text key.  
+KEY INDEX *index_name*       
+Is the name of the unique key index on *table_name*. The KEY INDEX must be a unique, single-key, non-nullable column. Select the smallest unique key index for the full-text unique key.  For the best performance, we recommend an integer data type for the full-text key.  
   
- *fulltext_catalog_name*       
- Is the full-text catalog used for the full-text index. The catalog must already exist in the database. This clause is optional. If it is not specified, a default catalog is used. If no default catalog exists, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error.  
+*fulltext_catalog_name*       
+Is the full-text catalog used for the full-text index. The catalog must already exist in the database. This clause is optional. If it is not specified, a default catalog is used. If no default catalog exists, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error.  
   
- FILEGROUP *filegroup_name*       
- Creates the specified full-text index on the specified filegroup. The filegroup must already exist. If the FILEGROUP clause is not specified, the full-text index is placed in the same filegroup as base table or view for a nonpartitioned table or in the primary filegroup for a partitioned table.  
+FILEGROUP *filegroup_name*       
+Creates the specified full-text index on the specified filegroup. The filegroup must already exist. If the FILEGROUP clause is not specified, the full-text index is placed in the same filegroup as base table or view for a nonpartitioned table or in the primary filegroup for a partitioned table.  
   
  CHANGE_TRACKING [ = ] { MANUAL | **AUTO** | OFF [ , NO POPULATION ] }       
  Specifies whether changes (updates, deletes or inserts) made to table columns that are covered by the full-text index will be propagated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the full-text index. Data changes through WRITETEXT and UPDATETEXT are not reflected in the full-text index, and are not picked up with change tracking.  
   
- MANUAL       
- Specifies that the tracked changes must be propagated manually by calling the ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
+MANUAL       
+Specifies that the tracked changes must be propagated manually by calling the ALTER FULLTEXT INDEX ... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to call this [!INCLUDE[tsql](../../includes/tsql-md.md)] statement periodically.  
   
- **AUTO**       
- Specifies that the tracked changes will be propagated automatically as data is modified in the base table (*automatic population*). Although changes are propagated automatically, these changes might not be reflected immediately in the full-text index. AUTO is the default.  
+**AUTO**       
+Specifies that the tracked changes will be propagated automatically as data is modified in the base table (*automatic population*). Although changes are propagated automatically, these changes might not be reflected immediately in the full-text index. AUTO is the default.  
   
- OFF [ `,` NO POPULATION]       
- Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not keep a list of changes to the indexed data. When NO POPULATION is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] populates the index fully after it is created.  
+OFF [ `,` NO POPULATION]       
+Specifies that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not keep a list of changes to the indexed data. When NO POPULATION is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] populates the index fully after it is created.  
   
- The NO POPULATION option can be used only when CHANGE_TRACKING is OFF. When NO POPULATION is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not populate an index after it is created. The index is only populated after the user executes the ALTER FULLTEXT INDEX command with the START FULL POPULATION or START INCREMENTAL POPULATION clause.  
+The NO POPULATION option can be used only when CHANGE_TRACKING is OFF. When NO POPULATION is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not populate an index after it is created. The index is only populated after the user executes the ALTER FULLTEXT INDEX command with the START FULL POPULATION or START INCREMENTAL POPULATION clause.  
   
- STOPLIST [ = ] { OFF | **SYSTEM** | *stoplist_name* }       
- Associates a full-text stoplist with the index. The index is not populated with any tokens that are part of the specified stoplist. If STOPLIST is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associates the system full-text stoplist with the index.  
+STOPLIST [ = ] { OFF | **SYSTEM** | *stoplist_name* }       
+Associates a full-text stoplist with the index. The index is not populated with any tokens that are part of the specified stoplist. If STOPLIST is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associates the system full-text stoplist with the index.  
   
- OFF       
- Specifies that no stoplist be associated with the full-text index.  
+OFF       
+Specifies that no stoplist be associated with the full-text index.  
   
- **SYSTEM**       
- Specifies that the default full-text system STOPLIST should be used for this full-text index.  
+**SYSTEM**       
+Specifies that the default full-text system STOPLIST should be used for this full-text index.  
   
- *stoplist_name*       
- Specifies the name of the stoplist to be associated with the full-text index.  
+*stoplist_name*       
+Specifies the name of the stoplist to be associated with the full-text index.  
   
- SEARCH PROPERTY LIST [ = ] *property_list_name*       
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+SEARCH PROPERTY LIST [ = ] *property_list_name*       
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
- Associates a search property list with the index.  
+Associates a search property list with the index.  
+ 
+OFF       
+Specifies that no property list be associated with the full-text index.  
   
- OFF       
- Specifies that no property list be associated with the full-text index.  
-  
- *property_list_name*       
- Specifies the name of the search property list to associate with the full-text index.  
+*property_list_name*       
+Specifies the name of the search property list to associate with the full-text index.  
   
 ## Remarks  
 For more information about full-text indexes, see [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md).  

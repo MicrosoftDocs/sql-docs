@@ -62,31 +62,30 @@ The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated starting with [!INCLU
 
 ## Examples  
 ### Return the hash of a variable  
- The following example returns the `SHA1` hash of the **nvarchar** data stored in variable `@HashThis`.  
+ The following example returns the `SHA2_256` hash of the **nvarchar** data stored in variable `@HashThis`.  
   
 ```sql  
-DECLARE @HashThis nvarchar(4000);  
-SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
-SELECT HASHBYTES('SHA1', @HashThis);  
+DECLARE @HashThis nvarchar(32);  
+SET @HashThis = CONVERT(nvarchar(32),'dslfdkjLK85kldhnv$n000#knf');  
+SELECT HASHBYTES('SHA2_256', @HashThis);  
 ```  
   
 ### Return the hash of a table column  
- The following example returns the SHA1 hash of the values in column `c1` in the table `Test1`.  
+ The following example returns the SHA2_256 hash of the values in column `c1` in the table `Test1`.  
   
 ```sql  
-CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
+CREATE TABLE dbo.Test1 (c1 nvarchar(32));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
-SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
+SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 -------------------------------------------  
-0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
-0xF643A82F948DEFB922B12E50B950CEE130A934D6  
-  
+0x741238C01D9DB821CF171BF61D72260B998F7C7881D90091099945E0B9E0C2E3 
+0x91DDCC41B761ACA928C62F7B0DA61DC763255E8247E0BD8DCE6B22205197154D  
 (2 row(s) affected)  
 ```  
   

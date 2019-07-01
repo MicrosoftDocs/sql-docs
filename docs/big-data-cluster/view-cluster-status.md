@@ -57,9 +57,9 @@ The service endpoints table also exposes several dashboards for monitoring:
 
 You can directly click on these links. You are asked twice to provide your user name and password before connecting to the service.
 
-### <a id="notebook"></a> Cluster Status status notebook
+### <a id="notebook"></a> Cluster Status notebook
 
-1. You can also view cluster status of the big data cluster by launching the cluster status notebook. To launch the notebook, click the **Cluster Status** task.
+1. You can also view cluster status of the big data cluster by launching the Cluster Status notebook. To launch the notebook, click the **Cluster Status** task.
 
     ![launch](media/view-cluster-status/cluster-status-launch.png)
 

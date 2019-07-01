@@ -1615,6 +1615,8 @@
           href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
         - name: Query data
           href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+        - name: Security
+          href: ../relational-databases/tables/temporal-table-security.md  
         - name: Change the schema
           href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
         - name: Stop system-versioning
@@ -8763,16 +8765,10 @@
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ../ssms/sql-server-management-studio-ssms.md
-    - name: Quickstarts
+    - name: Tutorials
       items:
         - name: Connect & query SQL Server
           href: ../ssms/tutorials/connect-query-sql-server.md
-    - name: Tutorials
-      items:
-      - name: Script objects
-        href: ../ssms/tutorials/scripting-ssms.md
-      - name: SSMS Configuration
-        href: ../ssms/tutorials/ssms-configuration.md
     - name: Concepts
       items:
       - name: Tool Windows in SSMS
@@ -9049,6 +9045,10 @@
         href: ../ssms/install-other-languages.md
       - name: Use templates in SSMS
         href: ../ssms/tutorials/templates-ssms.md
+      - name: Script objects
+        href: ../ssms/tutorials/scripting-ssms.md
+      - name: SSMS Configuration
+        href: ../ssms/tutorials/ssms-configuration.md
       - name: Customize Menus & Shortcut Keys
         href: ../ssms/customize-menus-and-shortcut-keys.md
       - name: Configure WMI to Show Server Status in SQL Server Tools
@@ -12843,6 +12843,8 @@
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md
       - name: sys.dm_os_server_diagnostics_log_configurations
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md
+      - name: sys.dm_os_spinlock_stats
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-os-spinlock-stats-transact-sql.md
       - name: sys.dm_os_stacks
         href: ../relational-databases/system-dynamic-management-views/sys-dm-os-stacks-transact-sql.md
       - name: sys.dm_os_sys_info

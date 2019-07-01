@@ -56,21 +56,28 @@ In this section, we list troubleshooting steps for the most common errors.
 
 ### Missing server identity
 
-**Error Message**: _401 AzureKeyVaultNoServerIdentity - The server identity is not correctly configured on server. Please contact support._
+**Error message**
 
-**Detection**: Use the following cmdlet or command to ensure that an identity has been assigned to the logical SQL Server instance:
+_401 AzureKeyVaultNoServerIdentity - The server identity is not correctly configured on server. Please contact support._
+
+**Detection**
+
+Use the following cmdlet or command to ensure that an identity has been assigned to the logical SQL Server instance:
 
 - Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Azure CLI: [`az-sql-server-show`](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
-**Mitigation**: Use the following cmdlet or command to configure an Azure AD identity (the AppId) for the logical SQL Server instance:
+**Mitigation**
 
-- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) with the -AssignIdentity option.
+Use the following cmdlet or command to configure an Azure AD identity (an AppId) for the logical SQL Server instance:
+
+- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) with the `-AssignIdentity` option.
 
 - Azure CLI: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) with the `--assign_identity` option.
 
-In the Azure portal, go to the key vault, and then go to **Access policies**:  
+In the Azure portal, go to the key vault, and then go to **Access policies**. Complete these steps: 
+
  1. Use the **Add New** button to add the AppId for the server you created in the preceding step. 
  1. Assign the following key permissions: Get, Wrap, and Unwrap 
 
@@ -82,15 +89,19 @@ To learn more, see [Assign an Azure AD identity to your server](https://docs.mic
 
 ### Missing key vault
 
-**Error message**: _503 AzureKeyVaultConnectionFailed - The operation could not be completed on the server because attempts to connect to Azure Key Vault have failed._
+**Error message**
 
-**Detection**: How to identify the key URI and the key vault:
+_503 AzureKeyVaultConnectionFailed - The operation could not be completed on the server because attempts to connect to Azure Key Vault have failed._
+
+**Detection**
+
+To identify the key URI and the key vault:
 
 1. Use the following cmdlet or command to get the key URI of a specific logical SQL Server instance:
 
     - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI: [`az-sql-server-tde-key-show`](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 1. Use the key URI to identify the key vault:
 
@@ -98,7 +109,9 @@ To learn more, see [Assign an Azure AD identity to your server](https://docs.mic
 
     - Azure CLI: Inspect the returned server encryption protector for details about the key vault.
 
-**Mitigation**: Confirm that the key vault is available:
+**Mitigation**
+
+Confirm that the key vault is available:
 
 - Ensure that the key vault is available and that the logical SQL Server instance has access.
 - If the key vault is behind a firewall, ensure that the check box to allow Microsoft services to access the key vault is selected.
@@ -107,30 +120,44 @@ To learn more, see [Assign an Azure AD identity to your server](https://docs.mic
 
 ### Missing key
 
-**Error message**: _404 ServerKeyNotFound - The requested server key was not found on the current subscription._ or _409 ServerKeyDoesNotExists - The server key does not exist._
+**Error messages**
 
-**Detection**: How to identify the key URI and the key vault:
+_404 ServerKeyNotFound - The requested server key was not found on the current subscription._ 
+
+_409 ServerKeyDoesNotExists - The server key does not exist._
+
+**Detection**
+
+To identify the key URI and the key vault:
 
 - Use the cmdlet or commands in [Missing key vault](#missing-key-vault) to identify the key URI that's added to the logical SQL Server instance. Running the commands returns the list of keys.
 
-**Mitigation**: Confirm that the TDE protector is present in Key Vault:
+**Mitigation**
+
+Confirm that the TDE protector is present in Key Vault:
 
 1. Identify the key vault, then go to the key vault in the Azure portal.
 1. Ensure that the key identified by the key URI is present.
 
 ### Missing permissions
 
-**Error message**: _401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault._
+**Error message**
 
-**Detection**: How to identify the key URI and key vault: 
+_401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault._
+
+**Detection**
+
+To identify the key URI and key vault: 
 
 - Use the cmdlet or commands in [Missing key vault](#missing-key-vault) to identify the key vault that the logical SQL Server instance uses.
 
-**Mitigation**: Confirm that the logical SQL Server instance has permissions to the key vault and the correct permissions to access the key:
+**Mitigation**
 
-- In the Azure portal, go to the key vault > **Access policies**. Find the logical SQL Server instance AppId:  
-  - If the AppId isn't present, add it by using the **Add New** button. 
-  - If the AppId is present, ensure that the AppID has the following key permissions: Get, Wrap, and Unwrap.
+Confirm that the logical SQL Server instance has permissions to the key vault and the correct permissions to access the key:
+
+- In the Azure portal, go to the key vault > **Access policies**. Find the logical SQL Server instance AppId.  
+- If the AppId is present, ensure that the AppID has the following key permissions: Get, Wrap, and Unwrap.
+- If the AppId isn't present, add it by using the **Add New** button. 
 
 ## Next steps
 

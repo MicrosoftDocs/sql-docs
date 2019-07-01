@@ -20,7 +20,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
 
 Modifies the content of an existing external package library.
 
@@ -120,6 +120,9 @@ Specifies the content of the package for a specific platform. Only one file arti
 The file can be specified in the form of a local path or network path. If the data source option is specified, the file name can be a relative path with respect to the container referenced in the `EXTERNAL DATA SOURCE`.
 
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
+
+> [!NOTE]
+> If you're running in Azure SQL Database, you need to use `library_bits` instead of `file_spec`. See a related example for CREATE EXTERNAL LIBRARY, [Create a library from a byte stream](create-external-library-transact-sql.md#c-create-a-library-from-a-byte-stream).
 
 **library_bits**
 

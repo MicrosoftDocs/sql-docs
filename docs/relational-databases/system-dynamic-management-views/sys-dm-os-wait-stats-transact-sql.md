@@ -109,11 +109,11 @@ This command resets all counters to 0.
 |BACKUPTHREAD |Occurs when a task is waiting for a backup task to finish. Wait times may be long, from several minutes to several hours. If the task that is being waited on is in an I/O process, this type does not indicate a problem.| 
 |BAD_PAGE_PROCESS |Occurs when the background suspect page logger is trying to avoid running more than every five seconds. Excessive suspect pages cause the logger to run frequently.| 
 |BLOB_METADATA |Internal use only. <br />**Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPALLOCATION |Internal use only. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPBUILD |Internal use only. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPREPARTITION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPREPLICATION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BPSORT |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPALLOCATION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPBUILD |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br />**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPREPARTITION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPREPLICATION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BPSORT |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_CONNECTION_RECEIVE_TASK |Occurs when waiting for access to receive a message on a connection endpoint. Receive access to the endpoint is serialized.| 
 |BROKER_DISPATCHER |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_ENDPOINT_STATE_MUTEX |Occurs when there is contention to access the state of a Service Broker connection endpoint. Access to the state for changes is serialized.| 
@@ -356,11 +356,11 @@ This command resets all counters to 0.
 |HK_RESTORE_FILEMAP |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HKCS_PARALLEL_MIGRATION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HKCS_PARALLEL_RECOVERY |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTBUILD |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTDELETE |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTMEMO |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTREINIT |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTREPARTITION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTBUILD |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTDELETE |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTMEMO |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTREINIT |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTREPARTITION |Occurs during synchronization of threads entering different processing stages inside a batch mode operator. <br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HTTP_ENUMERATION |Occurs at startup to enumerate the HTTP endpoints to start HTTP.| 
 |HTTP_START |Occurs when a connection is waiting for HTTP to complete initialization.| 
 |HTTP_STORAGE_CONNECTION |Internal use only. <br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

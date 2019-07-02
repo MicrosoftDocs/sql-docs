@@ -127,7 +127,7 @@ When attempting to access the file specified in **<client_library_specifier>**, 
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 
 > [!NOTE]
-> If you're running in Azure SQL Database, you need to use `library_bits` instead of `file_spec`. See the example, [Create a library from a byte stream](#c-create-a-library-from-a-byte-stream).
+> If you're running in Azure SQL Database, you need to use `library_bits` instead of `client_library_specifier`. See the example, [Create a library from a byte stream](#c-create-a-library-from-a-byte-stream).
 
 **library_bits**
 

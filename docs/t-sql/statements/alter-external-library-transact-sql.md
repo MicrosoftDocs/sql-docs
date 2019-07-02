@@ -122,7 +122,7 @@ The file can be specified in the form of a local path or network path. If the da
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 
 > [!NOTE]
-> If you're running in Azure SQL Database, you need to use `library_bits` instead of `file_spec`. See a related example for CREATE EXTERNAL LIBRARY, [Create a library from a byte stream](create-external-library-transact-sql.md#c-create-a-library-from-a-byte-stream).
+> If you're running in Azure SQL Database, you need to use `library_bits` instead of `client_library_specifier`. See a related example for CREATE EXTERNAL LIBRARY, [Create a library from a byte stream](create-external-library-transact-sql.md#c-create-a-library-from-a-byte-stream).
 
 **library_bits**
 

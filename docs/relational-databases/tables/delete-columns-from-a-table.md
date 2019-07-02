@@ -19,6 +19,7 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Columns from a Table
+
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
 This topic describes how to delete table columns in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].
@@ -56,7 +57,7 @@ Requires ALTER permission on the table.
 
 ## <a name="SSMSProcedure"></a> Using SQL Server Management Studio
 
-#### To delete columns by using Object Explorer
+### To delete columns by using Object Explorer
 
 1. In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 2. In **Object Explorer**, locate the table from which you want to delete columns, and expand to expose the column names.
@@ -65,7 +66,7 @@ Requires ALTER permission on the table.
 
 If the column contains constraints or other dependencies, an error message will display in the **Delete Object** dialog box. Resolve the error by deleting the referenced constraints.
 
-#### To delete columns by using Table Designer
+### To delete columns by using Table Designer
 
 1. In **Object Explorer**, right-click the table from which you want to delete columns and choose **Design**.
 2. Right-click the column you want to delete and choose **Delete Column** from the shortcut menu.
@@ -73,7 +74,7 @@ If the column contains constraints or other dependencies, an error message will 
 
 ## <a name="TsqlProcedure"></a> Using Transact-SQL
 
-#### To delete columns
+### To delete columns
 
 The following example shows you how to delete a column.
 

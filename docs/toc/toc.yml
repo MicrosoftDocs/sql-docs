@@ -8767,8 +8767,8 @@
         href: ../ssms/sql-server-management-studio-ssms.md
     - name: Tutorials
       items:
-        - name: Connect & query SQL Server
-          href: ../ssms/tutorials/connect-query-sql-server.md
+      - name: Connect & query SQL Server
+        href: ../ssms/tutorials/connect-query-sql-server.md
     - name: Concepts
       items:
       - name: Tool Windows in SSMS
@@ -9043,6 +9043,10 @@
       items:
       - name: Install non-English SSMS
         href: ../ssms/install-other-languages.md
+      - name: Script objects
+        href: ../ssms/tutorials/scripting-ssms.md
+      - name: SSMS Configuration
+        href: ../ssms/tutorials/ssms-configuration.md
       - name: Use templates in SSMS
         href: ../ssms/tutorials/templates-ssms.md
       - name: Script objects
@@ -9059,6 +9063,8 @@
         items:
         - name: Get full memory dump 
           href: ../ssms/troubleshoot/get-full-memory-dump.md
+        - name: Crashes and Hangs
+          href: ../ssms/troubleshoot/ssms-troubleshoot.md 
       - name: SQL Server Agent
         items:
         - name: Configure

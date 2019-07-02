@@ -9047,10 +9047,6 @@
       items:
       - name: Install non-English SSMS
         href: ssms/install-other-languages.md
-      - name: Script objects
-        href: ../ssms/tutorials/scripting-ssms.md
-      - name: SSMS Configuration
-        href: ../ssms/tutorials/ssms-configuration.md
       - name: Use templates in SSMS
         href: ssms/tutorials/templates-ssms.md
       - name: Script objects
@@ -9068,7 +9064,7 @@
         - name: Get full memory dump 
           href: ssms/troubleshoot/get-full-memory-dump.md
         - name: Crashes and Hangs
-          href: ../ssms/troubleshoot/ssms-troubleshoot.md
+          href: ssms/troubleshoot/ssms-troubleshoot.md
       - name: SQL Server Agent
         items:
         - name: Configure

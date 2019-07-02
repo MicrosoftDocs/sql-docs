@@ -74,8 +74,6 @@ Columns that contain similar data in different data sources are the basis of cre
   
 OLE DB providers can sometimes offer faster performance for large-scale data. When choosing between different providers for the same data source, you should try the OLE DB provider first.  
 
-
-
 ## See also
 
 [Data sources supported in SQL Server Analysis Services tabular 1400  models](data-sources-supported-ssas-tabular-1400.md)

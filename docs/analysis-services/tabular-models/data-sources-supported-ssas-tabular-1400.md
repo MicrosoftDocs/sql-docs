@@ -57,7 +57,7 @@ In-memory and DirectQuery models connecting to Azure data sources use .NET Frame
 | Teradata |OLE DB Provider for Teradata, Teradata Data Provider for .NET |Teradata Data Provider for .NET | |
 | | | |
 
-<a name="aeop">4</a> - SQL Server Database Always Encrypted is not supported in Azure Analysis Services. However, Azure SQL Database and SQL Server database Always Encrypted is supported as a DirectQuery [client datasource](data-sources-supported-ssas-tabular.md#bkmk_supported_ds_dq) in SQL Server Analysis Services tabular models at the 1200 compatibility level.      
+<a name="aeop">4</a> - Azure SQL Database and SQL Server database Always Encrypted is supported as a DirectQuery [client datasource](data-sources-supported-ssas-tabular.md#bkmk_supported_ds_dq) in SQL Server Analysis Services tabular models at the 1200 compatibility level only. Azure SQL Database and SQL Server database Always Encrypted is not supported in Azure Analysis Services.       
 
 > [!NOTE]
 > For in-memory models, OLE DB providers can provide better performance for large-scale data. When choosing between different providers for the same data source, try the OLE DB provider first.  

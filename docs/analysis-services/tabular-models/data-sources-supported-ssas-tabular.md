@@ -61,9 +61,8 @@ Teradata relational databases    |  Teradata V2R6 and later     | .Net Data Prov
 
 *  The Windows computer on which Analysis Services is installed has the necessary column master key certificate(s) installed. To learn more, see [Creating Column Master Keys in Windows Certificate Store](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store).
 *  The datasource Analysis Services uses to connect to SQL is based on the .Net Framework provider, and the Column Encryption Setting property on the data source must be enabled. .NET Framework 4.6.1 or later needs to be present on the Analysis Services server.
-*  For tabular models, the SQL Server or SQL Database datasource must be a *provider* datasource type supported by the 1200 compatibility level. It will not work with Power Query *structured* data sources, introduced in the 1400 compatibility level.
-*  This functionality should be used only with tabular models in DirectQuery mode.
-*  Always Encrypted is not supported for use with Azure Analysis Services.
+*  The SQL Server or SQL Database datasource must be a *provider* datasource type supported by the 1200 compatibility level. It will not work with Power Query *structured* data sources, introduced in the 1400 compatibility level.
+*  This functionality should be used only with SQL Server Analysis Services tabular models in DirectQuery mode. Always Encrypted is not supported for use with Azure Analysis Services.
   
 ##  <a name="bkmk_tips"></a> Tips for choosing data sources  
   

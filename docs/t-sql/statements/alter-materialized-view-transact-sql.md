@@ -48,9 +48,6 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
  *view_name*     
  Is the materialized view to change.  
   
-> [!IMPORTANT]  
->  Column permissions are maintained only when columns have the same name before and after ALTER VIEW is performed.
-
 *REBUILD*   
 Resumes the materialized view.
 

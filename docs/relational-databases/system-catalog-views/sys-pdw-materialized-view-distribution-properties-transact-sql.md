@@ -1,7 +1,7 @@
 ---
 title: "sys.pdw_materialized_view_distribution_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
@@ -10,7 +10,7 @@ dev_langs:
   - "TSQL"
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuL-Preview 
-ms.author: 
+ms.author: xiaoyul
 manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -21,10 +21,10 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 Displays distribution information materialized views.  
   
 |Column Name|Data Type|Description|  
-|-----------------|---------------|-----------------|-----------|  
+|-----------------|---------------|-----------------| 
 |object_id|**int**|ID of the materialized view for which thee properties were specified.| 
 |distribution_policy |**tinyint**|2 = HASH</br>4 = ROUND_ROBIN|  
-|distribution_policy_desc |**nvarchar(60)**|Ordinal (1-based) within set of distribution.|HASH, ROUND_ROBIN|  
+|distribution_policy_desc |**nvarchar(60)**|HASH, ROUND_ROBIN|  
   
 ## See also
 

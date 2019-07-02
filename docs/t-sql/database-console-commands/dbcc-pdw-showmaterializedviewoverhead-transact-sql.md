@@ -14,11 +14,11 @@ ms.author: xiaoyul
 manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD   (Transact-SQL) (preview)
+# DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Displays the number of  incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
+Displays the number of incremental changes in the base tables that are held for materialized views in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. The overhead ratio is calculated as TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -32,7 +32,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 ## Arguments
 
  *schema_name*     
- Is the name of the schema to    which the view belongs.
+ Is the name of the schema to which the view belongs.
 
 *materialized_view_name*   
 Is the name of the materialized view.
@@ -43,8 +43,8 @@ As the underlying tables in the definition of a materialized view are modified, 
   
 ## Permissions  
   
+Requires VIEW DATABASE STATE permission.  
 
-  
 ## Example  
 
 This example returns the delta space used for a materialized view.
@@ -64,8 +64,11 @@ Output:
 |OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|
 |4567|0|0|0.0|
+
+</br>
+
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|
 |789|0|2|2.0|
-| | | | |
 
 ## See also

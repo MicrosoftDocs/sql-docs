@@ -45,7 +45,7 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 
 This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in Azure SQL Data Warehouse for developing solutions. The article also provides code examples.
 
-A Materialized View persists the data returned from the view definition query and automatically gets updated as data changes in the underlying tables.   It improves the performance of complex queries (typically queries with joins and aggregations) while offering simple maintenance operations.   With its execution plan automatching capability, a materialized view does not have to be referenced in the query for the optimizer to consider the view for substitution.  This allows data engineers to implement indexed views as a mechanism for improving query response time, without having to change queries.  
+A Materialized View persists the data returned from the view definition query and automatically gets updated as data changes in the underlying tables.   It improves the performance of complex queries (typically queries with joins and aggregations) while offering simple maintenance operations.   With its execution plan automatching capability, a materialized view does not have to be referenced in the query for the optimizer to consider the view for substitution.  This allows data engineers to implement materialized views as a mechanism for improving query response time, without having to change queries.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -89,32 +89,27 @@ Aggregate functions are required in the SELECT list of the materialized view def
 
 When MIN/MAX aggregates are used in the SELECT list of materialized view definition, following requirements apply:
  
--FOR_APPEND is required.  For example:
-```sql 
-CREATE MATRIALIZED VIEW mv_test2  
-WITH (distribution = hash(i_category_id), FOR_APPEND)  
-AS
-SELECT MAX(i.i_rec_start_date) as max_i_rec_start_date, MIN(i.i_rec_end_date) as min_i_rec_end_date, i.i_item_sk, i.i_item_id, i.i_category_id
-FROM syntheticworkload.item i  
-GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
-```
+- FOR_APPEND is required.  For example:
+  ```sql 
+  CREATE MATRIALIZED VIEW mv_test2  
+  WITH (distribution = hash(i_category_id), FOR_APPEND)  
+  AS
+  SELECT MAX(i.i_rec_start_date) as max_i_rec_start_date, MIN(i.i_rec_end_date) as min_i_rec_end_date, i.i_item_sk, i.i_item_id, i.i_category_id
+  FROM syntheticworkload.item i  
+  GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
+  ```
 
 - The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction does not apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED INDEX with REBUILD.
   
-## Permissions
-
-Requires CREATE VIEW permission in the database and ALTER permission on the schema in which the view is being created.  
-
 ## Remarks
 
-A materialized view in Azure data warehouse is very similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (check CREATE INDEXED VIEW for details) except that a materialized view supports aggregate functions.   Here are additional considerations for materialized view.  
+A materialized view in Azure data warehouse is very similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](/sql/relational-databases/views/create-indexed-views) for details) except that a materialized view supports aggregate functions.   Here are additional considerations for materialized view.  
  
 Only CLUSTERED COLUMNSTORE INDEX is supported by materialized view. 
  
 A materialized view can be dropped via DROP VIEW.  You can use ALTER MATERIALIZED VIEW to disable or rebuild a materialized view.   
  
-Materialized Views can be created on partitioned tables.  SPLIT/MERGE operations are supported on tables referenced in materialized views.  SWITCH is not supported on tables referenced in materialized views. If attempted, the user will see the following error. 
-Msg 106104, Level 16, State 1, Line 9 Should we mark the error in red? 
+Materialized Views can be created on partitioned tables.  SPLIT/MERGE operations are supported on tables referenced in materialized views.  SWITCH is not supported on tables referenced in materialized views. If attempted, the user will see the error,  `Msg 106104, Level 16, State 1, Line 9`
  
 ALTER TABLE SWITCH is not supported on tables that are referenced in materialized views. Disable or drop the materialized views before using ALTER TABLE SWITCH. In the following scenarios, the materialized view creation requires new columns to be added to the materialized view:
 
@@ -134,6 +129,10 @@ Users can run [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/
 EXPLAIN plan and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution. and the graphical Estimated Execution Plan in SQL Server Management Studio can show whether a materialized view is considered by the query optimizer for query execution.
 
 To find out if a SQL statement can benefit from a new materialized view, run the `EXPLAIN` command with `WITH_RECOMMENDATIONS`.  For details, see [EXPLAIN (Transact-SQL)](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest).
+
+## Permissions
+
+Requires CREATE VIEW permission in the database and ALTER permission on the schema in which the view is being created. 
   
 ## See also
 

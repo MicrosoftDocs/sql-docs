@@ -207,7 +207,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  

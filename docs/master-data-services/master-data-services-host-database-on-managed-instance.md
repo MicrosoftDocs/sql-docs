@@ -1,3 +1,17 @@
+---
+title: "Host database on Managed Instance | Microsoft Docs"
+ms.custom: ""
+ms.date: "07/01/2019"
+ms.prod: sql
+ms.prod_service: "mds"
+ms.reviewer: ""
+ms.technology: master-data-services
+ms.topic: conceptual
+ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
+author: v-redu
+ms.author: lle
+manager: craigg
+---
 # Host database on Managed Instance
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

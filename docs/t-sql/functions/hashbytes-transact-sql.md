@@ -22,6 +22,7 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # HASHBYTES (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the MD2, MD4, MD5, SHA, SHA1, or SHA2 hash of its input in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,14 +38,15 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## Arguments  
- **'**\<algorithm>**'**  
- Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated.  
+
+`<algorithm>`  
+Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated.  
   
- **@input**  
- Specifies a variable containing the data to be hashed. **@input** is **varchar**, **nvarchar**, or **varbinary**.  
+`@input`  
+Specifies a variable containing the data to be hashed. `@input` is **varchar**, **nvarchar**, or **varbinary**.  
   
- **'** *input* **'**  
- Specifies an expression that evaluates to a character or binary string to be hashed.  
+'*input*'  
+Specifies an expression that evaluates to a character or binary string to be hashed.  
   
  The output conforms to the algorithm standard: 128 bits (16 bytes) for MD2, MD4, and MD5; 160 bits (20 bytes) for SHA and SHA1; 256 bits (32 bytes) for SHA2_256, and 512 bits (64 bytes) for SHA2_512.  
   

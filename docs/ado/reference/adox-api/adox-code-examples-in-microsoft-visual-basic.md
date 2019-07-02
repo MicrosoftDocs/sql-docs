@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # ADOX Code Examples in Microsoft Visual Basic
 These topics provide sample code to help you understand how to use ADOX. All code examples are written using Microsoft Visual Basic.  

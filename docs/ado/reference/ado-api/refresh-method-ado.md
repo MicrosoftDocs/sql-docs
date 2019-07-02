@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Refresh Method (ADO)
 Updates the objects in a collection to reflect objects available from, and specific to, the provider.  

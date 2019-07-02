@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
+manager: jroth
 ---
 # DQS Administration
 

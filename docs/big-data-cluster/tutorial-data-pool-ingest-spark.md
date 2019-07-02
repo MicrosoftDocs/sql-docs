@@ -4,8 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview) using Spark jobs in Azure Data Studio.
 author: rothja 
 ms.author: jroth 
-manager: craigg
-ms.date: 05/22/2019
+manager: jroth
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -51,7 +51,7 @@ The following steps create an external table in the data pool named **web_clicks
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. Create an external table named **web_clickstreams_spark_results** in the data pool.
@@ -69,7 +69,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 3.0, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 3.1, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Start a Spark streaming job
 

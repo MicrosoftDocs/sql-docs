@@ -49,6 +49,9 @@ Use the example in [sys.dm_db_column_store_row_group_physical_stats &#40;Transac
     CREATE DATABASE [columnstore];  
     GO  
   
+    USE columnstore;
+    GO
+
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'staging'  
         AND object_id = OBJECT_ID (N'staging'))  

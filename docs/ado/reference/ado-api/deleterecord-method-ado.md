@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # DeleteRecord Method (ADO)
 Deletes an entity represented by a [Record](../../../ado/reference/ado-api/record-object-ado.md).  

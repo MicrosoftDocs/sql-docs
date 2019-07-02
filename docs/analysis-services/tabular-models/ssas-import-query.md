@@ -52,7 +52,7 @@ After importing, a table named Employees is created in the model.
 
 
 ## See also  
- [Value.NativeQuery](https://msdn.microsoft.com/library/mt736917.aspx)   
+ [Value.NativeQuery](/powerquery-m/value-nativequery)   
  [Impersonation](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 
   

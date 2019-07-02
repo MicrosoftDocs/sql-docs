@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # ownInsertsAreVisible Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

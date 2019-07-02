@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Using the JDBC Driver
 

@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # isCurrency Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -7,7 +7,6 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 
 helpviewer_keywords: 

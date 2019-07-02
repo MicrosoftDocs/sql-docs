@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Source Property (ADO Recordset)
 Indicates the data source for a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

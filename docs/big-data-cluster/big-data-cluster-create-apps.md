@@ -5,8 +5,8 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: jroth
-manager: craigg
-ms.date: 05/22/2019
+manager: jroth
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -40,7 +40,7 @@ The following types of apps are supported:
 
 ## Capabilities
 
-In SQL Server 2019 (preview) CTP 3.0 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
+In SQL Server 2019 (preview) you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
 
 |Command |Description |
 |:---|:---|
@@ -75,7 +75,7 @@ If you are using AKS, you need to run the following command to get the IP addres
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 ```
 
 ## Kubeadm or Minikube

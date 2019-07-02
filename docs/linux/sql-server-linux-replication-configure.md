@@ -8,7 +8,6 @@ ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---

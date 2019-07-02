@@ -37,7 +37,7 @@ manager: craigg
  What information are you looking for, and did you find it? We're listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Leaf%20Member%20Staging%20Table%20page)  
   
 ## See Also  
- [Load or Update Members in Master Data Services by Using the Staging Process](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Load or Update Members in Master Data Services by Using the Staging Process](add-update-and-delete-data-master-data-services.md)   
  [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  

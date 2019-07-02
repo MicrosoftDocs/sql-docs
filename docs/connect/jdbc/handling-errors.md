@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Handling Errors
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

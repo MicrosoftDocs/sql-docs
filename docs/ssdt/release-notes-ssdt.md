@@ -19,8 +19,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 
-For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).
-
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
 Basically we have switched from bullet lists to a 2-column table.
@@ -66,6 +64,7 @@ _SSDT for Visual Studio 2017._
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
 | SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
+| Cannot create or Edit Data Sources in Package Deployment model. | Fails to open the Data Source Wizard. |
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source is not localized. | &nbsp; |

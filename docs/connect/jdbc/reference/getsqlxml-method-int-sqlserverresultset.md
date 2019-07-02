@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: faa35676-573d-48d5-afd9-850134735728
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getSQLXML Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

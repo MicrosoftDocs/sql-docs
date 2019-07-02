@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 ---
 # Configure the max degree of parallelism Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use the followi
 
 ||||
 |----------------|-----------------|-----------------|
-|Server with single NUMA node|Less than 16 logical processors|Keep MAXDOP at or below # of logical processors|
-|Server with single NUMA node|Greater than 16 logical processors|Keep MAXDOP at half the number of logical processors with a MAX value of 16|
-|Server with multiple NUMA nodes|Less than 16 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
+|Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
+|Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
+|Server with multiple NUMA nodes|Less than or equal to 16 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
 |Server with multiple NUMA nodes|Greater than 16 logical processors per NUMA node|Keep MAXDOP at half the number of logical processors per NUMA node with a MAX value of 16|
   
 > [!NOTE]
-> NUMA node in the above table refers to soft-NUMA nodes automatically created by [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and higher versions.   
+> NUMA node in the above table refers to soft-NUMA nodes automatically created by [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and higher versions, or hardware-based NUMA nodes if soft-NUMA has been disabled.   
 >  Use these same guidelines when you set the max degree of parallelism option for Resource Governor workload groups. For more information, see [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
 From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the **max degree of parallelism** server configuration value:
 
 ||||
 |----------------|-----------------|-----------------|
-|Server with single NUMA node|Less than 8 logical processors|Keep MAXDOP at or below # of logical processors|
+|Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
 |Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
-|Server with multiple NUMA nodes|Less than 8 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
+|Server with multiple NUMA nodes|Less than or equal to 8 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
 |Server with multiple NUMA nodes|Greater than 8 logical processors per NUMA node|Keep MAXDOP at 8|
   
 ###  <a name="Security"></a> Security  

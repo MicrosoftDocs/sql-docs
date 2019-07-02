@@ -31,7 +31,7 @@ This release introduces edge constraints, which enable users to add constraints 
 
 ### Edge Constraint Clauses
 
-Each edge constraint consists of one or more edge constraint clause(s). An edge constraint clause is the pair of FROM and TO nodes that the given edge could connect. 
+Each edge constraint consists of one or more edge constraint clause(s). An edge constraint clause is the pair of FROM and TO nodes that the given edge could connect.
 
 Consider that you have `Product` and `Customer` nodes in your graph and you use `Bought` edge to connect these nodes. The edge constraint clause specifies the FROM and TO node pair and the direction of the edge. In this case the edge constraint clause will be `Customer` TO `Product`. That is,
  inserting a `Bought` that goes from a `Customer` to `Product` will be allowed. Attempts to insert an edge that goes from `Product` to `Customer` fail.
@@ -280,7 +280,7 @@ CREATE TABLE bought
    )
    AS EDGE;
 
--- Query sys.edge_constraints and sys.edge_constraint_clauses to view 
+-- Query sys.edge_constraints and sys.edge_constraint_clauses to view
 -- edge constraint properties.
 SELECT
    EC.name AS edge_constraint_name

@@ -1391,8 +1391,6 @@
           href: relational-databases/indexes/guidelines-for-online-index-operations.md
       - name: Configure parallel operations
         href: relational-databases/indexes/configure-parallel-index-operations.md
-      - name: Index Properties F1 Help
-        href: relational-databases/indexes/index-properties-f1-help.md
     - name: Columnstore indexes
       href: relational-databases/indexes/columnstore-indexes-overview.md
       items:

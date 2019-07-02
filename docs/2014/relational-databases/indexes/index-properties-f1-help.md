@@ -20,62 +20,64 @@ ms.author: mikeray
 manager: craigg
 ---
 # Index Properties F1 Help
-  The sections in this topic refer to various index properties that are available by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dialogs.  
-  
- **In This Topic:**  
-  
- [Index Properties General Page](#General)  
-  
- [Select (Index) Columns Dialog Box](#Columns)  
-  
- [Index Properties Storage Page](#Storage)  
-  
- [Index Properties Spatial Page](#Spatial)  
-  
- [Index Properties Filter Page](#Filter)  
-  
-##  <a name="General"></a> Index Properties General Page  
- Use the General page to view or modify index properties for the selected table or view. The options for each page may change based on the type of index selected.  
-  
- **Table name**  
- Displays the name of the table or view that the index was created on. This field is read-only. To select a different table, close the Index Properties page, select the correct table, and then open the Index Properties page again.  
-  
- Spatial indexes cannot be specified on indexed views. Spatial indexes can be defined only for a table that has a primary key. The maximum number of primary key columns on the table is 15. The combined per-row size of the primary-key columns is limited to a maximum of 895 bytes.  
-  
- **Index name**  
- Displays the name of the index. This field is read-only for an existing index. When creating a new index, type the name of the index.  
-  
- **Index type**  
- Indicates the type of index. For new indexes, indicates the type of index selected when opening the dialog box. Indexes can be: **Clustered**, **Nonclustered**, **Primary XML**, **Secondary XML**, **Spatial**, **Clustered columnstore**, or **Nonclustered Columnstore**.  
-  
- **Note** Only one clustered index is allowed for each table. Only one xVelocity memory optimized columnstore index is allowed for each table.  
-  
- **Unique**  
- Selecting this check box makes the index unique. No two rows are permitted to have the same index value. By default, this check box is cleared. When modifying an existing index, index creation will fail if two rows have the same value. For columns where NULL is permitted, a unique index permits one NULL value.  
-  
- If you select **Spatial** in the **Index type** field, the **Unique** check box is dimmed.  
-  
- **Index key columns**  
- Add the desired columns to the **Index key columns** grid. When more than one column is added, the columns must be listed in the order desired. The column order in an index can have a great impact on the index performance.  
-  
- No more than 16 columns can participate in a single composite index. For greater than 16 columns, see included columns at the end of this topic.  
-  
- A spatial index can be defined only on a single column that contains a spatial data type (a *spatial column*).  
-  
- **Name**  
- Displays the name of the column that participates in the index key.  
-  
- **Sort Order**  
- Specifies the sort direction of the selected index column, either **Ascending** or **Descending**.  
-  
-> [!NOTE]  
->  If the index type is **Primary XML** or **Spatial**, this column does not appear in the table.  
-  
- **Data Type**  
- Displays the data type information.  
-  
-> [!NOTE]  
->  If the table column is a computed column, **Data type** displays "computed column."  
+
+The sections in this topic refer to various index properties that are available by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dialogs.
+
+**In This Topic:**
+
+[Index Properties General Page](#General)
+
+[Select (Index) Columns Dialog Box](#Columns)
+
+[Index Properties Storage Page](#Storage)
+
+[Index Properties Spatial Page](#Spatial)
+
+[Index Properties Filter Page](#Filter)
+
+## <a name="General"></a> Index Properties General Page
+
+Use the General page to view or modify index properties for the selected table or view. The options for each page may change based on the type of index selected.
+
+**Table name**
+Displays the name of the table or view that the index was created on. This field is read-only. To select a different table, close the Index Properties page, select the correct table, and then open the Index Properties page again.
+
+Spatial indexes cannot be specified on indexed views. Spatial indexes can be defined only for a table that has a primary key. The maximum number of primary key columns on the table is 15. The combined per-row size of the primary-key columns is limited to a maximum of 895 bytes.
+
+**Index name**
+Displays the name of the index. This field is read-only for an existing index. When creating a new index, type the name of the index.
+
+**Index type**
+Indicates the type of index. For new indexes, indicates the type of index selected when opening the dialog box. Indexes can be: **Clustered**, **Nonclustered**, **Primary XML**, **Secondary XML**, **Spatial**, **Clustered columnstore**, or **Nonclustered Columnstore**.
+
+**Note** Only one clustered index is allowed for each table. Only one xVelocity memory optimized columnstore index is allowed for each table.
+
+**Unique**
+Selecting this check box makes the index unique. No two rows are permitted to have the same index value. By default, this check box is cleared. When modifying an existing index, index creation will fail if two rows have the same value. For columns where NULL is permitted, a unique index permits one NULL value.
+
+If you select **Spatial** in the **Index type** field, the **Unique** check box is dimmed.
+
+**Index key columns**
+Add the desired columns to the **Index key columns** grid. When more than one column is added, the columns must be listed in the order desired. The column order in an index can have a great impact on the index performance.
+
+No more than 16 columns can participate in a single composite index. For greater than 16 columns, see included columns at the end of this topic.
+
+A spatial index can be defined only on a single column that contains a spatial data type (a *spatial column*).
+
+**Name**
+Displays the name of the column that participates in the index key.
+
+**Sort Order**
+Specifies the sort direction of the selected index column, either **Ascending** or **Descending**.
+
+> [!NOTE]
+> If the index type is **Primary XML** or **Spatial**, this column does not appear in the table.
+
+ **Data Type**
+ Displays the data type information.
+
+> [!NOTE]
+> If the table column is a computed column, **Data type** displays "computed column."  
   
  **Size**  
  Displays the maximum number of bytes required to store the column data type. Displays zero (0) for a spatial or XML column.  

@@ -1,7 +1,7 @@
 ---
 title: "DBCC DROPRESULTSETCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
@@ -25,7 +25,7 @@ Removes all result set cache entries from an Azure [!INCLUDE[ssSDW](../../includ
 ## Syntax  
   
 ```sql
-DBCC DROPRESULTSETCACHE 
+DBCC DROPRESULTSETCACHE
 [;]  
 ```  
 

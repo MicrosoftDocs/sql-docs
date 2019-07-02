@@ -1,7 +1,7 @@
 ---
 title: "DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""

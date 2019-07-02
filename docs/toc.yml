@@ -1,5 +1,5 @@
 - name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: sql-server/sql-server-technical-documentation.md?toc=toc.json
 
 - name: Previous versions 2014-2005
   href: toc/previous-versions-sql-server.md
@@ -8767,8 +8767,8 @@
         href: ssms/sql-server-management-studio-ssms.md
     - name: Quickstarts
       items:
-        - name: Connect & query SQL Server
-          href: ssms/tutorials/connect-query-sql-server.md
+      - name: Connect & query SQL Server
+        href: ssms/tutorials/connect-query-sql-server.md
     - name: Tutorials
       items:
       - name: Design a relational database in a single database
@@ -9063,6 +9063,8 @@
         items:
         - name: Get full memory dump 
           href: ssms/troubleshoot/get-full-memory-dump.md
+        - name: Crashes and Hangs
+          href: ssms/troubleshoot/ssms-troubleshoot.md
       - name: SQL Server Agent
         items:
         - name: Configure

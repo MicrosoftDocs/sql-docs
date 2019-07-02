@@ -1008,6 +1008,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md",
+            "redirect_url": "/sql/reporting-services/report-server/create-delete-or-modify-a-folder-web-portal",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/reports/open-and-close-a-report-report-manager.md",
+            "redirect_url": "/sql/reporting-services/reports/reporting-services-reports-ssrs",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/reporting-services/troubleshooting/troubleshoot-reporting-services.md",
             "redirect_url": "/sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services",
             "redirect_document_id": true

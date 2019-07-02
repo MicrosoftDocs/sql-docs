@@ -20,7 +20,7 @@ ms.author: maggies
   
 ## How to use predefined roles  
   
-1. Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define additional roles, you should do this before you begin assigning users to specific roles.  
+1. Review the predefined roles to determine whether you can use them as is. If you need to adjust the tasks or define additional roles, you should do this before you begin assigning users to specific roles. To create or edit custom roles use SQL Server Management Studio. For more information, see [Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
 2. Identify which users and groups require access to the report server, and at what level. Most users should be assigned to the **Browser** role or the **Report Builder** role. A smaller number of users should be assigned to the **Publisher** role. Very few users should be assigned to **Content Manager**.  
 

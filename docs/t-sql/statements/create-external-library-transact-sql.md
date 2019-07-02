@@ -128,6 +128,8 @@ Optionally, an OS platform for the file can be specified. Only one file artifact
 
 > [!NOTE]
 > If you're running in Azure SQL Database, you need to use `library_bits` instead of `client_library_specifier`. See the example, [Create a library from a byte stream](#c-create-a-library-from-a-byte-stream).
+>
+> As an alternative, you can use **sqlmlutils** to install a library in Azure SQL Database. For details, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages.md#add-a-package-with-sqlmlutils).
 
 **library_bits**
 

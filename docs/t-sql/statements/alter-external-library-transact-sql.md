@@ -123,10 +123,13 @@ Optionally, an OS platform for the file can be specified. Only one file artifact
 
 > [!NOTE]
 > If you're running in Azure SQL Database, you need to use `library_bits` instead of `client_library_specifier`. See the example, [Alter an existing library using a byte stream](#b-alter-an-existing-library-using-a-byte-stream).
+>
+> As an alternative, you can [remove the library](drop-external-library-transact-sql.md) from Azure SQL Database, and then use **sqlmlutils** to install the updated library. For details, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages.md#add-a-package-with-sqlmlutils).
+
 
 **library_bits**
 
-Specifies the content of the package as a hex literal, similar to assemblies. 
+Specifies the content of the package as a hex literal, similar to assemblies.
 
 This option is useful if you have the required permission to alter a library, but file access on the server is restricted and you cannot save the contents to a path the server can access.
 

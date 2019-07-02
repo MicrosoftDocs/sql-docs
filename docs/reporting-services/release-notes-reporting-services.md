@@ -46,7 +46,7 @@ We are "standardizing" all our 'Release Notes' style articles:
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 
-## 14.0.600.1274, 2019/07/02
+## 14.0.600.1274, 2019/07/01
 
 | Fixed issue | Details |
 | :---------- | :------ |

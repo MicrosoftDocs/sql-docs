@@ -4,7 +4,7 @@ Description: Troubleshooting an SSMS hang or crash by collecting a full memory d
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
-ms.topic: how-to
+ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
@@ -13,7 +13,6 @@ ms.reviewer: dineth, sstein
 ms.custom: ""
 ms.date: 05/17/2019
 ---
-
 # Get Full Memory Dump
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -26,9 +25,9 @@ To capture diagnostic information to troubleshoot, follow the steps below.
 
 2. Unzip the download into a folder.
 
-3. Open Command Prompt and run the following command.
+3. Open a Command Prompt (such as `cmd.exe`), and run the following command.
 
-    ```cmd
+    ```
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 

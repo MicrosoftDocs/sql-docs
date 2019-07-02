@@ -157,7 +157,7 @@ When you migrate your database using a bacpac file, you need to make sure you dr
 
 ## Known Limitations
 
-Secure enclaves enhance the functionality of Always Encrypted. The following capabilities **are not supported for enclave-enabled columns**:
+Secure enclaves enhance the functionality of Always Encrypted. The following capabilities **are now supported for enclave-enabled columns**:
 
 - In-place cryptographic operations.
 - Pattern matching (LIKE) and comparison operators on column encrypted using randomized encryption.

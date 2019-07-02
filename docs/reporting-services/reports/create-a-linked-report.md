@@ -41,7 +41,7 @@ ms.author: maggies
      ![Linked report icon](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")  
   
 ## See also  
- [Open and Close a Report &#40;web portal&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+
  [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
  [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
   

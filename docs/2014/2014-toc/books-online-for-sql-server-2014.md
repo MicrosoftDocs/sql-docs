@@ -4,7 +4,7 @@ ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.technology: release-landing
 ms.reviewer: ""
-ms.topic: "index-page "
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.portal.f1"
 helpviewer_keywords: 

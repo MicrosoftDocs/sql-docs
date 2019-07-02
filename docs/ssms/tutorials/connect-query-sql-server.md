@@ -13,7 +13,7 @@ ms.technology: ssms
 ms.custom: ""
 ms.date: 03/13/2018
 ---
-# Quickstart: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS)
+# Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio (SSMS) 
 
 This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to do the following:
 

@@ -47,10 +47,10 @@ manager: kfile
 |CVErr|Not supported||  
 |Date|MDX only|**Warning** DAX implements a different function with the same name; the DATE(Year, Month, Day) function, used to generate a date type value from the given arguments|  
 |DateAdd|MDX only|**Warning** DAX implements a different function with the same name; the DATEADD (\<dates>,<number_of_intervals>,\<interval>) function, used to shift the given dates by a number of given intervals|  
-|DateDiff]|MDX only||  
+|DateDiff|MDX only||  
 |DatePart|MDX only||  
 |DateSerial|MDX only||  
-|DateValue]|DAX, MDX||  
+|DateValue|DAX, MDX||  
 |Day|DAX, MDX||  
 |DDB|MDX only||  
 |Dir|Not supported||  
@@ -112,7 +112,7 @@ manager: kfile
 |MonthName|Not supported||  
 |MsgBox|Not supported||  
 |Now|DAX, MDX||  
-|NPer]|MDX only||  
+|NPer|MDX only||  
 |NPV|MDX only||  
 |Oct|MDX only||  
 |Partition|MDX only||  
@@ -140,7 +140,7 @@ manager: kfile
 |Str|MDX only||  
 |StrComp|MDX only||  
 |StrConv|MDX only||  
-|String]|MDX only||  
+|String|MDX only||  
 |StrReverse|Not supported||  
 |Switch|MDX only||  
 |SYD|MDX only||  
@@ -150,7 +150,7 @@ manager: kfile
 |Timer|MDX only||  
 |TimeSerial|MDX only||  
 |TimeValue|DAX, MDX||  
-|Trim]|DAX, MDX||  
+|Trim|DAX, MDX||  
 |TypeName|MDX only||  
 |UBound|Not supported||  
 |UCase|MDX only||  

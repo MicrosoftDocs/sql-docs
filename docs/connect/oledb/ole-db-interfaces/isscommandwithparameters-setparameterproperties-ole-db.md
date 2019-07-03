@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "SetParameterProperties method"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+manager: jroth
 ---
 # ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

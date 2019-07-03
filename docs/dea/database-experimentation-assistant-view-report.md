@@ -11,8 +11,8 @@ ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: mathoma
+manager: jroth
 ---
 
 # View analysis reports in Database Experimentation Assistant

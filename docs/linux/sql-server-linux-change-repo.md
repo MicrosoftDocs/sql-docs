@@ -7,7 +7,6 @@ manager: craigg
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ---

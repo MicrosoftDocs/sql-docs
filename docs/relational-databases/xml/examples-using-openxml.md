@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "element-centric mapping [SQL Server]"
   - "edge tables"
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Examples: Using OPENXML

@@ -31,7 +31,6 @@ Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVers
 ## Syntax
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -44,7 +43,7 @@ CollationDesignator_<ComparisonStyle>
 
 ## Arguments
 
-*CollationDesignator*
+*CollationDesignator*   
 Specifies the base collation rules used by the Windows collation. The base collation rules cover the following:
 
 - The sorting and comparison rules that are applied when dictionary sorting is specified. Sorting rules are based on alphabet or language.
@@ -62,20 +61,20 @@ Some examples are:
 **AI** specifies accent-insensitive, **AS** specifies accent-sensitive.
 
 *KanatypeSensitive*  
-**Omitted** specifies kanatype-insensitive, **KS** specifies kanatype-sensitive.
+Omitting this option specifies kanatype-insensitive, **KS** specifies kanatype-sensitive.
 
 *WidthSensitivity*  
-**Omitted** specifies width-insensitive, **WS** specifies width-sensitive.
+Omitting this option specifies width-insensitive, **WS** specifies width-sensitive.
 
 *VariationSelectorSensitivity*  
-**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**Omitted** specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
+- Omitting this option specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
 
 **UTF8**  
-**Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-Specifies UTF-8 enconding to be used for eligible data types. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+- Specifies UTF-8 enconding to be used for eligible data types. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Specifies the backward-compatible binary sort order to be used.
@@ -192,10 +191,10 @@ The following table lists all Windows collations supported in [!INCLUDE[ssCurren
 |Quechua (Peru)|Latin1_General_100_|Not available|
 |Romansh (Switzerland)|Romansh_100_|Not available|
 |Sami (Inari, Finland)|Sami_Sweden_Finland_100_|Not available|
-|Sami (Lule,Norway)|Sami_Norway_100_|Not available|
+|Sami (Lule, Norway)|Sami_Norway_100_|Not available|
 |Sami (Lule, Sweden)|Sami_Sweden_Finland_100_|Not available|
 |Sami (Northern, Finland)|Sami_Sweden_Finland_100_|Not available|
-|Sami (Northern,Norway)|Sami_Norway_100_|Not available|
+|Sami (Northern, Norway)|Sami_Norway_100_|Not available|
 |Sami (Northern, Sweden)|Sami_Sweden_Finland_100_|Not available|
 |Sami (Skolt, Finland)|Sami_Sweden_Finland_100_|Not available|
 |Sami (Southern, Norway)|Sami_Norway_100_|Not available|

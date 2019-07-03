@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/10/2018"
+ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -71,6 +71,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**min_spills**|**bigint**|The minimum number of pages that this stored procedure has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|The maximum number of pages that this stored procedure has ever spilled during a single execution.<br /><br /> **Applies to**: Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|The identifier for the node that this distribution is on.<br /><br />**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|The total number of page server reads performed by executions of this stored procedure since it was compiled.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**last_page_server_reads**|**bigint**|The number of page server reads performed the last time the stored procedure was executed.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**min_page_server_reads**|**bigint**|The minimum number of page server reads that this stored procedure has ever performed during a single execution.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
+|**max_page_server_reads**|**bigint**|The maximum number of page server reads that this stored procedure has ever performed during a single execution.<br /><br /> **Applies to**: Azure SQL Database Hyperscale|  
   
  <sup>1</sup> For natively compiled stored procedures when statistics collection is enabled, worker time is collected in milliseconds. If the query executes in less than a millisecond, the value will be 0.  
   

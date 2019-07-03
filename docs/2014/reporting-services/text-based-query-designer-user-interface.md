@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10010"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "text-based query designer [Reporting Services]"
   - "query designers [Reporting Services], text-based"
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Text-based Query Designer User Interface

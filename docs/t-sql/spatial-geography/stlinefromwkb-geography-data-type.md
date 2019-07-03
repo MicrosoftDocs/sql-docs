@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STLineFromWKB method"
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STLineFromWKB (geography Data Type)

@@ -7,7 +7,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: "v-chojas"
-manager: craigg
+manager: jroth
 author: MightyPen
 ---
 # Using Always Encrypted with the ODBC Driver for SQL Server
@@ -362,8 +362,6 @@ The driver supports authenticating to Azure Key Vault using the following creden
 - Username/Password - with this method, the credentials are the name of an Azure Active Directory user and its password.
 
 - Client ID/Secret - with this method, the credentials are an application client ID and an application secret.
-
-- Managed Service Identity - with this method, the credentials are system-assigned identity or user-assigned identity. For user-assigned identity, UID is set to the object ID of the user identity.
 
 To allow the driver to use CMKs stored in AKV for column encryption, use the following connection-string-only keywords:
 

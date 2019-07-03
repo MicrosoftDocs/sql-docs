@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # prepareStatement Method (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

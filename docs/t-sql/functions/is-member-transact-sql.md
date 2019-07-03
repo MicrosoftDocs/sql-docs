@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "groups [SQL Server], members"
   - "members [SQL Server], verifying"
 ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

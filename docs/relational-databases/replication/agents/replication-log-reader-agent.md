@@ -175,7 +175,7 @@ logread [-?]
  Is the number of seconds before the query times out. The default is 1800 seconds.  
   
  **-ReadBatchSize** _number_of_transactions_  
- Is the maximum number of transactions read out of the transaction log of the publishing database per processing cycle, with a default of 500. The agent will continue to read transactions in batches until all transactions are read from the log. This parameter is not supported for Oracle Publishers.  
+ Is the maximum number of transactions read out of the transaction log of the publishing database per processing cycle, with a default of 500, and max of 10000. The agent will continue to read transactions in batches until all transactions are read from the log. This parameter is not supported for Oracle Publishers.  
   
  **-ReadBatchThreshold** _number_of_commands_  
  Is the number of replication commands to be read from the transaction log before being issued to the Subscriber by the Distribution Agent. The default is 0. If this parameter is not specified, the Log Reader Agent will read to the end of the log or to the number specified in **-ReadBatchSize** (number of transactions).  

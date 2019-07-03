@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "subscriptions [SQL Server query notifications], stopping"
   - "query notifications [SQL Server], subscriptions"
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)

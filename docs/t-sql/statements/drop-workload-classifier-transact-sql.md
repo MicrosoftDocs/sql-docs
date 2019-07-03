@@ -1,7 +1,7 @@
 ---
 title: "DROP WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2019"
+ms.date: "05/01/2019"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -22,7 +22,7 @@ ms.author: rortloff
 manager: craigg
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
-# DROP WORKLOAD CLASSIFIER (Transact-SQL) (Preview)
+# DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -32,7 +32,7 @@ Drops an existing user-defined Workload Management Classifier.
   
 ## Syntax  
 
-```sql
+```
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 
@@ -65,4 +65,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## See Also
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[SQL Data Warehouse Workload Classification](/azure/sql-data-warehouse/classification)
+[SQL Data Warehouse Workload Classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

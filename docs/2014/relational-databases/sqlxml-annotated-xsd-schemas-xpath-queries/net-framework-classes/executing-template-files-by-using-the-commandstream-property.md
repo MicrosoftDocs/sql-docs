@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "templates [SQLXML], SQLXML Managed Classes"
   - "CommandStream property"
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Executing Template Files by Using the CommandStream Property

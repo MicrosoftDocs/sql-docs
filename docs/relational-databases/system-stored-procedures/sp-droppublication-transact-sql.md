@@ -33,10 +33,10 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to be dropped. *publication* is **sysname**, with no default. If **all** is specified, all publications are dropped from the publication database, except for those with subscriptions.  
   
- [ **@ignore_distributor =** ] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

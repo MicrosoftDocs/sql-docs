@@ -1,11 +1,11 @@
 ---
 title: Query HDFS data in the storage pool
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to query HDFS data in a SQL Server 2019 big data cluster (preview). You create an external table over data in the storage pool and then run a query.
 author: rothja 
 ms.author: jroth 
-manager: craigg
-ms.date: 03/27/2018
+manager: jroth
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,6 +13,8 @@ ms.custom: seodec18
 ---
 
 # Tutorial: Query HDFS in a SQL Server big data cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This tutorial demonstrates how to Query HDFS data in a SQL Server 2019 big data cluster (preview).
 
@@ -68,8 +70,10 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+   BEGIN
      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+   END
    ```
 
 1. Create an external table that can read the `/clickstream_data` from the storage pool. The **SqlStoragePool** is accessible from the master instance of a big data cluster.

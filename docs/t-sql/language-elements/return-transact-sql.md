@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "exiting procedures [SQL Server]"
   - "RETURN statement"
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # RETURN (Transact-SQL)

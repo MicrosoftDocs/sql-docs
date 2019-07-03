@@ -40,10 +40,10 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## Arguments  
- [ **@query_id =** ] *query_id*  
+`[ @query_id = ] query_id`
  Is the id of the query. *query_id* is a **bigint**, with no default.  
   
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan to be forced. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  

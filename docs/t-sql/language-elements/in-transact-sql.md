@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "IN keyword"
   - "8632 (Database Engine error)"
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

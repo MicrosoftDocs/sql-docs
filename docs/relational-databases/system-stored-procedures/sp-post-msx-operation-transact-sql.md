@@ -40,7 +40,7 @@ sp_post_msx_operation
 ```  
   
 ## Arguments  
- [ **@operation =**] **'***operation***'**  
+`[ @operation = ] 'operation'`
  The type of operation for the posted operation. *operation*is **varchar(64)**, with no default. Valid operations depend upon *object_type*.  
   
 |Object type|Operation|  
@@ -49,19 +49,19 @@ sp_post_msx_operation
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
- [ **@object_type =**] **'***object***'**  
+`[ @object_type = ] 'object'`
  The type of object for which to post an operation. Valid types are **JOB**, **SERVER**, and **SCHEDULE**. *object* is **varchar(64)**, with a default of **JOB**.  
   
- [ **@job_id =**] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number of the job to which the operation applies. *job_id* is **uniqueidentifier**, with no default. **0x00** indicates ALL jobs. If *object* is **SERVER**, then *job_id*is not required.  
   
- [ **@specific_target_server =**] **'***target_server***'**  
+`[ @specific_target_server = ] 'target_server'`
  The name of the target server for which the specified operation applies. If *job_id* is specified, but *target_server* is not specified, the operations are posted for all job servers of the job. *target_server* is **nvarchar(30)**, with a default of NULL.  
   
- [ **@value =**] *value*  
+`[ @value = ] value`
  The polling interval, in seconds. *value* is **int**, with a default of NULL. Specify this parameter only if *operation* is **SET-POLL**.  
   
- [ **@schedule_uid=** ] *schedule_uid*  
+`[ @schedule_uid = ] schedule_uid`
  The unique identifier for the schedule to which the operation applies. *schedule_uid* is **uniqueidentifier**, with no default.  
   
 ## Return Code Values  

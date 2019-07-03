@@ -21,6 +21,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Excel Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Excel source extracts data from worksheets or ranges in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbooks.  
 
 > [!IMPORTANT]

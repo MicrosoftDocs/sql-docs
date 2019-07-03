@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPolyFromWKB method"
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STMPolyFromWKB (geography Data Type)

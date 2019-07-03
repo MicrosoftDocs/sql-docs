@@ -31,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLBrowseConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -219,7 +219,7 @@ SQLRETURN SQLBrowseConnect(
   
  This is the final piece of information the driver needs to connect to the data source; **SQLBrowseConnect** returns SQL_SUCCESS, and **OutConnectionString* contains the completed connection string:  
   
-```  
+```cpp  
 // SQLBrowseConnect_Function.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

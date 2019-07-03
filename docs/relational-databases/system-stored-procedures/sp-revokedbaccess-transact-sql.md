@@ -37,7 +37,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name_in_db =** ] **'***name***'**  
+`[ @name_in_db = ] 'name'`
  Is the name of the database user to be removed. *name* is a **sysname** with no default. *name* can be the name of a server login, a Windows login, or a Windows group, and must exist in the current database. When you specify a Windows login or Windows group, specify the name by which it is known in the database.  
   
 ## Return Code Values  

@@ -2,14 +2,14 @@
 title: "Report Design Tips (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Design Tips (Report Builder and SSRS)
   Use the following tips to help design your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports.  

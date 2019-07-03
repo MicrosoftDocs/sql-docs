@@ -148,7 +148,7 @@ manager: craigg
 #### A. Restoring a differential database backup  
  This example restores a database and differential database backup of the `MyAdvWorks` database.  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -168,7 +168,7 @@ GO
 #### B. Restoring a database, differential database, and transaction log backup  
  This example restores a database, differential database, and transaction log backup of the `MyAdvWorks` database.  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  

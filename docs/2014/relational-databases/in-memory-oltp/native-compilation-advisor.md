@@ -33,7 +33,7 @@ manager: craigg
 ## Code Sample  
  The following sample shows an interpreted stored procedure and the equivalent stored procedure for native compilation. The sample assumes a directory called c:\data.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

@@ -1,7 +1,7 @@
 ---
 title: "System Requirements (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2018"
+ms.date: "02/15/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # System Requirements
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -83,4 +83,4 @@ The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame
 
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)  
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

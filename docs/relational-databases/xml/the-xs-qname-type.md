@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "xs:QName type"
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # The xs:QName Type

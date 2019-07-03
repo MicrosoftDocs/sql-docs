@@ -78,15 +78,15 @@ manager: craigg
   
 -   [Processor, Memory, and Operating System Requirements](hardware-and-software-requirements-for-installing-sql-server.md#pmosr)  
   
--   [Cross-Language Support](hardware-and-software-requirements-for-installing-sql-server.md#crosslanguagesupport)  
+-   [Cross-Language Support](hardware-and-software-requirements-for-installing-sql-server.md#CrossLanguageSupport)  
   
 -   [Extended System Support](hardware-and-software-requirements-for-installing-sql-server.md#ess)  
   
--   [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace)  
+-   [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)  
   
 -   [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)  
   
--   [Installing SQL Server on a Domain Controller](hardware-and-software-requirements-for-installing-sql-server.md#dc_support)  
+-   [Installing SQL Server on a Domain Controller](hardware-and-software-requirements-for-installing-sql-server.md#DC_support)  
   
 ##  <a name="hwswr"></a> Hardware and Software Requirements  
  The following requirements apply to all [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installations:  
@@ -97,7 +97,7 @@ manager: craigg
 |Windows PowerShell|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] does not install or enable Windows PowerShell 2.0; however Windows PowerShell 2.0 is an installation prerequisite for [!INCLUDE[ssDE](../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If Setup reports that Windows PowerShell 2.0 is not present, you can install or enable it by following the instructions on the [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) page.|  
 |Network Software|Supported operating systems for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] have built-in network software. Named and default instances of a stand-alone installation support the following network protocols: Shared memory, Named Pipes, TCP/IP and VIA.<br /><br /> Note: VIA protocol is not supported on failover clusters. Clients or applications running on the same node of the failover cluster as the SQL Server instance, can use Shared Memory protocol to connect to SQL Server using its local pipe address. However this type of connection is not cluster-aware and will fail after an instance failover. It is therefore not recommended and should only be used in very specific scenarios. The VIA protocol is deprecated. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> For more information about Network Protocols and Network Libraries, see [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md).|  
 |Virtualization|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is supported in virtual machine environments running on the Hyper-V role in:<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard, Enterprise and Datacenter editions<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard, Enterprise, and Datacenter editions.<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter and Standard editions.<br /><br /> In addition to resources required by the parent partition, each virtual machine (child partition) must be provided with sufficient processor resources, memory, and disk resources for its [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance. Requirements are listed later in this topic.\*<br /><br /> Within the Hyper-V role on [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 or [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, a maximum of 4 (four) virtual processors can be allocated to virtual machines running [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32-bit/64-bit or [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64-bit or [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64-bit editions.<br /><br /> Within the Hyper-V role on [!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />A maximum of 8 (eight) virtual processors can be allocated to virtual machines running [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32-bit/64-bit.<br />A maximum of 64 (sixty-four) virtual processors can be allocated to virtual machines running [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64-bit or [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64-bit editions.<br /><br /> For more information on compute capacity limits for different editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and how they differ in physical and virtualized environments with hyperthreaded processors, see [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). For more information about the Hyper-V role, see the [Windows Server 2008 Web site](https://go.microsoft.com/fwlink/?LinkId=182820).<br /><br /> **\*\* Important \*\*** Guest failover clustering is supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more information about the supported versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and operating systems for guest failover clustering, and the support for virtualization, see [Support policy for Microsoft SQL Server products running in a hardware virtual environment](https://go.microsoft.com/fwlink/?LinkId=151676).|  
-|Hard Disk|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requires a minimum of 6 GB of available hard-disk space.<br /><br /> Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] components you install. For more information, see [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace) later in this topic. For information on supported storage types for data files, see [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
+|Hard Disk|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requires a minimum of 6 GB of available hard-disk space.<br /><br /> Disk space requirements will vary with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] components you install. For more information, see [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) later in this topic. For information on supported storage types for data files, see [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes).|  
 |Drive|A DVD drive, as appropriate, is required for installation from disc.|  
 |Monitor|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] requires Super-VGA (800x600) or higher resolution monitor.|  
 |Internet|Internet functionality requires Internet access (fees may apply).|  
@@ -148,11 +148,11 @@ Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core 
   
  The [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] editions are classified into the following:  
   
--   [Principal Editions of SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md#top_principal)  
+-   [Principal Editions of SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md#TOP_Principal)  
   
--   [Specialized Editions of SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md#top_sp)  
+-   [Specialized Editions of SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md#TOP_SP)  
   
--   [Breadth Editions of SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md#top_breadth)  
+-   [Breadth Editions of SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md#TOP_Breadth)  
   
 ###  <a name="TOP_Principal"></a> Principal Editions Operating Systems requirements  
  The following table shows the operating system requirements for the principal editions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
@@ -243,5 +243,3 @@ Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core 
  [Planning a SQL Server Installation](planning-a-sql-server-installation.md)   
  [Security Considerations for a SQL Server Installation](security-considerations-for-a-sql-server-installation.md)   
  [Product Specifications for SQL Server 2014](../../getting-started/sql-server-2014-product-specifications.md)  
-  
-  

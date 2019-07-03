@@ -33,10 +33,10 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@starting_schemaversion=** ] *starting_schemaversion*  
+`[ @starting_schemaversion = ] starting_schemaversion`
  Is the lowest number schema change to include in the result set.  
   
 ## Result Set  

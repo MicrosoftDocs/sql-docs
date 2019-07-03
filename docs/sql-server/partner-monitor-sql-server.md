@@ -62,8 +62,8 @@ To learn more about some of our other partners, see [High availability and disas
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
-[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview  
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview  
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->
 <!--[idera_press]:-->
@@ -83,6 +83,6 @@ To learn more about some of our other partners, see [High availability and disas
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
 
 <!--LinkedIn-->
-[sentryone_linkedin]:https://www.linkedin.com/company/sentryone 
+[sentryone_linkedin]:https://www.linkedin.com/company/sentryone
 [redgate_linkedin]:https://www.linkedin.com/company/red-gate-software/
 [solarwinds_linkedin]:https://linkedin.com/showcase/solarwinds-database-performance

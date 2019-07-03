@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Procedure Object Properties, Methods, and Events
 ## Properties  

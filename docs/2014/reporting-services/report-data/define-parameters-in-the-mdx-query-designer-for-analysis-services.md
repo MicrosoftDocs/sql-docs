@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [Reporting Services], MDX"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "MDX [Reporting Services], defining parameters"
   - "DMX [Reporting Services]"
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Define Parameters in the MDX Query Designer for Analysis Services (Report Builder and SSRS)

@@ -2,7 +2,7 @@
 title: "rsModelGenerationError - Reporting Services Error | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
 
 
@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "rsModelGenerationError"
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # rsModelGenerationError - Reporting Services Error
     

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # RecordsetEvents (Visual C++ Syntax Index with #import)
 ## Events  

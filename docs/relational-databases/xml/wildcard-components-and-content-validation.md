@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "wildcard components [XML]"
   - "content validation [XML]"
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Wildcard Components and Content Validation

@@ -1,8 +1,8 @@
 ---
 title: "Create a Linked Report | Microsoft Docs"
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reports
 
 
@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "linked reports [Reporting Services], creating"
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Create a Linked Report
   A linked report is a report server item that provides an access point to an existing report. Conceptually, it is similar to a program shortcut that you use to run a program or open a file.  
@@ -22,26 +22,26 @@ ms.author: maghan
   
  Although linked reports are typically based on parameterized reports, a parameterized report is not required. You can create linked reports whenever you want to deploy an existing report with different settings.  
   
-### To create a linked report  
+## To create a linked report  
   
-1.  In Report Manager, navigate to the folder containing the report that you want to link to, and then open the options menu can click **Create Linked Report**.  
+1. In the web portal, navigate to the desired report, right-click on it and  select **Manage** from the drop down menu.
+
+2. On the **Manage <reportname>** page, select **Create linked report**.  
   
-2.  Type a name for the new linked report. Optionally type a description.  
+3. Enter a name for the new linked report. Optionally enter a description.  
   
-3.  To select a different folder for the report, click **Change Location**. Click the folder you want to use, or type the folder name in the **Location** box. [!INCLUDE[clickOK](../../includes/clickok-md.md)] If you do not select a different folder, the linked report is created in the current folder (where the report it is based on is stored).  
+4. To select a different folder for the report, select the ellipsis button (...) to the right of ***Location***.  Navigate to the new folder for the report and select **Select**. If you do not select a different folder, the linked report is created in the current folder.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] The linked report opens.  
+5. Select **Create**. The linked report is created.  
+
+6. Under **Advanced**, select a different **Report timeout** value if desired, and select **Apply** to save the changes.
   
      A linked report's icon differs from other items managed by a report server. The following icon indicates a linked report:  
   
      ![Linked report icon](../../reporting-services/report-server/media/hlp-16linked.gif "Linked report icon")  
   
-## See Also  
- [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [New Linked Report Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Choose Item Location Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [General Properties Page, Reports &#40;Report Manager&#41;](https://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+## See also  
+
+ [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
+ [The web portal of a report server (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)
   

@@ -19,8 +19,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 
-For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).
-
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
 Basically we have switched from bullet lists to a 2-column table.
@@ -40,6 +38,37 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## 15.9.1,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; April 27, 2019  
+_Build Number:_ &nbsp; 14.0.16191.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+#### SSIS
+
+| New item | Details |
+| :------- | :------ |
+| Fix an issue that package part cannot be correctly persisted when targeting to previous SQL Server version | &nbsp; |
+| Fix an issue that cannot add expression to precedence constraint when using package part | &nbsp; |
+| Fix an issue that the “Help” button of Power Query Source & Connection Manager doesn’t link to the correct document | &nbsp; |
+| Fix an issue that SSIS build version is not displayed in VS help window | &nbsp; |
+| Add the property “ConnectByProxy” for Ole DB and Flat File connection manager, which can enable access on-premise data with Self-hosted IR in Azure-SSIS IR | &nbsp; |
+| Fix an issue that ODBC components maps DT_DBDATE data type incorrectly | &nbsp; |
+| Add the property “ConnectUsingManagedIdentity” for ADO.NET and OLE DB connection manager, which enable managed identity authentication to connect to data source in Azure-SSIS IR | &nbsp; |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
+| SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
+| Cannot create or Edit Data Sources in Package Deployment model. | Fails to open the Data Source Wizard. |
+| Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source is not localized. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## 15.9.0,&nbsp; SSDT for VS 2017
 
@@ -55,7 +84,7 @@ _SSDT for Visual Studio 2017._
 | :------- | :------ |
 | Add Power Query Source (Preview) for SSIS in ADF 2017. | &nbsp; |
 | Add back the support for SQL Server 2012. | &nbsp; |
-| Add Oracle source and destination for SQL Server 2019. | &nbsp; |
+| Add Oracle source and destination for SQL Server 2019. | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT.<br/><br/>To design package targeting server version 2017 or below, please download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine. <br/>[Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
 | Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions. | &nbsp; |
 | Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1. | &nbsp; |
 | Fix an issue that, in some cases, saving the package causes Visual Studio to crash. | &nbsp; |

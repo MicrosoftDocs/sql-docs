@@ -34,7 +34,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## Arguments  
- [ **@typename=**] **'***type***'**  
+`[ @typename = ] 'type'`
  Is the name of an alias data type that you own. *type* is **sysname**, with no default.  
   
 ## Return Code Type  

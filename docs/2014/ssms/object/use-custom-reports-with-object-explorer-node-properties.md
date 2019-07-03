@@ -16,8 +16,6 @@ manager: craigg
 # Use Custom Reports with Object Explorer Node Properties
   Custom reports can execute in the context of a selected Object Explorer node if the custom reports reference the report parameters of that node. This enables a custom report to use the current context, for example the current database, or a database or server object.  
   
-## Report Samples  
- [Report Samples](https://go.microsoft.com/fwlink/?LinkId=81792), including the standard reports created by [!INCLUDE[msCoName](../../includes/msconame-md.md)], are available for download. These samples may be modified by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## Object Explorer Node Report Parameters  
   

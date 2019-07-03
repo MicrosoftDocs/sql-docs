@@ -1,17 +1,20 @@
 ---
 title: What are big data clusters?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Learn about SQL Server 2019 big data clusters (preview) that run on Kubernetes and provide scale-out options for both relational and HDFS data. 
 author: rothja 
 ms.author: jroth 
-manager: craigg
-ms.date: 12/07/2018
+manager: jroth
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
-# What are SQL Server 2019 big data clusters?
+
+# What are SQL Server big data clusters?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server big data clusters allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
@@ -49,9 +52,7 @@ SQL Server big data clusters enable AI and machine learning tasks on the data st
 
 ### Management and Monitoring
 
-Management and monitoring are provided through a combination of command line tools, APIs, an administrator portal, and dynamic management views.
-
-The [cluster administrator portal](cluster-admin-portal.md) is a web interface that displays the status and health of the pods in the cluster. It also provides links to other dashboards for log analytics and monitoring dashboards.
+Management and monitoring are provided through a combination of command line tools, APIs, portals, and dynamic management views.
 
 You can use Azure Data Studio to perform a variety of tasks on the big data cluster. This is enabled by the new **SQL Server 2019 Extension (Preview)**. This extension provides:
 

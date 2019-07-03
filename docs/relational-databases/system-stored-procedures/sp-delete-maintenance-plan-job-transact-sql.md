@@ -40,10 +40,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'**_plan\_id_**'**  
+`[ @plan_id = ] 'plan\_id'`
  Specifies the ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@job_id =**] **'**_job\_id_**'**  
+`[ @job_id = ] 'job\_id'`
  Specifies the ID of the job with which the maintenance plan is associated. *job_id* is **uniqueidentifier**, and must be a valid ID.  
   
 ## Return Code Values  

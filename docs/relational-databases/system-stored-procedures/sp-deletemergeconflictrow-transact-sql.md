@@ -36,19 +36,19 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## Arguments  
- [ **@conflict_table=**] **'**_conflict_table_**'**  
+`[ @conflict_table = ] 'conflict_table'`
  Is the name of the conflict table. *conflict_table* is **sysname**, with a default of **%**. If the *conflict_table* is specified as NULL or **%**, the conflict is assumed to be a delete conflict and the row matching *rowguid* and *origin_datasource* and *source_object* is deleted from the [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) table.  
   
- [ **@source_object=**] **'**_source_object_**'**  
+`[ @source_object = ] 'source_object'`
  Is the name of the source table. *source_object* is **nvarchar(386)**, with a default of NULL.  
   
- [ **@rowguid =**] **'**_rowguid_**'**  
+`[ @rowguid = ] 'rowguid'`
  Is the row identifier for the delete conflict. *rowguid* is **uniqueidentifier**, with no default.  
   
- [ **@origin_datasource=**] **'**_origin_datasource_**'**  
+`[ @origin_datasource = ] 'origin_datasource'`
  Is the origin of the conflict. *origin_datasource* is **varchar(255)**, with no default.  
   
- [ **@drop_table_if_empty=**] **'**_drop_table_if_empty_**'**  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'`
  Is a flag indicating that the *conflict_table* is to be dropped if is empty. *drop_table_if_empty* is **varchar(10)**, with a default of FALSE.  
   
 ## Return Code Values  

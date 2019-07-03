@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "searching reports"
   - "text searches [Reporting Services]"
   - "URL access [Reporting Services], report searches"
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Search a Report Using URL Access

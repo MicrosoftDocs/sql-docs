@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPolyFromWKB (geometry Data Type)"
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPolyFromWKB (geometry Data Type)

@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "unlocking versions [Master Data Services]"
   - "versions [Master Data Services], unlocking"
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

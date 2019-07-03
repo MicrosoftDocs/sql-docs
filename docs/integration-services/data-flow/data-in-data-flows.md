@@ -20,6 +20,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Data in Data Flows
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of data types that are used in data flows.  
   
 ## Data Type Conversion  

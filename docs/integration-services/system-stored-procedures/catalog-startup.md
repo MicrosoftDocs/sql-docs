@@ -12,7 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ---
-# catalog.startup
+# catalog.startup 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Performs maintenance of the state of operations for the SSISDB catalog.  

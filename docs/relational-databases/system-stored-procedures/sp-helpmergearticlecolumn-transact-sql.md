@@ -33,10 +33,10 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication.*publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of a table or view that is the article to retrieve information on.*article* is **sysname**, with no default.  
   
 ## Result Sets  

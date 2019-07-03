@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # Group Object Properties, Methods, and Events
 ## Properties/Collections  

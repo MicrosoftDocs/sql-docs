@@ -36,7 +36,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## Arguments  
- [ [ **@job_type=** ] **'**_job_type_' ]  
+`[ [ @job_type = ] 'job_type_' ]`
  Type of job to add. *job_type* is **nvarchar(20)** with a default of **capture**. Valid inputs are **capture** and **cleanup**.  
   
 ## Return Code Values  

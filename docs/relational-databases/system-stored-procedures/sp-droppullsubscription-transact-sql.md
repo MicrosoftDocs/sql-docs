@@ -35,16 +35,16 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the remote server name. *publisher* is **sysname**, with no default. If **all**, the subscription is dropped at all the Publishers.  
   
- [ **@publisher_db=** ] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default. **all** means all the Publisher databases.  
   
- [ **@publication=** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the publication name. *publication* is **sysname**, with no default. If **all**, the subscription is dropped to all the publications.  
   
- [ **@reserved=** ] *reserved*  
+`[ @reserved = ] reserved`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

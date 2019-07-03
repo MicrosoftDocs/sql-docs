@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/02/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Run predictions using Python embedded in a stored procedure
@@ -167,8 +167,8 @@ Sometimes, instead of batch scoring, you might want to pass in a single case, ge
 
 In this section, you'll learn how to create single predictions by calling two stored procedures:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) is designed for single-row scoring using the scikit-learn model.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) is designed for single-row scoring using the revoscalepy model.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) is designed for single-row scoring using the scikit-learn model.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) is designed for single-row scoring using the revoscalepy model.
 + If you haven't trained a model yet, return to [Step 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
 Both models take as input a series of single values, such as passenger count, trip distance, and so forth. A table-valued function, `fnEngineerFeatures`, is used to convert latitude and longitude values from the inputs to a new feature, direct distance. [Lesson 4](sqldev-py4-create-data-features-using-t-sql.md) contains a description of this table-valued function.

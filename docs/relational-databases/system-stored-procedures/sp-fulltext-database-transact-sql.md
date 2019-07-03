@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_database"
 ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -38,7 +38,7 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## Arguments  
- [ **@action=**] **'***action***'**  
+`[ @action = ] 'action'`
  Is the action to be performed. **action** is **varchar(20)**, and can be one of these values.  
   
 |Value|Description|  

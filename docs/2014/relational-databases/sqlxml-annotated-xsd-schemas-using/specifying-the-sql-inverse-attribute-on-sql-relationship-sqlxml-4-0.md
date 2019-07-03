@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "updategrams [SQLXML], relationships"
   - "sql:inverse"
 ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Specifying the sql:inverse Attribute on sql:relationship (SQLXML 4.0)

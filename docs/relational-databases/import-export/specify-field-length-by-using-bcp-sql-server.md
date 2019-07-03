@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], field length"
   - "bcp utility [SQL Server], field length"
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

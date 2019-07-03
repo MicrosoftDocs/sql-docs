@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 9566d8ea-ab28-440c-bcd6-a9af0aafe8a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # updateLong Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

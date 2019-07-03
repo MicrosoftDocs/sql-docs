@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 10/25/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Use Python with revoscalepy to create a model that runs remotely on SQL Server

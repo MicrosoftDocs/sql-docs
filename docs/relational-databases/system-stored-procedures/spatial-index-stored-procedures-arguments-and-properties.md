@@ -35,15 +35,15 @@ manager: craigg
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## Arguments  
- [ **@tabname =**] **'***tabname***'**  
+`[ @tabname = ] 'tabname'`
  Is the qualified or nonqualified name of the table for which the spatial index has been specified.  
   
  Quotation marks are required only if a qualified table is specified. If a fully qualified name, including a database name, is provided, the database name must be the name of the current database. *tabname* is **nvarchar**(776), with no default.  
   
- [ **@indexname =** ] **'***indexname***'**  
+`[ @indexname = ] 'indexname'`
  Is the name of the spatial index specified. *indexname* is **sysname** with no default.  
   
- [ **@verboseoutput =** ] **'***verboseoutput***'**  
+`[ @verboseoutput = ] 'verboseoutput'`
  Is the range of property names and values to be returned.  
   
  0 = core properties  
@@ -52,10 +52,10 @@ manager: craigg
   
  *verboseoutput* is **tinyint** with no default.  
   
- [ **@query_sample =** ] **'***query_sample***'**  
+`[ @query_sample = ] 'query_sample'`
  Is a representative query sample that can be used to test the usefulness of the index. It may be a representative object or a query window. *query_sample* is **geometry** with no default.  
   
- [ **@xml_output =** ] **'***xml_output***'**  
+`[ @xml_output = ] 'xml_output'`
  Is an output parameter that returns the result set in an XML fragment. *xml_output* is **xml** with no default.  
   
 ## Properties  

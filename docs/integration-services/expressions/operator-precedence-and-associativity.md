@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Operator Precedence and Associativity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Each operator in the set of operators that the expression evaluator supports has a designated precedence in the precedence hierarchy and includes a direction in which it is evaluated. The direction of evaluation for an operator is operator associativity. Operators with higher precedence are evaluated before operators with lower precedence. If a complex expression has multiple operators, operator precedence determines the order in which the operations are performed. The order of execution can significantly affect the resulting value. Some operators have equal precedence. If an expression contains multiple operators of equal precedence, the operators are evaluated directionally, from left to right or right to left.  
   
  The following table lists the precedence of operators in order of high to low. Operators at the same level have equal precedence.  

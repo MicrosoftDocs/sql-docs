@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # RDS Object Model Summary
 > [!IMPORTANT]

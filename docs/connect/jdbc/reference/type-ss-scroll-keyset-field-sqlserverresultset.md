@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 2b16123e-07ab-4c73-9509-e0425910680b
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # TYPE_SS_SCROLL_KEYSET Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

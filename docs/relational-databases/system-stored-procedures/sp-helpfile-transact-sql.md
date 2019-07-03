@@ -34,7 +34,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@filename =** ] **'***name***'**  
+`[ @filename = ] 'name'`
  Is the logical name of any file in the current database. *name* is **sysname**, with a default of NULL. If *name* is not specified, the attributes of all files in the current database are returned.  
   
 ## Return Code Values  

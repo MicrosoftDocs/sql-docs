@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getResultSetConcurrency Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

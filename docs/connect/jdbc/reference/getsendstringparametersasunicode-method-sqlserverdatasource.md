@@ -15,7 +15,7 @@ apitype: "Assembly"
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 author: MightyPen
 ms.author: genemi
-manager: craigg
+manager: jroth
 ---
 # getSendStringParametersAsUnicode Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

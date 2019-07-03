@@ -71,6 +71,6 @@ manager: craigg
 ## Related Content  
  Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
- Curated Answer, [How to Split Column Data using SSIS](https://go.microsoft.com/fwlink/?LinkId=321995), on curatedviews.cloudapp.net.  
+ Blog, [How to Split Column Data using SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
   
   

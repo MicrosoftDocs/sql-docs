@@ -1,7 +1,7 @@
 ---
 title: "A Guide to Query Processing for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/09/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -68,7 +68,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  The estimated execution plan as displayed by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] is as follows  
   
- ![Query plan for join of disk-based tables.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![Query plan for join of disk-based tables.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "Query plan for join of disk-based tables.")  
 Query plan for join of disk-based tables.  
   
  About this query plan:  
@@ -87,7 +87,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  The estimated plan for this query is:  
   
- ![Query plan for a hash join of disk-based tables.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Query plan for a hash join of disk-based tables.")  
+ ![Query plan for a hash join of disk-based tables.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Query plan for a hash join of disk-based tables.")  
 Query plan for a hash join of disk-based tables.  
   
  In this query, rows from the Order table are retrieved using the clustered index. The **Hash Match** physical operator is now used for the **Inner Join**. The clustered index on Order is not sorted on CustomerID, and so a **Merge Join** would require a sort operator, which would affect performance. Note the relative cost of the **Hash Match** operator (75%) compared with the cost of the **Merge Join** operator in the previous example (46%). The optimizer would have considered the **Hash Match** operator also in the previous example, but concluded that the **Merge Join** operator gave better performance.  
@@ -95,7 +95,7 @@ Query plan for a hash join of disk-based tables.
 ## [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Processing for Disk-Based Tables  
  The following diagram outlines the query processing flow in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for ad hoc queries:  
   
- ![SQL Server query processing pipeline.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![SQL Server query processing pipeline.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server query processing pipeline.")  
 SQL Server query processing pipeline.  
   
  In this scenario:  
@@ -119,7 +119,7 @@ SQL Server query processing pipeline.
   
  Interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] can be used to access both memory-optimized and disk-based tables. The following figure illustrates query processing for interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access to memory-optimized tables:  
   
- ![Query processing pipeline for interpreted tsql.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
+ ![Query processing pipeline for interpreted tsql.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Query processing pipeline for interpreted tsql.")  
 Query processing pipeline for interpreted Transact-SQL access to memory-optimized tables.  
   
  As illustrated by the figure, the query processing pipeline remains mostly unchanged:  
@@ -157,7 +157,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  The estimated plan is as follows:  
   
- ![Query plan for join of memory optimized tables.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
+ ![Query plan for join of memory optimized tables.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Query plan for join of memory optimized tables.")  
 Query plan for join of memory-optimized tables.  
   
  Observe the following differences with the plan for the same query on disk-based tables (figure 1):  
@@ -198,7 +198,7 @@ END
 ### Compilation and Query Processing  
  The following diagram illustrates the compilation process for natively compiled stored procedures:  
   
- ![Native compilation of stored procedures.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![Native compilation of stored procedures.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "Native compilation of stored procedures.")  
 Native compilation of stored procedures.  
   
  The process is described as,  
@@ -215,7 +215,7 @@ Native compilation of stored procedures.
   
  Invocation of a natively compiled stored procedure translates to calling a function in the DLL.  
   
- ![Execution of natively compiled stored procedures.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![Execution of natively compiled stored procedures.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Execution of natively compiled stored procedures.")  
 Execution of natively compiled stored procedures.  
   
  Invocation of a natively compiled stored procedure is described as follows:  
@@ -289,7 +289,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  After deleting all rows but one in the table Customer:  
   
- ![Column statistics and joins.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.gif "Column statistics and joins.")  
+ ![Column statistics and joins.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Column statistics and joins.")  
   
  Regarding this query plan:  
   

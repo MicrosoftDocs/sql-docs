@@ -33,10 +33,10 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher the status of which is being monitored. *publisher* is **sysname**, with a default value of NULL. If NULL, information will be returned for all Publishers that use the Distributor.  
   
- [ **@refreshpolicy=** ] *refreshpolicy*  
+`[ @refreshpolicy = ] refreshpolicy`
  Internal use only.  
   
 ## Result Sets  

@@ -5,10 +5,10 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
-ms.author: heidist
-author: HeidiSteen
+ms.author: davidph
+author: dphansen
 manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 #customer intent: As an R developer, I want to model/train/score partitioned data to avoid manually subsetting data.

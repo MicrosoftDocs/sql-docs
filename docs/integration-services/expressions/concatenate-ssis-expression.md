@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # + (Concatenate) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Concatenates two expressions into one expression.  
   
 ## Syntax  

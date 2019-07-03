@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "sys.dm_fts_outstanding_batches dynamic management view"
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_outstanding_batches (Transact-SQL)

@@ -7,7 +7,6 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ---
@@ -47,7 +46,7 @@ The first step is to configure the operating system on the cluster nodes. For th
     ```
     Connect to the SQL Server master database with the 'sa' account and run the following:
 
-    ```tsql
+    ```sql
     USE [master]
     GO
     CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'

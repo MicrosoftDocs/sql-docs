@@ -203,6 +203,8 @@ ALTER TABLE ProjectTaskCurrent
 -   Adding **PERIOD** will perform a data consistency check on current table to make sure that the existing values for period columns are valid  
   
 -   It is highly recommended to set **SYSTEM_VERSIONING** with **DATA_CONSISTENCY_CHECK = ON** to enforce data consistency checks on existing data.  
+
+-   If hidden columns are preferred, use the command `ALTER TABLE [tableName] ALTER COLUMN [columnName] ADD HIDDEN;`.
   
  
 ## See Also  

@@ -8,8 +8,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "command line"
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Install Reporting Services 2016 at the Command Prompt

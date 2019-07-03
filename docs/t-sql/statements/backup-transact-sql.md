@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "06/27/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -43,8 +43,8 @@ helpviewer_keywords:
   - "stripe sets [SQL Server]"
   - "cross-platform backups"
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
@@ -797,6 +797,7 @@ This section contains the following examples:
 - G. [Backing up to an existing mirrored media set](#existing_mirrored_media_set)
 - H. [Creating a compressed backup in a new media set](#creating_compressed_backup_new_media_set)
 - I. [Backing up to the Microsoft Azure Blob storage service](#url)
+- J. [Track the progress of backup statement](#backup_progress)
 
 > [!NOTE]
 > The backup how-to topics contain additional examples. For more information, see [Backup Overview](../../relational-databases/backup-restore/backup-overview-sql-server.md).
@@ -943,6 +944,17 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
+### <a name="backup_progress"></a> J. Track the progress of backup statement
+
+The following query returns information about the currently running backup statements:
+```sql
+SELECT query = a.text, start_time, percent_complete,
+    eta = dateadd(second,estimated_completion_time/1000, getdate())
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+WHERE r.command LIKE 'BACKUP%'
+```
+
 ## See Also
 
 - [Backup Devices](../../relational-databases/backup-restore/backup-devices-sql-server.md)
@@ -1017,7 +1029,7 @@ Specifies a complete database backup. During a database backup, the managed inst
 > [!IMPORTANT]
 > A database backup created on a managed instance can only be restored on another managed instance. It cannot be restored to a SQL Server on-premises instance (similar to the way that a backup of a SQL Server 2016 database cannot be restored to a SQL Server 2012 instance).
 
-When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database managed instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)
+When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database managed instance automatic backups, see [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* | **@**_database\_name\_var_ }
 Is the database from which the complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.

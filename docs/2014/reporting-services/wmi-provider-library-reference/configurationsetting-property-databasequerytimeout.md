@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "DatabaseQueryTimeout Property"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseQueryTimeout property"
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # DatabaseQueryTimeout Property (WMI MSReportServer_ConfigurationSetting)

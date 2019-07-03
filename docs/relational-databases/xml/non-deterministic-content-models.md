@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "non-deterministic content models"
   - "content models [XML in SQL Server]"
 ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Non-Deterministic Content Models

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], custom"
@@ -253,12 +252,8 @@ manager: craigg
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|`XMLOperation`|Provides information about the operation that the task performs|  
-  
-## Related Content  
- Blog entry, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580), on dougbert.com.  
+|`XMLOperation`|Provides information about the operation that the task performs|   
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
-  
   

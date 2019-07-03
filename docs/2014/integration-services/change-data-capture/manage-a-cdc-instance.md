@@ -88,7 +88,7 @@ manager: craigg
   
     -   **Active transactions**: The current number of source Oracle transactions that are being processed by the Oracle CDC Instance and are not yet decided (commit/rollback).  
   
-    -   **Staged transactions**: The current number source Oracle transactions that are staged to the [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) table.  
+    -   **Staged transactions**: The current number source Oracle transactions that are staged to the [cdc.xdbcdc_staged_transactions](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_staged_transactions) table.  
   
 -   **Counters**: You monitor the following information in this section.  
   
@@ -116,5 +116,3 @@ manager: craigg
  [How to View the CDC Instance Properties](how-to-view-the-cdc-instance-properties.md)   
  [How to Edit the CDC Instance Properties](how-to-edit-the-cdc-instance-properties.md)   
  [Use the New Instance Wizard](use-the-new-instance-wizard.md)  
-  
-  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "retrieving report data"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "datasets [Reporting Services], Analysis Services"
   - "queries [Reporting Services], data mining prediction"
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Retrieve Data from a Data Mining Model (DMX) (SSRS)

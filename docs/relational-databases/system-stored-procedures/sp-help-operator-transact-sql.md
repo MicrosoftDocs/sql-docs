@@ -37,10 +37,10 @@ sp_help_operator
 ```  
   
 ## Arguments  
- [ **@operator_name=** ] **'***operator_name***'**  
+`[ @operator_name = ] 'operator_name'`
  The operator name. *operator_name* is **sysname**. If *operator_name* is not specified, information about all operators is returned.  
   
- [ **@operator_id=** ] *operator_id*  
+`[ @operator_id = ] operator_id`
  The identification number of the operator for which information is requested. *operator_id*is **int**, with a default of NULL.  
   
 > [!NOTE]  

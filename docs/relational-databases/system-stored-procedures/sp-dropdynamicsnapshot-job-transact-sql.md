@@ -35,19 +35,19 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication from which the filtered data snapshot job is being removed. *publication* is **sysname**, with no default.  
   
- [ **@dynamic_snapshot_jobname**= ] **'**_dynamic_snapshot_jobname_**'**  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`
  Is the name of the filtered data snapshot job being removed. *dynamic_snapshot_jobname*is sysname, and if it is not supplied defaults to whatever job name is associated with *dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**= ] **'**_dynamic_snapshot_jobid_**'**  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`
  Is an identifier for the filtered data snapshot job being removed. *dynamic_snapshot_jobid*is **uniqueidentifier**, with default of NULL.  
   
 > [!IMPORTANT]  
 >  Only *dynamic_snapshot_jobid*or *dynamic_snapshot_jobname* can be specified. If values are not supplied for either *dynamic_snapshot_jobid*or *dynamic_snapshot_jobname*, all dynamic snapshot jobs for the publication are removed.  
   
- [ **@ignore_distributor =**] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  *ignore_distributor* is **bit**, with a default of **0**. This parameter can be used to drop a dynamic snapshot job without doing cleanup tasks at the Distributor.  
   
 ## Return Code Values  

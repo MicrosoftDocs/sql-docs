@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "assignment operators, %="
   - "augmented operators, %="
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

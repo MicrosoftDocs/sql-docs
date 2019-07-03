@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DECRYPTBYKEYAUTOCERT function"
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DECRYPTBYKEYAUTOCERT (Transact-SQL)

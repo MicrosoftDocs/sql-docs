@@ -32,7 +32,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## Arguments  
- [ **@frompublisher=** ] *frompublisher*  
+`[ @frompublisher = ] frompublisher`
  Specifies whether the stored procedure is called at the Publisher or at the Distributor. *frompublisher* is bit, with a default value of 0. **1** means that the stored procedure is called from the Publisher, and **0** means that the stored procedure is called from the Distributor.  
   
 ## Result Sets  

@@ -36,19 +36,19 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. If the publication is specified, all conflicts qualified by the publication are returned. For example, if the **MSmerge_conflict_Customers** table has conflict rows for the **WA** and the **CA** publications, passing in a publication name **CA** retrieves conflicts that pertain to the **CA** publication.  
   
- [ **@conflict_table=**] **'**_conflict_table_**'**  
+`[ @conflict_table = ] 'conflict_table'`
  Is the name of the conflict table. *conflict_table* is **sysname**, with no default. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, conflict tables are named using the format names with **MSmerge_conflict\__publication\_article_**, with one table for each published article.  
   
- [ **@publisher=**] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
- [ **@publisher_db=**] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publisher database.*publisher_db* is **sysname**, with a default of NULL.  
   
- [ **@logical_record_conflicts=** ] *logical_record_conflicts*  
+`[ @logical_record_conflicts = ] logical_record_conflicts`
  Indicates whether the result set contains information about logical record conflicts. *logical_record_conflicts* is **int**, with a default value of 0. **1** means that logical record conflict information is returned.  
   
 ## Result Sets  

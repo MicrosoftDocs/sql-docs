@@ -35,7 +35,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## Arguments  
- [ **@value=** ] *value*  
+`[ @value = ] value`
  Determines whether successful policy evaluations are logged. *value* is **sqlvariant**, and can be one of the following values:  
   
 -   0 or 'false' = Successful policy evaluations are not logged.  

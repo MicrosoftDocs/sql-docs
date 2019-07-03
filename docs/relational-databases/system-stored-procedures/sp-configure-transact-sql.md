@@ -55,12 +55,12 @@ RECONFIGURE
 ```  
   
 ## Arguments  
- [ **@configname=** ] **'***option_name***'**  
+`[ @configname = ] 'option_name'`
  Is the name of a configuration option. *option_name* is **varchar(35)**, with a default of NULL. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] recognizes any unique string that is part of the configuration name. If not specified, the complete list of options is returned.  
   
  For information about the available configuration options and their settings, see [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
- [ **@configvalue=** ] **'***value***'**  
+`[ @configvalue = ] 'value'`
  Is the new configuration setting. *value* is **int**, with a default of NULL. The maximum value depends on the individual option.  
   
  To see the maximum value for each option, see the **maximum** column of the **sys.configurations** catalog view.  

@@ -32,7 +32,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## Arguments  
- [ **@request_id**= ] *request_id*  
+`[ @request_id = ] request_id`
  Is the ID of a specific status request. *request_id* is **int**, with no default.  
   
 ## Result Sets  

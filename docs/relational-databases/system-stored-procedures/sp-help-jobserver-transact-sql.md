@@ -37,16 +37,16 @@ sp_help_jobserver
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number for which to return information. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The job name for which to return information. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@show_last_run_details=** ] *show_last_run_details*  
+`[ @show_last_run_details = ] show_last_run_details`
  Is whether the last-run execution information is part of the result set. *show_last_run_details* is **tinyint**, with a default of **0**. **0** does not include last-run information, and **1** does.  
   
 ## Return Code Values  

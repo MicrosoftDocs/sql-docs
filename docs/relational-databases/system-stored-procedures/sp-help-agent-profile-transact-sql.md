@@ -33,7 +33,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## Arguments  
- [ **@agent_type=**] *agent_type*  
+`[ @agent_type = ] agent_type`
  Is the type of agent. *agent_type* is **int**, with a default of **0**, and can be one of these values.  
   
 |Value|Description|  
@@ -44,7 +44,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Merge Agent|  
 |**9**|Queue Reader Agent|  
   
- [ **@profile_id=**] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile to be displayed. *profile_id* is **int**, with a default of **-1**, which returns all the profiles in the **MSagent_profiles** table.  
   
 ## Result Sets  

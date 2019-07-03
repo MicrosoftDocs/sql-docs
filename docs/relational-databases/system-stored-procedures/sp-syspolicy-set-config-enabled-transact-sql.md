@@ -34,7 +34,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
 ```  
   
 ## Arguments  
- [ **@value=** ] *value*  
+`[ @value = ] value`
  Determines whether Policy-Based Management is enabled. *value* is **sqlvariant**, and can be one of the following values:  
   
 -   0 (or 'false') = Disabled  

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DATABASE_PRINCIPAL_ID function"
   - "IDs [SQL Server], principals"
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DATABASE_PRINCIPAL_ID (Transact-SQL)

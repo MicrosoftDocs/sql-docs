@@ -38,13 +38,13 @@ sp_help_proxy
 ```  
   
 ## Arguments  
- [ **@proxy_id** = ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to list information for. The *proxy_id* is **int**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to list information for. The *proxy_name* is **sysname**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@subsystem_name** = ] '*subsystem_name*'  
+`[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to list proxies for. The *subsystem_name* is **sysname**, with a default of NULL. When *subsystem_name* is specified, *name* must also be specified.  
   
  The following table lists the values for each subsystem.  
@@ -63,7 +63,7 @@ sp_help_proxy
 |Dts|SSIS package execution|  
 |PowerShell|PowerShell Script|  
   
- [ **@name** = ] '*name*'  
+`[ @name = ] 'name'`
  The name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to list proxies for. The name is **nvarchar(256)**, with a default of NULL. When *name* is specified, *subsystem_name* must also be specified.  
   
 ## Return Code Values  

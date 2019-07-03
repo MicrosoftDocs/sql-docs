@@ -48,5 +48,5 @@ Requires VIEW SERVER STATE permission.
 
 [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
-[SET RESULT SET CACHING &#40;Transact-SQL&#41;](\sql\t-sql\statements\set-result-set-caching-transact-sql.md)</br>
+[SET RESULT SET CACHING &#40;Transact-SQL&#41;](\sql\t-sql\statements\set-result-set-caching-transact-sql)</br>
 [DBCC DROPRESULTSETCACHE  &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)

@@ -154,7 +154,7 @@ Get a Ticket Granting Ticket (TGT) from KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-View the available tickets using kinit. If the kinit was successful, you should see a ticket. 
+View the available tickets using klist. If the kinit was successful, you should see a ticket. 
 
 ```bash
 klist

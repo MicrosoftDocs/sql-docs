@@ -38,6 +38,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |importance|**nvarchar(32)**|The importance setting the request was submitted with. Requests with a lower importance will remain queued in suspended state, if higher importance requests are submitted.  Requests with higher importance will execute before lower importance requests that were submitted earlier.  For more information on importance, see [Workload Importance](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal (default)</br>above_normal</br>high|
 |group_name| |Reserved for internal use.</br>Applies to: Azure SQL Data Warehouse|
 |resource_allocation_percentage| |Reserved for internal use.</br>Applies to: Azure SQL Data Warehouse|
+|result_set_cache|**bit**|Details whether a completed query was a result cache hit (1) or not (0).|0,1|
+||||
   
  For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.   
   

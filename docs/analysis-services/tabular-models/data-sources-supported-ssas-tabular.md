@@ -57,12 +57,15 @@ Microsoft SQL Analytics Platform System (APS)     |   All      |  OLE DB Provide
 Oracle relational databases     |  Oracle 9i and later       |  Oracle OLE DB Provider       
 Teradata relational databases    |  Teradata V2R6 and later     | .Net Data Provider for Teradata    
 
-<a name="ae">[2]</a> SQL Server Analysis Services can act as a client to an [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) database on SQL Server or Azure SQL Database under the following conditions: 
 
+### Using SQL Server Analysis Services with Always Encrypted
+
+<a name="ae">[2]</a> SQL Server Analysis Services can act as a client to a database using [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) in SQL Server or Azure SQL Database under the following conditions: 
+
+*  Column master key(s) protecting the encrypted columns must be certificates, stored in Windows certificate store. Column master keys stored in Azure Key Vault are not supported.   
 *  The Windows computer on which Analysis Services is installed has the necessary column master key certificate(s) installed. To learn more, see [Creating Column Master Keys in Windows Certificate Store](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store).
 *  The datasource Analysis Services uses to connect to SQL is based on the .Net Framework provider, and the Column Encryption Setting property on the data source must be enabled. .NET Framework 4.6.1 or later needs to be present on the Analysis Services server.
 *  The SQL Server or SQL Database datasource must be a *provider* datasource type supported by the 1200 compatibility level. It will not work with Power Query *structured* data sources, introduced in the 1400 compatibility level.
-*  This functionality should be used only with SQL Server Analysis Services tabular models in DirectQuery mode. Always Encrypted is not supported for use with Azure Analysis Services.
   
 ##  <a name="bkmk_tips"></a> Tips for choosing data sources  
   

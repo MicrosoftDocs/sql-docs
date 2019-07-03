@@ -42,7 +42,7 @@ Disable result set caching for the current client session.
 
 ## Examples
 
-Query the result_cache_hit column in [sys.dm_pdw_exec_requests] with a query’s request_id to see if this query was executed with a result cache hit or miss.
+Query the result_cache_hit column in [sys.dm_pdw_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql) with a query’s request_id to see if this query was executed with a result cache hit or miss.
 
 ```sql
 SELECT result_cache_hit

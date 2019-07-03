@@ -101,50 +101,40 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 #### To see the properties of all the indexes in a table  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+The following example shows the properties of all indexes in a table in the AdventureWorks database.  
   
-2.  On the Standard bar, click **New Query**.  
+```sql  
+SELECT i.name AS index_name
+   , i.type_desc
+   , i.is_unique
+   , ds.type_desc AS filegroup_or_partition_scheme
+   , ds.name AS filegroup_or_partition_scheme_name
+   , i.ignore_dup_key
+   , i.is_primary_key
+   , i.is_unique_constraint
+   , i.fill_factor
+   , i.is_padded
+   , i.is_disabled
+   , i.allow_row_locks
+   , i.allow_page_locks
+   , i.has_filter
+   , i.filter_definition  
+FROM sys.indexes AS i  
+   INNER JOIN sys.data_spaces AS ds
+      ON i.data_space_id = ds.data_space_id  
+   WHERE is_hypothetical = 0 AND i.index_id <> 0
+       AND i.object_id = OBJECT_ID('HumanResources.Employee')
+;
   
-3.  Copy and paste the following example into the query window and click **Execute**.  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    SELECT i.name AS index_name,   
-        i.type_desc,   
-        i.is_unique,   
-        ds.type_desc AS filegroup_or_partition_scheme,   
-        ds.name AS filegroup_or_partition_scheme_name,   
-        i.ignore_dup_key,   
-        i.is_primary_key,   
-        i.is_unique_constraint,   
-        i.fill_factor,   
-        i.is_padded,   
-        i.is_disabled,   
-        i.allow_row_locks,   
-        i.allow_page_locks,   
-        i.has_filter,   
-        i.filter_definition  
-    FROM sys.indexes AS i  
-       INNER JOIN sys.data_spaces AS ds ON i.data_space_id = ds.data_space_id  
-    WHERE is_hypothetical = 0 AND i.index_id <> 0   
-       AND i.object_id = OBJECT_ID('HumanResources.Employee');   
-    GO  
-  
-    ```  
+```  
   
 #### To set the properties of an index  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+The following example sets the properties of indexes in the AdventureWorks database.
   
-2.  On the Standard bar, click **New Query**.  
+[!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/set-index-options_1.sql)]  
   
-3.  Copy and paste the following examples into the query window and click **Execute**.  
-  
-     [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/set-index-options_1.sql)]  
-  
-     [!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/set-index-options_2.sql)]  
+[!code-sql[IndexDDL#AlterIndex2](../../relational-databases/indexes/codesnippet/tsql/set-index-options_2.sql)]  
   
  For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
-  
-  
+ 

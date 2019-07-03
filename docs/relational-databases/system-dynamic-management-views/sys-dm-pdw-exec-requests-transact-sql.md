@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2019"
+ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
@@ -9,8 +9,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-author: ronortloff
-ms.author: rortloff
+author: XiaoyuL-Preview 
+ms.author: xiaoyul
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

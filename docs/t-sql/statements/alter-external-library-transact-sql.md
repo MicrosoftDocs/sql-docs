@@ -122,7 +122,7 @@ The file can be specified in the form of a local path or network path. If the da
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 
 > [!NOTE]
-> If you're running in Azure SQL Database, you can [remove the library](drop-external-library-transact-sql.md) and then use **sqlmlutils** to install the updated library. For details about using **sqlmlutile**, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages.md#add-a-package-with-sqlmlutils).
+> If you're running in Azure SQL Database, you can [remove the library](drop-external-library-transact-sql.md) and then use **sqlmlutils** to install the updated library. For details about using **sqlmlutile**, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
 >
 > If you use ALTER EXTERNAL LIBRARY in Azure SQL Database, you need to use `library_bits` instead of `client_library_specifier` for CONTENT. See the example, [Alter an existing library using a byte stream](#b-alter-an-existing-library-using-a-byte-stream).
 

@@ -127,7 +127,7 @@ When attempting to access the file specified in **<client_library_specifier>**, 
 Optionally, an OS platform for the file can be specified. Only one file artifact or content is permitted for each OS platform for a specific language or runtime.
 
 > [!NOTE]
-> If you're running in Azure SQL Database, you can use **sqlmlutils** to install a library. For details, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages.md#add-a-package-with-sqlmlutils).
+> If you're running in Azure SQL Database, you can use **sqlmlutils** to install a library. For details, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
 >
 > If you use CREATE EXTERNAL LIBRARY in Azure SQL Database, you need to use `library_bits` instead of `client_library_specifier` for CONTENT. See the example, [Create a library from a byte stream](#c-create-a-library-from-a-byte-stream).
 

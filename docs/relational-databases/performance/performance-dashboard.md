@@ -75,7 +75,8 @@ The **Expensive Queries** reports are reset when [!INCLUDE[ssNoVersion](../../in
 > The Performance Dashboard was first released as a standalone download for [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602), and later updated for [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
 
 ## Permissions  
-Requires `VIEW SERVER STATE` and `ALTER TRACE` permissions. 
+On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` and `ALTER TRACE` permissions. 
+On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requires the `VIEW DATABASE STATE` permission in the database.
 
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

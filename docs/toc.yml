@@ -15563,7 +15563,7 @@
       - name: DBCC DROPCLEANBUFFERS
         href: t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
       - name: DBCC DROPRESULTSETCACHE
-        href: t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql.md
+        href: t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql.md
       - name: DBCC FLUSHAUTHCACHE
         href: t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
       - name: DBCC FREEPROCCACHE

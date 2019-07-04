@@ -1,7 +1,7 @@
 ---
 title: "sys.pdw_materialized_view_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
@@ -25,7 +25,11 @@ The columns physical_name and object_id form the key for this catalog view.
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  
 |physical_name |**nvarchar(36)**|The physical name for the materialized view.|  
-|object_id  |**int**|The object ID for the materialized view. See [sys.objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).|  
+|object_id  |**int**|The object ID for the materialized view. See [sys.objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
+
+## Permissions
+
+Requires VIEW SERVER STATE permission.
   
 ## See also
 

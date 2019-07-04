@@ -25,7 +25,11 @@ Displays distribution information materialized views.
 |object_id|**int**|ID of the materialized view for which thee properties were specified.| 
 |distribution_policy |**tinyint**|2 = HASH</br>4 = ROUND_ROBIN|  
 |distribution_policy_desc |**nvarchar(60)**|HASH, ROUND_ROBIN|  
-  
+ 
+## Permissions
+
+Requires VIEW SERVER STATE permission.
+ 
 ## See also
 
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

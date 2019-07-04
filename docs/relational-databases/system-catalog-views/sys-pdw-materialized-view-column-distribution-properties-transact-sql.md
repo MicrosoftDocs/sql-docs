@@ -25,7 +25,11 @@ Displays distribution information for columns in a materialized view.
 |object_id|**int**|ID of the object to which the column belongs. |  
 |column_id|**int**|The ID of the column.|  
 |distribution_ordinal|**tinyint**|0 = Not a distribution column.</br> 1 = SQL Data Warehouse is using this column to distribute the materialized view.|
-  
+ 
+## Permissions 
+
+Requires VIEW SERVER STATE permission.
+ 
 ## See also
 
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

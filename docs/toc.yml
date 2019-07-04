@@ -15562,6 +15562,8 @@
         href: t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
       - name: DBCC DROPCLEANBUFFERS
         href: t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
+      - name: DBCC DROPRESULTSETCACHE
+        href: t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql.md
       - name: DBCC FLUSHAUTHCACHE
         href: t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
       - name: DBCC FREEPROCCACHE
@@ -15592,6 +15594,8 @@
         href: t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
       - name: DBCC SHOWCONTIG
         href: t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
+      - name: DBCC SHOWRESULTCACHESPACEUSED
+        href: t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql.md        
       - name: DBCC SHRINKDATABASE
         href: t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
       - name: DBCC SHRINKFILE

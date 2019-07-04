@@ -61,6 +61,9 @@ Deploying a DAC with logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] req
 2.  Right-click the **Databases** node, then select **Deploy Data-tier Application...**  
   
 3.  Complete the wizard dialogs and click finish.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 More about some of the wizard pages below: 
      
 ### Select DAC Package Page  

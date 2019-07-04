@@ -48,7 +48,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  Right-click the **Synonyms** folder, then click **New Synonym...**.  
   
 3.  In the **Add Synonym** dialog box, enter the following information.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      **Synonym name**  
      Type the new name you will use for this object.  
   

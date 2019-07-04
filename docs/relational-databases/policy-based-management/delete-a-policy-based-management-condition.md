@@ -50,5 +50,6 @@ manager: craigg
 5.  Right-click the condition that you want to delete and select **Delete**.  
   
 6.  In the **Delete Object** dialog box, ensure that the correct condition is selected and then click **OK**.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

@@ -56,6 +56,8 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
 
 2. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  
   

@@ -66,7 +66,9 @@ manager: craigg
 4.  In the **Category** box, click the **Database Maintenance**.  
   
 5.  In the **Description** box, type **Archive Database Mail messages**, and then click **Steps**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [Overview](#Process_Overview)  
   
 ## To create a step to archive the Database Mail messages  

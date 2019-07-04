@@ -66,7 +66,9 @@ manager: craigg
      At this point the primary and filegroups `A` and `C` are online. Files in filegroup `B` remain recovery pending, with the filegroup offline.  
   
 4.  Online restore of filegroup `B`.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      Files in filegroup `B` are restored any time thereafter.  
   
     > [!NOTE]  

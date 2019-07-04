@@ -104,5 +104,6 @@ class Test
      This creates an executable (DocSample.exe).  
   
 4.  At the command prompt, execute DocSample.exe.  
-  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

@@ -65,7 +65,9 @@ manager: craigg
     -   When this value is true, both successful and failed policy evaluations are logged.  
   
 4.  When finished, click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To configure Policy-Based Management  

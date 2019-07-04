@@ -28,7 +28,7 @@ Displays distribution information for columns in a materialized view.
  
 ## Permissions 
 
-Requires VIEW SERVER STATE permission.
+Requires VIEW DATABASE STATE permission.
  
 ## See also
 

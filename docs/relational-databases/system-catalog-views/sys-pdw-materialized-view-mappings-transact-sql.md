@@ -29,7 +29,7 @@ The columns physical_name and object_id form the key for this catalog view.
 
 ## Permissions
 
-Requires VIEW SERVER STATE permission.
+Requires VIEW DATABASE STATE permission.
   
 ## See also
 

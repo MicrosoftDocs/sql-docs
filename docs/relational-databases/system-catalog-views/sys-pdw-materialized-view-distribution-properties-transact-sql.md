@@ -28,7 +28,7 @@ Displays distribution information materialized views.
  
 ## Permissions
 
-Requires VIEW SERVER STATE permission.
+Requires VIEW DATABASE STATE permission.
  
 ## See also
 

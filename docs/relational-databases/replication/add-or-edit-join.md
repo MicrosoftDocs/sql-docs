@@ -48,7 +48,9 @@ manager: craigg
     -   If you are editing an existing join, you must make edits manually.  
   
 3.  **Specify join options**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   If the column on which you join in the filtered table is unique, select **Unique key**. The merge process has special performance optimizations available if the column is unique.  
   
         > [!CAUTION]  

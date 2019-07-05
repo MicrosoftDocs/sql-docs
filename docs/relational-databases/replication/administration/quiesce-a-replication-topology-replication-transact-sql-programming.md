@@ -31,7 +31,9 @@ manager: craigg
 3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 4.  Ensure that each Subscriber has received the tracer token.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### To quiesce a transactional replication topology with updatable subscriptions  
   
 1.  Stop activity on all published tables at the Publisher and all Subscribers.  

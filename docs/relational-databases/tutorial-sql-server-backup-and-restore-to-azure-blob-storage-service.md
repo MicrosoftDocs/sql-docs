@@ -34,6 +34,9 @@ To create a Container, follow these steps:
 
 1. Open the Azure portal. 
 1. Navigate to your Storage Account. 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    1. Select the storage account, scroll down to **Blob Services**.
    1. Select **Blobs** and then select  +**Container** to add a new container. 
    1. Enter the name for the container and make note of the container name you specified. This information is used in the URL (path to backup file) in the T-SQL statements later in this quickstart. 

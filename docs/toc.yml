@@ -12179,6 +12179,12 @@
         href: relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md
       - name: sys.pdw_loader_run_stages
         href: relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md
+      - name: sys.pdw_materialized_view_column_distribution_properties
+        href: relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md
+      - name: sys.pdw_materialized_view_distribution_properties
+        href: relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md
+      - name: sys.pdw_materialized_view_mappings
+        href: relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md        
       - name: sys.pdw_nodes_column_store_dictionaries
         href: relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md
       - name: sys.pdw_nodes_column_store_row_groups
@@ -15562,6 +15568,8 @@
         href: t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
       - name: DBCC DROPCLEANBUFFERS
         href: t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
+      - name: DBCC DROPRESULTSETCACHE
+        href: t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql.md
       - name: DBCC FLUSHAUTHCACHE
         href: t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
       - name: DBCC FREEPROCCACHE
@@ -15582,6 +15590,8 @@
         href: t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
       - name: DBCC PDW_SHOWEXECUTIONPLAN
         href: t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
+      - name: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD
+        href: t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md
       - name: DBCC PDW_SHOWPARTITIONSTATS
         href: t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
       - name: DBCC PDW_SHOWSPACEUSED
@@ -15592,6 +15602,8 @@
         href: t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
       - name: DBCC SHOWCONTIG
         href: t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
+      - name: DBCC SHOWRESULTCACHESPACEUSED
+        href: t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql.md        
       - name: DBCC SHRINKDATABASE
         href: t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
       - name: DBCC SHRINKFILE
@@ -16673,6 +16685,8 @@
           href: t-sql/statements/alter-login-transact-sql.md
         - name: MASTER KEY
           href: t-sql/statements/alter-master-key-transact-sql.md
+        - name: MATERIALIZED VIEW
+          href: t-sql/statements/alter-materialized-view-transact-sql.md
         - name: MESSAGE TYPE
           href: t-sql/statements/alter-message-type-transact-sql.md
         - name: PARTITION FUNCTION
@@ -16841,6 +16855,8 @@
           href: t-sql/statements/create-login-transact-sql.md
         - name: MASTER KEY
           href: t-sql/statements/create-master-key-transact-sql.md
+        - name: MATERIALIZED VIEW AS SELECT
+          href: t-sql/statements/create-materialized-view-as-select-transact-sql.md
         - name: MESSAGE TYPE
           href: t-sql/statements/create-message-type-transact-sql.md
         - name: PARTITION FUNCTION

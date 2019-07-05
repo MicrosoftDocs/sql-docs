@@ -39,7 +39,9 @@ manager: craigg
 2.  Expand **Databases.**  
   
 3.  Expand **Database Snapshots**, and select the snapshot you want to view.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To view a database snapshot**  
   

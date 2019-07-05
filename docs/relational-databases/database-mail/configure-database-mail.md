@@ -68,7 +68,9 @@ manager: craigg
 3.  Right-click **Database Mail**, and then click **Configure Database Mail**.  
   
 4.  Complete the Wizard dialogs  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   [Welcome Page](#Welcome)  
   
     -   [Select Configuration Task Page](#ConfigTask)  

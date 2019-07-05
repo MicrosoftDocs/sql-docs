@@ -3,7 +3,7 @@ title: SandDance for Azure Data Studio
 titleSuffix: Azure Data Studio
 description: How to use SandDance in Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "04/18/2019"
+ms.date: "07/03/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -30,9 +30,9 @@ Right-click on a .csv or .tsv file in HDFS if you are connected to SQL Server 20
 
 ## Known Issues
 
-Currently your data should have the first column as a unique identifier.
+Currently, your data should have the first column as a unique identifier.
 
-Currently we do not cap the row count that is visualized. However, memory consumption goes up proportionally to the number of rows, so we recommend that the data set or view is limited to around 100k rows.
+Currently, we do not cap the row count that is visualized. However, memory consumption goes up proportionally to the number of rows, so we recommend that the data set or view is limited to around 100k rows.
 
 See [known issues](https://microsoft.github.io/SandDance/#known-issues)
 

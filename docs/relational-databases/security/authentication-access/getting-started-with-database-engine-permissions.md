@@ -60,7 +60,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Create Windows groups that represent the work units and the work functions.  
   
 3.  Add the Windows users to the Windows groups.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### If the person connecting will be connecting to many databases  
   
 1.  Create a login for the Windows groups. (If using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication, skip the Active Directory steps, and create [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication logins here.)  

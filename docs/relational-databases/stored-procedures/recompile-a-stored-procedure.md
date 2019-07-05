@@ -70,7 +70,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  From the Standard bar, click **New Query**.  
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates the procedure definition.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```  
 USE AdventureWorks2012;  
 GO  

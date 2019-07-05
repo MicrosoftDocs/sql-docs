@@ -608,7 +608,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Use the **Write** method for the **Currency** UDT to determine how the UDT is persisted on disk and therefore how UDT values are compared and ordered for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations.  
   
 3.  Save the **Currency** UDT using the following binary format:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Save the culture as a UTF-16 encoded string for bytes 0-19 with padding to the right with null characters.  
   
     2.  Use bytes 20 and above to contain the decimal value of the currency.  

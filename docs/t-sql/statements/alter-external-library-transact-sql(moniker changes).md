@@ -16,7 +16,7 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -29,7 +29,7 @@ Modifies the content of an existing external package library.
 > In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4 and later.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-current"
+::: moniker range="=azuresqldb-current"
 > [!NOTE]
 > If you're running in Azure SQL Database, you can alter a library by removing it and then using **sqlmlutils** to install the altered version. For more information about **sqlmlutils**, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
 ::: moniker-end
@@ -108,7 +108,7 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 ## Syntax for Azure SQL Server Database
 
 ```text
@@ -143,7 +143,7 @@ The library name cannot be arbitrarily assigned. That is, you must use the name 
 
 Specifies the name of the user or role that owns the external library.
 
-::: moniker range="<>azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 **file_spec**
 
 Specifies the content of the package for a specific platform. Only one file artifact per platform is supported.
@@ -169,7 +169,7 @@ Specifies the platform for the content of the library. This value is required wh
 In SQL Server 2017, Windows is the only supported platform.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform.
@@ -189,7 +189,7 @@ In SQL Server 2019, Windows and Linux are the supported platforms.
 Specifies the language of the package. R is supported in SQL Server 2017.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 **LANGUAGE = 'R'**
 
 Specifies the language of the package. R is supported in Azure SQL Database.
@@ -223,7 +223,7 @@ By default, the **dbo** user or any member of the role **db_owner** has permissi
 
 The following examples change an external library called `customPackage`.
 
-::: moniker range="<>azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ### Replace the contents of a library using a file
 
 The following example modifies an external library called `customPackage`, using a zipped file containing the updated bits.

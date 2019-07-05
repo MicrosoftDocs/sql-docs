@@ -26,12 +26,12 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 
 Uploads R, Python, or Java package files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 > [!NOTE]
 > In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4 and later.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-current"
+::: moniker range="=azuresqldb-current"
 > [!NOTE]
 > If you're running in Azure SQL Database, you can use **sqlmlutils** to install a library. For details, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
 ::: moniker-end
@@ -113,7 +113,7 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 ## Syntax for Azure SQL Server Database
 
 ```text
@@ -152,7 +152,7 @@ The libraries owned by database owner are considered global to the database and 
 
 When the user **RUser1** executes an external script, the value of `libPath` can contain multiple paths. The first path is always the path to the shared library created by the database owner. The second part of `libPath` specifies the path containing packages uploaded individually by **RUser1**.
 
-::: moniker range="<>azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 **file_spec**
 
 Specifies the content of the package for a specific platform. Only one file artifact per platform is supported.
@@ -177,7 +177,7 @@ Specifies the platform for the content of the library. The value defaults to the
 In SQL Server 2017, Windows is the only supported platform.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform.
@@ -197,7 +197,7 @@ In SQL Server 2019, Windows and Linux are the supported platforms.
 Specifies the language of the package. R is supported in SQL Server 2017.
 ::: moniker-end
 
-::: moniker range=">=azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 **LANGUAGE = 'R'**
 
 Specifies the language of the package. R is supported in Azure SQL Database.
@@ -245,7 +245,7 @@ To create an external library by using a file path, the user must be a Windows a
 
 ## Examples
 
-::: moniker range="<>azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ### Add an external library to a database  
 
 The following example adds an external library called `customPackage` to a database.
@@ -283,7 +283,7 @@ In practice, package dependencies for popular packages are usually much more com
 
 Because it can be difficult to determine all dependencies just from looking at the  package manifest, we recommend that you use a package such as [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) to identify all packages that might be required to complete installation successfully.
 
-::: moniker range="<>azuresqldb-current||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 + Upload the target package and its dependencies. All files must be in a folder that is accessible to the server.
 

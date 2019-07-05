@@ -53,12 +53,12 @@ Use the `REVOKE` statement to remove execute permission for `Mary` on the stored
   
 3.   Use the `DROP` statement to remove the store procedure `pr_Names`:  
   
-    ```sql  
+  ```sql  
     DROP PROC pr_Names;  
-    GO  
-    ```  
+    GO   
+  ```  
   
-6.  Use the `DROP` statement to remove the view `vw_Names`:  
+4.  Use the `DROP` statement to remove the view `vw_Names`:  
   
     ```sql  
     DROP VIEW vw_Names;  

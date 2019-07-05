@@ -58,7 +58,9 @@ manager: craigg
 3.  Right-click the plan guide you want to disable or enable and select either **Disable** or **Enable**.  
   
 4.  In either the **Disable Plan Guide** or **Enable Plan Guide** dialog box, verify that the chosen action was successful and then click **Close**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To disable or enable all plan guides in a database  
   
 1.  Click the plus sign to expand the database in which you want to disable or enable a plan guide, and then click the plus sign to expand the **Programmability** folder.  

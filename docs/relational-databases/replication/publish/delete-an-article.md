@@ -41,7 +41,9 @@ manager: craigg
 1.  Execute [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. Specify a value of **1** for **@force_invalidate_snapshot**.  
   
 2.  (Optional) To remove the published object from the database entirely, execute the `DROP <objectname>` command at the Publisher on the publication database.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To delete an article from a merge publication  
   
 1.  Execute [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) to delete an article, specified by **@article**, from a publication, specified by **@publication**. If necessary, specify a value of **1** for **@force_invalidate_snapshot** and a value of **1** for **@force_reinit_subscription**.  

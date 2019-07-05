@@ -46,6 +46,8 @@ To access the XEvent Profiler, follow these steps:
 
 5. You can now view your Extended Events.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    ![XEProfiler Viewer](media/xevents-xe-profiler-start-viewer.png)
 
 ## See Also

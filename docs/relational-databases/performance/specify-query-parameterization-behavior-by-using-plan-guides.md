@@ -46,7 +46,9 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 1.  Retrieve the parameterized form of the query. The only safe way to obtain this value for use in **sp_create_plan_guide** is by using the [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) system stored procedure.  
   
 2.  Create the plan guide on the parameterized form of the query, specifying the PARAMETERIZATION FORCED query hint.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!IMPORTANT]  
     >  As part of parameterizing a query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a data type to the parameters that replace the literal values, depending on the value and size of the literal. The same process occurs to the value of the constant literals passed to the **@stmt** output parameter of **sp_get_query_template**. Because the data type specified in the **@params** argument of **sp_create_plan_guide** must match that of the query as it is parameterized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you may have to create more than one plan guide to cover the complete range of possible parameter values for the query.  
   

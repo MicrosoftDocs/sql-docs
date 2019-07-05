@@ -27,7 +27,9 @@ manager: craigg
 2.  In the **Publisher Settings** dialog box, set the **Auto refresh** and **Refresh rate** options. The **Auto refresh** setting affects the main window in Replication Monitor. The **Refresh rate** setting also affects any detail windows that are set to refresh automatically (changes to the setting only affect the detail windows opened after the change).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### To specify that a detail window should automatically refresh  
   
 1.  Open a detail window in Replication Monitor. For example:  

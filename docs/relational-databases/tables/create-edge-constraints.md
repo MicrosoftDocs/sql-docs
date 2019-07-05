@@ -39,7 +39,9 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 2.  On the Standard bar, click **New Query**.  
   
 3.  Copy and paste the following example into the query window and click **Execute**. The example creates an edge constraint on **bought** edge table.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  ```sql
  USE TEMPDB
  GO

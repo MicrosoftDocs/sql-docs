@@ -64,7 +64,9 @@ manager: craigg
 7.  In the **Backup media** text box, select **Backup Device**, and click the **Add** button to open the **Select Backup Device** dialog box.  
   
 8.  In the **Backup device** text box, select the device you want to use for the restore operation.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To restore a backup from a device  

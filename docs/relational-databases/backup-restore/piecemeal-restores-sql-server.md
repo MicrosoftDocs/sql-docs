@@ -167,7 +167,9 @@ manager: craigg
 3.  Later, a file restore of a read/write secondary filegroup WITH NORECOVERY from the backup_1 partial backup  
   
 4.  The differential backup followed by any other backups that were restored in the original piecemeal restore sequence to restore the data up to the original recovery point.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## See Also  
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

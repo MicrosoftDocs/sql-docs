@@ -38,7 +38,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 1.  Ensure that the schema and data are copied to the subscription database.  
   
 2.  Clear the **Initialize** check box on the **Initialize Subscriptions** page of the New Subscription Wizard. Do this for each subscription that requires only replication objects and metadata to be copied.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Subscriptions can be initialized manually using replication stored procedures.  
   

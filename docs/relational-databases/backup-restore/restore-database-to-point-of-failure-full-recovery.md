@@ -52,7 +52,9 @@ manager: craigg
     ```  
   
 5.  Recover the database by running the following RESTORE DATABASE statement:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     RESTORE DATABASE <database_name>   
        WITH RECOVERY;  

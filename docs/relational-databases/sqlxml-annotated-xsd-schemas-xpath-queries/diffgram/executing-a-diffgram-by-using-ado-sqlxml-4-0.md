@@ -98,5 +98,6 @@ End Sub
 6.  Edit the code to specify the DiffGram and XSD file names. Also edit the connection string as appropriate.  
   
 7.  Execute the application. The result of the execution depends on what DiffGram you are executing.  
-  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

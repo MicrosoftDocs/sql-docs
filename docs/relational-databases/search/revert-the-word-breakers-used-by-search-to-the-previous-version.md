@@ -103,7 +103,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     >  This change affects all the languages that use NaturalLanguage6.dll in both the current and previous version.  
   
 4.  Restart [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="nl6nl6restore"></a> To restore the current components  
   
 1.  Navigate to the location where you backed up the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version of NaturalLanguage6.dll.  

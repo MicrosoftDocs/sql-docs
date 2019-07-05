@@ -41,7 +41,9 @@ manager: craigg
 5.  To save the changes that you make to the template, click **OK**.  
   
 6.  To run the query, click **Execute**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## See Also  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Enable Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   

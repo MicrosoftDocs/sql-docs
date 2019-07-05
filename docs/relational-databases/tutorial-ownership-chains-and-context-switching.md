@@ -34,7 +34,9 @@ To fulfill the requirements of this scenario, the example is broken into four pa
 2.  Creating a stored procedure to access data by purchase order.   
 3.  Accessing the data through the stored procedure.  
 4.  Resetting the environment.  
-  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Each code block in this example is explained in line. To copy the complete example, see [Complete Example](#CompleteExample) at the end of this tutorial.
 
 ## Prerequisites

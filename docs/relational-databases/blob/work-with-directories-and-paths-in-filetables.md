@@ -62,7 +62,9 @@ GO
 2.  The **DIRECTORY_NAME** specified at the database level.  
   
 3.  The **FILETABLE_DIRECTORY** specified at the FileTable level.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  The resulting hierarchy looks like this:  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\`  

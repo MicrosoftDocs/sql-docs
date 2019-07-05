@@ -68,7 +68,9 @@ manager: craigg
 2.  LOGON trigger execution  
   
 3.  Classification  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  When classification starts, Resource Governor executes the classifier function and uses the value returned by the function to send requests to the appropriate workload group.  
   
 > [!NOTE]  

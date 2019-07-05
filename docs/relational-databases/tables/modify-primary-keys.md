@@ -58,7 +58,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     |Change the column order|Select **Columns**, and then click the ellipses **(...)** to the right of the property. In the  **Index Columns** dialog box, remove the columns from the primary key. Then add the columns back in the order you want. To remove a column from the key, simply remove the column name from the **Column** name list.|  
   
 4.  On the **File** menu, click **Save**_table name_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a primary key**  
   

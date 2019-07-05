@@ -52,7 +52,9 @@ GO
 1.  Checks that there are no semantic populations in progress for the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Removes all metadata associated with the specified Semantic Language Statistics database.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  For more information, see [Install and Configure Semantic Search](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## Metadata  

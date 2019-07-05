@@ -167,7 +167,9 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  Create an assembly and a Transact-SQL user-defined function to start the CLR class.  
   
 3.  Define the insert, update, and delete triggers by using the user-defined function to maintain a property tables.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  To do this, you first create the streaming CLR function. The **xml** data type is exposed as a managed class SqlXml in ADO.NET and supports the **CreateReader()** method that returns an XmlReader.  
   
 > [!NOTE]  

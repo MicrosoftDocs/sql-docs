@@ -43,7 +43,9 @@ manager: craigg
 5.  Right-click the condition that you want to view or edit and select **Properties**. For more information on the available options in the **Open Condition -**_condition_name_ dialog box, see [Create New Condition or Open Condition Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Open Condition Dialog Box, Dependent Policies Page](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Create New Condition or Open Condition Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md), and [Advanced Edit &#40;Condition&#41; Dialog Box](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
   
 6.  When finished, click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view a condition's properties  

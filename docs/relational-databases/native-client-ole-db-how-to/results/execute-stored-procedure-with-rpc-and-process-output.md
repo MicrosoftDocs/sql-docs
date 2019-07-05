@@ -42,7 +42,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 7.  Process the rowset and release it by using the **IRowset::Release** method.  
   
 8.  Process the return code and output parameter values received from the stored procedure.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Example  
  The example shows processing a rowset, a return code, and an output parameter. Result sets are not processed. This sample is not supported on IA64.  
   

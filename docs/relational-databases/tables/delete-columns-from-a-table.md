@@ -63,7 +63,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Right-click the column that you want to delete, and choose **Delete**.  
   
 3.  In **Delete Object** dialog box, click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  If the column contains constraints or other dependencies, an error message will display in the **Delete Object** dialog box. Resolve the error by deleting the referenced constraints.  
   
 #### To delete columns by using Table Designer  

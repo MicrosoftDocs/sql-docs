@@ -33,7 +33,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Set the rowset properties DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT, and DBPROP_OWNUPDATEDELETE to VARIANT_TRUE.  
   
 3.  Execute the command.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Example  
  The following example shows how to set the rowset properties to obtain a FAST_FORWARD cursor. After the properties are set, a SELECT statement is executed to retrieve and display the Name column of the Purchasing.Vendor table in the AdventureWorks database. This sample is not supported on IA64.  
   

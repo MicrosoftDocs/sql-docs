@@ -84,7 +84,9 @@ manager: craigg
 3.  Right-click a publication, and then click **Properties**.  
   
 4.  Modify any properties if necessary, and then click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To view and modify publication properties in Replication Monitor  
   
 1.  Expand a Publisher group in the left pane of Replication Monitor, and then expand a Publisher.  

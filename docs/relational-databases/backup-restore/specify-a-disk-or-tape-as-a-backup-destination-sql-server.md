@@ -62,7 +62,9 @@ manager: craigg
 3.  Right-click the database, point to **Tasks**, and then click **Back Up**. The **Back Up Database** dialog box appears.  
   
 4.  In the **Destination** section of the **General** page, click **Disk** or **Tape**. To select the paths of up to 64 disk or tape drives containing a single media set, click **Add**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      To remove a backup destination, select it and click **Remove**. To view the contents of a backup destination, select it and click **Contents**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

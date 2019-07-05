@@ -23,8 +23,10 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 
 Deletes an existing package library. Package libraries are used by supported external runtimes, such as R, Python, or Java.
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 > [!NOTE]
 > In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4. 
+::: moniker-end
 
 ## Syntax
 
@@ -61,6 +63,7 @@ Unlike other `DROP` statements in SQL Server, this statement supports specifying
 
 ## Examples
 
+::: moniker range="<>azuresqldb-current||=sqlallproducts-allversions"
 Add the custom R package, `customPackage`, to a database:
 
 ```sql
@@ -69,6 +72,7 @@ FROM (CONTENT = 'C:\temp\customPackage_v1.1.zip')
 WITH (LANGUAGE = 'R');
 GO
 ```
+::: moniker-end
 
 Delete the `customPackage` library.
 

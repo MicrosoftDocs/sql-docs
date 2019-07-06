@@ -33,10 +33,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A **String** value that contains a statement specifying the column name, comparison operator, and value to use in the search.  
   
  *SkipRows*  
- Optional*.* A **Long** value, whose default value is zero, that specifies the row offset from the current row or *Start* bookmark to begin the search. By default, the search will start on the current row.  
+ Optional. A **Long** value, whose default value is zero, that specifies the row offset from the current row or *Start* bookmark to begin the search. By default, the search will start on the current row.  
   
  *SearchDirection*  
- Optional*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) value that specifies whether the search should begin on the current row or the next available row in the direction of the search. An unsuccessful search stops at the end of the **Recordset** if the value is **adSearchForward**. An unsuccessful search stops at the start of the **Recordset** if the value is **adSearchBackward**.  
+ Optional. A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) value that specifies whether the search should begin on the current row or the next available row in the direction of the search. An unsuccessful search stops at the end of the **Recordset** if the value is **adSearchForward**. An unsuccessful search stops at the start of the **Recordset** if the value is **adSearchBackward**.  
   
  *Start*  
  Optional. A **Variant** bookmark that functions as the starting position for the search.  

@@ -21,7 +21,7 @@
   - name: Install ML Services on Windows
     href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
   - name: Install ML Services on Linux >>
-    href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc/toc.json
+    href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc.json
   - name: Install R Services
     href: ../advanced-analytics/install/sql-r-services-windows-install.md
   - name: Install standalone server (R, Python)
@@ -325,7 +325,7 @@
 - name: Resources
   items:
   - name: Release notes >>
-    href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+    href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:
     - name: Troubleshooting overview

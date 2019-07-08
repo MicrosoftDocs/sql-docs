@@ -73,7 +73,8 @@ ms.author: maggies
 #### Example of memory configuration settings  
  The following example shows the configuration settings for a report server computer that uses custom memory configuration values. If you want to add **WorkingSetMaximum** or **WorkingSetMinimum**, you must type the elements and values in the RSReportServer.config file. Both values are integers that express kilobytes of RAM you are allocating to the server applications. The following example specifies that total memory allocation for the report server applications cannot exceed 4 gigabytes. If the default value for **WorkingSetMinimum** (60% of **WorkingSetMaximum**) is acceptable, you can omit it and specify just **WorkingSetMaximum** in the RSReportServer.config file. This example includes **WorkingSetMinimum** to show how it would appear if you wanted to add it:  
   
-``` Config files 
+```
+      Config files 
       <MemorySafetyMargin>80</MemorySafetyMargin>  
       <MemoryThreshold>90</MemoryThreshold>  
       <WorkingSetMaximum>4000000</WorkingSetMaximum>  

@@ -1,6 +1,6 @@
 ---
 title: "Disconnect Users and Sessions on Analysis Services Server | Microsoft Docs"
-ms.date: 05/02/2018
+ms.date: 07/05/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 ---
 # Disconnect Users and Sessions on Analysis Services Server
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  An administrator of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] may want to end user activity as part of workload management. You do this by canceling sessions and connections. Sessions can be formed automatically when a query is run (implicit), or named at the time of creation by the administrator (explicit). Connections are open conduits over which queries can be run. Both sessions and connections can be ended while they are active. For example, an administrator may want to end processing for a session if the processing is taking too long or if some doubt has arisen as to whether the command being executed was written correctly.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+  As an administrator, you may want to end user activity as part of workload management. You do this by canceling sessions and connections. Sessions can be formed automatically when a query is run (implicit), or named at the time of creation by the administrator (explicit). Connections are open conduits over which queries can be run. Both sessions and connections can be ended while they are active. For example, you may want to end processing for a session if the processing is taking too long, or if some doubt has arisen as to whether the command being executed was written correctly.  
   
 ## Ending Sessions and Connections  
- To manage sessions and connections, you can use Dynamic Management Views (DMVs) and XMLA:  
+ To manage sessions and connections, use Dynamic Management Views (DMVs) and XMLA:  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connect to an Analysis Services instance.  
   
@@ -23,7 +23,7 @@ manager: kfile
   
      `Select * from $System.Discover_Sessions`  
   
-     `Select * from $System.Discover_Connections`  
+     `Select * from $System.Discover_Connections`  (This query does not apply to Azure Analysis Services)
   
      `Select * from $System.Discover_Commands`  
   
@@ -50,16 +50,10 @@ manager: kfile
     ```  
   
 2.  Press F5 to execute the cancel command.  
+
+Canceling a SPID/SessionID will cancel any active commands running on the session corresponding to the SPID/SessionID. Canceling a connection will identify the session associated with the connection, and cancel any active commands running on that session. In rare cases, a connection is not closed if the engine cannot track all sessions and SPIDs associated with the connection; for example, when multiple sessions are open in an HTTP scenario.   
   
- Ending a connection cancels all sessions and SPIDs, closing the host session.  
-  
- Ending a session stops all commands (SPIDs) that are running as part of that session.  
-  
- Ending a SPID cancels a particular commend.  
-  
- In rare cases, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will not close a connection if it cannot track all the sessions and SPIDs associated with the connection (for example, when multiple sessions are open in an HTTP scenario).  
-  
- For more information about the XMLA referenced in this topic, see [Execute Method &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) and [Cancel Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
+To learn more about the XMLA referenced in this topic, see [Execute Method &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) and [Cancel Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
   
 ## See Also  
  [Managing Connections and Sessions &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

@@ -120,7 +120,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 9. On the **Filter** page, under **Filter Expression**, enter SQL expression that you'll use to create the filtered index.  
   
 10. Click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To create a filtered index  

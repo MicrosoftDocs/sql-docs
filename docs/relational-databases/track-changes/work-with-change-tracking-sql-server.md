@@ -201,7 +201,9 @@ ON
 3.  Obtain the changes for the Sales table by using CHANGETABLE(CHANGES ...).  
   
 4.  Obtain the changes for the SalesOrders table by using CHANGETABLE(CHANGES ...).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Two processes are occurring in the database that can affect the results that are returned by the previous steps:  
   
 -   The cleanup process runs in the background and removes change tracking information that is older than the specified retention period.  

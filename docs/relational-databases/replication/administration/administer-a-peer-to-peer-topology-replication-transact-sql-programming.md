@@ -39,7 +39,9 @@ manager: craigg
     >  After [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) is executed, replication automatically adds the article to the subscriptions in the topology.  
   
 6.  Restart the Distribution Agents at each node in the topology.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### To make schema changes to a publication database  
   
 1.  Quiesce the system.  

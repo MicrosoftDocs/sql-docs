@@ -30,7 +30,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- The parent and child tables have a column name in common, cust_id*.* The *child-command* has a "?" placeholder, to which the RELATE clause refers (that is, "...PARAMETER 0").  
+ The parent and child tables have a column name in common, *cust_id*. The *child-command* has a "?" placeholder, to which the RELATE clause refers (that is, "...PARAMETER 0").  
   
 > [!NOTE]
 >  The PARAMETER clause pertains solely to the shape command syntax. It is not associated with either the ADO [Parameter](../../../ado/reference/ado-api/parameter-object.md) object or the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  

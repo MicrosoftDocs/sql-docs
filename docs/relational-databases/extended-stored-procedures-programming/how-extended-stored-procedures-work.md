@@ -31,3 +31,6 @@ manager: craigg
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calls the requested extended stored procedure (implemented as a function inside the DLL).  
   
 4.  The extended stored procedure passes result sets and return parameters back to the server by through the Extended Stored Procedure API.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

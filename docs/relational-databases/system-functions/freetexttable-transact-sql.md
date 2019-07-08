@@ -157,7 +157,7 @@ GO
 ```  
   
 > [!NOTE]
->  The LANGUAGE *language_term* paramete*r* is not required to use the *top_n_by_rank* parameter*.*  
+>  The LANGUAGE *language_term* parameter is not required to use the *top_n_by_rank* parameter.  
   
 ## See Also  
  [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   

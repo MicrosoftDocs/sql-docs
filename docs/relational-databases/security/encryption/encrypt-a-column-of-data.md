@@ -54,7 +54,9 @@ Always back up your database master key. For more information on database master
 2. On the Standard bar, click **New Query**.  
   
 3. Copy and paste the following example into the query window and click **Execute**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     USE AdventureWorks2012;  
     GO  

@@ -57,7 +57,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 1.  In **Object Explorer**, click the plus sign next to the database that contains the view to which you want to view the properties, and then click the plus sign to expand the **Views** folder.  
   
 2.  Right-click the view of which you want to view the properties and select **Properties**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      The following properties show in the **View Properties** dialog box.  
   
      **Database**  

@@ -65,7 +65,9 @@ manager: craigg
 6.  Optionally, to change the recovery model select a different model list. The choices are **Full**, **Bulk-logged**, or **Simple**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view the recovery model  

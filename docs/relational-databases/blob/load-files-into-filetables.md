@@ -49,7 +49,9 @@ You can use the following methods to load files into a FileTable:
 2.  Use xcopy or a similar tool to copy the .jpg files, with their directory structure, into the root directory of the FileTable.  
   
 3.  Fix the metadata in the **PhotoMetadata** table, by using code similar to the following example:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  

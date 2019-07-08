@@ -1,9 +1,9 @@
 ---
 title: "SESSION_CONTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/22/2016"
+ms.date: "05/14/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -20,7 +20,7 @@ ms.author: vanto
 manager: craigg
 ---
 # SESSION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Returns the value of the specified key in the current session context. The value is set by using the [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) procedure.  
   

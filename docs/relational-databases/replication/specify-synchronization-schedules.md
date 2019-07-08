@@ -60,12 +60,14 @@ manager: craigg
   
     -   **Run on demand only**  
   
-    -   **\<Define Schedule…>**  
+    -   **\<Define Schedule?>**  
   
-2.  If you select **\<Define Schedule…>**, specify a schedule in the **Job Schedule Properties** dialog box, and then click **OK**.  
+2.  If you select **\<Define Schedule?>**, specify a schedule in the **Job Schedule Properties** dialog box, and then click **OK**.  
   
 3.  Complete the wizard.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To modify a synchronization schedule for a push subscription in Replication Monitor  
   
 1.  Expand a Publisher group in the left pane of Replication Monitor, expand a Publisher, and then click a publication.  

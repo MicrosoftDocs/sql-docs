@@ -39,7 +39,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 6.  Select **Save long-running queries to the log file**. In the box, place the name of the file where the long-running queries should be logged. Optionally, click **Browse** to browse the file system for the query log.  
   
 7.  Set a query time-out interval, in milliseconds, in the **Long query time (milliseconds)** box.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### To log long-running queries data programmatically  
   
 1.  Call [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) with SQL_COPT_SS_PERF_QUERY_LOG and the full path and file name of the long-running query log file. For example:  

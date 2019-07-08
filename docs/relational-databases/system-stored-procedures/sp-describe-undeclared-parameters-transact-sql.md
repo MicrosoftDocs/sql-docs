@@ -232,7 +232,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 3.  If two similar data types tie under rule 1, for example **varchar(8000)** and **varchar(max)**, the smaller data type (**varchar(8000)**) is chosen. The same principle applies to **nvarchar** and **varbinary** data types.  
   
 4.  For purposes of rule 1, the type deduction algorithm prefers certain conversions as better than others. Conversions in order from best to worst are:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Conversion between same basic data type of different length.  
   
     2.  Conversion between fixed-length and variable-length version of same data types (e.g., **char** to **varchar**).  

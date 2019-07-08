@@ -103,9 +103,9 @@ Complete details about support and licensing for CTP releases are in `license_Ev
 
 - **Issue and customer impact**: SQL Server Configuration Manager (SSCM) does not start on a machine without VCRuntime 140. When starting SSCM, the user may see the following dialog: 
 
-  `
+  ```
   MMC could not create the snap-in. The snap-in might not have been installed correctly.
-  `
+  ```
 
 - **Workaround**:  Install the latest VC Runtime 2013 (x86):
 

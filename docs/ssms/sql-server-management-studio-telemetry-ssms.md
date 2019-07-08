@@ -45,7 +45,7 @@ To opt in or out of usage data collection for SSMS:
   To configure Visual Studio to disable customer feedback on individual computers, change the value of the following registry subkey to string `0`: `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
 
   For example, change the subkey to the following:  
-  `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn `=` 0`
+  `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn = 0`
 
   Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage and diagnostic data collection.
 

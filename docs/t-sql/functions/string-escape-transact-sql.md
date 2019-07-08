@@ -49,7 +49,7 @@ STRING_ESCAPE( text , type )
 |Special character|Encoded sequence|  
 |-----------------------|----------------------|  
 |Quotation mark (")|\\"|  
-|Reverse solidus (\\)|\\\|  
+|Reverse solidus (\\)| \\\\ |  
 |Solidus (/)|\\/|  
 |Backspace|\b|  
 |Form feed|\f|  

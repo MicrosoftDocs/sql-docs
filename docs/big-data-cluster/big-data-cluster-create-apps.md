@@ -102,7 +102,7 @@ The following command shows an example of what this command might look like:
 mssqlctl app create --spec ./addpy
 ```
 
-This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called called `spec.yaml`. Please see [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
+This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called `spec.yaml`. Please see [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
 
 To deploy this app sample app, create the following files in a directory called `addpy`:
 

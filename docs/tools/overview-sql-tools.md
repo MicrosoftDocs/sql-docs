@@ -20,7 +20,6 @@ To manage (query, monitor, etc.) your database you need a tool. While your datab
 
 There are many database tools available, so this article provides descriptions and pointers to some of the available tools for working with your SQL databases. If you need help deciding which tool you need, see [Which tool should I use?](#which-tool-should-i-choose).
 
-
 ## GUI tools to manage databases  
 
 The following are the main graphical user interface (GUI) tools:

@@ -8765,14 +8765,10 @@
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ssms/sql-server-management-studio-ssms.md
-    - name: Quickstarts
+    - name: Tutorials
       items:
       - name: Connect & query SQL Server
         href: ssms/tutorials/connect-query-sql-server.md
-    - name: Tutorials
-      items:
-      - name: Design a relational database in a single database
-        href: https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017
     - name: Concepts
       items:
       - name: Tool Windows in SSMS

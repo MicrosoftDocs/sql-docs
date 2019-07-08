@@ -1,6 +1,6 @@
 ---
 title: "Calculation groups in Analysis Services tabular models | Microsoft Docs"
-ms.date: 06/17/2019
+ms.date: 07/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -23,6 +23,7 @@ This article describes:
 > * Benefits 
 > * How calculation groups work
 > * Dynamic format strings
+> * Ordering
 > * Precedence
 > * Tools
 > * Limitations
@@ -250,6 +251,73 @@ The format string expression must return a scalar string. It uses the new [SELEC
 The following animation shows the dynamic format currency conversion of the **Sales** measure in a report.
 
 ![Currency conversion dynamic format string applied](media/calculation-groups/calc-groups-dynamic-format-string.gif)
+
+## Ordering
+
+The **Ordinal** property is used to order calculation items in calculation groups. When specified, calculation items can be shown to users in a more intuitive way, for example:
+
+![Ordinal property benefit](media/calculation-groups/calc-groups-ordinal-benefit.png)
+
+To use this property, the model must be at the 1480 compatibility level.
+
+The following JSON-metadata from a model.bim file shows the required properties to create an **Ordinal** column for sorting: 
+
+```json
+{ 
+    "tables": [ 
+        { 
+            "name": "Time Intelligence", 
+            "description": "Utility table for time-Intelligence calculations.",
+            "columns": [ 
+                { 
+                    "name": "Time Calc", 
+                    "dataType": "string", 
+                    "sourceColumn": "Name", 
+                    "sortByColumn": "Ordinal Col" 
+                }, 
+                { 
+                    "name": "Ordinal Col", 
+                    "dataType": "int64", 
+                    "sourceColumn": "Ordinal", 
+                    "isHidden": true 
+                } 
+            ], 
+            "partitions": [ 
+                { 
+                    "name": "Time Intelligence", 
+                    "source": { 
+                        "type": "calculationGroup" 
+                    } 
+                } 
+            ], 
+            "calculationGroup": { 
+                "calculationItems": [ 
+                    { 
+                        "name": "YTD", 
+                        "description": "Generic year-to-date calculation.", 
+                        "calculationExpression": "CALCULATE(SELECTEDMEASURE(),  DATESYTD(DimDate[Date]))", 
+                        "ordinal": 1 
+                    }, 
+                    { 
+                        "name": "MTD", 
+                        "description": "Generic month-to-date calculation.", 
+                        "calculationExpression": "CALCULATE(SELECTEDMEASURE(), DATESMTD(DimDate[Date]))", 
+                        "ordinal": 2 
+                    } 
+                ] 
+            } 
+        } 
+    ] 
+} 
+```
+
+Validation is performed to ensure if two columns are specified in the calculation group, the following rules are applied: 
+
+- One column is of type string and the SourceColumn is “name”. 
+- One column is of type int64 and the SourceColumn is “ordinal”. 
+- All calculation items have unique Ordinal values. 
+
+
 
 ## Precedence
 

@@ -235,7 +235,10 @@ The columns that the OPENJSON function returns depend on the WITH option.
   
      Only first-level properties are returned. The statement fails if the JSON text is not properly formatted.  
 
-2. When you call OPENJSON and you specify an explicit schema in the WITH clause, the function returns a table with the schema that you defined in the WITH clause.  
+2. When you call OPENJSON and you specify an explicit schema in the WITH clause, the function returns a table with the schema that you defined in the WITH clause.
+
+> [!NOTE]  
+> The **Key**, **Value**, and **Type** columns are returned only when you use OPENJSON with the default schema and are not available with an explicit schema.
 
 ## Remarks  
 

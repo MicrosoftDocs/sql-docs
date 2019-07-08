@@ -33,7 +33,9 @@ manager: craigg
 5.  Create subscriptions to the publication at the republishing Subscriber for the other Subscribers.  
   
 6.  Initialize the subscriptions.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  If you use merge replication in a republishing topology, all republishing Subscribers must use server subscriptions. For more information about subscription types, see [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md).  
   

@@ -95,7 +95,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 7.  Select **Maximum degree of parallelism**, and then enter some value between 1 and 64.  
   
 8.  Click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To set max degree of parallelism on an existing index  

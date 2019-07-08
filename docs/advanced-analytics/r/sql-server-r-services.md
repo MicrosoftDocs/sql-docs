@@ -9,6 +9,7 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
+monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # R Services in SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -20,7 +21,7 @@ R Services includes a base distribution of R, overlaid with enterprise R package
 R libraries include [**RevoScaleR**](ref-r-revoscaler.md), [**MicrosoftML (R)**](ref-r-microsoftml.md), and others. Because R Services is integrated with the database engine, you can keep analytics close to the data and eliminate the costs and security risks associated with data movement.
 
 > [!Note]
-> R Services was renamed in SQL Server 2017 to [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), reflecting the addition of Python.
+> R Services was renamed in SQL Server 2017 and later to [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), reflecting the addition of Python.
 
 ## Components
 

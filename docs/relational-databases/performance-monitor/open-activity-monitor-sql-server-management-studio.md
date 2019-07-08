@@ -52,7 +52,9 @@ Complete the **Connect to Server** dialog box if you are not already connected t
 3.  From the **At startup** drop-down list, select **Open Object Explorer and Activity Monitor**.  
 
 4.  Click **OK**.
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   

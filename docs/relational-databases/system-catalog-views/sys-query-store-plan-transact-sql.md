@@ -63,7 +63,7 @@ First, if the plan contains following constructions:
 * Reference to an external table
 * Distributed query or full-text operations
 * Use of Global queries 
-* Cursors
+* Dynamic or keyset cursors (plan forcing is supported for static and fast forward cursors)
 * Invalid star join specification 
 
 Second, when objects that plan relies on, are no longer available:

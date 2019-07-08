@@ -9341,10 +9341,9 @@
           href: ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
         - name: Import Registered Server Information
           href: ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-      - name: Scripting
+      - name: Scripting of Database Engine
+        href: ssms/scripting/database-engine-scripting.md
         items:
-        - name: Scripting
-          href: ssms/scripting/database-engine-scripting.md
         - name: Query & Text Editors
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
         - name: Database Engine Query Editor

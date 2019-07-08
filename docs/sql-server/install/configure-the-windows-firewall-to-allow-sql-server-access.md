@@ -51,7 +51,7 @@ To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
  Choosing a firewall strategy is more complex than just deciding if a given port should be open or closed. When designing a firewall strategy for your enterprise, make sure that you consider all the rules and configuration options available to you. This article does not review all the possible firewall options. We recommend that you review the following documents:  
   
- [Windows Firewall Deployment Guide ](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
+ [Windows Firewall Deployment Guide](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
  [Windows Firewall Design Guide](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [Introduction to Server and Domain Isolation](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   

@@ -33,7 +33,7 @@ Uploads R, Python, or Java package files to a database from the specified byte s
 
 ::: moniker range="=azuresqldb-current"
 > [!NOTE]
-> If you're running in Azure SQL Database, you can use **sqlmlutils** to install a library. For details, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
+> In Azure SQL Database, you can use **sqlmlutils** to install a library. For details, see [Add a package with sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -91,7 +91,7 @@ WITH ( LANGUAGE = 'R' )
 <file_spec> ::=  
 {  
     (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = <platform> ])  
+    [, PLATFORM = WINDOWS ])  
 }  
 
 <client_library_specifier> :: = 
@@ -103,12 +103,6 @@ WITH ( LANGUAGE = 'R' )
 { 
       varbinary_literal 
     | varbinary_expression 
-}
-
-<platform> :: = 
-{
-      WINDOWS
-    | LINUX
 }
 ```
 ::: moniker-end
@@ -126,6 +120,7 @@ WITH ( LANGUAGE = 'R' )
 <file_spec> ::=  
 {  
     (CONTENT = <library_bits>)  
+    [, PLATFORM = WINDOWS ])  
 }  
 
 <library_bits> :: =  

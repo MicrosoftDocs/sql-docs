@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: e13f242e-33f4-4d8d-9b10-0652ef4d0156
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Connect to a Registered Server (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Copy Queries (Visual Database Tools)

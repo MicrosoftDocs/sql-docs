@@ -7397,7 +7397,7 @@
     - name: Create Linked Servers
       href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
     - name: Create Linked Server Provider
-      href: ../relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
+      href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
   - name: Full-text search
     href: relational-databases/search/full-text-search.md
     items:

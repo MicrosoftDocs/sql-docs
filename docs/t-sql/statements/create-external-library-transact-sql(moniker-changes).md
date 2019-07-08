@@ -114,7 +114,7 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-## Syntax for Azure SQL Server Database
+## Syntax for Azure SQL Database
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  

@@ -40,7 +40,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
    - On Hyper-V 2016 or later, [enable nested virtualization extensions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor.
    - In Azure, make sure you're running a VM size that supports nested virtualization, such as the Dv3 and Ev3 series VMs. See [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
    - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
-   - Other hypervisors and public clouds may support using Always Encrypted with secure enclaves in a VM as long as virtualization extensions (sometimes called nested virtualization) are exposed to the VM. Check your virtualization solution’s documentation for compatibility and configuration instructions.
+   - Other hypervisors and public clouds may support using Always Encrypted with secure enclaves in a VM as long as virtualization extensions (sometimes called nested virtualization) are exposed to the VM. Check your virtualization solution?s documentation for compatibility and configuration instructions.
 - [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 As an alternative, you can install SSMS on another machine.
@@ -82,6 +82,8 @@ In this step, you will configure the HGS computer to run Host Guardian Service s
    ```
 
 4. Find the IP address of the HGS computer by running the following command. Save this IP address for later steps.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```powershell
    Get-NetIPAddress  

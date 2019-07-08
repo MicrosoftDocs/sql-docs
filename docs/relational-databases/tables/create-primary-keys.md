@@ -57,7 +57,7 @@ If you define a compound key, the order of columns in the primary key matches th
 ## <a name="TsqlProcedure"></a> Using Transact-SQL
 
 ### To create a primary key in an existing table
-  
+
 The following example creates a primary key on the column `TransactionID` in the AdventureWorks database.
 
 ```sql

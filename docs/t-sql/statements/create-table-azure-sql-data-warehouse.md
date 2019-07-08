@@ -1,7 +1,7 @@
 ---
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/14/2017"
+ms.date: "07/03/2019"
 ms.service: sql-data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
@@ -163,21 +163,21 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
-### Ordered Clustered columnstore index option (Preview)
+### Ordered Clustered columnstore index option (Preview for Azure SQL Data Warehouse)
 
 Clustered columnstore index is the default for creating tables in Azure SQL Data Warehouse.  The ORDER specification defaults to COMPOUND keys.  Sorting will always be ascending order. If no ORDER clause is specified, columnstore will not be sorted. Due to the ordering process, a table with ordered clustered columnstore index may experience longer data loading times than non-ordered clustered columnstore indexes. If you need more tempdb space while loading data, you can decrease the amount of data per insert.
 
-During preview, you can run this query to check the column(s) with ORDER enabled.  A catalog view will be provided later to provide this information and the column ordinal if multiple columns are specified in ORDER.
+During preview, you can run this query to check the column(s) with ORDER enabled.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
+SELECT i.name AS index_name  
+    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
+    ,ic.index_column_id  
+    ,ic.key_ordinal  
+,ic.is_included_column  
+FROM sys.indexes AS i  
+INNER JOIN sys.index_columns AS ic
+    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 ```
 
 ### <a name="DataTypes"></a> Data type
@@ -593,7 +593,8 @@ WITH
 <a name="SeeAlso"></a>
 ## See also
  
- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

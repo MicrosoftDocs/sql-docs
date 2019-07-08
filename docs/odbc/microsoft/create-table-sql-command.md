@@ -115,7 +115,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  A table can have multiple candidate indexes.  
   
  FOREIGN KEY *eExpression4*TAG *TagName4*[NODUP]  
- Creates a foreign (nonprimary) index and establishes a relationship to a parent table. *eExpression4* specifies the foreign index key expression, and *TagName4* specifies the name of the foreign index key tag that is created*.* Index tag names can contain up to 10 characters. Include NODUP to create a candidate foreign index.  
+ Creates a foreign (nonprimary) index and establishes a relationship to a parent table. *eExpression4* specifies the foreign index key expression, and *TagName4* specifies the name of the foreign index key tag that is created. Index tag names can contain up to 10 characters. Include NODUP to create a candidate foreign index.  
   
  You can create multiple foreign indexes for the table, but the foreign index expressions must specify different fields in the table.  
   

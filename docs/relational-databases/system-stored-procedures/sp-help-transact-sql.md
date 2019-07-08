@@ -69,7 +69,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Collation**|**sysname**|Collation of the data type. NULL for non-character data types.|  
   
 3.  If *name* is any database object other than a data type, **sp_help** returns this result set and also additional result sets, based on the type of object specified.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     |Column name|Data type|Description|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar(**128**)**|Table name|  

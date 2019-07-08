@@ -84,7 +84,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  Regenerate snapshot files for all merge publications involved at all levels. If you try to merge without regenerating the snapshot first, you receive a prompt to regenerate the snapshot.  
   
 6.  Back up the publication database. Failure to do so can cause a merge failure after a restore of the publication database.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **Special Considerations for Continuous Mode Merges**  
   
  If you are running continuous-mode merges, you must either:  

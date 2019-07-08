@@ -64,7 +64,9 @@ manager: craigg
 ###  <a name="Access_SSMS"></a> To access the Agent Profiles dialog box from SQL Server Management Studio  
   
 1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click **Profile Defaults**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To access the Agent Profiles dialog box from Replication Monitor  
   
 -   To open the dialog box for all agents, right-click a Publisher, and then click **Agent Profiles**.  
@@ -87,7 +89,7 @@ manager: craigg
   
 1.  If the **Agent Profiles** dialog box displays profiles for more than one agent, select an agent.  
   
-2.  Click the properties button (**…**) next to a profile.  
+2.  Click the properties button (**?**) next to a profile.  
   
 3.  View the parameters and values in the **\<ProfileName> Profile Properties** dialog box.  
   

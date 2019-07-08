@@ -53,7 +53,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     >  The default values for your column properties are added when you create a new column, but you can change them in the **Column Properties** tab.  
   
 6.  When you are finished adding columns, from the **File** menu, choose **Save** _table name_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To insert columns into a table  

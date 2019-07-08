@@ -34,6 +34,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
   
 2.  In Object Explorer, click **Databases**, and then press F5 to refresh the list of databases.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Create the Finance tables condition 
 

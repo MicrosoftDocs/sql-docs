@@ -1,5 +1,5 @@
 - name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
 
 - name: Previous versions 2014-2005
   href: toc/previous-versions-sql-server.md
@@ -32,7 +32,7 @@
     - name: SQL Server 2019
       href: sql-server/sql-server-ver15-release-notes.md
     - name: SQL Server 2017
-      href: sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+      href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: SQL Server 2016
       href: sql-server/sql-server-2016-release-notes.md
     - name: SQL Server 2014
@@ -7396,6 +7396,8 @@
     items:
     - name: Create Linked Servers
       href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+    - name: Create Linked Server Provider
+      href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
   - name: Full-text search
     href: relational-databases/search/full-text-search.md
     items:
@@ -8767,8 +8769,8 @@
         href: ssms/sql-server-management-studio-ssms.md
     - name: Quickstarts
       items:
-        - name: Connect & query SQL Server
-          href: ssms/tutorials/connect-query-sql-server.md
+      - name: Connect & query SQL Server
+        href: ssms/tutorials/connect-query-sql-server.md
     - name: Tutorials
       items:
       - name: Design a relational database in a single database
@@ -8909,12 +8911,11 @@
           href: ssms/register-servers/register-servers.md
         - name: Registered Servers F1 Help
           href: ssms/register-servers/registered-servers-f1-help.md
-      - name: Scripting
+      - name: Scripting with SSMS
         items:
         - name: Query & Text Editors
+          href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           items:
-          - name: Query & Text Editors
-            href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           - name: Database Engine Query Editor
             href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
           - name: XML Editor
@@ -9063,6 +9064,8 @@
         items:
         - name: Get full memory dump 
           href: ssms/troubleshoot/get-full-memory-dump.md
+        - name: Crashes and Hangs
+          href: ssms/troubleshoot/ssms-troubleshoot.md
       - name: SQL Server Agent
         items:
         - name: Configure
@@ -9339,10 +9342,9 @@
           href: ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
         - name: Import Registered Server Information
           href: ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-      - name: Scripting
+      - name: Scripting of Database Engine
+        href: ssms/scripting/database-engine-scripting.md
         items:
-        - name: Scripting
-          href: ssms/scripting/database-engine-scripting.md
         - name: Query & Text Editors
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
         - name: Database Engine Query Editor
@@ -12177,6 +12179,12 @@
         href: relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md
       - name: sys.pdw_loader_run_stages
         href: relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md
+      - name: sys.pdw_materialized_view_column_distribution_properties
+        href: relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql.md
+      - name: sys.pdw_materialized_view_distribution_properties
+        href: relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql.md
+      - name: sys.pdw_materialized_view_mappings
+        href: relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql.md        
       - name: sys.pdw_nodes_column_store_dictionaries
         href: relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md
       - name: sys.pdw_nodes_column_store_row_groups
@@ -15560,6 +15568,8 @@
         href: t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
       - name: DBCC DROPCLEANBUFFERS
         href: t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
+      - name: DBCC DROPRESULTSETCACHE
+        href: t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql.md
       - name: DBCC FLUSHAUTHCACHE
         href: t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
       - name: DBCC FREEPROCCACHE
@@ -15580,6 +15590,8 @@
         href: t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
       - name: DBCC PDW_SHOWEXECUTIONPLAN
         href: t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
+      - name: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD
+        href: t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql.md
       - name: DBCC PDW_SHOWPARTITIONSTATS
         href: t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
       - name: DBCC PDW_SHOWSPACEUSED
@@ -15590,6 +15602,8 @@
         href: t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
       - name: DBCC SHOWCONTIG
         href: t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
+      - name: DBCC SHOWRESULTCACHESPACEUSED
+        href: t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql.md        
       - name: DBCC SHRINKDATABASE
         href: t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
       - name: DBCC SHRINKFILE
@@ -16671,6 +16685,8 @@
           href: t-sql/statements/alter-login-transact-sql.md
         - name: MASTER KEY
           href: t-sql/statements/alter-master-key-transact-sql.md
+        - name: MATERIALIZED VIEW
+          href: t-sql/statements/alter-materialized-view-transact-sql.md
         - name: MESSAGE TYPE
           href: t-sql/statements/alter-message-type-transact-sql.md
         - name: PARTITION FUNCTION
@@ -16839,6 +16855,8 @@
           href: t-sql/statements/create-login-transact-sql.md
         - name: MASTER KEY
           href: t-sql/statements/create-master-key-transact-sql.md
+        - name: MATERIALIZED VIEW AS SELECT
+          href: t-sql/statements/create-materialized-view-as-select-transact-sql.md
         - name: MESSAGE TYPE
           href: t-sql/statements/create-message-type-transact-sql.md
         - name: PARTITION FUNCTION

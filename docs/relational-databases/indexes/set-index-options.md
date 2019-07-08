@@ -78,7 +78,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 7.  Click **Close**.  
   
 8.  On the **File** menu, select **Save**_table_name_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To modify the properties of an index in Object Explorer  
   
 1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index's properties.  

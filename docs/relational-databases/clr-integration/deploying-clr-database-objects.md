@@ -39,7 +39,9 @@ manager: craigg
 2.  Resolve all build errors and warnings before deploying the assembly to the test server.  
   
 3.  Select **Deploy** from the **Build** menu. The assembly will then be registered in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and database specified when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] project was first created in Visual Studio.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To deploy the assembly using Transact-SQL  
   
 1.  Compile the assembly from the source file using the command line compilers included with the .NET Framework.  

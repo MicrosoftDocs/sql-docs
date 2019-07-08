@@ -26,6 +26,8 @@ This article serves as a guide to walk through the debugging process of such iss
 1. SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 or higher with PolyBase installed
 1. A Hadoop cluster (Cloudera or Hortonworks) secured with Kerberos (Active Directory or MIT)
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Introduction
 
 It helps to first understand the Kerberos protocol at a high level. There are three actors involved:
@@ -241,7 +243,7 @@ If you are still having issues accessing Kerberos, follow the steps below to deb
 
      In the example above, `admin_user` includes only the user name - not any domain part.
 
-2. If you can’t access Kerberos HDFS data from outside PolyBase:
+2. If you can?t access Kerberos HDFS data from outside PolyBase:
     - There are two types of Kerberos authentication: Active directory Kerberos authentication, and MIT Kerberos authentication.
     - Make sure the user exists in domain account and use the same user account while trying to access HDFS.
 

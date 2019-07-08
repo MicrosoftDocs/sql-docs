@@ -69,7 +69,9 @@ The following procedures show you have to create a database protected by TDE usi
      Alters the database to turn on (checked) or turn off (unchecked) TDE.  
   
 8.  When finished, click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlCreate"></a> Using Transact-SQL  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  

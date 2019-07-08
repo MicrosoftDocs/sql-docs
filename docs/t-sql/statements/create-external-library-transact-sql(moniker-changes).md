@@ -177,6 +177,13 @@ Specifies the platform for the content of the library. The value defaults to the
 In SQL Server 2017, Windows is the only supported platform.
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**PLATFORM = WINDOWS**
+
+Specifies the platform for the content of the library. The value defaults to the host platform on which SQL Server is running. Therefore, the user doesn't have to specify the value. It is required in case where multiple platforms are supported, or the user needs to specify a different platform.
+In Azure SQL Database, Windows is the only supported platform.
+::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
@@ -193,10 +200,7 @@ Specifies the language of the package. R is supported in SQL Server 2017.
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 **LANGUAGE = 'R'**
 
-Specifies the language of the package. 
-::: moniker-end
-::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
-R is supported in Azure SQL Database.
+Specifies the language of the package. R is supported in Azure SQL Database.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"

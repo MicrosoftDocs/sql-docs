@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-current"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Uploads R, Python, or Java package files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
 > In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4 and later.
 ::: moniker-end
@@ -78,7 +78,7 @@ WITH ( LANGUAGE = <language> )
 
 ```
 ::: moniker-end
-::: moniker range=">=sql-server-2017 <=sql-server-2017||>=sql-server-linux-2017 <=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2017
 
 ```text
@@ -152,7 +152,7 @@ The libraries owned by database owner are considered global to the database and 
 
 When the user **RUser1** executes an external script, the value of `libPath` can contain multiple paths. The first path is always the path to the shared library created by the database owner. The second part of `libPath` specifies the path containing packages uploaded individually by **RUser1**.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 Specifies the content of the package for a specific platform. Only one file artifact per platform is supported.
@@ -194,13 +194,15 @@ In SQL Server 2019, Windows and Linux are the supported platforms.
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **LANGUAGE = 'R'**
 
-Specifies the language of the package. R is supported in SQL Server 2017.
+Specifies the language of the package.
+R is supported in SQL Server 2017.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 **LANGUAGE = 'R'**
 
-Specifies the language of the package. R is supported in Azure SQL Database.
+Specifies the language of the package.
+R is supported in Azure SQL Database.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -212,7 +214,8 @@ Specifies the language of the package. The value can be `R`, `Python`, or the na
 ## Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-For the R language, when using a file, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. In SQL Server 2017, only the Windows platform is supported.
+For the R language, when using a file, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. 
+In SQL Server 2017, only the Windows platform is supported.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -245,7 +248,7 @@ To create an external library by using a file path, the user must be a Windows a
 
 ## Examples
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 ### Add an external library to a database  
 
 The following example adds an external library called `customPackage` to a database.
@@ -283,7 +286,7 @@ In practice, package dependencies for popular packages are usually much more com
 
 Because it can be difficult to determine all dependencies just from looking at the  package manifest, we recommend that you use a package such as [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) to identify all packages that might be required to complete installation successfully.
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 + Upload the target package and its dependencies. All files must be in a folder that is accessible to the server.
 
@@ -391,7 +394,7 @@ library(packageA)
 
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
-::: moniker range=">=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
 ::: moniker-end

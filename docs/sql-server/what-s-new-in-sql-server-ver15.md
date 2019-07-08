@@ -56,7 +56,6 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |:---|:---| 
 | Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](../analysis-services/server-properties/general-properties.md). |
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](#online-attach-ctp32) in Details. |
-| Ordinal property to order calculation items in calculation groups. | This property ensures calculation items are shown to users in a more intuitive way. To learn more, see [Calculation groups](../analysis-services/tabular-models/calculation-groups.md#ordering). |
 | &nbsp; | &nbsp; |
 
 ## CTP 3.1 June 2019

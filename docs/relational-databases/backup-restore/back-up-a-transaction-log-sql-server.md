@@ -57,7 +57,8 @@ The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to 
   
 7.  Optionally, you can select **Copy Only Backup** to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
-    >** NOTE!** When the **Differential** option is selected, you cannot create a copy-only backup.  
+    > [!NOTE]
+    > When the **Differential** option is selected, you cannot create a copy-only backup.  
   
 8.  Either accept the default backup set name suggested in the **Name** text box, or enter a different name for the backup set.  
   

@@ -1,5 +1,5 @@
 - name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=toc.json
+  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
 
 - name: Previous versions 2014-2005
   href: toc/previous-versions-sql-server.md
@@ -32,7 +32,7 @@
     - name: SQL Server 2019
       href: sql-server/sql-server-ver15-release-notes.md
     - name: SQL Server 2017
-      href: sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+      href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: SQL Server 2016
       href: sql-server/sql-server-2016-release-notes.md
     - name: SQL Server 2014
@@ -8909,12 +8909,11 @@
           href: ssms/register-servers/register-servers.md
         - name: Registered Servers F1 Help
           href: ssms/register-servers/registered-servers-f1-help.md
-      - name: Scripting
+      - name: Scripting with SSMS
         items:
         - name: Query & Text Editors
+          href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           items:
-          - name: Query & Text Editors
-            href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
           - name: Database Engine Query Editor
             href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
           - name: XML Editor
@@ -9341,10 +9340,9 @@
           href: ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
         - name: Import Registered Server Information
           href: ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-      - name: Scripting
+      - name: Scripting of Database Engine
+        href: ssms/scripting/database-engine-scripting.md
         items:
-        - name: Scripting
-          href: ssms/scripting/database-engine-scripting.md
         - name: Query & Text Editors
           href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
         - name: Database Engine Query Editor

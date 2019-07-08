@@ -50,6 +50,15 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |:---|:---| 
 | &nbsp; | &nbsp; |
 
+### Analysis Services
+
+| New feature or update | Details |
+|:---|:---| 
+| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](../analysis-services/server-properties/general-properties.md). |
+| Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](#online-attach-ctp32) in Details. |
+| Ordinal property to order calculation items in calculation groups. | This property ensures calculation items are shown to users in a more intuitive way. To learn more, see [Calculation groups](../analysis-services/tabular-models/calculation-groups.md#ordering). |
+| &nbsp; | &nbsp; |
+
 ## CTP 3.1 June 2019
 
 ### Big data clusters
@@ -837,6 +846,34 @@ FROM sys.dm_exec_requests AS d
   - Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.
 
 ### <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
+
+#### <a name="online-attach-ctp32"></a>Online attach (CTP 3.2)
+
+CTP 3.2 introduces the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale out environments.To perform an online-attach operation, use the **AllowOverwrite** option of the Attach XMLA command. 
+
+```xmla
+<Attach xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"> 
+  <Folder>C:\Program Files\Microsoft SQL Server\MSAS15\OLAP\Data\AdventureWorks.0.db\</Folder> 
+  <AllowOverwrite>True</AllowOverwrite> 
+</Attach> 
+```
+
+This operation may require *double the model memory* to keep the old version online while loading the new version. 
+
+A typical usage pattern could be as follows: 
+
+1. DB1 (version 1) is already attached on read-only server B. 
+
+2. DB1 (version 2) is processed on the write server A. 
+
+3. DB1 (version 2) is detached and placed on a location accessible to server B (either via a shared location, or using robocopy, etc.). 
+
+4. The <Attach> command with AllowOverwrite=True is executed on server B with the new location of DB1 (version 2). 
+
+Without this feature, admins are first required to detach the database and then attach the new version of the database. This leads to downtime when the database is unavailable to users, and queries against it will fail. 
+
+When this new flag is specified, version 1 of the database is deleted atomically within the same transaction with no downtime. However, it comes at the cost of having both databases loaded into memory simultaneously. 
+
 
 #### <a name="many-to-many-ctp24"></a>Many-to-many relationships in tabular models (CTP 2.4)
 

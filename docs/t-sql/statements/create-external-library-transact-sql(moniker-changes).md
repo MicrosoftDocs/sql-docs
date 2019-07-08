@@ -78,7 +78,7 @@ WITH ( LANGUAGE = <language> )
 
 ```
 ::: moniker-end
-::: moniker range=">=sql-server-2017 <=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017 <=sql-server-2017||>=sql-server-linux-2017 <=sql-server-linux-2017||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2017
 
 ```text

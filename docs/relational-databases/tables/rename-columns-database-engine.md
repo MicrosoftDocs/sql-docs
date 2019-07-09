@@ -61,7 +61,7 @@ Requires ALTER permission on the object.
 
 1. In **Object Explorer**, right-click the table to which you want to rename columns and choose **Design**.
 2. Under **Column Name**, select the name you want to change and type a new one.
-3. On the **File** menu, click **Save**_table name_.
+3. On the **File** menu, click **Save** _table name_.
 
 > [!NOTE]
 > You can also change the name of a column in the **Column Properties** tab. Select the column whose name you want to change and type a new value for **Name**.

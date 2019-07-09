@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Add Table Dialog Box (Query and View Designers) (Visual Database Tools)

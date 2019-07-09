@@ -10,7 +10,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 ---
 # Tutorial: SQL Server Management Studio components and configuration
 

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Stop a Query (Visual Database Tools)

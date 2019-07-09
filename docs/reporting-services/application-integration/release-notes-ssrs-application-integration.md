@@ -29,7 +29,7 @@ For the release notes for SSRS, see [Release notes for SQL Server Reporting Serv
 | :----------------- | :------ |
 | Bug fixes  | Proper print preview for High DPI monitor |
 |            | Print dialog would show outside of visible space |
-|            | Large number of parameters resulted in parameter scroll bars and drop downlists not working correctly |
+|            | Large number of parameters resulted in parameter scroll bars and drop-down lists not working correctly |
 |            | Fixed issue with Null and date time parameters |
 |            | Updated JQuery to version 3.3.1 |
 |            | Fixed overlapping with tablix cells in HTML rendering |

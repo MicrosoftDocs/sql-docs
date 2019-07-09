@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Parameter Queries (Visual Database Tools)

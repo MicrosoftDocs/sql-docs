@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Connect to the Database Engine

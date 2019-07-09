@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.custom: ""
-ms.date: 06/12/2019
+ms.date: 06/12/2019 
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 

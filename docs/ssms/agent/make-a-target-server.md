@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Make a Target Server

@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords: 
   - "templates [SQL Server], SQL Server Management Studio"
   - "source controls [SQL Server Management Studio], tutorials"

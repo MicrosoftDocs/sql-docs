@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Use the Toolbox
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

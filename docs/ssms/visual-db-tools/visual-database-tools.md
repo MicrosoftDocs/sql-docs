@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

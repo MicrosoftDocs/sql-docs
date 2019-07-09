@@ -42,7 +42,7 @@ helpviewer_keywords:
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Generate and Publish Scripts Wizard

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)

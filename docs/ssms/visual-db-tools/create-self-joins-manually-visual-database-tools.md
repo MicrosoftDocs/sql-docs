@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Create Self-Joins Manually (Visual Database Tools)

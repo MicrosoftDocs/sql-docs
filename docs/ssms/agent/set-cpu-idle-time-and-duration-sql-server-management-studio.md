@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 8647b465-d899-4cc7-9640-134a506d0a2e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Set CPU Idle Time and Duration (SQL Server Management Studio)

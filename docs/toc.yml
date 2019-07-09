@@ -1338,7 +1338,7 @@
     items:
     - name: Heaps (Tables without Clustered Indexes)
       href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-    - name: Clustered & Nonclustered Indexes
+    - name: Clustered & Nonclustered Indexes Described
       href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
       items:
       - name: Create
@@ -1391,6 +1391,8 @@
           href: relational-databases/indexes/guidelines-for-online-index-operations.md
       - name: Configure parallel operations
         href: relational-databases/indexes/configure-parallel-index-operations.md
+      - name: Index Properties F1 Help
+        href: relational-databases/indexes/index-properties-f1-help.md
     - name: Columnstore indexes
       href: relational-databases/indexes/columnstore-indexes-overview.md
       items:
@@ -1547,8 +1549,24 @@
         href: relational-databases/tables/use-table-valued-parameters-database-engine.md
     - name: Edge constraints
       href: relational-databases/tables/graph-edge-constraints.md
+      items:
+      - name: Create
+        href: relational-databases/tables/create-edge-constraints.md
+      - name: Delete
+        href: relational-databases/tables/delete-edge-constraint.md
+      - name: Modify
+        href: relational-databases/tables/modify-edge-constraint.md
+      - name: View
+        href: relational-databases/tables/view-edge-constraint-properties.md
     - name: Primary keys
       href: relational-databases/tables/primary-and-foreign-key-constraints.md
+      items:
+      - name: Create
+        href: relational-databases/tables/create-primary-keys.md
+      - name: Modify
+        href: relational-databases/tables/modify-primary-keys.md
+      - name: Delete
+        href: relational-databases/tables/delete-primary-keys.md
     - name: Foreign keys
       items:
       - name: Create relationships

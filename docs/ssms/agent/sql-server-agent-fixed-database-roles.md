@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent Fixed Database Roles

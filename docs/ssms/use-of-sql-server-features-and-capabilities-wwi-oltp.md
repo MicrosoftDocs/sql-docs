@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Arguments for External Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

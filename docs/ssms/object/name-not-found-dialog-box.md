@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Name Not Found Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

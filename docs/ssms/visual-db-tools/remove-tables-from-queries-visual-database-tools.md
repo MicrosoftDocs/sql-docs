@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Remove Tables from Queries (Visual Database Tools)

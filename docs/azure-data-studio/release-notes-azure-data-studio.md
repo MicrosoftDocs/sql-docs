@@ -364,7 +364,7 @@ June 20, 2018 &nbsp; / &nbsp; version: 0.30.6 &nbsp; / &nbsp; Public Preview
 ### GitHub Issues Fixes, June 2018
 
 - Feature request ([issue 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Please make the results grid auto-fit column width to data, and remember manual changes if the same query is re-run.
-- Fix [issue 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Should show add message and add account account button when linked account is empty.
+- Fix [issue 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Should show add message and add account button when linked account is empty.
 - Fix [issue 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Linked account tab is broken when the view is collapsed.
 - Fix [issue 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL Tools Service crashes when opening .sql file from disk.
 - Fix [issue 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Missing SQL keyword "BETWEEN".

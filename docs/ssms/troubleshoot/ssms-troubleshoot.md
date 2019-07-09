@@ -18,7 +18,9 @@ ms.date: 07/01/2019
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)
 
-## Get full memory dump of SQL Server Management Studio (SSMS) when it hangs or crashes
+## Get full memory dump after a hang or crash
+
+Get a full memory dump of SQL Server Management Studio (SSMS) when it hangs or crashes.
 
 To capture diagnostic information to troubleshoot a crash or a hang of SSMS, follow the steps below.
 
@@ -50,7 +52,9 @@ To capture diagnostic information to troubleshoot a crash or a hang of SSMS, fol
 
 9. Zip up the folder
 
-## Get full memory dump of SSMS when it throws an OutOfMemoryException
+## Get full memory dump for an OutOfMemoryException
+
+Get a full memory dump of SSMS when it throws an OutOfMemoryException.
 
 You can get a full memory dump with any managed exception.
 

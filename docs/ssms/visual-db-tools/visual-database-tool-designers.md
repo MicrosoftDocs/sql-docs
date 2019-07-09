@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Visual Database Tool Designers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

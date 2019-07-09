@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a Job

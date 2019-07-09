@@ -14,7 +14,7 @@ f1_keywords:
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Database Changes Detected Dialog Box (Visual Database Tools)

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Remove Tables from Database Diagrams (Visual Database Tools)

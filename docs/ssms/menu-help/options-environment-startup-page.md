@@ -7,7 +7,7 @@ ms.technology: ssms
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Options (Environment - Startup page)
 

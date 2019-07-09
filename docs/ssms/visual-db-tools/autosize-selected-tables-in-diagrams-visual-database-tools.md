@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Autosize Selected Tables in Diagrams (Visual Database Tools)

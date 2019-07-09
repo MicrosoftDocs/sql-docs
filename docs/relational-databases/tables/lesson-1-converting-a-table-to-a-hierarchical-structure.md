@@ -39,21 +39,22 @@ The sample Adventureworks2017 (or later) database contains an **Employee** table
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    ```sql  
-    USE AdventureWorks2017;  
-    GO  
-      if OBJECT_ID('HumanResources.EmployeeDemo') is not null
-     drop table HumanResources.EmployeeDemo 
+
+   ```sql  
+   USE AdventureWorks2017;  
+   GO  
+     if OBJECT_ID('HumanResources.EmployeeDemo') is not null
+    drop table HumanResources.EmployeeDemo 
 
     SELECT emp.BusinessEntityID AS EmployeeID, emp.LoginID, 
-      (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
-		    WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
-			    (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID,
-           emp.JobTitle, emp.HireDate
-    INTO HumanResources.EmployeeDemo   
-    FROM HumanResources.Employee emp ;
-    GO
-    ```  
+     (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
+	    WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
+		    (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID,
+          emp.JobTitle, emp.HireDate
+   INTO HumanResources.EmployeeDemo   
+   FROM HumanResources.Employee emp ;
+   GO
+   ```  
   
 ### Examine the structure and data of the EmployeeDemo table  
   

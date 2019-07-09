@@ -86,7 +86,7 @@
             "redirect_document_id": false 
          },
          {
-            "source_path": "docs/relational-databases/tables/create-edge-constraint.md",
+            "source_path": "docs/relational-databases/tables/create-edge-constraints.md",
             "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
             "redirect_document_id": false 
          },

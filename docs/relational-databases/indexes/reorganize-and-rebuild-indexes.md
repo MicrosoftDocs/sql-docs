@@ -226,7 +226,7 @@ For more information, see [sys.dm_db_index_physical_stats](../../relational-data
 
 ### To reorganize a fragmented index
 
-The following example reorganizes the `IX_Employee_OrganizationalLevel_OrganizationalNode` index on the `HumanResources.Employee` table inthe AdventureWorks database.
+The following example reorganizes the `IX_Employee_OrganizationalLevel_OrganizationalNode` index on the `HumanResources.Employee` table in the AdventureWorks database.
 
 ```sql
 ALTER INDEX IX_Employee_OrganizationalLevel_OrganizationalNode

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete a Job Category

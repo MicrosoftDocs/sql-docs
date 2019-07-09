@@ -2736,6 +2736,8 @@
       href: ../connect/odbc/bug-fixes.md
   - name: Download ODBC Driver for SQL Server
     href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+  - name: C++ sample application using ODBC
+    href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
   # docs/odbc/
   - name: ODBC Advanced
     items:

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Join Tables Manually (Visual Database Tools)

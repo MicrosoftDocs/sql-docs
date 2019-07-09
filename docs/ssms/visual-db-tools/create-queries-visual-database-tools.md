@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Create Queries (Visual Database Tools)

@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Ssms Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

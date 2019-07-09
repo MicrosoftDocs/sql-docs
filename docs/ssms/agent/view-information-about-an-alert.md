@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View Information About an Alert

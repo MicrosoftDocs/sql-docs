@@ -120,7 +120,7 @@ The following sections describe the new features and known issues for big data c
 | **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
 | Multiple compute pool instances | Support for multiple compute pool instances. |
-| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
+| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
 | External table improvements | External tables of HADOOP data source type now supports reading rows up to 1 MB in size. External tables (ODBC, storage pool, data pool) now support rows as wide as a SQL Server table. |
 
 ### Known issues

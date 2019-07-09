@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)

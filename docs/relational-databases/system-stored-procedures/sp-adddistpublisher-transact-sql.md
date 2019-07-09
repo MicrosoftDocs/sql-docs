@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_adddistpublisher"
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # sp_adddistpublisher (Transact-SQL)

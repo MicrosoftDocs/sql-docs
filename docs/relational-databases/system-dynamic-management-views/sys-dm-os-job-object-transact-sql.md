@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sys.dm_db_resource_stats"
   - "dm_db_resource_stats"
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

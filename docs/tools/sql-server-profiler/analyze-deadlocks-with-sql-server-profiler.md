@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "events [SQL Server], deadlocks"
   - "edges [SQL Server Profiler]"
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Analyze Deadlocks with SQL Server Profiler

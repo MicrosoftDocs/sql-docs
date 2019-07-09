@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Recommendation element"
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Recommendation Element (DTA)

@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.custom: ""
-ms.date: 06/12/2019
+ms.date: 06/12/2019 
 ---
 
 # Release notes for SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS.
 

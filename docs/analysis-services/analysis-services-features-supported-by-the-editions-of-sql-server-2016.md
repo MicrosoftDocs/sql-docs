@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services Features Supported by the Editions of SQL Server | Microsoft Docs"
-ms.date: 06/25/2019
+ms.date: 07/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -53,7 +53,6 @@ This article describes features supported by different editions of SQL Server 20
 |Time intelligence|Yes|Yes|||||Yes|  
 |Custom rollups|Yes|Yes|||||Yes|  
 |Writeback cube|Yes|Yes|||||Yes|  
-|Writeback dimensions|Yes||||||Yes|  
 |Writeback cells|Yes|Yes|||||Yes|  
 |Drillthrough|Yes|Yes|||||Yes|  
 |Advanced hierarchy types (parent-child and ragged hierarchies)|Yes|Yes|||||Yes|  

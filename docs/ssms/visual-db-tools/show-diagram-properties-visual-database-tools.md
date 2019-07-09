@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Show Diagram Properties (Visual Database Tools)

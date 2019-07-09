@@ -1338,7 +1338,7 @@
     items:
     - name: Heaps (Tables without Clustered Indexes)
       href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-    - name: Clustered & Nonclustered Indexes Described
+    - name: Clustered & Nonclustered Indexes
       href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
       items:
       - name: Create

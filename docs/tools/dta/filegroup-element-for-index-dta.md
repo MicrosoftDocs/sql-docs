@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Filegroup element [DTA]"
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Filegroup Element for Index (DTA)

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "saving traces"
   - "traces [SQL Server], saving"
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Save Trace Results to a Table (SQL Server Profiler)

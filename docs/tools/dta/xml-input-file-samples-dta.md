@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sample applications [DTA]"
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # XML Input File Samples (DTA)

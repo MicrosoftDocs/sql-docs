@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "modifying filters, modifying"
   - "filters [SQL Server], traces"
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Modify a Filter (SQL Server Profiler)

@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---

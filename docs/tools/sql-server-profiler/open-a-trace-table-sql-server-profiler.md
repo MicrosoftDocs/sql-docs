@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "opening trace tables"
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Open a Trace Table (SQL Server Profiler)

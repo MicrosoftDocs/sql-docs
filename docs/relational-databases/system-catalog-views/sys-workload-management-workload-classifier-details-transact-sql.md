@@ -22,8 +22,8 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
   
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|
-|classifier_id|**int**|ID of the classifier. Joinable to [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md). Is not nullable.|
-|classifier_type|**sysname**|The entity on which classification is being done. Is not nullable.|MEMBERNAME|
+|classifier_id|**int**|ID of the classifier.  Is not nullable.|
+|classifier_type|**sysname**|Joinable to [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md).|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|
 |classifier_value|**sysname**|The value of the classifier. Is not nullable.||
 
 ## Permissions

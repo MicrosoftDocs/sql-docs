@@ -23,12 +23,12 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Unique ID of the classifier. Is not nullable||
-group_name|**sysname**|Name of the workload group the classifier is assigned to. Is not nullable. |Static Resource Classes</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Dynamic Resource Classes</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
+group_name|**sysname**|Name of the workload group the classifier is assigned to. Is not nullable. Joinable to sys.workload_management_workload_groups ||
 name|**sysname**|Name of the classifier. Must be unique to the instance. Is not nullable.||
-|importance|**sysname**|Is the relative importance of a request in this workload group and across workload groups for shared resources.  Importance specified in the classifier overrides the workload group importance setting.|low, below_normal, normal, above_normal, high |
+|importance|**sysname**|Is the relative importance of a request in this workload group and across workload groups for shared resources.  Importance specified in the classifier overrides the workload group importance setting. Is nullable.  When null, the workload group importance setting is used.|low, below_normal, normal, above_normal, high |
 |create_time|**datetime**|Time the classifier was created. Is not nullable.||
 modify_time|**datetime**|Time the classifier was last modified. Is not nullable.||
-is_enabled|**bit**|Displays whether the classifier is enabled or not. Is enabled by default. Is not nullable.|0 = the classifier is not enabled </br> 1 = the classifier is enabled|
+is_enabled|**bit**|INTERNAL||
 |&nbsp;||||
   
 ## Permissions

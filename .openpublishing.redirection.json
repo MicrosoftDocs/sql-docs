@@ -3242,7 +3242,7 @@
         },
         {
             "source_path": "docs/reporting-services/report-server/configure-kerberos-to-use-power-bi-reports.md",
-            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-configure-kerberos-powerbi-reports/",
+            "redirect_url": "/power-bi/report-server/configure-kerberos-powerbi-reports",
             "redirect_document_id": false
         },
         {
@@ -3252,12 +3252,12 @@
         },
         {
             "source_path": "docs/reporting-services/install-windows/install-january-2017-technical-preview-power-bi-reports.md",
-            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-install-report-server/",
+            "redirect_url": "/power-bi/report-server/install-report-server",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/reporting-services/power-bi-reports-in-reporting-services.md",
-            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-quickstart-powerbi-report/",
+            "redirect_url": "/power-bi/report-server/quickstart-create-powerbi-report",
             "redirect_document_id": false
         },
         {

@@ -34,7 +34,7 @@ productDirectory:
   - title: SQL Server on Windows
     imageSrc: media/index/windows.png
     links:
-      - url: sql-server/sql-server-technical-documentation
+      - url: sql-server/sql-server-technical-documentation.md
         text: On-premises
       - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
         text: On an Azure VM
@@ -167,7 +167,7 @@ conceptualContent:
           url: relational-databases/maintenance-plans/maintenance-plans.md
           itemType: overview
         - text: Policy-based management
-          url: relational-databases/policy-based-management/administer-servers-by-using-policy-based-management
+          url: relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
           itemType: overview
         - text: Transaction log management
           url: relational-databases/logs/the-transaction-log-sql-server.md

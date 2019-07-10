@@ -38,7 +38,7 @@ A Full-Text Search thesaurus is an XML text file.
 
 -   Diacritics setting  
   
-     For a given thesaurus, all search patterns are either sensitive or insensitive to diacritical marks such as a tilde (**~**), acute accent mark (**?**), or umlaut (**?**) (that is, *accent sensitive* or *accent insensitive*). For example, suppose you specify the pattern "caf?" to be replaced by other patterns in a full-text query. If the thesaurus is accent-insensitive, full-text search replaces the patterns "caf?" and "cafe". If the thesaurus is accent-sensitive, full-text search replaces only the pattern "caf?". By default, a thesaurus is accent-insensitive.  
+     For a given thesaurus, all search patterns are either sensitive or insensitive to diacritical marks such as a tilde (**~**), acute accent mark (**&acute;**), or umlaut (**&uml;**) (that is, *accent sensitive* or *accent insensitive*). For example, suppose you specify the pattern "caf&eacute;" to be replaced by other patterns in a full-text query. If the thesaurus is accent-insensitive, full-text search replaces the patterns "caf&eacute;" and "cafe". If the thesaurus is accent-sensitive, full-text search replaces only the pattern "caf&eacute;". By default, a thesaurus is accent-insensitive.  
   
 ##  <a name="initial_thesaurus_files"></a> Default thesaurus files
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a set of XML thesaurus files, one for each supported language. These files are essentially empty. They contain only the top-level XML structure that is common to all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thesauruses and a commented-out sample thesaurus.  

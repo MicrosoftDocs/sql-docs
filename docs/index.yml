@@ -53,10 +53,10 @@ conceptualContent:
   items:
     - title: Getting started 
       links:
-        - text: Connect & query with SSMS
-          url: ssms/tutorials/tutorial-sql-server-management-studio.md
+        - text: Connect & query (SQL Server Management Studio)
+          url: ssms/tutorials/connect-query-sql-server.md
           itemType: overview
-        - text: Connect & query with Azure Data Studio
+        - text: Connect & query (Azure Data Studio)
           url: azure-data-studio/quickstart-sql-server.md
           itemType: overview
         - text: Writing Transact-SQL

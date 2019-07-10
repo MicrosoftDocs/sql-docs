@@ -5,11 +5,10 @@ ms.date: "06/03/2019"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "dmv's"
+ms.subservice: "dmv's"
 ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 

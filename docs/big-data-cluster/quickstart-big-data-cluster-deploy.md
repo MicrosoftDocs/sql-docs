@@ -1,27 +1,27 @@
 ---
-title: Deployment quickstart
+title: Deployment script
 titleSuffix: SQL Server big data clusters
 description: Walkthrough a deployment of SQL Server 2019 big data clusters (preview) on Azure Kubernetes Service (AKS).
-author: rothja 
-ms.author: jroth 
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
-# Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
+# Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In this quickstart, you use a sample deployment script to deploy SQL Server 2019 big data cluster (preview) to Azure Kubernetes Service (AKS). 
+In this tutorial, you use a sample deployment script to deploy SQL Server 2019 big data cluster (preview) to Azure Kubernetes Service (AKS). 
 
 > [!TIP]
 > AKS is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
 
-The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the AKS default storage classes. The default configuration used in this quickstart is suitable for dev/test environments.
+The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the AKS default storage classes. The default configuration used in this tutorial is suitable for dev/test environments.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -45,7 +45,7 @@ az login
 
 ## Download the deployment script
 
-This quickstart automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **mssqlctl**, you should be able to run the script successfully in this quickstart. 
+This tutorial automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **mssqlctl**, you should be able to run the script successfully in this tutorial. 
 
 In a Windows PowerShell or Linux bash prompt, run the following command to download the deployment script from GitHub.
 

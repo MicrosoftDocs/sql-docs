@@ -2,14 +2,14 @@
 title: Configure minikube
 titleSuffix: SQL Server big data clusters
 description: Learn how to configure minikube for SQL Server 2019 big data cluster (preview) deployments on a single machine.
-author: rothja 
-ms.author: jroth 
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Configure minikube for SQL Server big data cluster deployments

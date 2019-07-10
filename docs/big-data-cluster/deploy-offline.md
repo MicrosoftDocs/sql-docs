@@ -2,8 +2,9 @@
 title: Deploy offline
 titleSuffix: SQL Server big data clusters
 description: Learn how to perform an offline deployment of a SQL Server big data cluster.
-author: rothja
-ms.author: jroth
+author: mihaelablendea 
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual

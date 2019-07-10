@@ -4,13 +4,12 @@ titleSuffix: SQL Server big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview).
 author: jeroenterheerdt 
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # How to deploy an app on SQL Server big data cluster (preview)

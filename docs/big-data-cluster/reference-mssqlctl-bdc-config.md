@@ -2,8 +2,9 @@
 title: mssqlctl bdc config reference
 titleSuffix: SQL Server big data clusters
 description: Reference article for mssqlctl bdc commands.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference

@@ -102,6 +102,20 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
+ **To view the collation settings for tables and columns**  
+
+1.  In Object Explorer, connect to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and on the toolbar, click **New Query**.  
+  
+2.  In the query window, enter the following statement that uses the sys.columns system catalog view.  
+  
+    ```sql  
+    SELECT t.name TableName, c.name ColumnName, collation_name  
+    FROM sys.columns c  
+    inner join sys.tables t on c.object_id = t.object_id;  
+    ```  
+
+
+
 ## See Also  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   

@@ -2,8 +2,9 @@
 title: mssqlctl sql reference
 titleSuffix: SQL Server big data clusters
 description: Reference article for mssqlctl sql commands.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference

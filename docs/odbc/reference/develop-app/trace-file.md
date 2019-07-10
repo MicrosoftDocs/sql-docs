@@ -20,4 +20,4 @@ An application specifies the trace file either by setting the **TraceFile** keyw
   
  The trace file provides a log of each ODBC function call with the data types and values of all arguments. It logs all input functions and logs all returned functions with return codes and error states.  
   
- In ODBC 3*.x*, parameters to connection functions are not provided to the trace DLL.
+ In ODBC *3.x*, parameters to connection functions are not provided to the trace DLL.

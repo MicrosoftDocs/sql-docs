@@ -1,5 +1,3 @@
-USE AdventureWorks2012;
-GO
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.
 IF NOT EXISTS (SELECT name FROM sys.indexes WHERE name = 
             N'AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate')
@@ -46,4 +44,3 @@ FROM sys.indexes AS i
     JOIN sys.filegroups AS f ON i.data_space_id = f.data_space_id
     JOIN sys.tables as t ON i.object_id = t.object_id
         AND i.object_id = OBJECT_ID(N'Production.BillOfMaterials','U');
-GO

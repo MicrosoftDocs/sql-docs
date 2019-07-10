@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
   - "traces [SQL Server], events"
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Filter Events Based on the Event Start Time (SQL Server Profiler)

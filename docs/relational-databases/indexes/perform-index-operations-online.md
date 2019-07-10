@@ -88,26 +88,19 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
-#### To create, rebuild, or drop an index online  
+### To create, rebuild, or drop an index online  
   
-1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+The following example rebuilds an existing online index in the AdventureWorks database.
   
-2.  On the Standard bar, click **New Query**.  
+ ```sql  
+ ALTER INDEX AK_Employee_NationalIDNumber
+   ON HumanResources.Employee  
+   REBUILD WITH (ONLINE = ON)
+;
+```  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The example rebuilds an existing online  
+The following example deletes a clustered index online and moves the resulting table (heap) to the filegroup `NewGroup` by using the `MOVE TO` clause. The `sys.indexes`, `sys.tables`, and `sys.filegroups` catalog views are queried to verify the index and table placement in the filegroups before and after the move.  
   
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    ALTER INDEX AK_Employee_NationalIDNumber ON HumanResources.Employee  
-    REBUILD WITH (ONLINE = ON);  
-    GO  
-    ```  
+[!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
   
-     The following example deletes a clustered index online and moves the resulting table (heap) to the filegroup `NewGroup` by using the `MOVE TO` clause. The `sys.indexes`, `sys.tables`, and `sys.filegroups` catalog views are queried to verify the index and table placement in the filegroups before and after the move.  
-  
-     [!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
-  
- For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
-  
-  
+For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  

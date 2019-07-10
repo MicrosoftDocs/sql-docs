@@ -52,7 +52,12 @@ Note that enabling Always Encrypted is not sufficient for encryption or decrypti
 
 ### Retrieving and Modifying Data in Encrypted Columns
 
-Once you enable Always Encrypted on a connection, you can use standard ODBC APIs (see [ODBC sample code](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) or [ODBC Programmer's Reference](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)) to retrieve or modify data in encrypted database columns. Assuming your application has the required database permissions and can access the column master key, the driver will encrypt any query parameters which target encrypted columns and decrypt data retrieved from encrypted columns, behaving transparently to the application as if the columns were not encrypted.
+Once you enable Always Encrypted on a connection, you can use standard ODBC APIs. The ODBC APIs can retrieve or modify data in encrypted database columns. The following documentation items might help with this:
+
+- [ODBC sample code](cpp-code-example-app-connect-access-sql-db.md)
+- [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md)
+
+Your application must have the required database permissions, and must be able to access the column master key. Then, the driver encrypts any query parameters that target encrypted columns. The driver also decrypts data retrieved from encrypted columns. The driver performs all this encrypting and decrypting without any assistance from your source code. To your program, it is as if the columns are not encrypted.
 
 If Always Encrypted is not enabled, queries with parameters which target encrypted columns will fail. Data can still be retrieved from encrypted columns, as long as the query has no parameters targeting encrypted columns. However, the driver will not attempt any decryption and the application will receive the binary encrypted data (as byte arrays).
 

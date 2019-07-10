@@ -127,8 +127,8 @@ For essential information about the following formulas, see the notes that follo
   
 |Platform|Estimating fdhost.exe memory requirements in MB-*F*^1|Formula for calculating max server memory-*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Number of crawl ranges* * 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *Number of crawl ranges* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *Number of crawl ranges* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *Number of crawl ranges* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **Notes about the formulas**
 1.  If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as _T_**-** sigma**(**_F_i**)**.  

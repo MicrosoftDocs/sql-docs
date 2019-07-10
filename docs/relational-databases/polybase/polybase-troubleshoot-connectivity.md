@@ -2,10 +2,9 @@
 title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 ms.technology: polybase
-ms.custom: ""
 ms.devlang: 
 ms.topic: conceptual
 ms.date: 04/23/2019
@@ -100,7 +99,7 @@ The tool runs independently of SQL Server, so it does not need to be running, no
 | *Name Node Port* | The port of the name node. Refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. For example, 8020. |
 | *Service Principal* | The admin service principal to your KDC. Matches the "IDENTITY" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Service Password* | Instead of typing your password at the console, store it in a file and pass the file path here. The contents of the file should match what you use as your "SECRET" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
-| *Remote HDFS file path (optional) * | The path of an existing file to access. If not specified, the root "/" will be used. |
+| *Remote HDFS file path (optional)* | The path of an existing file to access. If not specified, the root "/" will be used. |
 
 ## Example
 

@@ -84,6 +84,26 @@
             "source_path": "docs/relational-databases/database-features.md",
             "redirect_url": "/sql/relational-databases/databases/databases",
             "redirect_document_id": false 
+         },
+         {
+            "source_path": "docs/relational-databases/tables/create-edge-constraints.md",
+            "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
+            "redirect_document_id": false 
+         },
+         {
+            "source_path": "docs/relational-databases/tables/delete-edge-constraint.md",
+            "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
+            "redirect_document_id": false 
+         },
+         {
+            "source_path": "docs/relational-databases/tables/modify-edge-constraint.md",
+            "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
+            "redirect_document_id": false 
+         },
+         {
+            "source_path": "docs/relational-databases/tables/view-edge-constraint-properties.md",
+            "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
+            "redirect_document_id": false 
          },       
           {
             "source_path": "docs/relational-databases/polybase/get-started-with-polybase.md",

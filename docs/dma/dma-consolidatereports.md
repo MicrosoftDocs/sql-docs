@@ -176,7 +176,7 @@ You can also use the LoadWarehouse script to provide the basic TSQL statements f
    ![DMAWarehouse report view](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > If you do not see the data you were expecting, try changing the active bookmark.  For more information, see the the detail in the following section.
+   > If you do not see the data you were expecting, try changing the active bookmark.  For more information, see the detail in the following section.
 
 ## Working with DMA reports
 

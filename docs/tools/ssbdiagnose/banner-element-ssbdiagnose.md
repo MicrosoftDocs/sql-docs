@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "XML output file format [ssbdiagnose], banner element"
   - "ssbdiagnose"
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Banner Element (ssbdiagnose)

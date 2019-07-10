@@ -2,14 +2,14 @@
 title: Data persistence on Kubernetes
 titleSuffix: SQL Server big data clusters
 description: Learn about how data persistence works in a SQL Server 2019 big data cluster.
-author: rothja 
-ms.author: jroth 
+author: mihaelablendea 
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Data persistence with SQL Server big data cluster on Kubernetes

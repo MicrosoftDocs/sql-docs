@@ -4,13 +4,12 @@ titleSuffix: SQL Server big data clusters
 description: This article describes security concepts for SQL Server 2019 big data cluster (preview). This includes describing the cluster endpoints and cluster authentication.
 author: nelgson 
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Security concepts for SQL Server big data clusters
@@ -29,9 +28,9 @@ There are three entry points to the big data cluster
 
 * HDFS/Spark (Knox) gateway - This is an HTTPS-based endpoint. Other endpoints are proxied through this. HDFS/Spark gateway is used for accessing services like webHDFS and Livy. Wherever you see references to Knox, this is the endpoint.
 
-* Controller endpoint - big data cluster  management service that exposes REST APIs for managing the cluster. Some tools, such as the Admin portal, are also accessed through this endpoint.
+* Controller endpoint - big data cluster  management service that exposes REST APIs for managing the cluster. Some tools are also accessed through this endpoint.
 
-* Master Instance  - TDS endpoint for database tools and applications to connect to SQL Server Master Instance in the cluster.
+* Master Instance - TDS endpoint for database tools and applications to connect to SQL Server Master Instance in the cluster.
 
 ![Cluster endpoints](media/concept-security/cluster_endpoints.png)
 

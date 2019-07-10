@@ -1,7 +1,7 @@
 ---
 title: "OGC Methods on Geography Instances | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/27/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -63,7 +63,7 @@ manager: craigg
   
 -   [STIsEmpty](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
--   [STIsValida](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+-   [STIsValid](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 -   [STLength](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
   

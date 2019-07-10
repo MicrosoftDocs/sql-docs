@@ -68,7 +68,9 @@ manager: craigg
 2.  In the **Run** dialog box, type **secpol.msc**, and then click **OK**.  
   
 3.  In the **Local Security Settings** application, expand **Security Settings**, expand **Account Policies**, and then click **Password Policy**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      The password policies are described in the results pane.  
   
 ### Disadvantages of SQL Server Authentication  

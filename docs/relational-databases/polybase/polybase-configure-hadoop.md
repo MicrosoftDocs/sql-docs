@@ -1,13 +1,12 @@
 ---
 title: "Configure PolyBase to access external data in Hadoop | Microsoft Docs"
-ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
@@ -55,6 +54,8 @@ First, configure SQL Server PolyBase to use your specific Hadoop provider.
    ```  
 
 2. You must restart SQL Server using **services.msc**. Restarting SQL Server restarts these services:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase Engine  

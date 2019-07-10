@@ -72,7 +72,9 @@ manager: craigg
     >  If there are any problems with the network configuration, you will receive an error at this point. If you experience problems connecting to the Oracle database, see the section "The SQL Server Distributor cannot connect to the Oracle database instance" in [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To create a publication from an Oracle database  
   
 1.  Connect to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance that the Oracle Publisher will use as a Distributor, and then expand the server node.  

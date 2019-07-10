@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TestServer element"
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # TestServer Element (DTA)

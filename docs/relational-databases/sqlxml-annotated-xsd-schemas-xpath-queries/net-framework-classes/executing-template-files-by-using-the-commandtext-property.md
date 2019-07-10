@@ -87,7 +87,9 @@ class Test
      This creates an executable (DocSample.exe).  
   
 5.  At the command prompt, execute DocSample.exe.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  If you pass a parameter to a template, the parameter name must begin with at sign (@); for example, p.Name="\@ContactID", where p is a SqlXmlParameter object.  
   
  This is the updated template which takes one parameter.  

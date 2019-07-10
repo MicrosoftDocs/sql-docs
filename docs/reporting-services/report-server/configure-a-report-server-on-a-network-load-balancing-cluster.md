@@ -7,7 +7,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
+ms.date: 07/03/2019
 ---
 
 # Configure a Report Server on a Network Load Balancing Cluster
@@ -57,16 +57,16 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
     The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files;the key values are not valid.  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`machineKey`> element that you generated. By default, the Report Manager Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Open the Web.config file for Reportserver, and in the <`system.web`> section paste the <`MachineKey`> element that you generated. By default, the Report Manager Web.config file is located in \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Save the file.  
   
 4. Repeat the previous step for each report server in the scale-out deployment.  
   
-5. Verify that all Web.Config files in the \Reporting Services\Reportserver folders contain identical <`machineKey`> elements in the <`system.web`> section.  
+5. Verify that all Web.Config files in the \Reporting Services\Reportserver folders contain identical <`MachineKey`> elements in the <`system.web`> section.  
 
 ::: moniker-end
 
@@ -77,7 +77,7 @@ To run a scale-out deployment on an NLB cluster, you must configure view state v
     The following example provides an illustration of the value you must obtain. Do not copy the example into your configuration files; the key values are not valid. Report server requires the correct casing.
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. Save the file.

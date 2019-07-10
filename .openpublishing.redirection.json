@@ -1,6 +1,61 @@
 {
     "redirections": [
         {
+           "source_path": "docs/big-data-cluster/train-and-create-machinelearning-models-with-spark.md",
+           "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/export-model-with-spark-mleap.md",
+           "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-config-section.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-config-section",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-config.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-config",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-debug.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-debug",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-endpoint.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-endpoint",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-status.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-status",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster-storage-pool.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc-storage-pool",
+           "redirect_document_id": false
+        },
+        {
+           "source_path": "docs/big-data-cluster/reference-mssqlctl-cluster.md",
+           "redirect_url": "/sql/big-data-cluster/reference-mssqlctl-bdc",
+           "redirect_document_id": false
+        }, 
+        {
+           "source_path": "docs/big-data-cluster/cluster-admin-portal.md",
+           "redirect_url": "/sql/big-data-cluster/cluster-troubleshooting-commands",
+           "redirect_document_id": false
+        },    
+        {
            "source_path": "docs/big-data-cluster/spark-gpu-tensorflow.md",
            "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
            "redirect_document_id": false
@@ -28,6 +83,26 @@
          {
             "source_path": "docs/relational-databases/database-features.md",
             "redirect_url": "/sql/relational-databases/databases/databases",
+            "redirect_document_id": false 
+         },
+         {
+            "source_path": "docs/relational-databases/tables/create-edge-constraints.md",
+            "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
+            "redirect_document_id": false 
+         },
+         {
+            "source_path": "docs/relational-databases/tables/delete-edge-constraint.md",
+            "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
+            "redirect_document_id": false 
+         },
+         {
+            "source_path": "docs/relational-databases/tables/modify-edge-constraint.md",
+            "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
+            "redirect_document_id": false 
+         },
+         {
+            "source_path": "docs/relational-databases/tables/view-edge-constraint-properties.md",
+            "redirect_url": "/sql/relational-databases/tables/graph-edge-constraints",
             "redirect_document_id": false 
          },       
           {
@@ -950,6 +1025,16 @@
         {
             "source_path": "docs/reporting-services/report-builder/glossary-report-builder.md",
             "redirect_url": "/sql/reporting-services/reporting-services-concepts-ssrs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md",
+            "redirect_url": "/sql/reporting-services/report-server/create-delete-or-modify-a-folder-web-portal",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/reports/open-and-close-a-report-report-manager.md",
+            "redirect_url": "/sql/reporting-services/reports/reporting-services-reports-ssrs",
             "redirect_document_id": false
         },
         {

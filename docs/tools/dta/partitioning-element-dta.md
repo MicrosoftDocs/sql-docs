@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Partitioning element"
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Partitioning Element (DTA)

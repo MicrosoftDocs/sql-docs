@@ -52,7 +52,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  A role cannot include itself as a member. Such "circular" definitions are not valid, even when membership is only indirectly implied by one or more intermediate memberships.  
   
- sp_addrolemember cannot add a fixed database role, fixed server role, or dbo to a role. sp_addrolemember cannot be executed within a user-defined transaction.  
+ sp_addrolemember cannot add a fixed database role, fixed server role, or dbo to a role.
   
  Only use sp_addrolemember to add a member to a database role. To add a member to a server role, use [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   

@@ -33,7 +33,9 @@ manager: craigg
     >  SQL Server issues a lease ID to establish exclusive access during the restore operation. The restore lease ID is BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
 3.  **Delete the Blob:** To delete a blob with an active lease, you must first break the lease.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="Code_Example"></a> PowerShell script example  
   
 > [!IMPORTANT]

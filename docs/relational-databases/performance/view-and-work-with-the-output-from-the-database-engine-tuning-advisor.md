@@ -55,7 +55,9 @@ manager: craigg
 5.  Uncheck **Show existing objects** at the bottom of the **Recommendations** tabbed page. This causes the grid to display only those database objects that are referenced in the recommendation. Use the bottom scroll bar to view the right-most column in the recommendations grid, and click an item in the **Definition** column to view or copy the [!INCLUDE[tsql](../../includes/tsql-md.md)] script that creates that object in your database.  
   
 6.  If you want to save all of the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that create or drop all database objects in this recommendation into one script file, click **Save Recommendations** on the **Actions** menu.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To view the tuning summary and reports with the Database Engine Tuning Advisor GUI  
   
 1.  Tune a database using the Database Engine Tuning Advisor GUI or the **dta** command-line utility. For more information, see [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). If you want to use an existing tuning session, skip this step and proceed to step 2.  

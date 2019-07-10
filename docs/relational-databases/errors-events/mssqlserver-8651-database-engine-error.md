@@ -50,7 +50,9 @@ The following list outlines general steps that will help in troubleshooting memo
     Notice unusual settings. Correct them as necessary. Default settings are listed in "Setting Server Configuration Options" in SQL Server Books Online.  
   
 4.  Check the workload (for example, number of concurrent sessions, currently executing queries).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 The following actions may make more memory available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   If applications besides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are consuming resources, try stopping running these applications or consider running them on a separate server. This will remove external memory pressure.  

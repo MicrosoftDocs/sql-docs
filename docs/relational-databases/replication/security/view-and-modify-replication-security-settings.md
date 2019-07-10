@@ -65,7 +65,9 @@ manager: craigg
 4.  The **Distributor Properties - \<Distributor>** and **Distribution Database Properties - \<Database>** dialog boxes. For more information about accessing these dialog boxes, see [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 5.  The **Publisher Properties - \<Publisher>** dialog box. For more information about accessing this dialog box, [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To change the password for an account used by one or more agents  
   
 1.  If the account is a SQL Server account, this dialog box will also change the password for the SQL Server account. If the account is a Windows account, change the password in Windows first. For more information, see the Windows documentation.  
@@ -138,9 +140,9 @@ manager: craigg
   
 1.  In the **Subscription Properties - \<Subscription>** dialog box at the Publisher, you can make the following changes:  
   
-    -   To change the account under which the Distribution Agent runs and makes connections to the Distributor, click the **Agent process account** row, and then click the properties (**…**) button in the row. Specify an account and password in the **Distribution Agent Security** dialog box.  
+    -   To change the account under which the Distribution Agent runs and makes connections to the Distributor, click the **Agent process account** row, and then click the properties (**?**) button in the row. Specify an account and password in the **Distribution Agent Security** dialog box.  
   
-    -   To change the context under which the Distribution Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**…**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
+    -   To change the context under which the Distribution Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**?**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
          If you use queued updating subscriptions, the Queue Reader Agent also uses the context specified here for connections to the Subscriber.  
   
@@ -150,11 +152,11 @@ manager: craigg
   
 1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, you can make the following changes:  
   
-    -   To change the account under which the Distribution Agent runs and makes connections to the Subscriber, click the **Agent process account** row, and then click the properties (**…**) button in the row. Specify an account and password in the **Distribution Agent Security** dialog box.  
+    -   To change the account under which the Distribution Agent runs and makes connections to the Subscriber, click the **Agent process account** row, and then click the properties (**?**) button in the row. Specify an account and password in the **Distribution Agent Security** dialog box.  
   
          If you use queued updating subscriptions, the Queue Reader Agent also uses the context specified here for connections to the Subscriber.  
   
-    -   To change the context under which the Distribution Agent connects to the Distributor, click the **Distributor Connection** row, and then click the properties (**…**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
+    -   To change the context under which the Distribution Agent connects to the Distributor, click the **Distributor Connection** row, and then click the properties (**?**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -162,9 +164,9 @@ manager: craigg
   
 1.  In the **Subscription Properties - \<Subscription>** dialog box at the Publisher, you can make the following changes:  
   
-    -   To change the account under which the Merge Agent runs and makes connections to the Publisher and Distributor, click the **Agent process account** row, and then click the properties (**…**) button in the row. Specify an account and password in the **Merge Agent Security** dialog box.  
+    -   To change the account under which the Merge Agent runs and makes connections to the Publisher and Distributor, click the **Agent process account** row, and then click the properties (**?**) button in the row. Specify an account and password in the **Merge Agent Security** dialog box.  
   
-    -   To change the context under which the Merge Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**…**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
+    -   To change the context under which the Merge Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**?**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -172,15 +174,15 @@ manager: craigg
   
 1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, you can make the following changes:  
   
-    -   To change the account under which the Merge Agent runs and makes connections to the Subscriber, click the **Agent process account** row, and then click the properties (**…**) button in the row. Specify an account and password in the **Merge Agent Security** dialog box.  
+    -   To change the account under which the Merge Agent runs and makes connections to the Subscriber, click the **Agent process account** row, and then click the properties (**?**) button in the row. Specify an account and password in the **Merge Agent Security** dialog box.  
   
-    -   To change the context under which the Merge Agent connects to the Publisher and Distributor, click the **Publisher Connection** row, and then click the properties (**…**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
+    -   To change the context under which the Merge Agent connects to the Publisher and Distributor, click the **Publisher Connection** row, and then click the properties (**?**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### To change the account under which the Queue Reader Agent runs  
   
-1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties (**…**) button next to the distribution database.  
+1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties (**?**) button next to the distribution database.  
   
 2.  In the **Distribution Database Properties - \<Database>** dialog box, click the **Security Settings** button next to the **Agent process account** text box.  
   
@@ -212,7 +214,7 @@ manager: craigg
   
 #### To change security settings for an immediate updating pull subscription  
   
-1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**…**) button in the row.  
+1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**?**) button in the row.  
   
 2.  In the **Enter Connection Information** dialog box, select one of the following options:  
   

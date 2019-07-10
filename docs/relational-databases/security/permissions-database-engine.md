@@ -103,7 +103,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |IMPERSONATE|Logins and users|  
 |INSERT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] queues|  
-|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW, and<br />XML SCHEMA COLLECTION|  
+|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW, and<br />XML SCHEMA COLLECTION|  
 |SELECT|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|  
 |TAKE OWNERSHIP|All classes of objects except DATABASE SCOPED CONFIGURATION, LOGIN, SERVER, and USER.|  
 |UPDATE|Synonyms, tables and columns, views and columns. Permission can be granted at the database, schema, or object level.|  

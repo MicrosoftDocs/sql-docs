@@ -3,7 +3,7 @@ title: SQL Server 2019 extension (preview)
 titleSuffix: Azure Data Studio
 description: SQL Server 2019 Preview extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "05/15/2019"
+ms.date: "06/25/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -24,9 +24,9 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092817)|May 15, 2019 |0.13.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092816)|May 15, 2019 |0.13.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092815)|May 15, 2019 |0.13.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|June 25, 2019 |0.14.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|June 25, 2019 |0.14.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|June 25, 2019 |0.14.1
 
 1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 
@@ -38,11 +38,14 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
 1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
 
+## Changes in release 0.14.1
+* Support for CTP 3.1 data source support
+
 ## Changes in release 0.12.1
 
 * The **SQL Server big data cluster** connection type has been removed in this release. All functionality previously available from the SQL Server big data cluster connection is now available in the SQL Server connection.
 * HDFS browsing can be found under the **Data Services** folder
-* For notebooks the the PySpark and other big data kernels work when connected to the SQL Server master instance in your SQL Server big data cluster.
+* For notebooks the PySpark and other big data kernels work when connected to the SQL Server master instance in your SQL Server big data cluster.
 * Create External Table wizard:
   * Support for creating External Table using existing External Data Source.
   * Performance improvements across the wizard.

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_add_agent_profile"
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # sp_add_agent_profile (Transact-SQL)

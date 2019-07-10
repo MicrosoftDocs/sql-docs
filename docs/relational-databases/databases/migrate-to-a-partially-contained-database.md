@@ -64,7 +64,9 @@ GO
 2.  On the **Advanced** page, in the **Containment** section, set the **Enable Contained Databases** option to **True**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="convert"></a> Converting a Database to Partially Contained  
  A database is converted to a contained database by changing the **CONTAINMENT** option.  
   

@@ -53,7 +53,9 @@ Processing results in an ODBC application involves first determining the charact
 5.  Optionally, call [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) with SQL_UNBIND to release any bound column buffers.  
   
 6.  If another result set is available, go to Step 1.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  To cancel processing a result set before [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) returns SQL_NO_DATA, call [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   

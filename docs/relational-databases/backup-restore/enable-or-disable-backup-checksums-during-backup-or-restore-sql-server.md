@@ -55,7 +55,9 @@ manager: craigg
 1.  Follow the steps to [create a database backup](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 2.  On the **Options** page, in the **Reliability** section, click **Perform checksum before writing to media**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To enable or disable backup checksum for a backup operation  

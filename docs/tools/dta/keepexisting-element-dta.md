@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "KeepExisting element"
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # KeepExisting Element (DTA)

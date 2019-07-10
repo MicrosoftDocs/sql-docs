@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "traces [SQL Server], replaying"
   - "replaying traces"
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Replay a Trace File (SQL Server Profiler)

@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DatabaseToConnect element"
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # DatabaseToConnect Element (DTA)

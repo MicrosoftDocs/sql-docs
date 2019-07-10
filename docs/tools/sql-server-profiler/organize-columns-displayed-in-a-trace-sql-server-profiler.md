@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "arranging trace columns displayed"
   - "traces [SQL Server], data columns"
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Organize Columns Displayed in a Trace (SQL Server Profiler)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "pipes [SQL Server], listening on pipes"
   - "Named Pipes [SQL Server], listening on pipes"
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---

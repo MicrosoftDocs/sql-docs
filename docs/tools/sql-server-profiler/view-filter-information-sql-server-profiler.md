@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
   - "viewing filter information"
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # View Filter Information (SQL Server Profiler)

@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EventString element"
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # EventString Element (DTA)

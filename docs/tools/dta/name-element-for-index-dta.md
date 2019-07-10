@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Name element"
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Name Element for Index (DTA)

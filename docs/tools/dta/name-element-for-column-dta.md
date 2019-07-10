@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Name element"
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Name Element for Column (DTA)

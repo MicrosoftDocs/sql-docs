@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "identifiers [SQL Server], PowerShell"
   - "Cmdlets [SQL Server], Decode-Sqlname"
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # SQL Server Identifiers in PowerShell

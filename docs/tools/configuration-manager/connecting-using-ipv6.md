@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "IPv4"
   - "IPv6"
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---

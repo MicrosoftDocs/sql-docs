@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "trace templates [SQL Server]"
   - "saving trace template"
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Create a Trace Template (SQL Server Profiler)

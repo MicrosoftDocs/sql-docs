@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "client configuration [SQL Server], SQL Server Native Client"
 ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---

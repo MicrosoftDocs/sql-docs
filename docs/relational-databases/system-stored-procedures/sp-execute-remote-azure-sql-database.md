@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "remote execution"
   - "queries, remote execution"
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

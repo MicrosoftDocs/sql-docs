@@ -14477,7 +14477,7 @@
         },
         {
             "source_path": "docs/ssms/tutorials/templates-ssms.md",
-            "redirect_url": "docs/ssms/templates/templates-ssms",
+            "redirect_url": "/sql/ssms/template/templates-ssms",
             "redirect_document_id": true
         },
         {

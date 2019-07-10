@@ -53,10 +53,10 @@ conceptualContent:
   items:
     - title: Getting started 
       links:
-        - text: SQL Server Management Studio 
+        - text: Connect & query with SSMS
           url: ssms/tutorials/tutorial-sql-server-management-studio.md
           itemType: overview
-        - text: Azure Data Studio
+        - text: Connect & query with Azure Data Studio
           url: azure-data-studio/quickstart-sql-server.md
           itemType: overview
         - text: Writing Transact-SQL
@@ -167,7 +167,7 @@ conceptualContent:
           url: relational-databases/maintenance-plans/maintenance-plans.md
           itemType: overview
         - text: Policy-based management
-          url: relational-databases/policy-based-management/administer-servers-by-using-policy-based-management?view=sql-server-2017
+          url: relational-databases/policy-based-management/administer-servers-by-using-policy-based-management
           itemType: overview
         - text: Transaction log management
           url: relational-databases/logs/the-transaction-log-sql-server.md

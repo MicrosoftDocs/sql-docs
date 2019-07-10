@@ -280,8 +280,9 @@ If you're connected to an alias or to an Availability Group listener, that infor
 
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These *how-to* articles help you get familiar with the various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to *articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
+* [Connect to and query an instance](connect-query-sql-server.md)
 * [Scripting](scripting-ssms.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)

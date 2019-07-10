@@ -1,7 +1,7 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/16/2019"
+ms.date: "06/24/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -26,6 +26,7 @@ manager: jroth
   
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
+|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.0.jre12.jar<br> mssql-jdbc-7.4.0.jre11.jar<br> mssql-jdbc-7.4.0.jre8.jar|July 31, 2024|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|April 16, 2024|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|July 31, 2023|  
 |Microsoft JDBC Driver 6.4 for SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|February 27, 2023|    
@@ -48,17 +49,18 @@ manager: jroth
   
 ## SQL Version Compatibility  
   
-|Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance (Extended Private Preview)|  
-|-|-|-|-|-|-|-|-|-|-|
-|7.2|N|Y|Y|Y|Y|Y|Y|Y|Y|  
-|7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
-|6.4|N|Y|Y|Y|Y|Y|Y|Y|Y|  
-|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
-|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
-|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|Azure SQL Managed Instance (Extended Private Preview)|  
+|-|-|-|-|-|-|-|-|-|-|-|
+|7.4|N|N|Y|Y|Y|Y|Y|Y|Y|Y|  
+|7.2|N|Y|Y|Y|Y|Y|Y|Y|N|Y|  
+|7.0|N|Y|Y|Y|Y|Y|Y|Y|N|Y|  
+|6.4|N|Y|Y|Y|Y|Y|Y|Y|N|Y|  
+|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|N|
+|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|N|
+|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|N|
+|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|N|
+|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|N|
+|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|N|
 |3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
 |2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
 |1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
@@ -80,6 +82,7 @@ manager: jroth
   
 |JDBC Driver Version|JRE Versions|JDBC API Version| 
 |-|-|-|  
+|7.4|1.8, 11, 12|4.2, 4.3 (partially)|
 |7.2|1.8, 11|4.2, 4.3 (partially)|
 |7.0|1.8, 10|4.2, 4.3 (partially)|
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (partially)|  

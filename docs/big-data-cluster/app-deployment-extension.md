@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
 author: jeroenterheerdt 
 ms.author: jterh
-ms.reviewer: jroth 
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual

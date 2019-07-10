@@ -9,8 +9,8 @@ ms.topic: conceptual
 keywords: 
   - "install sql server powershell, download sql server powershell"
 ms.assetid: 
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Install SQL Server PowerShell module

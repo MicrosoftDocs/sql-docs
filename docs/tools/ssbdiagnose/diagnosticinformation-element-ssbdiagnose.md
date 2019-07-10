@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "diagnosticinformation element"
   - "ssbdiagnose"
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # DiagnosticInformation Element (ssbdiagnose)

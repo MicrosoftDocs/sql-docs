@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Index element (DTA)"
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Index Element (DTA)

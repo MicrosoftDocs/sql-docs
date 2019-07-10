@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], command prompt"
   - "backing up [SQL Server], sqlmaint utility"
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # sqlmaint Utility

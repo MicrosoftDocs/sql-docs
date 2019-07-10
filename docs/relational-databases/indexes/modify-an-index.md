@@ -55,11 +55,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 #### To modify an index  
   
-1.  Connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  From the Standard bar, click **New Query**.  
-  
-3.  Copy and paste the following example into the query window and click **Execute**. This example drops and re-creates an existing index on the `ProductID` column of the `Production.WorkOrder` table by using the `DROP_EXISTING` option. The options `FILLFACTOR` and `PAD_INDEX` are also set.  
+The following example drops and re-creates an existing index on the `ProductID` column of the `Production.WorkOrder` table in the AdventureWorks database by using the `DROP_EXISTING` option. The options `FILLFACTOR` and `PAD_INDEX` are also set.  
   
      [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   

@@ -53,6 +53,7 @@ This article describes features supported by different editions of SQL Server 20
 |Time intelligence|Yes|Yes|||||Yes|  
 |Custom rollups|Yes|Yes|||||Yes|  
 |Writeback cube|Yes|Yes|||||Yes|  
+|Writeback dimensions|Yes|Yes|||||Yes|  
 |Writeback cells|Yes|Yes|||||Yes|  
 |Drillthrough|Yes|Yes|||||Yes|  
 |Advanced hierarchy types (parent-child and ragged hierarchies)|Yes|Yes|||||Yes|  

@@ -9043,7 +9043,7 @@
       - name: Install non-English SSMS
         href: ssms/install-other-languages.md
       - name: Use templates in SSMS
-        href: ssms/templates/templates-ssms.md
+        href: ssms/template/templates-ssms.md
       - name: Script objects
         href: ssms/tutorials/scripting-ssms.md
       - name: SSMS Configuration

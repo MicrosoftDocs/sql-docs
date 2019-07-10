@@ -3142,7 +3142,7 @@
         },
         {
             "source_path": "docs/whitepapers/introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md",
-            "redirect_url": "sql/whitepapers/microsoft-white-papers",
+            "redirect_url": "/sql/whitepapers/microsoft-white-papers",
             "redirect_document_id": true
         },
         {
@@ -4042,22 +4042,22 @@
         },
         {
             "source_path": "docs/relational-databases/server-management-objects-smo/how-to-create-a-visual-basic-smo-project-in-visual-studio-net.md",
-            "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
+            "redirect_url": "/sql/relational-databases/server-management-objects-smo/overview-smo",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-basic-net.md",
-            "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
+            "redirect_url": "/sql/relational-databases/server-management-objects-smo/overview-smo",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/server-management-objects-smo/sql-dmo-mapping-to-smo.md",
-            "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
+            "redirect_url": "/sql/relational-databases/server-management-objects-smo/overview-smo",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/relational-databases/server-management-objects-smo/system-requirements.md",
-            "redirect_url": "sql/relational-databases/server-management-objects-smo/overview-smo",
+            "redirect_url": "/sql/relational-databases/server-management-objects-smo/overview-smo",
             "redirect_document_id": false
         },
         {

@@ -1,6 +1,6 @@
 ---
 title: Run SQL Server Machine Learning Services in a Container | Microsoft Docs
-description: This tutorial show how to use SQL Server Machine Learning Services in a Linux container running on Docker.
+description: This tutorial shows you how to use SQL Server Machine Learning Services in a Linux container running on Docker.
 author: uc-msft
 ms.author: umajay
 manager: craigg
@@ -15,7 +15,7 @@ moniker: ">= sql-server-linux-ver15 || =sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This tutorial demonstrates how to build a Docker container with SQL Server Machine Learning Services & run Machine Learning Scripts from Transact-SQL.
+This tutorial demonstrates how to build a Docker container with SQL Server Machine Learning Services and run Machine Learning Scripts from Transact-SQL.
 
 > [!div class="checklist"]
 > * Clone the mssql-docker repository.
@@ -24,12 +24,12 @@ This tutorial demonstrates how to build a Docker container with SQL Server Machi
 > * Run R or Python scripts using Transact-SQL statements.
 > * Stop and remove the SQL Server Linux container. 
 
-## Pre-requisites
+## Prerequisites
 
 * Git command-line interface.
 * Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-* Minimum of 2 GB of disk space
-* Minimum of 2 GB of RAM
+* Minimum of 2 GB of disk space.
+* Minimum of 2 GB of RAM.
 * [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Clone the mssql-docker repository

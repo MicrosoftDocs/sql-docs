@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Replay Option (Distributed Replay Administration Tool)

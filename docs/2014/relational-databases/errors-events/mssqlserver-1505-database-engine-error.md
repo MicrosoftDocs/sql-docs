@@ -24,7 +24,7 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|DUP_KEY|  
-|Message Text|CREATE UNIQUE INDEX terminated because a duplicate key was found for object name '%.*ls' and index name '%.\*ls'.  The duplicate key value is %ls.|  
+|Message Text|CREATE UNIQUE INDEX terminated because a duplicate key was found for object name '%.\*ls' and index name '%.\*ls'.  The duplicate key value is %ls.|  
   
 ## Explanation  
  This error occurs when you attempt to create a unique index and more than one row in the table contains the specified duplicate value. A unique index is created when you create an index and specify the UNIQUE keyword, or when you create a UNIQUE constraint. The table cannot contain any rows that have duplicate values in the columns defined in the index or constraint.  
@@ -44,7 +44,7 @@ manager: craigg
   
  Error message 1505 returns the first row that violates the uniqueness constraint. There may be other duplicate rows in the table. To find all duplicate rows, query the specified table and use the GROUP BY and HAVING clauses to report the duplicate rows. For example, the following query returns the rows in the **Employee** table that have duplicate first and last names.  
   
- SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ SELECT LastName, FirstName, count(\*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
   
 ## User Action  
  Consider the following solutions.  

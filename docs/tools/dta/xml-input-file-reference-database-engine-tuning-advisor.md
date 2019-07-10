@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "input file reference [Database Engine Tuning Advisor]"
   - "XML input files [Database Engine Tuning Advisor]"
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # XML Input File Reference (Database Engine Tuning Advisor)

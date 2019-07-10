@@ -2,8 +2,9 @@
 title: Configure deployments
 titleSuffix: SQL Server big data clusters
 description: Learn how to customize a big data cluster deployment with configuration files.
-author: rothja 
-ms.author: jroth 
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual

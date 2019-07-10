@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.date: 02/28/2019

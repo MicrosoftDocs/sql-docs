@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "connection strings [Database Engine], TCP/IP"
   - "aliases [SQL Server], TCP/IP"
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---

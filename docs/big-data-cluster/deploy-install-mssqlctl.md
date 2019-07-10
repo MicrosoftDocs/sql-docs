@@ -2,8 +2,9 @@
 title: Install mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Learn how to install the mssqlctl tool for installing and managing SQL Server 2019 big data clusters (preview).
-author: rothja 
-ms.author: jroth 
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/28/2019
 ms.topic: conceptual

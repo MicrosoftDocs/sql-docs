@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "File element"
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # File Element (DTA)

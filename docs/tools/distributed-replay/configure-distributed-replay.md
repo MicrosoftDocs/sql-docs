@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Configure Distributed Replay

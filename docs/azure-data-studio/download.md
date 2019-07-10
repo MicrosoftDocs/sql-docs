@@ -9,7 +9,7 @@ author: "markingmyname"
 ms.author: "maghan"
 manager: jroth
 ms.custom: "seodec18"
-ms.date: "07/10/2019"
+ms.date: "07/11/2019"
 ms.reviewer: "alayu; sstein"
 ---
 
@@ -25,9 +25,9 @@ Download and install the latest release, the *July Release*:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2098449)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2098450)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2098500)|July 10, 2019 |1.9.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2098501)|July 10, 2019 |1.9.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2098279)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2098280)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2098197)|July 10, 2019 |1.9.0|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2098449)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2098450)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2098500)|July 11, 2019 |1.9.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2098501)|July 11, 2019 |1.9.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2098279)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2098280)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2098197)|July 11, 2019 |1.9.0|
 
 For details about the latest release, see the [release notes](release-notes.md).
 

@@ -10,7 +10,7 @@ ms.author: "maghan"
 manager: jroth
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "07/10/2019"
+ms.date: "07/11/2019"
 ---
 
 # Release notes for Azure Data Studio
@@ -19,7 +19,7 @@ ms.date: "07/10/2019"
 
 ## July 2019
 
-July 10, 2019 &nbsp; / &nbsp; version: 1.9.0 
+July 11, 2019 &nbsp; / &nbsp; version: 1.9.0 
 
 &nbsp;
 

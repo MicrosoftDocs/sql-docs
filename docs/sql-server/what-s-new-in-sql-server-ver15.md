@@ -70,7 +70,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
 | Multiple compute pool instances | Support for multiple compute pool instances. |
-| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
+| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
 | External table improvements | External tables of HADOOP data source type now supports reading rows up to 1 MB in size. External tables (ODBC, storage pool, data pool) now support rows as wide as a SQL Server table. |
 | &nbsp; | &nbsp; |
 
@@ -313,7 +313,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |Expanded support for persistent memory devices.|[Hybrid Buffer Pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
 |Support for columnstore statistics in `DBCC CLONEDATABASE`|[Stats blob for columnstore indexes](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
 |`sp_estimate_data_compression_savings` introduces `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`.|[Considerations for Columnstore Indexes](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
-|Machine Learning services supported on Windows Server Failover Cluster. |[ What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
+|Machine Learning services supported on Windows Server Failover Cluster. |[What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
 |Machine Learning support for partition-based modeling.|[What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
 |Lightweight query profiling infrastructure enabled by default |[Lightweight query execution statistics profiling infrastructure v3](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
 |New PolyBase connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB. |[What is PolyBase?](../relational-databases/polybase/polybase-guide.md) |

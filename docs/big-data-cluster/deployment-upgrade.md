@@ -2,8 +2,9 @@
 title: Upgrade to a new release
 titleSuffix: SQL Server big data clusters
 description: Learn how to upgrade SQL Server 2019 big data clusters (preview) to a new release.
-author: rothja 
-ms.author: jroth 
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual

@@ -1,13 +1,12 @@
 ---
 title: "Configure PolyBase to access external data in Teradata | Microsoft Docs"
-ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---

@@ -62,7 +62,9 @@ manager: craigg
 4.  In the **Database files** grid, select the file to delete and then click **Remove**.  
   
 5.  Click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To delete data or log files from a database  

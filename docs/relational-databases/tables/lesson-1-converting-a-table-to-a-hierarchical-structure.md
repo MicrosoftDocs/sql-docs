@@ -36,22 +36,25 @@ The sample Adventureworks2017 (or later) database contains an **Employee** table
 ### Copy the Employee table  
   
 1.  In a Query Editor window, run the following code to copy the table structure and data from the **Employee** table into a new table named **EmployeeDemo**. Since the original table already uses hierarchyid, this query essentially flattens the hierarchy to retrieve the manager of the employee. In subsequent parts of this lesson we will be reconstructing this hierarchy.
-  
-    ```sql  
-    USE AdventureWorks2017;  
-    GO  
-      if OBJECT_ID('HumanResources.EmployeeDemo') is not null
-     drop table HumanResources.EmployeeDemo 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+
+   ```sql  
+   USE AdventureWorks2017;  
+   GO  
+     if OBJECT_ID('HumanResources.EmployeeDemo') is not null
+    drop table HumanResources.EmployeeDemo 
 
     SELECT emp.BusinessEntityID AS EmployeeID, emp.LoginID, 
-      (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
-		    WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
-			    (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID,
-           emp.JobTitle, emp.HireDate
-    INTO HumanResources.EmployeeDemo   
-    FROM HumanResources.Employee emp ;
-    GO
-    ```  
+     (SELECT  man.BusinessEntityID FROM HumanResources.Employee man 
+	    WHERE emp.OrganizationNode.GetAncestor(1)=man.OrganizationNode OR 
+		    (emp.OrganizationNode.GetAncestor(1) = 0x AND man.OrganizationNode IS NULL)) AS ManagerID,
+          emp.JobTitle, emp.HireDate
+   INTO HumanResources.EmployeeDemo   
+   FROM HumanResources.Employee emp ;
+   GO
+   ```  
   
 ### Examine the structure and data of the EmployeeDemo table  
   

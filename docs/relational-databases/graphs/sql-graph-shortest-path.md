@@ -89,7 +89,7 @@ Whereas, last node is the last Nth node in the output graph path for this patter
 This function returns the sum of provided node/edge attribute values or expression that appeared in the traversed path.
 
 ### COUNT
-This function returns the number of non-null values of the desired node/edge attribute in the path. The COUNT function supports the '*' operator with a node or edge table alias. Without the node or edge table alias, the usage of * is ambiguous and will result in an error.
+This function returns the number of non-null values of the desired node/edge attribute in the path. The COUNT function supports the '\*' operator with a node or edge table alias. Without the node or edge table alias, the usage of \* is ambiguous and will result in an error.
 
 	{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

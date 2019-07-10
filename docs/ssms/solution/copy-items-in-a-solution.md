@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Copy Items in a Solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

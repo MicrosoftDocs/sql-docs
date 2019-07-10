@@ -30,7 +30,7 @@ In the following task, you review the deployment properties of the [!INCLUDE[ssA
     Review the deployment properties for the project. By default, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Project template configures an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project to incrementally deploy all projects to the default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on the local computer, to create an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database with the same name as the project, and to process the objects after deployment by using the default processing option. For more information, see [Configure Analysis Services Project Properties &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > If you want to deploy the project to a named instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on the local computer, or to an instance on a remote server, change the **Server** property to the appropriate instance name, such as \<*ServerName**>\\<**InstanceName**>*.  
+    > If you want to deploy the project to a named instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] on the local computer, or to an instance on a remote server, change the **Server** property to the appropriate instance name, such as \<**ServerName**>\\\<**InstanceName**>.  
   
 3.  Click **OK**.  
   

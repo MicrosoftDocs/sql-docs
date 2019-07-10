@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "events [SQL Server], replaying traces"
   - "Profiler [SQL Server Profiler], replaying traces"
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Replay Traces

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "sys.dm_geo_replication_links dynamic management view"
   - "dm_geo_replication_links dynamic management view"
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

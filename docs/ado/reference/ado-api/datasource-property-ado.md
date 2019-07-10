@@ -21,7 +21,7 @@ manager: jroth
 Indicates an object that contains data to be represented as a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  
   
 ## Remarks  
- This property is used to create data-bound controls with the Data Environment. The Data Environment maintains collections of data (data sources) containing named objects (data members) that will be represented as a **Recordset** object*.*  
+ This property is used to create data-bound controls with the Data Environment. The Data Environment maintains collections of data (data sources) containing named objects (data members) that will be represented as a **Recordset** object.  
   
  The [DataMember](../../../ado/reference/ado-api/datamember-property.md) and **DataSource** properties must be used in conjunction.  
   

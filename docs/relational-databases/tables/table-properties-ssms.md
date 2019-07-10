@@ -33,7 +33,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  [File Table Page](#FileTable)  
   
 4.  [Storage Page](#Storage)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="GeneralPage"></a> General Page  
  **Database**  
  The name of the database containing this table.  

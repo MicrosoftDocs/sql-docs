@@ -35,7 +35,9 @@ The DBCC CHECKDB process consists of the following three stages:
 2.  System tables consistency checks. This is equivalent to running DBCC CHECKTABLE on a small list of necessary system base tables.  
   
 3.  Complete database consistency checks.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 MSSQLEngine_7995 is raised in stage 2 to indicate that DBCC CHECKDB has found errors that the command cannot repair or that REPAIR has not been specified. DBCC CHECKDB cannot continue with stage 3 because either the system base tables in question store the metadata for all objects in the database or the system base tables are corrupted.  
   
 ## User Action  

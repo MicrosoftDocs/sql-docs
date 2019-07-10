@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Enlist a Target Server to a Master Server

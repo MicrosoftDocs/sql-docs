@@ -48,7 +48,9 @@ manager: craigg
 3.  Right-click the audit log that you want to view and select **View Audit Logs**. This opens the **Log File Viewer -**_server\_name_ dialog box. For more information, see [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
 4.  When finished, click **Close**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommends viewing the audit log by using the Log File Viewer. However, if you are creating an automated monitoring system, the information in the audit file can be read directly by using the [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) function. Reading the file directly returns data in a slightly different (unprocessed) format. See **sys.fn_get_audit_file** for more information.  
   
 ## See Also  

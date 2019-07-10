@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 ---
 # Work with Database Diagrams (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

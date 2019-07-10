@@ -100,7 +100,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
      Enter the maximum percentage of free space to be left in the database files after the database has been shrunk. Permissible values are between 0 and 99.  
   
 4.  Click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To shrink a database  

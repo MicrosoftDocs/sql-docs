@@ -1,15 +1,14 @@
 ---
 title: "Install PolyBase on Windows | Microsoft Docs"
-ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords: 
    - "PolyBase, installation"
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
@@ -85,6 +84,8 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
      This option also enables Microsoft Distributed Transaction Coordinator (MSDTC) firewall connections and modifies MSDTC registry settings.  
    
 6. On the PolyBase Configuration page, specify a port range with at least six ports. SQL Server setup  allocates the first six available ports from the range.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > After installation, you must [enable the PolyBase feature](#enable).

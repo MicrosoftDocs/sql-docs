@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "unique resource names"
   - "URN"
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Query Expressions and Uniform Resource Names

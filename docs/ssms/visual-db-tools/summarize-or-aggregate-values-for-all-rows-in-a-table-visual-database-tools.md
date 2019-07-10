@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)

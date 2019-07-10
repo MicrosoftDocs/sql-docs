@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a PowerShell Script Job Step

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "stopping traces"
   - "starting traces"
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Start a Trace

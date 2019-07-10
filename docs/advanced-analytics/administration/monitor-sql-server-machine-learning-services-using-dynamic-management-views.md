@@ -191,7 +191,7 @@ The query returns the following columns:
 |--------|-------------|
 | physical_memory_kb | The total amount of physical memory on the machine. |
 | committed_kb | The committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. |
-| external_pool_peak_memory_kb | The sum of the The maximum amount of memory used, in kilobytes, for all external resource pools. |
+| external_pool_peak_memory_kb | The sum of the maximum amount of memory used, in kilobytes, for all external resource pools. |
 
 ## Memory configuration
 

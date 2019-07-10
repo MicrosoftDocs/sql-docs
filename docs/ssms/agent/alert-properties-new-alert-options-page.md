@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Alert Properties - New Alert (Options Page)

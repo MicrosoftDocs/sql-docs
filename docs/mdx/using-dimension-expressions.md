@@ -53,7 +53,7 @@ manager: kfile
   
  `FROM [Adventure Works]`  
   
- A hierarchy identifier appears as *Dimension_Name**.**Hierarchy_Name* in the BNF notation used to describe MDX statements.  
+ A hierarchy identifier appears as *Dimension_Name.Hierarchy_Name* in the BNF notation used to describe MDX statements.  
   
 ## See Also  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  

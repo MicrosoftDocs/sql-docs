@@ -22,7 +22,7 @@ helpviewer_keywords:
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+manager: jroth
 ms.reviewer: "sstein"
 ---
 # Tutorials for SQL Server Management Studio (SSMS)

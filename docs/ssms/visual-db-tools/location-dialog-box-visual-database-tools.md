@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Location Dialog Box (Visual Database Tools)

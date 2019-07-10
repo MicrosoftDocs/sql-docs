@@ -12,7 +12,7 @@ ms.topic: conceptual
 ms.assetid: ""
 caps.latest.revision: ""
 author: rene-ye
-ms.author: ""
+ms.author: v-reye
 manager: kenvh
 ---
 # Retrieving ParameterMetaData via useFmtOnly
@@ -20,7 +20,7 @@ manager: kenvh
 
   The Microsoft JDBC Driver for SQL Server includes an alternative way to query Parameter Metadata from the server, **useFmtOnly**. This feature was first introduced in version 7.4 of the driver, and is required as a workaround for known issues in `sp_describe_undeclared_parameters`.
   
-  The driver primarily uses `sp_describe_undeclared_parameters` to query Parameter Metadata, and this stored procedure is the recommended approach for Parameter Metadata retrieval under most circumstances. However, executing the stored procedure currently fails under the following use cases:
+  The driver primarily uses the stored procedure `sp_describe_undeclared_parameters` to query Parameter Metadata, as this is the recommended approach for Parameter Metadata retrieval under most circumstances. However, executing the stored procedure currently fails under the following use cases:
   
 -   Against Always Encrypted columns
   
@@ -28,7 +28,7 @@ manager: kenvh
   
 -   Against views 
   
-  The proposed solution for these use cases is to parse the user's sql query for parameters and table targets, then execute a `SELECT` query with `FMTONLY` enabled. The following snippet will help visualize the feature.
+  The proposed solution for these use cases is to parse the user's SQL query for parameters and table targets, then execute a `SELECT` query with `FMTONLY` enabled. The following snippet will help visualize the feature.
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'
@@ -132,7 +132,7 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo) WHERE c1 = ?; --Incorrect syntax near '
 UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
-## See Also  
+## See also  
  [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

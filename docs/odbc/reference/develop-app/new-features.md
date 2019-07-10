@@ -19,7 +19,7 @@ ms.author: genemi
 manager: craigg
 ---
 # New Features
-The following new functionality has been introduced in ODBC 3.*x*. An ODBC 3.*x* application working with an ODBC 2*.x* driver will not be able to use this functionality. The ODBC 3.*x* Driver Manager does not map these features when working with an ODBC 2*.x* driver.  
+The following new functionality has been introduced in ODBC *3.x*. An ODBC *3.x* application working with an ODBC *2.x* driver will not be able to use this functionality. The ODBC *3.x* Driver Manager does not map these features when working with an ODBC *2.x* driver.  
   
 -   Functions that take a descriptor handle as an argument: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, and **SQLCopyDesc**.  
   
@@ -75,7 +75,7 @@ The following new functionality has been introduced in ODBC 3.*x*. An ODBC 3.*x*
   
 -   Named parameters.  
   
--   Any of the ODBC 3.*x*-specific **SQLGetInfo** options. (If an ODBC 3.*x* application working with an ODBC 2.*x* driver calls the SQL_XXX_CURSOR_ATTRIBUTES1 information types, which have replaced several ODBC 2.*x* information types, some of the information might be reliable, but some might be unreliable. For more information, see [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Any of the ODBC *3.x*-specific **SQLGetInfo** options. (If an ODBC *3.x* application working with an ODBC *2.x* driver calls the SQL_XXX_CURSOR_ATTRIBUTES1 information types, which have replaced several ODBC *2.x* information types, some of the information might be reliable, but some might be unreliable. For more information, see [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Bind offsets.  
   
@@ -97,7 +97,7 @@ The following new functionality has been introduced in ODBC 3.*x*. An ODBC 3.*x*
   
 -   Use of **SQLDescribeCol** and **SQLColAttribute** on column 0.  
   
--   Use of any ODBC 3.*x*-specific column attributes in a call to **SQLColAttribute**.  
+-   Use of any ODBC *3.x*-specific column attributes in a call to **SQLColAttribute**.  
   
 -   Use of multiple environment handles.  
   

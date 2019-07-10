@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "sys.resource_stats"
   - "resource_stats"
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-author: CarlRabeler
-ms.author: "carlrab"
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], creating"
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Create a Trace (SQL Server Profiler)

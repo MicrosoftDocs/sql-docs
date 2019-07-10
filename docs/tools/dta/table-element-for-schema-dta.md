@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Table element [DTA]"
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Table Element for Schema (DTA)

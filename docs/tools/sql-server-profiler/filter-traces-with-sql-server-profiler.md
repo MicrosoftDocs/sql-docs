@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "filters [SQL Server], traces"
   - "traces [SQL Server], filters"
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Filter Traces with SQL Server Profiler

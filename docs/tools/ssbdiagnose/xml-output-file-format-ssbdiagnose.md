@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "XML output file format [ssbdiagnose]"
   - "ssbdiagnose"
 ms.assetid: 3ceb991b-6f15-4504-8828-de5adf448bc5
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # XML Output File Format (ssbdiagnose)

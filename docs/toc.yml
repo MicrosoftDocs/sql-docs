@@ -917,7 +917,7 @@
           items:
           - name: Set up
             href: database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md
-          - name: Prepare a a database
+          - name: Prepare a database
             href: database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md
           - name: Set up encryption
             href: database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md
@@ -1338,7 +1338,7 @@
     items:
     - name: Heaps (Tables without Clustered Indexes)
       href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-    - name: Clustered & Nonclustered Indexes Described
+    - name: Clustered & Nonclustered Indexes
       href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
       items:
       - name: Create
@@ -9058,7 +9058,7 @@
         items:
         - name: Get full memory dump 
           href: ssms/troubleshoot/get-full-memory-dump.md
-        - name: Crashes and Hangs
+        - name: Get diagnostic data
           href: ssms/troubleshoot/ssms-troubleshoot.md
       - name: SQL Server Agent
         items:

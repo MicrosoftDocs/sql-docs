@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "Service Broker, ssbdiagnose utility"
   - "ssbdiagnose"
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # ssbdiagnose Utility (Service Broker)

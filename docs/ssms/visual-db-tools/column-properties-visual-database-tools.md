@@ -16,7 +16,7 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Column Properties (Visual Database Tools)

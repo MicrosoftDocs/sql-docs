@@ -2,14 +2,14 @@
 title: Deployment guidance
 titleSuffix: SQL Server big data clusters
 description: Learn how to deploy SQL Server 2019 big data clusters (preview) on Kubernetes.
-author: rothja 
-ms.author: jroth 
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # How to deploy SQL Server big data clusters on Kubernetes

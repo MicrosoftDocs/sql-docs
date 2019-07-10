@@ -47,7 +47,7 @@ MSDTC is called by the SQL Server Native Client driver for Open Database Connect
 3. The application updates some data on SQL Server Y on computer B.
     - If an update on SQL Server Y fails, all the uncommitted updates on both SQL Server instances are rolled back.
 
-4. Finally, the the application ends the transaction by calling [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), with either the SQL_COMMIT or SQL_ROLLBACK option.
+4. Finally, the application ends the transaction by calling [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), with either the SQL_COMMIT or SQL_ROLLBACK option.
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

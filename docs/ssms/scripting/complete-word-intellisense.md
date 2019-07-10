@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Complete Word (IntelliSense)

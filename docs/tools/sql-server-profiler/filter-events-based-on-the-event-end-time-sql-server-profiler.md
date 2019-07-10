@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
   - "traces [SQL Server], events"
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Filter Events Based on the Event End Time (SQL Server Profiler)

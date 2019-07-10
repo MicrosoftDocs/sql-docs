@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Create UNION Queries (Visual Database Tools)

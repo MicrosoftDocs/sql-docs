@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: dineth, sstein
 ms.custom: ""
 ms.date: 05/17/2019

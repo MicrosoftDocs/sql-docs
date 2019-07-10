@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete an Operator

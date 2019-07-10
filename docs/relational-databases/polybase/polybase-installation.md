@@ -1,15 +1,14 @@
 ---
 title: "Install PolyBase on Windows | Microsoft Docs"
-ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords: 
    - "PolyBase, installation"
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---

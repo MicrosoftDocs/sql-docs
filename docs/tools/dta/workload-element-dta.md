@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Workload element"
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Workload Element (DTA)

@@ -8,7 +8,7 @@ ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
-author: "haoqian"
+author: "HaoQian-MS"
 ms.author: "haoqian"
 ms.reviewer: maghan
 manager: craigg

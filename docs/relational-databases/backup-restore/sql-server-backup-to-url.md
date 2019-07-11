@@ -213,9 +213,6 @@ You can back up a database to URL through the Back Up task in SQL Server Managem
 2.  Expand **Databases**, right-click the desired database, point to **Tasks**, and then click **Back Up...**.
   
 3.  On the **General** page in the **Destination** section the **URL** option is available in the **Back up to:** drop-down list.  The **URL** option is used to create a backup to Microsoft Azure storage. Click **Add** and the **Select Backup Destination** dialog box will open:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  **Azure storage container:** The name of the Microsoft Azure storage container to store the backup files.  Select an existing container from the drop-down list or manually enter the container. 
   
     2.  **Shared Access Policy:** Enter the shared access signature for a manually entered container.  This field is not available if an existing container was chosen. 
@@ -223,11 +220,13 @@ You can back up a database to URL through the Back Up task in SQL Server Managem
     3.  **Backup File:** Name of the backup file.
     
     4.  **New Container:** Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
-  
+
 > [!NOTE] 
 >  **Add** supports multiple backup files and storage containers for a single media set.
-  
- When you select **URL** as the destination, certain options in the **Media Options** page are disabled.  The following topics have more information on the Back Up Database dialog:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+When you select **URL** as the destination, certain options in the **Media Options** page are disabled.  The following topics have more information on the Back Up Database dialog:  
   
  [Back Up Database &#40;General Page&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   

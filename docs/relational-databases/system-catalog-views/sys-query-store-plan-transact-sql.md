@@ -63,8 +63,11 @@ First, if the plan contains following constructions:
 * Reference to an external table
 * Distributed query or full-text operations
 * Use of Global queries 
-* Dynamic or keyset cursors (plan forcing is supported for static and fast forward cursors)
+* Dynamic or keyset cursors 
 * Invalid star join specification 
+
+> [!NOTE]
+> Azure SQL Database and SQL Server 2019 (preview) support plan forcing for static and fast forward cursors.
 
 Second, when objects that plan relies on, are no longer available:
 * Database (if Database, where plan originated, does not exist anymore)

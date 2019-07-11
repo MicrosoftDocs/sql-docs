@@ -145,9 +145,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns** returns the results as a standard result set, ordered by SCOPE.  
   
- The following columns have been renamed for ODBC 3*.x*. The column name changes do not affect backward compatibility because applications bind by column number.  
+ The following columns have been renamed for ODBC *3.x*. The column name changes do not affect backward compatibility because applications bind by column number.  
   
-|ODBC 2.0 column|ODBC 3*.x* column|  
+|ODBC 2.0 column|ODBC *3.x* column|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # SQLAllocStmt Mapping
-When an application calls **SQLAllocStmt** through an ODBC 3*.x* driver, the call to:  
+When an application calls **SQLAllocStmt** through an ODBC *3.x* driver, the call to:  
   
 ```  
 SQLAllocStmt(hdbc, phstmt)  

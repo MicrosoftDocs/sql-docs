@@ -9043,11 +9043,13 @@
       - name: Install non-English SSMS
         href: ssms/install-other-languages.md
       - name: Use templates in SSMS
-        href: ssms/tutorials/templates-ssms.md
+        href: ssms/template/templates-ssms.md
       - name: Script objects
         href: ssms/tutorials/scripting-ssms.md
       - name: SSMS Configuration
         href: ssms/tutorials/ssms-configuration.md
+      - name: Use other tips & tricks
+        href: ssms/tutorials/ssms-tricks.md
       - name: Customize Menus & Shortcut Keys
         href: ssms/customize-menus-and-shortcut-keys.md
       - name: Configure WMI to Show Server Status in SQL Server Tools

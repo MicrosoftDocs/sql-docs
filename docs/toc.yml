@@ -9963,8 +9963,6 @@
           href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Resources
       items:
-      - name: SQL Server Management Studio
-        href: ssms/tutorials/tutorial-sql-server-management-studio.md
       - name: SSMS Support Policy
         href: ssms/support-policy.md
       - name: Support options for business users

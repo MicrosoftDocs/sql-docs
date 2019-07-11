@@ -10212,7 +10212,7 @@
     - name: Configure replication
       href: linux/sql-server-linux-replication-tutorial-tsql.md
     - name: Machine learning in a container
-      href: linux/sql-server-linux-machine-learning-services.md
+      href: linux/sql-server-linux-machine-learning-services-container.md
   - name: Concepts
     items:
     - name: Install

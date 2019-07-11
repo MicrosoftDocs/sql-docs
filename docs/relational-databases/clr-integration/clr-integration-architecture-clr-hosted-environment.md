@@ -102,8 +102,40 @@ manager: craigg
   
  Managed code runs preemptively in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scheduler has the ability to detect and stop threads that have not yielded for a significant amount of time. The ability to hook CLR threads to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] threads implies that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scheduler can identify "runaway" threads in the CLR and manage their priority. Such runaway threads are suspended and put back in the queue. Threads that are repeatedly identified as runaway threads are not allowed to run for a given period of time so that other executing workers can run.  
   
-> [!NOTE]  
->  Long-running managed code that accesses data or allocates enough memory to trigger garbage collection will yield automatically. Long-running managed code that does not access data or allocate enough managed memory to trigger garbage collection should explicitly yield by calling the System.Thread.Sleep() function of the .NET Framework.  
+ There are some situations where long-running managed code will yield automatically, and some situations where it will not. In the following situations, long-running managed code will yield automatically:
+ 
+ - If the code calls the SQL OS (to query data for example)
+ - If enough memory is allocated to trigger garbage collection
+ - If the code enters preemptive mode by calling OS functions
+
+ Code that doesn't do any of the above, for example tight loops that contain computation only, will not automatically yield the scheduler, which can lead to long waits for other workloads in the system. In these situations, it is up to the developer to explicitly yield by calling the System.Thread.Sleep() function of the .NET Framework, or by explicitly entering preemtive mode with System.Thread.BeginThreadAffinity(), in any sections of code that are anticipated to be long-running. The following code examples show how to manually yield using each of these methods.
+
+ ```c#
+// Example 1: Manually yield to SOS scheduler.
+for (int i = 0; i < Int32.MaxValue; i++)
+{
+  // *Code that does compute-heavy operation, and does not call into
+  // any OS functions.*
+
+  // Manually yield to the scheduler regularly after every few cycles.
+  if (i % 1000 == 0)
+  {
+    Thread.Sleep(0);
+  }
+}
+ ```
+
+```c#
+// Example 2: Use ThreadAffinity to run preemptively.
+// Within BeginThreadAffinity/EndThreadAffinity the CLR code runs in preemptive mode.
+Thread.BeginThreadAffinity();
+for (int i = 0; i < Int32.MaxValue; i++)
+{
+  // *Code that does compute-heavy operation, and does not call into
+  // any OS functions.*
+}
+Thread.EndThreadAffinity();
+```
   
 ###### Scalability: Common memory management  
  The CLR calls [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primitives for allocating and de-allocating its memory. Because the memory used by the CLR is accounted for in the total memory usage of the system, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can stay within its configured memory limits and ensure the CLR and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are not competing with each other for memory. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can also reject CLR memory requests when system memory is constrained, and ask CLR to reduce its memory use when other tasks need memory.  

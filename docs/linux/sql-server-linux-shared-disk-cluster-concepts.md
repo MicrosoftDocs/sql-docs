@@ -1,9 +1,10 @@
 ---
-title: Failover Cluster Instances - SQL Server on Linux | Microsoft Docs
+title: Failover Cluster Instances - SQL Server on Linux
 description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql

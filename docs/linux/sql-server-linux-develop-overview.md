@@ -1,9 +1,9 @@
 ---
-title: Develop applications for SQL Server on Linux | Microsoft Docs
+title: Develop applications for SQL Server on Linux
 description: 
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
+manager: jroth
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql

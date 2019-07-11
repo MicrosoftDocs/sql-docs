@@ -4,7 +4,8 @@ titleSuffix: SQL Server
 description: This article introduces availability groups on SQL Server containers
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql

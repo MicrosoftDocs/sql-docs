@@ -1,6 +1,6 @@
 ---
-title: "Analysis Services Features Supported by the Editions of SQL Server | Microsoft Docs"
-ms.date: 07/09/2019
+title: "Analysis Services features supported by the editions of SQL Server | Microsoft Docs"
+ms.date: 07/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -11,6 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Analysis Services features supported by SQL Server edition
+
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 This article describes features supported by different editions of SQL Server 2016, 2017, 2019 Analysis Services. Evaluation edition supports Enterprise edition features.
@@ -44,7 +45,7 @@ This article describes features supported by different editions of SQL Server 20
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Semi-additive measures|Yes|No <sup>1</sup>|||||Yes|  
+|Semi-additive measures|Yes|No <sup>[1](#sameas)</sup>|||||Yes|  
 |Hierarchies|Yes|Yes|||||Yes|  
 |KPIs|Yes|Yes|||||Yes|  
 |Perspectives|Yes||||||Yes|  
@@ -53,12 +54,12 @@ This article describes features supported by different editions of SQL Server 20
 |Time intelligence|Yes|Yes|||||Yes|  
 |Custom rollups|Yes|Yes|||||Yes|  
 |Writeback cube|Yes|Yes|||||Yes|  
-|Writeback dimensions|Yes|Yes|||||Yes|  
+|Writeback dimensions|Yes <sup>[2](#wb)</sup>||||||Yes <sup>[2](#wb)</sup>|  
 |Writeback cells|Yes|Yes|||||Yes|  
 |Drillthrough|Yes|Yes|||||Yes|  
 |Advanced hierarchy types (parent-child and ragged hierarchies)|Yes|Yes|||||Yes|  
 |Advanced dimensions (reference dimensions, many-to-many dimensions)|Yes|Yes|||||Yes|  
-|Linked measures and dimensions|Yes|Yes  <sup>2</sup> |||||Yes|  
+|Linked measures and dimensions|Yes|Yes  <sup>[3](#linkmd)</sup> |||||Yes|  
 |Translations|Yes|Yes|||||Yes|  
 |Aggregations|Yes|Yes|||||Yes|  
 |Multiple partitions|Yes|Yes, up to 3|||||Yes|  
@@ -74,8 +75,12 @@ This article describes features supported by different editions of SQL Server 20
 |Push-mode processing|Yes||||||Yes|  
 |Measure expressions|Yes||||||Yes|  
   
- <sup>1</sup> The LastChild semi-additive measure is supported in Standard edition, but other semi-additive measures, such as None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren, and ByAccount, are not. Additive measures, such as Sum, Count, Min, Max, and non-additive measures (DistinctCount) are supported on all editions.  
-  <sup>2</sup> Standard edition supports linking measures and dimensions within the same database, but not from other databases or instances.
+<a name="sameas">[1]</a> The LastChild semi-additive measure is supported in Standard edition, but other semi-additive measures, such as None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren, and ByAccount, are not. Additive measures, such as Sum, Count, Min, Max, and non-additive measures (DistinctCount) are supported on all editions. 
+
+<a name="wb">[2]</a> Writeback dimensions are discontinued in SQL Server Analysis Services 2019 and later.
+ 
+<a name="linkmd">[3]</a> Standard edition supports linking measures and dimensions within the same database, but not from other databases or instances.
+  
   
 ## Power Pivot for SharePoint  
   
@@ -89,6 +94,9 @@ This article describes features supported by different editions of SQL Server 20
 |Power Pivot data feeds|Yes||||||Yes|  
   
 ## Data Mining  
+
+> [!NOTE]
+> Data mining is [deprecated](analysis-services-backward-compatibility-sql2017.md#deprecated-features) in SQL Server Analysis Services 2017.
   
 |Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  

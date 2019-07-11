@@ -49,7 +49,7 @@ manager: craigg
   
 ## B  
  **behavioral change**  
- A change in certain functionality from ODBC 3*.x* behavior to ODBC 2.*x* behavior, or vice versa. Caused by changing the SQL_ATTR_ODBC_VERSION environment attribute.  
+ A change in certain functionality from ODBC *3.x* behavior to ODBC *2.x* behavior, or vice versa. Caused by changing the SQL_ATTR_ODBC_VERSION environment attribute.  
   
  **Binary large object (BLOB)**  
  Any binary data over a certain number of bytes, such as 255. Typically much longer. Such data is generally sent to and retrieved from the data source in parts. Also known as *long data*.  

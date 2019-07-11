@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # SQLError Mapping
-When an application calls **SQLError** through an ODBC 3*.x* driver, the call to  
+When an application calls **SQLError** through an ODBC *3.x* driver, the call to  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   

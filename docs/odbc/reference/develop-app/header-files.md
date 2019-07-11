@@ -19,7 +19,7 @@ The Sql.h header file contains prototypes for the functions and features in the 
   
  The header files all contain a **#define**, ODBCVER, that an application or driver can set to be compiled for different versions of ODBC.  
   
- To align with the ISO CLI and Open Group CLI, the header files contain aliases for the information types used in calls to **SQLGetInfo**. In the following table, the column "ODBC name" indicates the ODBC name for the information type in [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md). The column "Alias in header file" indicates the name that is used in the ISO CLI and the Open Group CLI. The actual numeric value of these manifest names is the same in both ODBC and the standard CLIs. These aliases enable a standards-compliant application or driver to compile with the ODBC 3*.x* header files.  
+ To align with the ISO CLI and Open Group CLI, the header files contain aliases for the information types used in calls to **SQLGetInfo**. In the following table, the column "ODBC name" indicates the ODBC name for the information type in [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md). The column "Alias in header file" indicates the name that is used in the ISO CLI and the Open Group CLI. The actual numeric value of these manifest names is the same in both ODBC and the standard CLIs. These aliases enable a standards-compliant application or driver to compile with the ODBC *3.x* header files.  
   
  These aliases include expansions of abbreviations in the ODBC names so that the names are more understandable. "MAX" is expanded to "MAXIMUM", "LEN" to "LENGTH", "MULT" to "MULTIPLE", "OJ" to "OUTER_JOIN", and "TXN" to "TRANSACTION."  
   

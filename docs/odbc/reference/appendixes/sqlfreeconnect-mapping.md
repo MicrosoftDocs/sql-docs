@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # SQLFreeConnect Mapping
-When an application calls **SQLFreeConnect** through an ODBC 3*.x* driver, the call to  
+When an application calls **SQLFreeConnect** through an ODBC *3.x* driver, the call to  
   
 ```  
 SQLFreeConnect(hdbc)   

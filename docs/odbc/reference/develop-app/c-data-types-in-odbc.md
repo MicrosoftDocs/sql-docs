@@ -21,7 +21,7 @@ ODBC defines the C data types that are used by application variables and their c
   
  ODBC also defines a default mapping from each SQL data type to a C data type. For example, a 2-byte integer in the data source is mapped to a 2-byte integer in the application. To use the default mapping, an application specifies the SQL_C_DEFAULT type identifier. However, use of this identifier is discouraged for interoperability reasons.  
   
- All integer C data types defined in ODBC 1*.x* were signed. Unsigned C data types and their corresponding type identifiers were added in ODBC 2.0. Because of this, applications and drivers need to be particularly careful when dealing with 1*.x* versions.  
+ All integer C data types defined in ODBC *1.x* were signed. Unsigned C data types and their corresponding type identifiers were added in ODBC 2.0. Because of this, applications and drivers need to be particularly careful when dealing with *1.x* versions.  
   
 ## C Data Type Extensibility  
  In ODBC 3.8, you can specify driver-specific C data types. This enables you to bind a SQL type as a driver-specific C type in ODBC applications when you call [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), or [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). This can be useful for supporting new server types, because existing C data types might not correctly represent the new server data types. Using driver-specific C types can increase the number of conversions that drivers can perform.  

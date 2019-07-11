@@ -138,21 +138,24 @@ The following section teaches you to script out the database by using the **Scri
 
       * **Script Statistics** set to *Script Statistics*.
       * **Types of data to script** set to *Schema only*.
-      *- **Script Indexes** set to *True*.
+      * **Script Indexes** set to *True*.
 
    ![Script objects](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
    > You can script the data for the database when you select *Schema and data* for the **Types of data to script** option. However, this isn't ideal with large databases. It can take more memory than SSMS can allocate. This limitation is okay for small databases. If you want to move data for a larger database, use the [Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-1. Select **OK**, and then select **Next**.
-2. Select **Next** on the **Summary**. Then select **Next** again to generate the script in a **New Query** window. 
-3. On your keyboard, open the **Find** dialog box (Ctrl+F). Select the down arrow to open the **Replace** option. On the top **Find** line, enter *AdventureWorks2016*. On the bottom **Replace** line, enter *AdventureWorks2016b*. 
-4. Select **Replace All** to replace all instances of *AdventureWorks2016* with *AdventureWorks2016b*. 
+6. Select **OK**, and then select **Next**.
+
+7. Select **Next** on the **Summary**. Then select **Next** again to generate the script in a **New Query** window.
+
+8. On your keyboard, open the **Find** dialog box (Ctrl+F). Select the down arrow to open the **Replace** option. On the top **Find** line, enter *AdventureWorks2016*. On the bottom **Replace** line, enter *AdventureWorks2016b*.
+
+9. Select **Replace All** to replace all instances of *AdventureWorks2016* with *AdventureWorks2016b*.
 
     ![AdventureWorks2016b](media/scripting-ssms/adventureworks2016b.png)
 
-7. Select **Execute** to execute the query and create your new AdventureWorks2016b database. 
+10. Select **Execute** to execute the query and create your new AdventureWorks2016b database.
 
 ## Script tables
 
@@ -218,7 +221,7 @@ This section covers how to script out [extended events](https://docs.microsoft.c
 
 ## Next steps
 
-The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to *articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS. These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
 * [Connect to and query an instance](connect-query-sql-server.md)
 * [Using Templates in SSMS](../template/templates-ssms.md)

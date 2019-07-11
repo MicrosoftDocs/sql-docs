@@ -22,7 +22,7 @@ manager: craigg
   
 3.  In the **Facet** box, confirm that **Surface Area Configuration** facet is selected.  
   
-4.  In the **Expression** area, in the **Field** box, select **@DatabaseMailEnabled**, in the **Operator** box select **=**, and in the **Value** select **False**.  
+4.  In the **Expression** area, in the **Field** box, select **\@DatabaseMailEnabled**, in the **Operator** box select **=**, and in the **Value** select **False**.  
   
 5.  On the **Description** page, type a description of the condition, and then click **OK** to create the condition.  
   

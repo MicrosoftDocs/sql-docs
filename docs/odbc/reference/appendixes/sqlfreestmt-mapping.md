@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # SQLFreeStmt Mapping
-When an application calls **SQLFreeStmt** with an *Option* argument of SQL_DROP through an ODBC 3*.x* driver, the call to  
+When an application calls **SQLFreeStmt** with an *Option* argument of SQL_DROP through an ODBC *3.x* driver, the call to  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   

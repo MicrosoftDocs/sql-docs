@@ -139,7 +139,7 @@ for source and target instances while running an assessment or migration, by set
 
 ## Ignore error codes
 
-Each rule has an error code in its title. You might not care about the specific rules and wants to ignore them. You can control the ignoreErrorCodes property. You can ignore one error or multiple errors that are separated by semi comma. For example, ignoreErrorCodes="46010;71501".The default value is 71501. 71501 means unresolved references found when the object references system objects like procedures, views, etc.
+Each rule has an error code in its title. You might not care about the specific rules and wants to ignore them. You can control the ignoreErrorCodes property. You can ignore one error or multiple errors that are separated by semicolon. For example, ignoreErrorCodes="46010;71501".The default value is 71501. 71501 means unresolved references found when the object references system objects like procedures, views, etc.
 
 ```
 <workflowSettings>

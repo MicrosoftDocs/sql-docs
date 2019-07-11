@@ -36,7 +36,6 @@ July 11, 2019 &nbsp; / &nbsp; version: 1.9.0
 | &nbsp; | &nbsp; |
 
 
-
 ## June 2019
 
 June 6, 2019 &nbsp; / &nbsp; version: 1.8.0 

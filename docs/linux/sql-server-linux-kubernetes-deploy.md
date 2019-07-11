@@ -3,7 +3,8 @@ title: Deploy a SQL Server Always On availability group on a Kubernetes cluster
 description: This article explains the parameters for the SQL Server Kubernetes Always On availability group operator global requirements
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql

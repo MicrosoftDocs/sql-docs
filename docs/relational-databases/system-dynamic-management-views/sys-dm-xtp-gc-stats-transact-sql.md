@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ---
 # sys.dm_xtp_gc_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Provides information (the overall statistics) about the current behavior of the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] garbage-collection process.  
   

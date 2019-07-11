@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
+manager: jroth
 
 ---
 # Copy an Image of a Database Diagram to the Clipboard (Visual Database Tools)

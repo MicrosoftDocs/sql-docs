@@ -66,7 +66,9 @@ Use the following steps to rename a SQL Server or Azure SQL database using SQL S
 3. In Object Explorer, expand **Databases**, right-click the database to rename, and then click **Rename**.  
   
 4. Enter the new database name, and then click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Rename a database using Transact-SQL  
   
 ### To rename a SQL Server database by placing it in single-user mode

@@ -239,6 +239,8 @@ There are some limitations with this implementation that are important to note:
 3. Queries against memory-optimized tables do not support locking and isolation hints, so queries against memory-optimized TempDB catalog views will not honor locking and isolation hints. As with other system catalog views in SQL Server, all transactions against system views will be in READ COMMITTED (or in this case READ COMMITTED SNAPSHOT) isolation.
 4. There may be some issues with columnstore indexes on temporary tables when memory-optimized tempdb metadata is enabled. For this preview release, it is best to avoid columnstore indexes on temporary tables when using memory-optimized tempdb metadata.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE] 
 > These limitations only apply when referencing TempDB system views, you will be able to create a temp table in the same transaction as you access a memory-optimized table in a user database if desired.
 

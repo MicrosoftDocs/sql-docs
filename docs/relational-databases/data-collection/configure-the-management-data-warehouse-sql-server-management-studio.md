@@ -53,7 +53,9 @@ manager: craigg
     -   Right-click **Data Collection**, and then click **Properties**. On the **General** tab, specify the existing management data warehouse and the server that it is installed on.  
   
 6.  Repeat step 5 until all the database instances that use the data collector are configured to upload data to the shared management data warehouse.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ####  <a name="Wizard"></a> Configure Management Data Warehouse Wizard  
  **Welcome Page**  
   

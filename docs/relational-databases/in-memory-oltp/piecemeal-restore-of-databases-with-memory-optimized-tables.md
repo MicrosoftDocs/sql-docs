@@ -96,7 +96,7 @@ BACKUP database imoltp
     with init;
 ```
   
- The following sample shows that a backup of a filegroup other than primary, and memory-optimized filegroup, works similar to the databases without memory-optimized tables. The following command backs up up the secondary filegroup  
+ The following sample shows that a backup of a filegroup other than primary, and memory-optimized filegroup, works similar to the databases without memory-optimized tables. The following command backs up the secondary filegroup  
   
 ```sql
 BACKUP database imoltp

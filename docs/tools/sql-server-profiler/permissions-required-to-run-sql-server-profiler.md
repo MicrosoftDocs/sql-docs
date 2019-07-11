@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Profiler, permissions"
   - "security [SQL Server], SQL Server Profiler"
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Permissions Required to Run SQL Server Profiler

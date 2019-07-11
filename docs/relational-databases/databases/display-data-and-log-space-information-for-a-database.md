@@ -43,7 +43,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Expand **Databases**.  
   
 3.  Right-click a database, point to **Reports**, point to **Standard Reports,**, and then click **Disk Usage**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To display data and log space information for a database by using sp_spaceused  

@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Name element"
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ---
 # Name Element for Server (DTA)

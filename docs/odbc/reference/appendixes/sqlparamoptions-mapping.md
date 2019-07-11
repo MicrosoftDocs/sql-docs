@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ---
 # SQLParamOptions Mapping
-When an application calls **SQLParamOptions** through an ODBC 3*.x* driver, the call  
+When an application calls **SQLParamOptions** through an ODBC *3.x* driver, the call  
   
 ```  
 SQLParamOptions(hstmt, crow, piRow);  

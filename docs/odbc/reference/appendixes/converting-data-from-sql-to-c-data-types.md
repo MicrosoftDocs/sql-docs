@@ -27,7 +27,7 @@ When an application calls **SQLFetch**, **SQLFetchScroll**, or **SQLGetData**, t
   
  The following table shows the supported conversions from ODBC SQL data types to ODBC C data types. A filled circle indicates the default conversion for an SQL data type (the C data type to which the data will be converted when the value of *TargetType* is SQL_C_DEFAULT). A hollow circle indicates a supported conversion.  
   
- For an ODBC 3*.x* application working with an ODBC 2.*x* driver, conversion from driver-specific data types might not be supported.  
+ For an ODBC *3.x* application working with an ODBC *2.x* driver, conversion from driver-specific data types might not be supported.  
   
  The format of the converted data is not affected by the Windows® country setting.  
   

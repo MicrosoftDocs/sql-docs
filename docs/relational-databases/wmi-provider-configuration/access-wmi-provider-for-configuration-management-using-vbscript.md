@@ -37,7 +37,9 @@ manager: craigg
 5.  Save the file.  
   
 6.  Run the script by typing **cscript test.vbs** at the command prompt.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Example  
   
 ```  

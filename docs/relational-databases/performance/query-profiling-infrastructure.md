@@ -166,6 +166,18 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
+## Query Profiling Infrastruture usage guidance
+The following table summarizes the actions to enable either standard profiling or lightweight profiling, both globally (at the server level) or in a single session. Also includes the earliest version for which the action is available. 
+
+|Scope|Standard Profiling|Lightweight Profiling|
+|---------------|---------------|---------------|
+|Global|xEvent session with the `query_post_execution_showplan` XE; Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Trace Flag 7412; Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1|
+|Global|SQL Trace and SQL Server Profiler with the `Showplan XML` trace event; Starting with SQL Server 2000|xEvent session with the `query_thread_profile` XE; Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
+|Global|-|xEvent session with the `query_post_execution_plan_profile` XE; Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|Session|Use `SET STATISTICS XML ON`; Starting with SQL Server 2000|Use the `QUERY_PLAN_PROFILE` query hint together with an xEvent session with the `query_plan_profile` XE; Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
+|Session|Use `SET STATISTICS PROFILE ON`; Starting with SQL Server 2000|-|
+|Session|Click the [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) button in SSMS; Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
+
 ## Remarks
 
 > [!IMPORTANT]

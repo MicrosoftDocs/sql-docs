@@ -7,8 +7,8 @@ ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.prod_service: sql-tools
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---

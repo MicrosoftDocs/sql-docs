@@ -5,11 +5,8 @@ ms.date: "06/03/2019"
 ms.prod: "sql-non-specified"
 ms.prod_service: "database-engine"
 ms.service: ""
-ms.component: "dmv's"
-ms.reviewer: ""
 ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -21,14 +18,13 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.dm_os_spinlock_stats dynamic management view"
-ms.assetid: 
-caps.latest.revision:
 author: "bluefooted"
 ms.author: "pamela"
+ms.reviewer: "maghan"
 manager: "amitban"
-ms.workload: "Inactive"
 ---
 # sys.dm_os_spinlock_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns information about all spinlock waits organized by type.  
@@ -185,7 +181,7 @@ GO
 |LANG_RES_LOAD|Internal use only.|
 |LIVE_TARGET_TVF|Internal use only.|
 |LOCK_FREE_LIST|Internal use only.|
-|LOCK_HASH|Protects access to the lock manager hash table that stores information about the locks being held in a database. See [this article](https://support.microsoft.comkb/2926217) for more information.|
+|LOCK_HASH|Protects access to the lock manager hash table that stores information about the locks being held in a database. See [this article](https://support.microsoft.com/kb/2926217) for more information.|
 |LOCK_NOTIFICATION|Internal use only.|
 |LOCK_RESOURCE_ID|Internal use only.|
 |LOCK_RW_ABTX_HASH_SET|Internal use only.|

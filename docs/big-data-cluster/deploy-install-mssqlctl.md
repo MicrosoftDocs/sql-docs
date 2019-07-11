@@ -2,10 +2,11 @@
 title: Install mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Learn how to install the mssqlctl tool for installing and managing SQL Server 2019 big data clusters (preview).
-author: rothja 
-ms.author: jroth 
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -86,7 +87,7 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 1. Install **mssqlctl** with the following command:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-3.1/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

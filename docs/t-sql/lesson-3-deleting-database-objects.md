@@ -38,33 +38,32 @@ Use the `REVOKE` statement to remove execute permission for `Mary` on the stored
 
 1. Use the `DROP` statement to remove permission for `Mary` to access the `TestData` database:
   
-  ```sql  
-  DROP USER Mary;  
-  GO  
-  ```  
+   ```sql  
+   DROP USER Mary;  
+   GO  
+   ```  
 
 
 2. Use the `DROP` statement to remove permission for `Mary` to access this instance of [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]:
   
-  ```sql  
-    DROP LOGIN [<computer_name>\Mary];  
-    GO   
-  ```  
+   ```sql  
+   DROP LOGIN [<computer_name>\Mary];  
+   GO   
+   ```  
   
-3.   Use the `DROP` statement to remove the store procedure `pr_Names`:  
+3. Use the `DROP` statement to remove the store procedure `pr_Names`:  
   
-    ```sql  
-    DROP PROC pr_Names;  
-    GO  
-    ```  
+   ```sql  
+   DROP PROC pr_Names;  
+   GO   
+   ```  
   
-6.  Use the `DROP` statement to remove the view `vw_Names`:  
+4. Use the `DROP` statement to remove the view `vw_Names`:  
   
-    ```sql  
-    DROP VIEW vw_Names;  
-    GO  
-  
-    ```  
+   ```sql  
+   DROP VIEW vw_Names;  
+   GO  
+   ```  
 
 ## Delete table
   

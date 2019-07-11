@@ -225,7 +225,9 @@ manager: craigg
     5.  In the **Reporting and Logging** dialog box, click **OK**.  
   
 12. To view the results in the log file viewer, in **Object Explorer**, right-click either the **Maintenance Plans** folder or the specific maintenance plan and select **View History**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   
      **Load Log**  

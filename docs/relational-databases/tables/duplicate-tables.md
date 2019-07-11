@@ -64,7 +64,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 7.  From the **File** menu, click **Save**_table name_.  
   
 8.  In the **Choose Name** dialog box, type a name for the new table and click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To duplicate a table in Query Editor  

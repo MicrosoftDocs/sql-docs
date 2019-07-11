@@ -10,7 +10,7 @@ ms.author: "maghan"
 manager: jroth
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "07/10/2019"
+ms.date: "07/11/2019"
 ---
 
 # Release notes for Azure Data Studio
@@ -19,7 +19,7 @@ ms.date: "07/10/2019"
 
 ## July 2019
 
-July 10, 2019 &nbsp; / &nbsp; version: 1.9.0 
+July 11, 2019 &nbsp; / &nbsp; version: 1.9.0 
 
 &nbsp;
 
@@ -34,7 +34,6 @@ July 10, 2019 &nbsp; / &nbsp; version: 1.9.0
 | Visual Studio Code May Release Merge 1.35 | Latest improvements can be found [here](https://code.visualstudio.com/updates/v1_35). |
 | Resolved bugs and issues | In previous releases of Azure Data Studio, if a user database was selected when connecting from the Connection dialog, the resulting Object Explorer entry was scoped entirely to that single database. Beginning in this release, that behavior is being changed so that server level properties are also shown in the object explorer. <br/> For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
-
 
 
 ## June 2019

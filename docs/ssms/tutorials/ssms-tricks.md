@@ -22,7 +22,7 @@ ms.custom: ""
 ms.date: 03/13/2018
 ---
 
-# Tutorial: Additional tips and tricks for using SSMS
+# Additional tips and tricks for using SSMS
 
 This tutorial gives you some additional tricks for using SQL Server Management Studio (SSMS). This article shows you how to: 
 
@@ -262,7 +262,7 @@ When you're connected to SQL Server, you can find the server name in three locat
 
 ### If you're connected to an alias or Availability Group listener
 
-If you're connected to an alias or to an Availability Group listener, that information appears in Object Explorer and Properties. In this case, the SQL Server name might not be readily apparent, and must be queried: 
+If you're connected to an alias or to an Availability Group listener, that information appears in Object Explorer and Properties. In this case, the SQL Server name might not be readily apparent, and must be queried:
 
 1. Connect to your SQL server.
 
@@ -277,3 +277,12 @@ If you're connected to an alias or to an Availability Group listener, that infor
 4. View the results of the query to identify the name of the SQL Server instance you're connected to: 
 
     ![Query the SQL Server name](media/ssms-tricks/queryservername.png)
+
+## Next steps
+
+The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
+
+* [Connect to and query an instance](connect-query-sql-server.md)
+* [Scripting](scripting-ssms.md)
+* [Using Templates in SSMS](../template/templates-ssms.md)
+* [SSMS Configuration](ssms-configuration.md)

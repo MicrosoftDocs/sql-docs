@@ -1,9 +1,10 @@
 ---
-title: Manage availability group failover - SQL Server on Linux | Microsoft Docs
+title: Manage availability group failover - SQL Server on Linux
 description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql

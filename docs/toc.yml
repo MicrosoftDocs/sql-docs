@@ -9963,8 +9963,6 @@
           href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Resources
       items:
-      - name: SQL Server Management Studio
-        href: ssms/tutorials/tutorial-sql-server-management-studio.md
       - name: SSMS Support Policy
         href: ssms/support-policy.md
       - name: Support options for business users
@@ -10184,15 +10182,15 @@
       href: linux/quickstart-install-connect-clouds.md
   - name: Tutorials
     items:
-    - name: 1_Migrate from Windows
+    - name: Migrate from Windows
       href: linux/sql-server-linux-migrate-restore-database.md
-    - name: 2_Migrate to Docker
+    - name: Migrate to Docker
       href: linux/tutorial-restore-backup-in-sql-server-container.md
-    - name: 3_Create a job
+    - name: Create a job
       href: linux/sql-server-linux-run-sql-server-agent-job.md
-    - name: 4_Setup AD Authentication
+    - name: Setup AD Authentication
       href: linux/sql-server-linux-active-directory-authentication.md
-    - name: 5_Create failover cluster instance
+    - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
       - name: iSCSI
@@ -10201,16 +10199,18 @@
         href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
       - name: SMB
         href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-    - name: 6_Operate failover cluster instance - SQL Server on Linux
+    - name: Operate failover cluster instance - SQL Server on Linux
       href: linux/sql-server-linux-shared-disk-cluster-operate.md
-    - name: 7_Deploy a Pacemaker cluster
+    - name: Deploy a Pacemaker cluster
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-    - name: 8_Create & configure availability groups
+    - name: Create & configure availability groups
       href: linux/sql-server-linux-create-availability-group.md
-    - name: 9_Deploy on Kubernetes
+    - name: Deploy on Kubernetes
       href: linux/tutorial-sql-server-containers-kubernetes.md
-    - name: 10_Configure replication
+    - name: Configure replication
       href: linux/sql-server-linux-replication-tutorial-tsql.md
+    - name: Machine learning in a container
+      href: linux/sql-server-linux-machine-learning-services-container.md
   - name: Concepts
     items:
     - name: Install

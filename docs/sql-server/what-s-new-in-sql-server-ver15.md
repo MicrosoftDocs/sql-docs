@@ -30,8 +30,6 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 
 For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
 
-Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
-
 In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2.
 
 ### Big data clusters

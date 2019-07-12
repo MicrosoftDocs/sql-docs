@@ -52,7 +52,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
--   Be aware of the DML and DDL triggers that exist in the database and on the server instance by querying the [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) and [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) catalog views. The following query returns all DML and database-level DDL triggers in the current database, and all server-level DDL triggers on the server instance:  
+-   Be aware of the DML and DDL triggers that exist in the database by querying the [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) catalog view. The following query returns all DML and database-level DDL triggers in the current database:  
   
     ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers ; 

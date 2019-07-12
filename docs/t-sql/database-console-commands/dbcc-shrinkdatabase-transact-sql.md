@@ -60,7 +60,7 @@ Moves assigned pages from the file's end to unassigned pages in the front of the
   
 The free space at the end of the file isn't returned to the operating system, and the physical size of the file doesn't change. As such, the database appears not to shrink when you specify NOTRUNCATE.  
   
-NOTRUNCATE is applicable only to data files. NONTRUNCATE doesn't affect the log file.  
+NOTRUNCATE is applicable only to data files. NOTRUNCATE doesn't affect the log file.  
   
 TRUNCATEONLY  
 Releases all free space at the end of the file to the operating system. Doesn't move any pages inside the file. The data file shrinks only to the last assigned extent. Ignores _target\_percent_ if specified with TRUNCATEONLY. Azure SQL Data Warehouse doesn't support this option.

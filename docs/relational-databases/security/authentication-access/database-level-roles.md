@@ -1,7 +1,7 @@
 ---
 title: "Database-Level Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/19/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -83,7 +83,7 @@ The permissions assigned to the fixed-database roles cannot be changed. The foll
 
 ## Special Roles for [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
-These database roles exist only in the virtual master database. Their permissions are restricted to actions performed in master. Only database users in master can be added to these roles. Logins cannot be added to these roles, but users can be created based on logins and then those users can be added to the roles. Contained database users in master, can also be added to these roles.
+These database roles exist only in the virtual master database. Their permissions are restricted to actions performed in master. Only database users in master can be added to these roles. Logins cannot be added to these roles, but users can be created based on logins and then those users can be added to the roles. Contained database users in master can also be added to these roles. However, contained database users added to the **dbmanager** role in master cannot be used to create new databases.
 
 |Role name|Description|  
 |--------------------|-----------------|

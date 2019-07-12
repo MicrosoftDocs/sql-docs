@@ -1,8 +1,7 @@
 ---
-title: "Editions and supported features of SQL Server 2017 ~ Linux | Microsoft Docs"
-ms.date: "09/14/2017"
+title: "Editions and supported features of SQL Server 2017 ~ Linux"
+ms.date: 09/14/2017
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: linux
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "installing SQL Server, editions"
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
-ms.assetid: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ---
 # Editions and supported features of SQL Server 2017 on Linux
 

@@ -1,9 +1,10 @@
 ---
-title: Configuration options for SQL Server on Docker | Microsoft Docs
+title: Configuration options for SQL Server on Docker
 description: Explore different ways of using and interacting with SQL Server 2017 and 2019 preview container images in Docker. This includes persisting data, copying files, and troubleshooting.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: vin-yu 
+ms.author: vinsonyu
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql

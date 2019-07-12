@@ -1,6 +1,6 @@
 ---
-title: Additional tips and tricks for using SQL Server Management Studio
-description: A tutorial that covers some additional tips and tricks for using SSMS.
+title: Tips and tricks for using SQL Server Management Studio (SSMS)
+description:  Learn to comment and uncomment your code, indent your text, filter objects in object explorer, access your SQL Server error log, and find your SQL Server instance name using SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -22,9 +22,9 @@ ms.custom: ""
 ms.date: 03/13/2018
 ---
 
-# Additional tips and tricks for using SSMS
+# Tips and tricks for using SQL Server Management Studio (SSMS)
 
-This tutorial gives you some additional tricks for using SQL Server Management Studio (SSMS). This article shows you how to: 
+This article gives you some tips and tricks for using SQL Server Management Studio (SSMS). This article shows you how to: 
 
 > [!div class="checklist"]
 > * Comment/uncomment your Transact-SQL (T-SQL) text
@@ -35,7 +35,7 @@ This tutorial gives you some additional tricks for using SQL Server Management S
 
 ## Prerequisites
 
-To complete this tutorial, you need SQL Server Management Studio, access to a SQL server, and an AdventureWorks database. 
+To test out the steps provided in this article, you need SQL Server Management Studio, access to a SQL server, and an AdventureWorks database. 
 
 * Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Install [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).

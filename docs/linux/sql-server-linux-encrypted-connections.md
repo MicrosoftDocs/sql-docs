@@ -1,14 +1,14 @@
 ---
-title: Encrypting Connections to SQL Server on Linux | Microsoft Docs
+title: Encrypting Connections to SQL Server on Linux
 description: This article describes Encrypting Connections to SQL Server on Linux.
-author: vin-yu 
 ms.date: 01/30/2018
-ms.author: vinsonyu 
-manager: craigg
+author: vin-yu 
+ms.author: vinsonyu
+ms.reviewer: vanto
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: 
 helpviewer_keywords: 
   - "Linux, encrypted connections"
 ---

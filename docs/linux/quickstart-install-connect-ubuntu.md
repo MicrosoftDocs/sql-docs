@@ -2,9 +2,9 @@
 title: Get started with SQL Server on Ubuntu
 titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
+manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql

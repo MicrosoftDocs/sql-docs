@@ -33,7 +33,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -72,16 +71,16 @@ GO
   
  Applications based on the ODBC or OLE DB APIs receive a syntax error if they try to execute a GO command. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities never send a GO command to the server.  
   
- Do not use a semicolon as a statement terminator after GO.  
-  
-## Permissions  
- GO is a utility command that requires no permissions. It can be executed by any user.  
-  
-```  
+ Do not use a semicolon as a statement terminator after GO.
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## Permissions  
+ GO is a utility command that requires no permissions. It can be executed by any user.    
   
 ## Examples  
  The following example creates two batches. The first batch contains only a `USE AdventureWorks2012` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  

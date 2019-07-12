@@ -72,7 +72,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 |ISO 8601|Notes|  
 |--------------|-----------|  
-|hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh is two digits, ranging from 0 to 14, that represent the number of hours in the time zone offset.<br /><br /> mm is two digits, ranging from 0 to 59, that represent the number of additional minutes in the time zone offset.|  
+|hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh is two digits, ranging from 0 to 23, that represent the number of hours in the time zone offset.<br /><br /> mm is two digits, ranging from 0 to 59, that represent the number of additional minutes in the time zone offset.|  
   
 |ODBC|Notes|  
 |----------|-----------|  

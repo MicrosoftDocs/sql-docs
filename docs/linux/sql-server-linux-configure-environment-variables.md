@@ -1,9 +1,9 @@
 ---
-title: Configure SQL Server settings with environment variables | Microsoft Docs
+title: Configure SQL Server settings with environment variables
 description: This article describes how to use environment variables to configure specific SQL Server 2017 settings on Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
+manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql

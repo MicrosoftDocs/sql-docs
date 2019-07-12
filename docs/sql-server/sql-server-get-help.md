@@ -13,7 +13,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 
 # SQL Server help and feedback
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 This article explains different ways to get assistance with your issue, or provide feedback for either SQL Server, or the SQL Server technical documentation. 
 
@@ -51,16 +50,17 @@ There are a few communities that can help you with your SQL Server issues.
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Get help from the community with the #sqlhelp hash tag on twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
+ 
+## Feedback
 
-## Feedback for SQL Server & SSMS
+You can submit suggestions for improvement, as well as submit bugs for:
 
-The SQL Server engineering for both SQL Server and SQL Server Management Studio (SSMS) team closely monitors feedback submitted via User Voice at [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback). This is the place to submit your suggestions for improving the product, as well as problems such as  bugs, crashed, sluggish performance, and any other unexpected behaviors. 
+- **SQL Server**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
+-** SQL Server Management Studio (SSMS)**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
+- **Azure Data Studio**: [Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
+ 
 
-## Feedback for Azure Data Studio
-
-The Azure Data Studio team closely monitors issues and feature requests on [Azure Data Studio Github](https://github.com/microsoft/azuredatastudio/issues). Please submit an issue or feature request here, and you can see when the issue/feature will be fixed or added.
-
-## Feedback for SQL Server documentation
+###  SQL Server documentation
 
 The best way to reach the SQL Server content team is through Git Issues. You'll find an option to submit a Git Issue at the bottom of most of our pages: 
 
@@ -72,14 +72,11 @@ Just select the 'New Issue' button to get started.
 
 ![New Git Issue](media/sql-server-get-help/new-git-issue.png)
 
-
-![Download PDF](media/sql-server-get-help/download-pdf.png)
-
 ## Social media updates
 
 There are a few social media outlets to get information about the latest SQL Server updates. 
 
-## Updates via Twitter
+### Updates via Twitter
 
 There are a few Twitter accounts that provide updates about SQL Server. 
 
@@ -101,19 +98,22 @@ There are a few SQL Server blogs that can bring you the latest information about
 
 If you would like to download and review the license information for SQL Server, it can be found at [Microsoft SQL Server Additional Software License Terms](https://www.microsoft.com/download/details.aspx?id=39299). 
 
-## Offline documentation
 
-If you would like to view the SQL Server documentation on an offline system, you have two options to do so. You can either create a PDF wherever you are in the SQL Server technical documentation, or you can download the offline content using [SQL Server offline Help Viewer](sql-server-help-installation.md). 
+## Contribute to documentation
 
-If you'd like to create a PDF, click the **Download PDF** link found at the bottom of every table of contents.
+As long you have a GitHub account, you can edit the content yourself on docs.microsoft.com by following these steps:
 
+1. Navigate to the page of interest.
+1. Select the "Edit" button at the top right of the page.
+1. Select the "Pencil" icon on the right.
+1. Modify the text within the text box in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
+1. Name your file change and provide a description.
+1. Select "Propose file change".
+1. Select "Create pull request" on the 'Comparing changes' page.
+1. Select "Create pull request" on the 'Open a pull request' page.
 
-## Contribute to SQL Server documentation
+![Edit SQL Docs](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-### ![edit content](../includes/media/edit-topic-pencil.png) Editing content
-Did you find something wrong with our documentation? Or do you have a contribution that can improve our documentation? Well, you can edit the content found on docs.microsoft.com yourself. If you do so, not only will our documentation improve, but you'll also be credited as a contributor to the page! Find out more information at [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
-
-All public contributions are reviewed by the SQL content team for technical accuracy and consistency. 
-
+You can find detailed information about this at [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
 
 

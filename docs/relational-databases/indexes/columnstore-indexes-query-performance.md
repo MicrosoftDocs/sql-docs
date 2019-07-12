@@ -86,7 +86,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
  Not all query execution operators can be executed in batch mode. For example, DML operations such as Insert, Delete or Update are executed row at a time. Batch mode operators target  operators for speeding up query performance such as Scan, Join, Aggregate, sort and so on. Since the columnstore index was introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], there is a sustained effort to expand the operators that can be executed in the batch mode. The table below shows the operators that run in batch mode according to the product version.    
     
-|Batch Mode Operators|When is this used?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]&sup1;|Comments|    
+|Batch Mode Operators|When is this used?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Comments|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML operations (insert, delete, update, merge)||no|no|no|DML is not a batch mode operation because it is not parallel. Even when we enable serial mode batch processing, we don't see significant gains by allowing DML to be processed in batch mode.|    
 |columnstore index scan|SCAN|NA|yes|yes|For columnstore indexes, we can push the predicate to the SCAN node.|    
@@ -105,7 +105,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |top sort||no|no|yes||    
 |window aggregates||NA|NA|yes|New operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- &sup1;Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup>Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### Aggregate Pushdown    
  A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met: 

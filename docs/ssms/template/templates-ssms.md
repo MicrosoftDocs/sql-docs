@@ -21,6 +21,7 @@ helpviewer_keywords:
 ms.custom: ""
 ms.date: 03/13/2018
 ---
+
 # Use templates in SQL Server Management Studio
 
 This tutorial introduces you to the prebuilt Transact-SQL (T-SQL) templates that are available in SQL Server Management Studio (SSMS). In this article, you learn how to:
@@ -111,7 +112,9 @@ You can also create a new template in Template Browser. The following steps show
 
 ## Next steps
 
-The next article provides additional tips and tricks for using SQL Server Management Studio. 
+The best way to get acquainted with SSMS is through hands-on practice. These *tutorial* and *how-to* articles help you with various features available within SSMS.  These articles teach you how to manage the components of SSMS and how to find the features that you use regularly.
 
-> [!div class="nextstepaction"]
-> [Additional tips and tricks for using SSMS](../tutorials/ssms-tricks.md)
+* [Connect to and query an instance](connect-query-sql-server.md)
+* [Scripting](scripting-ssms.md)
+* [SSMS Configuration](ssms-configuration.md)
+* [Additional Tips and Tricks for using SSMS](ssms-tricks.md)

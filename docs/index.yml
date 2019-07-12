@@ -62,8 +62,8 @@ conceptualContent:
         - text: Writing Transact-SQL
           url: t-sql/tutorial-writing-transact-sql-statements.md
           itemType: overview
-        - text: SQL Server on Ubuntu
-          url: linux/quickstart-install-connect-ubuntu.md
+        - text: SQL Docs navigation guide
+          url: sql-server/sql-docs-navigation-guide.md
           itemType: overview
     - title: What's new
       links:

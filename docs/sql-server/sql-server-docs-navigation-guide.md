@@ -49,6 +49,11 @@ The table of contents is the navigation pane found on the left side of each arti
 Think of the table of contents (TOC) as being the index in a technical documentation book, where content is categorized into relevant sections. Tthese categories match those on the hub page. The entire SQL Server documentation set can be located from within this table of contents. 
 
 ### Navigation hints
+Entires in the TOC that have `>` indicate that you will be taken away from docs.microsoft.com. 
+
+
+
+
 Entries in the TOC that have `>>` indicate that you will be taken to technical documentation with a different table of contents. 
 
 ![TOC navigation markers](media/sql-server-docs-navigation-guide/carrots-in-sql-docs-toc.png)

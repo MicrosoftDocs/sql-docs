@@ -63,7 +63,7 @@ When two execution plans are compared, regions of the plan that **do essentially
      > [!TIP]
      > All zooming and navigation options available for execution plans work in plan comparison mode. For more details, see [Display an Actual Execution Plan](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  A dual properties window also opens on the right side, in the scope of the default selection. Properties that exist in both compared operators but have differences will be preceeded by the *not equal* sign (?) for easier identification.
+5.  A dual properties window also opens on the right side, in the scope of the default selection. Properties that exist in both compared operators but have differences will be preceeded by the *not equal* sign (&ne;) for easier identification.
 
     ![Dual properties window](../../relational-databases/performance/media/plancomparison-properties.png "Dual properties window")  
 

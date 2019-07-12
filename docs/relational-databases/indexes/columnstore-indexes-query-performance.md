@@ -86,7 +86,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
  Not all query execution operators can be executed in batch mode. For example, DML operations such as Insert, Delete or Update are executed row at a time. Batch mode operators target  operators for speeding up query performance such as Scan, Join, Aggregate, sort and so on. Since the columnstore index was introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], there is a sustained effort to expand the operators that can be executed in the batch mode. The table below shows the operators that run in batch mode according to the product version.    
     
-|Batch Mode Operators|When is this used?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|Comments|    
+|Batch Mode Operators|When is this used?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Comments|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML operations (insert, delete, update, merge)||no|no|no|DML is not a batch mode operation because it is not parallel. Even when we enable serial mode batch processing, we don't see significant gains by allowing DML to be processed in batch mode.|    
 |columnstore index scan|SCAN|NA|yes|yes|For columnstore indexes, we can push the predicate to the SCAN node.|    
@@ -105,7 +105,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |top sort||no|no|yes||    
 |window aggregates||NA|NA|yes|New operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ?Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup>Applies to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium tiers, Standard tiers - S3 and above, and all vCore tiers, and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### Aggregate Pushdown    
  A normal execution path for aggregate computation to fetch the qualifying rows from the SCAN node and aggregate the values in Batch Mode. While this delivers good performance, but with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the aggregate operation can be pushed to the SCAN node to improve the performance of aggregate computation by orders of magnitude on top of Batch Mode execution provided the following conditions are met: 
@@ -140,7 +140,7 @@ When designing a data warehouse schema, the recommended schema modeling is to us
     
 For example, a fact can be a record representing a sale of a particular product in a specific region while the dimension represents a set of regions, products and so on. The fact and dimension tables are connected through a primary/foreign key relationship. Most commonly used analytics queries join one or more dimension tables with the fact table.    
     
-Let us consider a dimension table `Products`. A typical primary key will be `ProductCode` which is commonly represented as string data type. For performance of queries, it is a best practice to create surrogate key, typically an integer column, to refer to the row in the dimension table from the fact table. ? ?
+Let us consider a dimension table `Products`. A typical primary key will be `ProductCode` which is commonly represented as string data type. For performance of queries, it is a best practice to create surrogate key, typically an integer column, to refer to the row in the dimension table from the fact table. 
     
 The columnstore index runs analytics queries with joins/predicates involving numeric or integer based keys very efficiently. However, in many customer workloads, we find the use to string based columns linking fact/dimension tables and with the result the query performance with columnstore index was not as performing. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] improves the performance of analytics queries with string based columns significantly by pushing down the predicates with string columns to the SCAN node.    
     

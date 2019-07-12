@@ -22,7 +22,7 @@
   - name: Install ML Services on Windows
     href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
   - name: Install ML Services on Linux
-    href: ../linux/sql-server-linux-setup-machine-learning.md
+    href: ../linux/sql-server-linux-setup-machine-learning.md?toc=toc.json
   - name: Install R Services
     href: ../advanced-analytics/install/sql-r-services-windows-install.md
   - name: Install standalone server (R, Python)

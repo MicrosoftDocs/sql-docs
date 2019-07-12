@@ -200,3 +200,5 @@ The best way to get acquainted with SSMS is through hands-on practice. These art
 * [Using Templates in SSMS](../template/templates-ssms.md)
 * [SSMS Configuration](ssms-configuration.md)
 * [Additional Tips and Tricks for using SSMS](ssms-tricks.md)
+
+type your proposed file change in the text box

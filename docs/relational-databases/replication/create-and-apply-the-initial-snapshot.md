@@ -48,7 +48,7 @@ To view or modify the default snapshot folder location, see
   
 ### Modify the default snapshot location  
   
-1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**?**) for the Publisher for which you want to change the default snapshot location.  
+1.  On the **Publishers** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**...**) for the Publisher for which you want to change the default snapshot location.  
   
 2.  In the **Publisher Properties - \<Publisher>** dialog box, enter a value for the **Default Snapshot Folder** property.  
   

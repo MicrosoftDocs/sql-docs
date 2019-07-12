@@ -45,6 +45,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
 
+   > [!NOTE]
+   > Only **sys.triggers** is available for Azure SQL Database unless you are using Managed Instance.
+
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"

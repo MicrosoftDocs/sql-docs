@@ -114,7 +114,9 @@
       },
 
       "manager": {
-        "**/*.md": "jroth"
+        "**/*.md": "jroth",
+        "dmx/**/*.md": "kfile",
+        "mdx/**/*.md": "kfile"
       },
 
       "titleSuffix": {

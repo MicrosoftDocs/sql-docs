@@ -3,7 +3,6 @@ title: What's New for SQL Server 2017 on Linux
 description: This article highlights what's new for SQL Server 2017 on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql

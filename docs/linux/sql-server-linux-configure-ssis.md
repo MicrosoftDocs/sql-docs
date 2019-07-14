@@ -4,7 +4,6 @@ description: This article describes how to configure SQL Server Integration Serv
 author: lrtoyou1223 
 ms.author: lle 
 ms.reviewer: maghan
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql

@@ -5,7 +5,6 @@ ms.date: 01/30/2018
 author: vin-yu 
 ms.author: vinsonyu
 ms.reviewer: vanto
-manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

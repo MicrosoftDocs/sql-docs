@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Version (Master Data Services)
 

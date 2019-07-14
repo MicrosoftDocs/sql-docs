@@ -4,7 +4,6 @@ description: Learn how to backup and restore SQL Server databases on Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql

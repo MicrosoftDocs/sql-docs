@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Security (Master Data Services)
 

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Create a Data Quality Project
 

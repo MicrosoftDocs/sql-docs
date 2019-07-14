@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: jtoland
-manager: jroth
 ---
 
 # What's new in Data Migration Assistant

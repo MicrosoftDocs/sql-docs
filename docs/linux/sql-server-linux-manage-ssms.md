@@ -3,7 +3,6 @@ title: Use SSMS to Manage SQL Server on Linux
 description: 
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql

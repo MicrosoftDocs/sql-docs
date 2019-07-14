@@ -5,7 +5,6 @@ description: This tutorial shows how you can load an run a sample Spark notebook
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql

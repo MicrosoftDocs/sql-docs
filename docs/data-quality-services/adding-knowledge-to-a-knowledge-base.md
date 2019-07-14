@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Adding Knowledge to a Knowledge Base
 

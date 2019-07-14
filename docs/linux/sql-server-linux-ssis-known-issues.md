@@ -4,7 +4,6 @@ description: This article describes limitations and known issues for SQL Server 
 author: lrtoyou1223 
 ms.author: lle 
 ms.reviewer: maghan
-manager: jroth
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql

@@ -8,7 +8,6 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-manager: jroth
 ---
 # Manage SQL Server on Linux with PowerShell Core
 

@@ -4,7 +4,6 @@ titleSuffix: SQL Server
 description: Use the mssql extension for Visual Studio Code to edit and run Transact-SQL scripts for SQL Server on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql

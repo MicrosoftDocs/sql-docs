@@ -3,7 +3,6 @@ title: How to use distributed transactions with SQL Server on Docker
 description: This article explains how to use Dprovides a walk-through for configuring MSDTC on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql

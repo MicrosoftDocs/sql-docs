@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Test a User&#39;s Permissions (Master Data Services)
 

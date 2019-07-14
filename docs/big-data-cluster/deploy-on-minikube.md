@@ -5,7 +5,6 @@ description: Learn how to configure minikube for SQL Server 2019 big data cluste
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Other Non-SQL Server Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

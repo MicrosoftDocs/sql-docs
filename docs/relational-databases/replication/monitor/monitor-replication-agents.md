@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Monitor Replication Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

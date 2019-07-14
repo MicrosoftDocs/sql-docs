@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Disable Publishing and Distribution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

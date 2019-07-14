@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Define and Modify a Join Filter Between Merge Articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

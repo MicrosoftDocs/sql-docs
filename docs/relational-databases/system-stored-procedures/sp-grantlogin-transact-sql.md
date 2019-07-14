@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sp_grantlogin"
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
-manager: jroth
 author: VanMSFT
 ---
 # sp_grantlogin (Transact-SQL)

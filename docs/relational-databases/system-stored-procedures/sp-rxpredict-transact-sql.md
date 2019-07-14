@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "sp_rxPredict procedure"
 author: "HeidiSteen"
 ms.author: "heidist"
-manager: craigg
 ---
 # sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

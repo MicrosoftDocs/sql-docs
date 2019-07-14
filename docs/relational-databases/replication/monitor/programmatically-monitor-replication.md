@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Programmatically Monitor Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

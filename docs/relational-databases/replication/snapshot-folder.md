@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Snapshot Folder
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

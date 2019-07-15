@@ -11,7 +11,6 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # SQL Server Properties (Always On High Availability Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

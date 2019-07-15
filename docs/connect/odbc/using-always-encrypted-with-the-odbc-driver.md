@@ -7,7 +7,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: "v-chojas"
-manager: jroth
 author: MightyPen
 ---
 # Using Always Encrypted with the ODBC Driver for SQL Server

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Loading the Microsoft Drivers for PHP for SQL Server

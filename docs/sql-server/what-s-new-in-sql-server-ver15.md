@@ -60,7 +60,7 @@ The following sections highlight new components and features that were enhanced 
 
 For more details, see [What are SQL Server big data clusters](../big-data-cluster/big-data-cluster-overview.md)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features announced and changed for all previous CTP releases of this feature.
+[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features announced and changed for all previous CTP releases of this feature.
 
 ## Database engine
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Manage Tables, Relationships, and Fix Errors
 Topics in this section describe how to use the Table Designer to design tables and manage table relationships. Additional topics describe how to fix common syntax or semantic errors.  

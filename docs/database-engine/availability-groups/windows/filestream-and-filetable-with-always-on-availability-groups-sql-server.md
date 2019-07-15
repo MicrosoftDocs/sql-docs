@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Use FILESTREAM and FileTable with Always On availability groups

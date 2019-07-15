@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid:
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Use read-scale with Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

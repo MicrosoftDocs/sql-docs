@@ -101,6 +101,7 @@ conceptualContent:
           itemType: overview
         - text: SQL Server Management Studio (SSMS)
           url: ssms/release-notes-ssms.md
+          itemType: overview
     - title: Install
       links:
         - text: SQL Server

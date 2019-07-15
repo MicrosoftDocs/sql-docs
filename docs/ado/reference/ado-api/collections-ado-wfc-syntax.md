@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Collections (ADO - WFC Syntax)
 **package com.ms.wfc.data**  

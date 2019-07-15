@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # DataSpace Object (RDS) Properties, Methods, and Events
 > [!IMPORTANT]

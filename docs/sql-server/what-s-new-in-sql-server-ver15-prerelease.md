@@ -18,7 +18,7 @@ This article provides an archive of announced introduced in [!INCLUDE[sql-server
 
 This article will be removed prior to release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-For the current information, see [What's New in SQL Server 2019](what-s-new-in-sql-server-ver-15.md).
+For the current information, see [What's New in SQL Server 2019](what-s-new-in-sql-server-ver15.md).
 
 ## CTP 3.2 July 2019
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Connection Required Permissions for the CDC Service
 

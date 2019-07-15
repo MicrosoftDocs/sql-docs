@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Management Data Warehouse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

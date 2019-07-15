@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # System Settings (Master Data Services)
 

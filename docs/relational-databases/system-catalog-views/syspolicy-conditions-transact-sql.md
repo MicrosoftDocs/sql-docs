@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

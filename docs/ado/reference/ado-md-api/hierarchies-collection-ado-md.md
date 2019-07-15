@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Hierarchies Collection (ADO MD)
 Contains the set of [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objects from a dimension.  

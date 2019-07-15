@@ -19,7 +19,6 @@ ms.assetid: 58d8564b-9c43-4965-a31c-2893890334ef
 author: pmasl 
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_population_ranges (Transact-SQL)

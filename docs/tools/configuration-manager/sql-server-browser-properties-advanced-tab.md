@@ -11,7 +11,6 @@ ms.assetid: ba79137a-cb72-4bf3-a650-e11d02cfce10
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # SQL Server Browser Properties (Advanced Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

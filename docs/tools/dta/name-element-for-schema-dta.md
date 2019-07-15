@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Name Element for Schema (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Load-Balancing Packages on Remote Servers by Using SQL Server Agent
 

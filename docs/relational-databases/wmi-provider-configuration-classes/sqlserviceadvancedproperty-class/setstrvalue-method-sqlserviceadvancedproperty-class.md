@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetStrValue Method (SqlServiceAdvancedProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

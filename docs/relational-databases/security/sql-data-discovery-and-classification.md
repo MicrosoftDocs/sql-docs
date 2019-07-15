@@ -11,7 +11,6 @@ ms.topic: conceptual
 ms.date: 06/25/2019
 ms.author: mibar
 author: barmichal
-manager: craigg
 ---
 # SQL Data Discovery and Classification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

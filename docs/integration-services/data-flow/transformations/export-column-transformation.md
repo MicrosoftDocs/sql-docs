@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Export Column Transformation
 

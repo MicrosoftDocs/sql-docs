@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create a Trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

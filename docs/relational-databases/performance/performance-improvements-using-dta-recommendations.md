@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Performance Improvements using DTA recommendations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

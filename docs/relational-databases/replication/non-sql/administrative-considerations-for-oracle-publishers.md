@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Administrative Considerations for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

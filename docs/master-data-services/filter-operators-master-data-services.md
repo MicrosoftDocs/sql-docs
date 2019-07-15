@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Filter Operators (Master Data Services)
 

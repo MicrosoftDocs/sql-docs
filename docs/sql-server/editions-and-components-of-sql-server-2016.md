@@ -33,7 +33,6 @@ helpviewer_keywords:
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: craigg
 ---
 # Editions and supported features of SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

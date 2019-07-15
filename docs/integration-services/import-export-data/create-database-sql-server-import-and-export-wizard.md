@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create Database (SQL Server Import and Export Wizard)
 

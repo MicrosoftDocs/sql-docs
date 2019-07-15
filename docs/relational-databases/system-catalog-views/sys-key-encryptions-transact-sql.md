@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.key_encryptions (Transact-SQL)

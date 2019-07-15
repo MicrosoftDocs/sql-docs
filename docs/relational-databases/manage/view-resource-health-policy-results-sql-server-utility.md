@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View Resource Health Policy Results (SQL Server Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

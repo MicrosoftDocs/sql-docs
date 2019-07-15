@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Package Properties Dialog Box
 

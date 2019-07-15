@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Set Trace Display Defaults (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Error (Visual C++ Syntax Index with #import)
 ## Properties  

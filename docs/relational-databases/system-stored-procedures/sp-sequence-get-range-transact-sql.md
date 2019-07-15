@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_sequence_get_range (Transact-SQL)

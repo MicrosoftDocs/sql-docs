@@ -9,7 +9,6 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Configure Always Encrypted with secure enclaves

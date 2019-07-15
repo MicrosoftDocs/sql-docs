@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

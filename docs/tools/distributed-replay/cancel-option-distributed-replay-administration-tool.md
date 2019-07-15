@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Cancel Option (Distributed Replay Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

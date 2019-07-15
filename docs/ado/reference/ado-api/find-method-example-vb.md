@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Find Method Example (VB)
 This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Find](../../../ado/reference/ado-api/find-method-ado.md) method to locate and count the number of business titles in the ***Pubs*** database. The example assumes the underlying provider does not support similar functionality.  

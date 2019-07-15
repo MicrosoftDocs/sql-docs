@@ -9,7 +9,6 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Integration Services Scale Out Manager
 

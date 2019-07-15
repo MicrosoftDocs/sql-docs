@@ -4,7 +4,6 @@ description: Configure SQL Server Availability Group with replicas on Windows an
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql

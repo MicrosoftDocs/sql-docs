@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Breaking Changes in SQL Server Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

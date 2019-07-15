@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: f4f651b0-a822-4bd4-b391-cc2355154a2a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateInt Method (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

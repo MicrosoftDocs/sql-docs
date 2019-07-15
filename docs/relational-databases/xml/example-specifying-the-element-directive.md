@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Example: Specifying the ELEMENT Directive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

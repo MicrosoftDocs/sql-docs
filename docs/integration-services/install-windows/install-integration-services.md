@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Install Integration Services
 

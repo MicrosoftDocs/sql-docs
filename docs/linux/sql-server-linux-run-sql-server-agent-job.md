@@ -3,7 +3,6 @@ title: Create and run jobs for SQL Server on Linux
 description: This tutorial shows how to run SQL Server Agent job on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql

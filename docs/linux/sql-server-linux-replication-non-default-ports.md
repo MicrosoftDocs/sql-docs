@@ -4,7 +4,6 @@ description: This article describes how to configure snapshot folder shares SQL 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql

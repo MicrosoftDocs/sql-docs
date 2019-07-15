@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Issue Element (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

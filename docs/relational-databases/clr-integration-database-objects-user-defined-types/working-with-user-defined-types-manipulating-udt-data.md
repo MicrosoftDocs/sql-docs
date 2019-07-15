@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Working with User-Defined Types - Manipulating UDT Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

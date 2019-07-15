@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Header Files
 > [!NOTE]  

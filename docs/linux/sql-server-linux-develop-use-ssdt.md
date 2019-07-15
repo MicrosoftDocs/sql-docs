@@ -3,7 +3,6 @@ title: Develop and Deploy SQL Server databases for Linux  | Microsoft Docs
 description: 
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql

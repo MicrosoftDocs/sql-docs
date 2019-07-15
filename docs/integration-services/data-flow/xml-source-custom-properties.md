@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # XML Source Custom Properties
 

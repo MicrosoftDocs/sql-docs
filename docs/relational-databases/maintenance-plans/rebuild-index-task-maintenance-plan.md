@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Rebuild Index Task (Maintenance Plan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

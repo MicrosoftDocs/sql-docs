@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Clustered Property (ADOX)
 Indicates whether the index is clustered.  

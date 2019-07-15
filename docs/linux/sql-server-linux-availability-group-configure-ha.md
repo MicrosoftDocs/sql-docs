@@ -5,7 +5,6 @@ description: Learn about creating a SQL Server Always On Availability Group (AG)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql

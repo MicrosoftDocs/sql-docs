@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)

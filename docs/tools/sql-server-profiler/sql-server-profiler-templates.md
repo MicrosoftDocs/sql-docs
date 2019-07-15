@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # SQL Server Profiler Templates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

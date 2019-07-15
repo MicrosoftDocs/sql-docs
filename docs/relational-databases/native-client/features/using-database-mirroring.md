@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Database Mirroring

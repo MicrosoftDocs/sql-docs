@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Azure SQL Database Catalog Views

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Distributor Password
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

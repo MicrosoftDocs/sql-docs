@@ -11,7 +11,6 @@ ms.assetid: d89cc01f-084b-41b0-8c60-3c6b964d7ad4
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # SQL Server Integration Services Properties (Advanced Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectOption (Text File Driver)
 > [!NOTE]  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_database_encryption_keys (Transact-SQL)

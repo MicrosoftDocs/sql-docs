@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Parameterized Filters - Optimize for Precomputed Partitions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

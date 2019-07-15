@@ -9,7 +9,6 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: "pensivebrian"
 ms.author: "broneill"
-manager: craigg
 ---
 # Download and install sqlpackage
 

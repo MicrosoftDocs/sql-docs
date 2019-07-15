@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Data Types
 

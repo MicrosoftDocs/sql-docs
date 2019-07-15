@@ -5,7 +5,6 @@ description: Learn about configuring a SQL Server Always On Availability Group (
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql

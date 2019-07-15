@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Rebuild Index Task
 

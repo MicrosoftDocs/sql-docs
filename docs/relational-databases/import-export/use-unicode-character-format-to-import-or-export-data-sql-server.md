@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Unicode Character Format to Import or Export Data (SQL Server)

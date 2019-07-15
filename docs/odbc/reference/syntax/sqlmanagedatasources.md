@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLManageDataSources
 **Conformance**  

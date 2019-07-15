@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

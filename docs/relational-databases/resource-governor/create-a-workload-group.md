@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Create a Workload Group
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

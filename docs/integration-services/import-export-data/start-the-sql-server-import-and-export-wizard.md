@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Start the SQL Server Import and Export Wizard
 

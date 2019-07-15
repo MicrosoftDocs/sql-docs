@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # EKM provider enabled Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

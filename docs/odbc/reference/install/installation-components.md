@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Installation Components
 > [!NOTE]  

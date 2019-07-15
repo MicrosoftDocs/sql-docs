@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotated XDR Schemas (Deprecated in SQLXML 4.0)

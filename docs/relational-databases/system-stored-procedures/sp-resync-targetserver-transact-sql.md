@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

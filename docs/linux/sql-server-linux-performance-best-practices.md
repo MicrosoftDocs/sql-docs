@@ -4,7 +4,6 @@ description: This article provide performance best practices and guidelines for 
 author: rgward 
 ms.author: bobward
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Establish Database Mirroring Session - Windows Authentication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b61af738-f144-4992-b0b2-d44cb7240991
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Event Category

@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 
 # SSIS Catalog

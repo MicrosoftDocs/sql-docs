@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

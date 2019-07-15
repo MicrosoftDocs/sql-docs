@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Native Client (OLE DB) Interfaces

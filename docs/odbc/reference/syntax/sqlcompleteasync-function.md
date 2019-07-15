@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLCompleteAsync Function
 **Conformance**  

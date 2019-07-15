@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

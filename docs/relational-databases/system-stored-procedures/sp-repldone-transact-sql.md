@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

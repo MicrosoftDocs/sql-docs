@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Columnstore Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

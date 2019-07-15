@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Raw File Destination
 

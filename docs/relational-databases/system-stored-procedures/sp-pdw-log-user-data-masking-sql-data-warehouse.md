@@ -10,7 +10,6 @@ dev_langs:
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_log_user_data_masking (SQL Data Warehouse)

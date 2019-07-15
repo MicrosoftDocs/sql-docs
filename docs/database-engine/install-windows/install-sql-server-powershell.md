@@ -10,7 +10,6 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: jroth
 ---
 # Install SQL Server PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

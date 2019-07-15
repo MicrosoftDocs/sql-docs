@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # != (Unequal) (SSIS Expression)
 

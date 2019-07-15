@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IRowsetFastLoad::InsertRow (OLE DB)

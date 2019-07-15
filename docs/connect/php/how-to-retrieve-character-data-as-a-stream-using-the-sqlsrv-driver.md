@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # How to: Retrieve Character Data as a Stream Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

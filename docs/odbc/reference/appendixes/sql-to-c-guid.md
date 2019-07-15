@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL to C: GUID
 The identifier for the GUID ODBC SQL data type is:  

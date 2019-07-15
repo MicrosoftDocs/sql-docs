@@ -4,7 +4,6 @@ description: This article explains how to create deployment scripts for a SQL Se
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql

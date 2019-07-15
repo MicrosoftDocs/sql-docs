@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameters (SQL Server Native Client)

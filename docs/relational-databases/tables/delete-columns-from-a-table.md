@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Columns from a Table

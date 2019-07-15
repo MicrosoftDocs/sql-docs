@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # XQueries Handling Relational Data
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Monitor Resource Usage (System Monitor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

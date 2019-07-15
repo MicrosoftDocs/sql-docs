@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

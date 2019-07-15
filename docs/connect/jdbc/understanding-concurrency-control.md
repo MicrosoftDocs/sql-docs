@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Understanding Concurrency Control
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

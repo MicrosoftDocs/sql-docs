@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Term Lookup Transformation
 

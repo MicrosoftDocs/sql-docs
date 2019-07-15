@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ms.prod_service: database-engine, sql-database
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

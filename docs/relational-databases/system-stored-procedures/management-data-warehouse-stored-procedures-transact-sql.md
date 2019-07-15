@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Management Data Warehouse Stored Procedures (Transact-SQL)

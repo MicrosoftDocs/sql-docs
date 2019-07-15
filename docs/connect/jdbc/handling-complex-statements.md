@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Handling Complex Statements
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

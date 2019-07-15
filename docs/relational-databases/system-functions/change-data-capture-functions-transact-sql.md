@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Change Data Capture Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

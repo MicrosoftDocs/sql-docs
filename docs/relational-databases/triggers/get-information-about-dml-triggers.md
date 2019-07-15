@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DML Triggers

@@ -5,7 +5,6 @@ description: This article introduces availability groups on SQL Server container
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql

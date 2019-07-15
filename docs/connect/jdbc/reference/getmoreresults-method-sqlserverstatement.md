@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getMoreResults Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

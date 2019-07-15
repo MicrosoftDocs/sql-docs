@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLInstallTranslatorEx Function
 **Conformance**  

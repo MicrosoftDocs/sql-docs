@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Overview of the Replication Monitor Interface
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

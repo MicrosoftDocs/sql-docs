@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFreeHandle Function
 **Conformance**  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Debugging Control Flow
 

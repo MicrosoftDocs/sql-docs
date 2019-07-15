@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # OnlineIndexOperation Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

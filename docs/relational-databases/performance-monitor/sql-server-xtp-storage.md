@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server XTP Storage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

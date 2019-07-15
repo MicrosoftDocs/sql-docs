@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # XQuery Language Reference (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

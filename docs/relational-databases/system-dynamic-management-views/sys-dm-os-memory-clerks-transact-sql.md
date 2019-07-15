@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_memory_clerks (Transact-SQL)

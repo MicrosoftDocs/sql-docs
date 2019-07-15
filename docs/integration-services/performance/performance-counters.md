@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Performance Counters
 

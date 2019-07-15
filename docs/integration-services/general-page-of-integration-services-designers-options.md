@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # General Page of Integration Services Designers Options
 

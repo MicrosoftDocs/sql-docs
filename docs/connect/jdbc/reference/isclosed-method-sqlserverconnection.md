@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # isClosed Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

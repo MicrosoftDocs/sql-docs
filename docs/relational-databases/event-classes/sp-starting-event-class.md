@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SP:Starting Event Class

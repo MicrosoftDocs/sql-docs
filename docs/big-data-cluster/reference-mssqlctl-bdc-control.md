@@ -5,7 +5,6 @@ description: Reference article for mssqlctl bdc control commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql

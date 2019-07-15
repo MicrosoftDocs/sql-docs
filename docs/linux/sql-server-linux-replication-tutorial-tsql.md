@@ -4,7 +4,6 @@ description: This tutorial shows how to configure SQL Server snapshot replicatio
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql

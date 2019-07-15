@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 
 # CLR Integration Security

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSTATE Mappings
 This topic discusses SQLSTATE values for ODBC *2.x* and ODBC *3.x*. For more information on ODBC *3.x* SQLSTATE values, see [Appendix A: ODBC Error Codes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  

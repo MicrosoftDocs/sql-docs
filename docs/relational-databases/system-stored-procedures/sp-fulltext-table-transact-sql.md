@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_table (Transact-SQL)

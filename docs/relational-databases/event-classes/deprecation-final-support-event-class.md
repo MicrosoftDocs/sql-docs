@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deprecation Final Support Event Class

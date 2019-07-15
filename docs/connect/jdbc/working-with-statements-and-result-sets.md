@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Working with Statements and Result Sets

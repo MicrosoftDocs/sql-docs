@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Best Practices for Replication Administration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

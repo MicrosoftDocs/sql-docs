@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publish Execution of Stored Procedure in Transactional Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "OLE DB rowsets, properties"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Rowset Properties and Behaviors
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

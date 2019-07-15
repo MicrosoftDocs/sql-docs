@@ -8,7 +8,6 @@ ms.prod: sql
 ms.technology:
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
 ---
 # SQL Server managing partners
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

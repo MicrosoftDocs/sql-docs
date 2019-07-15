@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy a SELECT Result Set (ODBC)

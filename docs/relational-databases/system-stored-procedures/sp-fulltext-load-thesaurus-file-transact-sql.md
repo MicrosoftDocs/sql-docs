@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sp_fulltext_load_thesaurus_file (Transact-SQL)
 

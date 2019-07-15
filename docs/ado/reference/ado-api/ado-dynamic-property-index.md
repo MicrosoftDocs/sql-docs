@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADO Dynamic Property Index
 Data providers, service providers, and service components can add dynamic properties to the **Properties** collections of the unopened [Connection](../../../ado/reference/ado-api/connection-object-ado.md) and [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects. A given provider may also insert additional properties when these objects are opened. Some of these properties are listed in the [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md) section. More are listed under the specific providers in the [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md) section.  

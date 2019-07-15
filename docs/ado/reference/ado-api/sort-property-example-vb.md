@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Sort Property Example (VB)
 This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Sort](../../../ado/reference/ado-api/sort-property.md) property to reorder the rows of a **Recordset** derived from the ***Authors*** table of the ***Pubs*** database. A secondary utility routine prints each row.  

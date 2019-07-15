@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # UpdateRule Property (ADOX)
 Indicates the action performed when a primary [Key](../../../ado/reference/adox-api/key-object-adox.md) is updated.  

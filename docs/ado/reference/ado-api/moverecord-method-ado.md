@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # MoveRecord Method (ADO)
 Moves the entity represented by a [Record](../../../ado/reference/ado-api/record-object-ado.md) to another location.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8c79e9ba-afa0-4e20-9c53-371cc42b4a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLPutData (Visual FoxPro ODBC Driver)
 > [!NOTE]  

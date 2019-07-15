@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNumParams (Visual FoxPro ODBC Driver)
 > [!NOTE]  

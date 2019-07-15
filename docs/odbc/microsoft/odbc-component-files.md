@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Component Files
 The ODBC Driver files are required by each component of ODBC Desktop Database Drivers 4.0.  

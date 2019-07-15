@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6e9ce02b-97c7-4c1a-91e0-829df7459c84
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetTypeInfo (dBASE Driver)
 > [!NOTE]  

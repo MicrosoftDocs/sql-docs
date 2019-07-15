@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Environment Handles
 An *environment* is a global context in which to access data; associated with an environment is any information that is global in nature, such as:  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Affected ODBC Components
 Backward compatibility describes how applications, the Driver Manager, and drivers are affected by the introduction of a new version of the Driver Manager. This affects applications and driver when either or both of them remain in the old version. There are, therefore, three types of backward compatibility to consider, as shown in the following table.  

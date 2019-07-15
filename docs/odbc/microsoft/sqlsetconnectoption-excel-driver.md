@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectOption (Excel Driver)
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: "What's new in SQL Server 2019 | Microsoft Docs"
+title: "What's new in SQL Server 2019 (Pre-release) | Microsoft Docs"
 ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ""
@@ -10,17 +10,13 @@ ms.author: mikeray
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
+# What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (pre-release)
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. 
+This article provides a list of features introduced in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. It is provided for historical purposes, but does not apply to production, or current pre-release versions of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-This article summarizes new features and enhancements for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The [Details](#details) section provides technical details of features that may not be available in core documentation. The other sections of this article provide details about all of the features released to date for this [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
-
-For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
-
-**Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
+For the current information, see [What's New in SQL Server 2019](what-s-new-in-sql-server-ver-15.md).
 
 ## CTP 3.2 July 2019
 
@@ -32,20 +28,19 @@ For specific features excluded from support, see the [release notes](sql-server-
 
 In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2.
 
-### New in big data clusters
+### Big data clusters
 
 |New feature or update | Details |
 |:---|:---|
-|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. |
 | &nbsp; | &nbsp; |
 
-### New in database engine
+### Database engine
 
 | New feature or update | Details |
 |:---|:---| 
 | &nbsp; | &nbsp; |
 
-### New in Analysis Services
+### Analysis Services
 
 | New feature or update | Details |
 |:---|:---| 
@@ -53,29 +48,8 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
-## Big data clusters
+## CTP 3.1 June 2019
 
-| New feature or update | Details |
-|:---|:---|
-| Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes <br/><br/> Read, write, and process big data from Transact-SQL or Spark<br/><br/> Easily combine and analyze high-value relational data with high-volume big data<br/><br/>Query external data sources<br/><br/>Store big data in HDFS managed by SQL Server<br/><br/>Query data from multiple external data sources through the cluster<br/><br/> Use the data for AI, machine learning, and other analysis tasks<br/><br/> See [What are SQL Server big data clusters](../big-data-cluster/big-data-cluster-overview.md).|
-| &nbsp; | &nbsp; |
-
-For more details, see [What are SQL Server big data clusters](../big-data-cluster/big-data-cluster-overview.md)
-
-<!----------------------------
-### Database engine
-
-| New feature or update | Details |
-|:---|:---|
-|Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
-|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
-|New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
-|Partition tables and indexes for graph databases|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
-|New option for indexes - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more information.|
-| &nbsp; | &nbsp; |
------------------------------>
-
-<!----------------------------
 ### Big data clusters
 
 | New feature or update | Details |
@@ -86,174 +60,25 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 | MSSQL Spark connector | Support for read/write to data pool external tables. Previous releases supported read/write to MASTER instance tables only. For more information, see [How to read and write to SQL Server from Spark using the MSSQL Spark Connector](../big-data-cluster/spark-mssql-connector.md). |
 | Machine Learning using MLeap | [Train an MLeap machine learning model in Spark and score it in SQL Server using the Java language extension](../big-data-cluster/spark-create-machine-learning-model.md). |
 | &nbsp; | &nbsp; |
------------------------------------->
 
-## SQL Server on Linux
+### Database engine
 
 | New feature or update | Details |
-|:-----|:-----|
-|New container registry|[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
-|Always On Availability Group on Docker containers with Kubernetes |[Always On Availability Groups for containers](../linux/sql-server-ag-kubernetes.md) |
-|Replication support |[SQL Server Replication on Linux](../linux/sql-server-linux-replication.md)
-|Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md) |
-|OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md) |
-|Machine Learning on Linux |[Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md) |
-|Tempdb improvements | By default, a new installation of SQL Server on Linux creates multiple tempdb data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each tempdb file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
-| PolyBase on Linux | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
-| &nbsp; | &nbsp; |
-
-## Database engine
-
-### Security
-
-|New feature or update | Details |
 |:---|:---|
-|Feature restrictions| Prevent some forms of SQL injection from leaking information about the database, even when the SQL injection is successful. See [Feature restrictions](../relational-databases/security/feature-restrictions.md)|
 |Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
-|Transparent Data Encryption (TDE) scan - suspend and resume|[Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
-|Certificate management in SQL Server Configuration Manager|[Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
-| &nbsp; | &nbsp; |
-
-### Graph
-
-|New feature or update | Details |
-|:---|:---|
-|Edge constraint cascade delete actions |Define cascaded delete actions on an edge constraint in a graph database. See[Edge constraints](../relational-databases/tables/graph-edge-constraints.md). |
+|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
 |New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
-|Partition tables and indexes| The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
-|Use derived table or view aliases in graph match query |See [Graph Edge Constraints](../relational-databases/tables/graph-edge-constraints.md). |
+|Partition tables and indexes for graph databases|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
+|New option for indexes - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more information.|
 | &nbsp; | &nbsp; |
 
-### Indexes
-
-|New feature or update | Details |
-|:---|:---|
-|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more information.|
-|Build and rebuild online clustered columnstore index | See [Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md). |
-| &nbsp; | &nbsp; |
-
-### In memory databases
-
-|New feature or update | Details |
-|:---|:---|
-|DDL control for hybrid buffer pool |With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
-|Memory-optimized tempdb metadata|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
-| &nbsp; | &nbsp; |
-
-### Linked servers
-
-|New feature or update | Details |
-|:---|:---|
-|Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
-| &nbsp; | &nbsp; |
-
-### Collation
-
-|New feature or update | Details |
-|:---|:---|
-|Support UTF-8 character encoding |Enabled for a BIN2 collation (`Latin1_General_100_BIN2_UTF8`). See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md). |
-|Select UTF-8 collation as default during setup | See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23). |
-| &nbsp; | &nbsp; |
-
-### Server settings
-
-|New feature or update | Details |
-|:---|:---|
-|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
-|SQL Server Setup enables MAXDOP settings |New recommendations follow the documented guidelines.[Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
-|Hybrid buffer pool| New feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) .|
-| &nbsp; | &nbsp; |
-
-### Performance monitoring
-
-|New feature or update | Details |
-|:---|:---|
-|Scalar UDF inlining |Automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. See [Scalar UDF Inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md). |
-| `sys.dm_exec_requests` column `command` | Shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. See [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
-|`WAIT_ON_SYNC_STATISTICS_REFRESH` | New wait type in `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations. See [`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|
-|Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
-|`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for most queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
-|`LAST_QUERY_PLAN_STATS` | New database scoped configuration to enable `sys.dm_exec_query_plan_stats`. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|`LIGHTWEIGHT_QUERY_PROFILING`|New database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
-|`query_post_execution_plan_profile` | Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. See [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).|
-
-### Language extensions
-
-|New feature or update | Details |
-|:---|:---|
-|New Java language SDK | Simplifies development of Java programs that can be run from SQL Server. See [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
-|SQL Server Language Extensions - [Java language extension](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open sourced and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
-|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
-|Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
-
-### Spatial
-
-|New feature or update | Details |
-|:---|:---|
-| New spatial reference identifiers (SRIDs) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides more robust and accurate datum which is more closely aligned to global positioning systems. The new SRIDs are:<br/><br/> - 7843 - geographic 2D<br/> - 7844 - geographic 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
-| &nbsp; | &nbsp; |
-
-### Performance
-
-|New feature or update | Details |
-|:---|:---|
-|Accelerated database recovery | Enable accelerated database recovery per-database. See [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
-|Forcing fast forward and static cursors | Query Store plan forcing support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
-|Reduced recompilations for workloads| Improves using temporary tables across multiple scopes. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
-|Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-| &nbsp; | &nbsp; |
-
-### Availability groups
-
-|New feature or update | Details |
-|:---|:---|
-|Up to five synchronous replicas|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.|
-|Secondary-to-primary replica connection redirection| Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).|
-| &nbsp; | &nbsp; |
-
-### Error messages
-
-|New feature or update | Details |
-|:---|:---|
-|Verbose truncation warnings | Truncation error message defaults to include table and column names, and truncated value. See [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).|
-| &nbsp; | &nbsp; |
-
-## <a id="ml"></a> SQL Server Machine Learning Services
-
-|New feature or update | Details |
-|:---|:---|
-|Partition-based modeling|Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model. See [Create partition-based models](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)|
-|Windows Server Failover Cluster| Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.|
-| &nbsp; | &nbsp; |
-
-## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
-
-| New feature or update | Details |
-|:---|:---|
-|Supports Azure SQL Database managed instance databases.| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
-|New HTML controls| HTML controls replace all former Silverlight components. Silverlight dependency removed.|
-| &nbsp; | &nbsp; |
-
-## Analysis Services
-
-| New feature or update | Details |
-|:---|:---|
-|Calculation groups in tabular model| [Calculation groups in tabular model](#calc-ctp24) |
-|MDX query support for tabular models with calculation groups | See [Calculation groups](#calc-ctp24). |
-|Dynamic formatting of measures using calculation groups |This feature allows you to conditionally change format strings for measures with [calculation groups](#calc-ctp24). For example, with currency conversion, a measure can be displayed using different foreign currency formats.|
-|Many-to-many relationships in tabular models|[Many-to-many relationships in tabular models](#many-to-many-ctp24)|
-|Property settings for resource governance|[Property settings for resource governance](#property-ctp24)|
-| &nbsp; | &nbsp; |
-
-<!----------------------------------------
 ### SQL Server on Linux
 
 | New feature or update | Details |
-|:-----|:-----
+|:-----|:-----|
+| Tempdb improvements | By default, a new installation of SQL Server on Linux creates multiple tempdb data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each tempdb file is 8 MB with an auto growth of 64 MB. This behavior similar to the default SQL Server installation on Windows. |
 | &nbsp; | &nbsp; |
----------------------------------------->
 
-<!-------
 ## CTP 3.0 May 2019
 
 ### Big data clusters
@@ -266,9 +91,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 | New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
 | External table improvements | External tables of HADOOP data source type now supports reading rows up to 1 MB in size. External tables (ODBC, storage pool, data pool) now support rows as wide as a SQL Server table. |
 | &nbsp; | &nbsp; |
------->
 
-<!---------------------------
 ### Database engine
 
 | New feature or update | Details |
@@ -290,8 +113,14 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 >
 ><sup>2</sup>
 >A trace flag is no longer required to enable the hybrid buffer pool.
------------------>
-<!---------------------------
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| New feature or update | Details |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] supports Azure SQL Database managed instance databases.| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).
+| &nbsp; | &nbsp; |
+
 ### Analysis Services
 
 | New feature or update | Details |
@@ -315,7 +144,6 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 | Spark to SQL Server connector | [Read and write to SQL Server from Spark using the MSSQL JDBC Connector](../big-data-cluster/spark-mssql-connector.md) |
 | &nbsp; | &nbsp; |
 
-
 ### Database engine
 
 | New feature or update | Details |
@@ -329,9 +157,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 
 ><sup>1</sup>
 >This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled or setting the `LAST_QUERY_PLAN_STATS` database scoped configuration to ON.
----------------------------------->
 
-<!-----------------------------------
 ## CTP 2.4 March 2019
 
 ### Big data clusters
@@ -385,13 +211,18 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 | _Proxy_ endpoint names have been changed and consolidated. | **service-proxy-lb** and **service-proxy-nodeport** have been consolidated into the **endpoint-service-proxy** endpoint. |
 | _Controller_ endpoint names have been changed and consolidated. | **service-mssql-controller-lb** and **service-mssql-controller-nodeport** have been consolidated into the **endpoint-controller** endpoint. |
 | &nbsp; | &nbsp; |
--------------------------------------->
-<!-------------------------
+
 ### Database engine
 
 | New feature or update | Details |
 |:-----|:-----|
-
+|Enable accelerated database recovery can be enabled per-database.| [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)|
+|Query Store plan forcing support for fast forward and static cursors.|[Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
+|Reduced recompilations for workloads using temporary tables across multiple scopes. |[Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
+|Improved indirect checkpoint scalability. |[Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
+|Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Define cascaded delete actions on an edge constraint in a graph database. |[Edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
+|Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### Tools
@@ -406,16 +237,14 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Added "Reinstall Notebook dependencies" command to assist with Python package updates. | [Tools](#tools-ctp23) |
 |Launch Azure Data Studio from SSMS.| [Tools](#tools-ctp23) |
 | &nbsp; | &nbsp; |
------------------------------------->
-<!------------------
+
 ### Analysis services
 
 | New feature or update | Details |
 |:-----|:-----|
 |Calculation groups in tabular model.| [Calculation groups in tabular model](#calc-ctp24) |
 | &nbsp; | &nbsp; |
---------------------------------------->
-<!----------------------------------
+
 ## CTP 2.2 December 2018
 
 ### Big data clusters
@@ -432,18 +261,15 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |:-----|:-----|
 |Adds support to use UTF-8 character encoding with SQL Server Replication. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 | &nbsp; | &nbsp; |
----------------------------->
 
-<!--------------------------
+
 ### SQL Server on Linux
 
 | New feature or update | Details |
 |:-----|:-----|
 |Always On Availability Group on Docker containers with Kubernetes. |[Always On Availability Groups for containers](../linux/sql-server-ag-kubernetes.md) |
 | &nbsp; | &nbsp; |
----------------------------->
 
-<!----------------------
 ## CTP 2.1 November 2018
 
 ### Database engine
@@ -489,12 +315,39 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 
 | New feature or update | Details |
 |:-----|:-----|
+|Database **COMPATIBILITY_LEVEL 150** is added. |[ALTER DATABASE Compatibility Level (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
+|Resumable Online Index Create.|[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
+|Row mode memory grant feedback. |[Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
+|Approximate `COUNT DISTINCT`.|[Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
+|Batch mode on rowstore.|[Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+|Table variable deferred compilation.|[Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
+|Java language extension.|[Java language extension](../advanced-analytics/java/extension-java.md) |
+|Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. | |
+|Edge constraints.|[Graph edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
+|Database scoped default setting for online and resumable DDL operations.| |
+|Availability groups support up to 5 synchronous secondary replicas.|[Availability groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
+|Secondary to primary replica read/write connection redirection|[Secondary to primary replica read/write connection redirection-Always On Availability Groups](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
+|SQL Data Discovery and Classification.| [SQL Data Discovery & Classification](../relational-databases/security/sql-data-discovery-and-classification.md) |
+|Expanded support for persistent memory devices.|[Hybrid Buffer Pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
+|Support for columnstore statistics in `DBCC CLONEDATABASE`|[Stats blob for columnstore indexes](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
+|`sp_estimate_data_compression_savings` introduces `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`.|[Considerations for Columnstore Indexes](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
+|Machine Learning services supported on Windows Server Failover Cluster. |[What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
+|Machine Learning support for partition-based modeling.|[What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
+|Lightweight query profiling infrastructure enabled by default |[Lightweight query execution statistics profiling infrastructure v3](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
+|New PolyBase connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB. |[What is PolyBase?](../relational-databases/polybase/polybase-guide.md) |
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. |[sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
+|Always Encrypted with secure enclaves. |[Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) |
+|Build and rebuild online clustered columnstore index. |[Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md) |
 | &nbsp; | &nbsp; |
 
 ### SQL Server on Linux
 
 | New feature or update | Details |
 |:-----|:-----|
+|Replication support |[SQL Server Replication on Linux](../linux/sql-server-linux-replication.md)
+|Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md) |
+|OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md) |
+|Machine Learning on Linux |[Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md) |
 | &nbsp; | &nbsp; |
 
 ### Master Data Services
@@ -503,7 +356,6 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |:-----|:-----|
 |The Master Data Services (MDS) portal no longer depends on Silverlight.| All the former Silverlight components have been replaced with HTML controls.|
 | &nbsp; | &nbsp; |
-
 
 ### Security
 
@@ -529,7 +381,7 @@ As of CTP 2.4, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not 
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
----------------------------->
+
 ## Details
 
 ### <a id="bigdatacluster"></a>Big data clusters
@@ -819,7 +671,7 @@ To override the default setting, include the `ONLINE` or `RESUMABLE` option in t
 Without this feature, you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
 For more information on index resumable operations, see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
-<!------------
+
 #### <a id="ha"></a>Always On Availability Groups - more synchronous replicas (CTP 2.0)
 
 - **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.
@@ -845,7 +697,7 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 
 >[!NOTE]
 >There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](/azure/sql-database/sql-database-data-discovery-and-classification/#subheading-3).
---------------->
+
 #### Expanded support for persistent memory devices (CTP 2.0)
 
 Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed on a persistent memory device can now operate in *enlightened* mode. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] directly accesses the device, bypassing the storage stack of the operating system using efficient memcpy operations. This mode improves performance because it allows low latency input/output against such devices.
@@ -867,7 +719,6 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 
 `sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state. Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
-<!-----
 #### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling (CTP 2.0)
 
 - **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
@@ -875,7 +726,6 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
----------------->
 
 #### Lightweight query profiling infrastructure enabled by default (CTP 2.0)
 

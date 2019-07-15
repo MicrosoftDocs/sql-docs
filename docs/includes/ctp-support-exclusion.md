@@ -1,4 +1,4 @@
-### Enabled deployment scenarios
+## Enabled deployment scenarios
 
 CTP 3.2 enables the following scenarios:
 
@@ -9,7 +9,7 @@ CTP 3.2 enables the following scenarios:
    >[!NOTE]
    >While in-place upgrade from SQL Server 2008 and 2008 R2 is not blocked, there are no commonly supported Windows Operating system versions between them and SQL Server 2019.
 
-### Support
+## Support
 
 SQL Server 2019 CTP 3.2 is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](http://aka.ms/sqleap), may have support to run SQL Server 2019 CTP 3.2 by special agreement, in consultation with Microsoft.
 

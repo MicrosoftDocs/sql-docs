@@ -14,9 +14,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. This article summarizes what is new for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] builds on previous releases to grow SQL Server as a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems. 
 
-The article summarizes the features in each release and points to more details for each feature. The [Details](#details) section provides technical details of features that may not be available in core documentation. The other sections of this article provide details about all of the features released to date for this [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+This article summarizes new features and enhancements for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. The [Details](#details) section provides technical details of features that may not be available in core documentation. The other sections of this article provide details about all of the features released to date for this [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
@@ -36,6 +36,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 |New feature or update | Details |
 |:---|:---|
+|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. |
 | &nbsp; | &nbsp; |
 
 ### Database engine
@@ -52,7 +53,33 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
-## CTP 3.1 June 2019
+## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] enhancements by component
+
+### Big data clusters
+
+| New feature or update | Details |
+|:---|:---|
+| Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes |
+| |Read, write, and process big data from Transact-SQL or Spark|
+| | Easily combine and analyze high-value relational data with high-volume big data|
+| |Query external data sources|
+| |Store big data in HDFS managed by SQL Server|
+| |Query data from multiple external data sources through the cluster|
+| |Use the data for AI, machine learning, and other analysis tasks|
+| &nbsp; | &nbsp; |
+
+For more details, see [What are SQL Server big data clusters](../big-data-cluster/big-data-cluster-overview.md)
+
+### Database engine
+
+| New feature or update | Details |
+|:---|:---|
+|Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
+|New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
+|Partition tables and indexes for graph databases|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
+|New option for indexes - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more information.|
+| &nbsp; | &nbsp; |
 
 ### Big data clusters
 
@@ -65,16 +92,56 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | Machine Learning using MLeap | [Train an MLeap machine learning model in Spark and score it in SQL Server using the Java language extension](../big-data-cluster/spark-create-machine-learning-model.md). |
 | &nbsp; | &nbsp; |
 
-### Database engine
+### SQL Server on Linux
 
 | New feature or update | Details |
-|:---|:---|
-|Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
-|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
-|New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
-|Partition tables and indexes for graph databases|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
-|New option for indexes - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more information.|
+|:-----|:-----|
+| Tempdb improvements | By default, a new installation of SQL Server on Linux creates multiple tempdb data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each tempdb file is 8 MB with an auto growth of 64 MB. This behavior similar to the default SQL Server installation on Windows. |
 | &nbsp; | &nbsp; |
+
+### Database engine
+
+|Family| New feature or update | Details |
+|:----|:---|:---|
+|Encryption|Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Encryption|Transparent Data Encryption (TDE) scan - suspend and resume.|[Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
+|Graph|New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
+|Graph|Partition tables and indexes for graph databases|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
+|Index|New option for indexes - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more information.|
+|In memory|[In-memory database](../relational-databases/in-memory-database.md) adds new DDL syntax to control the hybrid buffer pool. <sup>2</sup>|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
+|In memory|Memory-optimized tempdb metadata|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
+|Linked server|Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Collation|BIN2_UTF8 collation name changed to `Latin1_General_100_BIN2_UTF8`. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Settings|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option 
+|Settings|[Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
+|Settings|SQL Server Setup includes MAXDOP recommendations that follow the documented guidelines. |[Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
+|Performance monitoring|`sys.dm_exec_query_plan_stats` returns more information about degree of parallelism and memory grants for query plans. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+|Linux | PolyBase on Linux. | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
+|Language extensions| New Java language SDK for SQL Server. | Simplifies development of Java programs that can be run from SQL Server. See [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
+|Language extensions|SQL Server Language Extensions - [Java language extension](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open sourced and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
+|Language extensions|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+|Language extensions|Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
+|Performance monitoring |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|Performance monitoring| Expanded the scope of plans available in DMF `sys.dm_exec_query_plan_stats`. |See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+|Performance monitoring| New `LAST_QUERY_PLAN_STATS` database scoped configuration to enable `sys.dm_exec_query_plan_stats`. |See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|
+|Performance monitoring|New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+|Performance monitoring|The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. |[Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md)|
+|Spatial| New spatial reference identifiers (SRIDs). |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides more robust and accurate datum which is more closely aligned to global positioning systems. The new SRIDs are:<br/><br/> - 7843 - geographic 2D<br/> - 7844 - geographic 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
+|Troubleshooting|Truncation error message defaults to include table and column names, and truncated value.|[VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)|
+| &nbsp; | &nbsp; |
+
+><sup>1</sup>
+>This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
+>
+
+
+
+
+
+
+
+
+KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
 
 ### SQL Server on Linux
 

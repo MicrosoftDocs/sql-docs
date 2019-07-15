@@ -7,7 +7,6 @@ ms.topic: "tutorial"
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-manager: craigg
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Improve PolyBase scale-out groups on Windows

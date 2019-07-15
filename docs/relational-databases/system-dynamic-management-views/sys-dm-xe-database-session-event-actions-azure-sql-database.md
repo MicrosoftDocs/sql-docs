@@ -9,7 +9,6 @@ ms.topic: "language-reference"
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_xe_database_session_event_actions (Azure SQL Database)

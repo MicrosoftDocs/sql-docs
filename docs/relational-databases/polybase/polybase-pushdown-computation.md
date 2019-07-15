@@ -7,7 +7,6 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-manager: craigg
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Pushdown computations in PolyBase

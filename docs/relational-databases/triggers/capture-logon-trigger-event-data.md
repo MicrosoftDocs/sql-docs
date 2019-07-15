@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Capture Logon Trigger Event Data

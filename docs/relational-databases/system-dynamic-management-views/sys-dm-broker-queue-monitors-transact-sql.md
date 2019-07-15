@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

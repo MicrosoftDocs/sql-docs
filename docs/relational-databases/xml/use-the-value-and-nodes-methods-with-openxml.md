@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Use the value() and nodes() Methods with OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

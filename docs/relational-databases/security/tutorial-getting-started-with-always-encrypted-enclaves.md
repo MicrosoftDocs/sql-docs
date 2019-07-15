@@ -11,7 +11,6 @@ ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS

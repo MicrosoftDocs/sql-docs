@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_stacks (Transact-SQL)

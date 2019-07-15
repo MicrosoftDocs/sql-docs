@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # cdc.lsn_time_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

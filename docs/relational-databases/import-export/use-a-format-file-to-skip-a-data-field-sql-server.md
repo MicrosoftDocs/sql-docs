@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use a Format File to Skip a Data Field (SQL Server)

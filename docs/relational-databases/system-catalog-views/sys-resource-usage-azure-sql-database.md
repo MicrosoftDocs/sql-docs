@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.resource_usage (Azure SQL Database)

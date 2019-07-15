@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

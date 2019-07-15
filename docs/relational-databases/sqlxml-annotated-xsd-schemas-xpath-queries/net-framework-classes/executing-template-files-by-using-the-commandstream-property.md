@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandStream Property

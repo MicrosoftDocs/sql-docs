@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuL-Preview 
 ms.author: xiaoyul
-manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_materialized_view_mappings (Transact-SQL) (preview)

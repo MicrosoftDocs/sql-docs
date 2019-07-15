@@ -17,7 +17,6 @@ ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Document Properties with Search Property Lists

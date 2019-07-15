@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

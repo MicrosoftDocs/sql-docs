@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Broker:Message Undeliverable Event Class

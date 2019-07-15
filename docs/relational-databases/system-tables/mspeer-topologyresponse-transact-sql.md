@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MSpeer_topologyresponse (Transact-SQL)

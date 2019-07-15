@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Wait Statistics Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

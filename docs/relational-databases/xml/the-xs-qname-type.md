@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # The xs:QName Type
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

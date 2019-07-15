@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysprotects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

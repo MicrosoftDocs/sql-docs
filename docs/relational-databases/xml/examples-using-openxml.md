@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Examples: Using OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

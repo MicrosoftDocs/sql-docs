@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Management Objects (SMO) Programming Guide

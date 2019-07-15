@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a SQL Server Native Client OLE DB Provider Application

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

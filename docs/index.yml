@@ -108,7 +108,7 @@ conceptualContent:
           url: database-engine/install-windows/install-sql-server.md
           itemType: overview
         - text: SQL Server Management Studio (SSMS)
-          url: ssms/download-sql-server-management-studio-ssms
+          url: ssms/download-sql-server-management-studio-ssms.md
           itemType: overview
         - text: Analysis Services (SSAS)
           url: analysis-services/instances/install-windows/install-analysis-services.md

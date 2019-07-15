@@ -6,7 +6,6 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 05/08/2019

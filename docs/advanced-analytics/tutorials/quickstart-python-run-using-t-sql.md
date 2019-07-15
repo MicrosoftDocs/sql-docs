@@ -8,7 +8,6 @@ ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Quickstart: "Hello world" Python script in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

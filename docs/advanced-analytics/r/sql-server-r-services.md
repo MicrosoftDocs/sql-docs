@@ -8,7 +8,6 @@ ms.date: 09/10/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # R Services in SQL Server 2016

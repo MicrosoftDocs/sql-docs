@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Syntax Conventions

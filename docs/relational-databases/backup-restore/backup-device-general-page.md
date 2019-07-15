@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Backup Device (General Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

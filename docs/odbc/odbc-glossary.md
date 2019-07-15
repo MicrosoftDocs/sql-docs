@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Glossary
 ## A  

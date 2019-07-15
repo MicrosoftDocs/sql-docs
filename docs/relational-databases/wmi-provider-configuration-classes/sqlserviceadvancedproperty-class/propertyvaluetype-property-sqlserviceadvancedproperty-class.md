@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # PropertyValueType Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

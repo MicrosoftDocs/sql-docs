@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLStatistics Function
 **Conformance**  

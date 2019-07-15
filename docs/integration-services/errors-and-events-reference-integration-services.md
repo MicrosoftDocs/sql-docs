@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Errors and Events Reference (Integration Services)
 

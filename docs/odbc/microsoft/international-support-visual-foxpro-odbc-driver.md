@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # International Support (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports:  

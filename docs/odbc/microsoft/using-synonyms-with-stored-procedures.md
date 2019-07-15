@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8620b039-a086-4534-8710-cc8b1787dc80
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Synonyms with Stored Procedures
 > [!IMPORTANT]  

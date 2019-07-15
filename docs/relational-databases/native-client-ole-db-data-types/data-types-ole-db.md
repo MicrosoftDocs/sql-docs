@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Types (OLE DB)

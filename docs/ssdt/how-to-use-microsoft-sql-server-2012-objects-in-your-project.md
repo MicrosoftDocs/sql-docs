@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Use Microsoft SQL Server 2012 Objects in Your Project
 In this example, you will add a sequence object to a database project targeting Microsoft SQL Server 2012.  

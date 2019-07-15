@@ -4,7 +4,6 @@ description: This tutorial shows how to deploy a SQL Server high availability so
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql

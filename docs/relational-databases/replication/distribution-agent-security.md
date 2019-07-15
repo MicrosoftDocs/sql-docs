@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Distribution Agent Security
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

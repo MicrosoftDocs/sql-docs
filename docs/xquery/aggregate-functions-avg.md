@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Aggregate Functions - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

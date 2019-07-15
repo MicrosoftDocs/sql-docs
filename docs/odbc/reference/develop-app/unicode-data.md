@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Unicode Data
 SQL Unicode data types are provided to describe data that resides in Unicode natively on the DBMS. A C Unicode data type is provided to allow an application to bind data to a Unicode buffer. The Driver Manager can convert data from a Unicode C type (SQL_C_WCHAR) to make it function with an ANSI driver.  

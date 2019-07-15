@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # KILL STATS JOB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

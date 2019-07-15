@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Replay a Transact-SQL Script (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

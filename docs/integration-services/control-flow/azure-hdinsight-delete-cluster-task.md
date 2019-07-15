@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure HDInsight Delete Cluster Task
 

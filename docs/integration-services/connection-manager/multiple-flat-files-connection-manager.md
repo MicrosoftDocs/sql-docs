@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Multiple Flat Files Connection Manager
 

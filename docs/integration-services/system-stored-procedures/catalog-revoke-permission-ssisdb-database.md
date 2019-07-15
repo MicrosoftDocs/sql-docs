@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.revoke_permission (SSISDB Database)
 

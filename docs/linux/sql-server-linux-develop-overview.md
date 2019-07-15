@@ -3,7 +3,6 @@ title: Develop applications for SQL Server on Linux
 description: 
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: de095cb3-1111-4154-8996-3c2e529e3000
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setSQLXML Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

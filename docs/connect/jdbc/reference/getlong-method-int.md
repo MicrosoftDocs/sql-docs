@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getLong Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

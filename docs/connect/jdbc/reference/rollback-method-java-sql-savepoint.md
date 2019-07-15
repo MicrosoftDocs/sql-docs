@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # rollback Method (java.sql.Savepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

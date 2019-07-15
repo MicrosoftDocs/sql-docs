@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_tasks (Transact-SQL)

@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE EVENT SESSION (Transact-SQL)
 

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # MSSQL_ENG014152
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STCurveToLine (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

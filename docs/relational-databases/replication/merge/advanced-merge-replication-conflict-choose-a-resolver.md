@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Advanced Merge Replication Conflict - Choose a Resolver
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

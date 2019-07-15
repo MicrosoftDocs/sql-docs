@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 940ebc5e-44ba-4dae-8b29-da94f2d1d6c4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.check_constraints (Transact-SQL)

@@ -9,7 +9,6 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-manager: jroth
 ---
 # Driver history for Microsoft SQL Server
 

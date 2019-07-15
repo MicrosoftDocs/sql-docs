@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Creating an ODBC Destination with the Script Component
 

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Add Data or Log Files to a Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

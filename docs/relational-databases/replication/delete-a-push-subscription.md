@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Delete a Push Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

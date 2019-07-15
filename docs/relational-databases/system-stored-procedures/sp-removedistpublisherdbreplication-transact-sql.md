@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

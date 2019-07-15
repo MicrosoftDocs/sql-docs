@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Connect to a Master Data Services Database Dialog Box
 

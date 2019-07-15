@@ -7,7 +7,6 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 
 # Troubleshoot machine learning in SQL Server

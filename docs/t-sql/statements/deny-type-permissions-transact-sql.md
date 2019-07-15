@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DENY Type Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

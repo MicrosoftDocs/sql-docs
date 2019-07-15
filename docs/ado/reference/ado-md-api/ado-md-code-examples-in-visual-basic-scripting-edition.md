@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADO MD Code Examples in Visual Basic, Scripting Edition
 The following examples require Microsoft Active Server Pages (ASP) for Microsoft Internet Information Server 4.0.  

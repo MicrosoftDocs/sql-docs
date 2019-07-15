@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create the Function to Retrieve the Change Data
 

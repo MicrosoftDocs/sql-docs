@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Persisting Custom Objects
 

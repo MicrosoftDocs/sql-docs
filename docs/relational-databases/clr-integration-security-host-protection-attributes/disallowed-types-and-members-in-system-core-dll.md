@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Disallowed Types and Members in System.Core.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

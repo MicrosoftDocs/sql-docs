@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PreConnect:Completed Event Class

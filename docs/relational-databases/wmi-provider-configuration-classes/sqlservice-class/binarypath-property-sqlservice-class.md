@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # BinaryPath Property (SqlService Class )
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

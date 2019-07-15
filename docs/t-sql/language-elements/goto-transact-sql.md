@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # GOTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

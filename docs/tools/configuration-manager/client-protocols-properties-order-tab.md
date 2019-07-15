@@ -13,7 +13,6 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Client Protocols Properties (Order Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

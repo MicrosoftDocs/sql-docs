@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Understanding Row Locking

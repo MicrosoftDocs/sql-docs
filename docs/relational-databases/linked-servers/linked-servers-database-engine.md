@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Linked Servers (Database Engine)
 

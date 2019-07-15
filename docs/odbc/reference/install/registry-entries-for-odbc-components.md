@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Registry Entries for ODBC Components
 > [!NOTE]  

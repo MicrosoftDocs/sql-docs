@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Transactional Articles - Regenerate to Reflect Schema Changes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

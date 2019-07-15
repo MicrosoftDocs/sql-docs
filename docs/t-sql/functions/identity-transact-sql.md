@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # &#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

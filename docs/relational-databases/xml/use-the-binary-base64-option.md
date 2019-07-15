@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Use the BINARY BASE64 Option
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

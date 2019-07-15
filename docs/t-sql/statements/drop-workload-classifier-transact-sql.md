@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # DROP WORKLOAD CLASSIFIER (Transact-SQL)

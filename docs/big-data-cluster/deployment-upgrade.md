@@ -5,7 +5,6 @@ description: Learn how to upgrade SQL Server 2019 big data clusters (preview) to
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql

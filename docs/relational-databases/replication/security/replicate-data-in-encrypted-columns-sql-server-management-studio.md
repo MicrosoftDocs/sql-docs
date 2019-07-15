@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replicate Data in Encrypted Columns (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

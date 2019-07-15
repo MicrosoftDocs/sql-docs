@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Availability Replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

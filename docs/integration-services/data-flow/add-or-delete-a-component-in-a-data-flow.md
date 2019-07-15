@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add or Delete a Component in a Data Flow
 

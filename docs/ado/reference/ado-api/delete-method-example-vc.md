@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Delete Method Example (VC++)
 This example uses the [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) method to remove a specified record from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

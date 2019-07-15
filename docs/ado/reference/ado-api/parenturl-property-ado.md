@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ParentURL Property (ADO)
 Indicates an absolute URL string that points to the parent [Record](../../../ado/reference/ado-api/record-object-ado.md) of the current **Record** object.  

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 30b8fbee-8818-4217-95be-ab1aa9230062
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLServerResultSet Fields
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

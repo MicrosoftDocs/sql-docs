@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Banner Element (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

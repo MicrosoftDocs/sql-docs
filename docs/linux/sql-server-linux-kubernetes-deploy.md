@@ -4,7 +4,6 @@ description: This article explains the parameters for the SQL Server Kubernetes 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql

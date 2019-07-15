@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Building a Knowledge Base
 

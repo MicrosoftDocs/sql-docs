@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Updating Large Data Sample

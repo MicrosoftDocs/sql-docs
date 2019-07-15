@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Scripting Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

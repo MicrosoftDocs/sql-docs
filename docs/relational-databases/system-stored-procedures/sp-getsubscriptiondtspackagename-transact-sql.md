@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

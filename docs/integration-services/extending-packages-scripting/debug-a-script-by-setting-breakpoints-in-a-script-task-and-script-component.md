@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component
 

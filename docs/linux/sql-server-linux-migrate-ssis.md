@@ -4,7 +4,6 @@ description: This article describes SQL Server Integration Services (SSIS) for L
 author: lrtoyou1223 
 ms.author: lle 
 ms.reviewer: maghan
-manager: jroth
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql

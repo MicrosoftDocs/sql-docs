@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFetchScroll Function
 **Conformance**  

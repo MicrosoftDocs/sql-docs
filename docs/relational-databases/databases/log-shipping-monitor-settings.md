@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Log Shipping Monitor Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

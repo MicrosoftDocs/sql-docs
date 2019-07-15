@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Filter Events in a Trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

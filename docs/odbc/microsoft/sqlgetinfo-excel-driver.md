@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetInfo (Excel Driver)
 > [!NOTE]  

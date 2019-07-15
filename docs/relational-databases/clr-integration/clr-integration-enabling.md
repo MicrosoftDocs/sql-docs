@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration - Enabling
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

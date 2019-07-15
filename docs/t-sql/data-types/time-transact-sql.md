@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # time (Transact-SQL)

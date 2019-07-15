@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # RDS Usage and Security
 Use the information in this section to set up your server and use RDS quickly. This section includes specific configuration steps that you might need to take when implementing RDS, describes some of the key relationships between RDS and other technologies, and helps identify solutions to problems that you might encounter when setting up an RDS solution.  

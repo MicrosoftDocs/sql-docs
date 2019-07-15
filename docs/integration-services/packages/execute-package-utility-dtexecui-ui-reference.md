@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Execute Package Utility (dtexecui)
 

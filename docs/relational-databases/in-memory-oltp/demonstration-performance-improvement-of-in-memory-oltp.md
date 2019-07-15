@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP

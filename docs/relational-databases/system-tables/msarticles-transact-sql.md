@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

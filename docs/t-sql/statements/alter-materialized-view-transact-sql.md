@@ -19,7 +19,6 @@ helpviewer_keywords:
   - "ALTER VIEW statement"
 author: XiaoyuL-Preview 
 ms.author: xiaoyul
-manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # ALTER MATERIALIZED VIEW (Transact-SQL) (preview)

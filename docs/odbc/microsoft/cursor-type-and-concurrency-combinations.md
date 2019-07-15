@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Cursor Type and Concurrency Combinations
 > [!IMPORTANT]  

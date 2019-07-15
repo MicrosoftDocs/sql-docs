@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Implement a Custom Conflict Resolver for a Merge Article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

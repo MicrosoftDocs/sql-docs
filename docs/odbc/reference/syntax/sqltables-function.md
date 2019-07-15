@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTables Function
 **Conformance**  

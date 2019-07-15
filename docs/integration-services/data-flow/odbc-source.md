@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ODBC Source
 

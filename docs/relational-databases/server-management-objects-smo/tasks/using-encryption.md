@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Encryption

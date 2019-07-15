@@ -4,7 +4,6 @@ description: SQL Server Backup Virtual Device Interface Specification.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql

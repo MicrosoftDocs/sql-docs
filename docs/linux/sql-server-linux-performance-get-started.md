@@ -3,7 +3,6 @@ title: Get started with performance features of SQL Server on Linux
 description: This article provides an introduction of SQL Server performance features for Linux users who are new to SQL Server. Many of these examples work on all platforms, but the context of this article is Linux. 
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql

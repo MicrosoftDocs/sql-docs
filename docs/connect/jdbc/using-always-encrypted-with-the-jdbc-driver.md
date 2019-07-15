@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Using Always Encrypted with the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

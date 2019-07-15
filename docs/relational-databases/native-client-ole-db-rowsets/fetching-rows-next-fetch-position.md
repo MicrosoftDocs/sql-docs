@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9ef74b3f-c9c0-492f-9b93-d65738a61abd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fetching Rows - Next Fetch Position

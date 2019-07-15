@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Perform a Dummy Update for a Merge Article (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

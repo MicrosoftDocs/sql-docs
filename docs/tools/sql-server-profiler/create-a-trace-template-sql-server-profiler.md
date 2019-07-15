@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Create a Trace Template (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

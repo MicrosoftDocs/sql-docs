@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Requirements for Using Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

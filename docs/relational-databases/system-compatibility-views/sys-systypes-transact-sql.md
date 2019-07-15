@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.systypes (Transact-SQL)

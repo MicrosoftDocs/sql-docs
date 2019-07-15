@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "consumer notification for rowset changes [OLE DB Driver for SQL Server]"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Working with Query Notifications
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Descriptor Transitions
 ODBC descriptors have the following three states.  

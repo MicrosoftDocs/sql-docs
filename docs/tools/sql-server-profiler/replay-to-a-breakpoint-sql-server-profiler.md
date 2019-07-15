@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3caf751e-df3b-40c7-b5e8-4490ae178e0c
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Replay to a Breakpoint (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

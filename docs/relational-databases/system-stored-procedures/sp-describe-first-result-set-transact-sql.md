@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_first_result_set (Transact-SQL)

@@ -5,7 +5,6 @@ description: This article describes the SQL Server master instance in a SQL Serv
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql

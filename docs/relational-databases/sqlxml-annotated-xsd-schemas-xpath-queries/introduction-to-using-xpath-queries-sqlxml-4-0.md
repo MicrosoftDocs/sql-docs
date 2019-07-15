@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Using XPath Queries (SQLXML 4.0)

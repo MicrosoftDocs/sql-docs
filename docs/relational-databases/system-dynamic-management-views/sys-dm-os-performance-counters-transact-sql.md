@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_performance_counters (Transact-SQL)

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Enable Updating Subscriptions for Transactional Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

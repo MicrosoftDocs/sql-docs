@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STMLineFromWKB (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Correlate a trace with Windows Performance Log data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

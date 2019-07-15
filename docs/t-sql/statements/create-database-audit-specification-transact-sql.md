@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

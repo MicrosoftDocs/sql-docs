@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replicate Schema Changes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

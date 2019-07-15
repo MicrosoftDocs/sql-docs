@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

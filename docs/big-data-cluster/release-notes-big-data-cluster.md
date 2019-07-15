@@ -5,7 +5,6 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql

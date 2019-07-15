@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # HAS_DBACCESS (Transact-SQL)

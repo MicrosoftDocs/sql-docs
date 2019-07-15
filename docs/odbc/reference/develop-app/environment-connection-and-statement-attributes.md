@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Environment, Connection, and Statement Attributes
 ODBC defines a number of attributes that are associated with environments, connections, or statements.  

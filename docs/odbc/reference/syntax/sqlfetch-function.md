@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFetch Function
 **Conformance**  

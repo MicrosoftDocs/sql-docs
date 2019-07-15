@@ -11,7 +11,6 @@ ms.topic: conceptual
 author: "HaoQian-MS"
 ms.author: "haoqian"
 ms.reviewer: maghan
-manager: craigg
 ---
 # Walkthrough: Set up Integration Services (SSIS) Scale Out
 

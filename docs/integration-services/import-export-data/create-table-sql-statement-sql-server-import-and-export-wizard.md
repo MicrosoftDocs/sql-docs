@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create Table SQL Statement (SQL Server Import and Export Wizard)
 

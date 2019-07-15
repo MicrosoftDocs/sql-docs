@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SAP BW Source Editor (Error Output Page)
 

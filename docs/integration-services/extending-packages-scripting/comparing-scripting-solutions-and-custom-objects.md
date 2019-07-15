@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Comparing Scripting Solutions and Custom Objects
 

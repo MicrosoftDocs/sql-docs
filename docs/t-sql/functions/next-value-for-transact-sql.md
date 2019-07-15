@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

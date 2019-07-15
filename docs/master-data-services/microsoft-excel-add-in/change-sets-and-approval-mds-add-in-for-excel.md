@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change Sets and Approval (MDS Add-in for Excel)
 

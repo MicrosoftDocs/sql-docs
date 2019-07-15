@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-manager: jroth
 ---
 # sp_grant_publication_access (Transact-SQL)
 

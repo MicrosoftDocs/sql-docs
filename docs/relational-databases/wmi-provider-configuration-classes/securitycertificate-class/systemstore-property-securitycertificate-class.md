@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SystemStore Property (SecurityCertificate Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

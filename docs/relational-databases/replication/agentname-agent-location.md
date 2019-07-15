@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # &lt;AgentName&gt; Agent Location
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

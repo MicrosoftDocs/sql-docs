@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getPropertyInfo Method (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

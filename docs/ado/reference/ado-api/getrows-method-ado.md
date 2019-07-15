@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # GetRows Method (ADO)
 Retrieves multiple records of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object into an array.  

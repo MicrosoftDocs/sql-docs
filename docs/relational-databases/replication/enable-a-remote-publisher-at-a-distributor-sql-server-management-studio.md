@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Enable a Remote Publisher at a Distributor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

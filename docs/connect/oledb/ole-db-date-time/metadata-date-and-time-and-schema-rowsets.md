@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "date/time [OLE DB], schema rowsets"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Metadata - Date and Time and Schema Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

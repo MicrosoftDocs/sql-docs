@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Queue Reader Agent Security
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

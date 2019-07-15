@@ -9,7 +9,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # SQL data discovery and classification

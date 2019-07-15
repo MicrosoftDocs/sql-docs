@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View Publication and Subscription Status in Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 ---
 # sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

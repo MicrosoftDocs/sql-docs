@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

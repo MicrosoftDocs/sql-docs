@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Raw File Source
 

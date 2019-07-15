@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Edit Instance Properties
 

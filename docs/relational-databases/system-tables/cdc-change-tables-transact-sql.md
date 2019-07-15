@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # cdc.change_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

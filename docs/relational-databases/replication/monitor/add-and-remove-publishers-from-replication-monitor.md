@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Add and Remove Publishers from Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

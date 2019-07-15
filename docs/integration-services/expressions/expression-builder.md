@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Expression Builder
 

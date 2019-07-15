@@ -17,7 +17,6 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # What is PolyBase?

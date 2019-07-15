@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

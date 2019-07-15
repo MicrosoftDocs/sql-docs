@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Configure Publishing and Distribution
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

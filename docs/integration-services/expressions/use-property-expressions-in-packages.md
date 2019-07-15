@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Use Property Expressions in Packages
 

@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

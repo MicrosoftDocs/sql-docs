@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SQL Tools and Utilities for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse

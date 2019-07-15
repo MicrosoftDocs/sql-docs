@@ -5,7 +5,6 @@ description: Learn how to perform an offline deployment of a SQL Server big data
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql

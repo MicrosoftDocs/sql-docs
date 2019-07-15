@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure FailureConditionLevel Property Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

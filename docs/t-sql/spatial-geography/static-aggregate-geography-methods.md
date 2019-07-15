@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # Static Aggregate Geography Methods
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STLineFromWKB (geometry Data Type)

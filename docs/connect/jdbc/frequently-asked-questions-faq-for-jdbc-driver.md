@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Frequently Asked Questions (FAQ) for JDBC Driver

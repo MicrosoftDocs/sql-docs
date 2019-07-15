@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 3513dd7f-6ae5-4010-bde0-454ac4365bce
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getUser Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

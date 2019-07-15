@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Understanding Isolation Levels
 

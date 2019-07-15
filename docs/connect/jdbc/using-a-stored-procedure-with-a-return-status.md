@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Using a Stored Procedure with a Return Status

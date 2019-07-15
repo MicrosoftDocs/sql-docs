@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Modifying Result Set Data Sample

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d64064bc-59dc-4614-a078-c2304d2fc236
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLServerDataSourceObjectFactory Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

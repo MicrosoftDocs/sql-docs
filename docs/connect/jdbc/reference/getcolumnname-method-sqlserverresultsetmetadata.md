@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0330ca1d-5e24-4ce3-9d2a-b931f20a0fcf
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getColumnName Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

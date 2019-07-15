@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 40f75549-5d5a-4de3-a271-4b8f0dd7b124
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateBlob Method (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 2a43d1c8-ec8a-43de-b51e-b9108f4e3eae
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getBlob Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

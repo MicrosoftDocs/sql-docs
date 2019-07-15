@@ -9,10 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, workload group create"
   - "workload groups [SQL Server], create"
-ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
+manager: craigg 
 ---
 # Create a Workload Group
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Upgrading a 3.5 Driver to a 3.8 Driver
 This topic provides guidelines and considerations for upgrading an ODBC 3.5 driver to an ODBC 3.8 driver.  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetStmtOption Function
 **Conformance**  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f6c55be1-f020-4ae2-a423-ef8a0d877e20
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBulkOperations and the Cursor Library
 > [!IMPORTANT]  

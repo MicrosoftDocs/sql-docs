@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBulkOperations Function
 **Conformance**  

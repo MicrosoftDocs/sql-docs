@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Processing Batches of SQL Statements
 > [!IMPORTANT]  

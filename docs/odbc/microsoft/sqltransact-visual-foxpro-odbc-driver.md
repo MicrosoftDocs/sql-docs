@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTransact (Visual FoxPro ODBC Driver)
 > [!NOTE]  

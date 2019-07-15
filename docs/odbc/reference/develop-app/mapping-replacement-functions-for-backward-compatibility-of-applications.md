@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Mapping Replacement Functions for Backward Compatibility of Applications
 An ODBC *3.x* application working through the ODBC *3.x* Driver Manager will work against an ODBC *2.x* driver as long as no new features are used. Both duplicated functionality and behavioral changes do, however, affect the way that the ODBC *3.x* application works on an ODBC *2.x* driver. When working with an ODBC *2.x* driver, the Driver Manager maps the following ODBC *3.x* functions, which have replaced one or more ODBC *2.x* functions, into the corresponding ODBC *2.x* functions.  

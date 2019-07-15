@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetPrivateProfileString Function
 **Conformance**  

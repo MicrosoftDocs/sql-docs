@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetConnectOption Mapping
 When an application calls **SQLGetConnectOption** through an ODBC *3.x* driver, the call to  

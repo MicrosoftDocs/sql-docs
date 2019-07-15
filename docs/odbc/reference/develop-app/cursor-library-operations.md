@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Cursor Library Operations
 > [!IMPORTANT]  

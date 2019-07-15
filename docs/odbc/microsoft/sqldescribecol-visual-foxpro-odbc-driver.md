@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDescribeCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  

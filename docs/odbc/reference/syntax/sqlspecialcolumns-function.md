@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSpecialColumns Function
 **Conformance**  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Assign Alerts to an Operator

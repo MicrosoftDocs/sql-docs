@@ -10,7 +10,6 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: jroth
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], tutorials"
   - "source controls [SQL Server Management Studio], tutorials"

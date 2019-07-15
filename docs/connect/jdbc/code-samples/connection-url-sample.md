@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Connection URL Sample

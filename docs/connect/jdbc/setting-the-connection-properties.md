@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Setting the Connection Properties

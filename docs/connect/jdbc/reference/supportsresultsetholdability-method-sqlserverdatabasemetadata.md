@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsResultSetHoldability Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

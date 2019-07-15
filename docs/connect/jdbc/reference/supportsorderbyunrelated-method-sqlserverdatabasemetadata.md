@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 9ea6c534-8132-49f3-aac3-a12ec4c46df2
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsOrderByUnrelated Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

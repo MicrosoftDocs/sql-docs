@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Troubleshooting Connectivity
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

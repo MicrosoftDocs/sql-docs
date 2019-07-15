@@ -16,6 +16,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 This article provides an archive of announced introduced in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP releases. It is provided for historical purposes, but does not apply to production, or current pre-release versions of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
+This article will be removed prior to release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+
 For the current information, see [What's New in SQL Server 2019](what-s-new-in-sql-server-ver-15.md).
 
 ## CTP 3.2 July 2019

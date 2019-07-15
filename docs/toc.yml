@@ -10,6 +10,8 @@
     items:
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-ver15.md
+    - name: SQL Server 2019 CTP announcement archive
+      href: sql-server/what-s-new-in-sql-server-ver15-prerelease.md
     - name: SQL Server 2017
       href: sql-server/what-s-new-in-sql-server-2017.md
     - name: SQL Server 2016

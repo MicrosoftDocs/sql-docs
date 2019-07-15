@@ -10,7 +10,6 @@ helpviewer_keywords:
   - "replication [SQL Server], tutorials"
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Troubleshooter: Find errors with SQL Server transactional replication 
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step in creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 

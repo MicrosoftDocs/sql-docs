@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Example: Querying XMLType Columns
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

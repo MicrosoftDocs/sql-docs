@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Types of Changes
 Three types of changes are made in ODBC *3.x* (and any version of ODBC). Each of these affects backward compatibility differently and is handled in a different way. These changes are described in the following table.  

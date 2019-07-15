@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Use Nested FOR XML Queries
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

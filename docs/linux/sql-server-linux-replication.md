@@ -4,7 +4,6 @@ description: This article describes SQL Server replication on Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql

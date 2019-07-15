@@ -8,7 +8,6 @@ ms.date: 08/28/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install Machine Learning Server (Standalone) or R Server (Standalone) using SQL Server Setup

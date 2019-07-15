@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Publish a Database (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

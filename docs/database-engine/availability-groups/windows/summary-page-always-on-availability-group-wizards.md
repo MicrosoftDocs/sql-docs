@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Summary Page (Always On Availability Group Wizards)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

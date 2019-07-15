@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data type conversion (Database Engine)

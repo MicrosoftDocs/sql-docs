@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Configuring DataFactory for Safe or Unrestricted Modes
 > [!IMPORTANT]

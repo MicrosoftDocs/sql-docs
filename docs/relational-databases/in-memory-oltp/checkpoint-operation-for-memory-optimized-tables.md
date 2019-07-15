@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Checkpoint Operation for Memory-Optimized Tables

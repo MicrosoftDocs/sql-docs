@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View Replicated Commands and Information in Distribution Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

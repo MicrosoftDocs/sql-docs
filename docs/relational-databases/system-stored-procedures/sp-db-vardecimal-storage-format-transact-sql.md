@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

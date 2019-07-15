@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Cursor Library Error Codes
 > [!IMPORTANT]  

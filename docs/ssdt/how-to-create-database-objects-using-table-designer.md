@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Create Database Objects Using Table Designer
 Not only is the new **SQL Server** node in **SQL Server Object Explorer** very similar to SSMS visually, but you can create new objects using contextual menus that function like their SSMS-counterparts.  

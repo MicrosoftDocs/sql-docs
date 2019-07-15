@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use a Format File to Map Table Columns to Data-File Fields (SQL Server)

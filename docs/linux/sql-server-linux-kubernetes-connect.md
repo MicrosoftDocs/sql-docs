@@ -4,7 +4,6 @@ description: This article explains how to connect to an Always On Availability G
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql

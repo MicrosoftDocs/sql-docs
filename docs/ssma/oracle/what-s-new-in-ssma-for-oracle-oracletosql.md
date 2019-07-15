@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: "HJToland3"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # What's New in SSMA for Oracle (OracleToSQL)
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.

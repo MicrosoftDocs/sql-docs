@@ -3,7 +3,6 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -21,7 +20,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 |||
 |---|---|
-| [Agent](#agent) | Enable SQL Server Agent |
+| [Agent](#agent) | Enable SQL Server Agent. |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
 | [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux. |

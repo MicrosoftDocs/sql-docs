@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Begin Tran Starting Event Class

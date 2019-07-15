@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "rowsets [OLE DB], schema"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Schema Rowsets - Distributed Query Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

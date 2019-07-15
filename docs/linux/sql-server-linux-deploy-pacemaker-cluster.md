@@ -4,7 +4,6 @@ description: This tutorial shows how to deploy a Pacemaker cluster for SQL Serve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql

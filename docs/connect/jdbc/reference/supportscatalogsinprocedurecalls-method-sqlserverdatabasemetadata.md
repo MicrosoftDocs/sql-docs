@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 5ec3571a-c7c6-4b94-a9ea-ac08adc7f978
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsCatalogsInProcedureCalls Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -17,7 +17,6 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Creating a Valid Connection String Using TCP IP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

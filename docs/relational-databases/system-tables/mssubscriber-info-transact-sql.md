@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSsubscriber_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

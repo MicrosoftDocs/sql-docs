@@ -3,7 +3,6 @@ title: Export and import a database on Linux
 description: 
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql

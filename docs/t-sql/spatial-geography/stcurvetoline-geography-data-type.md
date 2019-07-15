@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STCurveToLine (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

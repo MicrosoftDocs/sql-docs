@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Data Buffer Length
 The application passes the byte length of the data buffer to the driver in an argument, named *BufferLength* or a similar name. For example, in the following call to **SQLBindCol**, the application specifies the length of the *ValuePtr* buffer (**sizeof(***ValuePtr***)**):  

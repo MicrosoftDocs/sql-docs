@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # XML Input File Reference (Database Engine Tuning Advisor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

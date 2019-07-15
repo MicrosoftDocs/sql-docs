@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DROP SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

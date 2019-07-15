@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # master Database
 

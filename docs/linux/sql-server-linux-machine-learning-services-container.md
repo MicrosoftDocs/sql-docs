@@ -3,7 +3,6 @@ title: Run SQL Server Machine Learning Services in a Container | Microsoft Docs
 description: This tutorial shows you how to use SQL Server Machine Learning Services in a Linux container running on Docker.
 author: uc-msft
 ms.author: umajay
-manager: craigg
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql

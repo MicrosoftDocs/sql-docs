@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Create a Composite Domain
 

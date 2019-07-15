@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # System Requirements, Installation, and Driver Files
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

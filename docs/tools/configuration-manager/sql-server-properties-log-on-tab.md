@@ -11,7 +11,6 @@ ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # SQL Server Properties (Log On Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

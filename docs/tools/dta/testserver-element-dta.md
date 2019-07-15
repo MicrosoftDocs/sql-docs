@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # TestServer Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

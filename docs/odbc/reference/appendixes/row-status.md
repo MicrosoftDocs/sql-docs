@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Row Status
 > [!IMPORTANT]  

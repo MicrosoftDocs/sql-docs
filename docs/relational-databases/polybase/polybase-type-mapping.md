@@ -7,7 +7,6 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-manager: craigg
 ---
 # Type mapping with PolyBase
 

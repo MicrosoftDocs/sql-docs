@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

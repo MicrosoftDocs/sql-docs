@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Diagnostic Connection for Database Administrators
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

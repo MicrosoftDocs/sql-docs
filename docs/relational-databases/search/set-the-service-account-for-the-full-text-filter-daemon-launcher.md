@@ -12,7 +12,6 @@ ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set the Service Account for the Full-text Filter Daemon Launcher

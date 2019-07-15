@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Add a secondary replica to an Always On Availability Group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

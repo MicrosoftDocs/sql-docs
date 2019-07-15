@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # SQL Server Identifiers in PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

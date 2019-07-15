@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Example: Specifying the HIDE Directive
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

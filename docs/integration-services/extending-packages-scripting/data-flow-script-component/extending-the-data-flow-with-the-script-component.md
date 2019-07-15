@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Extending the Data Flow with the Script Component
 

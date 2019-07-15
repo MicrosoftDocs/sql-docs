@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.objects (Transact-SQL)

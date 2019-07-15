@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Scalar-Valued Functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

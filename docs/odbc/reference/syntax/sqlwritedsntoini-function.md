@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLWriteDSNToIni Function
 **Conformance**  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Cellset Object Properties, Methods, and Events
 ## Properties/Collections  

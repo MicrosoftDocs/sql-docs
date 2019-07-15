@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

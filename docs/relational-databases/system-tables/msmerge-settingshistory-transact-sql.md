@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

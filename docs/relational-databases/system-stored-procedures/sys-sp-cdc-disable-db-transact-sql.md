@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

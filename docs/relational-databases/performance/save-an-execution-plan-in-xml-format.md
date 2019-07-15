@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Save an Execution Plan in XML Format

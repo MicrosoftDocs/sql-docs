@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a Custom Transformation Component with Synchronous Outputs
 

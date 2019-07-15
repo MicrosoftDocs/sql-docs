@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication Agents Overview
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

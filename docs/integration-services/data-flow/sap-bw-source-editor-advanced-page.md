@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SAP BW Source Editor (Advanced Page)
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

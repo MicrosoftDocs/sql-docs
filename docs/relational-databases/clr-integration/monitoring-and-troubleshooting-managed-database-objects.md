@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Monitoring and Troubleshooting Managed Database Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Description Property (ADO MD)
 Returns a text explanation of the current object.  

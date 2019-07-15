@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Manage Logins in the Publication Access List
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

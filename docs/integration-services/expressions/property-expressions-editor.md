@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Property Expressions Editor
 

@@ -24,7 +24,6 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ---
 # Editions and supported features of SQL Server 2017 on Linux
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SqlServiceType Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

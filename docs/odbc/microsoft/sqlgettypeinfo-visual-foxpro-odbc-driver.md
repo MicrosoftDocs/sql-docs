@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetTypeInfo (Visual FoxPro ODBC Driver)
 > [!NOTE]  

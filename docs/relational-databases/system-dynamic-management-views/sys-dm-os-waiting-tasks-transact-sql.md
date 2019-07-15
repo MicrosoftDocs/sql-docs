@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_waiting_tasks (Transact-SQL)

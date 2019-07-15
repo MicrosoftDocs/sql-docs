@@ -5,7 +5,6 @@ description: This article describes the storage pool in a SQL Server 2019 big da
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql

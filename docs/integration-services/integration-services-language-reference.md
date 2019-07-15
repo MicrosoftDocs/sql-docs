@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Language Reference
 

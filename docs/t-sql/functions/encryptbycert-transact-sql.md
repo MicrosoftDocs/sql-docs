@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

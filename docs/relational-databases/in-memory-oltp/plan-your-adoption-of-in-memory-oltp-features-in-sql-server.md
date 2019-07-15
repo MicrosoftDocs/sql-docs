@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server

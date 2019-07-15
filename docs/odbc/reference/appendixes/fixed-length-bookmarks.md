@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Fixed-Length Bookmarks
 If an ODBC *3.x* driver should work with an ODBC *2.x* application that uses fixed-length bookmarks, the driver must support the following:  

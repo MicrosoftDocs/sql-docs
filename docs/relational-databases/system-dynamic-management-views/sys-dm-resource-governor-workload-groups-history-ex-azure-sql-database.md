@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_workload_groups_history_ex dynamic management view"
 author: joesackmsft
 ms.author: josack
-manager: craigg
 ---
 # sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

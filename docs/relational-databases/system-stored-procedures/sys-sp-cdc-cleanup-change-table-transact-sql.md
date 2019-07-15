@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

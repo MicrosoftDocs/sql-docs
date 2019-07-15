@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Save Traces and Trace Templates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

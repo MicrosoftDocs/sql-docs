@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replicate Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Windows Collation Name (Transact-SQL)

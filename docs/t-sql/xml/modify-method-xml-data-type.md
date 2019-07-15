@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # modify() Method (xml Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Synchronize a Pull Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Configure Outputs Using the Slowly Changing Dimension Wizard
 

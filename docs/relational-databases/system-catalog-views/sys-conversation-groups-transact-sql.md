@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.conversation_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

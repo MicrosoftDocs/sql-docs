@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Property Object (ADO)
 Represents a dynamic characteristic of an ADO object that is defined by the provider.  

@@ -4,7 +4,6 @@ description: This page details the steps for using the Create external table wiz
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql

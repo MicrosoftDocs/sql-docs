@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

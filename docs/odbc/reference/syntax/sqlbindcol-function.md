@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBindCol Function
 **Conformance**  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL Statements Entered by the User
 Applications that perform ad hoc analysis also commonly allow the user to enter SQL statements directly. For example:  

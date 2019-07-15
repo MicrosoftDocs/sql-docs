@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d6a21d01-6d8e-4449-9fdf-ddb09bd4fdb8
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateNCharacterStream Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

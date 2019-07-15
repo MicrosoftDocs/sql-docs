@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # CompareEnum
 Specifies the relative position of two records represented by their bookmarks.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Availability replica is disconnected within an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

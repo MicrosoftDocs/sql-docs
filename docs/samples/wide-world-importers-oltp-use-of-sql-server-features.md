@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use of SQL Server features and capabilities
 

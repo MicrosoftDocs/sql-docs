@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Trigger Security

@@ -2,7 +2,6 @@
 title: Load with Integration Services - Parallel Data Warehouse | Microsoft Docs
 description: Provides reference and deployment information for loading data into Parallel Data Warehouse (PDW) by using SQL Server Integration Services (SSIS) packages.  
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

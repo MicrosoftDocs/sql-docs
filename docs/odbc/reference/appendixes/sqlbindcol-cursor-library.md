@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBindCol (Cursor Library)
 > [!IMPORTANT]  

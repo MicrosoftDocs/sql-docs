@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.crypt_properties (Transact-SQL)

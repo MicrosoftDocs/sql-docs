@@ -10,7 +10,6 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "rachel-msft"
 ms.author: "raagyema"
-manager: jroth
 ---
 
 # PostgreSQL extension (preview)

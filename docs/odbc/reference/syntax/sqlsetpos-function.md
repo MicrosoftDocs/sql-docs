@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetPos Function
 **Conformance**  

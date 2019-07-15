@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetScrollOptions Mapping
 When an application calls **SQLSetScrollOptions** through an ODBC *3.x* driver and the driver does not support **SQLSetScrollOptions**, the call to  

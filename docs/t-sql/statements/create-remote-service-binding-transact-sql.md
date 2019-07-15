@@ -37,7 +37,6 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

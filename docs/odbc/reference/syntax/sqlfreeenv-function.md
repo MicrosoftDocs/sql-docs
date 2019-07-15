@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFreeEnv Function
 **Conformance**  

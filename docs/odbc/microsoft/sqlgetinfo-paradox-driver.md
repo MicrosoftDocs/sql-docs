@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetInfo (Paradox Driver)
 > [!NOTE]  

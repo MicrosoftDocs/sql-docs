@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Version - Transact SQL Metadata functions

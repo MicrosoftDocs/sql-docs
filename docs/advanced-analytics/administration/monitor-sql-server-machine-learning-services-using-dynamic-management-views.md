@@ -8,7 +8,6 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

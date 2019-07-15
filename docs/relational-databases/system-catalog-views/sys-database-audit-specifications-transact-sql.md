@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Manage Partitions for a Merge Publication with Parameterized Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

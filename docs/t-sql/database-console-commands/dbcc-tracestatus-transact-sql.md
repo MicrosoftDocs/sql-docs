@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

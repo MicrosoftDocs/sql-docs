@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Coding a Custom Log Provider
 

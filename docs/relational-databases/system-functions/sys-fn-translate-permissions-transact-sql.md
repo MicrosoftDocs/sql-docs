@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

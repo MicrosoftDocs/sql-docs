@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Backward Compatibility
 

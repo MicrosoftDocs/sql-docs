@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTransact (Access Driver)
 > [!NOTE]  

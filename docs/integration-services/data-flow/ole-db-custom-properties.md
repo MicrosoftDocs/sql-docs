@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OLE DB Custom Properties
 

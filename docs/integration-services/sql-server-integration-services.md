@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "Data Transformation Services"
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Integration Services
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rotate Always Encrypted Keys using PowerShell

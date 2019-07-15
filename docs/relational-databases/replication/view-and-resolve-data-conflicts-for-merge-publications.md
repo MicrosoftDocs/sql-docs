@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Conflict resolution for Merge Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

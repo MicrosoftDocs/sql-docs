@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

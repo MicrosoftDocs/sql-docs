@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_profiles (Transact-SQL)

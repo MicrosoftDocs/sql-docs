@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Mathematical Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

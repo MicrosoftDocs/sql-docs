@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

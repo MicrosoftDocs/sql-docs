@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Run SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

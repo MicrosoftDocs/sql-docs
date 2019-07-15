@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

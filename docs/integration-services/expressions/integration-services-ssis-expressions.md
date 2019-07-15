@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services (SSIS) Expressions
 

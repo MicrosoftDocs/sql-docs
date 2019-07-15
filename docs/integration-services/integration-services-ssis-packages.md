@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services (SSIS) Packages
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

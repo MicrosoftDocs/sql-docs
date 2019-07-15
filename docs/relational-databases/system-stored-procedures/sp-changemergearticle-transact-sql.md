@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

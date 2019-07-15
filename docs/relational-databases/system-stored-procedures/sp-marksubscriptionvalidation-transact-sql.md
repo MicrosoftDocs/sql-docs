@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

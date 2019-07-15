@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Deploy Packages with SSIS
 

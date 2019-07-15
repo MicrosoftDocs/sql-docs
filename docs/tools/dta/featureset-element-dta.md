@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # FeatureSet Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

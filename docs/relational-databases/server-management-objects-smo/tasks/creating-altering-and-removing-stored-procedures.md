@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Stored Procedures

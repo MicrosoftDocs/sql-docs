@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Term Extraction Transformation
 

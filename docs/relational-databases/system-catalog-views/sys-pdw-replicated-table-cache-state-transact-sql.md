@@ -10,7 +10,6 @@ dev_langs:
   - "TSQL"
 author: "ronortloff"
 ms.author: "rortloff"
-manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)

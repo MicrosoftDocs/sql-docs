@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Update and CancelUpdate Methods Example (VB)
 This example demonstrates the [Update](../../../ado/reference/ado-api/update-method.md) method in conjunction with the [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) method.  

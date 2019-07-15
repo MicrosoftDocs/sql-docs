@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getServerName Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

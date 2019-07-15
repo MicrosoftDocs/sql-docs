@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Enable or Disable Backup Checksums During Backup or Restore (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

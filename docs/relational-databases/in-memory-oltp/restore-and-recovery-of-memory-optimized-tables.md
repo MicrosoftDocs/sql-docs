@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Restore and recovery of memory-optimized tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

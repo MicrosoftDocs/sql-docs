@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Delete a Policy-Based Management Condition
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

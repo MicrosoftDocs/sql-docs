@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 
 # Slash Star (Block Comment) (Transact-SQL)

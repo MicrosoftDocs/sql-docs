@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Change the session-timeout period for a replica within an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

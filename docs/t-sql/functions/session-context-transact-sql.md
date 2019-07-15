@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

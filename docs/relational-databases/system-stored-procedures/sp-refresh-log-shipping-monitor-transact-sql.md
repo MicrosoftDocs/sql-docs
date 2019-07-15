@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

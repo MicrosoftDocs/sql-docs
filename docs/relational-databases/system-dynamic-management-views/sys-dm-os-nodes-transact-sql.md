@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_nodes (Transact-SQL)

@@ -4,7 +4,6 @@ description: This tutorial shows how to take a SQL Server database backup on Win
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connecting Tasks Programmatically
 

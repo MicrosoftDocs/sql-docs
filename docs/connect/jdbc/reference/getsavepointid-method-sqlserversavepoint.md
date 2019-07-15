@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 48037dab-165d-4310-93ad-86f9d7963b41
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getSavepointId Method (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Transaction Related Dynamic Management Views and Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

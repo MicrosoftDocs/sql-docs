@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Hadoop and HDFS Support in Integration Services (SSIS)
 

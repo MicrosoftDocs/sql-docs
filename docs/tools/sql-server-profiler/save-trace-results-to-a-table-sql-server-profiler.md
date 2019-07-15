@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Save Trace Results to a Table (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

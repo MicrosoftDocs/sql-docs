@@ -10,7 +10,6 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Add a Scale Out Worker with Scale Out Manager
 

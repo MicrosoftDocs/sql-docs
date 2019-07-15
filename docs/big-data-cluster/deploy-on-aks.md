@@ -5,7 +5,6 @@ description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Serve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql

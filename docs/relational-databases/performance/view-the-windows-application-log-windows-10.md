@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # View the Windows application log (Windows 10)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

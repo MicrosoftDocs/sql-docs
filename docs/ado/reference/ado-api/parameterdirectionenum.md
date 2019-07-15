@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ParameterDirectionEnum
 Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-object.md) represents an input parameter, an output parameter, both an input and an output parameter, or the return value from a stored procedure.  

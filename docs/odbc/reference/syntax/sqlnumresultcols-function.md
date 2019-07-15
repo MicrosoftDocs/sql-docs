@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNumResultCols Function
 **Conformance**  

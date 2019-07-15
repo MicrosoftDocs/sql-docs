@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Modify Snapshot Initialization Options for SQL Replication 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

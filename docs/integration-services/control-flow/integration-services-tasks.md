@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Tasks
 

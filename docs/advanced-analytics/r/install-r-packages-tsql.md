@@ -8,7 +8,6 @@ ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 
 # Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC and the Standard CLI
 ODBC aligns with the following specifications and standards that deal with the Call-Level Interface (CLI). (The ODBC features are a superset of each of these standards.)  

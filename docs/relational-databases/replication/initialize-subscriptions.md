@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Initialize Subscriptions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

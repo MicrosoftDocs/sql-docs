@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - defragmentation

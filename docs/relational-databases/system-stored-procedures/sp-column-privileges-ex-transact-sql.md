@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_stats (Transact-SQL)

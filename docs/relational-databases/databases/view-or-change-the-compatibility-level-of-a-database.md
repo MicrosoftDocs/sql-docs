@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or Change the Compatibility Level of a Database

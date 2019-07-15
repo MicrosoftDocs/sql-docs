@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Increase the Size of a Database

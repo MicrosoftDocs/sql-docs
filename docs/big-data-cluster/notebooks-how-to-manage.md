@@ -5,7 +5,6 @@ description: Learn how to manage notebooks in Azure Data Studio. This includes o
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql

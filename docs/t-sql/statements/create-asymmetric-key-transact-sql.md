@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

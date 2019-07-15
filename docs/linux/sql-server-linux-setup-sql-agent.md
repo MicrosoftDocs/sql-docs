@@ -3,7 +3,6 @@ title: Install SQL Server Agent on Linux
 description: This article describes how to install the SQL Server Agent on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql

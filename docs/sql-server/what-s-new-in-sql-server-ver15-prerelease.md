@@ -14,41 +14,11 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article provides an archive of announced introduced in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP releases. It is provided for historical purposes, but does not apply to production, or current pre-release versions of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+This article provides an archive of feature announcements from [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) releases. It is provided for historical purposes, but does not apply to production, or current pre-release versions of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-This article will be removed prior to release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+This article will be removed as [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] releases to production.
 
 For the current information, see [What's New in SQL Server 2019](what-s-new-in-sql-server-ver15.md).
-
-## CTP 3.2 July 2019
-
-Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
-
-[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
-
-For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
-
-In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2.
-
-### Big data clusters
-
-|New feature or update | Details |
-|:---|:---|
-| &nbsp; | &nbsp; |
-
-### Database engine
-
-| New feature or update | Details |
-|:---|:---| 
-| &nbsp; | &nbsp; |
-
-### Analysis Services
-
-| New feature or update | Details |
-|:---|:---| 
-| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](../analysis-services/server-properties/general-properties.md). |
-| Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](#online-attach-ctp32) in Details. |
-| &nbsp; | &nbsp; |
 
 ## CTP 3.1 June 2019
 

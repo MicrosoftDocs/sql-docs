@@ -24,7 +24,6 @@ helpviewer_keywords:
   - "CURRENT_TIMEZONE function [SQL Server]"
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 
 ---
 # CURRENT_TIMEZONE (Transact-SQL)

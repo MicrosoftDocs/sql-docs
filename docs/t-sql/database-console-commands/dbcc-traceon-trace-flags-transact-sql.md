@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: "pmasl"
 ms.author: "pelopes"
-manager: craigg
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)
 

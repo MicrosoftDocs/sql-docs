@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ms.reviewer: mathoma
 ---
 # CREATE TRIGGER (Transact-SQL)

@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SIGN (Transact-SQL)

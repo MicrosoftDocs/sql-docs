@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 
 # :: (Scope Resolution) (Transact-SQL)

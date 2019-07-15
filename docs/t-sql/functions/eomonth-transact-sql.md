@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EOMONTH (Transact-SQL)

@@ -1,5 +1,5 @@
 ---
-title: "What's new in SQL Server 2019 (Pre-release) | Microsoft Docs"
+title: "SQL Server 2019 CTP announcement archive | Microsoft Docs"
 ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ""
@@ -10,11 +10,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# What's new in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (pre-release)
+# SQL Server 2019 CTP announcement archive
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article provides a list of features introduced in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. It is provided for historical purposes, but does not apply to production, or current pre-release versions of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+This article provides an archive of announced introduced in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP releases. It is provided for historical purposes, but does not apply to production, or current pre-release versions of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 For the current information, see [What's New in SQL Server 2019](what-s-new-in-sql-server-ver-15.md).
 

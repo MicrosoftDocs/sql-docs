@@ -20,7 +20,7 @@ This article summarizes new features and enhancements for [!INCLUDE[sql-server-2
 
 For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
-**Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
+**Use the [latest tools](what-s-new-in-sql-server-ver15-prerelease.md#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
 ## CTP 3.2 July 2019
 
@@ -44,7 +44,7 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 | New feature or update | Details |
 |:---|:---| 
 | Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](../analysis-services/server-properties/general-properties.md). |
-| Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](#online-attach-ctp32) in Details. |
+| Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
 ## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] features introduced previously
@@ -210,11 +210,11 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 
 | New feature or update | Details |
 |:---|:---|
-|Calculation groups in tabular model| [Calculation groups in tabular model](#calc-ctp24) |
-|MDX query support for tabular models with calculation groups | See [Calculation groups](#calc-ctp24). |
-|Dynamic formatting of measures using calculation groups |This feature allows you to conditionally change format strings for measures with [calculation groups](#calc-ctp24). For example, with currency conversion, a measure can be displayed using different foreign currency formats.|
-|Many-to-many relationships in tabular models|[Many-to-many relationships in tabular models](#many-to-many-ctp24)|
-|Property settings for resource governance|[Property settings for resource governance](#property-ctp24)|
+|Calculation groups in tabular model| [Calculation groups in tabular model](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24) |
+|MDX query support for tabular models with calculation groups | See [Calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). |
+|Dynamic formatting of measures using calculation groups |This feature allows you to conditionally change format strings for measures with [calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). For example, with currency conversion, a measure can be displayed using different foreign currency formats.|
+|Many-to-many relationships in tabular models|[Many-to-many relationships in tabular models](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24)|
+|Property settings for resource governance|[Property settings for resource governance](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24)|
 | &nbsp; | &nbsp; |
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]

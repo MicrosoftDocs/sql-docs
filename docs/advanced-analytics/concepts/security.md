@@ -8,7 +8,6 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Security overview for the extensibility framework in SQL Server Machine Learning Services
 

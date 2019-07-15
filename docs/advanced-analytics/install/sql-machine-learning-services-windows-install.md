@@ -8,7 +8,6 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Install SQL Server Machine Learning Services on Windows
 

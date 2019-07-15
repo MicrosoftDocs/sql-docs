@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid:
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 ---
 # Connect to Microsoft Azure Storage
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

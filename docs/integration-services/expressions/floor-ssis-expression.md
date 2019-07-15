@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # FLOOR (SSIS Expression)
 

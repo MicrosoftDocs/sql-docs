@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Cache Transform
 

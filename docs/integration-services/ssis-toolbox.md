@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SSIS Toolbox
 

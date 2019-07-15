@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # DataReader Destination
 

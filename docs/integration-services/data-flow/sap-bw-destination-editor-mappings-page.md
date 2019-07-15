@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SAP BW Destination Editor (Mappings Page)
 

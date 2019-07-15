@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create New InfoObject
 

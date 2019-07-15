@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # File System Task
 

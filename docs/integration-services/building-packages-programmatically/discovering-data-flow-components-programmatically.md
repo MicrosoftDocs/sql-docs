@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Discovering Data Flow Components Programmatically
 

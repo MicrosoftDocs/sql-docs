@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 3: Install SSIS Packages
 

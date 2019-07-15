@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Referencing Other Assemblies in Scripting Solutions
 

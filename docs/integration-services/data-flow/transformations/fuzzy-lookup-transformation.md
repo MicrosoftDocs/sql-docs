@@ -33,7 +33,6 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Fuzzy Lookup Transformation
 

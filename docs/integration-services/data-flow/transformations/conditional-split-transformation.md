@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Conditional Split Transformation
 

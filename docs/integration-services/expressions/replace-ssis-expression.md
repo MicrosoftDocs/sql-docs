@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # REPLACE (SSIS Expression)
 

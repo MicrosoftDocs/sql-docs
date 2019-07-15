@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Project Properties Dialog Box
 

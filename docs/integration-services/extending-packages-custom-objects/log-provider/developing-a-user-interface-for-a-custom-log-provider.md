@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a User Interface for a Custom Log Provider
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Analysis Services Processing Task
 

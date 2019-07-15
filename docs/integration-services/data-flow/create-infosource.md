@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create InfoSource
 

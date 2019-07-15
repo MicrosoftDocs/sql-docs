@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Querying the Active Directory with the Script Task
 

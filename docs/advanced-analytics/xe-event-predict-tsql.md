@@ -7,7 +7,6 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 
 # Extended events for monitoring PREDICT statements

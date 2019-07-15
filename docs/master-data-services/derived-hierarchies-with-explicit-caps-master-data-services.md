@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Derived Hierarchies with Explicit Caps (Master Data Services)
 

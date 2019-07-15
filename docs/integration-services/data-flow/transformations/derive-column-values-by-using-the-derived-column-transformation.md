@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Derive Column Values by Using the Derived Column Transformation
 

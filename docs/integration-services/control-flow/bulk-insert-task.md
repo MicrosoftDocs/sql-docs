@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Bulk Insert Task
 

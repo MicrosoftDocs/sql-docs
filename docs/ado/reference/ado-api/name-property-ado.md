@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Name Property (ADO)
 Indicates the name of an object.  

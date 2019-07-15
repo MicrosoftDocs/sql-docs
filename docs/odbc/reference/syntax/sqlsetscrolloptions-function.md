@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetScrollOptions Function
 **Conformance**  

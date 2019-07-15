@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Writing ODBC 3.x Drivers
 The following table shows function support in an ODBC 3.*x* driver and an ODBC application, and the mapping performed by the Driver Manager when the functions are called against an ODBC 3.*x* driver.  

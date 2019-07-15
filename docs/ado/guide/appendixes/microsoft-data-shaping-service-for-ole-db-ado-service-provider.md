@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Microsoft Data Shaping Service for OLE DB Overview
 > [!IMPORTANT]

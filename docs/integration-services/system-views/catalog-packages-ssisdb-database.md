@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.packages (SSISDB Database)
 

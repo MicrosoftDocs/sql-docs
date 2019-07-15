@@ -4,7 +4,6 @@ description: This article describes how to configure SQL Server replication on L
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql

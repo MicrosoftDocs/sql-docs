@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.event_messages 
 

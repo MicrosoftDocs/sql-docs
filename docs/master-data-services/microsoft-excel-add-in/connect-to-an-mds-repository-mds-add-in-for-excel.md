@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Connect to an MDS Repository (MDS Add-in for Excel)
 

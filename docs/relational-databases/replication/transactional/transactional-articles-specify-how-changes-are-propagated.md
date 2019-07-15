@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Transactional Articles - Specify How Changes Are Propagated
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

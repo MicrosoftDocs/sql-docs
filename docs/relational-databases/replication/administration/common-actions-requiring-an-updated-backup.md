@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Common Actions Requiring an Updated Backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

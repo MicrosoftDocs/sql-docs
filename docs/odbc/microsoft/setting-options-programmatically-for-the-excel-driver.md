@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Setting Options Programmatically for the Excel Driver
 

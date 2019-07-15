@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Tutorial: Configure replication between two fully connected servers (transactional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

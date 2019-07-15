@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 1-8: Annotate and format the Lesson 1 package 
 

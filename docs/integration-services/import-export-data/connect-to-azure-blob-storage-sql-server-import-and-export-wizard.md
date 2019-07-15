@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to Azure Blob Storage (SQL Server Import and Export Wizard)
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # NativeError Property (ADO)
 Indicates the provider-specific error code for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  

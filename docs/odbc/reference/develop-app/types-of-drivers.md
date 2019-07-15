@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Types of Drivers
 ODBC drivers can be classified as follows:  

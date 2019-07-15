@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Configure Threshold Values for Cleansing and Matching
 

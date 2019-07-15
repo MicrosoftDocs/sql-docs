@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Column Data
 > [!IMPORTANT]  

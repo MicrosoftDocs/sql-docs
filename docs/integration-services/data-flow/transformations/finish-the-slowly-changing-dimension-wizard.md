@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Finish the Slowly Changing Dimension Wizard
 

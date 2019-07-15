@@ -13,7 +13,6 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # SQL Server Examples: Model Deployment Packages (MDS)
 

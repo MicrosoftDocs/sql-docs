@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transfer Error Messages Task
 

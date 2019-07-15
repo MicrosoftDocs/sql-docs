@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Operators (SSIS Expression)
 

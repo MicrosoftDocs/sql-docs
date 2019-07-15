@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ---
 # Securing SQL Server
 

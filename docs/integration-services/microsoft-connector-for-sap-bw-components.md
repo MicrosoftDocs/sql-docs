@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Microsoft Connector for SAP BW Components
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Automatic Code Creation (Master Data Services)
 

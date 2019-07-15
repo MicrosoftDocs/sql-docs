@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 52e99ef9-b786-4a14-bfc5-4162e46aafbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setBytes Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

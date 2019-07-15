@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Column Statistics Profile Request Options (Data Profiling Task)
 

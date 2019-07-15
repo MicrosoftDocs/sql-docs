@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Support multi-targeting in your custom components
 

@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts
 

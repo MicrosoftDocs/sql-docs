@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Enhance Merge Replication Performance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetServiceAccountPassword Method (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

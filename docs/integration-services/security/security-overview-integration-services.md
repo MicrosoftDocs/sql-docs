@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Security Overview (Integration Services)
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLAllocStmt Mapping
 When an application calls **SQLAllocStmt** through an ODBC *3.x* driver, the call to:  

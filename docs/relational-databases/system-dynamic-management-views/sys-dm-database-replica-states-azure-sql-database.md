@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_database_replica_states dynamic management view"
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

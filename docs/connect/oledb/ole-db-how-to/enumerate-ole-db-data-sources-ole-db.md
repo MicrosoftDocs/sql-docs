@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "data sources [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Enumerate OLE DB Data Sources (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

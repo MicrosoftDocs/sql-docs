@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: "pelopes"
 ms.author: "harinid"
-manager: "craigg"
 ---
 # Post-migration Validation and Optimization Guide
 

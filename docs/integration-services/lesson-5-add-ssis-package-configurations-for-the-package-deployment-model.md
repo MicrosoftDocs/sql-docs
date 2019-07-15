@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 5: Add SSIS package configurations for the Package Deployment Model
 

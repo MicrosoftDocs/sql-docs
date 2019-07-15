@@ -5,7 +5,6 @@ description: Learn about how data persistence works in a SQL Server 2019 big dat
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql

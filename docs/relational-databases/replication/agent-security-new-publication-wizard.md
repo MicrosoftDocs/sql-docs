@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Agent Security (New Publication Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

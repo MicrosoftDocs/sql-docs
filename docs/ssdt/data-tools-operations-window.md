@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Data Tools Operations Window
 The **Data Tools Operations**  window shows the progress of some operations discussed in this topic, and notifies you of any errors.  

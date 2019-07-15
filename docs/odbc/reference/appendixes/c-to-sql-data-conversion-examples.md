@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # C to SQL Data Conversion Examples
 The following examples illustrate how the driver converts C data to SQL data :  

@@ -11,7 +11,6 @@ dev_langs:
   - "TSQL"
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SESSION_ID (Transact-SQL)

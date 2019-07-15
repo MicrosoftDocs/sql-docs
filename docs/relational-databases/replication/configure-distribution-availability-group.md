@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Set up replication distribution database in Always On availability group
 

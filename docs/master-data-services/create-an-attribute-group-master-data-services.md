@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Attribute Group (Master Data Services)
 

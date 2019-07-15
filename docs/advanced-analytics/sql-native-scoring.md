@@ -8,7 +8,6 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 
 # Native scoring using the PREDICT T-SQL function

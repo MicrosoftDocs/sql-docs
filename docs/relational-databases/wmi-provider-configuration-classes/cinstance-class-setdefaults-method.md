@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # CInstance Class - SetDefaults Method
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

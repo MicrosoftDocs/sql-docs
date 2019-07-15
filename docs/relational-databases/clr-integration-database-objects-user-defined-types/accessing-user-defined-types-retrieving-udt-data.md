@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Accessing User-Defined Types - Retrieving UDT Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

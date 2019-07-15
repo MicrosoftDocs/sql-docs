@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Register a Database As a DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

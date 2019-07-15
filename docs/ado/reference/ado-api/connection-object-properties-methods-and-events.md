@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Connection Object Properties, Methods, and Events
 ## Properties/Collections  

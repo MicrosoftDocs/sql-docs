@@ -5,7 +5,6 @@ description: Consume an application deployed on SQL Server 2019 big data cluster
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql

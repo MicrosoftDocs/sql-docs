@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # New Features
 The following new functionality has been introduced in ODBC *3.x*. An ODBC *3.x* application working with an ODBC *2.x* driver will not be able to use this functionality. The ODBC *3.x* Driver Manager does not map these features when working with an ODBC *2.x* driver.  

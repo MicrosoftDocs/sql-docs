@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Other Text File Driver Programming Details
 > [!NOTE]  

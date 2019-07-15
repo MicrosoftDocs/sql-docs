@@ -5,7 +5,6 @@ description: Learn how to create availability group clusters for SQL Server on S
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql

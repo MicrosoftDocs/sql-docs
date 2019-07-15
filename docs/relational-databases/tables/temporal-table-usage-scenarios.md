@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Temporal Table Usage Scenarios
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

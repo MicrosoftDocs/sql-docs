@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLError Mapping
 When an application calls **SQLError** through an ODBC *3.x* driver, the call to  

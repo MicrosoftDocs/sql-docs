@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Consolidated Member Staging Table (Master Data Services)
 

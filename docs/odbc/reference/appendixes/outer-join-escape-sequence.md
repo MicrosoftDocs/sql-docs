@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Outer Join Escape Sequence
 ODBC uses escape sequences for outer joins. The syntax of this escape sequence is as follows:  

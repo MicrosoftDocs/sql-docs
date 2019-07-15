@@ -11,7 +11,6 @@ ms.topic: conceptual
 helpviewer_keywords: 
 author: "joesackmsft"
 ms.author: "josack"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Intelligent query processing in SQL databases

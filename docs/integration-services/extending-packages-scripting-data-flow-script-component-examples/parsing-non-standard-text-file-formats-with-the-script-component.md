@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Parsing Non-Standard Text File Formats with the Script Component
 

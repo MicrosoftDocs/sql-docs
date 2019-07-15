@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: cb1d0f36-d2de-4685-b97a-626608e50e5c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # clearParameters Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

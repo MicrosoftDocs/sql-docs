@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 
 # SQL Server Express LocalDB

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # HDFS File Source
 

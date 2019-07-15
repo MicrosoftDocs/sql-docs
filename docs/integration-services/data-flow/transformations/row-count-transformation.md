@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Row Count Transformation
 

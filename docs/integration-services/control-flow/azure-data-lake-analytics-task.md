@@ -14,7 +14,6 @@ f1_keywords:
 author: "yanancai"
 ms.author: "yanacai"
 ms.reviewer: maghan
-manager: craigg
 ---
 
 # Azure Data Lake Analytics task

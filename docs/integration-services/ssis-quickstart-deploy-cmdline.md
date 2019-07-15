@@ -8,7 +8,6 @@ ms.custom: ""
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe
 

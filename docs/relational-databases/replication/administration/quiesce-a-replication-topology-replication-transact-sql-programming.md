@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Quiesce a Replication Topology (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

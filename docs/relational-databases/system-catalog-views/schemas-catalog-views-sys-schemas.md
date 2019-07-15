@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schemas Catalog Views - sys.schemas

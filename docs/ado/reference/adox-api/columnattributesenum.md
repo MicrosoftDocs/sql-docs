@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ColumnAttributesEnum
 Specifies characteristics of a [Column](../../../ado/reference/adox-api/column-object-adox.md).  

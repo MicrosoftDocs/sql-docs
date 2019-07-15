@@ -28,7 +28,7 @@ ms.author: pelopes
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Query notifications were introduced in SQL Server 2005 (9.x) and SQL Server Native Client. Built on the SQL Service Broker infrastructure introduced in SQL Server 2005 (9.x), query notifications allow applications to be notified when data has changed. This feature is particularly useful for applications that provide a cache of information from a database, such as a web application, and need to be notified when the source data is changed.
+Query notifications were introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and OLE DB Driver for SQL Server. Built on the SQL Service Broker infrastructure introduced in SQL Server 2005 (9.x), query notifications allow applications to be notified when data has changed. This feature is particularly useful for applications that provide a cache of information from a database, such as a web application, and need to be notified when the source data is changed.
 
 Query notifications allow you to request notifications within a specified timeout period when the underlying data of a query changes. The request specifies the notification options, which include the service name, message text, and timeout value to the server. Notifications are delivered through a Service Broker queue that applications may poll for available notifications.
 

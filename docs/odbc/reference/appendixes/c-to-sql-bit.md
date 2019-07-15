@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # C to SQL: Bit
 The identifier for the bit ODBC C data type is:  

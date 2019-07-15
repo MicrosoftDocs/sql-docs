@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Resolve Out Of Memory issues
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

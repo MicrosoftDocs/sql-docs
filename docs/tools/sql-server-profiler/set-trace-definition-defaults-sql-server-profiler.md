@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], defaults"
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Set Trace Definition Defaults (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

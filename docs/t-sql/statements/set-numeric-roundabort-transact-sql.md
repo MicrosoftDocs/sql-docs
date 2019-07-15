@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: d20e74f1-b8da-466c-b180-9d8a8b851a77
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET NUMERIC_ROUNDABORT (Transact-SQL)

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Errors and Events Reference (Replication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "modifying filters, modifying"
   - "filters [SQL Server], traces"
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Modify a Filter (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

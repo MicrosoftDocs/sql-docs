@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Visual C++ Extensions
 ## The IADORecordBinding Interface

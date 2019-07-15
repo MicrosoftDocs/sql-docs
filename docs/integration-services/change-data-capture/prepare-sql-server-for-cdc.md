@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Prepare SQL Server for CDC
 

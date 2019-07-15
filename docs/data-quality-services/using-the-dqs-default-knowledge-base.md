@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Using the DQS Default Knowledge Base
 

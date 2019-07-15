@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
  Is the name of a Windows user or group granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* is **sysname**, with a default of NULL. If *account_name* is not specified, all Windows groups and Windows users that have been explicitly granted login permission are reported. *account_name* must be fully qualified. For example, 'ADVWKS4\macraes', or 'BUILTIN\Administrators'.  
   
  **'all'** | **'members'**  
- Specifies whether to report information about all permission paths for the account, or to report information about the members of the Windows group. **@option** is **varchar(10)**, with a default of NULL. Unless **all** is specified, only the first permission path is displayed.  
+ Specifies whether to report information about all permission paths for the account, or to report information about the members of the Windows group. **\@option** is **varchar(10)**, with a default of NULL. Unless **all** is specified, only the first permission path is displayed.  
   
 `[ @privilege = ] variable_name`
  Is an output parameter that returns the privilege level of the specified Windows account. *variable_name* is **varchar(10)**, with a default of 'Not wanted'. The privilege level returned is **user**, **admin**, or **null**.  

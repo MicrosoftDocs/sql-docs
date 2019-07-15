@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Debug Database Objects
 A SQL Server unit test consists of the following:  

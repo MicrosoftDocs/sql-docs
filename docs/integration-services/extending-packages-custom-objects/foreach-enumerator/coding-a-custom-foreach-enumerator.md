@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Coding a Custom Foreach Enumerator
 

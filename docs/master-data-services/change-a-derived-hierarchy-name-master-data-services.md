@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change a Derived Hierarchy Name (Master Data Services)
 

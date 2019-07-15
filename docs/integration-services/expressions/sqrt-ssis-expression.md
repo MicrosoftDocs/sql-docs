@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQRT (SSIS Expression)
 

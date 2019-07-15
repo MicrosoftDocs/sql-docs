@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Finding Additional JDBC Driver Information
 

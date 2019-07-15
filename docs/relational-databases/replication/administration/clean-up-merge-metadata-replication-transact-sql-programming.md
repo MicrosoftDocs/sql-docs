@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Clean Up Merge Metadata (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

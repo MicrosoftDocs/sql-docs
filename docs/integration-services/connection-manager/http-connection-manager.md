@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # HTTP Connection Manager
 

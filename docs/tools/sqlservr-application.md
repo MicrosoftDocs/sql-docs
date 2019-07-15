@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "command prompt [SQL Server], starting instance of SQL Server"
   - "continuing instance of SQL Server"
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sqlservr Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

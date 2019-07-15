@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "craigg"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Secondary to primary replica read/write connection redirection (Always On Availability Groups)

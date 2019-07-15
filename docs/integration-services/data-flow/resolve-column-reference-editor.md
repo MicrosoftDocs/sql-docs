@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Resolve Column Reference Editor
 

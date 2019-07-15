@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 218ff486-3f31-49e4-ad81-a423246a8307
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setBlob Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Upgrading the Version of a Data Flow Component
 

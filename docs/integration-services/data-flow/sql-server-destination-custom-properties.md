@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Destination Custom Properties
 

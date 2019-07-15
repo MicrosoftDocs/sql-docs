@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.clear_object_parameter_value (SSISDB Database)
 

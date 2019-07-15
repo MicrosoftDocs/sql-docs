@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLExecDirect Function
 **Conformance**  

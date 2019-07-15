@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CREATE INDEX Statement
 The syntax of the CREATE INDEX statement is:  

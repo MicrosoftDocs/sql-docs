@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 839f9c67-4cd4-4e07-a0ef-ba62591e9e5a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLServerClob Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Open Integration Services Projects in Data Quality Client
 

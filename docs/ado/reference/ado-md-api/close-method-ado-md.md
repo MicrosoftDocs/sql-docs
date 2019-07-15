@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Close Method (ADO MD)
 Closes an open cellset.  

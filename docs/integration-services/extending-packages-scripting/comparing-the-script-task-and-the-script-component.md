@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Comparing the Script Task and the Script Component
 

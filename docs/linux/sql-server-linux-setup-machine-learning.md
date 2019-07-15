@@ -1,8 +1,9 @@
 ---
-title: Install SQL Server Machine Learning Services (R, Python) on Linux | Microsoft Docs
+title: Install SQL Server Machine Learning Services (R, Python) on Linux
 description: Learn how to install SQL Server Machine Learning Services (R, Python) on Red Hat, Ubuntu, and SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual

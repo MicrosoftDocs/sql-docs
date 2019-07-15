@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Agent Jobs for Packages
 

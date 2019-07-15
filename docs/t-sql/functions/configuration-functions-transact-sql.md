@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configuration Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

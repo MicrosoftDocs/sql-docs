@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SET COLLATE Command
 Specifies a collation sequence for character fields in subsequent indexing and sorting operations.  

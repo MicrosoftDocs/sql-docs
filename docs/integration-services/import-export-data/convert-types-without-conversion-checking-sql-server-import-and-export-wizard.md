@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Convert Types without Conversion Checking (SQL Server Import and Export Wizard)
 

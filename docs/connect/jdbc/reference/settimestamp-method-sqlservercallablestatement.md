@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: d4f59d5e-af85-491d-abde-eb06684745ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setTimestamp Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

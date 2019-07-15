@@ -22,7 +22,6 @@ ms.assetid: 79787bb7-d729-448e-b56a-0a467bbb304f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_stopwords (Transact-SQL)

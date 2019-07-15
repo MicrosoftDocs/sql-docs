@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ADO.NET Connection Manager
 

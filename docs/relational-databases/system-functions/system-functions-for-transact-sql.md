@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # System Functions for Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

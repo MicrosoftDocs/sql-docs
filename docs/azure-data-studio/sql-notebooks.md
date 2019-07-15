@@ -10,7 +10,6 @@ ms.reviewer: "achatter; alayu; sstein"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-manager: jroth
 ---
 # How to use notebooks in Azure Data Studio
 

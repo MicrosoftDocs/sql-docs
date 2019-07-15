@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getTableName Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Coding and Debugging the Script Component
 

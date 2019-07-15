@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TYPE_ID (Transact-SQL)

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.trigger_events (Transact-SQL)

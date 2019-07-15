@@ -10,7 +10,6 @@ ms.reviewer: "alayu; sstein"
 ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
-manager: jroth
 ---
 
 # Quickstart: Connect and query SQL Server using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

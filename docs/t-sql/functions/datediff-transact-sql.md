@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEDIFF (Transact-SQL)
@@ -93,7 +92,7 @@ For a return value out of range for **int** (-2,147,483,648 to +2,147,483,647), 
   
 If *startdate* and *enddate* are both assigned only a time value, and the *datepart* is not a time *datepart*, `DATEDIFF` returns 0.
   
-`DATEDIFF` does not use a time zone offset component of *startdate* or *enddate* to calculate the return value.
+`DATEDIFF` uses the time zone offset component of *startdate* or *enddate* to calculate the return value.
   
 Because [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) is accurate only to the minute, seconds and milliseconds are always set to 0 in the return value when *startdate* or *enddate* have a **smalldatetime** value.
   

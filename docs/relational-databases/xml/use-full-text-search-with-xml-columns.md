@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Use Full-Text Search with XML Columns
 

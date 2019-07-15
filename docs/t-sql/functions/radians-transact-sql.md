@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RADIANS (Transact-SQL)

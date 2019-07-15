@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Snapshot Agent (New Publication Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

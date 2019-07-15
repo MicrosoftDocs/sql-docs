@@ -13,7 +13,6 @@ ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Troubleshoot Full-Text Indexing

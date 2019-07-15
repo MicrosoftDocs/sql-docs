@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Cursor Library Code Example
 > [!IMPORTANT]  

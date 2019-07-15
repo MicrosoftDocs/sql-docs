@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Working with Variables Programmatically
 

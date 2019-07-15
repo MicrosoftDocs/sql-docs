@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)
 

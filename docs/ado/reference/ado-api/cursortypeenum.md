@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # CursorTypeEnum
 Specifies the type of cursor used in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 4-5: Test the Lesson 4 package
 

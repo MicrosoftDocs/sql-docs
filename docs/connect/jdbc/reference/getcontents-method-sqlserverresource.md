@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7f25b8e0-a9fb-496f-aa05-84c5fdc9b49f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getContents Method (SQLServerResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

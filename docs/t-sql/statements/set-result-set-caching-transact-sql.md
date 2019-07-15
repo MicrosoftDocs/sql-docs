@@ -13,7 +13,6 @@ dev_langs:
 helpviewer_keywords: 
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 

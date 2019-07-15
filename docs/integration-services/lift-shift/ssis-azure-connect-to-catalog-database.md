@@ -10,7 +10,6 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
 ---
 # Connect to the SSIS Catalog (SSISDB) in Azure
 

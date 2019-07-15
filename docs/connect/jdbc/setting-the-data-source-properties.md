@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Setting the Data Source Properties

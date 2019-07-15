@@ -2,9 +2,9 @@
 title: mssqlctl app reference
 titleSuffix: SQL Server big data clusters
 description: Reference article for mssqlctl app commands.
-author: rothja
-ms.author: jroth
-manager: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql

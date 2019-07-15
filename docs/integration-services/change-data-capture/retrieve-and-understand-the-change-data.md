@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Retrieve and Understand the Change Data
 

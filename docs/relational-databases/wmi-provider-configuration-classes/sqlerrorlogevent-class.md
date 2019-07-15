@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SqlErrorLogEvent Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

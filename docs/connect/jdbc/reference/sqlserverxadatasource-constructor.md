@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLServerXADataSource Constructor ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # The ODBC Cursor Library
 > [!IMPORTANT]  

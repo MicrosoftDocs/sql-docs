@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Control Behavior of Triggers and Constraints in Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

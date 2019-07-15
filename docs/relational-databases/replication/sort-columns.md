@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Sort Columns
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

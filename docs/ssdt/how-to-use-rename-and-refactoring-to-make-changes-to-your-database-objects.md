@@ -16,7 +16,6 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Use Rename and Refactoring to Make Changes to your Database Objects
 The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or move an object to a different schema, and do a preview of all affected areas before committing the change. You can also use the Refactor menu to fully qualify all references to database objects, or expand any wildcard characters in `SELECT` statements in your database project.  

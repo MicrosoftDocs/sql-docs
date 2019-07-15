@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Monitor Data-tier Applications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

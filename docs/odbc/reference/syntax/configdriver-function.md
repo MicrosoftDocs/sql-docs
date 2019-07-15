@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ConfigDriver Function
 **Conformance**  

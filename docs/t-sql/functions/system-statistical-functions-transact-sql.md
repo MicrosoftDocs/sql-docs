@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # System Statistical Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

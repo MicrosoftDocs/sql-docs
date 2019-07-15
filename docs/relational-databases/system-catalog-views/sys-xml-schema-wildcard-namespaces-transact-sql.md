@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # sys.xml_schema_wildcard_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

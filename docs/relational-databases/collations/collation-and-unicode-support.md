@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation and Unicode Support
@@ -265,10 +264,14 @@ The following table outlines the encoding storage bytes for each character range
 
 <sup>2</sup> Code point range for [supplementary characters](#Supplementary_Characters).
 
-As seen above, choosing the appropriate Unicode encoding and data type may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII characters from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.
+> [!TIP]   
+> It is common to think in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), or in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), the *n* defines the number of characters. This is because in the example of a CHAR(10) column, 10 ASCII characters in the range 0-127 can be stored using a collation such as Latin1_General_100_CI_AI, because each character in this range uses only 1-byte.    
+> However, in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), the *n* defines the string length in **bytes** (0-8,000), while in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) the *n* defines the string length in **byte-pairs** (0-4,000). *n* never defines numbers of characters that can be stored.
+
+As seen above, choosing the appropriate Unicode encoding and data type may provide significant storage savings or increase your current storage footprint, depending on the character set in use. For example, When using a Latin collation that is UTF-8 enabled such as Latin1_General_100_CI_AI_SC_UTF8, a `CHAR(10)` column stores 10 bytes, and can hold 10 ASCII characters in the range 0-127, but only 5 characters in range 128-2047, and only 3 characters in range 2048-65535. By comparison, because a `NCHAR(10)` column stores 10 byte-pairs (20 bytes), it can hold 10 characters in the range 0-65535.  
 
 Before choosing whether to use UTF-8 or UTF-16 encoding for a database or column, consider the distribution of string data that will be stored:
--  If it is mostly in the ASCII range (such as English), then each character requires 1-byte with UTF-8 and 2-bytes with UTF-16. Using UTF-8 provides storage benefits. 
+-  If it is mostly in the ASCII range 0-127 (such as English), then each character requires 1-byte with UTF-8 and 2-bytes with UTF-16. Using UTF-8 provides storage benefits. Changing an existing column data type with ASCII characters in the range 0-127 from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50 percent reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string representation.    
 -  Above the ASCII range, almost all Latin-based script, and also Greek, Cyrillic, Coptic, Armenian, Hebrew, Arabic, Syriac, Tāna and N’Ko will require 2-bytes per character in both UTF-8 and UTF-16. In these cases there aren't significant storage differences for comparable data types (for example between using **char** or **nchar**).
 -  If it is mostly East Asian script (such as Korean, Chinese and Japanese), then each character requires 3-bytes with UTF-8 and 2-bytes with UTF-16. Using UTF-16 provides storage benefits. 
 -  Characters in the 010000 to 10FFFF range require 4-bytes in both UTF-8 and UTF-16. In these cases there aren't storage differences for comparable data types (for example between using **char** or **nchar**).

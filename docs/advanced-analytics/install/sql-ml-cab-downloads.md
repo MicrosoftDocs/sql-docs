@@ -8,7 +8,6 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # CAB downloads for cumulative updates of SQL Server in-database analytics instances
 

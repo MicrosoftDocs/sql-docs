@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Database element"
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Database Element for Configuration (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

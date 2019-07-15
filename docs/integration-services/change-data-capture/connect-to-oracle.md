@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to Oracle
 

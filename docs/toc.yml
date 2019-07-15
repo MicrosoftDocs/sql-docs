@@ -5695,6 +5695,8 @@
       href: dma/dma-migrateonpremsqltosqldb.md
     - name: Migrate SQL Server logins
       href: dma/dma-migrateserverlogins.md
+    - name: Assess a SQL Server data estate for Azure SQL Database readiness
+      href: dma/dma-assess-sql-data-estate-to-sqldb.md      
     - name: Best practices
       href: dma/dma-bestpractices.md
     - name: Consolidate assessment reports

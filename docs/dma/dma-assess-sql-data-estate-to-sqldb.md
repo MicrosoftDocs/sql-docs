@@ -169,7 +169,7 @@ After you successfully create a migration project, under **Assessment tools**, i
 
 5. Review the DMA assessment results to get more details around the migration blockers.
 
-   ![Azure Migrate - review migration blockers](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers-databases.png)
+   ![Azure Migrate - review migration blockers](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
 ## See also
 

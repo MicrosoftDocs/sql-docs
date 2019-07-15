@@ -99,21 +99,6 @@ There are a few SQL Server blogs that can bring you the latest information about
 If you would like to download and review the license information for SQL Server, it can be found at [Microsoft SQL Server Additional Software License Terms](https://www.microsoft.com/download/details.aspx?id=39299). 
 
 
-## Contribute to documentation
-
-As long you have a GitHub account, you can edit the content yourself on docs.microsoft.com by following these steps:
-
-1. Navigate to the page of interest.
-1. Select the "Edit" button at the top right of the page.
-1. Select the "Pencil" icon on the right.
-1. Modify the text within the text box in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
-1. Name your file change and provide a description.
-1. Select "Propose file change".
-1. Select "Create pull request" on the 'Comparing changes' page.
-1. Select "Create pull request" on the 'Open a pull request' page.
-
-![Edit SQL Docs](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
-
-You can find detailed information about this at [https://aka.ms/editsqldocs](https://aka.ms/editsqldocs). 
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 

@@ -21,7 +21,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 |||
 |---|---|
-| [Agent](#agent) | Enable SQL Server Agent |
+| [Agent](#agent) | Enable SQL Server Agent. |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
 | [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux. |

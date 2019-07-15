@@ -124,6 +124,8 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
     
 2.  The UnixODBC driver manager returns "invalid attribute/option identifier" for all statement attributes when they are passed through SQLSetConnectAttr. On Windows, when SQLSetConnectAttr receives a statement attribute value, it causes the driver to set that value on all active statements which are children of the connection handle.  
 
+3.  When using the driver with highly multithreaded applications, unixODBC's handle validation may become a performance bottleneck. In such scenarios, significantly more performance may be obtained by compiling unixODBC with the `--enable-fastvalidate` option. However, beware that this may cause applications which pass invalid handles to ODBC APIs to crash instead of returning `SQL_INVALID_HANDLE` errors.
+
 ## See Also  
 [Frequently Asked Questions](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 

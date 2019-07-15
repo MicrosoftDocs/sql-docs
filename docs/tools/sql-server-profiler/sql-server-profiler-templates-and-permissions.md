@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # SQL Server Profiler Templates and Permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

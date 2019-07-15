@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, encryption"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Using Encryption Without Validation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

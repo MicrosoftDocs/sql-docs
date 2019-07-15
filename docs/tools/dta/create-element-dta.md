@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Create Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

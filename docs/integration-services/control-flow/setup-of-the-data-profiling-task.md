@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Setup of the Data Profiling Task
 

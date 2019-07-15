@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Derived Column Transformation
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 2-1 - Building the Deployment Utility
 

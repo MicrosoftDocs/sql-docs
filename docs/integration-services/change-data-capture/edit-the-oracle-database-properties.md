@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Edit the Oracle Database Properties
 

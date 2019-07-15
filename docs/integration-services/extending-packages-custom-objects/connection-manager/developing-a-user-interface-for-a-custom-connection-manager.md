@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a User Interface for a Custom Connection Manager
 

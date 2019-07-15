@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transfer Logins Task
 

@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 1-1 - Creating Working Folders and Environment Variables
 

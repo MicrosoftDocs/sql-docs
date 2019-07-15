@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Storage Connection Manager
 

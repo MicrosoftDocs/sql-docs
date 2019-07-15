@@ -18,7 +18,6 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Deploy Integration Services (SSIS) Projects and Packages
 

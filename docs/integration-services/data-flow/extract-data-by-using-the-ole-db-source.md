@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Extract Data by Using the OLE DB Source
 

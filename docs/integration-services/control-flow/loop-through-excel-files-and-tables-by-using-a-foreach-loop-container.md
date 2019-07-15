@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Loop through Excel Files and Tables by Using a Foreach Loop Container
 

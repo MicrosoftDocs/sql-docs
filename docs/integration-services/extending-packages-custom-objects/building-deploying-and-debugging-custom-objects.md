@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Building, Deploying, and Debugging Custom Objects
 

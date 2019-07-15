@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Value Inclusion Profile Request Options (Data Profiling Task)
 

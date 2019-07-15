@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Restart Packages by Using Checkpoints
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Analysis Services Execute DDL Task
 

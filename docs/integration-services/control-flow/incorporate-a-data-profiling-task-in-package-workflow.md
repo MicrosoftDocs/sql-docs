@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Incorporate a Data Profiling Task in Package Workflow
 

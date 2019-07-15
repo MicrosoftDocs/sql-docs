@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # DQS Cleansing Connection Manager
 

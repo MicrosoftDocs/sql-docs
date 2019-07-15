@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)
 

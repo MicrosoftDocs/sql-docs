@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ^ (Bitwise Exclusive OR) (SSIS Expression)
 

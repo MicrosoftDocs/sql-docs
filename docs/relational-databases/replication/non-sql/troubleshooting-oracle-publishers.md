@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Troubleshooting Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

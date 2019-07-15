@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Specify Synchronization Schedules
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

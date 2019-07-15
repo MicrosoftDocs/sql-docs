@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publishing Stored Procedure Execution in Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

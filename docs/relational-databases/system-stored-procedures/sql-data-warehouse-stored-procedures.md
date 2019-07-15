@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: 02e04dfe-d565-4e45-b427-b8e89c958ba3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL Data Warehouse Stored Procedures

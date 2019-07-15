@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Filter Published Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

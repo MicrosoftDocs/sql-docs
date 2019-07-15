@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Secure the Snapshot Folder
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

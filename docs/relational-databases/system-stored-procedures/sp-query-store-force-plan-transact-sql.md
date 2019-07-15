@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_force_plan (Transact-SQL)

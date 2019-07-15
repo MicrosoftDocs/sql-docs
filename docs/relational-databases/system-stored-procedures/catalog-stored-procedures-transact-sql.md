@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 6190b070-a3ba-4925-bbe7-79229205dac7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Catalog Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

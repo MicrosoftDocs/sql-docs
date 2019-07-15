@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Glossary of Terms for Oracle Publishing
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 75ed08c7-f85c-4e15-9ee1-e7bc545d3293
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # affinity64 mask Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

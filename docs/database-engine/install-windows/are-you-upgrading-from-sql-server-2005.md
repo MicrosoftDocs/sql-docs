@@ -10,7 +10,6 @@ ms.assetid: ad40e66f-71fe-4ee6-9ce3-17127e7b1d7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: jroth
 ---
 # Are you upgrading from SQL Server 2005, 2008, or 2008R2?
 

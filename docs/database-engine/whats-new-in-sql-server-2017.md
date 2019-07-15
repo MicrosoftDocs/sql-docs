@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
-manager: jroth
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # What's new in Database Engine - SQL Server 2017

@@ -9,7 +9,6 @@ ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # AdventureWorks Installation and configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

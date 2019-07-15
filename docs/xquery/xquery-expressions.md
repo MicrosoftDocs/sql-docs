@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # XQuery Expressions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

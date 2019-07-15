@@ -9,7 +9,6 @@ f1_keywords:
 helpviewer_keywords: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server privacy supplement
 

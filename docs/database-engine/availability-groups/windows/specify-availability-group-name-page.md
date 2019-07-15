@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Specify Availability Group Options Page for an Always On Availability Group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

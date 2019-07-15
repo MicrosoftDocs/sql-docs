@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-manager: jroth
 ---
 # Monitor performance for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

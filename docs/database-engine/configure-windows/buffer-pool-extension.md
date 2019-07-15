@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

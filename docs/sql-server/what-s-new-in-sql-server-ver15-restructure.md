@@ -53,19 +53,11 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] enhancements by component
-
-### Big data clusters
+## Big data clusters
 
 | New feature or update | Details |
 |:---|:---|
-| Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes |
-| |Read, write, and process big data from Transact-SQL or Spark|
-| | Easily combine and analyze high-value relational data with high-volume big data|
-| |Query external data sources|
-| |Store big data in HDFS managed by SQL Server|
-| |Query data from multiple external data sources through the cluster|
-| |Use the data for AI, machine learning, and other analysis tasks|
+| Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes <br/><br/> Read, write, and process big data from Transact-SQL or Spark<br/><br/> Easily combine and analyze high-value relational data with high-volume big data<br/><br/>Query external data sources<br/><br/>Store big data in HDFS managed by SQL Server<br/><br/>Query data from multiple external data sources through the cluster<br/><br/> Use the data for AI, machine learning, and other analysis tasks<br/><br/> See [What are SQL Server big data clusters](../big-data-cluster/big-data-cluster-overview.md).|
 | &nbsp; | &nbsp; |
 
 For more details, see [What are SQL Server big data clusters](../big-data-cluster/big-data-cluster-overview.md)
@@ -96,7 +88,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 | &nbsp; | &nbsp; |
 ------------------------------------>
 
-### SQL Server on Linux
+## SQL Server on Linux
 
 | New feature or update | Details |
 |:-----|:-----|
@@ -110,18 +102,19 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 | PolyBase on Linux. | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
 | &nbsp; | &nbsp; |
 
-### Database engine
+## Database engine
 
-#### Security
+### Security
 
 |New feature or update | Details |
 |:---|:---|
+|Feature restrictions| Prevent some forms of SQL injection from leaking information about the database, even when the SQL injection is successful. See [Feature restrictions](../relational-databases/security/feature-restrictions.md)|
 |Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Transparent Data Encryption (TDE) scan - suspend and resume.|[Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Certificate management in SQL Server Configuration Manager|[Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
 | &nbsp; | &nbsp; |
 
-#### Graph
+### Graph
 
 |New feature or update | Details |
 |:---|:---|
@@ -131,7 +124,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Use derived table or view aliases in graph match query |[Graph Edge Constraints](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 
-#### Indexes
+### Indexes
 
 |New feature or update | Details |
 |:---|:---|
@@ -139,7 +132,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Build and rebuild online clustered columnstore index. |[Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md) |
 | &nbsp; | &nbsp; |
 
-#### In memory databases
+### In memory databases
 
 |New feature or update | Details |
 |:---|:---|
@@ -147,14 +140,14 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Memory-optimized tempdb metadata|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 | &nbsp; | &nbsp; |
 
-#### Linked servers
+### Linked servers
 
 |New feature or update | Details |
 |:---|:---|
 |Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 | &nbsp; | &nbsp; |
 
-#### Collation
+### Collation
 
 |New feature or update | Details |
 |:---|:---|
@@ -163,7 +156,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Adds support to select UTF-8 collation as default during. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 | &nbsp; | &nbsp; |
 
-#### Server settings
+### Server settings
 
 |New feature or update | Details |
 |:---|:---|
@@ -172,7 +165,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|[Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
 | &nbsp; | &nbsp; |
 
-#### Performance monitoring
+### Performance monitoring
 
 |New feature or update | Details |
 |:---|:---|
@@ -187,7 +180,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 |The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. |[Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md)|
 
-#### Language extensions
+### Language extensions
 
 |New feature or update | Details |
 |:---|:---|
@@ -196,14 +189,14 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 |Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
 
-#### Spatial
+### Spatial
 
 |New feature or update | Details |
 |:---|:---|
 | New spatial reference identifiers (SRIDs). |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides more robust and accurate datum which is more closely aligned to global positioning systems. The new SRIDs are:<br/><br/> - 7843 - geographic 2D<br/> - 7844 - geographic 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
 | &nbsp; | &nbsp; |
 
-#### Performance
+### Performance
 
 |New feature or update | Details |
 |:---|:---|
@@ -213,7 +206,15 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Improved indirect checkpoint scalability. |[Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 | &nbsp; | &nbsp; |
 
-#### Error messages
+### Availability groups
+
+|New feature or update | Details |
+|:---|:---|
+|Up to five synchronous replicas|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.|
+|Secondary-to-primary replica connection redirection| Allows client application connections to be directed to the primary replica regardless of the target server specified in the connection string. For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).|
+| &nbsp; | &nbsp; |
+
+### Error messages
 
 |New feature or update | Details |
 |:---|:---|
@@ -224,7 +225,15 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 >This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
 >
 
-### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+## <a id="ml"></a> SQL Server Machine Learning Services
+
+|New feature or update | Details |
+|:---|:---|
+|Partition-based modeling|Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model. See [Create partition-based models](../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)|
+|Windows Server Failover Cluster| Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.|
+| &nbsp; | &nbsp; |
+
+## [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
 | New feature or update | Details |
 |:---|:---|
@@ -232,7 +241,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |The Master Data Services (MDS) portal no longer depends on Silverlight.| All the former Silverlight components have been replaced with HTML controls.|
 | &nbsp; | &nbsp; |
 
-### Analysis Services
+## Analysis Services
 
 | New feature or update | Details |
 |:---|:---|
@@ -818,7 +827,7 @@ To override the default setting, include the `ONLINE` or `RESUMABLE` option in t
 Without this feature, you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
 For more information on index resumable operations, see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
-
+<!------------
 #### <a id="ha"></a>Always On Availability Groups - more synchronous replicas (CTP 2.0)
 
 - **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.
@@ -844,7 +853,7 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 
 >[!NOTE]
 >There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](/azure/sql-database/sql-database-data-discovery-and-classification/#subheading-3).
-
+--------------->
 #### Expanded support for persistent memory devices (CTP 2.0)
 
 Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed on a persistent memory device can now operate in *enlightened* mode. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] directly accesses the device, bypassing the storage stack of the operating system using efficient memcpy operations. This mode improves performance because it allows low latency input/output against such devices.
@@ -866,6 +875,7 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 
 `sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state. Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
 
+<!-----
 #### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling (CTP 2.0)
 
 - **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
@@ -873,6 +883,7 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+---------------->
 
 #### Lightweight query profiling infrastructure enabled by default (CTP 2.0)
 

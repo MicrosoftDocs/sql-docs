@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Disable or Enable a Job

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Set Job Execution Shutdown (SQL Server Management Studio)

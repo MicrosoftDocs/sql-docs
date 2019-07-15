@@ -22,7 +22,6 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 ms.reviewer: sstein
-manager: jroth
 ms.custom: ""
 ms.date: 06/12/2019
 ---

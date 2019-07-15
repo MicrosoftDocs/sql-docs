@@ -8,7 +8,6 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: jroth
 helpviewer_keywords:
   - "source controls [SQL Server Management Studio], tutorials"
   - "Help [SQL Server], SQL Server Management Studio"

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # DisplayName Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

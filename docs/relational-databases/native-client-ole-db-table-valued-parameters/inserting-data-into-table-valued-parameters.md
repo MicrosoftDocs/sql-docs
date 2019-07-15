@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Inserting Data into Table-Valued Parameters

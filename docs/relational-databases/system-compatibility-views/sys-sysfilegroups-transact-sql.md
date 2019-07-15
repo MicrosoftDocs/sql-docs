@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysfilegroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

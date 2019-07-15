@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Database Objects

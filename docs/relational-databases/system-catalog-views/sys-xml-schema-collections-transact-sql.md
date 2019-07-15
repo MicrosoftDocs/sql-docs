@@ -19,7 +19,6 @@ ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.xml_schema_collections (Transact-SQL)

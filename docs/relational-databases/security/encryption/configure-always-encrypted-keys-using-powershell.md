@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted Keys using PowerShell

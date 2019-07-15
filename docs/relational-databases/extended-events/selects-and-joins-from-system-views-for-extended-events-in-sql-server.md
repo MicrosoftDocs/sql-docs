@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECTs and JOINs From System Views for Extended Events in SQL Server

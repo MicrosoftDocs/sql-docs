@@ -27,7 +27,6 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Detach and Attach (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

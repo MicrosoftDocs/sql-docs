@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

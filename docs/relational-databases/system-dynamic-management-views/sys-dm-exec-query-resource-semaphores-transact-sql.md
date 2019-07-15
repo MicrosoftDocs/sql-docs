@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_query_resource_semaphores (Transact-SQL)

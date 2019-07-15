@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: d1fb46dd-5c74-4c04-9ecf-8934b1bedb5b 
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_io_pending_io_requests (Transact-SQL)

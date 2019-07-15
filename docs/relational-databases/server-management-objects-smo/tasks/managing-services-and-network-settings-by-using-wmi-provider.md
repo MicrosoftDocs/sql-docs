@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Services and Network Settings by Using WMI Provider

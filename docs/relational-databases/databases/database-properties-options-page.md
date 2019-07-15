@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Properties (Options Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

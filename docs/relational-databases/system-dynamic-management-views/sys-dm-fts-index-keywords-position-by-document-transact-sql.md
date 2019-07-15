@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl 
 ms.author: pelopes
-manager: craigg
 ---
 # sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

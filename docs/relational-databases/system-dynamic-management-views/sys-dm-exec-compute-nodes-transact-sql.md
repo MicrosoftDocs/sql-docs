@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_compute_nodes (Transact-SQL)

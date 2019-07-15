@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_locks (Transact-SQL)

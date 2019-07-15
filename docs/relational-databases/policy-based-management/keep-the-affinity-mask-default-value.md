@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Keep the Affinity Mask Default Value
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

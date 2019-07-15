@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Properties (Mirroring Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

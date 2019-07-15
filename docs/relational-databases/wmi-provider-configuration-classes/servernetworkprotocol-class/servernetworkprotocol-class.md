@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ServerNetworkProtocol Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

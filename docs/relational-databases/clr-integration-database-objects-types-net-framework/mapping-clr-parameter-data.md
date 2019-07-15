@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Mapping CLR Parameter Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

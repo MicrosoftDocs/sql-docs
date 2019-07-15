@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_missing_index_details (Transact-SQL)

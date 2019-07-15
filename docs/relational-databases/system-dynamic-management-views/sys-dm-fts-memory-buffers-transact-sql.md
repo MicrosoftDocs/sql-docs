@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8 
 author: pmasl 
 ms.author: pelopes
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_fts_memory_buffers (Transact-SQL)

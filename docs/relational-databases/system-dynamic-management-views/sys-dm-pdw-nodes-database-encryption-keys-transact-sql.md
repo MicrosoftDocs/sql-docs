@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)

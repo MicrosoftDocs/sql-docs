@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8bc10867-66d6-4f57-ac32-a6c29f3327cd
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Get Information About Event Notifications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

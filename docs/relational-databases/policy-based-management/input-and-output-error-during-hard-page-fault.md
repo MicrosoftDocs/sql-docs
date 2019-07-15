@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Input and Output Error During Hard Page Fault
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

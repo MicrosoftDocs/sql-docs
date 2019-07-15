@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)

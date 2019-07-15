@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Broker Statistics Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

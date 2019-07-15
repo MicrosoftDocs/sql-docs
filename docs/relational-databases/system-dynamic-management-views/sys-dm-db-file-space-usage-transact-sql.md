@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_file_space_usage (Transact-SQL)

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Dependencies Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

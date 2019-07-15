@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # sys.xml_schema_facets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

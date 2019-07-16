@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "formatting, decimal types, money values"
 author: "yitam"
 ms.author: "v-yitam"
-manager: "mbarwin"
+manager: v-mabarw
 ---
 # Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

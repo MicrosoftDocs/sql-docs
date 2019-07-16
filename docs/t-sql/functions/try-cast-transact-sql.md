@@ -34,7 +34,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## Arguments  
  *expression*  
- The value to be cast. Any valid expression.  
+ The value to be cast. Allowed input value is limited to 8000 bytes. 
   
  *data_type*  
  The data type into which to cast *expression*.  

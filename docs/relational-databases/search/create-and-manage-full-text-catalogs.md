@@ -12,7 +12,6 @@ ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Manage Full-Text Catalogs

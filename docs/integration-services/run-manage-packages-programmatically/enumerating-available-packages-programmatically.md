@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Enumerating Available Packages Programmatically
 

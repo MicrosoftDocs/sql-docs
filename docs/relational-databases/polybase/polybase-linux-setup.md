@@ -3,7 +3,6 @@ title: Install PolyBase on Linux | Microsoft Docs
 description: This article describes how to install SQL Server Full-Text Search on Linux.
 author: aboke 
 ms.author: aboke 
-manager: craigg
 ms.date: 4/12/2019
 ms.topic: conceptual
 ms.prod: sql

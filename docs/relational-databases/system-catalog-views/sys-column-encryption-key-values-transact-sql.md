@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_encryption_key_values (Transact-SQL)

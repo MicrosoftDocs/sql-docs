@@ -12,7 +12,6 @@ f1_keywords:
   - "SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1"
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Flexible File Task
 

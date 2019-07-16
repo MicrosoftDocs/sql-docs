@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Numeric, string, and Boolean literals
 

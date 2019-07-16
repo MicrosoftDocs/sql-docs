@@ -12,7 +12,6 @@ f1_keywords:
   - "sql14.dts.designer.afpextfilesrc.f1"
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Flexible File Source
 

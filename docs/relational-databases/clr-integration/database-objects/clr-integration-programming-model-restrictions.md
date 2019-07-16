@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration Programming Model Restrictions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

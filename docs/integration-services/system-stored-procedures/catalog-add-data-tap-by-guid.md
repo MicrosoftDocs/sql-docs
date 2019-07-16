@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.add_data_tap_by_guid 
 

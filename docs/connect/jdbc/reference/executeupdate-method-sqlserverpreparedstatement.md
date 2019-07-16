@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 677b0907-316e-40f2-a0d9-d4d0872c7f52
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # executeUpdate Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

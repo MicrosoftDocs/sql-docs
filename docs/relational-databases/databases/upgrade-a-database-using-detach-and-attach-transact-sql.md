@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Upgrade a Database Using Detach and Attach (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

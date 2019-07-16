@@ -15,7 +15,6 @@ apitype: "DLLExport"
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBStopInstance Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

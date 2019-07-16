@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Path Expressions - Specifying Node Test
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

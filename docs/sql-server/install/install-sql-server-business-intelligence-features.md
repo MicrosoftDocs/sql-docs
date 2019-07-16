@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: "markingmyname"
 ms.author: "maghan"
-manager: "kfile"
+manager: kfile
 ---
 # Install SQL Server Business Intelligence Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

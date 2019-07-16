@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add Analysis Services Connection Manager Dialog Box UI Reference
 

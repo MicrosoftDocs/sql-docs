@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MIN (Transact-SQL)

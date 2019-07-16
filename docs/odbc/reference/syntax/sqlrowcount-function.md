@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLRowCount Function
 **Conformance**  

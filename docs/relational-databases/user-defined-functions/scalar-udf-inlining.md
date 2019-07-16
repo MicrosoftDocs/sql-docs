@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "s-r-k"
 ms.author: "karam"
-manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Scalar UDF Inlining

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Extract Data by Using the XML Source
 

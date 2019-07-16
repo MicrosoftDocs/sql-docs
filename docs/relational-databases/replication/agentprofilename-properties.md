@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # &lt;AgentProfileName&gt; Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

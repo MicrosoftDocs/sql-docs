@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard
 

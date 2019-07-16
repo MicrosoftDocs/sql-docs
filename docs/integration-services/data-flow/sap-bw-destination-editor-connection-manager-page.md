@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SAP BW Destination Editor (Connection Manager Page)
 

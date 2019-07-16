@@ -10,7 +10,6 @@ ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-manager: jroth
 ---
 # Modify User and Workspace Settings
 

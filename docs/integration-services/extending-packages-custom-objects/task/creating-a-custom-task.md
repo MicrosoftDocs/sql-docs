@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Creating a Custom Task
 

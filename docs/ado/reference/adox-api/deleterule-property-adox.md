@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # DeleteRule Property (ADOX)
 Indicates the action performed when a primary key is deleted.  

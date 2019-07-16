@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Reorganize Index Task
 

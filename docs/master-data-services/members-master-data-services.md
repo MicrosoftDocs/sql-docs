@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Members (Master Data Services)
 

@@ -1,9 +1,9 @@
 ---
-title: SQL Server Replication on Linux | Microsoft Docs
+title: SQL Server Replication on Linux
 description: This article describes SQL Server replication on Linux.
-author: MikeRayMSFT 
+author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Not Equal To (Transact SQL) - exclamation

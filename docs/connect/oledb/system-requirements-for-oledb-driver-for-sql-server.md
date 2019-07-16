@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "MSOLEDBSQL, system requirements"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # System requirements for OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

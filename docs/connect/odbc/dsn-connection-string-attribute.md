@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-manager: jroth
 ---
 # DSN and Connection String Keywords and Attributes
 

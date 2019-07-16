@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 8b8049d0-8c6d-4476-866b-098709f37eec
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLServerDatabaseMetaData Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

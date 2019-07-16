@@ -2,9 +2,8 @@
 title: Install SQL Server command-line tools on Linux
 titleSuffix: SQL Server
 description: This article describes how to install the SQL Server Tools on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetCurrentCertificate Method (SInstance Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

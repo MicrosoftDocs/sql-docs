@@ -9,7 +9,6 @@ ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change the Word Breaker Used for US English and UK English

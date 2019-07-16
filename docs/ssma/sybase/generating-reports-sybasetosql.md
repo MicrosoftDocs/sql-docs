@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Generating Reports (SybaseToSQL)
 The reports of certain activities performed using commands are generated in SSMA Console at object tree level.  

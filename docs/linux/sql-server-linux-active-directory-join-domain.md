@@ -4,9 +4,8 @@ titleSuffix: SQL Server
 description: 
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

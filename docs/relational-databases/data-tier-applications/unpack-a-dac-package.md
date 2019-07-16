@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Unpack a DAC Package
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

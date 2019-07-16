@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Introduction to ODBC
 This section provides a brief history of Structured Query Language and ODBC, and includes conceptual information about the ODBC interface.  

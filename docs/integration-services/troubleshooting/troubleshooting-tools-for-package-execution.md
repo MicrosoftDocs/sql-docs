@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Troubleshooting Tools for Package Execution
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.validate_package (SSISDB Database)
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 
 author: DBArgenis
 ms.author: argenisf
-manager: jroth
 ---
 # Hybrid Buffer Pool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

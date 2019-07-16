@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # FTP Connection Manager
 

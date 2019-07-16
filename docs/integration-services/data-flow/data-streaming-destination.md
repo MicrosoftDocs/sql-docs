@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Streaming Destination
 

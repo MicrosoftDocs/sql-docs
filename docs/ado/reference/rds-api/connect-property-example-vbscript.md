@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Connect Property Example (VBScript)
 > [!IMPORTANT]

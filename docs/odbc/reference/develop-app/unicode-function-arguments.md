@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Unicode Function Arguments
 The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions of all functions that accept pointers to character strings or SQLPOINTER in their arguments. The Unicode functions are implemented as functions (with a suffix of *W*), not as macros. The ANSI functions (which can be called with or without a suffix of *A*) are identical to the current ODBC API functions.  
@@ -60,7 +59,7 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  Deprecated functions have Unicode-to-ANSI mapping support because the ODBC 3*.x* Driver Manager supports recompiling ODBC 2.*x* applications with the UNICODE **#define**.  
+>  Deprecated functions have Unicode-to-ANSI mapping support because the ODBC *3.x* Driver Manager supports recompiling ODBC *2.x* applications with the UNICODE **#define**.  
   
  This section contains the following topics.  
   

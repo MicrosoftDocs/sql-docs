@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "GetParameterProperties method"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Compare and Synchronize the Data of Two Databases
 You can compare the data that is contained in two databases. The databases that you compare are known as the *source* and the *target*.  

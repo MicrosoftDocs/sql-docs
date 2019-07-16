@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 83777807-5838-4f81-94ab-3ba4fc5aaa47
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsStatementPooling Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

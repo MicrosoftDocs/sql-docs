@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 220fb192-9636-41a2-b15c-62af6cab8fff
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Replay a Single Event at a Time (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

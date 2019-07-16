@@ -13,7 +13,6 @@ apilocation:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Command-Line Management Tool: SqlLocalDB.exe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

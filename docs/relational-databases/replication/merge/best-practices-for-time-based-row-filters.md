@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Best Practices for Time-Based Row Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

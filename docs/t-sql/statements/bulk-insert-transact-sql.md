@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # BULK INSERT (Transact-SQL)
 

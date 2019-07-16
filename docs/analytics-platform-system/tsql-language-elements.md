@@ -2,7 +2,6 @@
 title: T-SQL language elements - Parallel Data Warehouse | Microsoft Docs
 description: T-SQL language elements for Analytic Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

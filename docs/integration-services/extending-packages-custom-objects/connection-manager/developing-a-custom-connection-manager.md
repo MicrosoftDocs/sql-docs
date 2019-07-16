@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a Custom Connection Manager
 

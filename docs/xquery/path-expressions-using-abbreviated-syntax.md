@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Path Expressions - Using Abbreviated Syntax
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

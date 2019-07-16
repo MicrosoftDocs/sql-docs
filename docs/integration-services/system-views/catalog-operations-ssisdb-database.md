@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.operations (SSISDB Database)
 

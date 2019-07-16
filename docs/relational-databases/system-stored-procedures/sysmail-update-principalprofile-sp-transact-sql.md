@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  When the principal name for the association is **public** or the principal id for the association is **0**, this stored procedure changes the public profile. There can only be one default public profile.  
   
- When **@is_default** is '**1**' and the principal is associated with more than one profile, the specified profile becomes the default profile for the principal. The profile that was previously the default profile is still associated with the principal, but is no longer the default profile.  
+ When **\@is_default** is '**1**' and the principal is associated with more than one profile, the specified profile becomes the default profile for the principal. The profile that was previously the default profile is still associated with the principal, but is no longer the default profile.  
   
  The stored procedure **sysmail_update_principalprofile_sp** is in the **msdb** database and is owned by the **dbo** schema. The procedure must be executed with a three-part name if the current database is not **msdb**.  
   

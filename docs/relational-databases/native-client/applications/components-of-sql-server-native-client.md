@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Components of SQL Server Native Client

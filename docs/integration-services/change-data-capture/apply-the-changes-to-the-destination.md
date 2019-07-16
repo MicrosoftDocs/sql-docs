@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Apply the Changes to the Destination
 

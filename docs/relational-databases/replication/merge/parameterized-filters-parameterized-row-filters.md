@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Parameterized Filters - Parameterized Row Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

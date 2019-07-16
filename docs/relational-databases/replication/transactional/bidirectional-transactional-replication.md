@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Bidirectional Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

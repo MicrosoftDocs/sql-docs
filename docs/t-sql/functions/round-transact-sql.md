@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUND (Transact-SQL)

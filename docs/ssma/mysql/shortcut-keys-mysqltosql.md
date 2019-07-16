@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 580d72a3-9be3-4f19-a9b3-5b41cc84b589
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Shortcut Keys (MySQLToSQL)
 You can use keyboard shortcuts to navigate through SSMA application. For more information, see the following topics.  

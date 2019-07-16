@@ -5,7 +5,6 @@ ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies
-manager: kfile
 ms.reviewer: ""
 ms.custom: seodec18
 ms.date: 04/26/2019

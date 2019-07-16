@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Specify Schema Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

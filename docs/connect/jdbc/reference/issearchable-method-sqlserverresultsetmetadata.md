@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # isSearchable Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -2,7 +2,6 @@
 title: Appliance monitoring - Analytics Platform System | Microsoft Docs
 description: This appliance monitoring guide describes the tools and tasks for monitoring the Analytics Platform System appliance. 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

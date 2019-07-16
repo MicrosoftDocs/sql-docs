@@ -11,7 +11,10 @@ helpviewer_keywords:
   - "workload groups [SQL Server], create"
 author: julieMSFT
 ms.author: jrasnick
+<<<<<<< HEAD
 manager: craigg 
+=======
+>>>>>>> 84cddb176cbc02ae80b9f20b9956f611cf5ff397
 ---
 # Create a Workload Group
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

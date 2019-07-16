@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Change Data Capture Designer for Oracle by Attunity
 

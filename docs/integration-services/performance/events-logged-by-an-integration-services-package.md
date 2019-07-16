@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Events Logged by an Integration Services Package
 

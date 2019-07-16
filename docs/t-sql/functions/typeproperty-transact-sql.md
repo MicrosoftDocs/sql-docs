@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TYPEPROPERTY (Transact-SQL)

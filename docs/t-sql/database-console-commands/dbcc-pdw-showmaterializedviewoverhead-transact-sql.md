@@ -11,7 +11,6 @@ dev_langs:
   - "TSQL"
 author: XiaoyuL-Preview 
 ms.author: xiaoyul
-manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (preview)

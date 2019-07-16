@@ -4,7 +4,6 @@ titleSuffix: SQL Server Language Extensions
 description: External code support for the SQL Server database engine, with dual architecture for running external language on relational data.
 author: dphansen
 ms.author: davidph 
-manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql

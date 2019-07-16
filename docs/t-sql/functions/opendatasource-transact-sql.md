@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # OPENDATASOURCE (Transact-SQL)

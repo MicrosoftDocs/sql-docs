@@ -6,7 +6,6 @@ ms.technology: troubleshooting
 ms.topic: conceptual
 author: maggiesMSFT 
 ms.author: maggies
-manager: kfile
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 06/12/2019

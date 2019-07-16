@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "PREDICT clause"
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PREDICT (Transact-SQL)  

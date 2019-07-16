@@ -8,7 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: "ulvii"
 ms.author: "v-ulibra"
-manager: "v-mabarw"
+manager: v-mabarw
 ---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server

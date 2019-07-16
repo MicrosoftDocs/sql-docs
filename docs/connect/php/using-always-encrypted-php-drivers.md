@@ -8,7 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: "v-kaywon"
 ms.author: "v-kaywon"
-manager: "mbarwin"
+manager: v-mabarw
 ---
 # Using Always Encrypted with the PHP Drivers for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

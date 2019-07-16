@@ -4,7 +4,6 @@ description: A tutorial for connecting to a SQL Server instance by using SQL Ser
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools

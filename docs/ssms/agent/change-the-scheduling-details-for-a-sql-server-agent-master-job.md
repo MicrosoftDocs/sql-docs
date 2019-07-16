@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Change the Scheduling Details for a SQL Server Agent Master Job

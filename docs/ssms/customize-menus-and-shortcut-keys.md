@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 ---
 # Customize Menus and Shortcut Keys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

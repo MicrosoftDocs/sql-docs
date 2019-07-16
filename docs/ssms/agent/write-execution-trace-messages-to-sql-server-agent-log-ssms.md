@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)

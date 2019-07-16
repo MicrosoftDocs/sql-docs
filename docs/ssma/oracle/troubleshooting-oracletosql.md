@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Troubleshooting (OracleToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

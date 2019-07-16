@@ -30,7 +30,7 @@ ms.author: pelopes
 
 Query notifications were introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] and OLE DB Driver for SQL Server. Built on the SQL Service Broker infrastructure introduced in SQL Server 2005 (9.x), query notifications allow applications to be notified when data has changed. This feature is particularly useful for applications that provide a cache of information from a database, such as a web application, and need to be notified when the source data is changed.
 
-Query notifications allow you to request notifications within a specified timeout period when the underlying data of a query changes. The request specifies the notification options, which include the service name, message text, and timeout value to the server. Notifications are delivered through a Service Broker queue that applications may poll for available notifications.
+By using query notifications, you can request notifications within a specified timeout period when the underlying data of a query changes. The request specifies the notification options, which include the service name, message text, and timeout value to the server. Notifications are delivered through a Service Broker queue that applications can poll for available notifications.
 
 The syntax of the query notifications options string is:
 
@@ -40,7 +40,7 @@ The syntax of the query notifications options string is:
 
 `service=mySSBService;local database=mydb`
 
-Notification subscriptions outlive the process that initiates them, because an application may create a notification subscription and then terminate. The subscription remains valid, and the notification will occur if the data changes within the timeout period specified when the subscription was created. A notification is identified by the query executed, the notification options, and the message text. You can cancel it by setting its timeout value to zero.
+Notification subscriptions outlive the process that initiates them. That's because an application can create a notification subscription and then terminate. The subscription stays valid, and the notification occurs if the data changes within the timeout period specified when the subscription was created. A notification is identified by the query executed, the notification options, and the message text. You can cancel it by setting its timeout value to zero.
 
 Notifications are sent only once. To be continually notified of data changes, create a new subscription by re-executing the query after each notification is processed.
 
@@ -60,7 +60,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ```
 
 > [!NOTE]
-> The service must use the predefined contract as shown above.
+> The service must use the predefined contract, as shown above.
 
 ## The OLE DB Driver for SQL Server
 
@@ -81,7 +81,7 @@ In order to support query notifications through OLE DB, the OLE DB Driver for SQ
 
 The notification subscription is always committed. This happens regardless of whether the statement ran in a user transaction or in autocommit or whether the transaction in which the statement ran committed or rolled back. The server notification fires upon any of the following invalid notification conditions: change of underlying data or schema, or when the timeout period is reached; whichever is first. 
 
-Notification registrations are deleted as soon as they are fired. So, upon receiving notifications, the application must subscribe again if you want to get further updates.
+Notification registrations are deleted as soon as they're fired. So, upon receiving notifications, the application must subscribe again if you want to get further updates.
 
 Another connection or thread can check the destination queue for notifications. For example:
 
@@ -90,7 +90,7 @@ WAITFOR (RECEIVE * FROM MyQueue); -- Where MyQueue is the queue name.
 ```
 
 > [!NOTE]
-> `SELECT *` does not delete the entry from the queue. However, `RECEIVE * FROM` does. This stalls a server thread if the queue is empty. If there are queue entries at the time of the call, they are returned immediately. Otherwise, the call waits until a queue entry is made.
+> `SELECT *` doesn't delete the entry from the queue. However, `RECEIVE * FROM` does. This stalls a server thread if the queue is empty. If there are queue entries at the time of the call, they're returned immediately. Otherwise, the call waits until a queue entry is made.
 
 ```sql
 RECEIVE * FROM MyQueue
@@ -98,9 +98,9 @@ RECEIVE * FROM MyQueue
 
 This statement immediately returns an empty result set if the queue is empty. Otherwise, it returns all queue notifications.
 
-If `SSPROP_QP_NOTIFICATION_MSGTEXT` and `SSPROP_QP_NOTIFICATION_OPTIONS` are non-null and non-empty, the query notifications TDS header that contains the three properties defined above are sent to the server. This happens upon each execution of the command. If either of them is null (or empty), the header is not sent and `DB_E_ERRORSOCCURRED` is raised, (or `DB_S_ERRORSOCCURRED` is, if the properties are both marked as optional), and the status value is set to `DBPROPSTATUS_BADVALUE`. The validation occurs upon execute and prepare. Similarly, `DB_S_ERRORSOCCURED` is raised when the query notification properties are set for connections to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. The status value in this case is `DBPROPSTATUS_NOTSUPPORTED`.
+If `SSPROP_QP_NOTIFICATION_MSGTEXT` and `SSPROP_QP_NOTIFICATION_OPTIONS` are non-null and non-empty, the query notifications TDS header that contains the three properties defined above are sent to the server. This happens upon each execution of the command. If either of them is null (or empty), the header isn't sent and `DB_E_ERRORSOCCURRED` is raised (or `DB_S_ERRORSOCCURRED` is raised, if the properties are both marked as optional). The status value is then set to `DBPROPSTATUS_BADVALUE`. The validation occurs upon execute and prepare. Similarly, `DB_S_ERRORSOCCURED` is raised when the query notification properties are set for connections to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. The status value in this case is `DBPROPSTATUS_NOTSUPPORTED`.
 
-Initiating a subscription doesn't guarantee that subsequent messages will be successfully delivered. In addition, no check is made as to the validity of the service name specified.
+Initiating a subscription doesn't guarantee that subsequent messages will be successfully delivered. Also, no check is made as to the validity of the service name specified.
 
 > [!NOTE]
 > Preparing statements will never cause the subscription to be initiated. Only statement execution will achieve initiation. Query notifications aren't impacted by the use of OLE DB core services.

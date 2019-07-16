@@ -37,7 +37,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  The data type into which to cast *expression*.  
   
  *expression*  
- The value to be cast.  
+ The value to be cast. Allowed input value is limited to 8000 bytes.
   
  *style*  
  Optional integer expression that specifies how the **TRY_CONVERT** function is to translate *expression*.  

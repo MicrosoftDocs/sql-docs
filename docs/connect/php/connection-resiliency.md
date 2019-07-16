@@ -8,7 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: "david-puglielli"
 ms.author: "v-dapugl"
-manager: "v-hakaka"
+manager: v-mabarw
 ---
 # Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

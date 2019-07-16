@@ -21,7 +21,7 @@ helpviewer_keywords:
 author: "bluefooted"
 ms.author: "pamela"
 ms.reviewer: "maghan"
-manager: "amitban"
+manager: amitban
 ---
 # sys.dm_os_spinlock_stats (Transact-SQL)
 

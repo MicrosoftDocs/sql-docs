@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.dm_db_page_info dynamic management view"
 author: bluefooted
 ms.author: "pamela"
-manager: "amitban"
+manager: amitban
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # sys.dm_db_page_info (Transact-SQL)

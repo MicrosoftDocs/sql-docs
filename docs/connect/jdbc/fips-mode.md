@@ -9,8 +9,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: "kenvh"
----
+manager: kenvh---
 # FIPS Mode
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

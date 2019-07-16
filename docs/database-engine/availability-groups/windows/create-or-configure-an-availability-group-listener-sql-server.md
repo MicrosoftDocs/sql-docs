@@ -270,7 +270,7 @@ manager: erikre
 ```  
 Import-Module FailoverClusters  
 Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0   
-Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300  
+Get-ClusterResource yourListenerName | Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourListenerName  
 ```  

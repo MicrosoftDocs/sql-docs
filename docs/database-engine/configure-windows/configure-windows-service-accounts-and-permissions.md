@@ -90,7 +90,7 @@ ms.author: mikeray
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** - One or more Distributed Replay client computers that work together with a Distributed Replay controller to simulate concurrent workloads against an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - A trusted service that hosts external executables that are provided by Microsoft, such as the R runtime installed as part of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Satellite processes can be launched by the Launchpad process but will be resource governed based on the configuration of the individual instance. The Launchpad service runs under its own user account, and each satellite process for a specific, registered runtime will inherit the user account of the Launchpad. Satellite processes are created and destroyed on demand during execution time.
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - A trusted service that hosts external executables that are provided by Microsoft, such as the R or Python runtimes installed as part of R Services or Machine Learning Services. Satellite processes can be launched by the Launchpad process but will be resource governed based on the configuration of the individual instance. The Launchpad service runs under its own user account, and each satellite process for a specific, registered runtime will inherit the user account of the Launchpad. Satellite processes are created and destroyed on demand during execution time.
 
     Launchpad cannot create the accounts it uses if you install SQL Server on a computer that is also used as a domain controller. Hence, setup of R Services (In-Database) or Machine Learning Services (In-Database) fails on a domain controller.
 
@@ -225,7 +225,7 @@ The following table shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
+|R Services or Machine Learning Services|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |PolyBase Engine| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  \*For more information and sample syntax for unattended installations, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
@@ -294,8 +294,8 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Log on as a service** (SeServiceLogonRight)|  
 |**PolyBase Engine and DMS**| **Log on as a service** (SeServiceLogonRight)  |   
 |**Launchpad:**|**Log on as a service** (SeServiceLogonRight) <br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br />**Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br />**Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|     
-|**R Services:** **SQLRUserGroup** (SQL 2016 and 2017)  |**Allow Log on locally** |   
-|**Machine Learning** '**All Application Packages' [AppContainer]** (SQL 2019)  |**Read and execute permissions** to the SQL Server 'Binn', R_Services, and PYTHON_Services directories |   
+|**R Services/Machine Learning Services:** **SQLRUserGroup** (SQL 2016 and 2017)  |Does not have the **Allow Log on locally** permission by default |   
+|**Machine Learning Services** '**All Application Packages' [AppContainer]** (SQL 2019)  |**Read and execute permissions** to the SQL Server 'Binn', R_Services, and PYTHON_Services directories |   
 
  \*The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   

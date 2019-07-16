@@ -10,7 +10,8 @@ ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 ms.reviewer: "v-jizho2, v-chojas, genemi"
 author: v-makouz
 ms.author: v-makouz
-manager: kenvh---
+manager: kenvh
+---
 # Release Notes for ODBC to SQL Server on Windows
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -4,12 +4,13 @@ ms.custom: ""
 ms.date: "03/26/2019"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: "craigg"
+ms.reviewer: genemi
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-manager: kenvh---
+author: MikeRayMSFT
+ms.author: mikeray
+manager: kenvh
+---
 # FIPS Mode
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

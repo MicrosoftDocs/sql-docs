@@ -9,7 +9,8 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: karinazhou
 ms.author: v-jizho2
-manager: kenvh---
+manager: kenvh
+---
 # Release Notes for the Microsoft ODBC Driver to SQL Server on Linux and macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

@@ -8,7 +8,8 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: "ulvii"
 ms.author: "v-ulibra"
-manager: v-mabarw---
+manager: v-mabarw
+---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
 The following instructions assume a clean environment and show how to install PHP 7.x, the Microsoft ODBC driver, Apache, and the Microsoft Drivers for PHP for SQL Server on Ubuntu 16.04, 18.04, and 18.10, RedHat 7, Debian 8 and 9, Suse 12 and 15, and macOS 10.12, 10.13, and 10.14. These instructions advise installing the drivers using PECL, but you can also download the prebuilt binaries from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github project page and install them following the instructions in [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md). For an explanation of extension loading and why we do not add the extensions to php.ini, see the section on [loading the drivers](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).

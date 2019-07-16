@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Map data types from Java to SQL Server for input and output data structures, and for input parameters on the sp_execute_external_script.
 author: dphansen
 ms.author: davidph 
-ms.date: 06/26/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -63,7 +63,7 @@ The following SQL and Java data types are currently supported for input paramete
 | varchar(n) | String | Only UTF8 Strings supported | |
 | varchar(max) | String | Only UTF8 Strings supported | |
 
-## Data types for outut parameters
+## Data types for output parameters
 
 The following SQL and Java data types are currently supported for output parameters.
 

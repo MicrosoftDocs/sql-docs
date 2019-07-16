@@ -252,7 +252,7 @@ For the Python language in SQL Server 2019, the example also works by replacing 
 
 ### Alter an existing library using a byte stream
 
-The following example alters the existing library by passing the new bits as a hexidecimal literal.
+The following example alters the existing library by passing the new bits as a hexadecimal literal.
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary 

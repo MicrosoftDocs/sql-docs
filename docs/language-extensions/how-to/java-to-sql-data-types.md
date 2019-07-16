@@ -63,7 +63,7 @@ The following SQL and Java data types are currently supported for input paramete
 | varchar(n) | String | Only UTF8 Strings supported | |
 | varchar(max) | String | Only UTF8 Strings supported | |
 
-## Data types for outut parameters
+## Data types for output parameters
 
 The following SQL and Java data types are currently supported for output parameters.
 

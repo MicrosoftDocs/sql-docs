@@ -168,7 +168,7 @@ Specifies whether page locks are allowed.
 
 
 **Optimize for sequential key**<br>
-Specifies whether or not to optimize for last-page insert contention. For more information, see [Sequential Keys](../../t-sql/statements/create-index-transact-sql.md#Sequential-Keys).
+Specifies whether or not to optimize for last-page insert contention. For more information, see [Sequential Keys](../../t-sql/statements/create-index-transact-sql.md#sequential-keys).
 
 ### Storage Options
 

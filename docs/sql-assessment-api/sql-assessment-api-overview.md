@@ -17,7 +17,7 @@ SQL Assessment API provides a mechanism to evaluate the configuration of your SQ
 Currently, it can be used to assess SQL Server versions 2012 and higher, both on Windows and Linux.
 SQL Assessment API is useful when you want to make sure your SQL Server configuration is in line with recommended best practices. After an initial assessment, configuration stability can be tracked by regularly scheduled assessments.
 
-## Rules
+## Rules 
 
 Rules sometimes referred to as checks, are defined in JSON formatted files. Microsoft's shipped rule set is available in [GitHub](htttp://aka.ms/sql-assessment-api). There is versioning of the rule set for baselining and ease of management. Visit [GitHub](htttp://aka.ms/sql-assessment-api) for more details.
 

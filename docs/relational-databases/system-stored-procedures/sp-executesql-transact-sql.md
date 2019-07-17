@@ -243,8 +243,6 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- For additional examples, see [sp_executesql (Transact-SQL)](https://msdn.microsoft.com/library/ms188001.aspx).  
-  
 ## See Also  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

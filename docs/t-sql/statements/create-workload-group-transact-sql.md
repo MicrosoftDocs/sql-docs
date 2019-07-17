@@ -16,13 +16,26 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "CREATE WORKLOAD GROUP statement"
-ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+## Click a product!
+
+In the following row, click whichever product name you're interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](create-workload-group-transact-sql2.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql2.md?view=azure-sqldw-latest)|
+
+&nbsp;
+
+## SQL Server and SQL Database managed instance
 
 Creates a Resource Governor workload group and associates the workload group with a Resource Governor resource pool. Resource Governor is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
@@ -153,3 +166,30 @@ GO
 - [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
 - [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)
 - [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](create-workload-group-transact-sql2.md.md?view=sql-server-2017)||[SQL Database<br />managed instance](create-workload-group-transact-sql2.md.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## SQL Data Warehouse
+
+Creates a workload group.  The workload group can be used for reserving or limiting resources for a classified request.  Workload groups are used to define the amount of resources that are allocated per request.  Workload groups can also be used limit the query execution time.  Once the statement completes, the settings are in effect.
+
+```
+CREATE WORKLOAD GROUP group_name  
+ WITH  
+ (        MIN_PERCENTAGE_RESOURCE = value  
+      ,   CAP_PERCENTAGE_RESOURCE = value 
+      ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value   
+  [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]  
+  [ [ , ] IMPORTANCE = { LOW | BELOW NORMAL | NORMAL | ABOVE NORMAL | HIGH }]
+  [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )  
+  [ ; ]
+```
+
+::: moniker-end

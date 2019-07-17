@@ -22,6 +22,15 @@ This article describes how to install the **azdata** tool for CTP 3.1 on Windows
 > [!IMPORTANT]
 > If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading **azdata** and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
 
+
+To install azdata, you need to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). To confirm your acceptance, either:
+
+* Set the **ACCEPT_EULA** environment variable
+   or
+* Include `--accept-eula` in the installation command.
+
+In this article, the examples include `--accept-eula`.
+
 ## <a id="windows"></a> Windows azdata installation
 
 1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
@@ -48,7 +57,7 @@ This article describes how to install the **azdata** tool for CTP 3.1 on Windows
 1. Install **azdata** with the following command:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/azdata/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/azdata/requirements.txt --accept-eula
    ```
 
 ## <a id="linux"></a> Linux azdata installation
@@ -86,7 +95,7 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 1. Install **azdata** with the following command:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/azdata/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/azdata/requirements.txt --user --accept-eula
    ```
 
    > [!NOTE]

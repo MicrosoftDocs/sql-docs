@@ -1,14 +1,13 @@
 ---
 title: "sys.dm_workload_management_workload_groups_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "07/17/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 manager: craigg

@@ -121,9 +121,37 @@ Specifies the relative importance of a request.  Importance is one of the follow
 - ABOVE_NORMAL
 - HIGH  
 
-If Importance is not specified, the importance setting of the workload group is used.  The default workload group importance is normal.  Importance influences the order which requests are scheduled, thus giving first access to resources and locks.
+If importance is not specified, the importance setting of the workload group is used.  The default workload group importance is normal.  Importance influences the order which requests are scheduled, thus giving first access to resources and locks.
 
-If a user is a member of multiple roles with different resource classes assigned or matched in multiple classifiers, the user is given the highest resource class assignment. For more information see, [workload classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)
+## Classification parameter precedence
+
+A request can match against multiple classifiers.  There is a precedence in the classifier parameters.  The higher precedence matching classifier is used first to assign a workload group and importance.  The precedence goes as follows:
+1. USER
+2. ROLE
+3. WLM_LABEL
+4. WLM_SESSION
+5. START_TIME/END_TIME
+
+Consider the following classifier configurations.
+
+```sql
+CREATE WORKLOAD CLASSIFIER classiferA WITH  
+( WORKLOAD_GROUP = 'wgDashboards'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = HIGH
+ ,WLM_LABEL      = 'salereport' )
+
+CREATE WORKLOAD CLASSIFIER classiferB WITH  
+( WORKLOAD_GROUP = 'wgUserQueries'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = LOW
+ ,START_TIME     = '18:00')
+ ,END_TIME       = '07:00' )
+```
+
+The user ‘userloginA’ is configured for both classifiers.  If userloginA runs a query with a label equal to ‘salesreport’ between 6PM and 7AM UTC, the request will be classified to the wgDashboards workload group with HIGH importance.  The expectation may be to classify the request to wgUserQueries with LOW importance for off-hours reporting, but the precedence of WLM_LABEL is higher than START_TIME/END_TIME.  In this case, you can add START_TIME/END_TIME to classiferA.
+
+ For more information see, [workload classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)
 
 ## Permissions
 

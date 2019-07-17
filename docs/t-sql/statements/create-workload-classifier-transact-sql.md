@@ -103,6 +103,7 @@ EXEC sys.sp_set_session_context @key = 'wlm_context', @value = null
 Specifies the start_time and end_time that a request can be classified against.  Both start_time and end_time are of the HH:MM format in UTC time zone.  Start_time and end_time must be specified together.
 
 Example:
+
 ```sql
 CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
 ( WORKLOAD_GROUP = 'wgDataLoads'
@@ -110,7 +111,6 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
  ,START_TIME     = '22:00'
  ,END_TIME       = '02:00' )
 ```
-
 
 *IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }
 Specifies the relative importance of a request.  Importance is one of the following:
@@ -121,7 +121,7 @@ Specifies the relative importance of a request.  Importance is one of the follow
 - ABOVE_NORMAL
 - HIGH  
 
-Importance influences the order in which requests are scheduled, thus giving first access to resources and locks.
+If Importance is not specified, the importance setting of the workload group is used.  The default workload group importance is normal.  Importance influences the order which requests are scheduled, thus giving first access to resources and locks.
 
 If a user is a member of multiple roles with different resource classes assigned or matched in multiple classifiers, the user is given the highest resource class assignment. For more information see, [workload classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)
 

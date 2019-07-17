@@ -37,11 +37,11 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |importance|**nvarchar(128)**|The Importance setting the request executed at.  This is the relative importance of a request in this workload group and across workload groups for shared resources.  Importance specified in the classifier overrides the workload group importance setting.</br>Applies to: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>normal (default)</br>above_normal</br>high|
 |group_name|**sysname** |For requests utilizing resources, group_name is the name of the workload group the request is running under.  If the request does not utilize resources, group_name is null.</br>Applies to: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|For requests utilizing resources, group_name is the name of the workload group the request is running under.  If the request does not utilize resources, group_name is null.||
-|resource_allocation_percentage|**decimal(5,2) |The percentage amount of resources allocated to the request.</br>Applies to: Azure SQL Data Warehouse|
+|resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure SQL Data Warehouse|
 |result_set_cache|**bit**|Details whether a completed query was a result cache hit (1) or not (0). </br>Applies to: Azure SQL Data Warehouse|0,1|
 ||||
   
- For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.   
+ For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic.
   
 ## Permissions
 
@@ -52,8 +52,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
  sys.dm_pdw_exec_requests doesn't filter query results according to database-specific permissions. Logins with VIEW SERVER STATE permission can obtain results query results for all databases  
   
 >[!WARNING]  
->An attacker can use sys.dm_pdw_exec_requests to retrieve information about specific database objects by simply having VIEW SERVER STATE permission and by not having a database-specific permission.  
+>An attacker can use sys.dm_pdw_exec_requests to retrieve information about specific database objects by simply having VIEW SERVER STATE permission and by not having database-specific permission.  
   
 ## See Also
 
- [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md) 
+ [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

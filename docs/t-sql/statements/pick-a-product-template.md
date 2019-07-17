@@ -32,7 +32,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](pick-a-product-template.md?view=azuresqldb-current)|[SQL Database<br />managed instance](pick-a-product-template.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](pick-a-product-template.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 

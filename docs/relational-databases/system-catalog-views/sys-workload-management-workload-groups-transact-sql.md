@@ -14,7 +14,7 @@ ms.author: "rortloff"
 manager: craigg
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
-# sys.workload_management_workload_classifiers (Transact-SQL)
+# sys.workload_management_workload_groups (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -29,9 +29,8 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 |cap_percentage_resource|**tinyint**|Hard cap on the resource percentage allocation for all requests in the workload group. Limits the maximum resources allocated to the specified level. The allowed range for value is from 1 through 100.||
 |request_min_resource_grant_percent|**decimal(5,2)**|Specifies the minimum amount of resources allocated to a request. The allowed range for value is from 0.75 to 100.||
 |request_max_resource_grant_percent |**decimal(5,2)**|Specifies the maximum amount of resources allocated to a request.||
-|query_execution_timeout_sec|**int**|The amount of execution time, in seconds, allowed before the query is cancelled.  Queries cannot be cancelled once they have reached the return phase of execution.  query_execution_timeout_sec does not include time spent queued.||
+|query_execution_timeout_sec|**int**|The amount of execution time, in seconds, allowed before the query is cancelled.  Queries cannot be cancelled once they have reached the return phase of execution.  query_execution_timeout_sec does not include time spent queued.|
 |query_wait_timeout_sec|**int**|INTERNAL||
-
 |create_time|**datetime**|Time the workload group was created. Is not nullable.||
 modify_time|**datetime**|Time the workload group was last modified. Is not nullable.||
 |&nbsp;||||

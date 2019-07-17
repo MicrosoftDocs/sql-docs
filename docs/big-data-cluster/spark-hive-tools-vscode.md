@@ -41,7 +41,9 @@ After you have completed the prerequisites, you can install  Spark & Hive Tools 
 
 4. Select **Spark & Hive Tools** from the search results, and then select **Install**.  
 
-5. Select **Reload** to activate the **Spark & Hive Tools** extension after it installs.
+   ![Install Extension](./media/spark-hive-tools-vscode/extension.png)
+
+5. Reload when needed.
 
 ## Open work folder
 

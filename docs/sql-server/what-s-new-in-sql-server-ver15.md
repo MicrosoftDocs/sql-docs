@@ -30,6 +30,9 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 |New feature or update | Details |
 |:---|:---|
 |Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. |
+|Notebook based troubleshooting |CTP 3.2 introduces Jupyter notebooks to assist with discovery, diagnosis, and troubleshooting for components in a SQL Server big data cluster. |
+|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. |
+|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. |
 | &nbsp; | &nbsp; |
 
 ### New in database engine

@@ -114,13 +114,12 @@ The following requirements apply to all installations:
   
  WOW64 (Windows 32-bit on Windows 64-bit) is a feature of 64-bit editions of Windows that enables 32-bit applications to run natively in 32-bit mode. Applications function in 32-bit mode, even though the underlying operating system is a 64-bit operating system. WOW64 is not supported for [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] installations. However, Management Tools are supported in WOW64.  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
 
 **Server Core Support:**
 
-SQL Server 2019 is supported on a Server Core installation of Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
 
-Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core mode is supported by the following editions of Windows Server:
+Installing SQL Server 2019 on Server Core mode is supported by the following editions of Windows Server:
 
 |                              |                                |
 | :------------------------    | :------------------------------|
@@ -128,16 +127,11 @@ Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core 
 | Windows Server 2016 Standard | Windows Server 2016 Datacenter |
    | &nbsp; | &nbsp; |
 
-For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
-
 ::: moniker-end
 
+::: monikerRange: ">=sql-server-2016 <=sql-server-2017"
 
-**Server Core Support:**
-
-SQL Server is supported on a Server Core installation of Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
-
-Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core mode is supported by the following editions of Windows Server:
+Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
 
 |                              |                                |
 | :------------------------    | :------------------------------|
@@ -148,40 +142,31 @@ Installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core 
 | Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
 | Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
    | &nbsp; | &nbsp; |
+::: moniker-end
 
-For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 
   
 ### Features Supported on 32-bit Client Operating Systems  
  Windows client operating systems, for example Windows 10 and Windows 8.1 are available as 32-bit or 64-bit architectures.   All SQL Server features are supported on 64-bit client operating systems. On supported 32-bit client operating systems Microsoft supports the following features:  
   
--   Data Quality Client  
-  
--   Client Tools Connectivity  
-  
--   Integration Services  
-  
--   Client Tools Backwards Compatibility  
-  
--   Client Tools SDK  
-  
--   Documentation Components  
-  
--   Distributed Replay Components  
-  
--   Distributed Replay Controller  
-  
--   Distributed Replay Client  
-  
--   SQL Client Connectivity SDK  
+-   Data Quality Client
+-   Client Tools Connectivity
+-   Integration Services
+-   Client Tools Backwards Compatibility
+-   Client Tools SDK
+-   Documentation Components
+-   Distributed Replay Components
+-   Distributed Replay Controller
+-   Distributed Replay Client
+-   SQL Client Connectivity SDK
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] and later server operating systems are not available as 32-bit architectures. All supported server operating systems are only available as 64-bit. All features are supported on 64-bit server operating systems.  
   
 ###  <a name="TOP_Principal"></a> OS Compatibility   
 
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-The following table shows which editions of SQL Server are compatible with which versions of Windows:  
+The following table shows which editions of SQL Server 2019 are compatible with which versions of Windows:  
   
 
 | SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
@@ -195,7 +180,9 @@ The following table shows which editions of SQL Server are compatible with which
 | &nbsp; | &nbsp; |
 ::: moniker-end
 
-The following table shows which editions of SQL Server are compatible with which versions of Windows:  
+::: monikerRange: ">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+The following table shows which editions of SQL Server 2016 and 2017 are compatible with which versions of Windows:  
   
 | SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
@@ -228,7 +215,7 @@ The following table shows which editions of SQL Server are compatible with which
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in for SharePoint products  
-
+::: moniker-end
 
 
   

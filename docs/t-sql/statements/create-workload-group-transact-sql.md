@@ -116,7 +116,7 @@ Specifies the maximum degree of parallelism (DOP) for parallel requests. *value*
 - After DOP is configured, it can only be lowered on grant memory pressure. Workload group reconfiguration is not visible while waiting in the grant memory queue.
 
 GROUP_MAX_REQUESTS = *value*
-Specifies the maximum number of simultaneous requests that are allowed to execute in the workload group. *value* must be a 0 or a positive integer. The default setting for *value* is 0, and allows unlimited requests. When the maximum concurrent requests are reached, a user in that group can log in, but is placed in a wait state until concurrent requests are dropped below the value specified.
+Specifies the maximum number of simultaneous requests that are allowed to execute in the workload group. *value* must be a 0 or a positive integer. The default setting for *value* is 0, and allows unlimited requests. When the maximum concurrent requests are reached, a user in that group can sign in, but is placed in a wait state until concurrent requests are dropped below the value specified.
 
 USING { *pool_name* | **"default"** }
 Associates the workload group with the user-defined resource pool identified by *pool_name*. This in effect puts the workload group in the resource pool. If *pool_name* is not provided, or if the USING argument is not used, the workload group is put in the predefined Resource Governor default pool.
@@ -127,9 +127,9 @@ Associates the workload group with the user-defined resource pool identified by 
 > Predefined workload groups and resource pools all use lower case names, such as "default". This should be taken into account for servers that use case-sensitive collation. Servers with case-insensitive collation, such as SQL_Latin1_General_CP1_CI_AS, will treat "default" and "Default" as the same.
 
 EXTERNAL external_pool_name | "default"
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Workload group can specify an external resource pool. You can define a workload group and associate with 2 pools:
+Workload group can specify an external resource pool. You can define a workload group and associate with two pools:
 
 - A resource pool for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] workloads and queries
 - An external resource pool for external processes. For more information, see [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
@@ -180,6 +180,8 @@ GO
 
 Creates a workload group.  The workload group can be used for reserving or limiting resources for a classified request.  Workload groups are used to define the amount of resources that are allocated per request.  Workload groups can also be used limit the query execution time.  Once the statement completes, the settings are in effect.
 
+ ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+
 ```
 CREATE WORKLOAD GROUP group_name  
  WITH  
@@ -191,5 +193,68 @@ CREATE WORKLOAD GROUP group_name
   [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )  
   [ ; ]
 ```
+
+*group_name*</br>
+Specifies the name by which the workload group is identified.  group_name is a sysname.  It can be up to 128 characters long and must be unique within the instance.
+
+*MIN_PERCENTAGE_RESOURCE* = value</br>
+Specifies a guaranteed minimum resource allocation for this workload group that is not shared with other workload groups.  value is an integer range from 0 to 100.  The sum of min_percentage_resource across all workload groups cannot exceed 100.  The value for min_percentage_resource cannot be greater than cap_percentage_resource.
+
+*CAP_PERCENTAGE_RESOURCE* = value</br>
+Specifies the maximum resource utilization for all requests in a workload group.  The allowed range for value is 1 through 100.  The value for cap_percentage_resource must be greater than min_percentage_resource.
+
+*REQUEST_MIN_RESOURCE_GRANT_PERCENT* = value</br>
+Sets the minimum amount of resources allocated per request.  value is a required parameter with a decimal range between 0.75 to 100.00.  The value for request_min_resource_grant_percent must be a multiple of 0.25, must be a factor of min_percentage_resource, and be less than cap_percentage_resource.
+
+For example:
+
+```sql
+CREATE WORKLOAD GROUP wgSample WITH  
+( MIN_PERCENTAGE_RESOURCE = 26              -- integer value
+ ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (8 concurrency)
+ ,CAP_PERCENTAGE_RESOURCE = 100 )
+```
+
+Consider the values that are used for resource classes as a guideline for request_min_resource_grant_percent.  The table below contains resource allocations for Gen2.
+
+|Resource Class|Percent Resources|
+|---|---|
+|Smallrc|3%|
+|Mediumrc|10%|
+|Largerc|22%|
+|Xlargerc|70%|
+|||
+
+*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
+Sets the maximum amount of resources allocated per request.  value is an optional parameter with a default value equal to the request_min_resource_grant_percent.  value must be greater than or equal to request_min_resource_grant_percent.  When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
+
+*IMPORTANCE* = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
+Specifies the default importance of a request for the workload group.  Importance is one of the following, with NORMAL being the default:
+•	LOW
+•	BELOW_NORMAL
+•	NORMAL (default)
+•	ABOVE_NORMAL
+•	HIGH
+
+Importance set at the workload group is a default importance for all requests in the workload group.  A user can also set importance at the classifier level, which can override the workload group importance setting.  This allows for differentiation of requests within a workload group and influence for non-reserved resources.  When the sum of min_percentage_resource across workload groups is less than 100, there are non-reserved resources that are assigned on a basis of importance.
+
+*QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
+Specifies the maximum time, in seconds, that a query can execute before it is canceled.  value must be 0 or a positive integer.  The default setting for value is 0, which means unlimited.  The time spent waiting in the request queue is not counted towards query execution.
+
+## Effective Values
+
+The parameters min_percentage_resource, cap_percentage_resource, request_min_resource_grant_percent and request_max_resource_grant_percent have effective values that are adjusted in the context of the current service level and the configuration of other workload groups.
+
+The supported concurrency per service level remains the same as when resource classes were used to define resource grants per query, hence, the supported values for request_min_resource_grant_percent is dependent on the service level the instance is set to.  At the lowest service level, DW100c, 4 concurrency is supported.  The effective request_min_resource_grant_percent for a configured workload group can be 25% or higher.
+
+Similarly, request_min_resource_grant_percent, min_percentage_resource must be greater than or equal to the effective request_min_resource_grant_percent.  A workload group with min_percentage_resource configured that is less than effective min_percentage_resource has the value adjusted to zero at run time.  When this happens, the resources configured for min_percentage_resource are sharable across all workload groups.  For example, the workload group wgAdHoc with a min_percentage_resource of 10% running at DW1000c would have an effective min_percentage_resource of 10% (3.25% is the minimum supported value at DW1000c).  wgAdhoc at DW100c would have an effective min_percentage_resource of 0%.  The 10% configured for wgAdhoc would be shared across all workload groups.
+
+Cap_percentage_resource also has an effective value.  If a workload group wgAdhoc is configured with a cap_percentage_resource of 100% and another workload group wgDashboards is created with 25% min_percentage_resource, the effective cap_percentage_resource for wgAdhoc becomes 75%.
+
+## Permissions
+
+Requires CONTROL DATABASE permission
+
+## See also
 
 ::: moniker-end

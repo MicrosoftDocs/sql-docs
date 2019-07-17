@@ -37,7 +37,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 SQL Server big data clusters require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
 
 > [!NOTE]
-> Note that the client and server Kubernetes versions should be within +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> Note that the client and server Kubernetes versions should be within +1 or -1 minor version. For more information, see [Kubernetes release notes and version skew SKU policy)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
 ### <a id="kubernetes"></a> Kubernetes cluster setup
 
@@ -66,9 +66,9 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 
 ## <a id="deploy"></a> Deployment overview
 
-Starting in CTP 2.5, most big data cluster settings are defined in a JSON deployment configuration file. You can use a default deployment profile for AKS, kubeadm, or minikube or you can customize your own deployment configuration file to use during setup. For security reasons, authentication settings are passed via environment variables.
+Most big data cluster settings are defined in a JSON deployment configuration file. You can use a default deployment profile for AKS, `kubeadm`, or `minikube` or you can customize your own deployment configuration file to use during setup. For security reasons, authentication settings are passed via environment variables.
 
-The following sections provide more details on how to configure your big data cluster deployments as well as examples of common customizations. Also, you can always edit the custom deployment configuration file using an editor like VSCode for example.
+The following sections provide more details on how to configure your big data cluster deployments as well as examples of common customizations. Also, you can always edit the custom deployment configuration file using an editor like VS Code for example.
 
 ## <a id="configfile"></a> Default configurations
 
@@ -86,7 +86,10 @@ You can deploy a big data cluster by running **azdata bdc create**. This prompts
 azdata bdc create
 ```
 
-In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. Note that the Docker information is provided to you by Microsoft as part of the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup).
+In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. 
+
+> [!NOTE]
+> Beginning with SQL Server 2019 CTP 3.2, you no longer have be a member of had to the the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup) to experience the preview releases of big data cluster.
 
 > [!IMPORTANT]
 > The default name of the big data cluster is **mssql-cluster**. This is important to know in order to run any of the **kubectl** commands that specify the Kubernetes namespace with the `-n` parameter.
@@ -134,14 +137,14 @@ It is also possible to customize your own deployment configuration profile. You 
 
 The following environment variables are used for security settings that are not stored in a deployment configuration file. Note that Docker settings except credentials can be set in the configuration file.
 
-| Environment variable | Description |
-|---|---|---|---|
-| **DOCKER_USERNAME** | The username to access the container images in case they are stored in a private repository. |
-| **DOCKER_PASSWORD** | The password to access the above private repository. |
-| **CONTROLLER_USERNAME** | The username for the cluster administrator. |
-| **CONTROLLER_PASSWORD** | The password for the cluster administrator. |
-| **KNOX_PASSWORD** | The password for Knox user. |
-| **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
+| Environment variable | Requirement |Description |
+|---|---|---|
+| **CONTROLLER_USERNAME** | Required |The username for the cluster administrator. |
+| **CONTROLLER_PASSWORD** | Required |The password for the cluster administrator. |
+| **MSSQL_SA_PASSWORD** | Required |The password of SA user for SQL master instance. |
+| **KNOX_PASSWORD** | Required |The password for Knox user. |
+| **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. |
+| **DOCKER_PASSWORD** | Optional |The password to access the above private repository. |
 
 These environment variables must be set prior to calling **mssqlctl bdc create**. If any variable is not set, you are prompted for it.
 
@@ -152,8 +155,6 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
-export DOCKER_USERNAME=<docker-username>
-export DOCKER_PASSWORD=<docker-password>
 ```
 
 ```PowerShell
@@ -161,8 +162,6 @@ SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
-SET DOCKER_USERNAME=<docker-username>
-SET DOCKER_PASSWORD=<docker-password>
 ```
 azdata
 After setting the environment variables, you must run `mssqlctl bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
@@ -173,7 +172,6 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
 
 Please note the following guidelines:
 
-- At this time, credentials for the private Docker registry will be provided to you upon triaging your [Early Adoption Program registration](https://aka.ms/eapsignup). Early Adoption Program registration is required to test SQL Server big data clusters.
 - Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
 - The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 

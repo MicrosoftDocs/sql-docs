@@ -29,14 +29,21 @@ The following article provides reference for the **bdc** commands in the **azdat
 [azdata bdc storage-pool](reference-azdata-bdc-storage-pool.md) | Storage pool commands.
 [azdata bdc control](reference-azdata-bdc-control.md) | Control commands.
 [azdata bdc pool](reference-azdata-bdc-pool.md) | Pool commands.
-## azdata bdc create
-Create a SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'DOCKER_USERNAME', 'DOCKER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
+
+## mssqlctl bdc create
+
+Create a SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
+
 ```bash
 azdata bdc create [--config-profile -c] 
                     [--accept-eula -a]  
                     [--node-label -l]  
                     [--force -f]
 ```
+
+>[!NOTE]
+>Prior to CTP 3.2, the following parameters were also required: `['DOCKER_USERNAME', 'DOCKER_PASSWORD']`.
+
 ### Examples
 Guided BDC deployment experience - you will receive prompts for needed values.
 ```bash

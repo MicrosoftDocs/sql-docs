@@ -28,7 +28,7 @@ The following steps describe how to pull the big data cluster container images f
 > [!TIP]
 > The following steps explain the process. However, to simplify the task, you can use the [automated script](#automated) instead of manually running these commands.
 
-1. First, log in to the Microsoft Docker registry with the **docker login** command. Use the username and password that Microsoft provided to you as part of the Early Adoption Program.
+1. First, log in to the Microsoft Docker registry with the **docker login** command.
 
    ```PowerShell
    docker login private-repo.microsoft.com -u  <SOURCE_DOCKER_USERNAME> -p <SOURCE_DOCKER_PASSWORD>

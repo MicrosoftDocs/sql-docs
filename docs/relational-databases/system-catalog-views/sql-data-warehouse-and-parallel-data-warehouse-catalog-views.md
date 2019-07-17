@@ -55,19 +55,24 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-> [!Note]
-> Workload classification is available for preview on SQL Data Warehouse Gen2. Workload Management Classification and Importance preview is for builds with a release date of April 9th, 2019 or later.  Users should avoid using builds earlier than this date for workload management testing.  To determine if your build is workload management capable, run select @@version when connected to your SQL Data Warehouse instance.
-
 ## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Catalog Views
 
  The following catalog views apply to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] only:
 
-[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest) (Preview)   
-[sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) (Preview)   
-[sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (Preview)   
-[sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (Preview)  
-[sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)  
-[sys.workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) (Preview)
+ [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest) (Preview)
+
+ [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) (Preview)
+
+ [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (Preview)
+
+ [sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (Preview)
+  
+ [sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)
+  
+ [sys.workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) (Preview)
+
+> [!Note]
+> Workload classification is available for preview on SQL Data Warehouse Gen2. Workload Management Classification and Importance preview is for builds with a release date of April 9th, 2019 or later.  Users should avoid using builds earlier than this date for workload management testing.  To determine if your build is workload management capable, run select @@version when connected to your SQL Data Warehouse instance.
 
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views
 

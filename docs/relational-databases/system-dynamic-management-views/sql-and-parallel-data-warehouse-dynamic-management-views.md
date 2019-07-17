@@ -1,16 +1,15 @@
 ---
 title: "SQL and Parallel Data Warehouse Dynamic Management Views | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "07/17/2019"
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-ms.assetid: e713365e-d44c-4b66-84c9-81a1bcc32414
-author: stevestein
-ms.author: sstein
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL and Parallel Data Warehouse Dynamic Management Views
@@ -57,7 +56,12 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
  [sys.dm_pdw_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
- [sys.dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+ [sys.dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
+
+## [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Catalog Views
+ The following dynamic management views apply to [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] only:
+ 
+ [sys.dm_workload_management_workload_groups_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-groups-stats-transact-sql.md) (Preview)
   
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Dynamic Management Views  
  The following dynamic management views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:  
@@ -84,5 +88,4 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## See Also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
-  
   

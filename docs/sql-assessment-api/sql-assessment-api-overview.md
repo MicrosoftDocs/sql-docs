@@ -66,13 +66,13 @@ An assessment is performed against a chosen SQL Server object. Currently, we che
 
 1. Get a list of available checks for the local instance to familiarize yourself with the checks
 
-    ```PowerShell
+    ```powerShell
     Get-SqlAssessmentItem SQLSERVER:\SQL\localhost\default
     ```
 
 2. Invoke assessment and pipe results to a table
 
-    ```PowerShell
+    ```powerShell
     Get-SqlInstance -ServerInstance 'localhost' | Invoke-SqlAssessment |
     Write-SqlTableData -ServerInstance 'localhost' -DatabaseName SQLAssessmentDemo -SchemaName Assessment -TableName Results -Force
     ```

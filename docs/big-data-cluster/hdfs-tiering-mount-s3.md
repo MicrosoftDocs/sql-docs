@@ -81,6 +81,14 @@ To list the status of a mount at a specific path in HDFS, use the following comm
 mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
+## Refresh a mount
+
+The following example refreshes the mount.
+
+```bash
+mssqlctl bdc storage-pool mount refresh --mount-path <mount-path-in-hdfs>
+```
+
 ## <a id="delete"></a> Delete the mount
 
 To delete the mount, use the **mssqlctl bdc storage-pool mount delete** command, and specify the mount path in HDFS:

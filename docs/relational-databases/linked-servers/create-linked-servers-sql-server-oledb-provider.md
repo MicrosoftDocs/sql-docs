@@ -8,7 +8,7 @@ ms.prod_service: "database-engine"
 ms.reviewer: "MikeRayMSFT"
 ms.topic: conceptual
 author: pmasl
-ms.author: pmasl
+ms.author: pelopes
 manager: rothj
 ---
 

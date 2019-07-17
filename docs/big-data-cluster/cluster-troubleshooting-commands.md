@@ -114,7 +114,7 @@ The following services support external connections to the big data cluster:
 | **appproxy-svc-external** | Support application deployment scenarios. |
 
 > [!TIP]
-> This is a way of viewing the services with **kubectl**, but it is also possible to use `mssqlctl bdc endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).
+> This is a way of viewing the services with **kubectl**, but it is also possible to use `azdata bdc endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).
 
 ## Get service details
 

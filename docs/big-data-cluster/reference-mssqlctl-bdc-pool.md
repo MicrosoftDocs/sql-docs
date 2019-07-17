@@ -1,7 +1,7 @@
 ---
-title: mssqlctl bdc pool reference
+title: azdata bdc pool reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl bdc pool commands.
+description: Reference article for azdata bdc pool commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,17 +11,17 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl bdc pool
+# azdata bdc pool
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc pool** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc pool** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl bdc pool status](reference-mssqlctl-bdc-pool-status.md) | Pool status commands.
+[azdata bdc pool status](reference-azdata-bdc-pool-status.md) | Pool status commands.
 
 ## Next steps
 
-For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).

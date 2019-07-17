@@ -24,7 +24,7 @@ This tutorial explains how to use a script to load sample data into a SQL Server
 
 - [A deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-   - **mssqlctl**
+   - **azdata**
    - **kubectl**
    - **sqlcmd**
    - **curl**

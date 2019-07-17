@@ -28,7 +28,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 
 - An Azure subscription.
 - [Big data tools](deploy-big-data-tools.md):
-   - **mssqlctl**
+   - **azdata**
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 extension**
@@ -44,7 +44,7 @@ az login
 
 ## Download the deployment script
 
-This tutorial automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **mssqlctl**, you should be able to run the script successfully in this tutorial. 
+This tutorial automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **azdata**, you should be able to run the script successfully in this tutorial. 
 
 In a Windows PowerShell or Linux bash prompt, run the following command to download the deployment script from GitHub.
 
@@ -92,7 +92,7 @@ Use the following steps to run the deployment script. This script will create an
 
 ## Monitor the status
 
-After the script creates the AKS cluster, it proceeds to set necessary environment variables with the settings you specified earlier. It then calls **mssqlctl** to deploy the big data cluster on AKS.
+After the script creates the AKS cluster, it proceeds to set necessary environment variables with the settings you specified earlier. It then calls **azdata** to deploy the big data cluster on AKS.
 
 The client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
@@ -112,7 +112,7 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 
 ## Inspect the cluster
 
-At any time during deployment, you can use **kubectl** or **mssqlctl** to inspect the status and details about the running big data cluster.
+At any time during deployment, you can use **kubectl** or **azdata** to inspect the status and details about the running big data cluster.
 
 ### Use kubectl
 

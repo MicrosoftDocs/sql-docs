@@ -33,7 +33,7 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 - [Deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-  - **mssqlctl**
+  - **azdata**
   - **kubectl**
 
 ## Mounting instructions

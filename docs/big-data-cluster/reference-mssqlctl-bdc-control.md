@@ -1,7 +1,7 @@
 ---
-title: mssqlctl bdc control reference
+title: azdata bdc control reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl bdc control commands.
+description: Reference article for azdata bdc control commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,17 +11,17 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl bdc control
+# azdata bdc control
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc control** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc control** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl bdc control status](reference-mssqlctl-bdc-control-status.md) | Control status commands.
+[azdata bdc control status](reference-azdata-bdc-control-status.md) | Control status commands.
 
 ## Next steps
 
-For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).

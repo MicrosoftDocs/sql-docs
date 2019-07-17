@@ -23,7 +23,7 @@ Big data clusters require a specific set of client tools. Before you deploy a bi
 
 | Tool | Description |
 |---|---|
-| **mssqlctl** | Deploys and manages big data clusters. |
+| **azdata** | Deploys and manages big data clusters. |
 | **kubectl** | Creates and manages the underlying Kubernetes cluster. |
 | **Azure Data Studio** | Graphical interface for using the big data cluster. |
 | **SQL Server 2019 extension** | Azure Data Studio extension that enables big data cluster features. |
@@ -42,9 +42,9 @@ Big data clusters are deployed as a series of interrelated containers that are m
 
 ## Deploy a big data cluster
 
-After configuring Kubernetes, you deploy a big data cluster with the `mssqlctl bdc create` command. When deploying, you can take several different approaches.
+After configuring Kubernetes, you deploy a big data cluster with the `azdata bdc create` command. When deploying, you can take several different approaches.
 
-- If you are deploying to a dev-test environment, you can choose to use one of the [default configurations](deployment-guidance.md#deploy) provided by **mssqlctl**.
+- If you are deploying to a dev-test environment, you can choose to use one of the [default configurations](deployment-guidance.md#deploy) provided by **azdata**.
 
 - To customize your deployment, you can create and use your own [deployment configuration files](deployment-guidance.md#configfile).
 

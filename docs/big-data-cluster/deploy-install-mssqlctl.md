@@ -22,7 +22,6 @@ This article describes how to install the **azdata** tool for CTP 3.1 on Windows
 > [!IMPORTANT]
 > If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading **azdata** and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
 
-
 To install azdata, you need to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). To confirm your acceptance, either:
 
 * Set the **ACCEPT_EULA** environment variable

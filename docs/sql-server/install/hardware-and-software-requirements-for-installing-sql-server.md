@@ -50,15 +50,14 @@ ms.author: mathoma
 
 The article lists the minimum hardware and software requirements to install and run [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on the Windows operating system. 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduces support for [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux. For information, see [Hardware and Software Requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux](../../linux/sql-server-linux-setup.md#system). 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduced support for [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] on Linux. For information, see [Hardware and Software Requirements for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on Linux](../../linux/sql-server-linux-setup.md#system). 
 
-> This article applies to [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later. 
   
 **Try it out:**  
   
 -   Download SQL Server from the [**Evaluation Center**.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
   
--   Spin up a Virtual Machine with [**SQL Server 2016**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) already installed.  
+-   Spin up a Virtual Machine with [**SQL Server 2017**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) already installed.  
   
 **The following considerations apply to all editions:**  
   

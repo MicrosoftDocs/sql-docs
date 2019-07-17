@@ -119,11 +119,11 @@ Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime bi
   
      The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages. 
 
-   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+  ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
 
 1. Starting with SQL Server 2019, you can choose to install Java along with the Machine Learning Service on the **Feature Selection** page. Doing so will add the **Java Install Location** page to the SQL Server Setup window, after the **Instance Configuration** page. On the **Java Install Location** page, you can either choose to install the **Open JRE** included with the SQL Server 2019 installation, or provide a location of a different version of the JRE or JDK that has already been installed on the computer.
 
-   ::: moniker-end
+  ::: moniker-end
   
 1. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
   

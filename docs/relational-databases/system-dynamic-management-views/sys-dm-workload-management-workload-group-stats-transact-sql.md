@@ -14,7 +14,7 @@ ms.author: rortloff
 manager: craigg
 monikerRange: "= azure-sqldw-latest||= sqlallproducts-allversions"
 ---
-#sys.dm_workload_management_workload_groups_stats (Transact-SQL)
+# sys.dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   Displays wait information for all resource types in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  

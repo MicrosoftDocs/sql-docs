@@ -31,7 +31,7 @@ In the following row, click whichever product name you're interested in. The cli
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](create-workload-group-transact-sql2.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql2.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
 
@@ -172,7 +172,7 @@ GO
 
 > ||||
 > |---|---|---|
-> |[SQL Server](create-workload-group-transact-sql2.md.md?view=sql-server-2017)||[SQL Database<br />managed instance](create-workload-group-transact-sql2.md.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+> |[SQL Server](create-workload-group-transact-sql.md.md?view=sql-server-2017)||[SQL Database<br />managed instance](create-workload-group-transact-sql.md.md?view=azuresqldb-mi-current)||**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
 
 &nbsp;
 

@@ -91,6 +91,8 @@
         items:
         - name: Azure Kubernetes Service
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+        - name: Deploy using Azure Data Studio Notebooks
+          href: big-data-cluster/deploy-notebooks.md
   - name: Concepts
     items:
     - name: Application deployment

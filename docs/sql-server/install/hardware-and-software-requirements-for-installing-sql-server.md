@@ -129,7 +129,7 @@ Installing SQL Server 2019 on Server Core mode is supported by the following edi
 
 ::: moniker-end
 
-::: monikerRange: ">=sql-server-2016 <=sql-server-2017"
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
 
@@ -180,7 +180,7 @@ The following table shows which editions of SQL Server 2019 are compatible with 
 | &nbsp; | &nbsp; |
 ::: moniker-end
 
-::: monikerRange: ">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
 The following table shows which editions of SQL Server 2016 and 2017 are compatible with which versions of Windows:  
   

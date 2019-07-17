@@ -267,7 +267,7 @@ Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime bi
   
      The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages. 
 
-1. Starting with SQL Server 2019, Java has been added to the list of Machine Leraning Services and Language Extensions, alongside R and Python. Selecting to install the Java feature will add the **Java Install Location** of a JDK or JRE. On the **Java Install Location** page, you can choose to install the Azul Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.  
+1. Starting with SQL Server 2019, Java has been added to the list of Machine Learning Services and Language Extensions, alongside R and Python. Selecting to install the Java feature will add the **Java Install Location** of a JDK or JRE. On the **Java Install Location** page, you can choose to install the Azul Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.  
 
 1. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
   

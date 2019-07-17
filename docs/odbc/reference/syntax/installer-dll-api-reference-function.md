@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Installer DLL API Reference Function
 This section describes the syntax of the functions in the installer DLL API. The installer DLL API consists of 20 functions. Three of these functions, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, and **SQLWriteDSNToIni**, are called only by setup DLLs. The other functions are called by the setup and administration programs.  

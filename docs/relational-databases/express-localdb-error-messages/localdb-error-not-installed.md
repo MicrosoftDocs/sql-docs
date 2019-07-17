@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_NOT_INSTALLED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # SQL Server Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

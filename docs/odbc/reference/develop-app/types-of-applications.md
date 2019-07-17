@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Types of Applications
 ODBC applications can be classified as follows:  

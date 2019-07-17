@@ -3,7 +3,6 @@ title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
-manager: craigg
 ms.technology: polybase
 ms.devlang: 
 ms.topic: conceptual
@@ -242,7 +241,7 @@ If you are still having issues accessing Kerberos, follow the steps below to deb
 
      In the example above, `admin_user` includes only the user name - not any domain part.
 
-2. If you can?t access Kerberos HDFS data from outside PolyBase:
+2. If you can't access Kerberos HDFS data from outside PolyBase:
     - There are two types of Kerberos authentication: Active directory Kerberos authentication, and MIT Kerberos authentication.
     - Make sure the user exists in domain account and use the same user account while trying to access HDFS.
 

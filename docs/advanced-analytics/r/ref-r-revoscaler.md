@@ -8,7 +8,6 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # RevoScaleR (R library in SQL Server)
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Export a Domain to a .dqs File
 

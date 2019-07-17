@@ -5,7 +5,6 @@ ms.technology: ssdt
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ms.reviewer: ""
 ms.custom: "SSDT"
 ms.date: "02/09/2017"

@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Destination Assistant
 

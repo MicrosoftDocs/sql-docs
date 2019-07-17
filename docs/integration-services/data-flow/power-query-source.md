@@ -16,7 +16,6 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
 ---
 # Power Query Source (Preview)
 

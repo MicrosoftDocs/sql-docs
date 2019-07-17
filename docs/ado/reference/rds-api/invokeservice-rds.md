@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # InvokeService (RDS)
 Returns a pointer to the requested interface on a more capable version of the object.  

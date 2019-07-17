@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setFailoverPartner Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLEndTran Function
 **Conformance**  

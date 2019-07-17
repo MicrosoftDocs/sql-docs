@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Set the Compatibility Level for Merge Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c99e5f8d-4e43-48f8-9e0e-086707b411f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLColumns (Text File Driver)
 > [!NOTE]  

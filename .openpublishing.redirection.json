@@ -14512,6 +14512,11 @@
             "source_path": "docs/mdx/analysis-services-language-reference.md",
             "redirect_url": "/sql/mdx/multidimensional-expressions-mdx-reference",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/tutorials/tutorial-sql-server-management-studio.md",
+            "redirect_url": "/sql/ssms/tutorials/connect-query-sql-server",
+            "redirect_document_id": false
         }
     ]
 }

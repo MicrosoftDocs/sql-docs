@@ -5,7 +5,6 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -108,6 +107,11 @@ The following sections describe the known issues and limitations with this relea
 - The SA_PASSWORD is part of the environment and discoverable (for example in a cord dump file). You must reset the SA_PASSWORD on the master instance after deployment. This is not a bug but a security step. For more information on how to change the SA_PASSWORD in a Linux container, see [Change the SA password](../linux/quickstart-install-connect-docker.md#sapassword).
 
 - AKS logs may contain SA password for big data cluster deployments.
+
+#### Kibana logs dashboards
+
+- Between Aris CTP 3.0 and 3.1, the Kibana version was upgraded from 6.3.1 to 7.0.1.  This has made the Edge browser incompatible with Kibana. Users will see a blank page when loading the current version of the Kibana dashboards in Edge. See [here]( https://www.elastic.co/support/matrix#matrix_browse) for supported browsers for Kibana.rs 
+
 
 ## <a id="ctp30"></a> CTP 3.0 (May)
 

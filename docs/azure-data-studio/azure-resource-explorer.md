@@ -5,7 +5,6 @@ description: Learn how to explore and manage Azure SQL Server, Azure SQL Databas
 ms.custom: "seodec18"
 author: yanancai 
 ms.author: yanacai 
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql

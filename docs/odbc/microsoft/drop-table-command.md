@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DROP TABLE Command
 Removes a table from the database specified with the data source and deletes it from disk.  

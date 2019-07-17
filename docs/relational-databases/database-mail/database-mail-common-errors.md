@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], components"
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Common errors with database mail 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Subscription, Publisher to Distributor History (Transactional Subscription)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Specify Synchronization Schedules
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +59,9 @@ manager: craigg
   
     -   **Run on demand only**  
   
-    -   **\<Define Schedule?>**  
+    -   **\<Define Schedule...>**  
   
-2.  If you select **\<Define Schedule?>**, specify a schedule in the **Job Schedule Properties** dialog box, and then click **OK**.  
+2.  If you select **\<Define Schedule...>**, specify a schedule in the **Job Schedule Properties** dialog box, and then click **OK**.  
   
 3.  Complete the wizard.  
 

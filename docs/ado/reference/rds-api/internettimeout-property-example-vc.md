@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # InternetTimeout Property Example (VC++)
 > [!IMPORTANT]

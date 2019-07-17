@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Overview: Exporting Data (Master Data Services)
 

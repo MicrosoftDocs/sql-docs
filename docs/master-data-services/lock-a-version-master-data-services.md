@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Lock a Version (Master Data Services)
 

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Peer-to-Peer - Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

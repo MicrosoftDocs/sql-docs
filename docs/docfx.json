@@ -114,7 +114,12 @@
       },
 
       "manager": {
-        "**/*.md": "jroth"
+        "**/*.md": "jroth",
+        "advanced-analytics/**/*.md": "cgronlun",
+        "dmx/**/*.md": "kfile",
+        "language-extensions/**/*.md": "cgronlun",
+        "mdx/**/*.md": "kfile",
+        "reporting-services/**/*.md": "kfile"
       },
 
       "titleSuffix": {

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Maintenance Cleanup Task
 

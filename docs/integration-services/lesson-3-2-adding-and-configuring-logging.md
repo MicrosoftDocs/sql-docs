@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 3-2: Add and configure logging
 

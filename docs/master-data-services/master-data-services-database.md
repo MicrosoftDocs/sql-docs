@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Database
 

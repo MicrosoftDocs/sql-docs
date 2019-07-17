@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Understanding Synchronous and Asynchronous Transformations
 

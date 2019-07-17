@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Monitoring Performance Counters with the Script Task
 

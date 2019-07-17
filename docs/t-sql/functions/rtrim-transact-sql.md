@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RTRIM (Transact-SQL)

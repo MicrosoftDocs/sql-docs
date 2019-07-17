@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

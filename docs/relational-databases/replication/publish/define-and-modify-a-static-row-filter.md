@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Define and Modify a Static Row Filter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

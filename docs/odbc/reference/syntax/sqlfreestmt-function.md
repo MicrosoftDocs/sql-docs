@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFreeStmt Function
 **Conformance**  

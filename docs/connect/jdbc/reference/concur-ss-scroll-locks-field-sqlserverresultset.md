@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0fd5d34a-c323-4e9c-a1ef-6288c4a0b4ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # CONCUR_SS_SCROLL_LOCKS Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

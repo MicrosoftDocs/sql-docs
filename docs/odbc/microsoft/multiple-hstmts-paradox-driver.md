@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 66aecd94-092d-43d4-9583-74f5e2990eac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Multiple hstmts (Paradox Driver)
 When the ODBC Paradox driver is used, if you want to use more than one *hstmt* to execute queries on a table, the table must have a unique index (Paradox primary key).

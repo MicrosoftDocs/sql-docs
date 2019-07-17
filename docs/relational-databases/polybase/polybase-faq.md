@@ -7,7 +7,6 @@ ms.topic: conceptual
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 ---
 
 # Frequently asked questions

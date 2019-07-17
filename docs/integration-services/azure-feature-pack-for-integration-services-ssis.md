@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Feature Pack for Integration Services (SSIS)
 

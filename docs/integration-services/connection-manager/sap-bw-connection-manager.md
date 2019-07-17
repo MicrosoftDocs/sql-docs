@@ -12,7 +12,6 @@ f1_keywords:
   - "sql13.dts.designer.sapbwconnectionmanager.f1"
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SAP BW Connection Manager
 

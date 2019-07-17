@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Using Bulk Copy API for Batch Insert Operation

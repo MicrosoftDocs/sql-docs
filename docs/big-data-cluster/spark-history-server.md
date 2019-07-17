@@ -5,7 +5,6 @@ description: Use Spark History Server to debug and diagnose Spark applications r
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql

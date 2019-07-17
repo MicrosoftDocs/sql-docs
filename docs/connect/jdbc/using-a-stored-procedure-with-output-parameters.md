@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Using a Stored Procedure with Output Parameters

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Positioned Updates (ODBC)

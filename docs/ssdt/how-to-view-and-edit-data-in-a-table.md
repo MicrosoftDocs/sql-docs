@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: View and Edit Data in a Table
 You can view, edit, and delete data in an existing table by using a visual Data Editor.  

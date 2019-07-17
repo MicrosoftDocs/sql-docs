@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # SQL Server Express LocalDB Reference - Error Messages
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

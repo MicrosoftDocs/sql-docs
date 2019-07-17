@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Error Messages (Visual FoxPro ODBC Driver)
 When an error occurs, the Visual FoxPro driver returns the following information:  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using SQLConfigDatasource with the ODBC Driver for Oracle
 > [!IMPORTANT]  

@@ -5,7 +5,6 @@ description: This article describes application deployment on a SQL Server 2019 
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: sql

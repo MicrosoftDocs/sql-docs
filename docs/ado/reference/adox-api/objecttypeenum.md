@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ObjectTypeEnum
 Specifies the type of database object for which to set permissions or ownership.  

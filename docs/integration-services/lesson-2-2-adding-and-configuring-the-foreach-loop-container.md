@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 2-2: Add and configure the Foreach Loop container
 

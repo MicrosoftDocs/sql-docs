@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Debugging Data Flow
 

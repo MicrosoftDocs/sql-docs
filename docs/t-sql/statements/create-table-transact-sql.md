@@ -46,7 +46,6 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE TABLE (Transact-SQL)
 
@@ -115,7 +114,7 @@ column_name <data_type>
     [ <column_constraint> [, ...n ] ]
     [ <column_index> ]
   
-<data type> ::=
+<data_type> ::=
 [ type_schema_name . ] type_name
     [ ( precision [ , scale ] | max |
         [ { CONTENT | DOCUMENT } ] xml_schema_collection ) ]
@@ -285,7 +284,7 @@ column_name <data_type>
     [ <column_constraint> ]
     [ <column_index> ]
   
-<data type> ::=
+<data_type> ::=
  [type_schema_name . ] type_name [ (precision [ , scale ]) ]
 
 <column_constraint> ::=

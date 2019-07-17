@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 
 # Database Engine Service Startup Options

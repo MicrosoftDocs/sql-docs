@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Script Task Examples
 

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDescribeParam Function
 **Conformance**  

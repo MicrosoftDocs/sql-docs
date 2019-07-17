@@ -137,7 +137,9 @@ Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime bi
   
      For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
-     Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for **tempdb**. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).  
+     Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for **tempdb**. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb). 
+
+ 
      Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. Use the **Analysis Services Configuration - Account Provisioning** page to specify the server mode and the users or accounts that have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, select the default server mode option, **Multidimensional and Data Mining**.
@@ -297,7 +299,9 @@ Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime bi
   
      For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
-     Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for **tempdb**. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).  
+     Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for **tempdb**. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
+
+  
      Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** tab to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation. For more information, see the [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). This option is only available starting with SQL Server 2019. 
 
      Use the **Database Engine Configuration - Memory** tab to specify the MIN and MAX memory values that this instance of SQL Server will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option. This capability is only available within Setup starting with SQL Server 2019. 

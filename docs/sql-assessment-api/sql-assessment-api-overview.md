@@ -19,11 +19,11 @@ SQL Assessment API is useful when you want to make sure your SQL Server configur
 
 ## Rules
 
-Rules sometimes referred to as checks, are defined in JSON formatted files. Microsoft's shipped rule set is available in the [samples repository](htttp://aka.ms/sql-assessment-api). There is versioning of the rule set for baselining and ease of management. You can visit the [samples repository](htttp://aka.ms/sql-assessment-api) for more details.
+Rules sometimes referred to as checks, are defined in JSON formatted files. Microsoft's shipped rule set is available in the [samples repository](http://aka.ms/sql-assessment-api). There is versioning of the rule set for baselining and ease of management. You can visit the [samples repository](http://aka.ms/sql-assessment-api) for more details.
 
 ## Customizing rules
 
-Rules are designed to be customizable and extensible. Microsoft's ruleset is designed to work for most environments. However, it is impossible to have one rule set that works for every single environment. Users can write their own JSON files and customize existing rules or add new ones. Examples of customization are available in the [samples repository](htttp://aka.ms/sql-assessment-api).
+Rules are designed to be customizable and extensible. Microsoft's rule set is designed to work for most environments. However, it is impossible to have one rule set that works for every single environment. Users can write their own JSON files and customize existing rules or add new ones. Examples of customization are available in the [samples repository](http://aka.ms/sql-assessment-api).
 
 ### Customizing features enables users to do the  options below.
 
@@ -43,7 +43,7 @@ SQL Assessment API is part of SQL Server Management Objects (SMO) version <X> an
 
 * [Install SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md)
 
-You can find the below information in the [samples repository](htttp://aka.ms/sql-assessment-api):
+You can find the below information in the [samples repository](http://aka.ms/sql-assessment-api):
 
 * Example scripts
 * Complete Microsoft released rule set

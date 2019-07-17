@@ -23,7 +23,7 @@ The following article provides reference for the **bdc config** commands in the 
 [azdata bdc config show](#azdata-bdc-config-show) | Gets the Big Data Cluster's current configuration.
 [azdata bdc config init](#azdata-bdc-config-init) | Initializes a Big Data Cluster configuration profile that can be used with cluster create.
 [azdata bdc config list](#azdata-bdc-config-list) | Lists available configuration profile choices.
-[azdata bdc config section](reference-azdata-bdc-config-section.md) | Commands for working with individual sections of the Big Data Cluster configuration profile.
+[azdata bdc config section](reference-mssqlctl-bdc-config-section.md) | Commands for working with individual sections of the Big Data Cluster configuration profile.
 ## azdata bdc config show
 Gets the Big Data Cluster's current configuration profile and outputs it to the target directory or pretty prints it to the console.
 ```bash

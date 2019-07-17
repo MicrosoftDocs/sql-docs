@@ -20,7 +20,7 @@ The following article provides reference for the **bdc pool** commands in the **
 ## Commands
 |     |     |
 | --- | --- |
-[azdata bdc pool status](reference-azdata-bdc-pool-status.md) | Pool status commands.
+[azdata bdc pool status](reference-mssqlctl-bdc-pool-status.md) | Pool status commands.
 
 ## Next steps
 

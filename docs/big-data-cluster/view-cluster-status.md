@@ -106,7 +106,7 @@ You can obtain the IP addresses of the external endpoints for the big data clust
 
    Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
-1. Run [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
+1. Run [azdata bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -132,7 +132,7 @@ You can obtain the IP addresses of the external endpoints for the big data clust
 
 ### View cluster status
 
-You can view the status of the cluster with the [azdata bdc status show](reference-azdata-bdc-status.md) command.
+You can view the status of the cluster with the [azdata bdc status show](reference-mssqlctl-bdc-status.md) command.
 
 ```bash
 azdata bdc status show -o table
@@ -156,7 +156,7 @@ Storage  default        Ready
 
 ### View pool status
 
-You can view the status of pools within the cluster with the [azdata bdc pool status show](reference-azdata-bdc-pool-status.md) command. To use this command, specify the type of pool with the `--kind` parameter. The pool types are:
+You can view the status of pools within the cluster with the [azdata bdc pool status show](reference-mssqlctl-bdc-pool-status.md) command. To use this command, specify the type of pool with the `--kind` parameter. The pool types are:
 
 - compute
 - data
@@ -205,7 +205,7 @@ The `nodeMetricsUrl` and `sqlMetricsUrl` values link to a grafana dashboard for 
 
 ### View controller status
 
-You can view the controller status with the [azdata bdc control status show](reference-azdata-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller nodes of the big data cluster.
+You can view the controller status with the [azdata bdc control status show](reference-mssqlctl-bdc-control-status.md) command. It provides similar links to the monitoring dashboards related to the controller nodes of the big data cluster.
 
 ## Next steps
 

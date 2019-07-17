@@ -20,7 +20,7 @@ The following article provides reference for the **app** commands in the **azdat
 ## Commands
 |     |     |
 | --- | --- |
-[azdata app template](reference-azdata-app-template.md) | Templates.
+[azdata app template](reference-mssqlctl-app-template.md) | Templates.
 [azdata app init](#azdata-app-init) | Kickstart new application skeleton.
 [azdata app create](#azdata-app-create) | Create application.
 [azdata app update](#azdata-app-update) | Update application.

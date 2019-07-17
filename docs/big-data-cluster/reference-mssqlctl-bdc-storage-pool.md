@@ -20,7 +20,7 @@ The following article provides reference for the **bdc storage-pool** commands i
 ## Commands
 |     |     |
 | --- | --- |
-[azdata bdc storage-pool mount](reference-azdata-bdc-storage-pool-mount.md) | Manage mounting of remote stores in HDFS.
+[azdata bdc storage-pool mount](reference-mssqlctl-bdc-storage-pool-mount.md) | Manage mounting of remote stores in HDFS.
 
 ## Next steps
 

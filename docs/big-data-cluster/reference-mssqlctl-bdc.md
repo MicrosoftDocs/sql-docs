@@ -22,13 +22,13 @@ The following article provides reference for the **bdc** commands in the **azdat
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.
 [azdata bdc delete](#azdata-bdc-delete) | Delete Big Data Cluster.
-[azdata bdc config](reference-azdata-bdc-config.md) | Configuration commands.
-[azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | Endpoint commands.
-[azdata bdc status](reference-azdata-bdc-status.md) | Status commands.
-[azdata bdc debug](reference-azdata-bdc-debug.md) | Debug commands.
-[azdata bdc storage-pool](reference-azdata-bdc-storage-pool.md) | Storage pool commands.
-[azdata bdc control](reference-azdata-bdc-control.md) | Control commands.
-[azdata bdc pool](reference-azdata-bdc-pool.md) | Pool commands.
+[azdata bdc config](reference-mssqlctl-bdc-config.md) | Configuration commands.
+[azdata bdc endpoint](reference-mssqlctl-bdc-endpoint.md) | Endpoint commands.
+[azdata bdc status](reference-mssqlctl-bdc-status.md) | Status commands.
+[azdata bdc debug](reference-mssqlctl-bdc-debug.md) | Debug commands.
+[azdata bdc storage-pool](reference-mssqlctl-bdc-storage-pool.md) | Storage pool commands.
+[azdata bdc control](reference-mssqlctl-bdc-control.md) | Control commands.
+[azdata bdc pool](reference-mssqlctl-bdc-pool.md) | Pool commands.
 
 ## mssqlctl bdc create
 

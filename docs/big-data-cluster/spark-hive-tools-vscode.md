@@ -169,17 +169,19 @@ You can submit interactive PySpark queries by following the steps below:
 
 ## Apache Livy configuration
 
-[Apache Livy](https://livy.incubator.apache.org/) configuration is supported, it can be set at the **.VSCode\settings.json** in the work space folder. Currently, livy configuration only supports Python script. More details, see [Livy README](https://github.com/cloudera/livy/blob/master/README.rst ).
+[Apache Livy](https://livy.incubator.apache.org/) configuration is supported, it can be set at the **.VSCode\settings.json** in the work space folder. Currently, Livy configuration only supports Python script. More details, see [Livy README](https://github.com/cloudera/livy/blob/master/README.rst ).
 
-<a id="triggerlivyconf"></a>**How to trigger livy configuration**
+### <a id="triggerlivyconf"></a>**How to trigger Livy configuration**
 
-Method 1  
+#### Method 1
+
 1. From the menu bar, navigate to **File** > **Preferences** > **Settings**.  
 2. In the **Search settings** text box enter **HDInsight Job Sumission: Livy Conf**.  
 3. Select **Edit in settings.json** for the relevant search result.
 
-Method 2   
-Submit a file, notice the .vscode folder is added automatically to the work folder. You can find the livy configuration by clicking **.vscode\settings.json**.
+#### Method 2
+
+Submit a file, notice the `.vscode` folder is added automatically to the work folder. You can find the Livy configuration by clicking `.vscode\settings.json`.
 
 + The project settings:
 
@@ -188,43 +190,44 @@ Submit a file, notice the .vscode folder is added automatically to the work fold
 >[!NOTE]
 >For settings **driverMomory** and **executorMomry**, set the value with unit, for example 1g or 1024m. 
 
-+ The supported Livy configurations:   
+### Supported Livy configurations
 
-    **POST /batches**   
-    Request Body
+#### POST /batches
 
-    | name | description | type | 
-    | :- | :- | :- | 
-    | file | File containing the application to execute | path (required) | 
-    | proxyUser | User to impersonate when running the job | string | 
-    | className | Application Java/Spark main class | string |
-    | args | Command line arguments for the application | list of strings | 
-    | jars | jars to be used in this session | List of string | 
-    | pyFiles | Python files to be used in this session | List of string |
-    | files | files to be used in this session | List of string |
-    | driverMemory | Amount of memory to use for the driver process | string |
-    | driverCores | Number of cores to use for the driver process | int |
-    | executorMemory | Amount of memory to use per executor process | string |
-    | executorCores | Number of cores to use for each executor | int |
-    | numExecutors | Number of executors to launch for this session | int |
-    | archives | Archives to be used in this session | List of string |
-    | queue | The name of the YARN queue to which submitted | string |
-    | name | The name of this session | string |
-    | conf | Spark configuration properties | Map of key=val |
+**Request body**
+| name | description | type |
+| :- | :- | :- |
+| file | File containing the application to execute | path (required) |
+| proxyUser | User to impersonate when running the job | string |
+| className | Application Java/Spark main class | string |
+| args | Command line arguments for the application | list of strings |
+| jars | jars to be used in this session | List of string |
+| pyFiles | Python files to be used in this session | List of string |
+| files | files to be used in this session | List of string |
+| driverMemory | Amount of memory to use for the driver process | string |
+| driverCores | Number of cores to use for the driver process | int |
+| executorMemory | Amount of memory to use per executor process | string |
+| executorCores | Number of cores to use for each executor | int |
+| numExecutors | Number of executors to launch for this session | int |
+| archives | Archives to be used in this session | List of string |
+| queue | The name of the YARN queue to which submitted | string |
+| name | The name of this session | string |
+| conf | Spark configuration properties | Map of key=val |
 
-    Response Body   
-    The created Batch object.
+#### Response Body
 
-    | name | description | type | 
-    | :- | :- | :- | 
-    | id | The session id | int | 
-    | appId | The application id of this session | 	String |
-    | appInfo | The detailed application info | Map of key=val |
-    | log | The log lines | list of strings |
-    | state | 	The batch state | string |
+The created batch object.
+
+| name | description | type |
+| :- | :- | :- |
+| id | The session id | int |
+| appId | The application id of this session | String |
+| appInfo | The detailed application info | Map of key=val |
+| log | The log lines | list of strings |
+| state | The batch state | string |
 
 >[!NOTE]
->The assigned livy config will display in output pane when submit script.
+>The assigned Livy config will display in output pane when submit script.
 
 ## Additional features
 

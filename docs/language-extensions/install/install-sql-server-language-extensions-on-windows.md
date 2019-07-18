@@ -40,7 +40,7 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 
 ## Java JRE or JDK
 
-In CTP 3.2, Zulu Open JRE version 11.0.3 is included with the SQL Server installation.
+In CTP 3.2, Zulu Open JRE version 11.0.3 is supported and is included with the SQL Server installation.
 
 You can also use your preferred Java distribution instead of Zulu Open JRE. If you chose to use another Java distribution, you need to install it before installing SQL Server.
 

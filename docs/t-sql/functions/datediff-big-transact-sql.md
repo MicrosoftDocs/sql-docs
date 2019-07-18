@@ -38,7 +38,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 ## Arguments  
 *datepart*  
-The units in which `DATEDIFF_BIG` reports the difference between the *startdate* and *enddate*. 
+The part of *startdate* and *enddate* that specifies the type of boundary crossed.
 
 > [!NOTE]
 > `DATEDIFF_BIG` will not accept *datepart* values from user-defined variables or as quoted strings.

@@ -35,12 +35,6 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 |HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. |
 | &nbsp; | &nbsp; |
 
-### New in database engine
-
-| New feature or update | Details |
-|:---|:---| 
-| &nbsp; | &nbsp; |
-
 ### New in Analysis Services
 
 | New feature or update | Details |

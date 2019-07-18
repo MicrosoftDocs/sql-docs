@@ -36,7 +36,7 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external code, and adding accounts required for SQL Server to run Java code on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
 
-<a name="java-prerequisite"></a>
+<a name="java-jre-jdk"></a>
 
 ## Java JRE or JDK
 

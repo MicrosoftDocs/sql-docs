@@ -49,15 +49,15 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## Arguments  
 *datepart*  
-The units in which `DATEDIFF` reports the difference between the *startdate* and *enddate*. 
+The part of *startdate* and *enddate* that specifies the type of boundary crossed.
 
 > [!NOTE]
 > `DATEDIFF` will not accept *datepart* values from user-defined variables or as quoted strings. 
 
 This table lists all valid *datepart* argument names and abbreviations.
 
-|*datepart*|Abbreviations|  
-|---|---|
+|*datepart* name|*datepart* abbreviation|  
+|-----------|------------|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
@@ -70,7 +70,10 @@ This table lists all valid *datepart* argument names and abbreviations.
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.
+
 *startdate*  
 An expression that can resolve to one of the following values:
 
@@ -90,8 +93,7 @@ See *startdate*.
  **int**  
   
 ## Return Value  
-  
-Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
+The **int** difference between the *startdate* and *enddate*, expressed in the coundary set by *datepart*.
   
 For a return value out of range for **int** (-2,147,483,648 to +2,147,483,647), `DATEDIFF` returns an error.  For **millisecond**, the maximum difference between *startdate* and *enddate* is 24 days, 20 hours, 31 minutes and 23.647 seconds. For **second**, the maximum difference is 68 years, 19 days, 3 hours, 14 minutes and 7 seconds.
   
@@ -106,7 +108,7 @@ If only a time value is assigned to a date data type variable, `DATEDIFF` sets t
 If *startdate* and *enddate* have different date data types, and one has more time parts or fractional seconds precision than the other, `DATEDIFF` sets the missing parts of the other to 0.
   
 ## datepart boundaries  
-The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by a hundred nanoseconds (.0000001 second). The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF` will return 0 for *datepart* **week**.
+The following statements have the same *startdate* and the same *enddate* values. Those dates are adjacent and they differ in time by a hundred nanoseconds (.0000001 second). The difference between the *startdate* and *enddate* in each statement crosses one calendar or time boundary of its *datepart*. Each statement returns 1. 
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -121,7 +123,9 @@ SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
-  
+
+If *startdate* and *enddate* have different year values but they have the same calendar week values, `DATEDIFF` will return 0 for *datepart* **week**.
+
 ## Remarks  
 Use `DATEDIFF` in the `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` and `ORDER BY` clauses.
   

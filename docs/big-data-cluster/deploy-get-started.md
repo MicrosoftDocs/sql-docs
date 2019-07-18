@@ -58,6 +58,8 @@ Deployment scripts can help deploy both Kubernetes and big data clusters in a si
 
 You can customize any deployment script by creating your own version that configures the big data cluster environment variables differently.
 
+[Deploy a SQL Server 2019 big data cluster with Azure Data Studio Notebooks](deploy-notebooks.md).
+
 ## Next steps
 
 After you successfully deploy a big data cluster, [connect to the cluster](connect-to-big-data-cluster.md) and consider [loading sample data](tutorial-load-sample-data.md) for use with several walkthroughs.

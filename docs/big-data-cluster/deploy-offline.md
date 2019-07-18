@@ -28,19 +28,10 @@ The following steps describe how to pull the big data cluster container images f
 > [!TIP]
 > The following steps explain the process. However, to simplify the task, you can use the [automated script](#automated) instead of manually running these commands.
 
-1. First, log in to the Microsoft Docker registry with the **docker login** command.
-
-   ```PowerShell
-   docker login private-repo.microsoft.com -u  <SOURCE_DOCKER_USERNAME> -p <SOURCE_DOCKER_PASSWORD>
-   ```
-
-   > [!TIP]
-   > These commands use PowerShell as an example, but you can run them from cmd, bash, or any command shell that can run docker. On Linux, add `sudo` to each command.
-
 1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **ctp3.1**.  
 
    ```PowerShell
-   docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
+   docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
    ```
 
 1. Log in to the target private Docker registry.
@@ -52,7 +43,7 @@ The following steps describe how to pull the big data cluster container images f
 1. Tag the local images with the following command for each image:
 
    ```PowerShell
-   docker tag private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG> <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
+   docker tag mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG> <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
 1. Push the local images to the private Docker repository:
@@ -87,7 +78,6 @@ The following big data cluster container images are required for an offline inst
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
  - **mssql-mleap-serving-runtime**
-  
 
 ## <a id="automated"></a> Automated script
 

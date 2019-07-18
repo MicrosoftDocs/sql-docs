@@ -91,6 +91,8 @@
         items:
         - name: Azure Kubernetes Service
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+        - name: Deploy using Azure Data Studio Notebooks
+          href: big-data-cluster/deploy-notebooks.md
   - name: Concepts
     items:
     - name: Application deployment
@@ -7400,6 +7402,8 @@
     items:
     - name: Create Linked Servers
       href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+    - name: Create Linked Server Provider
+      href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
   - name: Full-text search
     href: relational-databases/search/full-text-search.md
     items:

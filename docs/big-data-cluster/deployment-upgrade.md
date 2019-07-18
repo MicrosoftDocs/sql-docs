@@ -32,30 +32,30 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > [!Important]
    > Use the version of **azdata** that matches your cluster. Do not delete an older cluster with the newer version of **azdata**.
 
-1. If you have any previous releases of **azdata** installed, it is important to uninstall **azdata** first before installing the latest version.
+1. Prior to CTP 3.2, **azdata** was called **mssqlctl**. If you have any previous releases of **mssqlctl** or **mssqlctl** installed, it is important to uninstall first before installing the latest version of **azdata**.
 
-   For CTP 2.3 or higher, run the following command. Replace `ctp3.0` in the command with the version of **azdata** that you are uninstalling. If the version is prior to CTP 3.0, add a dash before the version number (for example, `ctp-2.5`).
+   For CTP 2.3 or higher, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. If the version is prior to CTP 3.1, add a dash before the version number (for example, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/azdata/requirements.txt
+   pip3 uninstall -r  https://mcr.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
-1. Install the latest version of **azdata**. The following commands install **azdata** for CTP 3.1:
+1. Install the latest version of **azdata**. The following commands install **azdata** for CTP 3.2:
 
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/azdata/requirements.txt
+   pip3 install -r  https://mcr.microsoft.com/python/ctp3.2/azdata/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/azdata/requirements.txt --user
+   pip3 install -r  https://mcr.microsoft.com/python/ctp3.2/azdata/requirements.txt --user
    ```
 
    > [!IMPORTANT]
-   > For each release, the path to **azdata** changes. Even if you previously installed **azdata**, you must reinstall from the latest path before creating the new cluster.
+   > For each release, the path to **azdata** changes. Even if you previously installed **azdata** or **mssqlctl**, you must reinstall from the latest path before creating the new cluster.
 
 ## <a id="azdataversion"></a> Verify the azdata version
 

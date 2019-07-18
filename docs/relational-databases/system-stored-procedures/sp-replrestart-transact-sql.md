@@ -37,7 +37,7 @@ sp_replrestart
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- **sp_replrestart** is used when the highest log sequence number (LSN) value at the Distributor does match the highest LSN value at the Publisher.  
+ **sp_replrestart** is used when the highest log sequence number (LSN) value at the Distributor does not match the highest LSN value at the Publisher.  
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_replrestart**.  

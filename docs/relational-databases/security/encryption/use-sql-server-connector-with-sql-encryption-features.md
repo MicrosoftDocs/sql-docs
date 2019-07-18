@@ -1,7 +1,7 @@
 ---
 title: "Use SQL Server Connector with SQL Encryption Features | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Use SQL Server Connector with SQL Encryption Features
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Common [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption activities using an asymmetric key protected by the Azure Key Vault include the following three areas.  
   
 -   Transparent Data Encryption by using an Asymmetric Key from Azure Key Vault  

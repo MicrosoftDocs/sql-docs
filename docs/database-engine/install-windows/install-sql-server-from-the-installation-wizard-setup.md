@@ -42,11 +42,15 @@ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], re
 > [!NOTE]  
 > For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
 
+::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
 ###  <a name="bkmk_ga_instalpatch"></a> Install patch requirement
 
-Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime binaries that are installed as a prerequisite by SQL Server. An update is available to fix this problem. If this update to the Visual C++ runtime binaries isn't installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server, follow the instructions in the [SQL Server release notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the Visual C++ runtime binaries.  
+Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime binaries that are installed as a prerequisite by SQL Server 2016 and 2017. An update is available to fix this problem. If this update to the Visual C++ runtime binaries isn't installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server, follow the instructions in the [SQL Server release notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the Visual C++ runtime binaries. 
+
+This is not applicable to SQL Server 2019.  
   
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
 ## To install SQL Server 2016 and 2017  
 
 1. Insert the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click **Setup.exe**. To install from a network share, locate the root folder on the share, and then double-click **Setup.exe**.  
@@ -107,6 +111,9 @@ Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime bi
      * **Installed instances**: The grid shows the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].  
   
      The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages. 
+
+1. Selecting to install the Polybase feature will add the **PolyBase Configuration** page to the SQL Server setup, displayed after the **Instance Configuration** page. PolyBase requires the Oracle JRE 7 Update 51 (at least), and if this hasn't already been installed, your installation will be blocked. On the **Polybase Configuration** page, you can choose to use the SQL Server as a standalone Polybase-enabled instance, or you can use this SQL Server as part of a PolyBase scale-out group. If you choose to use the scale-out group, you will need to specify a port range of up to 6 or more ports. 
+
 
 1. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
   
@@ -266,6 +273,8 @@ Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime bi
      * **Installed instances**: The grid shows the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are on the computer where Setup is running. If a default instance is already installed on the computer, you must install a named instance of [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)].  
   
      The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages. 
+
+1. Selecting to install the Polybase feature will add the **PolyBase Configuration** page to the SQL Server setup, displayed after the **Instance Configuration** page. PolyBase requires the Oracle JRE 7 Update 51 (at least), and if this hasn't already been installed, starting with SQL Server 2019, you are able to install the Azul Zulu Open JRE along with SQL Server. On the **Polybase Configuration** page, you can choose to use the SQL Server as a standalone Polybase-enabled instance, or you can use this SQL Server as part of a PolyBase scale-out group. If you choose to use the scale-out group, you will need to specify a port range of up to 6 or more ports.  On the **Java Install Location** page, you can choose to install the Azul Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
 1. Starting with SQL Server 2019, Java has been added to the list of Machine Learning Services and Language Extensions, alongside R and Python. Selecting to install the Java feature will add the **Java Install Location** page to the SQL Server setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Azul Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 

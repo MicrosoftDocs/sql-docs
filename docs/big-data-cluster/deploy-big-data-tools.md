@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes the client tools that should be installed for creating, managing, and using SQL Server 2019 big data clusters (preview). The following section provides a list of tools and links to installation instructions. Before deploying a big data cluster, configure the tools marked required on Windows o    r Linux.
+This article describes the client tools that should be installed for creating, managing, and using SQL Server 2019 big data clusters (preview). The following section provides a list of tools and links to installation instructions. Before deploying a big data cluster, configure the tools marked required on Windows or Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 

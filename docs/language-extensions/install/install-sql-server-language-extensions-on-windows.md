@@ -82,7 +82,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 4. On the **Java Install Location** page, select either of these options:
 
-    - **Install Open JRE 11.0.3 included with this installation**. Choose this option if you want to install Zulu Open JRE 11.0.3 that is included with SQL Server.
+    - **Install Open JRE 11.0.3 included with this installation**. Choose this option if you want to install Zulu Open JRE 11.0.3 that is included with SQL Server. You do not need to install your a JRE or JDE before you install SQL Server.
 
     - **Provide the location of a different version that has been installed on this computer**. Choose the option if you want to install your own JDK or JRE. The JDK or JRE needs to be installed before you install see SQL Server.
 
@@ -121,7 +121,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 ## Grant access to non-default JRE folder
 
-If you did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
+If you did not use the Zulu Open JRE that was included with SQL Server and did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
 1. Give SQLRUserGroup permissions
 

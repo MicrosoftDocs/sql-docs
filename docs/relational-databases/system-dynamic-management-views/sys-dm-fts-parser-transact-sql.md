@@ -19,7 +19,6 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl 
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 ---
 # sys.dm_fts_parser (Transact-SQL)
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Specifying a Cursor Type and Selecting Rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

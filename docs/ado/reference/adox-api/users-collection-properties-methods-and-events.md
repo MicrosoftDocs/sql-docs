@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Users Collection Properties, Methods, and Events
 ## Properties  

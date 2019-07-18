@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Recordset Destination Custom Properties
 

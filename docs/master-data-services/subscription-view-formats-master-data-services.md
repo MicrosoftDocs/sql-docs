@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Subscription View Formats (Master Data Services)
 

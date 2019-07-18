@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Open and Configure Object Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

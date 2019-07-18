@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Make Schema Changes on Publication Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

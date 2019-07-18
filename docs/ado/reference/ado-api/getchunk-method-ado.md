@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # GetChunk Method (ADO)
 Returns all, or a portion, of the contents of a large text or binary data [Field](../../../ado/reference/ado-api/field-object.md) object.  

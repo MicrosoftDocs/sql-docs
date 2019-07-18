@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Suggest Column Types Dialog Box UI Reference
 

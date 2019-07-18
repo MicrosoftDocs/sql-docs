@@ -1,8 +1,9 @@
 ---
-title: Install SQL Server Machine Learning Services (R, Python) on Linux | Microsoft Docs
+title: Install SQL Server Machine Learning Services (R, Python) on Linux
 description: Learn how to install SQL Server Machine Learning Services (R, Python) on Red Hat, Ubuntu, and SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
@@ -22,7 +23,7 @@ Machine Learning Services is also supported on Linux containers. We do not provi
 
 ## Uninstall previous CTP
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.0. Side-by-side installation of multiple versions is not supported.
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.1. Side-by-side installation of multiple versions is not supported.
 
 ### 1. Confirm package installation
 
@@ -55,7 +56,7 @@ Commands for removing packages appear in the following table.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### 3. Proceed with CTP 3.0 install
+### 3. Proceed with CTP 3.1 install
 
 Install at the highest package level using the instructions in this article for your operating system.
 

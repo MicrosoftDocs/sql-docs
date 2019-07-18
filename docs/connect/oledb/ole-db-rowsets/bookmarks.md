@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "OLE DB rowsets, bookmarks"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Bookmarks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

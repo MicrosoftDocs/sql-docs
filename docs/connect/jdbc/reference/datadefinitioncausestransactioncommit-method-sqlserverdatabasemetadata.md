@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # dataDefinitionCausesTransactionCommit Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

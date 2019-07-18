@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.deploy_packages 
 

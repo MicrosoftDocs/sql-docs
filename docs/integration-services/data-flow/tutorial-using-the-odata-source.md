@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Tutorial: Using the OData Source
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Microsoft Internet Information Services
 > [!IMPORTANT]  

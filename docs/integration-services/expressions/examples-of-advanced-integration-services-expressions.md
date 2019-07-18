@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Examples of Advanced Integration Services Expressions
 

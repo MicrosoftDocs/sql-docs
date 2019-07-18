@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
 

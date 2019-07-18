@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Sample: Creating a SQL Server Agent Alert with the WMI Provider
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Color Dialog Box (Visual Database Tools)

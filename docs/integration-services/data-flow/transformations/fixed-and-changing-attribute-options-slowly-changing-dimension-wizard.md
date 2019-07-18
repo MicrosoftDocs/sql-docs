@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Fixed and Changing Attribute Options (Slowly Changing Dimension Wizard
 

@@ -1,10 +1,11 @@
 ---
-title: Install SQL Server Language Extensions (Java) on Linux | Microsoft Docs
+title: Install SQL Server Language Extensions (Java) on Linux
 description: Learn how to install SQL Server Language Extensions (Java) on Red Hat, Ubuntu, and SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -22,7 +23,7 @@ Language Extensions is also supported on Linux containers. We do not provide pre
 
 ## Uninstall previous CTP
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.0. Side-by-side installation of multiple versions is not supported.
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.1. Side-by-side installation of multiple versions is not supported.
 
 ### 1. Confirm package installation
 
@@ -46,7 +47,7 @@ Commands for removing packages appear in the following table.
 | SLES	| `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu	| `sudo apt-get remove msssql-server-extensibility-java`|
 
-### 3. Proceed with CTP 3.0 install
+### 3. Proceed with CTP 3.1 install
 
 Install at the highest package level using the instructions in this article for your operating system.
 
@@ -179,6 +180,20 @@ sudo zypper install mssql-server-extensibility-java
 6. Restart the `mssql-launchpadd` service again.
 
 7. For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+## Register external language
+
+For each database you want to use language extensions in, you need to register the external language with [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+The following example adds an external language called Java to a database on SQL Server on Linux.
+
+```SQL
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
+GO
+```
+
+For more information, see [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
 ## Verify installation
 

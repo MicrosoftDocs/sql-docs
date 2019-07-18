@@ -1,9 +1,9 @@
 ---
-title: Operate availability group SQL Server on Linux | Microsoft Docs
+title: Operate availability group SQL Server on Linux
 description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql

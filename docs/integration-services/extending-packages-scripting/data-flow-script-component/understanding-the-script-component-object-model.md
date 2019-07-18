@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Understanding the Script Component Object Model
 

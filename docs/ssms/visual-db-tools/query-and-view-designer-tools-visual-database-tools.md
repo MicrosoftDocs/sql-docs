@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Query and View Designer Tools (Visual Database Tools)

@@ -4,13 +4,11 @@ titleSuffix: SQL Server big data clusters
 description: Consume an application deployed on SQL Server 2019 big data cluster using a RESTful web service (preview).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
-manager: jroth
+ms.reviewer: mikeray
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Consume an app deployed on SQL Server big data cluster using a RESTful web service

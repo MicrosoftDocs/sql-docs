@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MashaMSFT"
 ms.author: mathoma
-manager: jroth
 ---
 # Create a domain-independent availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +64,10 @@ A common DNS suffix is necessary for a Domain Independent Availability Group's W
 10. You will be prompted to restart. If you do not want to restart immediately, click Restart Later, otherwise click Restart Now.
 11. After the server has rebooted, verify that the common DNS suffix is configured by looking at System again.
 
-
 ![Successful configuration of DNS suffix][4]
+
+  > [!NOTE]
+  > If you are using multiple subnets, and have a static DNS, you will need to have a process in place to update the DNS record associated with the listener before you perform a failover as otherwise the network name will not come online.
 
 ## Create a Domain Independent Availability Group
 

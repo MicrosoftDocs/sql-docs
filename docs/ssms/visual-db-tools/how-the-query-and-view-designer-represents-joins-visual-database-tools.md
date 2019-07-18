@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # How the Query and View Designer Represents Joins (Visual Database Tools)

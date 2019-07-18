@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Work with Multiple Versions and Instances of SQL Server
 
@@ -33,7 +32,7 @@ The following SQL Server-related items are compatible with the installation of m
 
 - Analysis Services
 
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - Reporting Services
 ::: moniker-end
 

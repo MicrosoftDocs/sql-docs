@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "restarting traces"
   - "stopping traces"
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Open Queries (Visual Database Tools)

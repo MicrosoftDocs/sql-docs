@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDataSources Function
 **Conformance**  

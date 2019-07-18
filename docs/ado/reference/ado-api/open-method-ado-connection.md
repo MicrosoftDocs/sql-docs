@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Open Method (ADO Connection)
 Opens a connection to a data source.  

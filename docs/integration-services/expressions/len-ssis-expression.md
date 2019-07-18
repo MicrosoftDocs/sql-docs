@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # LEN (SSIS Expression)
 

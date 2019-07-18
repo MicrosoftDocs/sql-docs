@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 55d09344-6682-40f6-b634-036b134ff650
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Bound Descriptor Records
 When the application sets the SQL_DESC_DATA_PTR field of a descriptor record so that it no longer contains a null value, the record is said to be *bound*.  

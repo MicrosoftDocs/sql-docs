@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl 
 ms.author: pelopes
-manager: craigg
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

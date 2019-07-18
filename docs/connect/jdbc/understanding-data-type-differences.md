@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Understanding Data Type Differences
 

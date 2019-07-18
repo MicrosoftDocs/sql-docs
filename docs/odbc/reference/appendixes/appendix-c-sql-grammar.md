@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Appendix C: SQL Grammar
 This appendix contains the following topics.  

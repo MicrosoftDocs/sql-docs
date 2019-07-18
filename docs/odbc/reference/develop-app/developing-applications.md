@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Developing Applications
 This section contains information about developing applications that use the ODBC interface and drivers that implement it.  

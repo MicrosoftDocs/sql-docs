@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Create Subqueries (Visual Database Tools)

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Create a Workload Group
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +50,9 @@ manager: craigg
 6.  Click or double-click any other cells in the row you want to change from their default settings, and enter the new values.  
   
 7.  To save the changes, click **OK**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="CreRPTSQL"></a> Create a Workload Group Using Transact-SQL  
  **To create a workload group by using [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

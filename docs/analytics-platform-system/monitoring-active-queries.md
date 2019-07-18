@@ -2,7 +2,6 @@
 title: Monitor active queries - Parallel Data Warehouse | Microsoft Docs
 description: Use the Admin Console and Parallel Data Warehouse system views to monitor active queries on Analytics Platform System.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "opening trace files"
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Open a Trace File (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

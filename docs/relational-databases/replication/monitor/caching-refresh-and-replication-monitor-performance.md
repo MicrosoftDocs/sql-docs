@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Caching, Refresh, and Replication Monitor Performance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

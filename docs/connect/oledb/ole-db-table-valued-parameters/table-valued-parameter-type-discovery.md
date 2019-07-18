@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "table-valued parameters, type discovery"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Table-Valued Parameter Type Discovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

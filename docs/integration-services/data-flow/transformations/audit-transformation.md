@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Audit Transformation
 

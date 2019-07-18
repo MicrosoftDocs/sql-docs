@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Select Oracle Tables and Columns
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Operation of Parameterized Commands
 If you are working with a large child **Recordset**, especially compared to the size of the parent **Recordset**, but need to access only a few child chapters, you might find it more efficient to use a parameterized command.  
@@ -30,7 +29,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- The parent and child tables have a column name in common, cust_id*.* The *child-command* has a "?" placeholder, to which the RELATE clause refers (that is, "...PARAMETER 0").  
+ The parent and child tables have a column name in common, *cust_id*. The *child-command* has a "?" placeholder, to which the RELATE clause refers (that is, "...PARAMETER 0").  
   
 > [!NOTE]
 >  The PARAMETER clause pertains solely to the shape command syntax. It is not associated with either the ADO [Parameter](../../../ado/reference/ado-api/parameter-object.md) object or the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  

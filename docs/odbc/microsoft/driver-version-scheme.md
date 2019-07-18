@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Driver Version Scheme
 > [!IMPORTANT]  

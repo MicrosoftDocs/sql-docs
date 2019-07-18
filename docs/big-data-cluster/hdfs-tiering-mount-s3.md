@@ -4,9 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: This article explains how to configure HDFS tiering to mount an external S3 file system into HDFS on a SQL Server 2019 big data cluster (preview).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
-manager: jroth
-ms.date: 05/22/2019
+ms.reviewer: mikeray
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -27,12 +26,12 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 ## Access keys
 
-1. Open a command-prompt on a client machine that can access your big data cluster.
+### Set environment variable for access key credentials
 
-1. Create a local file named **filename.creds** that contains your S3 account credentials using the following format:
+Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
 
    ```text
-    fs.s3a.access.key=<Access Key ID of the key>
+    set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
     fs.s3a.secret.key=<Secret Access Key of the key>
    ```
 
@@ -54,11 +53,13 @@ Now that you have prepared a credential file with access keys, you can start mou
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+   
+1. Set environment variable MOUNT_CREDENTIALS following the instructions above
 
-1. Mount the remote HDFS storage in Azure using **mssqlctl cluster storage-pool mount create**. Replace the placeholder values before running the following command:
+1. Mount the remote HDFS storage in Azure using **mssqlctl bdc storage-pool mount create**. Replace the placeholder values before running the following command:
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -71,21 +72,21 @@ If mounted successfully, you should be able to query the HDFS data and run Spark
 To list the status of all mounts in your big data cluster, use the following command:
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 To list the status of a mount at a specific path in HDFS, use the following command:
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Delete the mount
 
-To delete the mount, use the **mssqlctl cluster storage-pool mount delete** command, and specify the mount path in HDFS:
+To delete the mount, use the **mssqlctl bdc storage-pool mount delete** command, and specify the mount path in HDFS:
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## Next steps

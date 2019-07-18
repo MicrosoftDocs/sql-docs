@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connecting Data Flow Components Programmatically
 

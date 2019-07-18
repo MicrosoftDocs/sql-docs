@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Manage Objects by Using Object Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

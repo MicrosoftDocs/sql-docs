@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Overview (MDS)
 

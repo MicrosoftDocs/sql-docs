@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7e97197b-ed4d-40d1-9a52-9ab1d92401d7
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Configure WMI to Show Server Status in SQL Server Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

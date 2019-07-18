@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Permissions and Visual Database Tools (Visual Database Tools)

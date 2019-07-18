@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Microsoft ODBC Driver for SQL Server
 

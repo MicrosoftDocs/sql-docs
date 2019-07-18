@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Manage DQS Databases
 

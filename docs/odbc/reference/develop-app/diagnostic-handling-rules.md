@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Diagnostic Handling Rules
 The following rules govern diagnostic handling in **SQLGetDiagRec** and **SQLGetDiagField**.  

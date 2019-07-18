@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Improving Performance and Reliability with the JDBC Driver

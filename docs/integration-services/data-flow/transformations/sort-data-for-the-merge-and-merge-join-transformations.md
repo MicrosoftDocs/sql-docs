@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Sort Data for the Merge and Merge Join Transformations
 

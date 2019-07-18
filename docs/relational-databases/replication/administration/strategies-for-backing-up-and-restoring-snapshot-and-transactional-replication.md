@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

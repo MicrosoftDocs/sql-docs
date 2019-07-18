@@ -2,13 +2,13 @@
 title: "SQL Server privacy supplement | Microsoft Docs"
 ms.date: 01/19/2019
 ms.prod: sql
-ms.reviewer: ""
+ms.reviewer: "mikeray"
 ms.custom: ""
 ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 
-author: MikeRayMSFT
-ms.author: mikeray
+author: aliceku
+ms.author: aliceku
 ---
 # SQL Server privacy supplement
 

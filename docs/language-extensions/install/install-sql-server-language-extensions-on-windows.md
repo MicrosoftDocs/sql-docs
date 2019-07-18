@@ -38,21 +38,16 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 
 <a name="java-prerequisite"></a>
 
-## Java JRE or JDK prerequisite
+## Java JRE or JDK
 
-Java 8 is currently the supported version. Newer versions, like Java 11, should work with the language extension but is currently not supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
+Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
-You can use your preferred Java 8 distribution. Below are two suggested distributions:
+In CTP 3.2, Zulu Open JRE version 11 is included with the SQL Server installation.
 
-| Distribution | Java version | Operating systems | JDK | JRE |
-|-|-|-|-|-|
-| [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows and Linux | Yes | No |
-| [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows and Linux | Yes | Yes |
-
-On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
+You can also use your preferred Java distribution instead of Zulu Open JRE. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
 > [!NOTE]
-> Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for this early CTP release is Java 8. 
+> Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for the CTP 3.2 release is Java 11.
 
 ## Get the installation media
 
@@ -65,11 +60,11 @@ The preview version of SQL Server 2019 is available at the [SQL Server 2019 inst
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-1. Ensure a supported version of Java is installed. For more information, see the [Java prerequisites](#java-prerequisite).
-
-3. Start the setup wizard for SQL Server 2019. 
+1. Start the setup wizard for SQL Server 2019. 
   
-4. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+
+    ![SQL Server 2019 installation](../media/ctp32-install.png) 
 
 4. On the **Feature Selection** page, select these options:
   
@@ -81,9 +76,9 @@ For local installations, you must run Setup as an administrator. If you install 
   
         This option installs the Language Extensions component that support Java code execution.
 
-        You can omit R and Python if you wish.
+        Select Java. You can omit R and Python if you wish.
 
-        ![Feature options for Language Extensions](../media/sql2019-install-language-extensions.png) 
+        ![Feature options for Language Extensions](../media/ctp32-feature-selection.png)
 
 5. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   

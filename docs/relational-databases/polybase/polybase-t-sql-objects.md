@@ -140,7 +140,7 @@ WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
 -- CREDENTIAL: The database scoped credential created above.  
   
 CREATE EXTERNAL DATA SOURCE AzureStorage with (  
-        TYPE = HADOOP,   
+        TYPE = BLOB_STORAGE,   
         LOCATION ='wasbs://<blob_container_name>@<azure_storage_account_name>.blob.core.windows.net',  
         CREDENTIAL = AzureStorageCredential  
 );  

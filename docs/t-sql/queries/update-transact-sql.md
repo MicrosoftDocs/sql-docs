@@ -152,7 +152,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  Is a column that contains the data to be changed. *column_name* must exist in *table_or view_name*. Identity columns cannot be updated.  
   
  *expression*  
- Is a variable, literal value, expression, or a subselect statement (enclosed with parentheses) that returns a single value. The value returned by *expression* replaces the existing value in *column_name* or *@variable*.  
+ Is a variable, literal value, expression, or a subselect statement (enclosed with parentheses) that returns a single value. The value returned by *expression* replaces the existing value in *column_name* or @*variable*.  
   
 > [!NOTE]  
 >  When referencing the Unicode character data types **nchar**, **nvarchar**, and **ntext**, 'expression' should be prefixed with the capital letter 'N'. If 'N' is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts the string to the code page that corresponds to the default collation of the database or column. Any characters not found in this code page are lost.  
@@ -180,14 +180,14 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  Is a nonstatic public mutator method of *udt_column_name* that takes one or more arguments.  
   
- **.**WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
- Specifies that a section of the value of *column_name* is to be modified. *expression* replaces *@Length* units starting from *@Offset* of *column_name*. Only columns of **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** can be specified with this clause. *column_name* cannot be NULL and cannot be qualified with a table name or table alias.  
+ **.**WRITE **(**_expression_**,**@_Offset_**,**@_Length_**)**  
+ Specifies that a section of the value of *column_name* is to be modified. *expression* replaces @*Length* units starting from @*Offset* of *column_name*. Only columns of **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** can be specified with this clause. *column_name* cannot be NULL and cannot be qualified with a table name or table alias.  
   
- *expression* is the value that is copied to *column_name*. *expression* must evaluate to or be able to be implicitly cast to the *column_name* type. If *expression* is set to NULL, *@Length* is ignored, and the value in *column_name* is truncated at the specified *@Offset*.  
+ *expression* is the value that is copied to *column_name*. *expression* must evaluate to or be able to be implicitly cast to the *column_name* type. If *expression* is set to NULL, @*Length* is ignored, and the value in *column_name* is truncated at the specified @*Offset*.  
   
- *@Offset* is the starting point in the value of *column_name* at which *expression* is written. *@Offset* is a zero-based ordinal position, is **bigint**, and cannot be a negative number. If *@Offset* is NULL, the update operation appends *expression* at the end of the existing *column_name* value and *@Length* is ignored. If @Offset is greater than the length of the *column_name* value, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns an error. If *@Offset* plus *@Length* exceeds the end of the underlying value in the column, the deletion occurs up to the last character of the value. If *@Offset* plus LEN(*expression*) is greater than the underlying declared size, an error is raised.  
+ @*Offset* is the starting point in the value of *column_name* at which *expression* is written. @*Offset* is a zero-based ordinal position, is **bigint**, and cannot be a negative number. If @*Offset* is NULL, the update operation appends *expression* at the end of the existing *column_name* value and @*Length* is ignored. If @Offset is greater than the length of the *column_name* value, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] returns an error. If @*Offset* plus @*Length* exceeds the end of the underlying value in the column, the deletion occurs up to the last character of the value. If @*Offset* plus LEN(*expression*) is greater than the underlying declared size, an error is raised.  
   
- *@Length* is the length of the section in the column, starting from *@Offset*, that is replaced by *expression*. *@Length* is **bigint** and cannot be a negative number. If *@Length* is NULL, the update operation removes all data from *@Offset* to the end of the *column_name* value.  
+ @*Length* is the length of the section in the column, starting from @*Offset*, that is replaced by *expression*. @*Length* is **bigint** and cannot be a negative number. If @*Length* is NULL, the update operation removes all data from @*Offset* to the end of the *column_name* value.  
   
  For more information, see Remarks.  
   
@@ -324,21 +324,21 @@ GO
 >  The **ntext**, **text**, and **image** data types will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using these data types in new development work, and plan to modify applications that currently use them. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), and [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) instead.  
   
 ### Updating Large Value Data Types  
- Use the **\.**WRITE (_expression_**,** _@Offset_**,**_@Length_) clause to perform a partial or full update of **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. For example, a partial update of a **varchar(max)** column might delete or modify only the first 200 characters of the column, whereas a full update would delete or modify all the data in the column. **.**WRITE updates that insert or append new data are minimally logged if the database recovery model is set to bulk-logged or simple. Minimal logging is not used when existing values are updated. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Use the **.**WRITE **(**_expression_**,**@_Offset_**,**@_Length_**)** clause to perform a partial or full update of **varchar(max)**, **nvarchar(max)**, and **varbinary(max)** data types. For example, a partial update of a **varchar(max)** column might delete or modify only the first 200 characters of the column, whereas a full update would delete or modify all the data in the column. **.WRITE** updates that insert or append new data are minimally logged if the database recovery model is set to bulk-logged or simple. Minimal logging is not used when existing values are updated. For more information, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] converts a partial update to a full update when the UPDATE statement causes either of these actions:  
 -   Changes a key column of the partitioned view or table.  
 -   Modifies more than one row and also updates the key of a nonunique clustered index to a nonconstant value.  
   
-You cannot use the **.**WRITE clause to update a NULL column or set the value of *column_name* to NULL.  
+You cannot use the **.WRITE** clause to update a NULL column or set the value of *column_name* to NULL.  
   
-*@Offset* and *@Length* are specified in bytes for **varbinary** and **varchar** data types and in characters for the **nvarchar** data type. The appropriate offsets are computed for double-byte character set (DBCS) collations.  
+@*Offset* and @*Length* are specified in bytes for **varbinary** and **varchar** data types and in characters for the **nvarchar** data type. The appropriate offsets are computed for double-byte character set (DBCS) collations.  
   
 For best performance, we recommend that data be inserted or updated in chunk sizes that are multiples of 8040 bytes.  
   
-If the column modified by the **.**WRITE clause is referenced in an OUTPUT clause, the complete value of the column, either the before image in **deleted.**_column\_name_ or the after image in **inserted.**_column\_name_, is returned to the specified column in the table variable. See example R that follows.  
+If the column modified by the **\.WRITE** clause is referenced in an OUTPUT clause, the complete value of the column, either the before image in **deleted.**_column\_name_ or the after image in **inserted.**_column\_name_, is returned to the specified column in the table variable. See example R that follows.  
   
-To achieve the same functionality of **.**WRITE with other character or binary data types, use the [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
+To achieve the same functionality of **\.WRITE** with other character or binary data types, use the [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
 ### Updating User-defined Type Columns  
  Updating values in user-defined type columns can be accomplished in one of the following ways:  

@@ -18,7 +18,7 @@ This article explains how to use PolyBase on a SQL Server instance to query exte
 
 ## Prerequisites
 
-If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
+If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites. Once installed, also be sure to [enable PolyBase](polybase-installation.md#enable).
 
 Before creating a database scoped credential a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created. 
 

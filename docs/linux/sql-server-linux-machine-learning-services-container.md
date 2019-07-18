@@ -79,7 +79,7 @@ This tutorial demonstrates how to build a Docker container with SQL Server Machi
    This command creates a SQL Server container with Machine Learning Services with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**.
 
    > [!NOTE]
-   > The process for running production SQL Server editions in containers is slightly different. For more information, see [Run production container images](sql-server-linux-configure-docker.md#production). If you use the same container names and ports, the rest of this walk-through still works with production containers.
+   > The process for running production SQL Server editions in containers is slightly different. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md). If you use the same container names and ports, the rest of this walk-through still works with production containers.
 
 1. To view your Docker containers, use the `docker ps` command.
 

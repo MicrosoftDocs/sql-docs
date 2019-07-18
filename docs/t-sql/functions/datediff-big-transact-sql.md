@@ -1,7 +1,7 @@
 ---
 title: "DATEDIFF_BIG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -32,19 +32,20 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
   
 ## Syntax  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## Arguments  
 *datepart*  
-The part of *startdate* and *enddate* that specifies the type of boundary crossed. `DATEDIFF_BIG` will not accept user-defined variable equivalents. This table lists all valid *datepart* arguments.
+The units in which `DATEDIFF_BIG` reports the difference between the *startdate* and *enddate*. 
 
 > [!NOTE]
-> `DATEDIFF_BIG` does not accept user-defined variable equivalents for the *datepart* arguments.
+> `DATEDIFF_BIG` will not accept *datepart* values from user-defined variables or as quoted strings.
+
+This table lists all valid *datepart* argument names and abbreviations.
   
-|*datepart*|Abbreviations|  
+|*datepart* name| *datepart* abbreviation|  
 |---|---|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  

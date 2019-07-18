@@ -1,7 +1,7 @@
 ---
-title: mssqlctl bdc reference
+title: azdata bdc reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl bdc commands.
+description: Reference article for azdata bdc commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,31 +11,31 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl bdc
+# azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl bdc create](#mssqlctl-bdc-create) | Create Big Data Cluster.
-[mssqlctl bdc delete](#mssqlctl-bdc-delete) | Delete Big Data Cluster.
-[mssqlctl bdc config](reference-mssqlctl-bdc-config.md) | Configuration commands.
-[mssqlctl bdc endpoint](reference-mssqlctl-bdc-endpoint.md) | Endpoint commands.
-[mssqlctl bdc status](reference-mssqlctl-bdc-status.md) | Status commands.
-[mssqlctl bdc debug](reference-mssqlctl-bdc-debug.md) | Debug commands.
-[mssqlctl bdc storage-pool](reference-mssqlctl-bdc-storage-pool.md) | Storage pool commands.
-[mssqlctl bdc control](reference-mssqlctl-bdc-control.md) | Control commands.
-[mssqlctl bdc pool](reference-mssqlctl-bdc-pool.md) | Pool commands.
+[azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.
+[azdata bdc delete](#azdata-bdc-delete) | Delete Big Data Cluster.
+[azdata bdc config](reference-mssqlctl-bdc-config.md) | Configuration commands.
+[azdata bdc endpoint](reference-mssqlctl-bdc-endpoint.md) | Endpoint commands.
+[azdata bdc status](reference-mssqlctl-bdc-status.md) | Status commands.
+[azdata bdc debug](reference-mssqlctl-bdc-debug.md) | Debug commands.
+[azdata bdc storage-pool](reference-mssqlctl-bdc-storage-pool.md) | Storage pool commands.
+[azdata bdc control](reference-mssqlctl-bdc-control.md) | Control commands.
+[azdata bdc pool](reference-mssqlctl-bdc-pool.md) | Pool commands.
 
 ## mssqlctl bdc create
 
 Create a SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
 
 ```bash
-mssqlctl bdc create [--config-profile -c] 
+azdata bdc create [--config-profile -c] 
                     [--accept-eula -a]  
                     [--node-label -l]  
                     [--force -f]
@@ -47,15 +47,15 @@ mssqlctl bdc create [--config-profile -c]
 ### Examples
 Guided BDC deployment experience - you will receive prompts for needed values.
 ```bash
-mssqlctl bdc create
+azdata bdc create
 ```
 BDC deployment with arguments.
 ```bash
-mssqlctl bdc create --accept-eula yes --config-profile aks-dev-test
+azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```
 BDC deployment with arguments - no prompts will be given as the --force flag is used.
 ```bash
-mssqlctl bdc create --accept-eula yes --config-profile aks-dev-test --force
+azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 ```
 ### Optional Parameters
 #### `--config-profile -c`
@@ -77,16 +77,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl bdc delete
+## azdata bdc delete
 Delete the SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD'].
 ```bash
-mssqlctl bdc delete --name -n 
+azdata bdc delete --name -n 
                     [--force -f]
 ```
 ### Examples
 BDC deletion where the controller username and password are already set in your system environment.
 ```bash
-mssqlctl bdc delete --name <cluster_name>
+azdata bdc delete --name <cluster_name>
 ```
 ### Required Parameters
 #### `--name -n`
@@ -108,4 +108,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).

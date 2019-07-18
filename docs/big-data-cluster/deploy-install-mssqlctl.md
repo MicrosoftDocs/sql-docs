@@ -1,7 +1,7 @@
 ---
-title: Install mssqlctl
+title: Install azdata
 titleSuffix: SQL Server big data clusters
-description: Learn how to install the mssqlctl tool for installing and managing SQL Server 2019 big data clusters (preview).
+description: Learn how to install the azdata tool for installing and managing SQL Server 2019 big data clusters (preview).
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,18 +11,26 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install mssqlctl to manage SQL Server big data clusters
+# Install azdata to manage SQL Server big data clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to install the **mssqlctl** tool for CTP 3.2 on Windows or Linux.
+This article describes how to install the **azdata** tool for CTP 3.2 on Windows or Linux.
 
-**mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
+**azdata** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **azdata** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
-> If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
+> If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading **azdata** and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
 
-## <a id="windows"></a> Windows mssqlctl installation
+To install azdata, you need to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). To confirm your acceptance, either:
+
+* Set the **ACCEPT_EULA** environment variable
+   or
+* Include `--accept-eula` in the installation command.
+
+In this article, the examples include `--accept-eula`.
+
+## <a id="windows"></a> Windows azdata installation
 
 1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
 
@@ -31,27 +39,27 @@ This article describes how to install the **mssqlctl** tool for CTP 3.2 on Windo
 
 1. Open a new Windows PowerShell session so that it gets the latest path with Python in it.
 
-1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
+1. Prior to CTP 3.2 **azdata** was called **mssqlctl**. If you have any previous releases of **mssqlctl** or **azdata** installed, it is important to uninstall first before installing the latest version.
 
    If you are uninstalling **mssqlctl** corresponding to CTP version 2.2 or lower run:
 
    ```powershell
-   pip3 uninstall mssqlctl
+   pip3 uninstall azdata
    ```
 
-   For CTP 2.3 or higher, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. If the version is prior to CTP 3.0, add a dash before the version number (for example, `ctp-2.5`).
+   For CTP 2.3 or higher, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. If the version is prior to CTP 3.0, add a dash before the version number (for example, `ctp-2.5`). If you are uninstalling **azdata** replace **mssqlctl** with **azdata**. 
 
    ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
-1. Install **mssqlctl** with the following command:
+1. Install **azdata** with the following command:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.2/mssqlctl/requirements.txt
+   pip3 install -r  https://mcr.microsoft.com/python/ctp3.2/azdata/requirements.txt
    ```
 
-## <a id="linux"></a> Linux mssqlctl installation
+## <a id="linux"></a> Linux azdata installation
 
 On Linux, you must install Python 3.5 and then upgrade pip. The following example shows the commands that would work for Ubuntu. For other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
@@ -69,12 +77,12 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    sudo -H pip3 install --upgrade pip
    ```
 
-1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
+1. If you have any previous releases of **azdata** installed, it is important to uninstall **azdata** first before installing the latest version.
 
-   If you are uninstalling **mssqlctl** corresponding to CTP version 2.2 or lower run:
+   If you are uninstalling **azdata** corresponding to CTP version 2.2 or lower run:
 
    ```powershell
-   pip3 uninstall mssqlctl
+   pip3 uninstall azdata
    ```
 
    For CTP 2.3 or higher, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. If the version is prior to CTP 3.0, add a dash before the version number (for example, `ctp-2.5`).
@@ -83,14 +91,14 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
-1. Install **mssqlctl** with the following command:
+1. Install **azdata** with the following command:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.2/mssqlctl/requirements.txt --user
+   pip3 install -r  https://mcr.microsoft.com/python/ctp3.2/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]
-   > The `--user` switch installs mssqlctl to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./mssqlctl` from there.
+   > The `--user` switch installs azdata to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./azdata` from there.
 
 ## Next steps
 

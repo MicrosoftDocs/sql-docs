@@ -37,7 +37,7 @@ HDFS tiering supports refresh. Refresh an existing mount for the latest snapshot
 
 - [Deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-  - **mssqlctl**
+  - **azdata**
   - **kubectl**
 
 ## Mounting instructions

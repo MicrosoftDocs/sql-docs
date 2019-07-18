@@ -1,7 +1,7 @@
 ---
-title: mssqlctl hdfs reference
+title: azdata hdfs reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl hdfs commands.
+description: Reference article for azdata hdfs commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,35 +11,35 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl hdfs
+# azdata hdfs
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **hdfs** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **hdfs** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl hdfs shell](#mssqlctl-hdfs-shell) | The HDFS shell is a simple interactive command shell for HDFS file system.
-[mssqlctl hdfs ls](#mssqlctl-hdfs-ls) | List the status of the given file or directory.
-[mssqlctl hdfs exists](#mssqlctl-hdfs-exists) | Determine if a file or directory exists.  Returns True if exists and False otherwise.
-[mssqlctl hdfs mkdir](#mssqlctl-hdfs-mkdir) | Create a directory at the specified path.
-[mssqlctl hdfs mv](#mssqlctl-hdfs-mv) | Move the specified file or path to the specified location.
-[mssqlctl hdfs create](#mssqlctl-hdfs-create) | Create the text file at the specified location.  Simple text content can be added via data parameter.
-[mssqlctl hdfs read](#mssqlctl-hdfs-read) | Read content of a file.  Offset and length in bytes are optional parameters.
-[mssqlctl hdfs rm](#mssqlctl-hdfs-rm) | Remove a file or directory.
-[mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | Recursively remove a file or directory.
-[mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | Change the permission on the specified file or directory.
-[mssqlctl hdfs chown](#mssqlctl-hdfs-chown) | Change the owner or group of the specified file.
-## mssqlctl hdfs shell
+[azdata hdfs shell](#azdata-hdfs-shell) | The HDFS shell is a simple interactive command shell for HDFS file system.
+[azdata hdfs ls](#azdata-hdfs-ls) | List the status of the given file or directory.
+[azdata hdfs exists](#azdata-hdfs-exists) | Determine if a file or directory exists.  Returns True if exists and False otherwise.
+[azdata hdfs mkdir](#azdata-hdfs-mkdir) | Create a directory at the specified path.
+[azdata hdfs mv](#azdata-hdfs-mv) | Move the specified file or path to the specified location.
+[azdata hdfs create](#azdata-hdfs-create) | Create the text file at the specified location.  Simple text content can be added via data parameter.
+[azdata hdfs read](#azdata-hdfs-read) | Read content of a file.  Offset and length in bytes are optional parameters.
+[azdata hdfs rm](#azdata-hdfs-rm) | Remove a file or directory.
+[azdata hdfs rmr](#azdata-hdfs-rmr) | Recursively remove a file or directory.
+[azdata hdfs chmod](#azdata-hdfs-chmod) | Change the permission on the specified file or directory.
+[azdata hdfs chown](#azdata-hdfs-chown) | Change the owner or group of the specified file.
+## azdata hdfs shell
 The HDFS shell is a simple interactive command shell for HDFS file system.
 ```bash
-mssqlctl hdfs shell 
+azdata hdfs shell 
 ```
 ### Examples
 Launch the shell.
 ```bash
-mssqlctl hdfs shell
+azdata hdfs shell
 ```
 ### Global Arguments
 #### `--debug`
@@ -52,16 +52,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs ls
+## azdata hdfs ls
 List the status of the given file or directory.
 ```bash
-mssqlctl hdfs ls --path -p 
+azdata hdfs ls --path -p 
                  
 ```
 ### Examples
 List Status
 ```bash
-mssqlctl hdfs ls --path '/tmp'
+azdata hdfs ls --path '/tmp'
 ```
 ### Required Parameters
 #### `--path -p`
@@ -77,16 +77,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs exists
+## azdata hdfs exists
 Determine if a file or directory exists.  Returns True if exists and False otherwise.
 ```bash
-mssqlctl hdfs exists --path -p 
+azdata hdfs exists --path -p 
                      
 ```
 ### Examples
 Check for file or directory existance.
 ```bash
-mssqlctl hdfs exists --path '/tmp'
+azdata hdfs exists --path '/tmp'
 ```
 ### Required Parameters
 #### `--path -p`
@@ -102,16 +102,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs mkdir
+## azdata hdfs mkdir
 Create a directory at the specified path.
 ```bash
-mssqlctl hdfs mkdir --path -p 
+azdata hdfs mkdir --path -p 
                     
 ```
 ### Examples
 Make directory.
 ```bash
-mssqlctl hdfs mkdir --path '/tmp'
+azdata hdfs mkdir --path '/tmp'
 ```
 ### Required Parameters
 #### `--path -p`
@@ -127,16 +127,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs mv
+## azdata hdfs mv
 Move the specified file or path to the specified location.
 ```bash
-mssqlctl hdfs mv --source-path -s 
+azdata hdfs mv --source-path -s 
                  --target-path -t
 ```
 ### Examples
 Move file or directory.
 ```bash
-mssqlctl hdfs mv --source-path '/tmp' --target-path '/dest'
+azdata hdfs mv --source-path '/tmp' --target-path '/dest'
 ```
 ### Required Parameters
 #### `--source-path -s`
@@ -154,16 +154,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs create
+## azdata hdfs create
 Create the text file at the specified location.  Simple text content can be added via data parameter.
 ```bash
-mssqlctl hdfs create --path -p 
+azdata hdfs create --path -p 
                      --data -d
 ```
 ### Examples
 Create file.
 ```bash
-mssqlctl hdfs create --path '/tmp/test.txt' --data "This is a test."
+azdata hdfs create --path '/tmp/test.txt' --data "This is a test."
 ```
 ### Required Parameters
 #### `--path -p`
@@ -181,17 +181,17 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs read
+## azdata hdfs read
 Read content of a file.  Offset and length in bytes are optional parameters.
 ```bash
-mssqlctl hdfs read --path -p 
+azdata hdfs read --path -p 
                    --offset  
                    --length -l
 ```
 ### Examples
 Read file.
 ```bash
-mssqlctl hdfs read --path '/tmp/test.txt'
+azdata hdfs read --path '/tmp/test.txt'
 ```
 ### Required Parameters
 #### `--path -p`
@@ -211,16 +211,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs rm
+## azdata hdfs rm
 Remove a file or directory.
 ```bash
-mssqlctl hdfs rm --path -p 
+azdata hdfs rm --path -p 
                  
 ```
 ### Examples
 Remove a file or directory.
 ```bash
-mssqlctl hdfs rm --path '/tmp'
+azdata hdfs rm --path '/tmp'
 ```
 ### Required Parameters
 #### `--path -p`
@@ -236,16 +236,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs rmr
+## azdata hdfs rmr
 Recursively remove a file or directory.
 ```bash
-mssqlctl hdfs rmr --path -p 
+azdata hdfs rmr --path -p 
                   
 ```
 ### Examples
 Recursive remove directory.
 ```bash
-mssqlctl hdfs rmr --path '/tmp'
+azdata hdfs rmr --path '/tmp'
 ```
 ### Required Parameters
 #### `--path -p`
@@ -261,16 +261,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs chmod
+## azdata hdfs chmod
 Change the permission on the specified file or directory.
 ```bash
-mssqlctl hdfs chmod --path -p 
+azdata hdfs chmod --path -p 
                     --permission
 ```
 ### Examples
 Change file or directory permission.
 ```bash
-mssqlctl hdfs chmod --permission 775 --path '/tmp/test.txt'
+azdata hdfs chmod --permission 775 --path '/tmp/test.txt'
 ```
 ### Required Parameters
 #### `--path -p`
@@ -288,17 +288,17 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl hdfs chown
+## azdata hdfs chown
 Change the owner or group of the specified file.
 ```bash
-mssqlctl hdfs chown --path -p 
+azdata hdfs chown --path -p 
                     --owner  
                     --group -g
 ```
 ### Examples
 Change the owner and group.
 ```bash
-mssqlctl hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
+azdata hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
 ```
 ### Required Parameters
 #### `--path -p`
@@ -321,4 +321,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).

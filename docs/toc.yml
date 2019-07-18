@@ -65,7 +65,7 @@
       items:
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
-      - name: Install mssqlctl
+      - name: Install azdata
         href: big-data-cluster/deploy-install-mssqlctl.md
     - name: Deploy
       items:
@@ -143,7 +143,7 @@
         href: big-data-cluster/data-ingestion-restore-database.md
     - name: Deploy and consume apps
       items:
-      - name: Deploy with mssqlctl
+      - name: Deploy with azdata
         href: big-data-cluster/big-data-cluster-create-apps.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md
@@ -189,9 +189,9 @@
       items:
       - name: Deployment configuration file
         href: big-data-cluster/reference-deployment-config.md
-    - name: mssqlctl reference
+    - name: azdata reference
       items:
-      - name: mssqlctl
+      - name: azdata
         href: big-data-cluster/reference-mssqlctl.md
       - name: App Deploy
         items:

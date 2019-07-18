@@ -26,8 +26,8 @@ For the current information, see [What's New in SQL Server 2019](what-s-new-in-s
 
 | New feature or update | Details |
 |:---|:---|
-| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](../big-data-cluster/reference-mssqlctl.md). |
-|New status commands for `mssqlsctl`|`mssqlctl` adds new commands to complement existing monitoring commands. These replace the cluster administration portal - which is removed in this release.|
+| `azdata` command changes | `azdata cluster` commands have been renamed to `azdata bdc`. For more information, see the [`azdata` reference](../big-data-cluster/reference-mssqlctl.md). |
+|New status commands for `mssqlsctl`|`azdata` adds new commands to complement existing monitoring commands. These replace the cluster administration portal - which is removed in this release.|
 | Spark compute pools | Create additional nodes to increase Spark compute power without having to scale up storage. In addition, you can start storage pool nodes that aren't used for Spark. Spark and storage are decoupled. For more information, see [Configure storage without spark](../big-data-cluster/deployment-custom-configuration.md#sparkstorage). |
 | MSSQL Spark connector | Support for read/write to data pool external tables. Previous releases supported read/write to MASTER instance tables only. For more information, see [How to read and write to SQL Server from Spark using the MSSQL Spark Connector](../big-data-cluster/spark-mssql-connector.md). |
 | Machine Learning using MLeap | [Train an MLeap machine learning model in Spark and score it in SQL Server using the Java language extension](../big-data-cluster/spark-create-machine-learning-model.md). |
@@ -57,7 +57,7 @@ For the current information, see [What's New in SQL Server 2019](what-s-new-in-s
 
 | New feature or update | Details |
 |:---|:---|
-| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
+| **azdata** updates | Several **azdata** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **azdata login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
 | Multiple compute pool instances | Support for multiple compute pool instances. |
 | New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
@@ -108,9 +108,9 @@ For the current information, see [What's New in SQL Server 2019](what-s-new-in-s
 | New feature or update | Details |
 |:---|:---|
 | Deployment profiles | Use default and customized [deployment configuration JSON files](../big-data-cluster/deployment-guidance.md#configfile) for big data cluster deployments instead of environment variables. |
-| Prompted deployments | `mssqlctl cluster create` now prompts for any necessary settings for default deployments. |
+| Prompted deployments | `azdata cluster create` now prompts for any necessary settings for default deployments. |
 | Service endpoint and pod name changes | For more information, see the [big data cluster release notes](../big-data-cluster/release-notes-big-data-cluster.md). |
-| **mssqlctl** improvements | Use **mssqlctl** to [list external endpoints](../big-data-cluster/deployment-guidance.md#endpoints) and check the version of **mssqlctl** with the `--version` parameter. |
+| **azdata** improvements | Use **azdata** to [list external endpoints](../big-data-cluster/deployment-guidance.md#endpoints) and check the version of **azdata** with the `--version` parameter. |
 | Offline install | [Guidance for offline big data cluster deployments](../big-data-cluster/deploy-offline.md). |
 | HDFS tiering improvements | HDFS tiering against Amazon S3 storage. OAuth support for ADLS Gen2. Caching functionality for better performance. For more information, see [HSDFS Tiering](../big-data-cluster/hdfs-tiering.md) |
 | Spark to SQL Server connector | [Read and write to SQL Server from Spark using the MSSQL JDBC Connector](../big-data-cluster/spark-mssql-connector.md) |
@@ -174,11 +174,11 @@ For the current information, see [What's New in SQL Server 2019](what-s-new-in-s
 | Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on SQL Server big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md) |
 | Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](../big-data-cluster/big-data-cluster-create-apps.md) |
 | VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to SQL Server big data clusters](../big-data-cluster/app-deployment-extension.md) |
-| Changes to the **mssqlctl** tool command usage. | For more details see the [known issues for mssqlctl](../big-data-cluster/release-notes-big-data-cluster.md#mssqlctlctp23). |
+| Changes to the **azdata** tool command usage. | For more details see the [known issues for azdata](../big-data-cluster/release-notes-big-data-cluster.md#azdatactp23). |
 | Use Sparklyr in big data cluster. | [Use Sparklyr in SQL Server 2019 big data cluster](../big-data-cluster/sparklyr-from-RStudio.md) |
 | Mount external HDFS-compatible storage into big data cluster with **HDFS tiering**. | See [HDFS tiering](../big-data-cluster/hdfs-tiering.md). |
 | New unified connection experience for the SQL Server master instance and the HDFS/Spark Gateway. | See [SQL Server master instance and the HDFS/Spark Gateway](../big-data-cluster/connect-to-big-data-cluster.md). |
-| Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
+| Deleting a cluster with **azdata cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
 | _Security_ endpoint names have been changed and consolidated. | **service-security-lb** and **service-security-nodeport** have been consolidated into the **endpoint-security** endpoint. |
 | _Proxy_ endpoint names have been changed and consolidated. | **service-proxy-lb** and **service-proxy-nodeport** have been consolidated into the **endpoint-service-proxy** endpoint. |
 | _Controller_ endpoint names have been changed and consolidated. | **service-mssql-controller-lb** and **service-mssql-controller-nodeport** have been consolidated into the **endpoint-controller** endpoint. |
@@ -224,7 +224,7 @@ For the current information, see [What's New in SQL Server 2019](what-s-new-in-s
 | New feature or update | Details |
 |:-----|:-----|
 |Use SparkR from Azure Data Studio on a big data cluster. | |
-|Deploy Python and R apps.|[Deploy applications using mssqlctl](../big-data-cluster/big-data-cluster-create-apps.md) |
+|Deploy Python and R apps.|[Deploy applications using azdata](../big-data-cluster/big-data-cluster-create-apps.md) |
 | &nbsp; | &nbsp; |
 
 ### Database engine

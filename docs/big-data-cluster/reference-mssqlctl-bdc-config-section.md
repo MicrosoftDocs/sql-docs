@@ -1,7 +1,7 @@
 ---
-title: mssqlctl bdc config section reference
+title: azdata bdc config section reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl bdc config section commands.
+description: Reference article for azdata bdc config section commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,21 +11,21 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl bdc config section
+# azdata bdc config section
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc config section** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc config section** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl bdc config section show](#mssqlctl-bdc-config-section-show) | Gets a section from a config profile.
-[mssqlctl bdc config section set](#mssqlctl-bdc-config-section-set) | Sets a section for a config profile.
-## mssqlctl bdc config section show
+[azdata bdc config section show](#azdata-bdc-config-section-show) | Gets a section from a config profile.
+[azdata bdc config section set](#azdata-bdc-config-section-set) | Sets a section for a config profile.
+## azdata bdc config section show
 Gets the specified section from the selected config profile according to the given json path.
 ```bash
-mssqlctl bdc config section show --json-path -j 
+azdata bdc config section show --json-path -j 
                                  --config-profile -c  
                                  [--target -t]  
                                  [--force -f]
@@ -33,11 +33,11 @@ mssqlctl bdc config section show --json-path -j
 ### Examples
 Gets a value at the end of a simple json key path.
 ```bash
-mssqlctl bdc config section show --config-profile custom-config --json-path 'metadata.name' --target section.json
+azdata bdc config section show --config-profile custom-config --json-path 'metadata.name' --target section.json
 ```
 Gets a value at the end of a json key path with a conditional
 ```bash
-mssqlctl bdc config section show --config-profile custom-config  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
+azdata bdc config section show --config-profile custom-config  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
 ```
 ### Required Parameters
 #### `--json-path -j`
@@ -60,43 +60,43 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl bdc config section set
+## azdata bdc config section set
 Sets the specified section in the selected config profile according to the given json path.  All examplesbelow are given in Bash.  If using another command line, please be aware that you may need to escapequotations appropriately.  Alternatively, you may use the patch file functionality.
 ```bash
-mssqlctl bdc config section set --config-profile -c 
+azdata bdc config section set --config-profile -c 
                                 [--json-values -j]  
                                 [--patch-file -p]
 ```
 ### Examples
 Ex 1 (inline) - Set the port of a single endpoint (Controller Endpoint).
 ```bash
-mssqlctl bdc config section set --config-profile custom-config --json-values '$.spec.controlPlane.spec.endpoints[?(@.name=="Controller")].port=30080'
+azdata bdc config section set --config-profile custom-config --json-values '$.spec.controlPlane.spec.endpoints[?(@.name=="Controller")].port=30080'
 ```
 Ex 1 (patch) - Set the port of a single endpoint (Controller Endpoint) with patch file.
 ```bash
-mssqlctl bdc config section set --config-profile custom-config --patch ./patch.json
+azdata bdc config section set --config-profile custom-config --patch ./patch.json
 
     Patch File Example (patch.json): 
         {"patch":[{"op":"replace","path":"$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
 ```
 Ex 2 (inline) - Set control plane storage.
 ```bash
-mssqlctl bdc config section set --config-profile custom-config --json-values 'spec.controlPlane.spec.storage=spec.controlPlane.spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config section set --config-profile custom-config --json-values 'spec.controlPlane.spec.storage=spec.controlPlane.spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
 ```
 Ex 2 (patch) - Set control plane storage with patch file.
 ```bash
-mssqlctl bdc config section set --config-profile custom-config --patch ./patch.json
+azdata bdc config section set --config-profile custom-config --patch ./patch.json
 
     Patch File Example (patch.json): 
         {"patch":[{"op":"replace","path":"spec.controlPlane.spec.storage","value":{"accessMode":"ReadWriteMany","className":"managed-premium","size":"10Gi"}}]}
 ```
 Ex 3(inline) - Set pool storage, including replicas (Storage Pool).
 ```bash
-mssqlctl bdc config section set --config-profile custom-config --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config section set --config-profile custom-config --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
 Ex 3 (patch) - Set pool storage, including replicas (Storage Pool) with patch file.
 ```bash
-mssqlctl bdc config section set --config-profile custom-config --patch ./patch.json
+azdata bdc config section set --config-profile custom-config --patch ./patch.json
 
     Patch File Example (patch.json): 
         {"patch":[{"op":"replace","path":"$.spec.pools[?(@.spec.type == 'Storage')].spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
@@ -123,4 +123,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).

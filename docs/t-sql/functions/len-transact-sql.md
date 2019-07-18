@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the number of characters of the specified string expression, excluding trailing blanks.  
+  Returns the number of characters of the specified string expression, excluding trailing spaces.  
   
 > [!NOTE]  
 >  To return the number of bytes used to represent an expression, use the [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) function.  
@@ -47,7 +47,7 @@ LEN ( string_expression )
  If you are using SC collations, the returned integer value counts UTF-16 surrogate pairs as a single character. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## Remarks  
- LEN excludes trailing blanks. If that is a problem, consider using the [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) function which does not trim the string. If processing a unicode string, DATALENGTH will return twice the number of characters. The following example demonstrates LEN and DATALENGTH with a trailing space.  
+ LEN excludes trailing spaces. If that is a problem, consider using the [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) function which does not trim the string. If processing a unicode string, DATALENGTH will return twice the number of characters. The following example demonstrates LEN and DATALENGTH with a trailing space.  
   
 ```  
 DECLARE @v1 varchar(40),  

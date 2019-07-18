@@ -52,9 +52,9 @@ Execute Java code from within T-SQL script:
 
 + [Tutorial: Regular expressions with Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
-## Limitations in CTP 3.0
+## Limitations in CTP 3.2
 
-SQL Server Language Extensions is currently in public preview. There are some limitations in CTP 3.0:
+SQL Server Language Extensions is currently in public preview. There are some limitations in CTP 3.2:
 
 * The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 

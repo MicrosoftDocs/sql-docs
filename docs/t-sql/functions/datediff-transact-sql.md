@@ -1,7 +1,7 @@
 ---
 title: "DATEDIFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/13/2018"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -43,14 +43,19 @@ See [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-tra
   
 ## Syntax  
   
-```sql
+```
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
 ## Arguments  
 *datepart*  
-The part of *startdate* and *enddate* that specifies the type of boundary crossed. `DATEDIFF` will not accept user-defined variable equivalents. This table lists all valid *datepart* arguments.
-  
+The units in which `DATEDIFF` reports the difference between the *startdate* and *enddate*. 
+
+> [!NOTE]
+> `DATEDIFF` will not accept *datepart* values from user-defined variables or as quoted strings. 
+
+This table lists all valid *datepart* argument names and abbreviations.
+
 |*datepart*|Abbreviations|  
 |---|---|
 |**year**|**yy, yyyy**|  

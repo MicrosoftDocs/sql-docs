@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Backup and Restore: Interoperability and Coexistence (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

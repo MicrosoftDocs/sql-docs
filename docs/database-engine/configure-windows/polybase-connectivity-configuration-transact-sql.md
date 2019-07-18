@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # PolyBase Connectivity Configuration (Transact-SQL)

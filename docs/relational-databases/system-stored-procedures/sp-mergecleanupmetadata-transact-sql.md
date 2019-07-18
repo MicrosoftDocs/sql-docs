@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

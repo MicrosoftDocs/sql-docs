@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

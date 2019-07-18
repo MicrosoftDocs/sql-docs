@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

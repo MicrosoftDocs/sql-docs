@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

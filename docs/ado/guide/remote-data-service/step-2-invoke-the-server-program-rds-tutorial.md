@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Step 2: Invoke the Server Program (RDS Tutorial)
 When you invoke a method on the client *proxy*, the actual program on the server executes the method. In this step, you'll execute a query on the server.  

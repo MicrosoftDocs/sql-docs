@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

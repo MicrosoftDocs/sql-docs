@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create a Push Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

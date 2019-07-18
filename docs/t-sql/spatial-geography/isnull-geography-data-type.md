@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # IsNull (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

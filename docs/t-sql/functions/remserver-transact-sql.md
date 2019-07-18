@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # &#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

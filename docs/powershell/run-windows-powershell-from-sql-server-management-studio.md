@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 1f841825-da1f-4062-9a81-3cdbab03845b
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Run Windows PowerShell from SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

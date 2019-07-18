@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Access the CDC Designer Console
 

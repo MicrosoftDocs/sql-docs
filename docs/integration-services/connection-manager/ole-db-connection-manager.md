@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OLE DB Connection Manager
 

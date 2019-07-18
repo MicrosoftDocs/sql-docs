@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

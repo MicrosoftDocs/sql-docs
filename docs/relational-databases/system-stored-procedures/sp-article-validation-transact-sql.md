@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

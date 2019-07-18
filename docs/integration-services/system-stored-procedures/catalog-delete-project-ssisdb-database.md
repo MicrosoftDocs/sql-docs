@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.delete_project (SSISDB Database)
 

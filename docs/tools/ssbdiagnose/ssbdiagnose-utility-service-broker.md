@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # ssbdiagnose Utility (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

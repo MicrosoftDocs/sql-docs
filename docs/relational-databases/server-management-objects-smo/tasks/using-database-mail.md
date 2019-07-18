@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Database Mail

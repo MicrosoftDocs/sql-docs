@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # The &lt;xsd:redefine&gt; Element
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

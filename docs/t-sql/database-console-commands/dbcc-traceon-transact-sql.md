@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

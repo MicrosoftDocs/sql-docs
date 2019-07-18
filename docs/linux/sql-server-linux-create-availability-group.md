@@ -4,7 +4,6 @@ description: This tutorial shows how to create and configure availability groups
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql

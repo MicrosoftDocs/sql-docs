@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Query Expressions and Uniform Resource Names
 

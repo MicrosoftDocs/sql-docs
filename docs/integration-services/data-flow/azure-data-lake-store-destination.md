@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Data Lake Store Destination
 

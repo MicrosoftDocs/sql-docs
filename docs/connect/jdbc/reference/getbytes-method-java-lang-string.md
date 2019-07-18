@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 4d0dac7f-7f39-47a2-953e-80ab03688d82
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getBytes Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

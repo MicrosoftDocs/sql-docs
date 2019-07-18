@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete a Database

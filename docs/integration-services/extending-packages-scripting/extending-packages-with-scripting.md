@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Extending Packages with Scripting
 

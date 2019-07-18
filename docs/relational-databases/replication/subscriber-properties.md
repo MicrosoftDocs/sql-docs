@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Subscriber Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

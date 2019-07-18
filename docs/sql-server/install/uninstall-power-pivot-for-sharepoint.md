@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: "markingmyname"
 ms.author: "maghan"
-manager: "kfile"
+manager: kfile
 ---
 # Uninstall Power Pivot for SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

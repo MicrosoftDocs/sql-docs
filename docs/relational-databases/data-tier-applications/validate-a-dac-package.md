@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Validate a DAC Package
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

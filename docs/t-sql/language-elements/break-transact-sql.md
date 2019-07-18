@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 67c30b8d-3f15-41ad-b9a9-a4ced3b2af9f
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BREAK (Transact-SQL)

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_set_config_history_retention (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

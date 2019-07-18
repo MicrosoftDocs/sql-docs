@@ -5,7 +5,6 @@ description: This article provides useful commands for monitoring and troublesho
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetStmtOption Mapping
 When an application calls **SQLSetStmtOption** through an ODBC *3.x* driver, the call to  

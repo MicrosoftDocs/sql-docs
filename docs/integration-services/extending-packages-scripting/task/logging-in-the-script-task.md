@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Logging in the Script Task
 

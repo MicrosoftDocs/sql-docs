@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Preprocess a Schema to Merge Included Schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

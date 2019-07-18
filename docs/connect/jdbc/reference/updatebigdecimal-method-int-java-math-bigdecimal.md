@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateBigDecimal Method (int, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

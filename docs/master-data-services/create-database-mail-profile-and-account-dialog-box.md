@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create Database Mail Profile and Account Dialog Box
 

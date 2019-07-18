@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Returning Results from the Script Task
 

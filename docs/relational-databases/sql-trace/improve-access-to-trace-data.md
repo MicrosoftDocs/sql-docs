@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Improve Access to Trace Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

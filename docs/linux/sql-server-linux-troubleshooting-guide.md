@@ -3,7 +3,6 @@ title: Troubleshoot SQL Server on Linux
 description: Provides troubleshooting tips for using SQL Server on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql

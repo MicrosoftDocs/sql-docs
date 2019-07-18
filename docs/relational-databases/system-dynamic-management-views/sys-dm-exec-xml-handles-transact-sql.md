@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl 
 ms.author: pelopes
-manager: craigg
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_xml_handles (Transact-SQL)

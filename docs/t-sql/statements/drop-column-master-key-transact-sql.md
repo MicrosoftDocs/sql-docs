@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DROP COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

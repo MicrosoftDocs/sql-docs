@@ -6,7 +6,6 @@ author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: jroth
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: "seodec18"

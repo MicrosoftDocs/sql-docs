@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Database Mirroring Monitor (Warnings Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

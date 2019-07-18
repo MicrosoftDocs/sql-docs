@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services features supported by the editions of SQL Server
 

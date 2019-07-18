@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # SQL Server PowerShell Provider
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

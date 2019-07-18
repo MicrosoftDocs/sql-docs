@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Global Settings (Output Window) (MySQLToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

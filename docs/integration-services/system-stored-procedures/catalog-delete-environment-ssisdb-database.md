@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.delete_environment (SSISDB Database)
 

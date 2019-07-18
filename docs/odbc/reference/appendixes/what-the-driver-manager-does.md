@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # What the Driver Manager Does
 The following table summarizes how the ODBC *3.x* Driver Manager maps calls to ODBC *2.x* and ODBC *3.x* drivers.  

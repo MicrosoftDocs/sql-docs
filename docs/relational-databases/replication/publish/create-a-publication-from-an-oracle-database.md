@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create a Publication from an Oracle Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

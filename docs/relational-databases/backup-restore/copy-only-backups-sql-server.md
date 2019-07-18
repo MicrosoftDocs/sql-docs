@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Copy-Only Backups (SQL Server)

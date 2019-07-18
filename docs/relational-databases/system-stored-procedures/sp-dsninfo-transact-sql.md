@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

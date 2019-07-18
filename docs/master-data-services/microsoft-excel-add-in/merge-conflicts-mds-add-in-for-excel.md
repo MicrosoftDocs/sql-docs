@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Merge Conflicts (MDS Add-in for Excel)
 

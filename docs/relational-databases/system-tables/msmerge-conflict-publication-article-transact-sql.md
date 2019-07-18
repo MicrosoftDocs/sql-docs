@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: dc4490b4-02d8-4dfc-98f5-0cf8de8e11be
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSmerge_conflict_&lt;publication&gt;_&lt;article&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

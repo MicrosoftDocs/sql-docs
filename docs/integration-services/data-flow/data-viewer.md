@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Viewer
 

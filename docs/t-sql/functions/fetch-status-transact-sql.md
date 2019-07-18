@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # &#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

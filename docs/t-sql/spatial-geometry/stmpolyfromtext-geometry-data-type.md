@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STMPolyFromText (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

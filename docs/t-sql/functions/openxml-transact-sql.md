@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

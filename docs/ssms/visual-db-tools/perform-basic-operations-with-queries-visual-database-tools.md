@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 
 ---
 # Perform Basic Operations with Queries (Visual Database Tools)

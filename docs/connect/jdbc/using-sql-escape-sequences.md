@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Using SQL Escape Sequences
 

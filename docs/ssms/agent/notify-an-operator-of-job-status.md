@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Notify an Operator of Job Status

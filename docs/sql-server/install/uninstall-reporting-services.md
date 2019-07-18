@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: "markingmyname"
 ms.author: "maghan"
-manager: "kfile"
+manager: kfile
 ---
 # Uninstall Reporting Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

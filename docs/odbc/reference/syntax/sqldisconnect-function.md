@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDisconnect Function
 **Conformance**  

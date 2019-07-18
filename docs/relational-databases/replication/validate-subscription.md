@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Validate Subscription
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

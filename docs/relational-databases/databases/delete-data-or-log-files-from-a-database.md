@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Delete Data or Log Files from a Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

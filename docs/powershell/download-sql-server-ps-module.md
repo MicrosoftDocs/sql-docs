@@ -11,7 +11,6 @@ keywords:
 ms.assetid: 
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Install SQL Server PowerShell module
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

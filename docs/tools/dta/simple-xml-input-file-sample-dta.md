@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Simple XML Input File Sample (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

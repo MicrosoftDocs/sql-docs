@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Log Reader Agent Security
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

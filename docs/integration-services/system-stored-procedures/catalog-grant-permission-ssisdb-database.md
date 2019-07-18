@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.grant_permission (SSISDB Database)
 

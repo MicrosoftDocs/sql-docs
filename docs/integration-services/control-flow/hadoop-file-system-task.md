@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Hadoop File System Task
 

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Precedence Constraints
 

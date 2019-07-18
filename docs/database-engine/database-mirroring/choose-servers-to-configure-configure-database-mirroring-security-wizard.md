@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Choose Servers to Configure (Configure Database Mirroring Security Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

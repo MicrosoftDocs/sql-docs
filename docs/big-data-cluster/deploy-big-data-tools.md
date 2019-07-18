@@ -5,7 +5,6 @@ description: Learn how to install tools used with SQL Server 2019 big data clust
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql

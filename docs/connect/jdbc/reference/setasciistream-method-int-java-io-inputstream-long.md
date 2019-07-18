@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9dfa7781-d72f-407a-a8d4-1c78c9446d09
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setAsciiStream Method (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

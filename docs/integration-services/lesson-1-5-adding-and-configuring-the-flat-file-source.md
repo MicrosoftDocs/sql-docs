@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 1-5: Add and configure the Flat File source
 

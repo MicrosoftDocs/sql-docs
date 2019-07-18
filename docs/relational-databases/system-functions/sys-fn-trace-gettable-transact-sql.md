@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

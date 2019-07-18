@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

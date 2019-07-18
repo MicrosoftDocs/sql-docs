@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Step 3: Proof of concept connecting to SQL using Java
   

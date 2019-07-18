@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetStrValue Method (ClientNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

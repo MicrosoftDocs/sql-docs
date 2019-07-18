@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Run-time Methods of a Data Flow Component
 

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STGeometryN (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

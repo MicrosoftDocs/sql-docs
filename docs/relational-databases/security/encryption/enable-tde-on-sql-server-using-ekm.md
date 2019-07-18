@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enable TDE on SQL Server Using EKM

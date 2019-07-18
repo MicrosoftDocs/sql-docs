@@ -4,7 +4,6 @@ titleSuffix: SQL Server
 description: This article describes how to install the SQL Server Tools on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql

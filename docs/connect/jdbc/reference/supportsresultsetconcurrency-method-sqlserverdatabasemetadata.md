@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsResultSetConcurrency Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

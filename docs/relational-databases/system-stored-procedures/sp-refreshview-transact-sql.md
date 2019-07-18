@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

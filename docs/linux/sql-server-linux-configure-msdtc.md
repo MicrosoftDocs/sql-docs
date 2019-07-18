@@ -3,7 +3,6 @@ title: How to configure MSDTC on Linux
 description: This article provides a walk-through for configuring MSDTC on Linux.
 author: VanMSFT 
 ms.author: vanto
-manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql

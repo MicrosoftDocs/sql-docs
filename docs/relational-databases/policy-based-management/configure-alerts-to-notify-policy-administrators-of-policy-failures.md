@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Configure Alerts to Notify Policy Administrators of Policy Failures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication Queue Reader Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

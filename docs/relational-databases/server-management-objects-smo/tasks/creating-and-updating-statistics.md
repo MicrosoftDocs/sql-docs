@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating and Updating Statistics

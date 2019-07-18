@@ -7,7 +7,6 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Differences in SQL Server Machine Learning Services installation in SQL Server 2019  

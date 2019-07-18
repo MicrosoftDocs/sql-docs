@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTransact Function
 **Conformance**  

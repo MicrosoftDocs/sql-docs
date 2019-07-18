@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Check Constraints for Replication

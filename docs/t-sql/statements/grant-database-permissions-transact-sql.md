@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Permissions (Transact-SQL)

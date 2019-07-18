@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IBCPSession (OLE DB)

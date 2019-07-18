@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

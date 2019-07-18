@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Managing Packages and Folders Programmatically
 

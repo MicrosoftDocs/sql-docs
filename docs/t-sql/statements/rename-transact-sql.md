@@ -8,7 +8,6 @@ ms.topic: "language-reference"
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # RENAME (Transact-SQL)

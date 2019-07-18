@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLParamOptions Mapping
 When an application calls **SQLParamOptions** through an ODBC *3.x* driver, the call  

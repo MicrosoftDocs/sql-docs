@@ -4,7 +4,6 @@ description: Explore different ways of using and interacting with SQL Server 201
 author: vin-yu 
 ms.author: vinsonyu
 ms.reviewer: vanto
-manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql

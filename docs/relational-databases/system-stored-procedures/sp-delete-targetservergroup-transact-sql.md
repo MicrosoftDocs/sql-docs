@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

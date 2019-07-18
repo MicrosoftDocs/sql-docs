@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Enabled Property (ServerNetworkProtocolIpAddress Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # FILEGROUP_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

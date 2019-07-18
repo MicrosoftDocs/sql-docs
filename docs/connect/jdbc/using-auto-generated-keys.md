@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Using Auto Generated Keys

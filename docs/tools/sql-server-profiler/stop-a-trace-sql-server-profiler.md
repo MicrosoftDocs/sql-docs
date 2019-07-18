@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ---
 # Stop a Trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

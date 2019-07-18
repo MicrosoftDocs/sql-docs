@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publication Information, Agents (Transactional Publication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

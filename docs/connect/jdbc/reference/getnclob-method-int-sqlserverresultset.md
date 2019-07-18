@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 103082e3-de98-4dff-8dc7-eaa5c64b1597
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getNClob Method (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

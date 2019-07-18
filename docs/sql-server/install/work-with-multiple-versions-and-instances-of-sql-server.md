@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Work with Multiple Versions and Instances of SQL Server
 

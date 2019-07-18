@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_connection_stats (Azure SQL Database)

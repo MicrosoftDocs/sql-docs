@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Indexes Collection Properties, Methods, and Events
 ## Properties  

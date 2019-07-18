@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Save SSIS Package (SQL Server Import and Export Wizard)
 

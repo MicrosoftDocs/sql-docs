@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Creating an Asynchronous Transformation with the Script Component
 

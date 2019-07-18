@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration Architecture - CLR Hosted Environment
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

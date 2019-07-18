@@ -7,7 +7,6 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Troubleshoot data collection for machine learning
 

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # HOST_NAME Values
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

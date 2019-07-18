@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_getbindtoken (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

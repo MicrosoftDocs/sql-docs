@@ -2,7 +2,6 @@
 title: System databases - Parallel Data Warehouse | Microsoft Docs
 description: System databases in Parallel Data Warehouse (PDW).
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

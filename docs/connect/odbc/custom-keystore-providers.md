@@ -9,7 +9,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: "v-chojas"
-manager: jroth
 author: MightyPen
 ---
 # Custom Keystore Providers

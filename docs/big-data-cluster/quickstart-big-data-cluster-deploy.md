@@ -5,7 +5,6 @@ description: Walkthrough a deployment of SQL Server 2019 big data clusters (prev
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

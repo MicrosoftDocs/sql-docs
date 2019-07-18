@@ -5,7 +5,6 @@ description: This article explains how to configure HDFS tiering to mount an ext
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql

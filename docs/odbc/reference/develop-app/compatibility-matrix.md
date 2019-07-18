@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Compatibility Matrix
 The following table describes the compatibility of the types of applications and drivers defined previously in this section.  

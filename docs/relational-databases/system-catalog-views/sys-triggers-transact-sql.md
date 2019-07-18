@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.triggers (Transact-SQL)

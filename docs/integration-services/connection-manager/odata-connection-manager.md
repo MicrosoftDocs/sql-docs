@@ -13,7 +13,6 @@ f1_keywords:
   - "sql13.dts.designer.odataconnectionmanager.f1"
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OData Connection Manager
 

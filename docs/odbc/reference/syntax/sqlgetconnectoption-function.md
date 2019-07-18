@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetConnectOption Function
 **Conformance**  

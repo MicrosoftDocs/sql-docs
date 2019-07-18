@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

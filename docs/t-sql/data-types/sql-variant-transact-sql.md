@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -2,7 +2,6 @@
 title: Analysis and reporting with Microsoft business intelligence (BI) tools
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ""
 ms.prod: reporting-services
 ms.technology: reporting-services

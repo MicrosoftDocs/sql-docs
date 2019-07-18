@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Definition of a Stored Procedure

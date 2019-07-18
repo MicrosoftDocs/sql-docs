@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Column Mappings (SQL Server Import and Export Wizard)
 

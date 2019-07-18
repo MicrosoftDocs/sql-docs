@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Task Host Container
 

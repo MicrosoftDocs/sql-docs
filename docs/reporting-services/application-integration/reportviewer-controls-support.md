@@ -2,7 +2,6 @@
 title: Support for Report Viewer current branch versions
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native

@@ -32,7 +32,6 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Password Policy
 

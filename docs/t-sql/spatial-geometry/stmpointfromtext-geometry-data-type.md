@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STMPointFromText (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

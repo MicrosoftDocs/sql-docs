@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # + (Add) (SSIS)
 

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Type Casting Rules in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

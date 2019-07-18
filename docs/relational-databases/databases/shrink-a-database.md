@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Shrink a Database

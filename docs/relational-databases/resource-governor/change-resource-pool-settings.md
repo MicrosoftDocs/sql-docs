@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Change Resource Pool Settings
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUTINES (Transact-SQL)

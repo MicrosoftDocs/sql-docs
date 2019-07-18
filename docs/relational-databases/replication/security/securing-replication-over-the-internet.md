@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Securing Replication Over the Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

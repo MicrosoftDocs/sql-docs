@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 06450562-d8f3-4987-b7bd-4a70223ff937
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Microsoft Component Services
 > [!IMPORTANT]  

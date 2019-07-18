@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Conversions Performed from Server to Client

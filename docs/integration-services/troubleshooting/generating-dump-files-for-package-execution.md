@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Generating Dump Files for Package Execution
 

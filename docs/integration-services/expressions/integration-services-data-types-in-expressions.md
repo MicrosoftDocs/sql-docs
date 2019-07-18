@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Data Types in Expressions
 

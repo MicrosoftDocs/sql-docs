@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Containers
 

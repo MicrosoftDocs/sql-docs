@@ -51,49 +51,48 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 | New Item | Details |
 |-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Intellisense/Editor | Added support for Data Classification |
-| ShowPlan | Added a new attribute in QueryPlan when inline scalar udf feature is enabled (ContainsInlineScalarTsqlUdfs). |
+| ShowPlan | Added a new attribute in QueryPlan when inline scalar UDF feature is enabled (ContainsInlineScalarTsqlUdfs). |
 | Always Encrypted | Updated the Enclave Provider to support Azure Attestation. |
-| Query Execution or Results | Added a *Completion time* in the messages to track when a given query completed its execution. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/33531871) for more details. </br> </br> Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to two million characters for both (up from 256 and 64K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
+| Query Execution or Results | Added a *Completion time* in the messages to track when a given query completed its execution. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/33531871) for more details. </br> </br> Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to two million characters for both (up from 256 and 64 K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | SSMS Index dialog - added new index option OPTIMIZE_FOR_SEQUENTIAL_KEY. </br> </br> Added IntelliSense support. |
-| SMO | Added support for *Feature Restrictions*. For more information on the feature itself. See [Feature Restriction](../relational-databases/security/feature-restrictions.md) for more details. Assessment Extentions. See [Assessment APIs](https://review.docs.microsoft.com/en-us/sql/sql-assessment-api/sql-assessment-api-overview?view=azuresqldb-current&branch=pr-en-us-11080) for more details. | Integration Services | 
+| SMO | Added support for *Feature Restrictions*. For more information on the feature itself. See [Feature Restriction](../relational-databases/security/feature-restrictions.md) for more details. Assessment Extensions. See [Assessment APIs](https://review.docs.microsoft.com/en-us/sql/sql-assessment-api/sql-assessment-api-overview?view=azuresqldb-current&branch=pr-en-us-11080) for more details. | Integration Services | 
 | Integration Services (SSIS) | Perf optimization for SSIS package scheduler in Azure |
 
 ## Bug fixes in 18.2
 
 | New Item | Details |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| SSMS Setup | Mitigated an issue where SSMS setup was incorrectly blocking the installation of SSMS reporting mismatching languages. This could have been an issue in some abnormal situations, like an aborted setup or an incorrect uninstall of a previous version of SSMS. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37483594/) for more details. |
-| Always On | Fixed an issue where SSMS was throwing an error when trying to delete an Availability Group which has a single quote in its name. |
-| Always On | Fixed an issue where SSMS was presenting the wrong failover wizard, when replicas are configured as Synchronous, when using read scale AGs (cluster type=NONE). Now, SSMS presents the wizard for   Force_Failover_Allow_Data_Loss option, which is the only one allowed for cluster type NONE Availability |
-| Always On | Fixed an issue where the wizard was restricting the number of allowed synchornization replaces to three, even if SQL 2019 supports up to five (Enterprise/Developer/Evaluation Editions). |
-| Registered Servers  | Fixed an issue where trying to issue a query against multiple servers (under a "Group" in Registered Servers) when the Registrered Server uses either "Active Directory - Integrated" or "Azure Active Directory - Universal with MFA" just did not work because SSMS failed to connect. |
-| Registered Servers | Fixed an issue where trying to issue a query against multiple   servers (under a "Group" in Registered Servers) when the registrered server uses either *Active Directory - Password* or *SQL Auth* and the user chose not to remember the password would cause SSMS to crash. |
-| Object Explorer | Fixed an issue where some menu items (e.g. SQL Server Import and Export Wizard) where missing or disable when connected to SQL Express. See https://feedback.azure.com/forums/908035/suggestions/37500016 |
-| Object Explorer | Fixed an issue which was causing SSMS to crash when an object from dragged from OE to the editor. See https://feedback.azure.com/forums/908035/suggestions/37887988 |
-| Object Explorer | Fixed an issue where renaming databases was causing incorrect database names to show up in OE. See   https://feedback.azure.com/forums/908035/suggestions/37638472 |
-| Object Explorer | Fixed a long outstanding issue where trying to expand the "Tables" node in OE for a database which is set to use a collation that is not supported by Windows anymore would trigger an error (and the user   would not be able to expand the his/her tables). An example of such collation   would be Korean_Wansung_Unicode_CI_AS. |
-| Accessibility | Updated the Xevent UI (the grid) to be sortable by pressing   F3. |
-| SQL Agent | Fixed an issue that when Adding, inserting, editing or removing job steps, was causing   focus to be reset the first row instead of the active row. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/38070892) for more details. |
-| General SSMS | Fixed an issue where the user was unable to horizontal scroll Results pane via mouse wheel. See the feedback forum](https://feedback.azure.com/forums/908035/suggestions/34145641) |
-| General SSMS | Updated "Activity Monitor" to ignore benign wait   types SQLTRACE_WAIT_ENTRIES, XE_DISPATCHER_JOIN, and  CLR_SEMAPHORE so that they are not reported   a "Waiting Tasks". |
+| SSMS Setup | Mitigated an issue where SSMS setup was incorrectly blocking the installation of SSMS reporting mismatching languages. This could have been an issue in some abnormal situations, like an aborted setup, or an incorrect uninstall of a previous version of SSMS. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37483594/) for more details. |
+| Always On | Fixed an issue where SSMS was throwing an error when trying to delete an Availability Group, which has a single quote in its name. |
+| Always On | Fixed an issue where SSMS was presenting the wrong failover wizard when replicas are configured as Synchronous when using read scale AGs (cluster type=NONE). Now, SSMS presents the wizard for   Force_Failover_Allow_Data_Loss option, which is the only one allowed for cluster-type NONE Availability |
+| Always On | Fixed an issue where the wizard was restricting the number of allowed synchronizations to three, even if SQL 2019 supports up to five (Enterprise/Developer/Evaluation Editions). |
+| Registered Servers  | Fixed an issue where trying to issue a query against multiple servers (under a "Group" in Registered Servers) when the Registered Server uses either *Active Directory - Integrated* or *Azure Active Directory - Universal with MFA* did not work because SSMS failed to connect. |
+| Registered Servers | Fixed an issue where trying to issue a query against multiple servers (under a "Group" in Registered Servers) when the registered server uses either *Active Directory - Password* or *SQL Auth* and the user chose not to remember the password would cause SSMS to crash. |
+| Object Explorer | Fixed an issue where some menu items (for example, SQL Server Import and Export Wizard) were missing or disabled when connected to SQL Express. See https://feedback.azure.com/forums/908035/suggestions/37500016 |
+| Object Explorer | Fixed an issue, which was causing SSMS to crash when an object from dragged from OE to the editor. See https://feedback.azure.com/forums/908035/suggestions/37887988 |
+| Object Explorer | Fixed an issue where renaming databases was causing incorrect database names to show up in OE. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37638472) for more details. |
+| Object Explorer | Fixed a long outstanding issue where trying to expand the "Tables" node in OE for a database, which is set to use a collation that is not supported by Windows anymore would trigger an error (and the user would not be able to expand the his or her tables). An example of such collation would be Korean_Wansung_Unicode_CI_AS. |
+| Accessibility | Updated the XEvent UI (the grid) to be sortable by pressing F3. |
+| SQL Agent | Fixed an issue that when Adding, inserting, editing, or removing job steps, was causing focus to be reset the first row instead of the active row. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/38070892) for more details. |
+| General SSMS | Fixed an issue where the user was unable to horizontal scroll Results pane via mouse wheel. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/34145641) for more details. |
+| General SSMS | Updated "Activity Monitor" to ignore benign wait types SQLTRACE_WAIT_ENTRIES, XE_DISPATCHER_JOIN, and  CLR_SEMAPHORE so that they are not reported a *Waiting Tasks*. |
 | General SSMS | Fixed an issue where some color options ("Text Editor | Editor Tab and Status   Bar") were not persisted. See https://feedback.azure.com/forums/908035/suggestions/37924165 |
-| General SSMS | In connection dialog, replaced "Active Directory -   Universal with MFA support" with "Azure Active Directory -   Universal with MFA" (functionality is the same, but hopefully it will be   less confusing). |
+| General SSMS | In the connection dialog, replaced *Active Directory - Universal with MFA support* with *Azure Active Directory - Universal with MFA* (functionality is the same, but hopefully it is less confusing). |
 | General SSMS | Updated SSMS to use correct defaults values when creating an Azure SQL Database. |
-| General SSMS | Fixed an issue were the user was not able to "Start   PowerShell" from a node in Registered Servers when server is a SQL Linux   container. |
-| SMO/Scripting | Fixed   an issue where "CREATE OR ALTER" was not scripting objects that had   extended properties on them. See   https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748 |
-| SMO/Scripting | Fixed an issue where SSMS was not able to script CREATE EXTERNAL LIBRARY correctly.   See https://feedback.azure.com/forums/908035/suggestions/37868089 |
-| SMO/Scripting | Fixed an issue where trying to run the "Generate   Scripts" against a database with a few thousand tables (was causing the progress dialog to appear to be stuck. |
-| SMO/Scripting | Fixed an issue where scripting of 'External Table' on SQL2019   did not work |
-| SMO/Scripting | Fixed an issue where scripting of 'External Data Source' on SQL2019 did not work. See   https://feedback.azure.com/forums/908035/suggestions/34295080 |
-| SMO/Scripting | Fixed   an issue where "extended properties" on columns where not scripted   when targeting Azure SQL DB. See   https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio. |
-| SMO/Scripting | Last-page insert: SMO - Add property   Index.IsOptimizedForSequentialKey |
-| Import Flat File | Fixed an issue where "Import Flat File" was not working after upgrading from   SSMS 18.0 to 18.1. See   https://feedback.azure.com/forums/908035/suggestions/37912636 |
-| Import Flat File | Fixed an issue where "Import Flat File Wizard" was   reporting duplicate or invalid columns" on a .csv file with headers with   Unicode characters. |
-| Reports | Fixed an issue in "Disk Usage" reports where the report was failing to when data files had a really large number of extents. |
+| General SSMS | Fixed an issue where the user was not able to *Start PowerShell* from a node in Registered Servers when the server is a SQL Linux container. |
+| SMO/Scripting | Fixed an issue where *CREATE OR ALTER* was not scripting objects that had extended properties on them. See the [feedback forum](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748) for more details. |
+| SMO/Scripting | Fixed an issue where SSMS was not able to script CREATE EXTERNAL LIBRARY correctly. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/37868089) for more details. |
+| SMO/Scripting | Fixed an issue where trying to run the *Generate Scripts* against a database with a few thousand tables (was causing the progress dialog to appear to be stuck. |
+| SMO/Scripting | Fixed an issue where scripting of 'External Table' on SQL2019 did not work |
+| SMO/Scripting | Fixed an issue where scripting of 'External Data Source' on SQL2019 did not work. See the [feedback forum](https://feedback.azure.com/forums/908035/suggestions/34295080) for more details |
+| SMO/Scripting | Fixed an issue where *extended properties* on columns were not scripted when targeting Azure SQL DB. See the [stackoverflow page]((https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio) for more details. |
+| SMO/Scripting | Last-page insert: SMO - Add property *Index.IsOptimizedForSequentialKey* |
+| Import Flat File | Fixed an issue where *Import Flat File* was not working after upgrading from   SSMS 18.0 to 18.1. See https://feedback.azure.com/forums/908035/suggestions/37912636 |
+| Import Flat File | Fixed an issue where *Import Flat File Wizard was reporting a duplicate or invalid column* on a .csv file with headers with Unicode characters. |
+| Reports | Fixed an issue in *Disk Usage* reports where the report was failing to when data files had a vast number of extents. |
 | XEvent Profiler | Fixed a crash when the viewer was being closed. |
-| Replication Tools | Fixed an issue where Replication Monitor was not working with   publisher DB in AG and distributor in AG (this was previously fixed in SSMS   17.x, but the fix was never ported to SSMS 18.x) |
-| Data Classification | Fixed an issue where SSMS was throwing an "Index (zero based) must   be greater than or equal to zero..." error when trying to view data   classification reports on databases with CompatLevel less than 150. |
-
+| Replication Tools | Fixed an issue where Replication Monitor was not working with publisher DB in AG and distributor in AG (this was previously fixed in SSMS 17.x, but the fix was never ported to SSMS 18.x) |
+| Data Classification | Fixed an issue where SSMS was throwing an *Index (zero-based) must be greater than or equal to zero* error when trying to view data classification reports on databases with CompatLevel less than 150. |
 
 ## Previous SSMS releases
 

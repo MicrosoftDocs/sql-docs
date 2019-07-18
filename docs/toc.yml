@@ -65,8 +65,8 @@
       items:
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
-      - name: Install mssqlctl
-        href: big-data-cluster/deploy-install-mssqlctl.md
+      - name: Install azdata
+        href: big-data-cluster/deploy-install-azdata.md
     - name: Deploy
       items:
       - name: Deployment guidance

@@ -34,7 +34,7 @@ The following types of apps are supported:
 ## Prerequisites
 
 - [SQL Server 2019 big data cluster](deployment-guidance.md)
-- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
+- [mssqlctl command-line utility](deploy-install-azdata.md)
 
 ## Capabilities
 

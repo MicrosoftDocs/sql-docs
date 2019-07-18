@@ -20,7 +20,7 @@ This article describes how to consume an app deployed on a SQL Server 2019 big d
 ## Prerequisites
 
 - [SQL Server 2019 big data cluster](deployment-guidance.md)
-- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
+- [mssqlctl command-line utility](deploy-install-azdata.md)
 - An app deployed using either [`mssqlctl`](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
 
 ## Capabilities

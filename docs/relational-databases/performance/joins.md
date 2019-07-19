@@ -23,13 +23,14 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs sort, intersect, union, and difference operations using in-memory sorting and hash join technology. Using this type of query plan, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports vertical table partitioning, sometimes called columnar storage.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employs three types of join operations:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employs four types of join operations:    
 -   Nested Loops joins     
 -   Merge joins   
 -   Hash joins   
+-   Adaptive joins (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 ## <a name="fundamentals"></a> Join Fundamentals
-By using joins, you can retrieve data from two or more tables based on logical relationships between the tables. Joins indicate how Microsoft SQL Server should use data from one table to select the rows in another table.    
+By using joins, you can retrieve data from two or more tables based on logical relationships between the tables. Joins indicate how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should use data from one table to select the rows in another table.    
 
 A join condition defines the way two tables are related in a query by:    
 -   Specifying the column from each table to be used for the join. A typical join condition specifies a foreign key from one table and its associated key in the other table.    

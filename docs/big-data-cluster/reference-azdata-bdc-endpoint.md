@@ -15,11 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-<<<<<<< HEAD:docs/big-data-cluster/reference-azdata-bdc-endpoint.md
 The following article provides reference for the **bdc endpoint** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
-=======
-The following article provides reference for the **bdc endpoint** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
->>>>>>> 9dc5f02e20988a0dec013a9be895d4f34a3875e0:docs/big-data-cluster/reference-mssqlctl-bdc-endpoint.md
 
 ## Commands
 |     |     |
@@ -29,11 +25,7 @@ The following article provides reference for the **bdc endpoint** commands in th
 Lists the endpoints for the Big Data Cluster.
 ```bash
 azdata bdc endpoint list [--endpoint-name -e] 
-<<<<<<< HEAD:docs/big-data-cluster/reference-azdata-bdc-endpoint.md
                          
-=======
-                           
->>>>>>> 9dc5f02e20988a0dec013a9be895d4f34a3875e0:docs/big-data-cluster/reference-mssqlctl-bdc-endpoint.md
 ```
 ### Optional Parameters
 #### `--endpoint-name -e`
@@ -52,8 +44,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-<<<<<<< HEAD:docs/big-data-cluster/reference-azdata-bdc-endpoint.md
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
-=======
-For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
->>>>>>> 9dc5f02e20988a0dec013a9be895d4f34a3875e0:docs/big-data-cluster/reference-mssqlctl-bdc-endpoint.md

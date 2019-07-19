@@ -106,22 +106,22 @@ It is also possible to customize your own deployment configuration profile. You 
    azdata bdc config list
    ```
 
-1. azdatamize your deployment, create a copy of the deployment profile with the **azdata bdc config init** command. For example, the following command creates a copy of the **aks-dev-test** deployment configuration file in a target directory named `custom`:
+1. To customize your deployment, create a copy of the deployment profile with the **azdata bdc config init** command. For example, the following command creates a copy of the **aks-dev-test** deployment configuration files in a target directory named `custom`:
 
    ```bash
-   azdata bdc config init --source aks-dev-test --target customazdata
+   azdata bdc config init --source aks-dev-test --target custom
    ```
 
    azdata
-   > The `--target` specifies a directory that contains the configuration file based on the `--source` parameter.
+   > The `--target` specifies a directory that contains the configuration files, **cluster.json** and **control.json**, based on the `--source` parameter.
 
-1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **azdata bdc config section set** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
+1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **azdata bdc config** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
 
    ```bash
-   azdata bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"azdata
+   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
 
-   > The `--config-profile` specifies a directory name for your custom deployment profile, but the actual modifications happen on the deployment configuration JSON file within that directory. A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
+   > A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 
    In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 

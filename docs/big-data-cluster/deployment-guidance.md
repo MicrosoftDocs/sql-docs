@@ -265,7 +265,7 @@ If you are using minikube, you need to run the following command to get the IP a
 minikube ip
 ```
 
-## <a id="status"></a> Verify the cluster statusazdataazdata
+## <a id="status"></a> Verify the cluster status
 
 After deployment, you can check the status of the cluster with the [azdata bdc status show](reference-mssqlctl-bdc-status.md) command.
 azdata

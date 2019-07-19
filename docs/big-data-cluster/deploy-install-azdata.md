@@ -36,7 +36,7 @@ This article describes how to install the **azdata** tool for CTP 3.2 on Windows
    For CTP 3.1 or lower, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. If the version is prior to CTP 3.0, add a dash before the version number (for example, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 1. If you have any previous releases of **azdata** installed, it is important to uninstall it first before installing the latest version.
@@ -44,7 +44,7 @@ This article describes how to install the **azdata** tool for CTP 3.2 on Windows
    For CTP 3.2 or higher, run the following command. Replace `ctp3.2` in the command with the version of **azdata** that you are uninstalling.
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.2/azdata/requirements.txt
+   pip3 uninstall -r https://aka.ms/azdata
    ```
 
 1. Install **azdata** with the following command:
@@ -76,7 +76,7 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    For CTP 3.1 or lower, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. If the version is prior to CTP 3.0, add a dash before the version number (for example, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 1. If you have any previous releases of **azdata** installed, it is important to uninstall it first before installing the latest version.

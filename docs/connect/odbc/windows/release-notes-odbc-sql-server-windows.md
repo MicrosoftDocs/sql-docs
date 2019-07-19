@@ -43,7 +43,7 @@ GeneMi (and CraigG).  2019/03/30.
 | Feature added | Details |
 | :------------ | :------ |
 | Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
-| Ability to configure TCP Keep Alive settings. | To be added ... |
+| Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

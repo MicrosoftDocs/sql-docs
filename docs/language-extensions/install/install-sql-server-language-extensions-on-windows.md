@@ -82,7 +82,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 4. On the **Java Install Location** page, select either of these options:
 
-    - **Install Open JRE 11.0.3 included with this installation**. Choose this option if you want to install Zulu Open JRE 11.0.3 that is included with SQL Server. You do not need to install your a JRE or JDE before you install SQL Server.
+    - **Install Open JRE 11.0.3 included with this installation**. Choose this option if you want to install Zulu Open JRE 11.0.3 that is included with SQL Server. You do not need to install your JRE or JDE before you install SQL Server.
 
     - **Provide the location of a different version that has been installed on this computer**. Choose the option if you want to install your own JDK or JRE. The JDK or JRE needs to be installed before you install see SQL Server.
 

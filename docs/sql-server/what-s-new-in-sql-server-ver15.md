@@ -29,13 +29,10 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 
 |New feature or update | Details |
 |:---|:---|
-|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. |
-| &nbsp; | &nbsp; |
-
-### New in database engine
-
-| New feature or update | Details |
-|:---|:---| 
+|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](../big-data-cluster/deploy-get-started.md).|
+|Notebook based troubleshooting.|CTP 3.2 introduces Jupyter notebooks to assist with discovery, diagnosis, and troubleshooting for components in a SQL Server big data cluster. |
+|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. |
+|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. |
 | &nbsp; | &nbsp; |
 
 ### New in Analysis Services
@@ -69,8 +66,8 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |:---|:---|
 |Feature restrictions| Prevent some forms of SQL injection from leaking information about the database, even when the SQL injection is successful. See [Feature restrictions](../relational-databases/security/feature-restrictions.md)|
 |Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
-|Transparent Data Encryption (TDE) scan - suspend and resume|[Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
-|Certificate management in SQL Server Configuration Manager|[Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
+|Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
+|Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
 | &nbsp; | &nbsp; |
 
 ### Graph

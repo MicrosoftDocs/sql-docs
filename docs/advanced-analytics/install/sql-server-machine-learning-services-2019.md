@@ -1,5 +1,5 @@
 ---
-title: Differences in SQL Server 2019 - SQL Server Machine Learning Services
+title: Differences in SQL Server 2019
 description: Learn what's new for R and Python SQL Server machine learning extensions in the SQL Server 2019 preview release.
 ms.prod: sql
 ms.technology: machine-learning

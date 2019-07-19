@@ -1,5 +1,5 @@
 ---
-title: SQL Server Configuration (R Services) - SQL Server Machine Learning Services
+title: SQL Server Configuration (R Services)
 ms.prod: sql
 ms.technology: machine-learning
 

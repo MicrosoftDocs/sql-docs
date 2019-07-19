@@ -38,6 +38,16 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## 17.4, July 2019
+
+| Feature added | Details |
+| :------------ | :------ |
+| Always Encrypted with Secure Enclaves. | To be added ... |
+| Dynamic loading of OpenSSL | To be added ... |
+| Ability to configure TCP Keep Alive settings. | To be added ... |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.3, February 2019
 
 | Feature added | Details |

@@ -1,5 +1,5 @@
 ---
-title: Airline flight demo data set for SQL Server Python and R tutorials - SQL Server Machine Learning
+title: Airline flight demo data set for SQL Server Python and R tutorials
 Description: Create a database containing the Airline dataset from R and Python. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning

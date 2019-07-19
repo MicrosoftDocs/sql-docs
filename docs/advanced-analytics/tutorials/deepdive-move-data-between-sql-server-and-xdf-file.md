@@ -1,5 +1,5 @@
 ---
-title: Move data between SQL Server and XDF file using RevoScaleR - SQL Server Machine Learning
+title: Move data between SQL Server and XDF file using RevoScaleR
 description: Tutorial walkthrough on how to move data using XDF and the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning

@@ -86,7 +86,7 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 1. Install **azdata** with the following command:
 
    ```bash
-   pip3 install -r  https://mcr.microsoft.com/python/ctp3.2/mssqlctl/requirements.txt --user
+   pip3 install -r  https://mcr.microsoft.com/python/ctp3.2/azdata/requirements.txt --user
    ```
 
    > [!NOTE]

@@ -86,7 +86,7 @@ azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 The following example refreshes the mount.
 
 ```bash
-mssqlctl bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Delete the mount

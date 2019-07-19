@@ -187,7 +187,7 @@ WHERE [fo].[Quantity] = 360;
 
 The query returns 336 rows. Enabling [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md) displays the following plan:
 
-![Query result 336 rows](../../relational-databases/media/4_AQPStats336Rows.png)
+![Query result 336 rows](../../relational-databases/performance/media/4_AQPStats336Rows.png)
 
 In the plan, note the following:
 1. A columnstore index scan used to provide rows for the Hash join build phase.
@@ -208,7 +208,7 @@ WHERE [fo].[Quantity] = 361;
 ```
 The query returns one row. Enabling Live Query Statistics displays the following plan:
 
-![Query result one row](../../relational-databases/media/5_AQPStatsOneRow.png)
+![Query result one row](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
 
 In the plan, note the following:
 - With one row returned, the Clustered Index Seek now has rows flowing through it.
@@ -246,7 +246,7 @@ A few conditions make a logical join eligible for a batch mode Adaptive Join:
 ### Adaptive threshold rows
 The following chart shows an example intersection between the cost of a Hash join versus the cost of a Nested Loops join alternative. At this intersection point, the threshold is determined that in turn determines the actual algorithm used for the join operation.
 
-![Join threshold](../../relational-databases/media/6_AQPJoinThreshold.png)
+![Join threshold](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
 
 ### Disabling Adaptive joins without changing the compatibility level
 Adaptive joins can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  

@@ -15,13 +15,13 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-To customize your cluster deployment configuration file, you can use any JSON format editor, such as VSCode. For scripting these edits for automation purposes, use the **azdata bdc config section** command. This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
+To customize your cluster deployment configuration files, you can use any JSON format editor, such as VSCode. For scripting these edits for automation purposes, use the **azdata bdc config** command. This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
 
 ## Prerequisites
 
 - [Install azdata](deploy-install-azdata.md).
 
-- Each of the examples in this section assume that you have created a copy of one of the standard configuration files. For more information, see [Create a custom configuration file](deployment-guidance.md#customconfig). For example, the following command creates a directory called `custom` that contains a JSON deployment configuration file based on the default **aks-dev-test** configuration:
+- Each of the examples in this section assume that you have created a copy of one of the standard configurations. For more information, see [Create a custom configuration](deployment-guidance.md#customconfig). For example, the following command creates a directory called `custom` that contains two JSON deployment configuration files, **cluster.json** and **control.json**, based on the default **aks-dev-test** configuration:
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
@@ -29,7 +29,7 @@ To customize your cluster deployment configuration file, you can use any JSON fo
 
 ## <a id="clustername"></a> Change cluster name
 
-The cluster name is both the name of the big data cluster and the Kubernetes namespace that will be created on deployment. It is specified in the following portion of the deployment configuration file:
+The cluster name is both the name of the big data cluster and the Kubernetes namespace that will be created on deployment. It is specified in the following portion of the **cluster.json** deployment configuration file:
 
 ```json
 "metadata": {
@@ -41,7 +41,7 @@ The cluster name is both the name of the big data cluster and the Kubernetes nam
 The following command sends a key-value pair to the **--json-values** parameter to change the big data cluster name to **test-cluster**:
 
 ```bash
-azdata bdc config section set --config-profile custom -j "metadata.name=test-cluster"
+azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -49,7 +49,7 @@ azdata bdc config section set --config-profile custom -j "metadata.name=test-clu
 
 ## <a id="ports"></a> Update endpoint ports
 
-Endpoints are defined for the control plane as well as for individual pools. The following portion of the configuration file shows the endpoint definitions for the control plane:
+Endpoints are defined for the control plane as well as for individual pools. The following portion of the **control.json** configuration file shows the endpoint definitions for the control plane:
 
 ```json
 "endpoints": [
@@ -69,54 +69,42 @@ Endpoints are defined for the control plane as well as for individual pools. The
 The following example uses inline JSON to change the port for the **Controller** endpoint:
 
 ```bash
-azdata bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> Configure pool replicas
 
-The characteristics of each pool, such as the storage pool, is defined in the configuration file. For example, the following portion shows a storage pool definition:
+The characteristics of each pool, such as the storage pool, is defined in the configuration files. For example, the following portion of the **cluster.json** shows a storage pool definition:
 
 ```json
 "pools": [
-    {
-        "metadata": {
-            "kind": "Pool",
-            "name": "default"
-        },
-        "spec": {
-            "type": "Storage",
-            "replicas": 2,
-            "storage": {
-               "data": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "15Gi"
-               },
-               "logs": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "10Gi"
-               }
-           },
-        }
-    }
+   {
+       "metadata": {
+           "kind": "Pool",
+           "name": "default"
+       },
+       "spec": {
+           "type": "Storage",
+           "replicas": 2
+       }
+   }
 ]
 ```
 
 You can configure the number of instances in a pool by modifying the **replicas** value for each pool. The following example uses inline JSON to change these values for the storage and data pools to `10` and `4` respectively:
 
 ```bash
-azdata bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-azdata bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
 ## <a id="storage"></a> Configure storage
 
-You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool and updates the size of the persistent volume claim for storing data to 100Gb. You must have this section in the configuration file to update the settings using the *azdata bdc config set* command, see below how to use a patch file to add this section:
+You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool and updates the size of the persistent volume claim for storing data to 100Gb. You must have this section in the **control.json** configuration file to update the settings using the **azdata bdc config** command, see below how to use a patch file to add this section:
 
 ```bash
-azdata bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-azdata bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.className=storage-pool-class"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
@@ -133,7 +121,7 @@ You must have this section in the configuration file to update the settings usin
 By default, the **includeSpark** setting for the storage pool is set to true, so you must add the **includeSpark** field into the storage configuration in order to make changes:
 
 ```bash
-azdata cluster config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].includeSpark=false"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Storage"")].spec.includeSpark=false"
 ```
 
 ## <a id="podplacement"></a> Configure pod placement using Kubernetes labels
@@ -159,7 +147,7 @@ Create a file named **patch.json** in your current directory with the following 
 ```
 
 ```bash
-azdata bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> JSON patch files
@@ -292,10 +280,10 @@ The following **patch.json** file performs the following changes:
 > [!TIP]
 > For more information about the structure and options for changing a deployment configuration file, see [Deployment configuration file reference for big data clusters](reference-deployment-config.md).
 
-Use **azdata bdc config section set** to apply the changes in the JSON patch file. The following example applies the **patch.json** file to a target deployment configuration file **custom.json**.
+Use **azdata bdc config** commands to apply the changes in the JSON patch file. The following example applies the **patch.json** file to a target deployment configuration file **custom/cluster.json**.
 
 ```bash
-azdata bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## Next steps

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Monitor Performance with Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

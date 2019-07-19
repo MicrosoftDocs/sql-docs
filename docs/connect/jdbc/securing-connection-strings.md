@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Securing Connection Strings

@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sp_enclave_send_keys"
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # sp_enclave_send_keys    (Transact-SQL)

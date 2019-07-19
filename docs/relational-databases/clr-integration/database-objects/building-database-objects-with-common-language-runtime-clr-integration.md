@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Building Database Objects with Common Language Runtime (CLR) Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

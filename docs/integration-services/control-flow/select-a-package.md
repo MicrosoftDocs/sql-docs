@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Select a Package
 

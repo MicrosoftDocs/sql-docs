@@ -3,7 +3,7 @@ title: Connect to SQL Server Always On Availability Group on Kubernetes cluster
 description: This article explains how to connect to an Always On Availability Group
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql

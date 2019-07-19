@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Command Object Overview
 With a **Command** object, you can do the following:  

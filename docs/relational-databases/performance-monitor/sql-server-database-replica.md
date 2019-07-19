@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Database Replica
 

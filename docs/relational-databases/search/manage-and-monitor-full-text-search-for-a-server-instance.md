@@ -12,7 +12,6 @@ ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance

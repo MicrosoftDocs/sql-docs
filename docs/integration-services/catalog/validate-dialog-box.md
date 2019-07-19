@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Validate Dialog Box
 

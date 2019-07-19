@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Row Sampling Transformation
 

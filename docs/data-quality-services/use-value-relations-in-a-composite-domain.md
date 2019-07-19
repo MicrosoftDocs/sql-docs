@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Use Value Relations in a Composite Domain
 

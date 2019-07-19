@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publish Data over the Internet Using VPN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

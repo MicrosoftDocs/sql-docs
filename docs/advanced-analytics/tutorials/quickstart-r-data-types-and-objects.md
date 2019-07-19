@@ -1,5 +1,5 @@
 ---
-title: Quickstart about R and SQL data types and objects - SQL Server Machine Learning
+title: Quickstart about R and SQL data types and objects
 description: In this quickstart, learn how to work with data types and data objects in R and SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Quickstart: Handle data types and objects using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

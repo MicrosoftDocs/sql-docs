@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Save and Run Package (SQL Server Import and Export Wizard)
 

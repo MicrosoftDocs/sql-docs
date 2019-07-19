@@ -1,12 +1,11 @@
 ---
-title: Common issues with Launchpad service and external script execution - SQL Server Machine Learning Services
+title: Common issues with Launchpad service and external script execution
 ms.prod: sql
 ms.technology: 
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Common issues with Launchpad service and external script execution in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

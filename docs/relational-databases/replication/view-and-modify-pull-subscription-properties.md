@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View and Modify Pull Subscription Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

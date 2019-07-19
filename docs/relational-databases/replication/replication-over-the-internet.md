@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication over the Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

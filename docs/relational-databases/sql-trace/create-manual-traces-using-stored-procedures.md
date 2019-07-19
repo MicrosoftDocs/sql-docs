@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create Manual Traces using Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

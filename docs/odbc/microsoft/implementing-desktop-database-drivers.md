@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Implementing Desktop Database Drivers
 Instructions and technical notes about how to implement and set up the Microsoft ODBC Desktop Database Drivers can be found in the ODBC Data Source Administrator online help. This file can be accessed during driver setup routines from the [Microsoft ODBC Data Source Administrator](../../odbc/admin/odbc-data-source-administrator.md).  

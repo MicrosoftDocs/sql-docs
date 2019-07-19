@@ -1,5 +1,5 @@
 ---
-title: Install R language and Python components without internet access - SQL Server Machine Learning
+title: Install R language and Python components without internet access
 description: Offline or disconnected Machine Learning R and Python setup on isolated SQL Server instance behind a network firewall.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Install SQL Server machine learning R and Python on computers with no internet access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

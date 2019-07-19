@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: "markingmyname"
 ms.author: "maghan"
-manager: jroth
 
 ---
 # Index Columns Dialog Box (Visual Database Tools)

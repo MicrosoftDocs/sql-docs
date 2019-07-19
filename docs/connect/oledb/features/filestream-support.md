@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server [FILESTREAM support]"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # FILESTREAM Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

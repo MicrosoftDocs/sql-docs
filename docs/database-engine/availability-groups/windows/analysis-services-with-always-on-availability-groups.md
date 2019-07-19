@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: "erikre"
+manager: erikre
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Analysis Services with Always On Availability Groups

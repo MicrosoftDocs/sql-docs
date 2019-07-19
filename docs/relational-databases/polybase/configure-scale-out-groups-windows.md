@@ -2,13 +2,11 @@
 title: "Improve PolyBase scale-out groups on Windows | Microsoft Docs"
 ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: polybase
 ms.topic: "tutorial"
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Improve PolyBase scale-out groups on Windows

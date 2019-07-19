@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "modifying trace templates"
   - "SQL Server Profiler, templates"
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Modify trace templates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

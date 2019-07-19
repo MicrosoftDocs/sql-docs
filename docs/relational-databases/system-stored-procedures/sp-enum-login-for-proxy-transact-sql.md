@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-manager: jroth
 ---
 # sp_enum_login_for_proxy (Transact-SQL)
 

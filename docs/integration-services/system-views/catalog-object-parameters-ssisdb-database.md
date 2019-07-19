@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.object_parameters (SSISDB Database)
 

@@ -2,9 +2,9 @@
 title: Connect Spark to SQL Server
 titleSuffix: SQL Server big data clusters
 description: Learn how to use the MSSQL Spark Connector in Spark to read and write to SQL Server.
-author: rothja
-ms.author: jroth
-manager: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql

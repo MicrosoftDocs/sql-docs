@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Enable Coordinated Backups for Transactional Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

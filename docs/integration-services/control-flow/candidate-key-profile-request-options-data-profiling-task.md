@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Candidate Key Profile Request Options (Data Profiling Task)
 

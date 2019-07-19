@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Flat File Custom Properties
 

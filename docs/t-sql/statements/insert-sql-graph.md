@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "shkale-msft"
 ms.author: "shkale"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (SQL Graph)

@@ -1,5 +1,5 @@
 ---
-title: Upgrade and installation frequently asked questions (FAQ) - SQL Server Machine Learning Services
+title: Upgrade and installation frequently asked questions (FAQ)
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-manager: cgronlun
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning or R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

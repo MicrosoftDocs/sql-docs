@@ -14,7 +14,6 @@ ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deprecated Full-Text Search Features in SQL Server 2016

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e736b43a-9457-4781-95a4-4bcf9d4fc46a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CEILING (Transact-SQL)

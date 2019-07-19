@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Dimension Processing Destination
 

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # sys.dm_user_db_resource_governance (Transact-SQL)

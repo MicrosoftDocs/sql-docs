@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "errors [OLE DB], error interfaces"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Information in Error Interfaces
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

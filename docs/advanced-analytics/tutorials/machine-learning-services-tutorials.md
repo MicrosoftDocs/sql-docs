@@ -1,5 +1,5 @@
 ---
-title: SQL Server R and Python tutorials - SQL Server Machine Learning
+title: SQL Server R and Python tutorials
 description: Examples and tutorials for R and Python scripting in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # SQL Server Machine Learning tutorials in R and Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

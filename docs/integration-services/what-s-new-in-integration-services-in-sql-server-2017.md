@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # What&#39;s New in Integration Services in SQL Server 2017
 

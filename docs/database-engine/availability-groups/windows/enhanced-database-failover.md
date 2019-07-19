@@ -14,7 +14,6 @@ ms.assetid:
 author: "MashaMSFT"
 ms.reviewer: "mikeray"
 ms.author: mathoma
-manager: jroth
 ---
 # Enable enhanced database failover to a database in an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

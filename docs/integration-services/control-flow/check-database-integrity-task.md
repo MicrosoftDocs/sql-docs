@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Check Database Integrity Task
 

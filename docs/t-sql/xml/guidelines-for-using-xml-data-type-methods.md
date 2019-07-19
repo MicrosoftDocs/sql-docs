@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 
 # Guidelines for Using xml Data Type Methods

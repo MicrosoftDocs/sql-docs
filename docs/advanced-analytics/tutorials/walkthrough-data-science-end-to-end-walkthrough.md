@@ -1,5 +1,5 @@
 ---
-title: Tutorial for data scientists using R language - SQL Server Machine Learning
+title: Tutorial for data scientists using R language
 description: Tutorial showing how to create an end-to-end R solution for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Tutorial: SQL development for R data scientists
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

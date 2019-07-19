@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View and Modify Publication Properties
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -108,6 +108,6 @@ manager: kfile
  [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Power Pivot Securtiy Architecture](http://go.microsoft.com/fwlink/?linkID=220970)  
+ [Power Pivot Security Architecture](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

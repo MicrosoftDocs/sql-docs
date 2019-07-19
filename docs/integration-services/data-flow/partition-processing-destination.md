@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Partition Processing Destination
 

@@ -10,10 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "aliases [SQL Server], <Alias> properties"
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # &lt;Alias&gt; Properties (Alias Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

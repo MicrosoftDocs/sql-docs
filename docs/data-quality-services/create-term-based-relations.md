@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Create Term-Based Relations
 

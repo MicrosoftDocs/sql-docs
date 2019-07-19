@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Delete an Article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

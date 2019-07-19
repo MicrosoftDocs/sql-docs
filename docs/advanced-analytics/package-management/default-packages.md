@@ -1,5 +1,5 @@
 ---
-title: Get R and Python package information - SQL Server Machine Learning Services
+title: Get R and Python package information
 description: Determine R and Python package version, verify installation, and get a list of installed packages on SQL Server R Services or Machine Learning Services.
 ms.custom: ""
 ms.prod: sql
@@ -9,7 +9,6 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 #  Get R and Python package information
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

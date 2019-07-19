@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLRemoveDriver Function
 **Conformance**  

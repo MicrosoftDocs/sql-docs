@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Connection (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

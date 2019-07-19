@@ -1,5 +1,5 @@
 ---
-title: Standalone R Server or Machine Learning Server installation - SQL Server Machine Learning Services
+title: Standalone R Server or Machine Learning Server installation
 description: Overview introduction to standalone R Server and Machine Learning Server in SQL Server Setup
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # R Server (Standalone) and Machine Learning Server (Standalone) in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

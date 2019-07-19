@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLConnect Function
 **Conformance**  

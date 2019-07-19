@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Connection for Instance Creation
 

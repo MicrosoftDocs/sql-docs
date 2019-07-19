@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getStatement Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

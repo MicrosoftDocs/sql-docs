@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Mining Model Training Destination Custom Properties
 

@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Connect to big data cluster using sparklyr from RStudio.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql

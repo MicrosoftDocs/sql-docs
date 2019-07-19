@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Mining Query Task
 

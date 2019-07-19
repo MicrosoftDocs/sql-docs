@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # The CDC Designer Console Introduction
 

@@ -1,5 +1,5 @@
 ---
-title: Score new data using RevoScaleR and rxPredict - SQL Server Machine Learning
+title: Score new data using RevoScaleR and rxPredict
 description: Tutorial walkthrough on how to score data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Score new data (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

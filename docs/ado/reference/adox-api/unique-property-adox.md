@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Unique Property (ADOX)
 Indicates whether the index keys must be unique.  

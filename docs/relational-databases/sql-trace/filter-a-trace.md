@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Filter a Trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

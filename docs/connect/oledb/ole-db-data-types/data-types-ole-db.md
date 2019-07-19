@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "OLE DB, data types"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Data Types (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

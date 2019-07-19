@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Keyset-Driven Cursors
 A keyset-driven cursor lies between a static and a dynamic cursor in its ability to detect changes. Like a static cursor, it does not always detect changes to the membership and order of the result set. Like a dynamic cursor, it does detect changes to the values of rows in the result set (subject to the isolation level of the transaction, as set by the SQL_ATTR_TXN_ISOLATION connection attribute).  

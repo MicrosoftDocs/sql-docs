@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "Profiler [SQL Server Profiler], Showplan results"
   - "SQL Server Profiler, Showplan results"
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Analyze Queries with SHOWPLAN Results in SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

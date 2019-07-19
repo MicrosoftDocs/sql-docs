@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Standard Data Stream Protocol
 A standard data stream protocol is one way to access data in heterogeneous DBMSs. In fact, a standard data stream protocol already exists:

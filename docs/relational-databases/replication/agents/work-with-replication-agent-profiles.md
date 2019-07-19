@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Work with Replication Agent Profiles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +88,7 @@ manager: craigg
   
 1.  If the **Agent Profiles** dialog box displays profiles for more than one agent, select an agent.  
   
-2.  Click the properties button (**?**) next to a profile.  
+2.  Click the properties button (**...**) next to a profile.  
   
 3.  View the parameters and values in the **\<ProfileName> Profile Properties** dialog box.  
   

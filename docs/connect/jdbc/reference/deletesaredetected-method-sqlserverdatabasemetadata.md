@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # deletesAreDetected Method (SQLServerDatabaseMetaData)
 

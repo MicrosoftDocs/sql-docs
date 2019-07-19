@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
-manager: jroth
 ---
 
 # Migrate SQL Server logins with Data Migration Assistant

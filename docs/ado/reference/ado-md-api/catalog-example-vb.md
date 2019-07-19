@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Catalog Example (VB)
 This Visual Basic project creates a new cube using MDX. Then, it documents the structure of a cube in a Microsoft Word document.  

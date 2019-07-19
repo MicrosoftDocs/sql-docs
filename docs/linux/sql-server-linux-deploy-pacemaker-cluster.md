@@ -1,9 +1,9 @@
 ---
-title: Deploy a Pacemaker cluster for SQL Server on Linux | Microsoft Docs
+title: Deploy a Pacemaker cluster for SQL Server on Linux
 description: This tutorial shows how to deploy a Pacemaker cluster for SQL Server on Linux. 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql

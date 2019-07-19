@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Logging and Defining Log Entries in a Data Flow Component
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # How Extended Stored Procedures Work
 

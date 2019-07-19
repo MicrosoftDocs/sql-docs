@@ -12,7 +12,6 @@ ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure and Manage Filters for Search

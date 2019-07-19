@@ -9,7 +9,6 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Configure Always Encrypted with secure enclaves
@@ -145,7 +144,7 @@ To provision an enclave-enabled column encryption key, you need to make sure tha
 
 The following limitations currently apply to provisioning enclave-enabled keys:
 
-- Enclave-enabled column master keys must be stored in [Windows Certificate Store](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) or in [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Storing enclave-enabled column master keys in other types of key stores, for example hardware security modules or custom key stores, isn't currently supported.
+- Enclave-enabled column master keys must be stored in [Windows Certificate Store](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) or in [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Storing enclave-enabled column master keys in other types of key stores, for example hardware security modules or custom key stores, isn't currently supported.
 
 ### Provision enclave-enabled keys using SQL Server Management Studio (SSMS)
 

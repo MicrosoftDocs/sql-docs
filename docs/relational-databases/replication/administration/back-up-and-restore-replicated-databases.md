@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Back Up and Restore Replicated Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

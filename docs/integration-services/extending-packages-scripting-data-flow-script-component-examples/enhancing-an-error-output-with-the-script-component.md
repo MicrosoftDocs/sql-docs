@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Enhancing an Error Output with the Script Component
 

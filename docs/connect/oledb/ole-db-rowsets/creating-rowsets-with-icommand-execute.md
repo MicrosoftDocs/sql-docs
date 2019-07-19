@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "Execute method"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Creating Rowsets with ICommand::Execute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

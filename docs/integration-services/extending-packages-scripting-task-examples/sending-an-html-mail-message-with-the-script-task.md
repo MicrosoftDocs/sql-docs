@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Sending an HTML Mail Message with the Script Task
 

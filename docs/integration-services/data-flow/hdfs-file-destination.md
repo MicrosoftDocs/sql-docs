@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # HDFS File Destination
 

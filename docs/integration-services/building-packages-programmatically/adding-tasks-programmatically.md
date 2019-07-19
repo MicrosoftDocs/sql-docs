@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Adding Tasks Programmatically
 

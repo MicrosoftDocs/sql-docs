@@ -1,5 +1,5 @@
 ---
-title: SQL Server Configuration (R Services) - SQL Server Machine Learning Services
+title: SQL Server Configuration (R Services)
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,7 +7,6 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # SQL Server configuration for use with R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

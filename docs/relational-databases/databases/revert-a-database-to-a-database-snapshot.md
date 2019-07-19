@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Revert a Database to a Database Snapshot
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

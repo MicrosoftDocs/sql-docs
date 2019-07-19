@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Working with Data Types in the Data Flow
 

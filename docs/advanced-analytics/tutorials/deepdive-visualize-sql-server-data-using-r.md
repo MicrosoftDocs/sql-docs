@@ -1,5 +1,5 @@
 ---
-title: Visualize SQL Server data using RevoScaleR rxHistogram - SQL Server Machine Learning
+title: Visualize SQL Server data using RevoScaleR rxHistogram
 description: Tutorial walkthrough on how to visualize data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 #  Visualize SQL Server data using R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

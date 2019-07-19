@@ -1,5 +1,5 @@
 ---
-title: Overview of SQL Server Machine Learning Services (R, Python) - SQL Server Machine Learning Services
+title: Overview of SQL Server Machine Learning Services (R, Python)
 description: Overview of the Machine Learning Services feature in SQL Server, where you can integrate Python and R with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
 ms.prod: sql
 ms.technology: machine-learning

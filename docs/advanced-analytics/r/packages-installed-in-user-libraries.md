@@ -1,5 +1,5 @@
 ---
-title: Tips for using R packages installed in user libraries - SQL Server Machine Learning Services
+title: Tips for using R packages installed in user libraries
 ms.prod: sql
 ms.technology: machine-learning
 

@@ -1,5 +1,5 @@
 ---
-title: Python-to-SQL data type conversions - SQL Server Machine Learning
+title: Python-to-SQL data type conversions
 description: Review the implicit and explicit data type converstions between Python and SQL Server in data science and machine learning solutions.
 ms.prod: sql
 ms.technology: machine-learning

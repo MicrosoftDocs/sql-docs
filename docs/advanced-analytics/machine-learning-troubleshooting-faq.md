@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting and FAQ for machine learning - SQL Server Machine Learning Services
+title: Troubleshooting and FAQ for machine learning
 ms.prod: sql
 ms.technology: machine-learning
 

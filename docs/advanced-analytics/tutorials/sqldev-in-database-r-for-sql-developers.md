@@ -1,5 +1,5 @@
 ---
-title: Tutorial for in-database analytics using R - SQL Server Machine Learning
+title: Tutorial for in-database analytics using R
 description: Learn how to embed R programming language code in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning

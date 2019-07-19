@@ -1,5 +1,5 @@
 ---
-title: Query and modify the SQL Server data using RevoScaleR - SQL Server Machine Learning
+title: Query and modify the SQL Server data using RevoScaleR
 description: Tutorial walkthrough on how to query and modify data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning

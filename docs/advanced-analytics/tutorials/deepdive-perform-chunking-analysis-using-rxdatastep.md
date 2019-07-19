@@ -1,5 +1,5 @@
 ---
-title: Perform chunking analysis using RevoScaleR rxDataStep - SQL Server Machine Learning
+title: Perform chunking analysis using RevoScaleR rxDataStep
 description: Tutorial walkthrough on how to chunk data for distributed analysis using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning

@@ -176,7 +176,7 @@ Please note the following guidelines:
 - Make sure you wrap the password in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
 - The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 
-## <a id="unattended"></a> Unattended installazdata
+## <a id="unattended"></a> Unattended install
 
 For an unattended deployment, you must set all required environment variables, use a configuration file, and call `azdata bdc create` command with the `--accept-eula yes` parameter. The examples in the previous section demonstrate the syntax for an unattended installation.
 
@@ -218,7 +218,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
    ```
 
    > [!TIP]
-   > If you did not change the default nazdatang deployment, useazdataql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
+   > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
 1. Log in to the big data cluster with [azdata login](reference-mssqlctl.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 azdata
@@ -226,7 +226,7 @@ azdata
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   Speciazdatasername and password that you azdataed for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
+   Specify the username and password that you azdataed for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
 1. Run [azdata bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 azdata
@@ -269,11 +269,11 @@ minikube ip
 ## <a id="status"></a> Verify the cluster status
 
 After deployment, you can check the status of the cluster with the [azdata bdc status show](reference-mssqlctl-bdc-status.md) command.
-azdata
+
 ```bash
 azdata bdc status show -o table
 ```
-azdata
+
 > [!TIP]
 > To run the status commands, you must first log in with the **azdata login** command, which was shown in the previous endpoints section.
 
@@ -290,12 +290,12 @@ Data     default        Ready
 Storage  default        Ready
 ```
 
-In azdata to this summary status, you caazdataet more detailed status with the following commands:
-azdataazdata
+In to this summary status, you can also get more detailed status with the following commands:
+
 - [azdata bdc control status](reference-mssqlctl-bdc-control-status.md)
 - [azdata bdc pool status](reference-mssqlctl-bdc-pool-status.md)
 
-The output from these cazdatacontain URLs to Kibana and Grafana dashboards for more detailed analysis. azdata
+The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
 
 In addition to using **azdata**, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with **azdata** and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
 

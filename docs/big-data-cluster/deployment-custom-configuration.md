@@ -19,7 +19,7 @@ To customize your cluster deployment configuration files, you can use any JSON f
 
 ## Prerequisites
 
-- [Install azdata](deploy-install-mssqlctl.md).
+- [Install azdata](deploy-install-azdata.md).
 
 - Each of the examples in this section assume that you have created a copy of one of the standard configurations. For more information, see [Create a custom configuration](deployment-guidance.md#customconfig). For example, the following command creates a directory called `custom` that contains two JSON deployment configuration files, **cluster.json** and **control.json**, based on the default **aks-dev-test** configuration:
 

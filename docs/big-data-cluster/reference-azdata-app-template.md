@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **app template** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
+The following article provides reference for the **app template** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
@@ -26,7 +26,7 @@ The following article provides reference for the **app template** commands in th
 Fetch supported templates under the specified [URL] github repository.
 ```bash
 azdata app template list [--url -u] 
-                           
+                         
 ```
 ### Examples
 Fetch all templates under the default template repository location.
@@ -55,8 +55,8 @@ Increase logging verbosity. Use --debug for full debug logs.
 Download supported templates under the specified [URL] github repository.
 ```bash
 azdata app template pull [--name -n] 
-                           [--url -u]  
-                           [--destination -d]
+                         [--url -u]  
+                         [--destination -d]
 ```
 ### Examples
 Download all templates under the default template repository location.
@@ -93,4 +93,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

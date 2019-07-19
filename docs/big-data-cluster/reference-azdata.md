@@ -15,24 +15,24 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **azdata** tool for [SQL Server 2019 big data clusters (preview)](big-data-cluster-overview.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+The following article provides reference for the **azdata** tool for [SQL Server 2019 big data clusters (preview)](big-data-cluster-overview.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-|[azdata app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications. |
-|[azdata bdc](reference-mssqlctl-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
-|[azdata hdfs](reference-mssqlctl-hdfs.md) | The HDFS module provides commands to access an HDFS file system. |
+|[azdata app](reference-azdata-app.md) | Create, delete, run, and manage applications. |
+|[azdata bdc](reference-azdata-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
+|[azdata notebook](reference-azdata-notebook.md) | Commands for viewing, running, and managing notebooks from a terminal. |
 [azdata login](#azdata-login) | Log in to the cluster's controller endpoint.
 [azdata logout](#azdata-logout) | Log out of cluster.
-|[azdata sql](reference-mssqlctl-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
+|[azdata sql](reference-azdata-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
 ## azdata login
-When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to login.  If you do not know the controller endpoint, you may login by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, i.e. export KUBECONFIG=path/to/.kube/config. `--accept-eula` is required for first use if not set as an environment variable.
+When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to login.  If you do not know the controller endpoint, you may login by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, i.e. export KUBECONFIG=path/to/.kube/config.
 ```bash
 azdata login [--cluster-name -n] 
-               [--controller-username -u]  
-               [--controller-endpoint -e]  
-               [--accept-eula -a]
+             [--controller-username -u]  
+             [--controller-endpoint -e]  
+             [--accept-eula -a]
 ```
 ### Examples
 Log in interactively. Cluster name will always be prompted for if not specified as an argument. If you have the CONTROLLER_USERNAME, CONTROLLER_PASSWORD, and ACCEPT_EULA env variables set on your system, these will not be prompted for. If you have the kube config on your system or are using the KUBECONFIG env var to specify the path to the config, the interactive experience will first try to use the config and then prompt you if the config fails.
@@ -55,7 +55,7 @@ Account user. If you do not want to use this arg, you may set the environment va
 #### `--controller-endpoint -e`
 Cluster controller endpoint "https://host:port". If you do not want to use this arg, you may use the kube config on your machine. Please ensure the config is located at the default location of <user home>/.kube/config or use the KUBECONFIG env var.
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -91,4 +91,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

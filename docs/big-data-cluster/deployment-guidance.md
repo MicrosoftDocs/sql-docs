@@ -220,16 +220,16 @@ After the deployment script has completed successfully, you can obtain the IP ad
    > [!TIP]
    > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
-1. Log in to the big data cluster with [azdata login](reference-mssqlctl.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
-azdata
+1. Log in to the big data cluster with [azdata login](reference-azdata.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
+
    ```bash
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   Specify the username and password that you azdataed for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
+   Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
-1. Run [azdata bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
-azdata
+1. Run [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
+
    ```bash
    azdata bdc endpoint list -o table
    ```
@@ -268,7 +268,7 @@ minikube ip
 
 ## <a id="status"></a> Verify the cluster status
 
-After deployment, you can check the status of the cluster with the [azdata bdc status show](reference-mssqlctl-bdc-status.md) command.
+After deployment, you can check the status of the cluster with the [azdata bdc status show](reference-azdata-bdc-status.md) command.
 
 ```bash
 azdata bdc status show -o table
@@ -292,8 +292,8 @@ Storage  default        Ready
 
 In to this summary status, you can also get more detailed status with the following commands:
 
-- [azdata bdc control status](reference-mssqlctl-bdc-control-status.md)
-- [azdata bdc pool status](reference-mssqlctl-bdc-pool-status.md)
+- [azdata bdc control status](reference-azdata-bdc-control-status.md)
+- [azdata bdc pool status](reference-azdata-bdc-pool-status.md)
 
 The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
 

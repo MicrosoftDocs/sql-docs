@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc debug** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc debug** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
@@ -26,14 +26,14 @@ The following article provides reference for the **bdc debug** commands in the *
 Copy the debug logs from the Big Data Cluster - kube config is required on your system.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
-                             [--container -c]  
-                             [--target-folder -d]  
-                             [--pod -p]  
-                             [--timeout -t]
+                           [--container -c]  
+                           [--target-folder -d]  
+                           [--pod -p]  
+                           [--timeout -t]
 ```
 ### Required Parameters
 #### `--namespace -n`
-BDC name, used for kubernetes namespace.
+Big data cluster name, used for kubernetes namespace.
 ### Optional Parameters
 #### `--container -c`
 Copy the logs for the containers with similar name, Optional, by default copies logs for all containers. Cannot be specified multiple times. If specified multiple times, last one will be used
@@ -58,12 +58,12 @@ Increase logging verbosity. Use --debug for full debug logs.
 Trigger logging dump and copy it out from container - kube config is required on your system.
 ```bash
 azdata bdc debug dump --namespace -n 
-                        --container -c  
-                        [--target-folder -d]
+                      --container -c  
+                      [--target-folder -d]
 ```
 ### Required Parameters
 #### `--namespace -n`
-BDC name, used for kubernetes namespace.
+Big data cluster name, used for kubernetes namespace.
 #### `--container -c`
 Copy the logs for the containers with similar name, Optional, by default copies logs for all containers. Cannot be specified multiple times. If specified multiple times, last one will be used
 ### Optional Parameters
@@ -84,4 +84,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

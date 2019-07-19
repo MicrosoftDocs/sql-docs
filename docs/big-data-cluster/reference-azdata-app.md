@@ -15,12 +15,12 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **app** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
+The following article provides reference for the **app** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[azdata app template](reference-mssqlctl-app-template.md) | Templates.
+[azdata app template](reference-azdata-app-template.md) | Templates.
 [azdata app init](#azdata-app-init) | Kickstart new application skeleton.
 [azdata app create](#azdata-app-create) | Create application.
 [azdata app update](#azdata-app-update) | Update application.
@@ -32,11 +32,11 @@ The following article provides reference for the **app** commands in the **azdat
 Helps you to kickstart new application skeleton and/or spec files based on runtime environments.
 ```bash
 azdata app init [--spec -s] 
-                  [--name -n]  
-                  [--version -v]  
-                  [--template -t]  
-                  [--destination -d]  
-                  [--url -u]
+                [--name -n]  
+                [--version -v]  
+                [--template -t]  
+                [--destination -d]  
+                [--url -u]
 ```
 ### Examples
 Scaffold a new application `spec.yaml` only.
@@ -83,7 +83,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 Create an application.
 ```bash
 azdata app create --spec -s 
-                    
+                  
 ```
 ### Examples
 Create a new application from a directory containing a valid spec.yaml deployment specification.
@@ -108,7 +108,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 Update an application.
 ```bash
 azdata app update [--spec -s] 
-                    [--yes -y]
+                  [--yes -y]
 ```
 ### Examples
 Update an existing application from a directory containing a valid spec.yaml deployment specification.
@@ -135,7 +135,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 List an application(s).,
 ```bash
 azdata app list [--name -n] 
-                  [--version -v]
+                [--version -v]
 ```
 ### Examples
 List application by name and version.
@@ -170,7 +170,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 Delete an application.
 ```bash
 azdata app delete --name -n 
-                    --version -v
+                  --version -v
 ```
 ### Examples
 Delete application by name and version.
@@ -197,8 +197,8 @@ Increase logging verbosity. Use --debug for full debug logs.
 Run an application.
 ```bash
 azdata app run --name -n 
-                 --version -v  
-                 [--inputs]
+               --version -v  
+               [--inputs]
 ```
 ### Examples
 Run application with no input parameters.
@@ -236,8 +236,8 @@ Increase logging verbosity. Use --debug for full debug logs.
 Describe an application.
 ```bash
 azdata app describe [--spec -s] 
-                      [--name -n]  
-                      [--version -v]
+                    [--name -n]  
+                    [--version -v]
 ```
 ### Examples
 Describe the application.
@@ -265,4 +265,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

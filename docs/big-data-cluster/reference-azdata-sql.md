@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
@@ -47,7 +47,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 The query command allows execution of a T-SQL query.
 ```bash
 azdata sql query --database -d 
-                   -q
+                 -q
 ```
 ### Examples
 Select the list of tables names.  Database defaults to master.
@@ -73,4 +73,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

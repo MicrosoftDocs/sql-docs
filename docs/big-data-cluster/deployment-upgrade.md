@@ -45,13 +45,13 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://mcr.microsoft.com/python/ctp3.2/azdata/requirements.txt
+   pip3 install -r  https://aka.ms/azdata/python/ctp3.2/azdata/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://mcr.microsoft.com/python/ctp3.2/azdata/requirements.txt --user
+   pip3 install -r  https://aka.ms/azdata/python/ctp3.2/azdata/requirements.txt --user
    ```
 
    > [!IMPORTANT]

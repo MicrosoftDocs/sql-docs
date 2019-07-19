@@ -1,5 +1,5 @@
 ---
-title: Run custom R functions on SQL Server using RevoScaleR rxExec - SQL Server Machine Learning
+title: Run custom R functions on SQL Server using RevoScaleR rxExec
 description: Tutorial walkthrough on how to run custom R script on SQL Server using RevoScaleR functions.
 ms.prod: sql
 ms.technology: machine-learning

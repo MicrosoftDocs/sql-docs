@@ -1,5 +1,5 @@
 ---
-title: Set up a data science client for R development - SQL Server Machine Learning Services
+title: Set up a data science client for R development
 description: Install local R libraries and tools on a development workstation for remote connections to SQL Server.
 ms.prod: sql
 ms.technology: machine-learning

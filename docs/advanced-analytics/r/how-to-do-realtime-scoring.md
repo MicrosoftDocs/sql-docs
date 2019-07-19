@@ -1,5 +1,5 @@
 ---
-title: Generate forecasts and predictions using machine learning models - SQL Server Machine Learning Services
+title: Generate forecasts and predictions using machine learning models
 description: Use rxPredict, or sp_rxPredict for real-time scoring, or PREDICT T-SQL for native scoring for predictions and forecasting in R and Pythin in SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning

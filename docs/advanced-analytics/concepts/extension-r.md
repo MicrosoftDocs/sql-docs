@@ -1,5 +1,5 @@
 ---
-title: R programming language extension - SQL Server Machine Learning
+title: R programming language extension
 description: Learn about R code execution and built-in R libraries in SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning

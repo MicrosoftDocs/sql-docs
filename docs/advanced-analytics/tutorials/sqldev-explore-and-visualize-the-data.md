@@ -1,5 +1,5 @@
 ---
-title: Lesson 1 Explore and visualize data using R and T-SQL - SQL Server Machine Learning
+title: Lesson 1 Explore and visualize data using R and T-SQL
 description: Tutorial showing how to explore and visualize SQL Server data using R functions.
 ms.prod: sql
 ms.technology: machine-learning

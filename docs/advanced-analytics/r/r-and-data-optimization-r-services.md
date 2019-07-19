@@ -1,5 +1,5 @@
 ---
-title: Performance tuning for data optimization - SQL Server Machine Learning Services
+title: Performance tuning for data optimization
 ms.prod: sql
 ms.technology: machine-learning
 

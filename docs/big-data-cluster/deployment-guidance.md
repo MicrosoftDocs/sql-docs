@@ -128,7 +128,7 @@ It is also possible to customize your own deployment configuration profile. You 
 1. Then pass the custom configuration file to **azdata bdc create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
 
    ```bash
-   azdata bdc create --config-profile custom
+   azdata bdc create --config-profile custom --accept-eula yes
    ```
 
 > For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
@@ -144,7 +144,7 @@ The following environment variables are used for security settings that are not 
 | **MSSQL_SA_PASSWORD** | Required |The password of SA user for SQL master instance. |
 | **KNOX_PASSWORD** | Required |The password for Knox user. |
 | **ACCEPT_EULA**| Required for first use of `azdata`| Requires no value. When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula` in the first use of `azdata` command.|
-| **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. |
+| **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. See the [Offline deployments](deploy-offline.md) topic for more details on how to use a private Docker repository for big data cluster deployment.|
 | **DOCKER_PASSWORD** | Optional |The password to access the above private repository. |
 
 These environment variables must be set prior to calling **azdata bdc create**. If any variable is not set, you are prompted for it.
@@ -168,7 +168,7 @@ SET KNOX_PASSWORD=<password>
 After setting the environment variables, you must run `azdata bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
 
 ```bash
-bdc create --config-profile custom --accept-eula yes
+azdata bdc create --config-profile custom --accept-eula yes
 ```
 
 Please note the following guidelines:
@@ -211,7 +211,7 @@ Cluster deployed successfully.
 
 After the deployment script has completed successfully, you can obtain the IP addresses of the external endpoints for the big data cluster using the following steps.
 
-1. After the deployment, find the IP address of the controller endpoint by looking at the EXTERNAL-IP output of the following **kubectl** command:
+1. After the deployment, find the IP address of the controller endpoint either from the deployment standard output or by looking at the EXTERNAL-IP output of the following **kubectl** command:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>

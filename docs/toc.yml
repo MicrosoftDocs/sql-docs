@@ -165,6 +165,8 @@
         href: big-data-cluster/view-cluster-status.md
       - name: Kubernetes troubleshooting
         href: big-data-cluster/cluster-troubleshooting-commands.md
+      - name: Manage with notebook
+        href: big-data-cluster/manage-notebooks.md
     - name: Notebooks
       items:
       - name: Notebooks overview

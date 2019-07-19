@@ -76,15 +76,15 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Fixed an issue where some color options *(Text Editor > Editor Tab and Status Bar)* were not persisted. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37924165)
 | General SSMS | In connection dialog, replaced *Active Directory - Universal with MFA support* with *Azure Active Directory - Universal with MFA* (functionality is the same, but hopefully it's less confusing). |
 | General SSMS | Updated SSMS to use correct defaults values when creating an Azure SQL Database. |
-| General SSMS | Fixed an issue where the user was not able to *Start PowerShell* from a node in [Registered Servers](register-servers/register-servers.md) when the server is a [SQL Linux container](../linux/quickstart-install-connect-docker.md). |
+| General SSMS | Fixed an issue where the user was not able to *Start PowerShell* from a node in [Register Servers](register-servers/register-servers.md) when the server is a [SQL Linux container](../linux/quickstart-install-connect-docker.md). |
 | Import Flat File | Fixed an issue where *Import Flat File* was not working after upgrading from SSMS 18.0 to 18.1. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37912636) |
 | Import Flat File | Fixed an issue where *Import Flat File Wizard was reporting a duplicate or invalid column* on a .csv file with headers with Unicode characters. |
 | Object Explorer | Fixed an issue where some menu items (for example, SQL server *Import and Export Wizard*) where missing or disable when connected to SQL Express. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37500016) for more details. |
 | Object Explorer | Fixed an issue which was causing SSMS to crash when an object from dragged from Object Explorer to the editor. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37887988) for more details. |
 | Object Explorer | Fixed an issue where renaming databases was causing incorrect database names to show up in Object Explorer. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37638472) for more details. |
 | Object Explorer | Fixed a long outstanding issue where trying to expand the *Tables* node in Object Explorer for a database which is set to use a collation that is not supported by Windows anymore triggers an error (and the user can't expand his or her tables). An example of such collation would be Korean_Wansung_Unicode_CI_AS. |
-| [Registered Servers](register-servers/register-servers.md) | Fixed an issue where trying to issue a query against multiple servers (under a *Group* in Registered Servers) when the Registered Server uses either *Active Directory - Integrated* or *Azure Active Directory - Universal with MFA* did not work because SSMS failed to connect. |
-| [Registered Servers](register-servers/register-servers.md) | Fixed an issue where trying to issue a query against multiple servers (under a *Group* in Registered Servers) when the registered server uses either *Active Directory - Password* or *SQL Auth* and the user chose not to remember the password would cause SSMS to crash. |
+| [Register Servers](register-servers/register-servers.md) | Fixed an issue where trying to issue a query against multiple servers (under a *Group* in Registered Servers) when the Registered Server uses either *Active Directory - Integrated* or *Azure Active Directory - Universal with MFA* did not work because SSMS failed to connect. |
+| [Register Servers](register-servers/register-servers.md) | Fixed an issue where trying to issue a query against multiple servers (under a *Group* in Registered Servers) when the registered server uses either *Active Directory - Password* or *SQL Auth* and the user chose not to remember the password would cause SSMS to crash. |
 | Reports | Fixed an issue in *Disk Usage* reports where the report was failing to when data files had a vast number of extents. |
 | Replication Tools | Fixed an issue where Replication Monitor was not working with publisher DB in AG and distributor in AG (this was previously fixed in SSMS 17.x |
 | SQL Agent | Fixed an issue that when Adding, inserting, editing or removing job steps, was causing focus to be reset the first row instead of the active row. See [UserVoice]https://feedback.azure.com/forums/908035/suggestions/38070892 for more details. |
@@ -102,11 +102,13 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 Download previous SSMS versions by clicking the title links in the following sections:
 
-## ![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/)
+## ![download](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - Release number: 18.1  
 - Build number: 15.0.18131.0  
 - Release date: June 11, 2019
+
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
 SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 

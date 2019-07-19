@@ -210,171 +210,171 @@ JSON patch files configure multiple settings at once. For more information about
 
 The following **patch.json** file performs the following changes:
 
-- Updates the port of single endpoint in **control.json**
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "$.spec.endpoints[?(@.name=='Controller')].port",
-      "value": 30000
-    }   
-  ]
-}
-```
+- Updates the port of single endpoint in **control.json**.
+	```json
+	{
+	  "patch": [
+	    {
+	      "op": "replace",
+	      "path": "$.spec.endpoints[?(@.name=='Controller')].port",
+	      "value": 30000
+	    }   
+	  ]
+	}
+	```
 
-- Updates all endpoints (**port** and **serviceType**) in **control.json**
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.endpoints",
-      "value": [
-        {
-          "serviceType": "LoadBalancer",
-          "port": 30001,
-          "name": "Controller"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30778,
-            "name": "ServiceProxy"
-        }
-      ]
-    }
-  ]
-}
-```
+- Updates all endpoints (**port** and **serviceType**) in **control.json**.
+	```json
+	{
+	  "patch": [
+	    {
+	      "op": "replace",
+	      "path": "spec.endpoints",
+	      "value": [
+		{
+		  "serviceType": "LoadBalancer",
+		  "port": 30001,
+		  "name": "Controller"
+		},
+		{
+		    "serviceType": "LoadBalancer",
+		    "port": 30778,
+		    "name": "ServiceProxy"
+		}
+	      ]
+	    }
+	  ]
+	}
+	```
 
 - Updates the controller storage settings in **control.json**. These settings are applicable to all cluster components, unless overridden at pool level.
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.storage",
-      "value": {
-          "data": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-          },
-          "logs": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-          }
-        }
-    }   
-  ]
-}
-```
+	```json
+	{
+	  "patch": [
+	    {
+	      "op": "replace",
+	      "path": "spec.storage",
+	      "value": {
+		  "data": {
+		    "className": "managed-premium",
+		    "accessMode": "ReadWriteOnce",
+		    "size": "100Gi"
+		  },
+		  "logs": {
+		    "className": "managed-premium",
+		    "accessMode": "ReadWriteOnce",
+		    "size": "32Gi"
+		  }
+		}
+	    }   
+	  ]
+	}
+	```
 
 - Updates the storage class name in **control.json**.
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.storage.data.className",
-      "value": "managed-premium"
-    }   
-  ]
-}
-```
+	```json
+	{
+	  "patch": [
+	    {
+	      "op": "replace",
+	      "path": "spec.storage.data.className",
+	      "value": "managed-premium"
+	    }   
+	  ]
+	}
+	```
 
 - Updates pool storage settings for storage pool in **cluster.json**.
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
-      "value": {
-        "type":"Storage",
-        "replicas":2,
-        "storage":{
-        "data":{
-                "size": "100Gi",
-                "className": "myStorageClass",
-                "accessMode":"ReadWriteOnce"
-                },
-        "logs":{
-                "size":"32Gi",
-                "className":"myStorageClass",
-                "accessMode":"ReadWriteOnce"
-                }
-            }
-         }
-    }
-  ]
-}
-```
+	```json
+	{
+	  "patch": [
+	    {
+	      "op": "replace",
+	      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+	      "value": {
+		"type":"Storage",
+		"replicas":2,
+		"storage":{
+		"data":{
+			"size": "100Gi",
+			"className": "myStorageClass",
+			"accessMode":"ReadWriteOnce"
+			},
+		"logs":{
+			"size":"32Gi",
+			"className":"myStorageClass",
+			"accessMode":"ReadWriteOnce"
+			}
+		    }
+		 }
+	    }
+	  ]
+	}
+	```
 
 - Updates Spark settings for storage pool in **cluster.json**.
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
-      "value": {
-        "driverMemory": "2g",
-        "driverCores": 1,
-        "executorInstances": 3,
-        "executorCores": 1,
-        "executorMemory": "1536m"
-      }
-    }   
-  ]
-}
-```
+	```json
+	{
+	  "patch": [
+	    {
+	      "op": "replace",
+	      "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
+	      "value": {
+		"driverMemory": "2g",
+		"driverCores": 1,
+		"executorInstances": 3,
+		"executorCores": 1,
+		"executorMemory": "1536m"
+	      }
+	    }   
+	  ]
+	}
+	```
 
-- Creates a spark pool with 2 instances in **cluster.json**
-```json
-{
-  "patch": [
-    {
-      "op": "add",
-      "path": "spec.pools/-",
-      "value":
-      {
-        "metadata": {
-          "kind": "Pool",
-          "name": "default"
-        },
-        "spec": {
-          "type": "Spark",
-          "replicas": 2
-        },
-        "hadoop": {
-          "yarn": {
-            "nodeManager": {
-              "memory": 12288,
-              "vcores": 6
-            },
-            "schedulerMax": {
-              "memory": 12288,
-              "vcores": 6
-            },
-            "capacityScheduler": {
-              "maxAmPercent": 0.3
-            }
-          },
-          "spark": {
-            "driverMemory": "2g",
-            "driverCores": 1,
-            "executorInstances": 2,
-            "executorMemory": "2g",
-            "executorCores": 1
-          }
-        }
-      }
-    } 
-  ]
-}
-```
+- Creates a spark pool with 2 instances in **cluster.json**.
+	```json
+	{
+	  "patch": [
+	    {
+	      "op": "add",
+	      "path": "spec.pools/-",
+	      "value":
+	      {
+		"metadata": {
+		  "kind": "Pool",
+		  "name": "default"
+		},
+		"spec": {
+		  "type": "Spark",
+		  "replicas": 2
+		},
+		"hadoop": {
+		  "yarn": {
+		    "nodeManager": {
+		      "memory": 12288,
+		      "vcores": 6
+		    },
+		    "schedulerMax": {
+		      "memory": 12288,
+		      "vcores": 6
+		    },
+		    "capacityScheduler": {
+		      "maxAmPercent": 0.3
+		    }
+		  },
+		  "spark": {
+		    "driverMemory": "2g",
+		    "driverCores": 1,
+		    "executorInstances": 2,
+		    "executorMemory": "2g",
+		    "executorCores": 1
+		  }
+		}
+	      }
+	    } 
+	  ]
+	}
+	```
 
 
 

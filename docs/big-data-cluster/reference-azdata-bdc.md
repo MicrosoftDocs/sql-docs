@@ -18,6 +18,7 @@ ms.technology: big-data-cluster
 The following article provides reference for the **bdc** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
+
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.
@@ -40,11 +41,15 @@ azdata bdc create [--name -n]
                   [--force -f]
 ```
 ### Examples
+
 Guided BDC deployment experience - you will receive prompts for needed values.
+
 ```bash
 azdata bdc create
 ```
+
 BDC deployment with arguments.
+
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```
@@ -52,10 +57,13 @@ BDC deployment with specified name instead of default name in the profile.
 ```bash
 azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
 ```
+
 BDC deployment with arguments - no prompts will be given as the --force flag is used.
+
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 ```
+
 ### Optional Parameters
 #### `--name -n`
 Big data cluster name, used for kubernetes namespaces.

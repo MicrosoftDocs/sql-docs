@@ -10,8 +10,6 @@
     items:
     - name: SQL Server 2019
       href: sql-server/what-s-new-in-sql-server-ver15.md
-    - name: SQL Server 2019 CTP announcement archive
-      href: sql-server/what-s-new-in-sql-server-ver15-prerelease.md
     - name: SQL Server 2017
       href: sql-server/what-s-new-in-sql-server-2017.md
     - name: SQL Server 2016
@@ -143,7 +141,7 @@
         href: big-data-cluster/data-ingestion-restore-database.md
     - name: Deploy and consume apps
       items:
-      - name: Deploy with mssqlctl
+      - name: Deploy with azdata
         href: big-data-cluster/big-data-cluster-create-apps.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md

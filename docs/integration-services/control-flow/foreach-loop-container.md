@@ -501,7 +501,19 @@ Specifies an existing Azure Storage Connection Manager or creates a new one that
 Specifies the path of the folder to enumerate files in.
 
 **SearchRecursively**  
-Specifies whether to search recursively within the specified folder.  
+Specifies whether to search recursively within the specified folder.
+
+***Notes on Service Principal Permission Configuration***
+
+Data Lake Storage Gen2 permission is determined by both [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) and [ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Pay attention that ACLs are configured using the Object ID (OID) of the service principal for the app registration as detailed [here](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+This is different from the Application (client) ID that is used with RBAC configuration.
+When a security principal is granted RBAC data permissions through a built-in role, or through a custom role, these permissions are evaluated first upon authorization of a request.
+If the requested operation is authorized by the security principal's RBAC assignments, then authorization is immediately resolved and no additional ACL checks are performed.
+Alternatively, if the security principal does not have an RBAC assignment, or the request's operation does not match the assigned permission, then ACL checks are performed to determine if the security principal is authorized to perform the requested operation.
+For the enumerator to work, grant at least **Execute** permission starting from the root file system, along with **Read** permission for the target folder.
+Alternatively, grant at least the **Storage Blob Data Reader** role with RBAC.
+See [this](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) article for details.
 
 ## Variable Mappings Page - Foreach Loop Editor
  Use the **Variables Mappings** page of the **Foreach Loop Editor** dialog box to map variables to the collection value. The value of the variable is updated with the collection values on each iteration of the loop.  

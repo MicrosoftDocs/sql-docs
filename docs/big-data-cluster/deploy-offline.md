@@ -110,7 +110,7 @@ You can use an automated python script that will automatically pull all required
 
 ## Install tools offline
 
-Big data cluster deployments require several tools, including **Python**, **mssqlctl**, and **kubectl**. Use the following steps to install these tools on an offline server.
+Big data cluster deployments require several tools, including **Python**, **azdata**, and **kubectl**. Use the following steps to install these tools on an offline server.
 
 ### <a id="python"></a> Install python offline
 
@@ -130,18 +130,18 @@ Big data cluster deployments require several tools, including **Python**, **mssq
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="mssqlctl"></a> Install mssqlctl offline
+### <a id="azdata"></a> Install azdata offline
 
-1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the **mssqlctl** packages to the current folder.
+1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the **azdata** packages to the current folder.
 
    ```PowerShell
-   pip download -r https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip download -r https://private-repo.microsoft.com/python/ctp-2.3/azdata/requirements.txt
    ```
 
 1. Download the **requirements.txt** file.
 
    ```PowerShell
-   curl -o requirements.txt "https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt"
+   curl -o requirements.txt "https://private-repo.microsoft.com/python/ctp-2.3/azdata/requirements.txt"
    ```
 
 1. Copy the downloaded packages and the **requirements.txt** file to the target machine.
@@ -162,12 +162,12 @@ To install **kubectl** to an offline machine, use the following steps.
 
 ## Deploy from private repository
 
-To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **mssqlctl** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **custom.json**:
+To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **azdata** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **custom.json**:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+azdata bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+azdata bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+azdata bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 The deployment prompts you for the docker username and password, or you can specify them in the **DOCKER_USERNAME** and **DOCKER_PASSWORD** environment variables.

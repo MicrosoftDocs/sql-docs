@@ -135,13 +135,7 @@ Big data cluster deployments require several tools, including **Python**, **azda
 1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the **azdata** packages to the current folder.
 
    ```PowerShell
-   pip download -r https://private-repo.microsoft.com/python/ctp-2.3/azdata/requirements.txt
-   ```
-
-1. Download the **requirements.txt** file.
-
-   ```PowerShell
-   curl -o requirements.txt "https://private-repo.microsoft.com/python/ctp-2.3/azdata/requirements.txt"
+   pip download -r https://aka.ms/azdata
    ```
 
 1. Copy the downloaded packages and the **requirements.txt** file to the target machine.

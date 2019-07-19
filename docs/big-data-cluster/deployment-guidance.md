@@ -98,25 +98,25 @@ In this scenario, you are prompted for any settings that are not part of the def
 
 It is also possible to customize your own deployment configuration profile. You can do this with the following steps:
 
-1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **mssqlctl bdc config list** command to list them:
+1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **azdata bdc config list** command to list them:
 
    ```bash
-   mssqlctl bdc config listazdata
+   azdata bdc config listazdata
    ```
 
-1. azdatamize your deployment, create a copy of the deployment profile with the **mssqlctl bdc config init** command. For example, the following command creates a copy of the **aks-dev-test** deployment configuration file in a target directory named `custom`:
+1. azdatamize your deployment, create a copy of the deployment profile with the **azdata bdc config init** command. For example, the following command creates a copy of the **aks-dev-test** deployment configuration file in a target directory named `custom`:
 
    ```bash
-   mssqlctl bdc config init --source aks-dev-test --target customazdata
+   azdata bdc config init --source aks-dev-test --target customazdata
    ```
 
    azdata
    > The `--target` specifies a directory that contains the configuration file based on the `--source` parameter.
 
-1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **mssqlctl bdc config section set** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
+1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **azdata bdc config section set** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
 
    ```bash
-   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"azdata
+   azdata bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"azdata
    ```
 
    azdata
@@ -124,13 +124,12 @@ It is also possible to customize your own deployment configuration profile. You 
 
    In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 
-1. Then pass the custom configuration file to **mssqlctl bdc create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
+1. Then pass the custom configuration file to **azdata bdc create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
 
    ```bash
-   mssqlctl bdc create --config-profile custom -azdataeula yes
+   azdata bdc create --config-profile custom --accept-eula
    ```
 
-> [azdata
 > For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 
 ## <a id="env"></a> Environment variables
@@ -143,13 +142,14 @@ The following environment variables are used for security settings that are not 
 | **CONTROLLER_PASSWORD** | Required |The password for the cluster administrator. |
 | **MSSQL_SA_PASSWORD** | Required |The password of SA user for SQL master instance. |
 | **KNOX_PASSWORD** | Required |The password for Knox user. |
+| **ACCEPT_EULA**| Required for first use of `azdata`| Requires no value. When set as an environment variable, it applies EULA to both SQL Server and `azdata`. If not set as environment variable, you can include `--accept-eula` in the first use of `azdata` command.|
 | **DOCKER_USERNAME** | Optional | The username to access the container images in case they are stored in a private repository. |
 | **DOCKER_PASSWORD** | Optional |The password to access the above private repository. |
 
-These environment variables must be set prior to calling **mssqlctl bdc create**. If any variable is not set, you are prompted for it.
+These environment variables must be set prior to calling **azdata bdc create**. If any variable is not set, you are prompted for it.
 
 The following example shows how to set the environment variables for Linux (bash) and Windows (PowerShell):
-azdata
+
 ```bash
 export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
@@ -163,11 +163,11 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
-azdata
-After setting the environment variables, you must run `mssqlctl bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
+
+After setting the environment variables, you must run `azdata bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
 
 azdata
-mssqlctl bdc create --config-profile custom --accept-eula yes
+azdata bdc create --config-profile custom --accept-eula yes
 ```
 
 Please note the following guidelines:
@@ -177,7 +177,7 @@ Please note the following guidelines:
 
 ## <a id="unattended"></a> Unattended installazdata
 
-For an unattended deployment, you must set all required environment variables, use a configuration file, and call `mssqlctl bdc create` command with the `--accept-eula yes` parameter. The examples in the previous section demonstrate the syntax for an unattended installation.
+For an unattended deployment, you must set all required environment variables, use a configuration file, and call `azdata bdc create` command with the `--accept-eula yes` parameter. The examples in the previous section demonstrate the syntax for an unattended installation.
 
 ## <a id="monitor"></a> Monitor the deployment
 
@@ -219,18 +219,18 @@ After the deployment script has completed successfully, you can obtain the IP ad
    > [!TIP]
    > If you did not change the default nazdatang deployment, useazdataql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
-1. Log in to the big data cluster with [mssqlctl login](reference-mssqlctl.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
+1. Log in to the big data cluster with [azdata login](reference-mssqlctl.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 azdata
    ```bash
-   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
    Speciazdatasername and password that you azdataed for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
-1. Run [mssqlctl bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
+1. Run [azdata bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 azdata
    ```bash
-   mssqlctl bdc endpoint list -o table
+   azdata bdc endpoint list -o table
    ```
 
    The following list shows sample output from this command:
@@ -267,14 +267,14 @@ minikube ip
 
 ## <a id="status"></a> Verify the cluster statusazdataazdata
 
-After deployment, you can check the status of the cluster with the [mssqlctl bdc status show](reference-mssqlctl-bdc-status.md) command.
+After deployment, you can check the status of the cluster with the [azdata bdc status show](reference-mssqlctl-bdc-status.md) command.
 azdata
 ```bash
-mssqlctl bdc status show -o table
+azdata bdc status show -o table
 ```
 azdata
 > [!TIP]
-> To run the status commands, you must first log in with the **mssqlctl login** command, which was shown in the previous endpoints section.
+> To run the status commands, you must first log in with the **azdata login** command, which was shown in the previous endpoints section.
 
 The following shows sample output from this command:
 
@@ -291,12 +291,12 @@ Storage  default        Ready
 
 In azdata to this summary status, you caazdataet more detailed status with the following commands:
 azdataazdata
-- [mssqlctl bdc control status](reference-mssqlctl-bdc-control-status.md)
-- [mssqlctl bdc pool status](reference-mssqlctl-bdc-pool-status.md)
+- [azdata bdc control status](reference-mssqlctl-bdc-control-status.md)
+- [azdata bdc pool status](reference-mssqlctl-bdc-pool-status.md)
 
 The output from these cazdatacontain URLs to Kibana and Grafana dashboards for more detailed analysis. azdata
 
-In addition to using **mssqlctl**, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with **mssqlctl** and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
+In addition to using **azdata**, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with **azdata** and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
 
 ## <a id="connect"></a> Connect to the cluster
 

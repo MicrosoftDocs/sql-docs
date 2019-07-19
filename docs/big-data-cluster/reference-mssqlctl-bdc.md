@@ -18,6 +18,7 @@ ms.technology: big-data-cluster
 The following article provides reference for the **bdc** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
 
 ## Commands
+
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.
@@ -32,7 +33,7 @@ The following article provides reference for the **bdc** commands in the **azdat
 
 ## mssqlctl bdc create
 
-Create a SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
+Create a SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD']. `--accept-eula` is required for first use if not set as an environment variable. 
 
 ```bash
 azdata bdc create [--config-profile -c] 
@@ -45,20 +46,29 @@ azdata bdc create [--config-profile -c]
 >Prior to CTP 3.2, the following parameters were also required: `['DOCKER_USERNAME', 'DOCKER_PASSWORD']`.
 
 ### Examples
+
 Guided BDC deployment experience - you will receive prompts for needed values.
+
 ```bash
 azdata bdc create
 ```
+
 BDC deployment with arguments.
+
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```
+
 BDC deployment with arguments - no prompts will be given as the --force flag is used.
+
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 ```
+
 ### Optional Parameters
+
 #### `--config-profile -c`
+
 BDC config profile, used for deploying the cluster: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
 Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'

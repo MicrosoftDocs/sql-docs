@@ -22,14 +22,6 @@ This article describes how to install the **azdata** tool for CTP 3.2 on Windows
 > [!IMPORTANT]
 > If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading **azdata** and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
 
-To install azdata, you need to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). To confirm your acceptance, either:
-
-* Set the **ACCEPT_EULA** environment variable
-   or
-* Include `--accept-eula` in the installation command.
-
-In this article, the examples include `--accept-eula`.
-
 ## <a id="windows"></a> Windows azdata installation
 
 1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
@@ -44,7 +36,7 @@ In this article, the examples include `--accept-eula`.
    If you are uninstalling **mssqlctl** corresponding to CTP version 2.2 or lower run:
 
    ```powershell
-   pip3 uninstall azdata
+   pip3 uninstall mssqlctl
    ```
 
    For CTP 2.3 or higher, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. If the version is prior to CTP 3.0, add a dash before the version number (for example, `ctp-2.5`). If you are uninstalling **azdata** replace **mssqlctl** with **azdata**. 

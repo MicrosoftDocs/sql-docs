@@ -1,5 +1,5 @@
 ---
-title: Grant database permissions for R and Python script execution - SQL Server Machine Learning Services
+title: Grant database permissions for R and Python script execution
 description: How to grant database user permissions for R and Python script execution on SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning

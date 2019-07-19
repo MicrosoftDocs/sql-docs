@@ -1,5 +1,5 @@
 ---
-title: Extended events for monitoring R and Python processes - SQL Server Machine Learning Services
+title: Extended events for monitoring R and Python processes
 ms.prod: sql
 ms.technology: machine-learning
 

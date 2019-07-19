@@ -1,5 +1,5 @@
 ---
-title: RevoScaleR R function library - SQL Server Machine Learning Services
+title: RevoScaleR R function library
 description: Introduction to the RevoScaleR function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning

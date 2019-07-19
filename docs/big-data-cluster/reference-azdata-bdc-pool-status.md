@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc pool status** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc pool status** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
@@ -25,7 +25,7 @@ The following article provides reference for the **bdc pool status** commands in
 Pool status.
 ```bash
 azdata bdc pool status show --kind -k 
-                              [--name -n]
+                            [--name -n]
 ```
 ### Examples
 Get status of the storage pool.
@@ -50,10 +50,10 @@ azdata bdc pool status show --kind spark --name default
 ```
 ### Required Parameters
 #### `--kind -k`
-BDC pool kind.
+Big data cluster pool kind.
 ### Optional Parameters
 #### `--name -n`
-BDC pool name.
+Big data cluster pool name.
 `default`
 ### Global Arguments
 #### `--debug`
@@ -69,4 +69,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

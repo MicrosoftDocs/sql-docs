@@ -32,7 +32,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > [!Important]
    > Use the version of **azdata** that matches your cluster. Do not delete an older cluster with the newer version of **azdata**.
 
-1. Prior to CTP 3.2, **azdata** was called **mssqlctl**. If you have any previous releases of **mssqlctl** or **mssqlctl** installed, it is important to uninstall first before installing the latest version of **azdata**.
+1. Prior to CTP 3.2, **azdata** was called **mssqlctl**. If you have any previous releases of **mssqlctl** or **azdata** installed, it is important to uninstall first before installing the latest version of **azdata**.
 
    For CTP 2.3 or higher, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. If the version is prior to CTP 3.1, add a dash before the version number (for example, `ctp-2.5`).
 

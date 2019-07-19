@@ -82,8 +82,10 @@ Big data cluster deployment options are defined in JSON configuration files. The
 
 You can deploy a big data cluster by running **azdata bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
+The first time you run `azdata` you must include `--accept-eula` to accept the end user license agreement (EULA).
+
 ```bash
-azdata bdc create
+azdata bdc create --accept-eula
 ```
 
 In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. 
@@ -101,7 +103,7 @@ It is also possible to customize your own deployment configuration profile. You 
 1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **azdata bdc config list** command to list them:
 
    ```bash
-   azdata bdc config listazdata
+   azdata bdc config list
    ```
 
 1. azdatamize your deployment, create a copy of the deployment profile with the **azdata bdc config init** command. For example, the following command creates a copy of the **aks-dev-test** deployment configuration file in a target directory named `custom`:
@@ -119,7 +121,6 @@ It is also possible to customize your own deployment configuration profile. You 
    azdata bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"azdata
    ```
 
-   azdata
    > The `--config-profile` specifies a directory name for your custom deployment profile, but the actual modifications happen on the deployment configuration JSON file within that directory. A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 
    In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
@@ -127,7 +128,7 @@ It is also possible to customize your own deployment configuration profile. You 
 1. Then pass the custom configuration file to **azdata bdc create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
 
    ```bash
-   azdata bdc create --config-profile custom --accept-eula
+   azdata bdc create --config-profile custom
    ```
 
 > For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
@@ -166,16 +167,16 @@ SET KNOX_PASSWORD=<password>
 
 After setting the environment variables, you must run `azdata bdc create` to trigger the deployment. This example uses the cluster configuration profile created above:
 
-azdata
-azdata bdc create --config-profile custom --accept-eula yes
+```bash
+bdc create --config-profile custom --accept-eula yes
 ```
 
 Please note the following guidelines:
 
-- Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
-- The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
+- Make sure you wrap the password in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
+- The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running `echo $MSSQL_SA_PASSWORD` in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 
-## <a id="unattended"></a> Unattended installazdata
+## <a id="unattended"></a> Unattended install
 
 For an unattended deployment, you must set all required environment variables, use a configuration file, and call `azdata bdc create` command with the `--accept-eula yes` parameter. The examples in the previous section demonstrate the syntax for an unattended installation.
 
@@ -187,7 +188,7 @@ During cluster bootstrap, the client command window will output the deployment s
 Waiting for cluster controller to start.
 ```
 
-In less than 15 to 30 minutes, you should be notified that the controller pod is running:
+In 15 to 30 minutes, you should be notified that the controller pod is running:
 
 ```output
 Cluster controller endpoint is available at 11.111.111.11:30080.
@@ -217,7 +218,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
    ```
 
    > [!TIP]
-   > If you did not change the default nazdatang deployment, useazdataql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
+   > If you did not change the default name during deployment, use `-n mssql-cluster` in the previous command. **mssql-cluster** is the default name for the big data cluster.
 
 1. Log in to the big data cluster with [azdata login](reference-mssqlctl.md). Set the **--controller-endpoint** parameter to the external IP address of the controller endpoint.
 azdata
@@ -225,7 +226,7 @@ azdata
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   Speciazdatasername and password that you azdataed for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
+   Specify the username and password that you azdataed for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
 1. Run [azdata bdc endpoint list](reference-mssqlctl-bdc-endpoint.md) to get a list with a description of each endpoint and their corresponding IP address and port values. 
 azdata
@@ -268,11 +269,11 @@ minikube ip
 ## <a id="status"></a> Verify the cluster status
 
 After deployment, you can check the status of the cluster with the [azdata bdc status show](reference-mssqlctl-bdc-status.md) command.
-azdata
+
 ```bash
 azdata bdc status show -o table
 ```
-azdata
+
 > [!TIP]
 > To run the status commands, you must first log in with the **azdata login** command, which was shown in the previous endpoints section.
 
@@ -289,12 +290,12 @@ Data     default        Ready
 Storage  default        Ready
 ```
 
-In azdata to this summary status, you caazdataet more detailed status with the following commands:
-azdataazdata
+In to this summary status, you can also get more detailed status with the following commands:
+
 - [azdata bdc control status](reference-mssqlctl-bdc-control-status.md)
 - [azdata bdc pool status](reference-mssqlctl-bdc-pool-status.md)
 
-The output from these cazdatacontain URLs to Kibana and Grafana dashboards for more detailed analysis. azdata
+The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
 
 In addition to using **azdata**, you can also use Azure Data Studio to find both endpoints and status information. For more information about viewing cluster status with **azdata** and Azure Data Studio, see [How to view the status of a big data cluster](view-cluster-status.md).
 

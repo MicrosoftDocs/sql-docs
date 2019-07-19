@@ -103,7 +103,7 @@ It is also possible to customize your own deployment configuration profile. You 
 1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **azdata bdc config list** command to list them:
 
    ```bash
-   azdata bdc config
+   azdata bdc config list
    ```
 
 1. azdatamize your deployment, create a copy of the deployment profile with the **azdata bdc config init** command. For example, the following command creates a copy of the **aks-dev-test** deployment configuration file in a target directory named `custom`:

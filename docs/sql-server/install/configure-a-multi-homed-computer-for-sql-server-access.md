@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure a Multi-Homed Computer for SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

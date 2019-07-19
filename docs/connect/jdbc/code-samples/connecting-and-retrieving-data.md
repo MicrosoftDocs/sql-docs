@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Connecting and Retrieving Data
 

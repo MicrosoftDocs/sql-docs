@@ -1,5 +1,5 @@
 ---
-title: Create a local R package repository using miniCRAN - SQL Server Machine Learning Services
+title: Create a local R package repository using miniCRAN
 description: Use miniCran to detect, assemble, and install R package dependencies into a single consolidated package.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Create a local R package repository using miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

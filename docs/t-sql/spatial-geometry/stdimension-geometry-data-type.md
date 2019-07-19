@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STDimension (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

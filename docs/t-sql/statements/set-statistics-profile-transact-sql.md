@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

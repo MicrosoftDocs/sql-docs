@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Table Definition

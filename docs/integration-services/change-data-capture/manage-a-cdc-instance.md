@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Manage a CDC Instance
 

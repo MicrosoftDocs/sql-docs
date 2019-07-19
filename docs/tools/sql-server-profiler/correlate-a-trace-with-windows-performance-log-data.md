@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "traces [SQL Server], logs"
   - "SQL Server Profiler, correlating trace with log data"
 ms.assetid: 1e4412c8-d27c-4aae-9b35-214128d1d00a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Correlate a trace with Windows Performance Log data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Delete Rows in the Results Pane (Visual Database Tools)

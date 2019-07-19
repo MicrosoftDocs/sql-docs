@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_threads (Transact-SQL)
@@ -63,7 +62,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ## Notes on Linux version
 

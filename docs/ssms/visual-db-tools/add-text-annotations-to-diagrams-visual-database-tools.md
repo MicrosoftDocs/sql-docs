@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Add Text Annotations to Diagrams (Visual Database Tools)

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Overview of PowerShell Cmdlets for Always On Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

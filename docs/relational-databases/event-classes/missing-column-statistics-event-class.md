@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Missing Column Statistics Event Class

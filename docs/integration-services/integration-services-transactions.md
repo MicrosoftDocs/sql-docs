@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Transactions
 

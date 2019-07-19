@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete Jobs

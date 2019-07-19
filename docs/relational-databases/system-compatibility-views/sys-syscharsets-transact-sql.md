@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.syscharsets (Transact-SQL)

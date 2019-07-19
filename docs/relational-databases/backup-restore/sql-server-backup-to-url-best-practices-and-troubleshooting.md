@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Backup to URL Best Practices and Troubleshooting
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

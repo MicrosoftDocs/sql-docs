@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Start System Monitor (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

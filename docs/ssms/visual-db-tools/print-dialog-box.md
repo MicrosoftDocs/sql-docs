@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Print Dialog Box

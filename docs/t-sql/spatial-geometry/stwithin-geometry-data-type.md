@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STWithin (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

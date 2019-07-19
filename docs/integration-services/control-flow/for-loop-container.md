@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # For Loop Container
 

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameter Type Discovery

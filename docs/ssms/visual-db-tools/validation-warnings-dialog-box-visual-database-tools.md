@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Validation Warnings Dialog Box (Visual Database Tools)

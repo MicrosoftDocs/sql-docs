@@ -1,5 +1,5 @@
 ---
-title: Convert R code for stored procedures - SQL Server Machine Learning Services
+title: Convert R code for stored procedures
 description: Migrate R code to a SQL Server stored procedure for solution deployment and data access to relational data on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Convert R code for execution in SQL Server (In-Database) instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

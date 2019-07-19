@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OLE DB Command Transformation
 

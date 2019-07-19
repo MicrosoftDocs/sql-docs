@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

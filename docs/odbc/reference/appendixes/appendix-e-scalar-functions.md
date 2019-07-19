@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Appendix E: Scalar Functions
 ODBC specifies the following types of scalar functions, with detailed information about each of these function types provided in the corresponding sections of this appendix. The function descriptions include associated syntax.  

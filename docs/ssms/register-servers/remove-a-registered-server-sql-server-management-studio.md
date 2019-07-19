@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Remove a Registered Server (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

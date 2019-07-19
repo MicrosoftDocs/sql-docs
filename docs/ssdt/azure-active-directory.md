@@ -8,7 +8,6 @@ ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Azure Active Directory support in SQL Server Data Tools (SSDT)

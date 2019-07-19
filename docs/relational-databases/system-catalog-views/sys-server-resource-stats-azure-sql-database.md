@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # sys.server_resource_stats (Azure SQL Database)

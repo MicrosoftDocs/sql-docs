@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
 # FOR XML (SQL Server)

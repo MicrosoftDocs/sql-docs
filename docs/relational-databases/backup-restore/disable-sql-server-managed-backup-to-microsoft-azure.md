@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Disable SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

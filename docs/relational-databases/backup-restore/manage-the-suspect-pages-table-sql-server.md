@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Manage the suspect_pages Table (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

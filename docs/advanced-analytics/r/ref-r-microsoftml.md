@@ -1,5 +1,5 @@
 ---
-title: MicrosoftML R function library - SQL Server Machine Learning Services
+title: MicrosoftML R function library
 description: Introduction to the MicrosoftML function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # MicrosoftML (R library in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: "v-makouz"
 ms.author: v-makouz
-manager: "kenvh"
+manager: kenvh
 ---
 # Data Classification
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

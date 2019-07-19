@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Options (Designers - Analysis Services Designers - General)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

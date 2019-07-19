@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: a3fffc08-7254-4af7-bbae-8ff591fbd5ec
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # supportsANSI92EntryLevelSQL Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

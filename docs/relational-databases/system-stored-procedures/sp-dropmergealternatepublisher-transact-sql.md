@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

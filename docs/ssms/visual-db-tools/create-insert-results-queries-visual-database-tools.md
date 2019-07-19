@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Create Insert Results Queries (Visual Database Tools)

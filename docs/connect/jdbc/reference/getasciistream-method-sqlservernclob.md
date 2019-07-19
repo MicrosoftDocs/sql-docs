@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ff1d47e4-572a-4169-a631-ac261f7642b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getAsciiStream Method (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

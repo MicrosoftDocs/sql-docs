@@ -1,5 +1,5 @@
 ---
-title: Install SQL Server Machine Learning Services (In-Database) on Windows - SQL Server Machine Learning
+title: Install SQL Server Machine Learning Services (In-Database) on Windows
 description: R in SQL Server or Python on SQL Server installation steps for SQL Server 2017 Machine Learning Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Install SQL Server Machine Learning Services on Windows
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

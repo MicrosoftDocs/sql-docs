@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Notify Operator Task
 

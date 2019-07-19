@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET TEXTSIZE (Transact-SQL)

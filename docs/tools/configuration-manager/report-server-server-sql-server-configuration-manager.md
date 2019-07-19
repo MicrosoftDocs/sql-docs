@@ -8,10 +8,9 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: ea939db1-ce97-4eea-8223-1ca6a82128d7
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Report Server &lt;server&gt; (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

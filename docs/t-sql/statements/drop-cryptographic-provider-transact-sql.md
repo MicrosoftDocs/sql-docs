@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

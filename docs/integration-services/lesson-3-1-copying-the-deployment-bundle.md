@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 3-1 - Copying the Deployment Bundle
 

@@ -1,5 +1,5 @@
 ---
-title: Tutorial for in-database Python analytics for SQL developers - SQL Server Machine Learning
+title: Tutorial for in-database Python analytics for SQL developers
 description: Learn how to embed Python code in SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Tutorial: Python data analytics for SQL developers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

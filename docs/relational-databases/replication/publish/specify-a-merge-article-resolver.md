@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Specify a Merge Article Resolver
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

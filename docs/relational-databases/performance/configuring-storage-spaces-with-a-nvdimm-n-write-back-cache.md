@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Configuring Storage Spaces with a NVDIMM-N write-back cache
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

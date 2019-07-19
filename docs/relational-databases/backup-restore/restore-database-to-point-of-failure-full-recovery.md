@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore Database to Point of Failure - Full Recovery
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

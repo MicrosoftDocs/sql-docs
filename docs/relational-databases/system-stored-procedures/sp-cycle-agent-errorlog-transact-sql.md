@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

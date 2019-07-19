@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Delete Objects
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

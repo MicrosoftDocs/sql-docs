@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Load the SMO Assemblies in Windows PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

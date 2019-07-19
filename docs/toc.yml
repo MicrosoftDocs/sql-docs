@@ -917,7 +917,7 @@
           items:
           - name: Set up
             href: database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md
-          - name: Prepare a a database
+          - name: Prepare a database
             href: database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md
           - name: Set up encryption
             href: database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md
@@ -1338,7 +1338,7 @@
     items:
     - name: Heaps (Tables without Clustered Indexes)
       href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-    - name: Clustered & Nonclustered Indexes Described
+    - name: Clustered & Nonclustered Indexes
       href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
       items:
       - name: Create
@@ -5695,6 +5695,8 @@
       href: dma/dma-migrateonpremsqltosqldb.md
     - name: Migrate SQL Server logins
       href: dma/dma-migrateserverlogins.md
+    - name: Assess a SQL Server data estate for Azure SQL Database readiness
+      href: dma/dma-assess-sql-data-estate-to-sqldb.md      
     - name: Best practices
       href: dma/dma-bestpractices.md
     - name: Consolidate assessment reports
@@ -7396,6 +7398,8 @@
     items:
     - name: Create Linked Servers
       href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+    - name: Create Linked Server Provider
+      href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
   - name: Full-text search
     href: relational-databases/search/full-text-search.md
     items:
@@ -8765,14 +8769,10 @@
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ssms/sql-server-management-studio-ssms.md
-    - name: Quickstarts
+    - name: Tutorials
       items:
       - name: Connect & query SQL Server
         href: ssms/tutorials/connect-query-sql-server.md
-    - name: Tutorials
-      items:
-      - name: Design a relational database in a single database
-        href: https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017
     - name: Concepts
       items:
       - name: Tool Windows in SSMS
@@ -9047,11 +9047,13 @@
       - name: Install non-English SSMS
         href: ssms/install-other-languages.md
       - name: Use templates in SSMS
-        href: ssms/tutorials/templates-ssms.md
+        href: ssms/template/templates-ssms.md
       - name: Script objects
         href: ssms/tutorials/scripting-ssms.md
       - name: SSMS Configuration
         href: ssms/tutorials/ssms-configuration.md
+      - name: Use other tips & tricks
+        href: ssms/tutorials/ssms-tricks.md
       - name: Customize Menus & Shortcut Keys
         href: ssms/customize-menus-and-shortcut-keys.md
       - name: Configure WMI to Show Server Status in SQL Server Tools
@@ -9062,7 +9064,7 @@
         items:
         - name: Get full memory dump 
           href: ssms/troubleshoot/get-full-memory-dump.md
-        - name: Crashes and Hangs
+        - name: Get diagnostic data
           href: ssms/troubleshoot/ssms-troubleshoot.md
       - name: SQL Server Agent
         items:
@@ -9965,8 +9967,6 @@
           href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: Resources
       items:
-      - name: SQL Server Management Studio
-        href: ssms/tutorials/tutorial-sql-server-management-studio.md
       - name: SSMS Support Policy
         href: ssms/support-policy.md
       - name: Support options for business users
@@ -10186,15 +10186,15 @@
       href: linux/quickstart-install-connect-clouds.md
   - name: Tutorials
     items:
-    - name: 1_Migrate from Windows
+    - name: Migrate from Windows
       href: linux/sql-server-linux-migrate-restore-database.md
-    - name: 2_Migrate to Docker
+    - name: Migrate to Docker
       href: linux/tutorial-restore-backup-in-sql-server-container.md
-    - name: 3_Create a job
+    - name: Create a job
       href: linux/sql-server-linux-run-sql-server-agent-job.md
-    - name: 4_Setup AD Authentication
+    - name: Setup AD Authentication
       href: linux/sql-server-linux-active-directory-authentication.md
-    - name: 5_Create failover cluster instance
+    - name: Create failover cluster instance
       href: linux/sql-server-linux-shared-disk-cluster-configure.md
       items:
       - name: iSCSI
@@ -10203,16 +10203,18 @@
         href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
       - name: SMB
         href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-    - name: 6_Operate failover cluster instance - SQL Server on Linux
+    - name: Operate failover cluster instance - SQL Server on Linux
       href: linux/sql-server-linux-shared-disk-cluster-operate.md
-    - name: 7_Deploy a Pacemaker cluster
+    - name: Deploy a Pacemaker cluster
       href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-    - name: 8_Create & configure availability groups
+    - name: Create & configure availability groups
       href: linux/sql-server-linux-create-availability-group.md
-    - name: 9_Deploy on Kubernetes
+    - name: Deploy on Kubernetes
       href: linux/tutorial-sql-server-containers-kubernetes.md
-    - name: 10_Configure replication
+    - name: Configure replication
       href: linux/sql-server-linux-replication-tutorial-tsql.md
+    - name: Machine learning in a container
+      href: linux/sql-server-linux-machine-learning-services-container.md
   - name: Concepts
     items:
     - name: Install

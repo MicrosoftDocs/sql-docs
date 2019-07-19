@@ -15,7 +15,6 @@ apitype: "DLLExport"
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBFormatMessage Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

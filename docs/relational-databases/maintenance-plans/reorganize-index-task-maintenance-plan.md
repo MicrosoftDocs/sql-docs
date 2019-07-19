@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Reorganize Index Task (Maintenance Plan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

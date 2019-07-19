@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Control-of-Flow
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

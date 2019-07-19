@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Indexes with Included Columns

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Define a State Variable
 

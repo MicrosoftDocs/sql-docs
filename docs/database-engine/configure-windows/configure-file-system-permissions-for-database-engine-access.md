@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Configure File System Permissions for Database Engine Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

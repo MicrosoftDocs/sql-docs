@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a28b16eb-ca36-4297-9297-ecd7c107a84e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetTypeInfo (Access Driver)
 > [!NOTE]  

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Adding Support for Debugging in a Custom Task
 

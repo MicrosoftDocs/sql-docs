@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # DateTimeOffset Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Annotated XSD Schemas in Queries (SQLXML 4.0)

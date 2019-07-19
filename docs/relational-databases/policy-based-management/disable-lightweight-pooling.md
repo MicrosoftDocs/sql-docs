@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 481bb43d-6fe5-497c-9096-971fb6bf733b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Disable Lightweight Pooling
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

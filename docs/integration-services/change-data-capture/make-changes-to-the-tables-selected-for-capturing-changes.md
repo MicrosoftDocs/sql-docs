@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Make Changes to the Tables Selected for Capturing Changes
 

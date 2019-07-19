@@ -1,9 +1,8 @@
 ---
-title: Export and import a database on Linux | Microsoft Docs
+title: Export and import a database on Linux
 description: 
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql

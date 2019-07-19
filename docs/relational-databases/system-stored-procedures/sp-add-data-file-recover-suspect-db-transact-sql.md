@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

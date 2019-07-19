@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Close Method (ADO)
 Closes an open object and any dependent objects.  

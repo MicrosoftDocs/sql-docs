@@ -9,7 +9,6 @@ helpviewer_keywords:
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

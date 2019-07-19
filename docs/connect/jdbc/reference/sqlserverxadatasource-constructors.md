@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 8b734305-b007-41bd-819a-69792fac0781
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLServerXADataSource Constructors
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

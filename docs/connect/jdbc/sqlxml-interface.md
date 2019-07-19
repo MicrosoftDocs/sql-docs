@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # SQLXML Interface
 

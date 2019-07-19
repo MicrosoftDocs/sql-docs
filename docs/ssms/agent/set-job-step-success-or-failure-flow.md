@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Set Job Step Success or Failure Flow

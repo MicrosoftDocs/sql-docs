@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ! (Logical Not) (SSIS Expression)
 

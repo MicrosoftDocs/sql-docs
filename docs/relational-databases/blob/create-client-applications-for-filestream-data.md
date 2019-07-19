@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create Client Applications for FILESTREAM Data
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

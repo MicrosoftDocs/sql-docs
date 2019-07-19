@@ -18,7 +18,6 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Choose a Language When Creating a Full-Text Index

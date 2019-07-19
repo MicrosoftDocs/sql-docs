@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Load Files into FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

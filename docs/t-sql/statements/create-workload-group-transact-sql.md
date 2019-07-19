@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE WORKLOAD GROUP (Transact-SQL)
 

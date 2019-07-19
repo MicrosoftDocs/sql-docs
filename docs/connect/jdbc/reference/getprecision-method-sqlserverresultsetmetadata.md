@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: de46c96e-6ad6-4946-883e-807123658500
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getPrecision Method (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

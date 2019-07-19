@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Configure Resource Governor Using a Template
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

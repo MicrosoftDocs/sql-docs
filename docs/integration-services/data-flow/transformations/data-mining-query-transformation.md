@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Mining Query Transformation
 

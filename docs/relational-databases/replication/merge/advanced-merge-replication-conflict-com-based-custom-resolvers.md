@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Advanced Merge Replication Conflict - COM-Based Custom Resolvers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

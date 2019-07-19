@@ -1,5 +1,5 @@
 ---
-title: Set up a data science client for Python development - SQL Server Machine Learning
+title: Set up a data science client for Python development
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Set up a data science client for Python development on SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

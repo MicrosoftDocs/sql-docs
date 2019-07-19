@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Reinitialize Subscription(s) - All Subscriptions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

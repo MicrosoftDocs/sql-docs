@@ -10,7 +10,6 @@ ms.technology: connectivity
 ms.topic: "reference"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Use Enhanced Date and Time Features (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Quickstart to predict from model using R - SQL Server Machine Learning
+title: Quickstart to predict from model using R
 description: In this quickstart, learn about scoring using a prebuilt model in R and SQL Server data.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Quickstart: Predict from model using R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Hadoop Connection Manager
 

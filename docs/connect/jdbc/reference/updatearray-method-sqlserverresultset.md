@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 66b4473d-a8c1-4d19-8487-b39d6d0597c7
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateArray Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

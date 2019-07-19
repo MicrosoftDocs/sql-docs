@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View a Saved Trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

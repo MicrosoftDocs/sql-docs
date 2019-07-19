@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setURL Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

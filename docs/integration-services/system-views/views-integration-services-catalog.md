@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Views (Integration Services Catalog)
 

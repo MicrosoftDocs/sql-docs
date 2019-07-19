@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Browse for Objects (Object Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -18,7 +18,7 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_external_resource_pools"
 author: "HeidiSteen"
 ms.author: "heidist"
-manager: "cgronlun"
+manager: cgronlun
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

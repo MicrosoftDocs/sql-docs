@@ -7,7 +7,6 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying XPath Variables in XPath Queries (SQLXML 4.0)

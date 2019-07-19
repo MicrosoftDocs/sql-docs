@@ -1,5 +1,5 @@
 ---
-title: Microsoft Extensibility SDK for Java for SQL Server - SQL Server Language Extensions
+title: Microsoft Extensibility SDK for Java for SQL Server
 description: How to implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java.
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,7 +9,6 @@ ms.topic: conceptual
 author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
-manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 

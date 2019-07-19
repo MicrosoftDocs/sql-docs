@@ -8,7 +8,6 @@ ms.custom: ""
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Run an SSIS package from the command prompt with DTExec.exe
 

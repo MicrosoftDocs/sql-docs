@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STMPolyFromWKB (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

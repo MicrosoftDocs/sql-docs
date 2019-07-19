@@ -1,5 +1,5 @@
 ---
-title: Create SSIS and SSRS workflows with R - SQL Server Machine Learning Services
+title: Create SSIS and SSRS workflows with R
 description: Integration scenarios combining SQL Server Machine Learning Services and R Services, Reporting Services (SSRS) and SQL Server Integration Services (SSIS).
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 03/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Create SSIS and SSRS workflows with R on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

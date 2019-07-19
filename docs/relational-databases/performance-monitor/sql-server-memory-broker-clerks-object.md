@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Memory Broker Clerks Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

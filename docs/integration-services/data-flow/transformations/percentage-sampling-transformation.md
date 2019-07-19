@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Percentage Sampling Transformation
 

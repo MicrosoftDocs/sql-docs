@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Use Utility Explorer to Manage the SQL Server Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

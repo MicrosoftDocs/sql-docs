@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # RingN (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

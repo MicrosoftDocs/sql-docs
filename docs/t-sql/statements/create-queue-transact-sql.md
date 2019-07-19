@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

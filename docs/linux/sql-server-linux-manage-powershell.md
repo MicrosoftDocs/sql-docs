@@ -1,9 +1,8 @@
 ---
-title: Manage SQL Server on Linux with PowerShell | Microsoft Docs
+title: Manage SQL Server on Linux with PowerShell
 description: This article provides an overview of using PowerShell on Windows with SQL Server on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql

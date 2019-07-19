@@ -4,13 +4,11 @@ titleSuffix: SQL Server big data clusters
 description: This article describes the controller of a SQL Server 2019 big data cluster (preview).
 author: mihaelablendea 
 ms.author: mihaelab
-ms.reviewer: jroth
-manager: jroth
+ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # What is the controller on a SQL Server big data cluster?

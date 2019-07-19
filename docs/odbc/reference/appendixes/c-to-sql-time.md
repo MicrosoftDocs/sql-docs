@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # C to SQL: Time
 The identifier for the time ODBC C data type is:  

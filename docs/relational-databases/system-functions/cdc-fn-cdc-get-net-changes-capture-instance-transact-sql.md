@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

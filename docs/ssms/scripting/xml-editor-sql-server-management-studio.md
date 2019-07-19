@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Editor (SQL Server Management Studio)

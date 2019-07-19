@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries by Using the ExecuteXMLReader Method

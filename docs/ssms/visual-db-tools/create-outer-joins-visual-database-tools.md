@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Create Outer Joins (Visual Database Tools)

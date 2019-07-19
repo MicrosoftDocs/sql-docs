@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Define an Article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

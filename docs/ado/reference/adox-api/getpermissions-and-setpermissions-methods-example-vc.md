@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # GetPermissions and SetPermissions Methods Example (VC++)
 This example demonstrates the [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) and [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) methods. The following code gives full access to the Orders table to the Admin user.  

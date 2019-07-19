@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Location Path (SQLXML 4.0)

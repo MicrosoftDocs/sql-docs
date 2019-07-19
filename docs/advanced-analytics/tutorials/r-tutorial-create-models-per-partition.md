@@ -1,5 +1,5 @@
 ---
-title: Tutorial on creating, training and scoring partition-based models in R - SQL Server Machine Learning Services
+title: Tutorial on creating, training and scoring partition-based models in R
 description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
 ms.custom: sqlseattle
 ms.prod: sql
@@ -9,7 +9,6 @@ ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
-manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 #customer intent: As an R developer, I want to model/train/score partitioned data to avoid manually subsetting data.
 ---

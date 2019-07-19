@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

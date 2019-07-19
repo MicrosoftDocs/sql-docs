@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # View a SQL Server Audit Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

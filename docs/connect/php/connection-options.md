@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Connection Options
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

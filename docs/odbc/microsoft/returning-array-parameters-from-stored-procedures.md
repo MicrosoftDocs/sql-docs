@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Returning Array Parameters from Stored Procedures
 > [!IMPORTANT]  

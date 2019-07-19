@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Synonyms

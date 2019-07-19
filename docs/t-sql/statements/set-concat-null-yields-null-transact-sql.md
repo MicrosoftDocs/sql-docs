@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)

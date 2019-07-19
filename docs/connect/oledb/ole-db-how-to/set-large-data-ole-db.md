@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "large data"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Set Large Data (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # New Subscription Wizard (UI Reference)

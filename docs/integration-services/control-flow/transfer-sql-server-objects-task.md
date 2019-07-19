@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transfer SQL Server Objects Task
 

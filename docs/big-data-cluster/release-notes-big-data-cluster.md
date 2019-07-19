@@ -2,14 +2,13 @@
 title: Release notes
 titleSuffix: SQL Server big data clusters
 description: This article describes the latest updates and known issues for SQL Server 2019 big data clusters (preview). 
-author: rothja 
-ms.author: jroth 
-manager: jroth
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Release notes for big data clusters on SQL Server
@@ -109,6 +108,11 @@ The following sections describe the known issues and limitations with this relea
 
 - AKS logs may contain SA password for big data cluster deployments.
 
+#### Kibana logs dashboards
+
+- Between Aris CTP 3.0 and 3.1, the Kibana version was upgraded from 6.3.1 to 7.0.1.  This has made the Edge browser incompatible with Kibana. Users will see a blank page when loading the current version of the Kibana dashboards in Edge. See [here]( https://www.elastic.co/support/matrix#matrix_browse) for supported browsers for Kibana.rs 
+
+
 ## <a id="ctp30"></a> CTP 3.0 (May)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.0.
@@ -120,7 +124,7 @@ The following sections describe the new features and known issues for big data c
 | **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
 | Multiple compute pool instances | Support for multiple compute pool instances. |
-| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
+| New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |
 | External table improvements | External tables of HADOOP data source type now supports reading rows up to 1 MB in size. External tables (ODBC, storage pool, data pool) now support rows as wide as a SQL Server table. |
 
 ### Known issues

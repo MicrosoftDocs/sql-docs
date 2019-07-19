@@ -1,5 +1,5 @@
 ---
-title: Create new SQL Server table using RevoScaleR rxDataStep - SQL Server Machine Learning
+title: Create new SQL Server table using RevoScaleR rxDataStep
 description: Tutorial walkthrough on how to create a SQL Server table using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Create new SQL Server table using rxDataStep (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

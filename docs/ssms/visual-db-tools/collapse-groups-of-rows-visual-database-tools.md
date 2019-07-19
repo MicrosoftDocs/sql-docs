@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Collapse Groups of Rows (Visual Database Tools)

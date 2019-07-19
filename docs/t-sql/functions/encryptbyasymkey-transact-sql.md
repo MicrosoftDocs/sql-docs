@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

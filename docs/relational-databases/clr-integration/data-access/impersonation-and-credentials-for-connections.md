@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Impersonation and Credentials for Connections
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

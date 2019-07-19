@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a21c3782-273f-40b3-b239-47beaf8df462
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLAllocEnv (Visual FoxPro ODBC Driver)
 > [!NOTE]  

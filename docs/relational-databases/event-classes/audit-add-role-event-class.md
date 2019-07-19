@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Add Role Event Class

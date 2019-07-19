@@ -4,13 +4,11 @@ titleSuffix: SQL Server big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview).
 author: jeroenterheerdt 
 ms.author: jterh
-ms.reviewer: jroth
-manager: jroth
+ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # How to deploy an app on SQL Server big data cluster (preview)
@@ -102,7 +100,7 @@ The following command shows an example of what this command might look like:
 mssqlctl app create --spec ./addpy
 ```
 
-This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called called `spec.yaml`. Please see [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
+This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called `spec.yaml`. Please see [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
 
 To deploy this app sample app, create the following files in a directory called `addpy`:
 

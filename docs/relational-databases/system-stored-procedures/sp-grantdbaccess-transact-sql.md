@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-manager: craigg
 ---
 # sp_grantdbaccess (Transact-SQL)
 

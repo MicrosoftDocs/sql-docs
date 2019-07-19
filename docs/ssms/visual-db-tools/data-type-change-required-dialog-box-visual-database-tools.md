@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)

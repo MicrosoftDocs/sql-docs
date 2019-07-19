@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

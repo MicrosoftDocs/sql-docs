@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Using an SQL Statement to Modify Database Objects

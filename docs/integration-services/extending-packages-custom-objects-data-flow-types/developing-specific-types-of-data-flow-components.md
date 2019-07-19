@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing Specific Types of Data Flow Components
 

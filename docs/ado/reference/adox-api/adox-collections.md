@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADOX Collections
 

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stored Procedures (Database Engine)

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Scrollable Cursors
 Using a scrollable cursor requires these three steps:  

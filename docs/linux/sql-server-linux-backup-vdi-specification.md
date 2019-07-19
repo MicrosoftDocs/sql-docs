@@ -1,9 +1,9 @@
 ---
-title: VDI Backup Specification - SQL Server on Linux | Microsoft Docs
+title: VDI Backup Specification - SQL Server on Linux
 description: SQL Server Backup Virtual Device Interface Specification.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql

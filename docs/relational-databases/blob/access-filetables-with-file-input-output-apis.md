@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Access FileTables with File Input-Output APIs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

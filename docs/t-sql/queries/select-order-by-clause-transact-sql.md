@@ -38,7 +38,6 @@ helpviewer_keywords:
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)

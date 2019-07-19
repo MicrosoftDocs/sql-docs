@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # ToString (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

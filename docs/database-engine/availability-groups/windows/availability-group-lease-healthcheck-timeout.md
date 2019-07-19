@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid:
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ---
 # Mechanics and guidelines of lease, cluster, and health check timeouts for Always On availability groups 
 

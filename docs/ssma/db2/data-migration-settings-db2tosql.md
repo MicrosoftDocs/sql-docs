@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Data Migration Settings (DB2ToSQL)
   

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # registerOutParameter Method (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

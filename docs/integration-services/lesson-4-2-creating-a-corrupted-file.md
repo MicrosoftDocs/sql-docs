@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 4-2: Create a corrupted file
 

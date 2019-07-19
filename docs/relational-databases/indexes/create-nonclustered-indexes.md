@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nonclustered Indexes

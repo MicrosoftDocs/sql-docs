@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Change Tracking (SQL Server)

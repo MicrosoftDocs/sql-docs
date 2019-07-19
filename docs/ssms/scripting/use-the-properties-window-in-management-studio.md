@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Properties Window in Management Studio

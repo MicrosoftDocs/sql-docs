@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

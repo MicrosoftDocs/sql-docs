@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bound vs. Unbound Text and Image Columns

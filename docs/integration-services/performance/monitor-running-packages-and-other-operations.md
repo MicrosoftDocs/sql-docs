@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Monitor Running Packages and Other Operations
 

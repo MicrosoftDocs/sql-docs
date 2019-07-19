@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # StartDate Property (SecurityCertificate Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

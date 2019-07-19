@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL Data Types
 Each DBMS defines its own SQL types. Each ODBC driver exposes only those SQL data types that the associated DBMS defines. Information about how a driver maps DBMS SQL types to the ODBC-defined SQL type identifiers and how a driver maps DBMS SQL types to its own driver-specific SQL type identifiers is returned through a call to **SQLGetTypeInfo**. A driver also returns the SQL data types when describing the data types of columns and parameters through calls to **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, and **SQLSpecialColumns**.  
@@ -80,7 +79,7 @@ Each DBMS defines its own SQL types. Each ODBC driver exposes only those SQL dat
   
  [5]   Depending on the implementation, the precision of SQL_FLOAT can be either 24 or 53: if it is 24, the SQL_FLOAT data type is the same as SQL_REAL; if it is 53, the SQL_FLOAT data type is the same as SQL_DOUBLE.  
   
- [6]   In ODBC 3*.x*, the SQL date, time, and timestamp data types are SQL_TYPE_DATE, SQL_TYPE_TIME, and SQL_TYPE_TIMESTAMP, respectively; in ODBC 2.*x*, the data types are SQL_DATE, SQL_TIME, and SQL_TIMESTAMP.  
+ [6]   In ODBC *3.x*, the SQL date, time, and timestamp data types are SQL_TYPE_DATE, SQL_TYPE_TIME, and SQL_TYPE_TIMESTAMP, respectively; in ODBC *2.x*, the data types are SQL_DATE, SQL_TIME, and SQL_TIMESTAMP.  
   
  [7]   For more information about the interval SQL data types, see the [Interval Data Types](../../../odbc/reference/appendixes/interval-data-types.md) section, later in this appendix.  
   

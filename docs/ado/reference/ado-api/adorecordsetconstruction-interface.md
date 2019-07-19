@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADORecordsetConstruction Interface
 The **ADORecordsetConstruction** interface is used to construct an ADO **Recordset** object from an OLE DB **Rowset** object in a C/C++ application.  

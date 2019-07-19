@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services (SSIS) Catalog Transact-SQL Reference
 

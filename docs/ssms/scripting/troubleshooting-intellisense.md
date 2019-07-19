@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Troubleshooting IntelliSense

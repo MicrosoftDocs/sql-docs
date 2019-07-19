@@ -8,10 +8,9 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 3136f7ae-b3f1-4932-a5da-95175907671c
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # SQL Server Integration Services 10.0 (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

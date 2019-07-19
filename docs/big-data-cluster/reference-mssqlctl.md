@@ -27,7 +27,7 @@ The following article provides reference for the **azdata** tool for [SQL Server
 [azdata logout](#azdata-logout) | Log out of cluster.
 |[azdata sql](reference-mssqlctl-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
 ## azdata login
-When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to login.  If you do not know the controller endpoint, you may login by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, i.e. export KUBECONFIG=path/to/.kube/config.
+When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to login.  If you do not know the controller endpoint, you may login by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, i.e. export KUBECONFIG=path/to/.kube/config. `--accept-eula` is required for first use if not set as an environment variable.
 ```bash
 azdata login [--cluster-name -n] 
                [--controller-username -u]  

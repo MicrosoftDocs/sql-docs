@@ -31,7 +31,7 @@ The following article provides reference for the **bdc** commands in the **azdat
 [azdata bdc control](reference-mssqlctl-bdc-control.md) | Control commands.
 [azdata bdc pool](reference-mssqlctl-bdc-pool.md) | Pool commands.
 
-## mssqlctl bdc create
+## azdata bdc create
 
 Create a SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD']. `--accept-eula` is required for first use if not set as an environment variable. 
 

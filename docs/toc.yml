@@ -221,6 +221,12 @@
           href: big-data-cluster/reference-azdata-bdc-pool-status.md               
         - name: bdc spark
           href: big-data-cluster/reference-azdata-bdc-spark.md        
+        - name: bdc spark batch
+          href: big-data-cluster/reference-azdata-bdc-spark-batch.md        
+        - name: bdc spark session
+          href: big-data-cluster/reference-azdata-bdc-spark-session.md        
+        - name: bdc spark statement
+          href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
       - name: Notebook

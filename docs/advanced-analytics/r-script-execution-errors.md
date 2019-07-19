@@ -1,5 +1,5 @@
 ---
-title: R scripting errors and troubleshooting - SQL Server Machine Learning Services
+title: R scripting errors and troubleshooting
 ms.prod: sql
 ms.technology: machine-learning
 

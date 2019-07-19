@@ -1,5 +1,5 @@
 ---
-title: Lesson 3 Train and save a model using R and T-SQL - SQL Server Machine Learning
+title: Lesson 3 Train and save a model using R and T-SQL
 description: Tutorial showing how to train, serialize, and save an R model using SQL Server stored procedures and T-SQL functions.
 ms.prod: sql
 ms.technology: machine-learning

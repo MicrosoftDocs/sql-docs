@@ -1,5 +1,5 @@
 ---
-title: Create SQL Server data objects using RevoScaleR RxSqlServerData - SQL Server Machine Learning
+title: Create SQL Server data objects using RevoScaleR RxSqlServerData
 description: Tutorial walkthrough on how to create data objects using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning

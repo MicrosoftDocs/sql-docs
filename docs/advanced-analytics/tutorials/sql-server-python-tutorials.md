@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2017 Python tutorial overview - SQL Server Machine Learning
+title: SQL Server 2017 Python tutorial overview
 description: Introduction to the Python tutorials for SQL Server 2017 in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning

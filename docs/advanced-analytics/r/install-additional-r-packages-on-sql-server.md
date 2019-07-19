@@ -1,5 +1,5 @@
 ---
-title: Install new R language packages - SQL Server Machine Learning Services
+title: Install new R language packages
 description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database)
 ms.prod: sql
 ms.technology: machine-learning

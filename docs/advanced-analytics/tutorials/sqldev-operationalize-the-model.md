@@ -1,5 +1,5 @@
 ---
-title: Lesson 4 Predict potential outcomes using R models - SQL Server Machine Learning
+title: Lesson 4 Predict potential outcomes using R models
 description: Tutorial showing how to operationalize embedded R script in SQL Server stored procedures with T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning

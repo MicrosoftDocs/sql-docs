@@ -1,5 +1,5 @@
 ---
-title: Create a login for SQLRUserGroup - SQL Server Machine Learning Services
+title: Create a login for SQLRUserGroup
 description: For loopback connections using implied authentication, create a login in SQL Server for SQLRUserGroup, so that a worker account can log in to the server, for identity conversion back to the calling user.
 ms.prod: sql
 ms.technology: machine-learning

@@ -1,5 +1,5 @@
 ---
-title: revoscalepy Python package - SQL Server Machine Learning Services
+title: revoscalepy Python package
 description: Introduction to the revoscalepy module in SQL Server 2017 Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning

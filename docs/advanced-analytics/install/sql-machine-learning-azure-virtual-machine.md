@@ -1,5 +1,5 @@
 ---
-title: Install R language and Python features on an Azure virtual machine - SQL Server Machine Learning Services
+title: Install R language and Python features on an Azure virtual machine
 description: Run R and Python data science and machine learning solutions on a SQL Server virtual machine in the Azure cloud.
 ms.prod: sql
 ms.technology: machine-learning

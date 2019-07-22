@@ -50,13 +50,13 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 |  New Item  |  Details  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Always Encrypted | Updated the Enclave Provider to support Azure Attestation. |
+| [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | Updated the Enclave Provider to support Azure Attestation. |
 | Intellisense/Editor | Added support for Data   Classification  |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | SSMS Index dialog - added new index option OPTIMIZE_FOR_SEQUENTIAL_KEY |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | Added Intellisese support |
-| Query Execution or Results | Added a "Completion time" in the messages to track when a given query   completed its execution. See  [UserVoice](https://feedback.azure.com/forums/908035/suggestions/335318710 for more details. |
+| Query Execution or Results | Added a "Completion time" in the messages to track when a given query   completed its execution. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/335318710) for more details. |
 | Query Execution or Results  | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256   and 64K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
-| ShowPlan | Added a new attribute in QueryPlan when inline scalar UDF feature is enabled   (ContainsInlineScalarTsqlUdfs). |
+| [ShowPlan](../t-sql/statements/set-showplan-all-transact-sql.md) | Added a new attribute in QueryPlan when inline scalar UDF feature is enabled   (ContainsInlineScalarTsqlUdfs). |
 | SMO | Added support for "Feature Restrictions*. For more information on the feature   itself, see [feature  restrictions](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
 | SMO  | Assessment Extentions. See <we need a link to something> |
 | Integration Services (SSIS) | Perf optimization for SSIS package scheduler in Azure |
@@ -92,11 +92,19 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 | SMO/Scripting | Fixed an issue where SSMS wasn't able to script CREATE EXTERNAL LIBRARY correctly. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089) for more details. |
 | SMO/Scripting |  Fixed an issue where trying to run the *Generate Scripts* against a database with a few thousand tables (was causing the progress dialog to appear to be stuck. |
 | SMO/Scripting | Fixed an issue where scripting of *External Table* on SQL2019 did not work. |
-| SMO/Scripting | Fixed an issue where scripting of *External Data Source* on SQL2019 did not work. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080) for more details |
+| SMO/Scripting | Fixed an issue where scripting of *External Data Source* on SQL2019 did not work. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080) for more details. |
 | SMO/Scripting | Fixed an issue where *extended  properties* on columns were not scripted when targeting Azure SQL DB. See [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio) for more details. |
 | SMO/Scripting | Last-page insert: SMO - Add property *Index.IsOptimizedForSequentialKey* |
-|**SSMS Setup**| **Mitigated an issue where SSMS setup was incorrectly blocking the installation of SSMS reporting mismatching languages. This could have been an issue in some abnormal situations** |
+|**SSMS Setup**| **Mitigated an issue where SSMS setup was incorrectly blocking the installation of SSMS reporting mismatching languages. This could have been an issue in some abnormal situations, like an aborted setup or an incorrect uninstall of a previous version of SSMS. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37483594/) for more details.** |
 | XEvent Profiler | Fixed a crash when the viewer is being closed. |
+
+### Known issues (18.2)
+
+- Database Diagram created from on an SSMS running on machine A cannot be modified from machine B (it would crash SSMS). See [UserVpice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
+
+- SSMS 18.0 redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) - there is a workaround for this one listed, which is to disable h/w acceleration in Tools | Options
+
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ## Previous SSMS releases
 
@@ -106,7 +114,7 @@ Download previous SSMS versions by clicking the title links in the following sec
 
 - Release number: 18.1  
 - Build number: 15.0.18131.0  
-- Release date: June 11, 2019
+- Release date: June 11, 2019  
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 

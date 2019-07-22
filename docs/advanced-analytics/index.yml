@@ -1,8 +1,8 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: SQL Server Machine Learning Services (R and Python) Documentation
+title: SQL Server Machine Learning Services (R and Python) Documentation - Tutorials, quickstarts, how-to guides, and install guides
 metadata:
-  title: SQL Server Machine Learning Services (R, Python) Documentation | Microsoft Docs
+  title: SQL Server Machine Learning Services (R, Python) Documentation - Tutorials, quickstarts, how-to guides, and install guides | Microsoft Docs
   description: SQL Server Machine Learning Services provides in-database R and Python to quickly prep data, train, and deploy machine learning models. Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in SQL Server Machine Learning Services include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network.
   ms.prod: sql
   ms.technology: machine-learning
@@ -21,6 +21,7 @@ abstract:
     title: Watch video (3:00)
     href: https://www.youtube.com/watch?v=ACejZ9optCQ
     width: 250  
+
 sections:   
 - title: 5-Minute Quickstarts
   items:
@@ -29,10 +30,10 @@ sections:
   - type: list
     style: unordered
     items:
-    - html: <a href="tutorials/quickstart-r-run-using-tsql">Run "Hello world" R script</a> in SQL Server.
-    - html: <a href="tutorials/quickstart-r-create-predictive-model">Create a predictive model using R</a> in SQL Server.
-    - html: <a href="tutorials/quickstart-python-run-using-t-sql">Run "Hello world" Python script</a> in SQL Server.
-    - html: <a href="tutorials/quickstart-python-train-score-in-tsql">Create, train, and use a Python model with stored procedures</a> in SQL Server.
+    - html: '<b>R</b>: <a href="tutorials/quickstart-r-run-using-tsql">Run "Hello world" script</a> in SQL Server.'
+    - html: '<b>R</b>: <a href="tutorials/quickstart-r-create-predictive-model">Create a predictive model</a> in SQL Server.'
+    - html: '<b>Python</b>: <a href="tutorials/quickstart-python-run-using-t-sql">Run "Hello world" script</a> in SQL Server.'
+    - html: '<b>Python</b>: <a href="tutorials/quickstart-python-train-score-in-tsql">Create, train, and use a model with stored procedures</a> in SQL Server.'
 
 - title: Step-by-Step Tutorials
   items:
@@ -41,39 +42,53 @@ sections:
   - type: list
     style: unordered
     items:
-    - html: <a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a> - <a href="tutorials/sqldev-explore-and-visualize-the-data">Explore data</a>, <a href="tutorials/sqldev-create-data-features-using-t-sql">perform feature engineering</a>, <a href="tutorials/sqldev-train-and-save-a-model-using-t-sql">train and deploy models</a>, and <a href="tutorials/sqldev-operationalize-the-model">make predictions</a> with logistic regression models (<b>five-part series</b>).
-    - html: <a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Use Machine Learning Services in R tools</a> - <a href="tutorials/walkthrough-view-and-summarize-data-using-r">Explore data</a>, <a href="tutorials/walkthrough-create-graphs-and-plots-using-r">create graphs and plots</a>, <a href="tutorials/walkthrough-create-data-features">perform feature engineering</a>, <a href="tutorials/walkthrough-build-and-save-the-model">train and deploy models</a>, and <a href="tutorials/walkthrough-deploy-and-use-the-model">make predictions</a> with logistic regression models (<b>five-part series</b>).
-    - html: <a href="tutorial-data-prep">Prep data</a> and <a href="tutorial-auto-train-models">use automated machine learning</a> to train & tune regression models  (<b>two-part series</b>).
-    - html: <a href="ui-tutorial-automobile-price-train-score">Predict automobile price</a>  with the visual interface and <a href="ui-tutorial-automobile-price-deploy">deploy</a> the regression model.
+    - html: '<b><a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a><b>: <a href="tutorials/sqldev-explore-and-visualize-the-data">Explore data</a>, <a href="tutorials/sqldev-create-data-features-using-t-sql">perform feature engineering</a>, <a href="tutorials/sqldev-train-and-save-a-model-using-t-sql">train and deploy models</a>, and <a href="tutorials/sqldev-operationalize-the-model">make predictions</a> with logistic regression models (<b>five-part series</b>).'
+    - html: '<b><a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Use Machine Learning Services in R tools</a>: <a href="tutorials/walkthrough-view-and-summarize-data-using-r">Explore data</a>, <a href="tutorials/walkthrough-create-graphs-and-plots-using-r">create graphs and plots</a>, <a href="tutorials/walkthrough-create-data-features">perform feature engineering</a>, <a href="tutorials/walkthrough-build-and-save-the-model">train and deploy models</a>, and <a href="tutorials/walkthrough-deploy-and-use-the-model">make predictions</a> with logistic regression models (<b>five-part series</b>).'
+    - html: '<b><a href="tutorials/sqldev-in-database-python-for-sql-developers">Use Python in T-SQL</a><b>: <a href="tutorials/sqldev-py3-explore-and-visualize-the-data">Explore data</a>, <a href="tutorials/sqldev-py4-create-data-features-using-t-sql">perform feature engineering</a>, <a href="tutorials/sqldev-py5-train-and-save-a-model-using-t-sql">train and deploy models</a>, and <a href="tutorials/sqldev-py6-operationalize-the-model">make predictions</a> with logistic regression models (<b>five-part series</b>).'
 
-- title: Samples
+- title: Solutions
   items:
   - type: paragraph
-    text: 'Find <a href="samples-notebooks">Jupyter notebooks</a> to help you explore the service on Github.'
-    
-- title: Reference
-  items:
-  - type: list
-    style: unordered
-    items:
-    - html: '<a href="https://aka.ms/aml-sdk">Main Python SDK</a>: core functionality, automated machine learning, pipelines, and more'
-    - html: '<a href="https://aka.ms/aml-monitoring-sdk">Monitoring</a> Python SDK: collect data on deployed web services'
-    - html: '<a href="../algorithm-module-reference/module-reference.md">Algorithm & module reference</a> for the visual interface'
-    - html: '<a href="https://docs.microsoft.com/cli/azure/ext/azure-cli-ml/ml?view=azure-cli-latest">Azure ML CLI</a>: a machine learning command-line interface extension'
-  
-- title: Other Azure Machine Learning technologies
+    text: 'Find <a href="tutorials/data-science-scenarios-and-solution-templates">scenarios and solution templates</a> to help you explore SQL Server Machine Learning Services.'
+
+- title: R and Python
   items:
   - type: list
     style: cards
     className: cardsFTitle
     items:
-    - title: Azure Machine Learning Studio
-      href: /azure/machine-learning/studio/
+    - title: Open-source R, extended with RevoScaleR and Microsoft AI algorithms in MicrosoftML. These libraries give you forecasting and prediction models, statistical analysis, visualization, and data manipulation at scale.
+      image: 
+        src: media/index/logo_R.png
+    - title: Python developers can use Microsoft revoscalepy and microsoftml libraries for predictive analytics and machine learning at scale. Anaconda and Python 3.5-compatible libraries are the baseline distribution.
+      image: 
+        src: media/index/logo_python.png
+
+- title: Reference
+  items:
+  - type: list
+    style: unordered
+    items:
+    - html: '<a href="r/ref-r-revoscaler">RevoScaleR</a> in R: Distributed and parallel processing for R tasks: data transformation, exploration, visualization, statistical and predictive analytics.'
+    - html: '<a href="r/ref-r-microsoftml">MicrosoftML</a> in R: functions based on Microsoft AI algorithms, adapted for R.'
+    - html: '<a href="r/ref-r-olapr">olapR</a> in R: Imports data from OLAP cubes.'
+    - html: '<a href="r/ref-r-sqlrutils">sqlRUtils</a> in R: Helper functions for encapsulating R and T-SQL.'
+    - html: '<a href="python/ref-py-revoscalepy">revoscalepy</a> in Python: Distributed and parallel processing for Python tasks: data transformation, exploration, visualization, statistical and predictive analytics.'
+    - html: '<a href="python/ref-py-microsoftml">microsoftml</a> in Python: Functions based on Microsoft AI algorithms, adapted for Python.'
+
+- title: Other Machine Learning and Language Extensions technologies
+  items:
+  - type: list
+    style: cards
+    className: cardsFTitle
+    items:
+    - title: Azure SQL Database Machine Learning Services
+      href: /azure/sql-database/sql-database-machine-learning-services-overview
       image: 
         src: media/index/machine-learning-studio.svg
-        href: /azure/machine-learning/studio/
-    - title: Data Science Virtual Machine
-      href: /azure/machine-learning/data-science-virtual-machine/
+        href: /azure/sql-database/sql-database-machine-learning-services-overview
+    - title: SQL Server Language Extensions
+      href: /sql/language-extensions
       image: 
         src: media/index/virtual-machines.svg
-        href: /azure/machine-learning/data-science-virtual-machine/
+        href: /sql/language-extensions

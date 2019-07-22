@@ -41,7 +41,7 @@ sections:
   - type: list
     style: unordered
     items:
-    - html: <a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a>: <a href="tutorials/sqldev-explore-and-visualize-the-data">Explore data</a>, <a href="tutorials/sqldev-create-data-features-using-t-sql">perform feature engineering</a>, <a href="tutorials/sqldev-train-and-save-a-model-using-t-sql">train and deploy models</a>, and <a href="tutorials/sqldev-operationalize-the-model">make predictions</a> with logistic regression models (<b>five-part series</b>).
+    - html: <a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a> - <a href="tutorials/sqldev-explore-and-visualize-the-data">Explore data</a>, <a href="tutorials/sqldev-create-data-features-using-t-sql">perform feature engineering</a>, <a href="tutorials/sqldev-train-and-save-a-model-using-t-sql">train and deploy models</a>, and <a href="tutorials/sqldev-operationalize-the-model">make predictions</a> with logistic regression models (<b>five-part series</b>).
     - html: <a href="tutorial-data-prep">Prep data</a> and <a href="tutorial-auto-train-models">use automated machine learning</a> to train & tune regression models  (<b>two-part series</b>).
     - html: <a href="ui-tutorial-automobile-price-train-score">Predict automobile price</a>  with the visual interface and <a href="ui-tutorial-automobile-price-deploy">deploy</a> the regression model.
 

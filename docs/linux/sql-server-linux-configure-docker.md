@@ -557,6 +557,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 
 ::: moniker-end
 
+- If you get an error such as **'Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.30tdout=1&tail=all: dial unix /var/run/docker.sock: connect: permission denied'** when trying to start a container, then add your user to the docker group in Ubuntu. Then logout and login again as this change will affect new sessions. 
+
+   ```bash
+    usermod -aG docker $USER
+    ```
 - Check to see if there are any error messages from container.
 
     ```bash

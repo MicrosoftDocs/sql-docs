@@ -83,6 +83,14 @@ The download pages also include information about prerequisites. Make sure you i
 
 -   Azure Blob, Azure Data Lake Store, and Data Lake Storage Gen2 File Enumerator. See [Foreach Loop Container](../integration-services/control-flow/foreach-loop-container.md)
 
+## Use TLS 1.2
+
+The TLS version used by Azure Feature Pack follows system .NET Framework settings.
+To use TLS 1.2, add a `REG_DWORD` value named `SchUseStrongCrypto` with data `1` under the following two registry keys.
+
+1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
+2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
+
 ## Scenario: Processing big data
  Use Azure Connector to complete following big data processing work:
 

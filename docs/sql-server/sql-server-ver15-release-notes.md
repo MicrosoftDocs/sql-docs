@@ -53,7 +53,6 @@ Complete details about support and licensing for CTP releases are in `license_Ev
   - SQL Server Reporting Services
   - Always On availability groups on Kubernetes
   - Accelerated database recovery
-  - Memory-optimized tempdb metadata
 
 - **Workaround**: None. Exclusion applies to all customers, including participants in SQL Early Adopter Program.
 

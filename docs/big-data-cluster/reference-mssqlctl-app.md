@@ -43,15 +43,15 @@ Scaffold a new application `spec.yaml` only.
 ```bash
 mssqlctl app init --spec
 ```
-Scaffold a new R application application skeleton based on the `r` template.
+Scaffold a new R application skeleton based on the `r` template.
 ```bash
 mssqlctl app init --name reduce --template r
 ```
-Scaffold a new Python application application skeleton based on the `python` template.
+Scaffold a new Python application skeleton based on the `python` template.
 ```bash
 mssqlctl app init --name reduce --template python
 ```
-Scaffold a new SSIS application application skeleton based on the `ssis` template.
+Scaffold a new SSIS application skeleton based on the `ssis` template.
 ```bash
 mssqlctl app init --name reduce --template ssis            
 ```

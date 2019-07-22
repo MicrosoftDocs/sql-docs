@@ -1,5 +1,5 @@
 ---
-title: Upgrade R and Python components - SQL Server Machine Learning Services
+title: Upgrade R and Python components
 description: Upgrade R and Python in SQL Server 2016 Services or SQL Server 2017 Machine Learning Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning

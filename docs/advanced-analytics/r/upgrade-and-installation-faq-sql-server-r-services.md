@@ -1,5 +1,5 @@
 ---
-title: Upgrade and installation frequently asked questions (FAQ) - SQL Server Machine Learning Services
+title: Upgrade and installation frequently asked questions (FAQ)
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning

@@ -127,9 +127,9 @@ manager: craigg
     ```  
   
 ##  <a name="InstanceConfigure"></a> Enable and Configure Default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings for the Instance  
- You can enable and configure default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings at the instance level in two ways:  By using the system stored procedure `smart_backup.set_instance_backup` or **SQL Server Management Studio**. The two methods are explained below:  
+ You can enable and configure default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings at the instance level in two ways:  By using the system stored procedure `smart_admin.set_instance_backup` or **SQL Server Management Studio**. The two methods are explained below:  
   
- **smart_backup.set_instance_backup:**. By specifying the value **1** for *@enable_backup* parameter, you can enable backup and set the default configurations. Once applied at the instance level, these default settings are applied to any new database that is added to this instance.  When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time, the following information must be provided in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on the instance:  
+ **smart_admin.set_instance_backup:**. By specifying the value **1** for *@enable_backup* parameter, you can enable backup and set the default configurations. Once applied at the instance level, these default settings are applied to any new database that is added to this instance.  When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time, the following information must be provided in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on the instance:  
   
 -   The retention period.  
   

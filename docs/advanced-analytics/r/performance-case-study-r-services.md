@@ -1,5 +1,5 @@
 ---
-title: Performance for SQL Server R Services - results and resources - SQL Server Machine Learning Services
+title: Performance for SQL Server R Services - results and resources
 ms.prod: sql
 ms.technology: machine-learning
 

@@ -1,5 +1,5 @@
 ---
-title: Quickstart for working with data structures in Python - SQL Server Machine Learning
+title: Quickstart for working with data structures in Python
 description: In this quickstart for Python script in SQL Server, learn how use data structures with the sp_execute_external_script system stored procedure.
 ms.prod: sql
 ms.technology: machine-learning

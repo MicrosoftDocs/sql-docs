@@ -1,5 +1,5 @@
 ---
-title: Firewall configuration - SQL Server Machine Learning Services
+title: Firewall configuration
 description: How to configure the firewall for outbound connections from SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning

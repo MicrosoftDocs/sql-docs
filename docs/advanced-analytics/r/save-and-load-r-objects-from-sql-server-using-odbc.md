@@ -1,5 +1,5 @@
 ---
-title: Save and load R objects from SQL Server using ODBC - SQL Server Machine Learning Services
+title: Save and load R objects from SQL Server using ODBC
 ms.prod: sql
 ms.technology: machine-learning
 

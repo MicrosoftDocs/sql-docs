@@ -370,7 +370,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/sql-server-machine-learning-services",
+            "redirect_url": "/sql/advanced-analytics/",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/sql-server-machine-learning-services.md",
+            "redirect_url": "/sql/advanced-analytics/",
             "redirect_document_id": true
         },
         {
@@ -390,7 +395,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/sql-server-machine-learning-tasks.md",
-            "redirect_url": "/sql/advanced-analytics/sql-server-machine-learning-services",
+            "redirect_url": "/sql/advanced-analytics/",
             "redirect_document_id": false
         },
         {

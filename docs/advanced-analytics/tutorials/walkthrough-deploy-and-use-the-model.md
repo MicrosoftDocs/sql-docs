@@ -1,5 +1,5 @@
 ---
-title: Deploy an R model for predictions on SQL Server - SQL Server Machine Learning
+title: Deploy an R model for predictions on SQL Server
 description: Tutorial showing how to deploy an R model on SQL Server for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning

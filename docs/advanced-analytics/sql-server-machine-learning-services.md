@@ -1,5 +1,5 @@
 ---
-title: R and Python machine learning documentation - SQL Server Machine Learning Services
+title: R and Python machine learning documentation
 description: R and Python in SQL Server, with built-in data science modeling and machine learning algorithms for enterprise data analysis at scale.
 ms.prod: sql
 ms.technology: machine-learning

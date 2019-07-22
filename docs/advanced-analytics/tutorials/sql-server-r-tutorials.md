@@ -1,5 +1,5 @@
 ---
-title: SQL Server R tutorial overview - SQL Server Machine Learning
+title: SQL Server R tutorial overview
 description: Introduction to the R language tutorials for SQL Server in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning

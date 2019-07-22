@@ -1,5 +1,5 @@
 ---
-title: Data exploration and predictive modeling with R - SQL Server Machine Learning Services
+title: Data exploration and predictive modeling with R
 ms.prod: sql
 ms.technology: machine-learning
 

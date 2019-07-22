@@ -1,5 +1,5 @@
 ---
-title: Predict potential outcomes using Python models - SQL Server Machine Learning
+title: Predict potential outcomes using Python models
 description: Tutorial showing how to operationalize embedded PYthon script in SQL Server stored procedures with T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning

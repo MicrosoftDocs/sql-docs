@@ -130,10 +130,12 @@
         "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
         "2014/sql-server/failover-clusters/**/*.md": "SQL Server Always On",
     
+        "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
         "analysis-services/**/*.md": "",
         "azure-data-studio/**/*.md": "Azure Data Studio",
         "database-engine/availability-groups/**/*.md": "SQL Server Always On",
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
+        "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On"

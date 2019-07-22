@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server 2019 big data clusters (preview) on 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

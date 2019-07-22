@@ -5,7 +5,7 @@ description: Reference article for azdata app commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -43,15 +43,15 @@ Scaffold a new application `spec.yaml` only.
 ```bash
 azdata app init --spec
 ```
-Scaffold a new R application application skeleton based on the `r` template.
+Scaffold a new R application skeleton based on the `r` template.
 ```bash
 azdata app init --name reduce --template r
 ```
-Scaffold a new Python application application skeleton based on the `python` template.
+Scaffold a new Python application skeleton based on the `python` template.
 ```bash
 azdata app init --name reduce --template python
 ```
-Scaffold a new SSIS application application skeleton based on the `ssis` template.
+Scaffold a new SSIS application skeleton based on the `ssis` template.
 ```bash
 azdata app init --name reduce --template ssis            
 ```

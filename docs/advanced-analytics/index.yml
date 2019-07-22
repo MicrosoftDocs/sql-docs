@@ -1,8 +1,8 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: SQL Server Machine Learning Services (R, Python) Documentation | Microsoft Docs
+title: SQL Server Machine Learning Services (R and Python) Documentation
 metadata:
-  title: SQL Server Machine Learning Services (R and Python) Documentation
+  title: SQL Server Machine Learning Services (R, Python) Documentation | Microsoft Docs
   description: SQL Server Machine Learning Services provides in-database R and Python to quickly prep data, train, and deploy machine learning models. Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in SQL Server Machine Learning Services include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network.
   ms.prod: sql
   ms.technology: machine-learning

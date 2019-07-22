@@ -1,5 +1,5 @@
 ---
-title: Run Spark jobs with Spark & Hive Tools for VSCode on SQL Server big data cluster
+title: Run Spark jobs with Spark & Hive Tools for VS Code on SQL Server big data cluster
 titleSuffix: SQL Server big data clusters
 description: Submit spark job with the Spark & Hive Tools for Visual Studio Code on SQL Server big data cluster.
 author: jejiang
@@ -7,7 +7,6 @@ ms.author: jejiang
 ms.reviewer: mikeray
 ms.date: 06/28/2019
 ms.topic: conceptual
-ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
@@ -195,6 +194,7 @@ Submit a file, notice the `.vscode` folder is added automatically to the work fo
 #### POST /batches
 
 **Request body**
+
 | name | description | type |
 | :- | :- | :- |
 | file | File containing the application to execute | path (required) |

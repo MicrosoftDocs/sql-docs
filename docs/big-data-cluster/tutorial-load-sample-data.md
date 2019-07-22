@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to load sample data into a SQL Serve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster

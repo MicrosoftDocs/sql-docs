@@ -5,7 +5,7 @@ description: Learn about how data persistence works in a SQL Server 2019 big dat
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -80,39 +80,34 @@ azdata bdc config init --source aks-dev-test --target custom
 
 This creates two files, **cluster.json** and **control.json** that can be customized by either editing them manually, or you can use **azdata bdc config** command. You can use a combination of jsonpath and jsonpatch libraries to provide ways to edit your config files.
 
-### Configure size
+
+### <a id="config-samples"></a> Configure storage class name and/or claims size
 
 By default, the size of the persistent volume claims provisioned for each of the pods provisioned in the cluster is 10 GB. You can update this value to accommodate the workloads you are running in a custom configuration file before cluster deployment.
 
-The following example only updates the size of persistent volume claims for data stored in the storage pool to 100Gi. Note that storage section must exist in the configuration file for the storage pool before you run this command:
+The following example updates the size of persistent volume claims size to 32Gi in the **control.jsaon**. If not overridden at pool level, this setting will be applied to all pools:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.size=100Gi"
 ```
 
-The following example updates the size of persistent volume claims for all pools to 32Gi:
-
-```bash
-azdata bdc config replace --config-file custom/control.json --json-values "$.spec.controlPlane.spec.storage.data.size=32Gi"
-```
-
-### <a id="config-samples"></a> Configure storage class
-
-Following example shows how to modify the storage class for the control plane:
+Following example shows how to modify the storage class for the **control.json** file:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.className=<yourStorageClassName>"
 ```
 
-Another option is to manually edit the custom configuration file or to use jsonpatch like in the following example that changes the storage class for Storage pool. Create a *patch.json* file with this content:
+Another option is to manually edit the custom configuration file or to use json patch like in the following example that changes the storage class for Storage pool. Create a *patch.json* file with this content:
 
 ```json
 {
   "patch": [
     {
-      "op": "add",
+      "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage"
       "value": {
+          "type":"Storage",
+          "replicas":2,
           "data": {
             "className": "default",
             "accessMode": "ReadWriteOnce",
@@ -132,7 +127,7 @@ Another option is to manually edit the custom configuration file or to use jsonp
 Apply the patch file. Use **azdata bdc config patch** command to apply the changes in the JSON patch file. The following example applies the patch.json file to a target deployment configuration file custom.json.
 
 ```bash
-azdata bdc config patch --config-file custom/control.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## Next steps

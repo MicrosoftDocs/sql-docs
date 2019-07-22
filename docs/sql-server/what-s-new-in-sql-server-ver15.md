@@ -30,9 +30,10 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 |New feature or update | Details |
 |:---|:---|
 |Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](../big-data-cluster/deploy-get-started.md).|
-|Notebook based troubleshooting.|CTP 3.2 introduces Jupyter notebooks to assist with discovery, diagnosis, and troubleshooting for components in a SQL Server big data cluster. |
-|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. |
-|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. |
+|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](../big-data-cluster/deploy-install-azdata.md). |
+|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. |
+|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](../big-data-cluster/hdfs-tiering.md) |
+|Notebook based troubleshooting.|CTP 3.2 introduces Jupyter notebooks to assist with [deployment](../big-data-cluster/deploy-notebooks.md), and [discovery, diagnosis, and troubleshooting](../big-data-cluster/manage-notebooks.md) for components in a SQL Server big data cluster. |
 | &nbsp; | &nbsp; |
 
 ### New in Analysis Services
@@ -101,6 +102,12 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |New feature or update | Details |
 |:---|:---|
 |Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+| &nbsp; | &nbsp; |
+
+### PolyBase
+
+|New feature or update | Details |
+|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. |
 | &nbsp; | &nbsp; |
 
 ### Collation

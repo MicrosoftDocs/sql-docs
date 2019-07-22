@@ -2,7 +2,7 @@
 documentType: LandingData
 title: SQL Server Machine Learning Services (R, Python) Documentation | Microsoft Docs
 metadata:
-  title: SQL Server Machine Learning Services (R, Python) Documentation | Microsoft Docs
+  title: SQL Server Machine Learning Services (R and Python) Documentation
   description: SQL Server Machine Learning Services provides in-database R and Python to quickly prep data, train, and deploy machine learning models. Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in SQL Server Machine Learning Services include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network.
   ms.prod: sql
   ms.technology: machine-learning
@@ -29,18 +29,19 @@ sections:
   - type: list
     style: unordered
     items:
-    - html: <a href="quickstart-run-cloud-notebook">Run an experiment in the cloud</a> (no install required).
-    - html: <a href="quickstart-run-local-notebook">Run an experiment using a local notebook server</a> (local SDK install).
-    - html: <a href="ui-quickstart-run-experiment">Prepare and visualize data without writing code</a> in the visual interface.
+    - html: <a href="tutorials/quickstart-r-run-using-tsql">Run "Hello world" R script</a> in SQL Server.
+    - html: <a href="tutorials/quickstart-r-create-predictive-model">Create a predictive model using R</a> in SQL Server.
+    - html: <a href="tutorials/quickstart-python-run-using-t-sql">Run "Hello world" Python script</a> in SQL Server.
+    - html: <a href="tutorials/quickstart-python-train-score-in-tsql">Create, train, and use a Python model with stored procedures</a> in SQL Server.
 
 - title: Step-by-Step Tutorials
   items:
   - type: paragraph
-    text: 'Learn how to prep data, set up experiments, train and operationalize your machine learning models:'
+    text: 'Learn how to explore data, feature engineer, train and deploy models, and make predictions:'
   - type: list
     style: unordered
     items:
-    - html: <a href="tutorial-train-models-with-aml">Train</a> and <a href="tutorial-deploy-models-with-aml">deploy</a>  image classification models (<b>two-part series</b>).
+    - html: <a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a>: <a href="tutorials/sqldev-explore-and-visualize-the-data">Explore data</a>, <a href="tutorials/sqldev-create-data-features-using-t-sql">perform feature engineering</a>, <a href="tutorials/sqldev-train-and-save-a-model-using-t-sql">train and deploy models</a>, and <a href="tutorials/sqldev-operationalize-the-model">make predictions</a> with logistic regression models (<b>five-part series</b>).
     - html: <a href="tutorial-data-prep">Prep data</a> and <a href="tutorial-auto-train-models">use automated machine learning</a> to train & tune regression models  (<b>two-part series</b>).
     - html: <a href="ui-tutorial-automobile-price-train-score">Predict automobile price</a>  with the visual interface and <a href="ui-tutorial-automobile-price-deploy">deploy</a> the regression model.
 

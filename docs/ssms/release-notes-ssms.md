@@ -100,7 +100,7 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 ### Known issues (18.2)
 
-- Database Diagram created from on an SSMS running on machine A cannot be modified from machine B (it would crash SSMS). See [UserVpice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
+- Database Diagram created from on an SSMS running on machine A cannot be modified from machine B (it would crash SSMS). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
 
 - SSMS 18.0 redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) - there is a workaround for this one listed, which is to disable h/w acceleration in Tools | Options
 

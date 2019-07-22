@@ -86,6 +86,6 @@ An assessment is performed against a chosen SQL Server object. Currently, the AP
     Get-SqlDatabase -ServerInstance 'localhost' | Invoke-SqlAssessment -Verbose
     ```
 
-## Next Steps
+## Next steps
 
 Take a look at [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/overview-smo.md) and [PowerShell](../powershell/download-sql-server-ps-module.md).

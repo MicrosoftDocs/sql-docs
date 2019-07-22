@@ -50,13 +50,13 @@ pip3 install -U requests
    For CTP 3.2 or higher, run the following command. Replace `ctp3.2` in the command with the version of **azdata** that you are uninstalling.
 
    ```powershell
-   pip3 uninstall -r https://aka.ms/azdata/ctp3.2
+   pip3 uninstall -r https://aka.ms/azdata
    ```
 
 1. Install **azdata** with the following command:
 
    ```powershell
-   pip3 install -r https://aka.ms/azdata/ctp3.2
+   pip3 install -r https://aka.ms/azdata
    ```
 
 ## <a id="linux"></a> Linux azdata installation
@@ -90,13 +90,13 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    For CTP 3.2 or higher, run the following command. Replace `ctp3.2` in the command with the version of **azdata** that you are uninstalling.
 
    ```powershell
-   pip3 uninstall -r https://aka.ms/azdata/ctp3.2
+   pip3 uninstall -r https://aka.ms/azdata
    ```
 
 1. Install **azdata** with the following command:
 
    ```bash
-   pip3 install -r https://aka.ms/azdata/ctp3.2 --user
+   pip3 install -r https://aka.ms/azdata --user
    ```
 
    > [!NOTE]

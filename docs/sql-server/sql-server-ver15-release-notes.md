@@ -49,7 +49,7 @@ Complete details about support and licensing for CTP releases are in `license_Ev
 ## <a name = "release-notes"></a>Features excluded from support
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
-  - SQL Sever Analysis Services
+  - SQL Server Analysis Services
   - SQL Server Reporting Services
   - Always On availability groups on Kubernetes
   - Accelerated database recovery

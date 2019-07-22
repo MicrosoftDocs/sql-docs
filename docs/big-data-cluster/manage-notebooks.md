@@ -5,7 +5,7 @@ description: Use a notebook from Azure Data Studio to manage and troubleshoot a 
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

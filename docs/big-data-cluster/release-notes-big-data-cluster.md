@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -19,9 +19,30 @@ This article lists the updates and know issues for the most recent releases of S
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
+## <a id="ctp32"></a> CTP 3.2 (July)
+
+The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.2.
+
+|New feature or update | Details |
+|:---|:---|
+|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](deploy-get-started.md).|
+|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](deploy-install-azdata.md). |
+|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. |
+|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](hdfs-tiering.md) |
+|Notebook-based troubleshooting |CTP 3.2 introduces Jupyter notebooks to assist with [deployment](deploy-notebooks.md) and [discovery, diagnosis, and troubleshooting](manage-notebooks.md) for components in a SQL Server big data cluster. |
+| &nbsp; | &nbsp; |
+
 ## <a id="ctp31"></a> CTP 3.1 (June)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.1.
+
+|New feature or update | Details |
+|:---|:---|
+|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](deploy-get-started.md).|
+|Notebook based troubleshooting.|CTP 3.2 introduces Jupyter notebooks to assist with [deployment](deploy-notebooks.md), and [discovery, diagnosis, and troubleshooting](manage-notebooks.md) for components in a SQL Server big data cluster. |
+|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](deploy-install-azdata.md). |
+|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](hdfs-tiering.md) |
+| &nbsp; | &nbsp; |
 
 ### What's New
 
@@ -121,7 +142,7 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 |:---|:---|
-| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-azdata.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
+| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](reference-azdata.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
 | Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
 | Multiple compute pool instances | Support for multiple compute pool instances. |
 | New pool behavior and capabilities | The compute pool is now used by default for storage pool and data pool operations in a **ROUND_ROBIN** distribution only. The data pool can now use a new **REPLICATED** distribution type, which means that the same data is present on all the data pool instances. |

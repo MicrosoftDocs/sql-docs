@@ -87,9 +87,9 @@
           href: big-data-cluster/deploy-on-minikube.md
       - name: Deployment scripts
         items:
-        - name: AKS script (python)
+        - name: AKS python script
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: Single-node kubeadm (bash)
+        - name: Single node kubeadm script
           href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks
           href: big-data-cluster/deploy-notebooks.md         

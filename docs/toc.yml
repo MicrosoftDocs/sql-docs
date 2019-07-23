@@ -15966,6 +15966,8 @@
           href: t-sql/functions/filegroupproperty-transact-sql.md
         - name: FILEPROPERTY
           href: t-sql/functions/fileproperty-transact-sql.md
+        - name: FILEPROPERTYEX
+          href: t-sql/functions/filepropertyex-transact-sql.md
         - name: FULLTEXTCATALOGPROPERTY
           href: t-sql/functions/fulltextcatalogproperty-transact-sql.md
         - name: FULLTEXTSERVICEPROPERTY

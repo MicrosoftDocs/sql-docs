@@ -34,7 +34,7 @@ Other tools are required for different scenarios. Each article should explain th
 
 Big data clusters are deployed as a series of interrelated containers that are managed in [Kubernetes](https://kubernetes.io/docs/home). You can host Kubernetes in a variety of ways. Even if you already have an existing Kubernetes environment, you should review the related requirements for big data clusters.
 
-- **Azure Kubernetes Service (AKS)**: AKS allows you to deploy a managed Kubernetes cluster in Azure. You only manage and maintain the agent nodes. With AKS, you don't have to provision your own hardware for the cluster. It is also easy to use a big data cluster [deployment script](quickstart-big-data-cluster-deploy.md) to create the AKS cluster and deploy the big data cluster in one step. For more information about using AKS with big data clusters, see [Configure Azure Kubernetes Service for SQL Server 2019 big data cluster (preview) deployments](deploy-on-aks.md).
+- **Azure Kubernetes Service (AKS)**: AKS allows you to deploy a managed Kubernetes cluster in Azure. You only manage and maintain the agent nodes. With AKS, you don't have to provision your own hardware for the cluster. It is also easy to use a [python script](quickstart-big-data-cluster-deploy.md) or a [deployment notebook](deploy-notebooks.md) to create the AKS cluster and deploy the big data cluster in one step. For more information about configuring AKS for a big data cluster deployment, see [Configure Azure Kubernetes Service for SQL Server 2019 big data cluster (preview) deployments](deploy-on-aks.md).
 
 - **Multiple machines**: You can also deploy Kubernetes to multiple Linux machines, which could be physical servers or virtual machines. The [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) tool can be used to create the Kubernetes cluster. This method works well if you already have existing infrastructure that you want to use for your big data cluster. For more information about using **kubeadm** deployments with big data clusters, see [Configure Kubernetes on multiple machines for SQL Server 2019 big data cluster (preview) deployments](deploy-with-kubeadm.md).
 
@@ -52,13 +52,17 @@ After configuring Kubernetes, you deploy a big data cluster with the `azdata bdc
 
 ## Deployment scripts
 
-Deployment scripts can help deploy both Kubernetes and big data clusters in a single step. They also often provide default values for big data cluster settings. For an example of a deployment script for big data cluster on Azure Kubernetes Service (AKS), see the following article:
+Python deployment scripts can help deploy both Kubernetes and big data clusters in a single step. They also often provide default values for big data cluster settings. You can customize any deployment script by creating your own version that configures the big data cluster deployment differently.
 
-[Deploy a SQL Server 2019 big data cluster with a deployment script (AKS)](quickstart-big-data-cluster-deploy.md).
+For an example of a python deployment script for big data cluster on Azure Kubernetes Service (AKS), see the following article:
 
-You can customize any deployment script by creating your own version that configures the big data cluster environment variables differently.
+- [Use a python script to deploy a SQL Server 2019 big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
 
-[Deploy a SQL Server 2019 big data cluster with Azure Data Studio Notebooks](deploy-notebooks.md).
+## Deployment notebooks
+
+You can also deploy a big data cluster by running an Azure Data Studio notebook. For more information on how to use a notebook to deploy on AKS, see the following article:
+
+- [Deploy a SQL Server 2019 big data cluster with Azure Data Studio Notebooks](deploy-notebooks.md).
 
 ## Next steps
 

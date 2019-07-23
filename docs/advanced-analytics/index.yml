@@ -84,15 +84,9 @@ sections:
   items:
   - type: list
     style: cards
-    className: cardsFTitle
+    className: cardsL
     items:
     - title: Azure SQL Database Machine Learning Services
       href: /azure/sql-database/sql-database-machine-learning-services-overview
-      image: 
-        src: media/index/machine-learning-studio.svg
-        href: /azure/sql-database/sql-database-machine-learning-services-overview
     - title: SQL Server Language Extensions
       href: /sql/language-extensions
-      image: 
-        src: media/index/virtual-machines.svg
-        href: /sql/language-extensions

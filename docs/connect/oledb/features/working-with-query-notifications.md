@@ -62,21 +62,21 @@ CREATE SERVICE myService ON QUEUE myQueue
 > [!NOTE]
 > The service must use the predefined contract, as shown above.
 
-## The OLE DB Driver for SQL Server
+## OLE DB Driver for SQL Server
 
 The OLE DB Driver for SQL Server supports consumer notifications upon rowset modification. The consumer receives a notification at every phase of rowset modification and on any attempted change.
 
 > [!NOTE]
 > Passing a notifications query to the server with **ICommand::Execute** is the only valid way to subscribe to query notifications with the OLE DB Driver for SQL Server.
 
-### The DBPROPSET_SQLSERVERROWSET property set
+### DBPROPSET_SQLSERVERROWSET property set
 
 In order to support query notifications through OLE DB, the OLE DB Driver for SQL Server adds the following new properties to the `DBPROPSET_SQLSERVERROWSET` property set.
 
 |Name|Type|Description|
 |----------|----------|-----------------|
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|The number of seconds that the query notification is to remain active.<br /><br /> The default is 432,000 seconds (5 days). The minimum value is 1 second, and the maximum value is 2^31-1 seconds.|
-|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|The message text of the notification. This text is user-defined and has no predefined format.<br /><br /> By default, the string is empty. Specify a message by using between 1 and 2000 characters.|
+|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|The message text of the notification. This text is user-defined and has no predefined format.<br /><br /> By default, the string is empty. Specify a message by using 1 to 2000 characters.|
 |SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|The query notification options. These are specified in a string with *name*=*value* syntax. The user is responsible for creating the service and reading notifications off of the queue.<br /><br /> The default is an empty string.|
 
 The notification subscription is always committed. This happens regardless of whether the statement ran in a user transaction or in autocommit or whether the transaction in which the statement ran committed or rolled back. The server notification fires upon any of the following invalid notification conditions: change of underlying data or schema, or when the timeout period is reached; whichever is first. 
@@ -103,10 +103,10 @@ If `SSPROP_QP_NOTIFICATION_MSGTEXT` and `SSPROP_QP_NOTIFICATION_OPTIONS` are non
 Initiating a subscription doesn't guarantee that subsequent messages will be successfully delivered. Also, no check is made as to the validity of the service name specified.
 
 > [!NOTE]
-> Preparing statements will never cause the subscription to be initiated. Only statement execution will achieve initiation. Query notifications aren't impacted by the use of OLE DB core services.
+> Preparing statements will never cause the subscription to be initiated. Only statement execution will achieve initiation. Query notifications aren't affect by the use of OLE DB core services.
 
 For more information about the `DBPROPSET_SQLSERVERROWSET` property set, see [Rowset Properties and Behaviors](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
 
-## See Also
+## See also
 
 [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)

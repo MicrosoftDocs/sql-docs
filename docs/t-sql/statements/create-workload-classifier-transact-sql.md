@@ -44,7 +44,7 @@ WITH
 [ [ , ] START_TIME = ‘HH:MM’ ]  
 [ [ , ] END_TIME = ‘HH:MM’ ]  
   
-[ [ , ] IMPORTANCE = { LOW | BELOW NORMAL | NORMAL | ABOVE NORMAL | HIGH }]) 
+[ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
 ```
 

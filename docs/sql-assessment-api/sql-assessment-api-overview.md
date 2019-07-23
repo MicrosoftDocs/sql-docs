@@ -8,7 +8,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ---
 
 # SQL Assessment APIs (Public Preview)
@@ -37,7 +37,7 @@ Rules are designed to be customizable and extensible. Microsoft's ruleset is des
 
 ## Get started
 
-SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/installing-smo.md) version <X> and higher and the [SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md) version <Y> and higher.
+SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/installing-smo.md) July 2019 release version and higher and the [SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md) July 2019 release version and higher.
 
 You can find the below information in the [samples repository](http://aka.ms/sql-assessment-api):
 

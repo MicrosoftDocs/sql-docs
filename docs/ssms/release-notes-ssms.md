@@ -39,12 +39,12 @@ GeneMi. 2019/04/02.
 ## SSMS 18.2
 
 Download: [Download SSMS 18.2](download-sql-server-management-studio-ssms.md)  
-Build number: 15.0.X.0  
+Build number: 15.0.18142.0  
 Release date: July 25, 2019
 
 SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
-18.2 is a small update to 18.1 with the following new items and bug fixes.
+18.2 is an update to 18.1 with the following new items and bug fixes.
 
 ## What's new in 18.2
 

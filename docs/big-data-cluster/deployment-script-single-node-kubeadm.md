@@ -15,16 +15,44 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In this tutorial, you use a sample bash deployment script to deploy a SQL Server 2019 big data cluster (preview) to a single node kubeadm cluster.
+In this tutorial, you use a sample bash deployment script to deploy a single node Kubernetes cluster using  kubeadm and a SQL Server big data cluster on top of it.  
 
 ## Prerequisites
 
-- [Big data tools](deploy-big-data-tools.md):
-  - **azdata**
-  - **kubectl**
-  - **Azure Data Studio**
-  - **SQL Server 2019 extension**
+1. A vanilla Ubuntu 18.04 or 16.04 VM. All dependencies are going to be setup by the script. You will run the script from within the VM.
+**NOTE: Using Azure VMs is not yet supported.**
+
+1. VM should have at least 8CPUs, 64GB RAM and 100GB disk space. After pulling all big data cluster Docker images you will be left with 50GB for data/logs to use across all components.
+
+## Instructions
+
+1. Download the script on the VM you are planning to use for the deployment
+```
+curl --output kickstarter-azdata.sh  https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/setup-bdc.sh
+```
+
+2. Make the script executable
+```
+chmod +x kickstarter-azdata.sh
+```
+
+3. Run the script (make sure you are running with sudo)
+```
+sudo ./kickstarter-azdata.sh
+```
+
+When prompted, provide your input for the password that will be used for all external endpoints: controller, SQL Server master and gateway. Note that controller username is hardcoded to *admin*.
+
+4. Setup an alias for azdata tool
+```
+source ~/.bashrc
+```
+
+5. Validate alias works
+```
+azdata --version
+```
 
 ## Next steps
 
-For more information about big data cluster deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
+Follow [this tutorial](tutorial-load-sample-data.md) to get you started on using big data cluster.

@@ -120,6 +120,9 @@ It is also possible to customize your own deployment configuration profile. You 
    ```bash
    azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
+   
+> [!TIP]
+> You can also pass in the cluster name at deployment time using the *--name* parameter for *azdata create bdc* command. The parameters in the command have precedence over the values in the configuration files.
 
    > A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 

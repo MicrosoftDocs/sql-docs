@@ -11,7 +11,7 @@ ms.custom: ""
 ms.date: 07/26/2019 
 ---
 
-# SQL Assessment APIs (Public Preview)
+# SQL Assessment API (Public Preview)
 
 SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API methods are used utilizing a SQL Server Management Object (SMO) extension and new cmdlets in SqlServer PowerShell module. API is delivered with a rule set that is highly customizable and extensible.
 Currently, it can be used to assess SQL Server versions 2012 and higher, both on Windows and Linux.
@@ -19,11 +19,11 @@ SQL Assessment API is useful when you want to make sure your SQL Server configur
 
 ## Rules
 
-Rules sometimes referred to as checks, are defined in JSON formatted files. Microsoft's shipped rule set is available in the [samples repository](http://aka.ms/sql-assessment-api). There is versioning of the rule set for baselining and ease of management. You can visit the [samples repository](http://aka.ms/sql-assessment-api) for more details.
+Rules sometimes referred to as checks, are defined in JSON formatted files. Microsoft's shipped rule set is available in the [samples repository](https://aka.ms/sql-assessment-api). There is versioning of the rule set for baselining and ease of management. You can visit the [samples repository](https://aka.ms/sql-assessment-api) for more details.
 
 ## Customizing rules
 
-Rules are designed to be customizable and extensible. Microsoft's ruleset is designed to work for most environments. However, it is impossible to have one rule set that works for every single environment. Users can write their own JSON files and customize existing rules or add new ones. Examples of customization are available in the [samples repository](http://aka.ms/sql-assessment-api).
+Rules are designed to be customizable and extensible. Microsoft's ruleset is designed to work for most environments. However, it is impossible to have one rule set that works for every single environment. Users can write their own JSON files and customize existing rules or add new ones. Examples of customization are available in the [samples repository](https://aka.ms/sql-assessment-api).
 
 ### Customizing features enables users to do the  options below.
 
@@ -39,7 +39,7 @@ Rules are designed to be customizable and extensible. Microsoft's ruleset is des
 
 SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/installing-smo.md) July 2019 release version and higher and the [SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md) July 2019 release version and higher.
 
-You can find the below information in the [samples repository](http://aka.ms/sql-assessment-api):
+You can find the below information in the [samples repository](https://aka.ms/sql-assessment-api):
 
 * Example scripts
 * Complete Microsoft released rule set

@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Quickstart: Create a predictive model using R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart, you'll learn how to train a model using R, and then save the model to a table in SQL Server. The model is a simple generalized linear model (GLM) that predicts probability that a vehicle has been fitted with a manual transmission. You'll use the `mtcars` dataset included with R.
 

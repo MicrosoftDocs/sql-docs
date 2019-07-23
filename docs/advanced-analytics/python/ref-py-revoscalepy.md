@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # revoscalepy (Python module in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **revoscalepy** is a Python35-compatible module from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. It is based on the **RevoScaleR** package for R (distributed with Microsoft R Server and SQL Server R Services), offering similar functionality:
 

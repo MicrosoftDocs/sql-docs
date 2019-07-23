@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Install SQL Server 2016 R Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article explains how to install and configure **SQL Server 2016 R Services**. If you have SQL Server 2016, install this feature to enable execution of R code in SQL Server.
 

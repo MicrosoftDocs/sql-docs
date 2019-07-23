@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Resource governance for machine learning in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Data science and machine learning algorithms are computationally intensive. Depending on workload priorities, you might need to increase the resources available for data science, or decrease resourcing if R and Python script execution undermines the performance of other services running concurrently. 
 

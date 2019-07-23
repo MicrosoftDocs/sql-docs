@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Monitor SQL Server Machine Learning Services using dynamic management views (DMVs)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Use dynamic management views (DMVs) to monitor the execution of external scripts (R and Python), resources used, diagnose problems, and tune performance in SQL Server Machine Learning Services.
 

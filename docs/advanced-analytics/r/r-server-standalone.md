@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # R Server (Standalone) and Machine Learning Server (Standalone) in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server provides installation support for a standalone R Server or Machine Learning Server that runs independently of SQL Server. Depending on your SQL Server version, a standalone server has a foundation of open-source R and possibly Python, overlaid with high-performance libraries from Microsoft that add statistical and predictive analytics at scale. Libraries also enable machine learning tasks scripted in R or Python. 
 

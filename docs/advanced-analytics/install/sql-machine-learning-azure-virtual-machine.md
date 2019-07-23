@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Install SQL Server Machine Learning Services with R and Python on an Azure virtual machine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 You can install R and Python integration with Machine Learning Services on a SQL Server virtual machine in Azure, eliminating installation and configuration tasks. Once the virtual machine is deployed, the features are ready to use.
  

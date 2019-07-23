@@ -5,7 +5,7 @@ description: This article describes the controller of a SQL Server 2019 big data
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -31,19 +31,19 @@ The controller service provides the following core functionality:
 
 ## Deploying the controller service
 
-The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a big data cluster. This service is installed by a Kubernetes administrator during cluster bootstrap, using the **mssqlctl** command-line utility. For more information, see [Get started with SQL Server big data clusters](deploy-get-started.md).
+The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a big data cluster. This service is installed by a Kubernetes administrator during cluster bootstrap, using the **azdata** command-line utility. For more information, see [Get started with SQL Server big data clusters](deploy-get-started.md).
 
 The buildout workflow will layout on top of Kubernetes a fully functional SQL Server big data cluster that includes all the components described in the [Overview](big-data-cluster-overview.md) article. The bootstrap workflow first creates the controller service, and once this is deployed, the controller service will coordinate the installation and configuration of rest of the services part of master, compute, data, and storage pools.
 
 ## Managing the cluster through the controller service
 
-You can manage the cluster through the controller service using either **mssqlctl** commands. If you deploy additional Kubernetes objects like pods into the same namespace, they are not managed or monitored by the controller service. You can also use **kubectl** commands to manage the cluster at the Kubernetes level. For more information, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
+You can manage the cluster through the controller service using either **azdata** commands. If you deploy additional Kubernetes objects like pods into the same namespace, they are not managed or monitored by the controller service. You can also use **kubectl** commands to manage the cluster at the Kubernetes level. For more information, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
-The controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) created for a big data cluster reside in a dedicated Kubernetes namespace. The controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy for this scenario is configured automatically as part of initial cluster deployment using **mssqlctl**.
+The controller and the Kubernetes objects (stateful sets, pods, secrets, etc.) created for a big data cluster reside in a dedicated Kubernetes namespace. The controller service will be granted permission by the Kubernetes cluster administrator to manage all resources within that namespace.  The RBAC policy for this scenario is configured automatically as part of initial cluster deployment using **azdata**.
 
-### mssqlctl
+### azdata
 
-**mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage big data clusters via the REST APIs exposed by the controller service.
+**azdata** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage big data clusters via the REST APIs exposed by the controller service.
 
 ## Controller service security
 

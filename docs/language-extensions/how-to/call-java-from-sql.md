@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to call Java classes from SQL Server stored procedures using the Java programming language extension in SQL Server 2019.
 author: dphansen
 ms.author: davidph 
-ms.date: 05/22/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -45,7 +45,7 @@ The following are some basic principles when executing Java on SQL Server.
 * **params** is used to pass parameters to a Java class. Calling a method that requires arguments is not supported. Therefore, parameters the only way to pass argument values to your method. 
 
 > [!NOTE]
-> This note restates supported and unsupported operations specific to Java in CTP 3.0.
+> This note restates supported and unsupported operations specific to Java in CTP 3.2.
 > * On the stored procedure, input parameters are supported. Output parameters are not.
 > * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported.
 > * Partitioning using @input_data_1_partition_by_columns is not supported.
@@ -87,7 +87,7 @@ Once you have compiled your Java class or classes and created a jar file in your
 
 ## Use external library
 
-In SQL Server 2019 CTP 3.0, you can use external libraries for the Java language on Windows and Linux. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+In SQL Server 2019 CTP 3.2, you can use external libraries for the Java language on Windows and Linux. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Example of how to upload a .jar file with external library:
 

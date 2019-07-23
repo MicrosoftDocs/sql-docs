@@ -72,10 +72,10 @@ WHERE s.type_desc IN ('ROWS', 'LOG');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-file_id	type_desc	name	BlobTier	AccountType			IsInferredTier	IsPageBlob
+file_id  type_desc  name  BlobTier  AccountType  IsInferredTier  IsPageBlob
 --------------------------------------------------------------------------------------
-1		ROWS		data_0	P30			PremiumBlobStorage	0				1
-2		LOG			log		P30			PremiumBlobStorage	0				1
+1     ROWS      data_0  P30  PremiumBlobStorage  0   1
+2     LOG       log     P30  PremiumBlobStorage  0   1
 
 (2 rows affected)
 ```  

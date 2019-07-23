@@ -26,7 +26,7 @@ For the current information, see [What's New in SQL Server 2019](what-s-new-in-s
 
 | New feature or update | Details |
 |:---|:---|
-| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](../big-data-cluster/reference-mssqlctl.md). |
+| `mssqlctl` command changes | `mssqlctl cluster` commands have been renamed to `mssqlctl bdc`. For more information, see the [`mssqlctl` reference](../big-data-cluster/reference-azdata.md). |
 |New status commands for `mssqlsctl`|`mssqlctl` adds new commands to complement existing monitoring commands. These replace the cluster administration portal - which is removed in this release.|
 | Spark compute pools | Create additional nodes to increase Spark compute power without having to scale up storage. In addition, you can start storage pool nodes that aren't used for Spark. Spark and storage are decoupled. For more information, see [Configure storage without spark](../big-data-cluster/deployment-custom-configuration.md#sparkstorage). |
 | MSSQL Spark connector | Support for read/write to data pool external tables. Previous releases supported read/write to MASTER instance tables only. For more information, see [How to read and write to SQL Server from Spark using the MSSQL Spark Connector](../big-data-cluster/spark-mssql-connector.md). |

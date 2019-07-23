@@ -4,7 +4,7 @@ title: SQL Server Machine Learning Services (R and Python) Documentation - Tutor
 metadata:
   title: SQL Server Machine Learning Services (R, Python) Documentation - Tutorials, quickstarts, and install guides | Microsoft Docs
   titleSuffix: ''
-  description: SQL Server Machine Learning Services provides in-database R and Python to quickly prep data, train, and deploy machine learning models. Learn how to use R and Python external libraries and languages on resident, relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in SQL Server Machine Learning Services include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network.
+  description: SQL Server Machine Learning Services provides in-database R and Python to quickly prep data, train, and deploy machine learning models. Learn how to use R and Python external libraries and languages on relational data with our quickstarts, tutorials, and how-to articles. R and Python libraries in SQL Server Machine Learning Services include base distributions, data science models, machine learning algorithms, and functions for conducting high-performance analytics at scale, without having to transfer data across the network.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
@@ -56,14 +56,14 @@ sections:
   items:
   - type: list
     style: cards
-    className: cardsFTitle
+    className: cardsB
     columns: 2
     items:
-    - title: R
+    - title: '<b>R</b>'
       html: 'Open-source R, extended with RevoScaleR and Microsoft AI algorithms in MicrosoftML. These libraries give you forecasting and prediction models, statistical analysis, visualization, and data manipulation at scale.'
       image: 
         src: media/index/logo_R.png
-    - title: 'Python'
+    - title: '<b>Python</b>'
       html: 'Python developers can use Microsoft revoscalepy and microsoftml libraries for predictive analytics and machine learning at scale. Anaconda and Python 3.5-compatible libraries are the baseline distribution.'
       image: 
         src: media/index/logo_python.png

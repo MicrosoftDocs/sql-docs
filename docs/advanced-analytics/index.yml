@@ -27,7 +27,7 @@ sections:
 - title: 5-Minute Quickstarts
   items:
   - type: paragraph
-    text: 'After you  <a href="install/sql-machine-learning-services-windows-install">install SQL Server Machine Learning Services</a>, you can get started using these quickstarts:'
+    text: 'After you <a href="install/sql-machine-learning-services-windows-install">install SQL Server Machine Learning Services</a>, you can get started using these quickstarts:'
   - type: list
     style: unordered
     items:
@@ -70,6 +70,8 @@ sections:
 
 - title: Reference
   items:
+  - type: paragraph
+    text: 'SQL Server Machine Learning Services has several packages for both R and Python.'
   - type: list
     style: unordered
     items:

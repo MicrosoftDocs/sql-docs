@@ -1,6 +1,6 @@
 ---
 title: "Calculation groups in Analysis Services tabular models | Microsoft Docs"
-ms.date: 06/17/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -23,6 +23,7 @@ This article describes:
 > * Benefits 
 > * How calculation groups work
 > * Dynamic format strings
+> * Ordering
 > * Precedence
 > * Tools
 > * Limitations

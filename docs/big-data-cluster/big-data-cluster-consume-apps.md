@@ -5,7 +5,7 @@ description: Consume an application deployed on SQL Server 2019 big data cluster
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 03/18/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -20,33 +20,33 @@ This article describes how to consume an app deployed on a SQL Server 2019 big d
 ## Prerequisites
 
 - [SQL Server 2019 big data cluster](deployment-guidance.md)
-- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
-- An app deployed using either [`mssqlctl`](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
+- [mssqlctl command-line utility](deploy-install-azdata.md)
+- An app deployed using either [azdata](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
 
 ## Capabilities
 
-After you have deployed an application to your SQL Server 2019 big data cluster (preview), you can access and consume that application using a RESTful web service. This enables integration of that app from other applications or services (for example, a mobile app or website). The following table describes the application deployment commands that you can use with **mssqlctl** to get information about the RESTful web service for your app.
+After you have deployed an application to your SQL Server 2019 big data cluster (preview), you can access and consume that application using a RESTful web service. This enables integration of that app from other applications or services (for example, a mobile app or website). The following table describes the application deployment commands that you can use with **azdata** to get information about the RESTful web service for your app.
 
 |Command |Description |
 |:---|:---|
-|`mssqlctl app describe` | Describe application. |
+|`azdata app describe` | Describe application. |
 
 You can get help with the `--help` parameter as in the following example:
 
 ```bash
-mssqlctl app describe --help
+azdata app describe --help
 ```
 
 The following sections describe how to retrieve an endpoint for an application and how to work with the RESTful web service for application integration.
 
 ## Retrieve the endpoint
 
-The **mssqlctl app describe** command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
+The **azdata app describe** command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
 
 Describe your app by running a command similar to the following:
 
 ```bash
-mssqlctl app describe --name addpy --version v1
+azdata app describe --name addpy --version v1
 ```
 
 ```json
@@ -81,7 +81,7 @@ Note the IP address (`10.1.1.3` in this example) and the port number (`30777`) i
 
 ## Generate a JWT access token
 
-In order to access the RESTful web service for the app you have deployed you first have to generate a JWT Access token. Open the following URL in your browser: `https://[IP]:[PORT]/api/docs/swagger.json` using the IP address and port you retrieved running the `describe` command above. You will have to log in with the same credentials you used for `mssqlctl login`.
+In order to access the RESTful web service for the app you have deployed you first have to generate a JWT Access token. Open the following URL in your browser: `https://[IP]:[PORT]/api/docs/swagger.json` using the IP address and port you retrieved running the `describe` command above. You will have to log in with the same credentials you used for `azdata login`.
 
 Paste the contents of the `swagger.json` into the [Swagger Editor](https://editor.swagger.io) to understand what methods are available:
 
@@ -96,7 +96,7 @@ The result of this request will give you an JWT `access_token`, which you will n
 ## Execute the app using the RESTful web service
 
 > [!NOTE]
-> If you want, you can open the URL for the `swagger` that was returned when you ran `mssqlctl app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. You will have to log in with the same credentials you used for `mssqlctl login`. The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method. Also note the Base URL displayed at the top.
+> If you want, you can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. You will have to log in with the same credentials you used for `azdata login`. The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method. Also note the Base URL displayed at the top.
 
 You can use your favorite tool to call the `run` method (`https://[IP]:30778/api/app/[appname]/[version]/run`), passing in the parameters in the body of your POST request as json. In this example we will use [Postman](https://www.getpostman.com/). Before making the call, you will need to set the `Authorization` to `Bearer Token` and paste in the token you retrieved earlier. This will set a header on your request. See the screenshot below.
 
@@ -106,7 +106,7 @@ Next, in the requests body, pass in the parameters to the app you are calling an
 
 ![Postman Run Body](media/big-data-cluster-consume-apps/postman_run_2.png)
 
-When you send the request, you will get the same output as you did when you ran the app through `mssqlctl app run`:
+When you send the request, you will get the same output as you did when you ran the app through `azdata app run`:
 
 ![Postman Run Result](media/big-data-cluster-consume-apps/postman_result.png)
 

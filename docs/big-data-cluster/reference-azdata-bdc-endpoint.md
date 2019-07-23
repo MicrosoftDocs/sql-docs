@@ -1,35 +1,35 @@
 ---
-title: mssqlctl bdc endpoint reference
+title: azdata bdc endpoint reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl bdc endpoint commands.
+description: Reference article for azdata bdc endpoint commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl bdc endpoint
+# azdata bdc endpoint
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc endpoint** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc endpoint** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl bdc endpoint list](#mssqlctl-bdc-endpoint-list) | Lists the endpoints for the Big Data Cluster.
-## mssqlctl bdc endpoint list
+[azdata bdc endpoint list](#azdata-bdc-endpoint-list) | Lists the endpoints for the Big Data Cluster.
+## azdata bdc endpoint list
 Lists the endpoints for the Big Data Cluster.
 ```bash
-mssqlctl bdc endpoint list [--endpoint-name -e] 
-                           
+azdata bdc endpoint list [--endpoint-name -e] 
+                         
 ```
 ### Optional Parameters
 #### `--endpoint-name -e`
-BDC endpoint name.
+Big data cluster endpoint name.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -44,4 +44,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

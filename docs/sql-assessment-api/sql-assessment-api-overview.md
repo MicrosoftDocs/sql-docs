@@ -13,7 +13,7 @@ ms.date: 07/26/2019
 
 # SQL Assessment API (Public Preview)
 
-SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API methods uses a [SQL Server Management Object (SMO)](../relational-databases/server-management-objects-smo/overview-smo.md) extension and new cmdlets in [SQL Server PowerShell module](../database-engine/install-windows/install-sql-server-powershell.md). API is delivered with a ruleset that is highly customizable and extensible.
+SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API methods use a [SQL Server Management Object (SMO)](../relational-databases/server-management-objects-smo/overview-smo.md) extension and new cmdlets in [SQL Server PowerShell module](../database-engine/install-windows/install-sql-server-powershell.md). API is delivered with a ruleset that is highly customizable and extensible.
 Currently, it can be used to assess SQL Server versions 2012 and higher. Both SQL on Windows and SQL on Linux are supported, but the current version only has checks for SQL on Windows.
 SQL Assessment API is useful when you want to make sure your SQL Server configuration is in line with recommended best practices. After an initial assessment, configuration stability can be tracked by regularly scheduled assessments.
 
@@ -30,11 +30,13 @@ SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relat
 * [Install SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md)
 
 SqlServer module is getting two new cmdlets to work with SQL Assessment:
-* **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object. 
+
+* **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object.
 
 * **Invoke-SqlAssessment** – Provides results of an assessment
 
 SMO Framework is supplemented by the SQL Assessment extension that provides the following methods:
+
 * **GetAssessmentItems** – Returns available checks for a particular SQL object (IEnumerable<…>)
 
 * **GetAssessmentResults** – Synchronously evaluates assessment and returns results and errors if any (IEnumerable<…>)
@@ -99,7 +101,7 @@ Specific rules have thresholds that are compared against the current value of a 
 
 #### Adding more rules written by you or third parties
 
-You can *daisy chain* rulesets by adding one or more JSON files as parameters to your SQL Assessment API call. Your organization might write those files or obtain them from a third party. For example, you can have your JSON file that disables specific rules from the Microsoft rule set, and another JSON file by an industry expert that include rules you find useful for your environment, followed by another JSON file that changes some threshold values in that JSON file.
+You can string together rulesets by adding one or more JSON files as parameters to your SQL Assessment API call. Your organization might write those files or obtain them from a third party. For example, you can have your JSON file that disables specific rules from the Microsoft rule set, and another JSON file by an industry expert that include rules you find useful for your environment, followed by another JSON file that changes some threshold values in that JSON file.
 
 ## Next steps
 

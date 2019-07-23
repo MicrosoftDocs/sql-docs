@@ -90,7 +90,7 @@
         - name: AKS script (python)
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
         - name: Single-node kubeadm (bash)
-          href: deployment-script-single-node-kubeadm.md
+          href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks
           href: big-data-cluster/deploy-notebooks.md
   - name: Concepts

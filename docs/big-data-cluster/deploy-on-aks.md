@@ -21,8 +21,8 @@ AKS makes it simple to create, configure, and manage a cluster of virtual machin
 
 This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If you don't have an Azure subscription, create a free account before you begin.
 
-> [!TIP] 
-> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
+> [!TIP]
+> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](deploy-notebooks.md).
 
 ## Prerequisites
 

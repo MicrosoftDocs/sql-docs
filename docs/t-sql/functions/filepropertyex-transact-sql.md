@@ -1,6 +1,6 @@
 ---
 title: "FILEPROPERTYEX (Transact-SQL) | Microsoft Docs"
-ms.date: "07/22/2019"
+ms.date: "07/23/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "file properties [SQL Server]"
   - "FILEPROPERTYEX function"
   - "file names [SQL Server], FILEPROPERTYEX"
-author: sstein
+author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # FILEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Returns the specified extended file property value when a file name in the current database and a property name are specified. Returns NULL for files that are not in the current database or for extended file properties that do not exist. Currently, extended file properties only apply to databases that are in Azure Blob storage.  
   

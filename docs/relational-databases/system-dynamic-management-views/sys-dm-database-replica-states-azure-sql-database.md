@@ -71,7 +71,7 @@ ms.author: sstein
 
 ## Permissions
 
-Requires VIEW SERVER STATE permission on the server.  
+Requires VIEW DATABASE STATE permission on the database.
 
 
 ## See Also

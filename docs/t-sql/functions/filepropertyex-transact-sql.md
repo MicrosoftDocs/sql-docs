@@ -13,7 +13,6 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "viewing file properties"
-  - "names [SQL Server], files"
   - "displaying file properties"
   - "file properties [SQL Server]"
   - "FILEPROPERTYEX function"
@@ -58,7 +57,7 @@ FILEPROPERTYEX ( name , property )
   
 ## Examples  
  The following example returns the setting for database files:
-```  
+```sql
 SELECT s.file_id,
        s.type_desc,
        s.name,
@@ -72,7 +71,7 @@ WHERE s.type_desc IN ('ROWS', 'LOG');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 file_id	type_desc	name	BlobTier	AccountType			IsInferredTier	IsPageBlob
 --------------------------------------------------------------------------------------
 1		ROWS		data_0	P30			PremiumBlobStorage	0				1

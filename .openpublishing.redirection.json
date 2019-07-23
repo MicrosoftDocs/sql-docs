@@ -9842,12 +9842,7 @@
             "source_path": "docs/analysis-services/analysis-services-tutorials-ssas.md",
             "redirect_url": "/analysis-services/analysis-services-tutorials-ssas.md",
             "redirect_document_id": false
-        }, 
-        {
-            "source_path": "docs/analysis-services/analysis-services.md",
-            "redirect_url": "/analysis-services/analysis-services.md",
-            "redirect_document_id": false
-        }, 
+        },
         {
             "source_path": "docs/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md",
             "redirect_url": "/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md",

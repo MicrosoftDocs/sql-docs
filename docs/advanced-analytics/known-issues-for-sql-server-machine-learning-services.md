@@ -1,5 +1,5 @@
 ---
-title: Known issues for R language and Python integration - SQL Server Machine Learning Services
+title: Known issues for R language and Python integration
 ms.prod: sql
 ms.technology: machine-learning
 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server R and Python tutorials - SQL Server Machine Learning
+title: SQL Server R and Python tutorials
 description: Examples and tutorials for R and Python scripting in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning

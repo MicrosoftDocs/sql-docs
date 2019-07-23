@@ -8,10 +8,10 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 07/26/2019 
 ---
 
-# SQL Assessment APIs (Public Preview)
+# SQL Assessment API (Public Preview)
 
 SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API methods are used utilizing a SQL Server Management Object (SMO) extension and new cmdlets in SqlServer PowerShell module. API is delivered with a rule set that is highly customizable and extensible.
 Currently, it can be used to assess SQL Server versions 2012 and higher, both on Windows and Linux.
@@ -19,11 +19,11 @@ SQL Assessment API is useful when you want to make sure your SQL Server configur
 
 ## Rules
 
-Rules sometimes referred to as checks, are defined in JSON formatted files. Microsoft's shipped rule set is available in the [samples repository](http://aka.ms/sql-assessment-api). There is versioning of the rule set for baselining and ease of management. You can visit the [samples repository](http://aka.ms/sql-assessment-api) for more details.
+Rules sometimes referred to as checks, are defined in JSON formatted files. Microsoft's shipped rule set is available in the [samples repository](https://aka.ms/sql-assessment-api). There is versioning of the rule set for baselining and ease of management. You can visit the [samples repository](https://aka.ms/sql-assessment-api) for more details.
 
 ## Customizing rules
 
-Rules are designed to be customizable and extensible. Microsoft's rule set is designed to work for most environments. However, it is impossible to have one rule set that works for every single environment. Users can write their own JSON files and customize existing rules or add new ones. Examples of customization are available in the [samples repository](http://aka.ms/sql-assessment-api).
+Rules are designed to be customizable and extensible. Microsoft's ruleset is designed to work for most environments. However, it is impossible to have one rule set that works for every single environment. Users can write their own JSON files and customize existing rules or add new ones. Examples of customization are available in the [samples repository](https://aka.ms/sql-assessment-api).
 
 ### Customizing features enables users to do the  options below.
 
@@ -33,13 +33,13 @@ Rules are designed to be customizable and extensible. Microsoft's rule set is de
 * Change threshold parameters
 
 * Add more rules written by you or third parties
-    * You can "daisy chain" rule sets by adding one or more JSON files as parameters to your SQL Assessment api call. Your organization might write those files or obtain them from a third party. For example, you can have your JSON file that disables specific rules from the Microsoft rule set, and another JSON file by an industry expert that include rules you find useful for your environment, followed by another JSON file that changes some threshold values in that JSON file.
+    * You can "daisy chain" rulesets by adding one or more JSON files as parameters to your SQL Assessment API call. Your organization might write those files or obtain them from a third party. For example, you can have your JSON file that disables specific rules from the Microsoft rule set, and another JSON file by an industry expert that include rules you find useful for your environment, followed by another JSON file that changes some threshold values in that JSON file.
 
 ## Get started
 
-SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/installing-smo.md) version <X> and higher and the [SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md) version <Y> and higher.
+SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/installing-smo.md) July 2019 release version and higher and the [SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md) July 2019 release version and higher.
 
-You can find the below information in the [samples repository](http://aka.ms/sql-assessment-api):
+You can find the below information in the [samples repository](https://aka.ms/sql-assessment-api):
 
 * Example scripts
 * Complete Microsoft released rule set
@@ -47,27 +47,27 @@ You can find the below information in the [samples repository](http://aka.ms/sql
 
 Go through the steps below to get started.
 
-1. Get a list of available checks for the local instance to familiarize yourself with the checks
+1. Get a list of available checks for the local instance to familiarize yourself with the checks.
 
     ```powershell
     Get-SqlAssessmentItem SQLSERVER:\SQL\localhost\default
     ```
 
-2. Invoke assessment and pipe results to a table
+2. Invoke assessment and pipe results to a table.
 
     ```powershell
     Get-SqlInstance -ServerInstance 'localhost' | Invoke-SqlAssessment |
     Write-SqlTableData -ServerInstance 'localhost' -DatabaseName SQLAssessmentDemo -SchemaName Assessment -TableName Results -Force
     ```
 
-3. Follow descriptions and links in the table to further understand the recommendations
+3. Follow descriptions and links in the table to further understand the recommendations.
 
-4. Customize the rules based on your environment and organizational requirements.</br>
-    a. Enable/disable certain rules or groups of rules (using tags).</br>
-    b. Change threshold parameters.</br>
-    c. Add more rules written by you or third parties.
+4. Customize the rules based on your environment and organizational requirements.  
+    a. Enable/disable specific rules or groups of rules (using tags).  
+    b. Change threshold parameters.  
+    c. Add more rules written by you or third parties.  
 
-5. Schedule a task or a job to run the assessment regularly or on-demand to measure progress
+5. Schedule a task or a job to run the assessment regularly or on-demand to measure progress.
 
 6. Once you have the assessment results in a table, you can use it in many different ways, including but not restricted to charting, or uploading results to Azure Log Analytics for further analysis, and so forth.
 
@@ -85,3 +85,7 @@ An assessment is performed against a chosen SQL Server object. Currently, the AP
     ```powershell
     Get-SqlDatabase -ServerInstance 'localhost' | Invoke-SqlAssessment -Verbose
     ```
+
+## Next steps 
+
+Take a look at [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/overview-smo.md) and [PowerShell](../powershell/download-sql-server-ps-module.md).

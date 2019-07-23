@@ -1,5 +1,5 @@
 ---
-title: Quickstart for a "Hello World" basic Python code execution in T-SQL - SQL Server Machine Learning
+title: Quickstart for a "Hello World" basic Python code execution in T-SQL
 description: Quickstart for Python script in SQL Server. Learn the basics of calling Python script using the sp_execute_external_script system stored procedure in a hello-world exercise.
 ms.prod: sql
 ms.technology: machine-learning

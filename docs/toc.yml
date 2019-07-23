@@ -87,9 +87,11 @@
           href: big-data-cluster/deploy-on-minikube.md
       - name: Deployment scripts
         items:
-        - name: Azure Kubernetes Service
+        - name: AKS script (python)
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: Deploy using Azure Data Studio Notebooks
+        - name: Single-node kubeadm (bash)
+          href: big-data-cluster/deployment-script-single-node-kubeadm.md
+        - name: Deploy with notebooks
           href: big-data-cluster/deploy-notebooks.md
   - name: Concepts
     items:

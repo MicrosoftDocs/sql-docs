@@ -42,7 +42,7 @@ sp_query_store_flush_db [;]
 ## Remarks  
   
 ## Permissions  
- Requires the **EXECUTE** permission on the database, and **DELETE** permission on the query store catalog views.  
+ Requires the **ALTER** permission on the database.
   
 ## Examples  
  The following example flushes the in-memory portion of the Query Store data to disk.  

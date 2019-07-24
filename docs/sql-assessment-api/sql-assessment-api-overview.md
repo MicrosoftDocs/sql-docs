@@ -49,7 +49,7 @@ SMO Framework is supplemented by the SQL Assessment API extension that provides 
 
 An assessment is performed against a chosen SQL Server object. In the default ruleset, there are checks for two kinds of objects only: Server and Database (in addition to them, the API supports two more kinds: Filegroup and AvailabilityGroup). If you want to assess a SQL instance and all its databases, you should run the SQL Assessment cmdlets for each object separately. Or you can pass objects for assessment to the SQL Assessment cmdlets in a variable or the pipeline.
 
-Go through the steps below to get started.
+Go through the examples below to get started.
 
 1. Get a list of available checks for the local instance to familiarize yourself with the checks. In this example, we're using a path implemented with the [Windows PowerShell SQL Server provider](https://docs.microsoft.com/en-us/sql/powershell/sql-server-powershell-provider) to pass the instance object to the Get-SqlAssessmentItem cmdlet.
 
@@ -61,8 +61,8 @@ Go through the steps below to get started.
 2. Get a list of available checks for all databases of the instance. Here, we're putting the output of the Get-SqlDatabase cmdlet into a variable so further get Get-SqlAssessmentItem results for each database.
 
     ```powershell
-    $database = Get-SqlDatabase -ServerInstance 'localhost'
-    Get-SqlAssessmentItem $database
+    $databases = Get-SqlDatabase -ServerInstance 'localhost'
+    Get-SqlAssessmentItem $databases
     ```
 
 3. Invoke assessment for the instance and save the results to a SQL table. In this example, we're piping the output of the Get-SqlInstance cmdlet to the Invoke-SqlAssessment cmdlet, which results are piped to the Write-SqlTableData cmdlet.

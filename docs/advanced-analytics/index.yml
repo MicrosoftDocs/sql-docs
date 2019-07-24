@@ -48,7 +48,7 @@ sections:
 - title: Solutions
   items:
   - type: paragraph
-    text: 'Find <a href="tutorials/data-science-scenarios-and-solution-templates">scenarios and solution templates</a> to help you explore SQL Server Machine Learning Services.'
+    text: 'Find <a href="tutorials/data-science-scenarios-and-solution-templates">templates to help you build machine learning solutions</a> on SQL Server.'
 
 - title: Reference
   items:
@@ -64,10 +64,11 @@ sections:
     - html: '<a href="python/ref-py-revoscalepy">revoscalepy in Python</a>: Distributed and parallel processing for Python tasks: data transformation, exploration, visualization, statistical and predictive analytics'
     - html: '<a href="python/ref-py-microsoftml">microsoftml in Python</a>: Functions based on Microsoft AI algorithms, adapted for Python'
 
-- title: Other Machine Learning and Language Extensions technologies
+- title: Other Machine Learning Technologies
   items:
   - type: list
     style: unordered
     items:
     - html: '<a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning Services<a>'
-    - html: '<a href="/sql/language-extensions">SQL Server Language Extensions</a>'
+    - html: '<a href="/azure/machine-learning/">Azure Machine Learning</a>'
+    - html: '<a href="/dotnet/machine-learning/">ML.NET</a>'

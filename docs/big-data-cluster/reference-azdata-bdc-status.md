@@ -1,35 +1,35 @@
 ---
-title: mssqlctl bdc status reference
+title: azdata bdc status reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl bdc status commands.
+description: Reference article for azdata bdc status commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl bdc status
+# azdata bdc status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc status** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc status** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl bdc status show](#mssqlctl-bdc-status-show) | Shows the status of the Big Data Cluster.
-## mssqlctl bdc status show
+[azdata bdc status show](#azdata-bdc-status-show) | Shows the status of the Big Data Cluster.
+## azdata bdc status show
 Shows the status of the Big Data Cluster.
 ```bash
-mssqlctl bdc status show 
+azdata bdc status show 
 ```
 ### Examples
 BDC status where the user is logged in.
 ```bash
-mssqlctl bdc status show
+azdata bdc status show
 ```
 ### Global Arguments
 #### `--debug`
@@ -45,4 +45,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

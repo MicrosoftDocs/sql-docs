@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Enable or disable remote package management for SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes how to enable remote management of R packages from a client workstation or a different Machine Learning Server. After the package management feature has been enabled on SQL Server, you can use RevoScaleR commands on a client to install packages on SQL Server.
 

@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # SQL Server R language tutorials
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes the R language tutorials for in-database analytics on [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
 

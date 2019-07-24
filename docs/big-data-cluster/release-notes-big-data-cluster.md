@@ -27,10 +27,32 @@ The following sections describe the new features and known issues for big data c
 |:---|:---|
 |Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](deploy-get-started.md).|
 |`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](deploy-install-azdata.md). |
-|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. |
+|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. In previous CTP releases, columns in the external data source was bound based on the ordinal position only and the names specified in the EXTERNAL TABLE definition was not used. |
 |HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](hdfs-tiering.md) |
 |Notebook-based troubleshooting |CTP 3.2 introduces Jupyter notebooks to assist with [deployment](deploy-notebooks.md) and [discovery, diagnosis, and troubleshooting](manage-notebooks.md) for components in a SQL Server big data cluster. |
 | &nbsp; | &nbsp; |
+
+### Known issues
+
+The following sections describe the known issues and limitations with this release.
+
+#### PolyBase
+
+- Push-down of TOP clause when the count is > 1000 is not supported in this release. All rows will be read from the remote data source in such cases.
+
+- Push-down of colocated joins to external data sources is not supported in this release. For example, push-down of two data pool tables of ROUND_ROBIN distribution type will get the data to SQL Master instance or Compute Pool instance to perform the join operation.
+
+#### Compute Pool
+
+- Big data cluster deployment only supports compute pool with one instance.
+
+#### Storage Pool
+
+- Querying parquet files in storage pool does not support certain data types.
+
+- MAP and LIST parent columns, as well as parent columns without an attached type, cannot be queried. It will return an error.
+
+- REPEATED nodes cannot be queried and it might return wrong results.
 
 ## <a id="ctp31"></a> CTP 3.1 (June)
 

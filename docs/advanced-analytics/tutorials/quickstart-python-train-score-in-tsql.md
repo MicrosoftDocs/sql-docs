@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Quickstart: Create, train, and use a Python model with stored procedures in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart using Python, you will create and execute two stored procedures. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By placing code in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications. 
 

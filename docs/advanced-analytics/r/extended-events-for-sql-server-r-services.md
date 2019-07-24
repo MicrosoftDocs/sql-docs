@@ -9,7 +9,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Extended events for SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server provides a set of extended events to use in troubleshooting operations related to the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], as well as Python or R jobs sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

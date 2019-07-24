@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Upgrade machine learning (R and Python) components in SQL Server instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 R and Python integration in SQL Server includes open-source and Microsoft-proprietary packages. Under standard SQL Server servicing, packages are updated according to the SQL Server release cycle, with bug fixes to existing packages at the current version, but no major version upgrades. 
 

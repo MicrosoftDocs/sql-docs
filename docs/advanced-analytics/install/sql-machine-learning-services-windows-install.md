@@ -11,7 +11,7 @@ ms.author: davidph
 ---
 # Install SQL Server Machine Learning Services on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Starting in SQL Server 2017, R and Python support for in-database analytics is provided in **SQL Server Machine Learning Services**, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
 

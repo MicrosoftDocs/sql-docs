@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Install SQL Server machine learning R and Python components from the command line
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article provides instructions for intalling SQL Server machine learning components from a command line:
 

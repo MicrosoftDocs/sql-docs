@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "* (multiply operator)"
   - "multiply operator (*)"
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # * (Multiply) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Multiplies two numeric expressions.  
   
 ## Syntax  

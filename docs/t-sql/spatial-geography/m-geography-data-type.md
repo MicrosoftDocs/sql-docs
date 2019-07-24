@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "M method"
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # M (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

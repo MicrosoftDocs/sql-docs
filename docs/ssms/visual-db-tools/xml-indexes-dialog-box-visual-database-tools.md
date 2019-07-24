@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.xmlindexes"
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # XML Indexes Dialog Box (Visual Database Tools)

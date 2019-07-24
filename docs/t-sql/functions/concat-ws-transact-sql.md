@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT_WS function"
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT_WS (Transact-SQL)
@@ -32,7 +31,7 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 
 ## Arguments   
 separator  
-An expression of any character type (`char`', `nchar`', `nvarchar`, or `varchar`).
+An expression of any character type (`char`, `nchar`, `nvarchar`, or `varchar`).
 
 argument1, argument2, argument*N*  
 An expression of any type.
@@ -58,7 +57,7 @@ If a scenario involves null values separated by a delimiter, consider the `ISNUL
 ## Examples   
 
 ### A.  Concatenating values with separator
-This example concatenates three columns from the sys.databases table, separating the values with a  `- `.   
+This example concatenates three columns from the sys.databases table, separating the values with a  `-`.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo

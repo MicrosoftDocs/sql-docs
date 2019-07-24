@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Filter Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,6 +31,6 @@ manager: craigg
  Click this button to clear all filters that have been defined. To remove a single filter, select the filter row and press the Delete key.  
   
 ## See Also  
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

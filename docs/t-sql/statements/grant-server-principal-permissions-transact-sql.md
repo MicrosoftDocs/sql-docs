@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "logins [SQL Server], granting access"
   - "granting permissions [SQL Server], impersonation"
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # GRANT Server Principal Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

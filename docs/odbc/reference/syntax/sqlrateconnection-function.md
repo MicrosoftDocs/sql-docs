@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLRateConnection Function
 **Conformance**  
@@ -23,7 +22,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLRateConnection(  
                 SQLHDBC_INFO_TOKEN   hRequest,  
                 SQLHDBC              hCandidateConnection,  

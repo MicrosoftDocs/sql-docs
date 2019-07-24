@@ -37,14 +37,14 @@ manager: craigg
 # Discontinued Database Engine Functionality in SQL Server 2014
   This topic describes the [!INCLUDE[ssDE](../includes/ssde-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## Discontinued Features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Discontinued Features in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  The following table lists features that were removed in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Category|Discontinued feature|Replacement|  
 |--------------|--------------------------|-----------------|  
 |Compatibility level|90 compatibility level|Databases must be set to at least compatibility level 100. When a database with a compatibility level of less than 100 is upgraded to [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], the compatibility level of the database is set to 100 during the upgrade operation.|  
   
-## Discontinued Features in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Discontinued Features in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  The following table lists features that were removed in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 |Category|Discontinued feature|Replacement|  
@@ -69,7 +69,7 @@ manager: craigg
 |System tables|sys.database_principal_aliases|Use roles instead of aliases.|  
 |Transact-SQL|`RAISERROR` in the format `RAISERROR integer 'string'` is discontinued.|Rewrite the statement using the current **RAISERROR(...)** syntax.|  
 |Transact-SQL syntax|`COMPUTE / COMPUTE BY`|Use `ROLLUP`|  
-|Transact-SQL syntax|Use of **\*=** and **=\***|Use ANSI join syntax. For more information, see [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL syntax|Use of **\*=** and **=&#42;**|Use ANSI join syntax. For more information, see [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Replaced by database_file_size_change event, database_file_size_change<br /><br /> database_file_size_change event<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Additional XEvent changes**  
@@ -87,6 +87,6 @@ manager: craigg
 -   Fields added: target_kb, pages_kb  
   
 ## See Also  
- [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

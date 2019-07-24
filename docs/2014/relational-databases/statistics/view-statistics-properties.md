@@ -52,9 +52,9 @@ manager: craigg
   
 5.  Right-click the Statistics object of which you want to view the properties and select **Properties**.  
   
-6.  In the **Statistics Properties -** *statistics_name* dialog box, in the **Select a page** pane, select **Details**.  
+6.  In the **Statistics Properties -** _statistics_name_ dialog box, in the **Select a page** pane, select **Details**.  
   
-     The following properties show on the **Details** page in the **Statistics Properties -** *statistics_name* dialog box.  
+     The following properties show on the **Details** page in the **Statistics Properties -** _statistics_name_ dialog box.  
   
      **Table Name**  
      Displays the name of the table described by the statistics.  

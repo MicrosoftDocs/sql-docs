@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "joins [SQL Server], creating"
   - "joins [SQL Server], automatic"
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Join Tables Automatically (Visual Database Tools)

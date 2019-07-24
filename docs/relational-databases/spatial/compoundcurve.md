@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CompoundCurve
@@ -24,7 +23,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 1.  It must contain at least one **CircularString** or **LineString** instance.  
   
 2.  The sequence of **CircularString** or **LineString** instances must be continuous.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 If a **CompoundCurve** contains a sequence of multiple **CircularString** and **LineString** instances, the ending endpoint for every instance except for the last instance must be the starting endpoint for the next instance in the sequence. This means that if the ending point of a prior instance in the sequence is (4 3 7 2), the starting point for the next instance in the sequence must be (4 3 7 2). Note that Z(elevation) and M(measure) values for the point must also be the same. If there is a difference in the two points, a `System.FormatException` is thrown. Points in a **CircularString** do not have to have a Z or M value. If no Z or M values are given for the ending point of the prior instance, the starting point of the next instance cannot include Z or M values. If the ending point for the prior sequence is (4 3), the starting point for the next sequence must be (4 3); it cannot be (4 3 7 2). All points in a **CompoundCurve** instance must have either no Z value or the same Z value.  
   
 ## CompoundCurve instances  
@@ -132,7 +133,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
-This produces the output `12.5663706143592` which is the equivalent of 4∏. The `CompoundCurve` instance in the example stores a circle with a radius of 2. Both of the previous code examples did not have to use a `CompoundCurve`. For the first example a `LineString` instance would have been simpler, and a `CircularString` instance would have been simpler for the second example. However, the next example shows where a `CompoundCurve` provides a better alternative.  
+This produces the output `12.5663706143592` which is the equivalent of 4?. The `CompoundCurve` instance in the example stores a circle with a radius of 2. Both of the previous code examples did not have to use a `CompoundCurve`. For the first example a `LineString` instance would have been simpler, and a `CircularString` instance would have been simpler for the second example. However, the next example shows where a `CompoundCurve` provides a better alternative.  
   
 ### F. Using a CompoundCurve to store a semicircle  
  The following example uses a `CompoundCurve` instance to store a semicircle.  
@@ -178,7 +179,7 @@ Circle One11.940039...
 Circle Two12.566370...  
 ```  
   
-The perimeter for Circle Two is approximately 4∏, which is the actual value for the perimeter. However, the perimeter for Circle One is significantly inaccurate. Circle One's `CompoundCurve` instance stores one circular arc segment (ABC) and two line segments (CD, DA). The `CompoundCurve` instance has to store two circular arc segments (ABC, CDA) to define a circle. A `LineString` instance defines the second set of points (4 2, 2 4, 0 2) in Circle One's `CompoundCurve` instance. You have to explicitly declare a `CircularString` instance inside a `CompoundCurve`.  
+The perimeter for Circle Two is approximately 4?, which is the actual value for the perimeter. However, the perimeter for Circle One is significantly inaccurate. Circle One's `CompoundCurve` instance stores one circular arc segment (ABC) and two line segments (CD, DA). The `CompoundCurve` instance has to store two circular arc segments (ABC, CDA) to define a circle. A `LineString` instance defines the second set of points (4 2, 2 4, 0 2) in Circle One's `CompoundCurve` instance. You have to explicitly declare a `CircularString` instance inside a `CompoundCurve`.  
   
 ## See Also  
  [STIsValid &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

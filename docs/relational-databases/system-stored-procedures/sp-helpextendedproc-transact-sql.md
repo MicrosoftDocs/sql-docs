@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## Arguments  
- [ **@funcname =**] **'***procedure***'**  
+`[ @funcname = ] 'procedure'`
  Is the name of the extended stored procedure for which information is reported. *procedure* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

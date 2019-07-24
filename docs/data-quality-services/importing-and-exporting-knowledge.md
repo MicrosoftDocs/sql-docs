@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Importing and Exporting Knowledge
 

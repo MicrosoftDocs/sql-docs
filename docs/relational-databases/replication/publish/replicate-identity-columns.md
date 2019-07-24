@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replicate Identity Columns
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,9 @@ manager: craigg
 1.  Stop all activity on all Subscribers.  
   
 2.  For each published table that includes an identity column:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  In the subscription database at each Subscriber, execute `IDENT_CURRENT('<TableName>')`.  
   
     2.  Record the highest value found across all Subscribers.  

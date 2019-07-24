@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
@@ -23,7 +22,7 @@ manager: craigg
   
 3.  In the **Facet** box, confirm that **Surface Area Configuration** facet is selected.  
   
-4.  In the **Expression** area, in the **Field** box, select **@DatabaseMailEnabled**, in the **Operator** box select **=**, and in the **Value** select **False**.  
+4.  In the **Expression** area, in the **Field** box, select **\@DatabaseMailEnabled**, in the **Operator** box select **=**, and in the **Value** select **False**.  
   
 5.  On the **Description** page, type a description of the condition, and then click **OK** to create the condition.  
   

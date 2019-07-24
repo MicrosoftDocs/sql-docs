@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7937f4bb-8537-4012-af81-837f9ac123a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateBoolean Method (int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

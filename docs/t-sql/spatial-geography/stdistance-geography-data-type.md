@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDistance method"
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STDistance (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

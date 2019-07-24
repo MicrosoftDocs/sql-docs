@@ -9,10 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON, data type conversion"
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
-manager: craigg
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How FOR JSON converts SQL Server data types to JSON data types (SQL Server)

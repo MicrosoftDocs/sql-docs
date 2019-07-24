@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "log files"
   - "dqs log files"
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Manage DQS Log Files
 

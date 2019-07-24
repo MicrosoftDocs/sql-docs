@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "xs:QName type"
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # The xs:QName Type
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +22,7 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:int xs:QName"/>  
     </xs:simpleType>  
@@ -31,7 +30,7 @@ CREATE XML SCHEMA COLLECTION QNameLimitation1 AS N'
 GO  
   
 CREATE XML SCHEMA COLLECTION QNameLimitation2 AS N'  
-<xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema">  
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="myUnion">  
         <xs:union memberTypes="xs:integer">  
    <xs:simpleType>  

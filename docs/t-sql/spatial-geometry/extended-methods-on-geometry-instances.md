@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Extended Methods on Geometry Instances [SQLServer]"
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Extended Methods on Geometry Instances
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

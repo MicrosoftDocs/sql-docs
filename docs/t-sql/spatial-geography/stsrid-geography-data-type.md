@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STSrid method"
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STSrid (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

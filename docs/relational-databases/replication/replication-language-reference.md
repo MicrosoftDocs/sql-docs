@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication Language Reference
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Specify Predeployment or Postdeployment Scripts
 Pre-deployment and post-deployment scripts execute Transact\-SQL statements before and after the main deployment script, which is generated from the database project. A project can have only one pre-deployment and one post-deployment script. These scripts can be used for many purposes. For example:  

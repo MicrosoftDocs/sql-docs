@@ -5,9 +5,8 @@ ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options (Environment - Startup page)
 

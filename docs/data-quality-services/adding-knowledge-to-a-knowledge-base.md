@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Adding Knowledge to a Knowledge Base
 

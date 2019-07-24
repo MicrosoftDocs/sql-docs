@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SSIS custom tasks, debugging"
   - "debugging [Integration Services], custom tasks"
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Adding Support for Debugging in a Custom Task

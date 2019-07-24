@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "DROP CERTIFICATE statement"
   - "deleting certificates"
 ms.assetid: 5704aa04-68a3-4b29-b62b-8868af487817
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP CERTIFICATE (Transact-SQL)

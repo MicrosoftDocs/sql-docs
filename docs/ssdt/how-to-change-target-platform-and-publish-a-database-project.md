@@ -11,9 +11,8 @@ f1_keywords:
   - "sql.data.tools.publish.dialog"
   - "sql.data.tools.publishdacproject"
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Change Target Platform and Publish a Database Project
 You can change the target SQL Server version for your SQL Server Data Tools (SSDT) database project to any supported instance of SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012, or SQL Azure). By doing so, you can centralize your database development in one project, but publish it to multiple SQL Server instances as the need arises.  

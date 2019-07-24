@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "OLE DB data sources [OLE DB Driver for SQL Server]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Establishing a Connection to a Data Source
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

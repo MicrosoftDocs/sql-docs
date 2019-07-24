@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "COMPRESS function"
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

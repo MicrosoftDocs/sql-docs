@@ -13,9 +13,9 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADOX Methods
+
 |||  
 |-|-|  
 |[Append (Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Adds a new **Column** object to the **Columns** collection.|  

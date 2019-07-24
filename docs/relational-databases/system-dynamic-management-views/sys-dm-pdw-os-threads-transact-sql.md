@@ -2,8 +2,8 @@
 title: "sys.dm_pdw_os_threads (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: ddc12f05-edeb-4848-b6d7-e851684cf044
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_os_threads (Transact-SQL)

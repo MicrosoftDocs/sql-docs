@@ -2,14 +2,9 @@
 title: "Export Reports (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
-
-
 ms.topic: conceptual
-f1_keywords: 
-  - "10437"
-ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 author: maggiesMSFT
 ms.author: maggies
 ---

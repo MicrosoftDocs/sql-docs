@@ -65,7 +65,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Named instance**  
   
--   *MSSQLSvc/FQDN*:[*port***|***instancename*], where:  
+-   *MSSQLSvc/FQDN*:[_port_**|**_instancename_], where:  
   
     -   *MSSQLSvc* is the service that is being registered.  
   
@@ -77,7 +77,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Default instance**  
   
--   *MSSQLSvc/FQDN*:*port***|***MSSQLSvc/FQDN*, where:  
+-   *MSSQLSvc/FQDN*:_port_**|**_MSSQLSvc/FQDN_, where:  
   
     -   *MSSQLSvc* is the service that is being registered.  
   
@@ -141,7 +141,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
  To determine the authentication method of a connection, execute the following query.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

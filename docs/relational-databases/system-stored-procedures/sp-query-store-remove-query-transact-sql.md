@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_remove_query (Transact-SQL)
@@ -38,7 +37,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## Arguments  
- [ **@query_id =** ] *query_id*  
+`[ @query_id = ] query_id`
  Is the id of the query to be removed from the query store. *query_id* is a **bigint**, with no default.  
   
 ## Return Code Values  
@@ -47,7 +46,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## Remarks  
   
 ## Permissions  
- Requires the **EXECUTE** permission on the database, and **DELETE** permission on the query store catalog views.  
+ Requires the **ALTER** permission on the database.
   
 ## Examples  
  The following example returns information about the queries in the query store.  

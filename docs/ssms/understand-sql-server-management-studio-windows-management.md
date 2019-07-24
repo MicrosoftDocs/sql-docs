@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "push pin [SQL Server Management Studio]"
   - "tool windows [SQL Server Management Studio]"
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Understand SQL Server Management Studio Windows Management
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

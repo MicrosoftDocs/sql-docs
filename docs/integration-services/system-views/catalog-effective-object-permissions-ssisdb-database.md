@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "catalog.effective_object_permissions views [Integration Services]"
   - "effective_object_permissions view [Integration Services]"
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # catalog.effective_object_permissions (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays the effective permissions for the current principal for all objects in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

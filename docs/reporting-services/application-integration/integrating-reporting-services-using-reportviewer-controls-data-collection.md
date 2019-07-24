@@ -1,15 +1,15 @@
 ---
-title: "Data collection in ReportViewer Control 2016 | Microsoft Docs"
-ms.date: 09/18/2018
+title: Data collection in ReportViewer Control 2016
+uthor: markingmyname
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: ""
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-native"
+ms.prod_service: reporting-services-native
 ms.technology: application-integration
-
-
 ms.topic: reference
-ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
-author: markingmyname
-ms.author: maghan
+ms.custom: ""
+ms.date: 09/18/2018
 ---
 # Integrating Reporting Services Using ReportViewer Controls - Data Collection
 
@@ -21,14 +21,14 @@ An explanation of the data collection and usage practices of Microsoft SQL Serve
 
 Collection of usage data can be disabled through the ```EnableTelemetry``` property.
 
-```
+```xml
 <rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 </rsweb:ReportViewer>
 ```
 
 Or pragmatically before the control is rendered.
     
-```
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
     ReportViewer1.EnableTelemetry = false;

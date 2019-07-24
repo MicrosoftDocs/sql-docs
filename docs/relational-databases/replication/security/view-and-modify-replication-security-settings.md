@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View and Modify Replication Security Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,9 @@ manager: craigg
 4.  The **Distributor Properties - \<Distributor>** and **Distribution Database Properties - \<Database>** dialog boxes. For more information about accessing these dialog boxes, see [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 5.  The **Publisher Properties - \<Publisher>** dialog box. For more information about accessing this dialog box, [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To change the password for an account used by one or more agents  
   
 1.  If the account is a SQL Server account, this dialog box will also change the password for the SQL Server account. If the account is a Windows account, change the password in Windows first. For more information, see the Windows documentation.  
@@ -212,7 +213,7 @@ manager: craigg
   
 #### To change security settings for an immediate updating pull subscription  
   
-1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**...**) button in the row.  
+1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, click the **Publisher Connection** row, and then click the properties (**…**) button in the row.  
   
 2.  In the **Enter Connection Information** dialog box, select one of the following options:  
   
@@ -568,10 +569,10 @@ manager: craigg
 ## See Also  
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Manage Logins and Passwords in Replication](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   
   

@@ -92,11 +92,11 @@ manager: craigg
     > [!NOTE]  
     >  The FULL CONTROL share permissions and NTFS permissions on the SMB share folders should be restricted to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account and windows users with admin server roles.  
   
-     It is recommended to use domain account as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. If system account is used as a service account, grant the permissions for the machine account in the format: *<domain_name>***\\***<computer_name>***$**.  
+     It is recommended to use domain account as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. If system account is used as a service account, grant the permissions for the machine account in the format: _<domain_name>_**\\**_<computer_name>_**$**.  
   
     > [!NOTE]  
     >  -   During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, it is required to specify domain account as a service account if SMB file share is specified as a storage option. With SMB file share, System account can only be specified as a service account post [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
-    > -   Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format *<domain_name>***\\***<computer_name>***$**.  
+    > -   Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format _<domain_name>_**\\**_<computer_name>_**$**.  
   
 -   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL permissions on the SMB file share folder used as the data directory, or any other data folders (User database directory, user database log directory, TempDB directory, TempDB log directory, backup directory) during Cluster Setup.  
   

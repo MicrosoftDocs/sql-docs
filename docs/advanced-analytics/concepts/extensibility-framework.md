@@ -1,14 +1,13 @@
 ---
-title: Extensibility architecture for R language and Python script - SQL Server Machine Learning
+title: Extensibility architecture for R language and Python script
 description: External code support for the SQL Server database engine, with dual architecture for running R and Python script on relational data.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 10/17/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 
 # Extensibility architecture in SQL Server Machine Learning Services 

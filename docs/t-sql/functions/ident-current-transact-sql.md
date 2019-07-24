@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "identity columns, current value"
   - "IDENT_CURRENT function"
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # IDENT_CURRENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

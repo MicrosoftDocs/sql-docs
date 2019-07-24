@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "deleting jobs"
   - "removing jobs"
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Automatically Delete a Job

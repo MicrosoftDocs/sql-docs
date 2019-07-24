@@ -2,18 +2,19 @@
 title: "Migrate a Reporting Services Installation (SharePoint Mode) | Microsoft Docs"
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 
 
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] (../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   This topic is an overview of the steps needed to migrate a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment from one SharePoint environment to another. The specific steps can be different depending on the version you are migrating from. For more information on Upgrade and Migration scenarios for SharePoint mode, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). If you only want to copy the report items from one server to another, see [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
@@ -57,11 +58,11 @@ ms.author: maghan
   
 |Database|Example name||  
 |--------------|------------------|-|  
-|Catalog database|ReportingService_[service application GUID] **(\*)**|User migrates.|  
-|Temp database|ReportingService_[service application GUID]TempDB **(\*)**|User migrates.|  
+|Catalog database|ReportingService_[service application GUID] **(&#42;)**|User migrates.|  
+|Temp database|ReportingService_[service application GUID]TempDB **(&#42;)**|User migrates.|  
 |Alerting database|ReportingService_[service application GUID]_Alerting|Created when a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application is created.|  
   
- **(\*)** The example names shown in the table follow the naming convention SSRS uses when you create a new SSRS service application. If you are migrating from a different server, your catalog and tempDBs will have the names from the original installation.  
+ **(&#42;)** The example names shown in the table follow the naming convention SSRS uses when you create a new SSRS service application. If you are migrating from a different server, your catalog and tempDBs will have the names from the original installation.  
   
 ####  <a name="bkmk_backup_operations"></a> Backup operations  
  This section describes the types of information you need to migrate and the tools or process you use to complete the backup.  

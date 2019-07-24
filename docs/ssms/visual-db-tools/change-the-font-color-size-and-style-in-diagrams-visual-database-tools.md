@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "text in database diagrams"
   - "appearance of database diagrams"
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Change the Font Color, Size, and Style in Diagrams (Visual Database Tools)

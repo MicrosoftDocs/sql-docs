@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "REVOKE statement, endpoints"
   - "permissions [SQL Server], endpoints"
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Endpoint Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

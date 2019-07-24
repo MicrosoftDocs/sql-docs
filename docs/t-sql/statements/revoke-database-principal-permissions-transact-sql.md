@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "REVOKE statement, users"
   - "application roles [SQL Server], permissions"
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

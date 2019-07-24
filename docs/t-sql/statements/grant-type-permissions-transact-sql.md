@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "GRANT statement, types"
   - "type permissions [SQL Server]"
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # GRANT Type Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

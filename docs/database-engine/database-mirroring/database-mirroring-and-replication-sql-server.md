@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring and Replication (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +156,7 @@ manager: craigg
 |High-safety mode without automatic failover|All committed transactions are guaranteed to be hardened to disk on the mirror. The Log Reader Agent replicates only those transactions that are hardened on the mirror. If the mirror is unavailable, the principal disallows further activity in the database; therefore the Log Reader Agent has no transactions to replicate.|  
   
 ## See Also  
- [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   
  [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

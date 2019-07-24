@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "functions [SQL Server], cursors"
   - "cursors [SQL Server], statements"
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

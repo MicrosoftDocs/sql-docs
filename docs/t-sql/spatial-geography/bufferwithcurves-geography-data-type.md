@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "BufferWithCurves method (geography)"
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # BufferWithCurves (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

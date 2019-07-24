@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "combining search conditions"
   - "OR operator"
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)

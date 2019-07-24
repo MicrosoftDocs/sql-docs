@@ -9,10 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "WITHOUT_ARRAY_WRAPPER"
 ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
-manager: craigg
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Remove Square Brackets from JSON - WITHOUT_ARRAY_WRAPPER Option

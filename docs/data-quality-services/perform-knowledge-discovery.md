@@ -13,9 +13,8 @@ f1_keywords:
   - "sql13.dqs.kb.kbanalyze.f1"
   - "sql13.dqs.kb.kbmap.f1"
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Perform Knowledge Discovery
 

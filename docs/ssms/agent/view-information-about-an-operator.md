@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "notifications [SQL Server], job status"
   - "displaying operators"
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View Information About an Operator
@@ -67,7 +66,7 @@ For details about the permissions of these roles, see [SQL Server Agent Fixed Da
   
 4.  Right-click the operator that you want to view and select **Properties**.  
   
-    For more information on the available options contained in the *operator_name***Properties** dialog box, see:  
+    For more information on the available options contained in the _operator_name_**Properties** dialog box, see:  
   
     -   [Operator Properties - New Operator &#40;General Page&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   

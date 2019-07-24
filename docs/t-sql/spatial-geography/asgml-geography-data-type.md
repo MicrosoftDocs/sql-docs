@@ -17,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AsGml method"
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 #  AsGml - geography Data Type
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@class =**] **'**_class_**'**  
+`[ @class = ] 'class'`
  The class of the category. *class* is **varchar(8)**, with no default, and must have one of these values.  
   
 |Value|Description|  
@@ -44,7 +43,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**ALERT**|Deletes an alert category.|  
 |**OPERATOR**|Deletes an operator category.|  
   
- [ **@name =**] **'**_name_**'**  
+`[ @name = ] 'name'`
  The name of the category to be removed. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

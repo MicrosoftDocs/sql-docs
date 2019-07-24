@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "performance [SQL Server], jobs"
   - "current activity"
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Monitor Job Activity

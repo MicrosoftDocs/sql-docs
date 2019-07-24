@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "preprocessor tool [XML schemas]"
   - "XML schemas [SQL Server]"
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Preprocess a Schema to Merge Included Schemas

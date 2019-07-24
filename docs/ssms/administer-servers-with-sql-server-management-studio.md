@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], servers"
   - "servers [SQL Server], administering"
 ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Administer Servers with SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "combining query results"
   - "merged SELECT query [SQL Server]"
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Create UNION Queries (Visual Database Tools)

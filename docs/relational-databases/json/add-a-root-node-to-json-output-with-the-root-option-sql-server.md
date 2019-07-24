@@ -9,10 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ROOT (FOR JSON)"
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
-manager: craigg
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Add a Root Node to JSON Output with the ROOT Option (SQL Server)

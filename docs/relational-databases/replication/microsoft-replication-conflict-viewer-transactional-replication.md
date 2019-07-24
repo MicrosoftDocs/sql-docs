@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Microsoft Replication Conflict Viewer (Transactional Replication)
@@ -57,7 +56,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  **Show first five columns and other columns with conflicting data**  
  Select to display the first five columns and any columns that have conflicts. This is helpful when the table has a large number of columns, but you want to see only the columns most relevant to resolving the conflict. The first five columns are always included in this view, as fields that identify a row, such as the primary key or name fields, are often among the first columns of the table.  
   
- **Display Column Information** (**...**)  
+ **Display Column Information** (**…**)  
  Click to view column information: **Table Name**, **Column Name**, **Data Type**, and **Column Value**.  
   
  **Log the details of the conflict**  

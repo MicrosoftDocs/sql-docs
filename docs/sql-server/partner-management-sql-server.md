@@ -8,13 +8,13 @@ ms.prod: sql
 ms.technology:
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
 ---
 # SQL Server managing partners
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 To manage your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with management solutions supporting Microsoft SQL Server.
 
 ## Our management partners
+
 | Partner | Description | Links |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL Compliance Manager is a comprehensive auditing solution that displays who did what, when and how on SQL Servers to help ensure compliance with regulatory and data security requirements.<br><br>[System requirements][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |

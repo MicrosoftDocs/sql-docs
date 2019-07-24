@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## Arguments  
- [ **@typename=**] **'***type***'**  
+`[ @typename = ] 'type'`
  Is the name of an alias data type that you own. *type* is **sysname**, with no default.  
   
 ## Return Code Type  

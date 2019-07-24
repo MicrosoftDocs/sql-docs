@@ -12,9 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Save As dialog box"
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Save As
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

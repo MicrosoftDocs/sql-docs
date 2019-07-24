@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], tutorials"
@@ -13,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: d8e3f89f-091c-434e-8f67-639f073edcdf
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 1: Creating the Intermediate Data Mining Solution (Intermediate Data Mining Tutorial)
   In the Basic Data Mining tutorial, you created an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project that contains a simple data mining solution based on the new [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database.  

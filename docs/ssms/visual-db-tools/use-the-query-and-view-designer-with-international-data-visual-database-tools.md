@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "SQL pane [Visual Database Tools]"
   - "multiple language support [SQL Server], Query and View Designer"
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Use the Query and View Designer with International Data (Visual Database Tools)

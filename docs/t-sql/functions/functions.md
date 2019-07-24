@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "scalar functions"
   - "functions [SQL Server]"
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # What are the SQL database functions?
@@ -54,7 +53,7 @@ Operate on a single value and then return a single value. Scalar functions can b
 |[Cursor Functions](cursor-functions-transact-sql.md)|Return information about cursors.|  
 |[Date and Time Data Types and Functions](date-and-time-data-types-and-functions-transact-sql.md)|Perform operations on a date and time input values and return string, numeric, or date and time values.|  
 |[JSON Functions](json-functions-transact-sql.md)|Validate, query, or change JSON data.|  
-|[Logical Functions](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Perform logical operations.|  
+|[Logical Functions](logical-functions-choose-transact-sql.md)|Perform logical operations.|  
 |[Mathematical Functions](mathematical-functions-transact-sql.md)|Perform calculations based on input values provided as parameters to the functions, and return numeric values.|  
 |[Metadata Functions](metadata-functions-transact-sql.md)|Return information about the database and database objects.|  
 |[Security Functions](security-functions-transact-sql.md)|Return information about users and roles.|  

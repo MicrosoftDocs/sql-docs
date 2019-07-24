@@ -40,7 +40,6 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # New Publication Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,6 +74,6 @@ manager: craigg
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

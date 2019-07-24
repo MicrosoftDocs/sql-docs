@@ -64,7 +64,7 @@ manager: craigg
   
 6.  In the **Criteria Pane**, select additional sort or filter criteria for the columns.  
   
-7.  On the **File** menu, click **Save***view name*.  
+7.  On the **File** menu, click **Save**_view name_.  
   
 8.  In the **Choose Name** dialog box, enter a name for the new view and click **OK**.  
   

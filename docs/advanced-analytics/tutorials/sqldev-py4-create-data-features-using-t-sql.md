@@ -1,14 +1,13 @@
 ---
-title: Create data features using T-SQL functions and Python - SQL Server Machine Learning
+title: Create data features using T-SQL functions and Python
 description: Tutorial showing how to add calculations to stored procedures for use in Python machine learning models.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/01/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 # Create Data Features using T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBindCol Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLBindCol(  
       SQLHSTMT       StatementHandle,  
@@ -279,7 +278,7 @@ SQLRETURN SQLBindCol(
   
  For more code examples, see [SQLBulkOperations Function](../../../odbc/reference/syntax/sqlbulkoperations-function.md), [SQLColumns Function](../../../odbc/reference/syntax/sqlcolumns-function.md), [SQLFetchScroll Function](../../../odbc/reference/syntax/sqlfetchscroll-function.md), and [SQLSetPos Function](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 // SQLBindCol_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

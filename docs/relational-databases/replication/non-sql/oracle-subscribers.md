@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Oracle Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,9 @@ manager: craigg
     |Specify the host information to identify the database listener|The host is the name or DNS alias of the computer on which the Oracle listener is running, which is typically the same computer on which the database resides. For some protocols, you must provide additional information. For example, if you select TCP, you must supply the port on which the listener is listening for connection requests to the target database. The default TCP configuration uses port 1521.|  
   
 3.  Create a snapshot or transactional publication, enable it for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, and then create a push subscription for the Subscriber. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### Setting directory permissions  
  The account under which the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service on the Distributor runs must be granted read and execute permissions for the directory (and all subdirectories) where the Oracle client networking software is installed.  
   

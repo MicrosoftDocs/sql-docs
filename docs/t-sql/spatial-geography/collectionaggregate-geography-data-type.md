@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CollectionAggregate method (geography)"
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # CollectionAggregate (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

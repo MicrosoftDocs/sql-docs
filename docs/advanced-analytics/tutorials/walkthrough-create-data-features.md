@@ -1,14 +1,13 @@
 ---
-title: Create data features using R and SQL Server functions - SQL Server Machine Learning
+title: Create data features using R and SQL Server functions
 description: Tutorial showing how to create data features using SQL Server functions for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/26/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 # Create data features using R and SQL Server (walkthrough)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -125,7 +124,7 @@ Switch to [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/dow
 
 1. Use a SQL function, named *fnCalculateDistance*. The function should already exist in the NYCTaxi_Sample database. In Object Explorer, verify the function exists by navigating this path: Databases > NYCTaxi_Sample > Programmability > Functions > Scalar-valued Functions >  dbo.fnCalculateDistance.
 
-  If the function does not exist, use SQL Server Management Studio to generate the function in the NYCTaxi_Sample database.
+    If the function does not exist, use SQL Server Management Studio to generate the function in the NYCTaxi_Sample database.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)

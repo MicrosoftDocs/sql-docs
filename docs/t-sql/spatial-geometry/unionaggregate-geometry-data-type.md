@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "UnionAggregate method (geometry)"
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # UnionAggregate (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

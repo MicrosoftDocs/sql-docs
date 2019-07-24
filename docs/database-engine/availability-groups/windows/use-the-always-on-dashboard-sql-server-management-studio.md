@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use the Always On Availability Group dashboard (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,14 +33,12 @@ manager: craigg
 -   Synchronization mode and state    
 -   Time to restore log  
   
-##  Before You Begin  
   
-### Prerequisites  
+## Prerequisites  
  You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica of an availability group.  
   
-### Security  
-  
-#### Permissions  
+ 
+### Permissions  
  Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  To start the Always On dashboard  
@@ -50,7 +47,7 @@ manager: craigg
   
 2.  Expand the **Always On High Availability** node, right-click the **Availability Groups** node, and then click **Show Dashboard**.  
   
-###  Change Always On Dashboard Options  
+##  Change Always On Dashboard Options  
  You can use the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On Dashboard behavior for automatic refreshing and enabling an auto-defined Always On policy.  
   
 1.  From the **Tools** menu, click **Options**.  
@@ -210,8 +207,7 @@ The **Availability replica** pane displays the following columns:
     -   For a secondary database, indicates that the database has not started log synchronization because of a connection issue, is being suspended, or is going through transition states during startup or a role switch.  
   
 -   **Synchronizing**:
--   
-     On a primary replica:   
+- On a primary replica:   
     - On a primary database, indicates that this database is ready to accept a scan request from a secondary database.  
     - On a secondary replica, indicates that there is active data movement going on for that secondary database. 
   

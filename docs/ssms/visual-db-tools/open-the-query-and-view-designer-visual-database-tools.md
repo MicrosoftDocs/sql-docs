@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], opening"
   - "opening Query Designer"
 ms.assetid: b473f258-d53c-41c0-9ad9-528a2ff141f4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Open the Query and View Designer (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

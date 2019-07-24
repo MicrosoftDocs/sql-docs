@@ -105,6 +105,8 @@ manager: kfile
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  The IIS manager might not be able to connect to the Analysis Services in the current version if the Database is a backup from a previous one. This is caused by changes in the MSMDPUMP and should be solved by copying the msmdpump.dll file from the previous working version.
   
 ##  <a name="bkmk_appPool"></a> Step 2: Create an application pool and virtual directory in IIS  
  Next, create an application pool and an endpoint to the pump.  

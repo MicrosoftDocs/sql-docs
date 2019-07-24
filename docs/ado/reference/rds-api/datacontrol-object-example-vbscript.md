@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DataControl Object Example (VBScript)
 > [!IMPORTANT]

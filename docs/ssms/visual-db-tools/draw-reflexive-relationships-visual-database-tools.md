@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "reflexive relationships"
   - "database diagrams [SQL Server], relationships"
 ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Draw Reflexive Relationships (Visual Database Tools)

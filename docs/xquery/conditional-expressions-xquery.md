@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "conditional expressions [XQuery]"
   - "EBV"
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
-author: "rothja"
-ms.author: "jroth"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Conditional Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

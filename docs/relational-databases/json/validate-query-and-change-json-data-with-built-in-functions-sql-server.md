@@ -10,10 +10,9 @@ helpviewer_keywords:
   - "JSON, built-in functions"
   - "functions (JSON)"
 ms.assetid: 6b6c7673-d818-4fa9-8708-b4ed79cb1b41
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
-manager: craigg
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Validate, Query, and Change JSON Data with Built-in Functions (SQL Server)

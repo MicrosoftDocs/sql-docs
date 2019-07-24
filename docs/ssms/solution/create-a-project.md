@@ -1,7 +1,5 @@
 ---
 title: "Create a Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -10,11 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], creating"
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.custom: ""
+ms.date: "01/19/2017"
 ---
+
 # Create a Project
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can create one or more projects within an existing solution.  
   

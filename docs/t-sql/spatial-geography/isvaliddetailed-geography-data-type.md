@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IsValidDetailed geography"
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # IsValidDetailed (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

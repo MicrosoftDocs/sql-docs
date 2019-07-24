@@ -85,7 +85,7 @@ manager: craigg
   
  The general syntax for calling a procedure by using the ODBC CALL escape sequence is:  
   
- {[**?=**]**call***procedure_name*[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
+ {[**?=**]**call**_procedure_name_[**(**[*parameter*][**,**[*parameter*]]...**)**]}  
   
  For example:  
   

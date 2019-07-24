@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,22 +37,22 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. The publication must already exist and conform to the rules for identifiers. If NULL or **%**, information about all merge publications and subscriptions in the current database is returned.  
   
- [ **@subscriber=**] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of **%**. If NULL or %, information about all subscriptions to the given publication is returned.  
   
- [ **@subscriber_db=**] **'***subscriber_db***'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db*is **sysname**, with a default of **%**, which returns information about all subscription databases.  
   
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. The Publisher must be a valid server. *publisher*is **sysname**, with a default of **%**, which returns information about all Publishers.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db*is **sysname**, with a default of **%**, which returns information about all Publisher databases.  
   
- [ **@subscription_type=**] **'***subscription_type***'**  
+`[ @subscription_type = ] 'subscription_type'`
  Is the type of subscription. *subscription_type*is **nvarchar(15)**, and can be one of these values.  
   
 |Value|Description|  
@@ -62,7 +61,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**pull**|Pull subscription|  
 |**both**|Both a push and pull subscription|  
   
- [ **@found=**] **'***found***'OUTPUT**  
+`[ @found = ] 'found'OUTPUT`
  Is a flag to indicate returning rows. *found*is **int** and an OUTPUT parameter, with a default of NULL. **1** indicates the publication is found. **0** indicates the publication is not found.  
   
 ## Result Sets  

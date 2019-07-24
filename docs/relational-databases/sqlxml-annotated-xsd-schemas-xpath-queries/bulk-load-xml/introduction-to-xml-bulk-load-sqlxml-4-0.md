@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "transacted XML Bulk Load operations"
   - "streaming XML data"
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to XML Bulk Load (SQLXML 4.0)

@@ -10,8 +10,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL11.rsconfigtool.emailsettings.F1"
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # E-Mail Settings - Reporting Services Native mode (Configuration Manager)
 Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.
@@ -178,7 +178,7 @@ The connection between the report server and a local SMTP server or forwarder is
 
 3. Select the server to install Internet Information Server (IIS) onto and select **Next**.
 
-4. Select **Next** on the *Server Roles** page.
+4. Select **Next** on the *Server Roles* page.
      
 5. On the *Features* page, select **SMTP Server** and then select **Next**.
 

@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## Arguments  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  Is a variable used to store the system-generated dialog handle for the new dialog that is returned by the BEGIN DIALOG CONVERSATION statement. The variable must be of type **uniqueidentifier**.  
   
  FROM SERVICE *initiator_service_name*  

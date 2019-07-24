@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPointFromText method"
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STMPointFromText (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

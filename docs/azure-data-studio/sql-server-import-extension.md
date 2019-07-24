@@ -10,7 +10,6 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-manager: craigg
 ---
 # SQL Server Import extension (preview)
 
@@ -49,7 +48,7 @@ To learn more about the SSMS version of this feature, you can read [this article
     ![open import wizard](media/sql-server-import-extension/import-wizard-modify-columns.png)
 3. This page gives a summary of the actions chosen. You can also see whether your table inserted successfully or not. 
 
-    You can either click **Done,** **Previous** if you need to make changes, or **Import new file** to quickly import another file.
+    You can either click **Done, Previous** if you need to make changes, or **Import new file** to quickly import another file.
     ![open import wizard](media/sql-server-import-extension/import-wizard-summary.png)
 1. Verify if your table successfully imported by refreshing your target database or running a SELECT query on the table name.
 

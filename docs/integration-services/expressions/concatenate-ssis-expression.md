@@ -12,11 +12,14 @@ helpviewer_keywords:
   - "+ (concatenate operator)"
   - "concatenate operator (+)"
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # + (Concatenate) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Concatenates two expressions into one expression.  
   
 ## Syntax  

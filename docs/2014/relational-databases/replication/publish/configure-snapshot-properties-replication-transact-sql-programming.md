@@ -95,7 +95,7 @@ manager: craigg
 ## See Also  
  [Alternate Snapshot Folder Locations](../alternate-snapshot-folder-locations.md)   
  [Compressed Snapshots](../compressed-snapshots.md)   
- [Execute Scripts Before and After the Snapshot Is Applied](../execute-scripts-before-and-after-the-snapshot-is-applied.md)   
+ [Execute Scripts Before and After the Snapshot Is Applied](../snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Transfer Snapshots Through FTP](../transfer-snapshots-through-ftp.md)   
  [Change Publication and Article Properties](change-publication-and-article-properties.md)  

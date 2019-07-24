@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "last-inserted identity values"
   - "identity values [SQL Server], last-inserted"
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

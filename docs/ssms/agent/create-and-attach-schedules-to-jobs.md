@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, scheduling"
   - "idle time [SQL Server]"
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create and Attach Schedules to Jobs

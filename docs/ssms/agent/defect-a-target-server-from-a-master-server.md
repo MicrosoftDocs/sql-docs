@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "master servers [SQL Server], defecting target servers"
   - "defecting target servers"
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Defect a Target Server from a Master Server

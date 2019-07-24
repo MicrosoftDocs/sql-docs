@@ -12,10 +12,13 @@ f1_keywords:
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
 author: "Lingxi-Li"
 ms.author: "lingxl"
-ms.reviewer: "douglasl"
-manager: craigg
+ms.reviewer: maghan
 ---
 # Azure Data Lake Store File System Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 The Azure Data Lake Store File System Task lets users perform various file system operations on [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 

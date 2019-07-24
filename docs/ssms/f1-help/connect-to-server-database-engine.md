@@ -15,9 +15,8 @@ f1_keywords:
   - "sql13.swb.connection.login.sqlserver.f1"
   - "sql13.swb.manageSS2k.f1"
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Connect to Server (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,9 @@ Select the server instance to connect to. The server instance last connected to 
   
 > [!NOTE]  
 > To connect to an active user instance of [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] connect using named pipes protocol specifying the pipe name, such as `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. For more information, see the [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentation.  
-  
+> [!NOTE]  
+> Connections are typically persisted in the "Most Recently Used" (MRU) history. To remove entries from the MRU, simply click on the **Server name** combobox, select the name of the server to remove, then press the **DEL** key.  
+   
 **Authentication**  
 The current version of SSMS, offers five authentication modes when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)]. If your Authentication dialog box does not match the following list, download the most recent version of SSMS, from [Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 

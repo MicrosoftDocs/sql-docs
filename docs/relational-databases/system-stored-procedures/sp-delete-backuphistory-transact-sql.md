@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## Arguments  
- [ **@oldest_date=** ] **'**_oldest\_date_**'**  
+`[ @oldest_date = ] 'oldest\_date'`
  Is the oldest date retained in the backup and restore history tables. *oldest_date* is **datetime**, with no default.  
   
 ## Return Code Values  

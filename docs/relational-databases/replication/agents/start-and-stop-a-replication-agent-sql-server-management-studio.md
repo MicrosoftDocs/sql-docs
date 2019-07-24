@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Start and Stop a Replication Agent (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ manager: craigg
 3.  Right-click an agent, and then click **Start Agent** or **Stop Agent**.  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   

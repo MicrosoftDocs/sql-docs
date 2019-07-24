@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "Make Table query"
   - "adding tables"
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Create Make Table Queries (Visual Database Tools)

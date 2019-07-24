@@ -34,13 +34,24 @@
       href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
     - name: Behavior Changes to Management Tools Features in SQL Server 2014
       href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+- name: Business continuity
+  href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
+  items:
+    - name: Always On Availability Groups 
+      href: availability-groups/windows/toc.yml
+    - name: Failover Cluster Instance
+      href: ../sql-server/failover-clusters/toc.yml
+    - name: Database Mirroring
+      href: database-mirroring/toc.yml
+    - name: Log Shipping 
+      href: log-shipping/toc.yml
 - name: Database Engine Features and Tasks
   href: database-engine-features-and-tasks.md
 - name: Database Engine Instances (SQL Server)
   href: configure-windows/database-engine-instances-sql-server.md
   items:
   - name: Configure Database Engine Instances +
-    href: configure-windows/configure-database-engine-instances-sql-server.md
+    href: configure-windows/toc.yml
   - name: Collation and Unicode Support +
     href: ../relational-databases/collations/collation-and-unicode-support.md
   - name: Linked Servers (Database Engine)
@@ -123,12 +134,6 @@
     items:
     - name: Open Activity Monitor (SQL Server Management Studio)
       href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
-- name: Always On Availability Groups +
-  href: availability-groups/windows/always-on-availability-groups-sql-server.md
-- name: The Database Mirroring Endpoint +
-  href: database-mirroring/the-database-mirroring-endpoint-sql-server.md
-- name: About Log Shipping +
-  href: log-shipping/about-log-shipping-sql-server.md
 - name: Security Center for SQL Server Database Engine and Azure SQL Database +
   href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: Technical Reference

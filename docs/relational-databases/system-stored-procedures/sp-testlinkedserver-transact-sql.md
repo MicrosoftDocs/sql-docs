@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_testlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sp_testlinkedserver [ @servername ] = servername
 ```  
   
 ## Arguments  
- [ **@servername =** ]*servername*  
+`[ @servername = ]servername`
  Is the name of the linked server. *servername* is **sysname**, with no default value.  
   
 ## Result Sets  

@@ -37,9 +37,9 @@ manager: kfile
   
  **Continuous values**  
   
- Value is present:   `(X - μ)/σ ` (X is the actual value being encoded)  
+ Value is present:   `(X - μ)/σ` (X is the actual value being encoded)  
   
- Value is absent:    `-   μ/σ `  (negative mu divided by sigma)  
+ Value is absent:    `-   μ/σ`  (negative mu divided by sigma)  
   
  **Discrete values**  
   

@@ -1,14 +1,13 @@
 ---
-title: SQL Server 2017 Python tutorial overview - SQL Server Machine Learning
+title: SQL Server 2017 Python tutorial overview
 description: Introduction to the Python tutorials for SQL Server 2017 in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 12/18/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 # SQL Server 2017 Python tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,8 +25,8 @@ This article describes the Python tutorials for in-database analytics on [SQL Se
 
 | Link | Description |
 |------|-------------|
-| [Quickstart: Running Python in T-SQL](run-python-using-t-sql.md) | Learn the basics of how to call Python in T-SQL. |
-| [Tutorial: Train and score your first model](train-score-using-python-in-tsql.md) | Explains the mechanics of embedding Python code in a stored procedure, providing inputs, and stored procedure execution. |
+| [Quickstart: "Hello world" Python script in SQL Server](quickstart-python-run-using-t-sql.md) | Learn the basics of how to call Python in T-SQL. |
+| [Quickstart: Create, train, and use a Python model with stored procedures in SQL Server](quickstart-python-train-score-in-tsql.md) | Explains the mechanics of embedding Python code in a stored procedure, providing inputs, and stored procedure execution. |
 | [Tutorial: Create a model using revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstrates how to run code from a remote Python terminal, using SQL Server compute context. You should be somewhat familiar with Python tools and environments. Sample code is provided that creates a model using **rxLinMod**, from the new **revoscalepy** library. |
 | [Tutorial: Learn in-Database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md) | This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL stored procedures. All Python code is included.|
 

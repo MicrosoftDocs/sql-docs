@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EnvelopeAggregate method (geography)"
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # EnvelopeAggregate (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

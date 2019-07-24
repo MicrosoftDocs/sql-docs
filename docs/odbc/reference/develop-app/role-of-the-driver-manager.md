@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Role of the Driver Manager
 The Driver Manager determines the final order in which to return status records that it generates. In particular, it determines which record has the highest rank and is to be returned first. The driver is responsible for ordering status records that it generates. If status records are posted by both the Driver Manager and the driver, the Driver Manager is responsible for ordering them. For more information, see [Sequence of Status Records](../../../odbc/reference/develop-app/sequence-of-status-records.md).  

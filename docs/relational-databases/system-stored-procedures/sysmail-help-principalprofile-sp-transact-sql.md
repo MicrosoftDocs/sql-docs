@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +35,16 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## Arguments  
- [ **@principal_id=** ] *principal_id*  
+`[ @principal_id = ] principal_id`
  Is the ID of the database user or role in the **msdb** database for the association to list. *principal_id* is **int**, with a default of NULL. Either *principal_id* or *principal_name* may be specified.  
   
- [ **@principal_name=** ] **'**_principal_name_**'**  
+`[ @principal_name = ] 'principal_name'`
  Is the name of the database user or role in the **msdb** database for the association to list. *principal_name* is **sysname**, with a default of NULL. Either *principal_id* or *principal_name* may be specified.  
   
- [ **@profile_id=** ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile for the association to list. *profile_id* is **int**, with a default of NULL. Either *profile_id* or *profile_name* may be specified.  
   
- [ **@profile_name=** ] **'**_profile_name_**'**  
+`[ @profile_name = ] 'profile_name'`
  Is the name of the profile for the association to list. *profile_name* is **sysname**, with a default of NULL. Either *profile_id* or *profile_name* may be specified.  
   
 ## Return Code Values  

@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SqlErrorLogFile Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

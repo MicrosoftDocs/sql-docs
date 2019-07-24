@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "monitoring [SQL Server], events"
   - "responding to events automatically"
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Monitor and Respond to Events

@@ -9,10 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENJSON, with default schema"
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
-manager: craigg
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with the Default Schema (SQL Server)

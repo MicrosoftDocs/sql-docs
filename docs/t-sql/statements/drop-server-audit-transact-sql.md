@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP SERVER AUDIT statement"
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DROP SERVER AUDIT  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

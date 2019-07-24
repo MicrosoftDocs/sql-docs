@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "verifying backups"
   - "checking backups"
 ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - VERIFYONLY (Transact-SQL)

@@ -60,7 +60,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql) to enable the data collector.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_enable_collector ;  
@@ -74,7 +74,7 @@ EXEC dbo.sp_syscollector_enable_collector ;
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql) to disable the data collector.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_disable_collector;  

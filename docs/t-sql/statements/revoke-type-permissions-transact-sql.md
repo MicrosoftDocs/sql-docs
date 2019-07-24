@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], types"
   - "type permissions [SQL Server]"
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Type Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

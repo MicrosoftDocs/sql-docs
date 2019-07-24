@@ -16,13 +16,14 @@ helpviewer_keywords:
   - "RAW mode"
   - "XMLDATA option"
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Use RAW Mode with FOR XML
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  RAW mode transforms each row in the query result set into an XML element that has the generic identifier \<row>, or the optionally provided element name. By default, each column value in the rowset that is not NULL is mapped to an attribute of the \<row> element. If the ELEMENTS directive is added to the FOR XML clause, each column value is mapped to a subelement of the \<row> element. Together with the ELEMENTS directive, you can optionally specify the XSINIL option to map NULL column values in the result set to an element that has the attribute, xsi:nil=`"`true`"`.  
+
+RAW mode transforms each row in the query result set into an XML element that has the generic identifier \<row>, or the optionally provided element name. By default, each column value in the rowset that is not NULL is mapped to an attribute of the \<row> element. If the ELEMENTS directive is added to the FOR XML clause, each column value is mapped to a subelement of the \<row> element. Together with the ELEMENTS directive, you can optionally specify the XSINIL option to map NULL column values in the result set to an element that has the attribute, `xsi:nil="true"`.
   
  You can request a schema for the resulting XML. Specifying the XMLDATA option returns an in-line XDR schema. Specifying the XMLSCHEMA option returns an in-line XSD schema. The schema appears at the start of the data. In the result, the schema namespace reference is repeated for every top-level element.  
   
@@ -50,7 +51,7 @@ manager: craigg
  [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
+ [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)
   
   

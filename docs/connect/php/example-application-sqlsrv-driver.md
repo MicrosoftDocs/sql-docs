@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Example Application (SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +23,7 @@ The AdventureWorks Product Reviews example application is a Web application that
 1.  Install the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. For detailed information, see [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Copy the code listed later in this document into two files: adventureworks_demo.php and photo.php.  
 3.  Put the adventureworks_demo.php and photo.php files in the root directory of your Web server.  
-4.  Run the application by starting https://localhost/adventureworks_demo.php from your browser.  
+4.  Run the application by starting `https://localhost/adventureworks_demo.php` from your browser.  
   
 ## Requirements  
 To run the AdventureWorks Product Reviews example application, the following must be true for your computer:  

@@ -11,9 +11,8 @@ f1_keywords:
   - "vdt.dlgbox.datatypechangerequired"
   - "vdtsql.chm:65545"
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Data Type Change Required Dialog Box (Visual Database Tools)

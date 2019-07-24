@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "XQuery, samples"
   - "sample applications [XQuery]"
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Additional Sample XQueries Against the xml Data Type
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

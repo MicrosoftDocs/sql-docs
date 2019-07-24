@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "unnamed parameters"
   - "parameters [SQL Server], unnamed"
 ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Create Queries with Unnamed Parameters (Visual Database Tools)

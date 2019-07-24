@@ -5,8 +5,7 @@ ms.date: "11/08/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-
+ms.technology: replication
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -21,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,19 +31,19 @@ manager: craigg
  [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)  
  Topics in this section show how to use RMO to configure publishing and distribution.  
   
- [Create, Modify, and Delete Publications and Articles &#40;Replication&#41;](../../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
  Topics in this section show how to use RMO to create, delete, and modify publications and articles.  
   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
  Topics in this section show how to use RMO to create, delete, and modify subscriptions.  
   
- [Secure a Replication Topology](../../../relational-databases/replication/security/secure-a-replication-topology.md)  
+ [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  Topics in this section show how to use RMO to view and modify security settings.  
   
- [Synchronize Subscriptions &#40;Replication&#41;](../../../relational-databases/replication/synchronize-subscriptions-replication.md)  
+ [Synchronize Subscriptions &#40;Replication&#41;](../../../relational-databases/replication/synchronize-data.md)  
  Topics in this section show how to synchronize subscriptions.  
   
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
  Topics in this section show how to programmatically monitor a replication topology.  
   
 ## Introduction to RMO Programming  
@@ -87,7 +85,9 @@ manager: craigg
 9. On the **View** menu, click **Code**.  
   
 10. In the code, before the namespace statement, type the following **using** statements to qualify the types in the RMO namespaces:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     // These namespaces are required.  
     using Microsoft.SqlServer.Replication;  

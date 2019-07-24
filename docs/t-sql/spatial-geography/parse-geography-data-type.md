@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Parse method"
   - "Parse (geography Data Type)"
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Parse (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

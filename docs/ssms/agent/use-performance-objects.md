@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "performance counters [SQL Server], SQL Server Agent"
   - "counters [SQL Server], SQL Server Agent"
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Use Performance Objects

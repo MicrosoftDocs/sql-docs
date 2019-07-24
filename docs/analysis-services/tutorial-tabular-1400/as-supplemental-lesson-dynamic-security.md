@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial supplemental lesson: Dynamic security | Microsoft Docs"
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Supplemental lesson - Dynamic security
 
@@ -18,7 +19,7 @@ In this supplemental lesson, you create an additional role that implements dynam
   
 To implement dynamic security, you add a table to your model containing the user names of those users that can connect to the model and browse model objects and data. The model you create using this tutorial is in the context of Adventure Works; however, to complete this lesson, you must add a table containing users from your own domain. You do not need the passwords for the user names that are added. To create an EmployeeSecurity table, with a small sample of users from your own domain, you use the Paste feature, pasting employee data from an Excel spreadsheet. In a real-world scenario, the table containing user names would typically be a table from an actual database as a data source; for example, a real DimEmployee table.  
   
-To implement dynamic security, you use two DAX functions: [USERNAME Function (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) and [LOOKUPVALUE Function (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). These functions, applied in a row filter formula, are defined in a new role. By using the LOOKUPVALUE function, the formula specifies a value from the EmployeeSecurity table. The formula then passes that value to the USERNAME function, which specifies the user name of the user logged on belongs to this role. The user can then browse only data specified by the role's row filters. In this scenario, you specify that sales employees can only browse Internet sales data for the sales territories in which they are a member.  
+To implement dynamic security, you use two DAX functions: [USERNAME Function (DAX)](/dax/username-function-dax) and [LOOKUPVALUE Function (DAX)](/dax/lookupvalue-function-dax). These functions, applied in a row filter formula, are defined in a new role. By using the LOOKUPVALUE function, the formula specifies a value from the EmployeeSecurity table. The formula then passes that value to the USERNAME function, which specifies the user name of the user logged on belongs to this role. The user can then browse only data specified by the role's row filters. In this scenario, you specify that sales employees can only browse Internet sales data for the sales territories in which they are a member.  
   
 Those tasks that are unique to this Adventure Works tabular model scenario, but would not necessarily apply to a real-world scenario are identified as such. Each task includes additional information describing the purpose of the task.  
   
@@ -143,10 +144,9 @@ In this task, you create a user role. This role includes a row filter defining w
 9. For the **DimSalesTerritory** table, type the following formula:  
 
     ```  
-    ='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 
-      'Employee Security'[Login Id], USERNAME(), 
-      'Employee Security'[Sales Territory Id], 
-      'Sales Territory'[Sales Territory Id]) 
+    ='DimSalesTerritory'[SalesTerritoryKey]=LOOKUPVALUE('EmployeeSecurity'[SalesTerritoryId], 
+      'EmployeeSecurity'[LoginId], USERNAME(), 
+      'EmployeeSecurity'[SalesTerritoryId], 'DimSalesTerritory'[SalesTerritoryKey]) 
     ```
   
     In this formula, the LOOKUPVALUE function returns all values for the DimEmployeeSecurity[SalesTerritoryId] column, where the EmployeeSecurity[LoginId] is the same as the current logged on Windows user name, and EmployeeSecurity[SalesTerritoryId] is the same as the DimSalesTerritory[SalesTerritoryId].  
@@ -182,6 +182,6 @@ In this task, you use the Analyze in Excel feature in SSDT to test the efficacy 
   
 ## See Also  
 
-[USERNAME Function (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE Function (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[CUSTOMDATA Function (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[USERNAME Function (DAX)](/dax/username-function-dax)  
+[LOOKUPVALUE Function (DAX)](/dax/lookupvalue-function-dax)  
+[CUSTOMDATA Function (DAX)](/dax/customdata-function-dax)  

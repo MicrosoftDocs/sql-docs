@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Support for LocalDB
 

@@ -1,15 +1,13 @@
 ---
 title: "PolyBase features and limitations | Microsoft Docs"
-ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PolyBase features and limitations
@@ -55,6 +53,8 @@ Partial aggregation means that a final aggregation must occur after the data rea
 ## Known limitations
 
 PolyBase has the following limitations:
+
+- In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
 
 - The maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in SQL Server or 1 MB in Azure SQL Data Warehouse.
 

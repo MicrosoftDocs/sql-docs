@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "scripting [SQL Server Database Engine]"
   - "scripting [SQL Server Database Engine], PowerShell"
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Engine Scripting
@@ -56,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Use the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **File**/**Open** menu to open the file in a new [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window.  
   
--   Use the **-i***input_file* parameter to run the file with the **sqlcmd** utility.  
+-   Use the **-i**_input_file_ parameter to run the file with the **sqlcmd** utility.  
   
 -   Use the **-QueryFromFile** parameter to run the file with the **Invoke-Sqlcmd** cmdlet in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell scripts.  
   

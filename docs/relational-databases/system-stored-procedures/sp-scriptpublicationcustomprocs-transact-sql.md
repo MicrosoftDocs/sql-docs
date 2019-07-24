@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## Arguments  
- [ **@publication**=] **'***publication_name***'**  
+`[ @publication = ] 'publication_name'`
  Is the name of the publication. *publication_name* is **sysname** with no default.  
   
 ## Return Code Values  

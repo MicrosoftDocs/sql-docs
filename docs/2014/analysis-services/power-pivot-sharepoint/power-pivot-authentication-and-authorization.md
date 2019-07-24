@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
@@ -109,6 +108,6 @@ manager: craigg
  [Configure PowerPivot Service Accounts](configure-power-pivot-service-accounts.md)   
  [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot Securtiy Architecture](https://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot Security Architecture](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

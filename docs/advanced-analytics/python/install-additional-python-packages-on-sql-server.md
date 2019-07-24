@@ -1,21 +1,20 @@
 ---
-title: Install new Python language packages -  SQL Server Machine Learning
+title: Install new Python language packages
 description: Add new Python packages to SQL Server 2017 Machine Learning Services (In-Database), and Machine Learning Server (Standalone).
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/10/2018  
+ms.date: 06/16/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 # Install new Python packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how to install new Python packages on an instance of SQL Server 2017 Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
-For more information about package location and installation paths, see [Get R or Python package information](../r/determine-which-packages-are-installed-on-sql-server.md).
+For more information about package location and installation paths, see [Get R or Python package information](../package-management/installed-package-information.md).
 
 ## Prerequisites
 

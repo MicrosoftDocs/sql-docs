@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "Insert Results query"
   - "queries [SQL Server], results"
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Create Insert Results Queries (Visual Database Tools)

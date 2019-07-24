@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "operators [XQuery]"
   - "xml data type [SQL Server], XQuery"
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # XQuery Operators Against the xml Data Type
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

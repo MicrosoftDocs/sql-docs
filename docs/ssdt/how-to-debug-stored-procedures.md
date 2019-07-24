@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG"
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Debug Stored Procedures
 The Transact\-SQL debugger allows you to interactively debug stored procedures by displaying the SQL call stack, local variables, and parameters for the SQL stored procedure. As with debugging in other programming languages, you can view and modify local variables and parameters, view global variables, as well as control and manage breakpoints while debugging your Transact\-SQL script.  

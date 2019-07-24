@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], creating"
   - "master SQL Server Agent job [SQL Server]"
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a SQL Server Agent Master Job

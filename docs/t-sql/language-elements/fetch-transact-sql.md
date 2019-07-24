@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "SCROLL option"
   - "row fetching [SQL Server]"
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

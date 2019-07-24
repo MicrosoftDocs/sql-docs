@@ -1,11 +1,11 @@
 ---
 title: Analysis and reporting with Microsoft business intelligence (BI) tools
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.reviewer: ""
-ms.prod: reporting-services, sql-server
-ms.prod_service: reporting-services-native, reporting-services-sharepoint 
+ms.prod: reporting-services
+ms.technology: reporting-services
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
@@ -16,7 +16,10 @@ Choosing the right business intelligence tool can be overwhelming. Learn about t
 
 The following table maps workloads for data analysis and reporting to the Microsoft BI tools that are best suited for those workloads. For more information about a product, click the product link in the table.  
   
- If you're looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx).  
+ If you're looking for a brief overview of these tools to help you decide which tools are right for you, see [Introducing Microsoft Business Intelligence (BI) Tools](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx).
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
 |Workloads|User|||BI Tools|||  
 |---------------|----------|-|-|--------------|-|-|  
@@ -38,5 +41,6 @@ The following table maps workloads for data analysis and reporting to the Micros
 |**Advanced Analytics**|Data Scientist||||||  
 |Perform self-service predictive analytics||||||[Data Mining Add-ins for Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |Use data mining algorithms||||||[Data Mining in Analysis Services](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
  *Reporting Services has a number of features that support delivering operational reports and custom reports, such as delivering modern, paginated reports.

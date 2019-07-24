@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # New GUI Features in SSMA for Access to SQL
 This chapter describes new features of SSMA User Interface  

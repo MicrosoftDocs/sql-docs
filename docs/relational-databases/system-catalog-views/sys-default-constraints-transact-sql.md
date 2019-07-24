@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.default_constraints (Transact-SQL)
@@ -46,7 +45,8 @@ GO
 SELECT d.definition   
 FROM sys.default_constraints AS d  
 INNER JOIN sys.columns AS c  
-ON d.parent_column_id = c.column_id  
+ON d.parent_object_id = c.object_id
+AND d.parent_column_id = c.column_id  
 WHERE d.parent_object_id = OBJECT_ID(N'HumanResources.Employee', N'U')  
 AND c.name = 'VacationHours';  
 ```  

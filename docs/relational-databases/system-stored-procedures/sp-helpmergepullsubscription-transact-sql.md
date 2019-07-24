@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +34,16 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## Argument  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. If *publication* is **%**, information about all merge publications and subscriptions in the current database is returned.  
   
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher*is **sysname**, with a default of **%**.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db*is **sysname**, with a default of **%**.  
   
- [ **@subscription_type=**] **'***subscription_type***'**  
+`[ @subscription_type = ] 'subscription_type'`
  Is whether to show pull subscriptions. *subscription_type*is **nvarchar(10)**, with a default of **'pull'**. Valid values are **'push'**, **'pull'**, or **'both'**.  
   
 ## Result Sets  

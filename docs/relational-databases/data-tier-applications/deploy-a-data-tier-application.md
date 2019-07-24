@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Deploy a Data-tier Application
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,6 +60,9 @@ Deploying a DAC with logins to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] req
 2.  Right-click the **Databases** node, then select **Deploy Data-tier Application...**  
   
 3.  Complete the wizard dialogs and click finish.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 More about some of the wizard pages below: 
      
 ### Select DAC Package Page  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
 ```  
   
 ## Arguments  
- **N'** *plan_guide_name* **'**  
+ **N'** _plan_guide_name_ **'**  
  Specifies the plan guide that is being dropped, enabled, or disabled. *plan_guide_name* is resolved to the current database. If not specified, *plan_guide_name* defaults to NULL.  
   
  DROP  

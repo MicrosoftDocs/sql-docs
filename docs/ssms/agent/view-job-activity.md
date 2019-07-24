@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, viewing"
   - "displaying job activity"
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # View Job Activity

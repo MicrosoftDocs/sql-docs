@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +37,13 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## Arguments  
- [ **@objname=** ] **'***object_name***'**  
+`[ @objname = ] 'object_name'`
  Is the name of the table and column or the alias data type from which the rule is unbound. *object_name* is **nvarchar(776)**, with no default. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to resolve two-part identifiers to column names first, then to alias data types. When unbinding a rule from an alias data type, any columns of the data type that have the same rule are also unbound. Columns of that data type with rules bound directly to them are unaffected.  
   
 > [!NOTE]  
 >  *object_name* can contain brackets **[]** as delimited identifier characters. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+`[ @futureonly = ] 'futureonly_flag'`
  Is used only when unbinding a rule from an alias data type. *futureonly_flag* is **varchar(15)**, with a default of NULL. When *futureonly_flag* is **futureonly**, existing columns of that data type do not lose the specified rule.  
   
 ## Return Code Values  

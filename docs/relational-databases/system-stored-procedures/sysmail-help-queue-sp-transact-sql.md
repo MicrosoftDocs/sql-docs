@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## Arguments  
- [ **@queue_type** = ] **'**_queue_type_**'**  
+`[ @queue_type = ] 'queue_type'`
  Optional argument deletes e-mails of the type specified as the *queue_type*. *queue_type* is **nvarchar(6)** with no default. Valid entries are **mail** and **status**.  
   
 ## Return Code Values  

@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "functions [SQL Server], ranking"
   - "ranking rows"
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Ranking Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ manager: craigg
 |[DENSE_RANK](../../t-sql/functions/dense-rank-transact-sql.md)|[ROW_NUMBER](../../t-sql/functions/row-number-transact-sql.md)|  
   
 ## Examples  
- The following shows the four ranking functions used in the same query. For function specific examples, see each ranking function.  
+ The following example shows the four ranking functions used in the same query. For function-specific examples, see each ranking function.  
   
 ```  
 USE AdventureWorks2012;  
@@ -73,5 +72,4 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## See Also  
  [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
   

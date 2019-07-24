@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "persisted data source objects"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Persisted Data Source Objects
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "shortcuts [SQL Server Management Studio]"
   - "accelerator keys"
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # SQL Server Management Studio Keyboard Shortcuts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

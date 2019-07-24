@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=**] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the server group to create. *name* is **sysname**, with no default. *name* cannot contain commas.  
   
 ## Return Code Values  

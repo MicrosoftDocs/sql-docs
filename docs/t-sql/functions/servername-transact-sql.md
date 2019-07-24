@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "@@SERVERNAME function"
   - "local servers [SQL Server]"
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # &#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MakeValid method (geography)"
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # MakeValid (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "revoke_permission stored procedure [Integration Services]"
   - "catalog.revoke_permission stored procedure [Integration Services]"
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # catalog.revoke_permission (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Revokes a permission on a securable object in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
@@ -31,7 +34,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## Arguments  
  [ @object_type = ] *object_type*  
- The type of securable object. Securable objects types include folder (`1`), project (`2`), environment (`3`), and operation (`4`).The *object_type* is **smallint***.*  
+ The type of securable object. Securable objects types include folder (`1`), project (`2`), environment (`3`), and operation (`4`).The *object_type* is **smallint**_._  
   
  [ @object_id = ] *object_id*  
  The unique identitifier (ID) of the securable object. The *object_id* is **bigint**.  

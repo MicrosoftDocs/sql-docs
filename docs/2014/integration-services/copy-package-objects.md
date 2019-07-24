@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], copying objects"
   - "connection managers [Integration Services], copying"
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Copy Package Objects

@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.webservicestask.general.f1"
 helpviewer_keywords: 
   - "Web Service Task Editor"
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Web Service Task Editor (General Page)

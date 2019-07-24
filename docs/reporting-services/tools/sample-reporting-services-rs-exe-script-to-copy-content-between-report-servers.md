@@ -1,15 +1,15 @@
 ---
 title: "Sample Reporting Services rs.exe Script to Copy Content between Report Servers | Microsoft Docs"
-ms.date: 03/26/2018
+ms.date: 05/23/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Sample Reporting Services rs.exe Script to Copy Content between Report Servers
 
@@ -45,26 +45,26 @@ The script can be used to copy content between report servers of the same mode o
 |Item|Migrated|SharePoint|Description|  
 |----------|--------------|----------------|-----------------|  
 |Passwords|**No**|**No**|Passwords are **NOT** migrated. After content items are migrated, update the credential information on the destination server. For example, data sources with stored credentials.|  
-|My Reports|**No**|**No**|The Native mode "My Reports" feature is based on individual user logins therefore the scripting service does not have access to content in "My Reports" folders for users other than the **-u** parameter used to run the rss script. Also, "My Reports" isn't a feature of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode and items in the folders cannot be copied to a SharePoint environment. Therefore, the script does not copy report items that are in the "My Reports" folders on a source native mode report server<br /><br /> To migrate the content in "My Reports" folders with this script, complete the following steps:<br /><br /> 1.  Create new folder(s) in Report Manager. Optionally, you can create folders or subfolder for each user.<br />2.  Log in as one of the users with "My Reports" content.<br />3.  In Report Manager, click the **My Reports** folder.<br />4.  Click the **Details** view for the folder.<br />5.  Select each report that you want to copy.<br />6.  Click **Move** in the Report Manager toolbar.<br />7.  Select the desired destination folder.<br />8.  Repeat steps 2-7 for each user.<br />9. Run the script.|  
+|My Reports|**No**|**No**|The Native mode "My Reports" feature is based on individual user sign-ins therefore the scripting service does not have access to content in "My Reports" folders for users other than the **-u** parameter used to run the rss script. Also, "My Reports" isn't a feature of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode and items in the folders cannot be copied to a SharePoint environment. Therefore, the script does not copy report items that are in the "My Reports" folders on a source native mode report server<br /><br /> To migrate the content in "My Reports" folders with this script, complete the following steps:<br /><br /> 1.  Create new folder(s) in the web portal. Optionally, you can create folders or subfolders for each user.<br />2.  Sign in as one of the users with "My Reports" content.<br />3.  In the web portal, select the **My Reports** folder.<br />4.  Select the **Details** view for the folder.<br />5.  Select each report that you want to copy.<br />6.  Select **Move** in the web portal toolbar.<br />7.  Select the desired destination folder.<br />8.  Repeat steps 2-7 for each user.<br />9. Run the script.|  
 |History|**No**|**No**||  
 |History settings|Yes|Yes|The history settings are migrated however the history details are NOT migrated.|  
-|Schedules|yes|yes|To migrate schedules, it is required that SQL Server Agent is running on the target server. If SQL Server Agent isn't running on the target, you will see an error message similar to this one:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
-|Roles and system policies|Yes|Yes|By default the script won't copy custom permission schema between servers. The default behavior is the items will be copied to the destination server with the 'inherit parent permissions' flag set to TRUE. If you want the script to copy permissions for individual items, use the SECURITY switch.<br /><br /> If the source and target servers are **not the same report server mode**, for example from native mode to SharePoint mode, and you use the SECURITY switch, the script will attempt to map default roles and groups based on the comparison in the article [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Custom roles and groups aren't copied to the destination server.<br /><br /> When the script is copying between servers **that are the same mode**, and you use the SECURITY switch, the script will create new roles (native mode) or groups (SharePoint mode) on the destination server.<br /><br /> If a role already exists on the destination server, the script will create a "Failure" message similar to the following, and continue migrating other items. After the script completes, verify the roles on the destination server are configured to meet your needs. the Migrating roles: 8 items found.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> For more information, see [Grant User Access to a Report Server &#40;Report Manager&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> **Note:** if a user that exists on the source server does not exist on the destination server, the script cannot apply role assignments on the destination server, the script cannot apply role assignments, even if the SECURITY switch is used.|  
+|Schedules|Yes|Yes|To migrate schedules, it is required that SQL Server Agent is running on the target server. If SQL Server Agent isn't running on the target, you will see an error message similar to this one:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  
+|Roles and system policies|Yes|Yes|By default the script won't copy custom permission schema between servers. The default behavior is the items will be copied to the destination server with the 'inherit parent permissions' flag set to TRUE. If you want the script to copy permissions for individual items, use the SECURITY switch.<br /><br /> If the source and target servers are **not the same report server mode**, for example from native mode to SharePoint mode, and you use the SECURITY switch, the script will attempt to map default roles and groups based on the comparison in the article [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md). Custom roles and groups aren't copied to the destination server.<br /><br /> When the script is copying between servers **that are the same mode**, and you use the SECURITY switch, the script will create new roles (native mode) or groups (SharePoint mode) on the destination server.<br /><br /> If a role already exists on the destination server, the script will create a "Failure" message similar to the following, and continue migrating other items. After the script completes, verify that the roles on the destination server are configured to meet your needs. the Migrating roles: 8 items found.<br /><br /> `Migrating role: Browser ... FAILURE: The role 'Browser' already exists and cannot be created. ---> Microsoft.ReportingServices.Diagnostics.Utilities.RoleAlreadyExistsException: The role 'Browser' already exists and cannot be created.`<br /><br /> For more information, see [Grant User Access to a Report Server](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> **Note:** if a user that exists on the source server does not exist on the destination server, the script cannot apply role assignments on the destination server, the script cannot apply role assignments, even if the SECURITY switch is used.|  
 |Shared data source|Yes|Yes|The script won't overwrite existing items on the target server. If an item on the target server already exists with the same name, you will see an error message similar to this one:<br /><br /> `Migrating DataSource: /Data Sources/Aworks2012_oltp ... FAILURE:The item '/Data Sources/Aworks2012_oltp' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Data Source s/Aworks2012_oltp' already exists.`<br /><br /> Credentials are **NOT** copied over as part of the data source. After content items are migrated, update the credential information on the destination server.|  
-|Shared dataset|Yes|Yes||  
+|Shared dataset|Yes|Yes|| 
 |Folder|Yes|Yes|The script won't overwrite existing items on the target server. If an item on the target server already exists with the same name, you will see an error message similar to this one:<br /><br /> `Migrating Folder: /Reports ... FAILURE: The item '/Reports' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports' already exists.`|  
 |Report|Yes|Yes|The script won't overwrite existing items on the target server. If an item on the target server already exists with the same name, you will see an error message similar to this one:<br /><br /> `Migrating Report: /Reports/testThe item '/Reports/test' already exists. ---> Microsoft.ReportingServices.Diagnostics.Utilities.ItemAlreadyExistsException: The item '/Reports/test' already exists.`|  
 |Parameters|Yes|Yes||  
 |Subscriptions|Yes|Yes||  
 |History Settings|Yes|Yes|The history settings are migrated however the history details are NOT migrated.|  
-|processing options|Yes|Yes||  
-|cache refresh options|Yes|Yes|Dependent settings are migrated as part of a catalog item. The following is the sample out of the script as it migrates a report (.rdl) and related settings such as cache refresh options:<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br />-   Migrating subscription Save in \\\server\public\savedreports as TitleOnly ... SUCCESS<br />-   Migrating history settings for report TitleOnly.rdl ... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 items found.<br />-   Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br />-   Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
+|Processing options|Yes|Yes||  
+|Cache refresh options|Yes|Yes|Dependent settings are migrated as part of a catalog item. The following is the sample out of the script as it migrates a report (.rdl) and related settings such as cache refresh options:<br /><br /> -   Migrating parameters for report TitleOnly.rdl 0 items found.<br />-   Migrating subscriptions for report TitleOnly.rdl: 1 items found.<br />-   Migrating subscription Save in \\\server\public\savedreports as TitleOnly ... SUCCESS<br />-   Migrating history settings for report TitleOnly.rdl ... SUCCESS<br />-   Migrating processing options for report TitleOnly.rdl ... 0 items found.<br />-   Migrating cache refresh options for report TitleOnly.rdl ... SUCCESS<br />-   Migrating cache refresh plans for report TitleOnly.rdl: 1 items found.<br />-   Migrating cache refresh plan titleonly_refresh735amM2F ... SUCCESS|  
 |Cache refresh plans|Yes|Yes||  
 |Images|Yes|Yes||  
 |Report parts|Yes|Yes||  
   
-##  <a name="bkmk_required_permissions"></a> Required Permissions  
- The permissions required to read or write items and resources isn't the same for all of the methods used in the script. The following table summarizes the methods used for each item or resource and links to related content. Navigate to the individual topic to see the required permissions. For example the ListChildren method topic notes the required permissions of:  
+##  <a name="bkmk_required_permissions"></a> Required permissions  
+ The permissions required to read or write items and resources isn't the same for all of the methods used in the script. The following table summarizes the methods used for each item or resource and links to related content. Navigate to the individual article to see the required permissions. For example the ListChildren method topic notes the required permissions of:  
   
 -   **Native Mode Required Permissions:** ReadProperties on Item  
   
@@ -111,7 +111,7 @@ The script can be used to copy content between report servers of the same mode o
      You can **cancel the script after step** one if you only want to see the possible migration list or you want to modify the parameters. Dependent settings aren't listed in step one. For example, the cache options of a report aren't listed but the report itself is.  
   
     > [!TIP]  
-    >  If you want to just audit a single server, use the same server for source and destination and cancel after step 1  
+    > If you want to just audit a single server, use the same server for source and destination and cancel after step 1.  
   
      A good use of the step 1 audit information is to review existing roles on both the source and target Native mode server. The following is an example of the step one audit list. Notice the list includes a "roles" section because the switch-v security="True" was used:  
   
@@ -193,7 +193,7 @@ The script can be used to copy content between report servers of the same mode o
   
 -   Passwords aren't migrated, and must be re-entered, for example data sources with stored credentials.  
   
-##  <a name="bkmk_parameter_description"></a> Parameter Description  
+##  <a name="bkmk_parameter_description"></a> Parameter description  
   
 |Parameter|Description|Required|  
 |---------------|-----------------|--------------|  
@@ -207,9 +207,9 @@ The script can be used to copy content between report servers of the same mode o
 |**-v tf** ="TARGETFOLDER"|'Set to "/" for migrating into the root level. Set to "/folder/subfolder" to copy into a folder that already exists. Everything within "SOURCEFOLDER" will be copied into "TARGETFOLDER.|OPTIONAL, default is "/".|  
 |**-v security**= "True/False"|If set to "False", destination catalog items will inherit security setting according to the settings of the target system. This setting is recommended for migrations between different report server types, for example native mode to SharePoint mode. If set to "True", the script attempts to migrate security settings.|OPTIONAL, default is "False".|  
   
-##  <a name="bkmk_more_examples"></a> More Examples  
+##  <a name="bkmk_more_examples"></a> More examples  
   
-###  <a name="bkmk_native_2_native"></a> Native Mode Report Server to Native Mode Report Server  
+###  <a name="bkmk_native_2_native"></a> Native mode report server to native mode report server  
  The following example migrates content from the native mode **Sourceserver** to the native mode **Targetserver**.  
   
 ```  
@@ -222,8 +222,8 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password" -v security="True"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_root"></a> Native Mode to SharePoint Mode - root site  
- The following example migrates content from a native mode **SourceServer** to the "root site " on a SharePoint mode server **TargetServer**. The "Reports" and "Data Sources" folders on the native mode server as migrated as new libraries on the SharePoint deployment.  
+###  <a name="bkmk_native_2_sharepoint_root"></a> Native mode to SharePoint mode - root site  
+ The following example migrates content from a native mode **SourceServer** to the "root site " on a SharePoint mode server **TargetServer**. The "Reports" and "Data Sources" folders on the native mode server are migrated as new libraries on the SharePoint deployment.  
   
  ![ssrs_rss_migrate_root_site](../../reporting-services/tools/media/ssrs-rss-migrate-root-site.gif "ssrs_rss_migrate_root_site")  
   
@@ -231,14 +231,14 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/_vti_bin/ReportServer" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_2_sharepoint_with_site"></a> Native mode to SharePoint Mode -'bi' site collection  
+###  <a name="bkmk_native_2_sharepoint_with_site"></a> Native mode to SharePoint mode -'bi' site collection  
  The following example migrates content from a native mode server to a SharePoint server that contains a site collection of "sites/bi" and a shared documents library. The script creates folders in document the destination library. For example, the script will create a "Reports" and "Data Sources" folders in the target document library.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint Mode to SharePoint Mode -'bi' site collection  
+###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint mode to SharePoint Mode -'bi' site collection  
  The following example migrates content:  
   
 -   From a SharePoint server **SourceServer** that contains a site collection of "sites/bi" and a shared documents library.  
@@ -249,7 +249,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Native Mode to Native Mode - Windows Azure Virtual Machine  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Native mode to native mode - Windows Azure virtual machine  
  The following example migrates content:  
   
 -   From a Native mode report server **SourceServer**.  
@@ -261,9 +261,9 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 ```  
   
 > [!TIP]  
->  For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/dn449661.aspx).  
+> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint Mode -'bi' site collection to a Native Mode Server on Windows Azure Virtual Machine  
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint mode -'bi' site collection to a native mode server on a Windows Azure virtual machine. 
  The following example migrates content:  
   
 -   From a SharePoint mode report server **SourceServer** that contains a site collection of "sites/bi" and a shared documents library.  
@@ -282,19 +282,19 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
  **Native Mode**  
   
-1.  Browse to Report Manager on the destination server.  
+1.  Open the web portal on the destination server.  
   
-2.  Click **Site Settings** on the top menu.  
+2.  Select **Site Settings** on the top menu.  
   
-3.  Click **Schedules** in the left pane.  
+3.  Select **Schedules** in the left pane.  
   
- **SharePoint Mode:**  
+ **SharePoint mode:**  
   
 1.  Browse to **Site settings**.  
   
 2.  In the **Reporting Services** group, click **Manage Shared Schedules**.  
   
-### Roles and Groups  
+### Roles and groups  
  **Native Mode**  
   
 1.  Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and connect to your native mode report server.  
@@ -312,7 +312,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
   
 -   System.Exception: Could not connect to server: https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **The request failed with HTTP status 401: Unauthorized**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)   at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)   at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired()   at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout)   at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()   --- End of inner exception stack trace ---  
   
-## See Also  
+## See also  
  [RS.exe Utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
  [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   

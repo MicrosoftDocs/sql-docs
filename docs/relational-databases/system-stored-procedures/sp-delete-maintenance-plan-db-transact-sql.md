@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'**_plan\_id_**'**  
+`[ @plan_id = ] 'plan\_id'`
  Specifies the maintenance plan ID. *plan_id* is **uniqueidentifier**.  
   
- [ **@db_name =**] **'**_database\_name_**'**  
+`[ @db_name = ] 'database\_name'`
  Specifies the database name to be deleted from the maintenance plan. *database_name* is **sysname**.  
   
 ## Return Code Values  

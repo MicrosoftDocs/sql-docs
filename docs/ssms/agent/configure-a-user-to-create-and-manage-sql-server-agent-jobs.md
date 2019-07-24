@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SQLAgentUserRole database role"
   - "proxy accounts [SQL Server Agent]"
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure a User to Create and Manage SQL Server Agent Jobs

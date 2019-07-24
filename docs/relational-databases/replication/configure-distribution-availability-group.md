@@ -1,7 +1,7 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2018"
+ms.date: "01/16/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: replication
@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Set up replication distribution database in Always On availability group
 
@@ -28,7 +27,9 @@ This article explains how to set up a SQL Server replication distribution databa
 SQL Server 2017 CU6 and SQL Server 2016 SP2-CU3 introduces support for replication distribution database in an AG through the following mechanisms:
 
 - The distribution database AG needs to have a listener. When the publisher adds the distributor, it uses the listener name as the distributor name.
-- The replication jobs are created with the listener name as the distributor name.
+- The replication jobs are created with the listener name as the distributor name. Replication snapshot, log reader and distribution agent (push subscription) jobs created on the distribution server gets created on all secondary replicas of the AG for Distribution DB.
+ >[!NOTE]
+ >Distribution agent jobs for pull susbcriptions are created on the subscriber server and not on the distribution server. 
 - A new job monitors the state (primary or secondary in AG) of the distribution databases and disables or enables the replication jobs based on the distribution databases state.
 
 After a distribution database in the AG is configured based on the steps described below, replication configuration and run time jobs can run properly before and after distribution database AG failover.
@@ -42,7 +43,7 @@ After a distribution database in the AG is configured based on the steps describ
 - Adding or removing nodes to existing distribution database AG.
 - A distributor may have multiple distribution databases. Each distribution database can be in its own AG and can be not in any AG. Multiple distribution databases can share an AG.
 - Publisher and distributor need to be on separate SQL Server instances.
-- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port. This alias would need to created on all the publisher, distributor and subsciber replicas (for subscribers running in pull mode). 
+- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port.
 
 ## Limitations or exclusions
 
@@ -108,6 +109,8 @@ This example configures a new distributor and publisher and puts the distributio
    The value of `@working_directory` should be a network path independent of DIST1, DIST2, and DIST3.
 
 1. On DIST2 and DIST3, run:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
@@ -387,9 +390,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
  /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## See Also  

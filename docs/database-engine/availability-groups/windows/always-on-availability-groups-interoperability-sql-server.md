@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Always On availability groups: interoperability (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +45,7 @@ The following table lists [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 The following features interoperate with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with specific restrictions. See the linked topics for details.
 
 - Cross-database transactions/distributed transactions ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and Windows Server 2016). For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+- [Query statistics system data collector](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) cannot reliably run in an environment with non-readable secondaries. To use query statistics system data collector, set all secondary availability group replicas to allow [read-access](configure-read-only-access-on-an-availability-replica-sql-server.md). 
 
 ## <a name="NoInterop"></a> Features that Do Not Interoperate with Always On Availability Groups
 
@@ -66,7 +66,7 @@ The following features interoperate with [!INCLUDE[ssHADR](../../../includes/ssh
   [Migration Guide: Migrating to Always On Availability Groups from Prior Deployments Combining Database Mirroring and Log Shipping](https://msdn.microsoft.com/library/jj635217)
   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)
   [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)
-  [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)
+  [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## See Also
 

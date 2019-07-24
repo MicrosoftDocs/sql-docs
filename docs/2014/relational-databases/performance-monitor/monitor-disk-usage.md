@@ -1,10 +1,10 @@
 ---
 title: "Monitor Disk Usage | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
-ms.prod: "sql-server-2014"
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ""
-ms.technology: performance"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database monitoring [SQL Server], disk usage"

@@ -80,6 +80,6 @@ manager: kfile
 |[Synchronize Analysis Services Databases](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|Describes how to use the Synchronize Database Wizard to synchronize the metadata and data between any two [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular or multidimensional databases.|  
   
 ## See Also  
- [Connect to a tabular model database ](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
+ [Connect to a tabular model database](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

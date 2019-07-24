@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "Options [SQL Server Management Studio], dialog boxes"
   - "Options [SQL Server Management Studio]"
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options Dialog Boxes F1 Help
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

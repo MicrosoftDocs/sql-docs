@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "spatial data types [SQL Server]"
   - "geometry data type [SQL Server], Transact-SQL"
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Spatial Types - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

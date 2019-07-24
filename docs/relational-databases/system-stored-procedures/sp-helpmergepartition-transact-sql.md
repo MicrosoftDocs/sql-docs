@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,16 +33,16 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@suser_sname=** ] **'***suser_sname***'**  
+`[ @suser_sname = ] 'suser_sname'`
  Is the SUSER_SNAME value used to define a partition. *suser_sname* is **sysname**, with a default value of NULL. Supply this parameter to limit the result set to only partitions where SUSER_SNAME resolves to the supplied value.  
   
 > [!NOTE]  
 >  When *suser_sname* is supplied, *host_name* must be NULL  
   
- [ **@host_name=** ] **'***host_name***'**  
+`[ @host_name = ] 'host_name'`
  Is the HOST_NAME value used to define a partition. *host_name* is **sysname**, with a default value of NULL. Supply this parameter to limit the result set to only partitions where HOST_NAME resolves to the supplied value.  
   
 > [!NOTE]  

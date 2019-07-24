@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 
 # Perform a planned manual failover of an Always On availability group (SQL Server)

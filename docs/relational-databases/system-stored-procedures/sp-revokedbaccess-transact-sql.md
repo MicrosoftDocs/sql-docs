@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name_in_db =** ] **'***name***'**  
+`[ @name_in_db = ] 'name'`
  Is the name of the database user to be removed. *name* is a **sysname** with no default. *name* can be the name of a server login, a Windows login, or a Windows group, and must exist in the current database. When you specify a Windows login or Windows group, specify the name by which it is known in the database.  
   
 ## Return Code Values  

@@ -15,9 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CURRENT_TRANSACTION_ID function"
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

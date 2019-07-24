@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Z (geometry Data Type)"
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Z (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

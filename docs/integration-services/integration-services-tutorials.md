@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Integration Services Tutorials
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This section contains tutorials [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 -   [SSIS How to Create an ETL Package](../integration-services/ssis-how-to-create-an-etl-package.md)  

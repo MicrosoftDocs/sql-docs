@@ -14,11 +14,14 @@ helpviewer_keywords:
   - "inserting data"
   - "bulk load [Integration Services]"
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Bulk Load Data by Using the SQL Server Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To add and configure a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, the package must already include at least one Data Flow task and a data source.  
   
 ### To load data using a SQL Server destination  

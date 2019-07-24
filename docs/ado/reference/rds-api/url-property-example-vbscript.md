@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # URL Property Example (VBScript)
 > [!IMPORTANT]

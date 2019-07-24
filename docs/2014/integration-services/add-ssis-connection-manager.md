@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adddtsconnection.f1"
 helpviewer_keywords: 
   - "Add SSIS Connection Manager"
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add SSIS Connection Manager

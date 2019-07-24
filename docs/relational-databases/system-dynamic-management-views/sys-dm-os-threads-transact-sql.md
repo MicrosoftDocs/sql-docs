@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_threads (Transact-SQL)
@@ -63,7 +62,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
+
+## Notes on Linux version
+
+Due to how the SQL engine works in Linux, some of this information doesn't match Linux diagnostics data. For example, `os_thread_id` does not match the result of tools like `ps`,`top` or the procfs (/proc/`pid`).  This is due the Platform Abstraction Layer (SQLPAL), a layer between SQL Server components and the operating system.
 
 ## Examples  
  Upon startup, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts threads and then associates workers with those threads. However, external components, such as an extended stored procedure, can start threads under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has no control of these threads. sys.dm_os_threads can provide information about rogue threads that consume resources in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process.  

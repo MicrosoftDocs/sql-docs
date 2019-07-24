@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +42,22 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to change. *publication*is **sysname**, with no default  
   
- [ **@article** = ] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article to change. *article* is **sysname**, with no default.  
   
- [ **@subscriber** = ] **'**_subscriber_**'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with no default.  
   
- [ **@destination_db** = ] **'**_destination_db_**'**  
+`[ @destination_db = ] 'destination_db'`
  Is the name of the subscription database. *destination_db* is **sysname**, with no default.  
   
- [ **@property=**] **'**_property_**'**  
+`[ @property = ] 'property'`
  Is the property to change for the given subscription. *property* is **nvarchar(30)**, and can be one of the values in the table.  
   
- [ **@value=**] **'**_value_**'**  
+`[ @value = ] 'value'`
  Is the new value for the specified *property*. *value* is **nvarchar(4000)**, and can be one of the values in the table.  
   
 |Property|Value|Description|  
@@ -79,7 +78,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB provider|  
 |**memory_optimized**|**bit**|Indicates that  the subscription supports memory optimized tables. *memory_optimized* is **bit**, where 1 equals true (the subscription supports memory optimized tables).|  
   
- [ **@publisher =** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

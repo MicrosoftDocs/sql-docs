@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing reports [Reporting Services], uploading files"
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "files [Reporting Services]"
   - "folders [Reporting Services], uploading files to"
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Upload Files to a Folder
   You can upload files from the file system and store them as managed items in a report server database. What happens when you upload a file depends on the file type.  

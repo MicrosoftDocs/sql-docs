@@ -14,7 +14,7 @@ manager: craigg
 # Creating and Accessing Tables in TempDB from Natively Compiled Stored Procedures
   Creating and accessing tables in TempDB from natively compiled stored procedures is not supported. Instead, use table types and table variables. For example:  
   
-```tsql  
+```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   
   AS TABLE   
    (id INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT=100000),   

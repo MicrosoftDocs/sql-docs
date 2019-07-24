@@ -1,14 +1,13 @@
 ---
-title: Compute summary statistics RevoScaleR tutorial - SQL Server Machine Learning
+title: Compute summary statistics RevoScaleR tutorial
 description: Tutorial walkthrough on how to compute statistical summary statistics using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 # Compute summary statistics in R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "wildcard components [XML]"
   - "content validation [XML]"
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Wildcard Components and Content Validation
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +37,8 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"   
-        targetNamespace="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+        targetNamespace="http://ns">  
    <element name="e" type="anyType"/>  
    <element name="a" type="byte"/>  
    <element name="b" type="string"/>  
@@ -51,7 +50,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="https://ns"><a>1</a><b>data</b></e>'  
+SET @var = '<e xmlns="http://ns"><a>1</a><b>data</b></e>'  
 GO  
 ```  
   
@@ -59,7 +58,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="https://ns"><a>1</a><c>Wrong</c><b>data</b></e>'  
+SET @var = '<e xmlns="http://ns"><a>1</a><c>Wrong</c><b>data</b></e>'  
 GO  
 ```  
   
@@ -67,7 +66,7 @@ GO
   
 ```  
 DECLARE @var XML(SC)  
-SET @var = '<e xmlns="https://ns"><a>Wrong</a><b>data</b></e>'  
+SET @var = '<e xmlns="http://ns"><a>Wrong</a><b>data</b></e>'  
 SELECT @var  
 GO  
 ```  

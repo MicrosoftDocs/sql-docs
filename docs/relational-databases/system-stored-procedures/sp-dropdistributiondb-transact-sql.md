@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## Arguments  
- [ **@database=**] **'***database***'**  
+`[ @database = ] 'database'`
  Is the database to drop. *database* is **sysname**, with no default.  
   
 ## Return Code Values  

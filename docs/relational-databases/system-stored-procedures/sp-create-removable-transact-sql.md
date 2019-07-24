@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,36 +49,36 @@ sp_create_removable
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database to create for use on removable media. *dbname* is **sysname**.  
   
- [ **@syslogical=** ] **'***syslogical***'**  
+`[ @syslogical = ] 'syslogical'`
  Is the logical name of the file that contains the system catalog tables. *syslogical* is **sysname**.  
   
- [ **@sysphysical=** ] **'***sysphysical***'**  
+`[ @sysphysical = ] 'sysphysical'`
  Is the physical name. This includes a fully qualified path, of the file that holds the system catalog tables. *sysphysical* is **nvarchar(260)**.  
   
- [ **@syssize=** ] *syssize*  
+`[ @syssize = ] syssize`
  Is the size, in megabytes, of the file that holds the system catalog tables. *syssize* is **int**. The minimum *syssize* is 1.  
   
- [ **@loglogical=** ] **'***loglogical***'**  
+`[ @loglogical = ] 'loglogical'`
  Is the logical name of the file that contains the transaction log. *loglogical* is **sysname**.  
   
- [ **@logphysical=** ] **'***logphysical***'**  
+`[ @logphysical = ] 'logphysical'`
  Is the physical name. This includes a fully qualified path, of the file that contains the transaction log. *logphysical* is **nvarchar(260)**.  
   
- [ **@logsize=** ] *logsize*  
+`[ @logsize = ] logsize`
  Is the size, in megabytes, of the file that contains the transaction log. *logsize* is **int**. The minimum *logsize* is 1.  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+`[ @datalogical1 = ] 'datalogical'`
  Is the logical name of a file that contains the data tables. *datalogical* is **sysname**.  
   
  There must be from 1 through 16 data files. Typically, more than one data file is created when the database is expected to be large and must be distributed on multiple disks.  
   
- [ **@dataphysical1=** ] **'***dataphysical***'**  
+`[ @dataphysical1 = ] 'dataphysical'`
  Is the physical name. This includes a fully qualified path, of a file that contains data tables. *dataphysical* is **nvarchar(260)**.  
   
- [ **@datasize1=** ] **'***datasize***'**  
+`[ @datasize1 = ] 'datasize'`
  Is the size, in megabytes, of a file that contains data tables. *datasize* is **int**. The minimum *datasize* is 1.  
   
 ## Return Code Values  

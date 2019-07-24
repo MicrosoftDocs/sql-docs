@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Set the History Retention Period (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +20,7 @@ manager: craigg
   
 ### To specify the history retention period  
   
-1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**...**) for the distribution database.  
+1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties button (**…**) for the distribution database.  
   
 2.  Enter a value in the **Store replication performance history at least** box.  
   

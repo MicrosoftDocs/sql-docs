@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "RESTORE LABELONLY statement"
   - "backup media [SQL Server], content information"
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # RESTORE Statements - LABELONLY (Transact-SQL)

@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], help"
   - "SQL Server Management Studio Help [SQL Server], registered servers"
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Registered Servers F1 Help
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

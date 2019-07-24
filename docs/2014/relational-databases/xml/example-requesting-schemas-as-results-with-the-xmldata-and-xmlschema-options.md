@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "RAW mode, requesting schema example"
   - "RAW mode, with XMLDATA and XMLSCHEMA"
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options
@@ -46,7 +46,7 @@ GO
 ```  
   
 > [!NOTE]
->  The <`Schema`> is declared as a namespace. To avoid namespace collisions when multiple XML-Data schemas are requested in different FOR XML queries, the namespace identifier, `Schema1` in this example, changes with every query execution. The namespace identifier is made up of **Schema*n*** where ***n*** is an integer.  
+>  The <`Schema`> is declared as a namespace. To avoid namespace collisions when multiple XML-Data schemas are requested in different FOR XML queries, the namespace identifier, `Schema1` in this example, changes with every query execution. The namespace identifier is made up of **Schema_n_** where **_n_** is an integer.  
   
  By specifying the `XMLSCHEMA` option, you can request the XSD schema for the result.  
   

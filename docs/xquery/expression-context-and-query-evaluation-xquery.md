@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Expression Context and Query Evaluation (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ manager: craigg
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
@@ -127,7 +126,7 @@ manager: craigg
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
     xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
           <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  

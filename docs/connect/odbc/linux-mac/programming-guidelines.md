@@ -1,7 +1,7 @@
 ---
 title: "Programming Guidelines (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/11/2018"
+ms.date: "01/12/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -9,7 +9,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Programming Guidelines
 
@@ -125,9 +124,11 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
     
 2.  The UnixODBC driver manager returns "invalid attribute/option identifier" for all statement attributes when they are passed through SQLSetConnectAttr. On Windows, when SQLSetConnectAttr receives a statement attribute value, it causes the driver to set that value on all active statements which are children of the connection handle.  
 
+3.  When using the driver with highly multithreaded applications, unixODBC's handle validation may become a performance bottleneck. In such scenarios, significantly more performance may be obtained by compiling unixODBC with the `--enable-fastvalidate` option. However, beware that this may cause applications which pass invalid handles to ODBC APIs to crash instead of returning `SQL_INVALID_HANDLE` errors.
+
 ## See Also  
 [Frequently Asked Questions](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetInfo Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetInfo(  
      SQLHDBC         ConnectionHandle,  
@@ -1799,7 +1798,7 @@ SQLRETURN SQLGetInfo(
   
  For another example of using **SQLGetInfo**, see [SQLTables Function](../../../odbc/reference/syntax/sqltables-function.md).  
   
-```  
+```cpp  
 SQLUINTEGER fFuncs;  
   
 SQLGetInfo(hdbc,   

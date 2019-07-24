@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "custom events [SQL Server Agent]"
   - "international considerations [SQL Server], alerts"
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a User-Defined Event

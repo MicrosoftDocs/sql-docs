@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Troubleshooting Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,9 @@ manager: craigg
 2.  Issue the SQL command `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`.  
   
 3.  Issue the SQL command `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## SQL Server Error 21663 Is Raised Regarding the Lack of a Primary Key  
  Articles in transactional publications must have a valid primary key. If they do not have a valid primary key, you will receive the following error message when you attempt to add an article:  
   

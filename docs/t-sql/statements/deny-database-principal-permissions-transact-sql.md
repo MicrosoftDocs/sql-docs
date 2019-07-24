@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], application roles"
   - "application roles [SQL Server], permissions"
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DENY Database Principal Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

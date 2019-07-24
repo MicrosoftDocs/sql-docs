@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "local database runtime utility"
   - "LocalDB, SqlLocalDB Utility"
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # SqlLocalDB Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

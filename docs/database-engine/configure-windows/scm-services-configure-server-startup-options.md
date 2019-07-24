@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SCM Services - Configure Server Startup Options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ manager: craigg
   
 2.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, click **SQL Server Services**.  
   
-3.  In the right pane, right-click **SQL Server (***<instance_name>***)**, and then click **Properties**.  
+3.  In the right pane, right-click **SQL Server (**_<instance_name>_**)**, and then click **Properties**.  
   
 4.  On the **Startup Parameters** tab, in the **Specify a startup parameter** box, type the parameter, and then click **Add**.  
   

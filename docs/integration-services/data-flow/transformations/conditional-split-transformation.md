@@ -14,11 +14,14 @@ helpviewer_keywords:
   - "Conditional Split transformation"
   - "route rows to different outputs [Integration Services]"
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Conditional Split Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Conditional Split transformation can route data rows to different outputs depending on the content of the data. The implementation of the Conditional Split transformation is similar to a CASE decision structure in a programming language. The transformation evaluates expressions, and based on the results, directs the data row to the specified output. This transformation also provides a default output, so that if a row matches no expression it is directed to the default output.  
   
 ## Configuration of the Conditional Split Transformation  

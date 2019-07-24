@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], closing"
   - "closing solutions"
 ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Close a Solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

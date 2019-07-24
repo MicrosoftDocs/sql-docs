@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "business rules [Master Data Services], requiring attribute values"
   - "attributes [Master Data Services], requiring values"
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

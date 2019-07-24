@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "NOT EXISTS keyword"
   - "row existence testing [SQL Server]"
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EXISTS (Transact-SQL)

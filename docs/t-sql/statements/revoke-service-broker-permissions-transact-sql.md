@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "services [Service Broker], permissions"
   - "REVOKE statement, Service Broker"
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Service Broker Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

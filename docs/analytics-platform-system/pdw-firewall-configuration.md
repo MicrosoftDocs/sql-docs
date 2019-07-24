@@ -1,8 +1,7 @@
 ---
 title: PDW firewall configuration - Analytics Platform System | Microsoft Docs
 description: The firewall page of the SQL Server PDW Configuration Manager enables you to enable or disable firewall rules that allow or prevent access to specific ports on the Analytics Platform System appliance.  
-aauthor: mzaman1 
-manager: craigg
+author: mzaman1 
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,8 +9,8 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ---
-
 # Parallel Data Warehouse firewall configuration in Analytics Platform System
+
 The **Firewall** page of the SQL Server PDW Configuration Manager enables you to enable or disable firewall rules that allow or prevent access to specific ports on the Analytics Platform System appliance.  
   
 ## To manage ports and firewall rules for appliance nodes  
@@ -40,6 +39,7 @@ The following ports are opened for client connections coming from outside of PDW
 |SQL Server PDW Load Control Flow - Windows Credentials|8002|CTL|  
 |_Kerberos|88|AD01 and AD02,|  
 |_ldap|389|AD01 and AD02|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## Internal Ports  
 The following ports are used by PDW for internal communication, but are not opened for connections coming from outside of the PDW appliance.  
@@ -53,10 +53,12 @@ The following ports are used by PDW for internal communication, but are not open
 |Failover status (Engine)|15001|CMP|  
 |Dynamic (ephemeral) port range|20000-65535|CTL, CMP|  
 |SQL Server port ranges (TDS)|1433, 1500-1508|CTL, CMP|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  
 > Creating external tables or external data sources uses TCP port 8020 by default. These statements can be configured to use other ports instead. The Hortonworks JOB_TRACKER_LOCATION default port is 50300. Integrating with other systems and tools may require additional ports.  
   
 <!-- MISSING LINKS ## See Also  
-[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  
+[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)
+-->
   

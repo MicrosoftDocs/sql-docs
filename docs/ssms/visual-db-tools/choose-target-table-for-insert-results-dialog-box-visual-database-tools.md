@@ -11,9 +11,8 @@ f1_keywords:
   - "vdt.dlgbox.choosetableforinsertfrom"
   - "vdtsql.chm:69642"
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Choose Target Table for Insert Results Dialog Box (Visual Database Tools)

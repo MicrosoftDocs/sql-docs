@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "database backups [SQL Server], system databases"
   - "servers [SQL Server], backup"
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: mashamsft
+ms.author: mathoma
 ---
 # Back Up and Restore of System Databases (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

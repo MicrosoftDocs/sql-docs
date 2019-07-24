@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], deleting"
   - "deleting solutions"
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Delete a Solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

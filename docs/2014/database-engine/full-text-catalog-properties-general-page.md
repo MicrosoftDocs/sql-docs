@@ -64,7 +64,7 @@ manager: craigg
   
 -   **Yes**  
   
--   For information about diacritical marks, see [Diacritical Mark](https://go.microsoft.com/fwlink/?LinkId=154091) in the MSN Encarta Encyclopedia.  
+-   For information about diacritical marks, see [Diacritic](https://www.merriam-webster.com/dictionary/diacritic) in the Merriam-Webster dictionary.  
   
  **Last Population Date**  
  Displays the date the catalog was last populated.  

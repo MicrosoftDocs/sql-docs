@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "element-centric mapping [SQL Server]"
   - "edge tables"
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Examples: Using OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

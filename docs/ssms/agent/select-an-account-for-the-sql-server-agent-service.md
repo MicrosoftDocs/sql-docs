@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "Windows domain accounts [SQL Server]"
   - "security [SQL Server], SQL Server Agent"
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Select an Account for the SQL Server Agent Service

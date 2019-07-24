@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "mapping-schema attribute"
   - "record deletions [SQLXML]"
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deleting Data Using XML Updategrams (SQLXML 4.0)

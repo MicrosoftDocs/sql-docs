@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsRing (geometry Data Type)"
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIsRing (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,14 +1,13 @@
 ---
-title: How to create a resource pool for R and Python - SQL Server Machine Learning Services
+title: How to create a resource pool for R and Python
 description: Define a SQL Server resource pool for R or Python processes on a SQL Server 2016 or SQL Server 2017 database engine instance.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 04/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 # How to create a resource pool for machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

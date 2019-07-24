@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "MultiLineString geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MultiLineString
@@ -60,7 +59,9 @@ For a **MultiLineString** instance to be valid it must meet the following criter
 1.  All instances comprising the **MultiLineString** instance must be valid **LineString** instances.  
   
 2.  No two **LineString** instances comprising the **MultiLineString** instance may overlap over an interval. The **LineString** instances can only intersect or touch themselves or other **LineString** instances at a finite number of points.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 The following example shows three valid **MultiLineString** instances and one **MultiLineString** instance that is not valid.  
   
 ```sql  

@@ -9,10 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "INCLUDE_NULL_VALUES (FOR JSON)"
 ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
-manager: craigg
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Include Null Values in JSON - INCLUDE_NULL_VALUES Option

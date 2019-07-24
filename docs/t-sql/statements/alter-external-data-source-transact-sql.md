@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,9 @@ ALTER EXTERNAL DATA SOURCE data_source_name SET
 -- Modify an external data source pointing to Azure Blob storage
 -- Applies to: SQL Server (starting with 2017)
 ALTER EXTERNAL DATA SOURCE data_source_name
-    WITH (
-        TYPE = BLOB_STORAGE,
+    SET
         LOCATION = 'https://storage_account_name.blob.core.windows.net'
-        [, CREDENTIAL = credential_name ]
-    )  
+        [, CREDENTIAL = credential_name ] 
 ```  
   
 ## Arguments  

@@ -27,7 +27,6 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Move System Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +142,7 @@ manager: craigg
   
 2.  In the **SQL Server Services** node, right-click the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, **SQL Server (MSSQLSERVER)**) and choose **Properties**.  
   
-3.  In the **SQL Server (***instance_name***) Properties** dialog box, click the **Startup Parameters** tab.  
+3.  In the **SQL Server (**_instance_name_**) Properties** dialog box, click the **Startup Parameters** tab.  
   
 4.  In the **Existing parameters** box, select the -d parameter to move the master data file. Click **Update** to save the change.  
   

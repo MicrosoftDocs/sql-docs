@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "nullvalue attribute"
   - "null values [SQLXML]"
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NULL Handling (SQLXML 4.0)

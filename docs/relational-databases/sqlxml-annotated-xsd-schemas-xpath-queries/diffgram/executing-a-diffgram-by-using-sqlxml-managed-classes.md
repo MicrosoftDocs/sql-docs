@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Managed Classes [SQLXML], DiffGrams"
   - "SQLXML, Managed Classes"
 ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a DiffGram by Using SQLXML Managed Classes
@@ -93,7 +92,7 @@ class Test
 2.  Save the following XSD schema (DiffGramSchema.xml) in a folder:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
      <xsd:annotation>  
       <xsd:documentation>  

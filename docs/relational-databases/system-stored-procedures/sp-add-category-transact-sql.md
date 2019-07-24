@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_add_category
 ```  
   
 ## Arguments  
- [ **@class =** ] **'**_class_**'**  
+`[ @class = ] 'class'`
  The class of the category to be added. *class* is **varchar(8)** with a default value of JOB, and can be one of these values.  
   
 |Value|Description|  
@@ -46,7 +45,7 @@ sp_add_category
 |ALERT|Adds an alert category.|  
 |OPERATOR|Adds an operator category.|  
   
- [ **@type =** ] **'**_type_**'**  
+`[ @type = ] 'type'`
  The type of category to be added. *type* is **varchar(12)**, with a default value of **LOCAL**, and can be one of these values.  
   
 |Value|Description|  
@@ -55,7 +54,7 @@ sp_add_category
 |MULTI-SERVER|A multiserver job category.|  
 |NONE|A category for a class other than JOB**.**|  
   
- [ **@name =** ] **'**_name_**'**  
+`[ @name = ] 'name'`
  The name of the category to be added. The name must be unique within the specified class. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

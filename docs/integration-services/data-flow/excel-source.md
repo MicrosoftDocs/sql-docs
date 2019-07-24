@@ -16,11 +16,14 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "sources [Integration Services], Excel"
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Excel Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Excel source extracts data from worksheets or ranges in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbooks.  
 
 > [!IMPORTANT]

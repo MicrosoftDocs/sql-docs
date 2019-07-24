@@ -13,18 +13,11 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use contained databases with Always On availability groups 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
- **In this Topic:**  
-  
--   [Prerequisites](#Prerequisites)  
-  
--   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

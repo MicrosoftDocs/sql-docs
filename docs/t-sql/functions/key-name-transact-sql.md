@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "KEY_NAME function"
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "geography data type [SQL Server], Transact-SQL"
   - "spatial data types [SQL Server]"
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Spatial Types - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SCM Services - Connect to Another Computer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ manager: craigg
   
 8.  In the **Add/Remove Snap-in** window, click **OK**.  
   
-9. Expand **Computer Management (***\<computer name>***)**, and **Services and Applications**.  
+9. Expand **Computer Management (**_\<computer name>_**)**, and **Services and Applications**.  
   
 10. Right-click **SQL Server Configuration Manager**, and then click **New Window from here**.  
   

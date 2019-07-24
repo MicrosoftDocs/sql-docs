@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Python SQL Driver - pyodbc
 

@@ -20,8 +20,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DTExecUI utility"
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Execute Package Utility (DtExecUI) UI Reference
@@ -61,7 +61,7 @@ manager: craigg
 |||  
 |-|-|  
 |Value|Description|  
-|**SQL Server**|Select this option when the package resides in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and provide a user name and password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Each user name and password adds the **/USER** *username* and **/PASSWORD** *password* options to the command prompt.|  
+|**SQL Server**|Select this option when the package resides in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and provide a user name and password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Each user name and password adds the **/USER** _username_ and **/PASSWORD** _password_ options to the command prompt.|  
 |**File system**|Select this option when the package resides in the file system.|  
 |**SSIS Package Store**|Select this option when the package resides in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store.|  
   

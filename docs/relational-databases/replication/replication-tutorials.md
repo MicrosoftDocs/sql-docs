@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ Learn how to configure transactional replication to replicate data between fully
 Learn how to configure merge replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
 ## See also  
-[Security and protection for replication](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [Transactional replication overview](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

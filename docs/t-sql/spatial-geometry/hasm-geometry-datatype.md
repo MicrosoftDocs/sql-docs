@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "HasM geometry"
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # HasM (geometry DataType)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,5 +45,4 @@ SELECT @p.HasM
 ## See Also  
  [Extended Methods on Geometry Instances](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
-  
   

@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial supplemental lesson: Detail Rows | Microsoft Docs"
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Supplemental lesson - Detail Rows
 
@@ -74,6 +75,6 @@ What we want to see here is a table containing columns and rows of data that con
   
 ## See also  
 
-[SELECTCOLUMNS Function (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
+[SELECTCOLUMNS Function (DAX)](/dax/selectcolumns-function-dax)  
 [Supplemental lesson - Dynamic security](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Supplemental lesson - Ragged hierarchies](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

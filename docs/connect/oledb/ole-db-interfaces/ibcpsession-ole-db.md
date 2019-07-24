@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "IBCPSession interface"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

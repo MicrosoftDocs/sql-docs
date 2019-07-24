@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Failover and Failover Modes (Always On Availability Groups)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,9 +77,9 @@ manager: craigg
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Planned manual failover|No|Yes|Yes|  
-|Forced failover|Yes|Yes|Yes**\***|  
+|Forced failover|Yes|Yes|Yes**&#42;**|  
   
- **\***If you issue a forced failover command on a synchronized secondary replica, the secondary replica behaves the same as for a manual failover.  
+ **&#42;**If you issue a forced failover command on a synchronized secondary replica, the secondary replica behaves the same as for a manual failover.  
   
  The amount of time that the database is unavailable during a failover depends on the type of failover and its cause.  
   

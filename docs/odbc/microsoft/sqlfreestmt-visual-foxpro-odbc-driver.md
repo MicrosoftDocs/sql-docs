@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFreeStmt (Visual FoxPro ODBC Driver)
 > [!NOTE]  

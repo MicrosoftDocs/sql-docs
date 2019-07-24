@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # New Peer Initialization (Peer-to-Peer Replication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

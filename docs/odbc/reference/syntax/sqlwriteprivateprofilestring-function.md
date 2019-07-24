@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLWritePrivateProfileString Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLWritePrivateProfileString(  
      LPCSTR     lpszSection,  

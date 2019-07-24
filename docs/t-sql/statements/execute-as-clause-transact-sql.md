@@ -23,9 +23,8 @@ helpviewer_keywords:
   - "switching execution context"
   - "functions [SQL Server], execution context"
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # EXECUTE AS Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

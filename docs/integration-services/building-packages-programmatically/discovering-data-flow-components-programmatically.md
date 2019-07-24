@@ -17,11 +17,14 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Discovering Data Flow Components Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you have added a data flow task to a package, your next step may be to determine what data flow components are available for your use. You can programmatically discover the data flow sources, transformations, and destinations that are installed and available on the local computer. For information about adding a data flow task to the package, see [Adding the Data Flow Task Programmatically](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md).  
   
 ## Discovering Components  

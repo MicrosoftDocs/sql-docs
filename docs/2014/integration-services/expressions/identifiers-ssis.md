@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], identifiers"
   - "qualified identifiers [Integration Services]"
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Identifiers (SSIS)
@@ -115,6 +115,6 @@ manager: craigg
 ```  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), on pragmaticworks.com  
   
   

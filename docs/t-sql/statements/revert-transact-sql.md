@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "COOKIE clause"
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

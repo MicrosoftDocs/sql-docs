@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "shared schedules [Reporting Services], methods"
   - "methods [Reporting Services], scheduling"
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Scheduling Methods
   You can use these methods to create and manage shared schedules for report execution and delivery, and to cache refresh plans utilized by the report server.  

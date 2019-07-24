@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use the Fail Over Availability Group Wizard (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ manager: craigg
   
 4.  The information presented by the **Introduction** page depends on whether any secondary replica is eligible for a planned failover. If this page says, "**Perform a planned failover for this availability group**", you can failover the availability group without data loss.  
   
-5.  On the **Select New Primary Replica** page, you can view the status of the current primary replica and of the WSFC quorum, before you choose the secondary replica that will become the new primary replica (the *failover target*). For a planned manual failover, be sure to select a secondary replica whose **Failover Readiness** value is "**No data loss**". For a forced failover, for all the possible failover targets, this value will be "**Data loss, Warnings(***#***)**", where *#* indicates the number of warnings that exist for a given secondary replica. To view the warnings for a given failover target, click its "Failover Readiness" value.  
+5.  On the **Select New Primary Replica** page, you can view the status of the current primary replica and of the WSFC quorum, before you choose the secondary replica that will become the new primary replica (the *failover target*). For a planned manual failover, be sure to select a secondary replica whose **Failover Readiness** value is "**No data loss**". For a forced failover, for all the possible failover targets, this value will be "**Data loss, Warnings(**_#_**)**", where *#* indicates the number of warnings that exist for a given secondary replica. To view the warnings for a given failover target, click its "Failover Readiness" value.  
   
      For more information, see [Select New Primary Replica page](#SelectNewPrimaryReplica), later in this topic.  
   
@@ -145,7 +144,7 @@ manager: craigg
 |Value|Description|  
 |-----------|-----------------|  
 |**No data loss**|This secondary replica currently supports planned failover. This value occurs only when a synchronous-commit mode secondary replica is currently synchronized with the primary replica.|  
-|**Data loss, Warnings(** *#* **)**|This secondary replica currently supports forced failover (with possible data loss). This value occurs whenever the secondary replica is not synchronized with the primary replica. Click the data-loss warnings link for information about the possible data loss.|  
+|**Data loss, Warnings(** _#_ **)**|This secondary replica currently supports forced failover (with possible data loss). This value occurs whenever the secondary replica is not synchronized with the primary replica. Click the data-loss warnings link for information about the possible data loss.|  
   
  **Refresh**  
  Click to update the grid.  

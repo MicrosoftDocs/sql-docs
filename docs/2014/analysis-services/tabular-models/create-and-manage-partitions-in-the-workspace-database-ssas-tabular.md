@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.partitionmgr.f1"
@@ -65,6 +64,6 @@ manager: craigg
   
 ## See Also  
  [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
- [Process Partitions in the Workspace Databse &#40;SSAS Tabular&#41;](process-partitions-in-the-workspace-databse-ssas-tabular.md)  
+ [Process Partitions in the Workspace Database &#40;SSAS Tabular&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

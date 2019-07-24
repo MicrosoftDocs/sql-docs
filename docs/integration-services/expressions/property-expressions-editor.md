@@ -12,11 +12,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "Property Expressions Editor dialog box"
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Property Expressions Editor
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Property Expressions Editor** dialog box to create, edit, or delete the property expressions that update property values.  
   
 ## Options  

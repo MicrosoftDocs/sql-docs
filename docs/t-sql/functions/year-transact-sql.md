@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "YEAR function [SQL Server]"
   - "dateparts [SQL Server], year"
 ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # YEAR (Transact-SQL)

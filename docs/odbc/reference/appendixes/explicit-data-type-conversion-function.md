@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Explicit Data Type Conversion Function
 Explicit data type conversion is specified in terms of SQL data type definitions.  
@@ -23,7 +22,7 @@ Explicit data type conversion is specified in terms of SQL data type definitions
   
  The format of the **CONVERT** function is:  
   
- **CONVERT(** *value_exp*, _data_type_**)**  
+ **CONVERT(** _value_exp_, _data_type_**)**  
   
  The function returns the value specified by *value_exp* converted to the specified *data_type*, where *data_type* is one of the following keywords:  
   

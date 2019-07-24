@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 66bcc445-9226-4419-b845-e0334875c80b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # isNamed Method (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

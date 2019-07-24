@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumPoints method"
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STNumPoints (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

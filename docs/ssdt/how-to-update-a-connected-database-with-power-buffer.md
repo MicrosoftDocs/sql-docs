@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.commitpreview.dialog"
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Update a Connected Database with Power Buffer
 SQL Server Data Tools Power Buffer technology makes it easy for you to apply changes to your connected database by storing all your edits in the current session. Any errors caused by editing in Power Buffer window (in either the Transact\-SQL Editor or Table Designer) immediately show up in the **Error List** pane, which enables you to follow the errors identified for further troubleshooting. You can verify your pending changes until you are ready to apply them to your database. During the update process, SSDT automatically creates an ALTER script based on your edits, and alerts you of any potential issues. You can then apply all the changes that have accumulated across all open Power Buffer windows to the same database, or save the ALTER script to be deployed later.  

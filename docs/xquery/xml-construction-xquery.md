@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "XML [SQL Server], construction"
   - "XQuery, XML construction"
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # XML Construction (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

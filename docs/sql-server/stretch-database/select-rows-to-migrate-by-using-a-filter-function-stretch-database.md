@@ -1,8 +1,7 @@
 ---
 title: "Select rows to migrate by using a filter function (Stretch Database) | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,9 +10,8 @@ helpviewer_keywords:
   - "Stretch Database, inline table-valued functions"
   - "inline table-valued functions for Stretch Database"
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Select rows to migrate by using a filter function (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

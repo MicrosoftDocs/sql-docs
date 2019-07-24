@@ -17,11 +17,14 @@ helpviewer_keywords:
   - "XML source [Integration Services]"
   - "XML Source Editor"
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # XML Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The XML source reads an XML data file and populates the columns in the source output with the data.  
   
  The data in XML files frequently includes hierarchical relationships. For example, an XML data file can represent catalogs and items in catalogs. Before the data can enter the data flow, the relationship of the elements in XML data file must be determined, and an output must be generated for each element in the file.  

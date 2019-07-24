@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration Code Access Security
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

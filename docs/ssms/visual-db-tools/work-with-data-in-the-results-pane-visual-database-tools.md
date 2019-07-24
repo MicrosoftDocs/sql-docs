@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
   - "Results pane"
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Work with Data in the Results Pane (Visual Database Tools)

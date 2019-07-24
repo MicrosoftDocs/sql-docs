@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on String Values - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ where CatalogDescription.exist('
   
  `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">`  
   
  `A TRUE multi-sport bike that offers streamlined riding and`  
   

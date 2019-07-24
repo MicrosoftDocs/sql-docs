@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "rowsets [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLValidDSN Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLValidDSN(  
      LPCSTR    lpszDSN);  

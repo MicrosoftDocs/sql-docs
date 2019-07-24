@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER FUNCTION (Transact-SQL)
@@ -206,7 +205,7 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Parentheses are required after the function name even if a parameter is not specified.  
   
- **@** *parameter_name*  
+ **@** _parameter_name_  
  Is a parameter in the user-defined function. One or more parameters can be declared.  
   
  A function can have a maximum of 2,100 parameters. The value of each declared parameter must be supplied by the user when the function is executed, unless a default for the parameter is defined.  

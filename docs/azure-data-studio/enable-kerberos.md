@@ -10,7 +10,6 @@ ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
 author: "meet-bhagdev"
 ms.author: "meetb"
-manager: craigg
 ---
 # Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 
@@ -21,7 +20,7 @@ In order to use Integrated Authentication (Windows Authentication) on macOS or L
 ## Prerequisites
 
 - Access to a Windows domain-joined machine in order to query your Kerberos Domain Controller.
-- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. More information on setting up Sql Server to authenticate using Kerberos can be found [here](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). There should be SPNs registered for each instance of Sql Server you are trying to connect to. Details about the format of SQL Server SPNs are listed [here](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. More information on setting up Sql Server to authenticate using Kerberos can be found [here](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). There should be SPNs registered for each instance of Sql Server you are trying to connect to. Details about the format of SQL Server SPNs are listed [here](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## Checking if Sql Server has Kerberos Setup
@@ -154,7 +153,7 @@ Get a Ticket Granting Ticket (TGT) from KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-View the available tickets using kinit. If the kinit was successful, you should see a ticket. 
+View the available tickets using klist. If the kinit was successful, you should see a ticket. 
 
 ```bash
 klist

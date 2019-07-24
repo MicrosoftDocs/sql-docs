@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "preprocessor tool [XML schemas]"
   - "XML schemas [SQL Server]"
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Preprocess a Schema to Merge Included Schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -189,7 +188,7 @@ public class XmlSchemaIncludeNormalizer
 ### books_common.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified" >  
   <xsd:element name="publisher" type="xsd:string"/>  
@@ -199,7 +198,7 @@ public class XmlSchemaIncludeNormalizer
 ### books.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified"  
      targetNamespace="bookstore-schema">  

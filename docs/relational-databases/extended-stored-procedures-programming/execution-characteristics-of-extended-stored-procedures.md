@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Execution Characteristics of Extended Stored Procedures
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

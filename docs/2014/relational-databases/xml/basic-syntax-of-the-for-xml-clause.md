@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "FOR XML clause, syntax"
   - "FOR XML clause, ROOT directive"
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Basic Syntax of the FOR XML Clause

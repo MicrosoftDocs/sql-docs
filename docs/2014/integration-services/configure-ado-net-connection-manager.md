@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetconnection.f1"
 helpviewer_keywords: 
   - "Configure ADO.NET Connection Manager dialog box"
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure ADO.NET Connection Manager

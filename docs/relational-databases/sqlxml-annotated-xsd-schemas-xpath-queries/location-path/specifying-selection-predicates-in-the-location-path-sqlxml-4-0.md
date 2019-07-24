@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "filtering [SQLXML]"
   - "location path for XPath query"
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Selection Predicates in the Location Path (SQLXML 4.0)

@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "out-of-memory conditions"
   - "XML schema collections [SQL Server], large"
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Large XML Schema Collections and Out-of-Memory Conditions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

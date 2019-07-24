@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "proxies [SQL Server Agent], deleting"
   - "removing SQL Server Agent proxies"
 ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Delete a SQL Server Agent Proxy

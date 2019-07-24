@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDifference (geometry Data Type)"
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STDifference (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -3,8 +3,8 @@ title: Virtualize external data in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description: This page details the steps for using the Create external table wizard for a CSV file
 author: Abiola
 ms.author: aboke
-manager: craigg
-ms.date: 12/13/2018
+ms.reviewer: mikeray
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
@@ -14,6 +14,21 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 # Use the External Table Wizard with CSV files
 
 SQL Server 2019 also allows the ability to virtualize data from a CSV file in HDFS.  This process allows the data to stay in its original location, however you can **virtualize** the data in a SQL Server instance so that it can be queried there like any other table in SQL Server. This feature will minimize the need for ETL processes. This is possible with the use of Polybase connectors. For more information on Data Virtualization, refer to our [Get started with PolyBase](polybase-guide.md) Document.
+
+## Prerequisite
+
+Starting in CTP 2.4, the data pool and storage pool external data sources are no longer created by default in your big data cluster. Before using the wizard, create the default **SqlStoragePool** external data source in your target database with the following Transact-SQL query. Make sure that you first change the context of the query to your target database.
+
+```sql
+-- Create default data sources for SQL Big Data Cluster
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+    CREATE EXTERNAL DATA SOURCE SqlDataPool
+    WITH (LOCATION = 'sqldatapool://controller-svc/default');
+
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+```
 
 ## Launch the External Table wizard
 
@@ -34,7 +49,7 @@ Click Next to proceed to the next step in the wizard, which sets the Database Ma
 
 ## Select Destination Database
 
-In this step, you will choose the destination databse you wish to virtualize the data into. The drop-down field will contain all acceptable databases in the SQL Master instance specified in the previous screen. Here you can also name the new external table and see the schema it will use.
+In this step, you will choose the destination database you wish to virtualize the data into. The drop-down field will contain all acceptable databases in the SQL Master instance specified in the previous screen. Here you can also name the new external table and see the schema it will use.
 
 ![Create a database master key](media/data-virtualization/csv-select-destination.png)
 

@@ -88,7 +88,7 @@ manager: kfile
 -   Or, click the parent hierarchy level, and then press Delete. This also removes all the child levels.  
   
 ## See Also  
- [Tabular Model Designer ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Tabular Model Designer](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   

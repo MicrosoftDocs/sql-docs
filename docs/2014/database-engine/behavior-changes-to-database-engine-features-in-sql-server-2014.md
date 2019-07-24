@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "behavior changes [SQL Server]"
@@ -19,10 +18,10 @@ manager: craigg
 # Behavior Changes to Database Engine Features in SQL Server 2014
   This topic describes behavior changes in the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## Behavior Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Behavior Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], queries against an XML document that contains strings over a certain length (more than 4020 characters) can return incorrect results. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], such queries return the correct results.  
   
-## Behavior Changes in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Behavior Changes in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### Metadata Discovery  
  Improvements in the [!INCLUDE[ssDE](../includes/ssde-md.md)] beginning with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] allow SQLDescribeCol to obtain more accurate descriptions of the expected results than those returned by SQLDescribeCol in previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  

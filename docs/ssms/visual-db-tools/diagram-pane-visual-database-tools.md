@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "joins [SQL Server], Query and View Designer"
   - "Diagram pane [Visual Database Tools]"
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Diagram Pane (Visual Database Tools)

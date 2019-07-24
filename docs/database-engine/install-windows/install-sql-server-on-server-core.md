@@ -10,7 +10,6 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Install SQL Server on Server Core
 
@@ -327,7 +326,7 @@ If you accidentally close the command prompt, you can start a new command prompt
  [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Install Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Configure a Server Core installation of Windows Server 2016 with Sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Failover Cluster Cmdlets in Windows PowerShell](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Failover Cluster Cmdlets in Windows PowerShell](/powershell/module/failoverclusters/)
 
   
   

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "client-side XML formatting"
   - "client-side-xml attribute"
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Client-side XML Formatting (SQLXML 4.0)

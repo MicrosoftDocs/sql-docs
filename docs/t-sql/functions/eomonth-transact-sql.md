@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EOMONTH function"
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EOMONTH (Transact-SQL)

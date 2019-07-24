@@ -15,11 +15,14 @@ helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Data Reader task [Integration Services]"
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # WMI Data Reader Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The WMI Data Reader task runs queries using the Windows Management Instrumentation (WMI) Query Language that returns information from WMI about a computer system. You can use the WMI Data Reader task for the following purposes:  
   
 -   Query the Windows event logs on a local or remote computer and write the information to a file or variable.  

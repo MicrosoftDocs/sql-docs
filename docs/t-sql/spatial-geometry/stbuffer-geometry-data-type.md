@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STBuffer (geometry Data Type)"
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STBuffer (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

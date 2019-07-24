@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +43,16 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher**= ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher to link to. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db**= ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database to link to. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to link to. *publication* is **sysname**, with no default.  
   
- [ **@security_mode**= ] *security_mode*  
+`[ @security_mode = ] security_mode`
  Is the security mode used by the Subscriber to connect to a remote Publisher for immediate updating. *security_mode* is **int**, and can be one of these values. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Value|Description|  
@@ -62,13 +61,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Uses the security context ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or Windows Authentication) of the user making the change at the Subscriber.<br /><br /> Note: This account must also exist at the Publisher with sufficient privileges. When using Windows Authentication, security account delegation must be supported.|  
 |**2**|Uses an existing, user-defined linked server login created using **sp_link_publication**.|  
   
- [ **@login**= ] **'***login***'**  
+`[ @login = ] 'login'`
  Is the login. *login* is **sysname**, with a default of NULL. This parameter must be specified when *security_mode* is **0**.  
   
- [ **@password**= ] **'***password***'**  
+`[ @password = ] 'password'`
  Is the password. *password* is **sysname**, with a default of NULL. This parameter must be specified when *security_mode* is **0**.  
   
- [ **@distributor=** ] **'***distributor***'**  
+`[ @distributor = ] 'distributor'`
  Is the name of the Distributor. *distributor* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

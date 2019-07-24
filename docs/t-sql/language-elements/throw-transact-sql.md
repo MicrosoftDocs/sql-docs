@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "THROW statement"
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # THROW (Transact-SQL)
@@ -106,7 +105,7 @@ END CATCH;
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- PRINT 'In catch block.';  
+ In catch block. 
  Msg 2627, Level 14, State 1, Line 1  
  Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.  
  The statement has been terminated.

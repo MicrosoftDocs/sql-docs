@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Uses of Catalog Data
 Applications use catalog data in a variety of ways. Here are some common uses:  

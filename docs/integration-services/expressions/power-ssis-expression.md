@@ -10,11 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "POWER function"
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # POWER (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the result of raising a numeric expression to a power. The power parameter must evaluate to an integer.  
   
 ## Syntax  

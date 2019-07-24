@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "concurrency [SQLXML]"
   - "intermediate concurrency protection [SQLXML]"
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)

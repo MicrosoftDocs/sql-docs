@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refreshsqlmodule (Transact-SQL)
@@ -51,10 +50,10 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'**_module\_name_**'**  
+`[ @name = ] 'module\_name'`
  Is the name of the stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger. *module_name* cannot be a common language runtime (CLR) stored procedure or a CLR function. *module_name* cannot be schema-bound. *module_name* is **nvarchar**, with no default. *module_name* can be a multi-part identifier, but can only refer to objects in the current database.  
   
- [ **,** @**namespace** = ] **'** \<class> **'**  
+`[ , @namespace = ] ' \<class> '`
  Is the class of the specified module. When *module_name* is a DDL trigger, \<class> is required. *\<class>* is **nvarchar**(20). Valid inputs are:  
   
 |||  

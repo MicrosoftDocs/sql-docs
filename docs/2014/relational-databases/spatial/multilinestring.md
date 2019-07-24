@@ -9,8 +9,8 @@ helpviewer_keywords:
   - "MultiLineString geometry subtype [SQL Server]"
   - "geometry subtypes [SQL Server]"
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 ---
 # MultiLineString

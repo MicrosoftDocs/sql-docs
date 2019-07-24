@@ -34,9 +34,8 @@ helpviewer_keywords:
   - "NOEXPAND table hint"
   - "PAGLOCK table hint"
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # Hints (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

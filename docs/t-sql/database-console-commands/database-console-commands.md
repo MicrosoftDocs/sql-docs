@@ -10,9 +10,8 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # Database Console Commands
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

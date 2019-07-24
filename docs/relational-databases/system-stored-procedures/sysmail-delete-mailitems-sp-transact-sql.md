@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +34,10 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## Arguments  
- [ **@sent_before=** ] **'***sent_before***'**  
+`[ @sent_before = ] 'sent_before'`
  Deletes e-mails up to the date and time provided as the *sent_before* argument. *sent_before* is **datetime** with NULL as default. NULL indicates all dates.  
   
- [ **@sent_status=** ] **'***sent_status***'**  
+`[ @sent_status = ] 'sent_status'`
  Deletes e-mails of the type specified by *sent_status*. *sent_status* is **varchar(8)** with no default. Valid entries are **sent**, **unsent**, **retrying**, and **failed**. NULL indicates all statuses.  
   
 ## Return Code Values  

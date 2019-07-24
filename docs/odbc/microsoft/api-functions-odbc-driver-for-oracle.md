@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

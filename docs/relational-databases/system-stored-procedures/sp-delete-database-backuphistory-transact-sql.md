@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## Arguments  
- [ **@database_name=** ] *database_name*  
+`[ @database_name = ] database_name`
  Specifies the name of the database involved in backup and restore operations. *database_name* is **sysname**, with no default.  
   
 ## Return Code Values  

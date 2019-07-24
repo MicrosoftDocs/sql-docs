@@ -1,14 +1,12 @@
 ---
-title: Configure SSIS on Linux with ssis-conf | Microsoft Docs
+title: Configure SSIS on Linux with ssis-conf
 description: This article describes how to configure SQL Server Integration Services (SSIS) on Linux with the ssis-conf utility.
-author: leolimsft 
+author: lrtoyou1223 
 ms.author: lle 
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Configure SQL Server Integration Services on Linux with ssis-conf

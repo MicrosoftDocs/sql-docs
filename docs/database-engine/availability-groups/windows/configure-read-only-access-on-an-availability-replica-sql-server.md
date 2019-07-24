@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure read-only access to a secondary replica of an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,35 +23,12 @@ manager: craigg
   
  For information about the implications of enabling read-only access for a secondary replica and for an introduction to connection access, see [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) and [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
--   **Before you begin:**  
-  
-     [Prerequisites and Restrictions](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To configure access on an availability replica, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:**  [After Configuring Read-Only Access for an Availability Replica](#FollowUp)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites and Restrictions  
+ 
+##  <a name="Prerequisites"></a> Prerequisites and Restrictions  
   
 -   To configure different connection access, you must be connected to the server instance that hosts the primary replica.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 |Task|Permissions|  
 |----------|-----------------|  
@@ -153,7 +129,7 @@ GO
   
 2.  When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. The relevant parameters are as follows:  
   
-    -   To configure connection access for the secondary role, specify the **ConnectionModeInSecondaryRole***secondary_role_keyword* parameter, where *secondary_role_keyword* equals one of the following values:  
+    -   To configure connection access for the secondary role, specify the **ConnectionModeInSecondaryRole**_secondary_role_keyword_ parameter, where *secondary_role_keyword* equals one of the following values:  
   
          **AllowNoConnections**  
          No direct connections are allowed to the databases in the secondary replica and the databases are not available for read access. This is the default setting.  
@@ -164,7 +140,7 @@ GO
          **AllowAllConnections**  
          All connections are allowed to the databases in the secondary replica for read-only access.  
   
-    -   To configure connection access for the primary role, specify **ConnectionModeInPrimaryRole***primary_role_keyword*, where *primary_role_keyword* equals one of the following values:  
+    -   To configure connection access for the primary role, specify **ConnectionModeInPrimaryRole**_primary_role_keyword_, where *primary_role_keyword* equals one of the following values:  
   
          **AllowReadWriteConnections**  
          Connections where the Application Intent connection property is set to ReadOnly are disallowed. When the Application Intent property is set to ReadWrite or the Application Intent connection property is not set, the connection is allowed. For more information about Application Intent connection property, see [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
@@ -226,7 +202,7 @@ DATABASEPROPERTYEX([db name],'UpdateAbility') = N'READ_ONLY'
   
 -   [Always On: Why there are two options to enable a secondary replica for read workload?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [Always On: Setting up Readable Seconary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx)  
+-   [Always On: Setting up Readable Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-setting-up-readable-seconary-replica.aspx)  
   
 -   [Always On: I just enabled Readable Secondary but my query is blocked?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   

@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Creating User-Defined Types - Coding
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -608,7 +607,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Use the **Write** method for the **Currency** UDT to determine how the UDT is persisted on disk and therefore how UDT values are compared and ordered for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations.  
   
 3.  Save the **Currency** UDT using the following binary format:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Save the culture as a UTF-16 encoded string for bytes 0-19 with padding to the right with null characters.  
   
     2.  Use bytes 20 and above to contain the decimal value of the currency.  

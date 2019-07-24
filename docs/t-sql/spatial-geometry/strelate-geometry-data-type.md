@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STRelate (geometry Data Type)"
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STRelate (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

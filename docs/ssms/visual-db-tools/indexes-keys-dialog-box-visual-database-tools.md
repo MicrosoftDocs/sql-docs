@@ -11,9 +11,8 @@ f1_keywords:
   - "vdtsql.chm:65539"
   - "vdt.ppg.indexeskeys"
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Indexes - Keys Dialog Box (Visual Database Tools)

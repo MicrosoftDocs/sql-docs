@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADCPROP_UPDATECRITERIA_ENUM
 Specifies which fields can be used to detect conflicts during an optimistic update of a row of the data source with a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

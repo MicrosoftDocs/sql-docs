@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CurveToLineWithTolerance method (geometry)"
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # CurveToLineWithTolerance (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "rows [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Fetch Rows from a Result Set (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

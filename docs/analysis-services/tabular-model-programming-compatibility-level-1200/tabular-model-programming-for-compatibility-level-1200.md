@@ -45,7 +45,7 @@ Upgrading an existing Tabular solution is recommended but not required. Existing
 ## See Also  
  [Analysis Services Developer Documentation](../../analysis-services/analysis-services-developer-documentation.md)   
  [Tabular Model Programming for Compatibility Levels 1050 through 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Technical Reference ](../../analysis-services/powershell/technical-reference-ssas.md)[Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
+ [Technical Reference](../../analysis-services/powershell/technical-reference-ssas.md)[Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
  [Compatibility levels of Tabular models and databases](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
   
   

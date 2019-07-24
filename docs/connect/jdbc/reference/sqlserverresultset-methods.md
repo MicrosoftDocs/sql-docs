@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerResultSet Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

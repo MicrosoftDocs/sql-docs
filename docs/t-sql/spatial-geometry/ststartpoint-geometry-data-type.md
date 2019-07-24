@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STStartPoint (geometry Data Type)"
 ms.assetid: 049917db-3f76-4053-8cd2-bc54158e89bc
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STStartPoint (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

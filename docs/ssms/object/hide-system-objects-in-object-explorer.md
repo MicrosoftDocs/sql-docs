@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "objects [SQL Server], hiding"
   - "Object Explorer, hiding objects"
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Hide System Objects in Object Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

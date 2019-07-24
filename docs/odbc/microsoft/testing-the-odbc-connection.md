@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5e671665-2aba-49a7-8871-70784d8b3cc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Testing the ODBC Connection
 > [!IMPORTANT]  

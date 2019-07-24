@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "SETUSER statement"
   - "user impersonation [SQL Server]"
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SQL Server Agent, about SQL Server Agent"
   - "automatic administration steps"
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent

@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "bitwise NOT (~)"
   - "~ (bitwise NOT)"
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # ~ (Bitwise Not) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a bitwise negation of an integer. This operator can be applied to signed and unsigned integer data types.  
   
 ## Syntax  

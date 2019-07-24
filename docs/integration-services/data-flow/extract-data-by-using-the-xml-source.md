@@ -12,11 +12,14 @@ helpviewer_keywords:
   - "sources [Integration Services], XML"
   - "XML source [Integration Services]"
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Extract Data by Using the XML Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To add and configure an XML source, the package must already include at least one Data Flow task.  
   
 ### To extract data using an XML source  

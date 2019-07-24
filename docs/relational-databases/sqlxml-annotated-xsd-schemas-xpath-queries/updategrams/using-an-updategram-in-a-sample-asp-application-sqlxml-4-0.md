@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "Active Server Pages"
   - "updategrams [SQLXML], ASP applications"
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using an Updategram in a Sample ASP Application (SQLXML 4.0)

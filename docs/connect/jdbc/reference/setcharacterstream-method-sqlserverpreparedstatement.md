@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fe13326b-799d-4bf3-b4f1-32ab1841d0ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setCharacterStream Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View User-defined Functions
@@ -64,8 +63,10 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     -   Aggregate Function  
   
 4.  Right-click the function of which you want to view the properties and select **Properties**.  
-  
-     The following properties appear in the **Function Properties -** *function_name* dialog box.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
      **Database**  
      The name of the database containing this function.  

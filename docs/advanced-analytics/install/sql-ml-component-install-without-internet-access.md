@@ -1,14 +1,13 @@
 ---
-title: Install R language and Python components without internet access - SQL Server Machine Learning
+title: Install R language and Python components without internet access
 description: Offline or disconnected Machine Learning R and Python setup on isolated SQL Server instance behind a network firewall.
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 # Install SQL Server machine learning R and Python on computers with no internet access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -17,8 +16,8 @@ By default, installers connect to Microsoft download sites to get required and u
 
 In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
 
-+ SQL Server 2017 includes R and Python. 
-+ SQL Server 2016 is R-only. 
++ SQL Server 2017 includes R and Python 
++ SQL Server 2016 is R-only.
 
 On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
 
@@ -60,7 +59,7 @@ Release  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
-**SQL Server 2016 SP 2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
+**SQL Server 2016 SP 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
 
 ### 2 - Get SQL Server 2016 installation media
 
@@ -70,7 +69,9 @@ One way to get an .iso file containing the installation media is through [Visual
 
 ## Transfer files
 
-Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as **Downloads** or the setup user's %temp* folder.
+Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as the setup user's %TEMP* folder.
+
+The %TEMP% folder is required for Python CAB files. For R, you can use %TEMP% or set the myrcachedirectory parameter to the CAB path.
 
 The following screenshot shows SQL Server 2017 CAB and ISO files. SQL Server 2016 downloads look different: fewer files (no Python), and the installation media file name is for 2016.
 

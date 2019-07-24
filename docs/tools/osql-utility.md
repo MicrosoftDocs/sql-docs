@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "command prompt utilities [SQL Server], osql"
   - "CTRL+C command"
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # osql Utility
@@ -256,7 +255,7 @@ osql -E -i titles.qry -o titles.res
 >  When using **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] treats the batch separator GO, if it appears in a SQL script file, as a syntax error.  
   
 ## Inserting Comments  
- You can include comments in a Transact-SQL statement submitted to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by **osql**. Two types of commenting styles are allowed: -- and /*...\*/.  
+ You can include comments in a Transact-SQL statement submitted to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by **osql**. Two types of commenting styles are allowed: `--` and `/*...*/`.  
   
 ## Using EXIT to Return Results in osql  
  You can use the result of a SELECT statement as the return value from **osql**. If it is numeric, the last column of the last result row is converted to a 4-byte integer (long). MS-DOS passes the low byte to the parent process or operating system error level. Windows passes the entire 4-byte integer. The syntax is:  

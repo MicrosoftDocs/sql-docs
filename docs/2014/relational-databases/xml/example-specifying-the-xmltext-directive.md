@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "XMLTEXT directive"
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Example: Specifying the XMLTEXT Directive
@@ -92,9 +92,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- If *AttributeName* is specified with the `xmltext` directive, the attributes of the <`overflow`> element are added as attributes of the subelements of the enclosing <`Parent`> element. The name specified for *AttributeName* becomes the name of the subelement  
+ If *AttributeName* is specified with the `xmltext` directive, the attributes of the <`overflow`> element are added as attributes of the subelements of the enclosing <`Parent`> element. The name specified for *AttributeName* becomes the name of the subelement.  
   
- In this query, *AttributeName*, <`overflow`>, is specified together with the `xmltext` directive*:*  
+ In this query, *AttributeName*, <`overflow`>, is specified together with the `xmltext` directive:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

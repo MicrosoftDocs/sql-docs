@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "REVOKE statement, system objects"
   - "permissions [SQL Server], system objects"
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE System Object Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

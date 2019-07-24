@@ -5,7 +5,7 @@ ms.date: "08/10/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.topic: conceptual
 f1_keywords: 
   - "CREATE EXTERNAL TABLE AS SELECT"
@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)

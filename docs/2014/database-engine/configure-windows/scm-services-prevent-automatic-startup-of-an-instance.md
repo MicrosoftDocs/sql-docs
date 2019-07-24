@@ -31,9 +31,9 @@ manager: craigg
   
 3.  In the details pane, right-click **MSSQLServer**, and then click **Properties.**  
   
-4.  In the **SQL Server \<***instancename***> Properties** dialog box, in the **Properties** box, set the value of **Start Mode** to **Manual**.  
+4.  In the **SQL Server \<**_instancename_**> Properties** dialog box, in the **Properties** box, set the value of **Start Mode** to **Manual**.  
   
-5.  Click **OK** to close the **SQL Server \<***instancename***> Properties** dialog box, and then close [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
+5.  Click **OK** to close the **SQL Server \<**_instancename_**> Properties** dialog box, and then close [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
 ## See Also  
  [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](start-stop-pause-resume-restart-sql-server-services.md)  

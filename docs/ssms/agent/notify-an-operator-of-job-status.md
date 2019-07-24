@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, notification options"
   - "notifications [SQL Server], job status"
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Notify an Operator of Job Status

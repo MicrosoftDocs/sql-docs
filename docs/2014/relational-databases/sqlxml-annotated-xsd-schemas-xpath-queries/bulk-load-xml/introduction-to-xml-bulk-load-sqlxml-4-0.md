@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "transacted XML Bulk Load operations"
   - "streaming XML data"
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Introduction to XML Bulk Load (SQLXML 4.0)

@@ -40,6 +40,6 @@ manager: craigg
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
+
   
   

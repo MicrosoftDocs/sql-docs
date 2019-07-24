@@ -1,8 +1,8 @@
 ---
 title: "Create the RSExecRole | Microsoft Docs"
-ms.date: 05/30/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 
@@ -10,13 +10,13 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RSExecRole"
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Create the RSExecRole
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a predefined database role called **RSExecRole** to grant report server permissions to the report server database. The **RSExecRole** role is created automatically with the report server database. As a rule, you should never modify it or assign other users to the role. However, when you move a report server database to a new or different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a predefined database role called **RSExecRole** to grant report server permissions to the report server database. The **RSExecRole** role is created automatically with the report server database. As a rule, you should never modify it or assign other users to the role. However, when you move a report server database to a new or different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], you must re-create the role in the Master and MSDB system databases.  
   
  Using the following instructions, you will perform the following steps:  
   
@@ -25,7 +25,7 @@ ms.author: maghan
 -   Create and provision the **RSExecRole** in the MSDB system database.  
   
 > [!NOTE]  
->  The instructions in this topic are intended for users who do not want to run a script or write WMI code to provision the report server database. If you manage a large deployment and will be moving databases routinely, you should write a script to automate these steps. For more information, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
+> The instructions in this topic are intended for users who do not want to run a script or write WMI code to provision the report server database. If you manage a large deployment and will be moving databases routinely, you should write a script to automate these steps. For more information, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
 ## Before you start  
   
@@ -35,14 +35,14 @@ ms.author: maghan
   
 -   Verify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is installed and running on the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that you plan to use.  
   
--   Attach the reportservertempdb and reportserver databases. You are not required to attach the databases to create the actual role, but they must be attached before you can test your work.  
+-   Attach the ReportServerTempDB and ReportServer databases. You are not required to attach the databases to create the actual role, but they must be attached before you can test your work.  
   
  The instructions for manually creating the **RSExecRole** are intended to be used within the context of migrating a report server installation. Important tasks such as backing up and moving the report server database are not addressed in this topic, but are documented in the Database Engine documentation.  
   
-## Create RSExecRole in Master  
+## Create RSExecRole in master  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses extended stored procedures for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to support scheduled operations. The following steps explain how to grant Execute permissions for the procedures to the **RSExecRole** role.  
   
-#### To create RSExecRole in the Master system database using Management Studio  
+### To create RSExecRole in the master system database using Management Studio  
   
 1.  Start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and connect to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance that hosts the report server database.  
   
@@ -56,13 +56,13 @@ ms.author: maghan
   
 6.  Open **Roles**.  
   
-7.  Right-click **Database Roles**, and select **New Database Role**. The General page appears.  
+7.  Right-click **Database Roles**, and select **New Database Role**. The **Database Role - New** page appears.  
   
 8.  In **Role name**, type **RSExecRole**.  
   
-9. In **Owner**, type **DBO**.  
+9. In **Owner**, type **dbo**.  
   
-10. Click **Securables**.  
+10. Select page **Securables**.  
   
 11. Click **Search**. The **Add Objects** dialog box appears. The **Specific Objects** option is selected by default.  
   
@@ -86,16 +86,18 @@ ms.author: maghan
   
 18. Click **OK**, and the click **OK** again.  
   
-19. In the **Execute** row, in the **Grant** column, click the check box, and then click **OK**.  
+19. In the **Execute** row, in the **Grant** column, select the check box.  
   
 20. Repeat for each of the remaining stored procedures. **RSExecRole** must be granted Execute permissions for all three stored procedures.  
+
+21. Select **OK** to finish.  
   
  ![Database Role Properties page](../../reporting-services/security/media/rsexecroledbproperties.gif "Database Role Properties page")  
   
 ## Create RSExecRole in MSDB  
  Reporting Services uses stored procedures for SQL Server Agent service and retrieves job information from system tables to support scheduled operations. The following steps explain how to grant Execute permissions for the procedures and Select permissions on the tables to the RSExecRole.  
   
-#### To create RSExecRole in the MSDB system database  
+### To create RSExecRole in the MSDB system database  
   
 1.  Repeat similar steps for granting permissions to stored procedures and tables in MSDB. To simplify the steps, you will provision the stored procedures and tables separately.  
   
@@ -109,11 +111,11 @@ ms.author: maghan
   
 6.  In Role name, type **RSExecRole**.  
   
-7.  In Owner, type **DBO**.  
+7.  In Owner, type **dbo**.  
   
-8.  Click **Securables**.  
+8.  Select the **Securables** page.  
   
-9. Click **Add**. The **Add Objects** dialog box appears. The **Specify Objects** option is selected by default.  
+9.  Click **Search**. The **Add Objects** dialog box appears. The **Specify Objects** option is selected by default.  
   
 10. Click **OK**.  
   
@@ -147,15 +149,15 @@ ms.author: maghan
   
     10. sp_verify_job_identifiers  
   
-16. Click **OK**, and the click **OK** again.  
+16. Click **OK**, and then click **OK** again.  
   
 17. Select the first stored procedure: sp_add_category.  
   
-18. In the **Execute** row, in the **Grant** column, click the checkbox, and then click **OK**.  
+18. In the **Execute** row, in the **Grant** column, click the checkbox.  
   
 19. Repeat for each of the remaining stored procedures. RSExecRole must be granted Execute permissions for all ten stored procedures.  
   
-20. On the Securables tab, and click **Add** again. The **Add Objects** dialog box appears. The **Specify Objects** option is selected by default.  
+20. Still on the **Securables** page, click **Search** again. The **Add Objects** dialog box appears. The **Specify Objects** option is selected by default.  
   
 21. Click **OK**.  
   
@@ -177,21 +179,23 @@ ms.author: maghan
   
 28. Select the first table: syscategories.  
   
-29. In the **Select** row, in the **Grant** column, click the checkbox, and then click **OK**.  
+29. In the **Select** row, in the **Grant** column, click the checkbox.  
   
 30. Repeat for the sysjobs table. RSExecRole must be granted Select permissions for both tables.  
   
-## Move the Report Server Database  
+31. Select **OK** to finish.  
+  
+## Move the Report Server database  
  After you create the roles, you can move the report server database to new SQL Server instance. For more information, see [Moving the Report Server Databases to Another Computer](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
- If you are upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to SQL Server 2016, you can upgrade it before or after moving the database.  
+ If you are upgrading the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to SQL Server 2016 or later, you can upgrade it either before or after moving the database.  
   
  The report server database will be upgraded automatically when the report server connects to it. There are no specific steps required for upgrading the database.  
   
-## Restore Encryption Keys and Verify Your Work  
+## Restore encryption keys and verify your work  
  If you have attached the report server databases, you should now be able to complete the following steps to verify your work.  
   
-#### To verify report server operability after a database move  
+### To verify report server operability after a database move  
   
 1.  Start the Reporting Services Configuration tool and connect to the report server.  
   
@@ -203,13 +207,13 @@ ms.author: maghan
   
 5.  Enter the server name of the Database Engine. If you attached the report server databases to a named instance, you must type the instance name in this format: \<servername>\\<instancename\>.  
   
-6.  Click **Test Connection**.  
+6.  Click **Test Connection**. You should see a dialog box that states, "Test Connection Succeeded."
   
-7.  Click **Next**.  
+7.  Select **Ok** to close the dialog box and then select **Next**.  
   
 8.  On the Database, select the report server database.  
   
-9. Click **Next** and complete the wizard.  
+9.  Click **Next** and complete the wizard.  
   
 10. Click **Encryption Keys**.  
   
@@ -219,9 +223,9 @@ ms.author: maghan
   
 13. Enter the password and click **OK**.  
   
-14. Click **Report Manager URL**.  
+14. Click **Web Portal URL**.  
   
-15. Click the link to open Report Manager. You should see the report server items from the report server database.  
+15. Click the link to open the web portal. You should see the report server items from the report server database.  
 
 ## Creating the RSExecRole Role and permissions using T-SQL
 The role can also be created, and applicable permissions granted, on the system databases using the following T-SQL script:

@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "extracting information of XML nodes [SQL Server]"
   - "OPENXML statement, metaproperties"
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Specify Metaproperties in OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

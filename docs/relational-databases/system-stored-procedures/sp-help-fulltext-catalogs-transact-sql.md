@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_catalogs"
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ```  
   
 ## Arguments  
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`
  Is the name of the full-text catalog. *fulltext_catalog_name* is **sysname**. If this parameter is omitted or has the value NULL, information about all full-text catalogs associated with the current database is returned.  
   
 ## Return Code Values  

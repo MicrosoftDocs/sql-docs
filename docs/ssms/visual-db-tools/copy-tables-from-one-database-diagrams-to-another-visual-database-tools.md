@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "copying tables"
   - "duplicating tables"
 ms.assetid: 155a4f09-9321-4887-a7d4-aa2ce6b51277
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Copy Tables from One Database Diagrams to Another (Visual Database Tools)

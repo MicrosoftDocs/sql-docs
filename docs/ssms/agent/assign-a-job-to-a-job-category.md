@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, assigning"
   - "assigning job to category"
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Assign a Job to a Job Category

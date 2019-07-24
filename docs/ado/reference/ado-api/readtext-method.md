@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ReadText Method
 Reads specified number of characters from a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

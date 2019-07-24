@@ -53,7 +53,7 @@ When you import data or use a value in a formula, even if the original data sour
 >  You cannot import from a **varchar(max)** column that contains a string length of more than 131,072 characters.  
   
 ### Table data type  
- In addition, DAX uses a *table* data type. This data type is used by DAX in many functions, such as aggregations and time intelligence calculations. Some functions require a reference to a table; other functions return a table that can then be used as input to other functions. In some functions that require a table as input, you can specify an expression that evaluates to a table; for some functions, a reference to a base table is required. For information about the requirements of specific functions, see [DAX Function Reference](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ In addition, DAX uses a *table* data type. This data type is used by DAX in many functions, such as aggregations and time intelligence calculations. Some functions require a reference to a table; other functions return a table that can then be used as input to other functions. In some functions that require a table as input, you can specify an expression that evaluates to a table; for some functions, a reference to a base table is required. For information about the requirements of specific functions, see [DAX Function Reference](/dax/dax-function-reference).  
   
 ##  <a name="bkmk_implicit"></a> Implicit and explicit data type conversion in DAX Formulas
   
@@ -130,7 +130,7 @@ When you import data or use a value in a formula, even if the original data sour
  For example, if an integer is combined with a currency value in a division operation, both values are converted to real numbers, and the result is also a real number.  
   
 #### Comparison operators  
-Only a limited set of mixed data-type combinations for comparison operations is supported. To learn more, see [DAX Operator Reference](https://msdn.microsoft.com/library/ee634237.aspx).  
+Only a limited set of mixed data-type combinations for comparison operations is supported. To learn more, see [DAX Operator Reference](/dax/dax-operator-reference).  
   
 ## <a name="bkmk_hand_blanks"></a> Handling of blanks, empty strings, and zero values  
  The following table summarizes the differences between DAX and in Microsoft Excel, in the way that blanks are handled:  
@@ -151,5 +151,5 @@ Only a limited set of mixed data-type combinations for comparison operations is 
 |BLANK OR BLANK|BLANK|Error|  
 |BLANK AND BLANK|BLANK|Error|  
   
- For details on how a particular function or operator handles blanks, see the individual topics for each DAX function, in the section, [DAX Function Reference](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ For details on how a particular function or operator handles blanks, see the individual topics for each DAX function, in the section, [DAX Function Reference](/dax/dax-function-reference).  
   

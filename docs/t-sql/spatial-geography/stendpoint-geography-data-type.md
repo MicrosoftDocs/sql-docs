@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STEndpoint method"
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STEndpoint (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

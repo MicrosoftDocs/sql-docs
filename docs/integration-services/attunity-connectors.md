@@ -9,11 +9,14 @@ ms.custom: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Microsoft Connectors for Oracle and Teradata by Attunity for Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 You can download connectors for Integration Services by Attunity that optimize performance when loading data to or from Oracle or Teradata in an SSIS package.
 

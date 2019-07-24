@@ -14,9 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reauthorize_db stored procedure"
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

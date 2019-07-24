@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "system objects [SQL Server]"
   - "cryptography [SQL Server], system objects"
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DENY System Object Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

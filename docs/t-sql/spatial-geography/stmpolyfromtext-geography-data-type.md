@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPolyFromText method"
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STMPolyFromText (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

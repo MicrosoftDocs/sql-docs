@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## Arguments  
- [ **@viewname**= ] **'***view_name***'**  
+`[ @viewname = ] 'view_name'`
  Is the name of the view to verify. *view_name* is **sysname**, with no default.  
   
- [ **@fhasnullcols**= ] *field_has_null_columns* OUTPUT  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT`
  Is the flag indicating whether the view index has columns that allow NULL. *view_name* is **sysname**, with no default. Returns a value of **1** if the view index has columns that allow NULL. Returns a value of **0** if the view does not contain columns that allow NULLS.  
   
 > [!NOTE]  

@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "!< (not less than)"
   - "not less than operator (!<)"
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # !&lt; (Not Less Than) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "create,data quality project"
   - "data quality project,create"
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Create a Data Quality Project
 

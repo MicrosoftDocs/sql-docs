@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_validname (Transact-SQL)
@@ -36,10 +35,10 @@ sp_validname [@name =] 'name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the [identifiers](../../relational-databases/databases/database-identifiers.md) for which to check validity. *name* is **sysname**, with no default. *name* cannot be NULL, cannot be an empty string, and cannot contain a binary-zero character.  
   
- [ **@raise_error=** ] *raise_error*  
+`[ @raise_error = ] raise_error`
  Specifies whether to raise an error. *raise_error* is **bit**, with a default of 1. This means that errors will appear. 0 causes no error messages to appear.  
   
 ## Return Code Values  

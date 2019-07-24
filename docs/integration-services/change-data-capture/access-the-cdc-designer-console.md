@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "accMsDes"
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Access the CDC Designer Console
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can access the CDC Designer Console from the computer where you installed the console. For more information about installation, see Installation.  
   
  When you open the CDC Designer Console, the Connect to SQL Server dialog box opens.  

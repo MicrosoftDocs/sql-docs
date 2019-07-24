@@ -17,11 +17,14 @@ helpviewer_keywords:
   - "expressions [Integration Services], property expressions"
   - "property expressions [Integration Services]"
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Use Property Expressions in Packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A property expression is an expression that is assigned to a property to enable dynamic update of the property at run time. For example, a property expression can update the To line that a Send Mail task uses by inserting an e-mail address that is stored in a variable.  
   
  An expression can be added to a package, task, Foreach Loop, For Loop, Sequence, Foreach enumerator, event handler, a package or project level connection manager, or log provider. Any property of these objects that is read/write can implement a property expression. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] also supports the use of property expressions in some custom properties of data flow components. Variables and precedence constraints do not support property expressions, but they include special properties in which you can use expressions.  

@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "outer joins"
   - "joins [SQL Server], outer"
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Create Outer Joins (Visual Database Tools)

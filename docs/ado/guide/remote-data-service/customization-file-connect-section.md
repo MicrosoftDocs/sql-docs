@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Customization File Connect Section
 The default behavior of the handler is to deny all connections. The **connect** section specifies exceptions to that behavior. For example, if all the **connect** sections were absent or empty, then by default no connections could be made.  
@@ -51,11 +50,11 @@ connectionString
 |Part|Description|  
 |----------|-----------------|  
 |**Connect**|A literal string that indicates this is a connection string entry.|  
-|***connectionString***|A string that replaces the whole client connection string.|  
+|**_connectionString_**|A string that replaces the whole client connection string.|  
 |**Access**|A literal string that indicates this is an access entry.|  
-|***accessRight***|One of the following access rights:<br /><br /> -   **NoAccess** - User cannot access the data source.<br />-   **ReadOnly** - User can read the data source.<br />-   **ReadWrite** - User can read or write to the data source.|  
+|**_accessRight_**|One of the following access rights:<br /><br /> -   **NoAccess** - User cannot access the data source.<br />-   **ReadOnly** - User can read the data source.<br />-   **ReadWrite** - User can read or write to the data source.|  
   
- If you want to allow any connection (in effect, disabling the default handler behavior), set the access entry in the **connect default** section to `Access=ReadWrite`, and delete or comment out any other **connect** *identifier* section.  
+ If you want to allow any connection (in effect, disabling the default handler behavior), set the access entry in the **connect default** section to `Access=ReadWrite`, and delete or comment out any other **connect** _identifier_ section.  
   
 ## See Also  
  [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

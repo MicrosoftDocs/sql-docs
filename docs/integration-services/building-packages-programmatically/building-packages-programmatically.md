@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services 
 ms.topic: "reference"
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Building Packages Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   If you need to create packages dynamically, or to manage and execute [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. In this approach, you have a continuous range of options:  
   
 -   Load and execute an existing package without modification.  

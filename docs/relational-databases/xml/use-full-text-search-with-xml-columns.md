@@ -11,12 +11,13 @@ helpviewer_keywords:
   - "xml columns [full-text search]"
   - "indexes [full-text search]"
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Use Full-Text Search with XML Columns
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
   You can create a full-text index on XML columns that indexes the content of the XML values, but ignores the XML markup. Element tags are used as token boundaries. The following items are indexed:  
   
 -   The content of XML elements.  
@@ -28,11 +29,13 @@ manager: craigg
 1.  First, filter the XML values of interest by using SQL full-text search.  
   
 2.  Next, query those XML values that use XML index on the XML column.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Example: Combining Full-text Search with XML Querying  
  After the full-text index has been created on the XML column, the following query checks that an XML value contains the word "custom" in the title of a book:  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'custom')   
@@ -48,7 +51,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
 ## Example: Full-text Search on XML Values Using Stemming  
  The XQuery **contains()** check that was performed in the previous example generally cannot be eliminated. Consider this query:  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'run')   

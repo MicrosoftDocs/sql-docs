@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 8deb1987-c4e3-4599-8e37-0a04ec20b480
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsExtendedSQLGrammar Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

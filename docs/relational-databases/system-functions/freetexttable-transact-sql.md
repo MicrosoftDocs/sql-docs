@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "ranked results [full-text search]"
   - "column searches [full-text search]"
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FREETEXTTABLE (Transact-SQL)
@@ -157,7 +156,7 @@ GO
 ```  
   
 > [!NOTE]
->  The LANGUAGE *language_term* paramete*r* is not required to use the *top_n_by_rank* parameter*.*  
+>  The LANGUAGE *language_term* parameter is not required to use the *top_n_by_rank* parameter.  
   
 ## See Also  
  [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   

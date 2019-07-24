@@ -2,7 +2,7 @@
 title: "Azure Data Lake Analytics task | Microsoft Docs"
 description: You can submit U-SQL jobs to Azure Data Lake Analytics service with the Data Lake Analytics task.
 ms.custom: ""
-ms.date: "05/18/2018"
+ms.date: "06/27/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -13,11 +13,14 @@ f1_keywords:
   - "SQL14.DTS.DESIGNER.AFPADLSTASK.F1"
 author: "yanancai"
 ms.author: "yanacai"
-ms.reviewer: "douglasl"
-manager: craigg
+ms.reviewer: maghan
 ---
 
 # Azure Data Lake Analytics task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 You can submit U-SQL jobs to Azure Data Lake Analytics service with the Data Lake Analytics task. This task is a component of the [SQL Server Integration Services (SSIS) feature pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -29,7 +32,7 @@ To add a Data Lake Analytics task to a package, drag the task from SSIS Toolbox 
 
 ## General page configuration
 
-Use the **General** page to configure the task and provide the U-SQL script that the task submits. To learn more about the U-SQL language, see [U-SQL language reference](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
+Use the **General** page to configure the task and provide the U-SQL script that the task submits. To learn more about the U-SQL language, see [U-SQL language reference](/u-sql/).
 
 ### Basic configuration
 

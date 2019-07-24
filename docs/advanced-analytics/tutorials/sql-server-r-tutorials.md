@@ -1,14 +1,13 @@
 ---
-title: SQL Server R tutorial overview - SQL Server Machine Learning
+title: SQL Server R tutorial overview
 description: Introduction to the R language tutorials for SQL Server in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 12/18/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
 ---
 # SQL Server R language tutorials
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

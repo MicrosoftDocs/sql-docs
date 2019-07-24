@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "timestamp data type"
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # FOR XML Support for the timestamp Data Type

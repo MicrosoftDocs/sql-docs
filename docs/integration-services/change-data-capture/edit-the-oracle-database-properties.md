@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "oraProp"
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Edit the Oracle Database Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Oracle tab in the Properties editor to make changes to the description you provided in the Create CDC database page in the New Instance wizard and to make changes to the Oracle Log Mining database connection information.  
   
  The following describes the information in the **Oracle** tab.  

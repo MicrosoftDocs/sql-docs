@@ -1,7 +1,7 @@
 ---
 title: "Using Integrated Authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/20/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Integrated Authentication
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,7 +60,7 @@ Logging in to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uses 
   
 To audit activities in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on behalf of users other than the system account, the application must use [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-To improve application performance, an application can use connection pooling with Integrated Authentication and auditing. However, combining connection pooling, Integrated Authentication, and auditing creates a security risk because the unixODBC driver manager permits different users to reuse pooled connections. For more information, see [ODBC Connection Pooling](https://www.unixodbc.org/doc/conn_pool.html).  
+To improve application performance, an application can use connection pooling with Integrated Authentication and auditing. However, combining connection pooling, Integrated Authentication, and auditing creates a security risk because the unixODBC driver manager permits different users to reuse pooled connections. For more information, see [ODBC Connection Pooling](http://www.unixodbc.org/doc/conn_pool.html).  
 
 Before reuse, an application must reset pooled connections by executing `sp_reset_connection`.  
 
@@ -125,6 +124,6 @@ For more information about authenticating Linux or macOS computers with Active D
 ## See Also  
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [Using Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +31,10 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication whose snapshot contents are to be copied. *publication* is **sysname**, with no default.  
   
- [ **@destination_folder=**] **'**_destination_folder_**'**  
+`[ @destination_folder = ] 'destination_folder'`
  Is the name of the folder where the contents of the publication snapshot is to be copied. *destination_folder*is **nvarchar(255)**, with no default. The *destination_folder* can be an alternate location such as on another server, on a network drive, or on removable media (such as CD-ROMs or removable disks).  
   
 ## Return Code Values  
@@ -48,7 +47,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_copymergesnapshot**.  
   
 ## See Also  
- [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
+ [Alternate Snapshot Folder Locations](../../relational-databases/replication/snapshot-options.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,14 +1,13 @@
 ---
 title: "Improve PolyBase scale-out groups on Windows | Microsoft Docs"
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: polybase
 ms.topic: "tutorial"
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Improve PolyBase scale-out groups on Windows
 
@@ -35,6 +34,8 @@ The following steps summarize the process for creating a PolyBase scale-out grou
 4. Monitor nodes in the group using [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).
 
 5. Optional. Remove a compute node from  using [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Example walk-through
 

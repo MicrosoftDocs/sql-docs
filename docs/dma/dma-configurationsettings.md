@@ -2,7 +2,7 @@
 title: "Configure settings for Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn how to configure settings for the Data Migration Assistant by updating values in the configuration file
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,9 +12,8 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
-manager: craigg
 ---
 
 # Configure settings for Data Migration Assistant
@@ -137,6 +136,17 @@ for source and target instances while running an assessment or migration, by set
 </appSettings>
 ```
 
+## Ignore error codes
+
+Each rule has an error code in its title. If you don't need rules and want to ignore them, use the ignoreErrorCodes property. You can specify to ignore a single error or multiple errors. To ignore multiple errors, use a semicolon, e.g., ignoreErrorCodes="46010;71501". The default value is 71501, which is associated with unresolved references identified when an object references system objects such as procedures, views, etc.
+
+```
+<workflowSettings>
+
+<assessment parallelDatabases="8" ignoreErrorCodes="71501" />
+
+</workflowSettings>
+```
 
 ## See also
 

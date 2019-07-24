@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "multiple column joins"
   - "joins [SQL Server], multiple columns"
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Join Tables on Multiple Columns (Visual Database Tools)

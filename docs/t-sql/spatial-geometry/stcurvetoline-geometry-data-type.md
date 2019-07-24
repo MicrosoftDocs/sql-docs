@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STCurveToLine method (geometry)"
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STCurveToLine (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

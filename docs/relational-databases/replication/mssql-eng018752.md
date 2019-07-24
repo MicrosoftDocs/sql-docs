@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 405b2655-acb4-4e15-bcc6-b8f86bb22b37
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # MSSQL_ENG018752
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ manager: craigg
 ## User Action  
  The following steps can help you to troubleshoot the problem. If any step allows the Log Reader Agent to start without errors, there is no need to complete the remaining steps.  
   
--   Check the history of the Log Reader agent for any other errors that could be contributing to this error. For information about viewing agent status and error details in Replication Monitor, see [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  
+-   Check the history of the Log Reader agent for any other errors that could be contributing to this error. For information about viewing agent status and error details in Replication Monitor, see [View Information and Perform Tasks with Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Check the output of [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) for specific process identification numbers (SPIDs) that are connected to the published database. Close any connections that might have run **sp_repldone**, **sp_replcmds**, or **sp_replshowcmds**.  
   

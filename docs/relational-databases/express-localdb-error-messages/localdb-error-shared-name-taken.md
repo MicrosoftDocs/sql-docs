@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: f679fe4e-0ed1-4e2c-8fe1-e6b3d55c8d42
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_SHARED_NAME_TAKEN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -3,7 +3,6 @@ title: "sys.dm_fts_parser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,11 +16,12 @@ helpviewer_keywords:
   - "sys.dm_fts_parser dynamic management function"
   - "troubleshooting [SQL Server], full-text search"
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
+ms.reviewer: mikeray
 ---
 # sys.dm_fts_parser (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the final tokenization result after applying a given [word breaker](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), and [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) combination to a query string input. The tokenization result is equivalent to the output of the Full-Text Engine for the specified query string.  
@@ -31,7 +31,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)  
 ```  
   
@@ -130,7 +129,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
  Accent sensitivity is disabled.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
@@ -141,7 +140,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0,
   
  Accent sensitivity is disabled.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);  
 ```  
   
@@ -152,7 +151,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
   
  The example specifies the LCID for the French language, `1036`, and the ID of a user-defined stoplist, `5`. Accent sensitivity is enabled.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   

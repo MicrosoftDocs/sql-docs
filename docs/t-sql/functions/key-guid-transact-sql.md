@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "KEY_GUID function"
   - "GUIDs [SQL Server]"
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

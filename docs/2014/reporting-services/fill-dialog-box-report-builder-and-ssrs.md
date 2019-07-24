@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.reportbody.fill.f1"
@@ -17,9 +16,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.textboxproperties.fill.f1"
   - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Fill Dialog Box (Report Builder and SSRS)
   On the **Fill** tab, you can specify color options for the background of a single cell or multiple cells within a data region or a text box.  

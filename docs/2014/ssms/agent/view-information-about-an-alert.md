@@ -51,7 +51,7 @@ manager: craigg
   
 4.  Right-click the alert that has the information you want to view and select **Properties**.  
   
-     For more information on the available options contained in the *alert_name***alert properties** dialog box, see:  
+     For more information on the available options contained in the _alert_name_**alert properties** dialog box, see:  
   
     -   [Alert Properties-New Alert &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

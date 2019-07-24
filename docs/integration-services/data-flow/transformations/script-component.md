@@ -20,11 +20,14 @@ helpviewer_keywords:
   - "Script component [Integration Services], about Script component"
   - "Script component [Integration Services]"
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Script Component
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Script component hosts script and enables a package to include and run custom script code. You can use the Script component in packages for the following purposes:  
   
 -   Apply multiple transformations to data instead of using multiple transformations in the data flow. For example, a script can add the values in two columns and then calculate the average of the sum.  

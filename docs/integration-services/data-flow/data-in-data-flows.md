@@ -15,11 +15,14 @@ helpviewer_keywords:
   - "string comparisons"
   - "data flow [Integration Services], data options"
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Data in Data Flows
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a set of data types that are used in data flows.  
   
 ## Data Type Conversion  

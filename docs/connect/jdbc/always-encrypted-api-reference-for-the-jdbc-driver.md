@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Always Encrypted API Reference for the JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,6 +35,7 @@ manager: craigg
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Modifies the setting of the sendTimeAsDatetime connection property.|
 
  **SQLServerConnectionPoolProxy Class**
+ 
 |Name|Description|  
 |----------|-----------------|  
 |`public final boolean getSendTimeAsDatetime()` | Returns the setting of the sendTimeAsDatetime connection property.|
@@ -146,6 +146,7 @@ manager: craigg
 
   
 New types in **microsoft.sql.Types** class
+
 |Name|Description|  
 |----------|-----------------|  
 |DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Use these types as the target SQL types when sending parameter values to **encrypted** datetime, smalldatetime, money, smallmoney, uniqueidentifier columns using `setObject()/updateObject()` API methods.|  

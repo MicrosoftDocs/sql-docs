@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Keys Collection Properties, Methods, and Events
 ## Properties  

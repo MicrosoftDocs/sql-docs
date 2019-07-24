@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "overwriting data"
   - "data updates [SQL Server], WRITETEXT statement"
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "importing data, SSIS packages"
   - "sources [Integration Services], copying data"
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQL Server Import and Export Wizard

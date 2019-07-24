@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Cancel Method (RDS)
 Cancels execution of a pending, asynchronous method call.  

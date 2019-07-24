@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## Arguments  
- [ **@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database. *dbname* is **sysname**, with a default value of NULL. When NULL, the current database will be used.  
   
- [ **@type** = ] *type*  
+`[ @type = ] type`
  Is the type of replication for which database objects are being removed. *type* is **nvarchar(5)** and can be one of the following values.  
   
 |||  

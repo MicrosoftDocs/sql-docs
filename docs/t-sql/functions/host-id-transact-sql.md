@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "workstation IDs [SQL Server]"
   - "identification numbers [SQL Server], workstations"
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # HOST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

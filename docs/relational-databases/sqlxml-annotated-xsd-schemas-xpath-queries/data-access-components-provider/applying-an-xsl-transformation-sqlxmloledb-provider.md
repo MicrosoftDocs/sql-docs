@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "Base Path property"
   - "XSL Transformations [SQLXML]"
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXMLOLEDB Provider)
@@ -76,7 +75,7 @@ End Sub
   
 ```  
 <?xml version='1.0' encoding='UTF-8'?>            
- <xsl:stylesheet xmlns:xsl="https://www.w3.org/1999/XSL/Transform" version="1.0">   
+ <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">   
   
     <xsl:template match = 'Person.Contact'>  
        <TR>  

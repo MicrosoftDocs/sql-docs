@@ -10,11 +10,14 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom tasks [Integration Services], creating"
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Creating a Custom Task
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The steps involved in creating a custom task are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
 -   Create a new class that inherits from the base class. For a task, the base class is <xref:Microsoft.SqlServer.Dts.Runtime.Task>.  

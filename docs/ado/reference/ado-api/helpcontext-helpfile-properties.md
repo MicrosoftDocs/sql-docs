@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # HelpContext, HelpFile Properties
 Indicates the Help file and topic associated with an [Error](../../../ado/reference/ado-api/error-object.md) object.  

@@ -1,13 +1,12 @@
 ---
-title: VDI Backup Specification - SQL Server on Linux | Microsoft Docs
+title: VDI Backup Specification - SQL Server on Linux
 description: SQL Server Backup Virtual Device Interface Specification.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ---
@@ -292,6 +291,7 @@ For more information, see "Abnormal Termination" earlier in this document.
 | |**NOERROR** |The function succeeded.
 | |**VD_E_PROTOCOL** |The virtual device set is not currently open.
 | |**VD_E_INVALID** |The pBuffer is not a valid address.
+
 Remarks	The process that invokes the GetBufferHandle function is responsible for invoking ClientVirtualDevice::CompleteCommand when the data transfer is complete.
 
 ## ClientVirtualDeviceSet::MapBufferHandle

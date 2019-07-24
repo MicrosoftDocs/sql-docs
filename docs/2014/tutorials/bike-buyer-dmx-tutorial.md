@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "10/19/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DMX [Analysis Services], tutorials"
@@ -16,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Bike Buyer DMX Tutorial
   In this tutorial, you will learn how create, train, and explore mining models by using the Data Mining Extensions (DMX) query language. You will then use these mining models to create predictions that determine whether a customer will purchase a bicycle.  

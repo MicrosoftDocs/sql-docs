@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STOverlaps method (geography)"
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STOverlaps (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -2,13 +2,12 @@
 title: "SqlPackage.exe | Microsoft Docs"
 ms.prod: sql
 ms.technology: ssdt
-ms.date: "2018-06-27"
+ms.date: 06/28/2018
 ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: "pensivebrian"
 ms.author: "broneill"
-manager: "craigg"
 ---
 # SqlPackage.exe
 
@@ -30,7 +29,7 @@ manager: "craigg"
   
 The **SqlPackage.exe** command line allows you to specify these actions along with action-specific parameters and properties.  
 
-**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](sqlpackage-release-notes.md).
+**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
   
 ## Command-Line Syntax
 
@@ -293,6 +292,7 @@ A SqlPackage.exe Import action imports the schema and table data from a BACPAC p
 |**/UniversalAuthentication:**|**/ua**|{True&#124;False}|Specifies if Universal Authentication should be used. When set to True, the interactive authentication protocol is activated supporting MFA. This option can also be used for Azure AD authentication without MFA, using an interactive protocol requiring the user to enter their username and password or integrated authentication (Windows credentials). When /UniversalAuthentication is set to True, no Azure AD authentication can be specified in SourceConnectionString (/scs). When /UniversalAuthentication is set to False, Azure AD authentication must be specified in SourceConnectionString (/scs). <br/> For more information about Active Directory Universal Authentication, see [Universal Authentication with SQL Database and SQL Data Warehouse (SSMS support for MFA)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication).|
 
 Properties specific to the Import action:
+
 |Property|Value|Description|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Specifies the command timeout in seconds when executing queries against SQL Server.|
@@ -595,4 +595,10 @@ A **SqlPackage.exe** script action creates a Transact-SQL incremental update scr
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Specifies whether warnings should be generated when differences are found in objects that cannot be modified, for example, if the file size or file paths were different for a file.|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Specifies whether collation compatibility is verified.
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifies whether checks should be performed before publishing that will stop the publish action if issues are present that might block successful publishing. For example, your publish action might stop if you have foreign keys on the target database that do not exist in the database project, and that causes errors when you publish.|
-  
+
+## Exit codes
+
+Commands that return the following exit codes:
+
+- 0 = success
+- non-zero = failure

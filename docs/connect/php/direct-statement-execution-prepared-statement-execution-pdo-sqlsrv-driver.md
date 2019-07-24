@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,8 +27,12 @@ After you call [PDO::prepare](../../connect/php/pdo-prepare.md), the value of PD
   
 If a query requires the context that was set in a previous query, then execute your queries with PDO::SQLSRV_ATTR_DIRECT_QUERY set to True. For example, if you use temporary tables in your queries, PDO::SQLSRV_ATTR_DIRECT_QUERY must be set to True.  
   
-The following sample shows that when context from a previous statement is required, you need to set PDO::SQLSRV_ATTR_DIRECT_QUERY to True.  This sample uses temporary tables, which are only available to subsequent statements in your program when queries are executed directly.  
+The following sample shows that when context from a previous statement is required, you need to set PDO::SQLSRV_ATTR_DIRECT_QUERY to True. This sample uses temporary tables, which are only available to subsequent statements in your program when queries are executed directly.  
   
+> [!NOTE]
+> If the query is to invoke a stored procedure and temporary tables are used in this 
+> stored procedure, use [PDO::exec](../../connect/php/pdo-exec.md) instead.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  

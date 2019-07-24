@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Standard Programming Interface
 The programming interface is perhaps the most obvious candidate for standardization. In fact, when ODBC was being developed, ANSI and ISO already provided standards for embedded SQL and SQL modules. Although no standards existed for a database CLI, the SQL Access Group - an industry consortium of database vendors - was considering whether to create one; parts of ODBC later became the basis for their work.  

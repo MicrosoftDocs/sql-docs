@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "BufferWithTolerance (geometry Data Type)"
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # BufferWithTolerance (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

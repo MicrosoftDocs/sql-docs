@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication in a peer-to-peer topology for which status requests were sent. *publication* is **sysname**, with no default.  
   
- [ **@description**= ] **'***description***'**  
+`[ @description = ] 'description'`
  Value that can be used to identify individual status requests, which enables you to filter returned responses based on user defined information supplied when calling [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *description* is **nvarchar(4000)**, with a default of **%**. By default, all status requests for the publication are returned. This parameter is used to return only status requests with a description matching the value supplied in *description*, where character strings are matched using a [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md) clause.  
   
 ## Result Sets  

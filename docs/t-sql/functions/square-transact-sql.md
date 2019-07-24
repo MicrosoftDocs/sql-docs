@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "SQUARE"
   - "square values"
 ms.assetid: 007b6b12-da86-4229-8f5c-fdd4fa839f5f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQUARE (Transact-SQL)

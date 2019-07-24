@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "CREATE APPLICATION ROLE statement"
   - "application roles [SQL Server], creating"
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

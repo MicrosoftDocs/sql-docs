@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, retrieving binary data example"
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Example: Retrieving Binary Data
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

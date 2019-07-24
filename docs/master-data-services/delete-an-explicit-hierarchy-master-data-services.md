@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "explicit hierarchies, deleting"
   - "deleting explicit hierarchies [Master Data Services]"
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Explicit Hierarchy (Master Data Services)
 

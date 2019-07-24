@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "DBCC TRACEOFF statement"
   - "disabling trace flags"
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC TRACEOFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

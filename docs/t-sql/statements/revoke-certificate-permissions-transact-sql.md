@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], certificates"
   - "REVOKE statement, certificates"
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Certificate Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

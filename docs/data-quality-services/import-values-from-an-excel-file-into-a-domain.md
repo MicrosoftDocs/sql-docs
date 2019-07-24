@@ -12,9 +12,8 @@ f1_keywords:
   - "sql13.dqs.kb.importselect.f1"
   - "sql13.dqs.kb.failingvalues.f1"
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Import Values from an Excel File into a Domain
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helptrigger (Transact-SQL)
@@ -36,10 +35,10 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## Arguments  
- [ **@tabname=** ] **'***table***'**  
+`[ @tabname = ] 'table'`
  Is the name of the table in the current database for which to return trigger information. *table* is **nvarchar(776)**, with no default.  
   
- [ **@triggertype=** ] **'***type***'**  
+`[ @triggertype = ] 'type'`
  Is the type of DML trigger to return information about. *type* is **char(6)**, with a default of NULL, and can be one of these values.  
   
 |Value|Description|  

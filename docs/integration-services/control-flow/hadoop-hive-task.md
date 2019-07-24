@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoophivetask.f1"
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Hadoop Hive Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Hadoop Hive Task to run Hive script on a Hadoop cluster.  
   
  To add a Hadoop Hive Task, drag and drop it to the designer. Then double-click on the task, or right-click and click **Edit**, to open the **Hadoop Hive Task Editor** dialog box.  

@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "database audit specification"
   - "CREATE DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

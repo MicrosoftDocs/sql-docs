@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Default R and Python packages in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article lists the R and Python packages installed with SQL Server and where to find the package library.  
 

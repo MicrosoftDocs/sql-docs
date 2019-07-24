@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -60,20 +60,40 @@ Click on the extension in the sidebar to load a side panel showing the App Explo
 <img src="media/vs-extension/app_explorer.png" width=350px></img>
 <!--![App Explorer](media/vs-extension/app_explorer.png)-->
 
-#### New Connection
+#### Connect to Cluster
 
 To connect to the cluster endpoint, use one of the following methods:
 
 - Click on the status bar at the bottom that says `SQL Server BDC Disconnected`.
-- Or click on the `New Connection` button at the top with the arrow pointing into a doorway.
+- Or click on the `Connect to Cluster` button at the top with the arrow pointing into a doorway.
 
-   ![New Connection](media/vs-extension/connect_to_cluster.png)
+VS Code prompts for the appropriate endpoint, username, and password.
 
-VS Code prompts for the appropriate endpoint, username, and password. If given the correct credentials and app endpoint, VS Code notifies that you've been connected to the cluster and you will see any deployed apps populated in the sidebar. If you successfully connect, your endpoint and username will be saved to `./sqldbc` as part of your user profile. No password or tokens will ever be saved. When logging in again, the prompt will pre-fill with your saved host and username but always require you to input a password. If you wish to connect to a different cluster endpoint, just click the `New Connection` again. The connection will automatically close if you close VS Code or if you open a different workspace and you will need to reconnect.
+The endpoint to connect is the `Cluster Management Service` endpoint with port 30080.
+
+You can also find this endpoint from the command line through 
+
+```
+azdata bdc endpoint list
+```
+
+One of the other ways to get this information is doing right-click **Manage** on the server in Azure Data Studio where you will find the endpoints of the services listed.
+
+![ADS End Point](media/vs-extension/ads_end_point.png)
+
+Once you have found the endpoint to use, then connect to the cluster.
+
+![New Connection](media/vs-extension/connect_to_cluster.png)
+
+ If given the correct credentials and app endpoint, VS Code notifies that you've been connected to the cluster and you will see any deployed apps populated in the sidebar. If you successfully connect, your endpoint and username will be saved to `./sqldbc` as part of your user profile. No password or tokens will ever be saved. When logging in again, the prompt will pre-fill with your saved host and username but always require you to input a password. If you wish to connect to a different cluster endpoint, just click the `New Connection` again. The connection will automatically close if you close VS Code or if you open a different workspace and you will need to reconnect.
 
 ### App Template
 
-To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. It is advised that you place it in your current VS Code workspace so that you can use the full functionality of the extension, but you can place it anywhere in your local file system.
+You need to *Open Workspace* in VS Code where you are going to save the artifacts of the app.
+
+To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. The name and version which you provide should be a DNS-1035 label and must consist of lower case alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character.
+
+It is advised that you place it in your current VS Code workspace so that you can use the full functionality of the extension, but you can place it anywhere in your local file system.
 
 ![New App Template](media/vs-extension/new_app_template.png)
 
@@ -81,13 +101,16 @@ Once completed, a new app template is scaffolded for you at the location you spe
 
 ![Loaded App Template](media/vs-extension/loading_app_template.png)
 
-The template is a simple `Hello World` app that is laid out as follows:
+The template is a simple `helloworld` app that is laid out as follows in the App Specifications pane:
 
 - **spec.yaml**
    - Tells the cluster how to deploy your app
 - **run-spec.yaml**
    - Tells the cluster how you'd like to call your app
-- **handler.py**
+
+The source code of the App would be in the Workspace folder.
+
+- **source file name**
    - This is your source code file as specified by `src` in `spec.yaml`
    - It has one function called `handler` that is considered the `entrypoint` of the app as shown in `spec.yaml`. It takes in a string input called `msg` and returns a string output called `out`. These are specified in `inputs` and `outputs` of the `spec.yaml`.
 

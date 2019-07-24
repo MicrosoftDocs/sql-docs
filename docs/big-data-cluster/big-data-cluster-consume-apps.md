@@ -20,7 +20,7 @@ This article describes how to consume an app deployed on a SQL Server 2019 big d
 ## Prerequisites
 
 - [SQL Server 2019 big data cluster](deployment-guidance.md)
-- [mssqlctl command-line utility](deploy-install-azdata.md)
+- [azdata command-line utility](deploy-install-azdata.md)
 - An app deployed using either [azdata](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
 
 ## Capabilities
@@ -62,8 +62,8 @@ azdata app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
+    "app": "https://10.1.1.3:30080/api/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30080/api/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -77,7 +77,11 @@ azdata app describe --name addpy --version v1
 }
 ```
 
-Note the IP address (`10.1.1.3` in this example) and the port number (`30777`) in the output.
+Note the IP address (`10.1.1.3` in this example) and the port number (`30080`) in the output.
+
+One of the other ways to get this information is doing right-click Manage on the server in Azure Data Studio where you will find the endpoints of the services listed.
+
+![ADS End Point](media/big-data-cluster-consume-apps/ads_end_point.png)
 
 ## Generate a JWT access token
 

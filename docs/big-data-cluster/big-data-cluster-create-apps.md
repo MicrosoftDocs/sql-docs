@@ -69,11 +69,11 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 
 ## AKS
 
-If you are using AKS, you need to run the following command to get the IP address of the `mgmtproxy-svc-external` service by running this command in a bash or cmd window:
+If you are using AKS, you need to run the following command to get the IP address of the `controller-svc-external` service by running this command in a bash or cmd window:
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
+kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
 ## Kubeadm or Minikube
@@ -107,10 +107,10 @@ To deploy this app sample app, create the following files in a directory called 
 - `add.py`. Copy the following Python code into this file:
    ```py
    #add.py
-   def add(x,y):
-        result = x+y
-        return result
-    result=add(x,y)
+  def add(x, y):
+    result = x+y
+    return result
+  result=add(x,y)
    ```
 - `spec.yaml`. Copy the following code into this file:
    ```yaml
@@ -265,8 +265,8 @@ The describe command provides detailed information about the app including the e
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30080/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30080/api/app/add-app/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [

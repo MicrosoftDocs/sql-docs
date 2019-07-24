@@ -104,23 +104,25 @@ Another option is to manually edit the custom configuration file or to use json 
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage"
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
       "value": {
-          "type":"Storage",
-          "replicas":2,
-          "data": {
-            "className": "default",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-          },
-          "logs": {
-            "className": "default",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-          }
+        "type":"Storage",
+        "replicas":2,
+        "storage":{
+            "data":{
+                    "size": "100Gi",
+                    "className": "myStorageClass",
+                    "accessMode":"ReadWriteOnce"
+                    },
+            "logs":{
+                    "size":"32Gi",
+                    "className":"myStorageClass",
+                    "accessMode":"ReadWriteOnce"
+                    }
+                }
+            }
         }
-      }
-  ]
+    ]
 }
 ```
 

@@ -29,7 +29,7 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
 
 1. Download the script on the VM you are planning to use for the deployment
 ```
-curl --output kickstarter-azdata.sh  https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/setup-bdc.sh
+curl --output kickstarter-azdata.sh  https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/setup-bdc.sh
 ```
 
 2. Make the script executable

@@ -44,6 +44,12 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
+### New in SQL Server on Linux
+
+|New feature or update | Details |
+|:---|:---|
+| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
+
 ## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] features by component
 
 The following sections highlight new components and features that were enhanced in earlier releases of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].

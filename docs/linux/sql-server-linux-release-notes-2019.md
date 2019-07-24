@@ -64,7 +64,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CTP31"></a> CTP 3.2 (July 2019)
+## <a id="CTP32"></a> CTP 3.2 (July 2019)
 
 The following sections provide package locations and known issues for the CTP 3.2 release. To learn more about new features for Linux on SQL Server 2019, see the [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 

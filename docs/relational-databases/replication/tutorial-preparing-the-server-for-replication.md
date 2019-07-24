@@ -207,7 +207,7 @@ If your SQL Server Management Studio instance is running with administrative rig
 >[!NOTE]
 > If the SQL Agent doesn't visibly start, right-click the SQL Server Agent in SSMS and select **Refresh**. If it's still in the stopped state, start it manually from SQL Server Configuration Manager.    
   
-### Set database permissions  
+## Set database permissions  
   
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**:  
 

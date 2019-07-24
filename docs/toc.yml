@@ -6672,7 +6672,7 @@
           href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
     - name: SQL Server utility
       href: relational-databases/manage/sql-server-utility-features-and-tasks.md
-    - name: SQL Assessment APIs
+    - name: SQL Assessment API
       href: sql-assessment-api/sql-assessment-api-overview.md
       items:
       - name: Considerations for Running Utility & non-Utility Collection Sets on the Same Instance of SQL Server

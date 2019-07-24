@@ -43,15 +43,15 @@ Users can manually empty the result set cache for a database by turning OFF the 
 Requires VIEW SERVER STATE permission.
   
 ## Result Sets  
-This is the result set for all tables.
+This is the result set for all tables.  
   
 |Column|Data Type|Description|  
 |------------|---------------|-----------------|  
-|reserved_space|bigint|Total space used for the database, in KB.|  
+|reserved_space|bigint|Total space used for the database, in KB. This number will change as the cached result set increases.|  
 |data_space|bigint|Space used for data, in KB.|  
 |index_space|bigint|Space used for indexes, in KB.|  
 |unused_space|bigint|Space that is part of the reserved space and not used, in KB.|  
-|pdw_node_id|int|Compute node that is being used for the data.|  
+
 
 ## See also
 

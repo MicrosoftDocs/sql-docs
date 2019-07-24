@@ -31,7 +31,7 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 |:---|:---|
 |Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](../big-data-cluster/deploy-get-started.md).|
 |`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](../big-data-cluster/deploy-install-azdata.md). |
-|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. |
+|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. In previous CTP releases, the columns were bound only based on ordinal on the destination and column names in external table definition was not used.|
 |HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](../big-data-cluster/hdfs-tiering.md) |
 |Notebook-based troubleshooting |CTP 3.2 introduces Jupyter notebooks to assist with [deployment](../big-data-cluster/deploy-notebooks.md) and [discovery, diagnosis, and troubleshooting](../big-data-cluster/manage-notebooks.md) for components in a SQL Server big data cluster. |
 | &nbsp; | &nbsp; |

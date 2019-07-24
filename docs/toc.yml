@@ -77,7 +77,7 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
-      - name: Deployment targets
+      - name: Kubernetes clusters
         items:
         - name: Azure Kubernetes Service
           href: big-data-cluster/deploy-on-aks.md
@@ -87,10 +87,12 @@
           href: big-data-cluster/deploy-on-minikube.md
       - name: Deployment scripts
         items:
-        - name: Azure Kubernetes Service
+        - name: AKS python script
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: Deploy using Azure Data Studio Notebooks
-          href: big-data-cluster/deploy-notebooks.md
+        - name: Single node kubeadm script
+          href: big-data-cluster/deployment-script-single-node-kubeadm.md
+        - name: Deploy with notebooks
+          href: big-data-cluster/deploy-notebooks.md         
   - name: Concepts
     items:
     - name: Application deployment

@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Create graphs and plots using SQL and R (walkthrough)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this part of the walkthrough, you learn techniques for generating plots and maps using R with SQL Server data. You create a simple histogram and then develop a more complex map plot.
 

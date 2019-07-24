@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Create a login for SQLRUserGroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Create a [login in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) for [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a [loop back connection](../../advanced-analytics/concepts/security.md#implied-authentication) in your script specifies a *trusted connection*, and the identity used to execute an object contains your code is a Windows user account.
 

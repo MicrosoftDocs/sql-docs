@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Differences in SQL Server Machine Learning Services installation in SQL Server 2019  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes. This change replaces local worker accounts with [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), an isolation technology for client applications running on Windows. 
 

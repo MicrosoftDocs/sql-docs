@@ -70,7 +70,7 @@ The below behaviors are expected for [!INCLUDE[ssSQL17](../../includes/sssql17-m
 
 - If the compatibility level of a user database was 100 or higher before the upgrade, it remains the same after upgrade.
 - If the compatibility level of a user database was 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- The compatibility levels of the tempdb, model, msdb and Resource databases are set to the current compatibility level after upgrade.
+- The compatibility levels of the tempdb, model, msdb and Resource databases are set to the default compatibility level for a given [!INCLUDE[ssDE](../../includes/ssde-md.md)] version. 
 - The master system database retains the compatibility level it had before upgrade.
 
 Use `ALTER DATABASE` to change the compatibility level of the database. The new compatibility level setting for a database takes effect when a `USE <database>` command is issued, or a new login is processed with that database as the default database context.

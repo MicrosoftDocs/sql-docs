@@ -24,6 +24,9 @@ helpviewer_keywords:
   - "SQL Server collations"
   - "UTF-8"
   - "UTF-16"
+  - "UTF8"
+  - "UTF16"
+  - "UCS2"
   - "server-level collations [SQL Server]"
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: "stevestein"
@@ -295,7 +298,9 @@ For other considerations, see [Write International Transact-SQL Statements](../.
 [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - No longer maintained   
 [Unicode Consortium Web site](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Unicode Standard](http://www.unicode.org/standard/standard.html)      
+[Unicode Standard](http://www.unicode.org/standard/standard.html)     
+[UTF-8 Support in OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+Blog [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
 ## See Also    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     

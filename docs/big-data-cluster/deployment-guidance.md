@@ -52,7 +52,7 @@ You can choose to deploy Kubernetes in any of three ways:
 | **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
 
 > [!TIP]
-> For a sample python script that deploys both AKS and a SQL Server big data cluster in one step, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
+> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](deploy-notebooks.md).
 
 ### Verify Kubernetes configuration
 
@@ -90,9 +90,6 @@ azdata bdc create --accept-eula
 
 In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. 
 
-> [!NOTE]
-> Beginning with SQL Server 2019 CTP 3.2, you no longer have be a member of had to the the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup) to experience the preview releases of big data cluster.
-
 > [!IMPORTANT]
 > The default name of the big data cluster is **mssql-cluster**. This is important to know in order to run any of the **kubectl** commands that specify the Kubernetes namespace with the `-n` parameter.
 
@@ -120,6 +117,9 @@ It is also possible to customize your own deployment configuration profile. You 
    ```bash
    azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
+   
+> [!TIP]
+> You can also pass in the cluster name at deployment time using the *--name* parameter for *azdata create bdc* command. The parameters in the command have precedence over the values in the configuration files.
 
    > A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 

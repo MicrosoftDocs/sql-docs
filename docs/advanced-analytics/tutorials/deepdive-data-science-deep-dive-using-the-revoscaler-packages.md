@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Tutorial: Use RevoScaleR R functions with SQL Server data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is a Microsoft R package providing distributed and parallel processing for data science and machine learning workloads. For R development in SQL Server, **RevoScaleR** is one of the core built-in packages, with functions for creating data source objects, setting a compute context, managing packages, and most importantly: working with data end-to-end, from import to visualization and analysis. Machine Learning algorithms in SQL Server have a dependency on **RevoScaleR** data sources. Given the importance of **RevoScaleR**, knowing when and how to call its functions is an essential skill. 
 

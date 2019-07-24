@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # SQL Server 2017 Python tutorials
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes the Python tutorials for in-database analytics on [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 

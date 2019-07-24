@@ -155,9 +155,9 @@ By default, the **includeSpark** setting for the storage pool is set to true, so
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
       "value": {
-        "type":"Storage",
-        "replicas":2,
-        "includeSpark":false
+       "type":"Storage",
+       "replicas":2,
+       "includeSpark":false
       }
     }
   ]
@@ -183,17 +183,17 @@ Create a file named **patch.json** in your current directory with the following 
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
-		   "type": "Master",
-         "replicas": 1,
-         "hadrEnabled": false,
-         "endpoints": [
+	"type": "Master",
+        "replicas": 1,
+        "hadrEnabled": false,
+        "endpoints": [
             {
              "name": "Master",
              "serviceType": "NodePort",
              "port": 31433
             }
           ],
-         "nodeLabel": "<yourNodeLabel>"
+        "nodeLabel": "<yourNodeLabel>"
        }
     }
   ]
@@ -237,9 +237,9 @@ The following **patch.json** file performs the following changes:
 		  "name": "Controller"
 		},
 		{
-		    "serviceType": "LoadBalancer",
-		    "port": 30778,
-		    "name": "ServiceProxy"
+		  "serviceType": "LoadBalancer",
+		  "port": 30778,
+		  "name": "ServiceProxy"
 		}
 	      ]
 	    }
@@ -255,18 +255,18 @@ The following **patch.json** file performs the following changes:
 	      "op": "replace",
 	      "path": "spec.storage",
 	      "value": {
-		  "data": {
+	   	"data": {
 		    "className": "managed-premium",
 		    "accessMode": "ReadWriteOnce",
 		    "size": "100Gi"
-		  },
-		  "logs": {
+		       },
+		"logs": {
 		    "className": "managed-premium",
 		    "accessMode": "ReadWriteOnce",
 		    "size": "32Gi"
-		  }
-		}
-	    }   
+		       }
+	       }
+	     }  
 	  ]
 	}
 	```

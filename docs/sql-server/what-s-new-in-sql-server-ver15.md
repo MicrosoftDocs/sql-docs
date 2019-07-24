@@ -39,8 +39,6 @@ Community technology preview (RC) is the latest public release of [!INCLUDE[sql-
 
 ## CTP 3.2 July 2019
 
-### Big data clusters
-
 ### New in big data clusters
 
 |New feature or update | Details |

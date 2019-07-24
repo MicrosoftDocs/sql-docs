@@ -29,17 +29,17 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
 
 1. Download the script on the VM you are planning to use for the deployment
 ```
-curl --output kickstarter-azdata.sh  https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/setup-bdc.sh
+curl --output setup-bdc.sh https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/setup-bdc.sh
 ```
 
 2. Make the script executable
 ```
-chmod +x kickstarter-azdata.sh
+chmod +x setup-bdc.sh
 ```
 
 3. Run the script (make sure you are running with sudo)
 ```
-sudo ./kickstarter-azdata.sh
+sudo ./setup-bdc.sh
 ```
 
 When prompted, provide your input for the password that will be used for all external endpoints: controller, SQL Server master and gateway. Note that controller username is hardcoded to *admin*.

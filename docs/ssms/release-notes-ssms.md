@@ -48,7 +48,7 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 ## What's new in 18.2
 
-|  New item  |  Details  |
+|  New Item  |  Details  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Intellisense/Editor | Added support for Data Classification. |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | Added Intellisense support. |

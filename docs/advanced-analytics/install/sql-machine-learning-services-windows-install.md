@@ -191,7 +191,7 @@ Use the following steps to verify that all components used to launch external sc
     GO
     ```
 
- **Results**
+    **Results**
 
     The script can take a little while to run, the first time the external script runtime is loaded. The results should be something like this:
 

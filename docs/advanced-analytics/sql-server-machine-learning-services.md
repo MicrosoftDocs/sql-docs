@@ -11,7 +11,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## SQL Server Machine Learning Services (R and Python) Documentation
 

@@ -9,7 +9,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Tips for using R packages in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article has separate sections for DBAs who are unfamiliar with R and experienced R developers who are unfamiliar package access in a SQL Server instance.
 

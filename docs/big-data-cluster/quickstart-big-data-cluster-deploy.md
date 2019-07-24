@@ -1,8 +1,8 @@
 ---
-title: Deployment script
+title: Deploy with a python script
 titleSuffix: SQL Server big data clusters
-description: Walkthrough a deployment of SQL Server 2019 big data clusters (preview) on Azure Kubernetes Service (AKS).
-author: MikeRayMSFT 
+description: Learn how to use a deployment script to deploy SQL Server 2019 big data clusters (preview) on Azure Kubernetes Service (AKS).
+author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 ms.date: 07/24/2019
@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)
+# Use a python script to deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In this tutorial, you use a sample deployment script to deploy SQL Server 2019 big data cluster (preview) to Azure Kubernetes Service (AKS). 
+In this tutorial, you use a sample python deployment script to deploy SQL Server 2019 big data cluster (preview) to Azure Kubernetes Service (AKS).
 
 > [!TIP]
 > AKS is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).

@@ -21,9 +21,25 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](what-s-new-in-sql-server-ver15-prerelease.md#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
+## RC Aug 2019
+
+Community technology preview (RC) is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. For a list of features introduced or improved in each of the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
+
+### Big data clusters
+
+| New feature or update | Details |
+|:---|:---|
+| &nbsp; | &nbsp; |
+
+### Database engine
+
+| New feature or update | Details |
+|:---|:---|
+| &nbsp; | &nbsp; |
+
 ## CTP 3.2 July 2019
 
-Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. For a list of features introduced or improved in each of the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
+### Big data clusters
 
 ### New in big data clusters
 

@@ -5,7 +5,7 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-ms.topic: supportability
+ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ---

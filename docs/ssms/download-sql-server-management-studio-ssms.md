@@ -73,7 +73,7 @@ SQL Server Management Studio 18.2:
 | Always Encrypted | Updated the Enclave Provider to support Azure Attestation. |
 | Intellisense/Editor | Added support for Data   Classification  |
 | OPTIMIZE_FOR_SEQUENTIAL_KEY | SSMS Index dialog - added new index option OPTIMIZE_FOR_SEQUENTIAL_KEY |
-| OPTIMIZE_FOR_SEQUENTIAL_KEY | Added Intellisese support |
+| OPTIMIZE_FOR_SEQUENTIAL_KEY | Added Intellisense support |
 | Query Execution or Results | Added a "Completion time" in the messages to track when a given query   completed its execution. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/335318710 for more details. |
 | Query Execution or Results  | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256   and 64 K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
 | ShowPlan | Added a new attribute in QueryPlan when inline scalar UDF feature is enabled   (ContainsInlineScalarTsqlUdfs). |

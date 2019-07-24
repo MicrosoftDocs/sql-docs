@@ -1,7 +1,7 @@
 ---
 title: "Best Practice with the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/29/2018"
+ms.date: "07/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -45,7 +45,7 @@ The default parameters are good enough to start, but you should monitor how Quer
   
  While Query Store collects queries, execution plans and statistics, its size in the database grows until this limit is reached. When that happens, Query Store automatically changes the operation mode to read-only and stops collecting new data, which means that your performance analysis is no longer accurate.  
   
- The default value (100 MB) may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
+ The default value in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] is 100 MB, and may not be sufficient if your workload generates large number of different queries and plans or if you want to keep query history for a longer period of time. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is 1 GB. Keep track of current space usage and increase the Max Size (MB) to prevent Query Store from transitioning to read-only mode. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or execute the following script to get the latest information about Query Store size:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -103,9 +103,9 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **Query Store Capture Mode:** Specifies the query capture policy for the Query Store.  
   
--   **All** - Captures all queries. This is the default option.  
+-   **All** - Captures all queries. This is the default option in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].  
   
--   **Auto** - Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile and runtime duration are internally determined.  
+-   **Auto** - Infrequent queries and queries with insignificant compile and execution duration are ignored. Thresholds for execution count, compile and runtime duration are internally determined. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this is the default option.  
   
 -   **None** - Query Store stops capturing new queries.  
   
@@ -240,7 +240,7 @@ FROM sys.database_query_store_options;
   
  If the problem persists, it indicates corruption of the Query Store data is persisted on the disk.
  
- For SQL 2017 and later, Query Store can be recovered by executing the **sp_query_store_consistency_check** stored procedure within the affected database. For 2016, you will need to clear the data from the Query Store as shown below.
+ Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Query Store can be recovered by executing the **sp_query_store_consistency_check** stored procedure within the affected database. For [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you will need to clear the data from the Query Store as shown below.
  
  If that did not help, you can try to clear Query Store before requesting read-write mode.  
   
@@ -265,9 +265,12 @@ FROM sys.database_query_store_options;
   
 |Query Capture Mode|Scenario|  
 |------------------------|--------------|  
-|All|Analyze your workload thoroughly in terms of all queries shapes and their execution frequencies and other statistics.<br /><br /> Identify new queries in your workload.<br /><br /> Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.|  
-|Auto|Focus your attention on relevant and actionable queries; those queries that execute regularly or that have significant resource consumption.|  
+|All|Analyze your workload thoroughly in terms of all queries shapes and their execution frequencies and other statistics.<br /><br /> Identify new queries in your workload.<br /><br /> Detect if ad-hoc queries are used to identify opportunities for user or auto parameterization.<br /><br />**Note:** This is the default capture mode in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
+|Auto|Focus your attention on relevant and actionable queries; those queries that execute regularly or that have significant resource consumption.<br /><br />**Note:** Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] this is the default capture mode.|  
 |None|You have already captured the query set that you want to monitor in runtime and you want to eliminate the distractions  that other queries may introduce.<br /><br /> None is suitable for testing and bench-marking environments.<br /><br /> None is also appropriate for software vendors who ship Query Store configuration configured to monitor their application workload.<br /><br /> None should be used with caution as you might miss the opportunity to track and optimize important new queries. Avoid using None unless you have a specific scenario that requires it.|  
+
+> [!IMPORTANT]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.1 introduces a CUSTOM capture mode under the `ALTER DATABASE SET QUERY_STORE` command. When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. The new custom settings define what happens during the internal capture policy time threshold: a time boundary during which the configurable conditions are evaluated and if any are true, the query is eligible to be captured by Query Store. For more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).
   
 ## Keep the most relevant data in Query Store  
  Configure the Query Store to contain only the relevant data and it will run continuously providing great troubleshooting experience with a minimal impact on your regular workload.  
@@ -304,7 +307,6 @@ Consider following options:
 Query Store associates query entry with a containing object (stored procedure, function, and trigger).  When you recreate a containing object, a new query entry will be generated for the same query text. This will prevent you from tracking performance statistics for that query over time and use plan forcing mechanism. To avoid this, use the `ALTER <object>` process to change a containing object definition whenever it is possible.  
   
 ##  <a name="CheckForced"></a> Check the status of Forced Plans regularly  
-
 Plan forcing is a convenient mechanism to fix performance for the critical queries and make them more predictable. However, as with plan hints and plan guides, forcing a plan is not a guarantee that it will be used in future executions. Typically, when database schema changes in a way that objects referenced by the execution plan are altered or dropped, plan forcing will start failing. In that case [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] falls back to query recompilation while the actual forcing failure reason is surfaced in [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). The following query returns information about forced plans:  
   
 ```sql  
@@ -334,10 +336,14 @@ The global trace flags 7745 and 7752 can be used to improve availability of data
   
 -  Trace flag 7752 enables asynchronous load of Query Store. This allows a database to become online and queries to be executed before the Query Store has been fully recovered. The default behavior is to do a synchronous load of Query Store. The default behavior prevents queries from executing before the Query Store has been recovered but also prevents any queries from being missed in the data collection.
 
+   > [!NOTE]
+   > Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], this behavior is controlled by the engine and trace flag 7752 has no effect.
+
 > [!IMPORTANT]
 > If you are using Query Store for just in time workload insights in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], plan to install the performance scalability fixes in [KB 4340759](https://support.microsoft.com/help/4340759) as soon as possible. 
 
 ## See Also  
+[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
 [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
 [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     

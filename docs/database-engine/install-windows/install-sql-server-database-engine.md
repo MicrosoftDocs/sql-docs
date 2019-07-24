@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server Database Engine | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/22/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -32,7 +32,13 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
   
 -   [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md) - is an optional component  
 
--   [Machine Learning Services (In-Database) with R and Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+-   [Machine Learning Services (In-Database) with R, Python and Java](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+-   [Machine Learning Services (In-Database) with R, and Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
+::: moniker-end
 
 -   Full-Text Search - is an optional component  
   

@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Operationalize R code using stored procedures in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 When using the R and Python features in SQL Server Machine Learning Services, the most common approach for moving solutions to a production environment is by embedding code in stored procedures. This article summarizes the key points for the SQL developer to consider when operationalizing R code using SQL Server.
 

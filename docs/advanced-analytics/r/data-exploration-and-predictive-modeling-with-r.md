@@ -9,7 +9,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Data exploration and predictive modeling with R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes improvements to the data science process that are possible through integration with SQL Server.
 

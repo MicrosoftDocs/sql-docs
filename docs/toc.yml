@@ -6674,6 +6674,8 @@
           href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
     - name: SQL Server utility
       href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+    - name: SQL Assessment API
+      href: sql-assessment-api/sql-assessment-api-overview.md
       items:
       - name: Considerations for Running Utility & non-Utility Collection Sets on the Same Instance of SQL Server
         href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7504,7 +7506,7 @@
 - name: Reporting & Analytics
   items:
   - name: Advanced Analytics & Machine learning >>
-    href: advanced-analytics/index.md
+    href: advanced-analytics/
   - name: Analytics Platform System >>
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md

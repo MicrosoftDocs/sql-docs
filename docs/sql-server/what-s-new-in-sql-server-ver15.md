@@ -44,6 +44,12 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
+### New in SQL Server on Linux
+
+|New feature or update | Details |
+|:---|:---|
+| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
+
 ## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] features by component
 
 The following sections highlight new components and features that were enhanced in earlier releases of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
@@ -70,6 +76,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
 | &nbsp; | &nbsp; |
+
 
 ### Graph
 
@@ -139,6 +146,10 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |`LAST_QUERY_PLAN_STATS` | New database scoped configuration to enable `sys.dm_exec_query_plan_stats`. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`LIGHTWEIGHT_QUERY_PROFILING`|New database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
 |`query_post_execution_plan_profile` | Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. See [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).|
+|Row mode memory grant feedback. |[Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
+|Table variable deferred compilation.|[Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
+|Approximate `COUNT DISTINCT`.|[Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
+|Batch mode on rowstore.|[Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
 
 ### Language extensions
 

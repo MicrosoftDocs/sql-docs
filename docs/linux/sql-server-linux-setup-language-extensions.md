@@ -25,7 +25,7 @@ Language Extensions is also supported on Linux containers. We do not provide pre
 
 ## Uninstall previous CTP
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.1. Side-by-side installation of multiple versions is not supported.
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.2. Side-by-side installation of multiple versions is not supported.
 
 ### 1. Confirm package installation
 
@@ -49,7 +49,7 @@ Commands for removing packages appear in the following table.
 | SLES	| `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu	| `sudo apt-get remove msssql-server-extensibility-java`|
 
-### 3. Proceed with CTP 3.1 install
+### 3. Proceed with CTP 3.2 install
 
 Install at the highest package level using the instructions in this article for your operating system.
 

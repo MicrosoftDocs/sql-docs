@@ -10,7 +10,7 @@ ms.author: davidph
 author: dphansen
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning or R Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
 

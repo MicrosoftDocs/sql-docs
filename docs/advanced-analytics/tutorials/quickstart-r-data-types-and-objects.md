@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Quickstart: Handle data types and objects using R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart, get a hands-on introduction to common issues that occur when moving data between R and SQL Server. The experience you gain through this exercise provides essential background when working with data in your own script.
 

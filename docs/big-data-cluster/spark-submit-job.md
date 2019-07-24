@@ -1,11 +1,11 @@
 ---
-title: Run Spark jobs in Azure Data Studio 
+title: Submit Spark jobs on SQL Server big data clusters in Azure Data Studio 
 titleSuffix: SQL Server big data clusters
 description: Submit Spark jobs on SQL Server big data clusters in Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

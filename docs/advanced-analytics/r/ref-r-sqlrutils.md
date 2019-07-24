@@ -1,5 +1,5 @@
 ---
-title: sqlrutils helper functions - SQL Server Machine Learning Services
+title: sqlrutils helper functions
 description: Use the sqlrutils function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R to generate stored procedures containing R script.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # sqlrutils (R library in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The **sqlrutils** package provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. 
 

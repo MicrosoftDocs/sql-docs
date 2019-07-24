@@ -4,7 +4,7 @@ description: This page details the steps for using the Create external table wiz
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
@@ -17,7 +17,7 @@ One of the key scenarios for SQL Server 2019 CTP 2.0 is the ability to virtualiz
 
 ## Start the External Table wizard
 
-Connect to the master instance by using the IP address/port number of the **sql-server-master** endpoint obtained by using [**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) command. Expand your **Databases** node in the Object Explorer. Then select one of the databases where you want to virtualize the data from an existing SQL Server instance. Right-click the database, and select **Create External Table** to start the Virtualize Data wizard. You also can start the Virtualize Data wizard from the command palette. Use Ctrl+Shift+P in Windows, or use Cmd+Shift+P with a Mac.
+Connect to the master instance by using the IP address/port number of the **sql-server-master** endpoint obtained by using [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) command. Expand your **Databases** node in the Object Explorer. Then select one of the databases where you want to virtualize the data from an existing SQL Server instance. Right-click the database, and select **Create External Table** to start the Virtualize Data wizard. You also can start the Virtualize Data wizard from the command palette. Use Ctrl+Shift+P in Windows, or use Cmd+Shift+P with a Mac.
 
 ![Virtualize Data wizard](media/data-virtualization/virtualize-data-wizard.png)
 ## Select a data source

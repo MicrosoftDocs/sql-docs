@@ -1,5 +1,5 @@
 ---
-title: Create data features using R and SQL Server functions - SQL Server Machine Learning
+title: Create data features using R and SQL Server functions
 description: Tutorial showing how to create data features using SQL Server functions for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Create data features using R and SQL Server (walkthrough)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Data engineering is an important part of machine learning. Data often requires transformation before you can use it for predictive modeling. If the data does not have the features you need, you can engineer them from existing values.
 

@@ -43,7 +43,6 @@ Users can manually empty the result set cache for a database by turning OFF the 
 Requires VIEW SERVER STATE permission.
   
 ## Result Sets  
-This is the result set for all tables.  
   
 |Column|Data Type|Description|  
 |------------|---------------|-----------------|  

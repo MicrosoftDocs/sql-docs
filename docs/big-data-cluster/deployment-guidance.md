@@ -90,9 +90,6 @@ azdata bdc create --accept-eula
 
 In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. 
 
-> [!NOTE]
-> Beginning with SQL Server 2019 CTP 3.2, you no longer have be a member of had to the the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup) to experience the preview releases of big data cluster.
-
 > [!IMPORTANT]
 > The default name of the big data cluster is **mssql-cluster**. This is important to know in order to run any of the **kubectl** commands that specify the Kubernetes namespace with the `-n` parameter.
 

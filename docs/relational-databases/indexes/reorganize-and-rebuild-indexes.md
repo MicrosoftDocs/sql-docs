@@ -107,7 +107,7 @@ An index cannot be reorganized or rebuilt if the filegroup in which it is locate
 
 #### <a name="Permissions"></a> Permissions
 
-Requires ALTER permission on the table or view. User must be a member of at least one of the following roles:
+Requires `ALTER` permission on the table or view. User must be a member of at least one of the following roles:
 
 - **db_ddladmin** database role <sup>1</sup>
 - **db_owner** database role

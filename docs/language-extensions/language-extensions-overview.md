@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn about SQL Server 2019 language extensions (preview) that run external scripts within SQL Server. 
 author: dphansen
 ms.author: davidph 
-ms.date: 05/22/2019
+ms.date: 07/24/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # What is SQL Server Language Extensions (preview)?
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Language Extensions is a feature of SQL Server used for executing external code. In SQL Server 2019 CTP 3.0, Java is supported. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md).
+Language Extensions is a feature of SQL Server used for executing external code. In SQL Server 2019 CTP 3.2, Java is supported. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md).
 
 ## What you can do with Language Extensions
 
@@ -52,9 +52,9 @@ Execute Java code from within T-SQL script:
 
 + [Tutorial: Regular expressions with Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
-## Limitations in CTP 3.0
+## Limitations in CTP 3.2
 
-SQL Server Language Extensions is currently in public preview. There are some limitations in CTP 3.0:
+SQL Server Language Extensions is currently in public preview. There are some limitations in CTP 3.2:
 
 * The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 

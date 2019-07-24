@@ -33,7 +33,7 @@ SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relat
 
 SqlServer module is getting two new cmdlets to work with SQL Assessment API:
 
-* **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object.
+* **Get-SqlAssessmentItem** – Provides a list of available assessment checks for a SQL Server object
 
 * **Invoke-SqlAssessment** – Provides results of an assessment
 
@@ -85,7 +85,7 @@ Go through the examples below to get started.
 
 6. Customize the rules based on your environment and organizational requirements (see below).
 
-7. Schedule a task or a job to run the assessment regularly or on-demand to measure progress
+7. Schedule a task or a job to run the assessment regularly or on-demand to measure progress.
 
 ## Customizing rules
 

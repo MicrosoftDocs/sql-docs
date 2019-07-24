@@ -31,10 +31,18 @@ sections:
   - type: list
     style: unordered
     items:
-    - html: '<b>R</b>: <a href="tutorials/quickstart-r-run-using-tsql">Run "Hello world" script</a>'
-    - html: '<b>R</b>: <a href="tutorials/quickstart-r-create-predictive-model">Create a predictive model</a>'
-    - html: '<b>Python</b>: <a href="tutorials/quickstart-python-run-using-t-sql">Run "Hello world" script</a>'
-    - html: '<b>Python</b>: <a href="tutorials/quickstart-python-train-score-in-tsql">Create, train, and use a model with stored procedures</a>'
+      - html: 'R:'
+      - type: list
+        style: unordered
+        items:
+        - html: '<a href="tutorials/quickstart-r-run-using-tsql">Run "Hello world" script</a>'
+        - html: '<a href="tutorials/quickstart-r-create-predictive-model">Create a predictive model</a>'
+      - html: 'Python:'
+      - type: list
+        style: unordered
+        items:
+        - html: '<a href="tutorials/quickstart-python-run-using-t-sql">Run "Hello world" script</a>'
+        - html: '<a href="tutorials/quickstart-python-train-score-in-tsql">Create, train, and use a model with stored procedures</a>'
 
 - title: Step-by-Step Tutorials
   items:
@@ -43,30 +51,14 @@ sections:
   - type: list
     style: unordered
     items:
-    - html: '<b><a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a></b>: <a href="tutorials/sqldev-explore-and-visualize-the-data">Explore data</a>, <a href="tutorials/sqldev-create-data-features-using-t-sql">perform feature engineering</a>, <a href="tutorials/sqldev-train-and-save-a-model-using-t-sql">train and deploy models</a>, and <a href="tutorials/sqldev-operationalize-the-model">make predictions</a> (<b>five-part series</b>).'
-    - html: '<b><a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Use Machine Learning Services in R tools</a></b>: <a href="tutorials/walkthrough-view-and-summarize-data-using-r">Explore data</a>, <a href="tutorials/walkthrough-create-graphs-and-plots-using-r">create graphs and plots</a>, <a href="tutorials/walkthrough-create-data-features">perform feature engineering</a>, <a href="tutorials/walkthrough-build-and-save-the-model">train and deploy models</a>, and <a href="tutorials/walkthrough-deploy-and-use-the-model">make predictions</a> (<b>five-part series</b>).'
-    - html: '<b><a href="tutorials/sqldev-in-database-python-for-sql-developers">Use Python in T-SQL</a></b>: <a href="tutorials/sqldev-py3-explore-and-visualize-the-data">Explore data</a>, <a href="tutorials/sqldev-py4-create-data-features-using-t-sql">perform feature engineering</a>, <a href="tutorials/sqldev-py5-train-and-save-a-model-using-t-sql">train and deploy models</a>, and <a href="tutorials/sqldev-py6-operationalize-the-model">make predictions</a> (<b>five-part series</b>).'
+    - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a>: Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series).'
+    - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Use Machine Learning Services in R tools</a>: Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series).'
+    - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Use Python in T-SQL</a>: Explore data</a>, perform feature engineering, train and deploy models, and make predictions (five-part series).'
 
 - title: Solutions
   items:
   - type: paragraph
     text: 'Find <a href="tutorials/data-science-scenarios-and-solution-templates">scenarios and solution templates</a> to help you explore SQL Server Machine Learning Services.'
-
-- title: R and Python
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    columns: 2
-    items:
-    - title: 'R'
-      html: 'Open-source R, extended with RevoScaleR and Microsoft AI algorithms in MicrosoftML. These libraries give you forecasting and prediction models, statistical analysis, visualization, and data manipulation at scale.'
-      image: 
-        src: media/index/logo_R.png
-    - title: 'Python'
-      html: 'Python developers can use Microsoft revoscalepy and microsoftml libraries for predictive analytics and machine learning at scale. Anaconda and Python 3.5-compatible libraries are the baseline distribution.'
-      image: 
-        src: media/index/logo_python.png
 
 - title: Reference
   items:

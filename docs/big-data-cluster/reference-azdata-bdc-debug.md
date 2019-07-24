@@ -1,39 +1,39 @@
 ---
-title: mssqlctl bdc debug reference
+title: azdata bdc debug reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl bdc debug commands.
+description: Reference article for azdata bdc debug commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl bdc debug
+# azdata bdc debug
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc debug** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc debug** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl bdc debug copy-logs](#mssqlctl-bdc-debug-copy-logs) | Copy logs.
-[mssqlctl bdc debug dump](#mssqlctl-bdc-debug-dump) | Trigger logging dump.
-## mssqlctl bdc debug copy-logs
+[azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copy logs.
+[azdata bdc debug dump](#azdata-bdc-debug-dump) | Trigger logging dump.
+## azdata bdc debug copy-logs
 Copy the debug logs from the Big Data Cluster - kube config is required on your system.
 ```bash
-mssqlctl bdc debug copy-logs --namespace -n 
-                             [--container -c]  
-                             [--target-folder -d]  
-                             [--pod -p]  
-                             [--timeout -t]
+azdata bdc debug copy-logs --namespace -n 
+                           [--container -c]  
+                           [--target-folder -d]  
+                           [--pod -p]  
+                           [--timeout -t]
 ```
 ### Required Parameters
 #### `--namespace -n`
-BDC name, used for kubernetes namespace.
+Big data cluster name, used for kubernetes namespace.
 ### Optional Parameters
 #### `--container -c`
 Copy the logs for the containers with similar name, Optional, by default copies logs for all containers. Cannot be specified multiple times. If specified multiple times, last one will be used
@@ -54,16 +54,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl bdc debug dump
+## azdata bdc debug dump
 Trigger logging dump and copy it out from container - kube config is required on your system.
 ```bash
-mssqlctl bdc debug dump --namespace -n 
-                        --container -c  
-                        [--target-folder -d]
+azdata bdc debug dump --namespace -n 
+                      --container -c  
+                      [--target-folder -d]
 ```
 ### Required Parameters
 #### `--namespace -n`
-BDC name, used for kubernetes namespace.
+Big data cluster name, used for kubernetes namespace.
 #### `--container -c`
 Copy the logs for the containers with similar name, Optional, by default copies logs for all containers. Cannot be specified multiple times. If specified multiple times, last one will be used
 ### Optional Parameters
@@ -84,4 +84,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

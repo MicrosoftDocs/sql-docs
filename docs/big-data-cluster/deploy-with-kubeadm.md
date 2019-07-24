@@ -19,6 +19,7 @@ This article provides an example of how to use **kubeadm** to configure Kubernet
 
 > [!TIP] 
 > For sample scripts that configure Kubernetes, see [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
+Also see [this](deployment-script-single-node-kubeadm.md) topic for a sample script that automates a deployment of a single node kubeadm deployment on a VM and then deploys a default configuration of big data cluster on top of it.
 
 ## Prerequisites
 

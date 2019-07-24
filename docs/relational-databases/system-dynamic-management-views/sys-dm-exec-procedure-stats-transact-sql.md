@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   
 |Column name|Data type|Description|  
-|-----------------|---------------|-----------------|  
+|-----------------|---------------|-----------------| 
 |**database_id**|**int**|Database ID in which the stored procedure resides.|  
 |**object_id**|**int**|Object identification number of the stored procedure.|  
 |**type**|**char(2)**|Type of the object:<br /><br /> P = SQL stored procedure<br /><br /> PC = Assembly (CLR) stored procedure<br /><br /> X = Extended stored procedure|  

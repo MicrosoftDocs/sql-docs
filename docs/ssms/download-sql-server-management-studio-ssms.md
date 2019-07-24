@@ -68,7 +68,7 @@ SQL Server Management Studio 18.2:
 
 ## New in this release (SSMS 18.2)
 
-|  New item  |  Details  |
+|  New Item  |  Details  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Always Encrypted | Updated the Enclave Provider to support Azure Attestation. |
 | Intellisense/Editor | Added support for Data   Classification  |

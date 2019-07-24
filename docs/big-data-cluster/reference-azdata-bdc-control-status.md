@@ -1,35 +1,35 @@
 ---
-title: mssqlctl bdc control status reference
+title: azdata bdc control status reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl bdc control status commands.
+description: Reference article for azdata bdc control status commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl bdc control status
+# azdata bdc control status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc control status** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **bdc control status** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl bdc control status show](#mssqlctl-bdc-control-status-show) | Control status.
-## mssqlctl bdc control status show
+[azdata bdc control status show](#azdata-bdc-control-status-show) | Control status.
+## azdata bdc control status show
 Control status.
 ```bash
-mssqlctl bdc control status show 
+azdata bdc control status show 
 ```
 ### Examples
 Get status of control.
 ```bash
-mssqlctl bdc control status show
+azdata bdc control status show
 ```
 ### Global Arguments
 #### `--debug`
@@ -45,4 +45,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

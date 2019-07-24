@@ -1,59 +1,59 @@
 ---
-title: mssqlctl app reference
+title: azdata app reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl app commands.
+description: Reference article for azdata app commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl app
+# azdata app
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **app** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **app** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl app template](reference-mssqlctl-app-template.md) | Templates.
-[mssqlctl app init](#mssqlctl-app-init) | Kickstart new application skeleton.
-[mssqlctl app create](#mssqlctl-app-create) | Create application.
-[mssqlctl app update](#mssqlctl-app-update) | Update application.
-[mssqlctl app list](#mssqlctl-app-list) | List application(s).
-[mssqlctl app delete](#mssqlctl-app-delete) | Delete application.
-[mssqlctl app run](#mssqlctl-app-run) | Run application.
-[mssqlctl app describe](#mssqlctl-app-describe) | Describe application.
-## mssqlctl app init
+[azdata app template](reference-azdata-app-template.md) | Templates.
+[azdata app init](#azdata-app-init) | Kickstart new application skeleton.
+[azdata app create](#azdata-app-create) | Create application.
+[azdata app update](#azdata-app-update) | Update application.
+[azdata app list](#azdata-app-list) | List application(s).
+[azdata app delete](#azdata-app-delete) | Delete application.
+[azdata app run](#azdata-app-run) | Run application.
+[azdata app describe](#azdata-app-describe) | Describe application.
+## azdata app init
 Helps you to kickstart new application skeleton and/or spec files based on runtime environments.
 ```bash
-mssqlctl app init [--spec -s] 
-                  [--name -n]  
-                  [--version -v]  
-                  [--template -t]  
-                  [--destination -d]  
-                  [--url -u]
+azdata app init [--spec -s] 
+                [--name -n]  
+                [--version -v]  
+                [--template -t]  
+                [--destination -d]  
+                [--url -u]
 ```
 ### Examples
 Scaffold a new application `spec.yaml` only.
 ```bash
-mssqlctl app init --spec
+azdata app init --spec
 ```
 Scaffold a new R application skeleton based on the `r` template.
 ```bash
-mssqlctl app init --name reduce --template r
+azdata app init --name reduce --template r
 ```
 Scaffold a new Python application skeleton based on the `python` template.
 ```bash
-mssqlctl app init --name reduce --template python
+azdata app init --name reduce --template python
 ```
 Scaffold a new SSIS application skeleton based on the `ssis` template.
 ```bash
-mssqlctl app init --name reduce --template ssis            
+azdata app init --name reduce --template ssis            
 ```
 ### Optional Parameters
 #### `--spec -s`
@@ -63,7 +63,7 @@ Application name.
 #### `--version -v`
 Application version.
 #### `--template -t`
-Template name. For a full list off supported template names run `mssqlctl app template list`
+Template name. For a full list off supported template names run `azdata app template list`
 #### `--destination -d`
 Where to place the application skeleton. Default: current working directory.
 #### `--url -u`
@@ -79,16 +79,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl app create
+## azdata app create
 Create an application.
 ```bash
-mssqlctl app create --spec -s 
-                    
+azdata app create --spec -s 
+                  
 ```
 ### Examples
 Create a new application from a directory containing a valid spec.yaml deployment specification.
 ```bash
-mssqlctl app create --spec /path/to/dir/with/spec/yaml
+azdata app create --spec /path/to/dir/with/spec/yaml
 ```
 ### Required Parameters
 #### `--spec -s`
@@ -104,16 +104,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl app update
+## azdata app update
 Update an application.
 ```bash
-mssqlctl app update [--spec -s] 
-                    [--yes -y]
+azdata app update [--spec -s] 
+                  [--yes -y]
 ```
 ### Examples
 Update an existing application from a directory containing a valid spec.yaml deployment specification.
 ```bash
-mssqlctl app update --spec /path/to/dir/with/spec/yaml    
+azdata app update --spec /path/to/dir/with/spec/yaml    
 ```
 ### Optional Parameters
 #### `--spec -s`
@@ -131,24 +131,24 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl app list
+## azdata app list
 List an application(s).,
 ```bash
-mssqlctl app list [--name -n] 
-                  [--version -v]
+azdata app list [--name -n] 
+                [--version -v]
 ```
 ### Examples
 List application by name and version.
 ```bash
-mssqlctl app list --name reduce  --version v1
+azdata app list --name reduce  --version v1
 ```
 List all application versions by name.
 ```bash
-mssqlctl app list --name reduce
+azdata app list --name reduce
 ```
 List all application versions by name.
 ```bash
-mssqlctl app list
+azdata app list
 ```
 ### Optional Parameters
 #### `--name -n`
@@ -166,16 +166,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl app delete
+## azdata app delete
 Delete an application.
 ```bash
-mssqlctl app delete --name -n 
-                    --version -v
+azdata app delete --name -n 
+                  --version -v
 ```
 ### Examples
 Delete application by name and version.
 ```bash
-mssqlctl app delete --name reduce --version v1    
+azdata app delete --name reduce --version v1    
 ```
 ### Required Parameters
 #### `--name -n`
@@ -193,25 +193,25 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl app run
+## azdata app run
 Run an application.
 ```bash
-mssqlctl app run --name -n 
-                 --version -v  
-                 [--inputs]
+azdata app run --name -n 
+               --version -v  
+               [--inputs]
 ```
 ### Examples
 Run application with no input parameters.
 ```bash
-mssqlctl app run --name reduce --version v1
+azdata app run --name reduce --version v1
 ```
 Run application with 1 input parameter.
 ```bash
-mssqlctl app run --name reduce --version v1 --inputs x=10
+azdata app run --name reduce --version v1 --inputs x=10
 ```
 Run application with multiple input parameters.
 ```bash
-mssqlctl app run --name reduce --version v1 --inputs x=10,y5.6    
+azdata app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
 ### Required Parameters
 #### `--name -n`
@@ -232,17 +232,17 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl app describe
+## azdata app describe
 Describe an application.
 ```bash
-mssqlctl app describe [--spec -s] 
-                      [--name -n]  
-                      [--version -v]
+azdata app describe [--spec -s] 
+                    [--name -n]  
+                    [--version -v]
 ```
 ### Examples
 Describe the application.
 ```bash
-mssqlctl app describe --name reduce --version v1    
+azdata app describe --name reduce --version v1    
 ```
 ### Optional Parameters
 #### `--spec -s`
@@ -265,4 +265,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

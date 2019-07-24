@@ -19,7 +19,8 @@ In this tutorial, you use a sample bash deployment script to deploy a single nod
 
 ## Prerequisites
 
-1. A vanilla Ubuntu 18.04 or 16.04 VM. All dependencies are going to be setup by the script. You will run the script from within the VM.
+1. A vanilla Ubuntu 18.04 or 16.04 **server** VM. All dependencies are going to be setup by the script. You will run the script from within the VM.
+
 **NOTE: Using Azure VMs is not yet supported.**
 
 1. VM should have at least 8CPUs, 64GB RAM and 100GB disk space. After pulling all big data cluster Docker images you will be left with 50GB for data/logs to use across all components.

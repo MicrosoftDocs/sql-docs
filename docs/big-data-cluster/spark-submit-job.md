@@ -33,13 +33,14 @@ There are several ways to open Spark job submission dialog. The ways include Das
 
     ![Submit menu by clicking dashboard](./media/submit-spark-job/new-spark-job.png)
  
-+ Right-click on the cluster in the Object Explorer and select **Submit Spark Job** from the context menu. Spark job submission dialog will open.  
++ Right-click on the cluster in the Object Explorer and select **Submit Spark Job** from the context menu. Spark job submission dialog will open.
+
+    ![Submit menu by right-click file](./media/submit-spark-job/submit-spark-job-1.png)
  
-    ![Submit menu by right-click cluster](./media/submit-spark-job/submit-spark-job.png)
 
 + Right-click on a Jar/Py file in the Object Explorer and select **Submit Spark Job** from the context menu. Spark job submission dialog with the Jar/Py field to be pre-populated will open. 
  
-    ![Submit menu by right-click file](./media/submit-spark-job/submit-spark-job-2.png)
+    ![Submit menu by right-click cluster](./media/submit-spark-job/submit-spark-job.png)
 
 + Use command **Submit Spark Job** from command palette by typing Ctrl+Shift+P (in Windows) and Cmd+Shift+P (in Mac).
 
@@ -67,4 +68,3 @@ After the Spark job is submitted, the Spark job submission and execution status 
 
 ## Next steps
 For more information on SQL Server big data cluster and related scenarios, see [What is SQL Server big data cluster](big-data-cluster-overview.md)?
-

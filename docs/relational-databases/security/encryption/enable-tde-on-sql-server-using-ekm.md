@@ -29,9 +29,9 @@ ms.author: aliceku
   
 -   You must be a high privileged user (such as a system administrator) to create a database encryption key and encrypt a database. That user must be able to be authenticated by the EKM module.  
   
--   Upon startup the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] must open the database. To do this, you should create a credential that will be authenticated by the EKM, and add it to a login that is based on an asymmetric key. Users cannot log in using that login, but the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] will be able to authenticate itself with the EKM device.  
+-   Upon startup the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] must open the database. To do this, you should create a credential that will be authenticated by the EKM, and add it to a login that is based on an asymmetric key. Users cannot sign in using that login, but the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] will be able to authenticate itself with the EKM device.  
   
--   If the asymmetric key stored in the EKM module is lost, the database will not be able to be opened by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If the EKM provider lets you back up the asymmetric key, you should create a back up and store it in a secure location.  
+-   If the asymmetric key stored in the EKM module is lost, the database will not be able to be opened by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If the EKM provider lets you back up the asymmetric key, you should create a backup and store it in a secure location.  
   
 -   The options and parameters required by your EKM provider can differ from what is provided in the code example below. For more information, see your EKM provider.  
   

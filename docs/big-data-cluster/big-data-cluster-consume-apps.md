@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Consume an app deployed on SQL Server big data cluster using a RESTful web service
+# Consume an app deployed on SQL Server big data clusters using a RESTful web service
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

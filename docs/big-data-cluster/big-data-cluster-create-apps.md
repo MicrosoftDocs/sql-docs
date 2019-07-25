@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -21,10 +21,10 @@ This article describes how to deploy and manage R and Python script as an applic
 
 - A single command-line utility to manage cluster and app.
 - Simplified app deployment while providing granular control through spec files.
-- Support hosting additional application types - SSIS and MLeap (new in CTP 2.3)
-- [VS Code Extension](app-deployment-extension.md) to manage application deployment
+- Support hosting additional application types - SSIS and MLeap (new in CTP 2.3).
+- [Visual Studio Code Extension](app-deployment-extension.md) to manage application deployment.
 
-Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [VS Code Extension](app-deployment-extension.md).
+Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
 
 The following types of apps are supported:
 - R and Python apps (functions, models and apps)

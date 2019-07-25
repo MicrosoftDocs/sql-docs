@@ -1,26 +1,26 @@
 ---
 title: App deployment extension
 titleSuffix: SQL Server big data clusters
-description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
+description: Deploy a Python or R script as an application on SQL Server 2019 big data clusters (preview). 
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to use VS Code to deploy applications to SQL Server big data clusters
+# How to use Visual Studio Code to deploy applications to SQL Server big data clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to deploy applications to a SQL Server big data cluster using Visual Studio Code with the App Deployment extension. This capability was introduced in CTP 2.3. 
+This article describes how to deploy applications to a SQL Server big data cluster using Microsoft Visual Studio Code with the App Deployment extension. This capability was introduced in CTP 2.3. 
 
 ## Prerequisites
 
-- [Visual Studio Code](https://code.visualstudio.com/).
-- [SQL Server big data cluster](big-data-cluster-overview.md) CTP 2.3 or later.
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [SQL Server big data cluster](big-data-cluster-overview.md) CTP 2.3 or later
 
 ## Capabilities
 
@@ -39,11 +39,11 @@ The following sections walk though the installation process and provides an over
 
 ### Install
 
-First install the App Deployment extension in VS Code:
+First install the App Deployment extension in Visual Studio Code:
 
-1. Download [App Deploy Extension](https://aka.ms/app-deploy-vscode) to install the extension as part of VS Code.
+1. Download [App Deploy Extension](https://aka.ms/app-deploy-vscode) to install the extension as part of Visual Studio Code.
 
-1. Launch VS Code and navigate to the Extensions sidebar.
+1. Launch Visual Studio Code and navigate to the Extensions sidebar.
 
 1. Click the `…` context menu on the top of the side bar and select `Install from vsix`.
 
@@ -51,7 +51,7 @@ First install the App Deployment extension in VS Code:
 
 1. Find the `sqlservbdc-app-deploy.vsix` file you downloaded and choose that to install.
 
-After the SQL Server big data cluster app deploy extension has been installed, it prompts you to reload VS Code. You should now see the SQL Server BDC App Explorer in the VS Code sidebar.
+After the SQL Server big data cluster app deploy extension has been installed, it prompts you to reload Visual Studio Code. You should now see the SQL Server BDC App Explorer in the Visual Studio Code sidebar.
 
 ### App Explorer
 
@@ -67,7 +67,7 @@ To connect to the cluster endpoint, use one of the following methods:
 - Click on the status bar at the bottom that says `SQL Server BDC Disconnected`.
 - Or click on the `Connect to Cluster` button at the top with the arrow pointing into a doorway.
 
-VS Code prompts for the appropriate endpoint, username, and password.
+Visual Studio Code prompts for the appropriate endpoint, username, and password.
 
 The endpoint to connect is the `Cluster Management Service` endpoint with port 30080.
 
@@ -85,15 +85,15 @@ Once you have found the endpoint to use, then connect to the cluster.
 
 ![New Connection](media/vs-extension/connect_to_cluster.png)
 
- If given the correct credentials and app endpoint, VS Code notifies that you've been connected to the cluster and you will see any deployed apps populated in the sidebar. If you successfully connect, your endpoint and username will be saved to `./sqldbc` as part of your user profile. No password or tokens will ever be saved. When logging in again, the prompt will pre-fill with your saved host and username but always require you to input a password. If you wish to connect to a different cluster endpoint, just click the `New Connection` again. The connection will automatically close if you close VS Code or if you open a different workspace and you will need to reconnect.
+ If given the correct credentials and app endpoint, Visual Studio Code notifies that you've been connected to the cluster and you will see any deployed apps populated in the sidebar. If you successfully connect, your endpoint and username will be saved to `./sqldbc` as part of your user profile. No password or tokens will ever be saved. When logging in again, the prompt will pre-fill with your saved host and username but always require you to input a password. If you wish to connect to a different cluster endpoint, just click the `New Connection` again. The connection will automatically close if you close Visual Studio Code or if you open a different workspace and you will need to reconnect.
 
 ### App Template
 
-You need to *Open Workspace* in VS Code where you are going to save the artifacts of the app.
+You need to *Open Workspace* in Visual Studio Code where you are going to save the artifacts of the app.
 
 To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. The name and version which you provide should be a DNS-1035 label and must consist of lower case alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character.
 
-It is advised that you place it in your current VS Code workspace so that you can use the full functionality of the extension, but you can place it anywhere in your local file system.
+It is advised that you place it in your current Visual Studio Code workspace so that you can use the full functionality of the extension, but you can place it anywhere in your local file system.
 
 ![New App Template](media/vs-extension/new_app_template.png)
 
@@ -163,7 +163,7 @@ Specify any string you'd like in place of `hello` and then again run it through 
 
 ![Get Run Spec](media/vs-extension/get_run_spec.png)
 
-Once you have one and have edited it to your satisfaction, run it. VS Code returns the appropriate feedback when the app has finished running:
+Once you have one and have edited it to your satisfaction, run it. Visual Studio Code returns the appropriate feedback when the app has finished running:
 
 ![App Output](media/vs-extension/app_output.png)
 

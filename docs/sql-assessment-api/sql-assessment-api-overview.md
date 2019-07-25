@@ -51,7 +51,7 @@ An assessment is performed against a chosen SQL Server object. In the default ru
 
 Go through the examples below to get started.
 
-1. Get a list of available checks for the local instance to familiarize yourself with the checks. In this example, we're using a path implemented with the [Windows PowerShell SQL Server provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider) to pass the instance object to the Get-SqlAssessmentItem cmdlet.
+1. Get a list of available checks for the local instance to familiarize yourself with the checks. In this example, we're using a path implemented with the [Windows PowerShell SQL Server provider](../powershell/sql-server-powershell-provider.md) to pass the instance object to the Get-SqlAssessmentItem cmdlet.
 
     ```powershell
     CD SQLSERVER:\SQL\localhost\default

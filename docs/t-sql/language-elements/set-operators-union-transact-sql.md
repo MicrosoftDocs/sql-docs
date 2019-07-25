@@ -25,23 +25,23 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Combines the results of two queries into a single result set. You control whether the result set includes duplicate rows:
+Concatenates the results of two queries into a single result set. You control whether the result set includes duplicate rows:
 
 - **UNION ALL** - Includes duplicates.
 - **UNION** - Excludes duplicates.
 
-A UNION operation is different from a JOIN:
+A **UNION** operation is different from a **[JOIN](../queries/from-transact-sql.md)**:
 
-- A UNION combines result sets from two queries. But a UNION does not create individual rows from columns gathered from two tables.
-- A JOIN compares columns from two tables, to create rows composed of columns from two tables.
+- A **UNION** concatenates result sets from two queries. But a **UNION** does not create individual rows from columns gathered from two tables.
+- A **JOIN** compares columns from two tables, to create result rows composed of columns from two tables.
   
-The following are basic rules for combining the result sets of two queries by using UNION:  
+The following are basic rules for combining the result sets of two queries by using **UNION**:  
   
 -   The number and the order of the columns must be the same in all queries.  
   
 -   The data types must be compatible.  
   
-![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   

@@ -13,7 +13,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # What is SQL Server Language Extensions (preview)?
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Language Extensions is a feature of SQL Server used for executing external code. In SQL Server 2019 CTP 3.2, Java is supported. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md).
+Language Extensions is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md).
+
+In SQL Server 2019 CTP 3.2, Java is supported. The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
 
 ## What you can do with Language Extensions
 

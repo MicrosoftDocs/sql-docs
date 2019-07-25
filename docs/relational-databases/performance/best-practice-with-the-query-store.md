@@ -109,7 +109,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
 -   **None** - Query Store stops capturing new queries.  
 
--   **Custom** - Allows additional control and fine tune the data collection policy.<br /><br />The new custom settings define what happens during the internal capture policy time threshold: a time boundary during which the configurable conditions are evaluated and if any are true, the query is eligible to be captured by Query Store.
+-   **Custom** - Allows additional control and fine tune the data collection policy. The new custom settings define what happens during the internal capture policy time threshold: a time boundary during which the configurable conditions are evaluated and if any are true, the query is eligible to be captured by Query Store.
   
  The following script sets the Query Capture mode to Auto:  
   
@@ -136,7 +136,7 @@ SET QUERY_STORE = ON
 
 The following example sets the Query Capture mode to Auto and set other recommended options in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] to include wait statistics:  
 
-```
+```sql
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE = ON
     (
@@ -153,7 +153,7 @@ SET QUERY_STORE = ON
 
 The following example sets the Query Capture mode to Auto and set other recommended options in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], and optionally sets the Custom capture policy with its defaults:  
 
-```
+```sql
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE = ON 
     (

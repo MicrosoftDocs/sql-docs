@@ -1,5 +1,5 @@
 ---
-title: Security overview for R and Python extensions  - SQL Server Machine Learning
+title: Security overview for R and Python extensions 
 description: Security overview for the extensibility framework in SQL Server Machine Learning Services. Security for login and user accounts, SQL Server Launchpad service, worker accounts, running multiple scripts, and file permissions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -11,7 +11,7 @@ ms.author: davidph
 ---
 # Security overview for the extensibility framework in SQL Server Machine Learning Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework. It examines the securables, services, process identity, and permissions. For more information about the key concepts and components of extensibility in SQL Server, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md)].
 

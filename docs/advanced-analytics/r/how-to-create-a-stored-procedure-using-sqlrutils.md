@@ -1,5 +1,5 @@
 ---
-title: How to create a stored procedure using sqlrutils - SQL Server Machine Learning Services
+title: How to create a stored procedure using sqlrutils
 description: Use the sqlrutils R package in SQL Server to bundle R language code into a single function that can be passed as an argument to a stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Create a stored pProcedure using sqlrutils
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.
 

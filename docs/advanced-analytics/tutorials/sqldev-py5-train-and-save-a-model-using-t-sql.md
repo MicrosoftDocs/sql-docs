@@ -1,5 +1,5 @@
 ---
-title: Train and save a Python model using T-SQL - SQL Server Machine Learning
+title: Train and save a Python model using T-SQL
 description: Python tutorial showing how to train and save a model using Transact-SQL on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Train and save a Python model using T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 

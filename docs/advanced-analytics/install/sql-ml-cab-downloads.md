@@ -1,5 +1,5 @@
 ---
-title: CAB downloads for SQL Server cumulative updates - SQL Server Machine Learning
+title: CAB downloads for SQL Server cumulative updates
 description: R and Python CAB and package downloads for SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,6 +10,8 @@ author: dphansen
 ms.author: davidph
 ---
 # CAB downloads for cumulative updates of SQL Server in-database analytics instances
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server instances that are configured for in-database analytics include R and Python features. These features ship in CAB files, installed and serviced through SQL Server Setup. On internet-connected devices, CAB updates are typically applied through Windows Update. On disconnected servers, CAB files must be downloaded and applied manually. 
 

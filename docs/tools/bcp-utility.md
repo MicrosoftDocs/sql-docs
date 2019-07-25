@@ -85,6 +85,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
     [<a href="#K">-K application_intent</a>]
+    [<a href="#l">-l login_timeout</a>]
     [<a href="#L">-L last_row</a>]
     [<a href="#m">-m max_errors</a>]
     [<a href="#n">-n</a>]
@@ -312,6 +313,9 @@ Specifies that empty columns should retain a null value during the operation, ra
   
 **-K** _**application\_intent**_<a name="K"></a>   
 Declares the application workload type when connecting to a server. The only value that is possible is **ReadOnly**. If **-K** is not specified, the bcp utility will not support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  
+**-l** _**login\_timeout**_<a name="l"></a>  
+Specifies a login timeout. The -l option specifies the number of seconds before a login to SQL Server times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, bcp generates an error message. A value of 0 specifies an infinite timeout.
   
 **-L** _**last\_row**_<a name="L"></a>  
 Specifies the number of the last row to export from a table or import from a data file. This parameter requires a value greater than (>) 0 but less than (<) or equal to (=) the number of the last row. In the absence of this parameter, the default is the last row of the file.  

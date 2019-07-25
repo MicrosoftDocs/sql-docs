@@ -24,6 +24,9 @@ helpviewer_keywords:
   - "SQL Server collations"
   - "UTF-8"
   - "UTF-16"
+  - "UTF8"
+  - "UTF16"
+  - "UCS2"
   - "server-level collations [SQL Server]"
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: "stevestein"
@@ -266,7 +269,7 @@ The following table outlines the encoding storage bytes for each character range
 
 > [!TIP]   
 > It is common to think in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), or in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), the *n* defines the number of characters. This is because in the example of a CHAR(10) column, 10 ASCII characters in the range 0-127 can be stored using a collation such as Latin1_General_100_CI_AI, because each character in this range uses only 1-byte.    
-> However, in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), the *n* defines the string length in **bytes** (0-8,000), while in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) the *n* defines the string length in **byte-pairs** (0-4,000). *n* never defines numbers of characters that can be stored.
+> However, in [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), the *n* defines the string size in **bytes** (0-8,000), while in [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) the *n* defines the string size in **byte-pairs** (0-4,000). *n* never defines numbers of characters that can be stored.
 
 As seen above, choosing the appropriate Unicode encoding and data type may provide significant storage savings or increase your current storage footprint, depending on the character set in use. For example, When using a Latin collation that is UTF-8 enabled such as Latin1_General_100_CI_AI_SC_UTF8, a `CHAR(10)` column stores 10 bytes, and can hold 10 ASCII characters in the range 0-127, but only 5 characters in range 128-2047, and only 3 characters in range 2048-65535. By comparison, because a `NCHAR(10)` column stores 10 byte-pairs (20 bytes), it can hold 10 characters in the range 0-65535.  
 
@@ -295,7 +298,9 @@ For other considerations, see [Write International Transact-SQL Statements](../.
 [Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - No longer maintained   
 [Unicode Consortium Web site](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Unicode Standard](http://www.unicode.org/standard/standard.html)      
+[Unicode Standard](http://www.unicode.org/standard/standard.html)     
+[UTF-8 Support in OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+Blog [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
 ## See Also    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     

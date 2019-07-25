@@ -115,7 +115,7 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
 Starting with version 17.4 the driver loads OpenSSL dynamically, which allows it to run on systems that have either version 1.0 or 1.1 without a need for separate driver files. In case of several versions of OpenSSL present the driver will attempt to load the latest one. The driver currently supports OpenSSL 1.0 and 1.1.
 
     > [!NOTE] 
-    > A potential conflict may occur if the application that uses the driver (or one of its coponents) is linked with or dynamically loads a different version OpenSSL. If several versions of OpenSSL are present on the system and the application uses it, it is highly recommended that one be extra careful in making sure that the version loaded by the application and the driver do not mismatch, as the errors could corrupt memory and thus will not necesserily manifest in obvious or consistent ways.
+    > A potential conflict may occur if the application that uses the driver (or one of its components) is linked with or dynamically loads a different version OpenSSL. If several versions of OpenSSL are present on the system and the application uses it, it is highly recommended that one be extra careful in making sure that the version loaded by the application and the driver do not mismatch, as the errors could corrupt memory and thus will not necessarily manifest in obvious or consistent ways.
 
 ## Additional Notes  
 

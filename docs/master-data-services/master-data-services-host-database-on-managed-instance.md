@@ -1,5 +1,5 @@
 ---
-title: "Host database on Managed Instance | Microsoft Docs"
+title: "Host database on a Managed Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/01/2019"
 ms.prod: sql
@@ -96,13 +96,13 @@ You use the SQL Server setup installation wizard or a command prompt to install 
 2. Select [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on the Feature Selection page under Shared Features.
 This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies, a Windows PowerShell snap-in, and folders and files for Web applications and services.
 
-    ![mds-SQLServer2019-ConfigMI-SQLFeatureSelection](../master-data-services/media/mds-sqlserver2019-configmi-sqlfeatureselection.png "mds-SQLServer2019-ConfigMI_SQLFeatureSelection")  
+    ![mds-SQLServer2019-Config-MI-SQLFeatureSelection](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "mds-SQLServer2019-Config-MI_SQLFeatureSelection")  
 
 **Setting up the Database and Website**
 
 1. Connect the Windows Azure Virtual Network to ensure that you can connect to the managed instance.
 
-    ![mds-SQLServer2019-ConfigMI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-configmi-p2svpnconnect.png "mds-SQLServer2019-ConfigMI_P2SVPNConnect")  
+    ![mds-SQLServer2019-Config-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "mds-SQLServer2019-Config-MI_P2SVPNConnect")  
 
 2. Launch the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. And click **Database Configuration** in the left pane.
 
@@ -110,20 +110,20 @@ This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies
 
 4. On the **Database Server** page, fill the **SQL Server instance** and select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click Next.
 
-    **Note:**
+    **Notice:**
     - SQL Server instance for Managed instance like "xxxxxxx.xxxxxxx.database.windows.net"
     - For Managed instance, we support **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication type.
     - When you select **Current User – Active Directory Integrated** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM.
     - Please ensure your authentication contains **"sysadmin"** rule for Managed instance.
-![mds-SQLServer2019-ConfigMI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-configmi-createdbconnect.png "mds-SQLServer2019-ConfigMI_CreateDBConnect")  
+![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
 5. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** checkbox and click one or more of the available options such as **Case-sensitive**. Click **Next**.
 
-    ![mds-SQLServer2019-ConfigMI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-configmi-createddbname.png "mds-SQLServer2019-ConfigMI_CreatedDBName")  
+    ![mds-SQLServer2019-Config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "mds-SQLServer2019-Config-MI_CreatedDBName")  
 
 6. In the **User name** field, specify the Windows account of the user that will be the default Super User for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. A Super User has access to all functional areas and can add, delete, and update all models.
 
-    ![mds-SQLServer2019-ConfigMI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-configmi-createdbusername.png "mds-SQLServer2019-ConfigMI_createDBUserName")
+    ![mds-SQLServer2019-Config-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "mds-SQLServer2019-Config-MI_createDBUserName")
 
 7. Click **Next** to view a summary of the settings for the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database, and then click **Next** again to create the database. The **Progress and Finish** page appears.
 
@@ -135,25 +135,25 @@ This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies
 
 10. Click **Connect**, select the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you created in Step 8, and then click **OK**.
 
-    ![mds-SQLServer2019-ConfigMI-connectDBName](../master-data-services/media/mds-sqlserver2019-configmi-connectdbname.png "mds-SQLServer2019-ConfigMI_connectDBName")
+    ![mds-SQLServer2019-Config-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_connectDBName")
 
 11. In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and click **Web Configuration** in the left pane.
 
 12. In the **Website** list box, click **Default Web Site**, and then click **Create** to create a Web application.
 
-    **Note**
+    **Notice**
 
     When you select **Default Web Site**, you must create a Web application. If you select **Create new website** in the list box, the application is automatically created.
 
-    ![mds-SQLServer2019-ConfigMI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-configmi-webconfiguration.png "mds-SQLServer2019-ConfigMI_WebConfiguration")
+    ![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
 
 13. In the **Application Pool** section, enter a different user name, enter the password, and then click OK.
 
-    **Note**
+    **Notice**
 
     **You need ensure the user can access the Database with Active Directory Integrated authentication that you just created. Or you need change the connection in web.config later.**
 
-    ![mds-SQLServer2019-ConfigMI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-configmi-createwebapplication.png "mds-SQLServer2019-ConfigMI_CreateWebApplication")
+    ![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
 
 14. For more information about the **Create Web Application** dialog box, see [Create Web Application Dialog Box &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
 
@@ -163,7 +163,7 @@ This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies
 
     You've finished setting up the Website. The **Web Configuration** page now displays the Website you selected, Web application you created, and the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database associated with the application.
 
-    ![mds-SQLServer2019-ConfigMI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-configmi-webconfigselectdb.png "mds-SQLServer2019-ConfigMI_WebConfigSelectDB")
+    ![mds-SQLServer2019-Config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "mds-SQLServer2019-Config-MI_WebConfigSelectDB")
 
 17. Click **Apply**. The **Configuration Complete** message box displays. Click **OK** in the message box to launch the web application. The web site address is http://server name/web application/.
 
@@ -201,7 +201,7 @@ Install the SQL Server 2019 **Cumulative Update**, the [!INCLUDE[ssMDSshort_md](
 
 If you receive “The client version is incompatible with the database version” issue after install SQL Server 2019 **Cumulative Update**, you need upgrade the Database version.
 
-![mds-SQLServer2019-ConfigMI-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-configmi-upgradedbpage.png "mds-SQLServer2019-ConfigMI_UpgradeDBPage")
+![mds-SQLServer2019-Config-MI-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "mds-SQLServer2019-Config-MI_UpgradeDBPage")
 
 1. Launch the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. And click **Database Configuration** in the left pane.
 
@@ -209,15 +209,15 @@ If you receive “The client version is incompatible with the database version�
 
 3. Click **Connect**, select the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] database that you associated for web application, and then click **OK**.
 
-    ![mds-SQLServer2019-ConfigMI-ConnectDBName](../master-data-services/media/mds-sqlserver2019-configmi-connectdbname.png "mds-SQLServer2019-ConfigMI_ConnectDBName")
+    ![mds-SQLServer2019-Config-MI-ConnectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "mds-SQLServer2019-Config-MI_ConnectDBName")
 
 4. Click **Upgrade Database…** button
 
-    ![mds-SQLServer2019-ConfigMI-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-configmi-selectupgradedb.png "mds-SQLServer2019-ConfigMI_SelectUpgradeDB")
+    ![mds-SQLServer2019-Config-MI-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "mds-SQLServer2019-Config-MI_SelectUpgradeDB")
 
 5. In the Upgrade Database Wizard, Click **Next** button on **Welcome** page and **Upgrade Review** page.
 
-    ![mds-SQLServer2019-ConfigMI-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-configmi-upgradedbwizard.png "mds-SQLServer2019-ConfigMI_UpgradeDBWizard")
+    ![mds-SQLServer2019-Config-MI-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "mds-SQLServer2019-Config-MI_UpgradeDBWizard")
 
 6. Click **Finish** button when all task completed.
 

@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Machine Learning Services on Windows
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Starting in SQL Server 2019, Language Extensions and Java support are provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 

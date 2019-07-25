@@ -11,7 +11,7 @@ ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # What new in SQL Server Language Extensions?
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Language extension capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between external languages and the data platform. 
 

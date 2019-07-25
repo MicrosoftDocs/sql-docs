@@ -57,8 +57,7 @@ After the SQL Server big data cluster app deploy extension has been installed, i
 
 Click on the extension in the sidebar to load a side panel showing the App Explorer. The following sample screenshot of the App Explorer shows no apps or app specifications available:
 
-<img src="media/vs-extension/app_explorer.png" width=350px></img>
-<!--![App Explorer](media/vs-extension/app_explorer.png)-->
+![App Explorer](media/vs-extension/app_explorer.png)
 
 #### Connect to Cluster
 
@@ -91,7 +90,7 @@ Once you have found the endpoint to use, then connect to the cluster.
 
 You need to *Open Workspace* in Visual Studio Code where you are going to save the artifacts of the app.
 
-To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. The name and version which you provide should be a DNS-1035 label and must consist of lower case alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character.
+To deploy a new app from one of our templates, click on the `New App Template` button on the `App Specifications` pane, where you will be prompted for the name, the runtime, and what location you would like to place the new app in on your local machine. The name and version that you provide should be a DNS-1035 label and must consist of lower case alphanumeric characters or '-', start with an alphabetic character, and end with an alphanumeric character.
 
 It is advised that you place it in your current Visual Studio Code workspace so that you can use the full functionality of the extension, but you can place it anywhere in your local file system.
 
@@ -147,7 +146,7 @@ You may view all apps you have deployed in the side bar with the following infor
   - swagger
   - details
 
-If you click `Links`, you will see that you can access the `swagger.json` of your deployed app, so that you can write your own clients which call your app:
+If you click `Links`, you will see that you can access the `swagger.json` of your deployed app, so that you can write your own clients that call your app:
 
 ![Swagger](media/vs-extension/swagger.png)
 

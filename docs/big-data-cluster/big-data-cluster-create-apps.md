@@ -27,7 +27,7 @@ This article describes how to deploy and manage R and Python script as an applic
 Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
 
 The following types of apps are supported:
-- R and Python apps (functions, models and apps)
+- R and Python apps (functions, models, and apps)
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
@@ -78,7 +78,7 @@ kubectl get svc controller-svc-external -n <name of your big data cluster>
 
 ## Kubeadm or Minikube
 
-If you are using Kubeadm or Minikube run the following command to get the IP address to login in to the cluster
+If you are using Kubeadm or Minikube run the following command to get the IP address to sign in in to the cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -100,7 +100,7 @@ The following command shows an example of what this command might look like:
 azdata app create --spec ./addpy
 ```
 
-This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called `spec.yaml`. Please see [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
+This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called `spec.yaml`. See [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
 
 To deploy this app sample app, create the following files in a directory called `addpy`:
 
@@ -236,7 +236,7 @@ The init command provides a scaffold with the relevant artifacts that is require
 azdata app init --name hello --version v1 --template python
 ```
 
-This will create a folder called hello.  You can `cd` into the directory and inspect the generated files in the folder. spec.yaml defines the app, such as name, version and source code. You can edit the spec to change name, version, input and outputs.
+This will create a folder called hello.  You can `cd` into the directory and inspect the generated files in the folder. spec.yaml defines the app, such as name, version, and source code. You can edit the spec to change name, version, input, and outputs.
 
 Here is a sample output from the init command that you will see in the folder
 

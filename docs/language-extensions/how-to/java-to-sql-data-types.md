@@ -4,11 +4,11 @@ titleSuffix: SQL Server Language Extensions
 description: Map data types from Java to SQL Server for input and output data structures, and for input parameters on the sp_execute_external_script.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/16/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Java and SQL Server supported data types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

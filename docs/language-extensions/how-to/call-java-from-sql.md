@@ -4,11 +4,11 @@ titleSuffix: SQL Server Language Extensions
 description: Learn how to call Java classes from SQL Server stored procedures using the Java programming language extension in SQL Server 2019.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/24/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # How to call Java from SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

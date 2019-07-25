@@ -4,11 +4,11 @@ titleSuffix: SQL Server Language Extensions
 description: Learn about what's new SQL Server 2019 Language Extensions (preview). 
 author: dphansen
 ms.author: davidph 
-ms.date: 07/24/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # What new in SQL Server Language Extensions?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

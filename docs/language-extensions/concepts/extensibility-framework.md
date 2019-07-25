@@ -4,14 +4,14 @@ titleSuffix: SQL Server Language Extensions
 description: External code support for the SQL Server database engine, with dual architecture for running external language on relational data.
 author: dphansen
 ms.author: davidph 
-ms.date: 05/22/2019
+ms.date: 05/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Extensibility architecture in SQL Server Language Extensions
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server Language Extensions has an extensibility framework for running external code such as Java on the server. The code executes in a language runtime environment as an extension to the core database engine.
 

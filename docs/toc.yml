@@ -6674,8 +6674,6 @@
           href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
     - name: SQL Server utility
       href: relational-databases/manage/sql-server-utility-features-and-tasks.md
-    - name: SQL Assessment API
-      href: sql-assessment-api/sql-assessment-api-overview.md
       items:
       - name: Considerations for Running Utility & non-Utility Collection Sets on the Same Instance of SQL Server
         href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -6711,6 +6709,8 @@
         href: relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md
       - name: Utility Explorer F1 Help
         href: relational-databases/manage/utility-explorer-f1-help.md
+    - name: SQL Assessment API
+      href: sql-assessment-api/sql-assessment-api-overview.md
   - name: Monitor
     href: relational-databases/performance/monitor-and-tune-for-performance.md
     items:

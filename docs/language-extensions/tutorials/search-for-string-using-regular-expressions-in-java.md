@@ -4,14 +4,14 @@ titleSuffix: SQL Server Language Extensions
 description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/24/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: Search for a string using regular expressions (regex) in Java
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) and create a Java class that receives two columns (ID and text) from SQL Server and a regular expression as an input parameter. The class returns two columns back to SQL Server (ID and text).
 

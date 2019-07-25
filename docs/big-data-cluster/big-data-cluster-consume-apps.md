@@ -5,7 +5,7 @@ description: Consume an application deployed on SQL Server 2019 big data cluster
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -100,7 +100,7 @@ The result of this request will give you an JWT `access_token`, which you will n
 ## Execute the app using the RESTful web service
 
 > [!NOTE]
-> If you want, you can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. You will have to log in with the same credentials you used for `azdata login`. The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method. Also note the Base URL displayed at the top.
+> If you want, you can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. You will have to log in with the same credentials you used for `azdata login`. The contents of the `swagger.json` you can paste into [Swagger Editor](https://editor.swagger.io). You will see that the web service exposes the `run` method. Also note the Base URL displayed at the top.
 
 You can use your favorite tool to call the `run` method (`https://[IP]:30778/api/app/[appname]/[version]/run`), passing in the parameters in the body of your POST request as json. In this example we will use [Postman](https://www.getpostman.com/). Before making the call, you will need to set the `Authorization` to `Bearer Token` and paste in the token you retrieved earlier. This will set a header on your request. See the screenshot below.
 

@@ -40,11 +40,9 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 
 ## Java JRE or JDK
 
-In CTP 3.2, Zulu Open JRE version 11.0.3 is supported and is included with the SQL Server installation.
+In CTP 3.2, the default Java runtime is Zulu Open JRE version 11.0.3. This runtime is supported and included with the SQL Server installation.
 
-You can also use your preferred Java distribution instead of Zulu Open JRE. If you chose to use another Java distribution, you need to install it before installing SQL Server.
-
-Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
+You can also use your preferred Java distribution instead of Zulu Open JRE. Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
 > [!NOTE]
 > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for the CTP 3.2 release is Java 11.
@@ -82,9 +80,9 @@ For local installations, you must run Setup as an administrator. If you install 
 
 4. On the **Java Install Location** page, select either of these options:
 
-    - **Install Open JRE 11.0.3 included with this installation**. Choose this option if you want to install Zulu Open JRE 11.0.3 that is included with SQL Server. You do not need to install your JRE or JDE before you install SQL Server.
+    - **Install Open JRE 11.0.3 included with this installation**. Choose this option if you want to install Zulu Open JRE 11.0.3 that is included with SQL Server. You do not need to install a JRE or JDE.
 
-    - **Provide the location of a different version that has been installed on this computer**. Choose the option if you want to install your own JDK or JRE. The JDK or JRE needs to be installed before you install see SQL Server.
+    - **Provide the location of a different version that has been installed on this computer**. Choose the option if you want to install and use another JDK or JRE.
 
     ![Choose Java install location](../media/ctp32-openjdk.png)
 

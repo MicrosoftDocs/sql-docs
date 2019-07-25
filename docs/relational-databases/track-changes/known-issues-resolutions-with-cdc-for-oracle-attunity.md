@@ -86,6 +86,43 @@ Before spending too much time troubleshooting, it is important to use the latest
 
 ## Collect detailed logs 
 
+This section explains how to collect errors and events from the CDC instance. 
+
+### Management console
+
+You can see errors in the **Status** messages filed within the Oracle Change Data Capture Designer management console when a CDC instance is highlighted int he left pane. 
+
+### Query trace table
+
+You can query the trace table in the CDC database within SQL Server to see logged errors. 
+
+### Save output from basic logging 
+
+To capture diagnostics, select **Collect Diagnostics** on the status tab in the Oracle Change Data Capture management console. 
+
+### Detailed errors
+
+You can increase the level of tracing collected by the instance and repeat the scenario to gather more detailed logging. To do so, select **Properties** under **Actions** and then add a new property in the **Advanced Settings** grid on the **Advanced** tab. Set the name of the property to `trace` and then set the value to `SOURCE`. 
+
+Reproduce the error and then select the **Collect diagnostics** option to gather logs. 
+
+## ORA-00942 Table of view does not exist 
+
+This is a common error displayed in the **Status** message field of the CDC Instance. The instance retries numerous times, so the status icon will change to green momentarily, but then it will fail with the red exclamation and UNEXPECTED status. 
+
+```
+"ERROR","computername","ERROR","UNEXPECTED","ORACDC508E:Oracle method OCIStmtExecute failed with error: ORA-00942: table or view does not exist ","source","","" 
+```
+
+This happens when the Oracle account connecting from the CDC instance to the Oracle server does not have permission to see system log views. 
+
+### Resolution
+
+To resolve this error, either grant the currently configured user appropriate permissions within the Oracle database system, or change which account is being used to connect to the Oracle server from the CDC instance. 
+
+The list of all the necessarily permissions is detailed in the help file included in the installation program files folder `C:\Program Files\Change Data Capture for Oracle by Attunity\Attunity.SqlServer.XdbCdcDesigner.chm`.  See the page titled "Connect to an Oracle Source Database" within the .chm file for the complete list.
+
+You can set the user account by selecting the CDCInstance from the left pane and selecting the Properties button in the Actions right-most pane within the CDC Designer window. You can change the Oracle log mining authentication account from the properties dialogue page.
 
 
   

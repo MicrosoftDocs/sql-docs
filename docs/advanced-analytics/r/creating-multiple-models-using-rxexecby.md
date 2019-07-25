@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Creating multiple models using rxExecBy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The **rxExecBy** function in RevoScaleR supports parallel processing of multiple related models. Rather than train one large model based on data from multiple similar entities, a data scientist can quickly create many related models, each using data specific to a single entity. 
 

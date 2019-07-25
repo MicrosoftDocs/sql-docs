@@ -13,7 +13,9 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Install SQL Server 2019 Machine Learning Services (R, Python) on Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) runs on Linux operating systems starting in this preview release of SQL Server 2019. Follow the steps in this article to install the machine learning extensions for R and Python. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+[SQL Server Machine Learning Services](../advanced-analytics/index.yml) runs on Linux operating systems starting in this preview release of SQL Server 2019. Follow the steps in this article to install the machine learning extensions for R and Python.
 
 Machine learning and programming extensions are an add-on to the database engine. Although you can [install the database engine and Machine Learning Services concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
@@ -23,7 +25,7 @@ Machine Learning Services is also supported on Linux containers. We do not provi
 
 ## Uninstall previous CTP
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.1. Side-by-side installation of multiple versions is not supported.
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.2. Side-by-side installation of multiple versions is not supported.
 
 ### 1. Confirm package installation
 
@@ -56,7 +58,7 @@ Commands for removing packages appear in the following table.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### 3. Proceed with CTP 3.1 install
+### 3. Proceed with CTP 3.2 install
 
 Install at the highest package level using the instructions in this article for your operating system.
 

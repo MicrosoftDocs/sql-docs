@@ -191,21 +191,13 @@ Use the following steps to verify that all components used to launch external sc
     GO
     ```
 
- **Results**
+    **Results**
 
     The script can take a little while to run, the first time the external script runtime is loaded. The results should be something like this:
 
     | hello |
     |----|
     | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
 
 > [!NOTE]
 > Columns or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.

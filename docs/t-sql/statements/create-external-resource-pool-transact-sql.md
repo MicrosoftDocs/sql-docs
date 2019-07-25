@@ -1,10 +1,10 @@
 ---
 title: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/11/2017"
+ms.date: "07/24/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL RESOURCE POOL"
@@ -18,12 +18,13 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE EXTERNAL RESOURCE POOL statement"
 ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Creates an external pool used to define resources for external processes. A resource pool represents a subset of the physical resources (memory and CPUs) of a Database Engine instance. Resource Governor enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools.
 

@@ -11,7 +11,7 @@ ms.author: davidph
 ---
 
 # Extensibility architecture in SQL Server Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server has an extensibility framework for running external script such as R or Python on the server. Script executes in a language runtime environment as an extension to the core database engine. 
 

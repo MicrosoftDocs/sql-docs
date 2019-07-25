@@ -5,7 +5,7 @@ description: Learn how to install tools used with SQL Server 2019 big data clust
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/17/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -25,7 +25,8 @@ The following table lists common big data cluster tools and how to install them:
 
 | Tool | Required | Description | Installation |
 |---|---|---|---|
-| **mssqlctl** | Yes | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-mssqlctl.md) |
+| **python** | Yes | Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Many parts of big data clusters for SQL Server use python. | [Install python](#python)|
+| **azdata** | Yes | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-azdata.md) |
 | **kubectl**<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kuberentes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
 | **Azure Data Studio (insiders)** | Yes | Cross-platform graphical tool for querying SQL Server ([More info](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Install](https://aka.ms/azdata-insiders) |
 | **SQL Server 2019 extension** | Yes | Extension for Azure Data Studio that supports connecting to the big data cluster. Also provides a Data Virtualization wizard. | [Install](../azure-data-studio/sql-server-2019-extension.md) |
@@ -51,12 +52,30 @@ The following table lists common big data cluster tools and how to install them:
 
 The previous table provides all of the common tools that are used with big data clusters. Which tools are required depends on your scenario. But in general, the following tools are most important for managing, connecting to, and querying the cluster:
 
-- **mssqlctl**
+- **azdata**
 - **kubectl**
 - **Azure Data Studio**
 - **SQL Server 2019 extension**
 
 The remaining tools are only required in certain scenarios. **Azure CLI** can be used to manage Azure services associated with AKS deployments. **mssql-cli** is an optional but useful tool that allows you to connect to the SQL Server master instance in the cluster and run queries from the command line. And **sqlcmd** and **curl** are required if you plan to install sample data with the GitHub script.
+
+### <a id="python"></a> Install python offline
+
+1. On a machine with internet access, download one of the following compressed files containing Python:
+
+   | Operating system | Download |
+   |---|---|
+   | Windows | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
+   | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |
+   | OSX     | [https://go.microsoft.com/fwlink/?linkid=2065976](https://go.microsoft.com/fwlink/?linkid=2065976) |
+
+1. Copy the compressed file to the target machine and extract it to a folder of your choice.
+
+1. For Windows only, run `installLocalPythonPackages.bat` from that folder and pass the full path to the same folder as a parameter.
+
+   ```PowerShell
+   installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
+   ```
 
 ## Next steps
 

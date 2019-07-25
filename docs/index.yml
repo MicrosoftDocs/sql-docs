@@ -77,7 +77,7 @@ conceptualContent:
           url: https://docs.microsoft.com/azure/dms/dms-overview
           itemType: overview
         - text: SQL Machine Learning Services
-          url: advanced-analytics/what-is-sql-server-machine-learning.md
+          url: advanced-analytics/index.yml
           itemType: overview
     - title: Release notes 
       links:
@@ -271,7 +271,7 @@ additionalContent:
           - text: Azure Machine Learning
             url: https://docs.microsoft.com/azure/machine-learning/
           - text: SQL Machine Learning Services (R & Python)
-            url: advanced-analytics/what-is-sql-server-machine-learning.md
+            url: advanced-analytics/index.yml
           - text: SQL Server R Services
             url: advanced-analytics/r/sql-server-r-services.md
       - title: Data Analytics

@@ -23,6 +23,8 @@ This article lists the updates and know issues for the most recent releases of S
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.2.
 
+### What's New
+
 |New feature or update | Details |
 |:---|:---|
 |Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](deploy-get-started.md).|
@@ -57,14 +59,6 @@ The following sections describe the known issues and limitations with this relea
 ## <a id="ctp31"></a> CTP 3.1 (June)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.1.
-
-|New feature or update | Details |
-|:---|:---|
-|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](deploy-get-started.md).|
-|Notebook based troubleshooting.|CTP 3.2 introduces Jupyter notebooks to assist with [deployment](deploy-notebooks.md), and [discovery, diagnosis, and troubleshooting](manage-notebooks.md) for components in a SQL Server big data cluster. |
-|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](deploy-install-azdata.md). |
-|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](hdfs-tiering.md) |
-| &nbsp; | &nbsp; |
 
 ### What's New
 

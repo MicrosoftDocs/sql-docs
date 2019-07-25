@@ -56,7 +56,7 @@ The server options **min server memory** and **max server memory** can be set to
 
 <sup>2</sup> Refer to the documentation page on how to [Configure the max worker threads Server Configuration Option](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md), for information on the calculated default worker threads for a given number of affinitized CPUs in the current host.
 
-<sup>3</sup> Refer to the documentation page on [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
+<sup>3</sup> Refer to the documentation page on [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter. Aplicable only to 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
 ## How to configure memory options using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Use the two server memory options, **min server memory** and **max server memory**, to reconfigure the amount of memory (in megabytes) managed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources.  

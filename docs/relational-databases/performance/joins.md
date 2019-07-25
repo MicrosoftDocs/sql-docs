@@ -196,8 +196,6 @@ In the plan, note the following:
 3. Since the query returns 336 rows, this exceeded the threshold and so the second branch represents the probe phase of a standard Hash join operation. Notice that Live Query Statistics shows rows flowing through the operators - in this case "672 of 672".
 4. And the last branch is a Clustered Index Seek for use by the Nested Loops join had the threshold not been exceeded. Notice that we see "0 of 336" rows displayed (the branch is unused).
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 Now contrast the plan with the same query, but when the *Quantity* value only has one row in the table:
  
 ```sql
@@ -218,18 +216,18 @@ In the plan, note the following:
 ### Adaptive Join remarks
 Adaptive joins introduce a higher memory requirement than an indexed Nested Loops Join equivalent plan. The additional memory is requested as if the Nested Loops was a Hash join. There is also overhead for the build phase as a stop-and-go operation versus a Nested Loops streaming equivalent join. With that additional cost comes flexibility for scenarios where row counts may fluctuate in the build input.
 
-Batch mode Adaptive Joins work for the initial execution of a statement, and once compiled, consecutive executions will remain adaptive based on the compiled Adaptive Join threshold and the runtime rows flowing through the build phase of the outer input.
+Batch mode Adaptive joins work for the initial execution of a statement, and once compiled, consecutive executions will remain adaptive based on the compiled Adaptive Join threshold and the runtime rows flowing through the build phase of the outer input.
 
 If an Adaptive Join switches to a Nested Loops operation, it uses the rows already read by the Hash Join build. The operator does **not** re-read the outer reference rows again.
 
 ### Tracking Adaptive join activity
 The Adaptive Join operator has the following plan operator attributes:
 
-| Plan attribute | Description |
-|--- |--- |
-| AdaptiveThresholdRows | Shows the threshold use to switch from a hash join to nested loop join. |
-| EstimatedJoinType | What the join type is likely to be. |
-| ActualJoinType | In an actual plan, shows what join algorithm was ultimately chosen based on the threshold. |
+|Plan attribute|Description|
+|---|---|
+|AdaptiveThresholdRows|Shows the threshold use to switch from a hash join to nested loop join.|
+|EstimatedJoinType|What the join type is likely to be.|
+|ActualJoinType|In an actual plan, shows what join algorithm was ultimately chosen based on the threshold.|
 
 The estimated plan shows the Adaptive Join plan shape, along with a defined Adaptive Join threshold and estimated join type.
 
@@ -239,7 +237,7 @@ The estimated plan shows the Adaptive Join plan shape, along with a defined Adap
 ### Adaptive join eligible statements
 A few conditions make a logical join eligible for a batch mode Adaptive Join:
 - The database compatibility level is 140 or higher.
-- The query is a SELECT statement (data modification statements are currently ineligible).
+- The query is a `SELECT` statement (data modification statements are currently ineligible).
 - The join is eligible to be executed both by an indexed Nested Loops join or a Hash join physical algorithm.
 - The Hash join uses [Batch mode](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) - either through the presence of a Columnstore index in the query overall or a Columnstore indexed table being referenced directly by the join.
 - The generated alternative solutions of the Nested Loops join and Hash join should have the same first child (outer reference).
@@ -254,14 +252,22 @@ Adaptive joins can be disabled at the database or statement scope while still ma
 To disable Adaptive joins for all query executions originating from the database, execute the following within the context of the applicable database:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
 When enabled, this setting will appear as enabled in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 To re-enable adaptive joins for all query executions originating from the database, execute the following within the context of the applicable database:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
 Adaptive joins can also be disabled for a specific query by designating `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` as a [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint). For example:
@@ -343,7 +349,3 @@ The results do not make it easy to distinguish a NULL in the data from a NULL th
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)      
 [Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  

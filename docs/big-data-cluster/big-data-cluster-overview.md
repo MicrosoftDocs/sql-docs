@@ -5,7 +5,7 @@ description: Learn about SQL Server 2019 big data clusters (preview) that run on
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -79,21 +79,25 @@ In SQL Server big data clusters, Kubernetes is responsible for the state of the 
 
 ### Big data clusters architecture
 
-Nodes in the cluster are arranged into three logical planes: the control plane, the compute plane, and the data plane. Each plane has different responsibilities in the cluster. Every Kubernetes node in a SQL Server big data cluster is hosting pods for components of at least one plane.
+The following diagram shows the components of a big data cluster for SQL Server.
 
-![Architecture overview](media/big-data-cluster-overview/architecture-diagram-planes.png)
+![Architecture overview](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Control plane
+### <a id="controlplane"></a> Controller
 
-The control plane provides management and security for the cluster. It contains the Kubernetes master, the *SQL Server master instance*, and other cluster-level services such as the Hive Metastore and Spark Driver.
+The controller provides management and security for the cluster. It contains the cntrol service, the configuration store, and other cluster-level services such as Kibana, Grafana, and Elastic Search.
 
-### <a id="computeplane"></a> Compute plane
+### <a id="computeplane"></a> Compute pool
 
-The compute plane provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute plane are divided into *compute pools* for specific processing tasks. A compute pool can act as a [PolyBase](../relational-databases/polybase/polybase-guide.md) scale-out group for distributed queries over different data sources-such as HDFS, Oracle, MongoDB, or Teradata.
+The compute pool provides computational resources to the cluster. It contains nodes running SQL Server on Linux pods. The pods in the compute pool are divided into *SQL Compute instances* for specific processing tasks. 
 
-### <a id="dataplane"></a> Data plane
+### <a id="dataplane"></a> Data pool
 
-The data plane is used for data persistence and caching. It contains the SQL data pool, and storage pool.  The SQL data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Server big data cluster data marts are persisted in the data pool. The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Server big data cluster are members of an HDFS cluster.
+The data pool is used for data persistence and caching. The data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Server big data cluster data marts are persisted in the data pool. 
+
+### Storage pool
+
+The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Server big data cluster are members of an HDFS cluster.
 
 > [!TIP]
 > For an in-depth look into big data cluster architecture and installation, see [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).

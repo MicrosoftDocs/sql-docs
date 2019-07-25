@@ -55,9 +55,8 @@ There are a few communities that can help you with your SQL Server issues.
 
 You can submit suggestions for improvement, as well as submit bugs for:
 
-- **SQL Server**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
--** SQL Server Management Studio (SSMS)**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
-- **Azure Data Studio**: [Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
+- **SQL Server feedback**: [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)
+- **Azure Data Studio issues**: [Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 
 ###  SQL Server documentation
@@ -66,9 +65,7 @@ The best way to reach the SQL Server content team is through Git Issues. You'll 
 
 ![Git Issue content feedback](media/sql-server-get-help/git-issues.png)
 
-If you have something else to share - an idea, a suggestion, feedback, anything! You can do so by filing a general Git Issue at [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback). 
-
-Just select the 'New Issue' button to get started. 
+If you have something else to share -- an idea, a suggestion, feedback, anything! -- you can open a general Git Issue by going to [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback) and selecting **New Issues**. 
 
 ![New Git Issue](media/sql-server-get-help/new-git-issue.png)
 
@@ -78,7 +75,7 @@ There are a few social media outlets to get information about the latest SQL Ser
 
 ### Updates via Twitter
 
-There are a few Twitter accounts that provide updates about SQL Server. 
+The following Twitter accounts provide updates about SQL Server: 
 
 - [SQL Docs Twitter](https://twitter.com/sqldocs)
 - [SQL Tiger Team Twitter](https://twitter.com/mssqltiger)
@@ -86,7 +83,7 @@ There are a few Twitter accounts that provide updates about SQL Server.
  
 ### Blogs
 
-There are a few SQL Server blogs that can bring you the latest information about SQL Server. 
+The following SQL Server blogs provide the latest information about SQL Server: 
 
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 - [SQL Repl Talk](https://blogs.msdn.microsoft.com/repltalk/)

@@ -25,10 +25,9 @@ You can always navigate back to this page by selecting **SQL Docs** from the hea
 ![SQL docs in header](media/sql-server-docs-navigation-guide/sql-docs-in-header.png)
 
 
-## Table of contents
+## TOC navigation hints
 
-### Navigation hints
-Entires in the TOC that have a `>` at the end of the entry indicate that you will be taken away from docs.microsoft.com. 
+Entries in the table of contents (TOC) that have a `>` at the end of the entry indicate that you will be taken away from docs.microsoft.com. 
 
 ![Single carrots in toc](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
@@ -41,7 +40,7 @@ If you navigate to one of these pages, you can come back to the main SQL Server 
 
 ![Navigate back to SQL toc](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-### Filter box
+## TOC search tip
 On docs.microsoft.com, you can search the content in the table of contents by using the filter search box at the top: 
 
 ![Use filter box](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -76,7 +75,7 @@ If you would like to view the SQL Server documentation on an offline system, you
 If you'd like to create a PDF, select the **Download PDF** link found at the bottom of every table of contents.
 
 
-![Download PDF](media/sql-server-get-help/download-pdf.png)
+![Download PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
 ## Submit docs feedback
 
@@ -87,6 +86,8 @@ If you find something wrong within an article, you can submit feedback to the SQ
 You can also submit general documentation feedback and suggestions at [https://aka.ms/sqldocsfeedback](https://aka.ms/sqldocsfeedback). 
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+![Edit SQL Docs](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## Next steps
 

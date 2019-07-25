@@ -134,6 +134,7 @@ These new features and their usage are described in more detail in Backup and Re
 The following table lists the kinds of snapshot backups that are supported by the SQL writer/SQL Server working with the VSS framework for all editions of SQL Server.
 
 | **Backup/Restore Operation**                 | **Component-Based**           | **Noncomponent-Based** | **SQL writer** | **MSDE Writer**                    |
+|:-------------------------------------------- | :---------------------------- | :--------------------- | :------------- | :--------------------------------- |
 |Full Data Backup </br> (Including full-text catalog)| Yes                     | Yes                    | Yes            | Yes </br> (No full-text catalog support) |
 |Full Restore                                  | Yes                           | Yes                    | No             | Yes                                |
 |Full Restore (No recovery)                    | Yes                           | No                     | No             | Yes                                |

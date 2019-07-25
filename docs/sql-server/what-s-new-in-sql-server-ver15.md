@@ -44,6 +44,12 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
+### New in Language extensions
+
+|New feature or update | Details |
+|:---|:---|
+| New default Java Runtime  | SQL Server now includes Azul System's Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
+
 ### New in SQL Server on Linux
 
 |New feature or update | Details |

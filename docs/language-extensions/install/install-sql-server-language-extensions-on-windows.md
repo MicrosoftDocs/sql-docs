@@ -10,7 +10,7 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Machine Learning Services on Windows
+# Install SQL Server Language Extensions on Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

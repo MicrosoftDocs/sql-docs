@@ -4,15 +4,15 @@ titleSuffix: SQL Server Language Extensions
 description: Language extensions installation steps for SQL Server 2019 in Windows.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/24/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Install SQL Server Machine Learning Services on Windows
+# Install SQL Server Language Extensions on Windows
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Starting in SQL Server 2019, Language Extensions and Java support are provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 

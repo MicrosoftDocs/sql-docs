@@ -4,16 +4,16 @@ description: How to implement a Java program for SQL Server using the Microsoft 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/24/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Microsoft Extensibility SDK for Java for SQL Server
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes how you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. The SDK is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
 

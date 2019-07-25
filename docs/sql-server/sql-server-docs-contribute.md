@@ -28,7 +28,9 @@ All public contributions are validated by the SQL content team for technical acc
 
 ## <a id="githubui"></a> Edit in your browser
 
-You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. To do so, follow these steps:
+You can make simple edits to SQL Server content in your browser and then submit them to Microsoft. For more information, you can see the [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
+
+The following steps summarize the process: 
 
 1. On the page you have feedback about, select the **Edit** link at the top right.
 1. On the next page, select the **Pencil** icon at the top right.
@@ -45,7 +47,7 @@ The following GIF demonstrates the end-to-end process for submitting changes in 
 
 ![Edit SQL Docs](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-The complete process is documented in the article, [Microsoft Docs contributor guide overview](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
+The complete process is documented in the article, . 
 
 ## <a id="tools"></a> Edit locally with tools
 

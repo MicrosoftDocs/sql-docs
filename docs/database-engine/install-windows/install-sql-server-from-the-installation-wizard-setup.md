@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server 2016 from the Installation Wizard (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install

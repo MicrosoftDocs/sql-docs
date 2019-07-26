@@ -136,7 +136,8 @@ If you are currently using Version 1.0.0.440 or older, follow these steps to upd
   
 ### Key Backup and Recovery  
 The Key vault should be regularly backed up. If an asymmetric key in the vault is lost, it can be restored from backup. The key must be restored using the same name as before, which the Restore PowerShell command will do (see below steps).  
-If the vault has been lost, you will need to recreate a vault and restore the asymmetric key to the vault using the same name as before. The vault name can be different (or the same as before). You must also set the access permissions on the new vault to grant to the SQL Server service principal the access that is needed for the SQL Server encryption scenarios and then adjust the SQL Server credential so that the new vault name is reflected.  
+If the vault has been lost, you will need to recreate a vault and restore the asymmetric key to the vault using the same name as before. The vault name can be different (or the same as before). You must also set the access permissions on the new vault to grant to the SQL Server service principal the access that is needed for the SQL Server encryption scenarios and then adjust the SQL Server credential so that the new vault name is reflected.
+
 In summary, here are the steps:  
   
 * Back up the vault key (using the Backup-AzureKeyVaultKey Powershell cmdlet).  

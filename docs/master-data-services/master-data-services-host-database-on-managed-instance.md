@@ -111,11 +111,12 @@ This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies
 
 4. On the **Database Server** page, fill the **SQL Server instance** and select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click Next.
 
-    **Notice:**
-    - SQL Server instance for managed instance like "xxxxxxx.xxxxxxx.database.windows.net"
-    - For managed instance, we support **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication type.
-    - When you select **Current User – Active Directory Integrated** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM.
-    - Please ensure your authentication contains **"sysadmin"** rule for managed instance.
+   > [!NOTE]
+   > - SQL Server instance for managed instance like "xxxxxxx.xxxxxxx.database.windows.net"
+   > - For managed instance, we support **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication type.
+   > - When you select **Current User – Active Directory Integrated** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM.
+
+    Please ensure your authentication contains **"sysadmin"** rule for managed instance.
 ![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
 5. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** checkbox and click one or more of the available options such as **Case-sensitive**. Click **Next**.
@@ -142,17 +143,15 @@ This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies
 
 12. In the **Website** list box, click **Default Web Site**, and then click **Create** to create a Web application.
 
-    **Notice**
-
-    When you select **Default Web Site**, you must create a Web application. If you select **Create new website** in the list box, the application is automatically created.
+   > [!NOTE] 
+   > When you select **Default Web Site**, you must create a Web application. If you select **Create new website** in the list box, the application is automatically created.
 
     ![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
 
 13. In the **Application Pool** section, enter a different user name, enter the password, and then click OK.
 
-    **Notice**
-
-    **You need ensure the user can access the Database with Active Directory Integrated authentication that you just created. Or you need change the connection in web.config later.**
+   > [!NOTE] 
+   > You need ensure the user can access the database with Active Directory Integrated authentication that you just created. Or you need change the connection in web.config later.
 
     ![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
 

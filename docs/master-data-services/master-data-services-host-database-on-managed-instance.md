@@ -142,18 +142,20 @@ This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies
 11. In [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and click **Web Configuration** in the left pane.
 
 12. In the **Website** list box, click **Default Web Site**, and then click **Create** to create a Web application.
+![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
 
    > [!NOTE] 
    > When you select **Default Web Site**, you must create a Web application. If you select **Create new website** in the list box, the application is automatically created.
 
-    ![mds-SQLServer2019-Config-MI-WebConfiguration](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "mds-SQLServer2019-Config-MI_WebConfiguration")
+    
 
 13. In the **Application Pool** section, enter a different user name, enter the password, and then click OK.
+![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
 
-   > [!NOTE] 
+   > [!NOTE]
    > You need ensure the user can access the database with Active Directory Integrated authentication that you just created. Or you need change the connection in web.config later.
 
-    ![mds-SQLServer2019-Config-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "mds-SQLServer2019-Config-MI_CreateWebApplication")
+    
 
 14. For more information about the **Create Web Application** dialog box, see [Create Web Application Dialog Box &#40;[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
 

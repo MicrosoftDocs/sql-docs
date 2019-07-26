@@ -41,7 +41,7 @@ The architecture is designed such that external code run in a separate process f
   
   ***Component architecture in Linux***
   
-Components include a **Launchpad** service used to invoke external runtimes (for example, Java), language, and library-specific logic for loading interpreters and libraries.
+Components include a **Launchpad** service used to invoke external runtimes (for example, Java) and library-specific logic for loading interpreters and libraries.
 
 <a name="launchpad"></a>
 

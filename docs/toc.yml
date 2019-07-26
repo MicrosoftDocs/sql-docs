@@ -7534,6 +7534,8 @@
         href: master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
       - name: Master Data Services Developer Documentation
         href: master-data-services/develop/master-data-services-developer-documentation.md
+      - name: Host database on a managed instance
+        href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
     - name: Excel add-in
       href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
       items:
@@ -7974,8 +7976,6 @@
         href: relational-databases/security/sql-vulnerability-assessment.md
       - name: Data discovery & classification
         href: relational-databases/security/sql-data-discovery-and-classification.md
-      - name: SQL Server Connector troubleshooting
-        href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
     - name: Authentication Access
       items:
       - name: Determine effective permissions
@@ -8023,8 +8023,16 @@
           href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
       - name: Move a TDE protected database
         href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-      - name: Enable TDE with EKM
-        href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+      - name: Extensible Key Management
+        items:
+        - name: Enable TDE with EKM
+          href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+        - name: SQL Server connector with encryption
+          href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
+        - name: EKM using Azure Key Vault
+          href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+        - name: SQL Server Connector troubleshooting
+          href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
       - name: Back up service master key
         href: relational-databases/security/encryption/back-up-the-service-master-key.md
       - name: Restore service master key
@@ -8041,16 +8049,12 @@
         href: relational-databases/security/encryption/encrypt-a-column-of-data.md
     - name: Secure Azure SQL Database
       items:
-      - name: SQL Server connector with encryption
-        href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
       - name: Bring your own key >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
       - name: Rotate TDE BYOK keys >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
       - name: Remove TDE protector >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
-      - name: EKM using Azure Key Vault
-        href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
     - name: Auditing
       items:
       - name: Create server audit specification

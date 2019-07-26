@@ -18,7 +18,7 @@ ms.author: mathoma
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Examples of Bulk Access to Data in Azure Blob Storage
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 The `BULK INSERT` and `OPENROWSET` statements can directly access a file in Azure blob storage. The following examples use data from a CSV (comma separated value) file (named `inv-2017-01-19.csv`), stored in a container (named `Week3`), stored in a storage account (named `newinvoices`). The path to format file can be used, but is not included in these examples. 
 
@@ -61,7 +61,7 @@ Then the `OPENROWSET` statement adds the container name (`week3`) to the file de
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```
 
 Using `BULK INSERT`, use the container and file description:
@@ -90,7 +90,7 @@ Then the `OPENROWSET` statement does not include the container name in the file 
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```   
 
 Using `BULK INSERT`, do not use the container name in the file description: 

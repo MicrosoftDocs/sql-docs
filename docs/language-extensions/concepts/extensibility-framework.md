@@ -10,7 +10,9 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
+
 # Extensibility architecture in SQL Server Language Extensions
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server Language Extensions has an extensibility framework for running external code such as Java on the server. The code executes in a language runtime environment as an extension to the core database engine.

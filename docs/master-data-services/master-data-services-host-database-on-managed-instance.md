@@ -1,5 +1,6 @@
 ---
-title: "Host database on a Managed Instance | Microsoft Docs"
+title: "Host database on a managed instance | Microsoft Docs"
+description: Describes how to configure a MDS database on a managed instance.
 ms.custom: ""
 ms.date: "07/01/2019"
 ms.prod: sql
@@ -12,16 +13,16 @@ author: v-redu
 ms.author: lle
 manager: craigg
 ---
-# Host database on Managed Instance
+# Host database on managed instance
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  This article covers how to config MDS database on Managed Instance.
+  This article covers how to config a MDS database on managed instance.
   
 ## Preparation
 
 We need finish following steps in the preparation.
-- Finish Managed Instance creating and configuration. Include virtual network and Point-to-site VPN.
+- Finish managed instance creating and configuration. Include virtual network and Point-to-site VPN.
 - Finish web application machine configuration.
   - Include install Point-to-site VPN.
   - Install Roles and Features.
@@ -111,10 +112,10 @@ This installs [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], assemblies
 4. On the **Database Server** page, fill the **SQL Server instance** and select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click Next.
 
     **Notice:**
-    - SQL Server instance for Managed instance like "xxxxxxx.xxxxxxx.database.windows.net"
-    - For Managed instance, we support **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication type.
+    - SQL Server instance for managed instance like "xxxxxxx.xxxxxxx.database.windows.net"
+    - For managed instance, we support **"SQL Server Account"** and **"Current User – Active Directory Integrated"** authentication type.
     - When you select **Current User – Active Directory Integrated** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running SQL Server 2019 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM.
-    - Please ensure your authentication contains **"sysadmin"** rule for Managed instance.
+    - Please ensure your authentication contains **"sysadmin"** rule for managed instance.
 ![mds-SQLServer2019-Config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "mds-SQLServer2019-Config-MI_CreateDBConnect")  
 
 5. Type a name in the **Database name** field. Optionally, to select a Windows collation, clear the **SQL Server default collation** checkbox and click one or more of the available options such as **Case-sensitive**. Click **Next**.

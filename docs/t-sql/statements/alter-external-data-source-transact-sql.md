@@ -22,7 +22,7 @@ ms.author: carlrab
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  Modifies an external data source used to create an external table. The external data source can be Hadoop, Azure blob storage (WASBS), or Azure Data Lake storage (ABFSS).
+  Modifies an external data source used to create an external table. The external data source can be Hadoop or Azure blob storage (WASBS) for SQL SERVER and Azure blob storage (WASBS) or Azure Data Lake storage (ABFSS/ADL) for Azure SQL Data Warehouse. 
 
 ## Syntax  
 
@@ -48,7 +48,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 -- Applies to: Azure SQL Data Warehouse
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
-        LOCATION = '<location prefix>://<location path>'
+        [LOCATION = '<location prefix>://<location path>']
         [, CREDENTIAL = credential_name ] 
 ```
 
@@ -104,6 +104,6 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
 
 ```  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET
-   LOCATION = 		   'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
+   LOCATION = 'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
    CREDENTIAL = AzureStorageCredential
 ```

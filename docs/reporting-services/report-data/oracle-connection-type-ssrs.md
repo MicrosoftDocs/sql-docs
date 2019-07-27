@@ -1,6 +1,6 @@
 ---
 title: "Oracle Connection Type (SSRS, Power BI Report Server, and Report Builder) | Microsoft Docs"
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -17,17 +17,16 @@ To use data from an Oracle database in your report, you must have a dataset that
 
 ## 64-bit drivers for the report servers
 
-Power BI Report Server and SQL Server Reporting Services 2016 and 2017 all use Managed ODP.NET. The following steps assume the files are installed to c:\oracle64.
+Power BI Report Server and SQL Server Reporting Services 2016 and 2017 all use Managed ODP.NET. The following steps are only needed for when using the latest 18x drivers. They assume you've installed the files to c:\oracle64.
 
 1. On the Oracle download site, install the [Oracle 64-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
 2. Register ODP.NET Managed Client to GAC:
-    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+    C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
 3. Add ODP.NET Managed Client entries to machine.config:
     C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
 
 ## 32-bit drivers for Report Builder
-
-Report Builder uses Managed ODP.NET. The following steps assume the files are installed to c:\oracle32.
+The following steps are only needed for when using the latest 18x drivers. They assume you've installed the files to c:\oracle32.
 
 1. On the Oracle download site, install the [Oracle 32-bit ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
 2. Register ODP.NET Managed Client to GAC:

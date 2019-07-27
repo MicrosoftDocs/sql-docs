@@ -4,13 +4,15 @@ titleSuffix: SQL Server Language Extensions
 description: External code support for the SQL Server database engine, with dual architecture for running external language on relational data.
 author: dphansen
 ms.author: davidph 
-ms.date: 05/25/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
+
 # Extensibility architecture in SQL Server Language Extensions
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server Language Extensions has an extensibility framework for running external code such as Java on the server. The code executes in a language runtime environment as an extension to the core database engine.
@@ -39,44 +41,23 @@ The architecture is designed such that external code run in a separate process f
   
   ***Component architecture in Linux***
   
-Components include a **Launchpad** service used to invoke language-specific launchers (for example, Java), language, and library-specific logic for loading interpreters and libraries. The Launcher loads a language run time, plus any proprietary modules. 
+Components include a **Launchpad** service used to invoke external runtimes (for example, Java) and library-specific logic for loading interpreters and libraries.
 
 <a name="launchpad"></a>
 
 ## Launchpad
 
-The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages the life-time, resources, and security boundaries of the external process that’s responsible for script execution. This is similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
 
 | Trusted launchers | Extension | SQL Server versions |
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll for Java | Java extension | SQL Server 2019 |
 
-The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under **SQLRUserGroup**. which uses [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) for execution isolation.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under **SQLRUserGroup** which uses [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) for execution isolation.
 
 A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server Machine Language Extensions. There is one Launchpad service for each database engine instance, so if you have multiple instances with external script support, you will have a Launchpad service for each one. A database engine instance is bound to the Launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling the Launchpad service created for the same instance.
 
 To execute tasks in a specific supported language, the Launchpad gets a secured worker account from the pool, and starts a satellite process to manage the external runtime. Each satellite process inherits the user account of the Launchpad and uses that worker account for the duration of script execution. If script uses parallel processes, they are created under the same, single worker account.
-
-## BxlServer and SQL Satellite
-
-**BxlServer** is an executable provided by Microsoft that manages communication between SQL Server and the external language. It creates the Windows job objects that are used to contain external script sessions, provisions secure working folders for each external script job, and uses SQL Satellite to manage data transfer between the external runtime and SQL Server. If you run [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) while a job is running, you might see one or multiple instances of BxlServer.
-
-In effect, BxlServer is a companion to a language run time environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes. 
-
-**SQL Satellite** is an extensibility API, included in the database engine starting with SQL Server 2016, that supports external code or external runtimes implemented using C or C++.
-
-BxlServer uses SQL Satellite for these tasks:
-
-+ Reading input data
-+ Writing output data
-+ Getting input arguments
-+ Writing output arguments
-+ Error handling
-+ Writing STDOUT and STDERR back to client
-
-SQL Satellite uses a custom data format that is optimized for fast data transfer between SQL Server and external script languages. It performs type conversions and defines the schemas of the input and output datasets during communications between SQL Server and the external script runtime.
-
-The SQL Satellite can be monitored by using windows extended events (xEvents).
 
 ## Communication channels between components
 
@@ -85,10 +66,6 @@ Communication protocols among components and data platforms are described in thi
 + **TCP/IP**
 
   By default, internal communications between SQL Server and the SQL Satellite use TCP/IP.
-
-+ **Named Pipes**
-
-  Internal data transport between the BxlServer and SQL Server through SQL Satellite uses a proprietary, compressed data format to enhance performance. Data is exchanged between language run times and BxlServer in BXL format, using Named Pipes.
 
 + **ODBC**
 

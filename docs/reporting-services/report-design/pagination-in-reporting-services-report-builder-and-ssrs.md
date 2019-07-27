@@ -1,6 +1,6 @@
 ---
 title: "Pagination in Reporting Services (Report Builder  and SSRS) | Microsoft Docs"
-ms.date: 03/01/2017
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design

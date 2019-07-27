@@ -42,7 +42,7 @@ SSMS is free!
 
 **[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.2 is the latest general availability (GA) version of SSMS. If you have SSMS 18.2 (GA) installed, installing SSMS 18.2 upgrades it to 18.2. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.2.
+SSMS 18.2 is the latest general availability (GA) version of SSMS. If you have a previous GA version of SSMS 18 installed, installing SSMS 18.2 upgrades it to 18.2. If you have an older *preview* version of SSMS 18.x installed, you must uninstall it before installing SSMS 18.2.
 
 **Version Information**
 

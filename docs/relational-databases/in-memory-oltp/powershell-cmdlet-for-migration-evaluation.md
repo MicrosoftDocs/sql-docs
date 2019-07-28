@@ -28,7 +28,7 @@ Save-SqlMigrationReport
     [ -MigrationType <migration_scenario_type> ]
     [
         [ -Server <server_name> -Database <database_name>
-            [ -Schema <schema_name> ] [ -Object <object_name> ] ]
+            [ -Schema <schema_name> ] [ -Object <object_name> ]
         ]
        |
         [ -InputObject <smo_object> ]
@@ -47,12 +47,12 @@ There are syntax aspects that should be emphasized. If you specify the parameter
 - `-Schema`
 - `-Object`
 
-Conversely, if you do _not_ specify `-InputObject`, then you must specify `-Server` and `-Database`. If you specify `-Server` and `-Database`, you have the option to narrow the scope by specifying either `-Schema` or `-Object`, or both.
+Conversely, if you do _not_ specify `-InputObject`, then you must specify `-Server` and `-Database`. If you specify `-Server`, you have the option to narrow the scope by specifying either `-Schema` or `-Object`, or both.
 
 | Parameter name | Description |
 | :------------- | :---------- |
 | Database | The name of the target SQL Server database. Mandatory when `-Server` is mandatory.<br/><br/> Optional in SQLPS. |
-| FolderPath | The folder in which the cmdlet should deposit the generated reports.<br/><br/> Required. |
+| FolderPath | The folder under which the cmdlet should store the generated reports.<br/><br/> Required. |
 | InputObject | The SMO object the cmdlet should target.<br/><br/> Mandatory in Windows Powershell environment if `-Server` is not supplied.<br/><br/> Optional in SQLPS. |
 | MigrationType | The type of migration scenario the cmdlet is targeting. Currently the only value is the default **'OLTP'**.<br/><br/> Optional. |
 | Object | The name of the object to report about. Can be a table or stored procedure. |
@@ -90,7 +90,7 @@ Save-SqlMigrationReport `
 ;
 ```
 
-## Example results
+## Example output report
 
 Under the folder specified for the `-FolderPath` parameter, the following two folder paths are created by running this cmdlet. Both paths start with the _server\_name_ value:
 

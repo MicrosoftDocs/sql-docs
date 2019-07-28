@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Non-SQL Server Publishers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

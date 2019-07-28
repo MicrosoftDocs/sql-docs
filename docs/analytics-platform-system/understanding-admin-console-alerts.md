@@ -2,7 +2,6 @@
 title: Admin Console alerts - Analytics Platform System | Microsoft Docs
 description: Understanding Admin Console alerts in Analytics Platform System (APS).
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

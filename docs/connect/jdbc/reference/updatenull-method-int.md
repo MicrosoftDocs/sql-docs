@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b22336a1-fe53-4e00-a5ff-ede8d3f2b9f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateNull Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5e24b3a0-0658-44fc-b653-f4c52f9eb328
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ICommand (OLE DB)

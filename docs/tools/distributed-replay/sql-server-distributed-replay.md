@@ -9,9 +9,8 @@ helpviewer_keywords:
   - "Distributed Replay"
   - "SQL Server Distributed Replay"
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

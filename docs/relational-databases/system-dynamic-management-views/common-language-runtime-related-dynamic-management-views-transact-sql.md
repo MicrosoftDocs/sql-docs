@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 57e79c45-ff47-4885-bdf5-aecf29891ab3
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Common Language Runtime Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

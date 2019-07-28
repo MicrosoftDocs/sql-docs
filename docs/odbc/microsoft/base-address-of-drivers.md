@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3601c0c7-18ad-4b41-b80b-5839276d0cba
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Base Address of Drivers
 Each of the ODBC Desktop Database Drivers has been linked with a base address of 0x04c0000.

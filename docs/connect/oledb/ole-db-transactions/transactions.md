@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, transactions"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Transactions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

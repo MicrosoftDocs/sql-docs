@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Connect Options
 > [!IMPORTANT]  

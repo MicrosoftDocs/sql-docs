@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change the Order of Attributes
 

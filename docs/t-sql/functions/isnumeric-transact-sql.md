@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISNUMERIC (Transact-SQL)

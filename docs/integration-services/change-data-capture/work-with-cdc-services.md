@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Work with CDC Services
 

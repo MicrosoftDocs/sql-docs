@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Debugging Script
 

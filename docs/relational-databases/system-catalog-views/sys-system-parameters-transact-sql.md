@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0d135c5f-68b5-4009-a0da-35e6abfee0ff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.system_parameters (Transact-SQL)

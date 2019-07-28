@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.execution_property_override_values 
 

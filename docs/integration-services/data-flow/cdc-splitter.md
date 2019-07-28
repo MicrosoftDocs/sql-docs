@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # CDC Splitter
 

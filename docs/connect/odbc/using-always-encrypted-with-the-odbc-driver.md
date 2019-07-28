@@ -7,7 +7,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: "v-chojas"
-manager: craigg
 author: MightyPen
 ---
 # Using Always Encrypted with the ODBC Driver for SQL Server
@@ -52,7 +51,12 @@ Note that enabling Always Encrypted is not sufficient for encryption or decrypti
 
 ### Retrieving and Modifying Data in Encrypted Columns
 
-Once you enable Always Encrypted on a connection, you can use standard ODBC APIs (see [ODBC sample code](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) or [ODBC Programmer's Reference](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)) to retrieve or modify data in encrypted database columns. Assuming your application has the required database permissions and can access the column master key, the driver will encrypt any query parameters which target encrypted columns and decrypt data retrieved from encrypted columns, behaving transparently to the application as if the columns were not encrypted.
+Once you enable Always Encrypted on a connection, you can use standard ODBC APIs. The ODBC APIs can retrieve or modify data in encrypted database columns. The following documentation items might help with this:
+
+- [ODBC sample code](cpp-code-example-app-connect-access-sql-db.md)
+- [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md)
+
+Your application must have the required database permissions, and must be able to access the column master key. Then, the driver encrypts any query parameters that target encrypted columns. The driver also decrypts data retrieved from encrypted columns. The driver performs all this encrypting and decrypting without any assistance from your source code. To your program, it is as if the columns are not encrypted.
 
 If Always Encrypted is not enabled, queries with parameters which target encrypted columns will fail. Data can still be retrieved from encrypted columns, as long as the query has no parameters targeting encrypted columns. However, the driver will not attempt any decryption and the application will receive the binary encrypted data (as byte arrays).
 
@@ -352,9 +356,10 @@ The ODBC Driver for SQL Server comes with the following built-in keystore provid
 
 ### Using the Azure Key Vault Provider
 
-Azure Key Vault is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The ODBC Driver for SQL Server on Linux, macOS, and Windows includes a built-in column master key store provider for Azure Key Vault. See [Azure Key Vault - Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Getting Started with Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), and [Creating Column Master Keys in Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) for more information on configuring an Azure Key Vault for Always Encrypted.
+Azure Key Vault (AKV) is a convenient option to store and manage column master keys for Always Encrypted (especially if your applications are hosted in Azure). The ODBC Driver for SQL Server on Linux, macOS, and Windows includes a built-in column master key store provider for Azure Key Vault. See [Azure Key Vault - Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Getting Started with Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), and [Creating Column Master Keys in Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) for more information on configuring an Azure Key Vault for Always Encrypted.
 
 > [!NOTE]
+> The ODBC Driver does not support Active Directory Federation Services for AKV authentication. If you are using Azure Active Directory authentication to AKV and your Active Directory configuration includes Federated Services, authentication may fail.
 > On Linux and macOS, for driver version 17.2 and later, `libcurl` is required to use this provider, but is not an explicit dependency since other operations with the driver do not require it. If you encounter an error regarding `libcurl`, ensure it is installed.
 
 The driver supports authenticating to Azure Key Vault using the following credential types:

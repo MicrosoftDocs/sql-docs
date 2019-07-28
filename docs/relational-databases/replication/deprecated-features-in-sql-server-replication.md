@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Deprecated Features in SQL Server Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

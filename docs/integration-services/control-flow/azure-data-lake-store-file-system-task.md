@@ -13,7 +13,6 @@ f1_keywords:
 author: "Lingxi-Li"
 ms.author: "lingxl"
 ms.reviewer: maghan
-manager: craigg
 ---
 # Azure Data Lake Store File System Task
 

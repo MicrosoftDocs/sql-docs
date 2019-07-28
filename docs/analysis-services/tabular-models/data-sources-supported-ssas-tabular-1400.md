@@ -1,6 +1,6 @@
 ﻿---
 title: "Data sources supported in SQL Server Analysis Services tabular 1400 models | Microsoft Docs"
-ms.date: 02/12/2019
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -25,18 +25,20 @@ For Azure Analysis Services, see [Data sources supported in Azure Analysis Servi
 
 |Datasource  |In-memory  |DirectQuery  |
 |---------|---------|---------|
-|Azure SQL Database     |   Yes      |    Yes      |
+|Azure SQL Database <sup>[1](#ae)</sup>    |   Yes      |    Yes      |
 |Azure SQL Data Warehouse     |   Yes      |   Yes       |
 |Azure Blob Storage     |   Yes       |    No      |
 |Azure Table Storage    |   Yes       |    No      |
 |Azure Cosmos DB     |  Yes        |  No        |
-|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   Yes       |    No      |
+|Azure Data Lake Store (Gen1)<sup>[2](#gen2)</sup>      |   Yes       |    No      |
 |Azure HDInsight HDFS    |     Yes     |   No       |
-|Azure HDInsight Spark <sup>[2](#databricks)</sup>     |   Yes       |   No       |
+|Azure HDInsight Spark <sup>[3](#databricks)</sup>     |   Yes       |   No       |
 ||||
 
-<a name="gen2">1</a> - ADLS Gen2 is currently not supported.   
-<a name="databricks">2</a> - Azure Databricks using the Spark connector is currently not supported.   
+<a name="ae">1</a> - Azure SQL Database Always Encrypted is not supported.   
+<a name="gen2">2</a> - ADLS Gen2 is currently not supported.   
+<a name="databricks">3</a> - Azure Databricks using the Spark connector is currently not supported.   
+
 
 
 
@@ -49,11 +51,13 @@ In-memory and DirectQuery models connecting to Azure data sources use .NET Frame
 
 |Datasource | In-memory provider | DirectQuery provider |
 |  --- | --- | --- |
-| SQL Server |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server, .NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
+| SQL Server <sup>[4](#aeop)</sup> |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server, .NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | SQL Server Data Warehouse |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server, .NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | Oracle |Microsoft OLE DB Provider for Oracle, Oracle Data Provider for .NET |Oracle Data Provider for .NET | |
 | Teradata |OLE DB Provider for Teradata, Teradata Data Provider for .NET |Teradata Data Provider for .NET | |
 | | | |
+
+<a name="aeop">4</a> - Azure SQL Database and SQL Server database Always Encrypted is supported as a DirectQuery [client datasource](data-sources-supported-ssas-tabular.md#bkmk_supported_ds_dq) in SQL Server Analysis Services tabular models at the 1200 compatibility level only. Azure SQL Database and SQL Server database Always Encrypted is not supported in Azure Analysis Services.       
 
 > [!NOTE]
 > For in-memory models, OLE DB providers can provide better performance for large-scale data. When choosing between different providers for the same data source, try the OLE DB provider first.  

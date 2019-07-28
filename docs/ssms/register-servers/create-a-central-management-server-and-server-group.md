@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Create a Central Management Server and Server Group
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

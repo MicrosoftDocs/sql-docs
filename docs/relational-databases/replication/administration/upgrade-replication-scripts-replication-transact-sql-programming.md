@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Upgrade Replication Scripts (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

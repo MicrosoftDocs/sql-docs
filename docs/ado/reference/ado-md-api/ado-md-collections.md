@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADO MD Collections
 

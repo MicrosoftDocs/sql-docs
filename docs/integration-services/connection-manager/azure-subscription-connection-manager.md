@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Subscription Connection Manager
 

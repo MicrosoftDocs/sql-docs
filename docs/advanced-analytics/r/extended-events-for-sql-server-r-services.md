@@ -1,5 +1,5 @@
 ---
-title: Extended events for monitoring R and Python processes - SQL Server Machine Learning Services
+title: Extended events for monitoring R and Python processes
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,10 +7,9 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Extended events for SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server provides a set of extended events to use in troubleshooting operations related to the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], as well as Python or R jobs sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

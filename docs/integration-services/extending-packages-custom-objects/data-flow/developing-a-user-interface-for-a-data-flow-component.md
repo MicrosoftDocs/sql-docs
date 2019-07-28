@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a User Interface for a Data Flow Component
 

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)
 

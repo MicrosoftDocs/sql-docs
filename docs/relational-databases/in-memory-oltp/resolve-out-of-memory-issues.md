@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Resolve Out Of Memory issues
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,9 @@ If the server does have enough physical memory, but you are still seeing this er
 1.  [Open a DAC (Dedicated Administrator Connection)](#bkmk_openDAC)  
   
 2.  [Take corrective action](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> Open a DAC (Dedicated Administrator Connection)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a dedicated administrator connection (DAC). The DAC allows an administrator to access a running instance of SQL Server Database Engine to troubleshoot problems on the server-even when the server is unresponsive to other client connections. The DAC is available through the `sqlcmd` utility and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

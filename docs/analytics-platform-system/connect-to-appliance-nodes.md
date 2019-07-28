@@ -2,7 +2,6 @@
 title: Connect to appliance Nodes - Analytics Platform System | Microsoft Docs
 description: This article explains the various ways to connect to each node in the Analytics Platform System appliance.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

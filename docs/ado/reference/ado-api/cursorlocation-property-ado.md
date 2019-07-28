@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CursorLocation Property (ADO)
 Indicates the location of the cursor service.  

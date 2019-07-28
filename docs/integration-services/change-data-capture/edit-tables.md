@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Edit Tables
 

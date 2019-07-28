@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b9f363af-a60a-40f0-9c22-28aa7b159e06
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # AND Predicate Limitations
 A maximum of 40 is supported.

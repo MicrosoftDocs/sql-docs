@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_INVALID_PARAMETER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

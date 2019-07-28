@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Sort in Ascending or Descending Order (Visual Database Tools)

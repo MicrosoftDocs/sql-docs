@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Customize (Commands Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

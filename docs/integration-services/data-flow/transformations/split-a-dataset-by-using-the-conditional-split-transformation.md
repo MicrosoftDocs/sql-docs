@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Split a Dataset by Using the Conditional Split Transformation
 

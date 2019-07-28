@@ -1,17 +1,16 @@
 ---
-title: Upgrade and installation frequently asked questions (FAQ) - SQL Server Machine Learning Services
+title: Upgrade and installation frequently asked questions (FAQ)
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-manager: cgronlun
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning or R Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
 
@@ -26,7 +25,7 @@ Depending on the build of SQL Server that you are installing, some of the follow
 
 - In early versions of SQL Server 2016 R Services, 8dot3 notation was required on the drive that contains the working directory. If you installed a pre-release version, upgrading to SQL Server 2016 Service Pack 1 should fix this issue. This requirement does not apply to releases after SP1.
 
-- Currently, you cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. However, SQL Server 2019 preview does provide failover support if you would like to evaluate this capablity in a test environment. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
+- Currently, you cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. However, SQL Server 2019 preview does provide failover support if you would like to evaluate this capability in a test environment. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - On an Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
 
@@ -58,7 +57,7 @@ You can upgrade your version of SQL Server by re-running the setup wizard.
 + [Upgrade SQL Server Using the Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 You can upgrade just the machine learning components by using a process called binding: 
-+ [Use SqlBindR to upgrade machine learning components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Use SqlBindR to upgrade machine learning components](../install/upgrade-r-and-python.md)
 
 ### End of support for in-place upgrades from prerelease versions
 

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Enable or Disable Data Collection
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,9 @@ manager: craigg
 1.  In Object Explorer, expand the **Management** node.  
   
 2.  Right-click **Data Collection**, and then click **Enable Data Collection**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To disable the data collector  
   
 1.  In Object Explorer, expand the **Management** node.  

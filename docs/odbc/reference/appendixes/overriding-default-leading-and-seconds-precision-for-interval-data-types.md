@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Overriding Default Leading and Seconds Precision for Interval Data Types
 When the SQL_DESC_TYPE field of an ARD is set to a datetime or interval C type, by calling either **SQLBindCol** or **SQLSetDescField**, the SQL_DESC_PRECISION field (which contains the interval seconds precision) is set to the following defaults:  

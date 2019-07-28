@@ -1,14 +1,14 @@
 ---
 title: "Release notes for (SSRS) 2017 and later | Microsoft Docs"
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Release notes for SQL Server Reporting Services (SSRS) 2017 and later
@@ -46,6 +46,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 
+## 14.0.600.1274, 2019/07/01
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Security updates | &nbsp; |
+| Unable to select weekdays when creating a shared weekly schedule | &nbsp; |
+| Report does not display carriage returns properly in Word format | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 no longer works with recent SSRS 2017 upgrades | &nbsp; |
+| An error occurred when invoking the authorization extension for shared Dataset | &nbsp; |
+| Logic changed on stored procedure GetAllProperties in SSRS 2017 and PBIRS, which causes the Web service endpoint ReportingService2010.GetProperties method unable to get any data for linked report | &nbsp; |
+| Simple Grid Row Header in Mobile Report disappears when an Item within the Grid is clicked | &nbsp; |
+| Unable to use date field in Data Driven Subscription parameter | &nbsp; |
+| Nested tablix shows small font or partial font in SSRS 2016 and later | &nbsp; |
+| Subscriptions with DateTime Parameter error out after user with different Locale edits the Subscription | &nbsp; |
+| Creating a Data-driven Subscription with Null Delivery Extension is failing with "A delivery error has occurred" | &nbsp; |
+| URL encoding is incorrect when setting the value in Excel\Word format | &nbsp; |
+
 ## 14.0.600.1109, 2019/02/12
 
 | Fixed issue | Details |
@@ -81,7 +98,7 @@ The following issue has been fixed:
 | Text size is not scaling if pageHeight is less than 0.5 inches. | &nbsp; |
 | Deadlock occurs in the SSRS catalog database when it is used with CRM. | &nbsp; |
 | Vertically aligned column headers displayed incorrectly when scrolling down in report. | &nbsp; |
-| Users added to SCOM Reporting Role have access blocked to SSRS web portal. | &nbsp; |
+| Users added to System Center Operations Manager Reporting Role have access blocked to SSRS web portal. | &nbsp; |
 | Thai character is not exported correctly into the PDF. | &nbsp; |
 | Browser Role Behavior Change. | &nbsp; |
 | rc:Toolbar=false does not work in Express edition. | &nbsp; |

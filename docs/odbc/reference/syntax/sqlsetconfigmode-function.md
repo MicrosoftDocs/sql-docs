@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConfigMode Function
 **Conformance**  

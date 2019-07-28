@@ -1,15 +1,13 @@
 ---
 title: Develop and Deploy SQL Server databases for Linux  | Microsoft Docs
 description: 
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: "sql-linux"
 ---
 # Use Visual Studio to create databases for SQL Server on Linux
 

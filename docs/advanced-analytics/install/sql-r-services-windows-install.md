@@ -1,5 +1,5 @@
 ---
-title: Install SQL Server 2016 R Services (In-Database) - SQL Server Machine Learning
+title: Install SQL Server 2016 R Services (In-Database)
 description: Add R programming language support to a database engine on SQL Server 2016 R Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,7 +8,6 @@ ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Install SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -211,7 +210,7 @@ At the instance level, additional configuration might include:
 On the database, you might need the following configuration updates:
 
 * [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
-* [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
+* [Add SQLRUserGroup as a database user](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
 > Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)

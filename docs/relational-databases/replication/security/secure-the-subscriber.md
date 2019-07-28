@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Secure the Subscriber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

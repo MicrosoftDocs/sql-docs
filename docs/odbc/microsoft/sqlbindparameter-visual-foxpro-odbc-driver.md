@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBindParameter (Visual FoxPro ODBC Driver)
 > [!NOTE]  

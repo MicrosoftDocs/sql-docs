@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getCharacterStream Method () (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

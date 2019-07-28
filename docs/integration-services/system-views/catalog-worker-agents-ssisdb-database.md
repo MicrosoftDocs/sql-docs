@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.worker_agents (SSISDB Database)
 

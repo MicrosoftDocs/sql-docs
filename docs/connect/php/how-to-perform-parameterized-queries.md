@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # How to: Perform Parameterized Queries
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

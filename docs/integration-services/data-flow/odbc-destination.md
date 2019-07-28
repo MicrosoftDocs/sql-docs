@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ODBC Destination
 

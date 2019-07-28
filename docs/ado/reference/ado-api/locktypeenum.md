@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # LockTypeEnum
 Specifies the type of lock placed on records during editing.  

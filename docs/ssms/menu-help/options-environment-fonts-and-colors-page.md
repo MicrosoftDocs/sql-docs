@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Options (Environment - Fonts and Colors Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

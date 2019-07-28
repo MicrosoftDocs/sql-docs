@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Enable Updating Subscriptions for Transactional Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,9 @@ manager: craigg
 1.  On the **Publication Type** page of the New Publication Wizard, select **Transactional publication with updatable subscriptions**.  
   
 2.  On the **Agent Security** page, specify security settings for the Queue Reader Agent in addition to the Snapshot Agent and Log Reader Agent. For more information about the permissions required for the account under which the Queue Reader Agent runs, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > **NOTE:** The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

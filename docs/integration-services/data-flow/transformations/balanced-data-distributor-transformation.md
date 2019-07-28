@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Balanced Data Distributor Transformation
 

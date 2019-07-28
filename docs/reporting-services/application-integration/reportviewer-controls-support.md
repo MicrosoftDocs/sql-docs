@@ -1,8 +1,7 @@
 ---
 title: Support for Report Viewer current branch versions
-uthor: markingmyname
+author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,7 +10,6 @@ ms.topic: reference
 ms.custom: ""
 ms.date: 01/09/2019
 ---
-
 # Support for Report Viewer current branch versions
 
 **_Applies to: Microsoft Report Viewer versions 150.900.148 and later_**

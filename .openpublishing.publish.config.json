@@ -8,8 +8,8 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [
-        "= sql-server-2014",
-        "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+        "sql-server-2014",
+        "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {

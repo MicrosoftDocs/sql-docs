@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # XML Source
 

@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, BLOBs"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Streaming Support for BLOB Output Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

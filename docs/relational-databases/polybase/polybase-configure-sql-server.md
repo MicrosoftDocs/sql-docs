@@ -1,14 +1,12 @@
 ---
 title: "Configure PolyBase to access external data in SQL Server | Microsoft Docs"
-ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
-ms.reviewer: jroth
-manager: craigg
+ms.reviewer: mikeray
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
 
@@ -20,7 +18,7 @@ This article explains how to use PolyBase on a SQL Server instance to query exte
 
 ## Prerequisites
 
-If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites.
+If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md). The installation article explains the prerequisites. Once installed, also be sure to [enable PolyBase](polybase-installation.md#enable).
 
 Before creating a database scoped credential a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created. 
 
@@ -61,6 +59,8 @@ The following Transact-SQL commands are used in this section:
     ```
 
 1. **Optional:** Create statistics on an external table.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
 

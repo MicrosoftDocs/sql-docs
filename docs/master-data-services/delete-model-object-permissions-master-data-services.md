@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete Model Object Permissions (Master Data Services)
 

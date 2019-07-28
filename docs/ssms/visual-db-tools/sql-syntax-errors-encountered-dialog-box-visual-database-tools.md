@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # SQL Syntax Errors Encountered Dialog Box (Visual Database Tools)

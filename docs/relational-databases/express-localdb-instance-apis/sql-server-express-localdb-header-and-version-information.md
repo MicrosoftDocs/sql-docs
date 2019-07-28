@@ -13,7 +13,6 @@ apilocation:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SQL Server Express LocalDB Header and Version Information
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

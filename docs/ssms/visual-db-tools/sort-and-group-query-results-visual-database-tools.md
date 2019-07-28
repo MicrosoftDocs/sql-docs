@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Sort and Group Query Results (Visual Database Tools)

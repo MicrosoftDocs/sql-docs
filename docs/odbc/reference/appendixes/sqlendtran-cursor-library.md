@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLEndTran (Cursor Library)
 > [!IMPORTANT]  

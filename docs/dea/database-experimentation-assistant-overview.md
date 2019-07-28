@@ -12,7 +12,6 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
 ---
 
 # Overview of Database Experimentation Assistant

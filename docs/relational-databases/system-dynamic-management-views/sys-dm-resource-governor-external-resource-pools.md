@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/02/2018"
+ms.date: "07/24/2019"
 ms.prod: sql
 ms.technology: machine-learning
 ms.reviewer: ""
@@ -16,12 +16,13 @@ dev_langs:
 helpviewer_keywords: 
   - "dm_resource_governor_external_resource_pools"
   - "sys.dm_resource_governor_external_resource_pools"
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: "cgronlun"
+author: dphansen
+ms.author: davidph
+manager: cgronlun
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Returns information about the current external resource pool state, the current configuration of resource pools, and resource pool statistics. 
   

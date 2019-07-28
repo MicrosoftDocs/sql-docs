@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Ordinal Property (ADO MD Position)
 Uniquely identifies a [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) along an axis.  

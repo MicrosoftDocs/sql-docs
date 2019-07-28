@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # MONTH (SSIS Expression)
 

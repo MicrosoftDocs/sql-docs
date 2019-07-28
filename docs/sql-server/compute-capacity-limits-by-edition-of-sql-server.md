@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: craigg
 ---
 # Compute capacity limits by edition of SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

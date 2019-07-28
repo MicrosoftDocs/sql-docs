@@ -4,7 +4,7 @@ ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.technology: release-landing
 ms.reviewer: ""
-ms.topic: "index-page "
+ms.topic: conceptual
 f1_keywords: 
   - "sql12.portal.f1"
 helpviewer_keywords: 
@@ -51,7 +51,7 @@ SQL Server 2016, and later versions, are documented [here](https://docs.microsof
   
 -   [SQL Server on Microsoft.com](https://go.microsoft.com/fwlink/?linkid=8504)  
   
--   [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkid=218841)  
+-   [SQL Server Resource Center](https://www.microsoft.com/sql-server/sql-server-2017-resources)  
   
 -   [SQL Server TechCenter](https://go.microsoft.com/fwlink/?linkid=28107)  
   

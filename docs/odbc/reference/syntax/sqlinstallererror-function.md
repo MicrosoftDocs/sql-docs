@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLInstallerError Function
 **Conformance**  

@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sp_get_redirected_publisher
   
 ## Arguments  
 `[ @original_publisher = ] 'original_publisher'`
- The name of the database being published. *publisher_db* is **sysname**, with no default.  
+ The name of the instance of SQL Server that originally published the database. *original_publisher* is **sysname**, with no default.
   
 `[ @publisher_db = ] 'publisher_db'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  

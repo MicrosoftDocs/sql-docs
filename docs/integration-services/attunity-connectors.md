@@ -11,7 +11,6 @@ ms.topic: conceptual
 ms.assetid: 
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Microsoft Connectors for Oracle and Teradata by Attunity for Integration Services (SSIS)
 

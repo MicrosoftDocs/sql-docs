@@ -14,7 +14,6 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Folder Properties Dialog Box
 

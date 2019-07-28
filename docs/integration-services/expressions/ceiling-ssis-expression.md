@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # CEILING (SSIS Expression)
 

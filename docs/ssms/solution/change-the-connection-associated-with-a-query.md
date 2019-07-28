@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Change the Connection Associated with a Query
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

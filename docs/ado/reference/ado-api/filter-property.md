@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Filter Property
 Indicates a filter for data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

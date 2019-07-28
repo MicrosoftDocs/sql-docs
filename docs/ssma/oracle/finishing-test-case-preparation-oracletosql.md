@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Finishing Test Case Preparation (OracleToSQL)
 The wizard's final page displays the Test Case description and information about objects involved in the test. In addition, on this page you can set the test execution options.  

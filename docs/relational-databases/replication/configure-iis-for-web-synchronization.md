@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Configure IIS for Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,9 @@ manager: craigg
 4.  Set the appropriate permissions for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener.  
   
 5.  Run Web synchronization in diagnostic mode to test the connection to the computer that is running IIS and to make sure that the SSL certificate is properly installed.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Configuring Secure Sockets Layer  
  To configure SSL, specify a certificate for the computer that is running IIS to use. Web synchronization for merge replication supports using server certificates but not client certificates. To configure IIS for deployment, you must first obtain a certificate from a certification authority (CA). A certificate authority is an entity that is responsible for establishing and vouching for the authenticity of public encryption keys that belong to users, computers, or other certification authorities. For more information about certificates, see the IIS documentation. After you install the certificate, you must associate the certificate with the Web site that is used by Web synchronization.  
   

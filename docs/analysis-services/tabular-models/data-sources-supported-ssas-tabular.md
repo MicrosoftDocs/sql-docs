@@ -1,6 +1,6 @@
 ---
 title: "Data sources supported in SQL Server Analysis Services tabular 1200 models | Microsoft Docs"
-ms.date: 11/07/2018
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -52,9 +52,20 @@ Microsoft SQL Server    |  2008 and later      |       OLE DB Provider for SQL S
 Microsoft Azure SQL Database    |   All      |  OLE DB Provider for SQL Server, SQL Server Native Client OLE DB Provider, .NET Framework Data Provider for SQL Client            
 Microsoft Azure SQL Data Warehouse     |   All     |  SQL Server Native Client OLE DB Provider, .NET Framework Data Provider for SQL Client       
 Microsoft SQL Analytics Platform System (APS)     |   All      |  OLE DB Provider for SQL Server, SQL Server Native Client OLE DB Provider, .NET Framework Data Provider for SQL Client       
+|Microsoft SQL Server Always Encrypted <sup>[2](#ae)</sup> | 2016 and later. 2014 and earlier Enterprise edition only. | .NET Framework Data Provider for SQL Client
+|Azure SQL Database Always Encrypted <sup>[2](#ae)</sup>| All | .NET Framework Data Provider for SQL Client
 Oracle relational databases     |  Oracle 9i and later       |  Oracle OLE DB Provider       
 Teradata relational databases    |  Teradata V2R6 and later     | .Net Data Provider for Teradata    
 
+
+### Using SQL Server Analysis Services with Always Encrypted
+
+<a name="ae">[2]</a> SQL Server Analysis Services can act as a client to a database using [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) in SQL Server or Azure SQL Database under the following conditions: 
+
+*  Column master key(s) protecting the encrypted columns must be certificates, stored in Windows certificate store. Column master keys stored in Azure Key Vault are not supported.   
+*  The Windows computer on which Analysis Services is installed has the necessary column master key certificate(s) installed. To learn more, see [Creating Column Master Keys in Windows Certificate Store](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store).
+*  The datasource Analysis Services uses to connect to SQL is based on the .Net Framework provider, and the Column Encryption Setting property on the data source must be enabled. .NET Framework 4.6.1 or later needs to be present on the Analysis Services server.
+*  The SQL Server or SQL Database datasource must be a *provider* datasource type supported by the 1200 compatibility level. It will not work with Power Query *structured* data sources, introduced in the 1400 compatibility level.
   
 ##  <a name="bkmk_tips"></a> Tips for choosing data sources  
   

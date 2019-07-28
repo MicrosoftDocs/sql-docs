@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Perform an Incremental Load of Multiple Tables
 

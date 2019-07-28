@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Filter Table Rows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

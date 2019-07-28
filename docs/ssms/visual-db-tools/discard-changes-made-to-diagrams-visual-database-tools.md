@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Discard Changes Made to Diagrams (Visual Database Tools)

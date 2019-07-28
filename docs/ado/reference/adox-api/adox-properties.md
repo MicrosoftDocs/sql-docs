@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADOX Properties
 

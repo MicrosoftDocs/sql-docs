@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sp_drop_trusted_assembly (Transact-SQL)  

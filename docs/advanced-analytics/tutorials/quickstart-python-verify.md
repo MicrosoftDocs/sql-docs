@@ -8,10 +8,9 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Quickstart: Verify Python exists in SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server includes Python language support for data science analytics on resident SQL Server data. Script execution is through stored procedures, using either of the following approaches:
 
@@ -57,7 +56,7 @@ If you get errors, there are a variety of things you can do to ensure that the i
 
 First, rule out any installation issues. Post-install configuration is required to enable use of external code libraries. See [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). Likewise, make sure that the Launchpad service is running.
 
-You must also add the Windows user group `SQLRUserGroup` as a login on the instance, to ensure that Launchpad can provide communication between Python and SQL Server. (The same group is used for both R and Python code execution.) For more information, see [Enabled implied authentication](../security/add-sqlrusergroup-to-database.md).
+You must also add the Windows user group `SQLRUserGroup` as a login on the instance, to ensure that Launchpad can provide communication between Python and SQL Server. (The same group is used for both R and Python code execution.) For more information, see [Create a login for SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 Additionally, you might need to enable network protocols that have been disabled, or open the firewall so that SQL Server can communicate with external clients. For more information, see [Troubleshooting setup](../common-issues-external-script-execution.md).
 

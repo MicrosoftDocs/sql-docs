@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: bbac1370-fbf6-4450-8599-4ed3b4db3fc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsAlterTableWithAddColumn Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

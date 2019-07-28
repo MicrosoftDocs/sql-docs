@@ -1,13 +1,11 @@
 ---
-title: Configure log shipping for SQL Server on Linux | Microsoft Docs
+title: Configure log shipping for SQL Server on Linux
 description: This tutorial shows a basic example of how to replicate a SQL Server instance on Linux to a secondary instance using log shipping.
-author: meet-bhagdev 
-ms.author: meetb 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 # Get started with Log Shipping on Linux

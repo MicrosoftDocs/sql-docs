@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "table-valued parameters, executing commands containing"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Executing Commands Containing Table-Valued Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

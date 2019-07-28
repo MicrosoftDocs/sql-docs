@@ -1,13 +1,12 @@
 ---
-title: SQL Server availability basics for Linux deployments | Microsoft Docs
+title: SQL Server availability basics for Linux deployments
 description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
  

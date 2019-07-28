@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ConnectionString Property (SqlServerAlias Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

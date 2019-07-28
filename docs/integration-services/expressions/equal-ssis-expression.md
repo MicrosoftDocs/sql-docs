@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # == (Equal) (SSIS Expression)
 

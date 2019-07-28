@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Understanding the Customization File
 Each section header in the customization file consists of square brackets (**[]**) containing a type and parameter. The four section types are indicated by the literal strings **connect**, **sql**, **userlist**, or **logs**. The parameter is the literal string, the default, a user-specified identifier, or nothing.  
@@ -49,7 +48,7 @@ identifier
   
  A particular section is used under the following circumstances:  
   
--   A **connect** section is used if the value part of the client connect string keyword, "**Data Source=**_value_", matches a **connect** section identifier*.*  
+-   A **connect** section is used if the value part of the client connect string keyword, "**Data Source=**_value_", matches a **connect** section identifier. 
   
 -   An **sql** section is used if the client command string contains a string that matches an **sql** section identifier.  
   

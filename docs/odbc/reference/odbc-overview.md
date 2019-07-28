@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Overview
 Open Database Connectivity (ODBC) is a widely accepted application programming interface (API) for database access. It is based on the Call-Level Interface (CLI) specifications from Open Group and ISO/IEC for database APIs and uses Structured Query Language (SQL) as its database access language.  

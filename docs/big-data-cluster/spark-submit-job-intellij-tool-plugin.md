@@ -4,7 +4,7 @@ titleSuffix: SQL Server big data clusters
 description: Submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.date: 02/28/2019
@@ -43,7 +43,7 @@ One of the key scenarios for SQL Server big data clusters is the ability to subm
 
     ![link Big Data cluster - context menu](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
-## Create a Spark Scala application from HDInsight template
+## Create a Spark Scala application from Spark template
 
 1. Start IntelliJ IDEA, and then create a project. In the **New Project** dialog box, follow below steps: 
 

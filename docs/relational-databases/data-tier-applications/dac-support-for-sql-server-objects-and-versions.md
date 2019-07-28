@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # DAC Support For SQL Server Objects and Versions
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

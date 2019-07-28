@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.check_schema_version 
 
@@ -33,7 +32,7 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
   
 ## Arguments  
  [ @use32bitruntime= ] *use32bitruntime*  
- When the parameter is set to **True**, the 32-bit version of dtexec is called. The *use32bitruntime* is a **Bool**.  
+ When the parameter is set to **1**, the 32-bit version of dtexec is called. The *use32bitruntime* is an **int**.  
   
 ## Result Set  
  None  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View the Data and Log Files in a Backup Set (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,9 @@ manager: craigg
 4.  In the **Select a Page** pane, click **Files**.  
   
 5.  Look in the **Database files** grid for a list of the data and log files and their properties.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view the data and log files in a backup set  

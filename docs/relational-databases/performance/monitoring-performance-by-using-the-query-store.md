@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitoring performance by using the Query Store
@@ -39,7 +38,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  In the **Database Properties** dialog box, select the **Query Store** page.  
   
 3.  In the **Operation Mode (Requested)** box, select **Read Write**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### Use Transact-SQL Statements  
   
 Use the **ALTER DATABASE** statement to enable the query store. For example:  

@@ -13,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLFreeEnv Mapping
-When an application calls **SQLFreeEnv** through an ODBC 3*.x* driver, the call to  
+When an application calls **SQLFreeEnv** through an ODBC *3.x* driver, the call to  
   
 ```  
 SQLFreeEnv(henv)   

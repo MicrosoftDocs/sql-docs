@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ConvertToString Method (RDS)
 Converts a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to a MIME string that represents the recordset data.  

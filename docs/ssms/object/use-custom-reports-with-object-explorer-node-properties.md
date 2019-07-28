@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Use Custom Reports with Object Explorer Node Properties
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Additional Script Component Examples
 

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Hierarchies Collection Properties, Methods, and Events
 ## Properties  

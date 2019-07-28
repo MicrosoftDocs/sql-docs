@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Setting ODBC Connection Pooling Options
 Connection pooling enables an application to use a connection from a pool of connections that do not need to be reestablished for each use. You can use the **Connection Pooling** tab of the **ODBC Data Source Administrator** dialog box to enable and disable performance monitoring. Double-click a driver name to set the connection time-out period.  

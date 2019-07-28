@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Preview 
 

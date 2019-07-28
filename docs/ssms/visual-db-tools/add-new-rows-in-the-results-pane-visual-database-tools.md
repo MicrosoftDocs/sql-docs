@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Add New Rows in the Results Pane (Visual Database Tools)

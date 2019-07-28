@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Parameter Object Properties, Methods, and Events
 ## Properties/Collections  

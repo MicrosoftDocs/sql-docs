@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Choose Toolbox Items (Maintenance Tasks Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

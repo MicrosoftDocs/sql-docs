@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Windows Dialog Box (Microsoft Document Explorer Help)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

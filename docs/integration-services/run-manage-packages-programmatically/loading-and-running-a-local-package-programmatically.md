@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Loading and Running a Local Package Programmatically
 

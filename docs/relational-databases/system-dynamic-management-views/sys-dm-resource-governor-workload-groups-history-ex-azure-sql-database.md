@@ -18,7 +18,6 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_workload_groups_history_ex dynamic management view"
 author: joesackmsft
 ms.author: josack
-manager: craigg
 ---
 # sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 
 ## Permissions
 
-This view requires VIEW DATABASE STATE permission.
+This view requires VIEW SERVER STATE permission.
 
 ## Remarks
 

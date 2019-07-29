@@ -89,6 +89,7 @@ FROM Person.Person;
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 `NULL` values found in `name` cells are not returned in result.   
+
 > [!NOTE]  
 >  If using the Management Studio Query Editor, the **Results to Grid** option cannot implement the carriage return. Switch to **Results to Text** to see the result set properly.   
 
@@ -121,16 +122,17 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  If using the Management Studio Query Editor, the **Results to Grid** option cannot implement the carriage return. Switch to **Results to Text** to see the result set properly.   
+> If using the Management Studio Query Editor, the **Results to Grid** option cannot implement the carriage return. Switch to **Results to Text** to see the result set properly.
 
-### D. Return news articles with related tags 
+### D. Return news articles with related tags
+
 Article and their tags are separated into different tables. Developer wants to return one row per each article with all associated tags. Using following query:
 
 ```sql
-SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
-FROM dbo.Article AS a       
-LEFT JOIN dbo.ArticleTag AS t 
-    ON a.ArticleId = t.ArticleId 
+SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
+FROM dbo.Article AS a
+LEFT JOIN dbo.ArticleTag AS t
+    ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
 ```
 
@@ -138,9 +140,12 @@ GROUP BY a.articleId, title;
 
 |articleId |title |tags |
 |--- |--- |--- |
-|172 |Polls indicate close election results |politics,polls,city council | 
+|172 |Polls indicate close election results |politics,polls,city council |
 |176 |New highway expected to reduce congestion |NULL |
-|177 |Dogs continue to be more popular than cats |polls,animals| 
+|177 |Dogs continue to be more popular than cats |polls,animals|
+
+> [!NOTE]
+> The `GROUP BY` clause is required if the `STRING_AGG` function isn't the only item in the `SELECT` list.
 
 ### E. Generate list of emails per towns
 

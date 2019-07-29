@@ -47,8 +47,6 @@ The following GIF demonstrates the end-to-end process for submitting changes in 
 
 ![Edit SQL Docs](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-The complete process is documented in the article, . 
-
 ## <a id="tools"></a> Edit locally with tools
 
 Another editing option is to fork the **sql-docs** or **azure-docs** repositories and clone it locally to your machine. You can then use a Markdown editor and a git client to submit the changes. This workflow is good for edits that are more complex or involve multiple files. It is also good for frequent contributors to docs.microsoft.com.

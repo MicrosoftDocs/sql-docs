@@ -21,61 +21,46 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ### Compliance
 
-June 24, 2019
+June 15, 2019
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 7.2. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| Fully compliant with JDBC API Specification 4.2. | The jars in the 7.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.2.2.jre11.jar file from the 7.2 package should be used with Java 11. |
-| Compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8. | Microsoft JDBC Driver 7.2 for SQL Server is now compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8. |
+| Download the latest updates for JDBC Driver 7.4. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 7.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.4.0.jre11.jar file from the 7.4 package should be used with Java 11. |
+| Compatible with Java Development Kit (JDK) version 12.0, 11.0, and 1.8. | Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11.0 and 1.8. |
 | &nbsp; | &nbsp; |
 
-> [!NOTE]
-> An issue with SQL statement parsing was found in the JDBC 7.2 Release To Web (RTW) driver released on January 31, 2019. The change was rolled back, and new jars (version 7.2.1) were released on February 11, 2019.
->
-> Another update was made on the driver to fix issues with ActivityIDs not getting cleaned up properly. The new jars (version 7.2.2) were released on April 16, 2019.
-> 
-> We recommend updating your projects to use the 7.2.2 release jars. For more information, view release notes for [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) and [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
+### Introduces NTLM authentication
 
-### Active Directory _Managed Service Identity_ (MSI) authentication
-
-| MSI change | Details |
+| NTLM change | Details |
 | :--------- | :------ |
-| Supports Active Directory Managed Service Identity (MSI) authentication mode. | This mode of authentication is applicable on Azure Resources with support for "Identity" feature enabled.<br/><br/>Both types of Managed System Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection. |
-| More details and a sample application to use this authentication mode. | See [Connecting using Azure Active Directory Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| Supports NTLM authentication mode. | This mode of authentication  |
+| More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
-### Introduces _Open Service Gateway Initiative_ (OSGi) support
+### Introduces querying ParameterMetaData via _useFmtOnly_
 
-| OSGi change | Details |
+| useFmtOnly change | Details |
 | :---------- | :------ |
-| **DataSourceFactory** implementation added. | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
-| **Activator** implementation added. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
+| **useFmtOnly** connection property added. | This feature allows users to optionally query ParameterMetaData via the `SET FMTONLY ON` legacy API. This is useful for scenarios where `sp_describe_undeclared_parameters` doesn't perform as expected. |
+| More details and limitations. | See [Using useFmtOnly](../../connect/jdbc/using-useFmtOnly.md) |
 | &nbsp; | &nbsp; |
 
-### Introduces _SQLServerError_ APIs
-
-| Error API change | Details |
-| :--------------- | :------ |
-| SQLServerError API introduced. | Getter APIs to retrieve additional details about the error generated from the server.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
-| Additional details. | See [Handling Errors](../../connect/jdbc/handling-errors.md). |
-| &nbsp; | &nbsp; |
-
-### Updated _Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java_, version 1.6.3
+### Updated _Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java_, version 1.6.4
 
 | ADAL4J change | Details |
 | :------------ | :------ |
-| Updated its Maven dependency on ADAL4J to version 1.6.3. | &nbsp; |
-| Introduces _Java Client Runtime for AutoRest_ as a Maven dependency, version 1.6.5. | &nbsp; |
+| Updated its Maven dependency on ADAL4J to version 1.6.4. | &nbsp; |
+| Introduces _Java Client Runtime for AutoRest_ as a Maven dependency, version 1.6.10. | &nbsp; |
 | Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.0
+### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.1
 
 | Key Vault SDK change | Details |
 | :------------------- | :------ |
-| Updated its Maven dependency on _Microsoft Azure Key Vault SDK for Java_ to version 1.2.0. | &nbsp; |
-| Introduces _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency, version 1.2.0. | &nbsp; |
+| Updated its Maven dependency on _Microsoft Azure Key Vault SDK for Java_ to version 1.2.1. | &nbsp; |
+| Introduces _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency, version 1.2.1. | &nbsp; |
 | Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
@@ -83,8 +68,8 @@ June 24, 2019
 
 | Known issues | Details |
 | :----------- | :------ |
-| Parameterized queries, in certain cases. | An update of the 7.2.0 version, v7.2.1, was released in February 2019 to address this issue. |
-| Cleaning up of ActivityIds. | An update of the 7.2.1 version, v7.2.2, was released in April 2019 to address this issue. |
+| When using NTLM Authentication. | Enabling Extended Protection and encrypted connections at the same time is currently not supported. |
+| When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. See https://docs.microsoft.com/en-us/sql/connect/jdbc/using-usefmtonly for more details and workaround suggestions. |
 | &nbsp; | &nbsp; |
 
 ## 7.2.2

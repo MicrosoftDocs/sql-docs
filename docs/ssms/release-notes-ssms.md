@@ -57,6 +57,7 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 | Query Execution or Results | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256   and 64K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
 | ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqlUdfs). |
 | SMO | Added support for *Feature Restrictions*. For more information on the feature itself, see [Feature Restrictions](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
+| SMO | Added support for *SQL Assessment API*. For more information, see [SQL Assessment API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
 | Integration Services (SSIS) | Perf optimization for SSIS package scheduler in Azure. |
 |  |  |
 

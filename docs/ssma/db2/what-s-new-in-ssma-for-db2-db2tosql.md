@@ -2,7 +2,7 @@
 title: "What's New in SSMA for DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "06/11/2019"
+ms.date: "07/31/2019"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -13,6 +13,25 @@ ms.author: "Shamikg"
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.3
+
+The v8.3 release of SSMA for DB2 is enhanced with targeted fixes that are designed to improve quality and conversion metrics. In addition, this release of SSMA for DB2 provides fixes that:
+
+* Address accessibility issues
+* Add basic support for 'hierarchyid' type in SQL Server
+* Replace TRIM function usage in z/OS discovery queries with RTRIM/LTRIM
+* Allow user to specify Package Collection when connecting in “Standard mode” (defaults to NULLID)
+* Add conversion for CREATE TABLE AS SELECT
+* Improve conversions for global temp tables
+* Address an issue with object uniqueness check order to prioritize tables over constraints, if names collide
+* Address an issue with loading of default column values for DATE and TIMESTAMP for z/OS
+* Support Unicode line feed character (aka NEL)
+* Address an issue with cursor conversion with missing RETURN TO clause
+* Add support for labels and GOTO
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
 
 ## SSMA v8.2
 

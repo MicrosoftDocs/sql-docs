@@ -18,7 +18,7 @@ ms.technology: big-data-cluster
 This article provides an overview of how to deploy a [SQL Server 2019 big data cluster (preview)](big-data-cluster-overview.md). It is meant to orient you to the concepts and provide a framework for understanding the other deployment articles in this section. Your specific deployment steps vary based on your platform choices for the client and server.
 
 > [!TIP]
-> To quickly get an environment with Kubernetes and big data cluster deployed to help you ramp up on its capabilities, use one of the sample scripts pointed in [this section](scripts). Upon deployment, for using cluster use the [client tools](tools) below.
+> To quickly get an environment with Kubernetes and big data cluster deployed to help you ramp up on its capabilities, use one of the sample scripts pointed to in [the scripts section](#scripts). After deployment, to manage the cluster use the [client tools](#tools) in the following section.
 
 ## <a id="tools"></a> Client tools
 

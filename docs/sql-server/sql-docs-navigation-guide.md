@@ -24,6 +24,14 @@ You can always navigate back to this page by selecting **SQL Docs** from the hea
 
 ![SQL docs in header](media/sql-server-docs-navigation-guide/sql-docs-in-header.png)
 
+## Offline documentation
+
+If you would like to view the SQL Server documentation on an offline system, you have two options to do so. You can either create a PDF wherever you are in the SQL Server technical documentation, or you can download the offline content using [SQL Server offline Help Viewer](sql-server-help-installation.md). 
+
+If you'd like to create a PDF, select the **Download PDF** link found at the bottom of every table of contents.
+
+
+![Download PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
 ## TOC navigation hints
 
@@ -45,13 +53,6 @@ On docs.microsoft.com, you can search the content in the table of contents by us
 
 ![Use filter box](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
 
-## Breadcrumbs
-
-Breadcrumbs can be found below the header and above the table of contents, and indicate where the current article is located in the table of contents.  Not only does this help set the context to what type of content you're reading, but it also allows you to navigate back up the table of contents tree:
-
-![SQL Docs breadcrumbs](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
-
 ## Version filter
 The SQL Server technical documentation provides content for several supported versions and flavors of SQL Server. Features can vary between versions and flavors of SQL Server, and as such, sometimes the content itself can vary. 
 
@@ -61,6 +62,12 @@ You can use the version filter to ensure that you are seeing content for the app
 
 Selecting **SQL Server** > **Hide nothing** ensures that all content is visible, and that nothing is hidden behind the version filter. 
 
+## Breadcrumbs
+
+Breadcrumbs can be found below the header and above the table of contents, and indicate where the current article is located in the table of contents.  Not only does this help set the context to what type of content you're reading, but it also allows you to navigate back up the table of contents tree:
+
+![SQL Docs breadcrumbs](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
+
 
 ## Article section navigation
 
@@ -68,14 +75,6 @@ The right-hand navigation pane allows you to quickly navigate to sections within
 
 ![Right-hand navigation](media/sql-server-docs-navigation-guide/sql-docs-right-hand-navigation.gif)
 
-## Offline documentation
-
-If you would like to view the SQL Server documentation on an offline system, you have two options to do so. You can either create a PDF wherever you are in the SQL Server technical documentation, or you can download the offline content using [SQL Server offline Help Viewer](sql-server-help-installation.md). 
-
-If you'd like to create a PDF, select the **Download PDF** link found at the bottom of every table of contents.
-
-
-![Download PDF](media/sql-server-docs-navigation-guide/download-pdf.png)
 
 ## Submit docs feedback
 

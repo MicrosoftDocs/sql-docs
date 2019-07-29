@@ -2,7 +2,7 @@
 title: "What's New in SSMA for Oracle (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
-ms.date: "06/11/2019"
+ms.date: "07/31/2019"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual

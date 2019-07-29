@@ -20,7 +20,7 @@ This article describes how SQL Server expects users to fully process results ret
 
 ## Update Counts and Result Sets
 
-This section will talk about the 2 most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one of these results to be returned; users are expected to handle both when processing results.
+This section will talk about the two most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one of these results to be returned; users are expected to handle both when processing results.
 
 The following code is an example of how a user could iterate through all results from the server:
 ```java
@@ -42,7 +42,7 @@ try (Connection con = DriverManager.getConnection(URL); Statement s = con.create
 ```
 
 ## Exceptions
-When you execute a statement that results in an error or an informational message, SQL Server might respond differently depending whether it is able to generate an execution plan. The error message can be thrown immediately after statement execution or it might require a separate result set. In the latter case, the applications need to parse the result set to retrieve the exception.
+When you execute a statement that results in an error or an informational message, SQL Server might respond differently if it can generate an execution plan. The error message can be thrown immediately after statement execution or it might require a separate result set. In the latter case, the applications need to parse the result set to retrieve the exception.
 
 When SQL Server is unable to generate an execution plan, the exception is thrown immediately.
 
@@ -93,9 +93,9 @@ try (Statement statement = connection.createStatement();) {
 }
 ```
 
-Note that in case of `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, exception is thrown immediately on `execute()` and `SELECT 1` is not executed at all.
+In case the of `String SQL = "SELECT * FROM nonexistentTable; SELECT 1;";`, exception is thrown immediately on `execute()` and `SELECT 1` isn't executed at all.
 
-If the error from SQL Server has severity of `0` to `9`, it is considered as an informational message and returned as `SQLWarning`.
+If the error from SQL Server has severity of `0` to `9`, it's considered as an informational message and returned as `SQLWarning`.
 
 ```java
 String SQL = "RAISERROR ('WarningLevel5', 5, 2);";

@@ -1,36 +1,36 @@
 ---
-title: mssqlctl sql reference
+title: azdata sql reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl sql commands.
+description: Reference article for azdata sql commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl sql
+# azdata sql
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **sql** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl sql shell](#mssqlctl-sql-shell) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
-[mssqlctl sql query](#mssqlctl-sql-query) | The query command allows execution of a T-SQL query.
-## mssqlctl sql shell
+[azdata sql shell](#azdata-sql-shell) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
+[azdata sql query](#azdata-sql-query) | The query command allows execution of a T-SQL query.
+## azdata sql shell
 The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
 ```bash
-mssqlctl sql shell 
+azdata sql shell 
 ```
 ### Examples
 Example command line to start the interactive experience.
 ```bash
-mssqlctl sql shell
+azdata sql shell
 ```
 ### Global Arguments
 #### `--debug`
@@ -43,16 +43,16 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl sql query
+## azdata sql query
 The query command allows execution of a T-SQL query.
 ```bash
-mssqlctl sql query --database -d 
-                   -q
+azdata sql query --database -d 
+                 -q
 ```
 ### Examples
 Select the list of tables names.  Database defaults to master.
 ```bash
-mssqlctl sql query 'SELECT name FROM SYS.TABLES'
+azdata sql query 'SELECT name FROM SYS.TABLES'
 ```
 ### Required Parameters
 #### `--database -d`
@@ -73,4 +73,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

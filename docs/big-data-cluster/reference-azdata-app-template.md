@@ -1,41 +1,41 @@
 ---
-title: mssqlctl app template reference
+title: azdata app template reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for mssqlctl app template commands.
+description: Reference article for azdata app template commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# mssqlctl app template
+# azdata app template
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **app template** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
+The following article provides reference for the **app template** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl app template list](#mssqlctl-app-template-list) | Fetch supported templates.
-[mssqlctl app template pull](#mssqlctl-app-template-pull) | Download supported templates.
-## mssqlctl app template list
+[azdata app template list](#azdata-app-template-list) | Fetch supported templates.
+[azdata app template pull](#azdata-app-template-pull) | Download supported templates.
+## azdata app template list
 Fetch supported templates under the specified [URL] github repository.
 ```bash
-mssqlctl app template list [--url -u] 
-                           
+azdata app template list [--url -u] 
+                         
 ```
 ### Examples
 Fetch all templates under the default template repository location.
 ```bash
-mssqlctl app template list
+azdata app template list
 ```
 Fetch all templates under a different repository location.
 ```bash
-mssqlctl app template list --url https://github.com/diffrent/templates.git
+azdata app template list --url https://github.com/diffrent/templates.git
 ```
 ### Optional Parameters
 #### `--url -u`
@@ -51,29 +51,29 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## mssqlctl app template pull
+## azdata app template pull
 Download supported templates under the specified [URL] github repository.
 ```bash
-mssqlctl app template pull [--name -n] 
-                           [--url -u]  
-                           [--destination -d]
+azdata app template pull [--name -n] 
+                         [--url -u]  
+                         [--destination -d]
 ```
 ### Examples
 Download all templates under the default template repository location.
 ```bash
-mssqlctl app template pull
+azdata app template pull
 ```
 Download all templates under a different repository location.
 ```bash
-mssqlctl app template list --url https://github.com/diffrent/templates.git
+azdata app template list --url https://github.com/diffrent/templates.git
 ```
 Download individual template by name.
 ```bash
-mssqlctl app template pull --name ssis            
+azdata app template pull --name ssis            
 ```
 ### Optional Parameters
 #### `--name -n`
-Template name. For a full list off supported template namesrun `mssqlctl app template list`
+Template name. For a full list off supported template namesrun `azdata app template list`
 #### `--url -u`
 Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 #### `--destination -d`
@@ -93,4 +93,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

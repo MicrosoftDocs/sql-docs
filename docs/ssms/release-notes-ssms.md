@@ -39,27 +39,25 @@ GeneMi. 2019/04/02.
 ## SSMS 18.2
 
 Download: [Download SSMS 18.2](download-sql-server-management-studio-ssms.md)  
-Build number: 15.0.X.0  
+Build number: 15.0.18142.0  
 Release date: July 25, 2019
 
 SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
-18.2 is a small update to 18.1 with the following new items and bug fixes.
+18.2 is an update to 18.1 with the following new items and bug fixes.
 
 ## What's new in 18.2
 
 |  New Item  |  Details  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Always Encrypted | Updated the Enclave Provider to support Azure Attestation. |
-| Intellisense/Editor | Added support for Data   Classification  |
-| OPTIMIZE_FOR_SEQUENTIAL_KEY | SSMS Index dialog - added new index option OPTIMIZE_FOR_SEQUENTIAL_KEY |
-| OPTIMIZE_FOR_SEQUENTIAL_KEY | Added Intellisese support |
-| Query Execution or Results | Added a "Completion time" in the messages to track when a given query   completed its execution. See  [UserVoice](https://feedback.azure.com/forums/908035/suggestions/335318710 for more details. |
-| Query Execution or Results  | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256   and 64K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
-| ShowPlan | Added a new attribute in QueryPlan when inline scalar UDF feature is enabled   (ContainsInlineScalarTsqlUdfs). |
-| SMO | Added support for "Feature Restrictions*. For more information on the feature   itself, see [feature  restrictions](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
-| SMO  | Assessment Extentions. See <we need a link to something> |
-| Integration Services (SSIS) | Perf optimization for SSIS package scheduler in Azure |
+| Intellisense/Editor | Added support for Data Classification. |
+| OPTIMIZE_FOR_SEQUENTIAL_KEY | Added Intellisense support. |
+| OPTIMIZE_FOR_SEQUENTIAL_KEY | Turns on an optimization within the database engine that helps improve throughput for high-concurrency inserts into the index. This option is intended for indexes that are prone to last-page insert contention, typically seen with indexes that have a sequential key such as an identity column, sequence, or date/time column. See [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys) for more details. |
+| Query Execution or Results | Added a *Completion time* in the messages to track when a given query completed its execution. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/335318710) for more details. |
+| Query Execution or Results | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256   and 64K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
+| ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqlUdfs). |
+| SMO | Added support for *Feature Restrictions*. For more information on the feature itself, see [Feature Restrictions](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
+| Integration Services (SSIS) | Perf optimization for SSIS package scheduler in Azure. |
 |  |  |
 
 ## Bug fixes in 18.2
@@ -80,23 +78,31 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 | Import Flat File | Fixed an issue where *Import Flat File* was not working after upgrading from SSMS 18.0 to 18.1. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37912636) |
 | Import Flat File | Fixed an issue where *Import Flat File Wizard was reporting a duplicate or invalid column* on a .csv file with headers with Unicode characters. |
 | Object Explorer | Fixed an issue where some menu items (for example, SQL server *Import and Export Wizard*) where missing or disable when connected to SQL Express. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37500016) for more details. |
-| Object Explorer | Fixed an issue which was causing SSMS to crash when an object from dragged from Object Explorer to the editor. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37887988) for more details. |
+| Object Explorer | Fixed an issue which was causing SSMS to crash when an object is dragged from Object Explorer to the editor. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37887988) for more details. |
 | Object Explorer | Fixed an issue where renaming databases was causing incorrect database names to show up in Object Explorer. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37638472) for more details. |
 | Object Explorer | Fixed a long outstanding issue where trying to expand the *Tables* node in Object Explorer for a database which is set to use a collation that is not supported by Windows anymore triggers an error (and the user can't expand his or her tables). An example of such collation would be Korean_Wansung_Unicode_CI_AS. |
 | [Register Servers](register-servers/register-servers.md) | Fixed an issue where trying to issue a query against multiple servers (under a *Group* in Registered Servers) when the Registered Server uses either *Active Directory - Integrated* or *Azure Active Directory - Universal with MFA* did not work because SSMS failed to connect. |
 | [Register Servers](register-servers/register-servers.md) | Fixed an issue where trying to issue a query against multiple servers (under a *Group* in Registered Servers) when the registered server uses either *Active Directory - Password* or *SQL Auth* and the user chose not to remember the password would cause SSMS to crash. |
 | Reports | Fixed an issue in *Disk Usage* reports where the report was failing to when data files had a vast number of extents. |
 | Replication Tools | Fixed an issue where Replication Monitor was not working with publisher DB in AG and distributor in AG (this was previously fixed in SSMS 17.x |
-| SQL Agent | Fixed an issue that when Adding, inserting, editing or removing job steps, was causing focus to be reset the first row instead of the active row. See [UserVoice]https://feedback.azure.com/forums/908035/suggestions/38070892 for more details. |
+| SQL Agent | Fixed an issue that when Adding, inserting, editing or removing job steps, was causing focus to be reset the first row instead of the active row. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892) for more details. |
 | SMO/Scripting | Fixed an issue where *CREATE OR ALTER* was not scripting objects that had extended properties on them. See [UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748) for more details. |
 | SMO/Scripting | Fixed an issue where SSMS wasn't able to script CREATE EXTERNAL LIBRARY correctly. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089) for more details. |
 | SMO/Scripting |  Fixed an issue where trying to run the *Generate Scripts* against a database with a few thousand tables (was causing the progress dialog to appear to be stuck. |
-| SMO/Scripting | Fixed an issue where scripting of *External Table* on SQL2019 did not work. |
-| SMO/Scripting | Fixed an issue where scripting of *External Data Source* on SQL2019 did not work. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080) for more details |
+| SMO/Scripting | Fixed an issue where scripting of *External Table* on SQL 2019 did not work. |
+| SMO/Scripting | Fixed an issue where scripting of *External Data Source* on SQL 2019 did not work. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080) for more details. |
 | SMO/Scripting | Fixed an issue where *extended  properties* on columns were not scripted when targeting Azure SQL DB. See [stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio) for more details. |
 | SMO/Scripting | Last-page insert: SMO - Add property *Index.IsOptimizedForSequentialKey* |
-|**SSMS Setup**| **Mitigated an issue where SSMS setup was incorrectly blocking the installation of SSMS reporting mismatching languages. This could have been an issue in some abnormal situations** |
+|**SSMS Setup**| **Mitigated an issue where SSMS setup was incorrectly blocking the installation of SSMS reporting mismatching languages. This could have been an issue in some abnormal situations, like an aborted setup or an incorrect uninstall of a previous version of SSMS. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37483594/) for more details.** |
 | XEvent Profiler | Fixed a crash when the viewer is being closed. |
+
+### Known issues (18.2)
+
+- Database Diagram created from on an SSMS running on machine A cannot be modified from machine B (it would crash SSMS). See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details.
+
+- SSMS 18.0 redraw issues when switching between multiple query windows. See [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042) - there is a workaround for this one listed, which is to disable h/w acceleration in Tools | Options
+
+You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
 ## Previous SSMS releases
 
@@ -106,7 +112,7 @@ Download previous SSMS versions by clicking the title links in the following sec
 
 - Release number: 18.1  
 - Build number: 15.0.18131.0  
-- Release date: June 11, 2019
+- Release date: June 11, 2019  
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
@@ -228,7 +234,7 @@ SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a
 |Data Classification|Added new feature 'Data classification' to SMO. Column object exposes new properties: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId, and IsClassified (read-only). For more information, see [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
 |Data Classification|Added new "Classification Report" menu item to the "Data Classification" flyout.|
 |Data Classification| Updated recommendations.|
-|Database Compatibility Level Upgrade|Added a new option under **<Database name>** > **Tasks** > **Database Upgrade**. This starts the new **Query Tuning Assistant (QTA)** to guide the user through the process of:  Collecting a performance baseline before upgrading the database compatibility level.  Upgrading to the desired database compatibility level.  Collecting a second pass of performance data over the same workload.  Detect workload regressions, and provide tested recommendations to improve workload performance.  This is close to the database upgrade process documented in [query store usage scenarios](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), except for the last step where QTA does not rely on a previously known good state to generate recommendations.|
+|Database Compatibility Level Upgrade|Added a new option under ***Database name*** > ***Tasks*** > ***Database Upgrade***. This starts the new **Query Tuning Assistant (QTA)** to guide the user through the process of: Collecting a performance baseline before upgrading the database compatibility level. Upgrading to the desired database compatibility level.  Collecting a second pass of performance data over the same workload. Detect workload regressions, and provide tested recommendations to improve workload performance.  This is close to the database upgrade process documented in [query store usage scenarios](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), except for the last step where QTA does not rely on a previously known good state to generate recommendations.|
 |Data-tier Application Wizard|Added support to import/export data tier application with graph tables.|
 |Flat File Import Wizard|Added logic to notify the user that an import may have resulted in a renaming of the columns.|
 |Integration Services (SSIS)|Added support to allow customers to schedule SSIS packages on Azure-SSIS IRs that are in Azure Government cloud.|

@@ -5,7 +5,7 @@ description: This article describes application deployment on a SQL Server 2019 
 author: jeroenterheerdt 
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -49,7 +49,7 @@ When an application is executed, the Kubernetes service for the application prox
 ## How to work with Application Deployment
 
 The two main interfaces for Application Deployment are: 
-- [Command line interface `mssqlctl`](big-data-cluster-create-apps.md)
+- [Command line interface `azdata`](big-data-cluster-create-apps.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 
 It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](big-data-cluster-consume-apps.md).
@@ -58,7 +58,7 @@ It is also possible for an application to be executed using a RESTful web servic
 
 To learn more about how to create and run applications on SQL Server big data clusters, see the following:
 
-- [Deploy applications using mssqlctl](big-data-cluster-create-apps.md)
+- [Deploy applications using azdata](big-data-cluster-create-apps.md)
 - [Deploy applications using the App Deploy extension](app-deployment-extension.md)
 - [Consume applications on big data clusters](big-data-cluster-consume-apps.md)
 

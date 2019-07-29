@@ -5,7 +5,7 @@ description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -25,7 +25,7 @@ This article provides an example of how to use **kubeadm** to configure Kubernet
 - Minimum of 3 Linux physical machines or virtual machines
 - Recommended configuration per machine:
    - 8 CPUs
-   - 32 GB of memory
+   - 64 GB of memory
    - 100 GB of storage
 
 ## Prepare the machines

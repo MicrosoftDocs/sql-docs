@@ -5,7 +5,7 @@ description: Walkthrough a deployment of SQL Server 2019 big data clusters (prev
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/22/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -28,7 +28,7 @@ The default big data cluster deployment used here consists of a SQL Master insta
 
 - An Azure subscription.
 - [Big data tools](deploy-big-data-tools.md):
-   - **mssqlctl**
+   - **azdata**
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 extension**
@@ -44,7 +44,7 @@ az login
 
 ## Download the deployment script
 
-This tutorial automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **mssqlctl**, you should be able to run the script successfully in this tutorial. 
+This tutorial automates the creation of the big data cluster on AKS using a python script **deploy-sql-big-data-aks.py**. If you already installed python for **azdata**, you should be able to run the script successfully in this tutorial. 
 
 In a Windows PowerShell or Linux bash prompt, run the following command to download the deployment script from GitHub.
 
@@ -71,14 +71,14 @@ Use the following steps to run the deployment script. This script will create an
    |---|---|
    | **Azure subscription ID** | The Azure subscription ID to use for AKS. You can list all of your subscriptions and their IDs by running `az account list` from another command line. |
    | **Azure resource group** | The Azure resource group name to create for the AKS cluster. |
-   | **Docker username** | The Docker username provided to you as part of the limited public preview. |
-   | **Docker password** | The Docker password provided to you as part of the limited public preview. |
    | **Azure region** | The Azure region for the new AKS cluster (default **westus**). |
    | **Machine size** | The [machine size](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) to use for nodes in the AKS cluster (default **Standard_L8s**). |
    | **Worker nodes** | The number of worker nodes in the AKS cluster (default **1**). |
    | **Cluster name** | The name of both the AKS cluster and the big data cluster. The name of your big data cluster must be only lower case alpha-numeric characters, and no spaces. (default **sqlbigdata**). |
    | **Password** | Password for the controller, HDFS/Spark gateway, and master instance (default **MySQLBigData2019**). |
    | **Controller user** | Username for the controller user (default: **admin**). |
+
+The following parameters were required for participants in the SQL Server 2019 big data cluster early adopter program: **Docker username**, and **Docker password**. As of CTP 3.2 they are no longer required.
 
    > [!IMPORTANT]
    > The default **Standard_L8s** machine size may not be available in every Azure region. If you do select a different machine size, make sure that the total number of disks that can be attached across the nodes in the cluster is greater than or equal to 24. Each persistent volume claim in the cluster requires an attached disk. Currently, big data cluster requires 24 persistent volume claims. For example, the [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) machine size supports 32 attached disks, so you are able to evaluate big data clusters with a single node of this machine size.
@@ -92,7 +92,7 @@ Use the following steps to run the deployment script. This script will create an
 
 ## Monitor the status
 
-After the script creates the AKS cluster, it proceeds to set necessary environment variables with the settings you specified earlier. It then calls **mssqlctl** to deploy the big data cluster on AKS.
+After the script creates the AKS cluster, it proceeds to set necessary environment variables with the settings you specified earlier. It then calls **azdata** to deploy the big data cluster on AKS.
 
 The client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
@@ -112,7 +112,7 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 
 ## Inspect the cluster
 
-At any time during deployment, you can use **kubectl** or **mssqlctl** to inspect the status and details about the running big data cluster.
+At any time during deployment, you can use **kubectl** or **azdata** to inspect the status and details about the running big data cluster.
 
 ### Use kubectl
 

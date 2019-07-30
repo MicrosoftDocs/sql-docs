@@ -26,7 +26,6 @@ Bulk access to Azure blob storage from SQL Server, requires at least [!INCLUDE[s
 
 > [!IMPORTANT]
 >  All the paths to the container and to the files on blob are `CASE SENSITIVE`. If not correct, it might return error like "Cannot bulk load. The file "file.csv" does not exist or you don't have file access rights."
-> "
 
 
 ## Create the credential   

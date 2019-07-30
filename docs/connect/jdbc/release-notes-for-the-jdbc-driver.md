@@ -60,7 +60,7 @@ June 15, 2019
 | Key Vault SDK change | Details |
 | :------------------- | :------ |
 | Updated its Maven dependency on _Microsoft Azure Key Vault SDK for Java_ to version 1.2.1. | &nbsp; |
-| Introduces _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency, version 1.2.1. | &nbsp; |
+| Removes _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency. | &nbsp; |
 | Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 

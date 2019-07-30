@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Add a User (Master Data Services)
 

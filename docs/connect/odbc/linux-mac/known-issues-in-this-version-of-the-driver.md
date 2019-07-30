@@ -11,7 +11,6 @@ helpviewer_keywords:
   - "known issues"
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Known Issues in this Version of the Driver
 

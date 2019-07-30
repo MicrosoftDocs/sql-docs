@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Examples: Using PATH Mode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

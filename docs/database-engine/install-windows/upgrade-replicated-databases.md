@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Replicated Databases | Microsoft Docs"
+title: "Upgrade or patch replicated databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2016"
 ms.prod: sql
@@ -16,9 +16,8 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
-# Upgrade Replicated Databases
+# Upgrade or patch replicated databases
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -36,9 +35,7 @@ The upgrade path to SQL Server is different depending on the deployment pattern.
 
 A common approach that has been adopted for side-by-side upgrades of replication topologies is to move publisher-subscriber pairs in parts to the new side-by-side environment as opposed to a movement of the entire topology. This phased approach helps control downtime and minimize the impact to a certain extent for the business dependent on replication.  
 
-
-> [!NOTE]  
-> **For more detailed information regarding upgrading replication topology to SQL 2016, please see the blog post [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+The majority of this article is scoped towards upgrading the version of SQL Server. However, the in-place upgrade process should also be used when patching SQL Server with a service pack or cumulative update as well. 
 
  >[!WARNING]
  > Upgrading a replication topology is a multi-step process. We recommend attempting an upgrade of a replica of your replication topology in a test environment before running the upgrade on the actual production environment. This will help iron out any operational documentation that is required for handling the upgrade smoothly without incurring expensive and long downtimes during the actual upgrade process. We have seen customers reduce downtime significantly with the use of Always On Availability Groups and/or SQL Server Failover Cluster Instances for their production environments while upgrading their replication topology. Additionally, we recommend taking backups of all the databases including MSDB, Master, Distribution database(s) and the user databases participating in replication before attempting the upgrade.

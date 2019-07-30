@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # AVG (Transact-SQL)
@@ -60,7 +59,7 @@ The evaluated result of *expression* determines the return type.
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimal** category (p, s)|**decimal(38, s)** divided by **decimal(10, 0)**|  
+|**decimal** category (p, s)|**decimal(38, min(s,6))**|  
 |**money** and **smallmoney** category|**money**|  
 |**float** and **real** category|**float**|  
   

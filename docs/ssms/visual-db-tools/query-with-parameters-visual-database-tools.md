@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2e4fdeb6-c596-43cb-ac2e-9a18ea2bac0d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Query with Parameters (Visual Database Tools)

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Mirrored Backup Media Sets (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

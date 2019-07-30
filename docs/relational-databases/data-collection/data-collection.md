@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Data Collection
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

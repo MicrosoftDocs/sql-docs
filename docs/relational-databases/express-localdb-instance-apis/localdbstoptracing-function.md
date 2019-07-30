@@ -15,7 +15,6 @@ apitype: "DLLExport"
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBStopTracing Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

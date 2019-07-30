@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Use ring buffers to obtain health information about Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

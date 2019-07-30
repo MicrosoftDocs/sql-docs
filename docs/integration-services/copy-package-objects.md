@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Copy Package Objects
 

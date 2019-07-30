@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Retrieve Rows Using Bookmarks (OLE DB)
@@ -36,7 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 4.  Set the **dwFlag** field of the binding structure to DBCOLUMNSINFO_ISBOOKMARK flag for the column that will be used as a bookmark.  
   
 5.  Use **IRowsetLocate::GetRowsAt** to fetch rows, starting with the row specified by an offset from the bookmark.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Example  
  This sample shows how to fetch rows using a bookmark. This sample is not supported on IA64.  
   

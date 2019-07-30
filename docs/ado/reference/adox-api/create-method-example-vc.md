@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Create Method Example (VC++)
 The following code shows how to create a new Microsoft Jet database with the [Create](../../../ado/reference/adox-api/create-method-adox.md) method.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Text Attribute (Master Data Services)
 

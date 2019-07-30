@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Transaction Log Disk Space for Index Operations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

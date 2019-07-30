@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Heterogeneous Database Replication  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

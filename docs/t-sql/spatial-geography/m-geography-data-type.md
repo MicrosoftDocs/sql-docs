@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # M (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

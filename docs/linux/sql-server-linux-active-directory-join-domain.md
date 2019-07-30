@@ -3,15 +3,13 @@ title: Join SQL Server on Linux to Active Directory
 titleSuffix: SQL Server
 description: 
 author: Dylan-MSFT
-ms.author: Dylan.Gray
-ms.reviewer: rothja
+ms.author: dygray
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ---
-
 # Join SQL Server on a Linux host to an Active Directory domain
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]

@@ -2,7 +2,6 @@
 title: "Common subexpression explained in Analytics Platform System | Microsoft Docs"
 description: "Displays example query improvement that was introduced in Analytics Platform System CU7.3"
 author: "mzaman1" 
-manager: "craigg"	  
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"

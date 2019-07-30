@@ -9,7 +9,6 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # column encryption enclave type Server Configuration Option

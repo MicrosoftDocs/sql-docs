@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Connect to Any SQL Server Component from SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

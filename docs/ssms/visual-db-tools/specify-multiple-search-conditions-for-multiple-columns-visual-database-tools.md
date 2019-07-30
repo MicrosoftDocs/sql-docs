@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getLoginTimeout Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

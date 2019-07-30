@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "traces [SQL Server], running"
   - "traces [SQL Server], searching while trace running"
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Find a Value or Data Column While Tracing (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

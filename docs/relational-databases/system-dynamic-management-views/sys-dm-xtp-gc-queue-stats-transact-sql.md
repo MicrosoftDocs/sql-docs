@@ -18,10 +18,11 @@ helpviewer_keywords:
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
-manager: craigg
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Outputs information about each garbage collection worker queue on the server, and various statistics about each. There is one queue per logical CPU.  
   

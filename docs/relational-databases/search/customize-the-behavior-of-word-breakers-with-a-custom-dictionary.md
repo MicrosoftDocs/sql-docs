@@ -10,7 +10,6 @@ ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Customize the Behavior of Word Breakers with a Custom Dictionary

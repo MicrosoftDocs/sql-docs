@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a System-Versioned Temporal Table
@@ -203,6 +202,8 @@ ALTER TABLE ProjectTaskCurrent
 -   Adding **PERIOD** will perform a data consistency check on current table to make sure that the existing values for period columns are valid  
   
 -   It is highly recommended to set **SYSTEM_VERSIONING** with **DATA_CONSISTENCY_CHECK = ON** to enforce data consistency checks on existing data.  
+
+-   If hidden columns are preferred, use the command `ALTER TABLE [tableName] ALTER COLUMN [columnName] ADD HIDDEN;`.
   
  
 ## See Also  

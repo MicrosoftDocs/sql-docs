@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetEnvAttr and the Cursor Library
 > [!IMPORTANT]  

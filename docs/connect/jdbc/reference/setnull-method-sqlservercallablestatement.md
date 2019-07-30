@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 842dbcfb-7f6a-46d5-b386-c6cbb879a23d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setNull Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication Log Reader Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

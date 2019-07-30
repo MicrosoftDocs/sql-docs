@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # removeConnectionEventListener Method (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Combine Conditions When AND Has Precedence (Visual Database Tools)

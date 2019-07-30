@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Check for Updates Dialog Box
 Beginning in the November 2012 release of SQL Server Data Tools, you see a **Check for Updates** menu option under the **SQL** menu.  

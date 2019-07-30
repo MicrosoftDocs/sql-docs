@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

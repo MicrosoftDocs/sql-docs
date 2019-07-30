@@ -9,48 +9,37 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQL Server offline help and Help Viewer
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-You can use the Microsoft Help Viewer in to download and install SQL Server help packages from online sources or disk and view them offline. The Help Viewer is installed with either SQL Server Management Studio (SSMS) or Visual Studio (VS).This article describes tools that install the Help Viewer, how to install offline help content, and how to view help for [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016, and SQL Server 2017.
+You can use the Microsoft Help Viewer to download and install SQL Server help packages from online sources or local disk. You can then view the content offline. The Help Viewer is installed with several different tools. This article describes the tools that install the Help Viewer, how to install offline help content, and how to view help.
 
 Internet access is required to download the Help Viewer content. You can then migrate the content to a computer that does not have internet access.
 
-> [!NOTE]
-> SQL Server 2016 and SQL Server 2017 help are combined, although some topics apply to individual versions where noted. Most topics apply to both.
+>[!NOTE]
+> To get local content for the current versions of SQL server, install the current version of SQL Server Management Studio [SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-## Install the Help Viewer
+## What tools Install the Help Viewer versions?
 
-There are two versions of Help Viewer.  Each version supports different versions of SQL Server content.  The format of the offline books has changed over time and the older versions of Help Viewer do not support the newer versions of the books:
-- v2.x supports SQL Server 2016 and SQL Server 2017 help. 
-- v1.x supports [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help. The Help Viewer does not support proxy settings or the ISO format.
+There are two major versions of the Microsoft Help Viewer.  Versions 1.x and 2.x. Each version supports different versions of SQL Server content.  The format of the offline books has changed over time, and the older versions of Help Viewer do not support the newer versions of the books.
 
+|**Content Set**|**Tools that install Help Viewer**|**Help Viewer version**|
+|-|-|-|
+|SQL Server 2019 Preview <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | v2.3<br>V2.2|
+|SQL Server 2014<br>SQL Server 2012|SQL Server 2016 Setup (2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014 Setup (2)<br>SQL Server Management Studio 2012<br>SQL Server 2012 Setup (2)| v1.x|
+| | | |
 
-|**Tool**|**Installs Help Viewer version**|
-|---------|---------|
-|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
-|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Data Tools for Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
-|Visual Studio 2015 | v2.2|
-|SQL Server 2016 | v1.x|
-|SQL Server 2014 Management Studio | v1.x|
-|Earlier versions of Visual Studio | v1.x|
-| | |
+(1) To install the Help Viewer with Visual Studio 2019 or 2017, on the Individual Components tab in the Visual Studio Installer, select **Help Viewer** under Code Tools, and then click **Install**.
 
-\* To install the Help Viewer with Visual Studio 2017, on the Individual Components tab in the Visual Studio Installer, select **Help Viewer** under Code Tools, and then click **Install**.
+(2) Indicates the "Documentation Components" option in SQL Server Setup.
 
 >[!NOTE]
-> - SQL Server 2016 installs Help Viewer 1.1, which does not support SQL Server 2016 help. 
-> - Installing SQL Server 2017 does not install Help Viewer. Help Viewer is no longer included in the SQL Server installation.
-> - Help Viewer v2.x can also support [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] help, if you install the content from disk.
+> - SQL Server 2016 installs Help Viewer 1.1, which does not support SQL Server 2016 help content. For more information, see [SQL Server 2016 Release Notes](sql-server-2016-release-notes.md).  To view SQL Server 2016 content you need the v2.x of the help viewer. 
+> - Starting with SQL Server 2017 the Help Viewer cannot be installed from SQL Server Setup.
 
 ## Use Help Viewer v2.x
-
-SSMS 17.x and VS 2015 and 2017 use Help Viewer 2.x, which supports SQL Server 2016 and SQL Server 2017 Help. 
 
 **To download and install offline help content with Help Viewer v2.x**
 
@@ -68,7 +57,7 @@ SSMS 17.x and VS 2015 and 2017 use Help Viewer 2.x, which supports SQL Server 20
    > To install from disk (SQL Server 2014 help), choose **Disk** under Installation source, and specify the disk location.
    
    The Local store path on the Manage Content tab shows where on the local computer the content will be installed. To change the location, click **Move**, enter a different folder path in the **To** field, and then click **OK**.
-   If the help installation fails after changing the Local store path, close and reopen the Help Viewer, ensure the new location appears in the Local store path, and then try the installation again.
+   If the help installation fails after changing the Local store path, close and reopen the Help Viewer. Ensure the new location appears in the Local store path and then try the installation again.
 
 3. Click **Add** next to each content package (book) that you want to install. 
    To install all SQL Server help content, add all 13 books under SQL Server. 
@@ -81,7 +70,7 @@ SSMS 17.x and VS 2015 and 2017 use Help Viewer 2.x, which supports SQL Server 20
 > [!NOTE]
 > Not all the top-node titles in the SQL Server table of contents exactly match the names of the corresponding downloadable help books. The TOC titles map to the book names as follows:
 
-(*) indicates content that is from the first general availability version of SQL Server 2017 content along with older 2016 content. These books will be removed as the separate and complete books for SQL Server 2016 and 2017 contain content edits as of January 2019.  
+(*) Content that is from the first general availability version of SQL Server 2017 content along with older 2016 content. These books will be removed as the separate and complete books for SQL Server 2016 and 2017 contain content edits as of January 2019.  
 
 | | Contents pane | SQL Server book |
 |-----|-----|-----|
@@ -110,7 +99,7 @@ To view the installed help in SSMS, press CTRL + ALT + F1, or choose **Add or Re
 
    ![HelpViewer2 Add Remove Content](../sql-server/media/sql-server-help-installation/addremovecontent.png)  
 
-The Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. Click topics in the table of contents to display them in the right pane. 
+The Help Viewer opens to the Manage Content tab, with the installed help table of contents in the left pane. Click articles in the table of contents to display them in the right pane.
 > [!TIP]
 > If the contents pane is not visible, click Contents on the left margin. Click the pushpin icon to keep the contents pane open.  
 
@@ -127,12 +116,11 @@ To view the installed help in Visual Studio:
 
    ![View Help](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-   The help table of contents shows on the left, and the selected help topic on the right. 
-
+   The help table of contents shows on the left, and the selected help article on the right.
   
 ## Use Help Viewer v1.x
 
-Earlier versions of SSMS and VS use Help Viewer 1.x, which supports SQL Server 2014 Help. 
+Earlier versions of SSMS and VS use Help Viewer 1.x, which supports SQL Server 2014 and 2012 Help content. 
 
 **To download and install offline help content with Help Viewer v1.x**
 
@@ -197,16 +185,16 @@ Online help always shows the most up-to-date content.
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-4. Open the Help Viewer to see the content by clicking **View Help** on the **Help** menu. 
+4. Open the Help Viewer to see the content by clicking **View Help** on the **Help** menu.
 
 ## View F1 help
 
-When you press F1 or click **Help** or the **?** icon in a dialog box in SSMS or VS, a context-sensitive online help topic appears in the browser or Help Viewer. 
+When you press F1 or click **Help** or the **?** icon in a dialog box in SSMS or VS, a context-sensitive online help article appears in the browser or Help Viewer.
 
 **To view F1 help**
 
-1. Point to **Set Help Preference** on the Help menu, and choose either **Launch in Browser** or **Launch in Help Viewer**.
-2. Press F1, or click **Help**, or click **?** in dialog boxes where they are available, to see context-sensitive online topics in the chosen environment.
+1. In the Help menu, click **Set Help Preference**, and choose either **Launch in Browser** or **Launch in Help Viewer**.
+2. Press F1, or click **Help**, or click **?** in dialog boxes where they are available, to see context-sensitive online articles in the chosen environment.
 
 > [!NOTE]
 > F1 help only works when you are online. There are no offline sources for F1 help.

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

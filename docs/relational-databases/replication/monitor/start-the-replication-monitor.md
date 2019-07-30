@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Start the Replication Monitor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +22,9 @@ manager: craigg
 1.  Connect to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], and then expand the server node.  
   
 2.  Right-click the **Replication** folder or any of its subfolders, and then click **Launch Replication Monitor**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### To start Replication Monitor from the command prompt  
   
 1.  From the command prompt, navigate to the tools installation directory. The default path is [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]Tools\Binn\ .  

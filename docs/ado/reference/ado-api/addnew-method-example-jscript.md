@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # AddNew Method Example (JScript)
 This example uses the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method to create a new record with the specified name. Cut and paste the following code to Notepad or another text editor, and save it as **AddNewJS.asp**.  

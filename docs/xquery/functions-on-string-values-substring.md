@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on String Values - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

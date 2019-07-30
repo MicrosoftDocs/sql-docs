@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ---
@@ -64,6 +63,8 @@ The expression order affects the computed `CHECKSUM` value. The order of columns
   
 The `CHECKSUM` value depends on the collation. The same value stored with a different collation will return a different `CHECKSUM` value.
   
+`CHECKSUM ()` does not guarantee unique results.
+
 ## Examples  
 These examples show the use of `CHECKSUM` to build hash indexes.
   

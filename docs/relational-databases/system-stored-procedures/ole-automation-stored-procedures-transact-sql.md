@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # OLE Automation Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

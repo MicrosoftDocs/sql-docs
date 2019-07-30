@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_execute (Transact-SQL)

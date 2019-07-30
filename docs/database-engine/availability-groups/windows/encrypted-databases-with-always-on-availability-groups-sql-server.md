@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Add an encrypted database to an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

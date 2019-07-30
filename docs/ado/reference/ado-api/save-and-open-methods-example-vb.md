@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Save and Open Methods Example (VB)
 These three examples demonstrate how the [Save](../../../ado/reference/ado-api/save-method.md) and [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) methods can be used together.  

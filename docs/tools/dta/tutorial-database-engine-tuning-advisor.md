@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor [SQL Server], tutorials"
   - "tutorials [Database Engine Tuning Advisor]"
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

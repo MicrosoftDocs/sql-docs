@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Enter Passwords Page (Add Replica Wizard) for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

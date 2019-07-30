@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.set_environment_variable_protection (SSISDB Database)
 

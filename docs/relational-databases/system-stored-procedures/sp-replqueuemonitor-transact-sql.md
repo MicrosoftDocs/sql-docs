@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

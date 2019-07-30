@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # Release notes for SQL Server Data Tools (SSDT)
@@ -18,8 +17,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
-
-For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/).
 
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
@@ -40,6 +37,37 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## 15.9.2,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; July 17, 2019  
+_Build Number:_ &nbsp; 14.0.16194.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+#### SSIS
+
+| New item | Details |
+| :------- | :------ |
+| Add AzureEnabled feature. Enable packages of the project to be run on SSIS Platform-as-a-Service (PaaS) in Azure Data Factory | &nbsp; |
+| Fix an issue that Oracle connector properties are not able to be set from variable expression | &nbsp; |
+| Fix an issue that Oracle connector has VS_NEEDSNEWMETATDATA error when debugging packages targeted to pre-SQL Server 2019 | &nbsp; |
+| Fix an issue that Oracle connector failed to upgrade/downgrade package/project if the package/project uses expressions for connection manager’s properties | &nbsp; |
+| Fix an issue that Download WSDL button of Web Service Task Editor doesn't support TLS 1.1 & 1.2 protocal (targetting to SQL Server 2019) | &nbsp; |
+| Fix an issue that packages containing DQS connection manager cannot be loaded again after saving | &nbsp; |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
+| SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
+| Cannot create or Edit Data Sources in Package Deployment model. | Fails to open the Data Source Wizard. |
+| Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source is not localized | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## 15.9.1,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; April 27, 2019  
@@ -66,6 +94,7 @@ _SSDT for Visual Studio 2017._
 | :---------- | :------ |
 | SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted. |
 | SSDT for Visual Studio 2017 higher than 15.8 doesn't support designing packages that contain Teradata source/destination. | Use SSDT for Visual Studio 2017 (15.8). |
+| Cannot create or Edit Data Sources in Package Deployment model. | Fails to open the Data Source Wizard. |
 | Power Query Source may not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source may not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
 | Power Query Source is not localized. | &nbsp; |

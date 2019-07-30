@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

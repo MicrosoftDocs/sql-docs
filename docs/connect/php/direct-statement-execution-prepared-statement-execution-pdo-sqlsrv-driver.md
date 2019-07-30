@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

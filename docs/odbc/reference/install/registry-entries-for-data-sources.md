@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Registry Entries for Data Sources
 > [!NOTE]  

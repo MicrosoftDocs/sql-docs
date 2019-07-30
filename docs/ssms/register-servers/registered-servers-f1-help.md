@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Registered Servers F1 Help
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

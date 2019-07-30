@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsSelectForUpdate Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

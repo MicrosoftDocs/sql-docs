@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # FILESTREAM Compatibility with Other SQL Server Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Pause and resume data migration (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

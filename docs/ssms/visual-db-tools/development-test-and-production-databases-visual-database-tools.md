@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Development, Test, and Production Databases (Visual Database Tools)

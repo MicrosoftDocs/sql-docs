@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # FILESTREAM Support
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TestServer element"
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # TestServer Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

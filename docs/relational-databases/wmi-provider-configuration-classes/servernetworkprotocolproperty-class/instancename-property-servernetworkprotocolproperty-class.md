@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # InstanceName Property (ServerNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

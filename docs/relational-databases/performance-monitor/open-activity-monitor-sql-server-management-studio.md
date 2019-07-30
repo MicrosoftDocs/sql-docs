@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Open Activity Monitor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,9 @@ Complete the **Connect to Server** dialog box if you are not already connected t
 3.  From the **At startup** drop-down list, select **Open Object Explorer and Activity Monitor**.  
 
 4.  Click **OK**.
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   

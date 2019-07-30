@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

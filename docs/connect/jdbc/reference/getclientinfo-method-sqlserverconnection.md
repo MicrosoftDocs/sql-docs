@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 241536e1-fae6-4980-85a5-d8cfcd50b8bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getClientInfo Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

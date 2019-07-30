@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ce4ec01f-87a0-4787-81d4-a4bf490d1331
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateDouble Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

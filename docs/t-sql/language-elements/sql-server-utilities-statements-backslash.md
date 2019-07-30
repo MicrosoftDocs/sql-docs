@@ -1,7 +1,7 @@
 ---
 title: "Backslash (Line Continuation) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/09/2017"
+ms.date: "07/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -28,9 +28,9 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Backslash (Line Continuation) (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 `\`  breaks a long string constant, character or binary, into two or more lines for readability.  
@@ -52,7 +52,7 @@ manager: craigg
  Is the continuation of a string.  
   
 ## Remarks  
- This command returns the first and continued sections of the string as one string, without the backslash.  
+This command returns the first and continued sections of the string as one string, without the backslash. The new line after the backslash must either be a line feed character (U+000A) or a combination of carriage return (U+000D) and line feed (U+000A) in that order. 
 
 ## Examples  
 
@@ -79,7 +79,7 @@ def' AS [ColumnResult];
 The following example uses a backslash and a carriage return to split a binary string into two lines.  
 
 ```  
-SELECT 0xabc\  
+SELECT 0xabc\
 def AS [ColumnResult];  
   
 ```  

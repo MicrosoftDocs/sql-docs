@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Simulating an Error Output for the Script Component
 

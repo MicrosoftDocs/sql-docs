@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -8,7 +8,6 @@ ms.custom: ""
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Deploy an SSIS project with C# code in a .NET app
 

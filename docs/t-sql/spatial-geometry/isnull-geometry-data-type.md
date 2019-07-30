@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # IsNull (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

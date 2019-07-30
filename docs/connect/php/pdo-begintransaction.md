@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

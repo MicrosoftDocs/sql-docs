@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # View the Size of the Sparse File of a Database Snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,9 @@ manager: craigg
 ## Verify that a Database File is a Sparse File  
   
 1.  On the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
   
      1 = File is a sparse file.  

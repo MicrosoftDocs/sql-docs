@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # cross db ownership chaining Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

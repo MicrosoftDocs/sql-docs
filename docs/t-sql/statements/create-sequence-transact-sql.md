@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ For example, if a cache size of 50 is chosen, [!INCLUDE[ssNoVersion](../../inclu
 When created with the **CACHE** option, an unexpected shutdown (such as a power failure) may result in the loss of sequence numbers remaining in the cache.  
   
 ## General Remarks  
- Sequence numbers are generated outside the scope of the current transaction. They are consumed whether the transaction using the sequence number is committed or rolled back.  
+ Sequence numbers are generated outside the scope of the current transaction. They are consumed whether the transaction using the sequence number is committed or rolled back. Duplicate validation only occurs once a record is fully populated. This can result in some cases where the same number is used for more than one record during creation, but then gets identified as a duplicate. If this occurs and other autonumber values have been applied to subsequent records, this can result in a gap between autonumber values and is expected behavior.
   
 ### Cache management  
  To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pre-allocates the number of sequence numbers specified by the **CACHE** argument.  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Translator Setup DLLs
 > [!NOTE]  

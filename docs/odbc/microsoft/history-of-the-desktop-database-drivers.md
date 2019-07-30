@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # History of the Desktop Database Drivers
 The following table shows the Desktop Database Drivers version history.  

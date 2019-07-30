@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.environments (SSISDB Database)
 

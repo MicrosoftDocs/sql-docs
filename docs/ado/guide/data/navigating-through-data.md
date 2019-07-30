@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Navigating Through Data
 **Recordset** supports various methods and properties to navigate through the resultant dataset. We examine this functionality by going through a few scenarios with our sample **Recordset** objects.  

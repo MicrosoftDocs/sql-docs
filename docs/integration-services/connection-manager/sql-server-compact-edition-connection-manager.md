@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Compact Edition Connection Manager
 

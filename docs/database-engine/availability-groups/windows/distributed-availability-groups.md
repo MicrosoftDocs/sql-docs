@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MashaMSFT"
 ms.author: mathoma
-manager: craigg
 ---
 # Distributed availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

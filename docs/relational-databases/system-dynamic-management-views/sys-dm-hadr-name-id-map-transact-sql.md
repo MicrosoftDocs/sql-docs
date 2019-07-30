@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

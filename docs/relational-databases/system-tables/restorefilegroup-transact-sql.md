@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # restorefilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

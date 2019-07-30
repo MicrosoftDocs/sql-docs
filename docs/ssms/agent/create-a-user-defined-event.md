@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a User-Defined Event

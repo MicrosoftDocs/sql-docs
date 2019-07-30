@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, columns"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Removing a Column from a SQL Server Table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # usesLocalFilePerTable Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

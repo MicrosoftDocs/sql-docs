@@ -46,6 +46,6 @@ manager: craigg
   
 ## See Also  
  [Calculations &#40;SSAS Tabular&#41;](calculations-ssas-tabular.md)   
- [Time Intelligence Functions &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
+ [Time Intelligence Functions &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Save Queries (Visual Database Tools)

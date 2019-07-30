@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Progress Report Event Category

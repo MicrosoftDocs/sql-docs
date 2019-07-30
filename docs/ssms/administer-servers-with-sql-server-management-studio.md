@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 938bb035-e07a-4082-9f93-229d9feb6b06
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Administer Servers with SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

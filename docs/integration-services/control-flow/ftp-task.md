@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # FTP Task
 

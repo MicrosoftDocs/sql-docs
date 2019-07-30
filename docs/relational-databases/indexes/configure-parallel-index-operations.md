@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Parallel Index Operations
@@ -95,7 +94,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 7.  Select **Maximum degree of parallelism**, and then enter some value between 1 and 64.  
   
 8.  Click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To set max degree of parallelism on an existing index  

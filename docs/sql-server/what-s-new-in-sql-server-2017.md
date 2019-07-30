@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # What's new in SQL Server 2017
@@ -35,7 +34,7 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 - The **modified_extent_page_count** column in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) tracks differential changes in each database file, enabling smart backup solutions that perform differential backup or full backup based on percentage of changed pages in the database. (CTP 2.0)
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) T-SQL syntax now supports loading a table into a FileGroup other than the user's default by using the **ON** keyword. (CTP 2.0)
 - Cross database transactions are now supported among all databases that are part of an **Always On Availability Group**, including databases that are part of same instance. See [Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
-- New **Availability Groups** functionality includes clusterless support, Minimum Replica Commit Availability Groups setting, and Windows-Linux cross-OS migrations and testing. (CTP 1.3)
+- New **Availability Groups** functionality includes read-scale support without a cluster, Minimum Replica Commit Availability Groups setting, and Windows-Linux cross-OS migrations and testing. (CTP 1.3)
 - New dynamic management views:
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) exposes summary level attributes and information on transaction log files, helpful for monitoring transaction log health. (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) tracks version store usage per database, useful for proactively planning tempdb sizing based on the version store usage per database. (CTP 2.0)
@@ -82,7 +81,7 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 - Support for the **1400 Compatibility level** for tabular models. To create new or upgrade existing tabular model projects to the 1400 compatibility level, download and install [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
 - A modern **Get Data** experience for tabular models at the 1400 compatibility level. See the [Analysis Services Team Blog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
 - **Hide Members** property to hide blank members in ragged hierarchies. (CTP 1.1)
-- New **Detail Rows** end-user action to **Show Details** for aggregated information. [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) and **DETAILROWS** functions for creating Detail Rows expressions. (CTP 1.1)
+- New **Detail Rows** end-user action to **Show Details** for aggregated information. [SELECTCOLUMNS](/dax/selectcolumns-function-dax) and **DETAILROWS** functions for creating Detail Rows expressions. (CTP 1.1)
 - DAX **IN** operator for specifying multiple values. (CTP 1.1)
 
 For more information, see [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).

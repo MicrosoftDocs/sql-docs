@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b7fb66d4-6a42-43d0-ba68-8514816917cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setArray Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 89543177-b77c-4220-9f49-5d0c5379b567
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerXAConnection Methods
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

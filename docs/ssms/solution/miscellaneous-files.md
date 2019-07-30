@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Miscellaneous Files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

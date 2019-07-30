@@ -2,7 +2,6 @@
 title: Loading data into Parallel Data Warehouse | Microsoft Docs
 description: You can load or insert data into SQL Server Parallel Data Warehouse (PDW) by using Integration Services, bcp Utility, dwloader, or the SQL INSERT statement.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

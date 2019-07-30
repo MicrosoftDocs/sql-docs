@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Broker - DBM Transport Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

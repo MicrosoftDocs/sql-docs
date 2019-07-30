@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "Database Engine Tuning Advisor [SQL Server], command prompt"
   - "optimizing databases [SQL Server]"
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # dta Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

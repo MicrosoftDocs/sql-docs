@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Monitor Job Activity

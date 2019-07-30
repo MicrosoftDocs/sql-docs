@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SMTP Connection Manager
 

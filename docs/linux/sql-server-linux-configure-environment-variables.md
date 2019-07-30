@@ -1,13 +1,11 @@
 ---
-title: Configure SQL Server settings with environment variables | Microsoft Docs
+title: Configure SQL Server settings with environment variables
 description: This article describes how to use environment variables to configure specific SQL Server 2017 settings on Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/20/2018
+author: VanMSFT 
+ms.author: vanto
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 
 ---
@@ -41,7 +39,7 @@ You can use several different environment variables to configure SQL Server 2019
 
 | Environment variable | Description |
 |-----|-----|
-| **ACCEPT_EULA** | Accept the SQL Server license agreement when set to any value (for example, 'Y'). |
+| **ACCEPT_EULA** | Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
 | **MSSQL_SA_PASSWORD** | Configure the SA user password. |
 | **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**A product key**</br></br>If specifying a product key, it must be in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter.|
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
@@ -65,7 +63,7 @@ You can use several different environment variables to configure SQL Server 2019
 
 | Environment variable | Description |
 |-----|-----|
-| **ACCEPT_EULA** | Accept the SQL Server license agreement when set to any value (for example, 'Y'). |
+| **ACCEPT_EULA** | Set the **ACCEPT_EULA** variable to any value to confirm your acceptance of the [End-User Licensing Agreement](https://go.microsoft.com/fwlink/?LinkId=746388). Required setting for the SQL Server image. |
 | **MSSQL_SA_PASSWORD** | Configure the SA user password. |
 | **MSSQL_PID** | Set the SQL Server edition or product key. Possible values include: </br></br>**Evaluation**</br>**Developer**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**A product key**</br></br>If specifying a product key, it must be in the form of #####-#####-#####-#####-#####, where '#' is a number or a letter.|
 | **MSSQL_LCID** | Sets the language ID to use for SQL Server. For example 1036 is French. |
@@ -132,13 +130,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 If you are running Docker on Linux/macOS, use the following syntax with single quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 If you are running Docker on Windows, use the following syntax with double quotes:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ::: moniker-end

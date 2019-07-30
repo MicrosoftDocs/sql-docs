@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services (SSIS) in a Cluster
 

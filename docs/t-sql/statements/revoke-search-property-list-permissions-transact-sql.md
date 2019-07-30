@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Search Property List Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

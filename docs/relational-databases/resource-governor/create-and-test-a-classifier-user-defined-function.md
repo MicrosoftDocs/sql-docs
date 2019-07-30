@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Create and Test a Classifier User-Defined Function
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

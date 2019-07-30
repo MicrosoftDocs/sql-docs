@@ -90,8 +90,8 @@ manager: craigg
   
 |Function|Description|  
 |--------------|-----------------|  
-|[USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Returns the domain\ username of the user currently logged on.|  
-|[CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Returns the CustomData property in a connection string.|  
+|[USERNAME Function &#40;DAX&#41;](/dax/username-function-dax)|Returns the domain\ username of the user currently logged on.|  
+|[CUSTOMDATA Function &#40;DAX&#41;](/dax/customdata-function-dax)|Returns the CustomData property in a connection string.|  
   
  You can use the LOOKUPVALUE function to return values for a column in which the Windows user name is the same as the user name returned by the USERNAME function or a string returned by the CustomData function. Queries can then be restricted where the values returned by LOOKUPVALUE match values in the same or related table.  
   
@@ -134,8 +134,8 @@ manager: craigg
 ## See Also  
  [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
  [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE Function &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME Function &#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE Function &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA Function &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

@@ -12,7 +12,6 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
 ---
 
 # Capture a trace in Database Experimentation Assistant

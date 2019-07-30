@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Quickstart: SQL Server Backup and Restore to Azure Blob Storage Service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +33,9 @@ To create a Container, follow these steps:
 
 1. Open the Azure portal. 
 1. Navigate to your Storage Account. 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    1. Select the storage account, scroll down to **Blob Services**.
    1. Select **Blobs** and then select  +**Container** to add a new container. 
    1. Enter the name for the container and make note of the container name you specified. This information is used in the URL (path to backup file) in the T-SQL statements later in this quickstart. 

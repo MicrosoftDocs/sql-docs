@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # executeBatch Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

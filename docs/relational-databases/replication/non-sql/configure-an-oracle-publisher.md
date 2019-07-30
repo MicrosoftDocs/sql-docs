@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Configure an Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,6 +24,8 @@ manager: craigg
 3.  Install the Oracle client software and OLE DB provider on the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor, and then stop and restart the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. If the Distributor is running on a 64-bit platform, you must use the 64-bit version of the Oracle OLE DB provider.  
   
 4.  Configure the Oracle database as a Publisher at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor.  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the following heterogeneous scenarios for transactional and snapshot replication:  
   

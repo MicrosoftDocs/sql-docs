@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

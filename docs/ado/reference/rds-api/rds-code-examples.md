@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 59030e99-de9c-4506-a450-67dfcb6f7c00
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # RDS Code Examples
 > [!IMPORTANT]

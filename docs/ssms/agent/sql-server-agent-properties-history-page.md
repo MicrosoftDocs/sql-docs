@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent Properties (History Page)

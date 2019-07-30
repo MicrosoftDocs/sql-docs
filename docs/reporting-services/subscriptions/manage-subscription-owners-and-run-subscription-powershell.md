@@ -6,7 +6,6 @@ ms.technology: subscriptions
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 04/26/2019

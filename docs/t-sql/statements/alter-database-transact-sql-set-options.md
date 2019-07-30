@@ -29,7 +29,6 @@ helpviewer_keywords:
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE SET Options (Transact-SQL)
@@ -764,7 +763,10 @@ Size-based cleanup won't be automatically activated.
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-Designates the currently active query capture mode.
+Designates the currently active query capture mode. Each mode defines specific query capture policies.
+
+> [!NOTE]
+> Cursors, queries inside Stored Procedures, and Natively compiled queries are always captured when the query capture mode is set to ALL, AUTO, or CUSTOM.
 
 ALL         
 Captures all queries. ALL is the default configuration value. This is the default configuration value starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
@@ -1322,7 +1324,7 @@ SET QUERY_STORE = ON
 
 ### F. Enabling the query store with wait statistics
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting wityh [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 The following example enables the query store and configures query store parameters.
 
@@ -2892,54 +2894,45 @@ SET QUERY_STORE = ON
 
 ## Azure SQL Data Warehouse
 
-> [!NOTE]
-> Many database set options can be configured for the current session by using [SET Statements](../../t-sql/statements/set-statements-transact-sql.md) and are often configured by applications when they connect. Session level set options override the **ALTER DATABASE SET** values. The database options described below are values that can be set for sessions that don't explicitly provide other set option values.
-
 ## Syntax
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## Arguments
 
-*database_name*         
+*database_name*
+
 Is the name of the database to be modified.
 
-**\<auto_option> ::=**         
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+Applies to Azure SQL Data Warehouse (preview)
 
-Controls automatic options.
+This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in `sys.databases` to show the result cache setting for a database.  
 
-**Permissions**
-Requires these permissions:
-
-- Server-level principal login (the one created by the provisioning process), or
-- Member of the `dbmanager` database role.
-
-The owner of the database cannot alter the database unless the owner is a member of the dbmanager role.
-
-> [!Note]
-> While this feature is being rolled out to all regions, please check the version deployed to your instance and the latest [Azure SQL DW release notes](/azure/sql-data-warehouse/release-notes-10-0-10106-0) for feature availability.
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } (Preview for Gen2)         
-This command must be run while connected to the master database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data warehouse storage. A new column called is_result_set_caching_on is introduced in the sys.databases to show the result caching setting for a database.  
-
-ON         
+ON   
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
 
-OFF         
-Specifies that query result sets returned from this database will not be cached in Azure SQL Data warehouse storage.
-Users can tell if a query was executed with a result cache hit or miss by querying sys.pdw_request_steps with a specific request_id.   If there is a cache hit, the query result will have a single step with following details:
+OFF   
+Specifies that query result sets returned from this database will not be cached in Azure SQL Data warehouse storage. Users can tell if a query was executed with a result cache hit or miss by querying sys.pdw_request_steps with a specific request_id.   If there is a cache hit, the query result will have a single step with following details:
 
 |**Column name** |**Operator** |**Value** |
 |----|----|----|
@@ -2948,6 +2941,25 @@ Users can tell if a query was executed with a result cache hit or miss by queryi
 |location_type|=|Control|
 command|Like|%DWResultCacheDb%|
 | | |
+
+## Remarks
+
+Cached result set is reused for a query if all of the following requirements are all met:
+
+1. The user executing the query has access to all the tables referenced in the query.
+1. There is an exact match between the new query and the previous query that generated the result set cache.
+1. There is no data or schema changes in the tables where the cached result set was generated from.  
+
+Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except for queries with non-deterministic functions such as DateTime.Now().   Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
+
+## Permissions
+
+Requires these permissions:
+
+- Server-level principal login (the one created by the provisioning process), or
+- Member of the `dbmanager` database role.
+
+The owner of the database cannot alter the database unless the owner is a member of the dbmanager role.
 
 ## Examples
 
@@ -2968,7 +2980,7 @@ SET RESULT_SET_CACHING OFF;
 ### Check result set caching setting for a database
 
 ```sql
-SELECT name, is_result_set_caching  
+SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
@@ -3000,7 +3012,7 @@ If
 FROM sys.dm_pdw_request_steps  
 WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
 SELECT 1 as is_cache_hit  
-ELSE 
+ELSE
 SELECT 0 as is_cache_hit;
 ```
 
@@ -3012,7 +3024,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-## See Also
+## See also
 
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)

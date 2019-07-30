@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Running Stored Procedures

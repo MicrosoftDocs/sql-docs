@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SIGN (SSIS Expression)
 

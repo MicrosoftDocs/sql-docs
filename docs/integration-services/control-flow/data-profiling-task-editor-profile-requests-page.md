@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Profiling Task Editor (Profile Requests Page)
 

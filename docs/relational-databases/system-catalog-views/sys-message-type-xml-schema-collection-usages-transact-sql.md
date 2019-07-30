@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.message_type_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

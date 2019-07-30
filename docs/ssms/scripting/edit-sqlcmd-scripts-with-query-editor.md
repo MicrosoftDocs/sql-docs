@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Edit SQLCMD Scripts with Query Editor

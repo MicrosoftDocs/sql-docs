@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Diagnostic Messages
 A diagnostic message is returned with each SQLSTATE. The same SQLSTATE is often returned with a number of different messages. For example, SQLSTATE 42000 (Syntax error or access violation) is returned for most errors in SQL syntax. However, each syntax error is likely to be described by a different message.  

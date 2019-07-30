@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ROUND (SSIS Expression)
 

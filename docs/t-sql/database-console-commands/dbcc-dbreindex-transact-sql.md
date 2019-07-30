@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

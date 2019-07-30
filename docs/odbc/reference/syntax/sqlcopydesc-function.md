@@ -1,7 +1,7 @@
 ---
 title: "SQLCopyDesc Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,6 +11,7 @@ apiname:
   - "SQLCopyDesc"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLCopyDesc"
@@ -19,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLCopyDesc Function
 **Conformance**  

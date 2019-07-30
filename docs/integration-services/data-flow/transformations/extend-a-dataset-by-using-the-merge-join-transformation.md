@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Extend a Dataset by Using the Merge Join Transformation
 

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Get started by running the Enable Database for Stretch Wizard
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Destination
 

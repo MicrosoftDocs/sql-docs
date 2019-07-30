@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

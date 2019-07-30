@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Full Database Backups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

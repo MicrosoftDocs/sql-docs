@@ -2,13 +2,12 @@
 title: Configure SLES Cluster for SQL Server Availability Group
 titleSuffix: SQL Server
 description: Learn how to create availability group clusters for SQL Server on SUSE Linux Enterprise Server (SLES)
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ---

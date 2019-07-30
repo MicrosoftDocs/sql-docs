@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

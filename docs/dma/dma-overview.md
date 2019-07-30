@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
-manager: craigg
 ---
 
 # Overview of Data Migration Assistant

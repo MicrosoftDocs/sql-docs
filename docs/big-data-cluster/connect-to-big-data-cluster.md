@@ -2,9 +2,9 @@
 title: Connect to master and HDFS
 titleSuffix: SQL Server big data clusters
 description: Learn how to connect to the SQL Server master instance and the HDFS/Spark gateway for a SQL Server 2019 big data cluster (preview).
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab 
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -32,8 +32,11 @@ To connect to a big data cluster with Azure Data Studio, make a new connection t
 1. From the command line, find the IP of your master instance with the following command:
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > The big data cluster name defaults to **mssql-cluster** unless you customized the name in a deployment configuration file. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md#clustername).
 
 1. In Azure Data Studio, press **F1** > **New Connection**.
 

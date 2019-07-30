@@ -10,7 +10,6 @@ ms.reviewer: "alayu; sstein"
 ms.topic: "quickstart"
 author: "rachel-msft"
 ms.author: "raagyema"
-manager: craigg
 ---
 
 # Quickstart: Connect and query PostgreSQL using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

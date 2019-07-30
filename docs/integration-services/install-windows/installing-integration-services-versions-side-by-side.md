@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Installing Integration Services Versions Side by Side
 

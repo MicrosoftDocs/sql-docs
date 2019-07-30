@@ -207,7 +207,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Can be used in range queries.  
   
- If the clustered index is not created with the UNIQUE property, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a 4-byte uniqueifier column to the table. When it is required, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a uniqueifier value to a row to make each key unique. This column and its values are used internally and cannot be seen or accessed by users.  
+ If the clustered index is not created with the UNIQUE property, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a 4-byte uniquifier column to the table. When it is required, the [!INCLUDE[ssDE](../includes/ssde-md.md)] automatically adds a uniquifier value to a row to make each key unique. This column and its values are used internally and cannot be seen or accessed by users.  
   
 ### Clustered Index Architecture  
 

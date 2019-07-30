@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Piecemeal Restores (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +166,9 @@ manager: craigg
 3.  Later, a file restore of a read/write secondary filegroup WITH NORECOVERY from the backup_1 partial backup  
   
 4.  The differential backup followed by any other backups that were restored in the original piecemeal restore sequence to restore the data up to the original recovery point.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## See Also  
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

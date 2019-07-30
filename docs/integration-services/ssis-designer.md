@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SSIS Designer
 

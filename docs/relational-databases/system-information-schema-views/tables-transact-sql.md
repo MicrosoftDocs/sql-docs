@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TABLES (Transact-SQL)

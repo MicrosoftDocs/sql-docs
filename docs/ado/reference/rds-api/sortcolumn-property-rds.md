@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SortColumn Property (RDS)
 Indicates by which column to sort the records.  

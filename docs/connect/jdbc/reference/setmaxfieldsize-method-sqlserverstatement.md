@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 38f7fc1d-acad-4d10-9fc8-3c0669d93b07
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setMaxFieldSize Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

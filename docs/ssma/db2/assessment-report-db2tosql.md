@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Assessment Report (DB2ToSQL)
 The Assessment Report window shows the results of the conversion of database objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, and can also help you estimate the complexity and cost of your migration projects.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Drop XML Indexes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

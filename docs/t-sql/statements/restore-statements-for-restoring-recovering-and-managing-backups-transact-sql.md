@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # RESTORE Statements for Restoring, Recovering, and Managing Backups (Transact-SQL)

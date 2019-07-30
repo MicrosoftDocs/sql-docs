@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Create Clustered DTC resource for an Always On availability group

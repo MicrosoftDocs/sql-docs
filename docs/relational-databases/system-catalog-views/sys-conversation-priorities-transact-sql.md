@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

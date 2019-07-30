@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Change which cluster manages the metadata for replicas in an Always On availability group

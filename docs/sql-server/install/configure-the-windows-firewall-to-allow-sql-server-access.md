@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +50,7 @@ To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
  Choosing a firewall strategy is more complex than just deciding if a given port should be open or closed. When designing a firewall strategy for your enterprise, make sure that you consider all the rules and configuration options available to you. This article does not review all the possible firewall options. We recommend that you review the following documents:  
   
- [Windows Firewall Deployment Guide ](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
+ [Windows Firewall Deployment Guide](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
  [Windows Firewall Design Guide](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [Introduction to Server and Domain Isolation](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   
@@ -94,6 +93,10 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
  The following tables can help you identify the ports being used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
+ 
+
+By default, the typical ports used by SQL Server and associated database engine services are: TCP **1433**, **4022**, **135**, **1434**, UDP **1434**. The table below explains these ports in greater detail. A named instance uses [dynamic ports](#BKMK_dynamic_ports).
+ 
  The following table lists the ports that are frequently used by the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 |Scenario|Port|Comments|  
@@ -136,6 +139,9 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
 For more information about endpoints, see [Configure the Database Engine to Listen on Multiple TCP Ports](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) and [Endpoints Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
   
 ###  <a name="BKMK_ssas"></a> Ports Used By Analysis Services  
+ 
+By default, the typical ports used by SQL Server Analysis Services and associated services are: TCP **2382**, **2383**, **80**, **443**. The table below explains these ports in greater detail.  
+ 
  The following table lists the ports that are frequently used by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Feature|Port|Comments|  
@@ -150,6 +156,10 @@ For more information about endpoints, see [Configure the Database Engine to List
  For step by step instructions to configure the Windows Firewall for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ###  <a name="BKMK_ssrs"></a> Ports Used By Reporting Services  
+
+By default, the typical ports used by SQL Server Reporting SErvices and associated services are: TCP **80**, **443**. The table below explains these ports in greater detail. 
+
+
 The following table lists the ports that are frequently used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 |Feature|Port|Comments|  

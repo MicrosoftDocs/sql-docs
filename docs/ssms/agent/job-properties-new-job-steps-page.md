@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Properties - New Job (Steps Page)

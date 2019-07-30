@@ -11,7 +11,6 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 ---
 # Find Similar and Related Documents with Semantic Search
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

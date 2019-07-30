@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Support Resources for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

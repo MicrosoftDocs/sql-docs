@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "OLE DB, bulk copy operations"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -8,10 +8,9 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Quickstart: Verify Python exists in SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server includes Python language support for data science analytics on resident SQL Server data. Script execution is through stored procedures, using either of the following approaches:
 

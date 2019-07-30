@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Storage System Input-Output Time-out
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

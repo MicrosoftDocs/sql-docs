@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure firewall rules before running the TSQL Debugger

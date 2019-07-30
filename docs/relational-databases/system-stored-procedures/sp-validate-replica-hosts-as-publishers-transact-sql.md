@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

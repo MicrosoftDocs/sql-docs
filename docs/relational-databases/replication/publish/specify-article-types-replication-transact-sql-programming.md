@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Specify Article Types (Replication Transact-SQL Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,9 @@ manager: craigg
 2.  For **logbased manualboth** and **logbased manualfilter** articles, execute [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) to generate the filtering stored procedure for a horizontally filtered article. For more information, see [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
 3.  For **logbased manualboth**, **logbased manualview**, and **logbased manualfilter** articles, execute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) to generate the view that defines the vertically filtered article. For more information, see [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### To publish a view or indexed view article in a transactional or snapshot publication  
   
 1.  At the Publisher on the publication database, execute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specify one of the following values for **@type** to define the type of article:  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SchemaEnum
 Specifies the type of schema **Recordset** that the [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) method retrieves.  

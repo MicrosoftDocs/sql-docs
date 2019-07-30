@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getSchemas Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 

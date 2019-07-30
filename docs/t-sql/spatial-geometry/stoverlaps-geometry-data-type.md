@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STOverlaps (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication Monitor, Main Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

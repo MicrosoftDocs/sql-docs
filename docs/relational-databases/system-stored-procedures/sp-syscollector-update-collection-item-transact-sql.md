@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

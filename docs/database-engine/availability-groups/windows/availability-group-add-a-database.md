@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Add a Database to an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

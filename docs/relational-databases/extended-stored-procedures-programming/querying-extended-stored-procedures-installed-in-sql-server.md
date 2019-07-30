@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Querying Extended Stored Procedures Installed in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

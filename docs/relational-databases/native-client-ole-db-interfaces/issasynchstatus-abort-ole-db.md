@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ISSAsynchStatus::Abort (OLE DB)

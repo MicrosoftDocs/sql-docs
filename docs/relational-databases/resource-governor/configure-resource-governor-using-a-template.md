@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Configure Resource Governor Using a Template
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +40,9 @@ manager: craigg
 5.  To save the changes that you make to the template, click **OK**.  
   
 6.  To run the query, click **Execute**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## See Also  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Enable Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   

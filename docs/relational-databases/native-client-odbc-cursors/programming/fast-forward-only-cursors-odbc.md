@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Fast Forward-Only Cursors (ODBC)

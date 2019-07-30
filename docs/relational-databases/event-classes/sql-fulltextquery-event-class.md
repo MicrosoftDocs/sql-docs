@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:FullTextQuery Event Class

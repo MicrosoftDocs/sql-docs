@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # FilterValue Property (RDS)
 Indicates the value with which to filter records.  

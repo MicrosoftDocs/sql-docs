@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: Build and Deploy to a Local Database
 Microsoft SQL Server 2012 provides a local on-demand server instance, called SQL Server Express Local Database Runtime, which is activated when you debug a SQL Server Database project. This local server instance can be used as a sandbox for building, testing and debugging your project. It is independent of any of your installed SQL Server instances, and is not accessible outside SQL Server Data Tools (SSDT). Such an arrangement is ideal for developers who have limited or no access to production databases, but would like to test their projects locally before authorized personnel will deploy them to production. In addition, when you are developing a database solution for SQL Azure, you can utilize the convenience provided by this local server to develop and test your database project locally, before deploying it to the cloud.  

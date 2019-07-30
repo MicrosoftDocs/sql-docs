@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transform Data with Transformations
 

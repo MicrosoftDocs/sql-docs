@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # executeUpdate Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

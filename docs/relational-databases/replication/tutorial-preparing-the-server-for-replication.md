@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Tutorial: Prepare SQL Server for replication (publisher, distributor, subscriber)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/04/2017"
+ms.date: "05/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,10 +19,10 @@ helpviewer_keywords:
   - "sys.dm_db_column_store_row_group_physical_stats dynamic management view"
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Provides current rowgroup-level information about all of the columnstore indexes in the current database.  
@@ -49,7 +49,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**generation**|bigint|Row group generation associated with this row group.|  
 |**created_time**|datetime2|Clock time for when this rowgroup was created.<br /><br /> NULL - for a columnstore index on an in-memory table.|  
 |**closed_time**|datetime2|Clock time for when this rowgroup was closed.<br /><br /> NULL - for a columnstore index on an in-memory table.|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## Results  
  Returns one row for each rowgroup in the current database.  
   
@@ -74,7 +75,7 @@ SELECT i.object_id,
     i.index_id,   
     i.type_desc,   
     CSRowGroups.*,  
-    100*(ISNULL(deleted_rows,0))/total_rows AS 'Fragmentation'  
+    100*(ISNULL(deleted_rows,0))/NULLIF(total_rows,0) AS 'Fragmentation'
 FROM sys.indexes AS i  
 JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups  
     ON i.object_id = CSRowGroups.object_id AND i.index_id = CSRowGroups.index_id   

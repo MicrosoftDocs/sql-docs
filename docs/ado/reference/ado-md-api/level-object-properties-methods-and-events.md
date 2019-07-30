@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Level Object Properties, Methods, and Events
 ## Properties/Collections  

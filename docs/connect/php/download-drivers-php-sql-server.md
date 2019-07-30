@@ -9,7 +9,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Download the Microsoft Drivers for PHP for SQL Server
 

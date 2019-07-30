@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

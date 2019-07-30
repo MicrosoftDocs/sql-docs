@@ -15,10 +15,9 @@ helpviewer_keywords:
   - "displaying SQL Server error log"
   - "logs [SQL Server], SQL Server error logs"
 ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Viewing the SQL Server Error Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

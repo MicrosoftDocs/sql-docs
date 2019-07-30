@@ -16,10 +16,10 @@ helpviewer_keywords:
   - "sp_grantdbaccess"
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_grantdbaccess (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a database user to the current database.  
@@ -32,7 +32,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_grantdbaccess [ @loginame = ] 'login'  
     [ , [ @name_in_db = ] 'name_in_db' [ OUTPUT ] ]  
 ```  
@@ -58,7 +57,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## Examples  
  The following example uses `CREATE USER` to add a database user for the Windows login `Edmonds\LolanSo` to the current database. The new user is named `Lolan`. This is the preferred method for creating a database user.  
   
-```  
+```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
 GO  
 ```  

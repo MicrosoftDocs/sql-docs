@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STOverlaps (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -84,19 +84,19 @@ ms.author: "mathoma"
   
     -   If the value of **allow_push** is **1**, push subscriptions are supported.  
   
-    -   If the value of **allow_push** is **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_push** for **@property** and **true** for **@value**.  
+    -   If the value of **allow_push** is **0**, execute [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specifying **allow_push** for **\@property** and **true** for **\@value**.  
   
-2.  At the Publisher on the publication database, execute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **@publication**, **@subscriber** and **@destination_db**. Specify a value of **push** for **@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  At the Publisher on the publication database, execute [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Specify **\@publication**, **\@subscriber** and **\@destination_db**. Specify a value of **push** for **\@subscription_type**. For information about how to update subscriptions, see [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  At the Publisher on the publication database, execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specify the following:  
   
-    -   The **@subscriber**, **@subscriber_db**, and **@publication** parameters.  
+    -   The **\@subscriber**, **\@subscriber_db**, and **\@publication** parameters.  
   
-    -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Distributor runs for **@job_login** and **@job_password**.  
+    -   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows credentials under which the Distribution Agent at the Distributor runs for **\@job_login** and **\@job_password**.  
   
-        > **NOTE:** Connections made using Windows Integrated Authentication always use the Windows credentials specified by **@job_login** and **@job_password**. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
+        > **NOTE:** Connections made using Windows Integrated Authentication always use the Windows credentials specified by **\@job_login** and **\@job_password**. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
   
-    -   (Optional) A value of **0** for **@subscriber_security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@subscriber_login** and **@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
+    -   (Optional) A value of **0** for **\@subscriber_security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **\@subscriber_login** and **\@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
   
     -   A schedule for the Distribution Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -108,29 +108,29 @@ ms.author: "mathoma"
   
     -   If the value of **allow_push** is **1**, the publication supports push subscriptions.  
   
-    -   If the value of **allow_push** is not **1**, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **allow_push** for **@property** and **true** for **@value**.  
+    -   If the value of **allow_push** is not **1**, execute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **allow_push** for **\@property** and **true** for **\@value**.  
   
 2.  At the Publisher on the publication database, execute [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md), specifying the following parameters:  
   
-    -   **@publication**. This is the name of the publication.  
+    -   **\@publication**. This is the name of the publication.  
   
-    -   **@subscriber_type**. For a client subscription, specify **local** and for a server subscription, specify **global**.  
+    -   **\@subscriber_type**. For a client subscription, specify **local** and for a server subscription, specify **global**.  
   
-    -   **@subscription_priority**. For a server subscription, specify a priority for the subscription (**0.00** to **99.99**).  
+    -   **\@subscription_priority**. For a server subscription, specify a priority for the subscription (**0.00** to **99.99**).  
   
          For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  At the Publisher on the publication database, execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specify the following:  
   
-    -   The **@subscriber**, **@subscriber_db**, and **@publication** parameters.  
+    -   The **\@subscriber**, **\@subscriber_db**, and **\@publication** parameters.  
   
-    -   The Windows credentials under which the Merge Agent at the Distributor runs for **@job_login** and **@job_password**.  
+    -   The Windows credentials under which the Merge Agent at the Distributor runs for **\@job_login** and **\@job_password**.  
   
-        > **NOTE:**  Connections made using Windows Integrated Authentication always use the Windows credentials specified by **@job_login** and **@job_password**. The Merge Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
+        > **NOTE:**  Connections made using Windows Integrated Authentication always use the Windows credentials specified by **\@job_login** and **\@job_password**. The Merge Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication.  
   
-    -   (Optional) A value of **0** for **@subscriber_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@subscriber_login** and **@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
+    -   (Optional) A value of **0** for **\@subscriber_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **\@subscriber_login** and **\@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
   
-    -   (Optional) A value of **0** for **@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **@publisher_login** and **@publisher_password**. Specify these values if you need to use SQL Server Authentication when connecting to the Publisher.  
+    -   (Optional) A value of **0** for **\@publisher_security_mode** and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **\@publisher_login** and **\@publisher_password**. Specify these values if you need to use SQL Server Authentication when connecting to the Publisher.  
   
     -   A schedule for the Merge Agent job for this subscription. For more information, see [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -186,7 +186,7 @@ ms.author: "mathoma"
   
 8.  Call the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method.  
   
-    > **IMPORTANT!!**When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    > **IMPORTANT!! **When creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### To create a push subscription to a merge publication  
   

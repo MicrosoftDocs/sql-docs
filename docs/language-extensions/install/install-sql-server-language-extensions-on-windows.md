@@ -78,13 +78,13 @@ For local installations, you must run Setup as an administrator. If you install 
   
         This option installs the Language Extensions component that support Java code execution.
 
-        - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Java**.
+        - If you want to install the default Java runtime, Zulu Open JRE 11.0.3, select **Machine Learning Services and Language Extensions** and **Java**.
 
-        - If you want to use your own Java runtime, do not select Java.
+        - If you want to use your own Java runtime, select **Machine Learning Services and Language Extensions**. Do not select Java.
 
         If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install).
 
-        ![Feature options for Language Extensions](../media/ctp32-feature-selection.png)
+    ![Feature options for Language Extensions](../media/ctp32-feature-selection.png)
 
 4. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
 

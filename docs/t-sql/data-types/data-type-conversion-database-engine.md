@@ -51,7 +51,28 @@ Use CAST instead of CONVERT if you want [!INCLUDE[tsql](../../includes/tsql-md.m
 The following illustration shows all explicit and implicit data type conversions that are allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **xml**, **bigint**, and **sql_variant**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.
   
 ![Data type conversion table](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
-  
+
+The illustration shows how conversions are applied on assignment. An assignment happens when a variable is assigned a value or when a column is updated. For example,
+
+```sql
+declare @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+In the example above, SQL Server implicitly converts the integer `1` to a **varchar** when it assigns the value to the `@string` variable.
+
+Conversions do not apply to comparisons or expressions. The following example adds integer `1` to the character `c`. 
+
+```sql
+SELECT 1 + ' c'
+```
+The expression returns an error.
+
+`Msg 245, Level 16, State 1, Line 3 Conversion failed when converting the varchar value 'c' to data type int.`
+
+SQL Server does not convert comparisons or expressions.
+
 ## Data type conversion behaviors
 Some implicit and explicit data type conversions are not supported when you are converting the data type of one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object to another. For example, an **nchar** value cannot be converted to an **image** value. An **nchar** can only be converted to **binary** by using explicit conversion, an implicit conversion to **binary** is not supported. However, an **nchar** can be explicitly or implicitly converted to **nvarchar**.
   

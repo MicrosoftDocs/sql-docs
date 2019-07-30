@@ -90,12 +90,13 @@ The following example uses the R function `installed.packages()` in a [!INCLUDE[
 ```sql
 EXECUTE sp_execute_external_script
   @language=N'R',
-  @script = N'str(OutputDataSet);
-  packagematrix <- installed.packages();
-  Name <- packagematrix[,1];
-  Version <- packagematrix[,3];
-  OutputDataSet <- data.frame(Name, Version);',
-  @input_data_1 = N''
+@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);',
+@input_data_1 = N'
+'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
@@ -110,13 +111,14 @@ The `pip` module is installed by default, and supports many operations for listi
 EXECUTE sp_execute_external_script 
   @language = N'Python', 
   @script = N'
-  import pip
-  import pandas as pd
-  installed_packages = pip.get_installed_distributions()
-  installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
-     for i in installed_packages])
-  df = pd.DataFrame(installed_packages_list)
-  OutputDataSet = df'
+import pip
+import pandas as pd
+installed_packages = pip.get_installed_distributions()
+installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
+   for i in installed_packages])
+df = pd.DataFrame(installed_packages_list)
+OutputDataSet = df
+'
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
@@ -149,12 +151,13 @@ The equivalent check for Python can be performed from the Python shell, using `c
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-  import pip
-  import pkg_resources
-  pckg_name = "revoscalepy"
-  pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
-  installed_pckg = pckgs.query(''key == @pckg_name'')
-  print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
+import pip
+import pkg_resources
+pckg_name = "revoscalepy"
+pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
+installed_pckg = pckgs.query(''key == @pckg_name'')
+print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
+'
 ```
 
 <a name="get-package-vers"></a>

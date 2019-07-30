@@ -15,6 +15,7 @@ ms.reviewer: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How FOR JSON escapes special characters and control characters (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic describes how the **FOR JSON** clause of a SQL Server **SELECT** statement escapes special characters and represents control characters in the JSON output.  
@@ -28,7 +29,7 @@ If the source data contains special characters, the **FOR JSON** clause escapes 
 |**Special character**|**Escaped output**|  
 |---------------------------|--------------------------|  
 |Quotation mark (")|\\"|  
-|Backslash (\\)|\\\|  
+|Backslash (\\)|\\\\|  
 |Slash (/)|\\/|  
 |Backspace|\b|  
 |Form feed|\f|  

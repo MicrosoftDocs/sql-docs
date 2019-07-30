@@ -229,6 +229,8 @@
       href: ../advanced-analytics/sql-native-scoring.md
   - name: Package management
     items:
+    - name: R package information
+      href: ../advanced-analytics/package-management/package-information-r.md
     - name: Default packages
       href: ../advanced-analytics/package-management/default-packages.md
     - name: Get package information

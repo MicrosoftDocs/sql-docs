@@ -62,8 +62,6 @@ SELECT @string + ' is a string.'
 
 In the example above, SQL Server implicitly converts the integer `1` to a **varchar** when it assigns the value to the `@string` variable.
 
-Conversions do not apply to comparisons or expressions.
-
 ## Data type conversion behaviors
 Some implicit and explicit data type conversions are not supported when you are converting the data type of one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object to another. For example, an **nchar** value cannot be converted to an **image** value. An **nchar** can only be converted to **binary** by using explicit conversion, an implicit conversion to **binary** is not supported. However, an **nchar** can be explicitly or implicitly converted to **nvarchar**.
   

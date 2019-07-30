@@ -24,7 +24,7 @@ This article lists libraries that the Microsoft JDBC Driver for SQL Server depen
  - `com.microsoft.azure:azure-keyvault-webkey` : Azure Key Vault Provider for Always Encrypted Azure Key Vault feature (optional)
  - `com.microsoft.azure:adal4j` : Azure Active Directory Library for Java for Azure Active Directory Authentication feature and Azure Key Vault feature (optional)
  - `com.microsoft.rest:client-runtime` : Azure Active Directory Library for Java for Azure Active Directory Authentication feature and Azure Key Vault feature (optional)
- - `org.antlr:antlr4-runtime`: Antlr4 Runtime for useFmtOnly feature (optional)
+ - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime for useFmtOnly feature (optional)
  - `org.osgi:org.osgi.core`: OSGi Core library for OSGi Framework support.
  - `org.osgi:org.osgi.compendium`: OSGi Compendium library for OSGi Framework support.
 

@@ -14,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Subscriber Properties
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

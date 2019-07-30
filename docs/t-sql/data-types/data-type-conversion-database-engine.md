@@ -65,7 +65,7 @@ In the example above, SQL Server implicitly converts the integer `1` to a **varc
 Conversions do not apply to comparisons or expressions. The following example adds integer `1` to the character `c`. 
 
 ```sql
-SELECT 1 + ' c'
+SELECT 1 + 'c'
 ```
 The expression returns an error.
 

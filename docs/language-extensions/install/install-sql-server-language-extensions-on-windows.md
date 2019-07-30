@@ -82,17 +82,18 @@ For local installations, you must run Setup as an administrator. If you install 
 
         - If you want to use your own Java runtime, do not select Java.
 
-        You can omit R and Python if you wish.
+        If you want to use R and Python, see [Install SQL Server Machine Learning Services on Windows](https://docs.microsoft.com/sql/advanced-analytics/install/sql-machine-learning-services-windows-install).
 
         ![Feature options for Language Extensions](../media/ctp32-feature-selection.png)
 
-4. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up:
+4. If you choose **Java** in the previous step to install the default Java runtime, the **Java Install Location** page will show up.
 
-    Select the **Install Open JRE 11.0.3 included with this installation**. 
-
-    The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
+    Select the **Install Open JRE 11.0.3 included with this installation**.
 
     ![Choose Java install location](../media/ctp32-openjdk.png)
+
+    > [!NOTE]
+    > The **Provide the location of a different version that has been installed on this computer** is not used for Language Extensions.
 
 5. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   

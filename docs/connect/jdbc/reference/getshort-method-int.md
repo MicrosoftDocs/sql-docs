@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: cd9773c1-b598-4adb-aaf6-0c0f589cbef5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getShort Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

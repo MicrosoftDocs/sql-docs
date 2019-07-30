@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RPC:Completed Event Class

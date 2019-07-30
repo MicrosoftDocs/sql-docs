@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DrilledDown Property (ADO MD)
 Indicates whether children immediately follow the [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) on the axis.  

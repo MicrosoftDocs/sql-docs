@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ""
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 
 

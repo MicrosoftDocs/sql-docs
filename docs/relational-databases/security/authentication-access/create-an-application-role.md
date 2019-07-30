@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create an Application Role
@@ -64,7 +63,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 8.  Under **Schemas owned by this role**, select or view schemas that will be owned by this role. A schema can be owned by only one schema or role.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### Additional Options  
  The **Application Role - New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  
   

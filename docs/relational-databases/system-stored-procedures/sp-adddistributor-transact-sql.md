@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_adddistributor"
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: mashamsft
+ms.author: mathoma
 ---
 # sp_adddistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

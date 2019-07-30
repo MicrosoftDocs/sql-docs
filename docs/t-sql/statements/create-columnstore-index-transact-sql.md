@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE COLUMNSTORE INDEX (Transact-SQL)
@@ -66,7 +65,6 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
     [ ON <on_option> ] 
-    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
@@ -100,8 +98,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
 ```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-CREATE CLUSTERED COLUMNSTORE INDEX index_name   
-    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name } 
+    [ORDER (column [,...n] ) ] -- in preview
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 ```
@@ -747,7 +746,7 @@ DROP INDEX cci_xdimProduct ON xdimProduct;
 
 Create an ordered clustered columnstore index ordered on SHIPDATE.
 
-```sql 
+```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( SHIPDATE );
 ```

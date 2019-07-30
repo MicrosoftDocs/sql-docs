@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_add_agent_parameter"
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: mashamsft
+ms.author: mathoma
 ---
 # sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

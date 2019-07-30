@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

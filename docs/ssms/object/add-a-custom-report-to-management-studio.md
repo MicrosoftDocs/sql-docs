@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Add a Custom Report to Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

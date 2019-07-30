@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Select Objects to Transfer
 

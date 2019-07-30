@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Snapshot Agent Security

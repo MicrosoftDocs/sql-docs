@@ -2,10 +2,8 @@
 title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
-ms.reviewer: jroth
-manager: craigg
+ms.reviewer: mikeray
 ms.technology: polybase
-ms.custom: ""
 ms.devlang: 
 ms.topic: conceptual
 ms.date: 04/23/2019
@@ -25,6 +23,8 @@ This article serves as a guide to walk through the debugging process of such iss
 
 1. SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 or higher with PolyBase installed
 1. A Hadoop cluster (Cloudera or Hortonworks) secured with Kerberos (Active Directory or MIT)
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Introduction
 
@@ -98,7 +98,7 @@ The tool runs independently of SQL Server, so it does not need to be running, no
 | *Name Node Port* | The port of the name node. Refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. For example, 8020. |
 | *Service Principal* | The admin service principal to your KDC. Matches the "IDENTITY" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Service Password* | Instead of typing your password at the console, store it in a file and pass the file path here. The contents of the file should match what you use as your "SECRET" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
-| *Remote HDFS file path (optional) * | The path of an existing file to access. If not specified, the root "/" will be used. |
+| *Remote HDFS file path (optional)* | The path of an existing file to access. If not specified, the root "/" will be used. |
 
 ## Example
 
@@ -241,7 +241,7 @@ If you are still having issues accessing Kerberos, follow the steps below to deb
 
      In the example above, `admin_user` includes only the user name - not any domain part.
 
-2. If you can’t access Kerberos HDFS data from outside PolyBase:
+2. If you can't access Kerberos HDFS data from outside PolyBase:
     - There are two types of Kerberos authentication: Active directory Kerberos authentication, and MIT Kerberos authentication.
     - Make sure the user exists in domain account and use the same user account while trying to access HDFS.
 

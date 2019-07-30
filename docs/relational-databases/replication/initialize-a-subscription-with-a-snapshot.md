@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Initialize a Subscription with a Snapshot
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Page Setup Dialog Box

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Map Many-to-Many Relationships (Visual Database Tools)

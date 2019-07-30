@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SCM Services - Change the Service Startup Account
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

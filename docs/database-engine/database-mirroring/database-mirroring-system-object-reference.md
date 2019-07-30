@@ -9,7 +9,6 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Database mirroring system object reference
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

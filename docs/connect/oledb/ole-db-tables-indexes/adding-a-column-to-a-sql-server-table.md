@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "adding columns"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Adding a Column to a SQL Server Table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

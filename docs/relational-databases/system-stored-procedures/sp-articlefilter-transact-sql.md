@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_articlefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

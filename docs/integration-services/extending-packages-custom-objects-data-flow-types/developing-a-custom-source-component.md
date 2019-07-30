@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a Custom Source Component
 

@@ -1,11 +1,10 @@
 ---
-title: What's new - SQL Server Machine Learning Services | Microsoft Docs
+title: What's new | Microsoft Docs
 description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
 ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -13,7 +12,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # What's new in SQL Server Machine Learning Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform, advanced analytics, and data science. 
 
@@ -27,6 +26,7 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
+| CTP 3.0 | No changes. |
 | CTP 2.5 | No changes. |
 | CTP 2.4 | Linux support for [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for R and Python. |
 | CTP 2.3 | On Windows only, Python code can be accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. |

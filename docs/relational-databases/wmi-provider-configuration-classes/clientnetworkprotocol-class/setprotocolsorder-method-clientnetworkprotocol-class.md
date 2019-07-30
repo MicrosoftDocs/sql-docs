@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetProtocolsOrder Method (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

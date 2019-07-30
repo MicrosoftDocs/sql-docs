@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

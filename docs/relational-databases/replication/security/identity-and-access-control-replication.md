@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Identity and Access Control (Replication)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

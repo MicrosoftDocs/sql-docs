@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Enable a Database for Replication (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

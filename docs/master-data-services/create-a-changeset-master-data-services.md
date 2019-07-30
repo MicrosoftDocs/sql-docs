@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Changeset (Master Data Services)
 

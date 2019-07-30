@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Disable Publishing and Distribution
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +61,9 @@ manager: craigg
 2.  Right-click the **Replication** folder, and then click **Disable Publishing and Distribution**.  
   
 3.  Complete the steps in the Disable Publishing and Distribution Wizard.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  Publishing and distributing can be disabled programmatically using replication stored procedures.  
   

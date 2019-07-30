@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Configuration Components
 > [!NOTE]  

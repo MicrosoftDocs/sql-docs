@@ -26,7 +26,6 @@ ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Default Mapping of XSD Elements and Attributes to Tables and Columns (SQLXML 4.0)

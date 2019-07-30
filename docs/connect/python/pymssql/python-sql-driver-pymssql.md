@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Python SQL Driver - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Set Thresholds and Warnings in Replication Monitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

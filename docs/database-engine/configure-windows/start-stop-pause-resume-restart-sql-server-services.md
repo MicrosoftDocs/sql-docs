@@ -40,7 +40,6 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Start, Stop, Pause, Resume, Restart SQL Server Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

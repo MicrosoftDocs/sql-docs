@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Allow Non-Administrators to Use Replication Monitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +61,9 @@ manager: craigg
 6.  Select the **replmonitor** check box in the **Database role membership** grid.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To add a user to the replmonitor fixed database role  

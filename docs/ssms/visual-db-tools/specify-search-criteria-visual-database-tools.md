@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Specify Search Criteria (Visual Database Tools)

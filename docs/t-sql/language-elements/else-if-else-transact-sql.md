@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ELSE (IF...ELSE) (Transact-SQL)

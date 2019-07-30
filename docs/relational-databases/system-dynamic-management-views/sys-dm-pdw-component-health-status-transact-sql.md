@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_component_health_status (Transact-SQL)

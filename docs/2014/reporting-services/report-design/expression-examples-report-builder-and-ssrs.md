@@ -1,7 +1,7 @@
 ---
 title: "Expression Examples (Report Builder and SSRS) | Microsoft Docs"
-ms.prod: "reporting-services"
-ms.technology: "reporting-services-native"
+ms.prod: "sql-server-2014"
+ms.technology: "reporting-services"
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -10,7 +10,6 @@ ms.reviewer: ""
 ms.custom: ""
 ms.date: "03/08/2017"
 ---
-
 # Expression Examples (Report Builder and SSRS)
 
 Expressions are used frequently in reports to control content and report appearance. Expressions are written in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], and can use built-in functions custom code, report and group variables, and user-defined variables. Expressions begin with an equal sign (=). For more information about the expression editor and the types of references that you can include, see [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md), and [Add an Expression &#40;Report Builder and SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
@@ -212,7 +211,7 @@ The following example does the same as the above example, as well as displays a 
 -   By specifying a key field, you can use the `Lookup` function to retrieve a value from a dataset for a one-to-one relationship, for example, a key-value pair. The following expression displays the product name from a dataset ("Product"), given the product identifier to match on:  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### LookupSet  

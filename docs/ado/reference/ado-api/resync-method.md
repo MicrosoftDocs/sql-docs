@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Resync Method
 Refreshes the data in the current [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, or [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection of a [Record](../../../ado/reference/ado-api/record-object-ado.md) object, from the underlying database.  

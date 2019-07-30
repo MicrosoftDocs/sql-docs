@@ -2,13 +2,11 @@
 title: Get started with SQL Server (on Linux) in the Cloud
 titleSuffix: SQL Server
 description: This quickstart shows how to run SQL Server on Linux in the cloud of your choice.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql  
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid:
 ---

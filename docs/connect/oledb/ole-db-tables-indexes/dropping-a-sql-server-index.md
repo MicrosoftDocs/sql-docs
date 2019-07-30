@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Dropping a SQL Server Index
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

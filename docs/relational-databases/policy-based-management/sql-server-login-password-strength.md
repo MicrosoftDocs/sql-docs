@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b0862c3a-926b-490c-a37f-382e50146a3e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SQL Server Login Password Strength
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: olapR R function library - SQL Server Machine Learning Services
+title: olapR R function library
 description: Introduction to the olapR function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,9 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # olapR (R library in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **olapR** is a Microsoft library of R functions used for MDX queries against a SQL Server Analysis Services OLAP cube. Functions do not support all MDX operations, but you can build queries that slice, dice, drilldown, rollup, and pivot on dimensions. 
 

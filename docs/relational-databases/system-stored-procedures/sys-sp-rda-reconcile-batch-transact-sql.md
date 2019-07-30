@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

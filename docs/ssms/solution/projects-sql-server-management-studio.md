@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Projects (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

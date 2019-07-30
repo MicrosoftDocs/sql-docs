@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADO (Multidimensional) (ADO MD)
 This section contains the following topic.  

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Initialize a Transactional Subscription from a Backup
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

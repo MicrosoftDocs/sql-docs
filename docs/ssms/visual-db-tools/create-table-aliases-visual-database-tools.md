@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Create Table Aliases (Visual Database Tools)

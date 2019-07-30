@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Synonyms (Database Engine)

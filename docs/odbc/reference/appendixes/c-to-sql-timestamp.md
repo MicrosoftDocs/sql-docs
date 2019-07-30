@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # C to SQL: Timestamp
 The identifier for the timestamp ODBC C data type is:  

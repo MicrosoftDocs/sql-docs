@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Resync Method Example (VC++)
 This example demonstrates using the [Resync](../../../ado/reference/ado-api/resync-method.md) method to refresh data in a static recordset.  

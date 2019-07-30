@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Tables
@@ -77,7 +76,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   Period start column: The system records the start time for the row in this column, typically denoted as the **SysStartTime** column.  
   
--   Period end column: The system records the end time for the row in this column, typically denoted at the **SysEndTime** column.  
+-   Period end column: The system records the end time for the row in this column, typically denoted as the **SysEndTime** column.  
   
  The current table contains the current value for each row. The history table contains each previous value for each row, if any, and the start time and end time for the period for which it was valid.  
   

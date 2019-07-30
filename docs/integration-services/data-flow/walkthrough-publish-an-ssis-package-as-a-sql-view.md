@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
 

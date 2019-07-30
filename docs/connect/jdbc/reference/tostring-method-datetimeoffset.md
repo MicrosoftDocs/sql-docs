@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # toString Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

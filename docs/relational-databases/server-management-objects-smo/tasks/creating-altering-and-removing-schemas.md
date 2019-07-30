@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Schemas

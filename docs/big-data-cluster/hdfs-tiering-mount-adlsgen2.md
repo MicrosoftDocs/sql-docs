@@ -4,9 +4,8 @@ titleSuffix: How to mount ADLS Gen2
 description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a SQL Server 2019 big data cluster (preview).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
-manager: craigg
-ms.date: 05/22/2019
+ms.reviewer: mikeray
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -20,7 +19,7 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 - [Deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-  - **mssqlctl**
+  - **azdata**
   - **kubectl**
 
 ## <a id="load"></a> Load data into Azure Data Lake Storage
@@ -59,17 +58,16 @@ In order to use OAuth credentials to mount, you need to follow the below steps:
 
 Wait for 5-10 minutes before using the credentials for mounting
 
-### Create credential file
+### Set environment variable for OAuth credentials
 
-Open a command-prompt on a client machine that can access your big data cluster.
-
-Create a local file named **filename.creds** that contains your Azure Data Lake Storage Gen2 account credentials using the following format:
+Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format:
+Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
 
    ```text
-	fs.azure.account.auth.type=OAuth
-	fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-	fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-	fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+	set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+	fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+	fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+	fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
 	fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -78,39 +76,40 @@ Create a local file named **filename.creds** that contains your Azure Data Lake 
 You can also mount using access keys which you can get for your ADLS account on the Azure portal.
 
  > [!TIP]
-   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View and copy access keys](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
+   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View account keys and connection string](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
 
-### Create credential file
+### Set environment variable for access key credentials
 
 1. Open a command-prompt on a client machine that can access your big data cluster.
 
-1. Create a local file named **filename.creds** that contains your Azure Data Lake Storage Gen2 account credentials using the following format:
+1. Open a command-prompt on a client machine that can access your big data cluster. Set an environment variable using the following format. Note that the credentials need to be in a comma separated list. The 'set' command is used on Windows. If you are using Linux, then use 'export' instead.
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> Mount the remote HDFS storage
 
-Now that you have prepared a credential file with either access keys or using OAuth, you can start mounting. The following steps mount the remote HDFS storage in Azure Data Lake to the local HDFS storage of your big data cluster.
+Now that you have set the MOUNT_CREDENTIALS environment variable for access keys or using OAuth, you can start mounting. The following steps mount the remote HDFS storage in Azure Data Lake to the local HDFS storage of your big data cluster.
 
 1. Use **kubectl** to find the IP Address for the endpoint **controller-svc-external** service in your big data cluster. Look for the **External-IP**.
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. Log in with **mssqlctl** using the external IP address of the controller endpoint with your cluster username and password:
+1. Log in with **azdata** using the external IP address of the controller endpoint with your cluster username and password:
 
    ```bash
-   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. Set environment variable MOUNT_CREDENTIALS (scroll up for instructions)
 
-1. Mount the remote HDFS storage in Azure using **mssqlctl cluster storage-pool mount create**. Replace the placeholder values before running the following command:
+1. Mount the remote HDFS storage in Azure using **azdata bdc storage-pool mount create**. Replace the placeholder values before running the following command:
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   azdata bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -123,21 +122,29 @@ If mounted successfully, you should be able to query the HDFS data and run Spark
 To list the status of all mounts in your big data cluster, use the following command:
 
 ```bash
-mssqlctl cluster storage-pool mount status
+azdata bdc storage-pool mount status
 ```
 
 To list the status of a mount at a specific path in HDFS, use the following command:
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+```
+
+## Refresh a mount
+
+The following example refreshes the mount.
+
+```bash
+azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Delete the mount
 
-To delete the mount, use the **mssqlctl cluster storage-pool mount delete** command, and specify the mount path in HDFS:
+To delete the mount, use the **azdata bdc storage-pool mount delete** command, and specify the mount path in HDFS:
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## Next steps

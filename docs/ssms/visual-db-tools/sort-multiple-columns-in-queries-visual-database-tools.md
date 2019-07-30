@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Sort Multiple Columns in Queries (Visual Database Tools)

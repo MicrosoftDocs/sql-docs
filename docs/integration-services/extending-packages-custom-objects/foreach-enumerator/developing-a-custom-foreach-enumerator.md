@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a Custom ForEach Enumerator
 

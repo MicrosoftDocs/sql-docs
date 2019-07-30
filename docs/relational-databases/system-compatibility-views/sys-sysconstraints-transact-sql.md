@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

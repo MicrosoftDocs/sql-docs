@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

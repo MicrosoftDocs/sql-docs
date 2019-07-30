@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Backing Up a Database with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

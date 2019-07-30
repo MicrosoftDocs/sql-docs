@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # AddNew Method (ADO)
 Creates a new record for an updatable [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

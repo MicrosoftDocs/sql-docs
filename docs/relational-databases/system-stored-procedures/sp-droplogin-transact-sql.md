@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

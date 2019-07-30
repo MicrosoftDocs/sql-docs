@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Configuring the Script Task in the Script Task Editor
 

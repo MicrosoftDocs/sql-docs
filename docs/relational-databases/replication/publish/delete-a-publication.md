@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Delete a Publication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

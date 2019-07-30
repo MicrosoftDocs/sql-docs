@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replcounters (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

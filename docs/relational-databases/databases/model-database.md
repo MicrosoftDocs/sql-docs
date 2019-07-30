@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # model Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

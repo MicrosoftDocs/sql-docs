@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.set_environment_variable_property (SSISDB Database)
 

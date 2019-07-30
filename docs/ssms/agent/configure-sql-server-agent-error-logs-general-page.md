@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Configure SQL Server Agent Error Logs (General Page)

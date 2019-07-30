@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create an Updatable Subscription to a Transactional Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,6 +47,8 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
     For information about the permissions required by the linked server account, see the **Queued Updating Subscriptions** of [enter link description here](../../../relational-databases/replication/security/secure-the-subscriber.md).
 
 8. Complete the wizard.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Configure an updatable subscription from the Subscriber
 

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changesubstatus (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

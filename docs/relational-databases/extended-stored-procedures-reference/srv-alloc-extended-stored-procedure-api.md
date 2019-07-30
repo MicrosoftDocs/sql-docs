@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_alloc (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

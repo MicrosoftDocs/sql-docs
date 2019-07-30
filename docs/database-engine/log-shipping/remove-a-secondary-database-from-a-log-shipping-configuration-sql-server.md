@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Remove a Secondary Database from a Log Shipping Configuration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

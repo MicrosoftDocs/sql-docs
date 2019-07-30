@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

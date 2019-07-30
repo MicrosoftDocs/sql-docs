@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # CDC Source
 

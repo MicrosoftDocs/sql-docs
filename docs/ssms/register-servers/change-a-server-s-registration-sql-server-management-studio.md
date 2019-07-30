@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Change a Server&#39;s Registration (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

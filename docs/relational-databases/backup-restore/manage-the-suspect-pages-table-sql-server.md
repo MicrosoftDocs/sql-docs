@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Manage the suspect_pages Table (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,9 @@ manager: craigg
 3.  Expand **dbo.suspect_pages** and right-click **Edit Top 200 Rows**.  
   
 4.  In the query window, edit, update, or delete the rows that you want.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To manage the suspect_pages table  

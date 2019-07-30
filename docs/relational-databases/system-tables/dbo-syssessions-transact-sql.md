@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # dbo.syssessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

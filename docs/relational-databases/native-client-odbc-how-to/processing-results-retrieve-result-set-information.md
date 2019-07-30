@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results - Retrieve Result Set Information

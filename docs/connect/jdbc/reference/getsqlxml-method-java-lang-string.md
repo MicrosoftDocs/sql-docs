@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getSQLXML Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

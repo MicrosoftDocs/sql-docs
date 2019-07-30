@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Column Encryption using PowerShell

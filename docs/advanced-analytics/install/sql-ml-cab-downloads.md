@@ -1,16 +1,17 @@
 ---
-title: CAB downloads for SQL Server cumulative updates - SQL Server Machine Learning
+title: CAB downloads for SQL Server cumulative updates
 description: R and Python CAB and package downloads for SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 04/01/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # CAB downloads for cumulative updates of SQL Server in-database analytics instances
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server instances that are configured for in-database analytics include R and Python features. These features ship in CAB files, installed and serviced through SQL Server Setup. On internet-connected devices, CAB updates are typically applied through Windows Update. On disconnected servers, CAB files must be downloaded and applied manually. 
 
@@ -31,7 +32,7 @@ CAB files are listed in reverse chronological order. When you download the CAB f
 
 |Release  |Component | Download link  | Issues addressed | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Binaries within the package are now signed. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| Binaries within the package are now signed. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| Binaries within the package are now signed. |

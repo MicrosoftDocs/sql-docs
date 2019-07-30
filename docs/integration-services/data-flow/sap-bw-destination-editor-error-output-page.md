@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SAP BW Destination Editor (Error Output Page)
 

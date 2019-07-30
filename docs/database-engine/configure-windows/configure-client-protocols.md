@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure Client Protocols
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

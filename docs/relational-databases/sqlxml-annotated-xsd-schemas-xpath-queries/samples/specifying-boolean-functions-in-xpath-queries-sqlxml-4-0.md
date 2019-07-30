@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Boolean Functions in XPath Queries (SQLXML 4.0)
@@ -59,7 +58,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     ```  
   
 3.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Here is the partial result set of the template execution:  

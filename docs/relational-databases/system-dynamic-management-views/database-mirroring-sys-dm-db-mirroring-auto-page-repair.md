@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Mirroring - sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

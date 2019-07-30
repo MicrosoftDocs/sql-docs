@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # How to: View Data Differences
 After you compare the data in two databases, you will see each *database object* that you compared and its status. You can also view results for the records within each object, grouped by status.  

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # unwrap Method (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

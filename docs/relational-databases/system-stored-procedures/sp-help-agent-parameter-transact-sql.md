@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

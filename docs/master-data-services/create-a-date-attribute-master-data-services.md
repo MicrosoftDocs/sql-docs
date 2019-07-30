@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Date Attribute (Master Data Services)
 

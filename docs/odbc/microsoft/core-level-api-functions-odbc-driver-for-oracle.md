@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Core Level API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

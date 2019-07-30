@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STNumPoints (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

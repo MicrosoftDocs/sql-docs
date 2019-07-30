@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: eafcc668-9244-4e1e-a857-d9bd2585ed0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ORDER BY with GROUP BY
 ORDER BY can be performed on any expression in the GROUP BY *expression-list* or any column in the result set.

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDriverConnect (dBASE Driver)
 > [!NOTE]  

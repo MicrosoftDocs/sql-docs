@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Reset Method (RDS)
 Executes the sort or filter on a client-side **Recordset** based on the specified sort and filter properties.  

@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addarticle"
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: mashamsft
+ms.author: mathoma
 ---
 # sp_addarticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

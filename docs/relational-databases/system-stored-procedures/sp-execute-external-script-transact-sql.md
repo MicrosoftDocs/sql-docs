@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # sp_execute_external_script (Transact-SQL)
@@ -127,7 +126,7 @@ Monitor script execution using [sys.dm_external_script_requests](../../relationa
 
  In SQL Server 2019, currently in public preview, you can set two additional parameters that enable modeling on partitioned data, where partitions are based on one or more columns you provide that naturally segment a data set into logical partitions created and used only during script execution. Columns containing repeating values for age, gender, geographic region, date or time, are a few examples that lend themselves to partitioned data sets.
  
- The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+ The two parameters are **input_data_1_partition_by_columns** and **input_data_1_order_by_columns**, where the second parameter is used to order the result set. The parameters are passed as inputs to `sp_execute_external_script` with the external script executing once for every partition. For more information and examples, see [Tutorial: Create partition-based models](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
 
  You can execute script in parallel by specifying `@parallel=1`. If the input query can be parallelized, you should set `@parallel=1` as part of your arguments to `sp_execute_external_script`. By default, the query optimizer operates under `@parallel=1` on tables having more than 256 rows, but if you want to handle this explicitly, this script includes the parameter as a demonstration.
 

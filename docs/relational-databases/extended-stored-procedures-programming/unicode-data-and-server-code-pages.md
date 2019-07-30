@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Unicode Data and Server Code Pages
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

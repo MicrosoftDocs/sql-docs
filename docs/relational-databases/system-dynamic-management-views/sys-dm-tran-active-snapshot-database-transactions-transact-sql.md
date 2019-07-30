@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
@@ -69,7 +68,7 @@ sys.dm_tran_active_snapshot_database_transactions
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ## Remarks  
  **sys.dm_tran_active_snapshot_database_transactions** reports transactions that are assigned a transaction sequence number (XSN). The XSN is assigned when the transaction first accesses the version store. In a database that is enabled for snapshot isolation or read committed isolation using row versioning, the examples show when an XSN is assigned to a transaction:  

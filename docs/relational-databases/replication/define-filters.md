@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Define Filters
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

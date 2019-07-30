@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Error Handling in Data
 

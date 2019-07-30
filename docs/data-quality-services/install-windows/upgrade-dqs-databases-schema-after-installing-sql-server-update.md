@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Upgrade DQS Databases Schema After Installing SQL Server Update
 

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure distributed transactions for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +82,15 @@ ALTER AVAILABILITY GROUP MyaAG
 
 >[!NOTE]
 >Starting with [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 you can alter an availability group for distributed transactions. For [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] versions before Service Pack 2, you need to drop, and recreate the availability group with the `DTC_SUPPORT = PER_DB` setting. 
+
+To disable distributed transactions, use the following Transact-SQL command:
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="distTran"/>Distributed transactions - technical concepts
 

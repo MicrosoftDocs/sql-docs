@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Piecemeal Restore of Databases With Memory-Optimized Tables
@@ -96,7 +95,7 @@ BACKUP database imoltp
     with init;
 ```
   
- The following sample shows that a backup of a filegroup other than primary, and memory-optimized filegroup, works similar to the databases without memory-optimized tables. The following command backs up up the secondary filegroup  
+ The following sample shows that a backup of a filegroup other than primary, and memory-optimized filegroup, works similar to the databases without memory-optimized tables. The following command backs up the secondary filegroup  
   
 ```sql
 BACKUP database imoltp

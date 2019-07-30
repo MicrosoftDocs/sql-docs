@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STInteriorRingN (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

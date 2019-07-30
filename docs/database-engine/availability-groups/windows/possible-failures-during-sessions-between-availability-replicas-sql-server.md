@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 
 ---
 # "Determine possible reason for connectivity failures between availability replicas

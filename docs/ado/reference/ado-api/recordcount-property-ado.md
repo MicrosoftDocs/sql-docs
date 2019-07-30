@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # RecordCount Property (ADO)
 

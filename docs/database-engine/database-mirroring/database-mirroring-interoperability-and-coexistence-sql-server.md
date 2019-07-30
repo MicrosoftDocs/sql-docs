@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring: Interoperability and Coexistence (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

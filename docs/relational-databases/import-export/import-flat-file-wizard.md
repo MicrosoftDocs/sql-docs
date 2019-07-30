@@ -11,14 +11,13 @@ f1_keywords:
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Flat File to SQL Wizard
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > For content related to the Import and Export Wizard, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a destination. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
+Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a new table in your database. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
 
 ## Why would I use this wizard?
 This wizard was created to improve the current import experience leveraging an intelligent framework known as Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). For a user without specialized domain knowledge, importing data can often be a complex, error prone, and tedious task. This wizard streamlines the import process as simple as selecting an input file and unique table name, and the PROSE framework handles the rest.
@@ -38,6 +37,8 @@ To access the Import Flat File Wizard, follow these steps:
 1. Open **SQL Server Management Studio**.
 2. Connect to an instance of the SQL Server Database Engine or localhost.
 3. Expand **Databases**, right-click a database (test in the example below), point to **Tasks**, and click **Import Flat File** above Import Data.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![Wizard menu](media/import-flat-file-wizard/importffmenu.png)
 

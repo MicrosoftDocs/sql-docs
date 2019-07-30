@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Walkthrough Authoring a Custom Static Code Analysis Rule Assembly for SQL Server
 This walkthrough demonstrates the steps used to create a SQL Server Code Analysis rule. The rule created in this walkthrough is used to avoid WAITFOR DELAY statements in stored procedures, triggers, and functions.  

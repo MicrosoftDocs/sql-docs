@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Address Book Command Buttons
 The Address Book application includes the following command buttons:  

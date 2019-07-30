@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "OLE DB, how-to topics"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # OLE DB How-to Topics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

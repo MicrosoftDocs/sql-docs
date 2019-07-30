@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Subscription Type

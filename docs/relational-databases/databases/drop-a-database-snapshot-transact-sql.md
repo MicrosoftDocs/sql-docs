@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Drop a Database Snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

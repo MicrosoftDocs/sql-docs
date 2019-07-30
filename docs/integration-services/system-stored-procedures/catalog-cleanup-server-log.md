@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.cleanup_server_log 
 

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the max text repl size Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

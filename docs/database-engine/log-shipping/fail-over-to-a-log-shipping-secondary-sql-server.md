@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

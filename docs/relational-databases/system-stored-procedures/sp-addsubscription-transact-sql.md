@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

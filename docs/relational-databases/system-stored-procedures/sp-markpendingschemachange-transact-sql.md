@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -14,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Absolute and Relative URLs
-A URL specifies the location of a target stored on a local or networked computer. The target can be a file, directory, HTML page, image, program, and so on*.*  
+A URL specifies the location of a target stored on a local or networked computer. The target can be a file, directory, HTML page, image, program, and so on.  
   
  An *absolute URL* contains all the information necessary to locate a resource.  
   
@@ -47,7 +46,7 @@ A URL specifies the location of a target stored on a local or networked computer
   
  With ADO 2.7 or later, an absolute URL can also define a context. For example, when a [Record](../../../ado/reference/ado-api/record-object-ado.md) object is opened with an absolute URL, a **Connection** object is implicitly created to represent the resource specified by the URL.  
   
- An absolute URL that defines a context can be specified in the *ActiveConnection* parameter of the **Record** object [Open](../../../ado/reference/ado-api/open-method-ado-record.md) method. An absolute URL can also be specified as the value of the "URL**=**" keyword in the **Connection** object [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) method *ConnectionString* parameter, and the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method *ActiveConnection* parameter.  
+ An absolute URL that defines a context can be specified in the *ActiveConnection* parameter of the **Record** object [Open](../../../ado/reference/ado-api/open-method-ado-record.md) method. An absolute URL can also be specified as the value of the "URL=" keyword in the **Connection** object [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) method *ConnectionString* parameter, and the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method *ActiveConnection* parameter.  
   
  Context can also be defined by opening a **Record** or **Recordset** object that represents a directory, because these objects already have an implicitly or explicitly declared **Connection** object that specifies context.  
   

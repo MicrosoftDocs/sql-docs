@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLColumnPrivileges

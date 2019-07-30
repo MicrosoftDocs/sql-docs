@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Record Object Properties, Methods, and Events
 ## Properties/Collections  

@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing Data Flow Components with Multiple Inputs
 

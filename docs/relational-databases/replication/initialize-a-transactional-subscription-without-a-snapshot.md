@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Initialize a Transactional Subscription Without a Snapshot

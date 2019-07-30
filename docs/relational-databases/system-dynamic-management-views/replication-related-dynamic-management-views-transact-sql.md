@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Replication Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

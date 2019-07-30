@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Create New Policy or Open Policy Dialog Box, Description Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

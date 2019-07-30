@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monkerRange:  "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # SequenceType Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

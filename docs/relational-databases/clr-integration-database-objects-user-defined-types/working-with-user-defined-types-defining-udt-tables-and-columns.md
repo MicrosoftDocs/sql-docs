@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Working with User-Defined Types - Defining UDT Tables and Columns
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

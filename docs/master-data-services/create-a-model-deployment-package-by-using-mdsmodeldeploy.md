@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Model Deployment Package by Using MDSModelDeploy
 

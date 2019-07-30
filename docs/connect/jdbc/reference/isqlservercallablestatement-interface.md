@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ISQLServerCallableStatement Interface
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

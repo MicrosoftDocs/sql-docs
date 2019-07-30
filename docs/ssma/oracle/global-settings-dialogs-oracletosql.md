@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-pelars"
+manager: shamikg
 ---
 # Global Settings (Dialogs)  (OracleToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

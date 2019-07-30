@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # PageCount Property (ADO)
 Indicates how many pages of data the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object contains.  

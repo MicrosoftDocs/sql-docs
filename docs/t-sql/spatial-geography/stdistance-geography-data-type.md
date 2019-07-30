@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STDistance (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dropsubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

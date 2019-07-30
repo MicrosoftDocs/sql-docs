@@ -38,7 +38,10 @@ manager: craigg
   
 10. Drag-drop **DQS Cleansing** transform in **Other Transforms** on the **SSIS Toolbox** to the **Data Flow** tab under **Read Supplier Data from Excel File**. The DQS Cleansing transformation uses Data Quality Services (DQS) to correct data by applying approved rules in the knowledge base. This transform, at runtime, creates a DQS cleansing project on the DQS server. See [DQS Cleansing Transformation](https://msdn.microsoft.com/library/ee677619.aspx) topic for more details.  
   
-## Next Step  
- [Task 7: Adding DQS Cleansing Transform to the Data Flow](../integration-services/data-flow/data-flow.md)  
-  
-  
+## Next Step
+
+[Task 7: Adding DQS Cleansing Transform to the Data Flow](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)  
+
+### See Also
+
+[Data Flow](../integration-services/data-flow/data-flow.md)  

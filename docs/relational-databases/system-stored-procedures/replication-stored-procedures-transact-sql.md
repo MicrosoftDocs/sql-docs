@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication Stored Procedures (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

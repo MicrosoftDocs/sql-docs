@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # The Fields Collection
 The **Fields** collection is one of ADO's intrinsic collections. A collection is an ordered set of items that can be referred to as a unit. For more information about ADO collections, see [The ADO Object Model](../../../ado/guide/data/ado-objects-and-collections.md).  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DataControl Object (RDS) Properties, Methods, and Events
 > [!IMPORTANT]

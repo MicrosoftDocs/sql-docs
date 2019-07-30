@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Handling SMO Exceptions

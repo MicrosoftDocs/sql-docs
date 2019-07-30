@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: af98fc70-24dd-4bd3-a0a3-f701dfa67b2c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Disable Check Constraints for Replication
@@ -44,7 +43,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  In the **Check Constraints** dialog box, under **Table Designer**, select a value of **No** for **Enforce For Replication**.  
   
 4.  Click **Close**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To disable a check constraint for replication  

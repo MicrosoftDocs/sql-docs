@@ -2,7 +2,6 @@
 title: "Create a report server database, SSRS Configuration Manager | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual

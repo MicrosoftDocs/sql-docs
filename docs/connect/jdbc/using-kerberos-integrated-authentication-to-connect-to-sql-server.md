@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
 # Using Kerberos Integrated Authentication to Connect to SQL Server

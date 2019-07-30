@@ -1,13 +1,11 @@
 ---
-title: How to configure MSDTC on Linux | Microsoft Docs
+title: How to configure MSDTC on Linux
 description: This article provides a walk-through for configuring MSDTC on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1cf7cd81-1750-46ee-80ed-be70f57e8569
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # FROM Clause Limitations
 The maximum number of tables in a FROM clause is 16.

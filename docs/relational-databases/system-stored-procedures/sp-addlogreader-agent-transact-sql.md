@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addlogreader_agent"
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: mashamsft
+ms.author: mathoma
 ---
 # sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

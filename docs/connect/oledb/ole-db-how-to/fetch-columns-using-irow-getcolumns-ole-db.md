@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "IRow interface"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Fetch Columns Using IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

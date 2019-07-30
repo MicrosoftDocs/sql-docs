@@ -1,16 +1,15 @@
 ---
-title: Known issues for R language and Python integration - SQL Server Machine Learning Services
+title: Known issues for R language and Python integration
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Known issues in Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server 2016 R Services](install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services with R and Python](install/sql-machine-learning-services-windows-install.md).
 
@@ -131,7 +130,7 @@ This message is displayed if either of the following two statements is true,
 + You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 + You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](install/upgrade-r-and-python.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 

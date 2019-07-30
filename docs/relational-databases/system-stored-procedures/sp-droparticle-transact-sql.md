@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_droparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

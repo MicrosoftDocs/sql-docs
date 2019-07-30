@@ -1,7 +1,7 @@
 ---
-title: "index_option (Transact-SQL) | Microsoft Docs"
+title: " | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/08/2017"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,8 @@ manager: craigg
   | IGNORE_DUP_KEY = { ON | OFF }  
   | STATISTICS_NORECOMPUTE = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF }  
-  | ALLOW_PAGE_LOCKS = { ON | OFF }  
+  | ALLOW_PAGE_LOCKS = { ON | OFF } 
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } 
   | SORT_IN_TEMPDB = { ON | OFF }   
   | ONLINE = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -125,7 +125,13 @@ manager: craigg
   
  OFF  
  Page locks are not used.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.
+
+Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](./create-index-transact-sql.md#sequential-keys) section of the CREATE INDEX page for more information.
+ 
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

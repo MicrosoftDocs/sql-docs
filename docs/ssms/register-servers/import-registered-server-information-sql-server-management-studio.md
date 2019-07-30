@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Import Registered Server Information (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

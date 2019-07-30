@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # AcceptPause Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Procedure Parameters
 Parameters in procedure calls can be input, input/output, or output parameters. This is different from parameters in all other SQL statements, which are always input parameters.  

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

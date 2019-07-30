@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Monitoring (Replication)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

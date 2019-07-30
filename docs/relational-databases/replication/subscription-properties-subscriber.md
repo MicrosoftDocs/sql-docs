@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Replication Subscription Properties dialog box 

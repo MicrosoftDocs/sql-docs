@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Debugging CLR Database Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

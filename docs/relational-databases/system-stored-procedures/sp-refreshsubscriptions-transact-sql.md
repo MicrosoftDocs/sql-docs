@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

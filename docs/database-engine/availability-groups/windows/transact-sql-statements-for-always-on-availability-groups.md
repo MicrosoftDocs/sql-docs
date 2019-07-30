@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Transact-SQL Statements for Always On Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

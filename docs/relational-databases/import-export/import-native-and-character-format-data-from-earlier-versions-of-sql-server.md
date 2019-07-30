@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Native and Character Format Data from Earlier Versions of SQL Server

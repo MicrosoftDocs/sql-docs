@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

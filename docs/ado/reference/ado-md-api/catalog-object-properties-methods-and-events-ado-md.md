@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Catalog Object Properties, Methods, and Events (ADO MD)
 ## Properties/Collections  

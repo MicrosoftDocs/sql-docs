@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLError (Visual FoxPro ODBC Driver)
 > [!NOTE]  

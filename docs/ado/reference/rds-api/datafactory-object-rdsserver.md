@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DataFactory Object (RDSServer)
 > [!IMPORTANT]

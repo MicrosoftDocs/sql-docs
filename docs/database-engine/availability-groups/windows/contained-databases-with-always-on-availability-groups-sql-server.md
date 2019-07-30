@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use contained databases with Always On availability groups 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

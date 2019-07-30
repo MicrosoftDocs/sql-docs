@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Schema Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Indexes - Keys Dialog Box (Visual Database Tools)

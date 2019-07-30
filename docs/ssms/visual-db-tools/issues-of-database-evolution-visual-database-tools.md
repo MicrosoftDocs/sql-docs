@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Issues of Database Evolution (Visual Database Tools)

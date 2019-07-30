@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # $PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

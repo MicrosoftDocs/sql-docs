@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "command preparation [OLE DB Driver for SQL Server]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Preparing Commands
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

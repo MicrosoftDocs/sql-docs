@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

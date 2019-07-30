@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replshowcmds (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

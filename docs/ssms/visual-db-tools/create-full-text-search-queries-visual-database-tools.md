@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Create Full-Text Search Queries (Visual Database Tools)

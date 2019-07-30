@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Hadoop Hive Task
 

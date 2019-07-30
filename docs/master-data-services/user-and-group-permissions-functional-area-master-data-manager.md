@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # User and Group Permissions Functional Area (Master Data Manager)
 

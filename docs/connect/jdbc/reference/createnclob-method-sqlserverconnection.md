@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fa160884-394e-4fb2-a6e8-0437b81c149d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # createNClob Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

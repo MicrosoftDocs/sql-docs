@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Optimize Property-Dynamic (ADO)
 Specifies whether an index should be created on a [field](../../../ado/reference/ado-api/field-object.md).  

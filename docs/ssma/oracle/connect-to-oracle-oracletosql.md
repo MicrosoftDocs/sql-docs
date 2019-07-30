@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Connect To Oracle (OracleToSQL)
 Use the **Connect to Oracle** dialog box to connect to the Oracle database that you want to migrate.  

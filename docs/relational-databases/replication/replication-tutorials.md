@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication tutorials
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

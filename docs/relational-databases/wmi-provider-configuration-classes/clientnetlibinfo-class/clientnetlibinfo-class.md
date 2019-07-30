@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ClientNetLibInfo Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

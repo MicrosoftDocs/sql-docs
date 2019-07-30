@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Model (Master Data Services)
 

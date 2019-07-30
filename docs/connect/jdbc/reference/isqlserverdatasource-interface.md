@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ISQLServerDataSource Interface
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

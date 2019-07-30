@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # NumberOfFlags Property (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

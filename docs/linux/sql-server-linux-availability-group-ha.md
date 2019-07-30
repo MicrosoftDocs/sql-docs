@@ -1,15 +1,13 @@
 ---
-title: "SQL Server Always On availability group deployment patterns | Microsoft Docs"
-ms.custom: "sql-linux"
-ms.date: "04/17/2019"
+title: "SQL Server Always On availability group deployment patterns"
+ms.date: 04/17/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: linux
 ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ---
 # High availability and data protection for availability group configurations
 

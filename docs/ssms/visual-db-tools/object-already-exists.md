@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Object Already Exists

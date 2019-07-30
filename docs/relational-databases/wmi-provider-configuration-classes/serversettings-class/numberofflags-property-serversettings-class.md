@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # NumberOfFlags Property (ServerSettings Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

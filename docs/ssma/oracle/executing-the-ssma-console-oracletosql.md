@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Executing the SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The console application uses certain standard script file commands as enumerated in this section.  

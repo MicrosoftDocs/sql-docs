@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 3050c836-fbb3-4475-99e5-05637a48a932
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateBytes Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

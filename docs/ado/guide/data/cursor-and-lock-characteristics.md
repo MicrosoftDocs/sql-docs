@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Cursor and Lock Characteristics
 While the characteristics of a cursor depend upon capabilities of the provider, the following advantages and disadvantages generally apply to the various types of cursors and locks.  

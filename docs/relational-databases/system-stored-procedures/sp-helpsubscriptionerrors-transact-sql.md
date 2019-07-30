@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

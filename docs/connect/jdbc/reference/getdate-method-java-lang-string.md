@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getDate Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

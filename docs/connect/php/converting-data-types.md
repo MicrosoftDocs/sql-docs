@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Converting Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

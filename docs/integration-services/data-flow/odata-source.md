@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OData Source
 

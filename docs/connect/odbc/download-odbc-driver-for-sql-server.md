@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Download ODBC Driver for SQL Server
 

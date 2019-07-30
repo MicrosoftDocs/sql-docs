@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 613daef7-3171-42d0-b7e3-3879280f864d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Operating System Authentication
 > [!IMPORTANT]  

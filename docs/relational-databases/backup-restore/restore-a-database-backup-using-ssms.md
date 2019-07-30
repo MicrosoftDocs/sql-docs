@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +101,9 @@ For information on SQL Server restore from the Microsoft Azure Blob storage serv
 7.  Optionally, click **Files** in the **Select a page** pane to access the **Files** dialog box. From here, you can restore the database to a new location by specifying a new restore destination for each file in the **Restore the database files as** grid. For more information about this grid, see [Restore Database &#40;Files Page&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).    
     
 8. To view or select the advanced options, on the **Options** page, in the **Restore options** panel, you can select any of the following options, if appropriate for your situation:    
-    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  **WITH** options (not required):    
     
         -   **Overwrite the existing database (WITH REPLACE)**    

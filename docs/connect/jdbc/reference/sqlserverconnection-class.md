@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerConnection Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

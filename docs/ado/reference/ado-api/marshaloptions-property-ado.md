@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # MarshalOptions Property (ADO)
 Indicates which records of the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) are to be marshaled back to the server.  

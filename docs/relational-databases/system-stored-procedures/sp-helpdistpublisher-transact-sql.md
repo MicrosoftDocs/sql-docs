@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

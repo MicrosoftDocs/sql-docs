@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-manager: craigg
 ---
 # Move a TDE Protected Database to Another SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,9 @@ The following procedures show you have to create a database protected by TDE usi
      Alters the database to turn on (checked) or turn off (unchecked) TDE.  
   
 8.  When finished, click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlCreate"></a> Using Transact-SQL  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  

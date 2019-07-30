@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Installing the Driver Manager
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

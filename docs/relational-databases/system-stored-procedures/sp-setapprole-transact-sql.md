@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_setapprole (Transact-SQL)
 

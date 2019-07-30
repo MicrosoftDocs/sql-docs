@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Security Considerations for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

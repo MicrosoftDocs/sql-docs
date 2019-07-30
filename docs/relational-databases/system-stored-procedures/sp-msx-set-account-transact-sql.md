@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

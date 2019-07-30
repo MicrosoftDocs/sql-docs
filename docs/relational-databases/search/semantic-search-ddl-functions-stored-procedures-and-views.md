@@ -11,7 +11,6 @@ ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 ---
 # Semantic Search DDL, Functions, Stored Procedures, and Views
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

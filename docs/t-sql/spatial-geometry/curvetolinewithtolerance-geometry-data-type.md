@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # CurveToLineWithTolerance (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

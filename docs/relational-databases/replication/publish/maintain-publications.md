@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Maintain Publications
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

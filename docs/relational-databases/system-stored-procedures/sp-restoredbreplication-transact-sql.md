@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

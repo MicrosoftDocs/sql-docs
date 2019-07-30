@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Add Related Tables to Diagrams (Visual Database Tools)

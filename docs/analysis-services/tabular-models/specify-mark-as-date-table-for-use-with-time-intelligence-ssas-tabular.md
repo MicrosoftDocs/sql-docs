@@ -46,6 +46,6 @@ manager: kfile
   
 ## See Also  
  [Calculations](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Time-intelligence Functions (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [Time-intelligence Functions (DAX)](/dax/time-intelligence-functions-dax)  
   
   

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Configure the Transaction Set Job for an Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

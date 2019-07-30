@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # backupset (Transact-SQL)

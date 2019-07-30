@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # View Registered Servers in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

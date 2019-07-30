@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_adddistributiondb"
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: mashamsft
+ms.author: mathoma
 ---
 # sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

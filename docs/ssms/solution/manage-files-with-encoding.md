@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Manage Files with Encoding
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

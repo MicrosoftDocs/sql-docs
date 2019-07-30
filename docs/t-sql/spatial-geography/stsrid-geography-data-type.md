@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # STSrid (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

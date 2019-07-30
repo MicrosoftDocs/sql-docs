@@ -252,12 +252,8 @@ manager: craigg
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|`XMLOperation`|Provides information about the operation that the task performs|  
-  
-## Related Content  
- Blog entry, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580), on dougbert.com.  
+|`XMLOperation`|Provides information about the operation that the task performs|   
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
-  
   

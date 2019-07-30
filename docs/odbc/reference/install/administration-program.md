@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Administration Program
 > [!NOTE]  

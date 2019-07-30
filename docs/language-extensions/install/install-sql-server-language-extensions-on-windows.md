@@ -98,7 +98,7 @@ For local installations, you must run Setup as an administrator. If you install 
 5. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
     + Database Engine Services
-    + Machine Learning Services (in-database)
+    + Machine Learning Services and Language Extensions
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 

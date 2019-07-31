@@ -58,7 +58,7 @@ The following features are not available in this release of the ODBC driver on m
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect  
+-   SQLBrowseConnect (before version 17.2)
 -   C interval types such as SQL_C_INTERVAL_YEAR_TO_MONTH (documented in [Data Type Identifiers and Descriptors](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   The SQL_CUR_USE_ODBC value of the SQL_ATTR_ODBC_CURSORS attribute of the SQLSetConnectAttr function.
 

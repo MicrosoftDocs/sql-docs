@@ -126,7 +126,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   In the case of an `INSERT ... SELECT` or `INSERT ... EXEC` statement where the data being inserted comes from a query using an **ORDER BY** clause, the values being returned by the **NEXT VALUE FOR** function will be generated in the order specified by the **ORDER BY** clause.  
   
 ## Using a Sequence Object with an OVER ORDER BY Clause  
- The **NEXT VALUE FOR** function supports generating sorted sequence values by applying the **OVER** clause to the **NEXT VALUE FOR** call. By using the **OVER** clause, a user is guaranteed that the values being returned are generated in the order of the **OVER** clause's **ORDER B**Y subclause. The following additional rules apply when using the **NEXT VALUE FOR** function with the **OVER** clause:  
+ The **NEXT VALUE FOR** function supports generating sorted sequence values by applying the **OVER** clause to the **NEXT VALUE FOR** call. By using the **OVER** clause, a user is guaranteed that the values being returned are generated in the order of the **OVER** clause's **ORDER BY** subclause. The following additional rules apply when using the **NEXT VALUE FOR** function with the **OVER** clause:  
   
 -   Multiple calls to the **NEXT VALUE FOR** function for the same sequence generator in a single statement must all use the same **OVER** clause definition.  
   

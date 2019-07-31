@@ -52,7 +52,7 @@ The following illustration shows all explicit and implicit data type conversions
   
 ![Data type conversion table](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
 
-While the above chart illustrates all the explicit and implicit conversions that are allowed in SQL Server, it does not indicate the resulting data type of the conversion. When SQL Server performs an explicit conversion, the statement itself determines the resulting data type. For implicit conversions, assignment statements such as setting the value of a variable or inserting a value into a column results in the data type that was defined by the variable declaration or column definition. For comparison operators or other expressions, the resulting data type depends on the rules of data type precedence.
+While the above chart illustrates all the explicit and implicit conversions that are allowed in SQL Server, it does not indicate the resulting data type of the conversion. When SQL Server performs an explicit conversion, the statement itself determines the resulting data type. For implicit conversions, assignment statements such as setting the value of a variable or inserting a value into a column result in the data type that was defined by the variable declaration or column definition. For comparison operators or other expressions, the resulting data type depends on the rules of data type precedence.
 
 As an example, the following script defines a variable of type `varchar`, assigns an `int` type value to the variable, then selects a concatenation of the variable with a string.
 

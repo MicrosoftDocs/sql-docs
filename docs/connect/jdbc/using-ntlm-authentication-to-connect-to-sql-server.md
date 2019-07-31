@@ -20,14 +20,14 @@ manager: kenvh
 
 The [!INCLUDE[jdbcNoVersion] allows an application to use the **authenticationScheme** connection property to indicate that it wants to connect to a database using NTLM v2 Authentication. 
 
-The following properties must also be specified for NTLM Authentication:
+The following properties are also used for NTLM Authentication:
 
-- **domain = domainName**
+- **domain = domainName** (optional)
 - **user = userName**
 - **password = password**
 - **integratedSecurity = true**
 
-The driver will throw an error if any of the above properties are missing when the **NTLM** authenticationScheme property is used. 
+Other than **domain**, the other properties are mandatory, the driver will throw an error if any are missing when the **NTLM** authenticationScheme property is used. 
 
 For more information on connection properties, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
 
@@ -108,7 +108,7 @@ For more information on connecting with SSL Encryption, see:
 - [Connecting with SSL Encryption](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-2017)
 
 > [!NOTE]
-For the 7.4.0 release, Enabling **both** extended protection and encryption is not supported.
+For the 7.4.0 release, enabling **both** extended protection and encryption is not supported.
 
 ## See Also
 

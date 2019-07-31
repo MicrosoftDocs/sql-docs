@@ -64,6 +64,6 @@ WHERE TABLE_NAME = N'Product';
 
 ## See Also
 
-- [System Views &#40;Transact-SQL&#41;](../system-catalog-views/catalog-views-transact-sql.md)
+- [System Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 - [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

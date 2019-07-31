@@ -93,6 +93,23 @@ select auth_scheme from sys.dm_exec_connections where session_id=\@\@spid
 
 Make sure that you have the necessary permission to run this query.
 
+## Security Risks
+
+The NTLM protocol is an old authentication protocol with various vulnerabilities which pose a security risk. It is based on a relatively weak cryptographic scheme and is vulnerable to various attacks. It is replaced with Kerberos which is a lot more secure and therefore recommended. NTLM should only be used when Kerberos can not be used or in a secure trusted environment.
+
+The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports NTLM v2 which has some security improvements over the original v1 protocol. It is also recommended to enable Extended Protection, or use SSL Encryption for increased security. 
+
+For more information on how to enable Extended Protection and, see:
+
+- [Connect to the Database Engine Using Extended Protection](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection?view=sql-server-2017)
+
+For more information on connecting with SSL Encryption, see:
+
+- [Connecting with SSL Encryption](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-2017)
+
+> [!NOTE]
+For the 7.4.0 release, Enabling **both** extended protection and encryption is not supported.
+
 ## See Also
 
 [Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -8,6 +8,7 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: SQL development for R data scientists
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ Because the walkthrough is designed to introduce R developers to [!INCLUDE[rsql_
 
 ## Prerequisites
 
-+ [SQL Server 2017 Machine Learning Services with R integration](../install/sql-machine-learning-services-windows-install.md#verify-installation) or [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services with R integration](../install/sql-machine-learning-services-windows-install.md#verify-installation) or [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
 + [Database permissions](../security/user-permission.md) and a SQL Server database user login
 

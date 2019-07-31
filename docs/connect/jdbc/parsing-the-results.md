@@ -42,7 +42,7 @@ try (Connection con = DriverManager.getConnection(URL); Statement s = con.create
 ```
 
 ## Exceptions
-When you execute a statement that results in an error or an informational message, SQL Server SQL Server will respond differently depending on whether it can generate an execution plan. The error message can be thrown immediately after statement execution or it might require a separate result set. In the latter case, the applications need to parse the result set to retrieve the exception.
+When you execute a statement that results in an error or an informational message, SQL Server will respond differently depending on whether it can generate an execution plan. The error message can be thrown immediately after statement execution or it might require a separate result set. In the latter case, the applications need to parse the result set to retrieve the exception.
 
 When SQL Server is unable to generate an execution plan, the exception is thrown immediately.
 

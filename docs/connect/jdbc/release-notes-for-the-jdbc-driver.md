@@ -19,6 +19,10 @@ manager: jroth
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
 ## 7.4.0
 
+### Support for JDK 12
+
+Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11 and 1.8.
+
 ### Compliance
 
 July 31, 2019
@@ -34,7 +38,7 @@ July 31, 2019
 
 | NTLM change | Details |
 | :--------- | :------ |
-| Supports NTLM authentication mode. | This mode of authentication allows users to perform Winwdows Integrated Authentication from non-windows machines.  |
+| Supports NTLM authentication mode. | This mode of authentication allows users to perform Windows Integrated Authentication from non-Windows machines.  |
 | More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
@@ -44,15 +48,6 @@ July 31, 2019
 | :---------- | :------ |
 | **useFmtOnly** connection property added. | This feature allows users to optionally query ParameterMetaData via the `SET FMTONLY ON` legacy API. This is useful for scenarios where `sp_describe_undeclared_parameters` doesn't perform as expected. |
 | More details and limitations. | See [Using useFmtOnly](../../connect/jdbc/using-useFmtOnly.md) |
-| &nbsp; | &nbsp; |
-
-### Updated _Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java_, version 1.6.4
-
-| ADAL4J change | Details |
-| :------------ | :------ |
-| Updated its Maven dependency on ADAL4J to version 1.6.4. | &nbsp; |
-| Added support for JDK 12. | &nbsp; |
-| Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.1

@@ -24,11 +24,11 @@ This section will talk about the two most common results returned from SQL Serve
 
 The following code is an example of how a user could iterate through all results from the server:
 ```java
-try (Connection con = DriverManager.getConnection(URL); Statement s = con.createStatement()) {
-	boolean resultsAvailable = s.execute(USER_SQL);
+try (Connection connection = DriverManager.getConnection(URL); Statement statement = connection.createStatement()) {
+	boolean resultsAvailable = statement.execute(USER_SQL);
 	int updateCount = -2;
 	while (true) {
-		updateCount = s.getUpdateCount();
+		updateCount = statement.getUpdateCount();
 		if (!resultsAvailable && updateCount == -1)
 			break;
 		if (resultsAvailable) {
@@ -36,7 +36,7 @@ try (Connection con = DriverManager.getConnection(URL); Statement s = con.create
 		} else {
 			// handle Update Count
 		}
-		resultsAvailable = s.getMoreResults();
+		resultsAvailable = statement.getMoreResults();
 	}
 }
 ```

@@ -1,7 +1,7 @@
 ---
 title: "PowerShell Cmdlet for Migration Evaluation | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2019"
+ms.date: "07/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,6 +19,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 The `Save-SqlMigrationReport` cmdlet is a tool that evaluates the migration fitness of multiple objects in a SQL Server database.
 
 Currently, this cmdlet is limited to evaluating the migration fitness for In-Memory OLTP. The cmdlet can run in both an elevated Windows PowerShell environment and sqlps.
+
+As an alternative to running this PowerShell cmdlet directly, you can run the cmdlet implicitly by using SQL Server Management Studio (SSMS). In the SSMS **Object Explorer**, you can right-click a table, and then click **Memory Optimization Advisor**.
 
 ## Syntax
 

@@ -81,7 +81,7 @@ SET @nstring = N'Åkergatan 24';
 -- the actual Unicode character you are processing, and the UNICODE   
 -- value for this particular character.  
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
-WHILE @position <= DATALENGTH(@nstring)  
+WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
    BEGIN;  
    SELECT @position,   

@@ -63,8 +63,8 @@
       items:
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
-      - name: Install mssqlctl
-        href: big-data-cluster/deploy-install-mssqlctl.md
+      - name: Install azdata
+        href: big-data-cluster/deploy-install-azdata.md
     - name: Deploy
       items:
       - name: Deployment guidance
@@ -77,7 +77,7 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
-      - name: Deployment targets
+      - name: Kubernetes clusters
         items:
         - name: Azure Kubernetes Service
           href: big-data-cluster/deploy-on-aks.md
@@ -87,8 +87,12 @@
           href: big-data-cluster/deploy-on-minikube.md
       - name: Deployment scripts
         items:
-        - name: Azure Kubernetes Service
+        - name: AKS python script
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+        - name: Single node kubeadm script
+          href: big-data-cluster/deployment-script-single-node-kubeadm.md
+        - name: Deploy with notebooks
+          href: big-data-cluster/deploy-notebooks.md         
   - name: Concepts
     items:
     - name: Application deployment
@@ -139,7 +143,7 @@
         href: big-data-cluster/data-ingestion-restore-database.md
     - name: Deploy and consume apps
       items:
-      - name: Deploy with mssqlctl
+      - name: Deploy with azdata
         href: big-data-cluster/big-data-cluster-create-apps.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md
@@ -163,6 +167,8 @@
         href: big-data-cluster/view-cluster-status.md
       - name: Kubernetes troubleshooting
         href: big-data-cluster/cluster-troubleshooting-commands.md
+      - name: Manage with notebook
+        href: big-data-cluster/manage-notebooks.md
     - name: Notebooks
       items:
       - name: Notebooks overview
@@ -177,6 +183,8 @@
         href: big-data-cluster/spark-submit-job.md
       - name: Submit Spark jobs in IntelliJ
         href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+      - name: Submit Spark jobs in Visual Studio Code
+        href: big-data-cluster/spark-hive-tools-vscode.md
       - name: Use extended Spark History Server
         href: big-data-cluster/spark-history-server.md
   - name: Reference
@@ -185,50 +193,56 @@
       items:
       - name: Deployment configuration file
         href: big-data-cluster/reference-deployment-config.md
-    - name: mssqlctl reference
+    - name: azdata reference
       items:
-      - name: mssqlctl
-        href: big-data-cluster/reference-mssqlctl.md
+      - name: azdata
+        href: big-data-cluster/reference-azdata.md
       - name: App Deploy
         items:
         - name: app
-          href: big-data-cluster/reference-mssqlctl-app.md
+          href: big-data-cluster/reference-azdata-app.md
         - name: app template
-          href: big-data-cluster/reference-mssqlctl-app-template.md
+          href: big-data-cluster/reference-azdata-app-template.md
       - name: Cluster
         items:
         - name: bdc
-          href: big-data-cluster/reference-mssqlctl-bdc.md
+          href: big-data-cluster/reference-azdata-bdc.md
         - name: bdc config
-          href: big-data-cluster/reference-mssqlctl-bdc-config.md
-        - name: bdc config section
-          href: big-data-cluster/reference-mssqlctl-bdc-config-section.md
+          href: big-data-cluster/reference-azdata-bdc-config.md
         - name: bdc control
-          href: big-data-cluster/reference-mssqlctl-bdc-control.md
+          href: big-data-cluster/reference-azdata-bdc-control.md
         - name: bdc control status
-          href: big-data-cluster/reference-mssqlctl-bdc-control-status.md          
+          href: big-data-cluster/reference-azdata-bdc-control-status.md          
         - name: bdc debug
-          href: big-data-cluster/reference-mssqlctl-bdc-debug.md
+          href: big-data-cluster/reference-azdata-bdc-debug.md
         - name: bdc endpoint
-          href: big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+          href: big-data-cluster/reference-azdata-bdc-endpoint.md
+        - name: bdc hdfs
+          href: big-data-cluster/reference-azdata-bdc-hdfs.md
+        - name: bdc hdfs mount
+          href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
         - name: bdc pool
-          href: big-data-cluster/reference-mssqlctl-bdc-pool.md
+          href: big-data-cluster/reference-azdata-bdc-pool.md
         - name: bdc pool status
-          href: big-data-cluster/reference-mssqlctl-bdc-pool-status.md        
+          href: big-data-cluster/reference-azdata-bdc-pool-status.md               
+        - name: bdc spark
+          href: big-data-cluster/reference-azdata-bdc-spark.md        
+        - name: bdc spark batch
+          href: big-data-cluster/reference-azdata-bdc-spark-batch.md        
+        - name: bdc spark session
+          href: big-data-cluster/reference-azdata-bdc-spark-session.md        
+        - name: bdc spark statement
+          href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
         - name: bdc status
-          href: big-data-cluster/reference-mssqlctl-bdc-status.md
-      - name: Storage
-        items:
-        - name: bdc storage
-          href: big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
-        - name: bdc storage mount
-          href: big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
-        - name: hdfs
-          href: big-data-cluster/reference-mssqlctl-hdfs.md
+          href: big-data-cluster/reference-azdata-bdc-status.md
+      - name: Notebook
+        items: 
+        - name: notebook
+          href: big-data-cluster/reference-azdata-notebook.md
       - name: SQL
         items: 
         - name: sql
-          href: big-data-cluster/reference-mssqlctl-sql.md
+          href: big-data-cluster/reference-azdata-sql.md
 - name: Business continuity
   items:
   - name: Overview
@@ -6695,6 +6709,8 @@
         href: relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md
       - name: Utility Explorer F1 Help
         href: relational-databases/manage/utility-explorer-f1-help.md
+    - name: SQL Assessment API
+      href: sql-assessment-api/sql-assessment-api-overview.md
   - name: Monitor
     href: relational-databases/performance/monitor-and-tune-for-performance.md
     items:
@@ -7490,7 +7506,7 @@
 - name: Reporting & Analytics
   items:
   - name: Advanced Analytics & Machine learning >>
-    href: advanced-analytics/index.md
+    href: advanced-analytics/
   - name: Analytics Platform System >>
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md
@@ -7518,6 +7534,8 @@
         href: master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
       - name: Master Data Services Developer Documentation
         href: master-data-services/develop/master-data-services-developer-documentation.md
+      - name: Host database on a managed instance
+        href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
     - name: Excel add-in
       href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
       items:
@@ -7958,8 +7976,6 @@
         href: relational-databases/security/sql-vulnerability-assessment.md
       - name: Data discovery & classification
         href: relational-databases/security/sql-data-discovery-and-classification.md
-      - name: SQL Server Connector troubleshooting
-        href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
     - name: Authentication Access
       items:
       - name: Determine effective permissions
@@ -8007,8 +8023,16 @@
           href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
       - name: Move a TDE protected database
         href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-      - name: Enable TDE with EKM
-        href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+      - name: Extensible Key Management
+        items:
+        - name: Enable TDE with EKM
+          href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+        - name: SQL Server connector with encryption
+          href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
+        - name: EKM using Azure Key Vault
+          href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+        - name: SQL Server Connector troubleshooting
+          href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
       - name: Back up service master key
         href: relational-databases/security/encryption/back-up-the-service-master-key.md
       - name: Restore service master key
@@ -8025,16 +8049,12 @@
         href: relational-databases/security/encryption/encrypt-a-column-of-data.md
     - name: Secure Azure SQL Database
       items:
-      - name: SQL Server connector with encryption
-        href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
       - name: Bring your own key >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
       - name: Rotate TDE BYOK keys >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
       - name: Remove TDE protector >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
-      - name: EKM using Azure Key Vault
-        href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
     - name: Auditing
       items:
       - name: Create server audit specification
@@ -9969,22 +9989,8 @@
       items:
       - name: SSMS Support Policy
         href: ssms/support-policy.md
-      - name: Support options for business users
-        href: https://support.microsoft.com/gp/support-options-for-business
-      - name: Contact Microsoft
-        href: https://support.microsoft.com/gp/contactus81?Audience=Commercial
-      - name: All the ways to get help
+      - name: Feedback & help
         href: https://docs.microsoft.com/sql/sql-server/sql-server-get-help
-      - name: UserVoice - Suggestion to improve SQL Server?
-        href: https://feedback.azure.com/forums/908035-sql-server
-      - name: Setup and Upgrade -  MSDN Forums
-        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc
-      - name: Transact-SQL - MSDN Forums
-        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql
-      - name: Stack Overflow
-        href: https://stackoverflow.com/questions/tagged/sql-server
-      - name: Microsoft SQL Server License Terms and Information
-        href: https://www.microsoft.com/download/details.aspx?id=39299
       - name: User Assistance in SSMS
         href: ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data
@@ -10426,28 +10432,12 @@
       href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
     - name: SQL on Channel 9 >
       href: https://channel9.msdn.com/Search
-  - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
-    items:
-    - name: SQL Server >
-      href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: SQL Server Database Engine >
-      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
-    - name: SQL Server Security >
-      href: https://blogs.msdn.microsoft.com/sqlsecurity/
-    - name: SQL Server Data Tools >
-      href: https://blogs.msdn.microsoft.com/ssdt/
-  - name: Feedback & help
+  - name: Help
     items:
     - name: Get help
       href: sql-server/sql-server-get-help.md
-    - name: Feedback for SQL Docs >
-      href: https://aka.ms/sqldocsfeedback
-    - name: Feedback for SQL Server (UserVoice) >
-      href: https://feedback.azure.com/forums/908035-sql-server
-    - name: SQL Docs Survey >
-      href: https://aka.ms/sqldocsurvey
-    - name: Contribute to SQL Documentation!
-      href: sql-server/sql-server-docs-contribute.md
+    - name: SQL Docs navigation tips
+      href: sql-server/sql-docs-navigation-guide.md
     - name: DBA Stack Exchange >
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >
@@ -10456,6 +10446,24 @@
       href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit >
       href: https://www.reddit.com/r/SQLServer
+  - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
+    items:
+    - name: SQL Server >
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: Database Engine >
+      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+    - name: Security >
+      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+    - name: Data Tools >
+      href: https://blogs.msdn.microsoft.com/ssdt/
+  - name: Feedback
+    items: 
+    - name: SQL Docs > 
+      href: https://aka.ms/sqldocsfeedback
+    - name: SQL Server > 
+      href: https://feedback.azure.com/forums/908035-sql-server
+    - name: Edit SQL Documentation!
+      href: sql-server/sql-server-docs-contribute.md
   - name: Partners
     items:
     - name: Monitoring
@@ -10470,8 +10478,6 @@
     href: sql-server/sql-server-help-installation.md
 - name: Reference
   items:
-  - name: SQL Docs include files
-    href: sql-server/applies-to-includes.md
   - name: Archived Content (SQL 2005 - 2012) >
     displayName: 2005, 2008, 2008 r2, 2012, previous-versions
     href: https://docs.microsoft.com/previous-versions/sql/
@@ -15966,6 +15972,8 @@
           href: t-sql/functions/filegroupproperty-transact-sql.md
         - name: FILEPROPERTY
           href: t-sql/functions/fileproperty-transact-sql.md
+        - name: FILEPROPERTYEX
+          href: t-sql/functions/filepropertyex-transact-sql.md
         - name: FULLTEXTCATALOGPROPERTY
           href: t-sql/functions/fulltextcatalogproperty-transact-sql.md
         - name: FULLTEXTSERVICEPROPERTY

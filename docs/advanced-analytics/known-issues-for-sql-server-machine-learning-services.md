@@ -1,5 +1,5 @@
 ---
-title: Known issues for R language and Python integration - SQL Server Machine Learning Services
+title: Known issues for R language and Python integration
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -9,7 +9,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Known issues in Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server 2016 R Services](install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services with R and Python](install/sql-machine-learning-services-windows-install.md).
 

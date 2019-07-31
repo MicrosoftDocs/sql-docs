@@ -1,10 +1,10 @@
 ---
 title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/13/2017"
+ms.date: "07/24/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_EXTERNAL_RESOURCE_POOL_TSQL"
@@ -13,13 +13,13 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER EXTERNAL RESOURCE POOL statement"
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] and [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 

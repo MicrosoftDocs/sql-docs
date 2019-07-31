@@ -29,13 +29,13 @@ The following table shows the file location of Python for SQL Server. The file p
 
 |Version and language  | Default path|
 |----------------------|------------|
-| SQL Server 2017 with Python|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 with Python|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library |
 
 The following table lists the default path of the binaries when SQL Server 2017 Machine Learning Server (Standalone) is installed. 
 
 |Version| Installation|Default path|
 |-------|-------------|------------|
-|SQL Server 2017|Machine Learning Server, with Python |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
+|SQL Server 2017|Machine Learning Server, with Python |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
 
 > [!NOTE]
 > If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Machine Learning Server. For more information, see [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) .

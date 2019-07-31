@@ -109,7 +109,7 @@ Now that you have set the MOUNT_CREDENTIALS environment variable for access keys
 1. Mount the remote HDFS storage in Azure using **azdata bdc storage-pool mount create**. Replace the placeholder values before running the following command:
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -122,13 +122,13 @@ If mounted successfully, you should be able to query the HDFS data and run Spark
 To list the status of all mounts in your big data cluster, use the following command:
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 To list the status of a mount at a specific path in HDFS, use the following command:
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## Refresh a mount
@@ -144,7 +144,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 To delete the mount, use the **azdata bdc storage-pool mount delete** command, and specify the mount path in HDFS:
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## Next steps

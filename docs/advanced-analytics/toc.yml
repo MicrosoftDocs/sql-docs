@@ -231,6 +231,8 @@
     items:
     - name: R package information
       href: ../advanced-analytics/package-management/package-information-r.md
+    - name: Python package information
+      href: ../advanced-analytics/package-management/package-information-python.md
     - name: Default packages
       href: ../advanced-analytics/package-management/default-packages.md
     - name: Get package information

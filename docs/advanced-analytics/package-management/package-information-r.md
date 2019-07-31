@@ -9,7 +9,7 @@ ms.date: 07/30/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-monikerRange: "=sql-server-2016||=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016||>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Get R package information on SQL Server Machine Learning Services

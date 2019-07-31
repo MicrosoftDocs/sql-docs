@@ -21,7 +21,7 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ### Support for JDK 12
 
-Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11 and 1.8.
+Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11.0 and 1.8.
 
 ### Compliance
 

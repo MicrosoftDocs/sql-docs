@@ -44,7 +44,7 @@ manager: jroth
 
   The JDBC Driver 7.4 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 12.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 12.0.
   
-  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.2 for SQL Server:  
+  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.4 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   

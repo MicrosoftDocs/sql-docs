@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Sending to a Remote Private Message Queue with the Script Task
 

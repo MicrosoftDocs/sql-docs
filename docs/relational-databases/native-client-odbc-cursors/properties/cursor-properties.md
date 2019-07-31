@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Cursor Properties

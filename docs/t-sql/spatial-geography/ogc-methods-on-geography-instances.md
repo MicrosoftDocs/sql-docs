@@ -1,7 +1,7 @@
 ---
 title: "OGC Methods on Geography Instances | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/27/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: MladjoA
 ms.author: mlandzic 
-manager: craigg
 ---
 # OGC Methods on Geography Instances
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ manager: craigg
   
 -   [STIsEmpty](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
--   [STIsValida](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+-   [STIsValid](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 -   [STLength](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
   

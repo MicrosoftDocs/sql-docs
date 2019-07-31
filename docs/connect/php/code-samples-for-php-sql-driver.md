@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 3a5d218a-1490-4c61-a20c-4d71f6600c97
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Code Samples for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

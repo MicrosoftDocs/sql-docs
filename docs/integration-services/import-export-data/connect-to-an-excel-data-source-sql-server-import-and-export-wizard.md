@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to an Excel Data Source (SQL Server Import and Export Wizard)
 

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: "savjani"
 ms.author: "pariks"
-manager: "ajayj"
+manager: ajayj
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_info (Transact-SQL)

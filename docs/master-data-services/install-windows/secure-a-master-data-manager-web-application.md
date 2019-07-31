@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Secure a Master Data Manager Web Application
 

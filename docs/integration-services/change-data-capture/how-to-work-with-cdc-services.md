@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # How to Work with CDC Services
 

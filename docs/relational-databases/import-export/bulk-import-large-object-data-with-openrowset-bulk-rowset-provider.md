@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Bulk Import Large-Object Data with OPENROWSET Bulk Rowset Provider
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

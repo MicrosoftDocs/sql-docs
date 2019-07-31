@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Conflict resolution for Merge Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ manager: craigg
   
     -   Select one or more rows in the upper grid, and then click **Remove**, which is equivalent to clicking the **Submit Winner** button (without making any changes to the data).  
   
-    -   Click the properties button (**…**) to view more information on a column involved in a conflict.  
+    -   Click the properties button (**...**) to view more information on a column involved in a conflict.  
   
     -   Edit data in the **Conflict winner** or **Conflict loser** column before submitting the data (data is read-only if the column is gray).  
   
@@ -68,8 +67,8 @@ manager: craigg
   
 6.  Close the Replication Conflict Viewer.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-  
 ## View conflict information
 When a conflict is resolved in merge replication, the data from the losing row is written to a conflict table. This conflict data can be viewed programmatically by using replication stored procedures. For more information, see [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

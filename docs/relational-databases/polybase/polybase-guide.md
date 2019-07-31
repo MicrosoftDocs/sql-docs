@@ -2,8 +2,6 @@
 title: "What is PolyBase? | Microsoft Docs"
 ms.date: 06/10/2019
 ms.prod: sql
-ms.reviewer: ""
-ms.custom: ""
 ms.technology: polybase
 ms.topic: "overview"
 f1_keywords: 
@@ -16,9 +14,9 @@ helpviewer_keywords:
   - "Hadoop export"
   - "Hadoop export, PolyBase overview"
   - "Hadoop import, PolyBase overview"
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # What is PolyBase?
@@ -115,6 +113,6 @@ Before using PolyBase, you must [install the PolyBase feature](polybase-installa
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
-- [ODBC Generic Types](../../relational-databases/polybase/polybase-installation.md)
+- [ODBC Generic Types](polybase-configure-odbc-generic.md)
 
 ::: moniker-end

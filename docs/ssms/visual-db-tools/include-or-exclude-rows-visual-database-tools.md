@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Include or Exclude Rows (Visual Database Tools)

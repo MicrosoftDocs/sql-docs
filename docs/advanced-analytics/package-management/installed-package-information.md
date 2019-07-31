@@ -1,5 +1,5 @@
 ---
-title: Default R and Python package libraries - SQL Server Machine Learning Services
+title: Default R and Python package libraries
 description: R and Python packages installed by SQL Server for R Services, R Server, Machine Learning Services (In-Database), and Machine Learning Server (Standalone)
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,9 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Default R and Python packages in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article lists the R and Python packages installed with SQL Server and where to find the package library.  
 

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Map Query Parameters to Variables in a Data Flow Component
 

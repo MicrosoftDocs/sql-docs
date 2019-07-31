@@ -11,7 +11,6 @@ ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption
@@ -81,7 +80,7 @@ In this step, you'll create and test an index on an encrypted column. You'll be 
 
    CREATE INDEX IX_LastName ON [Employees] ([LastName])
    INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-   GO;
+   GO
    ```
 
 1. Run a rich query on the **LastName** column and verify SQL Server uses the index when executing the query.
@@ -148,7 +147,7 @@ In this step, you'll create an index on an encrypted column, pretending to be tw
 
         CREATE INDEX IX_LastName ON [Employees] ([LastName])
         INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-        GO;
+        GO
         ```
 
 1. As a data owner, run a rich query on the **LastName** column and verify SQL Server uses the index when executing the query.

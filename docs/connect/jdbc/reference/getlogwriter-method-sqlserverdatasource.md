@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: cde41743-1a5d-4930-91b3-4e5fccc1bc36
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getLogWriter Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

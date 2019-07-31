@@ -32,7 +32,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of SQL Server 2017
@@ -162,7 +161,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
-|Clusterless availability group|Yes|Yes|No|No|No|No|
+|Read-scale availability group|Yes|Yes|No|No|No|No|
 |Minimum replica commit availability group|Yes|Yes|Yes|No|No|No|
   
 

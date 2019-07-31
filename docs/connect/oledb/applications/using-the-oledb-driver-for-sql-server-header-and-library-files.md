@@ -20,7 +20,6 @@ helpviewer_keywords:
   - "MSOLEDBSQL, library files"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # Using the OLE DB Driver for SQL Server header and library files
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

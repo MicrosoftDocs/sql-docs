@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Blob Download Task
 

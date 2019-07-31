@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Using Sql_variant Data Type
 

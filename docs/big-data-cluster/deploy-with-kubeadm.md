@@ -2,14 +2,13 @@
 title: Configure Kubernetes with kubeadm
 titleSuffix: SQL Server big data clusters
 description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for SQL Server 2019 big data cluster (preview) deployments.
-author: rothja 
-ms.author: jroth 
-manager: jroth
-ms.date: 02/28/2019
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Configure Kubernetes on multiple machines for SQL Server big data cluster deployments
@@ -20,13 +19,14 @@ This article provides an example of how to use **kubeadm** to configure Kubernet
 
 > [!TIP] 
 > For sample scripts that configure Kubernetes, see [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
+Also see [this](deployment-script-single-node-kubeadm.md) topic for a sample script that automates a deployment of a single node kubeadm deployment on a VM and then deploys a default configuration of big data cluster on top of it.
 
 ## Prerequisites
 
 - Minimum of 3 Linux physical machines or virtual machines
 - Recommended configuration per machine:
    - 8 CPUs
-   - 32 GB of memory
+   - 64 GB of memory
    - 100 GB of storage
 
 ## Prepare the machines
@@ -56,7 +56,7 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 1. Configure docker and Kubernetes prerequisites on the machine.
 
    ```bash
-   KUBE_DPKG_VERSION=1.11.3-00
+   KUBE_DPKG_VERSION=1.15.0-00
    sudo apt-get update && /
    sudo apt-get install -y ebtables ethtool && /
    sudo apt-get install -y docker.io && /

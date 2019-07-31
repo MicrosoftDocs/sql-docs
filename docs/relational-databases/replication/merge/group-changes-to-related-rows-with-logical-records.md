@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Group Changes to Related Rows with Logical Records
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

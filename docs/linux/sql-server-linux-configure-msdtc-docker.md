@@ -1,9 +1,8 @@
 ---
-title: How to use distributed transactions with SQL Server on Docker | Microsoft Docs
+title: How to use distributed transactions with SQL Server on Docker
 description: This article explains how to use Dprovides a walk-through for configuring MSDTC on Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -35,7 +34,7 @@ docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 > [!IMPORTANT]

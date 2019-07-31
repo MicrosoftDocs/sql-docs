@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Unsuppress Run Custom Report Warnings
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

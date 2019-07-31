@@ -9,7 +9,6 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Configure Always Encrypted with secure enclaves
@@ -26,6 +25,8 @@ To set up Always Encrypted with secure enclaves, use the following workflow:
 4. Configure the enclave type in your SQL Server instance.
 5. Provision enclave-enabled keys.
 6. Encrypt columns that contain sensitive data.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > For a step-by-step tutorial on how to set up a test environment and try the functionality of Always Encrypted with secure enclaves in SSMS, see [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
@@ -143,7 +144,7 @@ To provision an enclave-enabled column encryption key, you need to make sure tha
 
 The following limitations currently apply to provisioning enclave-enabled keys:
 
-- Enclave-enabled column master keys must be stored in [Windows Certificate Store](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) or in [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Storing enclave-enabled column master keys in other types of key stores, for example hardware security modules or custom key stores, isn't currently supported.
+- Enclave-enabled column master keys must be stored in [Windows Certificate Store](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) or in [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Storing enclave-enabled column master keys in other types of key stores, for example hardware security modules or custom key stores, isn't currently supported.
 
 ### Provision enclave-enabled keys using SQL Server Management Studio (SSMS)
 
@@ -864,13 +865,13 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 4. Install the following NuGet package by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
    ```powershell
-   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease
+   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders -IncludePrerelease
    ```
 
 5. If you use Azure Key Vault for storing your column master keys, install the following NuGet packages by going to **Tools** (main menu) > **NuGet Package Manager** > **Package Manager Console**. Run the following code in the Package Manager Console.
 
    ```powershell
-   Install-Package  Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider  --IncludePrerelease -Version 2.2.0
+   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider -IncludePrerelease -Version 2.2.0
    Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
    ```
 
@@ -879,16 +880,17 @@ To use Always Encrypted with secure enclaves in a .NET Framework application, yo
 8. Locate the \<configuration\> section. Within the \<configuration\> section, locate the \<configSections\> section. Add the following section within the \<configSections\>:
 
    ```xml
-   <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient. SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
+   <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
 9. Inside the configuration section, below the \<configSections\>, add the following section, which specific an enclave provider to be used to attest and interact with Intel SGX enclaves:
 
    ```xml
-   \<SqlColumnEncryptionEnclaveProviders\>
-       \<providers\>
-       \<add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders. VirtualizationBasedSecurityEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/\>
-       \</SqlColumnEncryptionEnclaveProviders\>
+   <SqlColumnEncryptionEnclaveProviders>
+       <providers>
+           <add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualizationBasedSecurityEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
+       </providers>
+   </SqlColumnEncryptionEnclaveProviders>
    ```
 
 ### Develop and test your app

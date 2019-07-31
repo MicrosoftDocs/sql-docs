@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Attributes Property (ADOX)
 Describes column characteristics.  

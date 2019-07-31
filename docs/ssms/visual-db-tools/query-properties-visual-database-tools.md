@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Query Properties (Visual Database Tools)

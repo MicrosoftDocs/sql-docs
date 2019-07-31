@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Customize (Toolbars Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

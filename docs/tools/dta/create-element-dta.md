@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Create element (DTA)"
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Create Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

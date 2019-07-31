@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Distributor Settings
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

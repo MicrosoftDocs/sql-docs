@@ -1,5 +1,5 @@
 ---
-title: Performance for SQL Server R Services - results and resources - SQL Server Machine Learning Services
+title: Performance for SQL Server R Services - results and resources
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -7,10 +7,9 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Performance for R Services: results and resources
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article is the fourth and final in a series that describes performance optimization for R Services. This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 

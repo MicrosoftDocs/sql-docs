@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Updatable Subscriptions - Queued Updating Conflict Resolution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

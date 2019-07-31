@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Generate SQL Script (Replication Objects)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

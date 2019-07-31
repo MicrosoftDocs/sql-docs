@@ -1,5 +1,5 @@
 ---
-title: Get R and Python package information - SQL Server Machine Learning Services
+title: Get R and Python package information
 description: Determine R and Python package version, verify installation, and get a list of installed packages on SQL Server R Services or Machine Learning Services.
 ms.custom: ""
 ms.prod: sql
@@ -9,10 +9,9 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 #  Get R and Python package information
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Sometimes when you are working with multiple environments or installations of R or Python, you need to verify that the code you are running is using the expected environment for Python or the correct workspace for R. For example, if you have [upgraded R or Python](../install/upgrade-r-and-python.md), the path to the R library might be in a different folder than the default. Also, if you install R Client or an instance of the Standalone server, you might have multiple R libraries on your computer.
 

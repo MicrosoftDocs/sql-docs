@@ -3,7 +3,7 @@ title: High availability for SQL Server containers
 description: This article introduces high availability for SQL Server containers
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql

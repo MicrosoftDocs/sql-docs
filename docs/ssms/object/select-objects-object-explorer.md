@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Select Objects (Object Explorer)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

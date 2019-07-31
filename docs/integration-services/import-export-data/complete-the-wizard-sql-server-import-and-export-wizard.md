@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Complete the Wizard (SQL Server Import and Export Wizard)
 

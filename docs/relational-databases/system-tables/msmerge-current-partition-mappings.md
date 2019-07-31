@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSmerge_current_partition_mappings
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

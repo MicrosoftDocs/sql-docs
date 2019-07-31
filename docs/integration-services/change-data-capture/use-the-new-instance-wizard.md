@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Use the New Instance Wizard
 

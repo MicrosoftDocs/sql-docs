@@ -11,7 +11,6 @@ f1_keywords:
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Import Flat File to SQL Wizard
@@ -38,6 +37,8 @@ To access the Import Flat File Wizard, follow these steps:
 1. Open **SQL Server Management Studio**.
 2. Connect to an instance of the SQL Server Database Engine or localhost.
 3. Expand **Databases**, right-click a database (test in the example below), point to **Tasks**, and click **Import Flat File** above Import Data.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![Wizard menu](media/import-flat-file-wizard/importffmenu.png)
 

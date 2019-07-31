@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Visual FoxPro Setup Dialog Box
 The **ODBC Visual FoxPro Setup** dialog box enables you to add or change a Visual FoxPro data source.  

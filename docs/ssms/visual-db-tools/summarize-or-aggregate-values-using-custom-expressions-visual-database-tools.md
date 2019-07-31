@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Summarize or Aggregate Values Using Custom Expressions (Visual Database Tools)

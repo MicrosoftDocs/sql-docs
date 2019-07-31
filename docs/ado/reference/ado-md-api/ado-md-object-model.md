@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ADO MD Object Model
 This topic describes how objects are represented and related in ADO MD.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQUARE (SSIS Expression)
 

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Creating a Custom Data Flow Component
 

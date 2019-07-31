@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Connect to Server (Connection Properties Page) Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

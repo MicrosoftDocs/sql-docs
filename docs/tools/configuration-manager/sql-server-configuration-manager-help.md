@@ -10,10 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, help"
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # SQL Server Configuration Manager Help
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

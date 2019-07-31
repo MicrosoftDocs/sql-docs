@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "Abort method"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # ISSAbort::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "XML output file format [ssbdiagnose], issue element"
   - "ssbdiagnose"
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Issue Element (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

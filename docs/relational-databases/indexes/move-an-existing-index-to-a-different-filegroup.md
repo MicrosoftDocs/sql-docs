@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Move an Existing Index to a Different Filegroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,9 @@ manager: craigg
 8.  Click **Close**.  
   
 9. On the **File** menu, select **Save**_table_name_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To move an existing index to a different filegroup in Object Explorer  
   
 1.  In Object Explorer, click the plus sign to expand the database that contains the table containing the index that you want to move.  

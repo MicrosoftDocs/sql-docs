@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Appendix B: ADO Error Codes
 See the following topics for more information about particular error messages:

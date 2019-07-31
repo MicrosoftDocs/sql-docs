@@ -4,9 +4,8 @@ titleSuffix: SQL Server big data clusters
 description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a SQL Server 2019 big data cluster (preview).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
-manager: jroth
-ms.date: 04/23/2019
+ms.reviewer: mikeray
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -30,11 +29,15 @@ Today, by default, 1% of the total HDFS storage will be reserved for caching of 
 
 The following sections provide an example of how to configure HDFS tiering with an Azure Data Lake Storage Gen2 data source.
 
+## Refresh
+
+HDFS tiering supports refresh. Refresh an existing mount for the latest snapshot of the remote data.
+
 ## Prerequisites
 
 - [Deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-  - **mssqlctl**
+  - **azdata**
   - **kubectl**
 
 ## Mounting instructions

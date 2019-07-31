@@ -1,7 +1,7 @@
 ---
 title: "Graph processing with SQL Server and Azure SQL Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/18/2017"
+ms.date: "06/26/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Graph processing with SQL Server and Azure SQL Database
@@ -78,6 +77,9 @@ To learn more about how to create and use edge constraints refer to [Edge Constr
 The [MERGE](../../t-sql/statements/merge-transact-sql.md) statement performs insert, update, or delete operations on a target table based on the results of a join with a source table. For example, you can synchronize two tables by inserting, updating, or deleting rows in a target table based on differences between the target table and the source table. Using MATCH predicates in a MERGE statement is now supported on Azure SQL Database and SQL Server vNext. That is, it is now possible to merge your current graph data (node or edge tables) with new data using the MATCH predicates to specify graph relationships in a single statement, instead of separate INSERT/UPDATE/DELETE statements.
 
 To learn more about how match can be used in merge DML refer to [MERGE Statement](../../t-sql/statements/merge-transact-sql.md)
+
+## Shortest Path
+The [SHORTEST_PATH](./sql-graph-shortest-path.md) function finds shortest path between any 2 nodes in a graph or starting from a given node to all the other nodes in the graph. Shortest path can also be used to find a transitive closure or for arbitrary length traversals in the graph. 
 
  ## Next steps  
 Read the [SQL Graph Database - Architecture](./sql-graph-architecture.md)

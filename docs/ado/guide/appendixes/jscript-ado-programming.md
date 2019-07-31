@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # JScript ADO Programming
 ## Creating an ADO Project  

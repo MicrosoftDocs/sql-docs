@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Work with Data in the Results Pane (Visual Database Tools)

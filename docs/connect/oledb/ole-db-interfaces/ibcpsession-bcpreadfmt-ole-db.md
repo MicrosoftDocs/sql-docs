@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "BCPReadFmt method"
 author: pmasl
 ms.author: pelopes
-manager: jroth
 ---
 # IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

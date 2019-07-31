@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: "yualan"
 ms.author: "alayu"
-manager: craigg   
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the SSMS XEvent Profiler
@@ -45,6 +44,8 @@ To access the XEvent Profiler, follow these steps:
    ![XEProfiler Session](media/xevents-xe-profiler-start-session.png)
 
 5. You can now view your Extended Events.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ![XEProfiler Viewer](media/xevents-xe-profiler-start-viewer.png)
 

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_column_privileges (Transact-SQL)

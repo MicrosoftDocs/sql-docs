@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Subscription View (Master Data Services)
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Domain-Based Attributes (Master Data Services)
 

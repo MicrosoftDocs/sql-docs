@@ -2,7 +2,6 @@
 title: Power the appliance on or off - Analytics Platform System | Microsoft Docs
 description: Power the appliance on or off for Analytics Platform System 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

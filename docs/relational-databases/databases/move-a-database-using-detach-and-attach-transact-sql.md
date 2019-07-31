@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Move a Database Using Detach and Attach (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

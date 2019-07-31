@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sample applications [DTA]"
 ms.assetid: 7c04fe1d-6669-44a1-8b73-36d469e9b002
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # XML Input File Sample with Inline Workload (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

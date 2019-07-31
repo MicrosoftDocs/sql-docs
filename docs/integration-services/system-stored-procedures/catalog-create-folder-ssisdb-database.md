@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.create_folder (SSISDB Database)
 

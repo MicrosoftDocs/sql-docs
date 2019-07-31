@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Table Name Limitations
 Table names can contain any valid characters (for example, spaces). If table names contain any characters except letters, numbers, and underscores, the name must be delimited by enclosing it in back quotes (`).  

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ---
 # Diagnostic Connection for Database Administrators
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ manager: jroth
     -   If there are no tasks in the sys.dm_os_tasks associated with this session, but the session remains in sys.dm_exec_sessions after executing the KILL command, it means that you do not have a worker available. Select one of the currently running tasks (a task listed in the sys.dm_os_tasks view with a `sessions_id <> NULL`), and kill the session associated with it to free up the worker. Note that it may not be enough to kill a single session: you may have to kill multiple ones.  
   
 ## DAC Port  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens for the DAC on TCP port 1434 if available or a TCP port dynamically assigned upon [!INCLUDE[ssDE](../../includes/ssde-md.md)] startup. The error log contains the port number the DAC is listening on. By default the DAC listener accepts connection on only the local port. For a code sample that activates remote administration connections, see [remote admin connections Server Configuration Option](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listens for the DAC on TCP port 1434 if available or a TCP port dynamically assigned upon [!INCLUDE[ssDE](../../includes/ssde-md.md)] startup. The [error log](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md) contains the port number the DAC is listening on. By default the DAC listener accepts connection on only the local port. For a code sample that activates remote administration connections, see [remote admin connections Server Configuration Option](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
   
  After the remote administration connection is configured, the DAC listener is enabled without requiring a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a client can now connect to the DAC remotely. You can enable the DAC listener to accept connections remotely even if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unresponsive by first connecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the DAC locally, and then executing the sp_configure stored procedure to accept connection from remote connections.  
   

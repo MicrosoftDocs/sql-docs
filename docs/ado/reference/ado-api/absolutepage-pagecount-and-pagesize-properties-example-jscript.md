@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (JScript)
 This example demonstrates the AbsolutePage, PageCount and PageSize properties. Cut and paste the following code to Notepad or another text editor, and save it as **AbsolutePageJS.asp**.  

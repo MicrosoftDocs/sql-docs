@@ -10,7 +10,6 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-manager: jroth
 ---
 # SQL Server 2019 extension (preview)
 
@@ -45,7 +44,7 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
 * The **SQL Server big data cluster** connection type has been removed in this release. All functionality previously available from the SQL Server big data cluster connection is now available in the SQL Server connection.
 * HDFS browsing can be found under the **Data Services** folder
-* For notebooks the the PySpark and other big data kernels work when connected to the SQL Server master instance in your SQL Server big data cluster.
+* For notebooks the PySpark and other big data kernels work when connected to the SQL Server master instance in your SQL Server big data cluster.
 * Create External Table wizard:
   * Support for creating External Table using existing External Data Source.
   * Performance improvements across the wizard.

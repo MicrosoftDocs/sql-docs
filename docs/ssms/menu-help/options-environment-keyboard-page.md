@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # Options (Environment - Keyboard Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

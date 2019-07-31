@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Multiuser Environments (Visual Database Tools)

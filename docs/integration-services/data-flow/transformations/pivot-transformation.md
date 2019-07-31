@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Pivot Transformation
 

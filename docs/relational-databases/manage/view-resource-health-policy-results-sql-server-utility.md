@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View Resource Health Policy Results (SQL Server Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,9 @@ manager: craigg
 4.  Click the **Managed Instances** node to view list view data for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (right-click to refresh). List view data is displayed in the content pane.  
   
 5.  Click the **Deployed Data-tier Applications** node to view list view data for data-tier applications (right-click to refresh). List view data is displayed in the content pane.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## See Also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Reduce Noise in CPU Utilization Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)   

@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OLE DB Destination
 

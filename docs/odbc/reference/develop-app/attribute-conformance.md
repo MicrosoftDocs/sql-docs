@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Attribute Conformance
 The following table indicates the conformance level of each ODBC environment attribute, where this is well defined.  

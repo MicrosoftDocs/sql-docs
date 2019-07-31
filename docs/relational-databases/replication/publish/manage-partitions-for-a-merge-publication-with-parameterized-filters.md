@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Manage Partitions for a Merge Publication with Parameterized Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,9 @@ manager: craigg
     2.  Accept the default schedule for refreshing snapshots, or click **Change** to specify a different schedule.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To delete a partition  
   
 1.  On the **Data Partitions** page, select a partition in the grid.  

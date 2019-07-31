@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Remove Columns from Query Results (Visual Database Tools)

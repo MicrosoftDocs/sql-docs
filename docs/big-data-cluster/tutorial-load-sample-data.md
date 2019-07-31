@@ -2,14 +2,13 @@
 title: Load sample data
 titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to load sample data into a SQL Server big data cluster. The sample data includes relational data in the SQL Server master instance. It also includes HDFS data in the storage pool. This data supports other tutorials in this section.
-author: rothja
-ms.author: jroth
-manager: jroth
-ms.date: 04/23/2019
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Tutorial: Load sample data into a SQL Server big data cluster
@@ -25,7 +24,7 @@ This tutorial explains how to use a script to load sample data into a SQL Server
 
 - [A deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-   - **mssqlctl**
+   - **azdata**
    - **kubectl**
    - **sqlcmd**
    - **curl**

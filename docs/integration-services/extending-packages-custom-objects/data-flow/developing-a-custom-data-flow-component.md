@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a Custom Data Flow Component
 

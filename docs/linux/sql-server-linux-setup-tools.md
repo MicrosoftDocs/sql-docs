@@ -2,9 +2,8 @@
 title: Install SQL Server command-line tools on Linux
 titleSuffix: SQL Server
 description: This article describes how to install the SQL Server Tools on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -192,7 +191,7 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-The SQL Server command-line tools are included in the Docker image. If you attach to the image with an interactive command-prompt, you can run the tools locally.
+If you [run SQL Server in a Docker container](quickstart-install-connect-docker.md), the SQL Server command-line tools are already included in the SQL Server Linux container image. If you attach to a running container with an interactive bash shell, you can run the tools locally.
 
 ## Offline installation
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 ---
 # View Project Properties
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.rename_folder (SSISDB Database)
 

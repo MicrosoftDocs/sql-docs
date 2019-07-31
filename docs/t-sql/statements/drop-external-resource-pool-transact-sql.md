@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

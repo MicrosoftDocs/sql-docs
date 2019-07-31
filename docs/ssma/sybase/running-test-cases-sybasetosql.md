@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Running Test Cases (SybaseToSQL)
 When SSMA Tester runs a Test Case, it executes the objects selected for testing and creates a report about verification results. If the results are identical on both platforms, the test was successful. The correspondence of objects between Sybase and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is determined according to the schema-mapping settings for the current SSMA project.  

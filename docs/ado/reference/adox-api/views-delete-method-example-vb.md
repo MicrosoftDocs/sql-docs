@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Views Delete Method Example (VB)
 The following code shows how to use the [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) method to delete a view from the catalog.  

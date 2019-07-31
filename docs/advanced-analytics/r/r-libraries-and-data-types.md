@@ -1,5 +1,5 @@
 ---
-title: R-to-SQL data type conversions - SQL Server Machine Learning Services
+title: R-to-SQL data type conversions
 description: Review the implicit and explicit data type converstions between R and SQL Server in data science and machine learning solutions.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,9 @@ ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ---
 # Data type mappings between R and SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 For R solutions that run on the R integration feature in SQL Server Machine Learning Services, review the list of unsupported data types, and data type conversions that might be performed implicitly when data is passed between R libraries and SQL Server.
 

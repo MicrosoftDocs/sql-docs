@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: f1458ca8-54dd-48c4-86ae-a8bbedbb7db3
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

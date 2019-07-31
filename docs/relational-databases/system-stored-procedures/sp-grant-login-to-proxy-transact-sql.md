@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-manager: jrothj
 ---
 # sp_grant_login_to_proxy (Transact-SQL)
 

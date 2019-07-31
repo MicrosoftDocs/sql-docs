@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: "markingmyname"
 ms.author: "maghan"
-manager: craigg
 
 ---
 # Rules for Entering Search Values (Visual Database Tools)

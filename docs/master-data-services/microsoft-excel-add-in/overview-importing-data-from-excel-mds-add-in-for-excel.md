@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Overview: Importing Data from Excel (MDS Add-in for Excel)
 

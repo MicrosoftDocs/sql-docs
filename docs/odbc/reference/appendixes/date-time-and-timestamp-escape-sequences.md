@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Date, Time, and Timestamp Escape Sequences
 ODBC defines escape sequences for date, time, and timestamp literals. The syntax of these escape sequences is as follows:  

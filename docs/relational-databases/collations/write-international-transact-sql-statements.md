@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Write International Transact-SQL Statements
@@ -25,10 +24,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   Databases and database applications that use [!INCLUDE[tsql](../../includes/tsql-md.md)] statements will become more portable from one language to another, or will support multiple languages, if the following guidelines are followed:  
 
 -   Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], use either:
-    -   The **char**, **varchar**, and **varchar(max)** data types with a [UTF-8 enabled collation](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support).
-    -   The **nchar**, **nvarchar**, and **nvarchar(max)** data types with any collation.      
+    -   The **char**, **varchar**, and **varchar(max)** data types with a [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) enabled collation.
+    -   The **nchar**, **nvarchar**, and **nvarchar(max)** data types with [supplementary character](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collation.      
 
-    This avoids code page conversion issues. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+    This avoids code page conversion issues. For other considerations, see [Storage differences between UTF-8 and UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
 -   Up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], replace all uses of the **char**, **varchar**, and **varchar(max)** data types with **nchar**, **nvarchar**, and **nvarchar(max)**. This avoids code page conversion issues. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
     > [!IMPORTANT]

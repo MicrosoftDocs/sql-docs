@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Running and Managing Packages Programmatically
 

@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Storage Connection Manager
 
@@ -32,6 +31,6 @@ Following properties are available.
 - **Authentication:** Specifies the authentication method to use. **AccessKey** and **ServicePrincipal** authentication are supported.
     - **AccessKey:** For this authentication method, specify the **Account key**.
     - **ServicePrincipal:** For this authentication method, specify the **Application ID**, **Application key**, **Tenant ID** of the service principal.
-      The service principal should be assigned **Storage Blob Data Contributor** role to the storage account.
+      For **Test Connection** to work, the service principal should be assigned at least **Storage Blob Data Reader** role to the storage account.
       Refer to [this](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) page for details.
 - **Environment:** Specifies the cloud environment hosting the storage account.

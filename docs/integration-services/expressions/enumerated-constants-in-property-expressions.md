@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Enumerated Constants in Property Expressions
 

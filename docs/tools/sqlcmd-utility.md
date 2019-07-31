@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "RESET command"
   - "GO command"
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sqlcmd Utility

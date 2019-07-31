@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "Database Mail [SQL Server], components"
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Send a test email with database mail  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,6 +42,8 @@ You must be a member of the sysadmin fixed server role to use the Send Test E-Ma
     The sent_status column indicates if the test e-mail message was sent.
 
 1. If errors occurred, execute the following statement to view the error message:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

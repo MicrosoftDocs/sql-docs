@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setCharacterStream Method (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

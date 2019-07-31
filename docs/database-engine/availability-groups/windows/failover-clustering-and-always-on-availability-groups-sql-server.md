@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)

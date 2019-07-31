@@ -9989,22 +9989,8 @@
       items:
       - name: SSMS Support Policy
         href: ssms/support-policy.md
-      - name: Support options for business users
-        href: https://support.microsoft.com/gp/support-options-for-business
-      - name: Contact Microsoft
-        href: https://support.microsoft.com/gp/contactus81?Audience=Commercial
-      - name: All the ways to get help
+      - name: Feedback & help
         href: https://docs.microsoft.com/sql/sql-server/sql-server-get-help
-      - name: UserVoice - Suggestion to improve SQL Server?
-        href: https://feedback.azure.com/forums/908035-sql-server
-      - name: Setup and Upgrade -  MSDN Forums
-        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc
-      - name: Transact-SQL - MSDN Forums
-        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql
-      - name: Stack Overflow
-        href: https://stackoverflow.com/questions/tagged/sql-server
-      - name: Microsoft SQL Server License Terms and Information
-        href: https://www.microsoft.com/download/details.aspx?id=39299
       - name: User Assistance in SSMS
         href: ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data
@@ -10446,28 +10432,12 @@
       href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
     - name: SQL on Channel 9 >
       href: https://channel9.msdn.com/Search
-  - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
-    items:
-    - name: SQL Server >
-      href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: SQL Server Database Engine >
-      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
-    - name: SQL Server Security >
-      href: https://blogs.msdn.microsoft.com/sqlsecurity/
-    - name: SQL Server Data Tools >
-      href: https://blogs.msdn.microsoft.com/ssdt/
-  - name: Feedback & help
+  - name: Help
     items:
     - name: Get help
       href: sql-server/sql-server-get-help.md
-    - name: Feedback for SQL Docs >
-      href: https://aka.ms/sqldocsfeedback
-    - name: Feedback for SQL Server (UserVoice) >
-      href: https://feedback.azure.com/forums/908035-sql-server
-    - name: SQL Docs Survey >
-      href: https://aka.ms/sqldocsurvey
-    - name: Contribute to SQL Documentation!
-      href: sql-server/sql-server-docs-contribute.md
+    - name: SQL Docs navigation tips
+      href: sql-server/sql-docs-navigation-guide.md
     - name: DBA Stack Exchange >
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >
@@ -10476,6 +10446,24 @@
       href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit >
       href: https://www.reddit.com/r/SQLServer
+  - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
+    items:
+    - name: SQL Server >
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: Database Engine >
+      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+    - name: Security >
+      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+    - name: Data Tools >
+      href: https://blogs.msdn.microsoft.com/ssdt/
+  - name: Feedback
+    items: 
+    - name: SQL Docs > 
+      href: https://aka.ms/sqldocsfeedback
+    - name: SQL Server > 
+      href: https://feedback.azure.com/forums/908035-sql-server
+    - name: Edit SQL Documentation!
+      href: sql-server/sql-server-docs-contribute.md
   - name: Partners
     items:
     - name: Monitoring
@@ -10490,8 +10478,6 @@
     href: sql-server/sql-server-help-installation.md
 - name: Reference
   items:
-  - name: SQL Docs include files
-    href: sql-server/applies-to-includes.md
   - name: Archived Content (SQL 2005 - 2012) >
     displayName: 2005, 2008, 2008 r2, 2012, previous-versions
     href: https://docs.microsoft.com/previous-versions/sql/

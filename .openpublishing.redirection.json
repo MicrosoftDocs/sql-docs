@@ -1,6 +1,91 @@
 {
     "redirections": [
         {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-app-template.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-app-template",
+            "redirect_document_id": false
+        },     
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-app.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-app",
+            "redirect_document_id": false
+        },        
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-config-section.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-config",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-config.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-config",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-control-status.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-control-status",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-control.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-control",
+            "redirect_document_id": false
+        },               
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-debug.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-debug",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-endpoint.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-endpoint",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-pool-status.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-pool-status",
+            "redirect_document_id": false
+        },    
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-pool.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-pool",
+            "redirect_document_id": false
+        },                 
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-status.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-status",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-hdfs-mount",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-storage-pool.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-hdfs",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-hdfs.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-hdfs",
+            "redirect_document_id": false
+        },        
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl-sql.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata-sql",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/big-data-cluster/reference-mssqlctl.md",
+            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "redirect_document_id": false
+        },        
+        {
             "source_path": "docs/big-data-cluster/train-and-create-machinelearning-models-with-spark.md",
             "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
             "redirect_document_id": false
@@ -75,9 +160,6 @@
             "redirect_url": "/sql/linux/sql-server-linux-active-directory-authentication",
             "redirect_document_id": false
         },
-      
-      
-      
         {
             "source_path": "docs/toc/redirectfrom-reference-10.md",
             "redirect_url": "/sql/sql-server/applies-to-includes",
@@ -370,7 +452,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/sql-server-machine-learning-services",
+            "redirect_url": "/sql/advanced-analytics/",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/sql-server-machine-learning-services.md",
+            "redirect_url": "/sql/advanced-analytics/",
             "redirect_document_id": true
         },
         {
@@ -390,7 +477,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/sql-server-machine-learning-tasks.md",
-            "redirect_url": "/sql/advanced-analytics/sql-server-machine-learning-services",
+            "redirect_url": "/sql/advanced-analytics/",
             "redirect_document_id": false
         },
         {

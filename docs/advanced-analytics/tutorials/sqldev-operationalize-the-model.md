@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Lesson 4: Run predictions using R embedded in a stored procedure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article is part of a tutorial for SQL developers on how to use R in SQL Server.
 

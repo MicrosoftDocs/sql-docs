@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 ---
 # Quickstart: Verify R exists in SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server includes R language support for data science analytics on resident SQL Server data. Your R script can consist of open-source R functions, third-party R libraries, or built-in Microsoft R libraries such as [RevoScaleR](../r/revoscaler-overview.md) for predictive analytics at scale.
 

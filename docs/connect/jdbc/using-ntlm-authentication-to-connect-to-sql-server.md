@@ -20,7 +20,7 @@ manager: kenvh
 
 The [!INCLUDE[jdbcNoVersion] allows an application to use the **authenticationScheme** connection property to indicate that it wants to connect to a database using NTLM v2 Authentication. 
 
-In addition, the following properties must be specified for NTLM Authentication:
+The following properties must also be specified for NTLM Authentication:
 
 - **domain = domainName**
 - **user = userName**
@@ -95,7 +95,7 @@ Make sure that you have the necessary permission to run this query.
 
 ## Security Risks
 
-The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a relatively weak cryptographic scheme and is vulnerable to various attacks. It's replaced with Kerberos, which is a lot more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos cannot be used.
+The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a relatively weak cryptographic scheme and is vulnerable to various attacks. It's replaced with Kerberos, which is a lot more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos can't be used.
 
 The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports NTLM v2, which has some security improvements over the original v1 protocol. It'ss also recommended to enable Extended Protection, or use SSL Encryption for increased security. 
 

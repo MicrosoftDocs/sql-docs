@@ -83,16 +83,6 @@ The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4
 >
 > As of the 6.2 release, the driver will be able to build the **serverSpn** by default, although one can use **serverSpn** explicitly too.
 
-## Verifying that SQL Server Can be Accessed via NTLM
-
-Run the following query in SQL Server Management Studio:
-
-```sql
-select auth_scheme from sys.dm_exec_connections where session_id=\@\@spid
-```
-
-Make sure that you have the necessary permission to run this query.
-
 ## Security Risks
 
 The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a relatively weak cryptographic scheme and is vulnerable to various attacks. It's replaced with Kerberos, which is a lot more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos can't be used.

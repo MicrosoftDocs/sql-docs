@@ -7,11 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Known issues in Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server 2016 R Services](install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services with R and Python](install/sql-machine-learning-services-windows-install.md).
+This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server 2016 R Services](r/sql-server-r-services.md) and [SQL Server Machine Learning Services with R and Python](what-is-sql-server-machine-learning.md).
 
 ## Setup and configuration issues
 
@@ -71,7 +72,7 @@ The following example shows the commands with the default instance "MSSQL14.MSSQ
 
 ### 3. Unable to install SQL Server machine learning features on a domain controller
 
-If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with these errors:
+If you try to install SQL Server 2016 R Services or SQL Server Machine Learning Services on a domain controller, setup fails, with these errors:
 
 > *An error occurred during the setup process of the feature*
 > 

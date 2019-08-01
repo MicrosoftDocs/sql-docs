@@ -115,3 +115,10 @@ print(revoscalepy.__version__)
 print(sys.version)
   '
 ```
+
+## Next steps
+
++ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
++ [Get R package information](r-package-information.md)
++ [Install new R packages](../r/install-additional-r-packages-on-sql-server.md)
++ [R and Python tutorials](../tutorials/machine-learning-services-tutorials.md)

@@ -168,3 +168,10 @@ EXECUTE sp_execute_external_script
 print(packageDescription("glue"))
   '
 ```
+
+## Next steps
+
++ [Install new R packages](../r/install-additional-r-packages-on-sql-server.md)
++ [Get Python package information](python-package-information.md)
++ [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
++ [R and Python tutorials](../tutorials/machine-learning-services-tutorials.md)

@@ -101,11 +101,11 @@ The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] only supports 
 
 For more information on how to enable Extended Protection and, see:
 
-- [Connect to the Database Engine Using Extended Protection](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection?view=sql-server-2017)
+- [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection?view=sql-server-2017)
 
 For more information on connecting with SSL Encryption, see:
 
-- [Connecting with SSL Encryption](https://docs.microsoft.com/en-us/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-2017)
+- [Connecting with SSL Encryption](../../connect/jdbc/connecting-with-ssl-encryption?view=sql-server-2017)
 
 > [!NOTE]
 For the 7.4.0 release, enabling **both** extended protection and encryption is not supported.

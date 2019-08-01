@@ -104,12 +104,12 @@ DELETE Foo FROM Foo fooAlias WHERE c1 > ?;
 B. Ambiguous Column Name when tables have shared column names
 ```sql
 CREATE TABLE Foo(c1 int, c2 int, c3 int)
-Create TABLE Bar(c1 int, c2 int, c3 int)
+CREATE TABLE Bar(c1 int, c2 int, c3 int)
 
-SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM BAR WHERE c1 > ? and c2 < ? and c3 = ?); --Ambiguous Column Name
+SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar WHERE c1 > ? and c2 < ? and c3 = ?); --Ambiguous Column Name
 
 --Workaround: Use aliases
-SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM BAR b WHERE b.c1 = ? and b.c2 = ? and b.c3 = ?);
+SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar b WHERE b.c1 = ? and b.c2 = ? and b.c3 = ?);
 ```
 
 C. SELECT from a subquery with parameters

@@ -107,9 +107,7 @@ Microsoft Machine Learning Setup detects the existing features and SQL Server ve
 
 1. In SSMS, run `SELECT @@version` to verify the server meets minimum build requirements. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
    For SQL Server 2016 R Services, the minimum is [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) and [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1).
-::: moniker-end
 
 1. Check the version of R base and RevoScaleR packages to confirm the existing versions are lower than what you plan to replace them with. 
 

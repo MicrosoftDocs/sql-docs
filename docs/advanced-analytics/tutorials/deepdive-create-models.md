@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-You have enriched the training data. It's now time to analyze the data using regression modeling. Linear models are an important tool in the world of predictive analytics, and the **RevoScaleR** package includes regression algorithms that can subdivide the workload and run it in parallel.
+You have enriched the training data. It's now time to analyze the data using regression modeling. Linear models are an important tool in the world of predictive analytics. The **RevoScaleR** package includes regression algorithms that can subdivide the workload and run it in parallel.
 
 > [!div class="checklist"]
 > * Create a linear regression model

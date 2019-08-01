@@ -69,9 +69,9 @@ EXECUTE sp_execute_external_script
 
 ## Default R packages installed on SQL Server
 
-The following R packages are installed with SQL Server 2016 R Services or SQL Server 2017 (or later) Machine Learning Services when you select the R feature during setup.
-
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+The following R packages are installed with SQL Server R Services.
 
 |Packages         | Version | Description |
 |----------------|--------------|-------------|
@@ -81,6 +81,8 @@ The following R packages are installed with SQL Server 2016 R Services or SQL Se
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+
+The following R packages are installed with SQL Server Machine Learning Services when you select the R feature during setup.
 
 |Packages         | Version | Description |
 |----------------|--------------|-------------|

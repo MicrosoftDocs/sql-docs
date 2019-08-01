@@ -178,9 +178,24 @@ MSDTC for SQL Server on Linux does not use authentication on RPC communication b
 
 | Setting | Description |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | Configure secure only RPC calls for distributed transactions. |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configure security only RPC calls for distributed transactions. |
-| **distributedtransaction.turnoffrpcsecurity**               | Enable or disable RPC security for distributed transactions. |
+| **distributedtransaction.allowonlysecurerpccalls**          | Configure secure only RPC calls for distributed transactions. Default value is 0. |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configure security only RPC calls for distributed transactions. Default value is 0. |
+| **distributedtransaction.turnoffrpcsecurity**               | Enable or disable RPC security for distributed transactions. Default value is 0. |
+
+## Additional guidance
+
+### Active directory
+
+Microsoft recommends using MSDTC with RPC enabled if SQL Server is enrolled into an Active Directory (AD) configuration. If SQL Server is configured to use AD authentication, MSDTC uses mutual authentication RPC security by default.
+
+### Windows and Linux
+
+If a client on a Windows operating system needs to enlist into distributed transaction with SQL Server on Linux, it must have the following minimum version of Windows operating system:
+
+| Operating system | Minimum version | OS Build |
+|---|---|---|
+| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## Next steps
 

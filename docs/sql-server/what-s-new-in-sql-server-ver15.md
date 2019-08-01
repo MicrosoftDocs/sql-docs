@@ -120,6 +120,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 ### PolyBase
 
 |New feature or update | Details |
+|:---|:---|
 |PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. |
 | &nbsp; | &nbsp; |
 

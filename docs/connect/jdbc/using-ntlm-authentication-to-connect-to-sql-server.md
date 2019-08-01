@@ -1,7 +1,7 @@
 ---
 title: "Using NTLM Authentication to Connect to SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/26/2019"
+ms.date: "07/31/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -78,10 +78,7 @@ For more information about service principal names (SPNs), see:
 [!NOTE]  
 The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4.2 and higher.
 
-> [!NOTE]  
-> Before 6.2 release of JDBC driver, you would need to explicitly set the **serverSpn**.
->
-> As of the 6.2 release, the driver will be able to build the **serverSpn** by default, although one can use **serverSpn** explicitly too.
+Before 6.2 release of JDBC driver, you would need to explicitly set the **serverSpn**. As of the 6.2 release, the driver will be able to build the **serverSpn** by default, although one can use **serverSpn** explicitly too.
 
 ## Security Risks
 
@@ -97,8 +94,8 @@ For more information on connecting with SSL Encryption, see:
 
 - [Connecting with SSL Encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
-> [!NOTE]
-For the 7.4.0 release, enabling **both** extended protection and encryption is not supported.
+[!NOTE]
+For the 7.4.0 release, enabling **both** Extended Protection and Encryption is not supported.
 
 ## See Also
 

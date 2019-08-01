@@ -1,7 +1,7 @@
 ---
 title: "Understanding Java EE Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/26/2019"
+ms.date: "07/31/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

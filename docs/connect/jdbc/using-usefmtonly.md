@@ -1,7 +1,7 @@
 ---
 title: "Retrieving ParameterMetaData via useFmtOnly | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/26/2019"
+ms.date: "07/31/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

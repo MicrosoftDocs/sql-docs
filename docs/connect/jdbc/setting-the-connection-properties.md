@@ -1,7 +1,7 @@
 ---
 title: "Setting the Connection Properties | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/29/2019"
+ms.date: "07/31/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

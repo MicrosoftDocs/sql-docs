@@ -95,7 +95,7 @@ For more information on connecting with SSL Encryption, see:
 - [Connecting with SSL Encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 [!NOTE]
-For the 7.4.0 release, enabling **both** Extended Protection and Encryption is not supported.
+For the 7.4 release, enabling **both** Extended Protection and Encryption is not supported.
 
 ## See Also
 

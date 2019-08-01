@@ -153,13 +153,12 @@ GO
 ```
 
 To see more information about the package, view the `packageDescription`.
-The following statement returns information for the RevoScaleR and base packages.
+The following statement returns information for the **glue** package.
 
 ```sql
 EXECUTE sp_execute_external_script
   @language = N'R',
   @script = N'
-print(packageDescription("RevoScaleR"))
-print(packageDescription("base"))
-'
+print(packageDescription("glue"))
+  '
 ```

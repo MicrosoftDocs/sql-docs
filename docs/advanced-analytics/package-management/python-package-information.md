@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Learn how to get information about installed Python packages on SQL Server Machine Learning Services. Example Python script examples show you how to list package information such as installation path and version.
+Learn how to get information about installed Python packages on SQL Server Machine Learning Services. Example Python scripts show you how to list package information such as installation path and version.
 
 ## Default Python library location
 
@@ -39,9 +39,9 @@ EXECUTE sp_execute_external_script
   @script=N'import sys; print("\n".join(sys.path))'
 ```
 
-For more information about the variable `sys.path` and how it is used to set the interpreter's search path for modules, see [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
+For more information about the variable `sys.path` and how it's used to set the interpreter's search path for modules, see [The Module Search Path](https://docs.python.org/2/tutorial/modules.html#the-module-search-path).
 
-## Default Python packages installed
+## Default Python packages
 
 The following Python packages are installed with SQL Server Machine Learning Services when you select the Python feature during setup.
 
@@ -56,7 +56,7 @@ By default, Python packages are refreshed through service packs and cumulative u
 
 For more information, see [Upgrade R and Python components in SQL Server](../install/upgrade-r-and-python.md).
 
-## Open-source Python packages installed
+## Default open-source Python packages
 
 When you select the Python language option during setup, Anaconda 4.2 distribution (over Python 3.5) is installed. In addition to Python code libraries, the standard installation includes sample data, unit tests, and sample scripts.
 
@@ -66,6 +66,8 @@ When you select the Python language option during setup, Anaconda 4.2 distributi
 ## List all installed Python packages
 
 The `pip` module is installed by default and supports many operations for listing installed packages, in addition to those supported by standard Python. You can run `pip` from a Python command prompt, but you can also call some pip functions from `sp_execute_external_script`.
+
+The following example script displays a list of installed packages and their versions.
 
 ```sql
 EXECUTE sp_execute_external_script 
@@ -93,12 +95,13 @@ If the package is found, the code returns the message "Package scikit-learn is i
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-  import pip
-  import pkg_resources
-  pckg_name = "scikit-learn"
-  pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
-  installed_pckg = pckgs.query(''key == @pckg_name'')
-  print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")'
+import pip
+import pkg_resources
+pckg_name = "scikit-learn"
+pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
+installed_pckg = pckgs.query(''key == @pckg_name'')
+print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
+  '
 ```
 
 <a name="get-package-vers"></a>

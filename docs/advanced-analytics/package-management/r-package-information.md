@@ -71,7 +71,7 @@ EXECUTE sp_execute_external_script
 > [!NOTE]
 > The [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function can be executed only on the local computer. The function cannot return library paths for remote connections.
 
-## Default R packages installed
+## Default R packages
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
@@ -107,7 +107,7 @@ In addition, you can add MicrosoftML and olapR packages to a SQL Server instance
 
 For more information, see [Upgrade R and Python components in SQL Server](../install/upgrade-r-and-python.md).
 
-## Open-source R packages installed
+## Default open-source R packages
 
 R support includes open-source R so that you can call base R functions and install additional open-source and third-party packages. R language support includes core functionality such as **base**, **stats**, **utils**, and others. A base installation of R also includes numerous sample datasets and standard R tools such as **RGui** (a lightweight interactive editor) and **RTerm** (an R command prompt).
 

@@ -97,33 +97,33 @@ The general steps seen in the video are as follows:
 2. Next we see a memory-optimized edition of the table being created and populated by a few clicks in SQL Server Management Studio (SSMS.exe).
 3. Then the demo is rerun with the memory-optimized table. An enormous speed improvement is measured.
 
-### Index to time marks per video section
+### Index to each section in the video
 
-| Time mark<br/>as a link | Section title |
-| :---------------------- | :------------ |
+| `Time mark`<br/>`as a link` | `Section title` |
+| :-------------------------- | :-------------- |
 | [00:00](https://www.youtube.com/watch?v=l5l5eophmK4&t=0) | The beginning. |
 | <br/>[00:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=56) | <br/>Why customers should care about In-Memory OLTP. |
-| &nbsp; &nbsp; &bullet; &nbsp; [01:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=63) | &nbsp; &nbsp; Modern hardware requires modern architecture of database system. |
-| &nbsp; &nbsp; &bullet; &nbsp; [02:10](https://www.youtube.com/watch?v=l5l5eophmK4&t=130) | &nbsp; &nbsp; Explosion in data being generated; operations need to be instant (low latency). |
-| &nbsp; &nbsp; &bullet; &nbsp; [03:19](https://www.youtube.com/watch?v=l5l5eophmK4&t=199) | &nbsp; &nbsp; Reduce TCO - do more with the resources you have. |
+| &nbsp; &nbsp; &bullet; &nbsp; [01:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=63) | Modern hardware requires modern architecture of database system. |
+| &nbsp; &nbsp; &bullet; &nbsp; [02:10](https://www.youtube.com/watch?v=l5l5eophmK4&t=130) | Explosion in data being generated; operations need to be instant (low latency). |
+| &nbsp; &nbsp; &bullet; &nbsp; [03:19](https://www.youtube.com/watch?v=l5l5eophmK4&t=199) | Reduce TCO - do more with the resources you have. |
 | <br/>[03:33](https://www.youtube.com/watch?v=l5l5eophmK4&t=213) | <br/>What In-Memory OLTP is.<br/>Performance optimized using memory-optimized technology. |
-| &nbsp; &nbsp; &bullet; &nbsp; [05:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=303) | &nbsp; &nbsp; Up to 30X faster transaction processing. |
-| &nbsp; &nbsp; &bullet; &nbsp; [05:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=322) | &nbsp; &nbsp; Fully durable - data survives server failures. |
-| &nbsp; &nbsp; &bullet; &nbsp; [06:15](https://www.youtube.com/watch?v=l5l5eophmK4&t=375) | &nbsp; &nbsp; Fully integrated in SQL Server. Thus no new languages or tools to learn. |
-| &nbsp; &nbsp; &bullet; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | &nbsp; &nbsp; First released in SQL Server 2014, but major improvements in 2016. |
-| &nbsp; &nbsp; &bullet; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | &nbsp; &nbsp; Available in Azure SQL Database too (in the cloud). |
+| &nbsp; &nbsp; &bullet; &nbsp; [05:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=303) | Up to 30X faster transaction processing. |
+| &nbsp; &nbsp; &bullet; &nbsp; [05:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=322) | Fully durable - data survives server failures. |
+| &nbsp; &nbsp; &bullet; &nbsp; [06:15](https://www.youtube.com/watch?v=l5l5eophmK4&t=375) | Fully integrated in SQL Server. Thus no new languages or tools to learn. |
+| &nbsp; &nbsp; &bullet; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | First released in SQL Server 2014, but major improvements in 2016. |
+| &nbsp; &nbsp; &bullet; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | Available in Azure SQL Database too (in the cloud). |
 | <br/>[08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>Performance demonstration.<br/> Run the demo with a regular table. |
-| &nbsp; &nbsp; &bullet; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | &nbsp; &nbsp; SSMS context menu: **Reports** &gt; **Transaction Performance Analysis** |
-| &nbsp; &nbsp; &bullet; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | &nbsp; &nbsp; SSMS context menu: **Memory Optimization Advisor**<br/> &nbsp; &nbsp; Actually create a memory-optimized table from a regular table, plus migrate the data. |
-| &nbsp; &nbsp; &bullet; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | &nbsp; &nbsp; Rerun the demo, see 45X speed improvement. |
+| &nbsp; &nbsp; &bullet; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS context menu: **Reports** &gt; **Transaction Performance Analysis** |
+| &nbsp; &nbsp; &bullet; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | SSMS context menu: **Memory Optimization Advisor**<br/> &nbsp; &nbsp; Actually create a memory-optimized table from a regular table, plus migrate the data. |
+| &nbsp; &nbsp; &bullet; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | Rerun the demo, see 45X speed improvement. |
 | <br/>[12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>Easier to use In-Memory OLTP in SQL Server 2016 (compared to 2014). |
-| &nbsp; &nbsp; &bullet; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | &nbsp; &nbsp; Simplified analysis to help with app migration. |
-| &nbsp; &nbsp; &bullet; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | &nbsp; &nbsp; Reduced complexity of app migration through increased Transact-SQL language support (for example, with foreign keys and triggers). |
-| &nbsp; &nbsp; &bullet; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | &nbsp; &nbsp; Improved manageability.<br/> &nbsp; &nbsp; For example, change schema and indexes, auto-update of statistics. |
+| &nbsp; &nbsp; &bullet; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | Simplified analysis to help with app migration. |
+| &nbsp; &nbsp; &bullet; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | Reduced complexity of app migration through increased Transact-SQL language support (for example, with foreign keys and triggers). |
+| &nbsp; &nbsp; &bullet; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | Improved manageability.<br/> &nbsp; &nbsp; For example, change schema and indexes, auto-update of statistics. |
 | <br/>[14:46](https://www.youtube.com/watch?v=l5l5eophmK4&t=886) | <br/>Improved scalability. |
-| &nbsp; &nbsp; &bullet; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | &nbsp; &nbsp; Large memory-optimized tables (up to 2TB per database). |
-| &nbsp; &nbsp; &bullet; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | &nbsp; &nbsp; Even better scaling. |
-| &nbsp; &nbsp; &bullet; &nbsp; [16:41](https://www.youtube.com/watch?v=l5l5eophmK4&t=1001) | &nbsp; &nbsp; Do more with the resources you already have! |
+| &nbsp; &nbsp; &bullet; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | Large memory-optimized tables (up to 2TB per database). |
+| &nbsp; &nbsp; &bullet; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | Even better scaling. |
+| &nbsp; &nbsp; &bullet; &nbsp; [16:41](https://www.youtube.com/watch?v=l5l5eophmK4&t=1001) | Do more with the resources you already have! |
 | <br/>[16:53](https://www.youtube.com/watch?v=l5l5eophmK4&t=1013) | <br/>Final comments. (Ends at 17:32.) |
 | &nbsp; | &nbsp; |
 

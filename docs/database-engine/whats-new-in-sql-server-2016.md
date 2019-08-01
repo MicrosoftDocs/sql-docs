@@ -26,7 +26,7 @@ To review what is new in the other SQL Server components, see [What's New in SQL
 
 #### Try it out
 
-- To download [!INCLUDE[ssSQL15](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")].
+- To download [!INCLUDE[ssSQL15](../ssdt/media/download.png "download")].
 
 - Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] already installed.
 

@@ -1,22 +1,21 @@
 ---
-title: What is SQL Server Machine Learning Services (R and Python)?
+title: What is SQL Server Machine Learning Services (Python and R)?
 titleSuffix: 
-description: Overview of the Machine Learning Services feature in SQL Server, where you can integrate Python and R with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
+description: Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open source packages and frameworks, or the Microsoft Python and R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 07/24/2019
+ms.date: 08/01/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# What is SQL Server Machine Learning Services (R and Python)?
+# What is SQL Server Machine Learning Services (Python and R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Machine Learning Services is a feature of SQL Server, used for executing in-database R and Python scripts. The feature includes [Microsoft R and Python packages](#components) for high-performance predictive analytics and machine learning. The relational data can be used in R and Python scripts through stored procedures, T-SQL script containing R and Python statements, or R and Python code containing T-SQL.
+Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open source packages and frameworks, or the [Microsoft Python and R packages](#components) for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services.
 
-In Azure SQL Database, [Machine Learning Services (with R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) is currently in public preview.
+In Azure SQL Database, [Machine Learning Services](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) is currently in public preview.
 
 ## Bring compute power to the data
 

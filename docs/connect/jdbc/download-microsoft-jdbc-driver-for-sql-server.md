@@ -1,7 +1,7 @@
 ---
 title: "Download Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2019"
+ms.date: "08/01/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -22,7 +22,7 @@ The JDBC Driver can be added to a Maven project by adding it as a dependency in 
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.4.0.jre11</version>
+    <version>7.4.1.jre11</version>
 </dependency>
 ```  
 

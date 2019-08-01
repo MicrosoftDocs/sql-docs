@@ -120,8 +120,7 @@ The version of R provided by MRO using SQL Server Machine Learning Services Setu
 
 ## List all installed R packages
 
-The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure to display a list of R packages that have been installed in the R_SERVICES library for the current SQL instance. This script returns package name and version fields in the DESCRIPTION file (for more information about the optional and default fields for the R package DESCRIPTION field, see
-[https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)).
+The following example uses the R function `installed.packages()` in a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure to display a list of R packages that have been installed in the R_SERVICES library for the current SQL instance. This script returns package name and version fields in the DESCRIPTION file.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -135,6 +134,9 @@ OutputDataSet <- data.frame(Name, Version);',
   '
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
+
+For more information about the optional and default fields for the R package DESCRIPTION field, see
+[https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
 
 ## Find a single R package
 

@@ -9,7 +9,7 @@ ms.date: 07/30/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
-monikerRange: "=sql-server-2016||>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Get R package information on SQL Server Machine Learning Services
@@ -25,22 +25,22 @@ When you install machine learning with SQL Server, a single package library is c
 All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any R code running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.
 
-The following table shows the file location of R for different versions of SQL Server. The file paths shown assume the default instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used in place of MSSQLSERVER (for example, `MSSQL13.MYSERVER`).
+The default path of the binaries for R is:
 
-|Version and language  | Default path|
-|----------------------|------------|
-| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
-| SQL Server 2017 with R|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
+::: moniker-end
 
-The following table lists the default paths of the binaries when SQL Server 2016 R Server (Standalone) or SQL Server 2017 Machine Learning Server (Standalone) is installed. 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
+::: moniker-end
 
-|Version| Installation|Default path|
-|-------|-------------|------------|
-|SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
-|SQL Server 2017|Machine Learning Server, with R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
+This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
 
+<!-- I don't think this note is necessary. If you have these other products installed, you'd already know about them.
 > [!NOTE]
 > If you find other folders having similar subfolder names and files, you probably have a standalone installation of  Microsoft R Server or Machine Learning Server. These server products have different installers and paths: C:\Program Files\Microsoft\R Server\R_SERVER or C:\Program Files\Microsoft\ML SERVER\R_SERVER. For more information, see [Install R Server 9.1 for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) or [Install Machine Learning Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
+-->
 
 Run the following statement to verify the default R package library for the current instance:
 
@@ -52,10 +52,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-### RevoScaleR location and version
-
-In SQL Server 2017 (or later) Machine Learning Services, or in R Services with R upgraded to at least RevoScaleR 9.0.1, you can find the path of the instance library and the version of RevoScaleR used by SQL Server
-(for information about upgrading R Services, see [Upgrade machine learning components in SQL Server instances](../install/upgrade-r-and-python.md)).
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 The following stored procedure uses [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) to return the path of the instance library and the version of RevoScaleR used by SQL Server:
 
@@ -72,19 +69,37 @@ EXECUTE sp_execute_external_script
 > [!NOTE]
 > The [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function can be executed only on the local computer. The function cannot return library paths for remote connections.
 
+::: moniker-end
+
 ## Default R packages installed on SQL Server
 
 The following R packages are installed with SQL Server 2016 R Services or SQL Server 2017 (or later) Machine Learning Services when you select the R feature during setup.
 
-|Packages         | 2016 | 2017 | Description |
-|----------------|--------------|--------------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Used for including R script in stored procedures. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | Adds machine learning algorithms in R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | Used for writing MDX statements in R. |
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+|Packages         | Version | Description |
+|----------------|--------------|-------------|
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | Used for including R script in stored procedures. |
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+
+|Packages         | Version | Description |
+|----------------|--------------|-------------|
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9.2 | Used for including R script in stored procedures. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.2 | Adds machine learning algorithms in R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9.2 | Used for writing MDX statements in R. |
+
+::: moniker-end
 
 By default, R packages are refreshed through service packs and cumulative updates. Additional packages and full version upgrades of core R components are possible only through product upgrades or by binding R support to Microsoft Machine Learning Server.
-In addition, you can add MicrosoftML and olapR packages to a SQL Server 2016 R Services instance through a component upgrade.
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In addition, you can add MicrosoftML and olapR packages to a SQL Server instance through a component upgrade.
+::: moniker-end
 
 For more information, see [Upgrade R and Python components in SQL Server](../install/upgrade-r-and-python.md).
 
@@ -94,12 +109,13 @@ R support includes open-source R so that you can call base R functions and insta
 
 The distribution of open-source R included in your installation is [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
-The following table summarizes the versions of R provided by MRO using SQL Server Setup.
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+The version of R provided by MRO using SQL Server Setup is 3.2.2.
+::: moniker-end
 
-|Release             | R version       |
-|--------------------|-----------------|
-| [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+The version of R provided by MRO using SQL Server Setup is 3.3.3.
+::: moniker-end
 
 > [!IMPORTANT]
 > You should never manually overwrite the version of R installed by SQL Server Setup with newer versions on the web. Microsoft R packages are based on specific versions of R. Modifying your installation could destabilize it.

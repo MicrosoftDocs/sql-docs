@@ -34,7 +34,7 @@ GeneMi.  2019/04/03.
 | Feature added | Details |
 | :------------ | :------ |
 | Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
-| Dynamic loading of OpenSSL | See [Programming Guidelines](programming-guidelines.md#OpenSSL). |
+| Dynamic loading of OpenSSL | See [Programming Guidelines](programming-guidelines.md#bkmk-openssl). |
 | Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |

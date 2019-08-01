@@ -3,23 +3,25 @@ title: How to configure MSDTC on Linux
 description: This article provides a walk-through for configuring MSDTC on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 03/21/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSTDC) on Linux. MSDTC support on Linux was introduced in SQL Server 2019 preview.
+This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSTDC) on Linux.
+
+> [!NOTE]
+> MSDTC on Linux is supported on the SQL Server 2019 preview SQL Server 2017 starting with cumulative update 16.
 
 ## Overview
 
 Distributed transactions are enabled on SQL Server on Linux by introducing MSDTC and RPC endpoint mapper functionality within SQL Server. By default, an RPC endpoint-mapping process listens on port 135 for incoming RPC requests and provides registered components information to remote requests. Remote requests can use the information returned by endpoint mapper to communicate with registered RPC components, such as MSDTC services. A process requires super user privileges to bind to well-known ports (port numbers less than 1024) on Linux. To avoid starting SQL Server with root privileges for the RPC endpoint mapper process, system administrators must use iptables to create Network Address Translation to route traffic on port 135 to SQL Server's RPC endpoint-mapping process.
 
-SQL Server 2019 introduces two configuration parameters for the mssql-conf utility.
+MSDTC uses two configuration parameters for the mssql-conf utility:
 
 | mssql-conf setting | Description |
 |---|---|
@@ -35,8 +37,6 @@ The following MSDTC configurations are supported:
 - OLE-TX Distributed transactions against SQL Server on Linux for ODBC providers.
 - XA Distributed transactions against SQL Server on Linux using JDBC and ODBC providers. For XA transactions to be performed using ODBC provider, you need to use Microsoft ODBC Driver for SQL Server version 17.3 or higher.
 - Distributed transactions on Linked server.
-
-For limitations and known issues for MSDTC in preview, see [Release notes for SQL Server 2019 preview on Linux](sql-server-linux-release-notes-2019.md#msdtc).
 
 ## MSDTC configuration steps
 

@@ -57,8 +57,6 @@ The _datepart_ value cannot be specified in a variable, nor as a quoted string l
 
 The following table lists all the valid _datepart_ values. **DATEDIFF** accepts either the full name of the _datepart_, or any listed abbreviation of the full name.
 
-| Full name | Abbreviations |
-| :-------- | :------------ |
 |*datepart* name|*datepart* abbreviation|  
 |-----------|------------|
 |**year**|**yy, yyyy**|  
@@ -74,7 +72,6 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
 | &nbsp; | &nbsp; |
-=======
 
 > [!NOTE]
 > Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.

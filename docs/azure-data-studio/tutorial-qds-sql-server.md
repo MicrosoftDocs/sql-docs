@@ -116,7 +116,7 @@ To add the *slow queries widget* to your dashboard, edit the *dashboard.database
 
 4. Close the **Insights** pane.
 
-## View the query plan
+## View the query plan 
 
 1. Right-click on the **TutorialDB** database and select *Manage*
 

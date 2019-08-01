@@ -38,8 +38,8 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 
 | NTLM change | Details |
 | :--------- | :------ |
-| Supports NTLM authentication mode. | This mode of authentication allows users to perform Windows Integrated Authentication from non-Windows machines.  |
-| More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| Supports NTLM authentication mode. | This mode of authentication allows both Windows and non-Windows clients to authenticate themselves against SQL Server using Windows domain users. |
+| More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### Introduces querying ParameterMetaData via _useFmtOnly_
@@ -47,7 +47,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | useFmtOnly change | Details |
 | :---------- | :------ |
 | **useFmtOnly** connection property added. | This feature allows users to optionally query ParameterMetaData via the `SET FMTONLY ON` legacy API. This is useful for scenarios where `sp_describe_undeclared_parameters` doesn't perform as expected. |
-| More details and limitations. | See [Using useFmtOnly](../../connect/jdbc/using-useFmtOnly.md) |
+| More details and limitations. | See [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.1
@@ -64,7 +64,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | Known issues | Details |
 | :----------- | :------ |
 | When using NTLM Authentication. | Enabling Extended Protection and encrypted connections at the same time is currently not supported. |
-| When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. See [Using useFmtOnly](../../connect/jdbc/using-useFmtOnly.md) for more details and workaround suggestions. |
+| When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. See [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) for more details and workaround suggestions. |
 | &nbsp; | &nbsp; |
 
 ## 7.2.2

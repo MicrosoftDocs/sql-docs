@@ -823,7 +823,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### C. Create an index on a table in another database
-The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.
+The following example creates a clustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);

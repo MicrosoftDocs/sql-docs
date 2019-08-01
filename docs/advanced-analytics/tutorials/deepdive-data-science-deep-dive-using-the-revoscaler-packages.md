@@ -8,9 +8,10 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: Use RevoScaleR R functions with SQL Server data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is a Microsoft R package providing distributed and parallel processing for data science and machine learning workloads. For R development in SQL Server, **RevoScaleR** is one of the core built-in packages, with functions for creating data source objects, setting a compute context, managing packages, and most importantly: working with data end-to-end, from import to visualization and analysis. Machine Learning algorithms in SQL Server have a dependency on **RevoScaleR** data sources. Given the importance of **RevoScaleR**, knowing when and how to call its functions is an essential skill. 
 
@@ -18,7 +19,7 @@ In this multi-part tutorial, you are introduced to a range of **RevoScaleR** fun
 
 ## Prerequisites
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R feature, or [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R feature, or [SQL Server R Services (in-Database)](../install/sql-r-services-windows-install.md)
   
 + [Database permissions](../security/user-permission.md) and a SQL Server database user login
 
@@ -26,7 +27,7 @@ In this multi-part tutorial, you are introduced to a range of **RevoScaleR** fun
 
 + An IDE such as RStudio or the built-in RGUI tool included with R
 
-To switch back and forth between local and remote compute contexts, you need two systems. Local is typically a development workstation with sufficent power for data science workloads. Remote in this case is SQL Server 2017 or SQL Server 2016 with the R feature enabled. 
+To switch back and forth between local and remote compute contexts, you need two systems. Local is typically a development workstation with sufficent power for data science workloads. Remote in this case is SQL Server with the R feature enabled. 
 
 Switching compute contexts is predicated on having the same-version **RevoScaleR** on both local and remote systems. On a local workstation, you can get the **RevoScaleR** packages and related providers by installing Microsoft R Client.
 

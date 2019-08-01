@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
+ms.reviewer: "vanto"
 ms.technology: security
 ms.topic: conceptual
 author: jaszymas
@@ -144,13 +144,13 @@ The following security considerations apply to Always Encrypted with secure encl
 - Encrypting a column using randomized encryption with an enclave-enabled CEK may result in leaking the order of data stored in the column, as such columns support range comparisons. For example, if an encrypted column, containing employee salaries, has an index, a malicious DBA could scan the index to find the maximum encrypted salary value and identify a person with the maximum salary (assuming the name of the person is not encrypted). 
 - If you use Always Encrypted to protect sensitive data from unauthorized access by DBAs, do not share the column master keys or column encryption keys with the DBAs. A DBA can manage indexes on encrypted columns without having direct access to the keys, by leveraging the cache of column encryption keys inside the enclave.
 
-## Considerations for AlwaysOn and Database Migration
+## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Considerations for Availability Groups and Database Migration
 
-When configuring an AlwaysOn availability group that is required to support queries using enclaves, you need to ensure that all SQL Server instances hosting the databases in the availability group support Always Encrypted with secure enclaves and have an enclave configured. If the primary database supports enclaves, but a secondary replica does not, any query that attempts to use the functionality of Always Encrypted with secure enclaves will fail.
+When configuring an Always On availability group that is required to support queries using enclaves, you need to ensure that all SQL Server instances hosting the databases in the availability group support Always Encrypted with secure enclaves and have an enclave configured. If the primary database supports enclaves, but a secondary replica does not, any query that attempts to use the functionality of Always Encrypted with secure enclaves will fail.
 
-When you restore a backup file of a database that uses the functionality of Always Encrypted with secure enclaves on a SQL Server instance that doesn't have the enclave configured, the restore operation will succeed and all the functionality that doesn't rely on the enclave will be available. However, any subsequent queries using the enclave functionality will fail, and indexes on enclave-enabled columns using randomized encryption will become invalid.  The same applies when you attach a database using Always Encrypted with secure enclaves on the instance that doesn't have the enclave configured.
+When you restore a backup file of a database that uses the functionality of Always Encrypted with secure enclaves on a SQL Server instance that doesn't have the enclave configured, the restore operation will succeed and all the functionality that doesn't rely on the enclave will be available. However, any subsequent queries using the enclave functionality will fail, and indexes on enclave-enabled columns using randomized encryption will become invalid. The same applies when you attach a database using Always Encrypted with secure enclaves on the instance that doesn't have the enclave configured.
 
-If your database contains indexes on enclave-enabled columns using randomized encryption, make sure you enable  [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) in the database before creating a database backup. ADR will ensure the database, including the indexes, is available immediately after you restore the database. For more information, see [Database Recovery](#database-recovery).
+If your database contains indexes on enclave-enabled columns using randomized encryption, make sure you enable [Accelerated database recovery (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) in the database before creating a database backup. ADR will ensure the database, including the indexes, is available immediately after you restore the database. For more information, see [Database Recovery](#database-recovery).
 
 When you migrate your database using a bacpac file, you need to make sure you drop all indexes enclave-enabled columns using randomized encryption before creating the bacpac file.
 

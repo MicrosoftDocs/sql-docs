@@ -1,23 +1,24 @@
 ---
-title: Extensibility architecture for R language and Python script - SQL Server Machine Learning
+title: Extensibility architecture for R language and Python script
 description: External code support for the SQL Server database engine, with dual architecture for running R and Python script on relational data.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/17/2018  
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Extensibility architecture in SQL Server Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server has an extensibility framework for running external script such as R or Python on the server. Script executes in a language runtime environment as an extension to the core database engine. 
 
 ## Background
 
-The extensibility framework was introduced in SQL Server 2016 to support the R runtime. SQL Server 2017 adds support for Python
+The extensibility framework was introduced in SQL Server 2016 to support the R runtime. SQL Server 2017 and later has support for Python.
 
 The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python, reducing friction when moving data science solutions into production, and protecting data exposed during the development process. By executing a trusted scripting language within a secure framework managed by SQL Server, database administrators can maintain security while allowing data scientists access to enterprise data.
 
@@ -51,8 +52,8 @@ The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a serv
 
 | Trusted launchers | Extension | SQL Server versions |
 |-------------------|-----------|---------------------|
-| RLauncher.dll for the R language | [R extension](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Pythonlauncher.dll for Python 3.5 | [Python extension](extension-python.md) | SQL Server 2017 |
+| RLauncher.dll for the R language | [R extension](extension-r.md) | SQL Server 2016 and later |
+| Pythonlauncher.dll for Python 3.5 | [Python extension](extension-python.md) | SQL Server 2017 and later |
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs Launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
 
@@ -66,7 +67,7 @@ To execute tasks in a specific supported language, the Launchpad gets a secured 
 
 In effect, BxlServer is a companion to a language run time environment that works with SQL Server to transfer data and manage tasks. BXL stands for Binary Exchange language and refers to the data format used to move data efficiently between SQL Server and external processes. BxlServer is also an important part of related products such as Microsoft R Client and Microsoft R Server.
 
-**SQL Satellite** is an extensibility API, included in the database engine starting with SQL Server 2016, that supports external code or external runtimes implemented using C or C++.
+**SQL Satellite** is an extensibility API, included in the database engine, that supports external code or external runtimes implemented using C or C++.
 
 BxlServer uses SQL Satellite for these tasks:
 

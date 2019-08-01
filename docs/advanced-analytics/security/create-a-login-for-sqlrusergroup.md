@@ -1,5 +1,5 @@
 ---
-title: Create a login for SQLRUserGroup - SQL Server Machine Learning Services
+title: Create a login for SQLRUserGroup
 description: For loopback connections using implied authentication, create a login in SQL Server for SQLRUserGroup, so that a worker account can log in to the server, for identity conversion back to the calling user.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,9 +8,10 @@ ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a login for SQLRUserGroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Create a [login in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) for [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a [loop back connection](../../advanced-analytics/concepts/security.md#implied-authentication) in your script specifies a *trusted connection*, and the identity used to execute an object contains your code is a Windows user account.
 

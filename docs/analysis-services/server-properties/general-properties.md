@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services General Properties | Microsoft Docs"
-ms.date: 04/04/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: 
@@ -15,7 +15,7 @@ manager: kfile
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the server properties listed in the following tables. This topic documents those server properties in the msmdsrv.ini file that are not otherwise included in a specific section, such as Security, Network, or ThreadPool. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Applies to:** Multidimensional and Tabular server mode, unless noted otherwise  
+ These properties apply to Multidimensional and Tabular server mode, unless noted otherwise.  
   
 ## Non-Specific Category  
  **AdminTimeout**  
@@ -30,7 +30,7 @@ manager: kfile
  A string property that identifies the name of the directory where backup files are stored by default, in the event a path is not specified as part of the Backup command.  
  
 **ClientCacheRefreshPolicy**
-Applies to Azure Analysis Services only. Overrides the **Scheduled cache refresh** setting for all Power BI datasets. All Live Connect reports will observe the server-level setting irrespective of the dataset-level setting, or which workspace they reside on.
+ For tabular models in SSAS and Azure Analysis Services, this property overrides the **Scheduled cache refresh** setting for all Power BI datasets. All Live Connect reports will observe the server-level setting irrespective of the dataset-level setting, or which workspace they reside on.
 
 The default value for this property is -1, which allows all background cache refreshes as specified in the Scheduled cache refresh setting for the dataset. To discourage all background cache refreshes, specify zero (0).
 

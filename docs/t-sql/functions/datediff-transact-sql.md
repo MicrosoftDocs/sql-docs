@@ -49,8 +49,8 @@ DATEDIFF ( datepart , startdate , enddate )
 ```  
   
 ## Arguments  
-*datepart*  
 
+*datepart*  
 The units in which **DATEDIFF** reports the difference between the _startdate_ and _enddate_. Commonly used _datepart_ units include `month` or `second`.
 
 The _datepart_ value cannot be specified in a variable, nor as a quoted string like `'month'`.
@@ -59,6 +59,8 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 
 | Full name | Abbreviations |
 | :-------- | :------------ |
+|*datepart* name|*datepart* abbreviation|  
+|-----------|------------|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
@@ -72,6 +74,7 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
 | &nbsp; | &nbsp; |
+=======
 
 > [!NOTE]
 > Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.
@@ -129,7 +132,7 @@ SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
-  
+
 If *startdate* and *enddate* have different year values, but they have the same calendar week values, `DATEDIFF` will return 0 for *datepart* **week**.
 
 ## Remarks  

@@ -1,5 +1,6 @@
 ---
-title: Overview of SQL Server Machine Learning Services (R, Python)
+title: What is SQL Server Machine Learning Services (R and Python)?
+titleSuffix: 
 description: Overview of the Machine Learning Services feature in SQL Server, where you can integrate Python and R with relational data for data science and statistical modeling, machine learning models, predictive analytics, data visualization and more.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,7 +11,7 @@ author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# SQL Server Machine Learning Services (R, Python)
+# What is SQL Server Machine Learning Services (R and Python)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services is a feature of SQL Server, used for executing in-database R and Python scripts. The feature includes [Microsoft R and Python packages](#components) for high-performance predictive analytics and machine learning. The relational data can be used in R and Python scripts through stored procedures, T-SQL script containing R and Python statements, or R and Python code containing T-SQL.

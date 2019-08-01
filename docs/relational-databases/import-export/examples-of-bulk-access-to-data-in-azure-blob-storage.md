@@ -54,7 +54,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
         LOCATION = 'https://newinvoices.blob.core.windows.net', 
-        Credential = 'UploadInvoices';
+        CREDENTIAL = 'UploadInvoices';
     );
 ```   
 

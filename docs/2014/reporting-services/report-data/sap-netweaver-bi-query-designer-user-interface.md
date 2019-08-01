@@ -52,14 +52,14 @@ manager: kfile
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. Not available for this data source type.|  
 |**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Refresh dataset fields](../media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Refresh metadata from the data source.|  
-|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box.|  
-|![Toggle for show empty cells](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Switch between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
-|![AutoExecute the query](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made, for example, deleting a column in the Data pane. Results are shown in the Data pane.|  
-|![Delete](../../analysis-services/media/rsqdicon-delete.gif "Delete")|Delete the selected column in the Data pane from the query.|  
-|![Icon for the Query Parameters dialog box](../../analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Display the **Variables** dialog box. This button is enabled only when the selected cube is a Query cube (because only query cubes support variables). When you assign a default value to a variable, a corresponding report parameter is created.|  
-|![Run the query](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the results in the Data pane.|  
-|![Cancel the query](../../analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Cancel the query.|  
-|![Switch to Design mode](../../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Switch between Design mode and Query mode.|  
+|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Display the **Calculated Member Builder** dialog box.|  
+|![Toggle for show empty cells](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Switch between showing and not showing empty cells in the Data pane. (This is the equivalent to using the NON EMPTY clause in MDX).|  
+|![AutoExecute the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatically run the query and show the result every time a change is made, for example, deleting a column in the Data pane. Results are shown in the Data pane.|  
+|![Delete](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Delete")|Delete the selected column in the Data pane from the query.|  
+|![Icon for the Query Parameters dialog box](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Display the **Variables** dialog box. This button is enabled only when the selected cube is a Query cube (because only query cubes support variables). When you assign a default value to a variable, a corresponding report parameter is created.|  
+|![Run the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the results in the Data pane.|  
+|![Cancel the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Cancel the query.|  
+|![Switch to Design mode](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Switch between Design mode and Query mode.|  
   
 ## Graphical Query Designer in Query Mode  
  To change the graphical query designer to Query mode, click the **Design Mode** toggle button on the toolbar.  
@@ -89,13 +89,13 @@ manager: kfile
   
 -   **Edit As Text**  
   
--   **Add Calculated Member** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Add Calculated Member** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Show Empty Cells** (![Toggle for show empty cells](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
+-   **Show Empty Cells** (![Toggle for show empty cells](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
   
--   **AutoExecute** (![AutoExecute the query](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
+-   **AutoExecute** (![AutoExecute the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
   
--   **Delete** (![Delete](../../analysis-services/media/rsqdicon-delete.gif "Delete"))  
+-   **Delete** (![Delete](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Delete"))  
   
 ## See Also  
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   

@@ -14,7 +14,7 @@ manager: kfile
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A perspective is a mechanism to simplify or focus the model into a smaller portion of it for the client application.  
   
- See [Perspective Representation (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) for a detailed explanation on how to create and manipulate the perspective representation.  
+ See [Perspective Representation (Tabular)](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular) for a detailed explanation on how to create and manipulate the perspective representation.  
   
 > [!WARNING]  
 >  Perspectives are not a security mechanism; objects outside the perspective can still be accessed by the user through other interfaces.  

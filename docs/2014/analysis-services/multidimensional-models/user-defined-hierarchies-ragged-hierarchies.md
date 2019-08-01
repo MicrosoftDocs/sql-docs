@@ -68,6 +68,6 @@ manager: craigg
  [Create User-Defined Hierarchies](user-defined-hierarchies-create.md)   
  [User Hierarchies](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Parent-Child Hierarchy](parent-child-dimension.md)   
- [Connection String Properties &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Connection String Properties &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

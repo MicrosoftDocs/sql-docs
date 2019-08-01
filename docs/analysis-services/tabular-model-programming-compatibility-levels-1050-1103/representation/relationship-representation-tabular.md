@@ -14,7 +14,7 @@ manager: kfile
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A relationship is a connection between two tables of data. The relationship establishes how the data in the two tables should be correlated.  
   
- See [Relationship Representation (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular.md) for a detailed explanation on how to create and manipulate the relationship representation.  
+ See [Relationship Representation (Tabular)](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/relationship-representation-tabular) for a detailed explanation on how to create and manipulate the relationship representation.  
   
 ## Relationship Representation  
  In tabular models, multiple relationships can be defined between two tables. When multiple relationships, between two tables, are defined only one can be defined as the default relationship for the model and it is named as the Active relationship; all other relationships are named as Inactive.  

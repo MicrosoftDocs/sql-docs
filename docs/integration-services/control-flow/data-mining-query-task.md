@@ -37,9 +37,9 @@ ms.author: janinez
 ## Prediction Queries  
  The query is a Data Mining Extensions (DMX) statement. The DMX language is an extension of the SQL language that provides support for working with mining models. For more information about how to use the DMX language, see [Data Mining Extensions &#40;DMX&#41; Reference](../../dmx/data-mining-extensions-dmx-reference.md).  
   
- The task can query multiple mining models that are built on the same mining structure. A mining model is built using one of the data mining algorithms that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides. The mining structure that the Data Mining Query task references can include multiple mining models, built using different algorithms. For more information, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) and [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ The task can query multiple mining models that are built on the same mining structure. A mining model is built using one of the data mining algorithms that [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides. The mining structure that the Data Mining Query task references can include multiple mining models, built using different algorithms. For more information, see [Mining Structures &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) and [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
- The prediction query that the Data Mining Query task runs returns a result that is a single row or a data set. A query that returns a single row is called a singleton query: for example, the query that predicts how many sailboats will be sold during the summer months returns a number. For more information about prediction queries that return a single row, see [Data Mining Query Tools](../../analysis-services/data-mining/data-mining-query-tools.md).  
+ The prediction query that the Data Mining Query task runs returns a result that is a single row or a data set. A query that returns a single row is called a singleton query: for example, the query that predicts how many sailboats will be sold during the summer months returns a number. For more information about prediction queries that return a single row, see [Data Mining Query Tools](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools).  
   
  The query results are saved to tables. If a table with the name that the Data Mining Query task specifies already exists, the task can create a new table, using the same name with a number appended, or it can overwrite the table content.  
   
@@ -65,7 +65,7 @@ ms.author: janinez
 ## Data Mining Query Task Editor (Mining Model Tab)
   Use the **Mining Model** tab of the **Data Mining Query Task** dialog box to specify the mining structure and mining model to use.  
   
- To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md).  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### General Options  
  **Name**  
@@ -97,7 +97,7 @@ ms.author: janinez
 ## Data Mining Query Task Editor (Query Tab)
   Use the **Query** tab of the **Data Mining Query Task** dialog box to create prediction queries based on a mining model. In this dialog box you can also bind parameters and result sets to variables.  
   
- To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md).  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### General Options  
  **Name**  
@@ -153,7 +153,7 @@ ms.author: janinez
 ## Data Mining Query Task Editor (Output Tab)
   Use the **Output** tab of the **Data Mining Query Task Editor** dialog box to specify the destination of the prediction query.  
   
- To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](../../analysis-services/data-mining/data-mining-solutions.md).  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md) and [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### General Options  
  **Name**  

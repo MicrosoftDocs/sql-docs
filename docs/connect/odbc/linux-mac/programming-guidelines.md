@@ -111,7 +111,7 @@ There are some encoding conversion differences between Windows and several versi
 
 In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates are split across SQLPutData buffers, it results in data corruption. Use buffers for streaming SQLPutData that do not end in partial character encodings. This limitation has been removed with ODBC Driver 17.
 
-## OpenSSL
+## <a name="bkmk-openssl"></a>OpenSSL
 Starting with version 17.4, the driver loads OpenSSL dynamically, which allows it to run on systems that have either version 1.0 or 1.1 without a need for separate driver files. When multiple versions of OpenSSL are present, the driver will attempt to load the latest one. The driver currently supports OpenSSL 1.0.x and 1.1.x
 
 > [!NOTE]  

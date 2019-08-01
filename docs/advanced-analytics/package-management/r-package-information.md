@@ -52,8 +52,6 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-
 The following stored procedure uses [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) to return the path of the instance library and the version of RevoScaleR used by SQL Server:
 
 ```sql
@@ -68,8 +66,6 @@ EXECUTE sp_execute_external_script
 
 > [!NOTE]
 > The [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) function can be executed only on the local computer. The function cannot return library paths for remote connections.
-
-::: moniker-end
 
 ## Default R packages installed on SQL Server
 

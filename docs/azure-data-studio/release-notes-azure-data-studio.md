@@ -134,7 +134,7 @@ March 18, 2019 &nbsp; / &nbsp; version: 1.5.1
 **Workaround:** Will be fixed in next release. 
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Dacpac Extract crashes SqlToolsService if invalid version is used <br/>
 **Workaround:** Restart Azure Data Studio and ensure correct version is used.
-- New Notebook and Open Notebook icons are lost <br/> 
+- New Notebook and Open Notebook icons are lost <br/>
 **Workaround:** The legacy connection type is deprecated. We recommend connecting to the SQL Server endpoint and you’ll get all the actions (New Notebook, Spark Job) as expected. 
 
 ## February 2019

@@ -8,6 +8,7 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Native scoring using the PREDICT T-SQL function
@@ -30,7 +31,7 @@ The function returns predictions for the input data, together with any columns o
 
 ## Prerequisites
 
-PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server 2017 Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux), or Azure SQL Database. You do not need to install R, Python, or enable additional features.
+PREDICT is available on all editions of SQL Server 2017 database engine and enabled by default, including SQL Server Machine Learning Services on Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux), or Azure SQL Database. You do not need to install R, Python, or enable additional features.
 
 + The model must be trained in advance using one of the supported **rx** algorithms listed below.
 

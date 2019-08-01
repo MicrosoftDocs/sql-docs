@@ -25,13 +25,17 @@ When you install machine learning with SQL Server, a single package library is c
 All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any R code running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 The default path of the binaries for R is:
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+
+The default path of the binaries for R is:
+
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
 ::: moniker-end
 

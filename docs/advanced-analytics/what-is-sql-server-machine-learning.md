@@ -4,18 +4,16 @@ description: Overview of the Machine Learning Services feature in SQL Server, wh
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/13/2019
+ms.date: 07/24/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server Machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services is a feature of SQL Server, used for executing in-database R and Python scripts. The feature includes [Microsoft R and Python packages](#components) for high-performance predictive analytics and machine learning. The relational data can be used in R and Python scripts through stored procedures, T-SQL script containing R and Python statements, or R and Python code containing T-SQL.
-
-If you previously used [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services in SQL Server 2017 and later is the next generation of R support, with updated versions of base R, RevoScaleR, MicrosoftML, and other libraries introduced in 2016.
 
 In Azure SQL Database, [Machine Learning Services (with R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) is currently in public preview.
 
@@ -34,7 +32,7 @@ By using the right combination of SQL and R for different data processing and an
 
 ## Components
 
-SQL Server 2017 supports R and Python. The following table describes the components.
+SQL Server supports R and Python. The following table describes the components.
 
 | Component | Description |
 |-----------|-------------|
@@ -123,19 +121,6 @@ To take advantage of the resource management and security features in SQL Server
 + Enabling resource governance (requires the Enterprise edition)
 
 For more information, see [Resource Governance for R](r/resource-governance-for-r-services.md) and [R Package Management for SQL Server](r/install-additional-r-packages-on-sql-server.md).
-
-## Version history
-
-SQL Server 2017 Machine Learning Services is the next generation of SQL Server 2016 R Services, enhanced to include Python. The following table is a complete list of all product versions, from inception to the current release. 
-
-| Product name | Engine version | Release date |
-|--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (In-Database) | R Server 9.2.1 <br/> Python Server 9.2 | October 2017 |
-| SQL Server 2017 Machine Learning Server (Standalone) | R Server 9.2.1 <br/> Python Server 9.2 | October 2017 |
-| SQL Server 2016 R Services (In-Database) | R Server 9.1  | July 2017  |
-| SQL Server 2016 R Server (Standalone)  |  R Server 9.1 | July 2017 |
-
-For package versions by release, see the version map in [Upgrade R and Python components](install/upgrade-r-and-python.md#version-map).
 
 ## Portability and related products
 

@@ -25,7 +25,7 @@ July 31, 2019
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 7.4. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=PLACEHOLDER)<br/>&bull; &nbsp; [GitHub, 7.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Download the latest updates for JDBC Driver 7.4. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | Fully compliant with JDBC API Specification 4.2. | The jars in the 7.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.4.0.jre11.jar file from the 7.4 package should be used with Java 11. |
 | Compatible with Java Development Kit (JDK) version 12.0, 11.0, and 1.8. | Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11.0 and 1.8. |
 | &nbsp; | &nbsp; |

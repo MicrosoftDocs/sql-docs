@@ -7,13 +7,14 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Extended events for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server provides a set of extended events to use in troubleshooting operations related to the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], as well as Python or R jobs sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-**Applies to:**  SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**Applies to:**  SQL Server 2016 R Services, SQL Server Machine Learning Services
 
 ## SQL Server events for machine learning
 

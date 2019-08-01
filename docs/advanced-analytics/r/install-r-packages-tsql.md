@@ -1,6 +1,6 @@
 ---
 title: Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages
-description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database).
+description: Add new R packages to SQL Server 2016 R Services or SQL Server Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,6 +8,7 @@ ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server

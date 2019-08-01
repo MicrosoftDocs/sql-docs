@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Learn how to get information about installed R packages on SQL Server Machine Learning Services. Example R script examples show you how to list package information such as installation path and version.
+Learn how to get information about installed R packages on SQL Server Machine Learning Services. Example R scripts show you how to list package information such as installation path and version.
 
 ## Default R library location
 

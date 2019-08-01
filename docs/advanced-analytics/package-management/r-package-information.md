@@ -108,11 +108,11 @@ R support includes open-source R so that you can call base R functions and insta
 The distribution of open-source R included in your installation is [Microsoft R Open (MRO)](https://mran.microsoft.com/open). MRO adds value to base R by including additional open-source packages such as the [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library).
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-The version of R provided by MRO using SQL Server Setup is 3.2.2.
+The version of R provided by MRO using SQL Server R Services Setup is 3.2.2.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-The version of R provided by MRO using SQL Server Setup is 3.3.3.
+The version of R provided by MRO using SQL Server Machine Learning Services Setup is 3.3.3.
 ::: moniker-end
 
 > [!IMPORTANT]

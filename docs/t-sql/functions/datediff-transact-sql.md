@@ -72,7 +72,10 @@ The following table lists all the valid _datepart_ values. **DATEDIFF** accepts 
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
 | &nbsp; | &nbsp; |
-  
+
+> [!NOTE]
+> Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.
+
 *startdate*  
 An expression that can resolve to one of the following values:
 
@@ -92,6 +95,8 @@ See *startdate*.
  **int**  
   
 ## Return Value  
+
+The **int** difference between the *startdate* and *enddate*, expressed in the boundary set by *datepart*.
   
 For example, `SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` returns -2, hinting that 2036 must be a leap year. This case means that if we start at _startdate_ '2036-03-01', and then count -2 days, we reach the _enddate_ of '2036-02-28'.
   

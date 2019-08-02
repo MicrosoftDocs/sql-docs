@@ -27,10 +27,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 Returns aggregate performance statistics for cached query plans in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The view contains one row per query statement within the cached plan, and the lifetime of the rows are tied to the plan itself. When a plan is removed from the cache, the corresponding rows are eliminated from this view.  
   
 > [!NOTE]
-> An initial query of **sys.dm_exec_query_stats** might produce inaccurate results if there is a workload currently executing on the server. More accurate results may be determined by rerunning the query.  
-  
-> [!NOTE]
-> To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_query_stats**.  
+> - The results of **sys.dm_exec_query_stats**  may vary with each execution as the data only reflects finished queries, and not ones still in-flight.
+> - To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_query_stats**.    
+
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

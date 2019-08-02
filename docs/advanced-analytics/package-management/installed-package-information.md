@@ -54,7 +54,7 @@ You should never manually overwrite the version of R installed by SQL Server Set
 
 ## Open-source Python in your installation
 
-SQL Server 2017 adds Python components. When you select the Python language option, Anaconda 4.2 distribution is installed. In addition to Python code libraries, the standard installation includes sample data, unit tests, and sample scripts. 
+SQL Server 2017 adds Python components. When you select the Python language option, Anaconda 4.2 distribution is installed. In addition to Python script libraries, the standard installation includes sample data, unit tests, and sample scripts. 
 
 SQL Server 2017 Machine Learning is the first release to have both R and Python support.
 
@@ -72,7 +72,7 @@ After an initial installation, R and Python packages are refreshed through servi
 
 When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. On Windows, the instance library is a secured folder registered with SQL Server.
 
-All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server cannot access packages installed to other libraries. This applies to remote clients as well. When connecting to the server from a remote client, any R or Python code that you want to run in the server compute context can only use packages installed in the instance library.
+All script that runs in-database on SQL Server must load functions from the instance library. SQL Server cannot access packages installed to other libraries. This applies to remote clients as well. When connecting to the server from a remote client, any R or Python script that you want to run in the server compute context can only use packages installed in the instance library.
 
 To protect server assets, the default instance library can be modified only by a computer administrator. If you are not the owner of the computer, you might need to get permission from an administrator to install packages to this library. 
 

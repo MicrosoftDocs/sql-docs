@@ -22,7 +22,7 @@ Learn how to get information about installed R packages on SQL Server Machine Le
 
 When you install machine learning with SQL Server, a single package library is created at the instance level for each language that you install. On Windows, the instance library is a secured folder registered with SQL Server.
 
-All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any R code running in the server compute context can only use packages installed in the instance library.
+All script that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any R script running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -148,7 +148,7 @@ For more information about the optional and default fields for the R package DES
 
 If you've installed an R package and want to make sure that it's available to a particular SQL Server instance, you can execute a stored procedure to load the package and return messages.
 
-For example, the following code looks for and loads the [glue](https://cran.r-project.org/web/packages/glue/) package, if available.
+For example, the following statement looks for and loads the [glue](https://cran.r-project.org/web/packages/glue/) package, if available.
 If the package cannot be located or loaded, you get an error containing the text, "there is no package called 'glue'."
 
 ```sql

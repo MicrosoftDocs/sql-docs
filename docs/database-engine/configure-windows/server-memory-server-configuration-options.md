@@ -44,14 +44,14 @@ The server options **min server memory** and **max server memory** can be set to
 > The **min server memory** and **max server memory** options are advanced options. If you are using the **sp_configure** system stored procedure to change these settings, you can change them only when **show advanced options** is set to 1. These settings take effect immediately without a server restart.  
   
 <a name="min_server_memory"></a> Use **min_server_memory** to guarantee a minimum amount of memory available to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not immediately allocate the amount of memory specified in **min server memory** on startup. However, after memory usage has reached this value due to client load, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot free memory unless the value of **min server memory** is reduced. For example, when several instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can exist concurrently in the same host, set the min_server_memory parameter instead of max_server_memory for the purpose of reserving memory for an instance. Also, setting a min_server_memory value is essential in a virtualized environment to ensure memory pressure from the underlying host does not attempt to deallocate memory from the buffer pool on a guest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtual machine (VM) beyond what is needed for acceptable performance.
- 
-> [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not guaranteed to allocate the amount of memory specified in **min server memory**. If the load on the server never requires allocating the amount of memory specified in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will run with less memory.  
-  
+
+>[!NOTE]
+>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not guaranteed to allocate the amount of memory specified in **min server memory**. If the load on the server never requires allocating the amount of memory specified in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will run with less memory.
+
 <a name="max_server_memory"></a> Use **max_server_memory** to guarantee the OS does not experience detrimental memory pressure. To set max server memory configuration, monitor overall consumption of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process in order to determine memory requirements.
 
 - From the total OS memory, reserve sufficient for the OS itself.
-- Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of **_stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup>. What remains should be the max_server_memory setting for a single instance setup.
+- Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of **_stack size** <sup>1</sup> **\* calculated max worker threads**<sup>2</sup>. What remains should be the max_server_memory setting for a single instance setup.
 
 <sup>1</sup> Refer to the [Memory Management Architecture guide](../../relational-databases/memory-management-architecture-guide.md#stacksizes) for information on thread stack sizes per architecture.
 

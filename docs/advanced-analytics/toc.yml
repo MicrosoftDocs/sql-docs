@@ -177,10 +177,10 @@
   items:
   - name: Extensibility framework
     href: ../advanced-analytics/concepts/extensibility-framework.md
-  - name: R extension
-    href: ../advanced-analytics/concepts/extension-r.md
   - name: Python extension
     href: ../advanced-analytics/concepts/extension-python.md
+  - name: R extension
+    href: ../advanced-analytics/concepts/extension-r.md
   - name: Security
     href: ../advanced-analytics/concepts/security.md
 - name: How-to guides

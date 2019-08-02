@@ -48,6 +48,6 @@ This section contains the following articles:
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Upgrade Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197135)   
- [Backward Compatibility_deleted](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

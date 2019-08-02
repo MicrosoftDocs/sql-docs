@@ -233,10 +233,6 @@
       href: ../advanced-analytics/package-management/r-package-information.md
     - name: Get Python package information
       href: ../advanced-analytics/package-management/python-package-information.md
-    - name: Default packages
-      href: ../advanced-analytics/package-management/default-packages.md
-    - name: Get package information
-      href: ../advanced-analytics/package-management/installed-package-information.md
     - name: Install new R packages
       items:
       - name: Install R package

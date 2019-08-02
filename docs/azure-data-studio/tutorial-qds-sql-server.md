@@ -36,7 +36,7 @@ This tutorial requires the SQL Server or Azure SQL Database *TutorialDB*. To cre
 
 The widget in this example requires *Query Store* to be enabled.
 
-1. Right click the **TutorialDB** database (in the **SERVERS** sidebar) and select **New Query**.
+1. Right-click the **TutorialDB** database (in the **SERVERS** sidebar) and select **New Query**.
 
 2. Paste the following Transact-SQL (T-SQL) statement in the query editor, and click **Run**:
 
@@ -58,7 +58,7 @@ To add the *slow queries widget* to your dashboard, edit the *dashboard.database
 
    ![Search settings](./media/tutorial-qds-sql-server/search-settings.png)
 
-4. In settings.json, add the following:
+4. In settings.json, add the following code below:
 
    ```json
    "dashboard.database.widgets": [

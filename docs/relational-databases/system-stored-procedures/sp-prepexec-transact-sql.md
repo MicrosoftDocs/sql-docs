@@ -50,14 +50,14 @@ sp_prepexec handle OUTPUT, params , stmt
  The following example prepares and executes a simple statement.  
   
 ```  
-Declare @P1 int;  
-EXEC sp_prepexec @P1 output,   
+Declare @Out int;  
+EXEC sp_prepexec @Out output,   
     N'@P1 nvarchar(128), @P2 nvarchar(100)',  
     N'SELECT database_id, name  
       FROM sys.databases  
       WHERE name=@P1 AND state_desc = @P2',   
-@P1 = 'tempdb', @P2 = 'ONLINE';   
-EXEC sp_unprepare @P1;  
+          @P1 = 'tempdb', @P2 = 'ONLINE';   
+EXEC sp_unprepare @Out;  
 ```  
   
 ## See Also  

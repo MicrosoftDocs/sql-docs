@@ -26,17 +26,21 @@ All script that runs in-database on SQL Server must load functions from the inst
 To protect server assets, the default instance library can be modified only by a computer administrator.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-
 The default path of the binaries for R is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-
 The default path of the binaries for R is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library`
+::: moniker-end
+
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+The default path of the binaries for R is:
+
+`C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\library`
 ::: moniker-end
 
 This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.

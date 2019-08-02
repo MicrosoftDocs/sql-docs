@@ -25,9 +25,17 @@ When you install machine learning with SQL Server, a single package library is c
 All script or code that runs in-database on SQL Server must load functions from the instance library. SQL Server can't access packages installed to other libraries. This applies to remote clients as well: any Python code running in the server compute context can only use packages installed in the instance library.
 To protect server assets, the default instance library can be modified only by a computer administrator.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 The default path of the binaries for Python is:
 
 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library`
+::: moniker-end
+
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+The default path of the binaries for Python is:
+
+`C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\library`
+::: moniker-end
 
 This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.
 

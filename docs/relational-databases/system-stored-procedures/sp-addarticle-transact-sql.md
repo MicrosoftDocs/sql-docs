@@ -17,7 +17,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # sp_addarticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Creates an article and adds it to a publication. This stored procedure is executed at the Publisher on the publication database.  
   

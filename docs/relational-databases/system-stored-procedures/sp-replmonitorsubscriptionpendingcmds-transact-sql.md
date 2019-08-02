@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns information on the number of pending commands for a subscription to a transactional publication and a rough estimate of how much time it takes to process them. This stored procedure returns one row for each returned subscription. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   

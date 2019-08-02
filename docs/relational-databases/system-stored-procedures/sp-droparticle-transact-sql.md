@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_droparticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Drops an article from a snapshot or transactional publication. An article cannot be removed if one or more subscriptions to it exist. This stored procedure is executed at the Publisher on the publication database.  
   

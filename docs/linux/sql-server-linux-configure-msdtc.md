@@ -12,7 +12,7 @@ ms.technology: linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSTDC) on Linux.
+This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux.
 
 > [!NOTE]
 > MSDTC on Linux is supported on the SQL Server 2019 preview SQL Server 2017 starting with cumulative update 16.
@@ -35,7 +35,9 @@ For more information about these settings and other related MSDTC settings, see 
 The following MSDTC configurations are supported:
 
 - OLE-TX Distributed transactions against SQL Server on Linux for ODBC providers.
-- XA Distributed transactions against SQL Server on Linux using JDBC and ODBC providers. For XA transactions to be performed using ODBC provider, you need to use Microsoft ODBC Driver for SQL Server version 17.3 or higher.
+
+- XA Distributed transactions against SQL Server on Linux using JDBC and ODBC providers. For XA transactions to be performed using ODBC provider, you need to use Microsoft ODBC Driver for SQL Server version 17.3 or higher. For more information, see [Understanding XA Transactions](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
+
 - Distributed transactions on Linked server.
 
 ## MSDTC configuration steps

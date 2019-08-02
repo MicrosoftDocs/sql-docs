@@ -106,7 +106,7 @@ Now that you have set the MOUNT_CREDENTIALS environment variable for access keys
    ```
 1. Set environment variable MOUNT_CREDENTIALS (scroll up for instructions)
 
-1. Mount the remote HDFS storage in Azure using **azdata bdc storage-pool mount create**. Replace the placeholder values before running the following command:
+1. Mount the remote HDFS storage in Azure using **azdata bdc hdfs mount create**. Replace the placeholder values before running the following command:
 
    ```bash
    azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
@@ -141,7 +141,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Delete the mount
 
-To delete the mount, use the **azdata bdc storage-pool mount delete** command, and specify the mount path in HDFS:
+To delete the mount, use the **azdata bdc hdfs mount delete** command, and specify the mount path in HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>

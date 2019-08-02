@@ -13,9 +13,21 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # What is SQL Server Machine Learning Services (Python and R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open source packages and frameworks, or the [Microsoft Python and R packages](#components) for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services.
+Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open source packages and frameworks, as well as the [Microsoft Python and R packages](#components) for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services.
 
 In Azure SQL Database, [Machine Learning Services](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) is currently in public preview.
+
+## What is Machine Learning Services?
+
+SQL Server Machine Learning Services in-database Python and R script execution you can use to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminate transfer of the data across the network to another server. 
+
+You can use open-source packages and frameworks, such as PyTorch, TensorFlow, and scikit-learn, in addition to Microsoft packages [revoscalepy](python/ref-py-revoscalepy.md) and [microsoftml](python/ref-py-microsoftml.md) for Python and [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md), and [sqlrutils](r/ref-r-sqlrutils.md) for R.
+
+Machine Learning Services use an extensibility framework to run Python and R scripts in SQL Server. Learn more about how this works:
+
++ [Extensibility framework in SQL Server Machine Learning Services](concepts/extensibility-framework.md)
++ [Python extension](concepts/extension-python.md)
++ [R extension](concepts/extension-r.md)
 
 ## Bring compute power to the data
 

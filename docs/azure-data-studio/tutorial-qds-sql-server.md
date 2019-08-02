@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Enable the five slowest queries sample widget
+title: "Tutorial: Enable the five slowest queries sample widget"
 titleSuffix: Azure Data Studio
 description: This tutorial demonstrates how to enable the five slowest queries sample widget on the database dashboard.
 ms.prod: sql
@@ -9,7 +9,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 08/01/2019
+ms.date: 08/02/2019
 ---
 
 # Tutorial: Add the *five slowest queries* sample widget to the database dashboard
@@ -116,7 +116,7 @@ To add the *slow queries widget* to your dashboard, edit the *dashboard.database
 
 4. Close the **Insights** pane.
 
-## View the query plan 
+## View the query plan
 
 1. Right-click on the **TutorialDB** database and select *Manage*
 

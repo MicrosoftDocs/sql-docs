@@ -1,7 +1,7 @@
 ---
 title: "Server Memory Configuration Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2017"
+ms.date: "08/01/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

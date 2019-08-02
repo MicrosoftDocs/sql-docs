@@ -1,7 +1,7 @@
 ---
 title: "sqlservr Application | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/01/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""

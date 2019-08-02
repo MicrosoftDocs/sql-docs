@@ -1,7 +1,7 @@
 ---
 title: "Database Engine Service Startup Options | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/31/2019"
+ms.date: "08/01/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

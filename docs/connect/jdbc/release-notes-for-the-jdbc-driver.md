@@ -59,7 +59,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### Known Issues
+### Known issues
 
 | Known issues | Details |
 | :----------- | :------ |

@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ---
-# Microsoft JDBC Driver for SQL Server Support Matrix
+# Microsoft JDBC Driver for SQL Server support matrix
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   This page contains the support matrix and support lifecycle policy for the Microsoft JDBC Driver for SQL Server.  
   
-## Microsoft JDBC Driver Support Lifecycle Matrix and Policy  
- The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x, 6.x, and 7.x have five year Mainstream support from the driver release date. Mainstream support is defined on the Microsoft support lifecycle website.  
+## Microsoft JDBC Driver support lifecycle matrix and policy  
+ The Microsoft Support Lifecycle (MSL) policy provides transparent, predictable information regarding the support lifecycle of Microsoft products. JDBC driver versions 3.0, 4.x, 6.x, and 7.x have five-year Mainstream support from the driver release date. Mainstream support is defined on the Microsoft support lifecycle website.  
   
  Extended and custom support options are not available for the Microsoft JDBC Driver.  
     
@@ -47,20 +47,20 @@ manager: jroth
 |Microsoft SQL Server 2005 JDBC Driver 1.0|1.0|June 25, 2011|  
 |Microsoft SQL Server 2000 JDBC Driver|2000|July 9, 2010|  
   
-## SQL Version Compatibility  
+## SQL version compatibility  
   
-|Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|Azure SQL Managed Instance (Extended Private Preview)|  
+|Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
-|7.4|N|N|Y|Y|Y|Y|Y|Y|Y|Y|  
-|7.2|N|Y|Y|Y|Y|Y|Y|Y|N|Y|  
-|7.0|N|Y|Y|Y|Y|Y|Y|Y|N|Y|  
-|6.4|N|Y|Y|Y|Y|Y|Y|Y|N|Y|  
-|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|N|
-|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|N|
-|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|N|
-|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|N|
-|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|N|
-|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|N|
+|7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
+|7.2|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|7.0|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|6.4|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
+|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|
 |3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
 |2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
 |1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
@@ -78,7 +78,7 @@ manager: jroth
   
  <sup>5</sup>Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2014 as a down-level client.  
   
-## Java and JDBC Specification Support  
+## Java and JDBC specification support  
   
 |JDBC Driver Version|JRE Versions|JDBC API Version| 
 |-|-|-|  
@@ -99,12 +99,12 @@ manager: jroth
 |1.0|1.4|3.0|  
 |2000|1.4|3.0|  
   
-## Supported Operating Systems  
+## Supported operating systems  
  The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX, MacOS, and others.  
   
  The JDBC product team tests our driver on Windows, Sun Solaris, SUSE Linux, and RedHat Linux.  Customer Support is available to customers on all platforms, however we may ask you to reproduce the issue on a platform such as Windows.  
   
-## Application Server Support  
+## Application server support  
  The Microsoft JDBC Driver for SQL Server is tested with various application servers.  Consult your application server vendor for additional details on which driver version is compatible with their product.  
   
   

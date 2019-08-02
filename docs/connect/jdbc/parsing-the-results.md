@@ -12,13 +12,13 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ---
-# Parsing the Results
+# Parsing the results
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This article describes how SQL Server expects users to fully process results returned from any query.
 
-## Update Counts and Result Sets
+## Update counts and result sets
 
 This section will talk about the two most common results returned from SQL Server: Update Count and ResultSet. In general, any query a user executes will cause one of these results to be returned; users are expected to handle both when processing results.
 

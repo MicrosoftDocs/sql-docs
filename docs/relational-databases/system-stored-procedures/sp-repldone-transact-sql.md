@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_repldone (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Updates the record that identifies the last distributed transaction of the server. This stored procedure is executed at the Publisher on the publication database.  
   

@@ -21,7 +21,7 @@ For more information about package location and installation paths, see [Get R o
 
 ## Prerequisites
 
-+ [SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) with the Python language option.
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language option.
 
 + Packages must be Python 3.5-compliant and run on Windows.
 
@@ -35,7 +35,7 @@ Other considerations:
 
 + We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning, rather than tasks that simply query the database.
 
-## Add a new Python package
+## How to add a new Python package
 
 1. Download the Windows version of the Python package. If you're installing Python packages on a server with no internet access, download the WHL file to a different computer and then copy it to the server.
 
@@ -53,7 +53,7 @@ Other considerations:
 
 1. Install the package using pip. You can find the **pip** installer in the `Scripts` subfolder of PYTHON_SERVICES.
 
-   > [NOTE!]
+   > [!NOTE]
    > SQL Server Setup does not add `Scripts` to the system path. If you get an error that `pip` is not recognized as an internal or external command, you can add the `Scripts` folder to the **PATH** environment variable in Windows.
 
    If you are using Visual Studio with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`, it is filled in for you automatically.

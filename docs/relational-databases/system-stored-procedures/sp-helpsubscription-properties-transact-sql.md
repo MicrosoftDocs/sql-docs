@@ -17,7 +17,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_helpsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Retrieves security information from the [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) table. This stored procedure is executed at the Subscriber.  
   

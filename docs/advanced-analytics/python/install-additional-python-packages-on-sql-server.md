@@ -51,13 +51,10 @@ Other considerations:
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\library`
    ::: moniker-end
 
-1. Install the package using pip. You can find the **pip** installer in the `Scripts` subfolder of PYTHON_SERVICES.
+1. Install the package using pip. You can find pip in the **Scripts** subfolder of **PYTHON_SERVICES**. Note that SQL Server Setup doesn't add `Scripts` to the system path.
 
-   > [!NOTE]
-   > SQL Server Setup does not add `Scripts` to the system path. If you get an error that `pip` is not recognized as an internal or external command, you can add the `Scripts` folder to the **PATH** environment variable in Windows.
-
-   If you are using Visual Studio with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`, it is filled in for you automatically.
+   If you're using Visual Studio with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages** and provide the name or location of the package to install.
 
    If the computer has Internet access, provide the name of the package, or the URL of a specific package and version. If the computer doesn't have internet access, download the WHL file before beginning installation and then specify the local file path and name.
 
-1. Load the package or its functions as part of your script. To use functions from the package in your script, insert the standard `import <package_name>` statement in the initial lines of the script.
+You can now load the package or its functions as part of your script. To use functions from the package in your script, insert the standard `import <package_name>` statement in the initial lines of the script.

@@ -31,11 +31,11 @@ manager: craigg
   
  To analyze a different computer, use the following guidelines:  
   
--   To scan non-clustered instances, enter the computer name.  
+-   To scan nonclustered instances, enter the computer name.  
   
 -   To scan clustered instances, enter the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance.  
   
--   To scan non-clustered components that are installed on a node of a cluster, enter the computer name of the failover cluster node.  
+-   To scan nonclustered components that are installed on a node of a cluster, enter the computer name of the failover cluster node.  
   
     > [!IMPORTANT]  
     >  Do not include the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name.  

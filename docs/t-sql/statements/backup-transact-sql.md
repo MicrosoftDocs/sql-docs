@@ -324,6 +324,8 @@ If you choose to encrypt you will also have to specify the encryptor using the e
 - SERVER CERTIFICATE = Encryptor_Name
 - SERVER ASYMMETRIC KEY = Encryptor_Name
 
+The SERVER CERTIFICATE and SERVERY ASSYMETRIC KEY are a certificate and an assymetric key created in the Master database. For more informaiton see [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) and [CREATE ASYMMETRIC KEY](../../t-sql/statements/create-asymmetric-key-transact-sql.md) respectively. 
+
 > [!WARNING]
 > When encryption is used in conjunction with the `FILE_SNAPSHOT` argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) was completed for the database. No additional encryption happens for the data itself. The backup fails if the database was not encrypted or if the encryption was not completed before the backup statement was issued.
 

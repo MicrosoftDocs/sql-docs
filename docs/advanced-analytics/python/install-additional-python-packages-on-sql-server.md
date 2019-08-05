@@ -69,4 +69,5 @@ You can now load the package or its functions as part of your script. To use fun
 ## Next Steps
 
 + To view information about Python packages installed in SQL Server Machine Learning Services, see [Get R and Python package information](../package-management/default-packages.md) and [Default R and Python packages in SQL Server](../package-management/installed-package-information.md).
+
 + For information about installing R packages in SQL Server Machine Learning Services, see [Install new R packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).

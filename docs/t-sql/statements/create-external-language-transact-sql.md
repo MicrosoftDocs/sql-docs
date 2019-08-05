@@ -152,6 +152,15 @@ FROM
 (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so', PLATFORM = LINUX);
 GO
 ```
+### C. Grant permissions to execute external script
+
+The following example grants the **mylogin** principal access to execute scripts using the **Java** external language.
+
+```sql
+GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 
+TO mylogin;
+```
+
 
 ## See also
 

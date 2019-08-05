@@ -139,7 +139,7 @@ Since we have three hash indexes, the memory needed for the hash indexes is 3 * 
   
 #### Memory for non-clustered indexes  
   
-Non-clustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
+Nonclustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
   
 Unlike hash indexes, non-clustered indexes do not have a fixed bucket size. The index grows and shrinks dynamically with the data.  
   
@@ -152,7 +152,7 @@ Memory needed by non-clustered indexes can be computed as follows:
     The leaf nodes have one row for each unique key in the table that points to the data rows with that unique key.  If you have multiple rows with the same key (i.e., you have a non-unique non-clustered index), there is only one row in the index leaf node that points to one of the rows with the other rows linked to each other.  Thus, the total memory required can be approximated by:
   - memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Non-clustered indexes are best when used for range lookups, as exemplified by the following query:  
+ Nonclustered indexes are best when used for range lookups, as exemplified by the following query:  
   
 ```sql  
 SELECT * FRON t_hk  

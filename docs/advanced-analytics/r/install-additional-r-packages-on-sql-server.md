@@ -27,7 +27,7 @@ This article describes how to install new R packages to an instance of SQL Serve
 
 + R code running in SQL Server can use only packages installed in the default instance library. SQL Server cannot load packages from external libraries, even if that library is on the same computer.
 The R package library is located in the Program Files folder of your SQL Server instance, and by default, installing in this folder requires administrator permissions.
-For the default location of the library folder, see [Default R and Python packages in SQL Server](../package-management/installed-package-information.md#package-library-location).
+For the default location of the library folder, see [Package library location](../package-management/installed-package-information.md#package-library-location).
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 
@@ -61,8 +61,8 @@ Alternatively, you can perform these steps manually:
 R features are included in several Microsoft products, all of which could co-exist on the same computer.
 If you install one or more of these products, your computer will have separate installations of R for each, with duplicates of all the R tools and libraries.
 
-However, only packages that are installed in the R_SERVICES library can be used in-database on SQL Server.
-For more information about paths, see [Package library location](../package-management/installed-package-information.md#package-library-location).
+However, only packages that are installed in the R_SERVICES library folder can be used in-database on SQL Server.
+For more information about the R_SERVICES folder, see [Package library location](../package-management/installed-package-information.md#package-library-location).
 
 ## See also
 

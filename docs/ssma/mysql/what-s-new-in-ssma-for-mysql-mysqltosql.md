@@ -28,7 +28,7 @@ The v8.3 release of SSMA for MySQL is enhanced with targeted fixes that are desi
 
 The v8.2 release of SSMA for MySQL is enhanced with a targeted set of fixes designed to improve quality and conversion metrics, as well as fixes for:
 
-* An issue with disabled non-clustered indexes after data migration.
+* An issue with disabled nonclustered indexes after data migration.
 * Detection of .NET Framework during silent installation.
 * An intermittent crash that occurs when a new version is downloaded.
 

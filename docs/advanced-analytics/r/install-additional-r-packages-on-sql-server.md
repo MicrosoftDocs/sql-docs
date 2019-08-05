@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled. There are multiple methods for installing new R packages, depending on which version of SQL Server you have, and whether the server has an internet connection. The following approaches for new package installation are possible.
+This article describes how to install new R packages to an instance of SQL Server where machine learning is enabled. There are multiple methods for installing new R packages depending on which version of SQL Server you have and whether the server has an internet connection. The following approaches for new package installation are possible.
 
 | Approach                           | Permissions               | Remote/Local |
 |------------------------------------|---------------------------|--------------|
@@ -26,7 +26,7 @@ This article describes how to install new R packages to an instance of SQL Serve
 ## General considerations
 
 + R code running in SQL Server can use only packages installed in the default instance library. SQL Server cannot load packages from external libraries, even if that library is on the same computer.
-The R package library is located in the Program Files folder of your SQL Server instance. By default, installing in this folder requires administrator permissions.
+The R package library is located in the Program Files folder of your SQL Server instance, and by default, installing in this folder requires administrator permissions.
 For the default location of the library folder, see [Default R and Python packages in SQL Server](../package-management/installed-package-information.md#package-library-location).
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -44,7 +44,7 @@ For the default location of the library folder, see [Default R and Python packag
 
 ## Offline installation (no internet access)
 
-Frequently, servers that host production databases don't have an internet connection. To install R packages in that type of environment, you download and prepare packages and dependencies in advance (as zipped files), copying the files to a folder on the server where they can be installed offline.
+Frequently, servers that host production databases don't have an internet connection. To install R packages in that type of environment, you download and prepare packages and dependencies in advance (as zipped files), and then copy the files to a folder on the server. Once the files are in place, the packages can be installed offline.
 
 Identifying all dependencies gets complicated. For R, we recommend that you use **miniCRAN** to [create a local repository](create-a-local-package-repository-using-minicran.md) and then transfer it to the isolated SQL Server instance.
 
@@ -62,7 +62,7 @@ R features are included in several Microsoft products, all of which could co-exi
 If you install one or more of these products, your computer will have separate installations of R for each, with duplicates of all the R tools and libraries.
 
 However, only packages that are installed in the R_SERVICES library can be used in-database on SQL Server.
-For more information about paths, see [Package library location](../package-management/default-packages.md).
+For more information about paths, see [Package library location](../package-management/installed-package-information.md#package-library-location).
 
 ## See also
 

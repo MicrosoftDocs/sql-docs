@@ -97,7 +97,7 @@ azdata bdc spark session list
 ### Examples
 List all the active sessions.
 ```bash
-azdata bdcspark session list
+azdata bdc spark session list
 ```
 ### Global Arguments
 #### `--debug`

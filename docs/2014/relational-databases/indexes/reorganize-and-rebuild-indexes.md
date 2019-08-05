@@ -81,7 +81,7 @@ manager: craigg
 <sup>1</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online.  
   
 > [!TIP]
-> These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment. For example, if a given index is used mainly for scan operations, removing fragmentation can improve performance of these operations. The performance benefit is less noticeable for indexes that are used primarily for seek operations. Similarly, removing fragmentation in a heap (a table with no clustered index) is especially useful for non-clustered index scan operations, but has little effect in lookup operations.
+> These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment. For example, if a given index is used mainly for scan operations, removing fragmentation can improve performance of these operations. The performance benefit is less noticeable for indexes that are used primarily for seek operations. Similarly, removing fragmentation in a heap (a table with no clustered index) is especially useful for nonclustered index scan operations, but has little effect in lookup operations.
 
 Very low levels of fragmentation (less than 5 percent) should typically not be addressed by either of these commands, because the benefit from removing such a small amount of fragmentation is almost always vastly outweighed by the cost of reorganizing or rebuilding the index. 
 
@@ -89,15 +89,15 @@ Very low levels of fragmentation (less than 5 percent) should typically not be a
 > Rebuilding or reorganizing small indexes often does not reduce fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it.
 
 ### Index defragmentation considerations
-Under certain conditions, rebuilding a clustered index will automatically rebuild any non-clustered index that reference the clustering key, if the physical or logical identifiers contained in the non-clustered index records needs to change.
+Under certain conditions, rebuilding a clustered index will automatically rebuild any nonclustered index that reference the clustering key, if the physical or logical identifiers contained in the nonclustered index records needs to change.
 
-Scenarios that force all non-clustered indexes to be automatically rebuilt on a table:
+Scenarios that force all nonclustered indexes to be automatically rebuilt on a table:
 
 -  Creating a clustered index on a table
 -  Removing a clustered index, causing the table to be stored as a heap
 -  Changing the clustering key to include or exclude columns
 
-Scenarios that do not require all non-clustered indexes to be automatically rebuilt on a table:
+Scenarios that do not require all nonclustered indexes to be automatically rebuilt on a table:
 
 -  Rebuilding a unique clustered index
 -  Rebuilding a non-unique clustered index

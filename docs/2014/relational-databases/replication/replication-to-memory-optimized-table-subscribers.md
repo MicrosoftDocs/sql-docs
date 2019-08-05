@@ -299,7 +299,7 @@ GO
   
 ##  <a name="Schema"></a> Modifying a schema file  
   
--   Clustered indexes are not supported. Change any clustered indexes to non-clustered indexes.  
+-   Clustered indexes are not supported. Change any clustered indexes to nonclustered indexes.  
   
 -   All columns in the key of an index must be specified as `NOT NULL`.  
   

@@ -4,10 +4,11 @@ description: Add new Python packages to SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/02/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 
@@ -35,7 +36,7 @@ Other considerations:
 
 + We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning, rather than tasks that simply query the database.
 
-## How to add a new Python package
+## Add a package from the Python command line
 
 1. Download the Windows version of the Python package. If you're installing Python packages on a server with no internet access, download the WHL file to a different computer and then copy it to the server.
 
@@ -53,8 +54,19 @@ Other considerations:
 
 1. Install the package using pip. You can find pip in the **Scripts** subfolder of **PYTHON_SERVICES**. Note that SQL Server Setup doesn't add `Scripts` to the system path.
 
-   If you're using Visual Studio with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages** and provide the name or location of the package to install.
+## Add a package from Visual Studio
 
-   If the computer has Internet access, provide the name of the package, or the URL of a specific package and version. If the computer doesn't have internet access, download the WHL file before beginning installation and then specify the local file path and name.
+If you're using Visual Studio 2017 or later, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages** and provide the name or location of the package to install.
+
++ If the computer has Internet access, provide the name of the package, or the URL of a specific package and version.
+
++ If the computer doesn't have internet access, download the WHL file before beginning installation and then specify the local file path and name.
+
+## Load the package
 
 You can now load the package or its functions as part of your script. To use functions from the package in your script, insert the standard `import <package_name>` statement in the initial lines of the script.
+
+## Next Steps
+
++ To view information about Python packages installed in SQL Server Machine Learning Services, see [Get R and Python package information](../package-management/default-packages.md) and [Default R and Python packages in SQL Server](../package-management/installed-package-information.md).
++ For information about installing R packages in SQL Server Machine Learning Services, see [Install new R packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).

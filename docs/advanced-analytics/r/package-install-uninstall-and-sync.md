@@ -12,18 +12,19 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 
 # R package synchronization for SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-The version of RevoScaleR included in SQL Server 2017 includes the ability to synchronize collections of R packages between the file system and the instance and database where packages are used.
+RevoScaleR 9.0.1 and later includes the ability to synchronize collections of R packages between the file system and the instance and database where packages are used.
 
 This feature was provided to make it easier to back up R package collections associated with SQL Server databases. Using this feature, an administrator can restore not just the database, but any R packages that were used by data scientists working in that database.
 
 This article describes the package synchronization feature, and how to use the
 [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) function to perform the following tasks:
 
-+ Synchronize a list of packages for an entire SQL Server database
++ Synchronize a list of packages for an entire SQL Server database.
 
-+ Synchronize packages used by an individual user, or by a group of users
++ Synchronize packages used by an individual user, or by a group of users.
 
 + If a user moves to a different SQL Server, you can take a backup of the user's working database and restore it to the new server, and the packages for the user will be installed into the file system on the new server, as required by R.
 
@@ -35,24 +36,22 @@ For example, you might use package synchronization in these scenarios:
 
 ## Requirements
 
-Before you can use package synchronization, you must have the appropriate version of Microsoft R or Machine Learning Server. This feature is provided in Microsoft R version 9.1.0 or later. 
++ This feature is provided in Microsoft R version 9.1.0 or later.
 
-You must also enable the [package management feature](r-package-how-to-enable-or-disable.md) on the server.
++ You must enable the [package management feature](r-package-how-to-enable-or-disable.md) on the server.
 
-### Determine whether your server supports package management
-
-This feature is available in SQL Server 2017 CTP 2 or later.
-
-You can add this feature to an instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to upgrade SQL Server R Services](../install/upgrade-r-and-python.md).
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
++ You can add this feature to an instance of SQL Server 2016 by upgrading the instance to use the latest version of Microsoft R. For more information, see [Use SqlBindR.exe to upgrade SQL Server R Services](../install/upgrade-r-and-python.md).
+::: moniker-end
 
 ### Enable the package management feature
 
-To use package synchronization requires that the new package management feature be enabled on the SQL Server instance, and on individual databases. For more information, see [Enable or disable package management for SQL Server](r-package-how-to-enable-or-disable.md).
+To use package synchronization, you need to enable the package management feature on the SQL Server instance and on individual databases. For more information, see [Enable or disable package management for SQL Server](r-package-how-to-enable-or-disable.md).
 
 1. The server administrator enables the feature for the SQL Server instance.
-2. For each database, the administrator grants individual users the ability to install or share R packages, using database roles.
+1. For each database, the administrator grants individual users the ability to install or share R packages, using database roles.
 
-When this is done, you can use RevoScaleR functions, such as [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) to install packages into a database.  Information about users and the packages that they can use is stored in the SQL Server instance. 
+When this is done, you can use RevoScaleR functions, such as [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) to install packages into a database.  Information about users and the packages that they can use is stored in the SQL Server instance.
 
 Whenever you add a new package using the package management functions, both the records in SQL Server and the file system are updated. This information can be used to restore package information for the entire database.
 

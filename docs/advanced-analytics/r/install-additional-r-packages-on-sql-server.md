@@ -20,23 +20,21 @@ This article describes how to use standard R tools to install new R packages to 
 
 In addition to standard R tools, you can install R packages using:
 
++ [RevoScaleR](use-revoscaler-to-manage-r-packages.md)
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 + [T-SQL](install-r-packages-tsql.md) (CREATE EXTERNAL LIBRARY)
 ::: moniker-end
-+ [RevoScaleR](use-revoscaler-to-manage-r-packages.md)
 
 ## General considerations
 
 + R code running in SQL Server can use only packages installed in the default instance library. SQL Server cannot load packages from external libraries, even if that library is on the same computer.
-The R package library is located in the Program Files folder of your SQL Server instance, and by default, installing in this folder requires administrator permissions.
-For more information, see [Package library location](../package-management/installed-package-information.md#package-library-location).
+This includes R libraries installed with other Microsoft products.
 
-+ Non-administrators can install packages using RevoScaleR 9.0.1 and later, or using CREATE EXTERNAL LIBRARY. The **dbo_owner** user, or a user with CREATE EXTERNAL LIBRARY permission, can install R packages to the current database. For more information, see:
+  The R package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/installed-package-information.md#package-library-location).
+
++ Non-administrators can install packages using RevoScaleR 9.0.1 and later::: moniker range="=sql-server-2017||=sqlallproducts-allversions", or using CREATE EXTERNAL LIBRARY::: moniker-end. The **dbo_owner** user, or a user with CREATE EXTERNAL LIBRARY permission, can install R packages to the current database. For more information, see:
   + [How to use RevoScaleR functions to find or install R packages on SQL Server](use-revoscaler-to-manage-r-packages.md)
   + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server](install-r-packages-tsql.md)
-
-+ R features are included in several Microsoft products, all of which could co-exist on the same computer. If you install one or more of these products, your computer will have separate installations of R for each, with duplicates of all the R tools and libraries. However, only packages that are installed in the R_SERVICES library folder can be used in-database on SQL Server.
-For more information about the R_SERVICES folder, see [Package library location](../package-management/installed-package-information.md#package-library-location).
 
 + On a hardened SQL Server environment, you might want to avoid the following:
   + Packages that require network access

@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Tips for using R packages in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article provides helpful tips on using R packages in SQL Server. This is for DBAs who are unfamiliar with R, and experienced R developers who are unfamiliar with package access in a SQL Server instance.
+This article provides helpful tips on using R packages in SQL Server. These tips are for DBAs who are unfamiliar with R, and experienced R developers who are unfamiliar with package access in a SQL Server instance.
 
 ## If you're new to R
 
@@ -37,7 +37,7 @@ R packages run on multiple computing platforms. Be sure that the versions you in
 R packages run on multiple computing platforms. Be sure that the versions you install are Linux binaries.
 ::: moniker-end
 
-### Know which library you are installing to and which packages are already installed.
+### Know which library you're installing to and which packages are already installed
 
 If you have previously modified the R environment on the computer, before installing anything ensure that the R environment variable `.libPath` uses just one path.
 
@@ -45,7 +45,7 @@ This path should point to the R_SERVICES folder for the instance. For more infor
 
 ## If you're new to SQL Server
 
-As an R developer working on code executing on SQL Server, the security policies protecting the server constrain your ability to control the R environment. The following tips describe situations and provide suggestions for working in this environment.
+As an R developer working on code executing on SQL Server, the security policies protecting the server constrain your ability to control the R environment. The following tips describe typical situations and provide suggestions for working in this environment.
 
 ### R user libraries: not supported on SQL Server
 
@@ -61,7 +61,7 @@ This does not work when running R solutions in SQL Server, because R packages mu
 
 For information on how to install R packages in SQL Server, see [Install new R packages on SQL Server Machine Learning Services or SQL Server R Services](install-additional-r-packages-on-sql-server.md).
 
-### Avoid "package not found" errors
+### How to avoid "package not found" errors
 
 Using the following guidelines will help you avoid "package not found" errors.
 

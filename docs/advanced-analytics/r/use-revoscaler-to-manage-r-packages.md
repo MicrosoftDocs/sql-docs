@@ -86,7 +86,7 @@ User identity is typically specified when setting the compute context. If you do
 
 ## Call package management functions in stored procedures
 
-You cam run package management functions inside `sp_execute_external_script`. When you do so, the function is executed using the security context of the stored procedure caller.
+You can run package management functions inside `sp_execute_external_script`. When you do so, the function is executed using the security context of the stored procedure caller.
 
 ## Examples
 

@@ -1,9 +1,9 @@
 ---
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/05/2017"
+ms.date: "07/24/2019"
 ms.prod: sql
-ms.technology: system-objects
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "external_library_files"
@@ -14,13 +14,13 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_library_files catalog view"
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.external_library_files (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Lists a row for each file that makes up an external library.
 

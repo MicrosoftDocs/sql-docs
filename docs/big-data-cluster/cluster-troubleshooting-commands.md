@@ -5,7 +5,7 @@ description: This article provides useful commands for monitoring and troublesho
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -87,7 +87,7 @@ If any errors have occurred, you can sometimes see the error in the recent event
 You can retrieve the logs for containers running in a pod. The following command retrieves the logs for all containers running in the pod named `master-0` and outputs them to a file name `master-0-pod-logs.txt`:
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> Get status of services
@@ -114,7 +114,7 @@ The following services support external connections to the big data cluster:
 | **appproxy-svc-external** | Support application deployment scenarios. |
 
 > [!TIP]
-> This is a way of viewing the services with **kubectl**, but it is also possible to use `mssqlctl bdc endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).
+> This is a way of viewing the services with **kubectl**, but it is also possible to use `azdata bdc endpoint list` command to view these endpoints. For more information, see [Get big data cluster endpoints](deployment-guidance.md#endpoints).
 
 ## Get service details
 

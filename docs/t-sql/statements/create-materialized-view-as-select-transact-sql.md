@@ -34,7 +34,7 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview  
+author: XiaoyuMSFT  
 ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---

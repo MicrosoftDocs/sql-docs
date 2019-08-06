@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_replicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Sets a replication database option for the specified database. This stored procedure is executed at the Publisher or Subscriber on any database.  
   

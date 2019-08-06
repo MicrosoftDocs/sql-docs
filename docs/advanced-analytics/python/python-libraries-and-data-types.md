@@ -1,6 +1,6 @@
 ---
 title: Python-to-SQL data type conversions
-description: Review the implicit and explicit data type converstions between Python and SQL Server in data science and machine learning solutions.
+description: Review the implicit and explicit data type conversions between Python and SQL Server in data science and machine learning solutions.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,15 +8,14 @@ ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Data type mappings between Python and SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 For Python solutions that run on the Python integration feature in SQL Server Machine Learning Services, review the list of unsupported data types, and data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
 
 ## Python Version
-
-SQL Server 2017 Anaconda 4.2 distribution and Python 3.6.
 
 A subset of the RevoScaleR functionality (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, maybe a few others) is provided using Python APIs, using a new Python package **revoscalepy**. You can use this package to work with data using Pandas data frames, XDF files, or SQL data queries.
 
@@ -46,6 +45,3 @@ This table lists the implicit conversions that are provided. Other data types ar
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|
 |**varchar(max)**|`str`|
-
-## See also
-

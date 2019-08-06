@@ -5,7 +5,7 @@ description: Learn how to perform an offline deployment of a SQL Server big data
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -28,19 +28,10 @@ The following steps describe how to pull the big data cluster container images f
 > [!TIP]
 > The following steps explain the process. However, to simplify the task, you can use the [automated script](#automated) instead of manually running these commands.
 
-1. First, log in to the Microsoft Docker registry with the **docker login** command. Use the username and password that Microsoft provided to you as part of the Early Adoption Program.
+1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-CTP3.2-ubuntu**.  
 
    ```PowerShell
-   docker login private-repo.microsoft.com -u  <SOURCE_DOCKER_USERNAME> -p <SOURCE_DOCKER_PASSWORD>
-   ```
-
-   > [!TIP]
-   > These commands use PowerShell as an example, but you can run them from cmd, bash, or any command shell that can run docker. On Linux, add `sudo` to each command.
-
-1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **ctp3.1**.  
-
-   ```PowerShell
-   docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
+   docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
    ```
 
 1. Log in to the target private Docker registry.
@@ -52,7 +43,7 @@ The following steps describe how to pull the big data cluster container images f
 1. Tag the local images with the following command for each image:
 
    ```PowerShell
-   docker tag private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG> <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
+   docker tag mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG> <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
 1. Push the local images to the private Docker repository:
@@ -70,9 +61,6 @@ The following big data cluster container images are required for an offline inst
  - **mssql-monitor-collectd**
  - **mssql-server-data**
  - **mssql-hadoop**
- - **mssql-java**
- - **mssql-mlservices-pythonserver**
- - **mssql-mlservices-rserver**
  - **mssql-monitor-elasticsearch**
  - **mssql-monitor-influxdb**
  - **mssql-security-knox**
@@ -87,7 +75,7 @@ The following big data cluster container images are required for an offline inst
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
  - **mssql-mleap-serving-runtime**
-  
+ - **mssql-security-support**
 
 ## <a id="automated"></a> Automated script
 
@@ -120,7 +108,7 @@ You can use an automated python script that will automatically pull all required
 
 ## Install tools offline
 
-Big data cluster deployments require several tools, including **Python**, **mssqlctl**, and **kubectl**. Use the following steps to install these tools on an offline server.
+Big data cluster deployments require several tools, including **Python**, **azdata**, and **kubectl**. Use the following steps to install these tools on an offline server.
 
 ### <a id="python"></a> Install python offline
 
@@ -140,18 +128,12 @@ Big data cluster deployments require several tools, including **Python**, **mssq
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="mssqlctl"></a> Install mssqlctl offline
+### <a id="azdata"></a> Install azdata offline
 
-1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the **mssqlctl** packages to the current folder.
-
-   ```PowerShell
-   pip download -r https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
-   ```
-
-1. Download the **requirements.txt** file.
+1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the **azdata** packages to the current folder.
 
    ```PowerShell
-   curl -o requirements.txt "https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt"
+   pip download -r https://aka.ms/azdata
    ```
 
 1. Copy the downloaded packages and the **requirements.txt** file to the target machine.
@@ -172,12 +154,12 @@ To install **kubectl** to an offline machine, use the following steps.
 
 ## Deploy from private repository
 
-To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **mssqlctl** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **custom.json**:
+To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **azdata** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **control.json**:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.registry=<your-docker-registry>"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 The deployment prompts you for the docker username and password, or you can specify them in the **DOCKER_USERNAME** and **DOCKER_PASSWORD** environment variables.

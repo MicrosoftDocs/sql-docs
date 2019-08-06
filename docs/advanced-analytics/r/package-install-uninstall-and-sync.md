@@ -69,10 +69,10 @@ Whenever you add a new package using the package management functions, both the 
 
 ## How package synchronization works
 
-To use package synchronization, call [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), which is a new function in
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). 
+To use package synchronization, call [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), which is a function in
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler).
 
-For each call to `rxSyncPackages`, you must specify a SQL Server instance and database. Then, either list the packages to synchronize, or specify package scope.
+For each call to `rxSyncPackages`, you must specify a SQL Server instance and database. Then either list the packages to synchronize or specify package scope.
 
 1. Create the SQL Server compute context by using the `RxInSqlServer` function. If you don't specify a compute context, the current compute context is used.
 
@@ -92,7 +92,7 @@ For each call to `rxSyncPackages`, you must specify a SQL Server instance and da
 
 ### Example 1. Synchronize all package by database
 
-This example gets any new packages from the local file system and installs the packages in the database [TestDB]. Because no owner is specific, the list includes all packages that have been installed for private and shared scopes.
+This example gets any new packages from the local file system and installs the packages in the database, *TestDB*. Because no owner is specified, the list includes all packages that have been installed for private and shared scopes.
 
 ```R
 connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"

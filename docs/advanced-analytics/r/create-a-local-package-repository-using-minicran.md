@@ -109,19 +109,51 @@ pdb[, c("Package", "Version", "License")]
 
 After you have a local repository with the packages you need, move the package repository to the SQL Server computer. The following procedure describes how to install the packages using R tools.
 
-1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: miniCRAN root> bin > windows > contrib > version > all packages. In the following examples, we assume a folder off the root drive: 
+1. Copy the folder containing the miniCRAN repository, in its entirety, to the server where you plan to install the packages. The folder typically has this structure: 
+
+   `miniCRAN-root/bin/windows/contrib/version/all-packages`
+
+   In this procedure, we assume a folder off the root drive.
 
 2. Open an R tool associated with the instance (for example, you could use Rgui.exe). Right-click **Run as administrator** to allow the tool to make updates to your system.
 
-    - For SQL Server 2017, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
+   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+   - For example, the default file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
+   ::: moniker-end
 
-    - For SQL Server 2016, he file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
+   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
+   ::: moniker-end
 
-3. Get the path for the instance library, and add it to the list of library paths. On SQL Server 2017, the path is similar to the following example.
+   ::: moniker range="=sql-server-2019||=sqlallproducts-allversions"
+   - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64`.
+   ::: moniker-end
 
-    ```R
-    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library"
-    ```
+3. Get the path for the instance library, and add it to the list of library paths. The path should be similar to the following example:
+
+   ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+   ```R
+   outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library"
+   ```
+
+   ::: moniker-end
+
+   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+
+   ```R
+   outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library"
+   ```
+
+   ::: moniker-end
+
+   ::: moniker range="=sql-server-2019||=sqlallproducts-allversions"
+
+   ```R
+   outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL15.MSSQLSERVER/R_SERVICES/library"
+   ```
+
+   ::: moniker-end
 
 4. Specify the new location on the server where you copied the **miniCRAN** repository, as `server_repo`.
 
@@ -131,7 +163,7 @@ After you have a local repository with the packages you need, move the package r
     inputlib <- "C:/temp/mylocalrepo"
     ```
 
-5. Since you are working in a new R workspace on the server, you must also furnish the list of packages to install.
+5. Since you're working in a new R workspace on the server, you must also furnish the list of packages to install.
 
     ```R
     mypackages <- c("zoo", "forecast")

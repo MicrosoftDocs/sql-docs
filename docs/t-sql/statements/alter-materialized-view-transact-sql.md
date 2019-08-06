@@ -17,7 +17,7 @@ helpviewer_keywords:
   - "views [SQL Server], modifying"
   - "modifying views"
   - "ALTER VIEW statement"
-author: XiaoyuL-Preview 
+author: XiaoyuMSFT 
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---

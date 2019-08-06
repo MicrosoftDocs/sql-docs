@@ -138,14 +138,6 @@ Run this command from an R console to get the build number and version numbers f
 sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), computeContext = sqlServer)
 ```
 
-**Results**
-
-```text
-[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
-
-[2] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/lattice"
-```
-
 ### Install a package on SQL Server
 
 This example installs the **forecast** package and its dependencies into the compute context.

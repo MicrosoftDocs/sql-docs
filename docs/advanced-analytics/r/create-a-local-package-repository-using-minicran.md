@@ -19,8 +19,7 @@ You can specify one or more packages, and **miniCRAN** recursively reads the dep
 
 When it's done, **miniCRAN** creates an internally consistent repository consisting of the selected packages and all required dependencies. You can move this local repository to the server, and proceed to install the packages without an internet connection.
 
-> [!TIP]
-> Experienced R users often look for the list of dependent packages in the DESCRIPTION file of a downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend **miniCRAN** for assembling the full collection of required packages.
+Experienced R users often look for the list of dependent packages in the DESCRIPTION file of a downloaded package. However, packages listed in **Imports** might have second-level dependencies. For this reason, we recommend **miniCRAN** for assembling the full collection of required packages.
 
 ## Why create a local repository
 

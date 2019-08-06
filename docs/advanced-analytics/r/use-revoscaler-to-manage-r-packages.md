@@ -19,11 +19,12 @@ RevoScaleR 9.0.1 and later includes functions for R package management a SQL Ser
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-SQL Server Machine Learning Services already includes a newer version of RevoScaleR. 
+SQL Server Machine Learning Services includes a newer version of RevoScaleR.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server R Services customers must do a [component upgrade](../install/upgrade-r-and-python.md) to get RevoScaleR package management functions. For instructions on how to retrieve package version and contents, see [Get package information](../package-management/installed-package-information.md).
+> [!NOTE]
+> SQL Server R Services customers must do a [component upgrade](../install/upgrade-r-and-python.md) to get RevoScaleR package management functions. For instructions on how to retrieve package version and contents, see [Get package information](../package-management/installed-package-information.md).
 ::: moniker-end
 
 ## RevoScaleR functions for package management

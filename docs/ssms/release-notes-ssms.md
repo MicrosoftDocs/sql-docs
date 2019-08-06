@@ -376,7 +376,7 @@ SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a
 |Object Scripting|Fixed an issue where scripting of database objects was failing when connecting to an Azure SQL DB using AAD with MFA.|
 |Object Scripting|Fixed an issue where trying to script a spatial index with GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID on an Azure SQL DB was throwing an error.|
 |Object Scripting|Fixed an issue, which was causing the database scripting (of an Azure SQL database) to always target an on-prem SQL, even if the "Object Explorer" scripting settings were set to match the source.|
-|Object Scripting|Fixed an issue where trying to script a table in a SQL DW database involving clustered and non-clustered indexes was generating incorrect T-SQL statements.|
+|Object Scripting|Fixed an issue where trying to script a table in a SQL DW database involving clustered and nonclustered indexes was generating incorrect T-SQL statements.|
 |Object Scripting|Fixed an issue where trying to script a table in a SQL DW database with both "Clustered Columnstore Indexes" and "Clustered Indexes" was generating incorrect T-SQL (duplicate statements).|
 |Object Scripting|Fixed Partitioned table scripting with no range values (SQL DW databases).|
 |Object Scripting|Fixed an issue where the user would be unable to script an audit/audit specification SERVER_PERMISSION_CHANGE_GROUP.|

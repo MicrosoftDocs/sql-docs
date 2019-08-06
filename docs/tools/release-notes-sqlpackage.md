@@ -64,7 +64,7 @@ Preview release.
 | Feature | Details |
 | :------ | :------ |
 | Added support for UTF8 collations. | &nbsp; |
-| Enabled non-clustered columnstore indexes on an indexed view. | &nbsp; |
+| Enabled nonclustered columnstore indexes on an indexed view. | &nbsp; |
 | Moved to .NET Core 2.2. | &nbsp; |
 | Use memory backed storage for schema compare on .NET Core. | &nbsp; |
 | &nbsp; | &nbsp; |

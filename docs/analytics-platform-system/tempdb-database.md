@@ -62,7 +62,7 @@ Limitations and restrictions on local temporary tables. You *cannot:*
   
 -   Rename a temporary table  
   
--   Create partitions, views, or non-clustered indexes on a temporary table. **ALTER INDEX** can be used to rebuild a clustered index for a table created with one.  
+-   Create partitions, views, or nonclustered indexes on a temporary table. **ALTER INDEX** can be used to rebuild a clustered index for a table created with one.  
   
 -   Modify permissions to temporary tables with the GRANT, DENY, or REVOKE statements.  
   

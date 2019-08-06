@@ -1,9 +1,10 @@
 ---
 title: Tips for using R packages installed in user libraries
+description: Helpful tips on using R packages in SQL Server for those who are new to R or SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/13/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -12,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Tips for using R packages in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article has separate sections for DBAs who are unfamiliar with R and experienced R developers who are unfamiliar package access in a SQL Server instance.
+This article provides helpful tips on using R packages in SQL Server. This is for DBAs who are unfamiliar with R, and experienced R developers who are unfamiliar with package access in a SQL Server instance.
 
 ## If you're new to R
 
@@ -44,7 +45,7 @@ This path should point to the R_SERVICES folder for the instance. For more infor
 
 ## If you're new to SQL Server
 
-As an R developer working on code executing on SQL Server, the security policies protecting the server constrain your ability to control the R environment.
+As an R developer working on code executing on SQL Server, the security policies protecting the server constrain your ability to control the R environment. The following tips describe situations and provide suggestions for working in this environment.
 
 ### R user libraries: not supported on SQL Server
 

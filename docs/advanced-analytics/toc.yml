@@ -239,8 +239,6 @@
         href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
       - name: Use T-SQL
         href: ../advanced-analytics/r/install-r-packages-tsql.md
-      - name: Use package managers
-        href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
       - name: Use RevoScaleR
         items:
         - name: Install using RevoScaleR

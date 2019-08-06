@@ -125,7 +125,7 @@ After you have a local repository with the packages you need, move the package r
    - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2019||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
    - For example, the file location for RGUI is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64`.
    ::: moniker-end
 
@@ -147,7 +147,7 @@ After you have a local repository with the packages you need, move the package r
 
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2019||=sqlallproducts-allversions"
+   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
 
    ```R
    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL15.MSSQLSERVER/R_SERVICES/library"

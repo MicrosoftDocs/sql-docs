@@ -239,15 +239,13 @@
         href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: Install new R packages
       items:
-      - name: Install R package
+      - name: Install using R tools
         href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-      - name: Use T-SQL
+      - name: Install using T-SQL
         href: ../advanced-analytics/r/install-r-packages-tsql.md
-      - name: Use package managers
-        href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-      - name: Use RevoScaleR
+      - name: Install using RevoScaleR
         items:
-        - name: Install using RevoScaleR
+        - name: Overview
           href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
         - name: Enable remote R package management
           href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md

@@ -1,9 +1,10 @@
 ---
-title: How to use RevoScaleR functions to find or install R packages
+title: Use RevoScaleR to install R packages on SQL Server
+description: Use RevoScaleR functions to install R packages on SQL Server with Machine Learning Services or R Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/13/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -12,9 +13,16 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # How to use RevoScaleR functions to find or install R packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-RevoScaleR 9.0.1 and later includes functions for R package management a SQL Server compute context. These functions can be used by remote, non-administrators to install packages on SQL Server without direct access to the server.
+This article describes how to use RevoScaleR (version 9.0.1 and later) for R package management a SQL Server compute context. The RevoScaleR functions can be used by remote, non-administrators to install packages on SQL Server without direct access to the server.
 
-SQL Server Machine Learning Services already includes a newer version of RevoScaleR. SQL Server 2016 R Services customers must do a [component upgrade](../install/upgrade-r-and-python.md) to get RevoScaleR package management functions. For instructions on how to retrieve package version and contents, see [Get package information](../package-management/installed-package-information.md).
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server Machine Learning Services includes a newer version of RevoScaleR.
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+> [!NOTE]
+> SQL Server R Services customers must do a [component upgrade](../install/upgrade-r-and-python.md) to get RevoScaleR package management functions. For instructions on how to retrieve package version and contents, see [Get package information](../package-management/installed-package-information.md).
+::: moniker-end
 
 ## RevoScaleR functions for package management
 
@@ -31,17 +39,17 @@ The following table describes the functions used for R package installation and 
 
 ## Prerequisites
 
-+ [Enable remote R package management on SQL Server](r-package-how-to-enable-or-disable.md)
++ Remote management enabled on SQL Server. For more information, see [Enable remote R package management on SQL Server](r-package-how-to-enable-or-disable.md).
 
-+ RevoScaleR versions must be the same on both client and server environments. For more information, see [Get package information](../package-management/installed-package-information.md).
++ RevoScaleR versions are the same on both client and server environments. For more information, see [Get package information](../package-management/installed-package-information.md).
 
-+ Permission to connect to the server and a database, and to run R commands. You must be a member of a database role that allows you to install packages on the specified instance and database.
++ You have permission to connect to the server and a database, and to run R commands. You must be a member of a database role that allows you to install packages on the specified instance and database.
 
-+ Packages in **shared scope** can be installed by users belonging to the `rpkgs-shared` role in a specified database. All users in this role can uninstall shared packages.
+  + Packages in **shared scope** can be installed by users belonging to the `rpkgs-shared` role in a specified database. All users in this role can uninstall shared packages.
 
-+ Packages in **private scope** can be installed by any user belonging to the `rpkgs-private` role in a database. However, users can see and uninstall only their own packages.
+  + Packages in **private scope** can be installed by any user belonging to the `rpkgs-private` role in a database. However, users can see and uninstall only their own packages.
 
-+ Database owners can work with shared or private packages.
+  + Database owners can work with shared or private packages.
 
 ## Client connections
 
@@ -49,7 +57,7 @@ A client workstation can be [Microsoft R Client](https://docs.microsoft.com/mach
 
 When calling package management functions from a remote R client, you must create a compute context object first, using the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function. Thereafter, for each package management function that you use, pass the compute context as an argument.
 
-User identity is typically specified when setting the compute context. If you do not specify a user name and password when you create the compute context, the identity of the user running the R code is used.
+User identity is typically specified when setting the compute context. If you don't specify a user name and password when you create the compute context, the identity of the user running the R code is used.
 
 1. From an R command line, define a connection string to the instance and database.
 2. Use the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) constructor to define a SQL Server compute context, using the connection string.
@@ -75,7 +83,7 @@ User identity is typically specified when setting the compute context. If you do
 
 ## Call package management functions in stored procedures
 
-You cam run package management functions inside `sp_execute_external_script`. When you do so, the function is executed using the security context of the stored procedure caller.
+You can run package management functions inside `sp_execute_external_script`. When you do so, the function is executed using the security context of the stored procedure caller.
 
 ## Examples
 
@@ -129,14 +137,6 @@ Run this command from an R console to get the build number and version numbers f
 
 ```R
 sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), computeContext = sqlServer)
-```
-
-**Results**
-
-```text
-[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
-
-[2] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/lattice"
 ```
 
 ### Install a package on SQL Server

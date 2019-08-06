@@ -1,10 +1,10 @@
 ---
-title: Enable or disable remote R package management
-description: Enable remote R package management on SQL Server 2016 R Services or SQL Server Machine Learning Services (In-Database)
+title: How to enable or disable remote R package management on SQL Server
+description: Learn how to enable or disable remote R package management on SQL Server R Services or SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/13/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -15,9 +15,6 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 This article describes how to enable remote management of R packages from a client workstation or a different Machine Learning Server. After the package management feature has been enabled on SQL Server, you can use RevoScaleR commands on a client to install packages on SQL Server.
 
-> [!NOTE]
-> Currently management of R libraries is supported; support for Python is on the roadmap.
-
 By default, the external package management feature for SQL Server is disabled. You must run a separate script to enable the feature as described in the next section.
 
 ## Overview of process and tools
@@ -26,7 +23,7 @@ To enable or disable package management on SQL Server, use the command-line util
 
 [Enabling](#bkmk_enable) this feature is a two-step process, requiring a database administrator: you enable package management on the SQL Server instance (once per SQL Server instance), and then enable package management on the SQL database (once per SQL Server database).
 
-[Disabling](#bkmk_disable) the package management feature also requires multipel steps: you remove database-level packages and permissions (once per database), and then remove the roles from the server (once per instance).
+[Disabling](#bkmk_disable) the package management feature also requires multiple steps: you remove database-level packages and permissions (once per database), and then remove the roles from the server (once per instance).
 
 ## <a name="bkmk_enable"></a> Enable package management
 
@@ -48,7 +45,7 @@ To enable or disable package management on SQL Server, use the command-line util
    
     This command creates some database artifacts, including the following database roles that are used for controlling user permissions: `rpkgs-users`, `rpkgs-private`, and `rpkgs-shared`.
 
-    For example, the following command enables package management on the database, on the instance where RegisterRExt is run. If you do not specify a user, the current security context is used.
+    For example, the following command enables package management on the database, TestDB, on the instance where RegisterRExt is run. If you do not specify a user, the current security context is used.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 
@@ -71,7 +68,7 @@ To enable or disable package management on SQL Server, use the command-line util
         ON o.schema_id = s.schema_id;
     ```
 
-After you have enabled this feature, you can use RevoScaleR function to install or uninstall packages from a remote R client.
+After you have enabled this feature, you can use RevoScaleR functions to install or uninstall packages from a remote R client.
 
 ## <a name="bkmk_disable"></a> Disable package management
 

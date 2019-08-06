@@ -48,7 +48,7 @@ To enable or disable package management on SQL Server, use the command-line util
    
     This command creates some database artifacts, including the following database roles that are used for controlling user permissions: `rpkgs-users`, `rpkgs-private`, and `rpkgs-shared`.
 
-    For example, the following command enables package management on the database, on the instance where RegisterRExt is run. If you do not specify a user, the current security context is used.
+    For example, the following command enables package management on the database, TestDB, on the instance where RegisterRExt is run. If you do not specify a user, the current security context is used.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 
@@ -71,7 +71,7 @@ To enable or disable package management on SQL Server, use the command-line util
         ON o.schema_id = s.schema_id;
     ```
 
-After you have enabled this feature, you can use RevoScaleR function to install or uninstall packages from a remote R client.
+After you have enabled this feature, you can use RevoScaleR functions to install or uninstall packages from a remote R client.
 
 ## <a name="bkmk_disable"></a> Disable package management
 

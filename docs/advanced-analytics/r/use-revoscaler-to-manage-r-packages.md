@@ -3,7 +3,7 @@ title: How to use RevoScaleR functions to find or install R packages
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/13/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -38,17 +38,17 @@ The following table describes the functions used for R package installation and 
 
 ## Prerequisites
 
-+ [Enable remote R package management on SQL Server](r-package-how-to-enable-or-disable.md)
++ Remote management enabled on SQL Server. For more information, see [Enable remote R package management on SQL Server](r-package-how-to-enable-or-disable.md).
 
-+ RevoScaleR versions must be the same on both client and server environments. For more information, see [Get package information](../package-management/installed-package-information.md).
++ RevoScaleR versions are the same on both client and server environments. For more information, see [Get package information](../package-management/installed-package-information.md).
 
-+ Permission to connect to the server and a database, and to run R commands. You must be a member of a database role that allows you to install packages on the specified instance and database.
++ You have permission to connect to the server and a database, and to run R commands. You must be a member of a database role that allows you to install packages on the specified instance and database.
 
-+ Packages in **shared scope** can be installed by users belonging to the `rpkgs-shared` role in a specified database. All users in this role can uninstall shared packages.
+  + Packages in **shared scope** can be installed by users belonging to the `rpkgs-shared` role in a specified database. All users in this role can uninstall shared packages.
 
-+ Packages in **private scope** can be installed by any user belonging to the `rpkgs-private` role in a database. However, users can see and uninstall only their own packages.
+  + Packages in **private scope** can be installed by any user belonging to the `rpkgs-private` role in a database. However, users can see and uninstall only their own packages.
 
-+ Database owners can work with shared or private packages.
+  + Database owners can work with shared or private packages.
 
 ## Client connections
 
@@ -56,7 +56,7 @@ A client workstation can be [Microsoft R Client](https://docs.microsoft.com/mach
 
 When calling package management functions from a remote R client, you must create a compute context object first, using the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) function. Thereafter, for each package management function that you use, pass the compute context as an argument.
 
-User identity is typically specified when setting the compute context. If you do not specify a user name and password when you create the compute context, the identity of the user running the R code is used.
+User identity is typically specified when setting the compute context. If you don't specify a user name and password when you create the compute context, the identity of the user running the R code is used.
 
 1. From an R command line, define a connection string to the instance and database.
 2. Use the [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) constructor to define a SQL Server compute context, using the connection string.

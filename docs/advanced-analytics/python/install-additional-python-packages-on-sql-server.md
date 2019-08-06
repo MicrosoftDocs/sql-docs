@@ -12,7 +12,7 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 
-# Install new Python packages on SQL Server
+# Install new Python packages on SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

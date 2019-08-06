@@ -10,7 +10,7 @@ author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# How to use RevoScaleR functions to find or install R packages on SQL Server
+# Use RevoScaleR functions to install R packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes how to use RevoScaleR (version 9.0.1 and later) for R package management a SQL Server compute context. The RevoScaleR functions can be used by remote, non-administrators to install packages on SQL Server without direct access to the server.

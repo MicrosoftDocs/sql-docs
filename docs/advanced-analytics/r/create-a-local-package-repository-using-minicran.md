@@ -4,7 +4,7 @@ description: Use miniCran to detect, assemble, and install R package dependencie
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 06/13/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

@@ -4,7 +4,7 @@ description: Add new R packages to SQL Server Machine Learning Services (In-Data
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/05/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye

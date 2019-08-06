@@ -1103,8 +1103,8 @@ ALTER INDEX test_idx on test_table RESUME
 ALTER INDEX test_idx on test_table ABORT
 ```
 
-### O. Create a non-clustered index on a table in the current database
-The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table.
+### O. Create a nonclustered index on a table in the current database
+The following example creates a nonclustered index on the `VendorID` column of the `ProductVendor` table.
 
 ```sql
 CREATE INDEX IX_ProductVendor_VendorID
@@ -1112,7 +1112,7 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```
 
 ### P. Create a clustered index on a table in another database
-The following example creates a non-clustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.
+The following example creates a nonclustered index on the `VendorID` column of the `ProductVendor` table in the `Purchasing` database.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID

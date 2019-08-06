@@ -12,9 +12,10 @@ f1_keywords:
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: "MashaMSFT"
 ms.author: "mathoma"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication Monitor, Main Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Replication Monitor allows you to track the status and performance of publications and subscriptions across a replication topology. The following topics provide more information:  
   
 -   For an overview of Replication Monitor, see [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md).  

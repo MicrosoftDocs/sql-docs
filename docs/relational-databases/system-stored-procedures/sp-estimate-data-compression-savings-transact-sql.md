@@ -110,22 +110,22 @@ sp_estimate_data_compression_savings
  |-----------------|---------------|
  |Heap|Clustered columnstore index|
  |Clustered index|Clustered columnstore index|
- |Non-clustered index|Non-clustered columnstore index (including the key columns and any included columns of the provided non-clustered index, as well as the partition column of the table, if any)|
- |Non-clustered columnstore index|Non-clustered columnstore index (including the same columns as the provided non-clustered columnstore index)|
+ |Nonclustered index|Nonclustered columnstore index (including the key columns and any included columns of the provided nonclustered index, as well as the partition column of the table, if any)|
+ |Nonclustered columnstore index|Nonclustered columnstore index (including the same columns as the provided nonclustered columnstore index)|
  |Clustered columnstore index|Clustered columnstore index|
 
 > [!NOTE]  
-> When estimating columnstore compression from a rowstore source object (clustered index, non-clustered index or heap), if there are any columns in the source object that have a data type that is not supported in a columnstore index, sp_estimate_compression_savings will fail with an error.
+> When estimating columnstore compression from a rowstore source object (clustered index, nonclustered index or heap), if there are any columns in the source object that have a data type that is not supported in a columnstore index, sp_estimate_compression_savings will fail with an error.
 
  Similarly, when the @data_compression parameter is set to NONE, ROW, or PAGE and the source object is a columnstore index, the following table outlines the reference objects used.
 
  |Source Object|Reference Object|
  |-----------------|---------------|
  |Clustered columnstore index|Heap|
- |Non-clustered columnstore index|Non-clustered index (including the columns contained in the non-clustered columnstore index as key columns, and the partition column of the table, if any, as an included column)|
+ |Nonclustered columnstore index|Nonclustered index (including the columns contained in the nonclustered columnstore index as key columns, and the partition column of the table, if any, as an included column)|
 
 > [!NOTE]  
-> When estimating rowstore compression (NONE, ROW or PAGE) from a columnstore source object, be sure that the source index does not contain more than 32 columns as this is the limit supported in a rowstore (non-clustered) index.
+> When estimating rowstore compression (NONE, ROW or PAGE) from a columnstore source object, be sure that the source index does not contain more than 32 columns as this is the limit supported in a rowstore (nonclustered) index.
   
 ## Examples  
  The following example estimates the size of the `Production.WorkOrderRouting` table if it is compressed by using `ROW` compression.  

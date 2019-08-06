@@ -36,7 +36,6 @@ This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a s
 
 The *user installer* is recommended because it does not require administrator privileges, which simplifies both installs and upgrades. The user installer does not require Administrator privileges as the location is under your user Local AppData (LOCALAPPDATA) folder. The user installer also provides a smoother background update experience. For more information, see [User setup for Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
-
 **User Installer** (recommended)
 
 1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2098449).
@@ -46,7 +45,6 @@ The *user installer* is recommended because it does not require administrator pr
 
 1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2098450 ).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
-
 
 **.zip file**
 
@@ -136,6 +134,7 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - Windows 8.1 (64-bit)
 - Windows 8 (64-bit)
 - Windows 7 (SP1) (64-bit) - Requires [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767)
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2 (64-bit)
 - Windows Server 2012 (64-bit)
@@ -152,8 +151,6 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 - Ubuntu 16.04
 
 ## Recommended System Requirements
-For an optimal experience, please use the recommended system requirements.
-[Need update here to quantify memory]
 
 |             | CPU Cores | Memory/RAM |
 |:-----------|:---------|:----------|

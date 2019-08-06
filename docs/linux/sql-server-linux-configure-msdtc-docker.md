@@ -1,13 +1,12 @@
 ---
 title: How to use distributed transactions with SQL Server on Docker
-description: This article explains how to use Dprovides a walk-through for configuring MSDTC on Linux.
+description: This article explains how to use the Microsoft Distributed Transaction Coordinator (MSDTC) for distributed transactions in a SQL Server container on Docker.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 09/25/2018
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 
 # How to use distributed transactions with SQL Server on Docker
@@ -16,7 +15,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 
 This article explains how to set up SQL Server Linux containers on Docker for distributed transactions.
 
-Starting with SQL Server 2019 preview, container images support the Microsoft Distributed Transaction Coordinator (MSDTC) required for distributed transactions. To understand the communications requirements for MSDTC, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md). This article explains the special requirements and scenarios related to SQL Server Docker containers.
+SQL Server container images can use the Microsoft Distributed Transaction Coordinator (MSDTC), which is required for distributed transactions. To understand the communications requirements for MSDTC, see [How to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux](sql-server-linux-configure-msdtc.md). This article explains the special requirements and scenarios related to SQL Server Docker containers.
 
 ## Configuration
 
@@ -27,7 +26,32 @@ To enable MSDTC transaction in containers for docker, you must set two new envir
 
 ### Pull and run
 
-The following example shows how to use these environment variables to pull and run a single SQL Server container configured for MSDTC. This allows it to communicate with any application on any hosts.
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+The following example shows how to use these environment variables to pull and run a single SQL Server 2017 container configured for MSDTC. This allows it to communicate with any application on any hosts.
+
+```bash
+docker run \
+   -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
+   -p 51433:1433 -p 135:135 -p 51000:51000  \
+   -d mcr.microsoft.com/mssql/server:2017-latest
+```
+
+```PowerShell
+docker run `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
+   -p 51433:1433 -p 135:135 -p 51000:51000  `
+   -d mcr.microsoft.com/mssql/server:2017-latest
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+The following example shows how to use these environment variables to pull and run a single SQL Server 2019 preview container configured for MSDTC. This allows it to communicate with any application on any hosts.
 
 ```bash
 docker run \
@@ -36,6 +60,16 @@ docker run \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
+
+```PowerShell
+docker run `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
+   -p 51433:1433 -p 135:135 -p 51000:51000  `
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+```
+
+::: moniker-end
 
 > [!IMPORTANT]
 > The previous command only works for Docker running on Linux. For Docker on Windows, the Windows host already listens on port 135. You can remove the `-p 135:135` parameter for Docker on Windows, but it has a few limitations. The resulting container can then not be used for distributed transactions that involve the host; it can participate only in distributed transactions among docker containers on the host.

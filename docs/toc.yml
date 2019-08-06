@@ -5172,6 +5172,37 @@
       items:
       - name: Replication language
         href: relational-databases/replication/replication-language-reference.md
+      - name: Replication system views
+        href: relational-databases/system-views/replication-views-transact-sql.md
+        items:
+        - name: IHextendedArticleView (T-SQL)
+          href: relational-databases/system-views/ihextendedarticleview-transact-sql.md
+        - name: IHextendedSubscriptionView (T-SQL)
+          href: relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
+        - name: IHsyscolumns (T-SQL)
+          href: relational-databases/system-views/ihsyscolumns-transact-sql.md
+        - name: MSdatatype_mappings (T-SQL)
+          href: relational-databases/system-views/msdatatype-mappings-transact-sql.md
+        - name: MSdistribution_status (T-SQL)
+          href: relational-databases/system-views/msdistribution-status-transact-sql.md
+        - name: sysarticlecolumns (System View) (T-SQL)
+          href: relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
+        - name: sysarticles (System View) (T-SQL)
+          href: relational-databases/system-views/sysarticles-system-view-transact-sql.md
+        - name: sysdatatypemappings (T-SQL)
+          href: relational-databases/system-views/sysdatatypemappings-transact-sql.md
+        - name: sysextendedarticlesview (T-SQL)
+          href: relational-databases/system-views/sysextendedarticlesview-transact-sql.md
+        - name: sysmergeextendedarticlesview (T-SQL)
+          href: relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
+        - name: sysmergepartitioninfoview (T-SQL)
+          href: relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
+        - name: syspublications (System View) (T-SQL)
+          href: relational-databases/system-views/syspublications-system-view-transact-sql.md
+        - name: syssubscriptions (System View) (T-SQL)
+          href: relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
+        - name: systranschemas (T-SQL)
+          href: relational-databases/system-views/systranschemas-transact-sql.md
       - name: Properties of replication objects
         items:
         - name: Distributor properties
@@ -15011,37 +15042,6 @@
         href: relational-databases/system-tables/syssubscriptions-transact-sql.md
       - name: sysschemaarticles
         href: relational-databases/system-tables/sysschemaarticles-transact-sql.md
-  - name: System views
-    href: relational-databases/system-views/replication-views-transact-sql.md
-    items:
-    - name: IHextendedArticleView (T-SQL)
-      href: relational-databases/system-views/ihextendedarticleview-transact-sql.md
-    - name: IHextendedSubscriptionView (T-SQL)
-      href: relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
-    - name: IHsyscolumns (T-SQL)
-      href: relational-databases/system-views/ihsyscolumns-transact-sql.md
-    - name: MSdatatype_mappings (T-SQL)
-      href: relational-databases/system-views/msdatatype-mappings-transact-sql.md
-    - name: MSdistribution_status (T-SQL)
-      href: relational-databases/system-views/msdistribution-status-transact-sql.md
-    - name: sysarticlecolumns (System View) (T-SQL)
-      href: relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
-    - name: sysarticles (System View) (T-SQL)
-      href: relational-databases/system-views/sysarticles-system-view-transact-sql.md
-    - name: sysdatatypemappings (T-SQL)
-      href: relational-databases/system-views/sysdatatypemappings-transact-sql.md
-    - name: sysextendedarticlesview (T-SQL)
-      href: relational-databases/system-views/sysextendedarticlesview-transact-sql.md
-    - name: sysmergeextendedarticlesview (T-SQL)
-      href: relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
-    - name: sysmergepartitioninfoview (T-SQL)
-      href: relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
-    - name: syspublications (System View) (T-SQL)
-      href: relational-databases/system-views/syspublications-system-view-transact-sql.md
-    - name: syssubscriptions (System View) (T-SQL)
-      href: relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
-    - name: systranschemas (T-SQL)
-      href: relational-databases/system-views/systranschemas-transact-sql.md
   - name: Transact-SQL (T-SQL) Reference
     displayName: tsql
     href: t-sql/language-reference.md

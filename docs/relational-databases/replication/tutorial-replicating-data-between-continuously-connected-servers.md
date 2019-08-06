@@ -22,7 +22,7 @@ Transactional replication is a good solution to the problem of moving data betwe
 This tutorial shows you how to configure a transactional replication topology for continuously connected servers. For more information about how transactional replication works, see the [overview of transactional replication](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
   
 ## What you will learn  
-This tutorial teaches you to publish data from one database to another by using transactional replication. 
+This tutorial teaches you to publish data from one database to another by using transactional replication.  
 
 In this tutorial, you will learn how to:
 > [!div class="checklist"]

@@ -163,7 +163,6 @@ Secure enclaves enhance the functionality of Always Encrypted. The following cap
     > [!NOTE]
     > The above operations are supported for character string columns that use collations with a binary2 sort order (BIN2 collations). Character string columns using non-BIN2 collations can be encrypted using randomized encryption and enclave-enabled column encryption keys. However, the only new functionality that is enabled for such columns is in-place encryption.
 - Creating nonclustered indexes on columns using randomized encryption.
-- Computed columns using expressions containing the LIKE predicate and comparison operators on columns using randomized encryption.
 
 All other limitations (not addressed by the above enhancements) that are listed for Always Encrypted (without secure enclaves) at [Feature Details](always-encrypted-database-engine.md#feature-details) also apply to Always Encrypted with secure enclaves.
 
@@ -177,6 +176,7 @@ The following limitations are specific to Always Encrypted with secure enclaves:
     - char[n], varchar[n], binary[n], varbinary[n], if n is greater than 7935.
 - In-place cryptographic operations cannot be combined with any other changes of column metadata, except changing a collation within the same code page and nullability. For example, you cannot encrypt, re-encrypt, or decrypt a column AND change a data type of the column in a single ALTER TABLE or ALTER COLUMN Transact-SQL statement. Use two separate statements.
 - Using enclave-enabled keys for columns in in-memory tables isn't supported.
+- Expressions defining computed columns cannot perform any computations on enclave-enabled columns using randomized encryption (even if the computations are LIKE and range comparisons)..
 - The only supported key stores for storing enclave-enabled column master keys are Windows Certificate Store and Azure Key Vault.
 
 The following limitations apply to [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], but are on the roadmap to be addressed:

@@ -1,6 +1,6 @@
 ---
-title: Install new R language packages using standard R tools
-description: Add new R packages to SQL Server Machine Learning Services or SQL Server R Services
+title: Install new R language packages on SQL Server using standard R tools
+description: Add new R packages to SQL Server Machine Learning Services or SQL Server R Services using standard R tools.
 ms.prod: sql
 ms.technology: machine-learning
 

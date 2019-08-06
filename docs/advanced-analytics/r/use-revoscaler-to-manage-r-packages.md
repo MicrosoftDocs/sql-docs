@@ -1,5 +1,6 @@
 ---
-title: How to use RevoScaleR functions to find or install R packages
+title: Use RevoScaleR to install R packages on SQL Server
+description: Use RevoScaleR functions to install R packages on SQL Server with Machine Learning Services or R Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -12,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # How to use RevoScaleR functions to find or install R packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-RevoScaleR 9.0.1 and later includes functions for R package management a SQL Server compute context. These functions can be used by remote, non-administrators to install packages on SQL Server without direct access to the server.
+This article describes how to use RevoScaleR (version 9.0.1 and later) for R package management a SQL Server compute context. The RevoScaleR functions can be used by remote, non-administrators to install packages on SQL Server without direct access to the server.
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 SQL Server Machine Learning Services includes a newer version of RevoScaleR.

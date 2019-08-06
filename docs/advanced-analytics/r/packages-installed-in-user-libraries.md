@@ -1,6 +1,6 @@
 ---
-title: Tips for using R packages installed in user libraries
-description: Helpful tips on using R packages in SQL Server for those who are new to R or SQL Server.
+title: Tips for using R packages installed in SQL Server
+description: Helpful tips on using R packages in SQL Server for those who are new to R or to SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 

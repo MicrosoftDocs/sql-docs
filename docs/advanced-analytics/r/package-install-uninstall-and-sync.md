@@ -1,6 +1,6 @@
 ---
-title: R package synchronization from the file system
-description: Update R libraries on SQL Server with newer versions installed on the file system.
+title: Synchronize R packages between file system and SQL Server with RevoScaleR
+description: Use RevoScaleR to update R libraries on SQL Server with newer versions installed on the file system.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -15,9 +15,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-RevoScaleR 9.0.1 and later includes the ability to synchronize collections of R packages between the file system and the instance and database where packages are used.
+This article describes how to use RevoScaleR (version 9.0.1 and later) to synchronize collections of R packages between the file system and the instance and database where packages are used.
 
-This feature was provided to make it easier to back up R package collections associated with SQL Server databases. Using this feature, an administrator can restore not just the database, but any R packages that were used by data scientists working in that database.
+This feature was provided in RevoScaleR to make it easier to back up R package collections associated with SQL Server databases. Using this feature, an administrator can restore not just the database, but any R packages that were used by data scientists working in that database.
 
 This article describes the package synchronization feature, and how to use the
 [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) function to perform the following tasks:

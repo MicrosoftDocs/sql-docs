@@ -22,7 +22,7 @@ manager: craigg
  To use any code example that is provided, you will have to choose the programming environment, the programming template, and the programming language in which to create your application. For more information, see [Create a Visual Basic SMO Project in Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) or [Create a Visual C&#35; SMO Project in Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## Creating a Non-Clustered, Composite Index in Visual Basic  
- This code example demonstrates how to create a composite, non-clustered index. For a composite index, add more than one column to the index. Set the <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> property to `False` for a nonclustered index.  
+ This code example demonstrates how to create a composite, nonclustered index. For a composite index, add more than one column to the index. Set the <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> property to `False` for a nonclustered index.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -79,7 +79,7 @@ End Class
 ```  
   
 ## Creating a Non-Clustered, Composite Index in Visual C#  
- This code example demonstrates how to create a composite, non-clustered index. For a composite index, add more than one column to the index. Set the <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> property to `False` for a nonclustered index.  
+ This code example demonstrates how to create a composite, nonclustered index. For a composite index, add more than one column to the index. Set the <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> property to `False` for a nonclustered index.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -137,7 +137,7 @@ public class A {
 ```  
   
 ## Creating a Non-Clustered, Composite Index in PowerShell  
- This code example demonstrates how to create a composite, non-clustered index. For a composite index, add more than one column to the index. Set the <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> property to `False` for a nonclustered index.  
+ This code example demonstrates how to create a composite, nonclustered index. For a composite index, add more than one column to the index. Set the <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> property to `False` for a nonclustered index.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

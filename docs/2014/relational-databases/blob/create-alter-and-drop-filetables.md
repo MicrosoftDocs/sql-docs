@@ -156,9 +156,9 @@ GO
 |||  
 |-|-|  
 |**Columns**|**Index type**|  
-|[path_locator] ASC|Primary Key, non-clustered|  
-|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, non-clustered|  
-|[stream_id] ASC|Unique, non-clustered|  
+|[path_locator] ASC|Primary Key, nonclustered|  
+|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, nonclustered|  
+|[stream_id] ASC|Unique, nonclustered|  
   
  **Constraints that are created when you create a new FileTable**  
  When you create a new FileTable, the following system-defined constraints are also created:  

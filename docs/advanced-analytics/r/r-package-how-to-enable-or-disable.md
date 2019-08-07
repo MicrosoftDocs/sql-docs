@@ -90,4 +90,4 @@ After you have enabled this feature, you can use RevoScaleR functions to install
 
 + [Use RevoScaleR to install new R packages](use-revoscaler-to-manage-r-packages.md)
 + [Tips for installing R packages](packages-installed-in-user-libraries.md)
-+ [Default packages](../package-management/default-packages.md)
++ [Get R package information](../package-management/r-package-information.md)

@@ -207,4 +207,4 @@ exec sp_execute_external_script
 + [Enable remote R package management](r-package-how-to-enable-or-disable.md)
 + [Synchronize R packages](package-install-uninstall-and-sync.md)
 + [Tips for installing R packages](packages-installed-in-user-libraries.md)
-+ [Default packages](../package-management/default-packages.md)
++ [Get R package information](../package-management/r-package-information.md)

@@ -41,7 +41,7 @@ R packages run on multiple computing platforms. Be sure that the versions you in
 
 If you have previously modified the R environment on the computer, before installing anything ensure that the R environment variable `.libPath` uses just one path.
 
-This path should point to the R_SERVICES folder for the instance. For more information, including how to determine which packages are already installed, see [Default R and Python packages in SQL Server](../package-management/default-packages.md).
+This path should point to the R_SERVICES folder for the instance. For more information, including how to determine which packages are already installed, see [Get R package information](../package-management/r-package-information.md).
 
 ## If you're new to SQL Server
 
@@ -79,7 +79,7 @@ Using the following guidelines will help you avoid "package not found" errors.
 
 + Update your code to remove direct references to the paths of R packages or R libraries.
 
-+ Know which package library is associated with the instance. For more information, see [Default R and Python packages in SQL Server](../package-management/default-packages.md).
++ Know which package library is associated with the instance. For more information, see [Get R package information](../package-management/r-package-information.md).
 
 ## See also
 

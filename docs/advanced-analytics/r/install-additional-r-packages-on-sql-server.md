@@ -53,7 +53,7 @@ If the SQL Server has access to the Internet, then you can use standard package 
 
 For example, the following procedure uses RGui:
 
-1. Determine the location of the instance library (see [Get R package information](../package-management/default-packages.md)) and navigate to the folder where the R tools are installed.
+1. Determine the location of the instance library (see [Get R package information](../package-management/r-package-information.md)) and navigate to the folder where the R tools are installed.
 
    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
    For example the default path for a SQL Server default instance is:
@@ -90,7 +90,7 @@ For more information, see [Create a local R package repository using miniCRAN](c
 
 Once the zip file is on the SQL Server instance, you can install it using standard R tools on the server. For example, the following procedure uses RGui:
 
-1. Determine the location of the instance library (see [Get R and Python package information](../package-management/default-packages.md)) and navigate to the folder where the R tools are installed. 
+1. Determine the location of the instance library (see [Get R package information](../package-management/r-package-information.md)) and navigate to the folder where the R tools are installed. 
 
    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
    For example the default path for a SQL Server default instance is:

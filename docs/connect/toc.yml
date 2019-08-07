@@ -2381,6 +2381,8 @@
     items:
     - name: Download Microsoft JDBC Driver for SQL Server
       href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+    - name: Parsing the Results
+      href: ../connect/jdbc/parsing-the-results.md
     - name: Release Notes for the JDBC Driver
       href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
     - name: System Requirements for the JDBC Driver

@@ -18,7 +18,7 @@ manager: kenvh
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The [!INCLUDE[jdbcNoVersion] allows an application to use the **authenticationScheme** connection property to indicate that it wants to connect to a database using NTLM v2 Authentication. 
+The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] allows an application to use the **authenticationScheme** connection property to indicate that it wants to connect to a database using NTLM v2 Authentication. 
 
 The following properties are also used for NTLM Authentication:
 
@@ -75,10 +75,10 @@ For more information about service principal names (SPNs), see:
 
 - [Service Principal Name (SPN) Support in Client Connections](https://docs.microsoft.com/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections?view=sql-server-2017)
 
-[!NOTE]  
-The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4.2 and higher.
+> [!NOTE]  
+> The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4.2 and higher.
 
-Before 6.2 release of JDBC driver, you would need to explicitly set the **serverSpn**. As of the 6.2 release, the driver will be able to build the **serverSpn** by default, although one can use **serverSpn** explicitly too.
+> Before 6.2 release of JDBC driver, you would need to explicitly set the **serverSpn**. As of the 6.2 release, the driver will be able to build the **serverSpn** by default, although one can use **serverSpn** explicitly too.
 
 ## Security Risks
 
@@ -94,8 +94,8 @@ For more information on connecting with SSL Encryption, see:
 
 - [Connecting with SSL Encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
-[!NOTE]
-For the 7.4 release, enabling **both** Extended Protection and Encryption is not supported.
+> [!NOTE]
+> For the 7.4 release, enabling **both** Extended Protection and Encryption is not supported.
 
 ## See Also
 

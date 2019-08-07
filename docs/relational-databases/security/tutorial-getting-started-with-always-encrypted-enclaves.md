@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 08/07/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -35,7 +35,7 @@ To get started with Always Encrypted with secure enclaves, you need at least two
    - 64-bit Processor with Second Level Address Translation (SLAT)
    - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs)
    - Virtualization support enabled (Intel VT-x or AMD-V)
-- If your SQL Server computer is a virtual machine, the VM must be configured to allow nested virtualization.
+- If your SQL Server computer is a virtual machine, the VM must be configured to support Virtualization Based Security.
    - On Hyper-V 2016 or later, use a generation 1 VM and [enable nested virtualization extensions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor, or use a generation 2 VM. For more information about VM generations see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
    - In Azure, make sure you're running a VM size that supports one of the following:
       - Nested virtualization, for example the Dv3 and Ev3 series VMs. See [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).

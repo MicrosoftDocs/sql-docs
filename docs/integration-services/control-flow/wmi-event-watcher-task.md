@@ -105,7 +105,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## WMI Event Watcher Task Editor (General Page)
   Use the **General** page of the **WMI Event Watcher Task Editor** dialog box to name and describe the WMI Event Watcher task.  
   
- For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+ For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](/windows/win32/wmisdk/querying-with-wql), in the MSDN Library.  
   
 ### Options  
  **Name**  
@@ -120,7 +120,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## WMI Event Watcher Task Editor (WMI Options Page)
   Use the **WMI Options** page of the **WMI Event Watcher Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and how the WMI Event Watcher task responds to Microsoft Windows Instrumentation (WMI) events.  
   
- For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+ For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](/windows/win32/wmisdk/querying-with-wql), in the MSDN Library.  
   
 ### Static Options  
  **WMIConnectionName**  

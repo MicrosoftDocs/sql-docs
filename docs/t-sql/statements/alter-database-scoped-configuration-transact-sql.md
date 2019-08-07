@@ -323,7 +323,7 @@ Allows you to enable or disable colection of the last query plan statistics (equ
 
 PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time in minutes>
 
-**APPLIES TO**: Azure SQL Database
+**APPLIES TO**: Azure SQL Database only
 
 The `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` option determines how long (in minutes) the resumable index is being paused before being automatically aborted by the engine.
 
@@ -519,7 +519,9 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 ### L. Set paused duration
 
-This example sets the paused duration to 60 minutes.
+**APPLIES TO**: Azure SQL Database only
+
+This example sets the resumable index paused duration to 60 minutes.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION

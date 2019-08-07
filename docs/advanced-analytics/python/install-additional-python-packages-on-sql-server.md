@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 
 This article describes how to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
-For more information about package location and installation paths, see [Get Python package information](python-package-information.md).
+For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
 ## Prerequisites
 

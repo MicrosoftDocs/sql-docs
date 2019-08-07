@@ -61,20 +61,16 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 Is the name of an existing user-defined external resource pool or the default external resource pool that is created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.
 "default" must be enclosed by quotation marks ("") or brackets ([]) when used with `ALTER EXTERNAL RESOURCE POOL` to avoid conflict with `DEFAULT`, which is a system reserved word.
 
-
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
-
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 Attach the external resource pool to specific CPUs.
 
 AFFINITY CPU = **(** \<CPU_range_spec> **)** maps the external resource pool to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPUs identified by the given CPU_IDs. When you use AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, the external resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] physical CPUs that correspond to the given NUMA node or range of nodes.
 
-
 MAX_MEMORY_PERCENT =*value*  
 Specifies the total server memory that can be used by requests in this external resource pool. *value* is an integer. The allowed range for *value* is from 1 through 100.
-
 
 MAX_PROCESSES =*value*  
 Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool, which is thereafter bound only by computer resources.
@@ -108,18 +104,11 @@ GO
 
 ## See also
 
-[Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
-
-[external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-
-[CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
-
-[DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
-
-[ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
-
-[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
-
-[Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-
-[ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 
++ [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
++ [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
++ [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
++ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
++ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
++ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
++ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CREATE INDEX Statement Limitations
 The CREATE INDEX statement is not supported for the Microsoft Excel or Text drivers.  

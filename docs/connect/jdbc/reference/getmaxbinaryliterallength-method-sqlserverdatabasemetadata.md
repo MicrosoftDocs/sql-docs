@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 42e49ff9-8072-44e4-ad75-c864c3a4ad8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # getMaxBinaryLiteralLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

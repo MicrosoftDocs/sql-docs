@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Change Domain Values
 

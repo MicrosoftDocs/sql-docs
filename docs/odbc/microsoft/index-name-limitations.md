@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e44e5858-696e-4939-93ae-4d6572e3f49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Index Name Limitations
 When the Paradox driver is used, a primary index must have the same name as the table upon which it is defined. Other unique or non-unique indexes must have the same name as the table upon which they are defined.

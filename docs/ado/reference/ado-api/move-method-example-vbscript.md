@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Move Method Example (VBScript)
 This example uses the [Move](../../../ado/reference/ado-api/move-method-ado.md) method to position the record pointer, based on user input.  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UNICODE (Transact-SQL)
@@ -82,7 +81,7 @@ SET @nstring = N'Åkergatan 24';
 -- the actual Unicode character you are processing, and the UNICODE   
 -- value for this particular character.  
 PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
-WHILE @position <= DATALENGTH(@nstring)  
+WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
    BEGIN;  
    SELECT @position,   

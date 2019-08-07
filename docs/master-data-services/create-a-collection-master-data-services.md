@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Collection (Master Data Services)
 

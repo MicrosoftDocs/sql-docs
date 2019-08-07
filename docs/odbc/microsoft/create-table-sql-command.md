@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CREATE TABLE - SQL Command
 Creates a table having the specified fields.  

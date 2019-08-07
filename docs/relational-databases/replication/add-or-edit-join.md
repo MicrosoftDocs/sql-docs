@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Add or Edit Join
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

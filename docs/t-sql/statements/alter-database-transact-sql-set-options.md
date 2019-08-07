@@ -29,7 +29,6 @@ helpviewer_keywords:
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE SET Options (Transact-SQL)
@@ -764,7 +763,10 @@ Size-based cleanup won't be automatically activated.
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-Designates the currently active query capture mode.
+Designates the currently active query capture mode. Each mode defines specific query capture policies.
+
+> [!NOTE]
+> Cursors, queries inside Stored Procedures, and Natively compiled queries are always captured when the query capture mode is set to ALL, AUTO, or CUSTOM.
 
 ALL         
 Captures all queries. ALL is the default configuration value. This is the default configuration value starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].

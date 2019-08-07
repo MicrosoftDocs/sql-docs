@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC How-to Topics

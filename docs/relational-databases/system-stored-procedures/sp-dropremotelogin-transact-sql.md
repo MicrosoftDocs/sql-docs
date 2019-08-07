@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-manager: jroth
 ---
 # sp_dropremotelogin (Transact-SQL)
 

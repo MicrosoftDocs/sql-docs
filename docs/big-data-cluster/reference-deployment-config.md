@@ -5,7 +5,6 @@ description: Reference for a big data cluster deployment configuration file.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql

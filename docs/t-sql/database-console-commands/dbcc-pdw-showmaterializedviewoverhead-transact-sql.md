@@ -9,9 +9,8 @@ ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: XiaoyuL-Preview 
+author: XiaoyuMSFT 
 ms.author: xiaoyul
-manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (preview)

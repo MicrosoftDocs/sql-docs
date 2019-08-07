@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Column Pattern Profile Request Options (Data Profiling Task)
 

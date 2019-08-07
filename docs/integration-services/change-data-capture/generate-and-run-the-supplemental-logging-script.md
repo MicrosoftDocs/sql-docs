@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Generate and Run the Supplemental Logging Script
 

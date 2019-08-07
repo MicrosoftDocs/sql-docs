@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Create a Linked Domain
 

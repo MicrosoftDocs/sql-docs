@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # The Memory Optimized Filegroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

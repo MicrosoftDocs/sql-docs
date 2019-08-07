@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "views [SQL Server], modifying"
   - "modifying views"
   - "ALTER VIEW statement"
-author: XiaoyuL-Preview 
+author: XiaoyuMSFT 
 ms.author: xiaoyul
-manager: craigg
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # ALTER MATERIALIZED VIEW (Transact-SQL) (preview)

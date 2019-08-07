@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Reading Large Data with Stored Procedures Sample

@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Enabling Logging Programmatically
 

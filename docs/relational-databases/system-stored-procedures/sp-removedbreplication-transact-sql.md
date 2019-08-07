@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_removedbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   This stored procedure removes all replication objects on the publication database on the Publisher instance of SQL Server or on the subscription database on the Subscriber instance of SQL Server. Execute in the appropriate database, or if the execution is in the context of another database on the same instance, specify the database where the replication objects should be removed. This procedure does not remove objects from other databases, such as the distribution database.  
   

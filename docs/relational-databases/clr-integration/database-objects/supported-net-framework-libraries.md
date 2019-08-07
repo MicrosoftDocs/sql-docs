@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Supported .NET Framework Libraries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

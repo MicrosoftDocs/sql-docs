@@ -5,7 +5,7 @@ title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.topic: "hub-page"
 ms.prod: sql
 ms.technology: release-landing

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Entity (Master Data Services)
 

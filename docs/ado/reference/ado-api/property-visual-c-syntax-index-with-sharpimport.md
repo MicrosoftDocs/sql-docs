@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Property (Visual C++ Syntax Index with #import)
 ## Properties  

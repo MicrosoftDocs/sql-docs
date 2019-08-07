@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Statement Transitions
 ODBC statements have the following states.  

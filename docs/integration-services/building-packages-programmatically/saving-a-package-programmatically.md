@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Saving a Package Programmatically
 

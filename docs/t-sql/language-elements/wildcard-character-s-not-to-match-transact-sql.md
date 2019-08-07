@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 
 # \[^\] (Wildcard - Character(s) Not to Match) (Transact-SQL)

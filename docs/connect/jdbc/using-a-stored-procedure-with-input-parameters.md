@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 
 # Using a Stored Procedure with Input Parameters

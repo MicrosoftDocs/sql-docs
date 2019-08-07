@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create an Updatable Subscription to a Transactional Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

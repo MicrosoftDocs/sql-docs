@@ -6,7 +6,6 @@ helpviewer_keywords:
   - "tde akv configuration, troubleshooting"
   - "tde troubleshooting"
 author: aliceku
-manager: craigg
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto

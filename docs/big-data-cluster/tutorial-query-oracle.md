@@ -5,7 +5,6 @@ description: This tutorial demonstrates how to query Oracle data from a SQL Serv
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: aboke
-manager: jroth
 ms.date: 12/12/2018
 ms.topic: tutorial
 ms.prod: sql

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ATAN (Transact-SQL)

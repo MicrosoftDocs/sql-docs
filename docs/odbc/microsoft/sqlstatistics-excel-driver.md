@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLStatistics (Excel Driver)
 > [!NOTE]  

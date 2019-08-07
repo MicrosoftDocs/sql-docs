@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Managing CLR Integration Assemblies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

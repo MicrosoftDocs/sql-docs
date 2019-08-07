@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.effective_object_permissions (SSISDB Database)
 

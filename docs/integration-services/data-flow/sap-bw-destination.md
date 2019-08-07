@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SAP BW Destination
 

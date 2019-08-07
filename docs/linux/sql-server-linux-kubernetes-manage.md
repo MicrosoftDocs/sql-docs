@@ -3,7 +3,7 @@ title: Manage a SQL Server Always On availability group Kubernetes
 description: This article explains how to manage a SQL Server Always On Availability Group in Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql

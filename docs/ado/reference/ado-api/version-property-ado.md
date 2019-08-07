@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Version Property (ADO)
 Indicates the ADO version number.  

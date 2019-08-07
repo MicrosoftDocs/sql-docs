@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: "markingmyname"
 ms.author: "maghan"
-manager: "craigg"
 ---
 # Keyboard Shortcuts for SQL Server Unit Test Designer
 You can use the following keyboard shortcuts to navigate within the SQL Server Unit Test Designer.  

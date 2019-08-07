@@ -58,7 +58,6 @@ helpviewer_keywords:
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE (Transact-SQL)
@@ -756,7 +755,7 @@ A partitioned table with a clustered columstore index behaves like a partitioned
 
 - The primary key must include the partition key.
 - A unique index must include the partition key. But, including the partition key with an existing unique index can change the uniqueness.
-- To switch partitions, all non-clustered indexes must include the partition key.
+- To switch partitions, all nonclustered indexes must include the partition key.
 
 For **SWITCH** restriction when using replication, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).
 

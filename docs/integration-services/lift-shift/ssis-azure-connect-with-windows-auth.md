@@ -10,7 +10,6 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
 ---
 # Access data stores and file shares with Windows authentication from SSIS packages in Azure
 

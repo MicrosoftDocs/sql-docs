@@ -11,9 +11,8 @@ f1_keywords:
 dev_langs:
   - "TSQL"
 helpviewer_keywords: 
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
-manager: craigg
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 

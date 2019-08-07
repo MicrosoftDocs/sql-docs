@@ -8,7 +8,6 @@ ms.custom: ""
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Deploy an SSIS project from Visual Studio Code with Transact-SQL
 

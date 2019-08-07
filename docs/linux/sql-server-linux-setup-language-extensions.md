@@ -1,8 +1,9 @@
 ---
-title: Install SQL Server Language Extensions (Java) on Linux | Microsoft Docs
+title: Install SQL Server Language Extensions (Java) on Linux
 description: Learn how to install SQL Server Language Extensions (Java) on Red Hat, Ubuntu, and SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
@@ -11,6 +12,8 @@ ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server 2019 Language Extensions (Java) on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Language Extensions are an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
@@ -22,7 +25,7 @@ Language Extensions is also supported on Linux containers. We do not provide pre
 
 ## Uninstall previous CTP
 
-The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.1. Side-by-side installation of multiple versions is not supported.
+The package list has changed over the last several CTP releases, resulting in fewer packages. We recommend uninstalling CTP 2.x to remove all previous packages before installing CTP 3.2. Side-by-side installation of multiple versions is not supported.
 
 ### 1. Confirm package installation
 
@@ -46,7 +49,7 @@ Commands for removing packages appear in the following table.
 | SLES	| `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu	| `sudo apt-get remove msssql-server-extensibility-java`|
 
-### 3. Proceed with CTP 3.1 install
+### 3. Proceed with CTP 3.2 install
 
 Install at the highest package level using the instructions in this article for your operating system.
 

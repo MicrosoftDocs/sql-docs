@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "SQL graph, MATCH statement"
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # SHORTEST_PATH (Transact-SQL)

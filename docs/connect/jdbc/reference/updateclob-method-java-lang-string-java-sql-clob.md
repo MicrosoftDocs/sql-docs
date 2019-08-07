@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 5da64915-1c13-44fd-90c0-52168889bae0
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # updateClob Method (java.lang.String, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

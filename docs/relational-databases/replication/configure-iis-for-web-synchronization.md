@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Configure IIS for Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

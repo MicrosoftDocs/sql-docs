@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Recordset Destination
 

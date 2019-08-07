@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Errors Collection Properties, Methods, and Events
 ## Properties  

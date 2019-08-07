@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a Custom Destination Component
 

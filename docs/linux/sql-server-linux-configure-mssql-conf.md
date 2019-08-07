@@ -1,10 +1,9 @@
 ---
-title: Configure SQL Server settings on Linux | Microsoft Docs
+title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 02/28/2019
+author: VanMSFT 
+ms.author: vanto
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -21,7 +20,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 |||
 |---|---|
-| [Agent](#agent) | Enable SQL Server Agent |
+| [Agent](#agent) | Enable SQL Server Agent. |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
 | [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux. |
@@ -400,7 +399,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
 The **sqlpagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
 
 ```bash
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 ## <a id="hadr"></a> High Availability
 

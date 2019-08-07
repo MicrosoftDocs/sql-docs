@@ -492,12 +492,22 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/installing-and-managing-r-packages.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/default-packages",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "/sql/advanced-analytics/package-management/default-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
             "redirect_document_id": true
         },
         {
             "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/package-management/installed-package-information",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "/sql/advanced-analytics/package-management/installed-package-information.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
             "redirect_document_id": true
         },
         {

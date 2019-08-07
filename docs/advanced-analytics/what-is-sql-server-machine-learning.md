@@ -19,15 +19,19 @@ In Azure SQL Database, [Machine Learning Services](https://docs.microsoft.com/az
 
 ## What is Machine Learning Services?
 
-SQL Server Machine Learning Services is a feature for in-database Python and R script execution. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminate transfer of the data across the network to another server. 
+SQL Server Machine Learning Services let you execute Python and R scripts in-database. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminate transfer of the data across the network to another server. 
 
-You can use open-source packages and frameworks, such as PyTorch, TensorFlow, and scikit-learn, in addition to Microsoft packages [revoscalepy](python/ref-py-revoscalepy.md) and [microsoftml](python/ref-py-microsoftml.md) for Python and [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md), and [sqlrutils](r/ref-r-sqlrutils.md) for R.
+Base distributions of Python and R are included in Machine Learning Services. You can use open-source packages and frameworks, such as PyTorch, TensorFlow, and scikit-learn, in addition to Microsoft packages [revoscalepy](python/ref-py-revoscalepy.md) and [microsoftml](python/ref-py-microsoftml.md) for Python, and [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md), and [sqlrutils](r/ref-r-sqlrutils.md) for R.
 
 Machine Learning Services use an extensibility framework to run Python and R scripts in SQL Server. Learn more about how this works:
 
 + [Extensibility framework](concepts/extensibility-framework.md)
 + [Python extension](concepts/extension-python.md)
 + [R extension](concepts/extension-r.md)
+
+## What can I do with Machine Learning Services?
+
+
 
 <a name="components"></a>
 

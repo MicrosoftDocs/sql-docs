@@ -102,7 +102,7 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 3. Enter `import revoscalepy` and run the command to load one of the Microsoft-specific libraries.
 
-4. Enter and run `print(revoscalepy.__version__)` to return the version information. You should see 9.2.1 or 9.3.0. You can use either of these versions with [revoscalepy on the server](../package-management/installed-package-information.md). 
+4. Enter and run `print(revoscalepy.__version__)` to return the version information. You should see 9.2.1 or 9.3.0. You can use either of these versions with [revoscalepy on the server](../package-management/r-package-information.md).
 
 4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) over a local data set. Other functions get the location of the sample data and create a data source object for a local .xdf file.
 

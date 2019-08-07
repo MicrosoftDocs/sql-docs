@@ -194,7 +194,7 @@ Point your IDE to the local R libraries: base R, RevoScaleR, and so forth. Runni
 
 When using [RStudio](https://www.rstudio.com/), you can configure the environment to use the R libraries and executables that correspond to those on a remote SQL Server.
 
-1. Check R package versions installed on SQL Server. For more information, see [Get R package information](../package-management/installed-package-information.md).
+1. Check R package versions installed on SQL Server. For more information, see [Get R package information](../package-management/r-package-information.md).
 
 1. Install Microsoft R Client or one of the standalone server options to add RevoScaleR and other R packages, including the base R distribution used by your SQL Server instance. Choose a version at the same level or lower (packages are backward compatible) that provides the same package versions as on the server. For version information, see the version map in this article: [Upgrade R and Python components](../install/upgrade-r-and-python.md).
 

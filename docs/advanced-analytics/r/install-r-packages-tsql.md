@@ -64,5 +64,5 @@ EXEC sp_execute_external_script
 
 ## See also
 
-+ [Get package information](../package-management/installed-package-information.md)
++ [Get R package information](../package-management/r-package-information.md)
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)

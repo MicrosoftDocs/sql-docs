@@ -50,7 +50,7 @@ This tutorial assumes familiarity with basic database operations such as creatin
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) or [SQL Server Machine Learning Services with R enabled](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R libraries](../package-management/installed-package-information.md)
++ [R libraries](../package-management/r-package-information.md)
 
 + [Permissions](../security/user-permission.md)
 

@@ -104,7 +104,7 @@ The following table lists the default paths of the binaries when SQL Server 2016
 
 ## Next steps
 
-+ [Get package information](installed-package-information.md)
++ [Get R package information](r-package-information.md)
 + [Install new R packages](../r/install-additional-r-packages-on-sql-server.md)
 + [Install new Python packages](../python/install-additional-python-packages-on-sql-server.md)
 + [Enable remote R package management](../r/r-package-how-to-enable-or-disable.md)

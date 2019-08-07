@@ -220,8 +220,8 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x20000000000**|Replicates the SPARSE attribute for columns. For more information about this attribute, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).|  
 |**0x40000000000**|Enable scripting by the snapshot agent to create memory-optimized table on the subscriber.|  
 |**0x80000000000**|Converts clustered index to nonclustered index for memory-optimized articles.|  
-|**0x400000000000**|Replicates any non-clustered columnstore indexes on the table(s)|  
-|**0x800000000000**|Replicates any flitered non-clustered columnstore indexes on the table(s).|  
+|**0x400000000000**|Replicates any nonclustered columnstore indexes on the table(s)|  
+|**0x800000000000**|Replicates any flitered nonclustered columnstore indexes on the table(s).|  
 |NULL|Replication automatically sets *schema_option* to a default value, the value of which depends on other article properties. The "Default Schema Options" table in the Remarks section shows the default schema options based on article type and replication type.<br /><br /> The default for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications is **0x050D3**.|  
   
  Not all *schema_option* values are valid for every type of replication and article type. The **Valid Schema Options** table in the Remarks section shows the valid schema options that can be chosen based upon the combination of the article type and the replication type.  

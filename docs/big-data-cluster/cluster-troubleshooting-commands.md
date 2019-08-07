@@ -87,7 +87,7 @@ If any errors have occurred, you can sometimes see the error in the recent event
 You can retrieve the logs for containers running in a pod. The following command retrieves the logs for all containers running in the pod named `master-0` and outputs them to a file name `master-0-pod-logs.txt`:
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> Get status of services
@@ -128,36 +128,6 @@ The following example retrieves details for the **master-svc-external** service:
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## Run commands in a container
-
-If existing tools or the infrastructure does not enable you to perform a certain task without actually being in the context of the container, you can log in to the container using `kubectl exec` command. For example, you might need to check if a specific file exists, or you might need to restart services in the container. 
-
-To use the `kubectl exec` command, use the following syntax:
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-The following two sections provide two examples of running a command in a specific container.
-
-### <a id="restartsql"></a> Log in to a specific container and restart SQL Server process
-
-The following example shows how to restart the SQL Server process in the `mssql-server` container in the `master-0` pod:
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> Log in to a specific container and restart services in a container
- 
-The following example shows how to restart all services managed by **supervisord**: 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> Copy files

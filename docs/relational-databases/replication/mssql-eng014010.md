@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
      10.193.17.129 inst1  
   
--   Remove replication, register each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and then reestablish replication. If the value of @@SERVERNAME is not correct for a non-clustered instance, follow these steps:  
+-   Remove replication, register each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, and then reestablish replication. If the value of @@SERVERNAME is not correct for a nonclustered instance, follow these steps:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

@@ -560,7 +560,7 @@ The following example moves `tempdb` from its current location on the disk to an
 2. Change the location of each file by using `ALTER DATABASE`.
 
     ```sql
-    USE maser;
+    USE master;
     GO
     ALTER DATABASE tempdb
     MODIFY FILE (NAME = tempdev, FILENAME = 'E:\SQLData\tempdb.mdf');

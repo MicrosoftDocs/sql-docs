@@ -37,7 +37,7 @@ The v8.3 release of SSMA for DB2 is enhanced with targeted fixes that are design
 
 The v8.2 release of SSMA for DB2 is enhanced with to address issues with connections to Azure SQL Database from the SSMA console tool and missing COUNT_BIG column in views declaration during conversion. In addition, this version includes a targeted set of fixes designed to improve quality and conversion metrics, as well as fixes for:
 
-* An issue with disabled non-clustered indexes after data migration.
+* An issue with disabled nonclustered indexes after data migration.
 * Detection of .NET Framework during silent installation.
 * An intermittent crash that occurs when a new version is downloaded.
 

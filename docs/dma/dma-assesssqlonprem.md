@@ -30,7 +30,7 @@ The following step-by-step instructions help you perform your first assessment f
 
 3. Click **Create**.
 
-   ![Create an assessment](../dma/media/dma-assesssqlonprem/NewAssessment.png)
+   ![Create an assessment](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
 ## Choose assessment options
 
@@ -43,14 +43,14 @@ The following step-by-step instructions help you perform your first assessment f
     - **Compatibility Issues**
     - **New features' recommendation**
 
-   ![Select an assessment report type for SQL Server target](../dma/media/dma-assesssqlonprem/AssessmentTypes.png)
+   ![Select an assessment report type for SQL Server target](../dma/media/dma-assesssqlonprem/assessment-types.png)
 
    When assessing your source SQL Server instance for migrating to Azure SQL Database, you can choose one or both of the following assessment report types:
 
     - **Check database compatibility**
     - **Check feature parity**
 
-    ![Select assessment report type for SQL Database target](../dma/media/dma-assesssqlonprem/AssessmentTypes_Azure.png)
+    ![Select assessment report type for SQL Database target](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
 ## Add databases and extended events trace to assess
 
@@ -103,7 +103,7 @@ The following step-by-step instructions help you perform your first assessment f
 
 5. Click **Next** to start the assessment.
 
-    ![Add sources and start assessment](../dma/media/dma-assesssqlonprem/SelectDatabase1.png)
+    ![Add sources and start assessment](../dma/media/dma-assesssqlonprem/select-database1.png)
 
 ## View results
 
@@ -115,23 +115,23 @@ The duration of the assessment depends on the number of databases added and the 
 
 You can review compatibility issues by analyzing the affected object, its details, and potentially a fix for every issue identified under **Breaking changes**, **Behavior changes**, and **Deprecated features**.
 
-![View assessment results](../dma/media/dma-assesssqlonprem/ReviewResults.png)
+![View assessment results](../dma/media/dma-assesssqlonprem/review-results.png)
 
 Similarly, you can review feature recommendation across **Performance**, **Storage**, and **Security** areas.
 
 Feature recommendations cover different kinds of features such as In-Memory OLTP, Columnstore, Stretch Database, Always Encrypted, Dynamic Data Masking, and Transparent Data Encryption.
 
-![View feature recommendations](../dma/media/dma-assesssqlonprem/FeatureRecommendations.png)
+![View feature recommendations](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
 For Azure SQL Database, the assessments provide migration blocking issues and feature parity issues. Review the results for both categories by selecting the specific options.
 
 - The **SQL Server feature parity** category provides a comprehensive set of recommendations, alternative approaches available in Azure, and mitigating steps. It helps you plan this effort in your migration projects.
 
-  ![View information for SQL Server feature parity](../dma/media/SQLFeatureParity.png)
+  ![View information for SQL Server feature parity](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
 - The **Compatibility issues** category provides partially supported or unsupported features that block migrating on-premises SQL Server databases to Azure SQL databases. It then provides recommendations to help you address those issues.
 
-  ![View compatibility issues](../dma/media/dma-assesssqlonprem/CompatibilityIssues.png)
+  ![View compatibility issues](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
 ## Assess a data estate for target readiness
 
@@ -141,8 +141,7 @@ Doing so allows you to view the consolidated results on the Azure migrate hub pr
 
 Detailed, step-by-step guidance for target readiness assessments is available [here](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017).
 
-   ![Upload results to Azure Migrate](../dma/media/dma-assesssqlonprem/Upload_to_Azure_Migrate.png)
-
+   ![Upload results to Azure Migrate](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 
 ## Export results
 

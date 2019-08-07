@@ -1,6 +1,6 @@
 ---
-title: Install new Python language packages
-description: Add new Python packages to SQL Server Machine Learning Services.
+title: Install Python packages with pip
+description: Learn how to use Python pip to install new Python packages on an instance of SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -12,11 +12,11 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 ---
 
-# Install new Python packages on SQL Server Machine Learning Services
+# Install Python packages with pip
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
+This article describes how to use pip to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 

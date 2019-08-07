@@ -1,6 +1,6 @@
 ---
-title: Tips for using R packages installed in SQL Server
-description: Helpful tips on using R packages in SQL Server for those who are new to R or to SQL Server.
+title: Tips for using R packages
+description: Learn helpful tips on using R packages in SQL Server for those who are new to R or to SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,7 +10,8 @@ author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Tips for using R packages in SQL Server
+# Tips for using R packages
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article provides helpful tips on using R packages in SQL Server. These tips are for DBAs who are unfamiliar with R, and experienced R developers who are unfamiliar with package access in a SQL Server instance.

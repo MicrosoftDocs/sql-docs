@@ -1,22 +1,22 @@
 ---
 title: Get R package information
-description: Learn how to get information about installed R packages, including versions and installation locations, on SQL Server Machine Learning Services and SQL Server R Services.
+description: Learn how to get information about installed R packages on SQL Server Machine Learning Services and SQL Server R Services.
 ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
-# Get R package information on SQL Server Machine Learning Services and SQL Server R Services
+# Get R package information
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Learn how to get information about installed R packages on SQL Server Machine Learning Services. Example R scripts show you how to list package information such as installation path and version.
+This article describes how to get information about installed R packages on SQL Server Machine Learning Services and SQL Server R Services. Example R scripts show you how to list package information such as installation path and version.
 
 ## Default R library location
 

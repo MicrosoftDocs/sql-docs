@@ -1,6 +1,6 @@
 ---
-title: How to enable or disable remote R package management on SQL Server
-description: Learn how to enable or disable remote R package management on SQL Server R Services or SQL Server Machine Learning Services.
+title: How to enable or disable remote R package management
+description: Learn how to enable or disable remote R package management on SQL Server Machine Learning Services or SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -10,10 +10,11 @@ author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Enable or disable remote R package management for SQL Server
+# How to enable or disable remote R package management
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to enable remote management of R packages from a client workstation or a different Machine Learning Server. After the package management feature has been enabled on SQL Server, you can use RevoScaleR commands on a client to install packages on SQL Server.
+This article describes how to enable or disable remote R package management on SQL Server Machine Learning Services or SQL Server R Services. After the package management feature has been enabled on SQL Server, you can use RevoScaleR commands on a client to install packages on SQL Server.
 
 By default, the external package management feature for SQL Server is disabled. You must run a separate script to enable the feature as described in the next section.
 

@@ -1,6 +1,6 @@
 ---
-title: Install new R language packages on SQL Server using standard R tools
-description: Add new R packages to SQL Server Machine Learning Services or SQL Server R Services using standard R tools.
+title: Install new packages with R
+description: Learn how to use standard R tools to install new R packages to an instance of SQL Server Machine Learning Services or SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -12,7 +12,7 @@ ms.reviewer: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Install new R packages on SQL Server Machine Learning Services or SQL Server R Services
+# Install new packages with R
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

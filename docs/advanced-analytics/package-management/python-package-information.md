@@ -5,18 +5,18 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# Get Python package information on SQL Server Machine Learning Services
+# Get Python package information
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Learn how to get information about installed Python packages on SQL Server Machine Learning Services. Example Python scripts show you how to list package information such as installation path and version.
+This article describes how to get information about installed Python packages, including versions and installation locations, on SQL Server Machine Learning Services. Example Python scripts show you how to list package information such as installation path and version.
 
 ## Default Python library location
 

@@ -32,11 +32,11 @@ If you are installing a single package, download the package in zipped format.
 
 It's more common to install multiple packages due to package dependencies. When a package requires other packages, you must verify that all of them are accessible to each other during installation. We recommend [creating a local repository](create-a-local-package-repository-using-minicran.md) using [miniCRAN](https://andrie.github.io/miniCRAN/) to assemble a full collection of packages. The [igraph](https://igraph.org/r/) package is also useful for analyzing packages dependencies. Installing the wrong version of a package or omitting a package dependency can cause a CREATE EXTERNAL LIBRARY statement to fail.
 
-## Copy the file to a local folder
+## Copy the collection file to a local folder
 
 Copy the zipped file containing all packages to a local folder on the server. If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
-## Run the statement to upload packages
+## Upload the collection file to the database
 
 Open a **Query** window, using an account with administrative privileges.
 

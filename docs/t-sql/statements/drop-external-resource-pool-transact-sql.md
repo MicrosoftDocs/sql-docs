@@ -1,11 +1,11 @@
 ---
 title: "DROP EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2016"
+ms.date: "08/07/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP EXTERNAL RESOURCE POOL"
@@ -15,8 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP EXTERNAL RESOURCE POOL statement"
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
-author: CarlRabeler
-ms.author: carlrab
+author: dphansen
+ms.author: davidph
+manager: cgronlund
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

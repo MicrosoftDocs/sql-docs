@@ -28,7 +28,7 @@ MSDTC uses two configuration parameters for the mssql-conf utility:
 | **network.rpcport** | The TCP port that the RPC endpoint mapper process binds to. |
 | **distributedtransaction.servertcpport** | The port that the MSDTC server listens to. If not set, the MSDTC service uses a random ephemeral port on service restarts, and firewall exceptions will need to be reconfigured to ensure that MSDTC service can continue communication. |
 
-For more information about these settings and other related MSDTC settings, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md#msdtc).
+For more information about these settings and other related MSDTC settings, see [Configure SQL Server on Linux with the mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
 ## Supported MSDTC configurations
 

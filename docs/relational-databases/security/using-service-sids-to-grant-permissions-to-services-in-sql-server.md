@@ -97,7 +97,7 @@ GO
 
 ## Next steps
 
-For more information about the service sid structure, read [SERVICE_SID_INFO structure](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info).
+For more information about the service sid structure, read [SERVICE_SID_INFO structure](https://docs.microsoft.com/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
 
 Read about additional options that are available when [creating a login](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql).
 

@@ -21,7 +21,7 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ### Compliance
 
-August 1, 2019
+August 2, 2019
 
 | Compliance change | Details |
 | :---------------- | :------ |

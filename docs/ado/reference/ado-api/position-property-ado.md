@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Position Property (ADO)
 Indicates the current position within a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

@@ -41,7 +41,6 @@ helpviewer_keywords:
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER DATABASE (Transact-SQL) File and Filegroup Options
@@ -561,7 +560,7 @@ The following example moves `tempdb` from its current location on the disk to an
 2. Change the location of each file by using `ALTER DATABASE`.
 
     ```sql
-    USE maser;
+    USE master;
     GO
     ALTER DATABASE tempdb
     MODIFY FILE (NAME = tempdev, FILENAME = 'E:\SQLData\tempdb.mdf');

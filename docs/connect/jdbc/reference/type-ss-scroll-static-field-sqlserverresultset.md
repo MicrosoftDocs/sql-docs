@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 179551a0-3ca4-4816-8098-8195898c997f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # TYPE_SS_SCROLL_STATIC Field (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

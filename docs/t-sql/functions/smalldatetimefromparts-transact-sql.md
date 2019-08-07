@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 7467fdab-e588-419c-9e29-42caec34a9ea
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMALLDATETIMEFROMPARTS (Transact-SQL)

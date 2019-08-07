@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Automatically Generate Code Attribute Values (Master Data Services)
 

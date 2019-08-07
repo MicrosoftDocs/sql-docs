@@ -1,10 +1,9 @@
 ---
-title: Disaster recovery for SQL Server on Linux | Microsoft Docs
+title: Disaster recovery for SQL Server on Linux
 description: 
-author: "MikeRayMSFT"
-ms.author: mihaelab 
-ms.reviewer: "mikeray"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql

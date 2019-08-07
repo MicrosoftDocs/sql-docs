@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # FINDSTRING (SSIS Expression)
 

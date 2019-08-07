@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # View and Work with the Output from the Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -280,7 +279,7 @@ manager: craigg
  The index or view affected by the recommendation. The icon in this column reflects the recommendation to drop or add the **Target of Recommendation**.  
   
  **Details**  
- A description of the **Target of Recommendation**. Possible values include clustered, indexed view, or blank indicating a non-clustered index. Also indicates whether the index is unique.  
+ A description of the **Target of Recommendation**. Possible values include clustered, indexed view, or blank indicating a nonclustered index. Also indicates whether the index is unique.  
   
  **Partition Scheme**  
  The partition scheme is provided in this column if partitioning is recommended.  

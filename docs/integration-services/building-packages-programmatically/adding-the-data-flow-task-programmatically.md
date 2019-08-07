@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Adding the Data Flow Task Programmatically
 

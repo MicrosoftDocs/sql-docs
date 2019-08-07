@@ -3,7 +3,6 @@ title: Configure usage and diagnostic data collection for SQL Server (CEIP) | Mi
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql

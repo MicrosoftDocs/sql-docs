@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # DATEADD (SSIS Expression)
 

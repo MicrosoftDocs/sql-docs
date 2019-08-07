@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Appendix - 1 (OracleToSQL)
 Quick view of the SSMA Console command line options:  

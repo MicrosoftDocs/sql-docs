@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Steps in the SQL Server Import and Export Wizard
 

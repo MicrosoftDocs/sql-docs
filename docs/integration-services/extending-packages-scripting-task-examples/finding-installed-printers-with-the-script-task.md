@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Finding Installed Printers with the Script Task
 

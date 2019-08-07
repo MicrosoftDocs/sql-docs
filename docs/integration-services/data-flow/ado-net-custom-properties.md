@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ADO NET Custom Properties
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Query Method (RDS)
 Uses a valid SQL query string to return a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

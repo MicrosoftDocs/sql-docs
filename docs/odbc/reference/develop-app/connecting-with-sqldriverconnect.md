@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Connecting with SQLDriverConnect
 **SQLDriverConnect** is used to connect to a data source using a connection string. **SQLDriverConnect** is used instead of **SQLConnect** for the following reasons:  

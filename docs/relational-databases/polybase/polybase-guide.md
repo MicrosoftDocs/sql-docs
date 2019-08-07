@@ -17,7 +17,6 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest"
 ---
 # What is PolyBase?
@@ -114,6 +113,6 @@ Before using PolyBase, you must [install the PolyBase feature](polybase-installa
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
-- [ODBC Generic Types](../../relational-databases/polybase/polybase-installation.md)
+- [ODBC Generic Types](polybase-configure-odbc-generic.md)
 
 ::: moniker-end

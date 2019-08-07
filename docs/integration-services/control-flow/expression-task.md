@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Expression Task
 

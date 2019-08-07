@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 24d6e48d-53c4-4da2-a6de-1cdff463c9cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # setApplicationName Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

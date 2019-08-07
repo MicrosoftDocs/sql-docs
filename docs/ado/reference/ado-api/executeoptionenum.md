@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # ExecuteOptionEnum
 Specifies how a provider should execute a command.  

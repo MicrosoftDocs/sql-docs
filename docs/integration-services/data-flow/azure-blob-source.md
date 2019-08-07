@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Blob Source
 

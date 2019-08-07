@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Hadoop Pig Task
 

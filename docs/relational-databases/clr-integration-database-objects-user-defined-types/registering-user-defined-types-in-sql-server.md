@@ -32,7 +32,6 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Registering User-Defined Types in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

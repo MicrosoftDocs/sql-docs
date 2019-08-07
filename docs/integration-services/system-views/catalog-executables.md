@@ -10,7 +10,6 @@ ms.topic: "language-reference"
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.executables 
 

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:BatchCompleted Event Class

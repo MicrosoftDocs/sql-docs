@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLPutData Function
 **Conformance**  

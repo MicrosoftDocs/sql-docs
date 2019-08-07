@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Column Null Ratio Profile Request Options (Data Profiling Task)
 

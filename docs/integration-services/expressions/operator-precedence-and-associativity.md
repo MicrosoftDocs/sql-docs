@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Operator Precedence and Associativity
 

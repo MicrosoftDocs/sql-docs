@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create an Explicit Hierarchy (Master Data Services)
 

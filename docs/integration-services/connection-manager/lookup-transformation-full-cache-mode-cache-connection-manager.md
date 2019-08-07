@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lookup Transformation Full Cache Mode - Cache Connection Manager
 

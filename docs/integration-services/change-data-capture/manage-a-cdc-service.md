@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Manage a CDC Service
 

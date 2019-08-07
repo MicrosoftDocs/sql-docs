@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Trigger Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

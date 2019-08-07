@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLReadFileDSN Function
 **Conformance**  

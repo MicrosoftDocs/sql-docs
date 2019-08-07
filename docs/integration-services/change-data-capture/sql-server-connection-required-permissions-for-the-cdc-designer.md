@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Connection Required Permissions for the CDC Designer
 

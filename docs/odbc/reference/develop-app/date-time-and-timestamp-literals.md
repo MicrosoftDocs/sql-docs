@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Date, Time, and Timestamp Literals
 The escape sequence for date, time, and timestamp literals is  

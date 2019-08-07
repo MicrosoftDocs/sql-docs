@@ -11,7 +11,6 @@ ms.tgt_pltfrm: ""
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption

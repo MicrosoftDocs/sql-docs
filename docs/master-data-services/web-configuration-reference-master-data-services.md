@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Web Configuration Reference (Master Data Services)
 

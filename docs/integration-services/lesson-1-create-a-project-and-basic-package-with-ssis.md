@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 1: Create a project and basic package with SSIS
 

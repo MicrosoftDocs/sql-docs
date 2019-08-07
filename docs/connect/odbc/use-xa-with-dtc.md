@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "driver"
 author: "karinazhou"
 ms.author: "v-jizho2"
-manager: "kenvh"
+manager: kenvh
 ---
 # Using XA Transactions
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

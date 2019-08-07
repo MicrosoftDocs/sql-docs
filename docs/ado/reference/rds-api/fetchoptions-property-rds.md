@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # FetchOptions Property (RDS)
 Indicates the type of asynchronous fetching.  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Creating a Synchronous Transformation with the Script Component
 

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 0d20a569-8a27-409c-bcab-0effefb48013
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Restore a Database and Bind it to a Resource Pool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

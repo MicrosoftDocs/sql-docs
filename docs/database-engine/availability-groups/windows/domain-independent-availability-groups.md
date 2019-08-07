@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MashaMSFT"
 ms.author: mathoma
-manager: jroth
 ---
 # Create a domain-independent availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

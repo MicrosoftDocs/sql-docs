@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
-manager: jroth
 ---
 # Microsoft JDBC Driver for SQL Server support matrix
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ manager: jroth
 |Microsoft SQL Server 2000 JDBC Driver|2000|July 9, 2010|  
   
 ## SQL version compatibility  
-  
+
 |Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
 |7.4|N|N|Y|Y|Y|Y|Y|Y|Y|

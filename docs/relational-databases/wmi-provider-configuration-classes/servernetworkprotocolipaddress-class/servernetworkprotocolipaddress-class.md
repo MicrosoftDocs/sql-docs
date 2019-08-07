@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ServerNetworkProtocolIPAddress Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -10,7 +10,6 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-manager: jroth
 ---
 # Schema Compare extension (preview)
 The Schema Compare extension provides an easy to use experience to compare .dacpac files and databases and apply the changes from source to target.

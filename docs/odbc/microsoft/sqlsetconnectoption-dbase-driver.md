@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetConnectOption (dBASE Driver)
 > [!NOTE]  

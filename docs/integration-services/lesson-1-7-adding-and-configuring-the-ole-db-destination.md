@@ -10,7 +10,6 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 1-7: Add and configure the OLE DB destination
 

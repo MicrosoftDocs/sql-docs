@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replrestart (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Used by transactional replication during backup and restore so that the replicated data at the Distributor is synchronized with data at the Publisher. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -38,7 +37,7 @@ sp_replrestart
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- **sp_replrestart** is used when the highest log sequence number (LSN) value at the Distributor does match the highest LSN value at the Publisher.  
+ **sp_replrestart** is used when the highest log sequence number (LSN) value at the Distributor does not match the highest LSN value at the Publisher.  
   
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_replrestart**.  

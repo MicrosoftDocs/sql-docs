@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
 ---
 # Create a Knowledge Base
 

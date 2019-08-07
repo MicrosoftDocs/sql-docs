@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Save Trace Results to a File
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

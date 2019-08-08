@@ -19,9 +19,9 @@ Examples of services where a Service SID can be used are:
 - System Center Operations Manager Health Service (NT SERVICE\HealthService)
 - Windows Server Failover Clustering (WSFC) service (NT SERVICE\ClusSvc)
 
-Some services don't have a Service SID by default. The service SID must be created using [SC.exe](https://docs.microsoft.com/windows/desktop/services/configuring-a-service-using-sc). [This method](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) has been adopted by Microsoft System Center Operations Manager administrators to grant permission to the HealthService within SQL server.
+Some services don't have a Service SID by default. The service SID must be created using [SC.exe](/windows/desktop/services/configuring-a-service-using-sc). [This method](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) has been adopted by Microsoft System Center Operations Manager administrators to grant permission to the HealthService within SQL server.
 
-Once the service SID has been created and confirmed, it must be granted permission within SQL Server. Granting permissions is accomplished by creating a Windows login using either [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or a query. Once the login is created, it can be granted permissions, added to roles, and mapped to databases just like any other login.
+Once the service SID has been created and confirmed, it must be granted permission within SQL Server. Granting permissions is accomplished by creating a Windows login using either [SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) or a query. Once the login is created, it can be granted permissions, added to roles, and mapped to databases just like any other login.
 
 > [!TIP]
 > If the error `Login failed for user 'NT AUTHORITY\SYSTEM'` is received, verify the Service SID exists for the desired service, the Service SID login was created in SQL Server, and the appropriate permissions were granted to the Service SID in SQL Server.
@@ -34,7 +34,7 @@ Traditionally service accounts have been used to allow services to log into SQL 
 
 ### Granular permissions to system accounts
 
-System accounts have historically been granted permissions by creating a login for the [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([NT AUTHORITY\SYSTEM in en-us](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) or [NetworkService](https://docs.microsoft.com/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE in en-us](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) accounts and granting those logins permissions. This method grants any process or service permissions into SQL, which is running as a system account.
+System accounts have historically been granted permissions by creating a login for the [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([NT AUTHORITY\SYSTEM in en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) or [NetworkService](/windows/desktop/Services/networkservice-account) ([NT AUTHORITY\NETWORK SERVICE in en-us](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) accounts and granting those logins permissions. This method grants any process or service permissions into SQL, which is running as a system account.
 
 Using a Service SID allows permissions to be granted to a specific service. The service only has access to the resources it was granted permissions to when it is running. For example, if the `HealthService` is running as `LocalSystem` and is granted `View Server State`, the `LocalSystem` account will only have permission to `View Server State` when it is running in the context of the `HealthService`. If any other process attempts to access the server state of SQL as `LocalSystem`, they will be denied access.
 
@@ -97,10 +97,10 @@ GO
 
 ## Next steps
 
-For more information about the service sid structure, read [SERVICE_SID_INFO structure](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info).
+For more information about the service sid structure, read [SERVICE_SID_INFO structure](/windows/win32/api/winsvc/ns-winsvc-service_sid_info).
 
-Read about additional options that are available when [creating a login](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql).
+Read about additional options that are available when [creating a login](/sql/t-sql/statements/create-login-transact-sql).
 
-To use Role-Based Security with Service SIDs, read about [creating roles](https://docs.microsoft.com/sql/t-sql/statements/create-role-transact-sql) in SQL Server.
+To use Role-Based Security with Service SIDs, read about [creating roles](/sql/t-sql/statements/create-role-transact-sql) in SQL Server.
 
-Read about different ways to [grant permissions](https://docs.microsoft.com/sql/t-sql/statements/grant-transact-sql) to Service SIDs in SQL Server.
+Read about different ways to [grant permissions](/sql/t-sql/statements/grant-transact-sql) to Service SIDs in SQL Server.

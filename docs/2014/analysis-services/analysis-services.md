@@ -40,7 +40,7 @@ A typical workflow includes building an OLAP or tabular data model, deploy the m
   
  Models are populated with data from external data systems, usually data warehouses hosted on a SQL Server or Oracle relational database engine (Tabular models support additional data source types). Models specify query objects, such as cubes, but also specify dimensions that can be used in multiple cubes, calculations and KPIs that encapsulate business logic, and interactions such as navigation and drill-through behaviors.  
   
- To use a model, it's deployed to an server instance that runs databases in a particular server mode, making the data available to authorized users who connect through Excel or other applications.  
+ To use a model, it's deployed to a server instance that runs databases in a particular server mode, making the data available to authorized users who connect through Excel or other applications.  
   
  You can install an instance in one of three server modes:  
   

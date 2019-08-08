@@ -14,27 +14,27 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest|
 
 [!INCLUDE[includes_appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article explains our _versioning system_ for SQL documentation. The versioning system knows about products and their versions. The system enables you to choose the product and version you are interested, and displays the appropriate documentation.
+This article explains our _versioning system_ for SQL documentation. The versioning system knows about products and their versions. The system enables you to choose the product and version you are interested in. The system then displays the appropriate documentation.
 
 ## APPLIES TO products
 
-Most of the SQL Server articles have the words **APPLIES TO** under their title. On the same line there follows a handy listing of SQL _products_ with indicators of whether the article is relevant to the product. For example, the product SQL Server might be indicated as relevant, while Azure SQL Database might be indicated as irrelevant to the article.
+Most of the SQL Server articles have the words **APPLIES TO** under their title. On the same line, there follows a handy listing of SQL _products_ with indicators of whether the article is relevant to the product. For example, the product SQL Server could be indicated as relevant, while Azure SQL Database could be indicated as irrelevant to the article.
 
-The important point is that the **APPLIES TO** line does not know about _versions_ of products.
+The **APPLIES TO** line does not know about _versions_ of products. We strive to avoid discrepancies between the **APPLIES TO** line and the products aspect of our versioning system configurations.
 
 ## History of separate file sets
 
-For SQL Server 2014 and earlier versions, each version has its own full separate copy of the documentation files. For instance, the documentation for SQL Server 2014 began as a copy of the documentation for SQL Server 2012, and was then updated for 2014.
+For SQL Server 2014 and earlier versions, each version has its own full separate copy of the documentation files. For instance, the documentation for SQL Server 2014 began as a copy of the documentation for SQL Server 2012. The 2014 copy was then edited during the product development cycle.
 
-This old approach meant that if a flaw was discovered in the 2014 documentation, the flaw might also exist in 2012 and earlier copies of the documentation. This made documentation fixing flaws and general maintenance more difficult.
+This old approach meant that if a flaw was discovered in the 2014 documentation, the flaw might also exist in 2012 and 2008. This made fixing flaws and general maintenance more difficult.
 
 ## Multiple versions in the same files
 
-For this reason and others, the documentation files for SQL Server 2016 are also for 2017, 2019, and probably for \<vNext\>. This is made practical because We now embed _versioning monikers_ in our SQL Server documentation files. The versioning monikers are embedded at whatever degree of granularity makes sense for each given documentation file.
+For this reason and others, the documentation files for SQL Server 2016 are also for 2017, 2019, and probably for \<vNext\>. This consolidation is made practical because we now assign _versioning monikers_ to our SQL Server documentation files. The versioning monikers are assigned, or are explicitly embedded, at whatever degree of granularity makes sense for each given documentation file.
 
 ## Versioning control in the UI
 
-When you view this documentation article, or any other SQL Server article on our :::no-loc text="Docs"::: website, the currently chosen versioning moniker is visible above the table of contents and its search text box.
+When you view any SQL documentation article by using our :::no-loc text="Docs"::: website, the currently chosen versioning moniker is visible above the table of contents. The control is a drop-down list.
 
 ![media_versioning-control-10-sql-server-2017.png](media/versioning-control-10-sql-server-2017.png)
 
@@ -46,17 +46,22 @@ If you want to see the documentation for a different version of SQL Server, you 
 
 ### Editions
 
-In the 1990's and into the 2000's, Microsoft SQL Server had only one product. There were various _editions_ of each version of SQL Server, such as the _Developer_ and _Enterprise_ editions of SQL Server 2008. The editions represent different feature sets, but the core product was the same.
+In the 1990s and into the 2000s, Microsoft SQL Server had only one product. There were various _editions_ of each version of SQL Server, such as the _Developer_ and _Enterprise_ editions of SQL Server 2008. The editions represented slightly different feature sets, but the core product was the same. New SQL Server releases may still have a variety of editions.
 
 ### Products
 
-With the more recent rise of cloud computing and Microsoft Azure, Microsoft released its Azure SQL Database product. While there is much code shared by both the traditional SQL Server on-premises product and the Azure SQL Database product, these are two truly separate products. For SQL, versioning monikers make distinctions between products, but not between editions.
+With the more recent rise of cloud computing and Microsoft Azure, Microsoft released its Azure SQL Database product. While there is much code shared by both the traditional SQL Server on-premises product and the Azure SQL Database product, these products are two truly separate products.
+
+For SQL, versioning monikers make distinctions between products, but not between editions.
 
 ## Hiding
 
-The versioning system works by hiding documentation content that does not apply to the currently active moniker.
+The versioning system works by hiding documentation content that does not apply to the currently active moniker. The hiding occurs at the following levels:
 
-Consider the following scenario:
+- Sections or sentences within an article.
+- Entries for articles in the table of contents.
+
+The following is one normal scenario:
 
 1. The current versioning moniker is **SQL Server 2017**.
 2. You are reading a section that happens to describe a feature that was first added to version 2017 of SQL Server.
@@ -64,11 +69,6 @@ Consider the following scenario:
 4. You look back at the article, and you notice the section you were reading is gone.
 5. You again change the moniker, this time to **SQL Server 2019**.
 6. You again look back at the article, and you notice the 2017 section you were reading back on display.
-
-The way the versioning system works is by _hiding_ all content that does not apply to the currently chosen moniker. The hiding occurs at the following levels:
-
-- Sections or sentences within an article.
-- Entries for articles in the table of contents.
 
 In the preceding scenario, the section about the new 2017 feature is likely marked with a _moniker range_ that is equivalent to:
 
@@ -80,7 +80,7 @@ When the moniker **SQL Server 2019** is chosen, the versioning system realizes t
 
 There is one special versioning moniker named **All SQL**, and its only version is **Hide nothing**. This moniker is not useful to customers, and it can make the documentation display misleading. This moniker is only used for our internal testing.
 
-## HTTPS parameter ?view=
+## HTTPS parameter :::no-loc text="view=":::
 
 On the Microsoft :::no-loc text="Docs"::: website, the SQL Server articles have `https` URLs that append a parameter named `view=`. For example:
 
@@ -90,21 +90,21 @@ The value of `?view=` indicates the currently active versioning moniker. For amu
 
 ## Message: The requested page is not available for \<moniker\>
 
-Consider the following scenario:
+The following scenario leads to the display of an informational message near the top of the :::no-loc text="Docs"::: webpage:
 
 1. Currently the versioning moniker is **SQL Server 2017**.
 2. You are reading an article that is relevant to SQL Server 2017.
     - The article is _not_ relevant to the product Azure SQL Database.
 3. You attempt to change the moniker to **Azure SQL Database - current**.
-4. You see your attempt was rejected.
+4. You see your attempt was rejected, and a message is displayed.
 
 At the end of this scenario, you see the following informational message displayed near the top of the Docs webpage:
 
 > The requested page is not available for Azure SQL Database - current. You have been redirected to the newest product version this page is available for.
 
-![media_versioning-control-30-viewfallbackfrom.png](media/versioning-control-30-viewfallbackfrom.png)
+The _newest_ version might exclude versions that are not yet fully released and are in _Preview_ status.
 
-A minor point is that the _newest_ version might exclude versions that are not yet fully released and are in _Preview_ status.
+![media_versioning-control-30-viewfallbackfrom.png](media/versioning-control-30-viewfallbackfrom.png)
 
 ## See also
 

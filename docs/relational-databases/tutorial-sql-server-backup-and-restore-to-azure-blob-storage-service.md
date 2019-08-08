@@ -29,23 +29,22 @@ To use this quickstart, you need an Azure storage account, SQL Server Management
 ## Create Azure Blob Container
 A container provides a grouping of a set of blobs. All blobs must be in a container. An account can contain an unlimited number of containers, but must have at least one container. A container can store an unlimited number of blobs. 
 
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 To create a Container, follow these steps:
 
 1. Open the Azure portal. 
 1. Navigate to your Storage Account. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   1. Select the storage account, scroll down to **Blob Services**.
-   1. Select **Blobs** and then select  +**Container** to add a new container. 
-   1. Enter the name for the container and make note of the container name you specified. This information is used in the URL (path to backup file) in the T-SQL statements later in this quickstart. 
-   1. Select **OK**. 
+1. Select the storage account, scroll down to **Blob Services**.
+1. Select **Blobs** and then select  +**Container** to add a new container. 
+1. Enter the name for the container and make note of the container name you specified. This information is used in the URL (path to backup file) in the T-SQL statements later in this quickstart. 
+1. Select **OK**. 
     
     ![New container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
 
-  >[!NOTE]
-  >Authentication to the storage account is required for SQL Server backup and restore even if you choose to create a public container. You can also create a container programatically using REST APIs. For more information, see [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
+  > [!NOTE]
+  > Authentication to the storage account is required for SQL Server backup and restore even if you choose to create a public container. You can also create a container programatically using REST APIs. For more information, see [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)
 
 ## Create a test database 
 
@@ -88,14 +87,14 @@ GO
 ## Create a SQL Server Credential
 A SQL Server credential is an object that is used to store authentication information required to connect to a resource outside of SQL Server. Here, SQL Server backup and restore processes use credentials to authenticate with the Windows Azure Blob storage service. The Credential stores the name of the storage account and the storage account **access key** values. Once the credential is created, it must be specified in the WITH CREDENTIAL option when issuing the BACKUP/RESTORE statements. For more information about credentials, see [Credentials](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
-  >[!IMPORTANT]
-  >The requirements for creating a SQL Server credential described below are specific to SQL Server backup processes ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md), and [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server uses the storage account name and access key information when accessing Azure storage to write or read backups.
+  > [!IMPORTANT]
+  > The requirements for creating a SQL Server credential described below are specific to SQL Server backup processes ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md), and [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server uses the storage account name and access key information when accessing Azure storage to write or read backups.
 
 ### Access keys
-Since the Azure portal is still open, save the access keys necessary for creating the credential. 
+You will need the access keys for the storage account to create the credential. 
 
 1. Navigate to the **Storage Account** in the Azure portal. 
-1. Scroll down to **Settings** and select **Access Keys**. 
+1. Select **Access Keys** under **Settings**. 
 1. Save both the key and connection string to use later in this quickstart. 
 
    ![Access keys](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)

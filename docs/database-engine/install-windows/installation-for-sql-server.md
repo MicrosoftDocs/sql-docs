@@ -71,7 +71,7 @@ Describes how to prepare your computer for [!INCLUDE[ssNoVersion](../../includes
 [Install SQL Server BI Features with SharePoint &#40;Power Pivot and Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  This section explains how to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features in a SharePoint environment. It identifies which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are available given a specific version and edition of SharePoint. It also includes installation procedures for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint and Reporting Services in SharePoint mode.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Install the new sample database, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Install the new sample database, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
 [Additional SQL Server Samples and Sample Databases](https://sqlserversamples.codeplex.com/)  
  Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples and sample databases.  

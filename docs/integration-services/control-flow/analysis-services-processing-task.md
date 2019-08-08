@@ -117,7 +117,7 @@ ms.author: janinez
 |--------------|-----------------|  
 |**Object Name**|Lists the specified object names.|  
 |**Type**|Lists the types of the specified objects.|  
-|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Settings**|Lists processing settings for the specified objects.|  
   
  **Add**  

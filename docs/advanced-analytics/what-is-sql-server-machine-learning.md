@@ -75,26 +75,23 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 
 1. [Install SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md)
 
-1. Configure your development tools. There are 
+1. Configure your development tools. You can either use:
 
-    + You can use 
-    + You can use Python or R on your own laptop or development workstation and run R or Python code on SQL Server locally and remotely
+    + [Azure Data Studio](../azure-data-studio/what-is.md) or [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) to use T-SQL and the stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your Python or R script.
 
-### Step 1: Install the software
+    + Python or R on your own development laptop or workstation to execute scripts. You can either pull data down locally or push the execution remotely to SQL Server with [revoscalepy](python/ref-py-revoscalepy.md) and [RevoScaleR](r/ref-r-revoscaler.md). See how to set up a data science client for [Python development](python/setup-python-client-tools-sql.md) and [R development](r/set-up-a-data-science-client.md) for more information.
 
-+ [SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md)
- 
-### Step 2: Configure a development tool
+1. Write your first Python or R script
 
-Data scientists typically use R or Python on their own laptop or development workstation, to explore data, and build and tune predictive models until a good predictive model is achieved. With in-database analytics in SQL Server, there is no need to change this process. After installation is complete, you can run R or Python code on SQL Server locally and remotely.
+    + Quickstart: Run a "Hello world" script [in Python](tutorials/quickstart-python-run-using-t-sql.md) or [in R](tutorials/quickstart-r-run-using-tsql.md)
 
-![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
+    + Quickstart: Create a predictive model [in Python](tutorials/quickstart-python-train-score-in-tsql.md) or [in R](tutorials/quickstart-r-create-predictive-model.md)'
 
-+ **Use the IDE you prefer**. You can link the R and Python libraries to your development tool of choice. For more information, see [Set up R tools](r/set-up-a-data-science-client.md) and [Set up Python tools](python/setup-python-client-tools-sql.md).  
+    + Tutorial: [Use Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
 
-+ **Work remotely or locally**. Data scientists can connect to SQL Server and bring the data to the client for local analysis, as usual. However, a better solution is to use the **RevoScaleR** or **revoscalepy** APIs to push computations to the SQL Server computer, avoiding costly and insecure data movement.
+    + Tutorial: [Use R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
 
-+ **Embed R or Python scripts in SQL Server stored procedures**. When your code is fully optimized, wrap it in a stored procedure to avoid unnecessary data movement and optimize data processing tasks.
+    + Tutorial: [Use Machine Learning Services in R tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)
 
 ### Step 3: Write your first script
 

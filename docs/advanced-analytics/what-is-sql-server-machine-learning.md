@@ -47,7 +47,7 @@ Examples of the type of predictions that you can use SQL Server Machine Learning
 |Anomaly Detection|Detect fraudulent banking transactions |
 |Recommendations|Suggest products that online shoppers may want to buy, based on their previous purchases|
 
-## How to execute Python and R scripts
+### How to execute Python and R scripts
 
 There are two ways to execute Python and R scripts in Machine Learning Services:
 
@@ -78,19 +78,14 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 1. Configure your development tools. You can either use:
 
     + [Azure Data Studio](../azure-data-studio/what-is.md) or [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) to use T-SQL and the stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your Python or R script.
-
     + Python or R on your own development laptop or workstation to execute scripts. You can either pull data down locally or push the execution remotely to SQL Server with [revoscalepy](python/ref-py-revoscalepy.md) and [RevoScaleR](r/ref-r-revoscaler.md). See how to set up a data science client for [Python development](python/setup-python-client-tools-sql.md) and [R development](r/set-up-a-data-science-client.md) for more information.
 
 1. Write your first Python or R script
 
     + Quickstart: Run a "Hello world" script [in Python](tutorials/quickstart-python-run-using-t-sql.md) or [in R](tutorials/quickstart-r-run-using-tsql.md)
-
     + Quickstart: Create a predictive model [in Python](tutorials/quickstart-python-train-score-in-tsql.md) or [in R](tutorials/quickstart-r-create-predictive-model.md)'
-
     + Tutorial: [Use Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
-
     + Tutorial: [Use R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
-
     + Tutorial: [Use Machine Learning Services in R tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)
 
 ## Next steps

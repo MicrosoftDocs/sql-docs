@@ -322,7 +322,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 Allows you to enable or disable collection of the last query plan statistics (equivalent to an actual execution plan) in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
-PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time in minutes>
+PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 **APPLIES TO**: Azure SQL Database only
 

@@ -33,7 +33,7 @@ azdata bdc spark statement list --session-id -i
 ### Examples
 List all the session statements.
 ```bash
-azdata spark statement list --session-id 0
+azdata bdc spark statement list --session-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -58,7 +58,7 @@ azdata bdc spark statement create --session-id -i
 ### Examples
 Run a statement.
 ```bash
-azdata spark statement create --session-id 0 --code "2+2"
+azdata bdc spark statement create --session-id 0 --code "2+2"
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -85,7 +85,7 @@ azdata bdc spark statement info --session-id -i
 ### Examples
 Get statement info for session with ID of 0 and statement ID of 0.
 ```bash
-azdata spark statement info --session-id 0 --statement-id 0
+azdata bdc spark statement info --session-id 0 --statement-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`
@@ -112,7 +112,7 @@ azdata bdc spark statement cancel --session-id -i
 ### Examples
 Cancel a statement.
 ```bash
-azdata spark statement cancel --session-id 0 --statement-id 0
+azdata bdc spark statement cancel --session-id 0 --statement-id 0
 ```
 ### Required Parameters
 #### `--session-id -i`

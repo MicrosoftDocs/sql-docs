@@ -18,7 +18,7 @@ manager: craigg
 # Data Mining Query Task Editor (Mining Model Tab)
   Use the **Mining Model** tab of the **Data Mining Query Task** dialog box to specify the mining structure and mining model to use.  
   
- To learn about implementing data mining in packages, see [Data Mining Query Task](control-flow/data-mining-query-task.md) and [Data Mining Solutions](../analysis-services/data-mining/data-mining-solutions.md).  
+ To learn about implementing data mining in packages, see [Data Mining Query Task](control-flow/data-mining-query-task.md) and [Data Mining Solutions](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## General Options  
  **Name**  
@@ -51,6 +51,6 @@ manager: craigg
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Data Mining Query Task Editor &#40;Query Tab&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Data Mining Query Task Editor &#40;Output Tab&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Data Mining Designer](../analysis-services/data-mining/data-mining-designer.md)  
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

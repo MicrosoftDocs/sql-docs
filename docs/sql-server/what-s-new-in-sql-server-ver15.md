@@ -40,7 +40,7 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:---|:---| 
-| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](../analysis-services/server-properties/general-properties.md). |
+| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 

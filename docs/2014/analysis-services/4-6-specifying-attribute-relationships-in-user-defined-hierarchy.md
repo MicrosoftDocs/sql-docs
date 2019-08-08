@@ -175,7 +175,7 @@ manager: craigg
 14. On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 ## Next Task in Lesson  
- [Defining the Unknown Member and Null Processing Properties](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Defining the Unknown Member and Null Processing Properties](https://docs.microsoft.com/analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties)  
   
 ## See Also  
  [Define Attribute Relationships](multidimensional-models/attribute-relationships-define.md)   

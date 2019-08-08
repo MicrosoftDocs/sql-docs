@@ -39,6 +39,6 @@ manager: craigg
 4.  Verify that the version includes 12.00.\<build number> and that the description is Microsoft.AnalysisService.AdomdClient.  
   
 ## See Also  
- [PowerPivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
+ [PowerPivot Management Dashboard and Usage Data](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
   
   

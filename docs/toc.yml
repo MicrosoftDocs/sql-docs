@@ -7534,7 +7534,7 @@
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md
   - name: SQL Server Analysis Services (SSAS) >>
-    href: analysis-services/index.md
+    href: https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) >>
     href: reporting-services/index.md
   - name: Master Data Services

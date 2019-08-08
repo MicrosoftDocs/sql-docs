@@ -3,7 +3,7 @@ title: Previous versions of SQL Server | Microsoft Docs
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ""
-ms.date: "06/12/2019"
+ms.date: "08/08/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
@@ -17,7 +17,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 - [SQL Server previous versions documentation](/previous-versions/sql/) <!-- https://docs.microsoft.com/previous-versions/sql/ -->
 
 > [!TIP]
-> Use the _Version_ dropdown list control to select the version of SQL Server you want to see documentation for. The control is available near the top of this webpage.
+> Use the [_Version_ dropdown list control](versioning-system-monikers-ui-sql-server.md) to select the version of SQL Server you want to see documentation for. The control is available near the top of this webpage.
 >
 > In the dropdown list, the value labeled **SQL Server previous versions** allows this article to be displayed. This version value also hides most other articles. Almost every other version value hides this article.
 >

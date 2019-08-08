@@ -333,7 +333,7 @@ The `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` option determines how long (
 - The maximum duration is a week (7 days; 7 X 24 X 60 = 10080 minutes)
 - When set to 0, a paused operation will never automatically abort
 
-e Thcurrent value for this option is displayed in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+The current value for this option is displayed in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 
 ## <a name="Permissions"></a> Permissions
 

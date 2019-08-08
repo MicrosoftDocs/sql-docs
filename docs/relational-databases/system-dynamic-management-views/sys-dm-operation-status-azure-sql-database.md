@@ -21,6 +21,7 @@ ms.author: sstein
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_operation_status (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   Returns information about operations performed on databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.  
@@ -71,7 +72,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
  Show most recent geo-replication operations associated with database 'mydb'.  
   
 ```  
-SELECT * FROM sys.dm_ operation_status   
+SELECT * FROM sys.dm_operation_status   
    WHERE major_resource_id = 'myddb'   
    ORDER BY start_time DESC;  
 ```  

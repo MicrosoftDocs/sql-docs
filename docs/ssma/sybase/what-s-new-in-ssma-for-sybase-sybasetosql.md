@@ -1,7 +1,7 @@
 ---
 title: "What's New in SSMA for SAP ASE (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/11/2019"
+ms.date: "07/31/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssma
@@ -14,11 +14,21 @@ ms.author: "Shamikg"
 # What's New in SSMA for SAP ASE (SybaseToSQL)
 This article lists SQL Server Migration Assistant (SSMA) for SAP ASE (formerly SSMA for Sybase) changes in each release.
 
+## SSMA v8.3
+
+The v8.3 release of SSMA for SAP ASE is enhanced with targeted fixes that are designed to improve quality and conversion metrics. In addition, this release of SSMA for SAP ASE provides fixes that:
+
+* Address accessibility issues
+* Add basic support for 'hierarchyid' type in SQL Server
+
+> [!IMPORTANT]
+> With SSMA v7.4 and later versions, .Net 4.5.2 is an installation pre-requisite.
+
 ## SSMA v8.2
 
 The v8.2 release of SSMA for SAP ASE is enhanced with a targeted set of fixes designed to improve quality and conversion metrics, as well as fixes for:
 
-* An issue with disabled non-clustered indexes after data migration.
+* An issue with disabled nonclustered indexes after data migration.
 * Detection of .NET Framework during silent installation.
 * An intermittent crash that occurs when a new version is downloaded.
 

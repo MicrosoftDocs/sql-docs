@@ -1,7 +1,7 @@
 ---
 title: "Download Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/16/2019"
+ms.date: "08/01/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -21,11 +21,12 @@ The JDBC Driver can be added to a Maven project by adding it as a dependency in 
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.2.jre11</version>
+    <version>7.4.1.jre11</version>
 </dependency>
 ```  
 
 ## Available downloads of JDBC Driver for SQL Server
+ * [Microsoft JDBC Driver 7.4 for SQL Server](https://go.microsoft.com/fwlink/?linkid=2099962)
  * [Microsoft JDBC Driver 7.2 for SQL Server](https://go.microsoft.com/fwlink/?linkid=2063159)
  * [Microsoft JDBC Driver 7.0 for SQL Server](https://go.microsoft.com/fwlink/?linkid=2005972) 
  * [Microsoft JDBC Driver 6.4 for SQL Server](https://go.microsoft.com/fwlink/?linkid=868290) 
@@ -34,7 +35,7 @@ The JDBC Driver can be added to a Maven project by adding it as a dependency in 
  * [Microsoft JDBC Driver 4.2 for SQL Server](https://go.microsoft.com/fwlink/?linkid=841534) 
  * [Microsoft JDBC Driver 4.1 for SQL Server](https://go.microsoft.com/fwlink/?linkid=841533) 
   
-## Unsupported Drivers  
+## Unsupported drivers
 Unsupported driver versions are not available for download here. We are continually improving the Java connectivity support. As such we highly recommend that you work with the latest version of Microsoft JDBC driver.  
   
   

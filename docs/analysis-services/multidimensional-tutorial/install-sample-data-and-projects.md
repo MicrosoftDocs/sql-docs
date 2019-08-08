@@ -48,7 +48,7 @@ An Analysis Services multidimensional model uses transactional data that you imp
   
 To install the database, do the following:  
   
-1.  Download an [AdventureWorkDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) database backup from GitHub.  
+1.  Download an [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) database backup from GitHub.  
   
 2.  Copy the backup file to the data directory of the local SQL Server Database Engine instance.
   

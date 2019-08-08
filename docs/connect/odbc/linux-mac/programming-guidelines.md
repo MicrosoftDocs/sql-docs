@@ -7,7 +7,7 @@ ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: v-makouz
 ms.author: genemi
 ---
 # Programming Guidelines
@@ -58,7 +58,7 @@ The following features are not available in this release of the ODBC driver on m
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect  
+-   SQLBrowseConnect (before version 17.2)
 -   C interval types such as SQL_C_INTERVAL_YEAR_TO_MONTH (documented in [Data Type Identifiers and Descriptors](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   The SQL_CUR_USE_ODBC value of the SQL_ATTR_ODBC_CURSORS attribute of the SQLSetConnectAttr function.
 
@@ -110,6 +110,12 @@ For more information about collations and encodings, see [Collation and Unicode 
 There are some encoding conversion differences between Windows and several versions of the iconv library on Linux and macOS. Text data in codepage 1255 (Hebrew) has one code point (0xCA) that behaves differently upon conversion to Unicode. On Windows, this character converts to the UTF-16 code point of 0x05BA. On macOS and Linux with libiconv versions earlier than 1.15, it converts to 0x00CA. On Linux with iconv libraries that do not support the 2003 revision of Big5/CP950 (named `BIG5-2003`), characters added with that revision will not convert correctly. In codepage 932 (Japanese, Shift-JIS), the result of decoding of characters not originally defined in the encoding standard also differs. For example, the byte 0x80 converts to U+0080 on Windows but may become U+30FB on Linux and macOS, depending on iconv version.
 
 In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates are split across SQLPutData buffers, it results in data corruption. Use buffers for streaming SQLPutData that do not end in partial character encodings. This limitation has been removed with ODBC Driver 17.
+
+## <a name="bkmk-openssl"></a>OpenSSL
+Starting with version 17.4, the driver loads OpenSSL dynamically, which allows it to run on systems that have either version 1.0 or 1.1 without a need for separate driver files. When multiple versions of OpenSSL are present, the driver will attempt to load the latest one. The driver currently supports OpenSSL 1.0.x and 1.1.x
+
+> [!NOTE]  
+> A potential conflict may occur if the application that uses the driver (or one of its components) is linked with or dynamically loads a different version of OpenSSL. If several versions of OpenSSL are present on the system and the application uses it, it is highly recommended that one be extra careful in making sure that the version loaded by the application and the driver do not mismatch, as the errors could corrupt memory and thus will not necessarily manifest in obvious or consistent ways.
 
 ## Additional Notes  
 

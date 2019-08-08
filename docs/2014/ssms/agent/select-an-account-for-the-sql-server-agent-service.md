@@ -68,7 +68,7 @@ manager: craigg
 ## Supported Service Account Types  
  The following table lists the Windows account types that can be used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.  
   
-|Service account type|Non-clustered Server|Clustered server|Domain controller (non-clustered)|  
+|Service account type|Nonclustered Server|Clustered server|Domain controller (nonclustered)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows domain account (member of Windows Administrators group)|Supported|Supported|Supported|  
 |Windows domain account (non-administrative)|Supported<sup>1</sup>|Supported<sup>1</sup>|Supported<sup>1</sup>|  

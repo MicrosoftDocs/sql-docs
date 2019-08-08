@@ -13,12 +13,13 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # What is SQL Server Machine Learning Services (Python and R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open source packages and frameworks, as well as the [Microsoft Python and R packages](#components) for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services.
+Machine Learning Services is a feature in SQL Server that gives the ability to run Python and R scripts with relational data. You can use open source packages and frameworks, as well as the [Microsoft Python and R packages](#packages) for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server Machine Learning Services.
 
 In Azure SQL Database, [Machine Learning Services](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) is currently in public preview.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-For executing Java in-database, see the [Language Extensions documentation](../language-extensions/language-extensions-overview.md).
+> [!NOTE]
+> For executing Java in SQL Server, see the [Language Extensions documentation](../language-extensions/language-extensions-overview.md).
 ::: moniker-end
 
 ## What is Machine Learning Services?
@@ -35,9 +36,30 @@ Machine Learning Services use an extensibility framework to run Python and R scr
 
 ## What can I do with Machine Learning Services?
 
+You can use Machine Learning Services to build and training machine learning and deep learning models within SQL Server. You can also deploy existing models to Machine Learning Services and use relational data for predictions.
+
+Examples of the type of predictions that you can use SQL Server Machine Learning Services for, include:
+
+|||
+|-|-|
+|Classification/Categorization|Automatically divide customer feedback into positive and negative categories|
+|Regression/Predict continuous values|Predict the price of houses based on size and location|
+|Anomaly Detection|Detect fraudulent banking transactions |
+|Recommendations|Suggest products that online shoppers may want to buy, based on their previous purchases|
+
+There are two ways to execute Python and R scripts in Machine Learning Services:
+
++ The most common way is to use the T-SQL stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
++ You can also use your preferred Python or R client and write scripts that pushes the execution (referred to as a *remote compute context*) to a remote SQL Server. See how to set up a data science client for [Python development](python/setup-python-client-tools-sql.md) and [R development](r/set-up-a-data-science-client.md) for more information.
+
+<a name="packages"></a>
+
+## Python and R Packages
+
+You can use open-source packages and frameworks, in addition to Microsoft's enterprise packages. Below is a list of the Microsoft packages for Python and R.
 
 
-<a name="components"></a>
+
 
 ## Components
 

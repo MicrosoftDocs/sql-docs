@@ -117,7 +117,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
 ### SQL Server Native Client OLE DB Provider Example  
  In this example, a data source object is created using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native OLE DB provider, and MARS is enabled using the DBPROPSET_SQLSERVERDBINIT property set before the session object is created.  
   
-```  
+```cpp
 #include <sqlncli.h>  
   
 IDBInitialize *pIDBInitialize = NULL;  
@@ -206,7 +206,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ### SQL Server Native Client ODBC Driver Example  
  In this example, the **SQLSetConnectAttr** function is used to enable MARS before calling the **SQLDriverConnect** function to connect the database. Once the connection is made, two **SQLExecDirect** functions are called to create two separate result sets on the same connection.  
   
-```  
+```cpp
 #include <sqlncli.h>  
   
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MARS_ENABLED, SQL_MARS_ENABLED_YES, SQL_IS_UINTEGER);  

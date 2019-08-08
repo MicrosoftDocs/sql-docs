@@ -235,11 +235,11 @@
       href: ../advanced-analytics/package-management/r-package-information.md
     - name: Install new Python packages
       items:
-      - name: Install with Python tools
+      - name: Install with pip
         href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: Install new R packages
       items:
-      - name: Install with R tools
+      - name: Install with R
         href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
       - name: Install with T-SQL
         href: ../advanced-analytics/r/install-r-packages-tsql.md

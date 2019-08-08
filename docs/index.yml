@@ -111,7 +111,7 @@ conceptualContent:
           url: ssms/download-sql-server-management-studio-ssms.md
           itemType: overview
         - text: Analysis Services (SSAS)
-          url: analysis-services/instances/install-windows/install-analysis-services.md
+          url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
           itemType: overview
         - text: Integration Services (SSIS)
           url: integration-services/install-windows/install-integration-services.md
@@ -297,7 +297,7 @@ additionalContent:
           - text: Polybase
             url: relational-databases/polybase/polybase-guide.md
           - text: SQL Server Analysis Services (SSAS)
-            url: analysis-services/analysis-services.md
+            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
           - text: SQL Server 2019 big data clusters
             url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
       - title: Reference

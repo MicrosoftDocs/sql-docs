@@ -72,3 +72,5 @@ sections:
     - html: '<a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning Services<a>'
     - html: '<a href="/azure/machine-learning/">Azure Machine Learning</a>'
     - html: '<a href="/dotnet/machine-learning/">ML.NET</a>'
+    - html: '<a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">What are the machine learning products at Microsoft?</a>'
+    

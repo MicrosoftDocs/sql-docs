@@ -1,7 +1,7 @@
 ---
 title: "Using Multiple Active Result Sets (MARS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: "08/08/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: native-client
@@ -20,6 +20,7 @@ ms.author: genemi
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Multiple Active Result Sets (MARS)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -42,13 +43,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   Wherever possible, use API calls to change connection properties and manage transactions in preference to [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements.  
   
 -   In MARS, session-scoped impersonation is prohibited while concurrent batches are running.  
-  
-> [!NOTE]  
->  By default, MARS functionality is not enabled. To use MARS when connecting to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, you must specifically enable it within a connection string. For more information, see the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver sections, later in this topic.  
-  
+
+> [!NOTE]
+> By default, MARS functionality is not enabled by the driver. To use MARS when connecting to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, you must specifically enable MARS within a connection string. However, some applications may enable MARS by default, if the application detects that the driver supports MARS. For these applications, you can disable MARS in the connection string as needed. For more information, see the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver sections, later in this topic.
+
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not limit the number of active statements on a connection.  
   
- Typical applications which do not need to have more than a single multistatement batch or stored procedure executing at the same time will benefit from MARS without having to understand how MARS is implemented. However, applications with more complex requirements do need to take account of this.  
+ Typical applications which do not need to have more than a single multi-statement batch or stored procedure executing at the same time will benefit from MARS without having to understand how MARS is implemented. However, applications with more complex requirements do need to take account of this.  
   
  MARS enables the interleaved execution of multiple requests within a single connection. That is, it allows a batch to run, and within its execution, it allows other requests to execute. Note, however, that MARS is defined in terms of interleaving, not in terms of parallel execution.  
   

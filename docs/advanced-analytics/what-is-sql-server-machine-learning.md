@@ -17,6 +17,10 @@ Machine Learning Services is a feature in SQL Server that gives the ability to r
 
 In Azure SQL Database, [Machine Learning Services](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) is currently in public preview.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+For executing Java in-database, see the [Language Extensions documentation](../language-extensions/language-extensions-overview.md).
+::: moniker-end
+
 ## What is Machine Learning Services?
 
 SQL Server Machine Learning Services let you execute Python and R scripts in-database. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminate transfer of the data across the network to another server. 

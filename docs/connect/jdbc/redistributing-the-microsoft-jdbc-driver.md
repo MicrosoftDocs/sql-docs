@@ -1,7 +1,7 @@
 ---
 title: "Redistributing the Microsoft JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/21/2019"
+ms.date: "07/31/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -14,10 +14,10 @@ ms.author: genemi
 # Redistributing the Microsoft JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## Redistribute the Microsoft JDBC 4.1, 4.2, 6.0, 6.2, 6.4, 7.0 and 7.2 Driver
-The JDBC Drivers 4.1, 4.2, 6.0, 6.2, 6.4, 7.0 and 7.2 can be redistributed. Please review the "Distributable Code" clause in the license agreements for the 4.1, 4.2, 6.0, 6.2, 6.4, 7.0 and 7.2 versions of the driver.
+## Redistribute the Microsoft JDBC 4.1, 4.2, 6.0, 6.2, 6.4, 7.0, 7.2, and 7.4 Driver
+The JDBC Drivers 4.1, 4.2, 6.0, 6.2, 6.4, 7.0, 7.2, and 7.4 can be redistributed. Please review the "Distributable Code" clause in the license agreements for the 4.1, 4.2, 6.0, 6.2, 6.4, 7.0, 7.2, and 7.4 versions of the driver.
     
-## Register to Redistribute the Microsoft JDBC 4.0 Driver  
+## Register to redistribute the Microsoft JDBC 4.0 Driver  
  The Microsoft JDBC 4.0 Driver requires registration before you redistribute it. Click the following link to review the license agreement for the 4.0 version of the driver.  You may print and retain a copy of the license agreement for your records if you wish.  
   
  If you choose to accept the license agreement, you will be directed to the registration page and then the download page.  

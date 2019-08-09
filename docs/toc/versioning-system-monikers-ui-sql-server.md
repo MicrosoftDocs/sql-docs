@@ -84,7 +84,7 @@ There is one special versioning moniker named **All SQL**, and its only version 
 
 On the Microsoft :::no-loc text="Docs"::: website, the SQL Server articles have `https` URLs that append a parameter named `view=`. For example:
 
-- `https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2017?view=sql-server-2017`
+- `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017?view=sql-server-2017`
 
 The value of `?view=` indicates the currently active versioning moniker. For amusement, you have the option of editing the `?view=` value instead of clicking the versioning control.
 

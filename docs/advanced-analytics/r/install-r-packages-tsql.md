@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 This article explains how to install new R packages on an instance of SQL Server Machine Learning Services using T-SQL. This method works best for server administrators who are unfamiliar with R.
 
-The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement makes it possible to add a package or set of packages to an instance or a specific database without running R or Python code directly. However, this method requires package preparation and additional database permissions.
+The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) statement makes it possible to add a package or set of packages to an instance or a specific database without running R code directly. However, this method requires package preparation and additional database permissions.
 
 + All packages must be available as a local zipped file, rather than downloaded on demand from the internet.
 
@@ -34,7 +34,7 @@ It's more common to install multiple packages due to package dependencies. When 
 
 ## Copy the collection file to a local folder
 
-Copy the zipped file containing all packages to a local folder on the server. If you do not have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
+Copy the zipped file containing all packages to a local folder on the server. If you don't have access to the file system on the server, you can also pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 ## Upload the collection file to the database
 

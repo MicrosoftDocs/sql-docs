@@ -28,13 +28,13 @@ To protect server assets, the default instance library can be modified only by a
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 The default path of the binaries for Python is:
 
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library`
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 ::: moniker-end
 
 ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
 The default path of the binaries for Python is:
 
-`C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\library`
+`C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES`
 ::: moniker-end
 
 This assumes the default SQL instance, MSSQLSERVER. If SQL Server is installed as a user-defined named instance, the given name is used instead.

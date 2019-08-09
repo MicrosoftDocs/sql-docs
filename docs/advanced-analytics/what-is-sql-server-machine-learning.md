@@ -24,11 +24,11 @@ In Azure SQL Database, [Machine Learning Services](https://docs.microsoft.com/az
 
 ## What is Machine Learning Services?
 
-SQL Server Machine Learning Services let you execute Python and R scripts in-database. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminate transfer of the data across the network to another server.
+SQL Server Machine Learning Services lets you execute Python and R scripts in-database. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminates transfer of the data across the network to another server.
 
 Base distributions of Python and R are included in Machine Learning Services. You can use open-source packages and frameworks, such as PyTorch, TensorFlow, and scikit-learn, in addition to Microsoft packages [revoscalepy](python/ref-py-revoscalepy.md) and [microsoftml](python/ref-py-microsoftml.md) for Python, and [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md), and [sqlrutils](r/ref-r-sqlrutils.md) for R.
 
-Machine Learning Services use an extensibility framework to run Python and R scripts in SQL Server. Learn more about how this works:
+Machine Learning Services uses an extensibility framework to run Python and R scripts in SQL Server. Learn more about how this works:
 
 + [Extensibility framework](concepts/extensibility-framework.md)
 + [Python extension](concepts/extension-python.md)
@@ -75,7 +75,7 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 
 1. [Install SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md)
 
-1. Configure your development tools. You can either use:
+1. Configure your development tools. You can use:
 
     + [Azure Data Studio](../azure-data-studio/what-is.md) or [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) to use T-SQL and the stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute your Python or R script.
     + Python or R on your own development laptop or workstation to execute scripts. You can either pull data down locally or push the execution remotely to SQL Server with [revoscalepy](python/ref-py-revoscalepy.md) and [RevoScaleR](r/ref-r-revoscaler.md). See how to set up a data science client for [Python development](python/setup-python-client-tools-sql.md) and [R development](r/set-up-a-data-science-client.md) for more information.
@@ -83,8 +83,8 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 1. Write your first Python or R script
 
     + Quickstart: Run a "Hello world" script [in Python](tutorials/quickstart-python-run-using-t-sql.md) or [in R](tutorials/quickstart-r-run-using-tsql.md)
-    + Quickstart: Create a predictive model [in Python](tutorials/quickstart-python-train-score-in-tsql.md) or [in R](tutorials/quickstart-r-create-predictive-model.md)'
-    + Tutorial: [Use Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
+    + Quickstart: Create a predictive model [in Python](tutorials/quickstart-python-train-score-in-tsql.md) or [in R](tutorials/quickstart-r-create-predictive-model.md)
+    + Tutorial: [Use Python in T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
     + Tutorial: [Use R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
     + Tutorial: [Use Machine Learning Services in R tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)
 

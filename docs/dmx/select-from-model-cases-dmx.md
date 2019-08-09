@@ -78,7 +78,7 @@ AND IsInNode('002')
  To return a structure column, drillthrough permissions must be enabled on both the mining model and the mining structure.  
   
 > [!NOTE]  
->  Not all mining model types support drillthrough. For information about the models that support drillthrough, see [Drillthrough Queries &#40;Data Mining&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  Not all mining model types support drillthrough. For information about the models that support drillthrough, see [Drillthrough Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
 ## See Also  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   

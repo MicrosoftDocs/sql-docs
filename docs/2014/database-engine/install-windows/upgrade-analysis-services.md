@@ -29,7 +29,7 @@ manager: craigg
   
 -   [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
--   To learn which [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features and functionality have been discontinued, deprecated, or changed see [Analysis Services Backward Compatibility](../../analysis-services/analysis-services-backward-compatibility.md).  
+-   To learn which [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] features and functionality have been discontinued, deprecated, or changed see [Analysis Services Backward Compatibility](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility).  
   
 ## Pre-Upgrade Checklist  
  Before upgrading, review the following information:  
@@ -42,7 +42,7 @@ manager: craigg
   
 -   [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
--   [Backup and Restore of Analysis Services Databases](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
+-   [Backup and Restore of Analysis Services Databases](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
 -   [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
@@ -61,7 +61,7 @@ manager: craigg
  To upgrade an existing instance, run Setup and specify the name of the existing instance as the name of the new instance.  
   
 ## Upgrading Databases  
- Databases that were created in previous versions of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] run on the upgraded server under an older database compatibility level setting. Databases created in the following versions, have a database compatibility level of 105. You can change the compatibility level if you want to use features that require a newer database compatibility level. Otherwise, you can run the databases on the upgraded server using the original settings. For more information, see [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
+ Databases that were created in previous versions of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] run on the upgraded server under an older database compatibility level setting. Databases created in the following versions, have a database compatibility level of 105. You can change the compatibility level if you want to use features that require a newer database compatibility level. Otherwise, you can run the databases on the upgraded server using the original settings. For more information, see [Set the Compatibility Level of a Multidimensional Database &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services).  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -74,7 +74,7 @@ manager: craigg
 ## See Also  
  [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Understanding Microsoft OLAP Architecture](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)   
+ [Understanding Microsoft OLAP Architecture](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   
  [Upgrade PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)   
  [Install Analysis Services in Multidimensional and Data Mining Mode](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

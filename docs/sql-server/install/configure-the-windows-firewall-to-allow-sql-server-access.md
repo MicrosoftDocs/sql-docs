@@ -36,7 +36,7 @@ To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
  Users familiar with managing the  **Windows Firewall**, and know which firewall settings they want to configure can move directly to the more advanced articles:  
   
 -   [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)    
+-   [Configure the Windows Firewall to Allow Analysis Services Access](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> Basic Firewall Information  
@@ -153,7 +153,7 @@ By default, the typical ports used by SQL Server Analysis Services and associate
   
  If users access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] through IIS and the Internet, you must open the port on which IIS is listening and specify that port in the client connection string. In this case, no ports have to be open for direct access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The default port 2389, and port 2382, should be restricted together with all other ports that are not required.  
   
- For step by step instructions to configure the Windows Firewall for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ For step by step instructions to configure the Windows Firewall for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Configure the Windows Firewall to Allow Analysis Services Access](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access).  
   
 ###  <a name="BKMK_ssrs"></a> Ports Used By Reporting Services  
 

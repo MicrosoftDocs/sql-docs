@@ -118,7 +118,7 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
   
 ### See also
   
-* [Configure service accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
+* [Configure service accounts &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Configure Windows service accounts and permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## Analysis Services Configuration - Data Directories page

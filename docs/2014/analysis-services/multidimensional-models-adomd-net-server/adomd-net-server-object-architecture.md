@@ -20,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  To use the `Microsoft.AnalysisServices.AdomdServer` namespace (and these objects), a reference to the msmgdsrv.dll must be added to UDF project or stored procedure.  
   
- ![Shows the object relationships in ADOMD.NET Server](../../../2014/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Shows the object relationships in ADOMD.NET Server")  
+ ![Shows the object relationships in ADOMD.NET Server](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Shows the object relationships in ADOMD.NET Server")  
 ADOMD.NET Object Model  
   
  Interaction with the ADOMD.NET object hierarchy typically starts with one or more of the objects in the topmost layer, as described in the following table.  

@@ -32,7 +32,7 @@ manager: craigg
   
  The existing farm option assumes that a SharePoint farm is already in place. The new farm option assumes that you will create a new farm; it supports the addition of a Database Engine instance in the command line syntax so that you can use the Database Engine instance as the farm's database server.  
   
- In contrast with the previous releases, all server configuration tasks are performed as post-installation tasks. If you are automating installation and configuration steps, you can use PowerShell to configure the server. For more information, see [PowerPivot Configuration using Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+ In contrast with the previous releases, all server configuration tasks are performed as post-installation tasks. If you are automating installation and configuration steps, you can use PowerShell to configure the server. For more information, see [PowerPivot Configuration using Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## Example Commands  
  The following examples illustrate the usage of each option. Example 1 shows `SPI_AS_ExistingFarm`.  
@@ -96,10 +96,10 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 10. To verify installation, check the summary.txt file at \Program Files\SQL Server\120\Setup Bootstrap\Log. Final result should say "Passed" if the server installed without errors.  
   
-11. Configure the server. At a minimum, you must deploy solutions, create a service application, and enable the feature for each site collection. For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) or [PowerPivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+11. Configure the server. At a minimum, you must deploy solutions, create a service application, and enable the feature for each site collection. For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) or [PowerPivot Server Administration and Configuration in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
 ## See Also  
- [Configure PowerPivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
+ [Configure PowerPivot Service Accounts](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

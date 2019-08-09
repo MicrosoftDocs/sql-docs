@@ -1404,7 +1404,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Examples](#Example_Top)
+![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Examples](#Example_Top)
 
 ### <a name="alter_column"></a> Altering a Column Definition
 

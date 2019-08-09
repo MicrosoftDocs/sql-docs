@@ -46,8 +46,8 @@ manager: craigg
  Describes how you can use the exception message box programmatic interface in your applications to provide more control over the messaging experience, to give your users the option to save error message content for later reference, and to get help with messages.  
   
 ## See Also  
- [Data Mining Programming](../analysis-services/dev-guide/data-mining-programming.md)   
- [Developer's Guide &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
+ [Data Mining Programming](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Developer's Guide &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [Developer's Guide &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [Developer's Guide &#40;Replication&#41;](replication/concepts/replication-developer-documentation.md)   
  [Developer's Guide &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  

@@ -57,7 +57,7 @@ manager: craigg
  Specify a condition or user expression that applies to the column. Columns can be dragged from the tables containing the mining model and input columns to the cell.  
   
 ## See Also  
- [Data Mining Query Interfaces](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Data Mining Query Interfaces](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Data Mining Extensions &#40;DMX&#41; Statement Reference](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

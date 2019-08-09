@@ -118,7 +118,7 @@ SQL Server 2014, and older versions including SQL Server 2005, have documentatio
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Azure migration journey - asses, migrate, optimize](https://azure.microsoft.com/migration/)]
+- [Azure migration journey - assess, migrate, optimize](https://azure.microsoft.com/migration/)
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"

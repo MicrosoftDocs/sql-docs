@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Documentation | Microsoft Docs"
-ms.date: "08/02/2019"
+ms.date: "08/08/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -144,6 +144,12 @@ SQL Server 2014, and older versions including SQL Server 2005, have documentatio
 ## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005 previous versions
 
 [!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
+## Versioning control for SQL documentation
+
+The _versioning control_ on this :::no-loc text="Docs"::: webpage is above the table of contents. For information about how you can use the versioning control and exactly what it does, see:
+
+- [Versioning system for SQL documentation](../toc/versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

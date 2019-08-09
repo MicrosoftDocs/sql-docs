@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Documentation | Microsoft Docs"
-ms.date: "08/02/2019"
+ms.date: "08/08/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -118,7 +118,7 @@ SQL Server 2014, and older versions including SQL Server 2005, have documentatio
 - [Import and Export Data with the SQL Server Import and Export Wizard](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [Migrate your SQL Server database to Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
 - [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)
-- [Azure migration journey - asses, migrate, optimize](https://azure.microsoft.com/migration/)]
+- [Azure migration journey - assess, migrate, optimize](https://azure.microsoft.com/migration/)
 ::: moniker-end
 
 ::: moniker range=">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -144,6 +144,12 @@ SQL Server 2014, and older versions including SQL Server 2005, have documentatio
 ## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005 previous versions
 
 [!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
+## Versioning control for SQL documentation
+
+The _versioning control_ on this :::no-loc text="Docs"::: webpage is above the table of contents. For information about how you can use the versioning control and exactly what it does, see:
+
+- [Versioning system for SQL documentation](../toc/versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

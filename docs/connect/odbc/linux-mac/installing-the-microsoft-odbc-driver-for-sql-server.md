@@ -84,6 +84,7 @@ sudo su
 #Choose only ONE of the following, corresponding to your OS version
 
 #SUSE Linux Enterprise Server 11 SP4
+#Ensure SUSE Linux Enterprise 11 Security Module has been installed 
 zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 
 #SUSE Linux Enterprise Server 12
@@ -91,6 +92,7 @@ zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 #SUSE Linux Enterprise Server 15
 zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+#Run this command only if ODBC Driver version is 17.3 or below
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit

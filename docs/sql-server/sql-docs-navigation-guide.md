@@ -60,7 +60,7 @@ You can use the version filter to ensure that you are seeing content for the app
 
 ![SQL Docs version filter](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Selecting **SQL Server** > **Hide nothing** ensures that all content is visible, and that nothing is hidden behind the version filter. 
+Selecting **All SQL** > **Hide nothing** ensures that all content is visible, and that nothing is hidden behind the version filter. 
 
 ## Breadcrumbs
 

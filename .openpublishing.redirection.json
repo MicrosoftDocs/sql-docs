@@ -13814,6 +13814,46 @@
             "source_path": "docs/analysis-services/analysis-services.md",
             "redirect_url": "/analysis-services/analysis-services-overview",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md",
+            "redirect_url": "/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md",
+            "redirect_url": "/bi-reference/csdl/csdlbi-attributes-for-report-design",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md",
+            "redirect_url": "/bi-reference/csdl/csdlbi-concepts",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md",
+            "redirect_url": "/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md",
+            "redirect_url": "/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md",
+            "redirect_url": "/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md",
+            "redirect_url": "/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/index.md",
+            "redirect_url": "/bi-reference/adomd/index",
+            "redirect_document_id": false
         }
     ]
 }

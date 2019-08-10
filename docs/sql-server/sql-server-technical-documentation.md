@@ -149,7 +149,7 @@ SQL Server 2014, and older versions including SQL Server 2005, have documentatio
 
 The _versioning control_ on this :::no-loc text="Docs"::: webpage is above the table of contents. For information about how you can use the versioning control and exactly what it does, see:
 
-- [Versioning system for SQL documentation](../toc/versioning-system-monikers-ui-sql-server.md)
+- [Versioning system for SQL documentation](versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

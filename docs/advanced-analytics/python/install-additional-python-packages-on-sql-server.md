@@ -4,7 +4,7 @@ description: Learn how to use Python pip to install new Python packages on an in
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/05/2019
+ms.date: 08/08/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -16,55 +16,113 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to use pip to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
+This article describes how to use the pip installer to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
-## Prerequisites
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+In addition to using pip from a command line, you can install Python packages using [T-SQL](install-r-packages-tsql.md).
+::: moniker-end
 
-+ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language option.
+## General considerations
+
++ You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
 
 + Packages must be Python 3.5-compliant and run on Windows.
 
-+ You'll need administrative access to the server to install packages.
++ The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 
-Other considerations:
++ Non-administrator users with CREATE EXTERNAL LIBRARY permission can install Python packages to the current database using T-SQL. For more information, see:
+  + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install Python packages on SQL Server](install-python-packages-tsql.md)
 
 + Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
-+ Before adding packages, consider whether the package is a good fit for the SQL Server environment. If you add packages that put too much computational pressure on the server, performance will suffer.
++ Before adding a package, consider whether the package is a good fit for the SQL Server environment.
 
-+ We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning, rather than tasks that simply query the database.
+  + We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning, rather than tasks that simply query the database.
 
-## Add a package from the Python command line
+  + If you add packages that put too much computational pressure on the server, performance will suffer.
 
-1. Download the Windows version of the Python package. If you're installing Python packages on a server with no internet access, download the WHL file to a different computer and then copy it to the server.
+  + On a hardened SQL Server environment, you might want to avoid the following:
+    + Packages that require network access
+    + Packages that require elevated file system access
+    + Packages used for web development or other tasks that don't benefit by running inside SQL Server
 
-1. Open a Python command prompt. Python is located in the PYTHON_SERVICE folder for the instance where you want to add the package.
+## Online installation (with Internet access)
 
-   For example, if Machine Learning Services has been installed using defaults, and machine learning is enabled on the default instance, the path would be:
+If the SQL Server has access to the Internet, then you can use the standard [pip package installer](https://pip.pypa.io/en/stable/) to install Python packages.
+
+For example, the following procedure installs the [scikit-plot](https://pypi.org/project/scikit-plot/) package.
+
+1. Open a command prompt with administrator privileges.
+
+1. Navigate to the **Scripts** subfolder of **PYTHON_SERVICES**.
+
+   For example, if Machine Learning Services has been installed using defaults, and you're installing the package on the default SQL instance, the path would be:
 
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-   `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library`
+   `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
    ::: moniker-end
 
    ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\library`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\Scripts`
    ::: moniker-end
 
-1. Install the package using pip. You can find pip in the **Scripts** subfolder of **PYTHON_SERVICES**. Note that SQL Server Setup doesn't add `Scripts` to the system path.
+   For more information, see [Default Python library location](../package-management/python-package-information.md#default-python-library-location).
 
-## Add a package from Visual Studio
+1. Install the package using pip:
 
-If you're using Visual Studio 2017 or later, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages** and provide the name or location of the package to install.
+   ```python
+   pip install scikit-plot
+   ```
 
-+ If the computer has Internet access, provide the name of the package, or the URL of a specific package and version.
+## Offline installation (no Internet access)
 
-+ If the computer doesn't have internet access, download the WHL file before beginning installation and then specify the local file path and name.
+Frequently, servers that host production databases don't have an internet connection. To install a Python package in that environment, you download the package and any dependencies in advance, and then copy the files to a folder on the server. Once the files are in place, the packages can be installed on the server offline.
+
+You can use the `pip download` command to collect a package and all its dependencies into a local folder. Then you can copy the folder to the server and use `pip install` with the `--find-links` option to install the package and dependencies.
+
+For example, the following procedure installs the scikit-plot package.
+
+1. On a computer with Internet access, run the following command from a command prompt to download the package and dependencies into a subfolder named `scikitplot`:
+
+   ```command
+   pip download scikit-plot -d scikitplot
+   ```
+
+1. Copy the folder to the SQL server.
+
+1. On the server, open a command prompt with administrator privileges.
+
+1. Navigate to the **Scripts** subfolder of **PYTHON_SERVICES**.
+
+   For example, if Machine Learning Services has been installed using defaults, and you're installing the package on the default SQL instance, the path would be:
+
+   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+   ::: moniker-end
+
+   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+   ::: moniker-end
+
+   For more information, see [Default Python library location](../package-management/python-package-information.md#default-python-library-location).
+
+1. Run the following command - this assumes you copied the `scikitplot` folder to `c:\temp\scikitplot` on the server:
+
+   ```command
+   pip install --no-index --find-links=file:c:/temp/scikitplot scikit-plot
+   ```
+
+   The name you specified at the end of the command, `scikit-plot`, is the name you use to load that package.
 
 ## Load the package
 
-You can now load the package or its functions as part of your script. To use functions from the package in your script, insert the standard `import <package_name>` statement in the initial lines of the script.
+You can now load the package as part of your Python script:
+
+```python
+import scikit-plot
+```
 
 ## See Also
 

@@ -30,26 +30,25 @@ The [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/cr
 
 If you are installing a single package, download the package in zipped format.
 
-It's more common to install multiple packages due to package dependencies. When a package requires other packages, you must verify that all of them are accessible to each other during installation. We recommend [creating a local repository](create-a-local-package-repository-using-minicran.md) using [miniCRAN](https://andrie.github.io/miniCRAN/) to assemble a full collection of packages. The [igraph](https://igraph.org/r/) package is also useful for analyzing packages dependencies. Installing the wrong version of a package or omitting a package dependency can cause a CREATE EXTERNAL LIBRARY statement to fail.
+It's more common, however, that a package will be dependent on a number of other packages. When a package requires other packages, you must verify that all of them are accessible to each other during installation.
 
-Now copy the zipped file containing all packages to a local folder on the server.
+We recommend [creating a local repository](create-a-local-package-repository-using-minicran.md) using [miniCRAN](https://andrie.github.io/miniCRAN/) to assemble a full collection of packages. The [igraph](https://igraph.org/r/) package is also useful for analyzing packages dependencies. Installing the wrong version of a package or omitting a package dependency can cause a CREATE EXTERNAL LIBRARY statement to fail.
 
-> [!NOTE]
-> If you don't have access to the file system on the server, it is possible to pass a complete package as a variable, using a binary format. For more information, see [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
+You can now copy the zipped file containing all packages to a local folder on the server.
 
 ## Upload the collection file to the database
 
-Open a **Query** window, using an account with administrative privileges.
+1. In SQL Server Management Studio, open a **Query** window, using an account with administrative privileges.
 
-Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package collection to the database.
+1. Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package collection to the database.
 
-For example, the following statement references a miniCRAN repository containing the **randomForest** package with its dependencies.
+   For example, the following statement references a miniCRAN repository containing the **randomForest** package with its dependencies.
 
-```sql
-CREATE EXTERNAL LIBRARY randomForest
-FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-WITH (LANGUAGE = 'R');
-```
+   ```sql
+   CREATE EXTERNAL LIBRARY randomForest
+   FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
+   WITH (LANGUAGE = 'R');
+   ```
 
 You cannot use an arbitrary name; the external library name must have the same name that you expect to use when loading or calling the package.
 

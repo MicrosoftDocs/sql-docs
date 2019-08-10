@@ -1,5 +1,5 @@
 - name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: sql-server/sql-server-technical-documentation.md
 
 - name: SQL Docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
@@ -10461,7 +10461,7 @@
     items:
     - name: Get help
       href: sql-server/sql-server-get-help.md
-    - name: Versioning for SQL documentation
+    - name: Versioning of SQL docs
       href: sql-server/versioning-system-monikers-ui-sql-server.md
     - name: DBA Stack Exchange >
       href: https://dba.stackexchange.com/questions/tagged/sql-server

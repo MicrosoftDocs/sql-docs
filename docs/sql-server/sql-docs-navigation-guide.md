@@ -58,7 +58,7 @@ You can use the [version filter](versioning-system-monikers-ui-sql-server.md) to
 
 ![SQL Docs version filter](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Selecting **All SQL** \> **Hide nothing** ensures that all content is visible, and that nothing is hidden by the version filter. The [**Hide nothing** option is not recommended](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing) for routine use.
+Selecting **All SQL** \> **Hide nothing** ensures that all content is visible, and that nothing is hidden by the version filter. The [**Hide nothing** option is not recommended for routine use](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
 
 ## Breadcrumbs
 

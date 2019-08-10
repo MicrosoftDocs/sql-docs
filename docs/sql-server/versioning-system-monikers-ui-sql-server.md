@@ -151,7 +151,7 @@ The _newest_ version might exclude versions that are not yet fully released and 
 The versioning system is fully implemented for SQL Server version 2016 onward.
 
 - _2012 and earlier:_ &nbsp; The versioning system is not used for SQL Server 2012 or earlier versions.
-    - The special moniker of **SQL Server - older** is meant to hide almost all articles, except of couple of articles customers of older versions might need once.
+    - The special moniker of **SQL Server - older** is meant to hide almost all articles. The rare exceptions are a couple of articles that customers of older versions might need once.
 
 - _2014:_ &nbsp; The versioning system is half implemented for SQL Server 2014. You can choose SQL Server 2014 in the versioning control, and it works. Yet internally the files for 2014 are dedicated to just 2014, the same way the files for 2008 are dedicated to just 2008.
 

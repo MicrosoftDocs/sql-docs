@@ -1,6 +1,6 @@
 ---
 title: "CLR Stored Procedures"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
 ---
 # CLR Stored Procedures

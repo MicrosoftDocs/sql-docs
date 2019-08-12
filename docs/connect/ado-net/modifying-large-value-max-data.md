@@ -1,6 +1,6 @@
 ---
 title: "Modifying Large-Value (max) Data in ADO.NET"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -245,7 +245,6 @@ WHERE   DocumentID=@DocumentID
   
 ## See also
 
-- [SQL Server Binary and Large-Value Data](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [SQL Server Data Type Mappings](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [SQL Server Data Operations in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [SQL Server Binary and Large-Value Data](../../connect/ado-net/sql-server-binary-and-large-value-data.md)
+- [SQL Server Data Operations in ADO.NET](../../connect/ado-net/sql-server-data-operations.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

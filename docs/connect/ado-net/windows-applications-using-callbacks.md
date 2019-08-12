@@ -1,6 +1,6 @@
 ---
 title: "Windows Applications Using Callbacks"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -371,5 +371,5 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## See also
 
-- [Asynchronous Operations](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
+- [Asynchronous Operations](../../connect/ado-net/asynchronous-operations.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,6 +1,6 @@
 ---
 title: "Bulk Copy Example Setup"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
 ---
 # Bulk Copy Example Setup
@@ -77,5 +77,5 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
   
 ## See also
 
-- [Bulk Copy Operations in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
+- [Bulk Copy Operations in SQL Server](../../connect/ado-net/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

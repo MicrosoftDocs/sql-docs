@@ -1,6 +1,6 @@
 ---
 title: "Asynchronous Operations"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
 ---
 # Asynchronous Operations
@@ -14,17 +14,17 @@ Some database operations, such as command executions, can take significant time 
  Although using asynchronous techniques with ADO.NET features does not add any special considerations, it is likely that more developers will use asynchronous features in ADO.NET than in other areas of the .NET Framework. It is important to be aware of the benefits and pitfalls of creating multithreaded applications. The examples that follow in this section point out several important issues that developers will need to take into account when building applications that incorporate multithreaded functionality.  
   
 ## In This Section  
- [Windows Applications Using Callbacks](../../../../../docs/framework/data/adonet/sql/windows-applications-using-callbacks.md)  
+ [Windows Applications Using Callbacks](../../connect/ado-net/windows-applications-using-callbacks.md)  
  Provides an example demonstrating how to execute an asynchronous command safely, correctly handling interaction with a form and its contents from a separate thread.  
   
- [ASP.NET Applications Using Wait Handles](../../../../../docs/framework/data/adonet/sql/aspnet-apps-using-wait-handles.md)  
+ [ASP.NET Applications Using Wait Handles](../../connect/ado-net/aspnet-apps-using-wait-handles.md)  
  Provides an example demonstrating how to execute multiple concurrent commands from an ASP.NET page, using Wait handles to manage the operation at completion of all the commands.  
   
- [Polling in Console Applications](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
+ [Polling in Console Applications](../../connect/ado-net/polling-in-console-applications.md)  
  Provides an example demonstrating the use of polling to wait for the completion of an asynchronous command execution from a console application. This technique is also valid in a class library or other application without a user interface.  
   
 ## See also
 
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [SQL Server and ADO.NET](../../connect/ado-net/index.md)
 - [Calling Synchronous Methods Asynchronously](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

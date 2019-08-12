@@ -1,6 +1,6 @@
 ---
 title: "Comparing GUID and uniqueidentifier Values"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"

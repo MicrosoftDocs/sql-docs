@@ -1,6 +1,6 @@
 ---
 title: "FILESTREAM Data"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ---
 
@@ -180,8 +180,5 @@ The complete documentation for FILESTREAM is located in the following sections i
 
 ## See also
 
-- [SQL Server Data Types and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [Retrieving and Modifying Data in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
-- [SQL Server Binary and Large-Value Data](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET Overview](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [SQL Server Data Types and ADO.NET](../../connect/ado-net/sql-server-data-types.md)
+- [SQL Server Binary and Large-Value Data](../../connect/ado-net/sql-server-binary-and-large-value-data.md)

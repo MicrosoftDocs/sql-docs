@@ -1,6 +1,6 @@
 ---
 title: "Introduction to SQL Server CLR Integration"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ---
 # Introduction to SQL Server CLR Integration
@@ -61,5 +61,4 @@ GO
   
 ## See also
 
-- [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

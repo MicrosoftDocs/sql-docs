@@ -1,6 +1,6 @@
 ---
 title: "Authorization and Permissions in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
 ---
 # Authorization and Permissions in SQL Server
@@ -54,9 +54,8 @@ When you create database objects, you must explicitly grant permissions to make 
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Application Security Scenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Authentication in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Server and Database Roles in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [Ownership and User-Schema Separation in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
+- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
+- [Authentication in SQL Server](../../connect/ado-net/authentication-in-sql-server.md)
+- [Server and Database Roles in SQL Server](../../connect/ado-net/server-and-database-roles-in-sql-server.md)
+- [Ownership and User-Schema Separation in SQL Server](../../connect/ado-net/ownership-and-user-schema-separation-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,6 +1,6 @@
 ---
 title: "CLR User-Defined Functions"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
 ---
 # CLR User-Defined Functions
@@ -10,5 +10,5 @@ User-defined functions are routines that can take parameters, perform calculatio
   
 ## See also
 
-- [SQL Server Common Language Runtime Integration](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)
+- [SQL Server Common Language Runtime Integration](../../connect/ado-net/sql-server-common-language-runtime-integration.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

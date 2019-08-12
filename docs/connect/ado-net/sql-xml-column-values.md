@@ -1,6 +1,6 @@
 ---
 title: "SQL XML Column Values"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -21,5 +21,5 @@ SQL Server supports the `xml` data type, and developers can retrieve result sets
 ## See also
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [XML Data in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
+- [XML Data in SQL Server](../../connect/ado-net/xml-data-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

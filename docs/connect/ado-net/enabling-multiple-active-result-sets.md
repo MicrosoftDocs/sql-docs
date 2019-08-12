@@ -1,6 +1,6 @@
 ---
 title: "Enabling Multiple Active Result Sets"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -62,7 +62,6 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS operations are not thread-safe.  
   
 ### Connection Pooling  
- MARS-enabled connections are pooled like any other connection. If an application opens two connections, one with MARS enabled and one with MARS disabled, the two connections are in separate pools. For more information, see [SQL Server Connection Pooling (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### SQL Server Batch Execution Environment  
  When a connection is opened, a default environment is defined. This environment is then copied into a logical MARS session.  
@@ -107,5 +106,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## See also
 
-- [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [Multiple Active Result Sets (MARS)](../../connect/ado-net/multiple-active-result-sets-mars.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

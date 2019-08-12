@@ -1,6 +1,6 @@
 ---
 title: "SqlClient Support for LocalDB"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ---
 # SqlClient Support for LocalDB
@@ -54,5 +54,5 @@ Beginning in SQL Server code name Denali, a lightweight version of SQL Server, c
   
 ## See also
 
-- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [SQL Server Features and ADO.NET](../../connect/ado-net/sql-server-features-and-adonet.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

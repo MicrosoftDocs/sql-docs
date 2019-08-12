@@ -1,6 +1,6 @@
 ---
 title: "CLR Integration Security in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
 ---
 # CLR Integration Security in SQL Server
@@ -18,7 +18,5 @@ Microsoft SQL Server provides the integration of the common language runtime (CL
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Application Security Scenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server Common Language Runtime Integration](../../../../../docs/framework/data/adonet/sql/sql-server-common-language-runtime-integration.md)
-- [ADO.NET Overview](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
+- [SQL Server Common Language Runtime Integration](../../connect/ado-net/sql-server-common-language-runtime-integration.md)

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Common Language Runtime Integration"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ---
 # SQL Server Common Language Runtime Integration
@@ -15,28 +15,28 @@ SQL Server 2005 introduced the integration of the common language runtime (CLR) 
 1. [Common Language Runtime (CLR) Integration Programming Concepts](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## In This Section  
- [Introduction to SQL Server CLR Integration](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
+ [Introduction to SQL Server CLR Integration](../../connect/ado-net/introduction-to-sql-server-clr-integration.md)  
  Provides an introduction to SQL Server CLR integration. Provides links to additional topics.  
   
- [CLR User-Defined Functions](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
+ [CLR User-Defined Functions](../../connect/ado-net/clr-user-defined-functions.md)  
  Describes how to implement and use the various types of CLR functions: table-valued, scalar, and user-defined aggregate functions.  
   
- [CLR User-Defined Types](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
+ [CLR User-Defined Types](../../connect/ado-net/clr-user-defined-types.md)  
  Describes how to implement and use CLR user-defined types. Provides links to additional topics.  
   
- [CLR Stored Procedures](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  
+ [CLR Stored Procedures](../../connect/ado-net/clr-stored-procedures.md)  
  Describes how to implement and use CLR stored procedures. Provides links to additional topics.  
   
- [CLR Triggers](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
+ [CLR Triggers](../../connect/ado-net/clr-triggers.md)  
  Describes how to implement and use CLR triggers. Provides links to additional topics.  
   
- [The Context Connection](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
+ [The Context Connection](../../connect/ado-net/the-context-connection.md)  
  Describes the context connection.  
   
- [SQL Server In-Process-Specific Behavior of ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
+ [SQL Server In-Process-Specific Behavior of ADO.NET](../../connect/ado-net/sql-server-in-process-specific-behavior-of-adonet.md)  
  Describes the SQL Server in-process specific extensions to ADO.NET, and the context connection. Provides links to additional topics.  
   
 ## See also
 
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [SQL Server and ADO.NET](../../connect/ado-net/index.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

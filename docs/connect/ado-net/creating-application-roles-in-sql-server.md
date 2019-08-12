@@ -1,6 +1,6 @@
 ---
 title: "Creating Application Roles in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
 ---
 # Creating Application Roles in SQL Server
@@ -41,9 +41,9 @@ Application roles provide a way to assign permissions to an application instead 
   
  You may want to consider the following alternatives.  
   
-- Use context switching with the EXECUTE AS statement with its NO REVERT and WITH COOKIE clauses. You can create a user account in a database that is not mapped to a login. You then assign permissions to this account. Using EXECUTE AS with a login-less user is more secure because it is permission-based, not password-based. For more information, see [Customizing Permissions with Impersonation in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Use context switching with the EXECUTE AS statement with its NO REVERT and WITH COOKIE clauses. You can create a user account in a database that is not mapped to a login. You then assign permissions to this account. Using EXECUTE AS with a login-less user is more secure because it is permission-based, not password-based. For more information, see [Customizing Permissions with Impersonation in SQL Server](../../connect/ado-net/customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Sign stored procedures with certificates, granting only permission to execute the procedures. For more information, see [Signing Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Sign stored procedures with certificates, granting only permission to execute the procedures. For more information, see [Signing Stored Procedures in SQL Server](../../connect/ado-net/signing-stored-procedures-in-sql-server.md).  
   
 ## External Resources  
  For more information, see the following resources.  
@@ -54,7 +54,6 @@ Application roles provide a way to assign permissions to an application instead 
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Overview of SQL Server Security](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Application Security Scenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
+- [Overview of SQL Server Security](../../connect/ado-net/overview-of-sql-server-security.md)
+- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

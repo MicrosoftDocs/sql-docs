@@ -1,6 +1,6 @@
 ---
 title: "Managing Permissions with Stored Procedures in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 ---
 # Managing Permissions with Stored Procedures in SQL Server
@@ -52,11 +52,9 @@ One method of creating multiple lines of defense around your database is to impl
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Overview of SQL Server Security](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Application Security Scenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Writing Secure Dynamic SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Signing Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Customizing Permissions with Impersonation in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Modifying Data with Stored Procedures](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
+- [Overview of SQL Server Security](../../connect/ado-net/overview-of-sql-server-security.md)
+- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
+- [Writing Secure Dynamic SQL in SQL Server](../../connect/ado-net/writing-secure-dynamic-sql-in-sql-server.md)
+- [Signing Stored Procedures in SQL Server](../../connect/ado-net/signing-stored-procedures-in-sql-server.md)
+- [Customizing Permissions with Impersonation in SQL Server](../../connect/ado-net/customizing-permissions-with-impersonation-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

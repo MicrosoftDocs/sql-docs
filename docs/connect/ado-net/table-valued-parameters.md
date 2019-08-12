@@ -1,6 +1,6 @@
 ---
 title: "Table-Valued Parameters"
-ms.date: "10/12/2018"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -268,8 +268,5 @@ insertCommand.ExecuteNonQuery()
   
 ## See also
 
-- [Configuring Parameters and Parameter Data Types](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Commands and Parameters](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter Parameters](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [SQL Server Data Operations in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [SQL Server Data Operations in ADO.NET](../../connect/ado-net/sql-server-data-operations.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

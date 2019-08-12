@@ -1,6 +1,6 @@
 ---
 title: "Data Encryption in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
 ---
 # Data Encryption in SQL Server
@@ -25,10 +25,9 @@ SQL Server provides functions to encrypt and decrypt data using a certificate, a
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Application Security Scenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Authentication in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Server and Database Roles in SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [Ownership and User-Schema Separation in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Authorization and Permissions in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
+- [Authentication in SQL Server](../../connect/ado-net/authentication-in-sql-server.md)
+- [Server and Database Roles in SQL Server](../../connect/ado-net/server-and-database-roles-in-sql-server.md)
+- [Ownership and User-Schema Separation in SQL Server](../../connect/ado-net/ownership-and-user-schema-separation-in-sql-server.md)
+- [Authorization and Permissions in SQL Server](../../connect/ado-net/authorization-and-permissions-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

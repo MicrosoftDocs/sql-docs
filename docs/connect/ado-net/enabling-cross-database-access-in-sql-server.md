@@ -1,6 +1,6 @@
 ---
 title: "Enabling Cross-Database Access in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
 ---
 # Enabling Cross-Database Access in SQL Server
@@ -46,9 +46,8 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Overview of SQL Server Security](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Managing Permissions with Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Writing Secure Dynamic SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Signing Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
+- [Overview of SQL Server Security](../../connect/ado-net/overview-of-sql-server-security.md)
+- [Managing Permissions with Stored Procedures in SQL Server](../../connect/ado-net/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Writing Secure Dynamic SQL in SQL Server](../../connect/ado-net/writing-secure-dynamic-sql-in-sql-server.md)
+- [Signing Stored Procedures in SQL Server](../../connect/ado-net/signing-stored-procedures-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

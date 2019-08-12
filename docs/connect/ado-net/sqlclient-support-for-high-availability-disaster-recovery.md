@@ -1,6 +1,6 @@
 ---
 title: "SqlClient Support for High Availability, Disaster Recovery"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ---
 # SqlClient Support for High Availability, Disaster Recovery
@@ -92,5 +92,5 @@ This topic discusses SqlClient support (added in .NET Framework 4.5) for high-av
   
 ## See also
 
-- [SQL Server Features and ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [SQL Server Features and ADO.NET](../../connect/ado-net/sql-server-features-and-adonet.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

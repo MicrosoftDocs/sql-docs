@@ -1,6 +1,6 @@
 ---
 title: "Writing Secure Dynamic SQL in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ---
 # Writing Secure Dynamic SQL in SQL Server
@@ -40,9 +40,9 @@ SQL Injection is the process by which a malicious user enters Transact-SQL state
   
  SQL Server has methods for granting users access to data using stored procedures and user-defined functions that execute dynamic SQL.  
   
-- Using impersonation with the Transact-SQL EXECUTE AS clause, as described in [Customizing Permissions with Impersonation in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Using impersonation with the Transact-SQL EXECUTE AS clause, as described in [Customizing Permissions with Impersonation in SQL Server](../../connect/ado-net/customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Signing stored procedures with certificates, as described in [Signing Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Signing stored procedures with certificates, as described in [Signing Stored Procedures in SQL Server](../../connect/ado-net/signing-stored-procedures-in-sql-server.md).  
   
 ### EXECUTE AS  
  The EXECUTE AS clause replaces the permissions of the caller with that of the user specified in the EXECUTE AS clause. Nested stored procedures or triggers execute under the security context of the proxy user. This can break applications that rely on row-level security or require auditing. Some functions that return the identity of the user return the user specified in the EXECUTE AS clause, not the original caller. Execution context is reverted to the original caller only after execution of the procedure or when a REVERT statement is issued.  
@@ -62,10 +62,9 @@ SQL Injection is the process by which a malicious user enters Transact-SQL state
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Overview of SQL Server Security](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Application Security Scenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Managing Permissions with Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Signing Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [Customizing Permissions with Impersonation in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
+- [Overview of SQL Server Security](../../connect/ado-net/overview-of-sql-server-security.md)
+- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
+- [Managing Permissions with Stored Procedures in SQL Server](../../connect/ado-net/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Signing Stored Procedures in SQL Server](../../connect/ado-net/signing-stored-procedures-in-sql-server.md)
+- [Customizing Permissions with Impersonation in SQL Server](../../connect/ado-net/customizing-permissions-with-impersonation-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

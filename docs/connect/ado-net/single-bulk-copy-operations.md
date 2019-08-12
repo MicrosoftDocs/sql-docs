@@ -1,6 +1,6 @@
 ---
 title: "Single Bulk Copy Operations"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -12,7 +12,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
 > [!NOTE]
 >  If you need to roll back all or part of the bulk copy when an error occurs, you can either use a <xref:System.Data.SqlClient.SqlBulkCopy>-managed transaction, or perform the bulk copy operation within an existing transaction. **SqlBulkCopy** will also work with <xref:System.Transactions> if the connection is enlisted (implicitly or explicitly) into a **System.Transactions** transaction.  
 >   
->  For more information, see [Transaction and Bulk Copy Operations](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
+>  For more information, see [Transaction and Bulk Copy Operations](../../connect/ado-net/transaction-and-bulk-copy-operations.md).  
   
  The general steps for performing a bulk copy operation are as follows:  
   
@@ -37,7 +37,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
  The following console application demonstrates how to load data using the <xref:System.Data.SqlClient.SqlBulkCopy> class. In this example, a <xref:System.Data.SqlClient.SqlDataReader> is used to copy data from the **Production.Product** table in the SQL Server **AdventureWorks** database to a similar table in the same database.  
   
 > [!IMPORTANT]
->  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.  
+>  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../connect/ado-net/bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.  
   
  [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
  [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]  
@@ -75,5 +75,5 @@ command.ExecuteNonQuery();
   
 ## See also
 
-- [Bulk Copy Operations in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
+- [Bulk Copy Operations in SQL Server](../../connect/ado-net/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

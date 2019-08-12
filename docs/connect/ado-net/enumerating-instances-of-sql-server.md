@@ -1,6 +1,6 @@
 ---
 title: "Enumerating Instances of SQL Server (ADO.NET)"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -120,5 +120,5 @@ class Program
   
 ## See also
 
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [SQL Server and ADO.NET](../../connect/ado-net/index.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

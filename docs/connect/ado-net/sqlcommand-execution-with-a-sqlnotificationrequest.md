@@ -1,6 +1,6 @@
 ---
 title: "SqlCommand Execution with a SqlNotificationRequest"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs:
   - "csharp"
   - "vb"
@@ -70,5 +70,5 @@ command.ExecuteReader();
 
 ## See also
 
-- [Query Notifications in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
+- [Query Notifications in SQL Server](../../connect/ado-net/query-notifications-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

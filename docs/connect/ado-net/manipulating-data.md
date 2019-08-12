@@ -1,6 +1,6 @@
 ---
 title: "Manipulating Data"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -398,5 +398,5 @@ private static string GetConnectionString()
   
 ## See also
 
-- [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [Multiple Active Result Sets (MARS)](../../connect/ado-net/multiple-active-result-sets-mars.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,6 +1,6 @@
 ---
 title: "Query Notifications in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ---
 # Query Notifications in SQL Server
@@ -33,16 +33,16 @@ Built upon the Service Broker infrastructure, query notifications allow applicat
 - [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## In This Section  
- [Enabling Query Notifications](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
+ [Enabling Query Notifications](../../connect/ado-net/enabling-query-notifications.md)  
  Discusses how to use query notifications, including the requirements for enabling and using them.  
   
- [SqlDependency in an ASP.NET Application](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
+ [SqlDependency in an ASP.NET Application](../../connect/ado-net/sqldependency-in-an-aspnet-app.md)  
  Demonstrates how to use query notifications from an ASP.NET application.  
   
- [Detecting Changes with SqlDependency](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
+ [Detecting Changes with SqlDependency](../../connect/ado-net/detecting-changes-with-sqldependency.md)  
  Demonstrates how to detect when query results will be different from those originally received.  
   
- [SqlCommand Execution with a SqlNotificationRequest](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
+ [SqlCommand Execution with a SqlNotificationRequest](../../connect/ado-net/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
  Demonstrates configuring a <xref:System.Data.SqlClient.SqlCommand> object to work with a query notification.  
   
 ## Reference  
@@ -57,5 +57,5 @@ Built upon the Service Broker infrastructure, query notifications allow applicat
   
 ## See also
 
-- [SQL Server and ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [SQL Server and ADO.NET](../../connect/ado-net/index.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

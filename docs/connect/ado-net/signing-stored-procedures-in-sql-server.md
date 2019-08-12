@@ -1,6 +1,6 @@
 ---
 title: "Signing Stored Procedures in SQL Server"
-ms.date: "01/05/2018"
+ms.date: "08/15/2019"
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 ---
 # Signing Stored Procedures in SQL Server
@@ -50,11 +50,9 @@ If the module needs additional server-level permissions:
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Overview of SQL Server Security](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [Application Security Scenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Managing Permissions with Stored Procedures in SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Writing Secure Dynamic SQL in SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [Customizing Permissions with Impersonation in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Modifying Data with Stored Procedures](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
+- [Overview of SQL Server Security](../../connect/ado-net/overview-of-sql-server-security.md)
+- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
+- [Managing Permissions with Stored Procedures in SQL Server](../../connect/ado-net/managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Writing Secure Dynamic SQL in SQL Server](../../connect/ado-net/writing-secure-dynamic-sql-in-sql-server.md)
+- [Customizing Permissions with Impersonation in SQL Server](../../connect/ado-net/customizing-permissions-with-impersonation-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

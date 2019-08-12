@@ -1,6 +1,6 @@
 ---
 title: "Server and Database Roles in SQL Server"
-ms.date: "03/30/2017"
+ms.date: "08/15/2019"
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ---
 # Server and Database Roles in SQL Server
@@ -36,7 +36,7 @@ All versions of SQL Server use role-based security, which allows you to assign p
  The `dbo`, or database owner, is a user account that has implied permissions to perform all activities in the database. Members of the `sysadmin` fixed server role are automatically mapped to `dbo`.  
   
 > [!NOTE]
->  `dbo` is also the name of a schema, as discussed in [Ownership and User-Schema Separation in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+>  `dbo` is also the name of a schema, as discussed in [Ownership and User-Schema Separation in SQL Server](../../connect/ado-net/ownership-and-user-schema-separation-in-sql-server.md).  
   
  The `dbo` user account is frequently confused with the `db_owner` fixed database role. The scope of `db_owner` is a database; the scope of `sysadmin` is the whole server. Membership in the `db_owner` role does not confer `dbo` user privileges.  
   
@@ -57,9 +57,8 @@ All versions of SQL Server use role-based security, which allows you to assign p
   
 ## See also
 
-- [Securing ADO.NET Applications](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Application Security Scenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Authentication in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [Ownership and User-Schema Separation in SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [Authorization and Permissions in SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [Application Security Scenarios in SQL Server](../../connect/ado-net/application-security-scenarios-in-sql-server.md)
+- [Authentication in SQL Server](../../connect/ado-net/authentication-in-sql-server.md)
+- [Ownership and User-Schema Separation in SQL Server](../../connect/ado-net/ownership-and-user-schema-separation-in-sql-server.md)
+- [Authorization and Permissions in SQL Server](../../connect/ado-net/authorization-and-permissions-in-sql-server.md)
 - [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

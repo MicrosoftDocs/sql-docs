@@ -107,24 +107,16 @@ For more info, see [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/jso
 The **JSON_QUERY** function extracts an object or an array from a JSON string. The following example shows how to return a JSON fragment in query results.  
   
 ```sql  
-SELECT JSON_QUERY(f.doc, '$.address') AS Address,
-       JSON_QUERY(f.doc, '$.parents') AS Parents,
-       JSON_QUERY(f.doc, '$.parents[0]') AS Parent0
+SELECT JSON_QUERY(f.doc, '$.address')
 FROM Families f 
 WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ```  
   
-The results of this query are shown in the following table:
-
-| Address | Parents | Parent0 |
-| --- | --- | --- |
-| { "state": "NY", "county": "Manhattan", "city": "NY" } | [{ "familyName": "Wakefield", "givenName": "Robin" }, {"familyName": "Miller", "givenName": "Ben" } ]| { "familyName": "Wakefield", "givenName": "Robin" } |
-
 For more info, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md).  
 
 ## Parse nested JSON collections
 
-`OPENJSON` function enables you to transform JSON subarray into the rowset and then join it with the parent element. As an example, you can return all family documents, and "join" them with their `children` objects that are stored as an inner JSON array:
+`OPENJSON` function enables you to transform JSON sub-array into the rowset and then join it with the parent element. As an example, you can return all family documents, and "join" them with their `children` objects that are stored as an inner JSON array:
 
 ```sql
 SELECT JSON_VALUE(f.doc, '$.id')  AS Name, JSON_VALUE(f.doc, '$.address.city') AS City,
@@ -132,19 +124,12 @@ SELECT JSON_VALUE(f.doc, '$.id')  AS Name, JSON_VALUE(f.doc, '$.address.city') A
 FROM Families f
 		CROSS APPLY OPENJSON(f.doc, '$.children')
 			WITH(grade int, givenName nvarchar(100))  c
+WHERE c.grade > 8
 ```
 
 `OPENJSON` function parses `children` fragment from the `doc` column and returns `grade` and `givenName` from each element as a set of rows. This rowset can be joined with the parent document.
-The results of this query are shown in the following table:
-
-| Name | City | givenName | grade |
-| --- | --- | --- | --- |
-| AndersenFamily | NY | Jesse | 1 |
-| AndersenFamily | NY | Lisa | 8 |
-
-We are getting two rows as a result because one parent row is joined with two child rows produced by parsing two elements of the children subarray.
-
-## Query nested hierarchical JSON subarrays
+ 
+## Query nested hierarchical JSON sub-arrays
 
 You can apply multiple `CROSS APPLY OPENJSON` calls in order to query nested JSON structures. The JSON document used in this example has a nested array called `children`, where each child has nested array of `pets`. The following query will parse children from each document, return each array object as row, and then parse `pets` array:
 
@@ -158,12 +143,21 @@ FROM Families f
 		WITH (familyName nvarchar(100), children nvarchar(max) AS JSON)
 		CROSS APPLY OPENJSON(children) 
 		WITH (givenName nvarchar(100), firstName nvarchar(100), pets nvarchar(max) AS JSON) as c
-			CROSS APPLY OPENJSON (pets)
+			OUTER APPLY OPENJSON (pets)
 			WITH (givenName nvarchar(100))  as p
 ```
 
 The first `OPENJSON` call will return fragment of `children` array using AS JSON clause. This array fragment will be provided to the second `OPENJSON` function that will return `givenName`, `firstName` of each child, as well as the array of `pets`. The array of `pets` will be provided to the third `OPENJSON` function that will return the `givenName` of the pet.
-  
+The results of this query are shown in the following table:
+
+| familyName | childGivenName | childFirstName | petName |
+| --- | --- | --- |
+| AndersenFamily | Jesse | Merriam | Goofy |
+| AndersenFamily | Jesse | Merriam | Shadow |
+| AndersenFamily | Lisa | Miller| `NULL` |
+
+The root document is joined with two `children` rows returned by first `OPENJSON(children)` call naking two rows. Then each row is joined with the rows returned by `OPENJSON(pets)` using `OUTER APPLY` operator. Jesse has two pets, so (AndersenFamily, Jesse, Merriam) is joined with two rows generated for Goofy and Shadow. Lisa don't have the pets, so there are no rows returned by `OPENJSON(pets)` for this node. However, since we are using `OUTER APPLY` we are getting `NULL` in the column. If we put `CROSS APPLY` Lisa woudl not be returned in the result because there are no pets rows that could be joined with this tuple.
+
 ##  <a name="JSONCompare"></a> Compare JSON_VALUE and JSON_QUERY  
 The key difference between **JSON_VALUE** and **JSON_QUERY** is that **JSON_VALUE** returns a scalar value, while **JSON_QUERY** returns an object or an array.  
   

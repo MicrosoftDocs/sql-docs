@@ -116,7 +116,7 @@ For more info, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/jso
 
 ## Parse nested JSON collections
 
-`OPENJSON` function enables you to transform JSON sub-array into the rowset and then join it with the parent element. As an example, you can return all family documents, and "join" them with their `children` objects that are stored as an inner JSON array:
+`OPENJSON` function enables you to transform JSON subarray into the rowset and then join it with the parent element. As an example, you can return all family documents, and "join" them with their `children` objects that are stored as an inner JSON array:
 
 ```sql
 SELECT JSON_VALUE(f.doc, '$.id')  AS Name, JSON_VALUE(f.doc, '$.address.city') AS City,
@@ -124,12 +124,19 @@ SELECT JSON_VALUE(f.doc, '$.id')  AS Name, JSON_VALUE(f.doc, '$.address.city') A
 FROM Families f
 		CROSS APPLY OPENJSON(f.doc, '$.children')
 			WITH(grade int, givenName nvarchar(100))  c
-WHERE c.grade > 8
 ```
 
 `OPENJSON` function parses `children` fragment from the `doc` column and returns `grade` and `givenName` from each element as a set of rows. This rowset can be joined with the parent document.
- 
-## Query nested hierarchical JSON sub-arrays
+The results of this query are shown in the following table:
+
+| Name | City | givenName | grade |
+| --- | --- | --- | --- |
+| AndersenFamily | NY | Jesse | 1 |
+| AndersenFamily | NY | Lisa | 8 |
+
+We are getting two rows as a result because one parent row is joined with two child rows produced by parsing two elements of the children subarray.
+
+## Query nested hierarchical JSON subarrays
 
 You can apply multiple `CROSS APPLY OPENJSON` calls in order to query nested JSON structures. The JSON document used in this example has a nested array called `children`, where each child has nested array of `pets`. The following query will parse children from each document, return each array object as row, and then parse `pets` array:
 

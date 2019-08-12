@@ -68,13 +68,15 @@ GO
 use [<subscriber database name>]  
 EXEC sp_addpullsubscription @publisher= N'<publisher name>',
         @publisher_db= N'<publisher database name>',
-        @publication= N'<publication name>' ;
+        @publication= N'<publication name>',
+        @subscription_type = N'pull';
 Go
 
 EXEC sp_addpullsubscription_agent 
-        @publisher = @publisher, 
+        @publisher =  N'<publisher name>', 
         @subscriber = N'<availability group listener name>',
-        @subscriber_db = N'<subscriber database name>',   
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>' ;
         @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
 GO
 ```  

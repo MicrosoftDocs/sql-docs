@@ -29,6 +29,22 @@ Machine Learning Services uses an extensibility framework to run R scripts in SQ
 + [Extensibility framework](concepts/extensibility-framework.md)
 + [R extension](concepts/extension-r.md)
 
+Microsoft packages [revoscalepy](python/ref-py-revoscalepy.md) and [microsoftml](python/ref-py-microsoftml.md) for Python, and [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md), and [sqlrutils](r/ref-r-sqlrutils.md) for R.
+
+## What can I do with R Services?
+
+You can use R Services to build and training machine learning and deep learning models within SQL Server. You can also deploy existing models to R Services and use relational data for predictions.
+
+Examples of the type of predictions that you can use SQL Server R Services for, include:
+
+|||
+|-|-|
+|Classification/Categorization|Automatically divide customer feedback into positive and negative categories|
+|Regression/Predict continuous values|Predict the price of houses based on size and location|
+|Anomaly Detection|Detect fraudulent banking transactions |
+|Recommendations|Suggest products that online shoppers may want to buy, based on their previous purchases|
+
+
 ## Components
 
 SQL Server 2016 is R only. The following table describes the features in SQL Server 2016.

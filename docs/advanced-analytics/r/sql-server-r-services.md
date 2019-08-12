@@ -52,6 +52,22 @@ There are two ways to execute R scripts in R Services:
 
 + You can also use your preferred R client and write scripts that push the execution (referred to as a *remote compute context*) to a remote SQL Server. See how to [set up a data science client R development](r/set-up-a-data-science-client.md) for more information.
 
+<a name="packages"></a>
+
+## R packages
+
+You can use open-source packages and frameworks, in addition to Microsoft's enterprise packages. Most common open-source R packages are pre-installed in R Services. The following R packages from Microsoft are also included:
+
+| Language | Package | Description |
+|-|-|-|
+| R | [RevoScaleR](r/ref-r-revoscaler.md) | The primary package for scalable R. Data transformations and manipulation, statistical summarization, visualization, and many forms of modeling. Additionally, functions in this package automatically distribute workloads across available cores for parallel processing. |
+| R | [MicrosoftML (R)](r/ref-r-microsoftml.md) | Adds machine learning algorithms to create custom models for text analysis, image analysis, and sentiment analysis. |
+| R | [olapR](r/ref-r-olapr.md) | R functions used for MDX queries against a SQL Server Analysis Services OLAP cube. |
+| R | [sqlrutils](r/ref-r-sqlrutils.md) | A mechanism to use R scripts in a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an [R development environment](r/set-up-a-data-science-client.md). |
+| R | [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) is the enhanced distribution of R from Microsoft. It is a complete open-source platform for statistical analysis and data science. It is based on and 100% compatible with R, and includes additional capabilities for improved performance and reproducibility. |
+
+
+
 ## Components
 
 SQL Server 2016 is R only. The following table describes the features in SQL Server 2016.

@@ -92,7 +92,7 @@ zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 #SUSE Linux Enterprise Server 15
 zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
-#Run this command only if ODBC Driver version is 17.3 or below
+#(Only for driver 17.3 and below)
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit

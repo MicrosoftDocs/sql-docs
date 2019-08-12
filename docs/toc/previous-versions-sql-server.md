@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: ""
 ms.custom: ""
-monikerRange: ">=sql-server-previousversions||=sqlallproducts-allversions"
+monikerRange: "=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Previous versions of SQL Server documentation
 

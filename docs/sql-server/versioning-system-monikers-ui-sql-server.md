@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.reviewer: ""
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-previousversions||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Versioning system for SQL documentation
 

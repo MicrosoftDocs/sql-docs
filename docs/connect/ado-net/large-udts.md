@@ -5,6 +5,12 @@ dev_langs:
   - "csharp"
   - "vb"
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Large UDTs
 User-defined types (UDTs) allow a developer to extend the server's scalar type system by storing common language runtime (CLR) objects in a SQL Server database. UDTs can contain multiple elements and can have behaviors, unlike the traditional alias data types, which consist of a single SQL Server system data type.  

@@ -2,6 +2,12 @@
 title: "FILESTREAM Data"
 ms.date: "08/15/2019"
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 
 # FILESTREAM Data

@@ -2,6 +2,12 @@
 title: "Granting Row-Level Permissions in SQL Server"
 ms.date: "08/15/2019"
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 
 # Granting Row-Level Permissions in SQL Server

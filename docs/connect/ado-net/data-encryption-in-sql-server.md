@@ -2,6 +2,12 @@
 title: "Data Encryption in SQL Server"
 ms.date: "08/15/2019"
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Data Encryption in SQL Server
 SQL Server provides functions to encrypt and decrypt data using a certificate, asymmetric key, or symmetric key. It manages all of these in an internal certificate store. The store uses an encryption hierarchy that secures certificates and keys at one level with the layer above it in the hierarchy. This feature area of SQL Server is called Secret Storage.  

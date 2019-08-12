@@ -18,13 +18,13 @@
   - name: Microsoft ADO.NET for SQL Server
     href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
     items:
-    - name: Step 1: Configure development environment for ADO.NET development
+    - name: "Step 1: Configure development environment for ADO.NET development"
       href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-    - name: Step 2: Create a SQL database for ADO.NET development
+    - name: "Step 2: Create a SQL database for ADO.NET development"
       href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
-    - name: Step 3: Proof of concept connecting to SQL using ADO.NET
+    - name: "Step 3: Proof of concept connecting to SQL using ADO.NET"
       href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
-    - name: Step 4: Connect resiliently to SQL with ADO.NET
+    - name: "Step 4: Connect resiliently to SQL with ADO.NET"
       href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/index.md

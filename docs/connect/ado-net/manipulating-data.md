@@ -5,6 +5,12 @@ dev_langs:
   - "csharp"
   - "vb"
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Manipulating Data
 Before the introduction of Multiple Active Result Sets (MARS), developers had to use either multiple connections or server-side cursors to solve certain scenarios. In addition, when multiple connections were used in a transactional situation, bound connections (with **sp_getbindtoken** and **sp_bindsession**) were required. The following scenarios show how to use a MARS-enabled connection instead of multiple connections.  

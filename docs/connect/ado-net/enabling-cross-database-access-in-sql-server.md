@@ -2,6 +2,12 @@
 title: "Enabling Cross-Database Access in SQL Server"
 ms.date: "08/15/2019"
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Enabling Cross-Database Access in SQL Server
 Cross-database ownership chaining occurs when a procedure in one database depends on objects in another database. A cross-database ownership chain works in the same way as ownership chaining within a single database, except that an unbroken ownership chain requires that all the object owners are mapped to the same login account. If the source object in the source database and the target objects in the target databases are owned by the same login account, SQL Server does not check permissions on the target objects.  

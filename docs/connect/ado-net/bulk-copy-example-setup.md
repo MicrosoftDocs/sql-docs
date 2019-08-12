@@ -2,6 +2,12 @@
 title: "Bulk Copy Example Setup"
 ms.date: "08/15/2019"
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Bulk Copy Example Setup
 The <xref:System.Data.SqlClient.SqlBulkCopy> class can be used to write data only to SQL Server tables. The code samples shown in this topic use the SQL Server sample database, **AdventureWorks**. To avoid altering the existing tables code samples write data to tables that you must create first.  

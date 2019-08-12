@@ -2,6 +2,12 @@
 title: "Server and Database Roles in SQL Server"
 ms.date: "08/15/2019"
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Server and Database Roles in SQL Server
 All versions of SQL Server use role-based security, which allows you to assign permissions to a role, or group of users, instead of to individual users. Fixed server and fixed database roles have a fixed set of permissions assigned to them.  

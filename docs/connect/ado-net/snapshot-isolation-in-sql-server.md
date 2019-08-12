@@ -5,6 +5,12 @@ dev_langs:
   - "csharp"
   - "vb"
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Snapshot Isolation in SQL Server
 Snapshot isolation enhances concurrency for OLTP applications.  

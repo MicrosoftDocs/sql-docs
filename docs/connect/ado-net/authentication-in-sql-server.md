@@ -2,6 +2,12 @@
 title: "Authentication in SQL Server"
 ms.date: "08/15/2019"
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Authentication in SQL Server
 SQL Server supports two authentication modes, Windows authentication mode and mixed mode.  
@@ -60,7 +66,7 @@ SQL Server supports two authentication modes, Windows authentication mode and mi
 > [!IMPORTANT]
 >  SQL Server installs with a SQL Server login named `sa` (an abbreviation of "system administrator"). Assign a strong password to the `sa` login and do not use the `sa` login in your application. The `sa` login maps to the `sysadmin` fixed server role, which has irrevocable administrative credentials on the whole server. There are no limits to the potential damage if an attacker gains access as a system administrator. All members of the Windows `BUILTIN\Administrators` group (the local administrator's group) are members of the `sysadmin` role by default, but can be removed from that role.  
   
- SQL Server provides Windows password policy mechanisms for SQL Server logins when it is running on [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] or later versions. Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords. SQL Server can apply the same complexity and expiration policies used in [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] to passwords used inside SQL Server.  
+ SQL Server provides Windows password policy mechanisms for SQL Server logins when it is running on Windows Server 2003 or later versions. Password complexity policies are designed to deter brute force attacks by increasing the number of possible passwords. SQL Server can apply the same complexity and expiration policies used in Windows Server 2003 to passwords used inside SQL Server.  
   
 > [!IMPORTANT]
 >  Concatenating connection strings from user input can leave you vulnerable to a connection string injection attack. Use the <xref:System.Data.SqlClient.SqlConnectionStringBuilder> to create syntactically valid connection strings at run time.  

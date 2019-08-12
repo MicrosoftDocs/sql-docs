@@ -2,6 +2,12 @@
 title: "SQL Server Security"
 ms.date: "08/15/2019"
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # SQL Server Security
 SQL Server has many features that support creating secure database applications.  

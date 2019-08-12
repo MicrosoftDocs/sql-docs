@@ -2,6 +2,12 @@
 title: "CLR User-Defined Types"
 ms.date: "08/15/2019"
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # CLR User-Defined Types
 Microsoft SQL Server provides support for user-defined types (UDTs) implemented with the Microsoft .NET Framework common language runtime (CLR). The CLR is integrated into SQL Server, and this mechanism enables you to extend the type system of the database. UDTs provide user extensibility of the SQL Server data type system, and also the ability to define complex structured types.  

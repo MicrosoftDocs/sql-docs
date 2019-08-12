@@ -2,6 +2,12 @@
 title: "SQL Server Binary and Large-Value Data"
 ms.date: "08/15/2019"
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # SQL Server Binary and Large-Value Data
 SQL Server provides the `max` specifier, which expands the storage capacity of the `varchar`, `nvarchar`, and `varbinary` data types. `varchar(max)`, `nvarchar(max)`, and `varbinary(max)` are collectively called *large-value data types*. You can use the large-value data types to store up to 2^31-1 bytes of data.  

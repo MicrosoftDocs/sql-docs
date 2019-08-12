@@ -2,6 +2,12 @@
 title: "Query Notifications in SQL Server"
 ms.date: "08/15/2019"
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Query Notifications in SQL Server
 Built upon the Service Broker infrastructure, query notifications allow applications to be notified when data has changed. This feature is particularly useful for applications that provide a cache of information from a database, such as a Web application, and need to be notified when the source data is changed.  

@@ -2,6 +2,12 @@
 title: "Introduction to SQL Server CLR Integration"
 ms.date: "08/15/2019"
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Introduction to SQL Server CLR Integration
 The common language runtime (CLR) is the heart of the Microsoft .NET Framework and provides the execution environment for all .NET Framework code. Code that runs within the CLR is referred to as managed code. The CLR provides various functions and services required for program execution, including just-in-time (JIT) compilation, allocating and managing memory, enforcing type safety, exception handling, thread management, and security.  

@@ -2,6 +2,12 @@
 title: "SqlClient Support for High Availability, Disaster Recovery"
 ms.date: "08/15/2019"
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # SqlClient Support for High Availability, Disaster Recovery
 This topic discusses SqlClient support (added in .NET Framework 4.5) for high-availability, disaster recovery -- AlwaysOn Availability Groups.  AlwaysOn Availability Groups feature was added to SQL Server 2012. For more information about AlwaysOn Availability Groups, see SQL Server Books Online.  

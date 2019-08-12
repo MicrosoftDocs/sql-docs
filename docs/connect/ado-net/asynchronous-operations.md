@@ -2,6 +2,12 @@
 title: "Asynchronous Operations"
 ms.date: "08/15/2019"
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Asynchronous Operations
 Some database operations, such as command executions, can take significant time to complete. In such a case, single-threaded applications must block other operations and wait for the command to finish before they can continue their own operations. In contrast, being able to assign the long-running operation to a background thread allows the foreground thread to remain active throughout the operation. In a Windows application, for example, delegating the long-running operation to a background thread allows the user interface thread to remain responsive while the operation is executing.  

@@ -2,6 +2,12 @@
 title: "SQL Server Data Operations in ADO.NET"
 ms.date: "08/15/2019"
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # SQL Server Data Operations in ADO.NET
 This section describes SQL Server features and functionality that are specific to the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>).  

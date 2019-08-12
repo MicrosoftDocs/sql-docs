@@ -2,6 +2,12 @@
 title: "Managing Permissions with Stored Procedures in SQL Server"
 ms.date: "08/15/2019"
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Managing Permissions with Stored Procedures in SQL Server
 One method of creating multiple lines of defense around your database is to implement all data access using stored procedures or user-defined functions. You revoke or deny all permissions to underlying objects, such as tables, and grant EXECUTE permissions on stored procedures. This effectively creates a security perimeter around your data and database objects.  

@@ -2,6 +2,12 @@
 title: "Ownership and User-Schema Separation in SQL Server"
 ms.date: "08/15/2019"
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
+author: MightyPen
+ms.author: genemi
 ---
 # Ownership and User-Schema Separation in SQL Server
 A core concept of SQL Server security is that owners of objects have irrevocable permissions to administer them. You cannot remove privileges from an object owner, and you cannot drop users from a database if they own objects in it.  

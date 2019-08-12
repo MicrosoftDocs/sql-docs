@@ -22,14 +22,12 @@ R Services is a feature in SQL Server 2016 that gives the ability to run R scrip
 
 SQL Server R Services lets you execute R scripts in-database. You can use it to prepare and clean data, do feature engineering, and train, evaluate, and deploy machine learning models within a database. The feature runs your scripts where the data resides and eliminates transfer of the data across the network to another server.
 
-Base distributions of R are included in Machine Learning Services. You can use open-source packages and frameworks in addition to the Microsoft packages [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md), and [sqlrutils](r/ref-r-sqlrutils.md) for R.
+Base distributions of R are included in R Services. You can use open-source packages and frameworks in addition to the Microsoft packages [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md), and [sqlrutils](r/ref-r-sqlrutils.md) for R.
 
-Machine Learning Services uses an extensibility framework to run R scripts in SQL Server. Learn more about how this works:
+R Services uses an extensibility framework to run R scripts in SQL Server. Learn more about how this works:
 
 + [Extensibility framework](concepts/extensibility-framework.md)
 + [R extension](concepts/extension-r.md)
-
-Microsoft packages [revoscalepy](python/ref-py-revoscalepy.md) and [microsoftml](python/ref-py-microsoftml.md) for Python, and [RevoScaleR](r/ref-r-revoscaler.md), [MicrosoftML](r/ref-r-microsoftml.md), [olapR](r/ref-r-olapr.md), and [sqlrutils](r/ref-r-sqlrutils.md) for R.
 
 ## What can I do with R Services?
 
@@ -80,7 +78,7 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
     + Quickstart: [Run a "Hello world" script in R](tutorials/quickstart-r-run-using-tsql.md)
     + Quickstart: [Create a predictive model in R](tutorials/quickstart-r-create-predictive-model.md)
     + Tutorial: [Use R in T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)
-    + Tutorial: [Use Machine Learning Services in R tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)
+    + Tutorial: [Use R Services in R tools](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)
 
 ## Next steps
 

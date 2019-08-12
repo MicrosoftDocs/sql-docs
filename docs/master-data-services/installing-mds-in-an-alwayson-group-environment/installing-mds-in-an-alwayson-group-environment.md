@@ -20,9 +20,9 @@ ms.author: lle
 
 
 **Summary:** This article describes a solution for Master Data Service
-(MDS) hosted on AlwaysOn Availability Group configuration. The article
+(MDS) hosted on Always On Availability Group configuration. The article
 describes how to install and configure SQL 2016 Master Data Services on
-a SQL 2016 AlwaysOn Availability group (AG). The main purpose of this
+a SQL 2016 Always On Availability group (AG). The main purpose of this
 solution is to improve high availability and disaster recovery of MDS
 backend data hosted on a SQL Server database.
 
@@ -30,8 +30,8 @@ backend data hosted on a SQL Server database.
 
 
 This article describes a solution for Master Data Service (MDS) hosted
-on an AlwaysOn Availability Group configuration. The article describes
-how to install and configure SQL 2016 MDS on an SQL 2016 AlwaysOn
+on an Always On Availability Group configuration. The article describes
+how to install and configure SQL 2016 MDS on an SQL 2016 Always On
 Availability group (AG). The main purpose of this solution is to improve
 high availability and disaster recovery of MDS backend data hosted on a
 SQL Server database.
@@ -42,7 +42,7 @@ covered in this article.
 1.  [Install and set up Windows Server Failover Custer
     (WSFC)](#windows-server-failover-cluster-wsfc).
 
-2.  [Set up AlwaysOn AG](#sql-server-alwayson-availability-group).
+2.  [Set up an Always On Availability Group](#sql-server-alwayson-availability-group).
 
 3.  [Configure MDS to run on an WSFC
     node](#configure-mds-to-run-on-an-wsfc-node).
@@ -51,8 +51,7 @@ The above sections will briefly introduce the technologies, followed by
 instructions. For detailed information about the technologies, please
 review the documents linked to in each section.
 
-This solution described in this article is built on top of SQL Server
-AlwaysOn AG, in which each database has multiple synchronous or
+This solution described in this article is built on top of an AG, in which each database has multiple synchronous or
 asynchronous replicas. Only one replica accepts the transaction (accepts
 user requests). This is the primary replica.
 
@@ -77,11 +76,11 @@ with potentially minor differences.
 -   SQL Server 2016 with Master Data Service feature
 
 Also, the solution uses two VMs, **MDS-HA1** and **MDS-HA2**, to host
-two replicas. As long as it is supported by SQL Server AlwaysOn AG, MDS
+two replicas. As long as it is supported by an AG, MDS
 does not limit how many replicas you can use.
 
 This article assumes that you have basic knowledge about Windows Server,
-Windows Server Failover Cluster, SQL Server AlwaysOn, and SQL Server
+Windows Server Failover Cluster, AGs, and SQL Server
 MDS.
 
 ## What is not covered
@@ -94,18 +93,18 @@ This document does not cover the following:
     techniques to make IIS highly available and load balancing can
     work here as well.
 
--   How to use SQL Server AlwaysOn failover (FCI) cluster to support
+-   How to use a SQL Server Always On failover cluster instance (FCI) to support
     high availability (HA) on the MDS backend. SQL Server failover
     clustering is a different HA solution and is officially supported
     by SQL Server, and it does work with MDS.
 
--   How to use a hybrid solution of SQL Server failover cluster (FCI)
-    and AlwaysOn AG to support HA on the MDS backend. The hybrid
+-   How to use a hybrid solution of an FCI 
+    and an AG to support HA on the MDS backend. The hybrid
     solution does work with MDS.
 
 ## Design Consideration
 
-Figure 1 shows a typical configuration used mostly in AlwaysOn AG. In
+Figure 1 shows a typical configuration used mostly in an AG. In
 the primary data center, there are two replicas with a synchronous
 commit relationship, and both replicas have the VOTE privilege. This is
 mainly used to improve HA in case the primary replica fails.
@@ -120,9 +119,9 @@ center is in a disaster, such as a fire, earthquake, etc. The
 configuration achieves both HA and disaster recover with relatively low
 cost.
 
-![Typical configuration for AlwaysOn Availability Group](media/Fig1_TypicalConfig.png)
+![Typical configuration for an Always On Availability Group](media/Fig1_TypicalConfig.png)
 
-Figure 1. A Typical AlwaysOn Availability Group Configuration
+Figure 1. A Typical Always On Availability Group Configuration
 
 If you don't need to consider disaster recovery, you don't need to have
 a replica in a second data center. If you need to improve HA, then you
@@ -145,7 +144,7 @@ This section covers the following tasks.
 
 As shown in Figure 1 in the previous section, the solution described in
 this article includes Windows Server Failover Cluster (WSFC). We need to
-setup WSFC because SQL AlwaysOn depends on WFSC for failure detection
+setup WSFC because AGs depend on WFSC for failure detection
 and failover.
 
 WSFC is a feature to improve high availability of applications and
@@ -293,11 +292,11 @@ Notes:
 For more detailed information about WSFC, see [Failover
 Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx).
 
-## SQL Server AlwaysOn Availability Group
+## SQL Server Always On Availability Group
 
 This section covers the following tasks.
 
-1.  [Enable SQL Server AlwaysOn Availability
+1.  [Enable SQL Server Always On Availability
     Group](#enable-sql-server-alwayson-availability-group-on-every-sql-server-instance).
 
 2.  [Create an Availability Group](#create-an-availability-group).
@@ -305,20 +304,19 @@ This section covers the following tasks.
 3.  [Validate and Test the Availability
     Group](#validation-and-test-the-availability-group).
 
-SQLServer AlwaysOn solutions provide high availability and disaster
-recovery for SQLServer databases. AlwaysOn has two possible solutions.
-Both are built on top of WSFC.
+Always On has two features to provide high availability and disaster recovery for MDS, 
+both are built on top of WSFC.
 
--   AlwaysOn Availability Groups (AG)
+-   Always On Availability Group (AG)
 
--   AlwaysOn Failover Cluster Instances (FCI).
+-   Always On Failover Cluster Instance (FCI).
 
-AG enhances the database-level high availability. The AG (a set of user
+An AG provides database-level availability. The AG (a set of user
 databases) and its virtual network name are registered as resources in
 WSFC.
 
-FCI enhances the instance-level high availability. SQL Server service
-and the related services are registered as resources in WSFC. Also, the
+FCIs provide instance-level high availability. The SQL Server service
+and its related services are registered as resources in WSFC. Also, the
 FCI solution requires symmetrical shared disk storage, such as SAN or
 SMB file shares, which must be available to all nodes in the WFC
 cluster.
@@ -344,7 +342,7 @@ cluster.
 -   Confirm that the Windows firewall setting allows the SQL Server
     instances to communicate with each other.
 
-### Enable SQL Server AlwaysOn Availability Group on Every SQL Server Instance
+### Enable SQL Server Always On Availability Groups on Every SQL Server Instance
 
 1.  In the **SQL Server Configuration Manager** click **SQL Server
     service** in the left pane, right-click **SQL Server** in the
@@ -360,7 +358,7 @@ cluster.
     displays in the **Windows failover cluster name** text box, click
     **OK** to continue. See Figure 11.
 
-    ![Enable AlwaysOn Availability Groups option](media/Fig11_EnableAlwaysOn.png)
+    ![Enable Always On Availability Groups option](media/Fig11_EnableAlwaysOn.png)
 
     Figure 11
 
@@ -382,7 +380,7 @@ cluster.
 
 ### Create an Availability Group
 
-After the AlwaysOn feature is enabled in all SQL Server instances, you
+After the AG feature is enabled in all SQL Server instances, you
 create a new AG that contains the MDS database on one node.
 
 AG can only be created on existing databases. So either you create a MDS
@@ -409,7 +407,7 @@ create an AG on this MDS database.
     >A full database backup is necessary for creating the AG on this
     >database.
 
-3.  In the **Object Explorer**, expand the **AlwaysOn High
+3.  In the **Object Explorer**, expand the **Always On High
     Availability** folder and click **New Availability Group Wizard**
     to launch the **New Availability Group Wizard**. See Figure 13.
 
@@ -501,7 +499,7 @@ replica with read-only access.
     This network share will be used to store the database backup to create
 secondary replicas. If this is not available for your organization,
 choose another data synchronization preference. Refer to [SQL Server
-2016 AlwaysOn Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) on how to use other options to create secondary replicas. The figure 17 also
+2016 Always On Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) on how to use other options to create secondary replicas. The figure 17 also
 lists other options.
 
     ![Configure data synchronization](media/Fig19_AvailabilityGroupDataSync.png)
@@ -524,7 +522,7 @@ lists other options.
     the [Create an Availability Group](#create-an-availability-group)
     section. In this example, it is MDSSQLServer.
 
-2.  In **Object Explorer**, expand the **AlwaysOn High Availability**
+2.  In **Object Explorer**, expand the **Always On High Availability**
     folder, right click the AG you just created in the [Create an
     Availability Group](#create-an-availability-group) section, and
     then click **Show Dashboard**. See Figure 20. The status of the
@@ -538,10 +536,10 @@ lists other options.
     asynchronous replica. This is to verify that failover happens
     correctly without issues.
 
- The AlwaysOn setup is completed.
+ The AG setup is completed.
 
-For more information about AlwaysOn Availability Group, see [SQL Server
-2016 AlwaysOn Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
+For more information about Always On Availability Groups, see [SQL Server
+2016 Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).
 
 ## Configure MDS to Run on an WSFC Node
 
@@ -589,7 +587,7 @@ AG.
 
 6.  If previously you created a temporary database (see [Create an
     Availability Group](#create-an-availability-group) section) to
-    create AlwaysOn AG, then you should drop the temporary database
+    create an AG, then you should drop the temporary database
 
     For more information about Master Data Service, refer to [Master Data
 Services](https://docs.microsoft.com/sql/master-data-services/master-data-services-overview-mds).
@@ -597,11 +595,10 @@ Services](https://docs.microsoft.com/sql/master-data-services/master-data-servic
 ## Conclusion
 
 In this white paper, we have seen how to set up and configure the Master
-Data Services backend database on top of SQL Server AlwaysOn
-Availability Group. This configuration provides high availability and
+Data Services backend database as part of an AG. This configuration provides high availability and
 disaster recovery on the Master Data Services backend database. To
 implement this configuration, you need to install and configure Windows
-Server Failover Cluster, SQL Server AlwaysOn Availability Group, and
+Server Failover Cluster, AG, and
 Master Data Services.
 
 ## Feedback

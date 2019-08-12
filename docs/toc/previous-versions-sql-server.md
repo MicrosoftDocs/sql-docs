@@ -14,7 +14,7 @@ monikerRange: "=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-
 
 The documentation for several older versions of Microsoft SQL Server has been archived. Yet the archived documentation remains available at:
 
-- [An explanation, with direct links to previous versions of SQL Server documentation](../sql-server/sql-server-technical-documentation#previous-versions-gm66), recommended.
+- [An explanation, with direct links to previous versions of SQL Server documentation](../sql-server/sql-server-technical-documentation.md#previous-versions-gm66), recommended.
 - [A direct link to previous versions of SQL Server documentation](https://docs.microsoft.com/previous-versions/sql/).
 
 > [!TIP]

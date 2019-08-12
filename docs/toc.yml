@@ -1,7 +1,7 @@
 - name: Welcome to SQL Server
   href: sql-server/sql-server-technical-documentation.md
 
-- name: SQL Docs navigation tips
+- name: SQL docs navigation tips
   href: sql-server/sql-docs-navigation-guide.md
 - name: Previous versions 2014-2005
   href: toc/previous-versions-sql-server.md

@@ -128,6 +128,8 @@ Given the base `https` address, the following table explains what happens when t
 
 There is one special moniker product name of **All SQL**, and its only version is **Hide nothing**. The purpose of this moniker is for internal testing of certain changes. If used by a customer, this moniker is more likely to mislead than to inform.
 
+Some articles have information pertaining to multiple versions of SQL Server. Every regular moniker hides versioned sections that could otherwise display information that is inaccurate, confusing, or contradictory for the moniker's version. The special **All SQL** moniker would display all the version sections, and it might not be obvious that inaccurate information is being displayed.
+
 ## <a name="anchor-message-unavailable-for-moniker"></a> Message: The requested page is not available for \<moniker\>
 
 The following scenario leads to the display of an informational message near the top of the :::no-loc text="Docs"::: webpage:

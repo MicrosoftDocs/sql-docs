@@ -82,5 +82,5 @@ You can use open-source packages and frameworks, in addition to Microsoft's ente
 
 ## Next steps
 
-+ [Install SQL Server 2016 R Services](../../install/sql-r-services-windows-install.md)
++ [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [Set up a data science client for R development](../r/set-up-a-data-science-client.md)

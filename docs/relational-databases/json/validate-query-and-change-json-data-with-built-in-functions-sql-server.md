@@ -88,12 +88,18 @@ For more info, see [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-
 The **JSON_VALUE** function extracts a scalar value from a JSON string. The following query will return the documents where the `id` JSON field matches the value `AndersenFamily`, ordered by `city` and `state` JSON fields:
 
 ```sql  
-SELECT JSON_VALUE(f.doc, '$.id')  AS Name, JSON_VALUE(f.doc, '$.address.city') AS City
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, JSON_VALUE(f.doc, '$.address.city') AS City, JSON_VALUE(f.doc, '$.address.county') AS County
 FROM Families f 
 WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.state') ASC
 ```  
-  
+
+The results of this query are shown in the following table:
+
+| Name | City | County |
+| --- | --- | --- |
+| AndersenFamily | NY | Manhattan |
+
 For more info, see [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md).  
   
 ##  <a name="QUERY"></a> Extract an object or an array from JSON text by using the JSON_QUERY function  

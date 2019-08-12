@@ -38,7 +38,7 @@ IDENT_INCR ( 'table_or_view' )
 Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) specifying the table or view to check for a valid identity increment value. *table_or_view* can be a character string constant enclosed in quotation marks. It can also be a variable, a function, or a column name. *table_or_view* is **char**, **nchar**, **varchar**, or **nvarchar**.  
   
 ## Return Types  
-**numeric**(**@@**MAXPRECISION,0)) 
+**numeric**([@@MAXPRECISION](../../sql/t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## Exceptions  
 Returns NULL on error or if a caller doesn't have object view permission.  

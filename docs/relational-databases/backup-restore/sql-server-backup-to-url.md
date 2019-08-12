@@ -64,6 +64,18 @@ When you backup to block blob, the maximum block size you can specify is 4MB. Th
 - Use backup compression
 - Backup to multiple block blobs
 
+> [!NOTE] 
+>  Backup of a large database from a Managed Instance to blob storage may fail if the database size exceeds 195 GB:
+
+   ```sql  
+Msg 3202, Level 16, State 1, Line 23
+Write on 'http[s]://ACCOUNTNAME.blob.core.windows.net/<CONTAINER>/<FILENAME.bak>' failed: 1117(The request could not be performed because of an I/O device error.)
+Msg 3013, Level 16, State 1, Line 23
+BACKUP DATABASE is terminating abnormally.
+   ``` 
+
+> This is due to the block blob and append blob limitation of maximum size which is slightly more than 195 GB. In order to backup large databases from Managed Instance to blob storage, use [striped backups](https://docs.microsoft.com/en-us/sql/t-sql/statements/backup-transact-sql?view=azuresqldb-mi-current) and [MAXTRANSFERSIZE](https://docs.microsoft.com/en-us/sql/t-sql/statements/backup-transact-sql?view=azuresqldb-mi-current) parameter. See [Native database backup in Azure SQL Managed Instance](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/10/16/native-database-backup-in-azure-sql-managed-instance/) and [Understanding Block Blobs, Append Blobs, and Page Blobs](https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs) for more details. 
+
 ###  <a name="Blob"></a> Microsoft Azure Blob storage service  
  **Storage Account:** The storage account is the starting point for all storage services. To access the Microsoft Azure Blob storage service, first create a Windows Azure storage account. For more information, see [Create a Storage Account](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)  
   

@@ -14,7 +14,7 @@ moniker: ">= sql-server-linux-ver15 || =sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This tutorial demonstrates how to build a Docker container with SQL Server Machine Learning Services and run Machine Learning scripts from Transact-SQL.
+This tutorial demonstrates how to build a Docker container by using SQL Server Machine Learning Services, and how to run Machine Learning scripts from Transact-SQL. Coverage includes the following tasks:
 
 > [!div class="checklist"]
 > * Clone the mssql-docker repository.

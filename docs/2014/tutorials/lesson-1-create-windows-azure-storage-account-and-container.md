@@ -31,7 +31,7 @@ manager: craigg
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   
-2.  Use the step by step instructions to [create a storage account](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/). Note that when creating a storage account to be used for the SQL Server Data Files in Windows Azure feature, you should unselect or disable the geo-replication. This is because write order is not guaranteed for multiple blobs participating in geo-replication. If a storage account is geo-replicated and recovery is required, a corruption occurs.  
+2.  Use the step by step instructions to [create a storage account](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). Note that when creating a storage account to be used for the SQL Server Data Files in Windows Azure feature, you should unselect or disable the geo-replication. This is because write order is not guaranteed for multiple blobs participating in geo-replication. If a storage account is geo-replicated and recovery is required, a corruption occurs.  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   

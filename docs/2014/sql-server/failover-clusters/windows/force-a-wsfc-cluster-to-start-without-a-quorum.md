@@ -116,7 +116,7 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   

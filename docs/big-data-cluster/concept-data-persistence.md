@@ -55,7 +55,7 @@ Deployment of big data cluster will use persistent storage to store data, metada
 AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **default** and **managed-premium** along with dynamic provisioner for them. You can specify either of those or create your own storage class  for deploying big data cluster with persistent storage enabled. By default, the built in cluster configuration file for aks *aks-dev-test* comes with persistent storage configurations to use **default** storage class.
 
 > [!WARNING]
-> Persistent volumes created with the built-in storage classes **default** and **managed-premium** have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using **azure-disk** privioner with a *Retain* reclaim policy as shown in  [this](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) article.
+> Persistent volumes created with the built-in storage classes **default** and **managed-premium** have a reclaim policy of *Delete*. So at the time the you delete the SQL Server big data cluster, persistent volume claims get deleted and then persistent volumes as well. You can create custom storage classes using **azure-disk** privioner with a *Retain* reclaim policy as shown in  [this](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) article.
 
 
 ## Minikube storage class

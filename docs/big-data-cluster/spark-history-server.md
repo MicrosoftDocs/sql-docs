@@ -198,5 +198,5 @@ The Spark History Server has the following known issues:
 
 ## Next steps
 
-* [Get started with SQL Server big data clusters](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [Get started with SQL Server big data clusters](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [Configure Spark settings](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

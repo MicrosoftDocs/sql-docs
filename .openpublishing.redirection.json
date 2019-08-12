@@ -498,7 +498,7 @@
         {
             "source_path": "docs/advanced-analytics/package-management/default-packages.md",
             "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",

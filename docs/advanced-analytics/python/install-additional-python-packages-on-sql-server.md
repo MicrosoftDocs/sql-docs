@@ -21,7 +21,7 @@ This article describes how to use the pip installer to install new Python packag
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
 ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-In addition to using pip from a command line, you can install Python packages using [T-SQL](install-r-packages-tsql.md).
+In addition to using pip from a command line, you can install Python packages using [T-SQL](install-python-packages-tsql.md).
 ::: moniker-end
 
 ## General considerations

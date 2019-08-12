@@ -39,7 +39,7 @@ IDENT_CURRENT( 'table_or_view' )
 Is the name of the table or view whose identity value is returned. *table_or_view* is **varchar**, with no default.  
   
 ## Return Types  
-**numeric**([@@MAXPRECISION](../../sql/t-sql/functions/max-precision-transact-sql.md),0))  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## Exceptions  
 Returns NULL on error or if a caller does not have permission to view the object.  

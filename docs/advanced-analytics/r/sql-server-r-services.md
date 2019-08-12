@@ -44,6 +44,13 @@ Examples of the type of predictions that you can use SQL Server R Services for, 
 |Anomaly Detection|Detect fraudulent banking transactions |
 |Recommendations|Suggest products that online shoppers may want to buy, based on their previous purchases|
 
+### How to execute R scripts
+
+There are two ways to execute R scripts in R Services:
+
++ The most common way is to use the T-SQL stored procedure [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+
++ You can also use your preferred R client and write scripts that push the execution (referred to as a *remote compute context*) to a remote SQL Server. See how to [set up a data science client R development](r/set-up-a-data-science-client.md) for more information.
 
 ## Components
 

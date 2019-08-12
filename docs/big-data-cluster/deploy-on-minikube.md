@@ -32,7 +32,7 @@ This article describes how to configure **minikube** on a single machine for SQL
 1. If you do not already have a hypervisor installed, install one now.
    - For OS X, install [xhyve driver](https://git.k8s.io/minikube/docs/drivers.md), [VirtualBox](https://www.virtualbox.org/wiki/Downloads), or [VMware Fusion](https://www.vmware.com/products/fusion).
    - For Linux, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or [KVM](https://www.linux-kvm.org/).
-   - For Windows, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install). If you do not have an external switch configured in hyper-v, then create one that has external network access.  See how to [create external switch in hyper-v for minikube](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/).
+   - For Windows, install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) or [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install). If you do not have an external switch configured in Hyper-V, create one that has external network access. Learn how to [create an external switch in Hyper-V for minikube](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/).
 
 ## Install minikube
 
@@ -40,7 +40,7 @@ Install minikube release according to the instructions for the [v1.3.0 release](
 
 ## Create a minikube cluster
 
-The command below creates a minikube cluster in a Hyper-V VM with 8 CPUs, 64 GB of memory, and disk size of 100 GB. The disk size is not reserved space.  It grows to that size on disk as needed.  We recommend not changing the disk space to something less than 100 GB as we ran into problems with this in testing. This also specifies the hyper-v switch with external access explicitly.
+The command below creates a minikube cluster in a Hyper-V VM with 8 CPUs, 64 GB of memory, and disk size of 100 GB. The disk size is not reserved space.  It grows to that size on disk as needed.  We recommend not changing the disk space to something less than 100 GB as we ran into problems with this in testing. This also specifies the Hyper-V switch with external access explicitly.
 
 Change the parameters such as **--memory** as needed depending on your available hardware and which hypervisor you are using.  Make sure the **--hyper-v** virtual-switch parameter value matches the name you used when creating your virtual switch.
 

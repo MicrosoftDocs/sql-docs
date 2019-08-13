@@ -10014,8 +10014,8 @@
       items:
       - name: SSMS Support Policy
         href: ssms/support-policy.md
-      - name: Feedback & help
-        href: https://docs.microsoft.com/sql/sql-server/sql-server-get-help
+      - name: Feedback 
+        href: https://aka.ms/sqlfeedback
       - name: User Assistance in SSMS
         href: ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data

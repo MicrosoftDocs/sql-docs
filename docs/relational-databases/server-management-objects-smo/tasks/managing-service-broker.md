@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Service Broker [SMO]"
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Service Broker

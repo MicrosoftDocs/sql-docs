@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "certificates [SMO]"
   - "service master key [SMO]"
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Encryption

@@ -13,16 +13,20 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 # SQL Server 2019 preview release notes
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
-- [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. For related information, see:
 
-## RC
+>[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+
+>[!NOTE]
+>This article describes [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] for a pre-release build. The information is subject to change. The content is updated for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate.
+
+## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate (RC)
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC is available only as Evaluation Edition. No other editions are available.
 
-Complete details about support and licensing for CTP releases are in `license_Eval.rtf` with your installation media.
+Complete details about support and licensing for release candidate releases are in `license_Eval.rtf` with your installation media.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 

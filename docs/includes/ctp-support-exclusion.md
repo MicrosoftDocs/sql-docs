@@ -1,6 +1,6 @@
 ## Enabled deployment scenarios
 
-RC enables the following scenarios:
+SQL Server 2019 release candidate (RC) enables the following scenarios:
 
 - Side-by-side installation. Install instances of SQL Server 2019 RC with instances of SQL Server 2012 through SQL Server 2017, or other instances SQL Server 2019 CTP 3.0 or higher.
    >[!NOTE]

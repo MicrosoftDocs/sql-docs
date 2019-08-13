@@ -28,6 +28,8 @@
       href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
   - name: SQL Server and ADO.NET
     href: ../connect/ado-net/index.md
+  - name: Introduction to Microsoft.Data.SqlClient Namespace
+    href: ../connect/ado-net/introduction-to-microsoft-data-sqlclient-namespace.md
   - name: SQL Server Security
     href: ../connect/ado-net/sql-server-security.md
     items:

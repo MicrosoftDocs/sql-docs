@@ -18,7 +18,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 >[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 >[!NOTE]
->This article describes [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] for a pre-release build. The information is subject to change. The content is updated for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate.
+>The content is published for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate. The release candidate is pre-release software. The information is subject to change. For information about support scenarios, refer to [Support](#support).
 
 ## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate (RC)
 

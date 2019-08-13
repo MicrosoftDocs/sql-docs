@@ -22,7 +22,7 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 **Use the [latest tools](what-s-new-in-sql-server-ver15-prerelease.md#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
 >[!NOTE]
->This article describes [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] for a pre-release build. The information is subject to change. The content is updated for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate.
+>The content is published for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate. The release candidate is pre-release software. The information is subject to change. For information about support scenarios, refer to [Support](#support).
 >
 >This release includes improvements that were announced earlier in community technology preview (CTP) releases. The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved in the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
 
@@ -47,7 +47,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 
 |New feature or update | Details |
 |:---|:---|
-|Feature restrictions| Prevent some forms of SQL injection from leaking information about the database, even when the SQL injection is successful. See [Feature restrictions](../relational-databases/security/feature-restrictions.md)|
+|Feature restrictions| Prevent some forms of SQL injection from leaking information about the database, even when the SQL injection is successful. See [Feature restrictions](../relational-databases/security/feature-restrictions.md).|
 |Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)

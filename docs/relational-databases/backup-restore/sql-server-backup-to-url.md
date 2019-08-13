@@ -326,11 +326,6 @@ $cbc = $container.CloudBlobContainer
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
 $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
 $sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
-
-
-# Gets the Shared Access Signature for the policy  
-$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-$sas = $cbc.GetSharedAccessSignature($policy, $policyName)  
 Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
 # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  

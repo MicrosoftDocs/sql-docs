@@ -41,7 +41,7 @@ sections:
   - type: list
     style: unordered
     items:
-    - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Use Python in T-SQL</a>: Explore data</a>, perform feature engineering, train and deploy models, and make predictions (five-part series)'
+    - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Use Python in T-SQL</a>: Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
     - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Use R in T-SQL</a>: Explore data, perform feature engineering, train and deploy models, and make predictions (five-part series)'
     - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Use Machine Learning Services in R tools</a>: Explore data, create graphs and plots, perform feature engineering, train and deploy models, and make predictions (six-part series)'
 
@@ -72,3 +72,5 @@ sections:
     - html: '<a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning Services<a>'
     - html: '<a href="/azure/machine-learning/">Azure Machine Learning</a>'
     - html: '<a href="/dotnet/machine-learning/">ML.NET</a>'
+    - html: '<a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">What are the machine learning products at Microsoft?</a>'
+    

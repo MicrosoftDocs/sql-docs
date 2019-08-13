@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent [SMO]"
   - "automatic administrative SMO tasks"
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scheduling Automatic Administrative Tasks in SQL Server Agent

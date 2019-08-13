@@ -8,10 +8,8 @@ ms.custom: ""
 ms.topic: conceptual
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
-
 # SQL Server docs navigation guide 
 
 This topic provides some tips and tricks for navigating the SQL Server technical documentation space.  
@@ -56,11 +54,11 @@ On docs.microsoft.com, you can search the content in the table of contents by us
 ## Version filter
 The SQL Server technical documentation provides content for several supported versions and flavors of SQL Server. Features can vary between versions and flavors of SQL Server, and as such, sometimes the content itself can vary. 
 
-You can use the version filter to ensure that you are seeing content for the appropriate version and flavor of SQL Server: 
+You can use the [version filter](versioning-system-monikers-ui-sql-server.md) to ensure that you are seeing content for the appropriate version and flavor of SQL Server: 
 
 ![SQL Docs version filter](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Selecting **SQL Server** > **Hide nothing** ensures that all content is visible, and that nothing is hidden behind the version filter. 
+Selecting **All SQL** \> **Hide nothing** ensures that all content is visible, and that nothing is hidden by the version filter. The [**Hide nothing** option is not recommended for routine use](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
 
 ## Breadcrumbs
 

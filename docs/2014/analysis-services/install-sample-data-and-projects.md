@@ -139,7 +139,7 @@ manager: craigg
 8.  Start SQL Server Management Studio. In SQL Server Management Studio, connect to Analysis Services. Verify that a database named **Analysis Services Tutorial** is running on the server.  
   
 ## Next Step  
- You are now ready to use the tutorial. For more information about how to get started, see [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
+ You are now ready to use the tutorial. For more information about how to get started, see [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial).  
   
 ## See Also  
  [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

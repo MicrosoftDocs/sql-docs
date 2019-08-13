@@ -1,7 +1,7 @@
 ---
 title: SQL Server help and feedback | Microsoft Docs
 description: A resource for finding ways to get help with your issue or submit feedback for either the SQL Server product, or the SQL Server technical documentation. 
-ms.date: 07/11/2010
+ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""

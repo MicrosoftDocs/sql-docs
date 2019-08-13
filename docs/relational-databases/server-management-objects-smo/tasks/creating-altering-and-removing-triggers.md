@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "triggers [SMO]"
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Triggers

@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined functions [SMO]"
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing User-Defined Functions

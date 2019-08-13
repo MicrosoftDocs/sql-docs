@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "foreign keys [SMO]"
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Foreign Keys

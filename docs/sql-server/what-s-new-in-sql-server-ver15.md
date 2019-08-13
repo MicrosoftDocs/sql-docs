@@ -21,13 +21,14 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](what-s-new-in-sql-server-ver15-prerelease.md#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate
+>[!NOTE]
+>This article describes [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] for a pre-release build. The information is subject to change. The content is updated for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate.
+>
+>This release includes improvements from announced earlier in community technology preview (CTP) releases. The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved in the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] is the latest public release of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. This release includes improvements from announced earlier in community technology preview (CTP) releases. The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved in the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces big data clusters for [!INCLUDE[sql-server-2019](../includes/ssnoversion-md.md)]. It also provides additional capability and improvements for the SQL Server database engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux, and SQL Server Master Data Services.
 
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] features by component
-
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces big data clusters for SQL Server and provides additional capability and improvements for the SQL Server database engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux, and SQL Server Master Data Services.
+The following sections provide an overview of these features.
 
 ## Big data clusters
 
@@ -51,7 +52,6 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
 | &nbsp; | &nbsp; |
-
 
 ### Graph
 

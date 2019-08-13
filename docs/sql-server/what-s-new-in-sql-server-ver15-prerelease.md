@@ -20,6 +20,39 @@ This article will be removed as [!INCLUDE[sql-server-2019](../includes/sssqlv15-
 
 For the current information, see [What's New in SQL Server 2019](what-s-new-in-sql-server-ver15.md).
 
+## CTP 3.2 July 2019
+
+### New in big data clusters
+
+|New feature or update | Details |
+|:---|:---|
+|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](../big-data-cluster/deploy-get-started.md).|
+|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](../big-data-cluster/deploy-install-azdata.md). |
+|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. In previous CTP releases, the columns were bound only based on ordinal on the destination and column names in external table definition was not used.|
+|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](../big-data-cluster/hdfs-tiering.md) |
+|Notebook-based troubleshooting |CTP 3.2 introduces Jupyter notebooks to assist with [deployment](../big-data-cluster/deploy-notebooks.md) and [discovery, diagnosis, and troubleshooting](../big-data-cluster/manage-notebooks.md) for components in a SQL Server big data cluster. |
+| &nbsp; | &nbsp; |
+
+### New in Analysis Services
+
+| New feature or update | Details |
+|:---|:---| 
+| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
+| Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
+| &nbsp; | &nbsp; |
+
+### New in Language extensions
+
+|New feature or update | Details |
+|:---|:---|
+| New default Java Runtime  | SQL Server now includes Azul System's Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
+
+### New in SQL Server on Linux
+
+|New feature or update | Details |
+|:---|:---|
+| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
+
 ## CTP 3.1 June 2019
 
 ### Big data clusters

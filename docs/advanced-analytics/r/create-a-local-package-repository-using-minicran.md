@@ -50,7 +50,7 @@ library("miniCRAN")
 Specify a mirror site to use in getting packages. For example, you could use the MRAN site, or any other site in your region that contains the packages you need. If a download fails, try another mirror site.
 
 ```R
-CRAN_mirror <- c(CRAN = "https://mran.microsoft.com")
+CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
 ```
 
 ## Create a local folder

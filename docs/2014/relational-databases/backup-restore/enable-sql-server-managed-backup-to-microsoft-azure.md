@@ -37,7 +37,7 @@ manager: craigg
 
 
 1.  **Create a Microsoft Azure storage account:** The backups are stored in the Microsoft Azure storage service. You must first create a Microsoft Azure storage account, if you do not already have an account.
-    - SQL Server 2014 uses page blobs, which are different than block and append blobs. Therefore you must create a general purpose account, and not a blob account. For more information, see [About Azure storage accounts](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+    - SQL Server 2014 uses page blobs, which are different than block and append blobs. Therefore you must create a general purpose account, and not a blob account. For more information, see [About Azure storage accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Make a note of the storage account name, and the access keys. The storage account name and access key information is used to create a SQL Credential. The SQL Credential is used to authenticate to the storage account.  
  
 2.  **Create a SQL Credential:** Create a SQL Credential using the name of the storage account as the Identity and the storage access key as the password.  
@@ -156,7 +156,7 @@ manager: craigg
 
 
 1.  **Create a Microsoft Azure storage account:** The backups are stored in the Microsoft Azure storage service. You must first create a Microsoft Azure storage account, if you do not already have an account.
-    - SQL Server 2014 uses page blobs, which are different than block and append blobs. Therefore you must create a general purpose account, and not a blob account. For more information, see [About Azure storage accounts](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+    - SQL Server 2014 uses page blobs, which are different than block and append blobs. Therefore you must create a general purpose account, and not a blob account. For more information, see [About Azure storage accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Make a note of the storage account name, and the access keys. The storage account name and access key information is used to create a SQL Credential. The SQL Credential is used to authenticate to the storage account.  
   
 2.  **Create a SQL Credential:** Create a SQL Credential using the name of the storage account as the Identity and the storage access key as the password.  

@@ -30,7 +30,7 @@ Documentation is separated by version. You are currently in SQL Server 2014 Anal
 - To learn more about SQL Server 2012 and earlier, see [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
 - To learn more about SQL Server 2014, see [Books Online for SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md)
 - To learn more about SQL Server 2016 and later, see [Microsoft SQL documentation](https://docs.microsoft.com/sql/).
-- To learn more about Azure Analysis Services, see [Azure Analysis Services Documentation](https://docs.microsoft.com/en-us/azure/analysis-services/).
+- To learn more about Azure Analysis Services, see [Azure Analysis Services Documentation](https://docs.microsoft.com/azure/analysis-services/).
 
 ## Analysis Services workflow
 

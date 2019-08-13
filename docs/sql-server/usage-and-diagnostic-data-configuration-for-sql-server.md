@@ -139,7 +139,7 @@ The procedure to turn this feature on or off is dependent on the OS version. To 
  
 - Windows Server 2016 and Windows 10
 
-    [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 and Windows 7
 
     [WER Settings](/windows/desktop/wer/wer-settings)

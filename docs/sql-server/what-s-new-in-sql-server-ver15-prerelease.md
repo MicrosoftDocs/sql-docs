@@ -554,7 +554,7 @@ Resumable online index create supports the follow scenarios:
 
 In case of an index create failure, without this feature an online index create operation must be executed again and the operation must be restarted from the beginning.
 
-With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+With this release, we extend the resumable functionality adding this feature to available [resumable online index rebuild](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 

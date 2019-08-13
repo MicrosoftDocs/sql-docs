@@ -24,7 +24,7 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 >[!NOTE]
 >This article describes [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] for a pre-release build. The information is subject to change. The content is updated for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate.
 >
->This release includes improvements from announced earlier in community technology preview (CTP) releases. The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved in the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
+>This release includes improvements that were announced earlier in community technology preview (CTP) releases. The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved in the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces big data clusters for [!INCLUDE[sql-server-2019](../includes/ssnoversion-md.md)]. It also provides additional capability and improvements for the SQL Server database engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux, and SQL Server Master Data Services.
 

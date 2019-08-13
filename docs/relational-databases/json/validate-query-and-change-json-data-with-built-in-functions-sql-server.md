@@ -108,12 +108,19 @@ For more info, see [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/jso
 
 The **JSON_QUERY** function extracts an object or an array from a JSON string. The following example shows how to return a JSON fragment in query results.  
   
-```sql  
-SELECT JSON_QUERY(f.doc, '$.address')
+```sql
+SELECT JSON_QUERY(f.doc, '$.address') AS Address,
+       JSON_QUERY(f.doc, '$.parents') AS Parents,
+       JSON_QUERY(f.doc, '$.parents[0]') AS Parent0
 FROM Families f 
 WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ```  
-  
+The results of this query are shown in the following table:
+
+| Address | Parents | Parent0 |
+| --- | --- | --- |
+| { "state": "NY", "county": "Manhattan", "city": "NY" } | [{ "familyName": "Wakefield", "givenName": "Robin" }, {"familyName": "Miller", "givenName": "Ben" } ]| { "familyName": "Wakefield", "givenName": "Robin" } |
+
 For more info, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md).  
 
 ## Parse nested JSON collections
@@ -160,7 +167,7 @@ The first `OPENJSON` call will return fragment of `children` array using AS JSON
 The results of this query are shown in the following table:
 
 | familyName | childGivenName | childFirstName | petName |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | AndersenFamily | Jesse | Merriam | Goofy |
 | AndersenFamily | Jesse | Merriam | Shadow |
 | AndersenFamily | Lisa | Miller| `NULL` |

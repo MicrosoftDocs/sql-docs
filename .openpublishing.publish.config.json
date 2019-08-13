@@ -44,6 +44,14 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "samples",
+      "url": "https://github.com/dotnet/samples",
+      "branch": "master",
+      "branch_mapping": {
+        "live": "live"
+      }
+    },
+    {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
       "branch": "master"

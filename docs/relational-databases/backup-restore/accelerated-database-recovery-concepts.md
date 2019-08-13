@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: backup-restore
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "accelerated database recovery [SQL Server]", recovery-only"
+  - "accelerated database recovery [SQL Server], recovery-only"
   - "database recovery [SQL Server]"
 author: mashamsft
 ms.author: mathoma
@@ -37,7 +37,7 @@ Accelerated database recovery (ADR) improves database availability, especially
 
 Without ADR, database recovery in SQL Server follows the [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf) recovery model and consists of three phases, which are illustrated in the following diagram and explained in more detail following the diagram.
 
-![current recovery process](./media/sql-database-accelerated-database-recovery/current-recovery-process.png)
+![current recovery process](./media/accelerated-database-recovery-concepts/current-recovery-process.png)
 
 - **Analysis phase**
 
@@ -68,7 +68,7 @@ At a high level, ADR achieves fast database recovery by versioning all physical 
 
 The ADR recovery process has the same three phases as the current recovery process. How these phases operate with ADR is illustrated in the following diagram.
 
-![ADR recovery process](./media/sql-database-accelerated-database-recovery/adr-recovery-process.png)
+![ADR recovery process](./media/accelerated-database-recovery-concepts/adr-recovery-process.png)
 
 - **Analysis phase**
 

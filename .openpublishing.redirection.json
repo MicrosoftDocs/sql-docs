@@ -176,6 +176,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/toc/versioning-system-monikers-ui-sql-server.md",
+            "redirect_url": "/sql/sql-server/versioning-system-monikers-ui-sql-server",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/database-features.md",
             "redirect_url": "/sql/relational-databases/databases/databases",
             "redirect_document_id": false

@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "statistical information [SMO]"
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating and Updating Statistics

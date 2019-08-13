@@ -1,8 +1,8 @@
 - name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: sql-server/sql-server-technical-documentation.md
 
-- name: Versioning for SQL documentation
-  href: toc/versioning-system-monikers-ui-sql-server.md
+- name: SQL docs navigation tips
+  href: sql-server/sql-docs-navigation-guide.md
 - name: Previous versions 2014-2005
   href: toc/previous-versions-sql-server.md
 
@@ -10014,12 +10014,12 @@
       items:
       - name: SSMS Support Policy
         href: ssms/support-policy.md
-      - name: Feedback & help
-        href: https://docs.microsoft.com/sql/sql-server/sql-server-get-help
       - name: User Assistance in SSMS
         href: ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data
         href: ssms/sql-server-management-studio-telemetry-ssms.md
+      - name: Feedback > 
+        href: https://aka.ms/sqlfeedback
   - name: SqlPackage.exe
     items:
     - name: Install sqlpackage
@@ -10461,8 +10461,8 @@
     items:
     - name: Get help
       href: sql-server/sql-server-get-help.md
-    - name: SQL Docs navigation tips
-      href: sql-server/sql-docs-navigation-guide.md
+    - name: Versioning of SQL docs
+      href: sql-server/versioning-system-monikers-ui-sql-server.md
     - name: DBA Stack Exchange >
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >

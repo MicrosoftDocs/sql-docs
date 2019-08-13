@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "indexes [SMO]"
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Indexes

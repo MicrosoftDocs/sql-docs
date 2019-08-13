@@ -88,7 +88,9 @@ For more info, see [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-
 The **JSON_VALUE** function extracts a scalar value from a JSON string. The following query will return the documents where the `id` JSON field matches the value `AndersenFamily`, ordered by `city` and `state` JSON fields:
 
 ```sql  
-SELECT JSON_VALUE(f.doc, '$.id')  AS Name, JSON_VALUE(f.doc, '$.address.city') AS City, JSON_VALUE(f.doc, '$.address.county') AS County
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
+       JSON_VALUE(f.doc, '$.address.county') AS County
 FROM Families f 
 WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.state') ASC
@@ -106,12 +108,19 @@ For more info, see [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/jso
 
 The **JSON_QUERY** function extracts an object or an array from a JSON string. The following example shows how to return a JSON fragment in query results.  
   
-```sql  
-SELECT JSON_QUERY(f.doc, '$.address')
+```sql
+SELECT JSON_QUERY(f.doc, '$.address') AS Address,
+       JSON_QUERY(f.doc, '$.parents') AS Parents,
+       JSON_QUERY(f.doc, '$.parents[0]') AS Parent0
 FROM Families f 
 WHERE JSON_VALUE(f.doc, '$.id') = N'AndersenFamily'
 ```  
-  
+The results of this query are shown in the following table:
+
+| Address | Parents | Parent0 |
+| --- | --- | --- |
+| { "state": "NY", "county": "Manhattan", "city": "NY" } | [{ "familyName": "Wakefield", "givenName": "Robin" }, {"familyName": "Miller", "givenName": "Ben" } ]| { "familyName": "Wakefield", "givenName": "Robin" } |
+
 For more info, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md).  
 
 ## Parse nested JSON collections
@@ -119,15 +128,22 @@ For more info, see [JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/jso
 `OPENJSON` function enables you to transform JSON sub-array into the rowset and then join it with the parent element. As an example, you can return all family documents, and "join" them with their `children` objects that are stored as an inner JSON array:
 
 ```sql
-SELECT JSON_VALUE(f.doc, '$.id')  AS Name, JSON_VALUE(f.doc, '$.address.city') AS City,
+SELECT JSON_VALUE(f.doc, '$.id')  AS Name, 
+       JSON_VALUE(f.doc, '$.address.city') AS City,
        c.givenName, c.grade
 FROM Families f
 		CROSS APPLY OPENJSON(f.doc, '$.children')
 			WITH(grade int, givenName nvarchar(100))  c
-WHERE c.grade > 8
 ```
 
-`OPENJSON` function parses `children` fragment from the `doc` column and returns `grade` and `givenName` from each element as a set of rows. This rowset can be joined with the parent document.
+The results of this query are shown in the following table:
+
+| Name | City | givenName | grade |
+| --- | --- | --- | --- |
+| AndersenFamily | NY | Jesse | 1 |
+| AndersenFamily | NY | Lisa | 8 |
+
+We are getting two rows as a result because one parent row is joined with two child rows produced by parsing two elements of the children subarray. `OPENJSON` function parses `children` fragment from the `doc` column and returns `grade` and `givenName` from each element as a set of rows. This rowset can be joined with the parent document.
  
 ## Query nested hierarchical JSON sub-arrays
 
@@ -151,7 +167,7 @@ The first `OPENJSON` call will return fragment of `children` array using AS JSON
 The results of this query are shown in the following table:
 
 | familyName | childGivenName | childFirstName | petName |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | AndersenFamily | Jesse | Merriam | Goofy |
 | AndersenFamily | Jesse | Merriam | Shadow |
 | AndersenFamily | Lisa | Miller| `NULL` |

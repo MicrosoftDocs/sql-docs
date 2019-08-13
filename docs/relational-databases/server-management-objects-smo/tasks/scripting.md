@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "dependencies [SMO]"
   - "scripts [SMO]"
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scripting

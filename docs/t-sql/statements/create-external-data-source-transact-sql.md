@@ -764,14 +764,13 @@ WITH
 ;
 ```
 
-### C. Create external data source to reference Azure Data Lake Store Gen 1 or 2 using the storage account key
+### C. Create external data source to reference Azure Data Lake Store Gen 2 using the storage account key
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 ;
 
--- These values come from your Azure Active Directory Application used to authenticate to ADLS
 CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
 WITH
 --   IDENTITY   = '<storage_account_name>'
@@ -780,7 +779,7 @@ WITH
 ,    SECRET     = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
 ;
 
--- Note this example uses a Gen 2 endpoint (abfss)
+-- Note this example uses a Gen 2 secured endpoint (abfss)
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'

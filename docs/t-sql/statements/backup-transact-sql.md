@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/27/2019"
+ms.date: "08/13/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

@@ -567,7 +567,7 @@ After setting the property, restart SQL Server Launchpad service to read the upd
 sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
 
 # Turns off network access but preserves the setting
-/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
 
 # Removes the setting and rescinds network access
 sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess

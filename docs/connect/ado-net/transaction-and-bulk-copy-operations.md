@@ -27,8 +27,8 @@ Bulk copy operations can be performed as isolated operations or as part of a mul
 > [!NOTE]
 >  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../connect/ado-net/bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL`INSERT … SELECT` statement to copy the data.  
   
- [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
- [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
+ [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
   
 ## Performing a Dedicated Bulk Copy Operation in a Transaction  
  By default, a bulk copy operation is its own transaction. When you want to perform a dedicated bulk copy operation, create a new instance of <xref:System.Data.SqlClient.SqlBulkCopy> with a connection string, or use an existing <xref:System.Data.SqlClient.SqlConnection> object without an active transaction. In each scenario, the bulk copy operation creates, and then commits or rolls back the transaction.  
@@ -43,8 +43,8 @@ Bulk copy operations can be performed as isolated operations or as part of a mul
 > [!IMPORTANT]
 >  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../connect/ado-net/bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL`INSERT … SELECT` statement to copy the data.  
   
- [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
- [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
+ [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
   
 ## Using Existing Transactions  
  You can specify an existing <xref:System.Data.SqlClient.SqlTransaction> object as a parameter in a <xref:System.Data.SqlClient.SqlBulkCopy> constructor. In this situation, the bulk copy operation is performed in an existing transaction, and no change is made to the transaction state (that is, it is neither committed nor aborted). This allows an application to include the bulk copy operation in a transaction with other database operations. However, if you do not specify a <xref:System.Data.SqlClient.SqlTransaction> object and pass a null reference, and the connection has an active transaction, an exception is thrown.  
@@ -56,8 +56,8 @@ Bulk copy operations can be performed as isolated operations or as part of a mul
 > [!IMPORTANT]
 >  This sample will not run unless you have created the work tables as described in [Bulk Copy Example Setup](../../connect/ado-net/bulk-copy-example-setup.md). This code is provided to demonstrate the syntax for using **SqlBulkCopy** only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL`INSERT … SELECT` statement to copy the data.  
   
- [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
- [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
+ [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
+ [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## See also
 

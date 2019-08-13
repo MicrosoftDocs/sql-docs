@@ -172,7 +172,7 @@
     - name: SqlClient Support for LocalDB
       href: ../connect/ado-net/sqlclient-support-for-localdb.md
   - name: LINQ to SQL
-    href: ../connect/ado-net/linq/
+    href: ../connect/ado-net/linq/index.md
 
 - name: JDBC
   items:

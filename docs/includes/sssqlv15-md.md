@@ -1,1 +1,1 @@
-SQL Server 2019 release candidate
+SQL Server 2019

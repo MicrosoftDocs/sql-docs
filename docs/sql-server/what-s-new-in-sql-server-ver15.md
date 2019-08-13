@@ -21,9 +21,9 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](what-s-new-in-sql-server-ver15-prerelease.md#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## SQL Server 2019 release candidate
+## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate
 
-SQL Server 2019 release candidate is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from announced in earlier community technology preview (CTP). The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] is the latest public release of [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. This release includes improvements from announced earlier in community technology preview (CTP) releases. The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved in the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
 
 ## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] features by component
 

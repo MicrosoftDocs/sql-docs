@@ -1,7 +1,7 @@
 ---
-title: "Using NTLM Authentication to Connect to SQL Server | Microsoft Docs"
+title: "Using NTLM authentication to connect to SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -14,7 +14,7 @@ ms.author: "v-susanh"
 manager: kenvh
 ---
 
-# Using NTLM Authentication to Connect to SQL Server
+# Using NTLM Authentication to connect to SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,7 +29,7 @@ The following properties are also used for NTLM Authentication:
 
 Other than **domain**, the other properties are mandatory, the driver will throw an error if any are missing when the **NTLM** authenticationScheme property is used. 
 
-For more information on connection properties, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+For more information on connection properties, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md). For more information on the Microsoft NTLM authentication protocol, see [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
 
 ## Remarks
 
@@ -63,7 +63,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 }
 ```
 
-## Service Principal Names
+## Service principal names
 
 A service principal name (SPN) is the name by which a client uniquely identifies an instance of a service.
 
@@ -80,7 +80,7 @@ For more information about service principal names (SPNs), see:
 
 > Before 6.2 release of JDBC driver, you would need to explicitly set the **serverSpn**. As of the 6.2 release, the driver will be able to build the **serverSpn** by default, although one can use **serverSpn** explicitly too.
 
-## Security Risks
+## Security risks
 
 The NTLM protocol is an old authentication protocol with various vulnerabilities, which pose a security risk. It's based on a relatively weak cryptographic scheme and is vulnerable to various attacks. It's replaced with Kerberos, which is a lot more secure and recommended. NTLM authentication should only be used in a secure trusted environment, or when Kerberos can't be used.
 
@@ -92,11 +92,11 @@ For more information on how to enable Extended Protection and, see:
 
 For more information on connecting with SSL Encryption, see:
 
-- [Connecting with SSL Encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)
+- [Connecting with SSL encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
 > For the 7.4 release, enabling **both** Extended Protection and Encryption is not supported.
 
-## See Also
+## See also
 
-[Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

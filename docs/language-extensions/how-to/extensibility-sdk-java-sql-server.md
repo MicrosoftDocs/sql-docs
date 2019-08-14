@@ -4,7 +4,7 @@ description: How to implement a Java program for SQL Server using the Microsoft 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/25/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust

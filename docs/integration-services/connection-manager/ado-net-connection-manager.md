@@ -56,7 +56,7 @@ ms.author: janinez
   
  Many of configuration options of the [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection manager depend on the .NET provider that the connection manager uses.  
   
- For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topic:  
+ For more information about the properties that you can set in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click one of the following topics:  
   
 -   [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -83,6 +83,9 @@ ms.author: janinez
 ### Managed Identities for Azure Resources Authentication
 When running SSIS packages on [Azure-SSIS integration runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use the [managed identity](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) that is associated with your data factory for Azure SQL Database (or Managed Instance) authentication. The designated factory can access and copy data from or to your database by using this identity.
 
+> [!NOTE]
+>  When you use Azure AD authentication (including managed identity authentication) to connect to Azure SQL Database (or Managed Instance), there are known issues which may result in package execution failure or unexpected behavior change. Refer to [Azure AD features and limitations](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations) for more information.
+
 To use managed identity authentication for Azure SQL Database, follow these steps to configure your database:
 
 1. **Create a group in Azure AD.** Make the managed identity a member of the group.
@@ -103,7 +106,7 @@ To use managed identity authentication for Azure SQL Database, follow these step
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. **Grant the Azure AD group needed permissions** as you normally do for SQL users and others. For example, run the following code:
+1. **Grant the Azure AD group needed permissions** as you normally do for SQL users and others. Refer to [Database-Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) for appropriate roles. For example, run the following code:
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -128,11 +131,11 @@ To use managed identity authentication for Azure SQL Database Managed Instance, 
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **Grant the data factory managed identity needed permissions**. Run the following T-SQL against the database from or to which you want to copy data:
+1. **Grant the data factory managed identity needed permissions**. Refer to [Database-Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) for appropriate roles. Run the following T-SQL against the database from or to which you want to copy data:
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 Finally **configure managed identity authentication** for the ADO.NET connection manager. There are two options to do this.
@@ -146,7 +149,7 @@ Finally **configure managed identity authentication** for the ADO.NET connection
     >  In Azure-SSIS integration runtime, all other authentication methods (e.g., integrated authentication, password) preconfigured on the ADO.NET connection manager will be **overridden** when managed identity authentication is used to establish database connection.
 
 > [!NOTE]
->  To configure managed identity authentication on existing packages, please be sure to rebuild your SSIS project with the [latest SSIS Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) at least once and redeploy that SSIS project to your Azure-SSIS integration runtime so that the new connection manager property **ConnectUsingManagedIdentity** will automatically be added to all ADO.NET connection managers in your SSIS project.
+>  To configure managed identity authentication on existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) at least once and redeploy that SSIS project to your Azure-SSIS integration runtime so that the new connection manager property **ConnectUsingManagedIdentity** will automatically be added to all ADO.NET connection managers in your SSIS project. The alternative way is to directly use property override with property path **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** at run time.
 
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

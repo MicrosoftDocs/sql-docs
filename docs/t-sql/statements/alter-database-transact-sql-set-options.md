@@ -2906,14 +2906,20 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
+    <db_encryption_option>
+  | <query_store_options>   
+  | <result_set_caching>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<db_encryption_option> ::=
+    ENCRYPTION { ON | OFF }
+
+<result_set_caching>::=
 {
-RESULT_SET_CACHING {ON | OFF}
+result_set_caching {ON | OFF}
 }
+
 
 ```
 
@@ -2931,19 +2937,6 @@ This command must be run while connected to the `master` database.  Change to th
 ON   
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
 
-OFF   
-Specifies that query result sets returned from this database will not be cached in Azure SQL Data warehouse storage. Users can tell if a query was executed with a result cache hit or miss by querying sys.pdw_request_steps with a specific request_id.   If there is a cache hit, the query result will have a single step with following details:
-
-|**Column name** |**Operator** |**Value** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-command|Like|%DWResultCacheDb%|
-| | |
-
-## Remarks
-
 Cached result set is reused for a query if all of the following requirements are all met:
 
 1. The user executing the query has access to all the tables referenced in the query.
@@ -2951,6 +2944,82 @@ Cached result set is reused for a query if all of the following requirements are
 1. There is no data or schema changes in the tables where the cached result set was generated from.  
 
 Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except for queries with non-deterministic functions such as DateTime.Now().   Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
+
+**\<db_encryption_option> ::=**        
+
+Controls the database encryption state.
+
+ENCRYPTION { ON | OFF }         
+Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+
+When encryption is enabled at the database level, all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to **READ ONLY**, the database encryption operation will fail.
+
+You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+
+**\<query_store_options> ::=**         
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+
+ON | OFF | CLEAR [ ALL ]         
+Controls if the query store is enabled in this database, and also controls removing the contents of the query store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).     
+
+ON         
+Enables the query store.
+
+OFF         
+Disables the query store. OFF is the default value.
+
+CLEAR         
+Remove the contents of the query store.
+
+> [!NOTE]
+> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance is not supported.
+
+OPERATION_MODE { READ_ONLY | READ_WRITE }         
+Describes the operation mode of the query store. 
+
+READ_WRITE         
+The query store collects and persists query plan and runtime execution statistics information. 
+
+READ_ONLY         
+Information can be read from the query store, but new information isn't added. If the maximum issued space of the query store has been exhausted, the query store will change is operation mode to READ_ONLY.
+
+CLEANUP_POLICY         
+Describes the data retention policy of the query store. STALE_QUERY_THRESHOLD_DAYS determines the number of days for which the information for a query is kept in the query store. STALE_QUERY_THRESHOLD_DAYS is type **bigint**.
+
+DATA_FLUSH_INTERVAL_SECONDS         
+Determines the frequency at which data written to the query store is persisted to disk. To optimize for performance, data collected by the query store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured by using the DATA_FLUSH_INTERVAL_SECONDS argument. DATA_FLUSH_INTERVAL_SECONDS is type **bigint**.
+ 
+MAX_STORAGE_SIZE_MB         
+Determines the space issued to the query store. MAX_STORAGE_SIZE_MB is type **bigint**.
+
+INTERVAL_LENGTH_MINUTES         
+Determines the time interval at which runtime execution statistics data is aggregated into the query store. To optimize for space usage, the runtime execution statistics in the runtime stats store are aggregated over a fixed time window. This fixed time window is configured by using the INTERVAL_LENGTH_MINUTES argument. INTERVAL_LENGTH_MINUTES is type **bigint**.
+
+SIZE_BASED_CLEANUP_MODE { AUTO | OFF }         
+Controls whether cleanup automatically activates when total amount of data gets close to maximum size.
+
+AUTO         
+Size-based cleanup will be automatically activated when size on disk reaches 90% of **max_storage_size_mb**. Size-based cleanup removes the least expensive and oldest queries first. It stops at approximately 80% of **max_storage_size_mb**.This value is the default configuration value.
+
+OFF         
+Size-based cleanup won't be automatically activated.
+
+SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
+
+QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
+Designates the currently active query capture mode. Each mode defines specific query capture policies.
+
+> [!NOTE]
+> Cursors, queries inside Stored Procedures, and Natively compiled queries are always captured when the query capture mode is set to ALL, AUTO, or CUSTOM.
+
+ALL         
+Captures all queries. ALL is the default configuration value. This is the default configuration value starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
+
+AUTO         
+Capture relevant queries based on execution count and resource consumption. This is the default configuration value starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0.
+
+NONE         
+Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
 ## Permissions
 

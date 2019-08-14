@@ -469,7 +469,7 @@ If you are taking a backup that you plan to copy onto and restore from a CD-ROM,
 BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
-The total space used by the buffers is determined by: *buffercount* * *maxtransfersize*.
+The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.
@@ -1104,7 +1104,7 @@ Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 
 BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
-The total space used by the buffers is determined by: *buffercount* * *maxtransfersize*.
+The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.

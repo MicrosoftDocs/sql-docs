@@ -41,13 +41,13 @@ manager: craigg
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Exception Message Box Programming](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with ADOMD.NET](https://docs.microsoft.com/analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with ADOMD.NET](https://docs.microsoft.com/en-us/bi-reference/adomd/developing-with-adomd-net)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/en-us/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [OLE DB for Data Mining](https://docs.microsoft.com/analysis-services/dev-guide/ole-db-for-data-mining)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [OLE DB for Data Mining](https://docs.microsoft.com/en-us/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Integration Services Developer's Guide](../integration-services/integration-services-developer-documentation.md)  
   

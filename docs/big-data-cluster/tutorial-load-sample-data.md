@@ -15,10 +15,10 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This tutorial explains how to use a script to load sample data into a SQL Server 2019 big data cluster (preview). Many of the other tutorials in the documentation use this sample data.
+This tutorial explains how to use a script to load sample data into a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Many of the other tutorials in the documentation use this sample data.
 
 > [!TIP]
-> You can find additional samples for SQL Server 2019 big data cluster (preview) in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub repository. They are located in the **sql-server-samples/samples/features/sql-big-data-cluster/** path.
+> You can find additional samples for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub repository. They are located in the **sql-server-samples/samples/features/sql-big-data-cluster/** path.
 
 ## Prerequisites
 

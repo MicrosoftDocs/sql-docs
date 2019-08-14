@@ -1,7 +1,7 @@
 ---
 title: What are compute pools?
 titleSuffix: SQL Server big data clusters
-description: This article describes the compute pool in a SQL Server 2019 big data cluster (preview).
+description: This article describes the compute pool in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab 

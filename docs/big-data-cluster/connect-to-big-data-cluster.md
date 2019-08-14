@@ -1,7 +1,7 @@
 ---
 title: Connect to master and HDFS
 Big data clusters
-description: Learn how to connect to the SQL Server master instance and the HDFS/Spark gateway for a SQL Server 2019 big data cluster (preview).
+description: Learn how to connect to the SQL Server master instance and the HDFS/Spark gateway for a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab 
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to connect to a SQL Server 2019 big data cluster (preview) from Azure Data Studio.
+This article describes how to connect to a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] from Azure Data Studio.
 
 ## Prerequisites
 

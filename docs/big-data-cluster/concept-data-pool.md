@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes the role of *SQL Server data pools* in a SQL Server 2019 big data cluster (preview). The following sections describe the architecture and functionality of a SQL data pool.
+This article describes the role of *SQL Server data pools* in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The following sections describe the architecture and functionality of a SQL data pool.
 
 ## Data pool architecture
 

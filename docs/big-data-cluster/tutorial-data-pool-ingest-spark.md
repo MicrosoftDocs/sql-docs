@@ -1,7 +1,7 @@
 ---
 title: Ingest data with Spark jobs
 titleSuffix: SQL Server big data clusters
-description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview) using Spark jobs in Azure Data Studio.
+description: This tutorial demonstrates how to ingest data into the data pool of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using Spark jobs in Azure Data Studio.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This tutorial demonstrates how to use Spark jobs to load data into the [data pool](concept-data-pool.md) of a SQL Server 2019 big data cluster (preview). 
+This tutorial demonstrates how to use Spark jobs to load data into the [data pool](concept-data-pool.md) of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
 In this tutorial, you learn how to:
 

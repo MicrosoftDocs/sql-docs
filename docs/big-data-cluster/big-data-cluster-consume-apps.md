@@ -25,7 +25,7 @@ This article describes how to consume an app deployed on a SQL Server 2019 big d
 
 ## Capabilities
 
-After you have deployed an application to your SQL Server 2019 big data cluster (preview), you can access and consume that application using a RESTful web service. This enables integration of that app from other applications or services (for example, a mobile app or website). The following table describes the application deployment commands that you can use with **azdata** to get information about the RESTful web service for your app.
+After you have deployed an application to your [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], you can access and consume that application using a RESTful web service. This enables integration of that app from other applications or services (for example, a mobile app or website). The following table describes the application deployment commands that you can use with **azdata** to get information about the RESTful web service for your app.
 
 |Command |Description |
 |:---|:---|

@@ -477,7 +477,7 @@ The following sections describe the new features and known issues for big data c
 | New feature or update | Details |
 | :---------- | :------ |
 | Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](big-data-cluster-create-apps.md) |
+| Common CLI for application deployment and cluster management. | [How to deploy an app on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
 | VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Changes to the **azdata** tool command usage. | For more details see the [known issues for azdata](#azdatactp23). |
 | Use Sparklyr in big data cluster | [Use Sparklyr in SQL Server 2019 big data cluster](sparklyr-from-RStudio.md) |

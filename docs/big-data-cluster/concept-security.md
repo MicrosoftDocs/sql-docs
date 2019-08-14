@@ -1,7 +1,7 @@
 ---
 title: Security concepts
 titleSuffix: SQL Server big data clusters
-description: This article describes security concepts for SQL Server 2019 big data cluster (preview). This includes describing the cluster endpoints and cluster authentication.
+description: This article describes security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This includes describing the cluster endpoints and cluster authentication.
 author: nelgson 
 ms.author: negust
 ms.reviewer: mikeray

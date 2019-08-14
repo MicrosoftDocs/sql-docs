@@ -105,8 +105,7 @@ After completing the previous steps, the following steps below can be done **off
 
 1. Run `vs_setup.exe --NoWeb` to install the VS2017 Shell and SQL Server Data Project.
 2. From the layouts folder run `SSDT-Setup-ENU.exe /install` and select SSIS/SSRS/SSAS.
-
- - Or for an unattended installation, run `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`
+   - For an unattended installation, run `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`.
 
 For available options, run `SSDT-Setup-ENU.exe /help`
 

@@ -30,14 +30,14 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 The following sections provide an overview of these features.
 
-## Big data clusters
+## Big Data Clusters for SQL Server 2019
 
 | New feature or update | Details |
 |:---|:---|
 | Scalable big data solution | [Deploy scalable clusters](../big-data-cluster/deploy-get-started.md) of SQL Server, Spark, and HDFS containers running on Kubernetes <br/><br/> Read, write, and process big data from Transact-SQL or Spark<br/><br/> Easily combine and analyze high-value relational data with high-volume big data<br/><br/>Query external data sources<br/><br/>Store big data in HDFS managed by SQL Server<br/><br/>Query data from multiple external data sources through the cluster<br/><br/> Use the data for AI, machine learning, and other analysis tasks<br/><br/> Deploy and run applications in big data clusters <br/>|
 | &nbsp; | &nbsp; |
 
-For more details, see [What are SQL Server big data clusters](../big-data-cluster/big-data-cluster-overview.md)
+For more details, see [What are SQL Server big data clusters](../big-data-cluster/big-data-cluster-overview.md).
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features announced and changed for all previous CTP releases of this feature.
 

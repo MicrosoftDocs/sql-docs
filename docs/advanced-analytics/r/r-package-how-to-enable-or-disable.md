@@ -6,8 +6,9 @@ ms.technology: machine-learning
 
 ms.date: 08/06/2019
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # How to enable or disable remote R package management

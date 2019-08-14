@@ -1,6 +1,6 @@
 ---
-title: SQL Server docs navigation guide 
-description: A guide for navigating the SQL Server technical documentation - explains such things as the hub page, the table of contents, the header, as well as how to use the breadcrumbs and the  how to use the version filter. 
+title: SQL Server docs navigation tips 
+description: Tips and tricks for navigating the SQL Server technical documentation - explains such things as the hub page, the table of contents, the header, as well as how to use the breadcrumbs and how to use the version filter. 
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ""

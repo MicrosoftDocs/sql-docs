@@ -1,7 +1,7 @@
 ---
-title: "Using Database Metadata | Microsoft Docs"
+title: "Using database metadata | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: MightyPen
 ms.author: genemi
 ---
 
-# Using Database Metadata
+# Using database metadata
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -24,6 +24,6 @@ In the following example, an open connection to the [!INCLUDE[ssSampleDBnormal](
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 
-## See Also
+## See also
 
-[Handling Metadata with the JDBC Driver](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)
+[Handling metadata with the JDBC driver](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)

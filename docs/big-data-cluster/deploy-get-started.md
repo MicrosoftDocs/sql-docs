@@ -1,7 +1,7 @@
 ---
 title: Get started
 titleSuffix: SQL Server big data clusters
-description: Learn the steps and resources for deploying SQL Server 2019 big data clusters (preview).
+description: Learn the steps and resources for deploying [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

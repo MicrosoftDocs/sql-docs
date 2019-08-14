@@ -1,6 +1,6 @@
 ---
 title: What is Application Deployment?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 description: This article describes application deployment on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jeroenterheerdt 
 ms.author: jterh
@@ -64,4 +64,4 @@ To learn more about how to create and run applications on [!INCLUDE[big-data-clu
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 
-- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

@@ -1,7 +1,7 @@
 ---
 title: Deploy with a python script
 titleSuffix: SQL Server big data clusters
-description: Learn how to use a deployment script to deploy SQL Server 2019 big data clusters (preview) on Azure Kubernetes Service (AKS).
+description: Learn how to use a deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) on Azure Kubernetes Service (AKS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

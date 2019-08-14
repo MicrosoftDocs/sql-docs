@@ -48,7 +48,7 @@ As part of a SQL Server big data cluster, machine learning services will be avai
 
 SQL Server 2019 makes it easy for big data to be joined to the dimensional data typically stored in the enterprise database. The value of the big data greatly increases when it is not just in the hands of parts of an organization, but is also included in reports, dashboards, and applications. At the same time, data scientists can continue to use the Spark/HDFS ecosystem tools and have easy, real time access to the data in the SQL Server master instance and in external data sources accessible _through_ the SQL Server master instance.
 
-With SQL Server 2019 big data clusters, you can do more with your enterprise data lakes. SQL Server developers and analysts can:
+With [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], you can do more with your enterprise data lakes. SQL Server developers and analysts can:
 
 * Build applications consuming data from enterprise data lakes.
 * Reason over all data with Transact-SQL queries.
@@ -64,5 +64,5 @@ With SQL Server 2019 big data clusters, you can do more with your enterprise dat
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 
-- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
 - [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

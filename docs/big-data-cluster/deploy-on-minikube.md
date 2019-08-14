@@ -66,4 +66,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 The steps in this article configured a minikube cluster. The next step is to deploy SQL Server 2019 big data cluster. For instructions, see the following article:
 
-[Deploy SQL Server 2019 big data clusters on Kubernetes](deployment-guidance.md#deploy)
+[Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] on Kubernetes](deployment-guidance.md#deploy)

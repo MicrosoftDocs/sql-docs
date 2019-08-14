@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for R developers to use Spark. This article describes how to use sparklyr in a SQL Server 2019 big data cluster (preview) using RStudio.
+Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for R developers to use Spark. This article describes how to use sparklyr in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using RStudio.
 
 ## Prerequisites
 
@@ -85,4 +85,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

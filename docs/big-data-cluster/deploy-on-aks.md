@@ -1,7 +1,7 @@
 ---
 title: Configure Azure Kubernetes Service
 titleSuffix: SQL Server big data clusters
-description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
+description: Learn how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
+This article describes how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 
 AKS makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured with a Kubernetes cluster to run containerized applications. This enables you to use your existing skills or draw upon a large and growing body of community expertise, to deploy and manage container-based applications on Microsoft Azure.
 
@@ -160,4 +160,4 @@ If you have any problems creating an Azure Kubernetes Service with the previous 
 
 The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy a SQL Server 2019 big data cluster on the AKS Kubernetes cluster. For more information on how to deploy big data clusters, see the following article:
 
-[How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+[How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

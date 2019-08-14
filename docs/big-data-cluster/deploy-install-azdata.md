@@ -1,7 +1,7 @@
 ---
 title: Install azdata
 titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing SQL Server 2019 big data clusters (preview).
+description: Learn how to install the azdata tool for installing and managing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview).
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install azdata to manage SQL Server big data clusters
+# Install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -104,4 +104,4 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

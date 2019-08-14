@@ -43,6 +43,8 @@ After you install the Connector, you must restart the SQL Server Integration Ser
 
 If you need to design package with the Connector, you do not need download the Connector. SQL Server Data Tools (SSDT) has included it since version 15.9.0.
 
+[Join Community Discussion](https://aka.ms/AA5u35j)
+
 ## Uninstallation
 
 You can run uninstall wizard to remove Microsoft Connector for Oracle Database from SQL Server.

@@ -95,7 +95,7 @@ The Oracle Destination Editor is shown in below picture. It contains Connection 
 For more information, see one of the following sections:
 
 - [Oracle Destination Editor (Connection Manager Page)](#oracle-destination-editor-connection-manager-page)
-- [[Oracle Destination Editor (Mappings Page)](#oracle-destination-editor-mappings-page)
+- [Oracle Destination Editor (Mappings Page)](#oracle-destination-editor-mappings-page)
 - [Oracle Destination Editor (Error Output Page)](#oracle-destination-editor-error-output-page)
 
 ![Oracle Destination](media/oracle-destination.png)

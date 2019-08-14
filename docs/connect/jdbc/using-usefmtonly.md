@@ -1,7 +1,7 @@
 ---
 title: "Retrieving ParameterMetaData via useFmtOnly | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -133,6 +133,6 @@ UPDATE Foo SET c1 = (SELECT c1 FROM Foo HAVING (HASH JOIN)) WHERE c1 = ?;
 ```
 
 ## See also  
- [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md)  
+ [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

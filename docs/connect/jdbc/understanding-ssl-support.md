@@ -1,7 +1,7 @@
 ---
-title: "Understanding SSL Support | Microsoft Docs"
+title: "Understanding SSL support | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,7 +11,7 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ---
-# Understanding SSL Support
+# Understanding SSL support
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -60,7 +60,7 @@ If the encrypt property is set to **true**, the [!INCLUDE[jdbcNoVersion](../../i
   
 - Use a different JVM  
   
-## Validating Server SSL Certificate  
+## Validating server SSL certificate  
 
 During SSL handshake, the server sends its public key certificate to the client. The JDBC driver or client has to validate that the server certificate is issued by a certificate authority that the client trusts. The driver requires that the server certificate must meet the following conditions:  
   
@@ -74,8 +74,8 @@ During SSL handshake, the server sends its public key certificate to the client.
   
 - A DNS name can include wild card characters. But the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] does not support wild card matching. That is, abc.com will not match \*.com but \*.com will match \*.com.  
   
-## See Also
+## See also
 
-[Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)
+[Using SSL encryption](../../connect/jdbc/using-ssl-encryption.md)
 
-[Securing JDBC Driver Applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Securing JDBC driver applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  

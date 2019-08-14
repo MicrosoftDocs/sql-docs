@@ -111,6 +111,6 @@ manager: craigg
  [Defining Parent Attribute Properties in a Parent-Child Hierarchy](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## See Also  
- [Deploying an Analysis Services Project](https://docs.microsoft.com/analysis-services/lesson-2-5-deploying-an-analysis-services-project)  
+ [Deploying an Analysis Services Project](lesson-2-5-deploying-an-analysis-services-project.md)  
   
   

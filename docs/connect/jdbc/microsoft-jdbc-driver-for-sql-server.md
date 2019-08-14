@@ -1,7 +1,7 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -19,7 +19,7 @@ In our continued commitment to interoperability, Microsoft provides a Java Datab
 
 The Microsoft JDBC Driver for SQL Server has been tested against major application servers such as IBM WebSphere, and SAP NetWeaver.
   
-## Getting Started  
+## Getting started  
 
 * [Step 1: Configure development environment for Java development](step-1-configure-development-environment-for-java-development.md)  
 * [Step 2: Create a SQL database for Java development](step-2-create-a-sql-database-for-java-development.md)  
@@ -46,9 +46,9 @@ The Microsoft JDBC Driver for SQL Server has been tested against major applicati
   
 ## Samples  
 
-* [Sample JDBC Driver Applications](sample-jdbc-driver-applications.md)  
-* [Getting Started with Java on Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Getting Started with Java on macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Getting Started with Java on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Getting Started with Java on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Getting Started with Java on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Sample JDBC driver applications](sample-jdbc-driver-applications.md)  
+* [Getting started with Java on Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [Getting started with Java on macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Getting started with Java on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Getting started with Java on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [Getting started with Java on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

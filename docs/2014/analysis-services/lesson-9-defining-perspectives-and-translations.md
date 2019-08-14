@@ -22,7 +22,7 @@ manager: craigg
  [Defining and Browsing Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  In this task, you define and browse perspectives to simplify the view of the cube for specific users or uses.  
   
- [Defining and Browsing Translations](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [Defining and Browsing Translations](lesson-9-2-defining-and-browsing-translations.md)  
  In this task, you define and browse translations of specific metadata to certain languages.  
   
 ## Next Lesson  

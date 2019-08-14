@@ -207,7 +207,7 @@ If your SQL Server Management Studio instance is running with administrative rig
 >[!NOTE]
 > If the SQL Agent doesn't visibly start, right-click the SQL Server Agent in SSMS and select **Refresh**. If it's still in the stopped state, start it manually from SQL Server Configuration Manager.    
   
-### Set database permissions at the publisher  
+## Set database permissions  
   
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expand **Security**, right-click **Logins**, and then select **New Login**:  
 
@@ -228,6 +228,8 @@ If your SQL Server Management Studio instance is running with administrative rig
 5. Repeat steps 1-4 to create a login for the other local accounts (repl_distribution, repl_logreader, and repl_merge). These logins must also be mapped to users who are members of the **db_owner** fixed database role in the **distribution** and **AdventureWorks** databases.  
 
    ![View of all four accounts in Object Explorer](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. Repeat steps 1-4 on the subscriber for the distribution agent and the merge agent, changing the machine name to that of the subscriber. 
   
   
 For more information, see:

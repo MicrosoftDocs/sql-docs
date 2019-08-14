@@ -48,7 +48,7 @@ Server = [protocol:]server[,port]
 
 You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:**_servername_**,12345**. Note that the only protocol supported by the Linux and macOS drivers is `tcp`.
 
-To connect to a named instance on a static port, use <b>Server=</b>*servername*,**port_number**. Connecting to a dynamic port is not supported.  
+To connect to a named instance on a static port, use <b>Server=</b>*servername*,**port_number**. Connecting to a dynamic port is not supported before version 17.4.
 
 Alternatively, you can add the DSN information to a template file, and execute the following command to add it to `~/.odbc.ini` :
  - **odbcinst -i -s -f** _template_file_  
@@ -80,20 +80,33 @@ SSL uses the OpenSSL library. The following table shows the minimum supported ve
 
 |Platform|Minimum OpenSSL Version|Default Certificate Trust Store Location|  
 |------------|---------------------------|--------------------------------------------|
+|Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
-|Debian 8.71 |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
-|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Debian 8.71|1.0.1|/etc/ssl/certs|
+|OS X 10.11, macOS 10.12, 10.13, 10.14|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
-|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
-|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
-  
+|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SuSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|Ubuntu 18.10, 19.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.04|1.1.0|/etc/ssl/certs|
+|Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
+|Ubuntu 14.04|1.0.1|/etc/ssl/certs|
+
 You can also specify encryption in the connection string using the `Encrypt` option when using **SQLDriverConnect** to connect.
+
+## Adjusting the TCP Keep-Alive Settings
+
+Starting in ODBC Driver 17.4, how often the driver sends keep-alive packets and retransmits them when a response is not received is configurable.
+To configure, add the following settings to either the driver's section in `odbcinst.ini`, or the DSN's section in `odbc.ini`. When connecting
+with a DSN, the driver will use the settings in the DSN's section if present; otherwise, or if connecting with a connection string only, it will use the
+settings in the driver's section in `odbcinst.ini`. If the setting is not present in either location, the driver uses the default value.
+
+- `KeepAlive=<integer>` controls how often TCP attempts to verify that an idle connection is still intact by sending a keep-alive packet. The default is **30** seconds.
+
+- `KeepAliveInterval=<integer>` determines the interval separating keep-alive retransmissions until a response is received.  The default is **1** second.
+
 
 ## See Also  
 [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  

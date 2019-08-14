@@ -171,7 +171,7 @@ ms.author: lle
     
  **Custom Indexes**  
   
- You can create a non-clustered index on one attribute (single index) or on a list of attributes (composite index), in an entity, to help improve the query performance. For more information, see [Custom Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
+ You can create a nonclustered index on one attribute (single index) or on a list of attributes (composite index), in an entity, to help improve the query performance. For more information, see [Custom Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
   **Attribute Filters**  
   

@@ -8,6 +8,7 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Quickstart: Verify R exists in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -19,13 +20,13 @@ Script execution is through stored procedures, using either of the following app
 + Built-in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) stored procedure, passing R script in as an input parameter.
 + Wrap R script in a [custom stored procedure](sqldev-in-database-r-for-sql-developers.md) that you create.
 
-In this quickstart, you will verify that [SQL Server 2017 Machine Learning Services](../what-is-sql-server-machine-learning.md) or [SQL Server 2016 R Services](../r/sql-server-r-services.md) is installed and configured.
+In this quickstart, you will verify that [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) or [SQL Server 2016 R Services](../r/sql-server-r-services.md) is installed and configured.
 
 ## Prerequisites
 
 This exercise requires access to an instance of SQL Server with one of the following already installed:
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), with the R language installed
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), with the R language installed
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
 Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
@@ -68,7 +69,7 @@ You can confirm that Machine Learning Services (with R) is enabled for your SQL 
     nickname       Another Canoe               
     ```
 
-If you get any errors from this query, rule out any installation issues. Post-install configuration is required to enable use of external code libraries. See [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Likewise, make sure that the Launchpad service is running.
+If you get any errors from this query, rule out any installation issues. Post-install configuration is required to enable use of external code libraries. See [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) or [Install SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Likewise, make sure that the Launchpad service is running.
 
 Depending on your environment, you might need to enable the R worker accounts to connect to SQL Server, install additional network libraries, enable remote code execution, or restart the instance after everything is configured. For more information, see [R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 

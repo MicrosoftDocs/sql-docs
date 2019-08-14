@@ -40,7 +40,7 @@ Community technology preview (CTP) 3.2 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:---|:---| 
-| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](../analysis-services/server-properties/general-properties.md). |
+| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
@@ -77,7 +77,6 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 
 |New feature or update | Details |
 |:---|:---|
-|Feature restrictions| Prevent some forms of SQL injection from leaking information about the database, even when the SQL injection is successful. See [Feature restrictions](../relational-databases/security/feature-restrictions.md)|
 |Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
@@ -120,6 +119,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 ### PolyBase
 
 |New feature or update | Details |
+|:---|:---|
 |PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. |
 | &nbsp; | &nbsp; |
 

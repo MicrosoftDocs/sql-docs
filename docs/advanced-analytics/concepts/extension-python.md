@@ -1,6 +1,6 @@
 ---
 title: Python programming language extension
-description: Learn about Python code execution and built-in Python libraries in SQL Server 2017 Machine Learning Services.
+description: Learn about Python code execution and built-in Python libraries in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,6 +8,7 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Python language extension in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

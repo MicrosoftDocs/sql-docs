@@ -30,7 +30,7 @@ ms.author: mathoma
   
 -   The table is not being replicated.  
   
--   Table locking is specified (using TABLOCK). For table with clustered columnstore index, you don't need TABLOCK for minimal logging.  Additionally, only the data loaded into compressed rowgroups is minimally logged requiring a batchsize of 102400 or higher.  
+-   Table locking is specified (using TABLOCK). 
   
     > [!NOTE]  
     >  Although data insertions are not logged in the transaction log during a minimally logged bulk-import operation, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] still logs extent allocations each time a new extent is allocated to the table.  

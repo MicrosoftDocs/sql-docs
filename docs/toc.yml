@@ -1,6 +1,8 @@
 - name: Welcome to SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: sql-server/sql-server-technical-documentation.md
 
+- name: SQL docs navigation tips
+  href: sql-server/sql-docs-navigation-guide.md
 - name: Previous versions 2014-2005
   href: toc/previous-versions-sql-server.md
 
@@ -235,14 +237,6 @@
           href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
-      - name: Notebook
-        items: 
-        - name: notebook
-          href: big-data-cluster/reference-azdata-notebook.md
-      - name: SQL
-        items: 
-        - name: sql
-          href: big-data-cluster/reference-azdata-sql.md
 - name: Business continuity
   items:
   - name: Overview
@@ -5172,6 +5166,37 @@
       items:
       - name: Replication language
         href: relational-databases/replication/replication-language-reference.md
+      - name: Replication system views
+        href: relational-databases/system-views/replication-views-transact-sql.md
+        items:
+        - name: IHextendedArticleView (T-SQL)
+          href: relational-databases/system-views/ihextendedarticleview-transact-sql.md
+        - name: IHextendedSubscriptionView (T-SQL)
+          href: relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
+        - name: IHsyscolumns (T-SQL)
+          href: relational-databases/system-views/ihsyscolumns-transact-sql.md
+        - name: MSdatatype_mappings (T-SQL)
+          href: relational-databases/system-views/msdatatype-mappings-transact-sql.md
+        - name: MSdistribution_status (T-SQL)
+          href: relational-databases/system-views/msdistribution-status-transact-sql.md
+        - name: sysarticlecolumns (System View) (T-SQL)
+          href: relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
+        - name: sysarticles (System View) (T-SQL)
+          href: relational-databases/system-views/sysarticles-system-view-transact-sql.md
+        - name: sysdatatypemappings (T-SQL)
+          href: relational-databases/system-views/sysdatatypemappings-transact-sql.md
+        - name: sysextendedarticlesview (T-SQL)
+          href: relational-databases/system-views/sysextendedarticlesview-transact-sql.md
+        - name: sysmergeextendedarticlesview (T-SQL)
+          href: relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
+        - name: sysmergepartitioninfoview (T-SQL)
+          href: relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
+        - name: syspublications (System View) (T-SQL)
+          href: relational-databases/system-views/syspublications-system-view-transact-sql.md
+        - name: syssubscriptions (System View) (T-SQL)
+          href: relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
+        - name: systranschemas (T-SQL)
+          href: relational-databases/system-views/systranschemas-transact-sql.md
       - name: Properties of replication objects
         items:
         - name: Distributor properties
@@ -7511,7 +7536,7 @@
     displayName: APS, PDW, Parallel Data Warehouse
     href: analytics-platform-system/index.md
   - name: SQL Server Analysis Services (SSAS) >>
-    href: analysis-services/index.md
+    href: https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview
   - name: SQL Server Reporting Services (SSRS) >>
     href: reporting-services/index.md
   - name: Master Data Services
@@ -7534,6 +7559,8 @@
         href: master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
       - name: Master Data Services Developer Documentation
         href: master-data-services/develop/master-data-services-developer-documentation.md
+      - name: Host database on a managed instance
+        href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
     - name: Excel add-in
       href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
       items:
@@ -7974,8 +8001,6 @@
         href: relational-databases/security/sql-vulnerability-assessment.md
       - name: Data discovery & classification
         href: relational-databases/security/sql-data-discovery-and-classification.md
-      - name: SQL Server Connector troubleshooting
-        href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
     - name: Authentication Access
       items:
       - name: Determine effective permissions
@@ -8023,8 +8048,16 @@
           href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
       - name: Move a TDE protected database
         href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-      - name: Enable TDE with EKM
-        href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+      - name: Extensible Key Management
+        items:
+        - name: Enable TDE with EKM
+          href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+        - name: SQL Server connector with encryption
+          href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
+        - name: EKM using Azure Key Vault
+          href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+        - name: SQL Server Connector troubleshooting
+          href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
       - name: Back up service master key
         href: relational-databases/security/encryption/back-up-the-service-master-key.md
       - name: Restore service master key
@@ -8041,16 +8074,12 @@
         href: relational-databases/security/encryption/encrypt-a-column-of-data.md
     - name: Secure Azure SQL Database
       items:
-      - name: SQL Server connector with encryption
-        href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
       - name: Bring your own key >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
       - name: Rotate TDE BYOK keys >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
       - name: Remove TDE protector >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
-      - name: EKM using Azure Key Vault
-        href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
     - name: Auditing
       items:
       - name: Create server audit specification
@@ -9985,26 +10014,12 @@
       items:
       - name: SSMS Support Policy
         href: ssms/support-policy.md
-      - name: Support options for business users
-        href: https://support.microsoft.com/gp/support-options-for-business
-      - name: Contact Microsoft
-        href: https://support.microsoft.com/gp/contactus81?Audience=Commercial
-      - name: All the ways to get help
-        href: https://docs.microsoft.com/sql/sql-server/sql-server-get-help
-      - name: UserVoice - Suggestion to improve SQL Server?
-        href: https://feedback.azure.com/forums/908035-sql-server
-      - name: Setup and Upgrade -  MSDN Forums
-        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc
-      - name: Transact-SQL - MSDN Forums
-        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql
-      - name: Stack Overflow
-        href: https://stackoverflow.com/questions/tagged/sql-server
-      - name: Microsoft SQL Server License Terms and Information
-        href: https://www.microsoft.com/download/details.aspx?id=39299
       - name: User Assistance in SSMS
         href: ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data
         href: ssms/sql-server-management-studio-telemetry-ssms.md
+      - name: Feedback > 
+        href: https://aka.ms/sqlfeedback
   - name: SqlPackage.exe
     items:
     - name: Install sqlpackage
@@ -10442,28 +10457,12 @@
       href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
     - name: SQL on Channel 9 >
       href: https://channel9.msdn.com/Search
-  - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
-    items:
-    - name: SQL Server >
-      href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: SQL Server Database Engine >
-      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
-    - name: SQL Server Security >
-      href: https://blogs.msdn.microsoft.com/sqlsecurity/
-    - name: SQL Server Data Tools >
-      href: https://blogs.msdn.microsoft.com/ssdt/
-  - name: Feedback & help
+  - name: Help
     items:
     - name: Get help
       href: sql-server/sql-server-get-help.md
-    - name: Feedback for SQL Docs >
-      href: https://aka.ms/sqldocsfeedback
-    - name: Feedback for SQL Server (UserVoice) >
-      href: https://feedback.azure.com/forums/908035-sql-server
-    - name: SQL Docs Survey >
-      href: https://aka.ms/sqldocsurvey
-    - name: Contribute to SQL Documentation!
-      href: sql-server/sql-server-docs-contribute.md
+    - name: Versioning of SQL docs
+      href: sql-server/versioning-system-monikers-ui-sql-server.md
     - name: DBA Stack Exchange >
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >
@@ -10472,6 +10471,24 @@
       href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit >
       href: https://www.reddit.com/r/SQLServer
+  - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
+    items:
+    - name: SQL Server >
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: Database Engine >
+      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+    - name: Security >
+      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+    - name: Data Tools >
+      href: https://blogs.msdn.microsoft.com/ssdt/
+  - name: Feedback
+    items: 
+    - name: SQL Docs > 
+      href: https://aka.ms/sqldocsfeedback
+    - name: SQL Server > 
+      href: https://feedback.azure.com/forums/908035-sql-server
+    - name: Edit SQL Documentation!
+      href: sql-server/sql-server-docs-contribute.md
   - name: Partners
     items:
     - name: Monitoring
@@ -10486,8 +10503,6 @@
     href: sql-server/sql-server-help-installation.md
 - name: Reference
   items:
-  - name: SQL Docs include files
-    href: sql-server/applies-to-includes.md
   - name: Archived Content (SQL 2005 - 2012) >
     displayName: 2005, 2008, 2008 r2, 2012, previous-versions
     href: https://docs.microsoft.com/previous-versions/sql/
@@ -15021,37 +15036,6 @@
         href: relational-databases/system-tables/syssubscriptions-transact-sql.md
       - name: sysschemaarticles
         href: relational-databases/system-tables/sysschemaarticles-transact-sql.md
-  - name: System views
-    href: relational-databases/system-views/replication-views-transact-sql.md
-    items:
-    - name: IHextendedArticleView (T-SQL)
-      href: relational-databases/system-views/ihextendedarticleview-transact-sql.md
-    - name: IHextendedSubscriptionView (T-SQL)
-      href: relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
-    - name: IHsyscolumns (T-SQL)
-      href: relational-databases/system-views/ihsyscolumns-transact-sql.md
-    - name: MSdatatype_mappings (T-SQL)
-      href: relational-databases/system-views/msdatatype-mappings-transact-sql.md
-    - name: MSdistribution_status (T-SQL)
-      href: relational-databases/system-views/msdistribution-status-transact-sql.md
-    - name: sysarticlecolumns (System View) (T-SQL)
-      href: relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
-    - name: sysarticles (System View) (T-SQL)
-      href: relational-databases/system-views/sysarticles-system-view-transact-sql.md
-    - name: sysdatatypemappings (T-SQL)
-      href: relational-databases/system-views/sysdatatypemappings-transact-sql.md
-    - name: sysextendedarticlesview (T-SQL)
-      href: relational-databases/system-views/sysextendedarticlesview-transact-sql.md
-    - name: sysmergeextendedarticlesview (T-SQL)
-      href: relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
-    - name: sysmergepartitioninfoview (T-SQL)
-      href: relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
-    - name: syspublications (System View) (T-SQL)
-      href: relational-databases/system-views/syspublications-system-view-transact-sql.md
-    - name: syssubscriptions (System View) (T-SQL)
-      href: relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
-    - name: systranschemas (T-SQL)
-      href: relational-databases/system-views/systranschemas-transact-sql.md
   - name: Transact-SQL (T-SQL) Reference
     displayName: tsql
     href: t-sql/language-reference.md

@@ -7,7 +7,7 @@ ms.prod_service: connectivity
 ms.reviewer: "MightyPen"
 ms.technology: connectivity
 ms.topic: conceptual
-author: karinazhou
+author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
 ---
@@ -29,6 +29,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## 17.4, August 2019
+
+| Feature added | Details |
+| :------------ | :------ |
+| Always Encrypted with Secure Enclaves. | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
+| Dynamic loading of OpenSSL | See [Programming Guidelines](programming-guidelines.md#bkmk-openssl). |
+| Configurable TCP Keep Alive settings. | See [Connecting to SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
+| Bug fixes. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.3, February 2019
 

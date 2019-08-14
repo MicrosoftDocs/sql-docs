@@ -1,10 +1,10 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 06/26/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: t-sql
+ms.technology: language-extensions
 ms.topic: language-reference
 author: nelgson
 ms.author: negust
@@ -152,6 +152,15 @@ FROM
 (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so', PLATFORM = LINUX);
 GO
 ```
+### C. Grant permissions to execute external script
+
+The following example grants the **mylogin** principal access to execute scripts using the **Java** external language.
+
+```sql
+GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 
+TO mylogin;
+```
+
 
 ## See also
 

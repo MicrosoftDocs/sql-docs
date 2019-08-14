@@ -9,6 +9,7 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 #  Get R and Python package information
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Optionally, you can use [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) in newer versions of RevoScaleR in SQL Server 2017 Machine Learning Services or [R Services upgraded R to at least RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). This stored procedure returns the path of the instance library and the version of RevoScaleR used by SQL Server:
+Optionally, you can use [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) in newer versions of RevoScaleR in SQL Server Machine Learning Services or [R Services upgraded R to at least RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). This stored procedure returns the path of the instance library and the version of RevoScaleR used by SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -54,7 +55,7 @@ STDOUT message(s) from external script:
 
 ## Get the Python library location
 
-For **Python** in SQL Server 2017, run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory, and the standard library path.
+For **Python**, run the following statement to verify the default library for the current instance. This example returns the list of folders included in the Python `sys.path` variable. The list includes the current directory, and the standard library path.
 
 ```sql
 EXECUTE sp_execute_external_script

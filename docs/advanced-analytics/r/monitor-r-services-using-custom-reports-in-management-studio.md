@@ -7,6 +7,7 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Monitor Machine Learning Services using custom reports in Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -19,7 +20,7 @@ To make it easier to manage instance used for machine learning, the product team
 - Extended events for R Services
 - R or Python packages installed on the current instance
 
-This article explains how to install and use the custom reports provided specifically for machine leaerning. 
+This article explains how to install and use the custom reports provided specifically for machine learning. 
 
 For a general introduction to reports in Management Studio, see [Custom reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 

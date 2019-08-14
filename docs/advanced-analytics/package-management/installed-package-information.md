@@ -8,6 +8,7 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Default R and Python packages in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -16,7 +17,7 @@ This article lists the R and Python packages installed with SQL Server and where
 
 ## R package list for SQL Server
 
-R packages are installed with [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) when you select the R feature during setup. 
+R packages are installed with [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) and [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) when you select the R feature during setup. 
 
 |Packages         | 2016 | 2017 | Description |
 |----------------|--------------|--------------|-------------|
@@ -25,11 +26,11 @@ R packages are installed with [SQL Server 2016 R Services](../install/sql-r-serv
 | [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | Adds machine learning algorithms in R. | 
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | Used for writing MDX statements in R. |
 
-MicrosoftML and olapR are available by default in SQL Server 2017 Machine Learning Services. On a SQL Server 2016 R Services instance, you can add these packages through a [component upgrade](../install/upgrade-r-and-python.md). A component upgrade also gets you newer versions of packages (for example, newer versions of RevoScaleR include functions for package management on SQL Server).
+MicrosoftML and olapR are available by default in SQL Server Machine Learning Services. On a SQL Server 2016 R Services instance, you can add these packages through a [component upgrade](../install/upgrade-r-and-python.md). A component upgrade also gets you newer versions of packages (for example, newer versions of RevoScaleR include functions for package management on SQL Server).
 
 ## Python package list for SQL Server
 
-Python packages are available only in SQL Server 2017 when you install [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and select the Python feature.
+Python packages are available only in SQL Server 2017 when you install [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and select the Python feature.
 
 | Packages         | 2017    |  Description |
 | -----------------|-------------|------------|
@@ -47,7 +48,7 @@ The following table summarizes the versions of R provided by MRO using SQL Serve
 |Release             | R version       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+| [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
 You should never manually overwrite the version of R installed by SQL Server Setup with newer versions on the web. Microsoft R packages are based on specific versions of R. Modifying your installation could destabilize it.
 
@@ -59,7 +60,7 @@ SQL Server 2017 Machine Learning is the first release to have both R and Python 
 
 |Release             | Anaconda version| Microsoft packages    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2017 Machine Learning Services  | 4.2 over Python 3.5 | revoscalepy, microsoftml |
+| SQL Server Machine Learning Services  | 4.2 over Python 3.5 | revoscalepy, microsoftml |
 
 You should never manually overwrite the version of Python installed by SQL Server Setup with newer versions on the web. Microsoft Python packages are based on specific versions of Anaconda. Modifying your installation could destabilize it.
 

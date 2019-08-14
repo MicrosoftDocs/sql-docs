@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/27/2019"
+ms.date: "08/13/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -172,7 +172,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## Arguments
@@ -321,8 +321,10 @@ Used to specify encryption for a backup. You can specify an encryption algorithm
 
 If you choose to encrypt you will also have to specify the encryptor using the encryptor options:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+The `SERVER CERTIFICATE` and `SERVER ASYMMETRIC KEY` are a certificate and an asymmetric key created in `master` database. For more information see [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) and [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md) respectively.
 
 > [!WARNING]
 > When encryption is used in conjunction with the `FILE_SNAPSHOT` argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) was completed for the database. No additional encryption happens for the data itself. The backup fails if the database was not encrypted or if the encryption was not completed before the backup statement was issued.
@@ -467,7 +469,7 @@ If you are taking a backup that you plan to copy onto and restore from a CD-ROM,
 BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
-The total space used by the buffers is determined by: *buffercount/maxtransfersize*.
+The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.
@@ -1061,8 +1063,8 @@ Used to specify encryption for a backup. You can specify an encryption algorithm
 
 If you choose to encrypt you will also have to specify the encryptor using the encryptor options:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **Backup Set Options**
 
@@ -1102,7 +1104,7 @@ Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 
 BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
-The total space used by the buffers is determined by: *buffercount/maxtransfersize*.
+The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.

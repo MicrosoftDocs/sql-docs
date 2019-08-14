@@ -25,7 +25,7 @@ manager: craigg
 ### PowerPivot Gallery Thumbnail images show as a red X  
  One Possible cause is the **PowerPivot features Integration for Site Collections** is not active. Complete the following:  
   
-1.  In the PowerPivot Gallery library, click **Site Settings** from either the gear icon ![SharePoint Settings](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") or the **Home** list.  
+1.  In the PowerPivot Gallery library, click **Site Settings** from either the gear icon ![SharePoint Settings](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") or the **Home** list.  
   
 2.  In the **Site Collection Administration** section, click **Site Collection Features**.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Register a Service Principal Name for Kerberos Connections | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/20/2017"
+ms.date: "08/06/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -126,7 +126,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com redmond\accountname
 For a named instance, use:  
   
 ```  
-setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname  
+setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname  
 ```  
   
 ##  <a name="Client"></a> Client Connections  

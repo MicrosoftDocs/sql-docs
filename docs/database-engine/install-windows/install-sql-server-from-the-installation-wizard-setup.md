@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server 2016 from the Installation Wizard (Setup) | Microsoft Docs"
 ms.custom: ""
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -274,9 +274,9 @@ This is not applicable to SQL Server 2019.
   
      The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages. 
 
-1. Selecting to install the Polybase feature will add the **PolyBase Configuration** page to the SQL Server setup, displayed after the **Instance Configuration** page. PolyBase requires the Oracle JRE 7 Update 51 (at least), and if this hasn't already been installed, starting with SQL Server 2019, you are able to install the Azul Zulu Open JRE along with SQL Server. On the **Polybase Configuration** page, you can choose to use the SQL Server as a standalone Polybase-enabled instance, or you can use this SQL Server as part of a PolyBase scale-out group. If you choose to use the scale-out group, you will need to specify a port range of up to 6 or more ports.  On the **Java Install Location** page, you can choose to install the Azul Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
+1. Starting with SQL Server 2019, Polybase no longer requires that Oracle JRE 7 Update 51 (at least) be pre-installed on the computer prior to installing the feature. Selecting to install the Polybase feature will add the **Java Install Location** page to the SQL Server setup displayed after the **Instance Configuration** page. On the Java Install Location page, you can choose to install the Azul Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
-1. Starting with SQL Server 2019, Java has been added to the list of Machine Learning Services and Language Extensions, alongside R and Python. Selecting to install the Java feature will add the **Java Install Location** page to the SQL Server setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Azul Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
+1. Starting with SQL Server 2019, Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the SQL Server setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
 1. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
   

@@ -65,8 +65,14 @@ conceptualContent:
         - text: SQL Server on Ubuntu
           url: linux/quickstart-install-connect-ubuntu.md
           itemType: overview
+        - text: SQL Docs navigation tips
+          url: sql-server/sql-docs-navigation-guide.md
+          itemType: overview
     - title: What's new
       links:
+        - text: SQL Server 2019
+          url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+          itemType: overview
         - text: SQL Server big data cluster
           url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
           itemType: overview
@@ -82,7 +88,7 @@ conceptualContent:
     - title: Release notes 
       links:
         - text: SQL Server 2019
-          url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+          url: sql-server/sql-server-ver15-release-notes.md
           itemType: overview
         - text: SQL Server on an Azure VM
           url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-release-notes
@@ -93,13 +99,19 @@ conceptualContent:
         - text: Azure SQL Data Warehouse
           url: /azure/sql-data-warehouse/release-notes-10-0-10106-0
           itemType: overview
+        - text: SQL Server Management Studio (SSMS)
+          url: ssms/release-notes-ssms.md
+          itemType: overview
     - title: Install
       links:
         - text: SQL Server
           url: database-engine/install-windows/install-sql-server.md
           itemType: overview
+        - text: SQL Server Management Studio (SSMS)
+          url: ssms/download-sql-server-management-studio-ssms.md
+          itemType: overview
         - text: Analysis Services (SSAS)
-          url: analysis-services/instances/install-windows/install-analysis-services.md
+          url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
           itemType: overview
         - text: Integration Services (SSIS)
           url: integration-services/install-windows/install-integration-services.md
@@ -285,7 +297,7 @@ additionalContent:
           - text: Polybase
             url: relational-databases/polybase/polybase-guide.md
           - text: SQL Server Analysis Services (SSAS)
-            url: analysis-services/analysis-services.md
+            url: https://docs.microsoft.com/analysis-services/analysis-services-overview
           - text: SQL Server 2019 big data clusters
             url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
       - title: Reference

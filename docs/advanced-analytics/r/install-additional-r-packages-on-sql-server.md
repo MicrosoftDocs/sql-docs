@@ -1,6 +1,6 @@
 ---
 title: Install new R language packages
-description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database)
+description: Add new R packages to SQL Server 2016 R Services or SQL Server Machine Learning Services (In-Database)
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -8,6 +8,7 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Install new R packages on SQL Server
@@ -82,7 +83,7 @@ For example, the following procedure describes now to get the correct version of
 
 R and Python features are included in several Microsoft products, all of which could co-exist on the same computer.
 
-If you installed SQL Server 2017 Microsoft Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone) in addition to in-database analytics (SQL Server 2017 Machine Learning Services and SQL Server 2016 R Services), your computer has separate installations of R for each, with duplicates of all the R tools and libraries.
+If you installed SQL Server 2017 Microsoft Machine Learning Server (Standalone) or SQL Server 2016 R Server (Standalone) in addition to in-database analytics (SQL Server Machine Learning Services and SQL Server 2016 R Services), your computer has separate installations of R for each, with duplicates of all the R tools and libraries.
 
 Packages that are installed to the R_SERVER library are used only by a standalone server and cannot be accessed by a SQL Server (In-Database) instance. Always use the `R_SERVICES` library when installing packages that you want to use in-database on SQL Server. For more information about paths, see [Package library location](../package-management/default-packages.md).
 

@@ -161,7 +161,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 |Catalog views|Description|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
+|[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance for all databases.|  
 |[sys.server_audits](../../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)|Contains one row for each [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit in a server instance.|  
 |[sys.server_audit_specifications](../../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)|Contains information about the server audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  

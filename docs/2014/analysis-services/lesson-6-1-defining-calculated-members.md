@@ -281,7 +281,7 @@ manager: craigg
      Notice that the sale of accessories is increasing over time, but that these sales make up only a small fraction of total sales. Notice also that the gross profit margin for sales of accessories is higher than for bikes.  
   
 ## Next Task in Lesson  
- [Defining Named Sets](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [Defining Named Sets](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
   
 ## See Also  
  [Calculations](multidimensional-models-olap-logical-cube-objects/calculations.md)   

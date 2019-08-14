@@ -12,7 +12,7 @@ ms.author: owend
 manager: kfile
 ---
 # Implement Dynamic Security by Using Row Filters
-  In this supplemental lesson, you will create an additional role that implements dynamic security. Dynamic security provides row-level security based on the user name or login id of the user currently logged on. To learn more, see [Roles &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
+  In this supplemental lesson, you will create an additional role that implements dynamic security. Dynamic security provides row-level security based on the user name or login id of the user currently logged on. To learn more, see [Roles &#40;SSAS Tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular).  
   
  To implement dynamic security, you must add a table to your model containing the Windows user names of those users that can create a connection to the model as a data source and browse model objects and data. The model you create using this tutorial is in the context of Adventure Works Corp.; however, in order to complete this lesson, you must add a table containing users from your own domain. You will not need the passwords for the user names that will be added. To create an Employee Security table, with a small sample of users from your own domain, you will use the Paste feature, pasting employee data from an Excel spreadsheet. In a real-world scenario, the table containing user names you add to a model would typically use a table from an actual database as a data source; for example, a real dimEmployee table.  
   
@@ -124,7 +124,7 @@ manager: kfile
  In this task, you will create a new user role. This role will include a row filter defining which rows of the Sales Territory table are visible to users. The filter is then applied in the one-to many relationship direction to all other tables related to Sales Territory. You will also apply a simple filter that secures the entire Employee Security table from being queryable by any user that is a member of the role.  
   
 > [!NOTE]  
->  The Sales Employees by Territory role you create in this lesson restricts members to browse (or query) only sales data for the sales territory to which they belong. If you add a user as a member to the Sales Employees by Territory role that also exists as a member in a role created in [Lesson 12: Create Roles](../analysis-services/lesson-11-create-roles.md), you will get a combination of permissions. When a user is a member of multiple roles, the permissions, and row filters defined for each role are cumulative. That is, the user will have the greater permissions determined by the combination of roles.  
+>  The Sales Employees by Territory role you create in this lesson restricts members to browse (or query) only sales data for the sales territory to which they belong. If you add a user as a member to the Sales Employees by Territory role that also exists as a member in a role created in [Lesson 12: Create Roles](https://docs.microsoft.com/analysis-services/lesson-11-create-roles), you will get a combination of permissions. When a user is a member of multiple roles, the permissions, and row filters defined for each role are cumulative. That is, the user will have the greater permissions determined by the combination of roles.  
   
 #### To create a Sales Employees by Territory user role  
   

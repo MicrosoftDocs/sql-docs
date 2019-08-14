@@ -26,7 +26,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC is available only as Evaluation Edition. No other editions are available.
 
-Complete details about support and licensing for release releases are in `license_Eval.rtf` with your installation media.
+Complete details about support and licensing for release candidate software are in `license_Eval.rtf` with your installation media.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 

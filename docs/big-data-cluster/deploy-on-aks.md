@@ -160,4 +160,4 @@ If you have any problems creating an Azure Kubernetes Service with the previous 
 
 The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy a SQL Server 2019 big data cluster on the AKS Kubernetes cluster. For more information on how to deploy big data clusters, see the following article:
 
-[How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+[How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Consume an app deployed on SQL Server big data clusters using a RESTful web service
+# Consume an app deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] using a RESTful web service
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -120,4 +120,4 @@ You have now successfully called the app through the web service. You can follow
 
 You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

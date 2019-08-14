@@ -209,4 +209,4 @@ You can view the controller status with the [azdata bdc control status show](ref
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server big data clusters](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

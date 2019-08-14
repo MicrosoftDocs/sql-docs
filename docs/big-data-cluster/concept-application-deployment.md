@@ -56,12 +56,12 @@ It is also possible for an application to be executed using a RESTful web servic
 
 ## Next steps
 
-To learn more about how to create and run applications on SQL Server big data clusters, see the following:
+To learn more about how to create and run applications on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following:
 
 - [Deploy applications using azdata](big-data-cluster-create-apps.md)
 - [Deploy applications using the App Deploy extension](app-deployment-extension.md)
 - [Consume applications on big data clusters](big-data-cluster-consume-apps.md)
 
-To learn more about the SQL Server big data clusters, see the following overview:
+To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 
 - [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

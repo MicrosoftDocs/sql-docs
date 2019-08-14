@@ -166,4 +166,4 @@ The deployment prompts you for the docker username and password, or you can spec
 
 ## Next steps
 
-For more information about big data cluster deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
+For more information about big data cluster deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).

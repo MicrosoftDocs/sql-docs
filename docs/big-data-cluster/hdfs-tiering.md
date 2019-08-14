@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Configure HDFS tiering on SQL Server big data clusters
+# Configure HDFS tiering on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -49,7 +49,7 @@ We support connecting to Azure Data Lake Storage Gen2 and Amazon S3. Instruction
 
 ## <a id="issues"></a> Known issues and limitations
 
-The following list provides known issues and current limitations when using HDFS tiering in SQL Server big data clusters:
+The following list provides known issues and current limitations when using HDFS tiering in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]:
 
 - If the mount is stuck in a `CREATING` state for a long time, it has most likely failed. In this situation, cancel the command and delete the mount if necessary. Verify that your parameters and credentials are correct before retrying.
 

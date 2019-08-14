@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to upgrade SQL Server big data clusters
+# How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -67,8 +67,8 @@ azdata --version
 
 ## Install the new release
 
-After removing the previous big data cluster and installing the latest **azdata**, deploy the new big data cluster by using the current deployment instructions. For more information, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md). Then, restore any required databases or files.
+After removing the previous big data cluster and installing the latest **azdata**, deploy the new big data cluster by using the current deployment instructions. For more information, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md). Then, restore any required databases or files.
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server big data clusters](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](big-data-cluster-overview.md).

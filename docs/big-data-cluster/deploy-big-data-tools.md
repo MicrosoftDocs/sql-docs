@@ -82,6 +82,6 @@ The remaining tools are only required in certain scenarios. **Azure CLI** can be
 After configuring the tools, deploy a SQL Server 2019 big data cluster to Kubernetes in the Cloud or on-premises. For more information, see the following deployment articles:
 
 - [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
-- [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+- [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)
 
 For More info about big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

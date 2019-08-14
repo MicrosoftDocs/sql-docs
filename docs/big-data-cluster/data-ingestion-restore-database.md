@@ -107,6 +107,6 @@ GO
 
 ## Next steps
 
-To learn more about the SQL Server big data clusters, see the following overview:
+To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 
 - [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

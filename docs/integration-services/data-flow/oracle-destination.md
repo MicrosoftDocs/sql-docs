@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 author: gracegu
-ms.author: chugugrace
+ms.author: chugu
 ---
 # Oracle Destination
 

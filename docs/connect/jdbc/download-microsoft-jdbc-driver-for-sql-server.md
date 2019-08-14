@@ -1,7 +1,7 @@
 ---
 title: "Download Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -14,8 +14,8 @@ ms.author: genemi
 # Download Microsoft JDBC Driver for SQL Server
 
 
-## Using the JDBC Driver with Maven Central
-The JDBC Driver can be added to a Maven project by adding it as a dependency in the POM.xml file with the following code:
+## Using the JDBC driver with Maven Central
+The JDBC driver can be added to a Maven project by adding it as a dependency in the POM.xml file with the following code:
 
 ```xml
 <dependency>

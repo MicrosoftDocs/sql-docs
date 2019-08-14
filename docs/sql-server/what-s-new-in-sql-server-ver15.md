@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -21,58 +21,14 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](what-s-new-in-sql-server-ver15-prerelease.md#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## RC Aug 2019
+>[!NOTE]
+>The content is published for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate. The release candidate is pre-release software. The information is subject to change. For information about support scenarios, refer to [Support](#support).
+>
+>This release includes improvements that were announced earlier in community technology preview (CTP) releases. The improvements added features, fixed bugs, improved security, and optimized performance. For a list of features introduced or improved in the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
 
-Community technology preview (RC) is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. For a list of features introduced or improved in each of the CTP releases before [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2, see [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP announcement archive](what-s-new-in-sql-server-ver15-prerelease.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces big data clusters for [!INCLUDE[sql-server-2019](../includes/ssnoversion-md.md)]. It also provides additional capability and improvements for the SQL Server database engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux, and SQL Server Master Data Services.
 
-### Big data clusters
-
-| New feature or update | Details |
-|:---|:---|
-| &nbsp; | &nbsp; |
-
-### Database engine
-
-| New feature or update | Details |
-|:---|:---|
-| &nbsp; | &nbsp; |
-
-## CTP 3.2 July 2019
-
-### New in big data clusters
-
-|New feature or update | Details |
-|:---|:---|
-|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](../big-data-cluster/deploy-get-started.md).|
-|`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](../big-data-cluster/deploy-install-azdata.md). |
-|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. In previous CTP releases, the columns were bound only based on ordinal on the destination and column names in external table definition was not used.|
-|HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](../big-data-cluster/hdfs-tiering.md) |
-|Notebook-based troubleshooting |CTP 3.2 introduces Jupyter notebooks to assist with [deployment](../big-data-cluster/deploy-notebooks.md) and [discovery, diagnosis, and troubleshooting](../big-data-cluster/manage-notebooks.md) for components in a SQL Server big data cluster. |
-| &nbsp; | &nbsp; |
-
-### New in Analysis Services
-
-| New feature or update | Details |
-|:---|:---| 
-| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
-| Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
-| &nbsp; | &nbsp; |
-
-### New in Language extensions
-
-|New feature or update | Details |
-|:---|:---|
-| New default Java Runtime  | SQL Server now includes Azul System's Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
-
-### New in SQL Server on Linux
-
-|New feature or update | Details |
-|:---|:---|
-| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
-
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] features by component
-
-The following sections highlight new components and features that were enhanced in earlier releases of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+The following sections provide an overview of these features.
 
 ## Big data clusters
 
@@ -95,7 +51,6 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
 | &nbsp; | &nbsp; |
-
 
 ### Graph
 
@@ -170,6 +125,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Table variable deferred compilation.|[Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
 |Approximate `COUNT DISTINCT`.|[Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
 |Batch mode on rowstore.|[Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+| &nbsp; | &nbsp; |
 
 ### Language extensions
 
@@ -179,6 +135,8 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |SQL Server Language Extensions - [Java language extension](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 |Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
+| New default Java Runtime  | SQL Server now includes Azul System's Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
+| &nbsp; | &nbsp; |
 
 ### Spatial
 
@@ -224,6 +182,7 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Machine Learning on Linux |[Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md) |
 |Tempdb improvements | By default, a new installation of SQL Server on Linux creates multiple tempdb data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each tempdb file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
 | PolyBase on Linux | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
+| Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -251,6 +210,8 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 |Dynamic formatting of measures using calculation groups |This feature allows you to conditionally change format strings for measures with [calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). For example, with currency conversion, a measure can be displayed using different foreign currency formats.|
 |Many-to-many relationships in tabular models|[Many-to-many relationships in tabular models](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24)|
 |Property settings for resource governance|[Property settings for resource governance](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24)|
+| Governance setting for Power BI cache refreshes.  | The Power BI service caches dashboard tile data and report data for initial load of Live Connect report, causing an excessive number of cache queries being submitted to SSAS, and in extreme cases overload the server. This release  introduces the **ClientCacheRefreshPolicy** property. This property allows you to override this behavior at the server level. To learn more, see [General Properties](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
+| Online attach  | This feature provides the ability to attach a tabular model as an online operation. Online attach can be used for synchronization of read-only replicas in on-premises query scale-out environments. To learn more see [Online attach](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Details. |
 | &nbsp; | &nbsp; |
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]

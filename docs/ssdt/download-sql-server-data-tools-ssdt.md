@@ -96,9 +96,8 @@ First, complete the following steps while **online**:
 1. [Download the SSDT standalone installer](#ssdt-for-vs-2017-standalone-installer).
 2. [Download vs_sql.exe](https://aka.ms/vs/15/release/vs_sql.exe).
 3. While still online, execute one of the following commands to download all the files required for installing offline. Using the `--layout` option is the key, it downloads the actual files for the offline installation. Replace `<filepath>` with the actual layouts path to save the files.
-
- a. For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang en-us` (a single language is ~1 GB) 
- b. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>` (all languages are ~3.9 GB).
+   1. For a specific language, pass the locale: `vs_sql.exe --layout c:\<filepath> --lang en-us` (a single language is ~1 GB).
+   1. For all languages, omit the `--lang` argument: `vs_sql.exe --layout c:\<filepath>` (all languages are ~3.9 GB).
 
 4. Execute `SSDT-Setup-ENU.exe /layout c:\<filepath>` to extract the SSDT payload into the same `<filepath>` location where the VS2017 files were downloaded. This action ensures that all files from both are combined into a single layouts folder.
 

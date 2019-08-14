@@ -15,7 +15,7 @@ ms.technology: linux
 This article describes how to configure the Microsoft Distributed Transaction Coordinator (MSDTC) on Linux.
 
 > [!NOTE]
-> MSDTC on Linux is supported on the SQL Server 2019 preview SQL Server 2017 starting with cumulative update 16.
+> MSDTC on Linux is supported on SQL Server 2017 starting with cumulative update 16.
 
 ## Overview
 

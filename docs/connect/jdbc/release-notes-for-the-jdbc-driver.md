@@ -1,7 +1,7 @@
 ---
 title: "Release notes for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -152,11 +152,11 @@ Microsoft JDBC Driver 7.0 for SQL Server now provides support for SQL Server spa
 
 Microsoft JDBC Driver 7.0 for SQL Server now implements `beginRequest()` and `endRequest()` APIs from the `java.sql.Connection` class. These APIs were introduced with JDBC 4.3 specifications and JDK 9. For more information about the driver's implementation of these APIs, see [JDBC 4.3 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
-### Support for SQL data discovery and classification
+### Support for SQL Data Discovery and Classification
 
-Microsoft JDBC Driver 7.0 for SQL Server provides support for SQL data discovery and classification with any target database that supports this feature. The driver now exposes `SQLServerResultSet.getSensitivityClassification()` APIs to extract this information from the fetched `ResultSet`.
+Microsoft JDBC Driver 7.0 for SQL Server provides support for SQL Data Discovery and Classification with any target database that supports this feature. The driver now exposes `SQLServerResultSet.getSensitivityClassification()` APIs to extract this information from the fetched `ResultSet`.
 
-For more information about how to use this feature with the JDBC Driver, see the sample in [SQL data discovery and classification](../../connect/jdbc/data-discovery-classification-sample.md).
+For more information about how to use this feature with the JDBC Driver, see the sample in [SQL Data Discovery and Classification](../../connect/jdbc/data-discovery-classification-sample.md).
 
 ### Added connection property: useBulkCopyForBatchInsert
 

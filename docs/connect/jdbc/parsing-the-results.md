@@ -1,7 +1,7 @@
 ---
-title: "Parsing the Results | Microsoft Docs"
+title: "Parsing the results | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -108,4 +108,4 @@ try (Statement statement = connection.createStatement();) {
 
 ## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)

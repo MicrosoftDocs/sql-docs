@@ -67,7 +67,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @subscriber = ] 'subscriber'`
- Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
+ Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is a availability group. *subscriber* is **sysname**, with a default of NULL. 
   
 `[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL. For a non-SQL Server Subscriber, specify a value of **(default destination)** for *subscriber_db*.  

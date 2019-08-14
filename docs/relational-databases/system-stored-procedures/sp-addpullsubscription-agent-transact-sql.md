@@ -1,7 +1,7 @@
 ---
 title: "sp_addpullsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/08/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -83,7 +83,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @subscriber = ] 'subscriber'`
- Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
+ Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is in an availability group. *subscriber* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts.  

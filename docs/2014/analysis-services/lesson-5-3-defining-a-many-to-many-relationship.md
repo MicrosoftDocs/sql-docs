@@ -164,7 +164,7 @@ manager: craigg
      ![Filter and Data panes of Cube Designer](../../2014/tutorials/media/l5-many-to-many-5.gif "Filter and Data panes of Cube Designer")  
   
 ## Next Task in Lesson  
- [Defining Dimension Granularity within a Measure Group](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+ [Defining Dimension Granularity within a Measure Group](https://docs.microsoft.com/analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group)  
   
 ## See Also  
  [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   

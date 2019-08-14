@@ -297,7 +297,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
   
 ## See Also  
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
  [CodePlex SharePoint Management PowerShell scripts](http://sharepointpsscripts.codeplex.com/)   
  [How to Administer SSRS using PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   

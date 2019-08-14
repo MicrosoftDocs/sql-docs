@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server, configuring"
   - "configuration options [SMO]"
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configuring SQL Server in SMO

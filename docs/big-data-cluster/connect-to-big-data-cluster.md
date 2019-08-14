@@ -1,6 +1,5 @@
 ---
-title: Connect to master and HDFS
-Big data clusters
+title: Connect to master and HDFS Big data clusters
 description: Learn how to connect to the SQL Server master instance and the HDFS/Spark gateway for a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray

@@ -11,7 +11,7 @@ CTP 3.2 enables the following scenarios:
 
 ## Support
 
-SQL Server 2019 CTP 3.2 is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](http://aka.ms/sqleap), may have support to run SQL Server 2019 CTP 3.2 by special agreement, in consultation with Microsoft.
+SQL Server 2019 CTP 3.2 is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](https://aka.ms/sqleap), may have support to run SQL Server 2019 CTP 3.2 by special agreement, in consultation with Microsoft.
 
 Limited support for customers not in the early adoption program may be found at one of the following locations:
 

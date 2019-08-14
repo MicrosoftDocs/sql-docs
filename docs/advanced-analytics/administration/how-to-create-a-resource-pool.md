@@ -1,15 +1,16 @@
 ---
 title: How to create a resource pool for R and Python
-description: Define a SQL Server resource pool for R or Python processes on a SQL Server 2016 or SQL Server 2017 database engine instance.
+description: Define a SQL Server resource pool for R or Python processes on a SQL Server database engine instance.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# How to create a resource pool for machine learning in SQL Server
+# How to create a resource pool for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article describes how you can create and use a resource pool specifically for managing R and Python machine learning workloads in SQL Server. It assumes that you have already installed and enabled the machine learning features, and want to reconfigure the instance to support more fine-grained management of the resources used by external process such as R or Python.
@@ -183,7 +184,7 @@ To verify that the changes have been made, you should check the configuration of
   
      In this case, because the pools were created with an affinity of AUTO, no information is displayed. For more information, see [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
-## See also
+## Next steps
 
 For more information about managing server resources, see:
 

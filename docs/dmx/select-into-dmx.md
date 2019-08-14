@@ -34,7 +34,7 @@ FROM <existing model>
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  
   
  *expression*  
- An expression that evaluates to a valid filter condition on the training data. For more information about expressions that can be used as filters, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
+ An expression that evaluates to a valid filter condition on the training data. For more information about expressions that can be used as filters, see [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
  *existing model*  
  The name of the existing model to be copied.  

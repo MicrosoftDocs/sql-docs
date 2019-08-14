@@ -8,6 +8,7 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Operationalize R code using stored procedures in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ Because you can run R or Python from a stored procedure, you can execute scripts
 
 Scoring is an important task that can easily be automated, or started from external applications. You train the model beforehand, using R or Python or a stored procedure, and [save the model in binary format](../tutorials/walkthrough-build-and-save-the-model.md) to a table. Then, the model can be loaded into a variable as part of a stored procedure call, using one of these options for scoring from T-SQL:
 
-+ [Realtime](../real-time-scoring.md) scoring, optimized  for small batches
++ [Real-time scoring, optimized  for small batches
 + Single-row scoring, for calling from an application
 + [Native scoring](../sql-native-scoring.md), for fast batch prediction from SQL Server without calling R
 

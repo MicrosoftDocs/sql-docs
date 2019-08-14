@@ -26,7 +26,6 @@ Bulk access to Azure blob storage from SQL Server, requires at least [!INCLUDE[s
 
 > [!IMPORTANT]
 >  All the paths to the container and to the files on blob are `CASE SENSITIVE`. If not correct, it might return error like "Cannot bulk load. The file "file.csv" does not exist or you don't have file access rights."
-> "
 
 
 ## Create the credential   
@@ -36,23 +35,26 @@ All of the examples below require a database scoped credential referencing a sha
 > [!IMPORTANT]
 >  The external data source must be created with a database scoped credential that uses the `SHARED ACCESS SIGNATURE` identity. To create a shared access signature for your storage account, see the **Shared access signature** property on the storage account property page, in the Azure portal. For more information on shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). For more information on credentials, see [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
-Create a database scoped credential using the `IDENTITY` which must be `SHARED ACCESS SIGNATURE`. Use the secret from your Azure portal. For example:  
+Create a database scoped credential using the `IDENTITY` which must be `SHARED ACCESS SIGNATURE`. Use the SAS token generated for the blob storage account. Verify that your SAS token does not have a leading `?`, that you have at least read permission on the object that should be loaded, and that the expiration period is valid (all dates are in UTC time). 
+
+For example:  
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
+SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-07-30T18:25:19Z&spr=https&sig=KS51p%2BVnfUtLjMZtUTW1siyuyd2nlx294tL0mnmFsOk%3D';
 ```
 
 
 ## Accessing data in a CSV file referencing an Azure blob storage location   
-The following example uses an external data source pointing to an Azure storage account, named `newinvoices`.   
+The following example uses an external data source pointing to an Azure storage account, named `newinvoices`.  
+
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
         LOCATION = 'https://newinvoices.blob.core.windows.net', 
-        CREDENTIAL = UploadInvoices  
+        CREDENTIAL = 'UploadInvoices';
     );
 ```   
 

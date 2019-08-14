@@ -9,7 +9,7 @@ ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-author: XiaoyuL-Preview 
+author: XiaoyuMSFT 
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---

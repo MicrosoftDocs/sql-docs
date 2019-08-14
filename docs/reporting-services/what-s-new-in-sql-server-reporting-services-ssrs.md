@@ -21,7 +21,7 @@ For the current release notes, see [SQL Server 2017 Release Notes](../sql-server
 
 For information about Power BI Report Server, see [What is Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Download** ![download](../analysis-services/media/download.png "download")
+**Download** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
@@ -156,7 +156,7 @@ For more information on browser support, see [Browser Support for Reporting Serv
 2. Select the dashboard you want to pin the item to.
 3. Select how frequently you want the tile updated in the dashboard.
 
-![note](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
+![note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") The refresh is managed by  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] subscriptions and after the item is pinned, you can edit the subscription and configure a different  refresh schedule.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 

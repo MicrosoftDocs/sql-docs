@@ -8,8 +8,9 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Create a stored pProcedure using sqlrutils
+# Create a stored procedure using sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.
@@ -24,7 +25,7 @@ Also, because the input parameters for the R function will become the input para
 
 ### Inputs
 
-Among the input parameters there can be at most one data frame.
+Among the input parameters, there can be at most one data frame.
 
 The objects inside the data frame, as well as all other input parameters of the function, must be of the following R data types:
 - POSIXct
@@ -111,7 +112,7 @@ Both methods require that the stored procedure be registered in the database whe
 
 You can register the stored procedure using R, or you can run the CREATE PROCEDURE statement in T-SQL.
 
-- Using T-SQL.  If you are more comfortable with T-SQL, open SQl Server Management Studio (or any other client that can run SQL DDL commands) and execute the CREATE PROCEDURE statement using the code prepared by the `StoredProcedure` function.
+- Using T-SQL.  If you are more comfortable with T-SQL, open SQL Server Management Studio (or any other client that can run SQL DDL commands) and execute the CREATE PROCEDURE statement using the code prepared by the `StoredProcedure` function.
 - Using R. While you are still in your R environment, you can use the `registerStoredProcedure` function in **sqlrutils** to register the stored procedure with the database.
 
   For example, you could register the stored procedure **sp_rsample** in the instance and database defined in *sqlConnStr*, by making this R call:
@@ -130,7 +131,7 @@ After the stored procedure has been created, open a connection to the SQL databa
 
 ### Run using R
 
-Some additional preparation is needed If you want to execute the stored procedure from R code, rather from SQL Server. For example, if the stored procedure requires input values, you must set those input parameters before the function can be executed, and then pass those objects to the stored procedure in your R code.
+Some additional preparation is needed if you want to execute the stored procedure from R code, rather from SQL Server. For example, if the stored procedure requires input values, you must set those input parameters before the function can be executed, and then pass those objects to the stored procedure in your R code.
 
 The overall process of calling the prepared SQL stored procedure is as follows:
 

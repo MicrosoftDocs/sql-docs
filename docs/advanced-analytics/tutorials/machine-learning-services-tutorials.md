@@ -8,11 +8,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server Machine Learning tutorials in R and Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article provides a comprehensive list of tutorials and code samples demonstrating the machine learning features of [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
+This article provides a comprehensive list of tutorials and code samples demonstrating the machine learning features of [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
 + Quickstarts use built-in data or no data for fast exploration with least effort.
 + Tutorials go deeper with more tasks, larger datasets, and longer explanations.

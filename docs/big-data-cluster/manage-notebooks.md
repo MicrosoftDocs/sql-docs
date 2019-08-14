@@ -21,7 +21,7 @@ Originally implemented as an open source project, [notebooks](notebooks-guidance
 
 You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-In addition toe notebooks, users can view a collection of notebooks, which are called Jupyter Books. A Jupyter Book provides a table of contents to navigate a collection of notebooks so a user can easily find the notebook they need, whether to troubleshoot SQL Server or view cluster status.
+In addition to notebooks, users can view a collection of notebooks, which are called Jupyter Books. A Jupyter Book provides a table of contents to navigate a collection of notebooks so a user can easily find the notebook they need, whether to troubleshoot SQL Server or view cluster status.
 
 ## Prerequisites
 

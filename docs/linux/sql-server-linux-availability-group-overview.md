@@ -19,8 +19,8 @@ This article describes the characteristics of Always On Availability Groups (AGs
 
 From a high-level standpoint, availability groups under [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux are the same as they are on WSFC-based implementations. That means that all the limitations and features are the same, with some exceptions. The main differences include:
 
--   Microsoft Distributed Transaction Coordinator (DTC) is not supported under Linux in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. If your applications require the use of distributed transactions and need an AG, deploy [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Windows.
--   Linux-based deployments use Pacemaker instead of a WSFC.
+-   Microsoft Distributed Transaction Coordinator (DTC) is supported under Linux starting with SQL Server 2017 CU16. However, DTC is not yet supported on Availability Groups on Linux. If your applications require the use of distributed transactions and need an AG, deploy [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Windows.
+-   Linux-based deployments that require high availability use Pacemaker for clustering instead of a WSFC.
 -   Unlike most configurations for AGs on Windows except for the Workgroup Cluster scenario, Pacemaker never requires Active Directory Domain Services (AD DS).
 -   How to fail an AG from one node to another is different between Linux and Windows.
 -   Certain settings such as `required_synchronized_secondaries_to_commit` can only be changed via Pacemaker on Linux, whereas a WSFC-based install uses Transact-SQL.

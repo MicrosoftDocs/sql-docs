@@ -12,6 +12,7 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 manager: craigg
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Host database on managed instance
 

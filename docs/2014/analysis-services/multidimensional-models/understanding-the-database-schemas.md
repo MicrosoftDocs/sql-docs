@@ -65,7 +65,7 @@ manager: craigg
  Relationships  
  The wizard generates one relationship for each regular dimension relationship from the fact table to the dimension table's granularity attribute. If the granularity is based on the key attribute of the dimension table, the relationship is created in the database and in the data source view. If the granularity is based on another attribute, the relationship is created only in the data source view.  
   
- If you chose to generate indexes in the wizard, a non-clustered index is generated for each of these relationship columns.  
+ If you chose to generate indexes in the wizard, a nonclustered index is generated for each of these relationship columns.  
   
  Constraints  
  Primary keys are not generated on fact tables.  

@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn about SQL Server 2019 language extensions (preview) that run external scripts within SQL Server. 
 author: dphansen
 ms.author: davidph 
-ms.date: 07/25/2019
+ms.date: 08/14/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 Language Extensions is a feature of SQL Server used for executing external code. The relational data can be used in the external code using the [extensibility framework](concepts/extensibility-framework.md).
 
-In SQL Server 2019 CTP 3.2, Java is supported. The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
+In SQL Server 2019 RC 1, Java is supported. The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
 
 ## What you can do with Language Extensions
 
@@ -54,17 +54,11 @@ Execute Java code from within T-SQL script:
 
 + [Tutorial: Regular expressions with Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
-## Limitations in CTP 3.2
+## Limitations in RC 1
 
-SQL Server Language Extensions is currently in public preview. There are some limitations in CTP 3.2:
+SQL Server Language Extensions is currently in public preview. There are some limitations in RC 1:
 
-* The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
-
-* Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
-
-* Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
-
-* Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
++ The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 
 ## Next steps
 

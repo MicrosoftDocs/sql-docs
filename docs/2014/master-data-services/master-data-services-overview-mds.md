@@ -19,7 +19,7 @@ manager: craigg
   
 |||  
 |-|-|  
-|![Azure Virtual Machine](../../2014/master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Do you want to try out SQL Server 2016? Sign up for Microsoft Azure, and then go **[Here](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server 2016  already installed. You can delete the Virtual Machine when you're finished.|  
+|![Azure Virtual Machine](../../2014/master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Do you want to try out SQL Server 2016? Sign up for Microsoft Azure, and then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server 2016  already installed. You can delete the Virtual Machine when you're finished.|  
   
  For example, your online product model may contain entities such as product, color, and style. The  color entity may contain  members for the colors red, silver, and black.  
   

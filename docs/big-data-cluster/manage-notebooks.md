@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides an extension for Azure Data Studio that includes notebooks. A notebook includes documentation and code that you can use in Azure Data Studio to manage big data clusters for SQL Server.
 
-Originally implemented as an open source project, [notebooks](notebooks-guidance.md) have been implemented into [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
+Originally implemented as an open source project, [notebooks](notebooks-guidance.md) have been implemented into [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
 
 You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

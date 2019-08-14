@@ -115,7 +115,7 @@ manager: craigg
      ![Define Relationship dialog box](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Define Relationship dialog box")  
   
 ## Next Task in Lesson  
- [Defining a Fact Relationship](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
+ [Defining a Fact Relationship](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## See Also  
  [Attribute Relationships](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

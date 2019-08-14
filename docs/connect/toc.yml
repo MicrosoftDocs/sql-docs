@@ -17,7 +17,13 @@
   items:
   - name: Microsoft ADO.NET for SQL Server
     href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
+  - name: Getting Started with the SqlClient Driver
+    href: ../connect/ado-net/getting-started-with-the-sqlclient-driver.md
     items:
+    - name: Introduction to Microsoft.Data.SqlClient Namespace
+      href: ../connect/ado-net/introduction-to-microsoft-data-sqlclient-namespace.md
+    - name: SQL Server and ADO.NET
+      href: ../connect/ado-net/sql-server-and-ado-net.md
     - name: "Step 1: Configure development environment for ADO.NET development"
       href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
     - name: "Step 2: Create a SQL database for ADO.NET development"
@@ -26,10 +32,6 @@
       href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
     - name: "Step 4: Connect resiliently to SQL with ADO.NET"
       href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
-  - name: SQL Server and ADO.NET
-    href: ../connect/ado-net/index.md
-  - name: Introduction to Microsoft.Data.SqlClient Namespace
-    href: ../connect/ado-net/introduction-to-microsoft-data-sqlclient-namespace.md
   - name: SQL Server Security
     href: ../connect/ado-net/sql-server-security.md
     items:

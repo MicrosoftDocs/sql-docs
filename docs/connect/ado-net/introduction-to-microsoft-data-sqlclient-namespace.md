@@ -12,17 +12,17 @@ ms.author: genemi
 # Introduction to Microsoft.Data.SqlClient Namespace
 This page describes how Microsoft.Data.SqlClient namespace offers additional functionality over the existing System.Data.SqlClient namespace.
   
-## Release Notes
+## Release notes
 All release notes are available on the [GitHub Repository](https://github.com/dotnet/SqlClient/tree/master/release-notes).
 
-## New Features
+## New features
 
-### New features over .NET Framework 4.7.2 System.Data.SqlClient.
+### New features over .NET Framework 4.7.2 System.Data.SqlClient
 
 Data Classification - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
 UTF-8 support - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
 
-### New features over .NET Core 2.2 System.Data.SqlClient.
+### New features over .NET Core 2.2 System.Data.SqlClient
 
 Data Classification - Available in Azure SQL Database and Microsoft SQL Server 2019 since CTP 2.0.
 UTF-8 support - Available in Microsoft SQL Server SQL Server 2019 since CTP 2.3.
@@ -69,7 +69,7 @@ namespace Microsoft.Data.SqlClient.DataClassification
 }
 ```
 
-### UTF-8 Support
+### UTF-8 support
 
 UTF-8 support does not require any application code changes. These SqlClient changes simply optimize the communication between the client and server when the server supports UTF-8 and the underlying column collation is UTF-8. See the UTF-8 section under [What's new in SQL Server 2019 preview](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sqlallproducts-allversions#utf-8-support-ctp-23).
 
@@ -77,8 +77,9 @@ UTF-8 support does not require any application code changes. These SqlClient cha
 
 In general, existing documentation which uses System.Data.SqlClient on .NET Framework **and built-in column master key store providers** should now work with .NET Core, too.
 
-[Develop using Always Encrypted with .NET Framework Data Provider](https://docs.microsoft.com/sql/relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider?view=sql-server-2017)
-[Always Encrypted: Protect sensitive data and store encryption keys in the Windows certificate store](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+ [Develop using Always Encrypted with .NET Framework Data Provider](https://docs.microsoft.com/sql/relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider?view=sql-server-2017)
+
+ [Always Encrypted: Protect sensitive data and store encryption keys in the Windows certificate store](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 ### Authentication
 
@@ -87,6 +88,3 @@ Different authentication modes can be specified by using the _Authentication_ co
 > [!NOTE]
 > Custom key store providers, like the Azure Key Vault provider, will need to be updated to support Microsoft.Data.SqlClient. Similarly, enclave providers will also need to be updated to support Microsoft.Data.SqlClient.
 > Always Encrypted is only supported against .NET Framework and .NET Core targets. It is not supported against .NET Standard since .NET Standard is missing certain encryption dependencies.
-
-## See also
-- [ADO.NET Managed Providers and DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -205,6 +205,8 @@ For more details, see [What are SQL Server big data clusters](../big-data-cluste
 
 | New feature or update | Details |
 |:---|:---|
+|Query interleaving| See [Query interleaving](https://docs.microsoft.com/analysis-services/tabular-models/query-interleaving) |
+|MDX query support for tabular models with calculation groups | See [Calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). |
 |Calculation groups in tabular model| [Calculation groups in tabular model](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24) |
 |MDX query support for tabular models with calculation groups | See [Calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). |
 |Dynamic formatting of measures using calculation groups |This feature allows you to conditionally change format strings for measures with [calculation groups](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). For example, with currency conversion, a measure can be displayed using different foreign currency formats.|

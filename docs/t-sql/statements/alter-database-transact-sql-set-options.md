@@ -727,9 +727,6 @@ Disables the query store. OFF is the default value.
 CLEAR         
 Remove the contents of the query store.
 
-> [!NOTE]
-> For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], you must execute `ALTER DATABASE SET QUERY_STORE` from the user database. Executing the statement from another data warehouse instance is not supported.
-
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 Describes the operation mode of the query store. 
 

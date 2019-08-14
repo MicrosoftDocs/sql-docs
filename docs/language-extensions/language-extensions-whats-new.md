@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn about what's new SQL Server 2019 Language Extensions (preview). 
 author: dphansen
 ms.author: davidph 
-ms.date: 07/25/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

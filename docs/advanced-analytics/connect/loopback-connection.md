@@ -6,7 +6,8 @@ ms.technology: machine-learning
 ms.date: 08/15/2019  
 ms.topic: conceptual
 author: dphansen
-ms.author: davidph
+ms.author: anmunde
+ms.reviewer: dphansen
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Loopback connection to SQL Server from a Python or R script
@@ -30,11 +31,17 @@ Here is an example of the loopback connection string on Windows:
 
 ### Connection string on Linux
 
-For authentication on SQL Server on Linux, the Python or R script needs to use **ClientCertificate** and ClientKey attributes of the ODBC driver to authenticate as the same user that ran the sp_execute_external_script. This requires the use of latest odbc driver 17.4.1.1. The loopback connection string on linux looks like :
-"Driver=ODBC Driver 17 for SQL Server;Server=fe80::8012:3df5:0:5db1%eth0;Database=nameOfDatabase;ClientCertificate=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitecert.pem;ClientKey=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitekey.pem;TrustServerCertificate=Yes;Trusted_Connection=no;Encrypt=Yes"
-The server address, clientcertificate file location and client key file location are unique to every sp_execute_external_script and can be obtained by the use of the api - rxGetSqlLoopbackConnectionString() for R or rx_get_sql_loopback_connection_string() for Python as described below. 
+For authentication on SQL Server on Linux, the Python or R script needs to use **ClientCertificate** and **ClientKey** attributes of the ODBC driver to authenticate as the same user that executed `sp_execute_external_script`. This requires the use of latest odbc driver 17.4.1.1.
 
-Refer here for more information on connection string attributes: https://docs.microsoft.com/en-us/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes
+Here is an example of the loopback connection string on Linux:
+
+```
+"Driver=ODBC Driver 17 for SQL Server;Server=fe80::8012:3df5:0:5db1%eth0;Database=nameOfDatabase;ClientCertificate=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitecert.pem;ClientKey=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitekey.pem;TrustServerCertificate=Yes;Trusted_Connection=no;Encrypt=Yes"
+```
+
+The server address, clientcertificate file location, and client key file location are unique to every `sp_execute_external_script` and can be obtained by the use of the API **rx_get_sql_loopback_connection_string()** for Python or **rxGetSqlLoopbackConnectionString()** for R.
+
+For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](https://docs.microsoft.com/en-us/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
 
 
 ## rxGetSqlLoopbackConnectionString() in RevoScaleR for R

@@ -1,5 +1,5 @@
 ---
-title: "Oracle source | Microsoft Docs"
+title: "Oracle Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"
 ms.prod: sql
@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: gracegu
 ms.author: chugu
 ---
-# Oracle source
+# Oracle Source
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

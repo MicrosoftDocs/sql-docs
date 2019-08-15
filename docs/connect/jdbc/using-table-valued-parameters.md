@@ -1,7 +1,7 @@
 ---
-title: "Using Table-Valued Parameters | Microsoft Docs"
+title: "Using table-valued parameters | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/21/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,7 +11,7 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 ---
-# Using Table-Valued Parameters
+# Using table-valued parameters
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -32,7 +32,7 @@ Column values in table-valued parameters can be accessed using standard Transact
 | [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
 | The [Microsoft SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkId=120507) section of CodePlex        | Contains samples that demonstrate how to use SQL Server features and functionality  |
   
-## Passing Multiple Rows in Previous Versions of SQL Server  
+## Passing multiple rows in previous versions of SQL Server  
 
 Before table-valued parameters were introduced to SQL Server 2008, the options for passing multiple rows of data to a stored procedure or a parameterized SQL command were limited. A developer could choose from the following options for passing multiple rows to the server:  
   
@@ -44,7 +44,7 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 - Use the bcp utility program or the [SQLServerBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy(v=vs.110).aspx) object to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.  
   
-## Creating Table-Valued Parameter Types  
+## Creating table-valued parameter types  
 
 Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
 
@@ -60,7 +60,7 @@ CREATE PROCEDURE usp_UpdateCategories
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```
 
-## Modifying Data with Table-Valued Parameters (Transact-SQL)  
+## Modifying data with table-valued parameters (Transact-SQL)  
 
 Table-valued parameters can be used in set-based data modifications that affect multiple rows by executing a single statement. For example, you can select all the rows in a table-valued parameter and insert them into a database table, or you can create an update statement by joining a table-valued parameter to the table you want to update.  
   
@@ -80,7 +80,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```
 
-## Limitations of Table-Valued Parameters
+## Limitations of table-valued parameters
 
 There are several limitations to table-valued parameters:  
   
@@ -94,7 +94,7 @@ There are several limitations to table-valued parameters:
 
 - You can stream large objects in a table-valued parameter.  
   
-## Configuring a Table-Valued Parameter
+## Configuring a table-valued parameter
 
 Beginning with Microsoft JDBC Driver 6.0 for SQL Server, table-valued parameters are supported with a parameterized statement or a parameterized stored procedure. Table-valued parameters can be populated from a SQLServerDataTable, from a ResultSet or from a user provided implementation of the ISQLServerDataRecord interface. When setting a table-valued parameter for a prepared query, you must specify a type name which must match the name of a compatible type previously created on the server.  
   
@@ -119,7 +119,7 @@ pStmt.execute();
 > [!NOTE]  
 > See Section **Table-Valued Parameter API for the JDBC Driver** below for a complete list of APIs available for setting the table-valued parameter.  
   
-## Passing a Table-Valued Parameter as a SQLServerDataTable Object  
+## Passing a table-valued parameter as a SQLServerDataTable object  
 
 Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerDataTable class represents an in-memory table of relational data. This example demonstrates how to construct a table-valued parameter from in-memory data using the SQLServerDataTable object. The code first creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
 
@@ -148,7 +148,7 @@ pStmt.execute();
 > [!NOTE]  
 > See Section **Table-Valued Parameter API for the JDBC Driver** below for a complete list of APIs available for setting the table-valued parameter.  
   
-## Passing a Table-Valued Parameter as a ResultSet Object  
+## Passing a table-valued parameter as a ResultSet object  
 
 This example demonstrates how to stream rows of data from a ResultSet to a table-valued parameter. The code first retrieves data from a source table in a creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
 
@@ -169,7 +169,7 @@ pStmt.execute();
 > [!NOTE]  
 > See Section **Table-Valued Parameter API for the JDBC Driver** below for a complete list of APIs available for setting the table-valued parameter.  
 
-## Passing a Table-Valued Parameter as an ISQLServerDataRecord Object  
+## Passing a table-valued parameter as an ISQLServerDataRecord object  
 
 Beginning with Microsoft JDBC Driver 6.0 for SQL Server, a new interface ISQLServerDataRecord is available for streaming data (depending on how the user provides the implementation for it) using a table-valued parameter. The following example demonstrates how to implement the ISQLServerDataRecord interface and how to pass it as a table-valued parameter. For simplicity, the following example passes just one row with hardcoded values to the table-valued parameter. Ideally, the user would implement this interface to stream rows from any source, for example from text files.  
 
@@ -223,9 +223,9 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> See Section **Table-Valued Parameter API for the JDBC Driver** below for a complete list of APIs available for setting the table-valued parameter.
+> See Section **Table-valued parameter API for the JDBC driver** below for a complete list of APIs available for setting the table-valued parameter.
 
-## Table-Valued Parameter API for the JDBC Driver
+## Table-valued parameter API for the JDBC driver
 
 ### SQLServerMetaData
 
@@ -306,6 +306,6 @@ The following methods have been added to this class to support passing of table-
 | public final void setStructured(String paratemeterName, String tvpName, ResultSet tvpResultSet)             | Populates a table-valued parameter passed to a stored procedure with a ResultSet retrieved from another table. paratemeterName is the name of the parameter, tvpName is the name of the type TVP, and tvpResultSet is the source result set object.                                                                              |
 | public final void setStructured(String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | Populates a table-valued parameter passed to a stored procedure with an ISQLServerDataRecord object. ISQLServerDataRecord is used for streaming data and the user decides how to use it. paratemeterName is the name of the parameter, tvpName is the name of the type TVP, and tvpDataRecord is an ISQLServerDataRecord object. |
 
-## See Also
+## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

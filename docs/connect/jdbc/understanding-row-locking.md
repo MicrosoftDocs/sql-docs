@@ -1,7 +1,7 @@
 ---
-title: "Understanding Row Locking | Microsoft Docs"
+title: "Understanding row locking | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: MightyPen
 ms.author: genemi
 ---
 
-# Understanding Row Locking
+# Understanding row locking
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -26,6 +26,6 @@ Locking is used to assure transactional integrity and database consistency. Lock
 > [!NOTE]  
 > For more information about row locking in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see "Locking in the [!INCLUDE[ssDE](../../includes/ssde_md.md)]" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
 
-## See Also
+## See also
 
-[Managing Result Sets with the JDBC Driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)
+[Managing result sets with the JDBC driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)

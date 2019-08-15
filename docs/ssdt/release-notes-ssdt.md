@@ -79,13 +79,13 @@ _SSDT for Visual Studio 2017._
 
 | New item | Details |
 | :------- | :------ |
-| Fix an issue that package part cannot be correctly persisted when targeting to previous SQL Server version | &nbsp; |
-| Fix an issue that cannot add expression to precedence constraint when using package part | &nbsp; |
-| Fix an issue that the “Help” button of Power Query Source & Connection Manager doesn’t link to the correct document | &nbsp; |
-| Fix an issue that SSIS build version is not displayed in VS help window | &nbsp; |
-| Add the property “ConnectByProxy” for Ole DB and Flat File connection manager, which can enable access on-premise data with Self-hosted IR in Azure-SSIS IR | &nbsp; |
-| Fix an issue that ODBC components maps DT_DBDATE data type incorrectly | &nbsp; |
-| Add the property “ConnectUsingManagedIdentity” for ADO.NET and OLE DB connection manager, which enable managed identity authentication to connect to data source in Azure-SSIS IR | &nbsp; |
+| Fix an issue that package part cannot be correctly persisted when targeting to previous SQL Server version. | &nbsp; |
+| Fix an issue that cannot add expression to precedence constraint when using package part. | &nbsp; |
+| Fix an issue that the “Help” button of Power Query Source & Connection Manager doesn’t link to the correct document. | &nbsp; |
+| Fix an issue that SSIS build version is not displayed in VS help window. | &nbsp; |
+| Add the property “ConnectByProxy” for Ole DB and Flat File connection manager, which can enable access on-premise data with Self-hosted IR in Azure-SSIS IR. | &nbsp; |
+| Fix an issue that ODBC components maps DT_DBDATE data type incorrectly. | &nbsp; |
+| Add the property “ConnectUsingManagedIdentity” for ADO.NET and OLE DB connection manager, which enable managed identity authentication to connect to data source in Azure-SSIS IR. | &nbsp; |
 
 ### Known issues
 
@@ -107,20 +107,19 @@ _SSDT for Visual Studio 2017._
 
 ### What's New?
 
-#### SSIS
-
-| New item | Details |
-| :------- | :------ |
-| Add Power Query Source (Preview) for SSIS in ADF 2017. | &nbsp; |
-| Add back the support for SQL Server 2012. | &nbsp; |
-| Add Oracle source and destination for SQL Server 2019. | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT.<br/><br/>To design package targeting server version 2017 or below, please download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine. <br/>[Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
-| Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions. | &nbsp; |
-| Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1. | &nbsp; |
-| Fix an issue that, in some cases, saving the package causes Visual Studio to crash. | &nbsp; |
-| Fix an issue that, in some cases, the package cannot be executed. | This problem occurred when both of the following conditions are true:<br/><br/>&bull; &nbsp; Protection level is EncryptSensitiveWithPassword.<br/>&bull; &nbsp; Target server version is earlier than SQL Server 2017. |
-| Fix an issue that annotations with default font are not displayed in SSDT. | &nbsp; |
-| ISDeploymentWizard supports SQL authentication, Azure Active Directory integrated authentication, and Azure Active Directory password authentication in command-line mode. | &nbsp; |
-| &nbsp; | &nbsp; |
+| New Item | Details |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Add Power Query Source (Preview) for SSIS in ADF 2017. |
+| Integration Services (SSIS) | Add back the support for SQL Server 2012. |
+| Integration Services (SSIS) | Add Oracle source and destination for SQL Server 2019. |
+| Integration Services (SSIS) | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT. <br/></br> To design package targeting server version 2017 or below, please download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine. <br/></br> [Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017 ](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016 ](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014 ](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012 ](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions. |
+| Integration Services (SSIS) | Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1. |
+| Integration Services (SSIS) | Fix an issue that, in some cases, saving the package causes Visual Studio to crash. |
+| Integration Services (SSIS) | Fix an issue that, in some cases, the package cannot be executed. |
+| Integration Services (SSIS) | This problem occurred when both of the following conditions are true:< br />< br /> &bull;   Protection level is EncryptSensitiveWithPassword.< br /> &bull;   Target server version is earlier than SQL Server 2017.          |
+| Integration Services (SSIS) | Fix an issue that annotations with default font are not displayed in SSDT. |
+| Integration Services (SSIS) | ISDeploymentWizard supports SQL authentication, Azure Active Directory integrated authentication, and Azure Active Directory password authentication in command-line mode. |
 
 ### Known issues
 

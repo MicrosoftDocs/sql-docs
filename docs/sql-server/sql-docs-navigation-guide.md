@@ -41,7 +41,7 @@ Entries in the TOC that have a `>>` indicate that you will be taken away from do
 
 ![TOC navigation markers](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-If you navigate to one of these pages, you can come back to the main SQL Server technical page, and table of contents, by selecting the "Welcome to SQL Server >>" entry found at the top of each of these table of contents. 
+If you navigate to one of these pages, you can come back to the main SQL Server technical page, and table of contents, by selecting the "Welcome to SQL Server >" entry found at the top of each of these table of contents. 
 
 ![Navigate back to SQL toc](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 

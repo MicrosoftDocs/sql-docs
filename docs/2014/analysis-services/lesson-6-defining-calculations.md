@@ -49,8 +49,8 @@ manager: craigg
  [Lesson 7: Defining Key Performance Indicators &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## See Also  
- [Analysis Services Tutorial Scenario](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
- [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
+ [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Create Named Sets](multidimensional-models/create-named-sets.md)   
  [Create Calculated Members](multidimensional-models/create-calculated-members.md)  
   

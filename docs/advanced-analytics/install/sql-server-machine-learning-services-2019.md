@@ -14,6 +14,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 This article describes the changes to the isolation mechanism in Machine Learning Services in SQL Server 2019 on Windows. These changes affect **SQLRUserGroup**, firewall rules, file permission, and implied authentication.
 
+For more information, see how to install [SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md).
+
 ## Changes to isolation mechanism
 
 On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes. This change replaces local worker accounts with [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), an isolation technology for client applications running on Windows. 

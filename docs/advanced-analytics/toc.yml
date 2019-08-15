@@ -17,7 +17,7 @@
     href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: Differences in SQL Server 2019
+  - name: Isolation changes in SQL Server 2019
     href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
   - name: Install ML Services on Windows
     href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md

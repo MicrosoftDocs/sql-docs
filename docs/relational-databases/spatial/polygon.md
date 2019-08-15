@@ -43,9 +43,9 @@ As shown in the illustration:
  Accepted **Polygon** instances are instances that can be stored in a **geometry** or **geography** variable without throwing an exception. The following are accepted **Polygon** instances:  
   
 -   An Empty **Polygon** instance  
--   A **Polygon** instance that has an acceptable exterior ring and zero or more acceptable interior rings  
+-   A **Polygon** instance that has an acceptable exterior ring (**LineString**) and zero or more acceptable interior rings (**LineString**s)  
   
-The following criteria are needed for a ring to be acceptable.  
+The following criteria are needed for a ring (**LineString**) to be acceptable.  
   
 -   The **LineString** instance must be accepted.  
 -   The **LineString** instance must have at least four points.  

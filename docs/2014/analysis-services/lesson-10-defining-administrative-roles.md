@@ -19,7 +19,7 @@ manager: craigg
   
  This lesson contains the following task:  
   
- [Granting Process Database Permissions](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
+ [Granting Process Database Permissions](lesson-10-granting-process-database-permissions.md)  
  In this task, you define a security role that has permissions to process the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, and then you test this security role.  
   
 ## See Also  

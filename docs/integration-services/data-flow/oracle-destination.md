@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: gracegu
 ms.author: chugu
 ---
-# Oracle Destination
+# Oracle destination
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -25,7 +25,7 @@ The Oracle destination has one regular input and one error output.
 Columns of unsupported data types are deleted from columns with a warning before mapping.
 For more information, see [Data Type Support](oracle-data-type-support.md).
 
-## Load Options
+## Load options
 
 Two access load modes are supported. The mode can be set in the [Oracle Destination Editor (Connection Manager Page)](#oracle-destination-editor-connection-manager-page). The two modes are:
 
@@ -35,7 +35,7 @@ Details on how to configure this mode, see [Oracle Destination Editor (Connectio
 - Fast load using Direct Path: This mode is to use the direct path mode of the driver for loading Oracle table. There are restrictions when using this mode, refer to Oracle documentation for details.  
 Details on how to configure this mode, see [Oracle Destination Editor (Connection Manager Page)](#oracle-destination-editor-connection-manager-page) and [Oracle Destination Custom Properties](#oracle-destination-custom-properties).
 
-## Error Handling
+## Error handling
 
 The Oracle destination has an error output. The component error output includes the following output columns:
 
@@ -65,11 +65,11 @@ See Oracle documentation regarding restrictions when using Parallel direct path 
 
 For more information, see [Oracle Destination Custom Properties](#oracle-destination-custom-properties).
 
-## Troubleshooting the Oracle Destination
+## Troubleshooting the Oracle destination
 
 You can log the ODBC calls that the Oracle source makes to Oracle data sources to troubleshoot the data exporting. To log the ODBC calls that the Oracle source makes to Oracle data sources, enable the ODBC driver manager trace. For more information, see the Microsoft documentation on *How To Generate an ODBC Trace with ODBC the Data Source Administrator.*
 
-## Oracle Destination Custom Properties
+## Oracle destination custom properties
 
 The following table describes the custom properties of the Oracle destination. All properties are read/write.
 
@@ -86,7 +86,7 @@ The following table describes the custom properties of the Oracle destination. A
 |TransactionSize|Integer|The number of inserts that can be made in a single transaction. The default is the **BatchSize**.|Used only in batch mode.|
 |TransferBufferSize|Integer|The size of the transfer buffer. The default value is 64 KB.|Used only in Fast Load mode.|
 
-## Configuring the Oracle Destination
+## Configuring the Oracle destination
 
 Oracle destination can be configured programmatically or through the SSIS Designer.
 
@@ -107,7 +107,7 @@ To open the **Advanced Editor** dialog box:
 
 For more information about the properties that you can set in the Advanced Editor dialog box, see [Oracle Destination Custom Properties](#oracle-destination-custom-properties).
 
-## Oracle Destination Editor (Connection Manager Page)
+## Oracle Destination Editor (Connection Manager page)
 
 Use the **Connection Manager** page of the **Oracle Destination Editor** dialog box to select the Oracle connection manager for the destination. This page also lets you select a table or view from the database.
 
@@ -142,7 +142,7 @@ Select the method for selecting data from the source. The options are shown in t
 
 Click **View Existing Data** to view up to 200 rows of data for the table that you selected.
 
-## Oracle Destination Editor (Mappings Page)
+## Oracle Destination Editor (Mappings page)
 
 Use the **Mappings** page of the **Oracle Destination Editor** dialog box to map input columns to destination columns.
 
@@ -176,7 +176,7 @@ View all available destination columns, both mapped and unmapped.
 >
 >Columns of unsupported data types will be deleted from mapping with a warning.
 
-## Oracle Destination Editor (Error Output Page)
+## Oracle Destination Editor (Error Output page)
 
 Use the Error Output page of the Oracle Destination Editor dialog box to select error handling options.
 
@@ -199,7 +199,7 @@ Select how the Oracle source should handle errors in a flow: ignore the failure,
 
 Select how the Oracle source should handle truncation in a flow: ignore the failure, redirect the row, or fail the component.
 
-## Next Steps
+## Next steps
 
 - Configure [Oracle Connection Manager](oracle-connection-manager.md).
 - Configure [Oracle Source](oracle-source.md).

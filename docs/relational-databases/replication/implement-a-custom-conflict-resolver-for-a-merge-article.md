@@ -17,13 +17,13 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: "MashaMSFT"
 ms.author: "mathoma"
 ---
-# Implement a custom conflict resolver for a merge article
+# Implement a custom conflict resolver for a Merge article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to implement a custom conflict resolver for a merge article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or a [COM-based custom resolver](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+  This topic describes how to implement a custom conflict resolver for a Merge article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or a [COM-based custom resolver](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
  **In this topic**  
   
--   **Implement a custom conflict resolver for a merge article, using:**  
+-   **Implement a custom conflict resolver for a Merge article, using:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,11 +48,11 @@ ms.author: "mathoma"
     |**\@subscriber_db**|**sysname**|Name of the database from which a conflicting change is being propagated.|  
     |**\@log_conflict OUTPUT**|**int**|Sets whether the merge process should log a conflict for later resolution:<br /><br /> **0** = Do not log the conflict.<br /><br /> **1** = Subscriber is the conflict loser.<br /><br /> **2** = Publisher is the conflict loser.|  
     |**\@conflict_message OUTPUT**|**nvarchar(512)**|Message to be given about the resolution if the conflict is logged.|  
-    |**\@destowner**|**sysname**|The owner of the published table at the subscriber.|  
+    |**\@destowner**|**sysname**|The owner of the published table at the Subscriber.|  
   
      This stored procedure uses the values passed by the Merge Agent to these parameters to implement your custom conflict resolution logic. It must return a single row result set that's identical in structure to the base table and that contains the data values for the winning version of the row.  
   
-2.  Grant EXECUTE permissions on the stored procedure to any logins used by subscribers to connect to the Publisher.  
+2.  Grant EXECUTE permissions on the stored procedure to any logins used by Subscribers to connect to the Publisher.  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -71,7 +71,7 @@ ms.author: "mathoma"
 2.  Execute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **\@publication**, **\@article**, a value of **resolver_info** for **\@property**, and the name of the stored procedure that implements the conflict resolver logic for **\@value**.  
   
 ##  <a name="COM"></a> Using a COM-based custom resolver  
- The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and to resolve conflicts that occur during the merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a merge article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLLs), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. This kind of COM–based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
+ The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and to resolve conflicts that occur during the Merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a Merge article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLLs), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. This kind of COM–based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
   
 #### To create and register a COM-based custom conflict resolver  
   
@@ -88,7 +88,7 @@ ms.author: "mathoma"
 6.  Deploy the library in the directory that contains the Merge Agent executable (usually \Microsoft SQL Server\100\COM).  
   
     > [!NOTE]  
-    >  A custom conflict resolver must be deployed at the subscriber for a pull subscription, at the Distributor for a push subscription, or at the web server used with web synchronization.  
+    >  A custom conflict resolver must be deployed at the Subscriber for a pull subscription, at the Distributor for a push subscription, or at the Web server used with Web synchronization.  
   
 7.  Register the custom conflict resolver library by running regsvr32.exe from the deployment directory as follows:  
   
@@ -103,7 +103,7 @@ ms.author: "mathoma"
     > [!NOTE]  
     >  When it's no longer needed, you can unregister a custom conflict resolver by using [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md).  
   
-10. (Optional) On a cluster, repeat steps 5-8 to register the custom resolver on all nodes of the cluster. These steps are required to make sure that the custom resolver can properly load the reconciler following a failover.
+10. (Optional) On a cluster, repeat steps 6-9 to register the custom resolver on all nodes of the cluster. These steps are required to make sure that the custom resolver can properly load the reconciler following a failover.
   
 #### To use a custom conflict resolver with a new table article  
   

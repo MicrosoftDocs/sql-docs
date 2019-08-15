@@ -118,8 +118,8 @@ ms.author: "mathoma"
 2.  Execute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **\@publication**, **\@article**, a value of **article_resolver** for **\@property**, and the friendly name of the article resolver from step 1 for **\@value**.  
   
 
-## See Also  
- [Advanced merge replication conflict detection and resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+## See also  
+ [Advanced Merge replication conflict detection and resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-based custom resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

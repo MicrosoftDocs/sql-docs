@@ -23,9 +23,9 @@ ms.author: genemi
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Introduction to Microsoft.Data.SqlClient Namespace](introduction-to-microsoft-data-sqlclient-namespace.md|Introduction page for Microsoft.Data.SqlClient Namespace.|  
+|[Introduction to Microsoft.Data.SqlClient Namespace](introduction-to-microsoft-data-sqlclient-namespace.md)|Introduction page for Microsoft.Data.SqlClient Namespace.|  
 |[Download Microsoft SqlClient Data Provider for SQL Server](download-microsoft-sqlclient-data-provider-for-sql-server.md)|Download page for ADO.NET and Microsoft SqlClient Data Provider for SQL Server.|  
-|[.NET Framework Support Lifecycle](net-framework-support-lifecycle.md)|Page that contains product support lifecycle information.|  
+|[SqlClient Driver Support Lifecycle](sqlclient-driver-support-lifecycle.md)|Page that contains product support lifecycle information.|  
 |[Finding Additional SqlClient Driver information](finding-additional-sqlclient-driver-information.md)|Page that contains useful information regarding the driver.|  
 
 ## See Also  

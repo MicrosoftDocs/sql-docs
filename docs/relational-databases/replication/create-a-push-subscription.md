@@ -187,8 +187,8 @@ You can create push subscriptions programmatically by using replication stored p
   
     -   The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> fields of <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Distribution Agent runs at the distributor. This account is used to make local connections to the distributor and to make remote connections by using Windows Authentication.  
   
-        > [!NOTE]
-        > Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the **sysadmin** fixed server role, but we recommend it. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent security model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+       > [!NOTE]
+       > Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the **sysadmin** fixed server role, but we recommend it. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent security model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
     -   (Optional) A value of **true** (the default) for <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> to create an agent job that is used to synchronize the subscription. If you specify **false**, the subscription can only be synchronized programmatically.  
   

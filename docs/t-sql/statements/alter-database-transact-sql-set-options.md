@@ -2911,7 +2911,7 @@ SET
 
 <auto_option> ::=
 {
-    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] }
+    AUTO_CREATE_STATISTICS { OFF | ON  }
 }
 
 <db_encryption_option> ::=
@@ -2972,19 +2972,9 @@ Sets the database to be encrypted.
 OFF         
 Sets the database to not be encrypted. 
 
-SUSPEND         
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])         
-Can be used to pause the encryption scan after Transparent Data Encryption has been enabled or disabled, or after the encryption key has been changed.
-
-RESUME         
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])         
-Can be used to resume a previously paused encryption scan.
-
 For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
 When encryption is enabled at the database level, all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to **READ ONLY**, the database encryption operation will fail.
-
-You can see the encryption state of the database as well as the state of the encryption scan by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
 **\<query_store_options> ::=**         
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
@@ -3083,7 +3073,7 @@ The owner of the database cannot alter the database unless the owner is a member
 The following example enables the query store and configures query store parameters.
 
 ```sql
-ALTER DATABASE AdventureWorks2012
+ALTER DATABASE AdventureWorksDW
 SET QUERY_STORE = ON
     (
       OPERATION_MODE = READ_WRITE,
@@ -3100,7 +3090,7 @@ SET QUERY_STORE = ON
 The following example enables the query store and configures query store parameters.
 
 ```sql
-ALTER DATABASE AdventureWorks2016
+ALTER DATABASE AdventureWorksDW
 SET QUERY_STORE = ON
     (
       OPERATION_MODE = READ_WRITE, 
@@ -3119,7 +3109,7 @@ SET QUERY_STORE = ON
 The following example enables the query store and configures query store parameters.
 
 ```sql
-ALTER DATABASE AdventureWorks2016 
+ALTER DATABASE AdventureWorksDW 
 SET QUERY_STORE = ON 
     (
       OPERATION_MODE = READ_WRITE, 
@@ -3143,14 +3133,14 @@ SET QUERY_STORE = ON
 ### D. Enable result set caching for a database
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
 ### D. Disable result set caching for a database
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 

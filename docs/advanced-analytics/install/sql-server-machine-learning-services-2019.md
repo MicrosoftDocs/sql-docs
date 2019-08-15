@@ -1,16 +1,20 @@
 ---
-title: Differences in SQL Server 2019
-description: Learn what's new for R and Python SQL Server machine learning extensions in the SQL Server 2019 preview release.
+title: 'Isolation changes for Windows'
+description: This article describes the changes to the isolation mechanism in Machine Learning Services in SQL Server 2019 on Windows. These changes affect SQLRUserGroup, firewall rules, file permission, and implied authentication.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Differences in SQL Server Machine Learning Services installation in SQL Server 2019  
+# SQL Server 2019 on Windows: Isolation changes for Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+This article describes the changes to the isolation mechanism in Machine Learning Services in SQL Server 2019 on Windows. These changes affect **SQLRUserGroup**, firewall rules, file permission, and implied authentication.
+
+## Changes to isolation mechanism
 
 On Windows, SQL Server 2019 Setup changes the isolation mechanism for external processes. This change replaces local worker accounts with [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), an isolation technology for client applications running on Windows. 
 
@@ -57,5 +61,4 @@ A symbolic link is created to the current default **R_SERVICES**  and **PYTHON_S
 ## See also
 
 + [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md)
-
-+ [Install SQL Server 2019 Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md)
++ [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md)

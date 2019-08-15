@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 # Loopback connection to SQL Server from a Python or R script
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Learn how to use a loopback connection to connect back to SQL Server over [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) to read or write data from a Python or R script executed from `sp_execute_external_script`. You can use this when you can't use the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script`.
+Learn how to use a loopback connection to connect back to SQL Server over [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) to read or write data from a Python or R script executed from `sp_execute_external_script`. You can use this when using the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script` are not possible.
 
 ## Connection string
 
@@ -43,9 +43,9 @@ The server address, clientcertificate file location, and client key file locatio
 
 For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](https://docs.microsoft.com/en-us/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
 
-## Generate connection string with rx_get_sql_loopback_connection_string() in revoscalepy for Python
+## Generate connection string with revoscalepy for Python
 
-Use the API **rx_get_sql_loopback_connection_string()** in [revoscalepy](../python/ref-py-revoscalepy.md) to generate a correct connection string for a loopback connection in a Python script.
+You can use the API **rx_get_sql_loopback_connection_string()** in [revoscalepy](../python/ref-py-revoscalepy.md) to generate a correct connection string for a loopback connection in a Python script.
 
 It accepts the following arguments:
 
@@ -88,9 +88,9 @@ WITH RESULT SETS ((col1 int, col2 int))
 GO
 ```
 
-## Generate connection string with rxGetSqlLoopbackConnectionString() in RevoScaleR for R
+## Generate connection string with RevoScaleR for R
 
-Use the API **rxGetSqlLoopbackConnectionString()** in [RevoScaleR](../r/ref-r-revoscaler.md) to generate a correct connection string for a loopback connection in an R script.
+You can use the API **rxGetSqlLoopbackConnectionString()** in [RevoScaleR](../r/ref-r-revoscaler.md) to generate a correct connection string for a loopback connection in an R script.
 
 It accepts the following arguments:
 
@@ -107,7 +107,7 @@ Example for SQL Server on Windows:
 EXECUTE sp_execute_external_script
 @language = N'R',
 @script = N'
-    loopbackConnectionString <-  rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="SQL Server")
+    loopbackConnectionString <- rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="SQL Server")
     print(paste("Connection String:", loopbackConnectionString))
     dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", connectionString = loopbackConnectionString)
     OutputDataSet <- rxDataStep(dataSet)

@@ -1,5 +1,5 @@
 ---
-title: "Oracle Source | Microsoft Docs"
+title: "Oracle source | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"
 ms.prod: sql
@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: gracegu
 ms.author: chugu
 ---
-# Oracle Source
+# Oracle source
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -22,7 +22,7 @@ The Oracle source extracts data from Oracle Database with below modes:
 
 The source uses an Oracle Connection Manager to connect to Oracle source. For more information, see [Oracle Connection Manager](oracle-connection-manager.md).
 
-## Error Output
+## Error output
 
 Error output includes the following columns:  
 
@@ -35,11 +35,11 @@ Error output includes the following columns:
 
 The Oracle source returns errors occurred during loading and extraction process in the error output. For more information, see [Oracle Source Editor (Error Output Page)](#oracle-source-editor-error-output-page).
 
-## Troubleshooting the Oracle Source
+## Troubleshooting the Oracle source
 
 You can log the ODBC calls that the Oracle source makes to Oracle data sources to troubleshoot the data exporting. To log the ODBC calls that the Oracle source makes to Oracle data sources, enable the ODBC driver manager trace. For more information, see the Microsoft documentation on *How To Generate an ODBC Trace with ODBC the Data Source Administrator.*
 
-## Oracle Source Custom Properties
+## Oracle source custom properties
 
 The custom properties of the Oracle source are as below. All properties are read/write.
 
@@ -52,7 +52,7 @@ The custom properties of the Oracle source are as below. All properties are read
 |SqlCommand|String|The SQL command to be executed when AccessMode is set to SQL Command.|
 |TableName|String|The name of the table with the data to be used when AccessMode is set to Table Name.|
 
-## Configuring the Oracle Source
+## Configuring the Oracle source
 
 You can configure the Oracle Source programmatically or through the SSIS Designer.
 
@@ -74,7 +74,7 @@ To open the **Advanced Editor** dialog box:
 
 For more information about the properties that you can set in the **Advanced Editor** dialog box, see [Oracle Source Custom Properties](#oracle-source-custom-properties).
 
-## Oracle Source Editor (Connection Manager Page)
+## Oracle Source Editor (Connection Manager page)
 
 On **Connection Manager** page, **Oracle Source Editor** dialog box is to select Oracle Database as source, table, or view from the database.
 
@@ -106,7 +106,7 @@ Select the method for selecting data from the source. The options are shown in t
 
 Click **Preview** to view up to the first 200 rows of the data extracted from the table or view you selected.
 
-## Oracle Source Editor (Columns Page)
+## Oracle Source Editor (Columns page)
 
 On **Columns** page, **Oracle Source Editor** dialog box is used to map an output column to each external (source) column.
 
@@ -138,7 +138,7 @@ The name of the selected external (source) column is the default output name. Wh
 >
 >If there are columns with unsupported data types, there will be a warning shown the data types are not supported, and related columns will be removed from mapping columns.
 
-## Oracle Source Editor (Error Output Page)
+## Oracle Source Editor (Error Output page)
 
 Use the **Error Output** page of the **Oracle Source Editor** dialog box to select error handling options.
 
@@ -161,7 +161,7 @@ Select how the Oracle source should handle errors in a flow: ignore the failure,
 
 Select how the Oracle source should handle truncation in a flow: ignore the failure, redirect the row, or fail the component.
 
-## Next Steps
+## Next steps
 
 - Configure [Oracle Destination](oracle-destination.md).
 - If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).

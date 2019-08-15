@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Python tutorials for SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes the Python tutorials for in-database analytics on [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
+This article describes the Python tutorials for [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
 + Learn how to run Python scripts.
 + Build, train, and deploy Python models to SQL Server.

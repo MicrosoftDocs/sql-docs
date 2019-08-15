@@ -124,7 +124,7 @@ manager: kfile
  In this task, you will create a new user role. This role will include a row filter defining which rows of the Sales Territory table are visible to users. The filter is then applied in the one-to many relationship direction to all other tables related to Sales Territory. You will also apply a simple filter that secures the entire Employee Security table from being queryable by any user that is a member of the role.  
   
 > [!NOTE]  
->  The Sales Employees by Territory role you create in this lesson restricts members to browse (or query) only sales data for the sales territory to which they belong. If you add a user as a member to the Sales Employees by Territory role that also exists as a member in a role created in [Lesson 12: Create Roles](https://docs.microsoft.com/analysis-services/lesson-11-create-roles), you will get a combination of permissions. When a user is a member of multiple roles, the permissions, and row filters defined for each role are cumulative. That is, the user will have the greater permissions determined by the combination of roles.  
+>  The Sales Employees by Territory role you create in this lesson restricts members to browse (or query) only sales data for the sales territory to which they belong. If you add a user as a member to the Sales Employees by Territory role that also exists as a member in a role created in [Lesson 12: Create Roles](../analysis-services/lesson-11-create-roles.md), you will get a combination of permissions. When a user is a member of multiple roles, the permissions, and row filters defined for each role are cumulative. That is, the user will have the greater permissions determined by the combination of roles.  
   
 #### To create a Sales Employees by Territory user role  
   

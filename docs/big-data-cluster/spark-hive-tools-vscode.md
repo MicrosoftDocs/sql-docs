@@ -22,7 +22,7 @@ Spark & Hive Tools can be installed on platforms that are supported by Visual St
 
 The following items are required for completing the steps in this article:
 
-- A SQL Server big data cluster. See [SQL Server big data clusters](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+- A SQL Server big data cluster. See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono is only required for Linux and macOS.
 - [Set up PySpark interactive environment for Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
@@ -250,4 +250,4 @@ Spark & Hive for Visual Studio Code supports the following features:
 3. Review **OUTPUT** view for verification.  
 
 ## Next steps
-For more information on SQL Server big data cluster and related scenarios, See [SQL Server big data clusters](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+For more information on SQL Server big data cluster and related scenarios, See [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).

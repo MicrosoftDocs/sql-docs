@@ -1,7 +1,7 @@
 ---
 title: Configure minikube
 titleSuffix: SQL Server big data clusters
-description: Learn how to configure minikube for SQL Server 2019 big data cluster (preview) deployments on a single machine.
+description: Learn how to configure minikube for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments on a single machine.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to configure **minikube** on a single machine for SQL Server 2019 big data cluster (preview) deployments. Minikube is a tool that makes it easy to run Kubernetes on a single machine like a laptop or a desktop. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day. 
+This article describes how to configure **minikube** on a single machine for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments. Minikube is a tool that makes it easy to run Kubernetes on a single machine like a laptop or a desktop. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day. 
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ This article describes how to configure **minikube** on a single machine for SQL
 
 ## Install minikube
 
-Install minikube release according to the instructions for the [v1.3.0 release](https://github.com/kubernetes/minikube/releases/tag/v1.3.0). The SQL Server 2019 big data cluster (preview) only works with version v1.0.0 and up.
+Install minikube release according to the instructions for the [v1.3.0 release](https://github.com/kubernetes/minikube/releases/tag/v1.3.0). The [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] only works with version v1.0.0 and up.
 
 ## Create a minikube cluster
 
@@ -66,4 +66,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 The steps in this article configured a minikube cluster. The next step is to deploy SQL Server 2019 big data cluster. For instructions, see the following article:
 
-[Deploy SQL Server 2019 big data clusters on Kubernetes](deployment-guidance.md#deploy)
+[Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] on Kubernetes](deployment-guidance.md#deploy)

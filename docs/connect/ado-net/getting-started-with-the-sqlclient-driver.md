@@ -13,11 +13,9 @@ ms.author: genemi
 ---
 # Getting Started with the SqlClient Driver
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## Getting Started  
-* [Introduction to Microsoft.Data.SqlClient Namespace](introduction-to-microsoft-data-sqlclient-namespace.md)  
-* [SQL Server and ADO.NET](sql-server-and-ado-net.md)  
 * [Step 1: Configure development environment for ADO.NET development](step-1-configure-development-environment-for-ado-net-development.md)  
 * [Step 2: Create a SQL database for ADO.NET development](step-2-create-a-sql-database-for-ado-net-development.md)  
 * [Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  

@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # CLR User-Defined Functions
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 User-defined functions are routines that can take parameters, perform calculations or other actions, and return a result. You can write user-defined functions in any Microsoft .NET Framework programming language, such as Microsoft Visual Basic .NET or Microsoft Visual C#.  
   
  For more detailed information, see [CLR User-Defined Functions](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  

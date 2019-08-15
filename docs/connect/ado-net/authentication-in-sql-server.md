@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # Authentication in SQL Server
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 SQL Server supports two authentication modes, Windows authentication mode and mixed mode.  
   
 - Windows authentication is the default, and is often referred to as integrated security because this SQL Server security model is tightly integrated with Windows. Specific Windows user and group accounts are trusted to log in to SQL Server. Windows users who have already been authenticated do not have to present additional credentials.  

@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # Authorization and Permissions in SQL Server
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 When you create database objects, you must explicitly grant permissions to make them accessible to users. Every securable object has permissions that can be granted to a principal using permission statements.  
   
 ## The Principle of Least Privilege  

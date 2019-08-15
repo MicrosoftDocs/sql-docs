@@ -13,6 +13,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # Enabling Multiple Active Result Sets
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 Multiple Active Result Sets (MARS) is a feature that works with SQL Server to allow the execution of multiple batches on a single connection. When MARS is enabled for use with SQL Server, each command object used adds a session to the connection.  
   
 > [!NOTE]

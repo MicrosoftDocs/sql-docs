@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # SQL Server Data Operations in ADO.NET
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 This section describes SQL Server features and functionality that are specific to the .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>).  
   
 ## In This Section  

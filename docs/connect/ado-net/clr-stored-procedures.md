@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # CLR Stored Procedures
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 Stored procedures are routines that cannot be used in scalar expressions. They can return tabular results and messages to the client, invoke data definition language (DDL) and data manipulation language (DML) statements, and return output parameters.  
   
 > [!NOTE]

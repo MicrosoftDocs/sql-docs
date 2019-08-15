@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # SQL Server Features and ADO.NET
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 The topics in this section discuss features in SQL Server that are targeted at developing database applications using ADO.NET.  
   
  For more information, see SQL Server Books Online for the version of SQL Server you are using, as listed in the following table.  

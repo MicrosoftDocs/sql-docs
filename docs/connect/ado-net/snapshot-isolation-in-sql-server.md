@@ -13,6 +13,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # Snapshot Isolation in SQL Server
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 Snapshot isolation enhances concurrency for OLTP applications.  
   
 ## Understanding Snapshot Isolation and Row Versioning  

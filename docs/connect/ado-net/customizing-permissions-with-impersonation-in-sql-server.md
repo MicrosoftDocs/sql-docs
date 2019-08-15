@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # Customizing Permissions with Impersonation in SQL Server
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 Many applications use stored procedures to access data, relying on ownership chaining to restrict access to base tables. You can grant EXECUTE permissions on stored procedures, revoking or denying permissions on the base tables. SQL Server does not check the permissions of the caller if the stored procedure and tables have the same owner. However, ownership chaining doesn't work if objects have different owners or in the case of dynamic SQL.  
   
  You can use the EXECUTE AS clause in a stored procedure when the caller doesn't have permissions on the referenced database objects. The effect of the EXECUTE AS clause is that the execution context is switched to the proxy user. All code, as well as any calls to nested stored procedures or triggers, executes under the security context of the proxy user. Execution context is reverted to the original caller only after execution of the procedure or when a REVERT statement is issued.  

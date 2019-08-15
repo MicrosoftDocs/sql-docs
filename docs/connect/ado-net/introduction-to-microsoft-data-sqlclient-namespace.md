@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # Introduction to Microsoft.Data.SqlClient Namespace
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 This page describes how Microsoft.Data.SqlClient namespace offers additional functionality over the existing System.Data.SqlClient namespace.
   
 ## Release notes

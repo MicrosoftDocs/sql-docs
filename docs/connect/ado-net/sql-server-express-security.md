@@ -10,6 +10,9 @@ author: MightyPen
 ms.author: genemi
 ---
 # SQL Server Express Security
+
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 Microsoft SQL Server Express Edition (SQL Server Express) is based on Microsoft SQL Server, and supports most of the features of the database engine. It is designed so that nonessential features and network connectivity are off by default. This reduces the surface area available for attack by a malicious user.  
   
  SQL Server Express is usually installed as a named instance. The default name of the instance is `SQLExpress`. A named instance is identified by the network name of the computer plus the instance name that you specify during installation.  

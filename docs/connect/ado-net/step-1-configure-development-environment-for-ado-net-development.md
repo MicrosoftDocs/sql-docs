@@ -13,6 +13,8 @@ ms.author: genemi
 ---
 # Step 1: Configure development environment for ADO.NET development
 
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 - Next article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](step-2-create-a-sql-database-for-ado-net-development.md)  
 
 ## Download a .NET SQL driver

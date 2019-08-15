@@ -13,22 +13,27 @@ ms.author: genemi
 ---
 # Microsoft ADO.NET for SQL Server
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET is the core data access technology for .NET languages. Use the System.Data.SqlClient namespace to access SQL Server, or providers from other suppliers to access their stores. Use System.Data.Odbc or System.Data.Oledb to access data from .NET languages using other data access technologies. Use System.Data.Dataset when you need an offline data cache in client applications. It also provides local persistence and XML capabilities that can be useful in web services.  
   
 ## Getting Started  
 * [Introduction to Microsoft.Data.SqlClient Namespace](introduction-to-microsoft-data-sqlclient-namespace.md)  
-* [SQL Server and ADO.NET](sql-server-and-ado-net.md)  
 * [Step 1: Configure development environment for ADO.NET development](step-1-configure-development-environment-for-ado-net-development.md)  
 * [Step 2: Create a SQL database for ADO.NET development](step-2-create-a-sql-database-for-ado-net-development.md)  
 * [Step 3: Proof of concept connecting to SQL using ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
 * [Step 4: Connect resiliently to SQL with ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
   
 ## Documentation  
+* [ADO.NET Overview](https://msdn.microsoft.com/library/e80y5yhx.aspx)
 * [Getting Started](getting-started-with-the-sqlclient-driver.md)  
-* [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
-* [SQL Server and ADO.NET](sql-server-and-ado-net.md)  
+* [Overview of the SqlClient Driver](overview-of-the-sqlclient-driver.md)  
+* [Security](sql-server-security.md)
+* [Data Types](sql-server-data-types.md)
+* [Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)
+* [Data Operations](sql-server-data-operations.md)
+* [Features](sql-server-features-and-adonet.md)
+* [LINQ to SQL](linq/index.md)
 * [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## Community  

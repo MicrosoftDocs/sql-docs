@@ -12,6 +12,8 @@ ms.author: genemi
 
 # Granting Row-Level Permissions in SQL Server
 
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 In some scenarios, there is a requirement to control access to data at a more granular level than what simply granting, revoking, or denying permissions provides. For example, a hospital database application may require individual Doctors to be restricted to accessing information related to only their patients. Similar requirements exist in many environments, including finance, law, government, and military applications. To help address these scenarios, SQL Server 2016 provides a [Row-Level Security](/sql/relational-databases/security/row-level-security) feature that simplifies and centralizes row-level access logic in a security policy. For earlier versions of SQL Server, similar functionality can be achieved by using views to enact row-level filtering.
 
 ## Implementing Row-level Filtering

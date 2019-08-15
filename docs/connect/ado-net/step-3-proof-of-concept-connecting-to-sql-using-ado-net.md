@@ -13,6 +13,8 @@ ms.author: genemi
 ---
 # Step 3: Proof of concept connecting to SQL using ADO.NET
 
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+
 - Previous article:&nbsp;&nbsp;&nbsp;[Step 2: Create a SQL database for ADO.NET development](step-2-create-a-sql-database-for-ado-net-development.md)  
 - Next article:&nbsp;&nbsp;&nbsp;[Step 4: Connect resiliently to SQL with ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 

@@ -448,4 +448,4 @@ Use the following JSON file as a reference for the structure and settings in a b
 
 ## Next steps
 
-For more information on how to use and customize deployment configuration files, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md#configfile).
+For more information on how to use and customize deployment configuration files, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

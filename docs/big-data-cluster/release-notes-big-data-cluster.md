@@ -1,7 +1,7 @@
 ---
 title: Release notes
 titleSuffix: SQL Server big data clusters
-description: This article describes the latest updates and known issues for SQL Server 2019 big data clusters (preview). 
+description: This article describes the latest updates and known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview). 
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article lists the updates and know issues for the most recent releases of SQL Server big data clusters.
+This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -27,7 +27,7 @@ The following sections describe the new features and known issues for big data c
 
 |New feature or update | Details |
 |:---|:---|
-|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with SQL Server big data clusters](deploy-get-started.md).|
+|Public preview |Prior to CTP 3.2, SQL Server big data cluster was available to registered early adopters. This release allows anyone to experience the features of SQL Server Big data clusters. <br/><br/> See [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).|
 |`azdata` |CTP 3.2 introduces `azdata` - a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. `azdata` replaces `mssqlctl`. See [Install `azdata`](deploy-install-azdata.md). |
 |PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB, and ODBC data sources. In previous CTP releases, columns in the external data source was bound based on the ordinal position only and the names specified in the EXTERNAL TABLE definition was not used. |
 |HDFS tiering refresh |Introducing refresh functionality for HDFS tiering so that an existing mount can be refreshed for the latest snapshot of the remote data. See [HDFS tiering](hdfs-tiering.md) |
@@ -476,9 +476,9 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 | :---------- | :------ |
-| Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on SQL Server big data clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](big-data-cluster-create-apps.md) |
-| VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to SQL Server big data clusters](app-deployment-extension.md) |
+| Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Common CLI for application deployment and cluster management. | [How to deploy an app on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Changes to the **azdata** tool command usage. | For more details see the [known issues for azdata](#azdatactp23). |
 | Use Sparklyr in big data cluster | [Use Sparklyr in SQL Server 2019 big data cluster](sparklyr-from-RStudio.md) |
 | Mount external HDFS-compatible storage into big data cluster with **HDFS tiering**. | See [HDFS tiering](hdfs-tiering.md). |
@@ -671,7 +671,7 @@ The following sections describe the new features and known issues for big data c
 
 ### Known issues
 
-The following sections provide known issues for SQL Server big data clusters in CTP 2.1.
+The following sections provide known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in CTP 2.1.
 
 #### Deployment
 
@@ -746,7 +746,7 @@ The following sections describe the new features and known issues for big data c
 
 ### Known issues
 
-The following sections provide known issues for SQL Server big data clusters in CTP 2.0.
+The following sections provide known issues for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in CTP 2.0.
 
 #### Deployment
 
@@ -796,4 +796,4 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 ## Next steps
 
-For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

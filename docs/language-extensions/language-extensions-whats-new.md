@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Learn about what's new SQL Server 2019 Language Extensions (preview). 
 author: dphansen
 ms.author: davidph 
-ms.date: 07/25/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -21,7 +21,8 @@ This release adds the support for Language Extensions in SQL Server. For more in
 
 | Release | Feature update |
 |---------|----------------|
-| CTP 3.2 | New default Java Runtime is Open Zulu JRE 11.0.3 and is included with the [SQL Server Language Extensions installation](install/install-sql-server-language-extensions-on-windows.md#java-jre-jdk). |
+| RC 1 | New default Java Runtime on Linux is Open Zulu JRE and is included with the [SQL Server Language Extensions installation on Linux](../linux/sql-server-linux-setup-language-extensions.md). |
+| CTP 3.2 | New default Java Runtime on Windows is Open Zulu JRE 11.0.3 and is included with the [SQL Server Language Extensions installation on Windows](install/install-sql-server-language-extensions-on-windows.md#java-jre-jdk). |
 | CTP 3.1 | New supported [Java data types](how-to/java-to-sql-data-types.md). |
 | CTP 3.0 | New [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) for registering external language (for example, Java) in SQL Server.
 | | New supported [Java data types](how-to/java-to-sql-data-types.md). |

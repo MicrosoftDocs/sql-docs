@@ -2912,7 +2912,6 @@ SET
 <auto_option> ::=
 {
     AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] }
-
 }
 
 <db_encryption_option> ::=
@@ -3080,58 +3079,7 @@ The owner of the database cannot alter the database unless the owner is a member
 
 ## Examples
 
-### A. Enabling snapshot isolation on a database
-
-The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
-
-```sql
-USE AdventureWorks2012;
-USE master;
-GO
-ALTER DATABASE AdventureWorks2012
-SET ALLOW_SNAPSHOT_ISOLATION ON;
-GO
--- Check the state of the snapshot_isolation_framework
--- in the database.
-SELECT name, snapshot_isolation_state,
-    snapshot_isolation_state_desc AS description
-FROM sys.databases
-WHERE name = N'AdventureWorks2012';
-GO
-
-```
-
-The result set shows that the snapshot isolation framework is enabled.
-
-|name |snapshot_isolation_state |description|
-|-------------------- |------------------------|----------|
-|AdventureWorks2012 |1| ON |
-
-### B. Enabling, modifying, and disabling change tracking
-
-The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
-
-```sql
-ALTER DATABASE AdventureWorks2012
-SET CHANGE_TRACKING = ON
-(AUTO_CLEANUP = ON, CHANGE_RETENTION = 2 DAYS);
-```
-
-The following example shows how to change the retention period to `3` days.
-
-```sql
-ALTER DATABASE AdventureWorks2012
-SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);
-```
-
-The following example shows how to disable change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
-
-```sql
-ALTER DATABASE AdventureWorks2012
-SET CHANGE_TRACKING = OFF;
-```
-
-### C. Enabling the query store
+### A. Enabling the query store
 
 The following example enables the query store and configures query store parameters.
 
@@ -3148,7 +3096,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### D. Enabling the query store with wait statistics
+### B. Enabling the query store with wait statistics
 
 The following example enables the query store and configures query store parameters.
 
@@ -3167,7 +3115,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-### E. Enabling the query store with custom capture policy options
+### C. Enabling the query store with custom capture policy options
 
 The following example enables the query store and configures query store parameters.
 
@@ -3193,28 +3141,28 @@ SET QUERY_STORE = ON
     );
 ```
 
-### F. Enable result set caching for a database
+### D. Enable result set caching for a database
 
 ```sql
 ALTER DATABASE myTestDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### G. Disable result set caching for a database
+### D. Disable result set caching for a database
 
 ```sql
 ALTER DATABASE myTestDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### H. Check result set caching setting for a database
+### D. Check result set caching setting for a database
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### I. Check for number of queries with result set cache hit and cache miss
+### D. Check for number of queries with result set cache hit and cache miss
 
 ```sql
 SELECT  
@@ -3234,7 +3182,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### J. Check for result set cache hit or cache miss for a query
+### D. Check for result set cache hit or cache miss for a query
 
 ```sql
 If
@@ -3246,7 +3194,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### K. Check for all queries with result set cache hits
+### D. Check for all queries with result set cache hits
 
 ```sql
 SELECT *  

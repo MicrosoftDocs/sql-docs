@@ -41,7 +41,7 @@ Here is an example of the loopback connection string on Linux:
 
 The server address, client certificate file location, and client key file location are unique to every `sp_execute_external_script` and can be obtained by the use of the API **rx_get_sql_loopback_connection_string()** for Python or **rxGetSqlLoopbackConnectionString()** for R.
 
-For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](https://docs.microsoft.com/en-us/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
+For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
 
 ## Generate connection string with revoscalepy for Python
 

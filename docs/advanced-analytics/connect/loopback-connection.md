@@ -43,49 +43,23 @@ The server address, clientcertificate file location, and client key file locatio
 
 For more information on the connection string attributes, see the [DSN and Connection String Keywords and Attributes](https://docs.microsoft.com/en-us/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) for Microsoft ODBC Driver for SQL Server.
 
+## Generate connection string with rx_get_sql_loopback_connection_string() in revoscalepy for Python
 
-## rxGetSqlLoopbackConnectionString() in RevoScaleR for R
+Use the API **rx_get_sql_loopback_connection_string()** in [revoscalepy](../python/ref-py-revoscalepy.md) to generate a correct connection string for a loopback connection in a Python script.
 
-This is a convenience API useful to generate the correct connection string for such loopback connections. It accepts following arguments:
-nameOfDatabase 
-    name of the database to which the connection is to be made.
-odbcDriver
-    name of the odbc driver.
+It accepts the following arguments:
 
-Example for Windows SQL Server:
-execute sp_execute_external_script
-@language = N'R',
-@script = N'
-    loopbackConnectionString <-  rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="SQL Server")
-    print(paste("Connection String:", loopbackConnectionString))
-    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", connectionString = loopbackConnectionString)
-    OutputDataSet <- rxDataStep(dataSet)
-'
-WITH RESULT SETS ((col1 int, col2 int))
-GO
+| Argument | Description |
+|-|-|
+| name_of_database | Name of the database to which the connection is to be made |
+| odbc_driver | Name of the odbc driver |
 
-Example for Linux SQL Server:
-execute sp_execute_external_script
-@language = N'R',
-@script = N'
-    loopbackConnectionString <-  rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="ODBC Driver 17 for SQL Server")
-    print(paste("Connection String:", loopbackConnectionString))
-    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", connectionString = loopbackConnectionString)
-    OutputDataSet <- rxDataStep(dataSet)
-'
-WITH RESULT SETS ((col1 int, col2 int))
-GO
+### Examples
 
-## rx_get_sql_loopback_connection_string() in revoscalepy for Python
+Example for SQL Server on Windows:
 
-This is a convenience API useful to generate the correct connection string for such loopback connections when external script is Python. It accepts following arguments:
-name_of_database
-    name of the database to which the connection is to be made.
-odbc_driver
-    name of the odbc driver.
-
-Example for Windows SQL Server:
-execute sp_execute_external_script
+```sql
+EXECUTE sp_execute_external_script
 @language = N'Python',
 @script = N'
 from revoscalepy import rx_get_sql_loopback_connection_string, RxSqlServerData, rx_data_step
@@ -96,9 +70,12 @@ OutputDataSet = rx_data_step(data_set)
 '
 WITH RESULT SETS ((col1 int, col2 int))
 GO
+```
 
-Example for Linux SQL Server:
-execute sp_execute_external_script
+Example for SQL Server on Linux:
+
+```sql
+EXECUTE sp_execute_external_script
 @language = N'Python',
 @script = N'
 from revoscalepy import rx_get_sql_loopback_connection_string, RxSqlServerData, rx_data_step
@@ -109,8 +86,53 @@ OutputDataSet = rx_data_step(data_set)
 '
 WITH RESULT SETS ((col1 int, col2 int))
 GO
+```
+
+## Generate connection string with rxGetSqlLoopbackConnectionString() in RevoScaleR for R
+
+Use the API **rxGetSqlLoopbackConnectionString()** in [RevoScaleR](../r/ref-r-revoscaler.md) to generate a correct connection string for a loopback connection in an R script.
+
+It accepts the following arguments:
+
+| Argument | Description |
+|-|-|
+| nameOfDatabase | Name of the database to which the connection is to be made |
+| odbcDriver | Name of the odbc driver |
+
+### Examples
+
+Example for SQL Server on Windows:
+
+```sql
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+    loopbackConnectionString <-  rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="SQL Server")
+    print(paste("Connection String:", loopbackConnectionString))
+    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", connectionString = loopbackConnectionString)
+    OutputDataSet <- rxDataStep(dataSet)
+'
+WITH RESULT SETS ((col1 int, col2 int))
+GO
+```
+
+Example for SQL Server on Linux:
+
+```sql
+EXECUTE sp_execute_external_script
+@language = N'R',
+@script = N'
+    loopbackConnectionString <-  rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="ODBC Driver 17 for SQL Server")
+    print(paste("Connection String:", loopbackConnectionString))
+    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", connectionString = loopbackConnectionString)
+    OutputDataSet <- rxDataStep(dataSet)
+'
+WITH RESULT SETS ((col1 int, col2 int))
+GO
+```
 
 ## Next steps
 
-+ [Some relevant article](../advanced-analytics/link-to-relevant-article.md)
-+ [Some other relevant article](../advanced-analytics/link-to-other-relevant-article.md)
++ [Microsoft ODBC driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)
++ [revoscalepy](../python/ref-py-revoscalepy.md)
++ [RevoScaleR](../r/ref-r-revoscaler.md)

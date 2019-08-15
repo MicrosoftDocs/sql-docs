@@ -4192,7 +4192,9 @@
         href: database-engine/install-windows/complete-the-database-engine-upgrade.md
       - name: Change the Database Compatibility Mode & Use the Query Store
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
-  - name: Configuration
+    - name: Update Center for SQL Server
+      href: database-engine/install-windows/update-center-for-microsoft-sql-server.md
+        - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
     - name: Windows firewall

@@ -1,6 +1,6 @@
 ---
-title: Loopback connection to SQL Server from Python and R scripts
-description: How to create a loopback connection from Machine Learning Services to SQL Server
+title: Loopback connection to SQL Server from a Python or R script
+description: Learn how to use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from sp_execute_external_script. You can use this when you can't use the InputDataSet and OutputDataSet arguments of sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2019  
@@ -9,18 +9,22 @@ author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Loopback connection to SQL Server
+# Loopback connection to SQL Server from a Python or R script
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Learn how to use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from `sp_execute_external_script`. You can use this when you can't use the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script`.
 
-## Connection String
+## Connection string
 
-To make a loopback connection, the most important aspect is the formation of the correct connection string. The common mandatory arguments on both SQL server platforms are the name of the ODBC driver, the server address and the name of database. 
+To make a loopback you connection, you need to use a correct connection string. The common mandatory arguments are the name of the ODBC driver, the server address and the name of database.
+
+### Connection string on Windows
 
 For authentication on Windows SQL Server, external scripts can use the "Trusted_Connection" connection string attribute to authenticate as the same user that ran the sp_execute_external_script. Refer here 
 On this platform, the loopback connection string for external scripts looks like : 
 "Driver=SQL Server;Server=.;Database=nameOfDatabase;Trusted_Connection=Yes;"
+
+### Connection string on Linux
 
 For Linux SQL Server, external scripts need to use ClientCertificate and ClientKey attributes of the ODBC driver to authenticate as the same user that ran the sp_execute_external_script. This requires the use of latest odbc driver 17.4.1.1. The loopback connection string on linux looks like :
 "Driver=ODBC Driver 17 for SQL Server;Server=fe80::8012:3df5:0:5db1%eth0;Database=nameOfDatabase;ClientCertificate=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitecert.pem;ClientKey=file:/var/opt/mssql-extensibility/data/baeaac72-60b3-4fae-acfd-c50eff5d34a2/sqlsatellitekey.pem;TrustServerCertificate=Yes;Trusted_Connection=no;Encrypt=Yes"

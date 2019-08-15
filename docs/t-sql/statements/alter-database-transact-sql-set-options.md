@@ -2965,7 +2965,7 @@ Is the name of the database to be modified.
 
 Controls the database encryption state.
 
-ENCRYPTION {ON | OFF | SUSPEND | RESUME}         
+ENCRYPTION {ON | OFF }         
 ON         
 Sets the database to be encrypted.
 

@@ -1,7 +1,7 @@
 ---
 title: Run a sample notebook | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: This tutorial shows how you can load an run a sample Spark notebook on a SQL Server 2019 big data cluster (preview).
+description: This tutorial shows how you can load an run a sample Spark notebook on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This tutorial demonstrates how to load and run a notebook in Azure Data Studio on a SQL Server 2019 big data cluster (preview). This allows data scientists and data engineers to run Python, R, or Scala code against the cluster.
+This tutorial demonstrates how to load and run a notebook in Azure Data Studio on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This allows data scientists and data engineers to run Python, R, or Scala code against the cluster.
 
 > [!TIP]
 > If you prefer, you can download and run a script for the commands in this tutorial. For instructions, see the [Spark samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) on GitHub.
@@ -62,7 +62,7 @@ You can run each notebook cell by pressing the play button to the left of the ce
 
 ![Run notebook cell](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-Run each of the cells in the sample notebook in succession. For more information about using notebooks with SQL Server big data clusters, see the following resources:
+Run each of the cells in the sample notebook in succession. For more information about using notebooks with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 
 - [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md)
 - [How to manage notebooks in Azure Data Studio](notebooks-how-to-manage.md)

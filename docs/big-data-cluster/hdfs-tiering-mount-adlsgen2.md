@@ -1,7 +1,7 @@
 ---
 title: Mount ADLS Gen2 for HDFS tiering
 titleSuffix: How to mount ADLS Gen2
-description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a SQL Server 2019 big data cluster (preview).
+description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -149,4 +149,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## Next steps
 
-For more information about SQL Server 2019 big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

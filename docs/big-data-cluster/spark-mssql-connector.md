@@ -85,4 +85,4 @@ To demonstrate the use of the MSSQL Spark Connector with this data, you can down
 
 ## Next steps
 
-For more information about big data clusters, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+For more information about big data clusters, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

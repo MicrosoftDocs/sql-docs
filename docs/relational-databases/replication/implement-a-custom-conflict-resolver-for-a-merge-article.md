@@ -23,11 +23,11 @@ ms.author: "mathoma"
   
  **In this topic**  
   
--   **To implement a custom conflict resolver for a merge article, using:**  
+-   **Implement a custom conflict resolver for a merge article, using:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [COM-based resolver](#COM)  
+     [A COM-based resolver](#COM)  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  You can write your own custom conflict resolver as a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure at each Publisher. During synchronization, this stored procedure is invoked when conflicts are encountered in an article that the resolver was registered to. Information about the conflict row is passed by the Merge Agent to the required parameters of the procedure. Stored procedure-based custom conflict resolvers are always created at the Publisher.  
@@ -48,11 +48,11 @@ ms.author: "mathoma"
     |**\@subscriber_db**|**sysname**|Name of the database from which a conflicting change is being propagated.|  
     |**\@log_conflict OUTPUT**|**int**|Sets whether the merge process should log a conflict for later resolution:<br /><br /> **0** = Do not log the conflict.<br /><br /> **1** = Subscriber is the conflict loser.<br /><br /> **2** = Publisher is the conflict loser.|  
     |**\@conflict_message OUTPUT**|**nvarchar(512)**|Message to be given about the resolution if the conflict is logged.|  
-    |**\@destowner**|**sysname**|The owner of the published table at the Subscriber.|  
+    |**\@destowner**|**sysname**|The owner of the published table at the subscriber.|  
   
      This stored procedure uses the values passed by the Merge Agent to these parameters to implement your custom conflict resolution logic. It must return a single row result set that's identical in structure to the base table and that contains the data values for the winning version of the row.  
   
-2.  Grant EXECUTE permissions on the stored procedure to any logins used by Subscribers to connect to the Publisher.  
+2.  Grant EXECUTE permissions on the stored procedure to any logins used by subscribers to connect to the Publisher.  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -71,7 +71,7 @@ ms.author: "mathoma"
 2.  Execute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specifying **\@publication**, **\@article**, a value of **resolver_info** for **\@property**, and the name of the stored procedure that implements the conflict resolver logic for **\@value**.  
   
 ##  <a name="COM"></a> Using a COM-based custom resolver  
- The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and to resolve conflicts that occur during the merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a merge article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLL), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. This kind of COM–based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
+ The <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> namespace implements an interface that enables you to write complex business logic to handle events and to resolve conflicts that occur during the merge replication synchronization process. For more information, see [Implement a Business Logic Handler for a merge article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). You can also write your own native code-based custom business logic to resolve conflicts. This logic is built as a COM component and compiled into dynamic-link libraries (DLLs), using products such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. This kind of COM–based custom conflict resolver must implement the **ICustomResolver** interface, which is designed specifically for conflict resolution.  
   
 #### To create and register a COM-based custom conflict resolver  
   
@@ -85,12 +85,12 @@ ms.author: "mathoma"
   
 5.  Build the project to create the custom conflict resolver library file.  
   
-6.  Deploy the library in the directory that contains the merge agent executable (usually \Microsoft SQL Server\100\COM).  
+6.  Deploy the library in the directory that contains the Merge Agent executable (usually \Microsoft SQL Server\100\COM).  
   
     > [!NOTE]  
-    >  A custom conflict resolver must be deployed at the Subscriber for a pull subscription, at the Distributor for a push subscription, or at the Web server used with Web synchronization.  
+    >  A custom conflict resolver must be deployed at the subscriber for a pull subscription, at the Distributor for a push subscription, or at the web server used with web synchronization.  
   
-7.  Register the custom conflict resolver library by using regsvr32.exe from the deployment directory as follows:  
+7.  Register the custom conflict resolver library by running regsvr32.exe from the deployment directory as follows:  
   
     ```  
     regsvr32.exe mycustomresolver.dll  
@@ -119,8 +119,8 @@ ms.author: "mathoma"
   
 
 ## See Also  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [COM-Based Custom Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Advanced Merge replication conflict detection and resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [COM-based custom resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
+ [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

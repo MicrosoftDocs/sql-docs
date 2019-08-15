@@ -2904,20 +2904,56 @@ SET
 <option_spec>::=
 {
     <db_encryption_option>
-  | <query_store_options>   
+  | <query_store_options>
   | <result_set_caching>
 }
 ;
 
-<db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
-
-<result_set_caching>::=
+<auto_option> ::=
 {
-result_set_caching {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] }
+
 }
 
+<db_encryption_option> ::=
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
+ }
 
+<query_store_options> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON [ ( <query_store_option_list> [,...n] ) ]
+        | ( < query_store_option_list> [,...n] )
+        | CLEAR [ ALL ]
+    }
+}
+
+<query_store_option_list> ::=
+{
+      OPERATION_MODE = { READ_WRITE | READ_ONLY }
+    | CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = number )
+    | DATA_FLUSH_INTERVAL_SECONDS = number
+    | MAX_STORAGE_SIZE_MB = number
+    | INTERVAL_LENGTH_MINUTES = number
+    | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+    | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
+    | MAX_PLANS_PER_QUERY = number
+    | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+    | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number      
+}
+
+<result_set_caching_option_list> ::=
+     { result_set_caching { ON | OFF }
 ```
 
 ## Arguments
@@ -2926,32 +2962,30 @@ result_set_caching {ON | OFF}
 
 Is the name of the database to be modified.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-Applies to Azure SQL Data Warehouse (preview)
-
-This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in `sys.databases` to show the result cache setting for a database.  
-
-ON   
-Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
-
-Cached result set is reused for a query if all of the following requirements are all met:
-
-1. The user executing the query has access to all the tables referenced in the query.
-1. There is an exact match between the new query and the previous query that generated the result set cache.
-1. There is no data or schema changes in the tables where the cached result set was generated from.  
-
-Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except for queries with non-deterministic functions such as DateTime.Now().   Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
-
 **\<db_encryption_option> ::=**        
 
 Controls the database encryption state.
 
-ENCRYPTION { ON | OFF }         
-Sets the database to be encrypted (ON) or not encrypted (OFF). For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+ENCRYPTION {ON | OFF | SUSPEND | RESUME}         
+ON         
+Sets the database to be encrypted.
+
+OFF         
+Sets the database to not be encrypted. 
+
+SUSPEND         
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])         
+Can be used to pause the encryption scan after Transparent Data Encryption has been enabled or disabled, or after the encryption key has been changed.
+
+RESUME         
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])         
+Can be used to resume a previously paused encryption scan.
+
+For more information about database encryption, see [Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), and [Transparent Data Encryption with Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
 
 When encryption is enabled at the database level, all filegroups will be encrypted. Any new filegroups will inherit the encrypted property. If any filegroups in the database are set to **READ ONLY**, the database encryption operation will fail.
 
-You can see the encryption state of the database by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
+You can see the encryption state of the database as well as the state of the encryption scan by using the [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) dynamic management view.
 
 **\<query_store_options> ::=**         
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
@@ -3018,6 +3052,23 @@ Capture relevant queries based on execution count and resource consumption. This
 NONE         
 Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
+
+**\<result_set_caching_options> ::=**         
+**Applies to**: Azure SQL Data Warehouse (preview)
+
+This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in `sys.databases` to show the result cache setting for a database.  
+
+ON   
+Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
+
+Cached result set is reused for a query if all of the following requirements are all met:
+
+1. The user executing the query has access to all the tables referenced in the query.
+1. There is an exact match between the new query and the previous query that generated the result set cache.
+1. There is no data or schema changes in the tables where the cached result set was generated from.  
+
+Once result set caching is turned ON for a database, results are cached for all queries until the cache is full, except for queries with non-deterministic functions such as DateTime.Now().   Queries with large result sets (for example, > 1 million rows) may experience slower performance during the first run when the result cache is being created.
+
 ## Permissions
 
 Requires these permissions:
@@ -3029,28 +3080,141 @@ The owner of the database cannot alter the database unless the owner is a member
 
 ## Examples
 
-### Enable result set caching for a database
+### A. Enabling snapshot isolation on a database
+
+The following example enables the snapshot isolation framework option for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+
+```sql
+USE AdventureWorks2012;
+USE master;
+GO
+ALTER DATABASE AdventureWorks2012
+SET ALLOW_SNAPSHOT_ISOLATION ON;
+GO
+-- Check the state of the snapshot_isolation_framework
+-- in the database.
+SELECT name, snapshot_isolation_state,
+    snapshot_isolation_state_desc AS description
+FROM sys.databases
+WHERE name = N'AdventureWorks2012';
+GO
+
+```
+
+The result set shows that the snapshot isolation framework is enabled.
+
+|name |snapshot_isolation_state |description|
+|-------------------- |------------------------|----------|
+|AdventureWorks2012 |1| ON |
+
+### B. Enabling, modifying, and disabling change tracking
+
+The following example enables change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database and sets the retention period to `2` days.
+
+```sql
+ALTER DATABASE AdventureWorks2012
+SET CHANGE_TRACKING = ON
+(AUTO_CLEANUP = ON, CHANGE_RETENTION = 2 DAYS);
+```
+
+The following example shows how to change the retention period to `3` days.
+
+```sql
+ALTER DATABASE AdventureWorks2012
+SET CHANGE_TRACKING (CHANGE_RETENTION = 3 DAYS);
+```
+
+The following example shows how to disable change tracking for the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+
+```sql
+ALTER DATABASE AdventureWorks2012
+SET CHANGE_TRACKING = OFF;
+```
+
+### C. Enabling the query store
+
+The following example enables the query store and configures query store parameters.
+
+```sql
+ALTER DATABASE AdventureWorks2012
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### D. Enabling the query store with wait statistics
+
+The following example enables the query store and configures query store parameters.
+
+```sql
+ALTER DATABASE AdventureWorks2016
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### E. Enabling the query store with custom capture policy options
+
+The following example enables the query store and configures query store parameters.
+
+```sql
+ALTER DATABASE AdventureWorks2016 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### F. Enable result set caching for a database
 
 ```sql
 ALTER DATABASE myTestDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### Disable result set caching for a database
+### G. Disable result set caching for a database
 
 ```sql
 ALTER DATABASE myTestDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### Check result set caching setting for a database
+### H. Check result set caching setting for a database
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### Check for number of queries with result set cache hit and cache miss
+### I. Check for number of queries with result set cache hit and cache miss
 
 ```sql
 SELECT  
@@ -3070,7 +3234,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### Check for result set cache hit or cache miss for a query
+### J. Check for result set cache hit or cache miss for a query
 
 ```sql
 If
@@ -3082,7 +3246,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### Check for all queries with result set cache hits
+### K. Check for all queries with result set cache hits
 
 ```sql
 SELECT *  
@@ -3100,3 +3264,4 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 - [SQL Data Warehouse language elements](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

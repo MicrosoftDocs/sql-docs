@@ -31,7 +31,7 @@ Here is an example of the loopback connection string on Windows:
 
 ### Connection string on Linux
 
-For authentication on SQL Server on Linux, the Python or R script needs to use **ClientCertificate** and **ClientKey** attributes of the ODBC driver to authenticate as the same user that executed `sp_execute_external_script`. This requires the use of [latest ODBC driver](../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.4.1.1.
+For authentication on SQL Server on Linux, the Python or R script needs to use **ClientCertificate** and **ClientKey** attributes of the ODBC driver to authenticate as the same user that executed `sp_execute_external_script`. This requires the use of [latest ODBC driver](../../connect/odbc/download-odbc-driver-for-sql-server.md) version 17.4.1.1.
 
 Here is an example of the loopback connection string on Linux:
 

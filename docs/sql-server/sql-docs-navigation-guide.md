@@ -33,12 +33,11 @@ If you'd like to create a PDF, select the **Download PDF** link found at the bot
 
 ## TOC navigation hints
 
-Entries in the table of contents (TOC) that have a `>` at the end of the entry indicate that you will be taken away from docs.microsoft.com. 
+Entries in the table of contents (TOC) that have a `>` at the end of the entry indicate that you will be taken to technical documentation with a different table of contents. 
 
 ![Single carrots in toc](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-Entries in the TOC that have a `>>` indicate that you will be taken to technical documentation with a different table of contents. 
+Entries in the TOC that have a `>>` indicate that you will be taken away from docs.microsoft.com. 
 
 ![TOC navigation markers](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 

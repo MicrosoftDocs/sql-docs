@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Connector for Oracle Data Type Support | Microsoft Docs"
+title: "Microsoft Connector for Oracle data type support | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 author: gracegu
 ms.author: chugu
 ---
-# Microsoft Connector for Oracle Data Type Support
+# Microsoft Connector for Oracle data type support
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 SSIS components for Oracle do not support all Oracle data types. Columns with unsupported data types will have a warning when designing packages in SSDT and will be deleted from mapping columns. Data cannot be loaded to a column with an unsupported data type.
 
-**Data Type Mapping**
+## Data type mapping
 
 The following table shows the Oracle database data types and their default mapping to SSIS data types. It also shows the unsupported Oracle data types.
 
@@ -42,7 +42,7 @@ The following table shows the Oracle database data types and their default mappi
 |ROWID|Not Supported||
 |User-defined type (object type, VARRAY, Nested Table)|Not Supported||
 
-## Next Steps
+## Next steps
 
 - Configure [Oracle Connection Manager](oracle-connection-manager.md).
 - Configure [Oracle Source](oracle-source.md).

@@ -119,7 +119,7 @@ ms.author: "mathoma"
   
 
 ## See Also  
- [Advanced Merge replication conflict detection and resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced merge replication conflict detection and resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-based custom resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Replication security best practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

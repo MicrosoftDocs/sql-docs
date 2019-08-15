@@ -3051,7 +3051,6 @@ Capture relevant queries based on execution count and resource consumption. This
 NONE         
 Stop capturing new queries. Query Store will continue to collect compile and runtime statistics for queries that were captured already. Use this configuration with caution since you may miss capturing important queries.
 
-
 **\<result_set_caching_options> ::=**         
 **Applies to**: Azure SQL Data Warehouse (preview)
 

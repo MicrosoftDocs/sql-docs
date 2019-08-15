@@ -172,7 +172,7 @@ View the input columns that you selected. You can remove mappings by selecting *
 
 View all available destination columns, both mapped and unmapped.
 
->**Note**
+> [!NOTE]
 >
 >Columns of unsupported data types will be deleted from mapping with a warning.
 
@@ -199,8 +199,9 @@ Select how the Oracle source should handle errors in a flow: ignore the failure,
 
 Select how the Oracle source should handle truncation in a flow: ignore the failure, redirect the row, or fail the component.
 
-## Learn More
+## Next Steps
 
-- [Oracle Connection Manager](oracle-connection-manager.md)
-
-- [Oracle Source](oracle-source.md)
+- Configure [Oracle Connection Manager](oracle-connection-manager.md).
+- Configure [Oracle Source](oracle-source.md).
+- Configure [Oracle Destination](oracle-destination.md).
+- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).

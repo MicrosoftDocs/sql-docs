@@ -57,9 +57,10 @@ Select one of the below options:
 - **Use Oracle Authentication**: Select this to use Oracle database authentication. If you use this authentication, enter your Oracle credentials as follows:  
 	**User name**: Type the user name used to connect to the Oracle database.  
 	**Password**: Type the Oracle database password for the user entered in the user name field.
->**Note**
+
+> [!NOTE]
 >
->**Windows Authentication is not supported for Oracle Server 18c.**
+>Windows Authentication is not supported for Oracle Server 18c.
 
 **Test Connection**
 
@@ -80,3 +81,9 @@ Custom properties are not listed in Oracle Connection Manager Editor. To set the
 1. From the Connection Manager area, right-click the Oracle connection manager you are working with and select **Properties**.
 
 2. In the **Properties** pane, set the **OracleHome** or **OracleHome64** property with the full path to the Oracle home directory.
+
+## Next Steps
+
+- Configure [Oracle Source](oracle-source.md).
+- Configure [Oracle Destination](oracle-destination.md).
+- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).

@@ -31,9 +31,9 @@ The following Oracle database versions of data source are supported:
 - Oracle 18c (without Windows Authentication support)
 
 The Oracle database is supported on all operating systems and platforms.
-> **Note**
+> [!NOTE]
 >
-> **Oracle client is not required for Microsoft Connector for Oracle Database in SQL Server 2019.**
+> Oracle client is not required for Microsoft Connector for Oracle Database in SQL Server 2019.
 
 ## Installation
 
@@ -42,8 +42,6 @@ If you need to run package in SQL Server, you can get the Microsoft Connector fo
 After you install the Connector, you must restart the SQL Server Integration Service to be sure that the Oracle source and destination works correctly.
 
 If you need to design package with the Connector, you do not need download the Connector. SQL Server Data Tools (SSDT) has included it since version 15.9.0.
-
-[Join Community Discussion](https://aka.ms/AA5u35j)
 
 ## Uninstallation
 
@@ -62,8 +60,9 @@ To design SSIS package targeting SQL Server 2017 and below, you need to install 
 - [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
 
-## Components in Microsoft Connector for Oracle Database
+## Next Steps
 
-- [Oracle Connection Manager](oracle-connection-manager.md)
-- [Oracle Source](oracle-source.md)
-- [Oracle Destination](oracle-destination.md)
+- Configure [Oracle Connection Manager](oracle-connection-manager.md).
+- Configure [Oracle Source](oracle-source.md).
+- Configure [Oracle Destination](oracle-destination.md).
+- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).

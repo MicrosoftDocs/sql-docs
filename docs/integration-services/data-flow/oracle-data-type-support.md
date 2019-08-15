@@ -16,7 +16,7 @@ ms.author: chugu
 
 SSIS components for Oracle do not support all Oracle data types. Columns with unsupported data types will have a warning when designing packages in SSDT and will be deleted from mapping columns. Data cannot be loaded to a column with an unsupported data type.
 
-## Data Type Mapping
+**Data Type Mapping**
 
 The following table shows the Oracle database data types and their default mapping to SSIS data types. It also shows the unsupported Oracle data types.
 
@@ -41,3 +41,10 @@ The following table shows the Oracle database data types and their default mappi
 |LONG RAW|Not Supported||
 |ROWID|Not Supported||
 |User-defined type (object type, VARRAY, Nested Table)|Not Supported||
+
+## Next Steps
+
+- Configure [Oracle Connection Manager](oracle-connection-manager.md).
+- Configure [Oracle Source](oracle-source.md).
+- Configure [Oracle Destination](oracle-destination.md).
+- If you have questions, visit [TechCommunity](https://aka.ms/AA5u35j).

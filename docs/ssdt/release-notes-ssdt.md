@@ -1,17 +1,18 @@
 ---
 title: "Release notes for SQL Server Data Tools (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: 09/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ""
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
+ms.custom: ""
+ms.date: 09/28/2018
+ms.reviewer: ""
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
+
 # Release notes for SQL Server Data Tools (SSDT)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,16 +46,14 @@ _SSDT for Visual Studio 2017._
 
 ### What's New?
 
-#### SSIS
-
-| New item | Details |
-| :------- | :------ |
-| Add AzureEnabled feature. Enable packages of the project to be run on SSIS Platform-as-a-Service (PaaS) in Azure Data Factory | &nbsp; |
-| Fix an issue that Oracle connector properties are not able to be set from variable expression | &nbsp; |
-| Fix an issue that Oracle connector has VS_NEEDSNEWMETATDATA error when debugging packages targeted to pre-SQL Server 2019 | &nbsp; |
-| Fix an issue that Oracle connector failed to upgrade/downgrade package/project if the package/project uses expressions for connection manager’s properties | &nbsp; |
-| Fix an issue that Download WSDL button of Web Service Task Editor doesn't support TLS 1.1 & 1.2 protocal (targetting to SQL Server 2019) | &nbsp; |
-| Fix an issue that packages containing DQS connection manager cannot be loaded again after saving | &nbsp; |
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Add AzureEnabled feature. Enable packages of the project to be run on SSIS Platform-as-a-Service (PaaS) in Azure Data Factory |
+| Integration Services (SSIS) | Fix an issue that Oracle connector properties are not able to be set from variable expression |
+| Integration Services (SSIS) | Fix an issue that Oracle connector has VS_NEEDSNEWMETATDATA error when debugging packages targeted to pre-SQL Server 2019 |
+| Integration Services (SSIS) | Fix an issue that Oracle connector failed to upgrade/downgrade package/project if the package/project uses expressions for connection manager’s properties |
+| Integration Services (SSIS) | Fix an issue that Download WSDL button of Web Service Task Editor doesn't support TLS 1.1 & 1.2 protocol (target is SQL Server 2019) |
+| Integration Services (SSIS) | Fix an issue that packages containing DQS connection manager cannot be loaded again after saving |
 
 ### Known issues
 

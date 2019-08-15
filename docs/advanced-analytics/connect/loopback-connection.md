@@ -65,7 +65,8 @@ EXECUTE sp_execute_external_script
 from revoscalepy import rx_get_sql_loopback_connection_string, RxSqlServerData, rx_data_step
 loopback_connection_string = rx_get_sql_loopback_connection_string(odbc_driver="SQL Server", name_of_database="DBName")
 print("Connection String:{0}".format(loopback_connection_string))
-data_set = RxSqlServerData(sql_query = "select col1, col2 from tableName", connection_string = loopback_connection_string)
+data_set = RxSqlServerData(sql_query = "select col1, col2 from tableName",
+                           connection_string = loopback_connection_string)
 OutputDataSet = rx_data_step(data_set)
 '
 WITH RESULT SETS ((col1 int, col2 int))
@@ -79,9 +80,11 @@ EXECUTE sp_execute_external_script
 @language = N'Python',
 @script = N'
 from revoscalepy import rx_get_sql_loopback_connection_string, RxSqlServerData, rx_data_step
-loopback_connection_string = rx_get_sql_loopback_connection_string(odbc_driver="ODBC Driver 17 for SQL Server", name_of_database="DBName")
+loopback_connection_string = rx_get_sql_loopback_connection_string(odbc_driver="ODBC Driver 17 for SQL Server",
+                                                                   name_of_database="DBName")
 print("Loopback Connection String:{0}".format(loopback_connection_string))
-data_set = RxSqlServerData(sql_query = "select col1, col2 from tableName", connection_string = loopback_connection_string)
+data_set = RxSqlServerData(sql_query = "select col1, col2 from tableName",
+                           connection_string = loopback_connection_string)
 OutputDataSet = rx_data_step(data_set)
 '
 WITH RESULT SETS ((col1 int, col2 int))
@@ -109,7 +112,8 @@ EXECUTE sp_execute_external_script
 @script = N'
     loopbackConnectionString <- rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="SQL Server")
     print(paste("Connection String:", loopbackConnectionString))
-    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", connectionString = loopbackConnectionString)
+    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName",
+                               connectionString = loopbackConnectionString)
     OutputDataSet <- rxDataStep(dataSet)
 '
 WITH RESULT SETS ((col1 int, col2 int))
@@ -122,9 +126,11 @@ Example for SQL Server on Linux:
 EXECUTE sp_execute_external_script
 @language = N'R',
 @script = N'
-    loopbackConnectionString <-  rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", odbcDriver ="ODBC Driver 17 for SQL Server")
+    loopbackConnectionString <-  rxGetSqlLoopbackConnectionString(nameOfDatabase="DBName", 
+                                                                  odbcDriver ="ODBC Driver 17 for SQL Server")
     print(paste("Connection String:", loopbackConnectionString))
-    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", connectionString = loopbackConnectionString)
+    dataSet <- RxSqlServerData(sqlQuery = "select col1, col2 from tableName", 
+                               connectionString = loopbackConnectionString)
     OutputDataSet <- rxDataStep(dataSet)
 '
 WITH RESULT SETS ((col1 int, col2 int))

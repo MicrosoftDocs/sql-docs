@@ -16,7 +16,7 @@ ms.author: chugu
 
 Microsoft Connector for Oracle enables to export data from and load data into Oracle data source in an SSIS package.
 
-## Version Support
+## Version support
 
 The following Microsoft SQL Server products are supported by Microsoft Connector for Oracle:
 
@@ -47,7 +47,7 @@ If you need to design package with the Connector, you do not need download the C
 
 You can run uninstall wizard to remove Microsoft Connector for Oracle Database from SQL Server.
 
-## Design SSIS Package with Previous version
+## Design SSIS package with previous version
 
 Since version 15.9.0, SSDT already includes Microsoft Connector for Oracle Database, you do not need any installation when designing SSIS packages targeting SQL Server 2019.
 
@@ -60,7 +60,7 @@ To design SSIS package targeting SQL Server 2017 and below, you need to install 
 - [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
 
-## Next Steps
+## Next steps
 
 - Configure [Oracle Connection Manager](oracle-connection-manager.md).
 - Configure [Oracle Source](oracle-source.md).

@@ -24,7 +24,7 @@ August 15, 2019 &nbsp; / &nbsp; version: 1.10.0
 
 | Change | Details |
 | :----- | :------ |
-| Release of SandDance 1.30 extension | &bull; &nbsp; Smart chart detection <br/>&bull; &nbsp; 3D Visualizations <br/> &bull; &nbsp; Data sorting |
+| Release of SandDance 1.3.1 extension | &bull; &nbsp; Smart chart detection <br/>&bull; &nbsp; 3D Visualizations <br/> &bull; &nbsp; Data filtering |
 | Notebook Improvements | &bull; &nbsp; Add code or text cell in-line <br/>&bull; &nbsp; Added ability to right-click SQL results grid to save result as CSV, JSON, etc. <br/> &bull; &nbsp; Improvement to notebook loading performance for loading JSON faster <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
 | SQL Server 2019 Support |  This release includes support for additional SQL Server 2019 Big Data Cluster features including: <br/> &bull; &nbsp; Reduced time taken to load table and column information on the object mapping page. <br/> &bull; &nbsp; Fixed a bug with loading existing database scoped credentials on the connection details page. <br/> &bull; &nbsp; Increased default sample size used for PROSE parsing. | 
 | Dacpac extension now supports AAD | 

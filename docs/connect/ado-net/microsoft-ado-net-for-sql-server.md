@@ -33,7 +33,6 @@ ADO.NET is the core data access technology for .NET languages. Use the System.Da
 * [Data Operations](sql-server-data-operations.md)
 * [Features](sql-server-features-and-adonet.md)
 * [LINQ to SQL](linq/index.md)
-* [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## Community  
 * [ADO.NET Managed Providers Forum](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  

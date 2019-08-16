@@ -5,6 +5,9 @@ ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
 ms:mtpsurl: https://technet.microsoft.com/en-us/library/Ff803383(v=MSDN.10)
 ms:contentKeyID: 31804705
 ms.date: 08/02/2019
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10

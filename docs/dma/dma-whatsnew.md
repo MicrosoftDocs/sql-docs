@@ -132,7 +132,6 @@ The v3.2 release of DMA includes the following additions:
 The v3.1 release of DMA includes the following additions:
 
 * Improved assessment recommendations for Azure SQL Databases in terms of database collations, use of unsupported system stored procedures, and CLR objects.
-
 * Assessment guidance for compatibility levels 130, 120, 110, and 100 when migrating to Azure SQL Databases.
 
 ## DMA v3.0

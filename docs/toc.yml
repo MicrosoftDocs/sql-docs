@@ -4194,7 +4194,7 @@
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
     - name: Update Center for SQL Server
       href: database-engine/install-windows/update-center-for-microsoft-sql-server.md
-        - name: Configuration
+  - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
     - name: Windows firewall

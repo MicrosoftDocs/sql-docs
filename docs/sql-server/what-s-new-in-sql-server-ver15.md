@@ -146,7 +146,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Forcing fast forward and static cursors | Query Store plan forcing support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
 |Reduced recompilations for workloads| Improves using temporary tables across multiple scopes. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
 |Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Memory-optimized tempdb metadata| - Table and variable caching <br/><br/>- Improved latching allocation <br/><br/>- Reduced logging overhead <br/><br/>- Add multiple data files during installation<br/><br/>- Simultaneous file growth across all tempdb tables<br/><br/>- Allocation in optimized extents. <br/><br/>See [Memory-Optimized tempdb Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Memory-optimized tempdb metadata| - Table and variable caching <br/><br/>- Improved latching allocation <br/><br/>- Reduced logging overhead <br/><br/>- Add multiple data files during installation<br/><br/>- Simultaneous file growth across all tempdb tables<br/><br/>- Allocation in optimized extents <br/><br/>See [Memory-Optimized tempdb Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### Availability groups

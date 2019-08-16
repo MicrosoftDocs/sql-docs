@@ -28,7 +28,7 @@ The storage pool consists of storage nodes comprised of SQL Server on Linux, Spa
 Storage nodes are responsible for:
 
 - Data ingestion through Spark.
-- Data storage in HDFS (Parquet format). HDFS also provides data persistency, as HDFS data is spread across all the storage nodes in the SQL big data cluster.
+- Data storage in HDFS (Parquet and delimited text format). HDFS also provides data persistency, as HDFS data is spread across all the storage nodes in the SQL big data cluster.
 - Data access through HDFS and SQL Server endpoints.
 
 ## Next steps

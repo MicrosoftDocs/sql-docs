@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Migrating Access Data into SQL Server - Azure SQL DB (AccessToSQL)
 After you have successfully created the database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can migrate data from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  

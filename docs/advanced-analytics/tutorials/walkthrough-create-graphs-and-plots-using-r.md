@@ -4,14 +4,14 @@ description: Tutorial showing how to create graphs and plots using R language fu
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/26/2018  
+ms.date: 06/13/2019
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create graphs and plots using SQL and R (walkthrough)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this part of the walkthrough, you learn techniques for generating plots and maps using R with SQL Server data. You create a simple histogram and then develop a more complex map plot.
 
@@ -96,7 +96,7 @@ Typically, database servers block Internet access. This can be inconvenient when
     + When the line beginning with `plot` runs, the rendered data is serialized back to the local R environment so that you can view it in your R client.
 
     > [!NOTE]
-    > If you are using SQL Server in an Azure virtual machine, you might get an error at this point. An error occurs when the default firewall rule in Azure blocks network access by R code. For details on how to fix this error, see [Installing Machine Learning (R) Services on an Azure VM](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > If you are using SQL Server in an Azure virtual machine, you might get an error at this point. An error occurs when the default firewall rule in Azure blocks network access by R code. For details on how to fix this error, see [Installing Machine Learning (R) Services on an Azure VM](../install/sql-machine-learning-azure-virtual-machine.md).
 
 4. The following image shows the output plot. The taxi pickup locations are added to the map as red dots. Your image might look different, depending how many locations are in the data source you used.
 

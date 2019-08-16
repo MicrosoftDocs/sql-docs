@@ -1,18 +1,18 @@
 ---
-title: Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages - SQL Server Machine Learning Services
-description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database).
+title: Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages
+description: Add new R packages to SQL Server 2016 R Services or SQL Server Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/30/2018  
+ms.date: 06/12/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article explains how to install new R packages on an instance of SQL Server where machine learning is enabled. There are multiple approaches to choose from. Using T-SQL works best for server administrators who are unfamiliar with R.
 
@@ -64,6 +64,5 @@ EXEC sp_execute_external_script
 
 ## See also
 
-+ [Get package information](determine-which-packages-are-installed-on-sql-server.md)
++ [Get package information](../package-management/installed-package-information.md)
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
-+ [How-to guides](sql-server-machine-learning-tasks.md)

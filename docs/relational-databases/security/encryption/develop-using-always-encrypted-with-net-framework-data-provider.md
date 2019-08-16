@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Develop using Always Encrypted with .NET Framework Data Provider

@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.bids.converttolegacydeployment.f1"
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Convert to Package Deployment Model Dialog Box

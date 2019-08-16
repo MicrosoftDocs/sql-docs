@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Dynamic SQL
 Although static SQL works well in many situations, there is a class of applications in which the data access cannot be determined in advance. For example, suppose a spreadsheet allows a user to enter a query, which the spreadsheet then sends to the DBMS to retrieve data. The contents of this query obviously cannot be known to the programmer when the spreadsheet program is written.  

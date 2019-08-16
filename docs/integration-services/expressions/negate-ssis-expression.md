@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "- (negative)"
   - "negative operator (-)"
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # - (Negate) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Negates a numeric expression.  
   
 ## Syntax  

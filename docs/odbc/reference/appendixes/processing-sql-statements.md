@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Processing SQL Statements
 > [!IMPORTANT]  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

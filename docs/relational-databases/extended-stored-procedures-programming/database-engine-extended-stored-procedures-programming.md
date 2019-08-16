@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Database Engine Extended Stored Procedures - Programming
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDisjoint"
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STDisjoint (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

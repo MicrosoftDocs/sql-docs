@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Specify Endpoint URL - Adding or Modifying Availability Replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,13 +22,6 @@ manager: craigg
 > [!NOTE]  
 >  The term "endpoint URL" is synonymous with the term "server network address" used by the database mirroring user interface and documentation.  
   
--   [Syntax for an Endpoint URL](#SyntaxOfURL)  
-  
--   [Finding the Fully Qualified Domain Name of A System](#Finding_FQDN)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="SyntaxOfURL"></a> Syntax for an Endpoint URL  
  The syntax for an endpoint URL is of the form:  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f5f658e3-417e-4286-9213-5738266f3b28
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Database Maintenance Plan Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

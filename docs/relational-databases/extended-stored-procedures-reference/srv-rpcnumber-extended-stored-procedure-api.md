@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_rpcnumber (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

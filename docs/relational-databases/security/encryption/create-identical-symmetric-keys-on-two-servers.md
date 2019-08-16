@@ -1,7 +1,7 @@
 ---
 title: "Create Identical Symmetric Keys on Two Servers | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/02/2019"
+ms.date: "05/30/2019"
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Identical Symmetric Keys on Two Servers
@@ -84,9 +83,23 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
-  
- For more information, see the following:  
-  
+
+### Encryption changes in SQL Server 2017 CU2
+
+SQL Server 2016 uses the SHA1 hashing algorithm for its encryption work. Starting in SQL Server 2017, SHA2 is used instead. This means extra steps might be necessary to have your SQL Server 2017 installation decrypt items that were encrypted by SQL Server 2016. Here are the extra steps:
+
+- Ensure your SQL Server 2017 is updated to at least Cumulative Update 2 (CU2).
+  - See [Cumulative Update 2 (CU2) for SQL Server 2017](https://support.microsoft.com/help/4052574) for important details.
+- After you install CU2, turn on trace flag 4631 in SQL Server 2017: `DBCC TRACEON(4631, -1);`
+  - Trace flag 4631 is new in SQL Sewrver 2017. Trace flag 4631 needs to be `ON` globally before you create the master key, certificate, or symmetrical key in SQL Server 2017. This enables these created items to interoperate with SQL Server 2016 and earlier versions.
+
+For more guidance, see:
+
+- [FIX: SQL Server 2017 cannot decrypt data encrypted by earlier versions of SQL Server by using the same symmetric key](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
+- [Identical symmetric keys do not work between SQL Server 2017 and other SQL Server version](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+
+## For more information
+
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  

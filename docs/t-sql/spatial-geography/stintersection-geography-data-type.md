@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIntersection method"
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIntersection (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

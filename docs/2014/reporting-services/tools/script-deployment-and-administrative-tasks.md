@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [Reporting Services]"
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "transferrng reports"
   - "reports [Reporting Services], migrating"
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Script Deployment and Administrative Tasks

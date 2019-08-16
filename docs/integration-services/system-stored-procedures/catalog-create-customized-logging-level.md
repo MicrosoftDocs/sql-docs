@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
-# catalog.create_customized_logging_level
+# catalog.create_customized_logging_level 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Creates a new customized logging level. For more info about customized logging levels, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  

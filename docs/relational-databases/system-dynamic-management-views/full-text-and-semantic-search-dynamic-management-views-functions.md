@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], full-text search"
   - "full-text search [SQL Server], dynamic management views"
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

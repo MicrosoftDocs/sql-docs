@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "| (bitwise inclusive OR)"
   - "bitwise inclusive OR (|)"
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # | (Bitwise Inclusive OR) (SSIS Expression)

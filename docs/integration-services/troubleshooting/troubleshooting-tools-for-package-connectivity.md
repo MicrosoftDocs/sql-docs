@@ -15,11 +15,14 @@ helpviewer_keywords:
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Troubleshooting Tools for Package Connectivity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot connectivity between packages and the data sources from which packages extract and load data.  
   
 ## Troubleshooting Issues with External Data Providers  

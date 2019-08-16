@@ -17,11 +17,14 @@ helpviewer_keywords:
   - "installing Integration Services"
   - "Setup [Integration Services]"
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Install Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a single Setup program to install any or all of its components, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Use Setup to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] with or without other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components on a single computer.    
     
@@ -113,6 +116,6 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 -   **Optional additional components**. You can optionally download additional third-party components from the SQL Server Feature Package.
 
-    -   Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+    -   MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ®. To get these components, see [MicrosoftÂ® SQL ServerÂ® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
     -   Microsoft Connector Version 5.0 for Oracle by Attunity and Microsoft Connector Version 5.0 for Teradata by Attunity. To get these components, see [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179).

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Legal Notice (SSMA for Sybase)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  

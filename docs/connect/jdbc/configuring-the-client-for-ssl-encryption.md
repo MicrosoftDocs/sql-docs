@@ -1,7 +1,7 @@
 ---
-title: "Configuring the Client for SSL Encryption | Microsoft Docs"
+title: "Configuring the client for SSL encryption | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Configuring the Client for SSL Encryption
+# Configuring the client for SSL encryption
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] or client has to validate that the server is the correct server and its certificate is issued by a certificate authority that the client trusts. In order to validate the server certificate, the trust material must be supplied at connection time. In addition, the issuer of the server certificate must be a certificate authority that the client trusts.  
   
  This topic first describes how to supply the trust material in the client computer. Then, the topic describes how to import a server certificate to the client computer's trust store when the instance of SQL Server's Secure Sockets Layer (SSL) certificate is issued by a private certificate authority.  
   
- For more information about validating the server certificate, see the Validating Server SSL Certificate section in [Understanding SSL Support](../../connect/jdbc/understanding-ssl-support.md).  
+ For more information about validating the server certificate, see the Validating Server SSL Certificate section in [Understanding SSL support](../../connect/jdbc/understanding-ssl-support.md).  
   
-## Configuring the Client Trust Store  
+## Configuring the client trust store 
  Validating the server certificate requires that the trust material must be supplied at connection time either by using **trustStore** and **trustStorePassword** connection properties explicitly, or by using the underlying Java Virtual Machine (JVM)'s default trust store implicitly. For more information about how to set the **trustStore** and **trustStorePassword** properties in a connection string, see [Connecting with SSL Encryption](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
  If the **trustStore** property is unspecified or set to null, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will rely on the underlying JVM's security provider, the Java Secure Socket Extension (SunJSSE). The SunJSSE provider provides a default TrustManager, which is used to validate X.509 certificates returned by SQL Server against the trust material provided in a trust store.  
@@ -47,7 +46,7 @@ java -Djavax.net.ssl.trustStorePassword=storePassword
   
  In addition, you can configure and manage the default trust store files such as "\<java-home>/lib/security/jssecacerts" and "\<java-home>/lib/security/cacerts". To do that, use the JAVA "keytool" utility that is installed with the JRE (Java Runtime Environment). For more information about the "keytool" utility, see keytool documentation on the Sun Microsystems Web site.  
   
-### Importing the Server Certificate to Trust Store  
+### Importing the server certificate to trust store  
  During the SSL handshake, the server sends its public key certificate to the client. The issuer of a public key certificate is known as a Certificate Authority (CA). The client has to ensure that the certificate authority is one that the client trusts. This is achieved by knowing the public key of trusted CAs in advance. Normally, the JVM ships with a predefined set of trusted certificate authorities.  
   
  If the instance of SQL Server's SSL certificate is issued by a private certificate authority, you must add the certificate authority's certificate to the list of trusted certificates in the client computer's trust store.  
@@ -78,8 +77,8 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. Click Next, and then click Finish to export the certificate.  
   
-## See Also  
- [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)   
- [Securing JDBC Driver Applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## See also  
+ [Using SSL encryption](../../connect/jdbc/using-ssl-encryption.md)   
+ [Securing JDBC driver applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

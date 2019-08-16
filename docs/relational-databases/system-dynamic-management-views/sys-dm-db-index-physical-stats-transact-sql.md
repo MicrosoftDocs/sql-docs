@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_index_physical_stats (Transact-SQL)
@@ -191,7 +190,7 @@ GO
   
 -   Use ALTER INDEX REBUILD, the replacement for DBCC DBREINDEX, to rebuild the index online or offline. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- Fragmentation alone is not a sufficient reason to reorganize or rebuild an index. The main effect of fragmentation is that it slows down page read-ahead throughput during index scans. This causes slower response times. If the query workload on a fragmented table or index does not involve scans, because the workload is primarily singleton lookups, removing fragmentation may have no effect. For more information, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=31012).  
+ Fragmentation alone is not a sufficient reason to reorganize or rebuild an index. The main effect of fragmentation is that it slows down page read-ahead throughput during index scans. This causes slower response times. If the query workload on a fragmented table or index does not involve scans, because the workload is primarily singleton lookups, removing fragmentation may have no effect.
   
 > [!NOTE]  
 >  Running DBCC SHRINKFILE or DBCC SHRINKDATABASE may introduce fragmentation if an index is partly or completely moved during the shrink operation. Therefore, if a shrink operation must be performed, you should do it before fragmentation is removed.  
@@ -200,7 +199,7 @@ GO
  To reduce the extent fragmentation of a heap, create a clustered index on the table and then drop the index. This redistributes the data while the clustered index is created. This also makes it as optimal as possible, considering the distribution of free space available in the database. When the clustered index is then dropped to re-create the heap, the data is not moved and remains optimally in position. For information about how to perform these operations, see [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) and [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md).  
   
 > [!CAUTION]  
->  Creating and dropping a clustered index on a table, rebuilds all non-clustered indexes on that table twice.  
+>  Creating and dropping a clustered index on a table, rebuilds all nonclustered indexes on that table twice.  
   
 ## Compacting Large Object Data  
  By default, the ALTER INDEX REORGANIZE statement compacts pages that contain large object (LOB) data. Because LOB pages are not deallocated when empty, compacting this data can improve disk space use if lots of LOB data have been deleted, or a LOB column is dropped.  

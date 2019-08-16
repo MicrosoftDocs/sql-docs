@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ChangePassword Method (ADOX)
 Changes the password for a [user](../../../ado/reference/adox-api/user-object-adox.md) account.  

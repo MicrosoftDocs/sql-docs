@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Manage an Oracle CDC Service
@@ -22,7 +22,7 @@ manager: craigg
   
 2.  Select the CDC service you want to work with.  
   
-     You can also right-click the CDC service you want to work with and select the desired action. See [What can you do with a CDC Service](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice).  
+     You can also right-click the CDC service you want to work with and select the desired action. See [What can you do with a CDC Service](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
  **OR**  
   
@@ -30,7 +30,7 @@ manager: craigg
   
 2.  From the middle section of the CDC Service Configuration Console, select the service you want to work with.  
   
-     You can also right-click the CDC service you want to work with and select the desired action. See [What can you do with a CDC Service](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice).  
+     You can also right-click the CDC service you want to work with and select the desired action. See [What can you do with a CDC Service](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService).  
   
 ##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  You can carry out the following actions when working with a CDC service.  
@@ -53,5 +53,3 @@ manager: craigg
   
 ## See Also  
  [How to Manage a Local CDC Service](how-to-manage-a-local-cdc-service.md)  
-  
-  

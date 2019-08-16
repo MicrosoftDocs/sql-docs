@@ -14,7 +14,6 @@ helpviewer_keywords:
   - "OLE DB, creating applications"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Creating an OLE DB Driver for SQL Server Application
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

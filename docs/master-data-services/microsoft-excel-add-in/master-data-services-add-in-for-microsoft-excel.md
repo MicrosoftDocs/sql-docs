@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Add-in for Microsoft Excel
 
@@ -25,6 +24,7 @@ manager: craigg
 ## Downloads 
 >*  Download the Master Data Services Add-in for Excel for SQL Server 2016 SP2 from [this Microsoft Download Center page](https://www.microsoft.com/download/details.aspx?id=56838). 
 >* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
+>*  Download the Master Data Services Add-in for Excel for SQL Server 2019 CTP from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=2086948). 
  
   
 ## Terms  

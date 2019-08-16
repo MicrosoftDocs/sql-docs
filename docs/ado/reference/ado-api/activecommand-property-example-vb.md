@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ActiveCommand Property Example (VB)
 This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property.  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ParameterAttributesEnum
 Specifies the attributes of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

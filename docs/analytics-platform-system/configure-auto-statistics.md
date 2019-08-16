@@ -2,7 +2,6 @@
 title: "Auto-Statistics (Analytics Platform System)"
 description: "Describes auto statistics feature introduced in Analytics Platform System AU7."
 author: "mzaman1" 
-manager: "craigg"	  
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"

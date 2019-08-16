@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "disks [SQL Server], number of disk writes"
   - "total write [SQL Server]"
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # &#x40;&#x40;TOTAL_WRITE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,17 +1,17 @@
 ---
 title: Discontinued Functionality
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint 
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ---
-
 # Discontinued Functionality in SQL Server Reporting Services (SSRS)
 
   This topic describes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features that are no longer available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. It does not include announcements about discontinued support for specific versions of the operating system or [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Services (IIS). For more information about system prerequisites, see [Hardware and Software Requirements for Installing SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  

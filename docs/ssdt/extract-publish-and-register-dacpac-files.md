@@ -14,9 +14,8 @@ f1_keywords:
   - "sql.data.tools.publishdacproject"
   - "sql.data.tools.DacExtractDialog"
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Extract, Publish, and Register .dacpac Files
 This topic describes four procedures that you can perform by right clicking a connected database in SQL Server Object Explorer:  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLGetTypeInfo

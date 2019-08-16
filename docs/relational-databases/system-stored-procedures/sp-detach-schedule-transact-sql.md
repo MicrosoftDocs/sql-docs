@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,25 +36,25 @@ sp_detach_schedule
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number of the job to remove the schedule from. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'**_job_name_**'**  
+`[ @job_name = ] 'job_name'`
  The name of the job to remove the schedule from. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_id=** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The schedule identification number of the schedule to remove from the job. *schedule_id* is **int**, with a default of NULL.  
   
- [ **@schedule_name=** ] **'**_schedule_name_**'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to remove from the job. *schedule_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
+`[ @delete_unused_schedule = ] delete_unused_schedule`
  Specifies whether to delete unused job schedules. *delete_unused_schedule* is **bit**, with a default of **0**, which means that all schedules will be kept, even if no jobs reference them. If set to **1**, unused job schedules are deleted if no jobs reference them.  
   
 ## Return Code Values  

@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.columnchart.f1"
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Data Viewer (Column Chart Tab)

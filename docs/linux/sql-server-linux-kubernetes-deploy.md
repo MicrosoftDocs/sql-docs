@@ -3,11 +3,10 @@ title: Deploy a SQL Server Always On availability group on a Kubernetes cluster
 description: This article explains the parameters for the SQL Server Kubernetes Always On availability group operator global requirements
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
@@ -23,17 +22,20 @@ On Kubernetes, the deployment includes a SQL Server operator, the SQL Server con
 
 ## Requirements
 
-- A Kubernetes cluster
-- Kubernetes version 1.11.0 or higher
+- An AKS Kubernetes cluster with the latest version
 - At least three nodes
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - Access to the [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) GitHub repository
 
 > [!NOTE]
 > You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](https://docs.microsoft.com/azure/aks/create-cluster).
-> The following script creates a four-node Kubernetes cluster in Azure.
+>
+> Use the latest version of Kubernetes. The specific version depends on your subscription and region. See [Supported Kubernetes versions in AKS](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions).  
+>
+> The following script creates a four-node Kubernetes cluster in Azure. Before you run the script replace `<latest version>` with the latest available version. For example `1.12.5`.
+>
 > ```azure-cli
-> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version 1.11.3 --generate-ssh-keys
+> az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 4 --kubernetes-version <latest version> --generate-ssh-keys
 > ```
 
 ## Deploy the operator, SQL Server containers, and load-balancing services

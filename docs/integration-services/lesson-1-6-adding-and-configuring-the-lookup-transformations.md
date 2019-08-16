@@ -1,18 +1,20 @@
 ---
 title: "Step 6: Add and configure the Lookup transformations | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/03/2019"
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
+ms.reviewer: ""
 ---
 # Lesson 1-6: Add and configure the Lookup transformations
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 After you have configured the Flat File source to extract data from the source file, you define the Lookup transformations needed to obtain the values for **CurrencyKey** and **DateKey**. A Lookup transformation performs a lookup by joining data in the specified input column to a column in a reference dataset. The reference dataset can be an existing table or view, a new table, or the result of an SQL statement. In this tutorial, the Lookup transformation uses an OLE DB connection manager to connect to the database that contains the source data of the reference dataset.  
   
@@ -92,7 +94,7 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
   
 8.  On the **Columns** page, make the following selections:  
   
-    1.  In the **Available Input Columns** panel, drag **CurrencyDate** to the **Available Lookup Columns** panel and drop it on **FullDateAlternateKey**.  
+    1.  In the **Available Input Columns** panel, drag **CurrencyDate** to the **Available Lookup Columns** panel and drop it on **FullDateAlternateKey**.  If you see a message indicating a data type mismatch, change the data type of CurrencyDate to [DT_DBDATE].
   
     2.  In the **Available Lookup Columns** list, select the check box to the left of **DateKey**.  
   
@@ -109,6 +111,3 @@ In both cases, the Lookup transformation uses the OLE DB connection manager you 
   
 ## See also  
 [Lookup transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

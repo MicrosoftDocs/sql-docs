@@ -9,7 +9,6 @@ ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Installation and configuration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

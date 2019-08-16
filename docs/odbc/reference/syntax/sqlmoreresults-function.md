@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLMoreResults Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLMoreResults(  
      SQLHSTMT     StatementHandle);  

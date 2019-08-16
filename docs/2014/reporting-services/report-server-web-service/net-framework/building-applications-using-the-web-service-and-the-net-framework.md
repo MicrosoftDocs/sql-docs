@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Report Server Web service, application building"
@@ -19,8 +17,8 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], application building"
   - "Web service [Reporting Services], client creation"
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Building Applications Using the Web Service and the .NET Framework

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System-Versioned Temporal Tables with Memory-Optimized Tables

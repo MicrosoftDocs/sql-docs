@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom objects [Integration Services]"
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Building, Deploying, and Debugging Custom Objects

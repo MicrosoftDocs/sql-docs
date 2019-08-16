@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)
@@ -33,7 +32,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ##  <a name="WSFC"></a> Windows Server Failover Clustering and Availability Groups  
  Deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requires a Windows Server Failover Cluster (WSFC). To be enabled for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must reside on a WSFC node, and the WSFC and node must be online. Furthermore, each availability replica of a given availability group must reside on a different node of the same WSFC. The only exception is that while being migrated to another WSFC, an availability group can temporarily straddle two clusters.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] relies on the Windows Server Failover Cluste(WSFC) to monitor and manage the current roles of the availability replicas that belong to a given availability group and to determine how a failover event affects the availability replicas. A WSFC resource group is created for every availability group that you create. The WSFC monitors this resource group to evaluate the health of the primary replica.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] relies on the Windows Server Failover Cluster (WSFC) to monitor and manage the current roles of the availability replicas that belong to a given availability group and to determine how a failover event affects the availability replicas. A WSFC resource group is created for every availability group that you create. The WSFC monitors this resource group to evaluate the health of the primary replica.  
   
  The quorum for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is based on all nodes in the WSFC regardless of whether a given cluster node hosts any availability replicas. In contrast to database mirroring, there is no witness role in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
@@ -122,7 +121,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
      [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
+     [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

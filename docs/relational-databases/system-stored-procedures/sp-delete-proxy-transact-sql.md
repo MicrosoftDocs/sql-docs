@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +34,10 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## Arguments  
- [ **@proxy_id**= ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to remove. The *proxy_id* is **int**, with a default of NULL.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to remove. The *proxy_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

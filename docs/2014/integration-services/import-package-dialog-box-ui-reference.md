@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.dtsserver.importpackage.f1"
 helpviewer_keywords: 
   - "Import Package dialog box"
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Import Package Dialog Box UI Reference

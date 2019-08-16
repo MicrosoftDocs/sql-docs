@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Revert a Database to a Database Snapshot
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +111,9 @@ manager: craigg
 5.  Start the database.  
   
 6.  Optionally, back up the reverted database, especially if it uses the full (or bulk-logged) recovery model. To back up a database, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  This section contains the following examples of reverting a database to a database snapshot:  
   

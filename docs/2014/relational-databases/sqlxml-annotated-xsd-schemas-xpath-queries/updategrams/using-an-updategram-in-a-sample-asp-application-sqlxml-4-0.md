@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Active Server Pages"
   - "updategrams [SQLXML], ASP applications"
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using an Updategram in a Sample ASP Application (SQLXML 4.0)

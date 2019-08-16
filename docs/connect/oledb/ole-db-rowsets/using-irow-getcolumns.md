@@ -17,7 +17,6 @@ helpviewer_keywords:
   - "GetColumns method"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Using IRow::GetColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

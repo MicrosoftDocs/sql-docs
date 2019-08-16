@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data processing extensions [Reporting Services], data readers"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "DataReader class"
   - "read-only data"
 ms.assetid: 23e286e7-6074-4fbe-be29-203420d6c3d0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Implementing a DataReader Class for a Data Processing Extension

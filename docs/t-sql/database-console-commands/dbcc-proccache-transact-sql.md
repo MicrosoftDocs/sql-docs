@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "displaying procedure cache information"
   - "DBCC PROCCACHE statement"
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

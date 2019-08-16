@@ -3,18 +3,20 @@ title: "Save and Run Package (SQL Server Import and Export Wizard) | Microsoft D
 ms.custom: ""
 ms.date: "02/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.saveschedule.f1"
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Save and Run Package (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you specify and configure your data source and destination, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Save and Run Package**. On this page, you specify whether you want to run the copy operation immediately. Depending on your configuration, you may also be able to save your settings as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) package to customize it and to reuse it later.
   
 **What's a package?** The Wizard uses SQL Server Integration Services (SSIS) to copy data. In SSIS, the basic unit is the package. The wizard creates an SSIS package in memory as you move through the pages of the wizard and specify options.

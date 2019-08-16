@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Database Mail Views (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

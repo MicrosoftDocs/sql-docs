@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which cleans up metadata for all publications. The publication must already exist if explicitly specified.  
   
- [ **@reinitialize_subscriber =** ] **'***subscriber***'**  
+`[ @reinitialize_subscriber = ] 'subscriber'`
  Specifies whether to reinitialize the Subscriber. *subscriber* is **nvarchar(5)**, can be **TRUE** or **FALSE**, with a default of **TRUE**. If **TRUE**, subscriptions are marked for reinitialization. If **FALSE**, the subscriptions are not marked for reinitialization.  
   
 ## Return Code Values  
@@ -84,7 +83,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  Regenerate snapshot files for all merge publications involved at all levels. If you try to merge without regenerating the snapshot first, you receive a prompt to regenerate the snapshot.  
   
 6.  Back up the publication database. Failure to do so can cause a merge failure after a restore of the publication database.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **Special Considerations for Continuous Mode Merges**  
   
  If you are running continuous-mode merges, you must either:  

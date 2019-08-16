@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], user interface elements"
   - "user interface [SQL Server Management Studio]"
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # General User Interface Elements
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

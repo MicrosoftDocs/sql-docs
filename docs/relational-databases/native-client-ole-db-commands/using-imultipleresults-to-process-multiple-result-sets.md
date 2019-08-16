@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using IMultipleResults to Process Multiple Result Sets

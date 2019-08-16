@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Change Data Capture and Other SQL Server Features
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

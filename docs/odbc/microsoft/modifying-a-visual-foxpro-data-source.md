@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Modifying a Visual FoxPro Data Source
 ### To modify a Visual FoxPro data source  

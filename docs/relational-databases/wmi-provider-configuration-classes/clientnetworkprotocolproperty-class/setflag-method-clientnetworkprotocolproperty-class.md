@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetFlag Method (ClientNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

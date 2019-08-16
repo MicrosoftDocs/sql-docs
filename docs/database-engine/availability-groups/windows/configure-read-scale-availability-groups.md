@@ -4,7 +4,6 @@ description: "Configure your Always On availability group for read-scale workloa
 ms.custom: "seodec18"
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.reviewer: ""
 ms.date: 05/24/2018
 ms.topic: conceptual

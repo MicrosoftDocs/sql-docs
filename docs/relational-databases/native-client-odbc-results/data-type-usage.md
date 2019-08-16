@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Usage

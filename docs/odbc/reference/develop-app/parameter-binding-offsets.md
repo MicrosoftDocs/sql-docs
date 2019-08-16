@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Parameter Binding Offsets
 An application can specify that an offset is added to bound parameter buffer addresses and the corresponding length/indicator buffer addresses when **SQLExecDirect** or **SQLExecute** is called. The result of these additions determines the addresses used in these operations.  

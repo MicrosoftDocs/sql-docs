@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

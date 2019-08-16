@@ -1,18 +1,18 @@
 ---
-title: Known issues for R language and Python integration - SQL Server Machine Learning Services
+title: Known issues for R language and Python integration
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/28/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Known issues in Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server 2016 R Services](install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services with R and Python](install/sql-machine-learning-services-windows-install.md).
+This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server 2016 R Services](r/sql-server-r-services.md) and [SQL Server Machine Learning Services with R and Python](what-is-sql-server-machine-learning.md).
 
 ## Setup and configuration issues
 
@@ -72,7 +72,7 @@ The following example shows the commands with the default instance "MSSQL14.MSSQ
 
 ### 3. Unable to install SQL Server machine learning features on a domain controller
 
-If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with these errors:
+If you try to install SQL Server 2016 R Services or SQL Server Machine Learning Services on a domain controller, setup fails, with these errors:
 
 > *An error occurred during the setup process of the feature*
 > 
@@ -131,7 +131,7 @@ This message is displayed if either of the following two statements is true,
 + You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 + You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](install/upgrade-r-and-python.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -401,6 +401,29 @@ The `rxDTree` function does not currently support in-formula transformations. In
 
 Ordered factors are treated the same as factors in all RevoScaleR analysis functions except `rxDTree`.
 
+### 20. Data.table as an OutputDataSet in R
+
+Using `data.table` as an `OutputDataSet` in R is not supported in SQL Server 2017 Cumulative Update 13 (CU13) and earlier. The following message might appear:
+
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 
+'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
+
+`data.table` as an `OutputDataSet` in R is supported in SQL Server 2017 Cumulative Update 14 (CU14) and later.
+
 ## Python script execution issues
 
 This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -460,8 +483,19 @@ Beginning with SQL Server 2017 CU2, the following message might appear even if P
 > *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state is used prior to global declaration*
 
-
 This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3). 
+
+### 5. Numeric, decimal and money data types not supported
+
+Beginning with SQL Server 2017 Cumulative Update 12 (CU12), numeric, decimal and money data types in WITH RESULT SETS are unsupported when using Python with `sp_execute_external_script`. The following messages might appear:
+
+> *[Code: 39004, SQL State: S1000]  A 'Python' script error occurred during execution of'sp_execute_external_script' with HRESULT 0x80004004.*
+
+> *[Code: 39019, SQL State: S1000]  An external script error occurred:*
+> 
+> *SqlSatelliteCall error: Unsupported type in output schema. Supported types: bit, smallint, int, datetime, smallmoney, real and float. char, varchar are partially supported.*
+
+This has been fixed in SQL Server 2017 Cumulative Update 14 (CU14).
 
 ## Revolution R Enterprise and Microsoft R Open
 

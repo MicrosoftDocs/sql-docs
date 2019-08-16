@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwsource.columns.f1"
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # SAP BW Source Editor (Columns Page)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Columns** page of the **SAP BW Source Editor** to map an output column to each external (source) column.  
   
  To learn more about the SAP BW source component of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md).  

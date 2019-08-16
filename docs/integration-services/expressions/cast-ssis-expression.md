@@ -14,11 +14,14 @@ helpviewer_keywords:
   - "data types [Integration Services], expressions"
   - "data types [Integration Services], converting"
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Cast (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Explicitly converts an expression from one data type to a different data type. The cast operator can also function as a truncation operator.  
   
 ## Syntax  

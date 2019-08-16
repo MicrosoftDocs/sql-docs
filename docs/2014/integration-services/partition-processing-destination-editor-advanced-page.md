@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.partprocessingtransformation.advanced.f1"
 helpviewer_keywords: 
   - "Partition Processing Destination Editor"
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Partition Processing Destination Editor (Advanced Page)

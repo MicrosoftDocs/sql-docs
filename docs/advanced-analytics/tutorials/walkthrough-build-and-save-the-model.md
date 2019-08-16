@@ -1,17 +1,17 @@
 ---
-title: Build an R model and save to SQL Server (walkthrough) - SQL Server Machine Learning
+title: Build an R model and save to SQL Server (walkthrough)
 description: Tutorial showing how to build an R language model used for SQL Server in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/26/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Build an R model and save to SQL Server (walkthrough)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this step, learn how to build a machine learning model and save the model in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By saving a model, you can call it directly from [!INCLUDE[tsql](../../includes/tsql-md.md)] code, using the system stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) or the [PREDICT (T-SQL) function](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 

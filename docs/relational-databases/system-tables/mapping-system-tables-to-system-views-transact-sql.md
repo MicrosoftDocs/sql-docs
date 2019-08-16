@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Mapping System Tables to System Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

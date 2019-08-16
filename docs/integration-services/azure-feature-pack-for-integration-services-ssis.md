@@ -1,7 +1,7 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/09/2018"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -11,14 +11,17 @@ f1_keywords:
   - "SQL13.SSIS.AZURE.F1"
   - "SQL14.SSIS.AZURE.F1"
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Azure Feature Pack for Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
 
-[![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Download**
+[![Download SSIS Feature Pack for Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Download**
 
 - For SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - For SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
@@ -62,6 +65,8 @@ The download pages also include information about prerequisites. Make sure you i
 
     -   [Azure SQL DW Upload Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Flexible File Task](../integration-services/control-flow/flexible-file-task.md)
+
 -   Data Flow Components
 
     -   [Azure Blob Source](../integration-services/data-flow/azure-blob-source.md)
@@ -72,7 +77,73 @@ The download pages also include information about prerequisites. Make sure you i
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob & Azure Data Lake Store File Enumerator. See [Foreach Loop Container](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+    -   [Flexible File Source](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [Flexible File Destination](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Azure Blob, Azure Data Lake Store, and Data Lake Storage Gen2 File Enumerator. See [Foreach Loop Container](../integration-services/control-flow/foreach-loop-container.md)
+
+## Use TLS 1.2
+
+The TLS version used by Azure Feature Pack follows system .NET Framework settings.
+To use TLS 1.2, add a `REG_DWORD` value named `SchUseStrongCrypto` with data `1` under the following two registry keys.
+
+1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
+2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
+
+## Dependency on Java
+
+Java is required to use certain features.
+Architecture (32/64-bit) of the Java build should match that of the SSIS runtime to use.
+The following Java builds have been tested.
+
+- [Zulu's OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Oracle's Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### Set Up Zulu's OpenJDK
+
+1. Download and extract the installation zip package.
+2. From the Command Prompt, run `sysdm.cpl`.
+3. On the **Advanced** tab, select **Environment Variables**.
+4. Under the **System variables** section, select **New**.
+5. Enter `JAVA_HOME` for the **Variable name**.
+6. Select **Browse Directory**, navigate to the extracted folder, and select the `jre` subfolder.
+   Then select **OK**, and the **Variable value** is populated automatically.
+7. Select **OK** to close the **New System Variable** dialog box.
+8. Select **OK** to close the **Environment Variables** dialog box.
+9. Select **OK** to close the **System Properties** dialog box.
+
+### Set Up Zulu's OpenJDK on Azure-SSIS Integration Runtime
+
+This should be done via [custom setup interface](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for Azure-SSIS Integration Runtime.
+Suppose `zulu8.33.0.1-jdk8.0.192-win_x64.zip` is used.
+The blob container could be organized as follows.
+
+~~~
+main.cmd
+install_openjdk.ps1
+zulu8.33.0.1-jdk8.0.192-win_x64.zip
+~~~
+
+As the entry point, `main.cmd` triggers execution of the PowerShell script `install_openjdk.ps1` which in turn extracts `zulu8.33.0.1-jdk8.0.192-win_x64.zip` and sets `JAVA_HOME` accordingly.
+
+**main.cmd**
+
+~~~
+powershell.exe -file install_openjdk.ps1
+~~~
+
+**install_openjdk.ps1**
+
+~~~
+Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
+[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\zulu8.33.0.1-jdk8.0.192-win_x64\jre", "Machine")
+~~~
+
+### Set Up Oracle's Java SE Runtime Environment
+
+1. Download and run the exe installer.
+2. Follow the installer instructions to complete setup.
 
 ## Scenario: Processing big data
  Use Azure Connector to complete following big data processing work:

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +36,10 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of the new database role. *role* is a **sysname**, with no default. *role* must be a valid identifier (ID) and must not already exist in the current database.  
   
- [ **@ownername =**] **'***owner***'**  
+`[ @ownername = ] 'owner'`
  Is the owner of the new database role. *owner* is a **sysname**, with a default of the current executing user. *owner* must be a database user or database role in the current database.  
   
 ## Return Code Values  

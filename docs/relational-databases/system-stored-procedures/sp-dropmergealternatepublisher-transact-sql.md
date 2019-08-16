@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,22 +31,22 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the current Publisher. *publisher*is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the current publication database. *publisher_db*is **sysname**, with no default.  
   
- [ **@publication =**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the current publication. *publication* is **sysname**, with no default.  
   
- [ **@alternate_publisher=**] **'**_alternate_publisher_**'**  
+`[ @alternate_publisher = ] 'alternate_publisher'`
  Is the name of the alternate Publisher to drop as the alternate synchronization partner. *alternate_publisher*is **sysname**, with no default.  
   
- [ **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'`
  Is the name of the publication database to drop as the alternate synchronization partner publication database. *alternate_publisher_db*is **sysname**, with no default.  
   
- [ **@alternate_publication=**] **'**_alternate_publication_**'**  
+`[ @alternate_publication = ] 'alternate_publication'`
  Is the name of the publication to drop as the alternate synchronization partner publication. *alternate_publication*is **sysname**, with no default.  
   
 ## Return Code Values  

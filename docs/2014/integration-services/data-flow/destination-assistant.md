@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.dts.designer.destinationassistant.f1"
   - "SQL12.DTS.DESIGNER.DESTINATIONASSIST.F1"
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Destination Assistant

@@ -12,11 +12,14 @@ helpviewer_keywords:
   - "transformations [Integration Services], about transformations"
   - "transforming data [Integration Services]"
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Transform Data with Transformations
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes three types of data flow components: sources, transformations, and destinations.  
   
  The following diagram shows a simple data flow that has a source, two transformations, and a destination.  

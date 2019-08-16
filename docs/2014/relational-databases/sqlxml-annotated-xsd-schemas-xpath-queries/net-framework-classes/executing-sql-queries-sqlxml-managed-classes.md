@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ExecuteToStream method"
   - "SQL queries [SQLXML]"
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Executing SQL Queries (SQLXML Managed Classes)

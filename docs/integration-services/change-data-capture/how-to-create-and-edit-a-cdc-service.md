@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # How to Create and Edit a CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   These procedures describe how to create and edit a new Oracle CDC Service from the CDC Service Configuration Console.  
   
  This procedure requires a Windows user with administrator privileges on the computer where the Oracle CDC service is configured.  

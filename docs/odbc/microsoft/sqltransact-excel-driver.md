@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTransact (Excel Driver)
 > [!NOTE]  

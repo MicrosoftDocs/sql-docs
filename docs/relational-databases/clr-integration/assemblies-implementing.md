@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Assemblies - Implementing
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

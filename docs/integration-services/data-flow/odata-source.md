@@ -13,11 +13,14 @@ f1_keywords:
   - "sql13.dts.designer.odatasource.columns.f1"
   - "sql13.dts.designer.odatasource.erroroutput.f1"
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # OData Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service.
 
 ## Supported protocols and data formats

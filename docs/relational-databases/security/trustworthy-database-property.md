@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # TRUSTWORTHY Database Property
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 34423903-1aaa-4a55-88a6-8228315d84e7
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # dbo.server_quotas (Azure SQL Database)

@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "at-identity attribute"
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Inserting Data Using XML Updategrams (SQLXML 4.0)

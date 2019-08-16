@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "scripts [Integration Services], about Script task with packages"
   - "SSIS Script task, about Script task"
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Extending the Package with the Script Task

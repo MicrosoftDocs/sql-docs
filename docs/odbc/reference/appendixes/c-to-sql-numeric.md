@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # C to SQL: Numeric
 The identifiers for the numeric ODBC C data types are:  

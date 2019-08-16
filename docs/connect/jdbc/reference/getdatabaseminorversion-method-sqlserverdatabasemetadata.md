@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 18163668-60d6-4d54-aaf1-c338b8c90f2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getDatabaseMinorVersion Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

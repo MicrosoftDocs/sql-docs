@@ -11,9 +11,8 @@ f1_keywords:
   - "sql13.dqs.dm.refdata.f1"
   - "sql13.dqs.dm.refcatalog.f1"
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Attach Domain or Composite Domain to Reference Data
 

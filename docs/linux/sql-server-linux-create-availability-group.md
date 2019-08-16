@@ -1,13 +1,12 @@
 ---
-title: Create and configure an availability group for SQL Server on Linux | Microsoft Docs
+title: Create and configure an availability group for SQL Server on Linux
 description: This tutorial shows how to create and configure availability groups for SQL Server on Linux.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ---
 
@@ -238,7 +237,7 @@ This example will create certificates for a three-node configuration. The instan
     GO
     ```
     
-10.  Restore LinAGN1_Cert and LinAGN3_Cert on LinAGN2. 
+10. Restore LinAGN1_Cert and LinAGN3_Cert on LinAGN2.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -252,8 +251,9 @@ This example will create certificates for a three-node configuration. The instan
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -265,7 +265,7 @@ This example will create certificates for a three-node configuration. The instan
     GO
     ```
     
-12.  Create the instance-level logins and users associated with LinAGN1 and LinAGN2 on LinAGN3.
+12. Create the instance-level logins and users associated with LinAGN1 and LinAGN2 on LinAGN3.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -279,7 +279,7 @@ This example will create certificates for a three-node configuration. The instan
     GO
     ```
     
-13.  Restore LinAGN1_Cert and LinAGN2_Cert on LinAGN3. 
+13. Restore LinAGN1_Cert and LinAGN2_Cert on LinAGN3. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -293,8 +293,9 @@ This example will create certificates for a three-node configuration. The instan
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -411,7 +412,7 @@ This example shows how to create a two-replica AG that uses a configuration-only
     GO
     ```
     
-3.  In a query window connected to the configuration only replica, join it to the AG.
+3. In a query window connected to the configuration only replica, join it to the AG.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -534,7 +535,7 @@ A Pacemaker high availability cluster underlying [!INCLUDE[ssnoversion-md](../in
 1.  In a query window connected to the first replica, execute the following:
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

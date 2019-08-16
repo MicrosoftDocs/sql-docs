@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # managed_backup.sp_backup_master_switch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

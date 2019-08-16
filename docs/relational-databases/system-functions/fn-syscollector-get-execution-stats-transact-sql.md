@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

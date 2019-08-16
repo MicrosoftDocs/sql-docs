@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "SYSUTCDATETIME function [SQL Server]"
   - "time [SQL Server], system"
 ms.assetid: f14fc2cd-9ea8-4daf-88f4-418cf523ab55
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SYSUTCDATETIME (Transact-SQL)

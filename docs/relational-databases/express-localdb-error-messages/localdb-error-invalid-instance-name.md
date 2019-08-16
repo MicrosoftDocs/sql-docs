@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # LOCALDB_ERROR_INVALID_INSTANCE_NAME
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

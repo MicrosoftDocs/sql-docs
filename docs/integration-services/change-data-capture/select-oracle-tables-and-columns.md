@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "selTabCol"
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Select Oracle Tables and Columns
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Select Oracle Tables and Columns page to select the tables from the Oracle source database where changes are captured. This page has the following elements:  
   
 ## Options  

@@ -1,20 +1,19 @@
 ---
-title: Tutorial on creating, training and scoring partition-based models in R - SQL Server Machine Learning Services
+title: Tutorial on creating, training and scoring partition-based models in R
 description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 02/28/2019
+ms.date: 03/27/2019
 ms.topic: tutorial
-ms.author: heidist
-author: HeidiSteen
-manager: cgronlun
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+ms.author: davidph
+author: dphansen
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 #customer intent: As an R developer, I want to model/train/score partitioned data to avoid manually subsetting data.
 ---
 # Tutorial: Create partition-based models in R on SQL Server
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In SQL Server 2019, partition-based modeling is the ability to create and train models over partitioned data. For stratified data that naturally segments into a given classification scheme - such as geographic regions, date and time, age or gender - you can execute script over the entire data set, with the ability to model, train, and score over partitions that remain intact over all these operations. 
 
@@ -42,7 +41,7 @@ To complete this tutorial, you must have the following:
 
 + SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration.
 
-Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.3) - 15.0.x".
+Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.4) - 15.0.x".
 
 Check availability of R packages by returning a well-formatted list of all R packages currently installed with your database engine instance:
 

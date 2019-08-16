@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Publication Information, Warnings (Merge Publication, SQL Server 2005 and Later)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

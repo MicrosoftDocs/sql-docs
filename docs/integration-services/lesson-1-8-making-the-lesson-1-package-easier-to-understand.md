@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Lesson 1-8: Annotate and format the Lesson 1 package 
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Now that you've completed the configuration of the Lesson 1 package, it's probably time to tidy up the package layout. If the shapes in the control and data flow layouts are different sizes, or not laid out evenly, the package may be more difficult to understand.  
   

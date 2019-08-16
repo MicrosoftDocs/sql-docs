@@ -2,14 +2,14 @@
 title: "Stock Charts (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Stock Charts (Report Builder and SSRS)

@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomFromText (geometry Data Type)"
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomFromText (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copying from Program Variables

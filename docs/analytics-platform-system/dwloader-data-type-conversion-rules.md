@@ -2,7 +2,6 @@
 title: Dwloader data type conversion rules - Parallel Data Warehouse | Microsoft Docs
 description: This topic describes the input data formats and implicit data type conversions that dwloader Command-Line Loader supports when it loads data into Parallel Data Warehouse (PDW)."
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

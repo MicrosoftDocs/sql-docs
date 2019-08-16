@@ -2,13 +2,13 @@
 title: "Configuration and administration of a report server (SSRS) | Microsoft Docs"
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
 
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configuration and administration of a SQL Server Reporting Services (SSRS) report server

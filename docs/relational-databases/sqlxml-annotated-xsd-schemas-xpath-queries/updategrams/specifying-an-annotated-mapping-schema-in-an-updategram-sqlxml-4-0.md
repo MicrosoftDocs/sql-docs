@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying an Annotated Mapping Schema in an Updategram (SQLXML 4.0)

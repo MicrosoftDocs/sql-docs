@@ -16,9 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_rda_migration_status dynamic management view"
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: pmasl 
+ms.author: pelopes
 ---
 # Stretch Database - sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

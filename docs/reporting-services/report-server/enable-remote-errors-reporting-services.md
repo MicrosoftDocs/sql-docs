@@ -2,7 +2,7 @@
 title: "Enable Remote Errors (Reporting Services) | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "remote data source [Reporting Services]"
   - "EnableRemoteError server property"
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Enable Remote Errors (Reporting Services)
   You can set server properties on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", you can set the **EnableRemoteErrors** property to access additional information that can help you troubleshoot the problem. For more information, see [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
@@ -64,7 +64,7 @@ ms.author: maghan
   
 3.  Click **Advanced** to open the properties page. For more information, see [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-4.  In **EnableRemoteErrors**, select **True**.  
+4.  In the **Security** section, in **EnableRemoteErrors**, select **True**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

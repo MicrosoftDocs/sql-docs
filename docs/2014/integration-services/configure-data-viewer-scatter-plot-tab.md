@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.scatterplot.f1"
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Data Viewer (Scatter Plot Tab)

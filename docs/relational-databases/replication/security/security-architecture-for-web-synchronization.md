@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Security Architecture for Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

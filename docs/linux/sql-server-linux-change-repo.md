@@ -1,13 +1,11 @@
 ---
-title: Configure Linux repositories for SQL Server 2017 and 2019 | Microsoft Docs
+title: Configure Linux repositories for SQL Server 2017 and 2019
 description: Check and configure source repositories for SQL Server 2019 and SQL Server 2017 on Linux. The source repository affects the version of SQL Server that is applied during installation and upgrade.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ---

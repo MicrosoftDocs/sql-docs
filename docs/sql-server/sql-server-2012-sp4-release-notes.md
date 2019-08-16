@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Service Pack release notes
@@ -89,7 +88,7 @@ Use the table below to identify the location and name of the file to download ba
 
 ### Download pages  
 - [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268158)
-- [SQL Server 2012 SP1 Express](https://go.microsoft.com/fwlink/p/?LinkID=26815)
+- [SQL Server 2012 SP1 Express](https://www.microsoft.com/download/details.aspx?id=35579)
 
 
 Use the following table to determine which file to download and install. Verify that you have the correct system requirements before installing the service pack. The system requirements are provided on the download pages that are linked to in the table.  

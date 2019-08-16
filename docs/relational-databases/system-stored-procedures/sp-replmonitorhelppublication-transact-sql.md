@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replmonitorhelppublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns current status information for one or more publications at a Publisher. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   
@@ -36,16 +35,16 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher the status of which is being monitored. *publisher* is **sysname**, with a default value of NULL. If **null**, information will be returned for all Publishers that use the Distributor.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the published database. *publisher_db* is **sysname**, with a default value of NULL. If NULL, then information is returned for all published databases at the Publisher.  
   
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication being monitored. *publication* is **sysname**, with a default value of NULL.  
   
- [ **@publication_type** = ] *publication_type*  
+`[ @publication_type = ] publication_type`
  If the type of publication. *publication_type* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -55,7 +54,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**2**|Merge publication.|  
 |NULL (default)|Replication attempts to determine the publication type.|  
   
- [ **@refreshpolicy=** ] *refreshpolicy*  
+`[ @refreshpolicy = ] refreshpolicy`
  Internal use only.  
   
 ## Result Sets  

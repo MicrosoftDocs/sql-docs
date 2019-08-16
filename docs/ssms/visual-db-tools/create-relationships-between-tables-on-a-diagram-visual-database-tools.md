@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "diagrams [SQL Server], designing"
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Create Relationships Between Tables on a Diagram (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

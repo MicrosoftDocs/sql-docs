@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

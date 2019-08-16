@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

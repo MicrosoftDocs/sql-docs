@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fuzzylookuptransformation.referencetable.f1"
 helpviewer_keywords: 
   - "Fuzzy Lookup Transformation Editor"
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Fuzzy Lookup Transformation Editor (Reference Table Tab)

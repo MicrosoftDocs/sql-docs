@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "modifying join operators"
   - "join operators"
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Modify Join Operators (Visual Database Tools)

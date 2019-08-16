@@ -9,7 +9,6 @@ ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Wide World Importers sample databases for Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ The typical flow for how items are stocked and distributed is as follows:
 - Suppliers send the items, WWI receives them and stocks them in their warehouse.
 - Customers order items from WWI
 - WWI fills the customer order with stock items in the warehouse, and when they do not have sufficient stock, they order the additional stock from the suppliers.
-- Some customers do not want to wait for items that are not in stock. If they order say five different stock items, and four are available, they want to receive the four items and backorder the remaining item. The item would them be sent later in a separate shipment.
+- Some customers do not want to wait for items that are not in stock. If they order say five different stock items, and four are available, they want to receive the four items and backorder the remaining item. The item would then be sent later in a separate shipment.
 - WWI invoices customers for the stock items, typically by converting the order to an invoice.
 - Customers might order items that are not in stock. These items are backordered.
 - WWI delivers stock items to customers either via their own delivery vans, or via other couriers or freight methods.

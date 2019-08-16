@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Shrink a File
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLColumns (dBASE Driver)
 > [!NOTE]  

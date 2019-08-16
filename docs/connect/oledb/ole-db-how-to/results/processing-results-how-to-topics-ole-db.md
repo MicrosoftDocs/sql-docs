@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "OLE DB, processing results"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Processing Results How-to Topics (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

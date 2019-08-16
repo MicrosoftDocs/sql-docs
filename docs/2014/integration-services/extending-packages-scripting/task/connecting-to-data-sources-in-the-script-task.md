@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, connections"
   - "SSIS Script task, connections"
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connecting to Data Sources in the Script Task

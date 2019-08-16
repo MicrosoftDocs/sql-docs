@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Work with Change Tracking (SQL Server)
@@ -201,7 +200,9 @@ ON
 3.  Obtain the changes for the Sales table by using CHANGETABLE(CHANGES ...).  
   
 4.  Obtain the changes for the SalesOrders table by using CHANGETABLE(CHANGES ...).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Two processes are occurring in the database that can affect the results that are returned by the previous steps:  
   
 -   The cleanup process runs in the background and removes change tracking information that is older than the specified retention period.  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "security [SQLXML], updategrams"
   - "updategrams [SQLXML], security"
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Updategram Security Considerations (SQLXML 4.0)

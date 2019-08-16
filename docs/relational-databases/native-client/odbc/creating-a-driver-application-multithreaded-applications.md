@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Driver Application - Multithreaded Applications

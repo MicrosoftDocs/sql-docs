@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "accounts [Reporting Services]"
   - "reports [Reporting Services], processing"
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure the Unattended Execution Account (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a special account that is used for unattended report processing and for sending connection requests across the network. The account is used in the following ways:  
@@ -70,6 +70,9 @@ ms.author: maghan
  To retrieve image files, the report server uses the account automatically and no specific action is required on your part. To use the account to connect to external data sources that provide data to reports, you must specify a **Credential Type** option in the data source properties page of the report data source or shared data source:  
   
 -   In the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] or on a SharePoint site, select the **Credentials are not required** option.  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
  The unattended report processing account is used primarily to connect to external servers, and not as a login to database servers. If you want to use the account credentials to log in to a database, you must specify credentials in the connection string. You can specify **Integrated Security=SSPI** if the database server supports Windows integrated security and the account used for unattended report processing has permission to read the database. Otherwise, you must enter the user name and password in the connection string, where it appears in clear text to any user who has permission to edit data source connection properties.  
   

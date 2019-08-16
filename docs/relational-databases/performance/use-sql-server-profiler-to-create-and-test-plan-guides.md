@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Use SQL Server Profiler to Create and Test Plan Guides
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

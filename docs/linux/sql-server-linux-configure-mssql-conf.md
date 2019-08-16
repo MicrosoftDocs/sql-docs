@@ -1,13 +1,11 @@
 ---
-title: Configure SQL Server settings on Linux | Microsoft Docs
+title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 02/28/2019
+author: VanMSFT 
+ms.author: vanto
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ---
@@ -22,7 +20,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 |||
 |---|---|
-| [Agent](#agent) | Enable SQL Server Agent |
+| [Agent](#agent) | Enable SQL Server Agent. |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
 | [Customer feedback](#customerfeedback) | Choose whether or not SQL Server sends feedback to Microsoft. |
 | [Database Mail Profile](#dbmail) | Set the default database mail profile for SQL Server on Linux. |
@@ -401,7 +399,7 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
 The **sqlpagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
 
 ```bash
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 ## <a id="hadr"></a> High Availability
 
@@ -505,8 +503,8 @@ There are several other settings for mssql-conf that you can use to monitor and 
 
 | mssql-conf setting | Description |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | Configure secure only rpc calls for distributed transactions |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only rpc calls for distributed |transactions
+| distributedtransaction.allowonlysecurerpccalls | Configure secure only RPC calls for distributed transactions |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed |transactions
 | distributedtransaction.maxlogsize | DTC transaction log file size in MB. Default is 64MB |
 | distributedtransaction.memorybuffersize | Circular buffer size in which traces are stored. This size is in MB and default is 10MB |
 | distributedtransaction.servertcpport | MSDTC rpc server port |
@@ -569,7 +567,7 @@ After setting the property, restart SQL Server Launchpad service to read the upd
 sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
 
 # Turns off network access but preserves the setting
-/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
 
 # Removes the setting and rescinds network access
 sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess

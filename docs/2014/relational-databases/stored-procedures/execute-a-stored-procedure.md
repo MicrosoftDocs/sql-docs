@@ -47,7 +47,7 @@ manager: craigg
   
 -   The calling database collation is used when matching system procedure names. Therefore, always use the exact case of system procedure names in procedure calls. For example, this code will fail if it is executed in the context of a database that has a case-sensitive collation:  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -61,7 +61,7 @@ manager: craigg
   
      System procedures begin with the prefix **sp_**. Because they logically appear in all user- and system- defined databases, they can be executed from any database without having to fully quality the procedure name. However, we recommend schema-qualifying all system procedure names with the **sys** schema name to prevent name conflicts. The following example demonstrates the recommended method of calling a system procedure.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -71,7 +71,7 @@ manager: craigg
   
      The following example demonstrates the recommended method to execute a user-defined procedure. Notice that the procedure accepts one input parameter. For information about specifying input and output parameters, see [Specify Parameters](specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -79,7 +79,7 @@ manager: craigg
   
      -Or-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -158,7 +158,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to execute a stored procedure that expects one parameter. The example executes the `uspGetEmployeeManagers` stored procedure with the value  `6` specified as the `@EmployeeID` parameter.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -173,7 +173,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) to set a procedure for automatic execution.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -189,7 +189,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) to stop a procedure from executing automatically.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

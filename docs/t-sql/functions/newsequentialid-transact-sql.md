@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "NEWSEQUENTIALID function"
   - "GUIDs [SQL Server]"
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

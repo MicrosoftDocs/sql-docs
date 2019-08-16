@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Troubleshoot SQL Server Resource Health (SQL Server Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

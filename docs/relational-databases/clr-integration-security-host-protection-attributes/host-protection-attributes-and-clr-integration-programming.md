@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Host Protection Attributes and CLR Integration Programming
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

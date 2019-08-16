@@ -19,9 +19,9 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Set up replication distribution database in Always On availability group
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 
@@ -110,6 +110,8 @@ This example configures a new distributor and publisher and puts the distributio
    The value of `@working_directory` should be a network path independent of DIST1, DIST2, and DIST3.
 
 1. On DIST2 and DIST3, run:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
@@ -232,7 +234,7 @@ This example removes a distributor from a current distribution database AG while
 
 ## Remove a publisher from distribution database AG
 
-This example removes a publisher from a distributor’s current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
+This example removes a publisher from a distributor's current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
 
 ### Publisher workflow
 
@@ -389,9 +391,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
  /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## See Also  

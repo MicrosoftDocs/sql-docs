@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Error Messages

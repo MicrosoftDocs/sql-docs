@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
-manager: "erikre"
+manager: erikre
 ---
 # Data synchronization state of availability database is not healthy for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

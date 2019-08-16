@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Namespaces
 The XML persistence format in ADO uses the following four namespaces.  

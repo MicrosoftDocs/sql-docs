@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STSymDifference (geography Data Type)"
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STSymDifference (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

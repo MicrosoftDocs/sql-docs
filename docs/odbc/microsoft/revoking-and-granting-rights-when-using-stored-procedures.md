@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Revoking and Granting Rights When Using Stored Procedures
 > [!IMPORTANT]  

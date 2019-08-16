@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Database Related Dynamic Management Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

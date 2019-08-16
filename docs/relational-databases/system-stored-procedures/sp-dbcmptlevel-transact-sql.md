@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## Arguments  
- [ **@dbname=** ] *name*  
+`[ @dbname = ] name`
  Is the name of the database for which the compatibility level is to be changed. Database names must conform to the rules for identifiers. *name* is **sysname**, with a default of NULL.  
   
- [ **@new_cmptlevel=** ] *version*  
+`[ @new_cmptlevel = ] version`
  Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with which the database is to be made compatible. *version* is **tinyint**, with a default of NULL. The value must be one of the following:  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  

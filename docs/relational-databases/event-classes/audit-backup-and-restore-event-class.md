@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 08b0b5fe-298a-483f-b50a-73919a2513ce
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Audit Backup and Restore Event Class
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

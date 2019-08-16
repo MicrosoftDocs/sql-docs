@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "Execute method"
   - "XML Bulk Load [SQLXML], object model"
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # SQL Server XML Bulk Load Object Model (SQLXML 4.0)

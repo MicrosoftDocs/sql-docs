@@ -1,14 +1,13 @@
 ---
 title: "PolyBase configuration and security for Hadoop | Microsoft Docs"
-ms.custom: ""
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 
 # PolyBase configuration and security for Hadoop
@@ -28,6 +27,8 @@ A common way to secure communication in a hadoop cluster is by changing the hado
      <value></value>
    </property> 
 ```
+
+To use 'Privacy' or 'Integrity' for hadoop.rpc.protection, SQL Server must be at least SQL Server 2016 SP1 CU7, SQL Server 2016 SP2, or SQL Server 2017 CU3.
 
 ## Example XML files for CDH 5.X cluster
 
@@ -162,6 +163,8 @@ To connect to a Kerberos-secured Hadoop cluster using MIT KDC:
    |7|yarn-site.xml yarn.|yarn.resourcemanager.principal|Find the Hadoop side configuration and copy to SQL Server machine. For example: yarn/_HOST@YOUR-REALM.COM|  
 
 4. Create a database-scoped credential object to specify the authentication information for each Hadoop user. See [PolyBase T-SQL objects](../../relational-databases/polybase/polybase-t-sql-objects.md).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Next steps  
 

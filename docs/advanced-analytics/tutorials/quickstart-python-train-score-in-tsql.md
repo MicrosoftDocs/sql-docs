@@ -1,5 +1,5 @@
 ---
-title: Quickstart for Python models for training and predictions using stored procedures - SQL Server Machine Learning
+title: Quickstart for Python models for training and predictions using stored procedures
 description: Embed Python code in SQL Server stored procedures to create, train, and use a Python model with the classic Iris data set. Save a trained model to SQL Server, and then use it to generate predicted outcomes.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,10 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Quickstart: Create, train, and use a Python model with stored procedures in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart using Python, you will create and execute two stored procedures. The first one uses the classic Iris flower data set and generates a Naïve Bayes model to predict an Iris species based on flower characteristics. The second procedure is for scoring. It calls the model generated in the first procedure to output a set of predictions. By placing code in a stored procedure, operations are contained, reusable, and callable by other stored procedures and client applications. 
 

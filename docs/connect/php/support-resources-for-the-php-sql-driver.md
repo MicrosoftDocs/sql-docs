@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Support Resources for the Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,9 +40,9 @@ For peer-to-peer support, visit the [IIS Forums](https://forums.iis.net/).
 ## PHP Support Resources  
 [PHP for Windows Documentation](https://windows.php.net/)  
   
-For the latest information about PHP, visit [https://www.php.net/](https://www.php.net).  
+For the latest information about PHP, visit [http://www.php.net/](http://www.php.net).  
   
-For PHP documentation, visit [https://www.php.net/docs.php](https://www.php.net/docs.php).  
+For PHP documentation, visit [http://www.php.net/docs.php](http://www.php.net/docs.php).  
   
 ## Microsoft Customer Support  
 For support questions related to the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you can contact [Microsoft Support](https://support.microsoft.com/contactus/), or ask on the [Github project page](https://github.com/Microsoft/msphpsql/issues).  

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration Custom Attributes for CLR Routines
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

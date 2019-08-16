@@ -16,11 +16,14 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Connecting Data Flow Components Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you have added components to the data flow task, you connect them to create an execution tree that represents the flow of data from sources through transformations to destinations. You use <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> objects to connect the components in the data flow.  
   
 ## Creating a Path  

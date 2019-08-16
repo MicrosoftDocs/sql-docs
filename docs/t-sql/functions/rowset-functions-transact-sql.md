@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "rowsets [SQL Server], functions"
   - "rowsets [SQL Server]"
 ms.assetid: ac24d700-3144-4ab5-9fa8-8c014001cc71
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Rowset Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

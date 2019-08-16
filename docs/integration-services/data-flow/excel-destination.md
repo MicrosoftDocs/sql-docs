@@ -16,11 +16,14 @@ helpviewer_keywords:
   - "destinations [Integration Services], Excel"
   - "Excel [Integration Services]"
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Excel Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Excel destination loads data into worksheets or ranges in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel workbooks.  
 
 > [!IMPORTANT]

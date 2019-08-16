@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_repldone (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Updates the record that identifies the last distributed transaction of the server. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -39,19 +38,19 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## Arguments  
- [ **@xactid=**]  *xactid*  
+`[ @xactid = ] xactid`
  Is the log sequence number (LSN) of the first record for the last distributed transaction of the server. *xactid* is **binary(10)**, with no default.  
   
- [ **@xact_seqno=**]  *xact_seqno*  
+`[ @xact_seqno = ] xact_seqno`
  Is the LSN of the last record for the last distributed transaction of the server. *xact_seqno* is **binary(10)**, with no default.  
   
- [ **@numtrans=**] *numtrans*  
+`[ @numtrans = ] numtrans`
  Is the number of transactions distributed. *numtrans* is **int**, with no default.  
   
- [ **@time=**]  *time*  
+`[ @time = ] time`
  Is the number of milliseconds, if provided, needed to distribute the last batch of transactions. *time* is **int**, with no default.  
   
- [ **@reset=**]  *reset*  
+`[ @reset = ] reset`
  Is the reset status. *reset* is **int**, with no default. If **1**, all replicated transactions in the log are marked as distributed. If **0**, the transaction log is reset to the first replicated transaction and no replicated transactions are marked as distributed. *reset* is valid only when both *xactid* and *xact_seqno* are NULL.  
   
 ## Return Code Values  

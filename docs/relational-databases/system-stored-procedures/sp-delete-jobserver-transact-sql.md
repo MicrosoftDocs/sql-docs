@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +34,16 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job from which the specified target server will be removed. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job from which the specified target server will be removed. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified; both cannot be specified.  
   
- [ **@server_name=** ] **'***server***'**  
+`[ @server_name = ] 'server'`
  The name of the target server to remove from the specified job. *server* is **nvarchar(30)**, with no default. *server* can be **(LOCAL)**or the name of a remote target server.  
   
 ## Return Code Values  

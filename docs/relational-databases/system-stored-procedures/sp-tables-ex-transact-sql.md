@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,19 +38,19 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server=** ] **'**_table_server_**'**  
+`[ @table_server = ] 'table_server'`
  Is the name of the linked server for which to return table information. *table_server* is **sysname**, with no default.  
   
- [ **,** [ **@table_name=** ] **'**_table_name_**'**]  
+``[ , [ @table_name = ] 'table_name']``
  Is the name of the table for which to return data type information. *table_name*is **sysname**, with a default of NULL.  
   
- [ **@table_schema=** ] **'**_table_schema_**'**]  
+`[ @table_schema = ] 'table_schema']`
  Is the table schema. *table_schema*is **sysname**, with a default of NULL.  
   
- [ **@table_catalog=** ] **'**_table_catalog_**'**  
+`[ @table_catalog = ] 'table_catalog'`
  Is the name of the database in which the specified *table_name* resides. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@table_type=** ] **'**_table_type_**'**  
+`[ @table_type = ] 'table_type'`
  Is the type of the table to return. *table_type* is **sysname**, with a default of NULL, and can have one of the following values.  
   
 |Value|Description|  
@@ -65,7 +64,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Name of a user table.|  
 |**VIEW**|Name of a view.|  
   
- [ **@fUsePattern=** ] **'**_fUsePattern_**'**  
+`[ @fUsePattern = ] 'fUsePattern'`
  Determines whether the characters **_**, **%**, **[**, and **]** are interpreted as wildcard characters. Valid values are 0 (pattern matching is off) and 1 (pattern matching is on). *fUsePattern* is **bit**, with a default of 1.  
   
 ## Return Code Values  

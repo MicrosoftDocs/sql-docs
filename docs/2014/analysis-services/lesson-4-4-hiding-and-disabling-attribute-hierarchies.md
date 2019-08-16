@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
@@ -121,6 +120,6 @@ manager: craigg
      Notice that the hidden levels, **Postal Code** and **Full Name**, are visible in the user-defined hierarchy.  
   
 ## Next Task in Lesson  
- [Sorting Attribute Members Based on a Secondary Attribute](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [Sorting Attribute Members Based on a Secondary Attribute](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

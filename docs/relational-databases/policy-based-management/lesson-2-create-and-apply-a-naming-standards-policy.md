@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Lesson 2: Create and Apply a Naming Standards Policy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +33,7 @@ To complete this tutorial, you need SQL Server Management Studio, access to a se
   
 2.  In Object Explorer, click **Databases**, and then press F5 to refresh the list of databases.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Create the Finance tables condition 
 

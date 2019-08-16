@@ -10,11 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation [Integration Services]"
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Lookup Transformation Full Cache Mode - Cache Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can configure the Lookup transformation to use full cache mode and a Cache connection manager. In full cache mode, the reference dataset is loaded into cache before the Lookup transformation runs.  
   
 > [!NOTE]  

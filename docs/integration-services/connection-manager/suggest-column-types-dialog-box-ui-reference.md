@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.suggestdatatypes.f1"
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Suggest Column Types Dialog Box UI Reference
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Suggest Column Types** dialog box to identify the data type and length of columns in a Flat File Connection Manager based on a sampling of the file content.  
   
  To learn more about the data types used by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  

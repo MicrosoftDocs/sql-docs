@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the EVENTDATA Function

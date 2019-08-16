@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Indexes on Computed Columns

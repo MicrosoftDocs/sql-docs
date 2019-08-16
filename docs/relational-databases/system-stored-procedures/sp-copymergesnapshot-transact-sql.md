@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_copymergesnapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Copies the snapshot folder of the specified publication to the folder listed in the **@destination_folde**_r_. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -32,10 +31,10 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication whose snapshot contents are to be copied. *publication* is **sysname**, with no default.  
   
- [ **@destination_folder=**] **'**_destination_folder_**'**  
+`[ @destination_folder = ] 'destination_folder'`
  Is the name of the folder where the contents of the publication snapshot is to be copied. *destination_folder*is **nvarchar(255)**, with no default. The *destination_folder* can be an alternate location such as on another server, on a network drive, or on removable media (such as CD-ROMs or removable disks).  
   
 ## Return Code Values  

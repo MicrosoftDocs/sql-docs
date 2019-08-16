@@ -18,11 +18,14 @@ helpviewer_keywords:
   - "data flow components [Integration Services], execution plans"
   - "execution plans [Integration Services]"
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Execution Plan and Buffer Allocation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Before execution, the data flow task examines its components and generates an execution plan for each sequence of components. This section provides details about the execution plan, how to view the plan, and how input and output buffers are allocated based on the execution plan.  
   
 ## Understanding the Execution Plan  

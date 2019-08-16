@@ -2,7 +2,7 @@
 title: "GenerateDatabaseUpgradeScript Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "GenerateDatabaseUpgradeScript method"
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - GenerateDatabaseUpgradeScript
   Generates a script that can be used to upgrade the report server database to the [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] schema.  

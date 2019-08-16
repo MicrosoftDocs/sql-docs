@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # GRANT Symmetric Key Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

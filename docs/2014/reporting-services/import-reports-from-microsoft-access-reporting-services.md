@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Access reports [Reporting Services]"
   - "importing reports"
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Import Reports from Microsoft Access (Reporting Services)

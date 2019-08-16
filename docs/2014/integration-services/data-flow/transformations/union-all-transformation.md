@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Union All transformation"
   - "datasets [Integration Services], merging"
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Union All Transformation

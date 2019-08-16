@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Conditional Split transformation"
   - "route rows to different outputs [Integration Services]"
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Conditional Split Transformation

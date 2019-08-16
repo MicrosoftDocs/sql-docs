@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -21,8 +20,8 @@ helpviewer_keywords:
   - "table/view mapping [SQLXML], excluding schema elements"
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ""
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Excluding Schema Elements from the XML Document Using sql:mapped
@@ -79,7 +78,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     ```  
   
 3.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  This is the result set:  

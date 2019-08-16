@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.ssms.isprojectprop.versions.f1"
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Project Versions Dialog Box

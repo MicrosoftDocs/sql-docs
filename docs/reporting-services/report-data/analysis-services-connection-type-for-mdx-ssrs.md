@@ -2,14 +2,14 @@
 title: "Analysis Services Connection Type for MDX (SSRS) | Microsoft Docs"
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
 ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Analysis Services Connection Type for MDX (SSRS)
   To include data from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube in your report, you must have a dataset that is based on a report data source of type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. This built-in data source type is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data extension. You can retrieve metadata about dimensions, hierarchies, levels, key performance indicators (KPIs), measures, and attributes from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube for use as report data.  
@@ -25,7 +25,7 @@ ms.author: maghan
 data source=<server name>;initial catalog=<database name>  
 ```  
   
- For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ For more connection string examples, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Credentials  
@@ -43,7 +43,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   No credentials are required. To use this option, you must have the unattended execution account configured on the report server. For more information, see [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in on msdn.microsoft.com.  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credential and Connection Information for Report Data Sources](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Queries  
@@ -73,7 +73,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="Remarks"></a> Remarks  
- The Analysis Services data extension is based on the XMLA (XML for Analysis) protocol. Result sets from cubes are retrieved through the XMLA protocol as a flattened row set. Ragged hierarchies are not supported. For more information, see [Ragged Hierarchies](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
+ The Analysis Services data extension is based on the XMLA (XML for Analysis) protocol. Result sets from cubes are retrieved through the XMLA protocol as a flattened row set. Ragged hierarchies are not supported. For more information, see [Ragged Hierarchies](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  You can also retrieve data from an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cube from the OLE DB data source type. For more information, see [OLE DB Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -86,7 +86,7 @@ data source=<server name>;initial catalog=<database name>
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Provides an overview of accessing data for your report.  
   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Provides information about data connections and data sources.  
   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

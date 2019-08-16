@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLDriverConnect (Paradox Driver)
 > [!NOTE]  

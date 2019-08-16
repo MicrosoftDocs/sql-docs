@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_paramdata (Extended Stored Procedure API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

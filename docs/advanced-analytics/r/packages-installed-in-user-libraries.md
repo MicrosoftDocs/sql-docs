@@ -1,16 +1,16 @@
 ---
-title: Tips for using R packages installed in user libraries - SQL Server Machine Learning Services
+title: Tips for using R packages installed in user libraries
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/30/2018  
+ms.date: 06/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tips for using R packages in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article has separate sections for DBAs who are unfamiliar with R and experienced R developers who are unfamiliar package access in a SQL Server instance.
 
@@ -34,7 +34,7 @@ R packages run on multiple computing platforms. Be sure that the versions you in
 
 If you have previously modified the R environment on the computer, before installing anything, ensure that the R environment variable `.libPath` uses just one path.
 
-This path should point to the R_SERVICES folder for the instance. For more information, including how to determine which packages are already installed, see [Default R and Python packages in SQL Server](installing-and-managing-r-packages.md).
+This path should point to the R_SERVICES folder for the instance. For more information, including how to determine which packages are already installed, see [Default R and Python packages in SQL Server](../package-management/default-packages.md).
 
 ## New to SQL Server
 
@@ -68,7 +68,7 @@ This does not work when running R solutions in SQL Server, because R packages mu
 
 + Update your code to remove direct references to the paths of R packages or R libraries. 
 
-+ Know which package library is associated with the instance. For more information, see [Default R and Python packages in SQL Server](installing-and-managing-r-packages.md).
++ Know which package library is associated with the instance. For more information, see [Default R and Python packages in SQL Server](../package-management/default-packages.md).
 
 ## See also
 

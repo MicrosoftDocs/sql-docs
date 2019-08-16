@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Data Files and Format Files
@@ -39,7 +38,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Call [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) with *eOption* set to BCPHINTS and *iValue* set to a pointer to a SQLTCHAR string containing the Transact-SQL statement.  
   
 3.  Call **bcp_exec** to execute the bulk copy operation.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] statement can be any statement that generates a result set. The data file is created containing the first result set of the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. Bulk copy ignores any result set after the first if the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement generates multiple result sets.  
   
  To create a data file in which column data is stored in a different format than in the table, call [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) to specify how many columns will be changed, then call [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) for each column whose format you want to change. This is done after calling **bcp_init** but before calling **bcp_exec**. **bcp_colfmt** specifies the format in which the column's data is stored in the data file. It can be used when bulk copying in or out. You can also use **bcp_colfmt** to set the row and column terminators. For example, if your data contains no tab characters, you can create a tab-delimited file by using **bcp_colfmt** to set the tab character as the terminator for each column.  

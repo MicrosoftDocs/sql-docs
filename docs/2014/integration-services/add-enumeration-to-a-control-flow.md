@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding enumerations"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "repeating workflows"
   - "enumerations [Integration Services]"
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Enumeration to a Control Flow

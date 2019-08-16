@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "ranking rows"
   - "RANK function [Transact-SQL]"
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RANK (Transact-SQL)
@@ -37,7 +36,7 @@ ROW_NUMBER and RANK are similar. ROW_NUMBER numbers all rows sequentially (for e
   
 ## Syntax  
   
-```  
+```sql  
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
@@ -60,7 +59,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ### A. Ranking rows within a partition  
  The following example ranks the products in inventory the specified inventory locations according to their quantities. The result set is partitioned by `LocationID` and logically ordered by `Quantity`. Notice that products 494 and 495 have the same quantity. Because they are tied, they are both ranked one.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -76,7 +75,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
   
 ProductID   Name                   LocationID   Quantity Rank  
 ----------- ---------------------- ------------ -------- ----  
@@ -96,7 +95,7 @@ ProductID   Name                   LocationID   Quantity Rank
 ### B. Ranking all rows in a result set  
  The following example returns the top ten employees ranked by their salary. Because a PARTITION BY clause was not specified, the RANK function was applied to all rows in the result set.  
   
-```  
+```sql  
 USE AdventureWorks2012  
 SELECT TOP(10) BusinessEntityID, Rate,   
        RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
@@ -109,7 +108,7 @@ ORDER BY BusinessEntityID;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
 BusinessEntityID Rate                  RankBySalary  
 ---------------- --------------------- --------------------  
 1                125.50                1  
@@ -129,7 +128,7 @@ BusinessEntityID Rate                  RankBySalary
 ### C: Ranking rows within a partition  
  The following example ranks the sales representatives in each sales territory according to their total sales. The rowset is partitioned by `SalesTerritoryGroup` and sorted by `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion,  
@@ -143,8 +142,8 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```
-LastName          TotalSales     SalesTerritoryGroup  RankResult
+```sql
+LastName          TotalSales     SalesTerritoryRegion  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1
 Saraiva           7098000.0000   Canada               1

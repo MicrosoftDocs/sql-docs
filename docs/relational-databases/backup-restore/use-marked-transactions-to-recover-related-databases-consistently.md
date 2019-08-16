@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Use Marked Transactions to Recover Related Databases Consistently
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,9 @@ manager: craigg
 4.  Restore database backups WITH NORECOVERY.  
   
 5.  Restore logs WITH STOPATMARK.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Considerations for Using Marked Transactions  
  Before inserting named marks into the transaction log, consider the following:  
   

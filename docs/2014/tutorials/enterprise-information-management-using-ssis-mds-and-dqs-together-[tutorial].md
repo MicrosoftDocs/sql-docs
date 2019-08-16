@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---
@@ -56,9 +56,9 @@ manager: craigg
   
 5.  Install **Master Data Services Add-in for Excel** (32-bit or 64-bit based on the version of Excel you have on your computer) from [here](https://www.microsoft.com/download/details.aspx?id=29064). To find the version of Excel installed on your computer, run **Excel**, click **File** on menu bar and click **Help** to see the version in the right pane. Note that you need to install Visual Studio 2010 Tools for Office Runtime before installing the Excel Add-in.  
   
-6.  (Optional) Create an account with [Windows Azure Marketplace](https://datamarket.azure.com/). One of the tasks in the tutorial requires you to have an **Azure Marketplace** (originally named **Data Market**) account. You can skip this task if you want and proceed with the next task.  
+6.  (Optional) Create an account with [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). One of the tasks in the tutorial requires you to have an **Azure Marketplace** (originally named **Data Market**) account. You can skip this task if you want and proceed with the next task.  
   
-7.  Download the Suppliers.xls file from [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=271504).  
+7.  Download the Suppliers.xls file from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  DQS does not allow you to export the cleansing or matching results to an Excel file if you are using **64-bit version of Excel**. This issue is a known issue. To work around the issue, do the following:  
   

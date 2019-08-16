@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Aggregate Functions - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
@@ -47,7 +46,7 @@ manager: craigg
   
         3.  Copy and paste the following example into the query window, modify as needed. The following statement creates a SQL Server Credential to store your storage container's Shared Access Certificate.  
   
-            ```tsql  
+            ```sql  
   
             USE master   
             GO   
@@ -60,13 +59,13 @@ manager: craigg
   
         4.  To see all available credentials, you can run the following statement in the query window:  
   
-            ```tsql  
+            ```sql  
             SELECT * from sys.credentials   
             ```  
   
         5.  When connected to the destination server, open query window, and run:  
   
-            ```tsql  
+            ```sql  
   
             -- Create a master key and a server certificate   
             USE master   
@@ -88,7 +87,7 @@ manager: craigg
   
     2.  Then, create a database with data and log files pointing to the existing files in Windows Azure Storage by using FOR ATTACH option. In the query window, run the following statement:  
   
-        ```tsql  
+        ```sql  
   
         --Create a database on the destination server   
         CREATE DATABASE TestDB1onDest   
@@ -107,7 +106,7 @@ manager: craigg
   
     4.  Next, run the following statement in the query window:  
   
-        ```tsql  
+        ```sql  
   
         USE TestDB1onDest   
         SELECT * FROM Table1;   

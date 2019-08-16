@@ -19,12 +19,11 @@ helpviewer_keywords:
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns information about event session actions. Actions are executed when events are fired. This management view aggregates statistics about the number of times an action has run, and the total run time of the action.  
+  Returns information about event session actions. Actions are executed when events are fired.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

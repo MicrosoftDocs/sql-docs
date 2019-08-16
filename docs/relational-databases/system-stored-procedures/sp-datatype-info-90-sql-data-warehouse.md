@@ -10,7 +10,6 @@ dev_langs:
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_datatype_info_90 (SQL Data Warehouse)
@@ -30,10 +29,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## Arguments  
- [ **@data_type=** ] *data_type*  
+`[ @data_type = ] data_type`
  Is the code number for the specified data type. To obtain a list of all data types, omit this parameter. *data_type* is **int**, with a default of 0.  
   
- [ **@ODBCVer=** ] *odbc_version*  
+`[ @ODBCVer = ] odbc_version`
  Is the version of ODBC that is used. *odbc_version* is **tinyint**, with a default of 2.  
   
 ## Return Code Values  

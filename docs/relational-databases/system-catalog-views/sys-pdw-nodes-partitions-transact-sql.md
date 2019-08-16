@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_partitions (Transact-SQL)

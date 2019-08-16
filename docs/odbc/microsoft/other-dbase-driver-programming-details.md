@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Other dBASE Driver Programming Details
 > [!NOTE]  

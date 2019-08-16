@@ -133,7 +133,7 @@ manager: craigg
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example restores two of the files for the `MyNwind` database that were originally located on Drive C to new locations on Drive D. Two transaction logs will also be applied to restore the database to the current time. The `RESTORE FILELISTONLY` statement is used to determine the number and logical and physical names of the files in the database being restored.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

@@ -1,45 +1,49 @@
 ---
-title: Run Spark jobs in Azure Toolkit for IntelliJ on SQL Server Big Data Cluster
-titleSuffix: SQL Server Big Data Clusters
-description: Submit Spark jobs on SQL Server Big Data Clusters in Azure Toolkit for IntelliJ.
+title: Run Spark jobs in Azure Toolkit for IntelliJ on SQL Server big data cluster
+titleSuffix: SQL Server big data clusters
+description: Submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.date: 02/28/2019
+ms.prod: sql
+ms.technology: big-data-cluster
 ---
 
-# Submit Spark jobs on SQL Server Big Data Clusters in IntelliJ
+# Submit Spark jobs on SQL Server big data clusters in IntelliJ
 
-One of the key scenarios for SQL Server Big Data Clusters is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server Big Data Clusters. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+One of the key scenarios for SQL Server big data clusters is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to SQL Server big data clusters. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
 ## Prerequisites
 
-- SQL Server Big Data Cluster.
-- Oracle Java Development Kit. You can install it from the [Oracle website](https://aka.ms/azure-jdks).
+- SQL Server big data cluster.
+- Oracle Java Development Kit. You can install it from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - IntelliJ IDEA. You can install it from the [JetBrains website](https://www.jetbrains.com/idea/download/).
 - Azure Toolkit for IntelliJ extension. For installation instructions, see [Install Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
-## Link SQL Server Big Data Cluster
+## Link SQL Server big data cluster
 1. Open the IntelliJ IDEA tool.
 
-2. If you are using self-signed certificate, please disable SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
+2. If you are using self-signed certificate, disable SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
 
-    ![link SQL Server Big Data Cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![link SQL Server big data cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Open Azure Explorer from **View** menu, select **Tool Windows**, and then select **Azure Explorer**.
-4. Right click on **SQL Server Big Data Cluster**, select **Link SQL Server Big Data Cluster**. Enter the **Server**, **User Name**, and **Password**, then click **OK**.
+4. Right click on **SQL Server big data cluster**, select **Link SQL Server big data cluster**. Enter the **Server**, **User Name**, and **Password**, then click **OK**.
 
     ![link Big Data cluster - dialog](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
 5. When the untrusted server's certificate dialog appears, click **Accept**. You can manage the certificate later, see [Server Certificates](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
 
-6. The linked cluster lists under **SQL Server Big Data Cluster**. You could monitor spark job by opening the spark history UI and Yarn UI, you could also unlink, by right clicking on the cluster.
+6. The linked cluster lists under **SQL Server big data cluster**. You could monitor spark job by opening the spark history UI and Yarn UI, you could also unlink, by right clicking on the cluster.
 
     ![link Big Data cluster - context menu](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
-## Create a Spark Scala application from HDInsight template
+## Create a Spark Scala application from Spark template
 
 1. Start IntelliJ IDEA, and then create a project. In the **New Project** dialog box, follow below steps: 
 
@@ -62,7 +66,7 @@ One of the key scenarios for SQL Server Big Data Clusters is the ability to subm
 
    ![The Scala plugin installation dialog box](./media/spark-submit-job-intellij-tool-plugin/Choose-Scala-Plugin.PNG)
 
-5. In the **New Project** window, do the following:  
+5. In the **New Project** window, do the following steps:  
 
     ![Selecting the Spark SDK](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
@@ -74,7 +78,7 @@ One of the key scenarios for SQL Server Big Data Clusters is the ability to subm
 
 6. Select **Finish**.
 
-7. The Spark project automatically creates an artifact for you. To view the artifact, do the following:
+7. The Spark project automatically creates an artifact for you. To view the artifact, do the following steps:
 
    a. On the **File** menu, select **Project Structure**.
 
@@ -83,8 +87,8 @@ One of the key scenarios for SQL Server Big Data Clusters is the ability to subm
       ![Artifact info in the dialog box](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
 
-## Submit application to SQL Server Big Data Cluster
-After link a SQL Server Big Data Cluster, you can submit application to it.
+## Submit application to SQL Server big data cluster
+After link a SQL Server big data cluster, you can submit application to it.
 
 1. Set up the configuration in **Run/Debug Configurations** window, click +->**Apache Spark on SQL Server**, select tab **Remotely Run in Cluster**, set the parameters as following, then click OK.
 
@@ -117,5 +121,74 @@ After link a SQL Server Big Data Cluster, you can submit application to it.
 
     ![link Big Data cluster - run](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
 
+## Spark Console
+You can run Spark Local Console(Scala) or run Spark Livy Interactive Session Console(Scala).
+
+### Spark Local Console(Scala)
+Ensure you have satisfied the WINUTILS.EXE prerequisite.
+
+1. From the menu bar, navigate to **Run** > **Edit Configurations...**.
+
+2. From the **Run/Debug Configurations** window, in the left pane, navigate to **Apache Spark on SQL Server big data cluster** > **[Spark on SQL] myApp**.
+
+3. From the main window, select the **Locally Run** tab.
+
+4. Provide the following values, and then select **OK**:
+
+    |Property |Value |
+    |----|----|
+    |Job main class|The default value is the main class from the selected file. You can change the class by selecting the ellipsis(**...**)  and choosing another class.|
+    |Environment variables|Ensure the value for HADOOP_HOME is correct.|
+    |WINUTILS.exe location|Ensure the path is correct.|
+
+    ![Local Console Set Configuration](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
+
+5. From Project, navigate to **myApp** > **src** > **main** > **scala** > **myApp**.  
+
+6. From the menu bar, navigate to **Tools** > **Spark Console** > **Run Spark Local Console(Scala)**.
+
+7. Then two dialogs may be displayed to ask you if you want to auto fix dependencies. If so, select **Auto Fix**.
+
+    ![Spark Auto Fix1](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
+
+    ![Spark Auto Fix2](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
+
+8. The console should look similar to the picture below. In the console window type `sc.appName`, and then press ctrl+Enter.  The result will be shown. You can terminate the local console by clicking red button.
+
+    ![Local Console Result](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
+
+
+### Spark Livy Interactive Session Console(Scala)
+The Spark Livy Interactive Session Console(Scala) is only supported on IntelliJ 2018.2 and 2018.3.
+
+1. From the menu bar, navigate to **Run** > **Edit Configurations...**.
+
+2. From the **Run/Debug Configurations** window, in the left pane, navigate to **Apache Spark on SQL Server big data cluster** > **[Spark on SQL] myApp**.
+
+3. From the main window, select the **Remotely Run in Cluster** tab.
+
+4. Provide the following values, and then select **OK**:
+
+    |Property |Value |
+    |----|----|
+    |Spark clusters (Linux only)|Select the SQL Server Big Data cluster on which you want to run your application.|
+    |Main class name|The default value is the main class from the selected file. You can change the class by selecting the ellipsis(**...**)  and choosing another class.|
+
+    ![Interactive Console Set Configuration](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
+
+5. From Project, navigate to **myApp** > **src** > **main** > **scala** > **myApp**.  
+
+6. From the menu bar, navigate to **Tools** > **Spark Console** > **Run Spark Livy Interactive Session Console(Scala)**.
+
+7. The console should look similar to the picture below. In the console window type `sc.appName`, and then press ctrl+Enter.  The result will be shown. You can terminate the local console by clicking red button.
+
+    ![Interactive Console Result](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
+
+### Send Selection To Spark Console
+
+For convenience, you can see the script result by sending some code to the Local Console or Livy Interactive Session Console(Scala). You can highlight some code in the Scala file, then right-click **Send Selection To Spark Console**. The selected code will be sent to the console and be performed. The result will be displayed after the code in the console. The console will check the errors if existing.  
+
+   ![Send Selection To Spark Console](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
+
 ## Next steps
-For more information on SQL Server Big Data Cluster and related scenarios, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md)?
+For more information on SQL Server big data cluster and related scenarios, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md)?

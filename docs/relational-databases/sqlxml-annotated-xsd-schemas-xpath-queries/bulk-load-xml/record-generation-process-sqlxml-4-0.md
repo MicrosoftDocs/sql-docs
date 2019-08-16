@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Record Generation Process (SQLXML 4.0)

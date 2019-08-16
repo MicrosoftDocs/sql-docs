@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.job.notifications.f1"
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Properties - New Job (Notifications Page)

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], upgrading"
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "report definition files [Reporting Services]"
   - ".rdl files"
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Upgrade Reports

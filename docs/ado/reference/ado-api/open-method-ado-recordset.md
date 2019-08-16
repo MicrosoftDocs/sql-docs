@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Open Method (ADO Recordset)
 Opens a cursor on a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

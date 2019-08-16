@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetInfo Returned Values for dBASE
 The following table lists the C-language #defines for the *fInfoType* argument and the corresponding values returned by **SQLGetInfo**. This information can be retrieved by passing the listed C-language #defines to **SQLGetInfo** in the *fInfoType* argument. For more information about the values returned by **SQLGetInfo**, see the *ODBC Programmer's Reference*.  
@@ -106,7 +105,7 @@ The following table lists the C-language #defines for the *fInfoType* argument a
 |SQL_GETDATA_EXTENSIONS|Multiple values|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_UPPER (The qualifier is returned in mixed case so that Windows NT can locate the directory.)|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"`" (back quote)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (back quote)|  
 |SQL_KEYWORDS|Multiple values|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -151,7 +150,7 @@ The following table lists the C-language #defines for the *fInfoType* argument a
 |SQL_SCROLL_OPTIONS|Multiple values|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"DBASE"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`\@#$%^&\*\_-+=\\}{"';:\?/\><,.!'\[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Multiple values|  
 |SQL_SUBQUERIES|Multiple values|  
 |SQL_SYSTEM_FUNCTIONS|0|  

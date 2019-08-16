@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], installing"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "dependencies [Integration Services]"
   - "deploying packages [Integration Services], installing"
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Deploy Packages by Using the Deployment Utility

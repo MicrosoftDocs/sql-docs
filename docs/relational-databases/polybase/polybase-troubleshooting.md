@@ -1,10 +1,8 @@
 ---
 title: "Monitor and troubleshoot PolyBase | Microsoft Docs"
-ms.custom: ""
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
-ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
    - "PolyBase, monitoring"
@@ -12,13 +10,14 @@ f1_keywords:
 helpviewer_keywords: 
    - "PolyBase, troubleshooting"
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Monitor and troubleshoot PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To troubleshoot PolyBase, use the techniques found in this topic.
 

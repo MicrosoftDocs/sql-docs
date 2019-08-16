@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # PowerShell cmdlets for Reporting Services SharePoint Mode
@@ -50,7 +49,9 @@ manager: kfile
     -   [Change and list subscription owners](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet Summary  
- To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx) (https://technet.microsoft.com/library/hh847814.aspx). In the following cmdlet summaries, the references to service application 'databases', refer to all of the databases created and used by a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application. This includes the configuration, alerting, and temp databases.  
+
+ To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). In the following cmdlet summaries, the references to service application 'databases', refer to all of the databases created and used by a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application. This includes the configuration, alerting, and temp databases.  
+
   
  If you see an error message similar to the following when you type the PowerShell examples:  
   
@@ -296,7 +297,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
   
 ## See Also  
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
  [CodePlex SharePoint Management PowerShell scripts](http://sharepointpsscripts.codeplex.com/)   
  [How to Administer SSRS using PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   

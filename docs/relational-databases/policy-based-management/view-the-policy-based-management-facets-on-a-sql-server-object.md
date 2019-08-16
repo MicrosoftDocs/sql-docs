@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # View the Policy-Based Management Facets on a SQL Server Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

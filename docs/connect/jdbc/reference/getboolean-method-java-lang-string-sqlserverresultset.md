@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getBoolean Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,9 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Manage certificates for SQL Server Integration Services Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 To secure the communication between Scale Out Master and Scale Out Workers, SSIS Scale Out uses two certificates - one for the Master and one for the Workers. 
 

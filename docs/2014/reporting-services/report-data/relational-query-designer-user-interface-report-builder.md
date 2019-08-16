@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10012"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "accessing data, query designer"
   - "relational query designer"
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Relational Query Designer User Interface (Report Builder)
@@ -37,11 +36,11 @@ manager: kfile
   
  The following figure shows the graphical query designer when it is used with tables or views.  
   
- ![Graphical designer for queries](../../analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
+ ![Graphical designer for queries](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Graphical designer for queries")  
   
  The following figure shows the graphical query designer when it is used with stored procedures or table-valued functions.  
   
- ![Stored procedure in graphical query designer](../../analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
+ ![Stored procedure in graphical query designer](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in graphical query designer")  
   
  The following table describes the function of each pane.  
   

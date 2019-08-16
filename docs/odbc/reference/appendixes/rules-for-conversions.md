@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Rules for Conversions
 The rules in this section apply for conversions involving numeric literals. For the purposes of these rules, the following terms are defined:  

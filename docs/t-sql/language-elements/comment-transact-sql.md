@@ -1,7 +1,7 @@
 ---
 title: "-- (Comment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: "07/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "-- (comment character)"
   - "comments [SQL Server]"
 ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # -- (Comment) (Transact-SQL)
@@ -43,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Is the character string that contains the text of the comment.  
   
 ## Remarks  
- Use two hyphens (--) for single-line or nested comments. Comments inserted with -- are terminated by the newline character. There is no maximum length for comments. The following table lists the keyboard shortcuts that you can use to comment or uncomment text.  
+Use two hyphens (**--**) for single-line or nested comments. Comments inserted with **--** are terminated by a new line, which is specified with a carriage return character (U+000A), line feed character (U+000D), or a combination of the two. There is no maximum length for comments. The following table lists the keyboard shortcuts that you can use to comment or uncomment text.
   
 |Action|Standard|  
 |------------|--------------|  

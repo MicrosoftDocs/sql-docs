@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Ordinal Property (ADO MD Cell)
 Uniquely identifies a [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) by its position within a cellset.  

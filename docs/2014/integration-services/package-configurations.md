@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "package configuration syntax [Integration Services]"
@@ -19,8 +18,8 @@ helpviewer_keywords:
   - "direct configurations [Integration Services]"
   - "packages [Integration Services], configurations"
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package Configurations

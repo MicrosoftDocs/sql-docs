@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: eb709f6b-64e1-4d0c-a704-290891627dd7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getURL Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Visual FoxPro Terminology
 **database**  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "MashaMSFT"
 ms.author: mathoma
-manager: craigg
 ---
 # Create a domain-independent availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +64,16 @@ A common DNS suffix is necessary for a Domain Independent Availability Group's W
 10. You will be prompted to restart. If you do not want to restart immediately, click Restart Later, otherwise click Restart Now.
 11. After the server has rebooted, verify that the common DNS suffix is configured by looking at System again.
 
-
 ![Successful configuration of DNS suffix][4]
+
+  > [!NOTE]
+  > If you are using multiple subnets, and have a static DNS, you will need to have a process in place to update the DNS record associated with the listener before you perform a failover as otherwise the network name will not come online.
 
 ## Create a Domain Independent Availability Group
 
 Creating a Domain Independent Availability Group cannot currently be achieved completely using SQL Server Management Studio. While creating the Domain Independent Availability Group is basically the same as the creation of a normal availability group, certain aspects (such as creating the certificates) are only possible with Transact-SQL. The example below assumes an availability group configuration with two replicas: one primary and one secondary. 
 
-1. [Using the instructions at this link](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), deploy a Workgroup Cluster composed of all servers that will participate in the availability group. Ensure that the common DNS suffix is already configured before configuring the Workgroup Cluster.
+1. [Using the instructions at this link](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), deploy a Workgroup Cluster composed of all servers that will participate in the availability group. Ensure that the common DNS suffix is already configured before configuring the Workgroup Cluster.
 2. [Enable the Always On Availability Groups feature](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) on each instance that will be participating in the availability group. This will require a restart of each SQL Server instance.
 3. Each instance that will host the primary replica requires a database master key. If a master key does not exist already, run the following command:
 

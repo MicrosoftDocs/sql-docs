@@ -1,7 +1,7 @@
 ---
-title: "Spatial Data Types Sample | Microsoft Docs"
+title: "Spatial data types sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -9,9 +9,8 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Spatial Data Types Sample
+# Spatial data types sample
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -25,10 +24,10 @@ The code file for this sample is named SpatialDataTypes.java, and it can be foun
 
 ## Requirements  
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. For more information about how to set the classpath, see [Using the JDBC driver](../../../connect/jdbc/using-the-jdbc-driver.md).  
 
 > [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## Example
 
@@ -90,7 +89,7 @@ public class SpatialDataTypes {
 }
 ```
 
-## See Also  
+## See also  
 
-[Working with Data Types &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
+[Working with data types &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   

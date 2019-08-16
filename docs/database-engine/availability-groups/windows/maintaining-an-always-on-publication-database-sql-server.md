@@ -13,20 +13,11 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Manage a replicated Publisher database as part of an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic discusses special considerations for maintaining a publication database when you use Always On availability groups.  
-  
- **In This Topic:**  
-  
--   [Maintaining a Published Database in an Availability Group](#MaintainPublDb)  
-  
--   [Removing a Published Database from an Availability Group](#RemovePublDb)  
-  
--   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="MaintainPublDb"></a> Maintaining a Published Database in an Availability Group  
  Maintaining an Always On publication database is basically the same as maintaining a standard publication database, with the following considerations:  

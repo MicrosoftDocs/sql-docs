@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Failover Cluster Troubleshooting
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

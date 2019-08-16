@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, renaming <row> example"
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Example: Renaming the &lt;row&gt; Element
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

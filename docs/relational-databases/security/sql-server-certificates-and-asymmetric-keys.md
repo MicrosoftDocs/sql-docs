@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Certificates and Asymmetric Keys
@@ -65,8 +64,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |||  
 |-|-|  
 |Tool|Purpose|  
-|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Creates certificates.|  
-|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Creates strong names for symmetric keys.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|Creates certificates.|  
+|[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Creates strong names for symmetric keys.|  
   
 ## Related Tasks  
  [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  

@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "MSOLEDBSQL, ADO"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Using ADO with OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

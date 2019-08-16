@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
@@ -21,7 +20,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
   This article describes limitations and issues with SQL Server 2016 releases, including service packs. For information on what's new, see [What's New in SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
 - [![Download from Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Download SQL Server 2016  from the **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
-- [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Have an Azure account?  Then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
+- [![Azure Virtual Machine small](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** to spin up a Virtual Machine with SQL Server 2016 SP1 already installed.
 - [![Download SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
@@ -103,7 +102,7 @@ The following table summarizes key improvements provided in SQL Server 2016 SP1.
 
 |Feature|Description|More information|
 |---|---|---|
-|Bulk insert into heaps with auto TABLOCK under TF 715| Trace Flag 715 enables table lock for bulk load operations into heap with no non-clustered indexes.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|Bulk insert into heaps with auto TABLOCK under TF 715| Trace Flag 715 enables table lock for bulk load operations into heap with no nonclustered indexes.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE OR ALTER|Deploy objects such as Stored Procedures, Triggers, User-Defined Functions, and Views.|[SQL Server Database Engine Blog](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |DROP TABLE support for replication|DROP TABLE DDL support for replication to allow replication articles to be dropped.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Filestream RsFx Driver signing|The Filestream RsFx driver is signed and certified using Windows Hardware Developer Center Dashboard portal (Dev Portal) allowing SQL Server 2016 SP1 Filestream RsFx driver to be installed on Windows Server 2016/Windows 10 without any issue.|[Migrating SAP workloads to SQL Server just got 2.5x faster](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|

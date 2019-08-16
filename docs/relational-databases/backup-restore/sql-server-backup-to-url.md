@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Backup to URL | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/17/2017"
+ms.date: "03/25/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Backup to URL
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   This topic introduces the concepts, requirements and components necessary to use the Microsoft Azure Blob storage service as a backup destination. The backup and restore functionality are same or similar to when using DISK or TAPE, with a few differences. These differences and a few code examples are included in this topic.  
   
@@ -93,7 +92,7 @@ When you backup to block blob, the maximum block size you can specify is 4MB. Th
   
 -   Backup to premium storage is not supported.  
   
--   SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 MB (50,000 blocks * 4MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
+-   SQL Server limits the maximum backup size supported using a page blob to 1 TB. The maximum backup size supported using block blobs is limited to approximately 200 GB (50,000 blocks * 4MB MAXTRANSFERSIZE). Block blobs support striping to support substantially larger backup sizes.  
   
 -   You can issue backup or restore statements by using TSQL, SMO, PowerShell cmdlets, SQL Server Management Studio Backup or Restore wizard.   
   
@@ -121,7 +120,7 @@ When you backup to block blob, the maximum block size you can specify is 4MB. Th
 |RESTORE HEADERONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
 |RESTORE LABELONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
 |RESTORE VERIFYONLY|Y||Requires a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential to be defined, and requires the WITH CREDENTIAL argument to be specified if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credential is defined using the storage account key as the secret|  
-|RESTORE REWINDONLY|−|||  
+|RESTORE REWINDONLY|-|||  
   
  For syntax and general information about backup statements, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -145,9 +144,9 @@ When you backup to block blob, the maximum block size you can specify is 4MB. Th
 |COMPRESSION&#124;NO_COMPRESSION|Y|Not supported for file-snapshot backup||  
 |DESCRIPTION|Y|||  
 |NAME|Y|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||Appending to blobs is not possible. To overwrite a backup use the **WITH FORMAT** argument. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
-|NOSKIP &#124; SKIP|−|||  
+|EXPIREDATE &#124; RETAINDAYS|-|||  
+|NOINIT &#124; INIT|-||Appending to blobs is not possible. To overwrite a backup use the **WITH FORMAT** argument. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
+|NOSKIP &#124; SKIP|-|||  
 |NOFORMAT &#124; FORMAT|Y||A backup taken to an existing blob fails unless **WITH FORMAT** is specified. The existing blob is overwritten when **WITH FORMAT** is specified. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the FORMAT argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original file-snapshot backup. However, when using file-snapshot backups (using the **WITH FILE_SNAPSHOT** argument), the **WITH FORMAT** argument is not permitted to avoid leaving orphaned file-snapshots that were created with the original backup.|  
 |MEDIADESCRIPTION|Y|||  
 |MEDIANAME|Y|||  
@@ -157,8 +156,8 @@ When you backup to block blob, the maximum block size you can specify is 4MB. Th
 |NO_CHECKSUM &#124; CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
 |STATS|Y|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|Y|||  
 |NO_TRUNCATE|Y|||  
   
@@ -180,19 +179,19 @@ When you backup to block blob, the maximum block size you can specify is 4MB. Th
 |REPLACE|Y|||  
 |RESTART|Y|||  
 |RESTRICTED_USER|Y|||  
-|FILE|−|||  
+|FILE|-|||  
 |PASSWORD|Y|||  
 |MEDIANAME|Y|||  
 |MEDIAPASSWORD|Y|||  
 |BLOCKSIZE|Y|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
+|BUFFERCOUNT|-|||  
+|MAXTRANSFERSIZE|-|||  
 |CHECKSUM &#124; NO_CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
 |FILESTREAM|Y|Not supported for snapshot backup||  
 |STATS|Y|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|Y|||  
 |KEEP_CDC|Y|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|Y|||  
@@ -213,7 +212,6 @@ You can back up a database to URL through the Back Up task in SQL Server Managem
 2.  Expand **Databases**, right-click the desired database, point to **Tasks**, and then click **Back Up...**.
   
 3.  On the **General** page in the **Destination** section the **URL** option is available in the **Back up to:** drop-down list.  The **URL** option is used to create a backup to Microsoft Azure storage. Click **Add** and the **Select Backup Destination** dialog box will open:
-   
     1.  **Azure storage container:** The name of the Microsoft Azure storage container to store the backup files.  Select an existing container from the drop-down list or manually enter the container. 
   
     2.  **Shared Access Policy:** Enter the shared access signature for a manually entered container.  This field is not available if an existing container was chosen. 
@@ -221,11 +219,13 @@ You can back up a database to URL through the Back Up task in SQL Server Managem
     3.  **Backup File:** Name of the backup file.
     
     4.  **New Container:** Used to register an existing container that you do not have a shared access signature for.  See [Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
-  
+
 > [!NOTE] 
 >  **Add** supports multiple backup files and storage containers for a single media set.
-  
- When you select **URL** as the destination, certain options in the **Media Options** page are disabled.  The following topics have more information on the Back Up Database dialog:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+When you select **URL** as the destination, certain options in the **Media Options** page are disabled.  The following topics have more information on the Back Up Database dialog:  
   
  [Back Up Database &#40;General Page&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   
@@ -317,20 +317,15 @@ New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroup
 $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
-$storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
+$storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
 
 # Creates a new container in blob storage  
-$container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+$container = New-AzStorageContainer -Context $storageContext -Name $containerName  
 $cbc = $container.CloudBlobContainer  
 
 # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-$policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
-$sas = New-AzureStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
-
-
-# Gets the Shared Access Signature for the policy  
-$policy = new-object 'Microsoft.WindowsAzure.Storage.Blob.SharedAccessBlobPolicy'  
-$sas = $cbc.GetSharedAccessSignature($policy, $policyName)  
+$policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission "rwld"
+$sas = New-AzStorageContainerSASToken -Policy $policyName -Context $storageContext -Container $containerName
 Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
 # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  

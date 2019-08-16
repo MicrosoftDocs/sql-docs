@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create an Encrypted Backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,9 @@ manager: craigg
     ```  
   
 3.  **Backup the database:** Specify the encryption algorithm and certificate to use. Copy and paste the following example into the query window and click **Execute**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     BACKUP DATABASE [MyTestDB]  
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  

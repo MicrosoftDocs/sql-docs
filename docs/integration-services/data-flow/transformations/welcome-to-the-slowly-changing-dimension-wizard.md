@@ -10,11 +10,14 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.welcome.f1"
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Welcome to the Slowly Changing Dimension Wizard
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions.  
   
  To learn more about this wizard, see [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  

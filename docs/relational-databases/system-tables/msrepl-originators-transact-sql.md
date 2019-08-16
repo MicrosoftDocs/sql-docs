@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

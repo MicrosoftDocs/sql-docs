@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "removing tables"
   - "dropping tables"
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Remove Tables from Database Diagrams (Visual Database Tools)

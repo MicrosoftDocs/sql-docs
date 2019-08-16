@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Report Server Web service, methods"
@@ -16,8 +14,8 @@ helpviewer_keywords:
   - "Report Server Web service, features"
   - "XML Web service [Reporting Services], methods"
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Server Web Service Methods

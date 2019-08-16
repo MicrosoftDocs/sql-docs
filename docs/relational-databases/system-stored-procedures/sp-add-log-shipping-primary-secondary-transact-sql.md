@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +36,13 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## Arguments  
- [ **@primary_database** = ] '*primary_database*'  
+`[ @primary_database = ] 'primary_database'`
  Is the name of the database on the primary server. *primary_database* is **sysname**, with no default.  
   
- [ **@secondary_server** = ] '*secondary_server*',  
+`[ @secondary_server = ] 'secondary_server',`
  Is the name of the secondary server. *secondary_server* is **sysname**, with no default.  
   
- [ **@secondary_database** = ] '*secondary_database*'  
+`[ @secondary_database = ] 'secondary_database'`
  Is the name of the secondary database. *secondary_database* is **sysname**, with no default.  
   
 ## Return Code Values  

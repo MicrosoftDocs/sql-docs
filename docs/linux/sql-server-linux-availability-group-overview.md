@@ -1,13 +1,12 @@
 ---
-title: Always On Availability Groups for SQL Server on Linux | Microsoft Docs
+title: Always On Availability Groups for SQL Server on Linux
 description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
-ms.date: 11/27/2017
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1 
 ---
@@ -20,8 +19,8 @@ This article describes the characteristics of Always On Availability Groups (AGs
 
 From a high-level standpoint, availability groups under [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux are the same as they are on WSFC-based implementations. That means that all the limitations and features are the same, with some exceptions. The main differences include:
 
--   Microsoft Distributed Transaction Coordinator (DTC) is not supported under Linux in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. If your applications require the use of distributed transactions and need an AG, deploy [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Windows.
--   Linux-based deployments use Pacemaker instead of a WSFC.
+-   Microsoft Distributed Transaction Coordinator (DTC) is supported under Linux starting with SQL Server 2017 CU16. However, DTC is not yet supported on Availability Groups on Linux. If your applications require the use of distributed transactions and need an AG, deploy [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Windows.
+-   Linux-based deployments that require high availability use Pacemaker for clustering instead of a WSFC.
 -   Unlike most configurations for AGs on Windows except for the Workgroup Cluster scenario, Pacemaker never requires Active Directory Domain Services (AD DS).
 -   How to fail an AG from one node to another is different between Linux and Windows.
 -   Certain settings such as `required_synchronized_secondaries_to_commit` can only be changed via Pacemaker on Linux, whereas a WSFC-based install uses Transact-SQL.
@@ -52,7 +51,7 @@ The combination of `required_synchronized_secondaries_to_commit` and the new seq
 
 There are three values that can be set for `required_synchronized_secondaries_to_commit`: 0, 1, or 2. They control the behavior of what happens when a replica becomes unavailable. The numbers correspond to the number of secondary replicas that must be synchronized with the primary. The behavior is as follows under Linux:
 
--   0 - No automatic failover is possible since no secondary replica is required to be synchronized. The primary database is available at all times.
+-   0 - Secondary replicas do not need to be in synchronized state with the primary. However if the secondaries are not synchronized, there will be no automatic failover. 
 -   1 - One secondary replica must be in a synchronized state with the primary; automatic failover is possible. The primary database is unavailable until a secondary synchronous replica is available.
 -   2 - Both secondary replicas in a three or more node AG configuration must be synchronized with the primary; automatic failover is possible.
 
@@ -90,7 +89,7 @@ If these conditions are met and the server hosting the primary replica fails, th
 
 Also new in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] as of CU1 is a configuration-only replica. Because Pacemaker is different than a WSFC, especially when it comes to quorum and requiring STONITH, having just a two-node configuration will not work when it comes to an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine, because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], where all the metadata is stored. This is where the configuration-only replica comes into play.
 
-Without anything else, a third node and at least one synchronized replica would be required. This would not work for [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)], since it can only have two replicas participating in an AG. The configuration-only replica stores the AG configuration in the master database, same as the other replicas in the AG configuration. The configuration-only replica does not have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they are automatic or manual.
+Without anything else, a third node and at least one synchronized replica would be required. The configuration-only replica stores the AG configuration in the master database, same as the other replicas in the AG configuration. The configuration-only replica does not have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they are automatic or manual.
 
 For an AG to maintain quorum and enable automatic failovers with a cluster type of External, it either must:
 

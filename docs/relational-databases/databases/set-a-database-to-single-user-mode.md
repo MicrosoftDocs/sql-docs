@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Set a Database to Single-user Mode
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

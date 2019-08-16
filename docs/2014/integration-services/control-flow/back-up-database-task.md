@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "transaction log backups [Integration Services]"
   - "backing up transaction logs [Integration Services]"
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Back Up Database Task

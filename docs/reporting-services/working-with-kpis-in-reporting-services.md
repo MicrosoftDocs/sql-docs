@@ -1,8 +1,7 @@
 ---
 title: Working with KPIs in Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -23,7 +22,10 @@ By using KPIs in SQL Server Reporting Services, you can easily visualize answers
 - How far ahead or behind am I?  
   
 - What are the minimum amounts I have completed?  
-  
+
+> [!NOTE]
+> KPIs are only accessible in the Enterprise (Developer) editions of the SSRS portal.
+
 ## Creating a Dataset
 
 A KPI will only use the first row of data from a shared dataset. Make sure that the data you want to use is located on that first row. To create a shared dataset, you can use either Report Builder or SQL Server Data Tools.  

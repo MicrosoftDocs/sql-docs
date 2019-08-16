@@ -11,7 +11,6 @@ ms.topic: "reference"
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # New Date and Time Features with Previous SQL Server Versions (OLE DB)

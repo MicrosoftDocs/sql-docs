@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Prerequisites to convert log shipping to Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,15 +22,6 @@ manager: craigg
 > [!NOTE]  
 >  You can configure any primary or secondary database (possibly readable) in an availability group as a log shipping primary database.  
   
- **In This Topic:**  
-  
--   [Availability Group Prerequisites](#AGPrereqsRealAddress)  
-  
--   [Log Shipping Prerequisites](#LogShipPrereqs)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="AGPrereqsRealAddress"></a> Availability Group Prerequisites  
  To allow backup jobs to run on the primary replica of the availability group, use the following Always On Availability Groups backup settings:  
@@ -104,7 +94,7 @@ manager: craigg
   
      [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
+     [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## See Also  
  [About Log Shipping &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

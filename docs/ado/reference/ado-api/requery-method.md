@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Requery Method
 Updates the data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object by re-executing the query on which the object is based.  

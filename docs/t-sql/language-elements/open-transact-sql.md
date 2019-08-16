@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "OPEN statement"
   - "Transact-SQL cursors, opening"
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

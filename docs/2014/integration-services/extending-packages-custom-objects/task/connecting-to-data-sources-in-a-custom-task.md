@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "connections [Integration Services], external data sources"
   - "SSIS custom tasks, external data sources"
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connecting to Data Sources in a Custom Task

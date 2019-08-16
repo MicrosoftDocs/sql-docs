@@ -26,7 +26,7 @@ manager: craigg
 ### Specifying the Isolation Level of Individual Operations  
  To set a different isolation level for a set of statements in a transaction, you can use `SET TRANSACTION ISOLATION LEVEL`. The following example of a transaction uses the serializable isolation level as default. The insert and select operations on t3, t2, and t1 are executed under repeatable read isolation.  
   
-```tsql  
+```sql  
 set transaction isolation level serializable  
 go  
   
@@ -43,7 +43,7 @@ commit
   
  To set an isolation level for individual read operations that is different from the transaction default, you can use a table hint (for example, serializable). Every select corresponds to a read operation and every update and every delete corresponds to a read, because the row always needs to be read before it can be updated or deleted. Insert operations do not have an isolation level, because writes are always isolated in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In the following example, the default isolation level for the transaction is read committed, but table t1 is accessed under serializable and t2 under snapshot isolation.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -97,7 +97,7 @@ commit
   
  Consider the following transaction,  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -143,7 +143,7 @@ commit
   
  The memory-optimized side of the transaction can reach one of two levels: if condition1 is true, it reaches serializable, while if it is false, the memory-optimized side reaches only snapshot isolation.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   

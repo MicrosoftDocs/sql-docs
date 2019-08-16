@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Project-Oriented Database Development using Command-Line Tools
 SQL Server Data Tools proves command-line tools that enable a number of project-oriented database development scenarios.  

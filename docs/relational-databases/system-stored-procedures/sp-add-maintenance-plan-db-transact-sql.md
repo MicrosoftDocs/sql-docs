@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'**_plan_id_**'**  
+`[ @plan_id = ] 'plan_id'`
  Specifies the plan ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@db_name =**] **'**_database_name_**'**  
+`[ @db_name = ] 'database_name'`
  Specifies the name of the database to be added to the maintenance plan. The database must be created or exist before its addition to the plan. *database_name* is **sysname**.  
   
 ## Return Code Values  

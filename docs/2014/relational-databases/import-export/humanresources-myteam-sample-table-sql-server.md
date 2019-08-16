@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], examples"
   - "bulk exporting [SQL Server], examples"
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # HumanResources.myTeam Sample Table (SQL Server)

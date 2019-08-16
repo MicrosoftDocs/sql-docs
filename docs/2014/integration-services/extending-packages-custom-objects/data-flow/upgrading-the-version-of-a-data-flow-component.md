@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data flow components [Integration Services], upgrading version"
   - "upgrading data flow components [Integration Services]"
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Upgrading the Version of a Data Flow Component

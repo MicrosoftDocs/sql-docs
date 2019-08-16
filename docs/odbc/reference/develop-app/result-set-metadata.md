@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Result Set Metadata
 *Metadata* is data that describes other data. For example, result set metadata describes the result set, such as the number of columns in the result set, the data types of those columns, their names, precision, nullability, and so on.  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_createstats (Transact-SQL)
@@ -43,16 +42,16 @@ sp_createstats
 ```  
   
 ## Arguments  
- [ **@indexonly=** ] **'indexonly'**  
+`[ @indexonly = ] 'indexonly'`
  Creates statistics only on columns that are in an existing index and are not the first column in any index definition. **indexonly** is **char(9)**. The default is NO.  
   
- [ **@fullscan=** ] **'fullscan'**  
+`[ @fullscan = ] 'fullscan'`
  Uses the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement with the **FULLSCAN** option. **fullscan** is **char(9)**.  The default is NO.  
   
- [ **@norecompute=** ] **'norecompute'**  
+`[ @norecompute = ] 'norecompute'`
  Uses the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement with the **NORECOMPUTE** option. **norecompute** is **char(12)**.  The default is NO.  
   
- [ **@incremental=** ] **'incremental'**  
+`[ @incremental = ] 'incremental'`
  Uses the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement with the **INCREMENTAL = ON** option. **Incremental** is **char(12)**.  The default is NO.  
   
 ## Return Code Values  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "verifying database consistency"
   - "integrity checking [Integration Services]"
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Check Database Integrity Task

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Security Catalog Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +30,7 @@ manager: craigg
 |[sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)|[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) |  
 |[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|[sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) |  
 |[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|[sys.user_token](../../relational-databases/system-catalog-views/sys-user-token-transact-sql.md) |  
+|[sys.sql_feature_restrictions](sys-sql-feature-restrictions.md)|
   
 ## Server-Level Views  
   

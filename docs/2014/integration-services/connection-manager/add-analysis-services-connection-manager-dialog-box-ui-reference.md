@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Add Analysis Services Connection Manager"
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Analysis Services Connection Manager Dialog Box UI Reference

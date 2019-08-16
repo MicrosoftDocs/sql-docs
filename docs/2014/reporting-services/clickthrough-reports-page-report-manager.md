@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.modelproperties.drilthroughreports.f1"
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Clickthrough Reports Page (Report Manager)

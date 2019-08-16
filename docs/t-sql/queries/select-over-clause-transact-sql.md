@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - OVER Clause (Transact-SQL)
@@ -541,6 +540,6 @@ ORDER BY SalesOrderNumber,ProductKey;
 ## See Also  
  [Aggregate Functions &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Analytic Functions &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [Excellent blog post about window functions and OVER, on sqlmag.com, by Itzik Ben-Gan](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+ [Excellent blog post about window functions and OVER, on sqlmag.com, by Itzik Ben-Gan](https://www.itprotoday.com/sql-server/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   

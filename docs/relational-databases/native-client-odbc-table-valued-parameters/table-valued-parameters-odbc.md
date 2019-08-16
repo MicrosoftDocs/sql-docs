@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameters (ODBC)

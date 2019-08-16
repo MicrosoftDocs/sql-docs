@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "FOR XML query"
   - "queries [XML in SQL Server], comparing query types"
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # FOR XML Query Compared to Nested FOR XML Query
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

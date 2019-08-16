@@ -11,9 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "views [SMO]"
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Views

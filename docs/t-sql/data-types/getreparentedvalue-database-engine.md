@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # GetReparentedValue (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "02/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords:
@@ -15,7 +14,7 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, building applications"
 author: pmasl
 ms.author: pelopes
-manager: craigg
+ms.reviewer: mikeray
 ---
 # Building applications with OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

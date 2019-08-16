@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Stopping System-Versioning on a System-Versioned Temporal Table

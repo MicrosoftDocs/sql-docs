@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

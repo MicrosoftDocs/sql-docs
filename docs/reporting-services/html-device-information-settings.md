@@ -2,7 +2,7 @@
 title: "HTML Device Information Settings | Microsoft Docs"
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "HTML [Reporting Services], rendering"
   - "device information settings [Reporting Services], HTML rendering"
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # HTML Device Information Settings
 The following table lists the device information settings for rendering in HTML format.  

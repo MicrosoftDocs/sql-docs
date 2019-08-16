@@ -1,10 +1,8 @@
 ---
 title: "Improve the Performance of Full-Text Indexes | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -15,9 +13,9 @@ helpviewer_keywords:
   - "full-text search [SQL Server], performance"
   - "batches [SQL Server], full-text search"
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Improve the Performance of Full-Text Indexes
@@ -128,8 +126,8 @@ For essential information about the following formulas, see the notes that follo
   
 |Platform|Estimating fdhost.exe memory requirements in MB-*F*^1|Formula for calculating max server memory-*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Number of crawl ranges* * 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *Number of crawl ranges* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *Number of crawl ranges* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *Number of crawl ranges* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **Notes about the formulas**
 1.  If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as _T_**-** sigma**(**_F_i**)**.  
@@ -169,7 +167,7 @@ The performance of full populations is not optimal when the average CPU consumpt
      To find out whether a page wait time is high, run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:  
   
     ```  
-    Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
+    SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
     ```  
   
      The following table describes the wait types of interest here.  

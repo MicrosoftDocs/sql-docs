@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SetEOS Method
 Sets the position that is the end of the stream.  

@@ -9,7 +9,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.clienthome.f1"
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

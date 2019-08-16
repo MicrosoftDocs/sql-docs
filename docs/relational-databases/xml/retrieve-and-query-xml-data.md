@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "XML data [SQL Server], retrieving"
   - "XML instance retrieval"
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Retrieve and Query XML Data
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

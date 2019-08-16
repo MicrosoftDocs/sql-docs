@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administering Report Builder"
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Install, Uninstall, and Report Builder Support
@@ -53,7 +52,7 @@ manager: kfile
 ### Installing the ClickOnce Version of Report Builder on Your Computer  
  The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder is installed with [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. It is installed by both native and SharePoint integrated installations of [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] is a Microsoft technology for deploying Windows applications. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] enables users to install and run a Windows application such as Report Builder by clicking a link on a web page. For more information about deploying [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications, applying [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application security, or running [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications in the Internet zone, see the "ClickOnce Deployment for Windows Forms Applications", "Security in Windows Forms Overview", or "Trusted Application Deployment Overview" articles on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network Web site at [www.microsoft.com/msdn](https://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] is a Microsoft technology for deploying Windows applications. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] enables users to install and run a Windows application such as Report Builder by clicking a link on a web page. For more information about deploying [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications, applying [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] application security, or running [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications in the Internet zone, see the "ClickOnce Deployment for Windows Forms Applications", "Security in Windows Forms Overview", or "Trusted Application Deployment Overview" articles on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network Web site at [https://developer.microsoft.com/](https://developer.microsoft.com/).  
   
  The [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version of Report Builder is located on the report server, and installs on your computer when you click the **Report Builder** button in Report Manager or click the **Report Builder Report** option on the **New Document** menu in a SharePoint library.  
   
@@ -147,7 +146,7 @@ manager: kfile
   
  However, with additional configuration the report server is available to Report Builder users. You can add [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URLs to trusted sites. By default, Internet Explorer 7.0 or later runs in Protected Mode on Windows Vista, Windows Server 2008, and Windows 7. Protected Mode is a feature that blocks browser requests from reaching high-level processes that run on the same computer. You can disable protected mode for the report server applications by adding them as Trusted Sites. You must have administrator permission to make this change.  
   
- For more information about configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Reporting Services Configuration Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
+ For more information about configuring [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see [Reporting Services Configuration Manager &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) on msdn.microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a> SQL Server Sample Databases  

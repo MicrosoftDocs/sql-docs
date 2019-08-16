@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ConfigTranslator Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL ConfigTranslator(  
      HWND     hwndParent,  

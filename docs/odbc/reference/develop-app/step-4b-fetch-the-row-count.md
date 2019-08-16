@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Step 4b: Fetch the Row Count
 The next step is to fetch the row count, as shown in the following illustration.  

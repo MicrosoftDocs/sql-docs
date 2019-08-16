@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "viewing user names"
   - "SESSION_USER function"
 ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SESSION_USER (Transact-SQL)

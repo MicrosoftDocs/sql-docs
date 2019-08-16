@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Value Property Example (VC++)
 This example demonstrates the [Value](../../../ado/reference/ado-api/value-property-ado.md) property with [Field](../../../ado/reference/ado-api/field-object.md) and [Property](../../../ado/reference/ado-api/property-object-ado.md) objects by displaying field and property values for the ***Employees*** table.  

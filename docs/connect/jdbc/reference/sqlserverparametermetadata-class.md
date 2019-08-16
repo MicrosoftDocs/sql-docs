@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 546290e0-9411-4a2b-aa36-61251e70e9cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerParameterMetaData Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

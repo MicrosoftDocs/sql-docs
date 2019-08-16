@@ -14,11 +14,14 @@ helpviewer_keywords:
   - "control flow [Integration Services], containers"
   - "SQL Server Integration Services containers"
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Integration Services Containers
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Containers are objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] that provide structure to packages and services to tasks. They support repeating control flows in packages, and they group tasks and containers into meaningful units of work. Containers can include other containers in addition to tasks.  
   
  Packages use containers for the following purposes:  

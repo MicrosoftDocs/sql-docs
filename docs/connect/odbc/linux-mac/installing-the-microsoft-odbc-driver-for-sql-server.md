@@ -1,7 +1,7 @@
 ---
 title: "Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/04/2018"
+ms.date: "12/05/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -24,7 +24,7 @@ This article explains how to install the [!INCLUDE[msCoName](../../../includes/m
 > [!IMPORTANT]
 > If you installed the v17 `msodbcsql` package that was briefly available, you should remove it before installing the `msodbcsql17` package. This will avoid conflicts. The `msodbcsql17` package can be installed side by side with the `msodbcsql` v13 package.
 
-### Debian 8 and 9
+### Debian
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -38,6 +38,9 @@ curl https://packages.microsoft.com/config/debian/8/prod.list > /etc/apt/sources
 #Debian 9
 curl https://packages.microsoft.com/config/debian/9/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Debian 10
+curl https://packages.microsoft.com/config/debian/10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql17
@@ -50,7 +53,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### RedHat Enterprise Server 6 and 7
+### RedHat Enterprise Server
 ```
 sudo su
 
@@ -62,6 +65,9 @@ curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/m
 
 #RedHat Enterprise Server 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
+
+#RedHat Enterprise Server 8
+curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
 sudo yum remove unixODBC-utf16 unixODBC-utf16-devel #to avoid conflicts
@@ -75,7 +81,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### SUSE Linux Enterprise Server 11SP4, 12, and 15
+### SUSE Linux Enterprise Server
 
 ```
 sudo su
@@ -84,6 +90,7 @@ sudo su
 #Choose only ONE of the following, corresponding to your OS version
 
 #SUSE Linux Enterprise Server 11 SP4
+#Ensure SUSE Linux Enterprise 11 Security Module has been installed 
 zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 
 #SUSE Linux Enterprise Server 12
@@ -91,6 +98,7 @@ zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 #SUSE Linux Enterprise Server 15
 zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+#(Only for driver 17.3 and below)
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit
@@ -104,7 +112,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### Ubuntu 14.04, 16.04, 17.10, and 18.04
+### Ubuntu
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -124,6 +132,9 @@ curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sou
 #Ubuntu 18.10
 curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
+#Ubuntu 19.04
+curl https://packages.microsoft.com/config/ubuntu/19.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
 exit
 sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install msodbcsql17
@@ -139,7 +150,7 @@ sudo apt-get install unixodbc-dev
 > - Driver version 17.2 or higher is required for Ubuntu 18.04 support.
 > - Driver version 17.3 or higher is required for Ubuntu 18.10 support.   
 
-### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), macOS 10.13 (High Sierra), and macOS 10.14 (Mojave)
+### MacOS
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -537,6 +548,6 @@ MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
 
 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)

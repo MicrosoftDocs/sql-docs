@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns properties of the specified distribution database. This stored procedure is executed at the Distributor on the distribution database.  
   
@@ -32,7 +31,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## Arguments  
- [ **@database=**]  **'***database_name***'**  
+`[ @database = ] 'database_name'`
  Is the database name for which properties are returned. *database_name* is **sysname**, with a default of **%** for all databases associated with the Distributor and on which the user has permissions.  
   
 ## Result Sets  

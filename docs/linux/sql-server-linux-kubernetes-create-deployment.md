@@ -3,11 +3,10 @@ title: Create deployment scripts for SQL Server Always On Availability Group on 
 description: This article explains how to create deployment scripts for a SQL Server Always On Availability Group on Kubernetes 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---

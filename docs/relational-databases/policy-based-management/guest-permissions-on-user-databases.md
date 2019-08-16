@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Guest Permissions on User Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -34,9 +34,8 @@ helpviewer_keywords:
   - "progress reporting [DBCC statements]"
   - "informational statements [SQL Server]"
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

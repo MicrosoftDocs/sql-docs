@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Setup DLL Function Summary
 The following table describes setup DLL functions. For more information about the syntax and semantics for each function, see [Setup DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md).  

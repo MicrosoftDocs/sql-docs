@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Context Connection
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

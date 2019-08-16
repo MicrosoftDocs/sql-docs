@@ -14,11 +14,14 @@ helpviewer_keywords:
   - "database shrinking [Integration Services]"
   - "shrinking databases"
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Shrink Database Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Shrink Database task reduces the size of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data and log files.  
   
  By using the Shrink Database task, a package can shrink files for a single database or multiple databases.  

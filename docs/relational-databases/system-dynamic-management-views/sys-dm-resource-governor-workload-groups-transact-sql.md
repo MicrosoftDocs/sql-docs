@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_resource_governor_workload_groups (Transact-SQL)

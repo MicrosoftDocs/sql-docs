@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)

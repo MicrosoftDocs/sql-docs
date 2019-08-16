@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

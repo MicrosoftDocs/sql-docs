@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.numbered_procedures (Transact-SQL)

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Contained Database Collations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

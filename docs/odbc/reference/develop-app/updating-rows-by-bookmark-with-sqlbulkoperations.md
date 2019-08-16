@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Updating Rows by Bookmark with SQLBulkOperations
 When updating a row by bookmark, **SQLBulkOperations** makes the data source update one or more rows of the table. The rows are identified by the bookmark in a bound bookmark column. The row is updated using data in the application buffers for each bound column (except when the value in the length/indicator buffer for a column is SQL_COLUMN_IGNORE). Unbound columns will not be updated.  

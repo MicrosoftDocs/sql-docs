@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # NamedParameters Property (ADO)
 Indicates whether parameter names should be passed to the provider.  

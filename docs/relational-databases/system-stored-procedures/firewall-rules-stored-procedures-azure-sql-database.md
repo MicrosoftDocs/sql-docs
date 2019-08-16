@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Firewall Rules Stored Procedures (Azure SQL Database)

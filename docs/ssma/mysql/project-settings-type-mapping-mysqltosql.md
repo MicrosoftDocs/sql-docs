@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Project Settings (Type Mapping) (MySQLToSQL)
 The Type Mapping project settings let you set default type mappings for the SSMA project.  

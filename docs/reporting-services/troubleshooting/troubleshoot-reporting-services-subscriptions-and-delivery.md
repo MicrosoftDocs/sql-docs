@@ -2,14 +2,14 @@
 title: "Troubleshoot Reporting Services Subscriptions and Delivery | Microsoft Docs"
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
 
 
 ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Reporting Services Subscriptions and Delivery
   

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLCancel (Visual FoxPro ODBC Driver)
 > [!NOTE]  

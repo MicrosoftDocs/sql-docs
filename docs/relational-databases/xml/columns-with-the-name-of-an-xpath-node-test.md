@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "names [SQL Server], columns with"
   - "XPath node test"
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Columns with the Name of an XPath Node Test
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

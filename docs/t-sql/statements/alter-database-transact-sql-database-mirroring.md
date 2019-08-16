@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring
 

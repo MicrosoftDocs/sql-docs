@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "table-valued parameters (OLE DB), API support (properties)"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # OLE DB Table-Valued Parameter Type Support (Properties)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

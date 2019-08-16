@@ -10,7 +10,6 @@ ms.technology: connectivity
 ms.topic: "reference"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Change a SQL Server Authentication User Password (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

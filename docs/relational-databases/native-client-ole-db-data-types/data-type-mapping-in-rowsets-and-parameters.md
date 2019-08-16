@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Mapping in Rowsets and Parameters

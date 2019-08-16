@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changedistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Changes the properties of the distribution Publisher. This stored procedure is executed at the Distributor on any database.  
   
@@ -35,16 +34,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the Publisher name. *publisher* is **sysname**, with no default.  
   
- [ **@property=** ] **'**_property_**'**  
+`[ @property = ] 'property'`
  Is a property to change for the given Publisher. *property* is **sysname** and can be one of these values.  
   
- [ **@value=** ] **'**_value_**'**  
+`[ @value = ] 'value'`
  Is the value for the given property. *value* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@storage_connection_string =**] **'**_storage_connection_string_**'**  
+`[ @storage_connection_string = ] 'storage_connection_string'`
  Is required for SQL Database managed instance, should match the access key for the Azure SQL Database storage volume. 
 
 

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetData Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetData(  
       SQLHSTMT       StatementHandle,  
@@ -198,7 +197,7 @@ SQLRETURN SQLGetData(
   
  Successive calls to **SQLGetData** will retrieve data from the last column requested; prior offsets become invalid. For example, when the following sequence is performed:  
   
-```  
+```cpp  
 SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)  
 ```  
   
@@ -212,7 +211,7 @@ SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)
 ## Code Example  
  In the following example, an application executes a **SELECT** statement to return a result set of the customer IDs, names, and phone numbers sorted by name, ID, and phone number. For each row of data, it calls **SQLFetch** to position the cursor to the next row. It calls **SQLGetData** to retrieve the fetched data; the buffers for the data and the returned number of bytes are specified in the call to **SQLGetData**. Finally, it prints each employee's name, ID, and phone number.  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 50  
   

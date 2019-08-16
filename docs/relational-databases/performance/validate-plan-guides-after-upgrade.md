@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Validate Plan Guides After Upgrade
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

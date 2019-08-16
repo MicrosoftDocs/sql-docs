@@ -1,13 +1,12 @@
 ---
-title: Configure Red Hat Enterprise Linux shared cluster for SQL Server | Microsoft Docs
+title: Configure Red Hat Enterprise Linux shared cluster for SQL Server
 description: Implement high availability by configuring Red Hat Enterprise Linux shared disk cluster for SQL Server.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ---
@@ -111,7 +110,7 @@ There are a variety of solutions for providing shared storage. This walk-through
 ### Configure shared storage with NFS
 
 > [!IMPORTANT] 
-> Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
+> Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on nonclustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
 
 On the NFS Server do the following:
 
@@ -197,7 +196,7 @@ For more information about using NFS, see the following resources:
 
 * [NFS servers and firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Mounting an NFS Volume | Linux Network Administrators Guide](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS server configuration](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
+* [NFS server configuration | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### Mount database files directory to point to the shared storage
 

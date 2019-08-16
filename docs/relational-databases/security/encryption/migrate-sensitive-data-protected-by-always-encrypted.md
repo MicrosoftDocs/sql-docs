@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Migrate Sensitive Data Protected by Always Encrypted

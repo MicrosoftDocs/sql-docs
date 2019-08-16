@@ -942,7 +942,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1642,7 +1642,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1887,22 +1887,22 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/r-package-how-to-enable-or-disable.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/r/install-r-packages-tsql.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/r/package-install-uninstall-and-sync.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/advanced-analytics/r/use-revoscaler-to-manage-r-packages.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {

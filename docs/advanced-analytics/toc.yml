@@ -238,7 +238,7 @@
       - name: Get R package information
         href: ../advanced-analytics/package-management/r-package-information.md
       - name: Install R packages
-        href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
+        href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
       - name: Create a miniCRAN repo
         href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages

@@ -130,11 +130,12 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 |New feature or update | Details |
 |:---|:---|
-|New Java language SDK | Simplifies development of Java programs that can be run from SQL Server. See [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
-|SQL Server Language Extensions - [Java language extension](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
+|New Java language SDK | Simplifies development of Java programs that can be run from SQL Server. See [Microsoft Extensibility SDK for Java for SQL Server](../language-extensions/how-to/extensibility-sdk-java-sql-server.md). |
+|Java language SDK is open source |The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
+|SQL Server language extensions| Execute external code with the extensibility  framework.  See [SQL Server language extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 |Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 |Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
-| New default Java Runtime  | SQL Server now includes Azul System's Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
+|New default Java Runtime  | SQL Server now includes Azul Systems Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
 | &nbsp; | &nbsp; |
 
 ### Spatial

@@ -75,14 +75,13 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |New feature or update | Details |
 |:---|:---|
 |DDL control for hybrid buffer pool |With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
-|Memory-optimized tempdb metadata|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### Unicode support
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).|
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/>Enabled for a BIN2 collation (`Latin1_General_100_BIN2_UTF8`). See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)|
 | &nbsp; | &nbsp; |
 
 ### PolyBase
@@ -92,13 +91,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Query external tables |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. See [What is PolyBase](../relational-databases/polybase/polybase-guide.md).|
 | &nbsp; | &nbsp; |
 
-### Collation
 
-|New feature or update | Details |
-|:---|:---|
-|Support UTF-8 character encoding |Enabled for a BIN2 collation (`Latin1_General_100_BIN2_UTF8`). See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md). |
-|Select UTF-8 collation as default during setup | See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23). |
-| &nbsp; | &nbsp; |
 
 ### Server settings
 
@@ -134,7 +127,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Java language SDK is open source |The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
 |New default Java Runtime | SQL Server now includes Azul Systems Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
-|SQL Server language extensions| Execute external code with the extensibility  framework.  See [SQL Server language extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+|SQL Server language extensions| Execute external code with the extensibility framework. See [SQL Server language extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 |Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 | &nbsp; | &nbsp; |
 
@@ -153,6 +146,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Forcing fast forward and static cursors | Query Store plan forcing support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
 |Reduced recompilations for workloads| Improves using temporary tables across multiple scopes. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
 |Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
+|Memory-optimized tempdb metadata| - Table and variable caching <br/><br/>- Improved latching allocation <br/><br/>- Reduced logging overhead <br/><br/>- Add multiple data files during installation<br/><br/>- Simultaneous file growth across all TempDB tables<br/><br/>- Allocation in optimized extents. <br/><br/>See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### Availability groups

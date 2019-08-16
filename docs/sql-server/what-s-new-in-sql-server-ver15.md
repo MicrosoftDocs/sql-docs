@@ -113,10 +113,6 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for most queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | New database scoped configuration to enable `sys.dm_exec_query_plan_stats`. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. See [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).|
-|Row mode memory grant feedback |Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. See [Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
-|Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
-|Approximate `COUNT DISTINCT`|It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
-|Batch mode on rowstore|Batch mode on rowstore enables batch mode execution for analytic workloads without requiring columnstore indexes. See [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
 | &nbsp; | &nbsp; |
 
 ### Language extensions
@@ -146,7 +142,14 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Forcing fast forward and static cursors | Query Store plan forcing support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
 |Reduced recompilations for workloads| Improves using temporary tables across multiple scopes. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
 |Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Memory-optimized tempdb metadata| - Table and variable caching <br/><br/>- Improved latching allocation <br/><br/>- Reduced logging overhead <br/><br/>- Add multiple data files during installation<br/><br/>- Simultaneous file growth across all tempdb tables<br/><br/>- Allocation in optimized extents <br/><br/>See [Memory-Optimized tempdb Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Memory-optimized tempdb metadata|See [Memory-Optimized tempdb Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Concurrent PFS updates||
+|Partitioned PMO|By default|
+|Temp table cache improvements||
+|Row mode memory grant feedback |Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. See [Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
+|Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
+|Approximate `COUNT DISTINCT`|It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
+|Batch mode on rowstore|Batch mode on rowstore enables batch mode execution for analytic workloads without requiring columnstore indexes. See [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
 | &nbsp; | &nbsp; |
 
 ### Availability groups

@@ -26,6 +26,7 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
+| RC 1 | [Loopback connection to SQL Server from a Python or R script](connect/loopback-connection.md) is now supported for both Windows and Linux. |
 | CTP 3.2 | No changes. |
 | CTP 3.1 | No changes. |
 | CTP 3.0 | No changes. |

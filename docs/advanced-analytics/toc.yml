@@ -17,7 +17,7 @@
     href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: Install
   items:
-  - name: Differences in SQL Server 2019
+  - name: Isolation changes in SQL Server 2019
     href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
   - name: Install ML Services on Windows
     href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
@@ -77,16 +77,6 @@
       href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
 - name: Tutorials
   items:
-  - name: Tutorials overview
-    href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
-  - name: Sample data
-    items:
-    - name: Airline data set
-      href: ../advanced-analytics/tutorials/demo-data-airlinedemo-in-sql.md
-    - name: Iris data set
-      href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
-    - name: NYC Taxi data set
-      href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
   - name: Python
     items:
     - name: Python tutorials
@@ -169,6 +159,14 @@
         href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: 15. Send custom R using rxExec
         href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
+  - name: Sample data
+    items:
+    - name: Airline data set
+      href: ../advanced-analytics/tutorials/demo-data-airlinedemo-in-sql.md
+    - name: Iris data set
+      href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
+    - name: NYC Taxi data set
+      href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
 - name: Samples >
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
@@ -187,6 +185,8 @@
   items:
   - name: Connect
     items:
+    - name: Loopback connection
+      href: ../advanced-analytics/connect/loopback-connection.md
     - name: Connect to OLAP from R
       items:
       - name: Use data from OLAP cubes in R

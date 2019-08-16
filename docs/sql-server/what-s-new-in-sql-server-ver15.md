@@ -56,10 +56,10 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 |New feature or update | Details |
 |:---|:---|
-|Edge constraint cascade delete actions |Define cascaded delete actions on an edge constraint in a graph database. See[Edge constraints](../relational-databases/tables/graph-edge-constraints.md). |
+|Edge constraint cascade delete actions |Define cascaded delete actions on an edge constraint in a graph database. See [Edge constraints](../relational-databases/tables/graph-edge-constraints.md). |
 |New graph function - `SHORTEST_PATH` | Use `SHORTEST_PATH` inside `MATCH` to find the shortest path between any 2 nodes in a graph or to perform arbitrary length traversals.|
 |Partition tables and indexes| The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a graph database. |
-|Use derived table or view aliases in graph match query |See [Graph Edge Constraints](../relational-databases/tables/graph-edge-constraints.md). |
+|Use derived table or view aliases in graph match query |See [Graph match query](../t-sql/queries/match-sql-graph.md). |
 | &nbsp; | &nbsp; |
 
 ### Indexes
@@ -78,18 +78,18 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Memory-optimized tempdb metadata|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 | &nbsp; | &nbsp; |
 
-### Linked servers
+### Unicode support
 
 |New feature or update | Details |
 |:---|:---|
-|Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 | &nbsp; | &nbsp; |
 
 ### PolyBase
 
 |New feature or update | Details |
 |:---|:---|
-|PolyBase |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. |
+|Query external tables |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. See [What is PolyBase](../relational-databases/polybase/polybase-guide.md)|
 | &nbsp; | &nbsp; |
 
 ### Collation
@@ -105,7 +105,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |New feature or update | Details |
 |:---|:---|
 |Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
-|SQL Server Setup enables MAXDOP settings |New recommendations follow the documented guidelines.[Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
+|SQL Server Setup enables MAXDOP settings |New recommendations follow the documented guidelines. [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |Hybrid buffer pool| New feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) .|
 | &nbsp; | &nbsp; |
 

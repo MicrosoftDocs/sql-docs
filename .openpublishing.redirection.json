@@ -1911,6 +1911,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/install-additional-r-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/install-additional-python-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-python-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r-services/r-server-standalone.md",
             "redirect_url": "/sql/advanced-analytics/r/r-server-standalone",
             "redirect_document_id": false

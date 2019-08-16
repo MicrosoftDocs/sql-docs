@@ -232,7 +232,7 @@
       - name: Get Python package information
         href: ../advanced-analytics/package-management/python-package-information.md
       - name: Install Python packages
-        href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
+        href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
     - name: Install new R packages
       items:
       - name: Get R package information

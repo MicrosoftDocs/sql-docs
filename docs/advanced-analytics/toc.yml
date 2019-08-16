@@ -227,28 +227,18 @@
       href: ../advanced-analytics/sql-native-scoring.md
   - name: Package management
     items:
-    - name: Get Python package information
-      href: ../advanced-analytics/package-management/python-package-information.md
-    - name: Get R package information
-      href: ../advanced-analytics/package-management/r-package-information.md
     - name: Install new Python packages
       items:
-      - name: Install with pip
+      - name: Get Python package information
+        href: ../advanced-analytics/package-management/python-package-information.md
+      - name: Install Python packages
         href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: Install new R packages
       items:
-      - name: Install with R
+      - name: Get R package information
+        href: ../advanced-analytics/package-management/r-package-information.md
+      - name: Install R packages
         href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-      - name: Install with T-SQL
-        href: ../advanced-analytics/r/install-r-packages-tsql.md
-      - name: Install with RevoScaleR
-        items:
-        - name: Overview
-          href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-        - name: Enable remote R package management
-          href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-        - name: Synchronize R packages
-          href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
       - name: Create a miniCRAN repo
         href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages

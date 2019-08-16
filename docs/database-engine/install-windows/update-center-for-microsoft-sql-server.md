@@ -18,7 +18,7 @@ This page tracks all updates to all supported versions of SQL Server.
 
 For more information about which products are supported please consult the [Microsoft Product Lifecycle Page](http://support.microsoft.com/lifecycle/).
 
-### Latest Updates
+### Latest updates
 
 Each of the following links provides information for all of the applicable products and technologies listed in the **Applies To** section of this page.
 
@@ -49,19 +49,19 @@ Each of the following links provides information for all of the applicable produ
 
 **Learn how to test updates:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-85-48-files/0827.testing-and-developing-supportability-roadmaps-for-isv-applications.pdf)
 
-### Knowledge Base
+### Knowledge base
 
   - KB 935897: [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](http://support.microsoft.com/kb/935897)
   - KB 824684: [Description of the standard terminology that is used to describe Microsoft software updates](http://support.microsoft.com/kb/824684)
   - KB 822499: [Naming schema for Microsoft SQL Server software update packages](http://support.microsoft.com/kb/822499)
   - KB 321185: [How to determine the version and edition of SQL Server and its components](http://support.microsoft.com/kb/321185)
 
-### Additional Resources
+### Additional resources
 
   - [SQL Customer Advisory Team Site](http://sqlcat.com/)
   - [SQL Server DevCenter](http://msdn.microsoft.com/en-us/sqlserver/default.aspx)
   - [SQL Server TechCenter](http://technet.microsoft.com/en-us/sqlserver/default.aspx)
   - [SQL Server Product Information Center](http://www.microsoft.com/sqlserver/en/us/default.aspx)
 
-### Update Center Blogs
+### Update Center blogs
 

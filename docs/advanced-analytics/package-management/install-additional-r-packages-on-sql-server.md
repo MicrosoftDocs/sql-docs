@@ -60,13 +60,13 @@ If the client computer has Internet access, you can download and install **sqlml
 If the client computer doesn't have an Internet connection, you need to download the packages **sqlmlutils** and **RODBCext** in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
 
 The **RODBCext** package has a number of dependent packages, and identifying all dependencies for a package gets complicated. We recommend that you use [**miniCRAN**](https://andrie.github.io/miniCRAN/) to create a local repository folder for the package that includes all the dependent packages.
-For more information, see [Install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran).
+For more information, see [Create a local R package repository using miniCRAN](../r/create-a-local-package-repository-using-minicran.md).
 
 The **sqlmlutils** package consists of a single zip file that you can copy to the client computer and install.
 
 On a computer with Internet access:
 
-1. Install **miniCRAN**. See [Create a local R package repository using miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) for details.
+1. Install **miniCRAN**. See [Install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) for details.
 
 1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example creates the repository in the folder `c:\downloads\rodbcext`.
 
@@ -79,12 +79,11 @@ On a computer with Internet access:
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
    ```
 
-   > [!NOTE]
-   > The `path` option of `makeRepo` expects forward slashes (/) in the file path.
+   Notice that the `path` option of `makeRepo` expects forward slashes (/) in the file path.
 
 1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/R/dist (don't unzip the file). For example, download the file to `c:\downloads\sqlmlutils_0.7.1.zip`.
 
-1. Copy the entire **RODBCext** repository folder (`c:\download\rodbcext`) and the **sqlmlutils** zip file (`c:\download\sqlmlutils_0.7.1.zip`) to the client computer. For example, copy them to the folder `c:\temp\packages` on the client computer.
+1. Copy the entire **RODBCext** repository folder (`c:\downloads\rodbcext`) and the **sqlmlutils** zip file (`c:\downloads\sqlmlutils_0.7.1.zip`) to the client computer. For example, copy them to the folder `c:\temp\packages` on the client computer.
 
 On the client computer you use to connect to SQL Server, open a command prompt and run the following commands to install **RODBCext** and then **sqlmlutils**.
 
@@ -189,18 +188,15 @@ Once the **glue** package is installed, you can use it in an R script in SQL Ser
 
 ## Remove the package
 
-If you would like to remove the package, run the following R script. Use the same **connection** variable you defined earlier.
+If you would like to remove the **glue** package, run the following R script. Use the same **connection** variable you defined earlier.
 
 ```R
 sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLIC")
 ```
 
-<!-- Fill this in later
 ## Next steps
 
-For more information about SQL Database Machine Learning Services, see the following articles.
-
-- [Azure SQL Database Machine Learning Services with R (preview)](sql-database-machine-learning-services-overview.md)
-- [Write advanced R functions in Azure SQL Database using Machine Learning Services (preview)](sql-database-machine-learning-services-functions.md)
-- [Work with R and SQL data in Azure SQL Database Machine Learning Services (preview)](sql-database-machine-learning-services-data-issues.md)
--->
+- For information about installed R packages, see [Get R package information](r-package-information.md)
+- For help in working with R packages, see [Tips for using R packages](../r/packages-installed-in-user-libraries.md)
+- For information about installing Python packages, see [Install Python packages with pip](install-additional-python-packages-on-sql-server.md)
+- For more information about SQL Server Machine Learning Services, see [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

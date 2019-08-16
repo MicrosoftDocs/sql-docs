@@ -7,10 +7,10 @@ ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
-author: gracegu
+author: chugugrace
 ms.author: chugu
 ---
-# Microsoft Connector for Oracle data type support
+# Microsoft Connector for Oracle Data Type Support
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

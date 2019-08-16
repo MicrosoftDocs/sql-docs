@@ -49,7 +49,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |:---|:---|
 |Index encrypted columns|Create indexes on columns encrypted using randomized encryption and enclave-enabled keys, to improve the performance of rich queries (using `LIKE` and comparison operators). See [Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Suspend and resume initial scan for Transparent Data Encryption (TDE)|See [Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
-|Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
+|Certificate management in SQL Server Configuration Manager|See [Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |
 
 ### Graph
@@ -75,38 +75,30 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |New feature or update | Details |
 |:---|:---|
 |DDL control for hybrid buffer pool |With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
-|Memory-optimized tempdb metadata|See [Memory-Optimized TempDB Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)|
 | &nbsp; | &nbsp; |
 
 ### Unicode support
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/>Enabled for a BIN2 collation (`Latin1_General_100_BIN2_UTF8`). See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)|
 | &nbsp; | &nbsp; |
 
 ### PolyBase
 
 |New feature or update | Details |
 |:---|:---|
-|Query external tables |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. See [What is PolyBase](../relational-databases/polybase/polybase-guide.md)|
+|Query external tables |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. See [What is PolyBase](../relational-databases/polybase/polybase-guide.md).|
 | &nbsp; | &nbsp; |
 
-### Collation
 
-|New feature or update | Details |
-|:---|:---|
-|Support UTF-8 character encoding |Enabled for a BIN2 collation (`Latin1_General_100_BIN2_UTF8`). See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md). |
-|Select UTF-8 collation as default during setup | See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23). |
-| &nbsp; | &nbsp; |
 
 ### Server settings
 
 |New feature or update | Details |
 |:---|:---|
-|Set `MIN` and `MAX` server memory values at setup |During setup, you can set server memory values. Use the default values, the calculated recommended values, or manually specify your own values once you've chosen the **Recommended** option [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
-|SQL Server Setup enables MAXDOP settings |New recommendations follow the documented guidelines. [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
-|Hybrid buffer pool| New feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) .|
+|New settings during installation | Set `MIN` and `MAX` server memory and `MAXDOP` during installation.  See [Server Memory Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually), and [Configure the max degree of parallelism Server Configuration Option](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).|
+|Hybrid buffer pool| New feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. See [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
 | &nbsp; | &nbsp; |
 
 ### Performance monitoring
@@ -114,35 +106,36 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |New feature or update | Details |
 |:---|:---|
 |Scalar UDF inlining |Automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. See [Scalar UDF Inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md). |
-| `sys.dm_exec_requests` column `command` | Shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. See [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
 |`WAIT_ON_SYNC_STATISTICS_REFRESH` | New wait type in `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations. See [`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|
 |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine-tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|`LIGHTWEIGHT_QUERY_PROFILING`|New database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
+| `sys.dm_exec_requests` column `command` | Shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. See [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
 |`sys.dm_exec_query_plan_stats` |New DMF returns the equivalent of the last known actual execution plan for most queries. See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | New database scoped configuration to enable `sys.dm_exec_query_plan_stats`. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|`LIGHTWEIGHT_QUERY_PROFILING`|New database scoped configuration. See [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
 |`query_post_execution_plan_profile` | Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. See [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).|
-|Row mode memory grant feedback. |[Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
-|Table variable deferred compilation.|[Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
-|Approximate `COUNT DISTINCT`.|[Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
-|Batch mode on rowstore.|[Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+|Row mode memory grant feedback |Expands on the batch mode memory grant feedback feature by adjusting memory grant sizes for both batch and row mode operators. See [Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
+|Table variable deferred compilation|Improves plan quality and overall performance for queries that reference table variables. During optimization and initial compilation, this feature propagates cardinality estimates that are based on actual table variable row counts. This accurate row count information optimizes downstream plan operations. See [Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
+|Approximate `COUNT DISTINCT`|It aggregates across large datasets where responsiveness is more critical than absolute precision. An example is calculating a **COUNT(DISTINCT())** across 10 billion rows, for display on a dashboard. [Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
+|Batch mode on rowstore|Batch mode on rowstore enables batch mode execution for analytic workloads without requiring columnstore indexes. See [Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
 | &nbsp; | &nbsp; |
 
 ### Language extensions
 
 |New feature or update | Details |
 |:---|:---|
-|New Java language SDK | Simplifies development of Java programs that can be run from SQL Server. See [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
-|SQL Server Language Extensions - [Java language extension](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
-|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+|New Java language SDK | Simplifies development of Java programs that can be run from SQL Server. See [Microsoft Extensibility SDK for Java for SQL Server](../language-extensions/how-to/extensibility-sdk-java-sql-server.md). |
+|Java language SDK is open source |The [Microsoft Extensibility SDK for Java for Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) is now open source and [available on GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Support for Java data types|See [Java data types](../language-extensions/how-to/java-to-sql-data-types.md).|
-| New default Java Runtime  | SQL Server now includes Azul System's Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
+|New default Java Runtime | SQL Server now includes Azul Systems Zulu Embedded for Java support throughout the product. For more information, see [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
+|SQL Server language extensions| Execute external code with the extensibility framework. See [SQL Server language extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 | &nbsp; | &nbsp; |
 
 ### Spatial
 
 |New feature or update | Details |
 |:---|:---|
-| New spatial reference identifiers (SRIDs) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides more robust and accurate datum which is more closely aligned to global positioning systems. The new SRIDs are:<br/><br/> - 7843 - geographic 2D<br/> - 7844 - geographic 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
+| New spatial reference identifiers (SRIDs) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides more robust and accurate datum which is more closely aligned to global positioning systems. The new SRIDs are :<br/><br/> - 7843 for geographic 2D<br/> - 7844 for geographic 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
 | &nbsp; | &nbsp; |
 
 ### Performance
@@ -153,6 +146,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |Forcing fast forward and static cursors | Query Store plan forcing support for fast forward and static cursors. See [Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
 |Reduced recompilations for workloads| Improves using temporary tables across multiple scopes. See [Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
 |Indirect checkpoint scalability |See [Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
+|Memory-optimized tempdb metadata| - Table and variable caching <br/><br/>- Improved latching allocation <br/><br/>- Reduced logging overhead <br/><br/>- Add multiple data files during installation<br/><br/>- Simultaneous file growth across all tempdb tables<br/><br/>- Allocation in optimized extents <br/><br/>See [Memory-Optimized tempdb Metadata](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### Availability groups

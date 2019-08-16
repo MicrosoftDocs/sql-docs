@@ -60,13 +60,13 @@ If the client computer has Internet access, you can download and install **sqlml
 If the client computer doesn't have an Internet connection, you need to download the packages **sqlmlutils** and **RODBCext** in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
 
 The **RODBCext** package has a number of dependent packages, and identifying all dependencies for a package gets complicated. We recommend that you use [**miniCRAN**](https://andrie.github.io/miniCRAN/) to create a local repository folder for the package that includes all the dependent packages.
-For more information, see [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
+For more information, see [Install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran).
 
 The **sqlmlutils** package consists of a single zip file that you can copy to the client computer and install.
 
 On a computer with Internet access:
 
-1. Install **miniCRAN**. See [Create a local R package repository using miniCRAN](create-a-local-package-repository-using-minicran.md) for details.
+1. Install **miniCRAN**. See [Create a local R package repository using miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) for details.
 
 1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example creates the repository in the folder `c:\downloads\rodbcext`.
 
@@ -122,7 +122,7 @@ If the client computer you use to connect to SQL Server has Internet access, you
 ### Add the package offline
 
 If the client computer doesn't have an Internet connection, you can use **miniCRAN** to download the **glue** package using a computer that does have Internet access. You then copy the package to the client computer where you can install the package offline.
-See [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) for information on installing **miniCRAN**.
+See [Install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) for information on installing **miniCRAN**.
 
 On a computer with Internet access:
 

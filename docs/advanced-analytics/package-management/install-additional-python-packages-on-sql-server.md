@@ -20,10 +20,6 @@ This article describes how to use the pip installer to install new Python packag
 
 For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
 
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-In addition to using pip from a command line, you can install Python packages using [T-SQL](install-python-packages-tsql.md).
-::: moniker-end
-
 ## General considerations
 
 + You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
@@ -31,9 +27,6 @@ In addition to using pip from a command line, you can install Python packages us
 + Packages must be Python 3.5-compliant and run on Windows.
 
 + The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
-
-+ Non-administrator users with CREATE EXTERNAL LIBRARY permission can install Python packages to the current database using T-SQL. For more information, see:
-  + [Use T-SQL (CREATE EXTERNAL LIBRARY) to install Python packages on SQL Server](install-python-packages-tsql.md)
 
 + Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 

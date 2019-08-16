@@ -19,7 +19,7 @@ ms.author: janinez
 > [!NOTE]
 > Atunity Connectors for Oracle and Teradata support SQL Server 2017 and below.
 >
-> Get latest connectors for SQL Server 2019 and upwards here:
+> From SQL Server 2019, get latest connectors for Oracle and Teradata here:
 > [Microsoft Connector for Oracle](dataflow/oracle-connector.md)
 
 You can download connectors for Integration Services by Attunity that optimize performance when loading data to or from Oracle or Teradata in an SSIS package.

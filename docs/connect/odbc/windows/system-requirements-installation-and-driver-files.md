@@ -18,9 +18,11 @@ The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.m
   
 The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows can be installed on a computer that also has one or more versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-The ODBC Driver 13 and 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], in addition to the above, supports SQL Server 2016. 
+The ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], supports connections to SQL Server 2016, SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]. 
 
-The ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports all the above ones and also SQL Server 2017.
+The ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], in addition to the above for 13, supports SQL Server 2017. 
+
+The ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports the same database versions as 13.1.
 
 The ODBC Driver 17 for SQL Server supports SQL Server 2019 starting with driver version 17.3.
 

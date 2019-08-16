@@ -56,7 +56,7 @@ manager: kfile
   
 ## See Also  
  [Create a Data Source &#40;SSAS Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Defining a Data Source](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [Defining a Data Source](../analysis-services/lesson-1-2-defining-a-data-source.md)   
  [Set Impersonation Options &#40;SSAS - Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

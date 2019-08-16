@@ -23,7 +23,7 @@ ms.author: "pelopes"
 ---
 # DBCC TRACEON - Trace Flags (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 Trace flags are used to set specific server characteristics or to alter a particular behavior. For example, trace flag 3226 is a commonly used startup trace flag which suppresses successful backup messages in the error log. Trace flags are frequently used to diagnose performance issues or to debug stored procedures or complex computer systems, but they may also be recommended by Microsoft Support to address behavior that is negatively impacting a specific workload.  All documented trace flags and those recommended by Microsoft Support are fully supported in a production environment when used as directed.  Note that trace flags in this list may have additional considerations regarding their particular usage, so it is advisable to carefully review all the recommendations given here and/or by your support engineer. Also, as with any configuration change in SQL Server, it is always best to thoroughly test the flag in a non-production environment before deploying.
 
@@ -45,8 +45,10 @@ Use the `DBCC TRACESTATUS` command to determine which trace flags are currently 
 
 ## Trace flags
 
-  
-The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+> [!NOTE]
+> Azure SQL Database Managed Instance supports the following global Trace Flags: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389,1 0316, and 11024. Session trace-flags are not yet supported in Managed Instance.
  
 > [!NOTE]
 > Some trace flags were introduced in specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. For more information on the applicable version, see the Microsoft Support article associated with a specific trace flag.

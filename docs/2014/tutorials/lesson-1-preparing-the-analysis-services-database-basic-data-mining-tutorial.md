@@ -34,6 +34,6 @@ manager: kfile
  [Data Source Views in Multidimensional Models](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)   
  [Data Sources Supported &#40;SSAS Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)   
  [Build Analysis Services Projects &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [Creating an Analysis Services Project](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)  
+ [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
   
   

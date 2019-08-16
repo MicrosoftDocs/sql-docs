@@ -54,6 +54,11 @@ To install DMA, download the latest version of the tool from the [Microsoft Down
 
 - After a successful migration, applications can connect to the target SQL Server databases seamlessly.
 
+- Discover issues that can affect the migration from on-premises SQL Server Integration Services to ADF SSIS Integration Runtime. These are described as compatibility issues and are organized in the following categories:
+
+  - Migration blockers: discovers the compatibility issues that block migrating source projects/packages to ADF SSIS Integration Runtime
+  - Information: detects partially supported or deprecated features that are used in source projects/packages
+  
 ## Prerequisites
 To run an assessment, you have to be a member of the SQL Server **sysadmin** role.
 
@@ -68,6 +73,7 @@ DMA replaces all previous versions of SQL Server Upgrade Advisor and should be u
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 on Windows
+- AWS RDS for SQL Server
 
 **Targets**
 - SQL Server 2012

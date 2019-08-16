@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ---
-# Microsoft Connector for Oracle Data Type Support
+# Microsoft Connector for Oracle data type support
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

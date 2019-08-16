@@ -1445,11 +1445,11 @@
   items:
   - name: Oracle Connection Manager
     href: ../integration-services/data-flow/oracle-connection-manager.md
-  - name: Oracle Source
+  - name: Oracle source
     ref: ../integration-services/data-flow/oracle-source.md
-  - name: Oracle Destination
+  - name: Oracle destination
     href: ../integration-services/data-flow/oracle-destination.md
-  - name: Data Type Support
+  - name: Data type support
     href: ../integration-services/data-flow/oracle-data-type-support.md
 - name: Microsoft Connectors for Oracle and Teradata by Attunity
   href: ../integration-services/attunity-connectors.md

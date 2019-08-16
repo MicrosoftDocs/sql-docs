@@ -10,7 +10,7 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ---
-# Oracle Source
+# Oracle source
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

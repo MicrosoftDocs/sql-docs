@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new R packages to an instance of SQL Server Machine Learning Services or SQL Server R Services. You'll use these functions to install packages on SQL Server remotely from a local client computer. The packages you install can be used in R scripts running in-database using the T-SQL [sp-execute-external-script-transact-sql](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) statement.
+This article describes how to use functions in the [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) package to install new R packages to an instance of SQL Server Machine Learning Services or SQL Server R Services. You can use these functions to install packages on SQL Server remotely from a local client computer. The packages you install can be used in R scripts running in-database using the T-SQL [sp-execute-external-script-transact-sql](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) statement.
 
 > [!NOTE]
 > The standard R `install.packages` command is not recommended for adding R packages on SQL Server. Instead, use **sqlmlutils** as described in this article.
@@ -40,13 +40,15 @@ This article describes how to use functions in the [**sqlmlutils**](https://gith
 
 To use **sqlmlutils**, you first need to install it on the client computer you use to connect to SQL Server.
 
+The **sqlmlutils** package depends on the **RODBCext** package, and **RODBCext** depends on a number of other packages. The following procedures install all of these packages in the correct order.
+
 ### Install sqlmlutils online
 
 If the client computer has Internet access, you can download and install **sqlmlutils** and its dependent packages online.
 
 1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/R/dist to the client computer. Don't unzip the file.
 
-1. Open a **Command Prompt** and run the following commands to install the packages **sqlmlutils** and **RODBCext** (a prerequisite for **sqlmlutils**) on the client computer. Substitute the full path to the **sqlmlutils** zip file you downloaded (this example assumes the file is in your Documents folder).
+1. Open a **Command Prompt** and run the following commands to install the packages **sqlmlutils** and **RODBCext**. Substitute the full path to the **sqlmlutils** zip file you downloaded (this example assumes the file is in your Documents folder). The **RODBCext** package is found online and installed.
 
    ```console
    R -e "install.packages('RODBCext', repos='https://cran.microsoft.com')"
@@ -55,11 +57,10 @@ If the client computer has Internet access, you can download and install **sqlml
 
 ### Install sqlmlutils offline
 
-If the client computer doesn't have an Internet connection, you need to download the packages **sqlmlutils** and **RODBCext** (a prerequisite for **sqlmlutils**) in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
+If the client computer doesn't have an Internet connection, you need to download the packages **sqlmlutils** and **RODBCext** in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
 
-The **RODBCext** package has a number of dependent packages that need to be installed along with **RODBCext**.
-Identifying all dependencies for a package gets complicated. We recommend that you use [**miniCRAN**](https://andrie.github.io/miniCRAN/) to create a local repository folder for the package that includes all the dependent packages.
-For more information, see [Create a local R package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
+The **RODBCext** package has a number of dependent packages, and identifying all dependencies for a package gets complicated. We recommend that you use [**miniCRAN**](https://andrie.github.io/miniCRAN/) to create a local repository folder for the package that includes all the dependent packages.
+For more information, see [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran).
 
 The **sqlmlutils** package consists of a single zip file that you can copy to the client computer and install.
 
@@ -94,11 +95,11 @@ On the client computer you use to connect to SQL Server, open a command prompt a
 
 ## Add an R package on SQL Server
 
-In the following example, you'll add the **[glue](https://cran.r-project.org/web/packages/glue/)** package (for formatting and interpolating strings) to SQL Server.
+In the following example, you'll add the [**glue**](https://cran.r-project.org/web/packages/glue/) package to SQL Server.
 
 ### Add the package online
 
-If the client computer you use to connect to SQL Server has Internet access, you can use **sqlmlutils** to find an R package and its dependencies over the Internet, and then install the package to a SQL Server instance remotely.
+If the client computer you use to connect to SQL Server has Internet access, you can use **sqlmlutils** to find the **glue** package and any dependencies over the Internet, and then install the package to a SQL Server instance remotely.
 
 1. On the client computer, open RStudio and create a new **R Script** file.
 
@@ -121,7 +122,7 @@ If the client computer you use to connect to SQL Server has Internet access, you
 ### Add the package offline
 
 If the client computer doesn't have an Internet connection, you can use **miniCRAN** to download the **glue** package using a computer that does have Internet access. You then copy the package to the client computer where you can install the package offline.
-See [Create a local R package repository using miniCRAN](create-a-local-package-repository-using-minicran.md) for information on installing **miniCRAN**.
+See [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) for information on installing **miniCRAN**.
 
 On a computer with Internet access:
 

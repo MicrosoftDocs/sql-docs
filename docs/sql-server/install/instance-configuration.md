@@ -417,7 +417,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 **Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces the ability to configure this option during installation. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] also automatically detects the recommended MaxDOP setting for the server based on the number of cores.  
 
-If this page is skipped during setup, the default MaxDOP value is the recommended value displayed in this page instead of the default [!INCLUDE[ssde_md](../../includes/ssde_md.md)] value for previous versions(0). You can also manually configure this setting on this page, and you can modify this setting after installation. 
+If this page is skipped during setup, the default MaxDOP value is the recommended value displayed in this page instead of the default [!INCLUDE[ssde_md](../../includes/ssde_md.md)] value for previous versions (0). You can also manually configure this setting on this page, and you can modify this setting after installation. 
 
 ### UIElement list
 
@@ -429,19 +429,19 @@ If this page is skipped during setup, the default MaxDOP value is the recommende
 
 **max server memory** determines the upper memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 2,147,483,647 megabytes (MB) and the calculated recommended values will align with the memory configuration guidelines in [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) for a standalone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, based on the existing system memory. For more information on the effects of **max server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 
-You can manually configure these settings on this page once you've chosen the **Recommended** radio button, and you can modify these setting after installation. For more information, see [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
+If this page is skipped during setup, the default **max server memory** value used is the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] default value (2,147,483,647 megabytes). You can manually configure these settings on this page once you've chosen the **Recommended** radio button, and you can modify these setting after installation. For more information, see [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
 ### UIElement list
   
-**Default**: This radio button is selected by default and sets the **min server memory** and **max server memory** settings to its default values. 
+**Default**: This radio button is selected by default and sets the **min server memory** and **max server memory** settings to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] default values. 
 
-**Recommended**: This radio button must be selected to accept the calculated values or to change the calculated values to user configured values.  
+**Recommended**: This radio button must be selected to accept the calculated recommended values or to change the calculated values to user configured values.  
   
-**Min Server Memory (MB)**: If changing from the calculated value to a user configured value, enter the value for **min server memory**.  
+**Min Server Memory (MB)**: If changing from the calculated recommended value to a user configured value, enter the value for **min server memory**.  
   
-**Max Server Memory (MB)**: If changing from the calculated value to a user configured value, enter the value for **max server memory**.  
+**Max Server Memory (MB)**: If changing from the calculated recommended value to a user configured value, enter the value for **max server memory**.  
 
-**Click here to accept the recommended memory configurations for the SQL Server Database Engine**: Select this check box to accept the calculated memory configurations on this server. If the **Recommended** radio button was selected, setup cannot continue without this check box being selected.
+**Click here to accept the recommended memory configurations for the SQL Server Database Engine**: Select this check box to accept the calculated recommended memory configurations on this server. If the **Recommended** radio button was selected, setup cannot continue without this check box being selected.
 
 ::: moniker-end
 

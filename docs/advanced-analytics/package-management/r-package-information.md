@@ -60,7 +60,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-The following stored procedure uses [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) to return the path of the instance library and the version of RevoScaleR used by SQL Server:
+The following statement uses [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) to return the path of the instance library and the version of RevoScaleR used by SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script

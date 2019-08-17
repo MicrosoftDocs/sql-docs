@@ -1,124 +1,133 @@
 ---
-title: Install Python packages with pip
-description: Learn how to use Python pip to install new Python packages on an instance of SQL Server Machine Learning Services.
+title: Install new Python language packages
+description: Add new Python packages to SQL Server Machine Learning Services (In-Database), and Machine Learning Server (Standalone).
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/08/2019
+ms.date: 06/16/2019
 ms.topic: conceptual
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
-monikerRange: ">=sql-server-2017||=sqlallproducts-allversions"
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-
-# Install Python packages with pip
-
+# Install new Python packages on SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to use the pip installer to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
+This article describes how to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an internet connection.
 
-For more information about package location and installation paths, see [Get Python package information](../package-management/python-package-information.md).
+For more information about package location and installation paths, see [Get R or Python package information](../package-management/installed-package-information.md).
 
-## General considerations
+## Prerequisites
 
-+ You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
++ [SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) with the Python language option. 
 
-+ Packages must be Python 3.5-compliant and run on Windows.
++ Packages must be Python 3.5-compliant and run on Windows. 
 
-+ The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
++ Administrative access to the server is required to install packages.
 
-+ Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
+## Considerations
 
-+ Before adding a package, consider whether the package is a good fit for the SQL Server environment.
+Before adding packages, consider whether the package is a good fit for the SQL Server environment. Typically a database server is a shared asset accommodating multiple workloads. If you add packages that put too much computational pressure on the server, performance will suffer. 
 
-  + We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning, rather than tasks that simply query the database.
+Additionally, Some popular Python packages (like Flask) perform tasks, such as web development, that are better suited for a standalone environment. We recommend that you use Python in-database for tasks that benefit from tight integration with the database engine, such as machine learning,  rather than tasks that simply query the database.
 
-  + If you add packages that put too much computational pressure on the server, performance will suffer.
+Database servers are frequently locked down. In many cases, Internet access is blocked entirely. For packages with a long list of dependencies, you will need to identify these dependencies in advance and be willing to install each one manually.
 
-  + On a hardened SQL Server environment, you might want to avoid the following:
-    + Packages that require network access
-    + Packages that require elevated file system access
-    + Packages used for web development or other tasks that don't benefit by running inside SQL Server
+## Add a new Python package
 
-## Online installation (with Internet access)
+For this example, we assume that you want to install a new package directly on the SQL Server computer.
 
-If the SQL Server has access to the Internet, then you can use the standard [pip package installer](https://pip.pypa.io/en/stable/) to install Python packages.
+Package installation is per instance. If you have multiple instances of Machine Learning Services, you must add the package to each one.
 
-For example, the following procedure installs the [scikit-plot](https://pypi.org/project/scikit-plot/) package.
+The package installed in this example is [CNTK](https://docs.microsoft.com/cognitive-toolkit/), a framework for deep learning from Microsoft that supports customization, training, and sharing of different types of neural networks.
 
-1. Open a command prompt with administrator privileges.
+### Step 1. Download the Windows version of the Python package
 
-1. Navigate to the **Scripts** subfolder of **PYTHON_SERVICES**.
++ If you are installing Python packages on a server with no internet access, you must download the WHL file to a different computer and then copy it to the server.
 
-   For example, if Machine Learning Services has been installed using defaults, and you're installing the package on the default SQL instance, the path would be:
+    For example, on a separate computer, you can download the WHL file from this site [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), and then copy the file `cntk-2.1-cp35-cp35m-win_amd64.whl` to a local folder on the SQL Server computer.
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-   `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
-   ::: moniker-end
++ SQL Server 2017 uses Python 3.5. 
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\Scripts`
-   ::: moniker-end
+> [!IMPORTANT]
+> Make sure that you get the Windows version of the package. If the file ends in .gz, it's probably not the right version.
 
-   For more information, see [Default Python library location](../package-management/python-package-information.md#default-python-library-location).
+This page contains downloads for multiple platforms and for multiple Python versions: [Set up CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
-1. Install the package using pip:
+### Step 2. Open a Python command prompt
 
-   ```python
-   pip install scikit-plot
-   ```
+Locate the default Python library location used by SQL Server. If you have installed multiple instances, locate the PYTHON_SERVICE folder for the instance where you want to add the package.
 
-## Offline installation (no Internet access)
+For example, if Machine Learning Services has been installed using defaults, and machine learning is enabled on the default instance, the path would be as follows:
 
-Frequently, servers that host production databases don't have an internet connection. To install a Python package in that environment, you download the package and any dependencies in advance, and then copy the files to a folder on the server. Once the files are in place, the packages can be installed on the server offline.
+    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
-You can use the `pip download` command to collect a package and all its dependencies into a local folder. Then you can copy the folder to the server and use `pip install` with the `--find-links` option to install the package and dependencies.
+Open the Python command prompt associated with the instance.
 
-For example, the following procedure installs the scikit-plot package.
+> [!TIP]
+> For future debugging and testing, you might want to set up a Python environment specific to the instance library.
 
-1. On a computer with Internet access, run the following command from a command prompt to download the package and dependencies into a subfolder named `scikitplot`:
+### Step 3. Install the package using pip
 
-   ```command
-   pip download scikit-plot -d scikitplot
-   ```
++ If you are accustomed to using the Python command line, use PIP.exe to install new packages. You can find the **pip** installer in the `Scripts` subfolder. 
 
-1. Copy the folder to the SQL server.
+  SQL Server Setup does not add Scripts to the system path. If you get an error that `pip` is not recognized as an internal or external command, you can add the Scripts folder to the PATH variable in Windows.
 
-1. On the server, open a command prompt with administrator privileges.
+  The full path of the **Scripts** folder in a default installation is as follows:
 
-1. Navigate to the **Scripts** subfolder of **PYTHON_SERVICES**.
+    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
-   For example, if Machine Learning Services has been installed using defaults, and you're installing the package on the default SQL instance, the path would be:
++ If you are using Visual Studio 2017, or Visual Studio 2015 with the Python extensions, you can run `pip install` from the **Python Environments** window. Click **Packages**, and in the text box, provide the name or location of the package to install. You don't need to type `pip install`; it is filled in for you automatically. 
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-   `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
-   ::: moniker-end
+    - If the computer has Internet access, provide the name of the package, or the URL of a specific package and version. 
+    
+    For example, to install the version of CNTK that is supported for Windows and Python 3.5, specify the download URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-   ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\Scripts`
-   ::: moniker-end
+    - If the computer does not have internet access, you must download the WHL file before beginning installation. Then, specify the local file path and name. For example, paste the following path and file to install the WHL file downloaded from the site: 
+    `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
-   For more information, see [Default Python library location](../package-management/python-package-information.md#default-python-library-location).
+You might be prompted to elevate permissions to complete the install.
 
-1. Run the following command - this assumes you copied the `scikitplot` folder to `c:\temp\scikitplot` on the server:
-
-   ```command
-   pip install --no-index --find-links=file:c:/temp/scikitplot scikit-plot
-   ```
-
-   The name you specified at the end of the command, `scikit-plot`, is the name you use to load that package.
-
-## Load the package
-
-You can now load the package as part of your Python script:
+As installation progresses, you can see status messages in the command prompt window:
 
 ```python
-import scikit-plot
+pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
+Collecting cntk==2.1 from https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
+  Downloading https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl (34.1MB)
+    100% |################################| 34.1MB 13kB/s
+...
+Installing collected packages: cntk
+Successfully installed cntk-2.1
 ```
 
-## See Also
 
-+ To view information about Python packages installed in SQL Server Machine Learning Services, see [Get Python package information](../package-management/python-package-information.md).
+### Step 4. Load the package or its functions as part of your script
 
-+ For information about installing R packages in SQL Server Machine Learning Services, see [Install new R packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).
+When installation is complete, you can immediately begin using the package as described in the next step.
+
+For examples of deep learning using CNTK, see these tutorials: [Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html)
+
+To use functions from the package in your script, insert the standard `import <package_name>` statement in the initial lines of the script:
+
+```python
+import numpy as np
+import cntk as cntk
+cntk._version_
+```
+
+## List installed packages using conda
+
+There are different ways that you can get a list of installed packages. For example, you can view the installed packages in the **Python Environments** windows of Visual Studio.
+
+If you are using the Python command line, you can use either **Pip** or the **conda** package manager, included with the Anaconda Python environment added by SQL Server setup.
+
+1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+
+1. Right-click **conda.exe** > **Run as administrator**, and enter `conda list` to return a list of packages installed in the current environment.
+
+1. Similarly, right-click **pip.exe** > **Run as administrator**, and enter `pip list` to return the same information. 
+
+For more information about **conda** and how you can use it to create and manage multiple Python environments, see [Managing environments with conda](https://conda.io/docs/user-guide/tasks/manage-environments.html).
+
+> [!Note]
+> SQL Server Setup does not add Pip or Conda to the system path and on a production SQL Server instance, keeping non-essential executables out of the path is a best practice. However, for development and test environments, you could add the Scripts folder to the system PATH environment variable to run both Pip and Conda on command from any location.

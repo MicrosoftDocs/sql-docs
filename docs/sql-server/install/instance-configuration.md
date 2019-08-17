@@ -413,7 +413,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## Database Engine Configuration - MaxDOP page
+## <a name="maxdop"><a/> Database Engine Configuration - MaxDOP page
 
 **Max degree of parallelism (MaxDOP)** determines the maximum number of processors that a single statement can use. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces the ability to configure this option during installation. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] also automatically detects the recommended MaxDOP setting for the server based on the number of cores.  
 
@@ -423,7 +423,7 @@ If this page is skipped during setup, the default MaxDOP value is the recommende
 
 * **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
 
-## Database Engine Configuration - Memory page
+## <a name="memory"><a/> Database Engine Configuration - Memory page
 
 **min server memory** determines the lower memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 0 and the recommended value is also 0. For more information on the effects of **min server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 
@@ -435,13 +435,13 @@ You can manually configure these settings on this page once you've chosen the **
   
 **Default**: This radio button is selected by default and sets the **min server memory** and **max server memory** settings to its default values. 
 
-**Recommended**: This radio button must be selected to accept the recommended values or to change the recommended values to user configured values.  
+**Recommended**: This radio button must be selected to accept the calculated values or to change the calculated values to user configured values.  
   
-**Min Server Memory (MB)**: If changing from the recommended value to a user configured value, enter the value for **min server memory**.  
+**Min Server Memory (MB)**: If changing from the calculated value to a user configured value, enter the value for **min server memory**.  
   
-**Max Server Memory (MB)**: If changing from the recommended value to a user configured value, enter the value for **max server memory**.  
+**Max Server Memory (MB)**: If changing from the calculated value to a user configured value, enter the value for **max server memory**.  
 
-**Click here to accept the recommended memory configurations for the SQL Server Database Engine**: Select this check box to accept the recommended memory configurations on this server. If the **Recommended** radio button was selected, setup cannot continue without this check box being selected.
+**Click here to accept the recommended memory configurations for the SQL Server Database Engine**: Select this check box to accept the calculated memory configurations on this server. If the **Recommended** radio button was selected, setup cannot continue without this check box being selected.
 
 ::: moniker-end
 

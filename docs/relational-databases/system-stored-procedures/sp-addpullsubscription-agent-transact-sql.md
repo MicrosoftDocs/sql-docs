@@ -83,7 +83,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 `[ @subscriber = ] 'subscriber'`
- Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is a availability group. *subscriber* is **sysname**, with a default of NULL.  
+ Is the name of the Subscriber instance or the name of the AG listener if the subscriber database is in an availability group. *subscriber* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts.  

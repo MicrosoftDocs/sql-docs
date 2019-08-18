@@ -31,15 +31,15 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later.
 - Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter.
-- If your SQL Server computer is a physical machine, it must meet the [Hyper-V Hardware Requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+- If your SQL Server computer is a physical machine, it must meet the [Hyper-V Hardware Requirements](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
    - 64-bit Processor with Second Level Address Translation (SLAT)
    - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs)
    - Virtualization support enabled (Intel VT-x or AMD-V)
 - If your SQL Server computer is a virtual machine, the VM must be configured to support Virtualization Based Security.
-   - On Hyper-V 2016 or later, use a generation 1 VM and [enable nested virtualization extensions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor, or use a generation 2 VM. For more information about VM generations see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
+   - On Hyper-V 2016 or later, use a generation 1 VM and [enable nested virtualization extensions](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor, or use a generation 2 VM. For more information about VM generations see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
    - In Azure, make sure you're running a VM size that supports one of the following:
-      - Nested virtualization, for example the Dv3 and Ev3 series VMs. See [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-      - Generation 2 VMs, for example: the Dsv3 or Esv3 series VMs. See [Support for generation 2 VMs on Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2).
+      - Nested virtualization, for example the Dv3 and Ev3 series VMs. See [Create a nesting capable Azure VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+      - Generation 2 VMs, for example: the Dsv3 or Esv3 series VMs. See [Support for generation 2 VMs on Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
    - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
    - Other hypervisors and public clouds may support using Always Encrypted with secure enclaves in a VM as long as virtualization extensions (sometimes called nested virtualization) are exposed to the VM. Check your virtualization solution?s documentation for compatibility and configuration instructions.
 - [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).

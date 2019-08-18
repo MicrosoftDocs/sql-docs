@@ -56,7 +56,7 @@ Now that you have prepared a credential file with access keys, you can start mou
    
 1. Set environment variable MOUNT_CREDENTIALS following the instructions above
 
-1. Mount the remote HDFS storage in Azure using **azdata bdc storage-pool mount create**. Replace the placeholder values before running the following command:
+1. Mount the remote HDFS storage in S3 using **azdata bdc storage-pool mount create**. Replace the placeholder values before running the following command:
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>

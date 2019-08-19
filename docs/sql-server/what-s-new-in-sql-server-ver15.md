@@ -81,7 +81,7 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 |New feature or update | Details |
 |:---|:---|
-|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/>Enabled for a BIN2 collation (`Latin1_General_100_BIN2_UTF8`). See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)|
+|Support for UTF-8 character encoding |Support UTF-8 character for import and export encoding, and as database level or column level  collation for string data. This supports applications extending to a global scale, where the requirement of providing global multilingual database applications and services is critical to meet customer demands, and specific market regulations.<br/><br/>-  Enabled for a BIN2 collation (`Latin1_General_100_BIN2_UTF8`).<br/><br/>-  Enabled for Polybase external tables.<br/><br/>-  Enabled for Linked Servers.<br/><br/>Enabled for Always Encrypted<br/><br/>See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)|
 | &nbsp; | &nbsp; |
 
 ### PolyBase
@@ -89,9 +89,8 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 |New feature or update | Details |
 |:---|:---|
 |Query external tables |External table column names are now used for querying SQL Server, Oracle, Teradata, MongoDB & ODBC data sources. See [What is PolyBase](../relational-databases/polybase/polybase-guide.md).|
+|Support for UTF-8 character encoding|Support UTF-8 character with external tables. See [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)|
 | &nbsp; | &nbsp; |
-
-
 
 ### Server settings
 

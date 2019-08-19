@@ -76,10 +76,10 @@ On a computer with Internet access:
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
-   monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+   ::: monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ::: moniker-end
-   monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ::: monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ::: moniker-end
    ```

@@ -41,6 +41,9 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) announcement archive](what-s-new-in-sql-server-ver15-prerelease.md) contains a list of features announced and changed for all previous CTP releases of this feature.
 
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+
 ## Database engine
 
 ### Security

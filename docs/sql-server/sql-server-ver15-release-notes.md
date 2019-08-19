@@ -116,6 +116,14 @@ Complete details about support and licensing for release candidate software are 
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
+## <a href="aoag"></a>Always On Availability Group Kubernetes operator not supported
+
+- **Issue and customer impact**: The Kubernetes operator for Always On Availability Groups on containers is a preview feature. Support for production is not expected at the time of SQL Server 2019 RTM. 
+
+- **Workaround**: None
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Release candidate
+
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

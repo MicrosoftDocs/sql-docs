@@ -52,7 +52,7 @@ If the client computer has Internet access, you can download and install **sqlml
 
    ```console
    R -e "install.packages('RODBCext', repos='https://cran.microsoft.com')"
-   R CMD INSTALL %UserProfile%\Documents\sqlmlutils_0.5.1.zip
+   R CMD INSTALL %UserProfile%\Documents\sqlmlutils_0.7.1.zip
    ```
 
 ### Install sqlmlutils offline
@@ -76,10 +76,10 @@ On a computer with Internet access:
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
-   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
+   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
 
-   Notice that the `path` option of `makeRepo` expects forward slashes (/) in the file path.
+   For the `Rversion` value, use the version of R installed on SQL Server. To verify the installed version use the command `print(R.version)` in the T-SQL statement `sp_execute_external_script`.
 
 1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/R/dist (don't unzip the file). For example, download the file to `c:\downloads\sqlmlutils_0.7.1.zip`.
 
@@ -133,7 +133,7 @@ On a computer with Internet access:
    pkgs_needed <- "glue"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
-   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
+   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
 
 1. Copy the entire **glue** repository folder (`c:\downloads\glue`) to the client computer. For example, copy it to the folder `c:\temp\packages\glue`.
@@ -152,7 +152,7 @@ On the client computer:
      uid = "yoursqluser",
      pwd = "yoursqlpassword")
 
-   sql_install.packages(connectionString = connection, pkgs = "c:\temp\packages\glue", verbose = TRUE, scope = "PUBLIC", repos=NULL)
+   sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos="file:///c:\\temp\\packages\\glue")
    ```
 
    > [!TIP]

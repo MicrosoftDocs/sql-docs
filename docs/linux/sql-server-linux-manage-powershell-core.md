@@ -193,7 +193,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## Explore cmdlets currently available in PS Core
-While the SqlServer module currently has 109 cmdlets available in Windows PowerShell, only 62 of the 109 are available in PSCore. A full list of 59 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
+While the SqlServer module currently has 109 cmdlets available in Windows PowerShell, only 62 of the 109 are available in PSCore. A full list of 62 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
 
 The following command will show you all of the cmdlets available on the version of PowerShell you are using.
 

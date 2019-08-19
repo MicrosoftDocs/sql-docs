@@ -17,7 +17,7 @@ This article demonstrates a SQL Server 2019 availability groups on containers in
 
 The article applies to an early SQL Server 2019 customer technology preview release.
 
-For information about the availability of this feature, see [release notes](..\sql-server\sql-server-ver15-release-notes.md#always-on-availability-group-kubernetes-operator-not-supported).
+For information about the availability of this feature, see [release notes](../sql-server/sql-server-ver15-release-notes.md#always-on-availability-group-kubernetes-operator-not-supported).
 
 For availability groups, deploy the SQL Server [Kubernetes operator](https://coreos.com/blog/introducing-operators.html) to your Kubernetes cluster. The operator helps package, deploy, and manage the availability group in a cluster.
 

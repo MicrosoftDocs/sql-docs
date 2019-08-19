@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Identify databases and tables for Stretch Database with Data Migration Assistant
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

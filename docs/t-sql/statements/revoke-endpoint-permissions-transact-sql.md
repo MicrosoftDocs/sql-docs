@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Endpoint Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

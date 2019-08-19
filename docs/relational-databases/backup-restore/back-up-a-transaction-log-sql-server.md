@@ -1,7 +1,7 @@
 ---
 title: "Back Up a Transaction Log (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/01/2017"
+ms.date: "02/02/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Back Up a Transaction Log (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +37,9 @@ manager: craigg
 The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to members of the **sysadmin** fixed server role, and the **db_owner** and **db_backupoperator** fixed database roles.  
   
  Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Permissions problems on the backup device's physical file may not become obvious to you until you attemt to access the [physical resource](backup-devices-sql-server.md) when you try to backup or restore. So again, check permissions before you begin!
-  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Back up using SSMS  
   
 1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
@@ -56,7 +56,8 @@ The BACKUP DATABASE and BACKUP LOG permissions needed are granted by default to 
   
 7.  Optionally, you can select **Copy Only Backup** to create a copy-only backup. A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. For more information, see [Copy-Only Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).  
   
-    >** NOTE!** When the **Differential** option is selected, you cannot create a copy-only backup.  
+    > [!NOTE]
+    > When the **Differential** option is selected, you cannot create a copy-only backup.  
   
 8.  Either accept the default backup set name suggested in the **Name** text box, or enter a different name for the backup set.  
   

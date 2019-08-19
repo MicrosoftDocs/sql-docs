@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Quantified Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Numeric Literal Syntax
 The following syntax is used for numeric literals in ODBC:  

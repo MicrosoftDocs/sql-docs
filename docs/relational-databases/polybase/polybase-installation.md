@@ -1,16 +1,15 @@
 ---
 title: "Install PolyBase on Windows | Microsoft Docs"
-ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords: 
    - "PolyBase, installation"
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Install PolyBase on Windows
 
@@ -34,15 +33,16 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
    
 - TCP/IP must be enabled for PolyBase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-- MSVC++ 2012. 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > PolyBase can be installed on only one SQL Server instance per machine.
-> 
-> [!IMPORTANT]
-> 
-> To use the computation pushdown functionality against Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
+
+
+>[!NOTE]
+>In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
+
+>[!IMPORTANT]
+>To use the computation pushdown functionality against Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.
   
 ## Single node or PolyBase scale-out group
 
@@ -67,12 +67,14 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
 
    ![PolyBase services](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
+   >[!NOTE]
+   >SQL Server 2019 PolyBase now includes an additional option **Java connector for HDFS data sources**. See [SQL Server preview features](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) for more information about this feature.
+   
 4. On the Server Configuration page, configure the **SQL Server PolyBase Engine Service** and **SQL Server PolyBase Data Movement Service** to run under the same domain account.  
-   
-   > [!IMPORTANT] 
-   >
-   >In a PolyBase scale-out group, the PolyBase Engine and PolyBase Data Movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#Enable).
-   
+
+   >[!IMPORTANT]
+   >In a PolyBase scale-out group, the PolyBase Engine and PolyBase Data Movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#enable).
+
 5. On the PolyBase Configuration page, select one of the two options. For more information, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
    - Use the SQL Server instance as a standalone PolyBase-enabled instance.  
@@ -85,8 +87,9 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
    
 6. On the PolyBase Configuration page, specify a port range with at least six ports. SQL Server setup  allocates the first six available ports from the range.  
 
-   > [!IMPORTANT]
-   >
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+   >[!IMPORTANT]
    > After installation, you must [enable the PolyBase feature](#enable).
 
 

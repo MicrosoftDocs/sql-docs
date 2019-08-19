@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "scripts [SQL Server], traces"
   - "replaying traces"
 ms.assetid: 9c0eb222-e6e3-4bc1-a25f-a41e962d361b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Replay a Transact-SQL Script (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

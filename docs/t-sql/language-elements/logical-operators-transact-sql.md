@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "FALSE"
   - "logical operators [SQL Server], Transact-SQL"
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Logical Operators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

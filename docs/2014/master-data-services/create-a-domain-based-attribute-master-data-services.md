@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "creating domain-based attributes [Master Data Services]"
   - "attributes [Master Data Services], creating domain-based attributes"
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

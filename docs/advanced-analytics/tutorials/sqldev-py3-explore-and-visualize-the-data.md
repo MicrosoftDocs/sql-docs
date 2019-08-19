@@ -1,17 +1,17 @@
 ---
-title: Lesson 1 Explore and visualize data using Python and T-SQL - SQL Server Machine Learning
+title: Lesson 1 Explore and visualize data using Python and T-SQL
 description: Tutorial showing how to embed Python in SQL Server stored procedures and T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/01/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Explore and visualize the data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -76,56 +76,56 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
     GO
 
-	CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
-	AS
-	BEGIN
-      SET NOCOUNT ON;
-      DECLARE @query nvarchar(max) =
-      N'SELECT cast(tipped as int) as tipped, tip_amount, fare_amount FROM [dbo].[nyctaxi_sample]'
-	  EXECUTE sp_execute_external_script
-	  @language = N'Python',
-      @script = N'
-	import matplotlib
-	matplotlib.use("Agg")
-	import matplotlib.pyplot as plt
-	import pandas as pd
-	import pickle
+    CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
+    AS
+    BEGIN
+        SET NOCOUNT ON;
+        DECLARE @query nvarchar(max) =
+        N'SELECT cast(tipped as int) as tipped, tip_amount, fare_amount FROM [dbo].[nyctaxi_sample]'
+        EXECUTE sp_execute_external_script
+        @language = N'Python',
+        @script = N'
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    import pickle
 
-	fig_handle = plt.figure()
-	plt.hist(InputDataSet.tipped)
-	plt.xlabel("Tipped")
-	plt.ylabel("Counts")
-	plt.title("Histogram, Tipped")
-	plot0 = pd.DataFrame(data =[pickle.dumps(fig_handle)], columns =["plot"])
-	plt.clf()
+    fig_handle = plt.figure()
+    plt.hist(InputDataSet.tipped)
+    plt.xlabel("Tipped")
+    plt.ylabel("Counts")
+    plt.title("Histogram, Tipped")
+    plot0 = pd.DataFrame(data =[pickle.dumps(fig_handle)], columns =["plot"])
+    plt.clf()
 
-	plt.hist(InputDataSet.tip_amount)
-	plt.xlabel("Tip amount ($)")
-	plt.ylabel("Counts")
-	plt.title("Histogram, Tip amount")
-	plot1 = pd.DataFrame(data =[pickle.dumps(fig_handle)], columns =["plot"])
-	plt.clf()
+    plt.hist(InputDataSet.tip_amount)
+    plt.xlabel("Tip amount ($)")
+    plt.ylabel("Counts")
+    plt.title("Histogram, Tip amount")
+    plot1 = pd.DataFrame(data =[pickle.dumps(fig_handle)], columns =["plot"])
+    plt.clf()
 
-	plt.hist(InputDataSet.fare_amount)
-	plt.xlabel("Fare amount ($)")
-	plt.ylabel("Counts")
-	plt.title("Histogram, Fare amount")
-	plot2 = pd.DataFrame(data =[pickle.dumps(fig_handle)], columns =["plot"])
-	plt.clf()
+    plt.hist(InputDataSet.fare_amount)
+    plt.xlabel("Fare amount ($)")
+    plt.ylabel("Counts")
+    plt.title("Histogram, Fare amount")
+    plot2 = pd.DataFrame(data =[pickle.dumps(fig_handle)], columns =["plot"])
+    plt.clf()
 
-	plt.scatter( InputDataSet.fare_amount, InputDataSet.tip_amount)
-	plt.xlabel("Fare Amount ($)")
-	plt.ylabel("Tip Amount ($)")
-	plt.title("Tip amount by Fare amount")
-	plot3 = pd.DataFrame(data =[pickle.dumps(fig_handle)], columns =["plot"])
-	plt.clf()
+    plt.scatter( InputDataSet.fare_amount, InputDataSet.tip_amount)
+    plt.xlabel("Fare Amount ($)")
+    plt.ylabel("Tip Amount ($)")
+    plt.title("Tip amount by Fare amount")
+    plot3 = pd.DataFrame(data =[pickle.dumps(fig_handle)], columns =["plot"])
+    plt.clf()
 
-	OutputDataSet = plot0.append(plot1, ignore_index=True).append(plot2, ignore_index=True).append(plot3, ignore_index=True)
-	',
+    OutputDataSet = plot0.append(plot1, ignore_index=True).append(plot2, ignore_index=True).append(plot3, ignore_index=True)
+    ',
     @input_data_1 = @query
-	WITH RESULT SETS ((plot varbinary(max)))
-	END
-	GO
+    WITH RESULT SETS ((plot varbinary(max)))
+    END
+    GO
     ```
 
 2. Now run the stored procedure with no arguments to generate a plot from the data hard-coded as the input query.
@@ -156,7 +156,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
+    cnxn = pyodbc.connect('DRIVER=SQL Server;SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
     cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
@@ -173,7 +173,7 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
+    cnxn = pyodbc.connect('DRIVER=SQL Server;SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
     cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()

@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.axisproperties.axisoptions.f1"
   - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Axis Properties Dialog Box, Axis Options (Report Builder and SSRS)

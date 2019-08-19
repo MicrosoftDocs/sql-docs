@@ -13,11 +13,14 @@ helpviewer_keywords:
   - "error outputs [Integration Services], enhancing"
   - "Script component [Integration Services], transformation components"
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Enhancing an Error Output with the Script Component
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   By default, the two extra columns in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error output, ErrorCode and ErrorColumn, contain only numeric codes that represent an error number and the ID of the column in which the error occurred. These numeric values may be of limited use without the corresponding error description and column name.  
   
  This topic describes how to add the error description and the column name to existing error output data in the data flow by using the Script component. The example adds the error description that corresponds to a specific predefined [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error code by using the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> method of the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface, available through the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> property of the Script component. Then the example adds the column name that corresponds to the captured lineage ID by using the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> method of the same interface.  
@@ -70,9 +73,12 @@ Public Class ScriptMain      ' VB
 
         If componentMetaData130 IsNot Nothing Then
 
-            If 0 = Row.ErrorColumn Then
+            If Row.ErrorColumn = 0 Then
                 ' 0 means no specific column is identified by ErrorColumn, this time.
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            ELSE If Row.ErrorColumn = -1 Then
+                ' -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables."
             Else
                 Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
             End If
@@ -96,6 +102,11 @@ public class ScriptMain:      // C#
             if (Row.ErrorColumn == 0)
             {
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            // -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+            else if (Row.ErrorColumn == -1)
+            {
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables.";
             }
             else
             {

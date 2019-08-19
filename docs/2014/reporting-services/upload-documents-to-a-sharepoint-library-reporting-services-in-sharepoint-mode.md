@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], viewing reports"
   - "SharePoint integration [Reporting Services], content management"
   - "uploading reports [Reporting Services]"
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Upload Documents to a SharePoint Library (Reporting Services in SharePoint Mode)

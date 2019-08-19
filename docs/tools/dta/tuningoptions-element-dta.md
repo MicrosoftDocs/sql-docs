@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TuningOptions element"
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # TuningOptions Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

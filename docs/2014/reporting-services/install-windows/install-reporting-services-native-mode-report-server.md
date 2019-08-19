@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default configuration [Reporting Services]"
   - "report servers [Reporting Services], default configurations"
   - "installation options [Reporting Services]"
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Install Reporting Services Native Mode Report Server

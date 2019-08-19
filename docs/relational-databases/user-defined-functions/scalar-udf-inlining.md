@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 
 author: "s-r-k"
 ms.author: "karam"
-manager: craigg
 monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Scalar UDF Inlining
@@ -48,8 +47,9 @@ Consider the following query
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
 ```
 
@@ -68,8 +68,9 @@ Now the query can be modified to invoke this UDF.
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 ```
 
@@ -116,7 +117,7 @@ The execution plan for this query in SQL Server 2017 (compatibility level 140 an
 
 ![Query Plan without inlining](./media/query-plan-without-udf-inlining.png)
 
-As the plan shows, SQL Server adopts a simple strategy here: for every tuple in the `CUSTOMER` table, invoke the UDF and output the results. This strategy is naïve and inefficient. With inlining, such UDFs are transformed into equivalent scalar subqueries, which are substituted in the calling query in place of the UDF.
+As the plan shows, SQL Server adopts a simple strategy here: for every tuple in the `CUSTOMER` table, invoke the UDF and output the results. This strategy is na?ve and inefficient. With inlining, such UDFs are transformed into equivalent scalar subqueries, which are substituted in the calling query in place of the UDF.
 
 For the same query, the plan with the UDF inlined looks as below.
 
@@ -127,6 +128,8 @@ As mentioned earlier, the query plan no longer has a user-defined function opera
 1. SQL Server has inferred the implicit join between `CUSTOMER` and `ORDERS` and made that explicit via a join operator.
 2. SQL Server has also inferred the implicit `GROUP BY O_CUSTKEY on ORDERS` and has used the IndexSpool + StreamAggregate to implement it.
 3. SQL Server is now using parallelism across all operators.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
@@ -174,7 +177,7 @@ If all the preconditions are satisfied and SQL Server decides to perform inlinin
 
 ## Enabling scalar UDF inlining
 
-You can make workloads automatically eligible for scalar UDF inlining by enabling compatibility level 150 for the database.  You can set this using Transact-SQL. For example:  
+You can make workloads automatically eligible for scalar UDF inlining by enabling compatibility level 150 for the database.? You can set this using Transact-SQL.?For example:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -201,8 +204,9 @@ You can also disable scalar UDF inlining for a specific query by designating `DI
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```

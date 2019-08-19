@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Default Driver Subkey
 The Default subkey contains a single value that describes the driver used by the default data source. The format of this value is shown in the following table.  

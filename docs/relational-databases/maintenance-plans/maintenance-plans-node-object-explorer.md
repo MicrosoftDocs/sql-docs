@@ -13,7 +13,6 @@ f1_keywords:
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Maintenance Plans Node (Object Explorer)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

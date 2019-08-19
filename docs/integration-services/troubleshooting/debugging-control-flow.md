@@ -17,11 +17,14 @@ helpviewer_keywords:
   - "color-coded progress reporting [Integration Services]"
   - "Set Breakpoints dialog box"
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Debugging Control Flow
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features and tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports breakpoints on containers and tasks.  

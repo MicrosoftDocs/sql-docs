@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View a Saved Trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +22,9 @@ manager: craigg
 ### To view a specific trace  
   
 1.  Execute **fn_trace_getinfo** by specifying the ID of the trace about which information is needed. This function returns a table that lists the trace, trace property, and information about the property.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      Invoke the function this way:  
   
     ```  

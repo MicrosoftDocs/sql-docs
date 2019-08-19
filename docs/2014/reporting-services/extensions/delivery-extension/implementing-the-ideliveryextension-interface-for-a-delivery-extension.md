@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "delivery extensions [Reporting Services], attributes"
   - "delivery extensions [Reporting Services], class creation"
   - "IDeliveryExtension interface"
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Implementing the IDeliveryExtension Interface for a Delivery Extension

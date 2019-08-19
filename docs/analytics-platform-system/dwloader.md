@@ -2,7 +2,6 @@
 title: dwloader Command-Line Loader - Parallel Data Warehouse | Microsoft Docs
 description: dwloader is a Parallel Data Warehouse (PDW) command-line tool that loads table rows in bulk into an existing table.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -38,7 +37,7 @@ ms.reviewer: martinle
   
 5.  Run **dwloader**.  
   
-    Log in to the Loading server and run the executable **dwloader.exe** with the appropriate command-line options.  
+    Sign in to the Loading server and run the executable **dwloader.exe** with the appropriate command-line options.  
   
 6.  Verify the results.  
   
@@ -106,7 +105,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -169,7 +169,7 @@ To specify the source data location:
   
 -   The source data location can be a network path or a local path to a directory on the loading server.  
   
--   To specify all the files in a directory, enter the directory path followed by the * wildcard character.  The loader does not load files from any subdirectories that are in the source data location.. The loader errors when a directory exists in a gzip file.  
+-   To specify all the files in a directory, enter the directory path followed by the * wildcard character.  The loader does not load files from any subdirectories that are in the source data location. The loader errors when a directory exists in a gzip file.  
   
 -   To specify some of the files in a directory, use a combination of characters and the * wildcard.  
   
@@ -214,7 +214,7 @@ For ASCII files, NULLs are represented by placing delimiters consecutively. For 
 Specifies a character-encoding type for the data to be loaded from the data file. Options are ASCII (default), UTF8, UTF16, or UTF16BE, where UTF16 is little endian and UTF16BE is big endian. These options are case insensitive.  
   
 **-t** *field_delimiter*  
-The delimiter for each field (column) in the row. The field delimiter is one or more of these ASCII escape characters or ASCII hex values..  
+The delimiter for each field (column) in the row. The field delimiter is one or more of these ASCII escape characters or ASCII hex values.  
   
 |Name|Escape Character|Hex Character|  
 |--------|--------------------|-----------------|  
@@ -266,7 +266,7 @@ Examples of LF:
 An LF is required for Unix. A CR is required for Windows.  
   
 **-s** *string_delimiter*  
-The delimiter for string data type field of a text-delimited input file. The string delimiter is one or more ASCII values.  It can be specified as a character (e.g., -s * ) or as a hex value (e.g., -s 0x22 for a double quote).  
+The delimiter for string data type field of a text-delimited input file. The string delimiter is one or more ASCII values.  It can be specified as a character (e.g., -s *) or as a hex value (e.g., -s 0x22 for a double quote).  
   
 Examples:  
   
@@ -363,9 +363,9 @@ dym
 Input file examples for March 04, 2010: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format* is a custom date format (e.g., MM/dd/yyyy ) and included for backward compatibility only. dwloader does not enfoce the custom date format. Instead, when you specify a custom date format, **dwloader** will convert it to the corresponding setting of ymd, ydm,  mdy,  myd,  dym, or dmy.  
+*custom_date_format* is a custom date format (e.g., MM/dd/yyyy) and included for backward compatibility only. dwloader does not enforce the custom date format. Instead, when you specify a custom date format, **dwloader** will convert it to the corresponding setting of ymd, ydm,  mdy,  myd,  dym, or dmy.  
   
-For example, if you specify -D MM/dd/yyyy, dwloader expects all date input to be ordered with month first, then day, and then year (mdy). It does not enforce 2 character months, 2 digit days, and 4 digit years as specified by the custom date format. Here are some examples of ways dates can be formatted in the input file when the date format is -D MM/dd/yyyy: 01/02/2013, Jan.02.2013, 1/2/2013  
+For example, if you specify -D MM/dd/yyyy, dwloader expects all date input to be ordered with month first, then day, and then year (mdy). It does not enforce 2 character months, 2-digit days, and 4-digit years as specified by the custom date format. Here are some examples of ways dates can be formatted in the input file when the date format is -D MM/dd/yyyy: 01/02/2013, Jan.02.2013, 1/2/2013  
   
 For more comprehensive formatting information, see [Data type conversion rules for dwloader](dwloader-data-type-conversion-rules.md).  
   
@@ -476,7 +476,10 @@ We recommend using **-m** only when loading into an empty table, so that you can
 Verify the target appliance has a valid SQL Server PDW certificate from a trusted authority. Use this to help ensure your data is not being hijacked by an attacker and sent to an unauthorized location. The certificate must already be installed on the appliance. The only supported way to install the certificate is for the appliance administrator to install it by using the Configuration Manager tool. Ask your appliance administrator if you are not sure whether the appliance has a trusted certificate installed.  
   
 **-se**  
-Skip loading empty files. This also skips uncompressing empty gzip files.  
+Skip loading empty files. This also skips uncompressing empty gzip files.
+
+**-l**  
+Available with CU7.4 update, specifies the maximum row length (in bytes) that can be loaded. Valid values are integers between 32768 and 33554432. Only use when needed to load large rows (greater than 32KB) as this will allocate more memory on the client and server.
   
 ## Return Code Values  
 0 (success) or other integer value (failure)  
@@ -523,7 +526,7 @@ The total size of all loads occurring concurrently must be smaller than LOG_SIZE
   
 When loading multiple files with one load command, all rejected rows are written to the same reject file. The reject file does not show which input file contains each rejected row.  
   
-The empty string should not be used as a delimiter . When an empty string is used as a row delimiter, the load will fail. When used as column delimiter, the load ignores the delimiter and continues to use the default "|" as the column delimiter. When used as string delimiter, the empty string is ignored and the default behavior is applied.  
+The empty string should not be used as a delimiter. When an empty string is used as a row delimiter, the load will fail. When used as column delimiter, the load ignores the delimiter and continues to use the default "|" as the column delimiter. When used as string delimiter, the empty string is ignored and the default behavior is applied.  
   
 ## Locking Behavior  
 **dwloader** locking behavior varies depending on the *load_mode_option*.  
@@ -537,7 +540,7 @@ The empty string should not be used as a delimiter . When an empty string is use
 -   **upsert** - Upsert loads data into a staging table, and then performs a merge operation from the staging table to the final table. Upsert does not require exclusive locks on the final table. Performance may vary when using upsert. Test the behavior in your environment.  
   
 ### Locking Behavior  
-**A append mode locking**  
+**Append mode locking**  
   
 Append can be run in multi-transactional mode (using the -m argument) but it is not transaction safe. Therefore append should be used as a transactional operation (without using the -m argument). Unfortunately, during the final INSERT-SELECT operation, transactional mode is currently about six times slower than the multi-transactional mode.  
   

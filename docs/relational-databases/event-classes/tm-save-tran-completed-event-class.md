@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Save Tran Completed Event Class

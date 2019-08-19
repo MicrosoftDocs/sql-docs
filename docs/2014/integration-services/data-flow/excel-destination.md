@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], Excel"
   - "Excel [Integration Services]"
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Destination

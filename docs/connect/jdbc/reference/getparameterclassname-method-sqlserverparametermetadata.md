@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getParameterClassName Method (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

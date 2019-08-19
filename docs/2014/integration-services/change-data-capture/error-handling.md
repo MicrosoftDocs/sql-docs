@@ -7,14 +7,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Error Handling
   An Oracle CDC Instance mines changes from a single Oracle source database (an Oracle RAC cluster is considered a single database) and writes the committed changes to change tables in a CDC database in the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
- A CDC Instance maintains its state in a system table called **cdc.xdbcdc_state**. This table can be queried any time to find the state of the CDC Instance. For more information about the cdc.xdbcdc_state table, see [cdc.xdbcdc_state](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state).  
+ A CDC Instance maintains its state in a system table called **cdc.xdbcdc_state**. This table can be queried any time to find the state of the CDC Instance. For more information about the cdc.xdbcdc_state table, see [cdc.xdbcdc_state](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_state).  
   
  The table below describes the CDC Instance states in the xdbcdc_state table.  
   
@@ -109,5 +109,3 @@ manager: craigg
 ## See Also  
  [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [The Oracle CDC Instance](the-oracle-cdc-instance.md)  
-  
-  

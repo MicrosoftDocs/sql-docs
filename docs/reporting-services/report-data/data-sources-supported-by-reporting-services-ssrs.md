@@ -2,7 +2,7 @@
 title: "Data Sources Supported by Reporting Services (SSRS) | Microsoft Docs"
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "ODBC data processing extension"
   - "Reporting Services, data sources"
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Data Sources Supported by Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -128,7 +128,7 @@ ms.author: maghan
 > [!NOTE]
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data processing extension is not supported at this time.  
   
- For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ For more information about data processing extensions supported by Report Builder, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server Data Processing Extension  
  The data source type **Microsoft SQL Server** wraps and extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This data processing extension is natively compiled for and runs on x86 and [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-based platforms.  
@@ -225,7 +225,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
  
 To install the Oracle Client tools you can do the following.
  
-1.	Go to [Oracle's download site](https://www.oracle.com/us/products/tools/index-090165.html)
+1.	Go to [Oracle's download site](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html)
 2.	Download ODAC 12c Release 4 (12.1.0.2.4) for Windows (64bit for server, 32bit for tools)
 3.	Install the Data Provider for .NET 4
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10226"
@@ -156,8 +155,8 @@ f1_keywords:
   - "10190"
   - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Gauges (Report Builder and SSRS)

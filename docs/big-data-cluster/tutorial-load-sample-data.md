@@ -1,18 +1,19 @@
 ---
 title: Load sample data
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to load sample data into a SQL Server big data cluster. The sample data includes relational data in the SQL Server master instance. It also includes HDFS data in the storage pool. This data supports other tutorials in this section.
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/28/2019
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
-# Tutorial: Load sample data into a SQL Server 2019 big data cluster
+# Tutorial: Load sample data into a SQL Server big data cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This tutorial explains how to use a script to load sample data into a SQL Server 2019 big data cluster (preview). Many of the other tutorials in the documentation use this sample data.
 
@@ -23,7 +24,7 @@ This tutorial explains how to use a script to load sample data into a SQL Server
 
 - [A deployed big data cluster](deployment-guidance.md)
 - [Big data tools](deploy-big-data-tools.md)
-   - **mssqlctl**
+   - **azdata**
    - **kubectl**
    - **sqlcmd**
    - **curl**
@@ -64,7 +65,7 @@ The following steps describe how to use a Windows client to load the sample data
    | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**endpoint-security**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-big-data-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**). The default name of a cluster is **mssql-cluster**.
 
 1. Run the bootstrap script.
 
@@ -100,7 +101,7 @@ The following steps describe how to use a Linux client to load the sample data i
    | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**endpoint-security**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-big-data-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**). The default name of a cluster is **mssql-cluster**.
 
 1. Run the bootstrap script.
 
@@ -110,4 +111,18 @@ The following steps describe how to use a Linux client to load the sample data i
 
 ## Next steps
 
-After the bootstrap script runs, your big data cluster has the sample databases and HDFS data. To start exploring this data and big data clusters, see the [Tutorials](tutorial-query-hdfs-storage-pool.md) in this section.
+After the bootstrap script runs, your big data cluster has the sample databases and HDFS data. The following tutorials use the sample data to demonstrate big data cluster capabilities:
+
+Data Virtualization:
+
+- [Tutorial: Query HDFS in a SQL Server big data cluster](tutorial-query-hdfs-storage-pool.md)
+- [Tutorial: Query Oracle from a SQL Server big data cluster](tutorial-query-oracle.md)
+
+Data ingestion:
+
+- [Tutorial: Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutorial: Ingest data into a SQL Server data pool with Spark jobs](tutorial-data-pool-ingest-spark.md)
+
+Notebooks:
+
+- [Tutorial: Run a sample notebook on a SQL Server 2019 big data cluster](tutorial-notebook-spark.md)

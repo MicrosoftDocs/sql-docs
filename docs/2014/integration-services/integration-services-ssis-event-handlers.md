@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "containers [Integration Services], events"
   - "events [Integration Services], about events"
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Event Handlers

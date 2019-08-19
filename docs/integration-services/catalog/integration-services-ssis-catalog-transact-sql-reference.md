@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Integration Services (SSIS) Catalog Transact-SQL Reference
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [Views &#40;Integration Services Catalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md)  
   
  [Stored Procedures &#40;Integration Services Catalog&#41;](../../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  

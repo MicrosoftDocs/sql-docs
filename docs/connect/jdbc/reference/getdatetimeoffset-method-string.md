@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getDateTimeOffset Method (String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

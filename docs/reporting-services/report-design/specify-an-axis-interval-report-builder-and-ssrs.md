@@ -2,14 +2,14 @@
 title: "Specify an Axis Interval (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 09/02/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Specify an Axis Interval (Report Builder and SSRS)
 Learn to change the number of labels and tick marks on the category (x) axis in a chart by setting the axis interval in a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report.

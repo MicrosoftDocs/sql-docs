@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "service [Integration Services], remote instance"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "Integration Services service, remote instance"
   - "service [Integration Services], connecting"
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect to a Remote Integration Services Server (SSIS Service)

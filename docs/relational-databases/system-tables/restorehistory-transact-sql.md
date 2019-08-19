@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

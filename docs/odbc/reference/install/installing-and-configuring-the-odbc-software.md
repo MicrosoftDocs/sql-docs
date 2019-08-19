@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Installing and Configuring the ODBC Software
 > [!NOTE]  

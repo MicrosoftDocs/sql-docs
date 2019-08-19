@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomCollFromWKB (geometry Data Type)"
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomCollFromWKB (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -26,10 +26,9 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-manager: craigg
 ---
 # CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Generates a manual checkpoint in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to which you are currently connected.  
   

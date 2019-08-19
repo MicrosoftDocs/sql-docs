@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "current configuration information"
   - "configuration functions [SQL Server]"
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Configuration Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

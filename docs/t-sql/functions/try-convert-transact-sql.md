@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TRY_CONVERT function"
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: c5cc562f-2c5a-4fdb-a552-dfb08c2bf0ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getObject Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

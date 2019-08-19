@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Assigning Storage

@@ -16,11 +16,14 @@ helpviewer_keywords:
   - "datasets [Integration Services], normalized data"
   - "less normalized data set [Integration Services]"
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Pivot Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Pivot transformation makes a normalized data set into a less normalized but more compact version by pivoting the input data on a column value. For example, a normalized **Orders** data set that lists customer name, product, and quantity purchased typically has multiple rows for any customer who purchased multiple products, with each row for that customer showing order details for a different product. By pivoting the data set on the product column, the Pivot transformation can output a data set with a single row per customer. That single row lists all the purchases by the customer, with the product names shown as column names, and the quantity shown as a value in the product column. Because not every customer purchases every product, many columns may contain null values.  
   
  When a dataset is pivoted, input columns perform different roles in the pivoting process. A column can participate in the following ways:  

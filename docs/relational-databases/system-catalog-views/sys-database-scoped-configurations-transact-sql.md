@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_scoped_configurations (Transact-SQL)
@@ -32,15 +31,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**value**|**sqlvariant**|The value set for this configuration option for the primary replica.|  
 |**value_for_secondary**|**sqlvariant**|The value set for this configuration option for the secondary replicas.|  
 |**is_value_default**|**bit** |Specifies whether the value set is the default value.|
-|**elevate_resumable**|nvarchar(60)|The db scoped default set for the resumable option for index operations| 
   
 ##  <a name="Permissions"></a> Permissions  
- Requires membership in the **public** role.  
+Requires membership in the **public** role.  
   
 ## Remarks  
- When NULL is returned as the value for **value_for_secondary**, this means that the secondary is set to PRIMARY.  
+When NULL is returned as the value for **value_for_secondary**, this means that the secondary is set to PRIMARY.  
  
- Database scoped configuration settings will be carried over with the database. This means that when a given database is restored or attached, the existing configuration settings remain.
+Database scoped configuration settings will be carried over with the database. This means that when a given database is restored or attached, the existing configuration settings remain.
   
 ## See Also  
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

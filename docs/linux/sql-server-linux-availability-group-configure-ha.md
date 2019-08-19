@@ -2,13 +2,12 @@
 title: Configure SQL Server Always On Availability Group for high availability on Linux
 titleSuffix: SQL Server
 description: Learn about creating a SQL Server Always On Availability Group (AG) for high availability on Linux.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 
 ---
@@ -127,6 +126,7 @@ Run **only one** of the following scripts:
    >[!IMPORTANT]
    >After you run the preceding script to create an AG with three synchronous replicas, do not run the following script:
 
+<a name="configOnly"></a>
 - Create AG with two synchronous replicas and a configuration replica:
 
    >[!IMPORTANT]

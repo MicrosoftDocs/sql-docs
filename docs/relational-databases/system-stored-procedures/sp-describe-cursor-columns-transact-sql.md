@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

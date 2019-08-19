@@ -2,7 +2,6 @@
 title: Hardware components - Analytics Platform System | Microsoft Docs
 description: Analytics Platform System (APS) uses scalable components so that you can buy the right amount of processing and storage according to your business requirements. When you order APS, you will need a combination of these core hardware components.  
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Sample: Using the WMI Event Provider with the .NET Framework
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

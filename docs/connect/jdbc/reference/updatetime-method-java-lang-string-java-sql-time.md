@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: fbbcef68-b903-4cfd-911c-a7e239d17c74
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateTime Method (java.lang.String, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

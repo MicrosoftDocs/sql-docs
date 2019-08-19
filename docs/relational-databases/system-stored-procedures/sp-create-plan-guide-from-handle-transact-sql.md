@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

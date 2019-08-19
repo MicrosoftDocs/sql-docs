@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.shared.action.f1"
@@ -31,8 +30,8 @@ f1_keywords:
   - "10244"
   - "sql12.rtp.rptdesigner.seriesproperties.action.f1"
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Action Properties Dialog Box (Report Builder and SSRS)

@@ -26,10 +26,9 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_check_dynamic_filters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Displays information on parameterized row filter properties for a publication, in particular the functions used to generate a filtered data partition for a publication and whether the publication qualifies for using precomputed partitions. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -43,7 +42,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 ## Result Sets  

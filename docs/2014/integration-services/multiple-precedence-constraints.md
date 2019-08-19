@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple precedence constraints"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "precedence constraints [Integration Services], multiple"
   - "constrained executables [Integration Services]"
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Multiple Precedence Constraints

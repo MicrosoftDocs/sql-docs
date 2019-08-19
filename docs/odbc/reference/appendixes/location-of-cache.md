@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Location of Cache
 > [!IMPORTANT]  

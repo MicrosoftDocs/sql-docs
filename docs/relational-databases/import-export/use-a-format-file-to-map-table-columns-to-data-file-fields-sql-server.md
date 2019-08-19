@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "mapping columns to fields during import [SQL Server]"
   - "format files [SQL Server], mapping columns to fields"
 ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use a Format File to Map Table Columns to Data-File Fields (SQL Server)
@@ -73,6 +72,8 @@ See [Structure of Non-XML Format Files](../../relational-databases/import-export
 1.  Re-arrange the order of the format-file rows so that the rows are in the same order as the data in `myRemap.bcp`.
 2.  Ensure the host file field order values are sequential.
 3.  Ensure there is a carriage return after the last format-file row.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Compare the changes:	 
 **Before**

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ manager: craigg
 ```  
   
 ## Arguments  
- [ **@ db_name =** ] **'**_db_name_**'**  
+`[ @ db_name = ] 'db_name'`
  The name of the database to enable or disable Selective XML Index on. If *db_name* is NULL, the current database is assumed.  
   
- [ **@action =** ] **'**_action_**'**  
+`[ @action = ] 'action'`
  Determines whether to enable or disable the index. If another value except 'on', 'true', 'off', or 'false' is passed, an error will be raised.  
   
 ```  

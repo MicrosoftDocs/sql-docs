@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server replication], non-convergence"
   - "non-convergence [SQL Server]"
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # tablediff Utility

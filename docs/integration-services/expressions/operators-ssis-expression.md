@@ -13,11 +13,14 @@ helpviewer_keywords:
   - "operators [Integration Services]"
   - "expressions [Integration Services], operators"
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Operators (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This section describes the operators the expression language provides and the operator precedence and associativity that the expression evaluator uses.  
   
  The following table lists topics about operators in this section.  

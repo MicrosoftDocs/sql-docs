@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Save Changes dialog box"
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Save Changes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

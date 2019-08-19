@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetCursorName (Visual FoxPro ODBC Driver)
 > [!NOTE]  

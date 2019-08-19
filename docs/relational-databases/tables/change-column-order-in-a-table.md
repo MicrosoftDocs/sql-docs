@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Column Order in a Table

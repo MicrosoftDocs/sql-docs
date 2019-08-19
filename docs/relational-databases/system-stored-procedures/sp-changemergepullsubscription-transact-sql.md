@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,19 +35,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of %.  
   
- [ **@publisher=**] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher*is **sysname**, with a default of %.  
   
- [ **@publisher_db=**] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db*is **sysname**, with a default of %.  
   
- [ **@property=**]  **'**_property_**'**  
+`[ @property = ] 'property'`
  Is the name of the property to change. *property* is **sysname**, and can be one of the values in the table.  
   
- [ **@value=**]  **'**_value_**'**  
+`[ @value = ] 'value'`
  Is the new value for the specified property. *value*is **nvarchar(255)**, and can be one of the values in the table.  
   
 |Property|Value|Description|  

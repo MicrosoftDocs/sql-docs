@@ -1,10 +1,10 @@
 ---
 title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/28/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: system-objects
+ms.technology: machine-learning
 ms.topic: "language-reference"
 f1_keywords: 
   - "external_libraries"
@@ -21,12 +21,12 @@ manager: cgronlun
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.external_libraries (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Supports the management of package libraries related to external runtimes such as R, Python, and Java.
 
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows platform are supported in SQL Server 2019 CTP 2.3. Support for Linux is planned for a later release.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4.
 
 ## sys.external_libraries
 

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Filter Published Data for Merge Replication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

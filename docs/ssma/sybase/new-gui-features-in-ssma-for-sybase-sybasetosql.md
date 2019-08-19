@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # New GUI Features in SSMA For Sybase (SybaseToSQL)
 This chapter describes new features of SSMA User Interface.  

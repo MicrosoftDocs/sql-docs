@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # equals Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

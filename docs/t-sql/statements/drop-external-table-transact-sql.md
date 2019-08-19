@@ -12,7 +12,6 @@ dev_langs:
 ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP EXTERNAL TABLE (Transact-SQL)
@@ -25,13 +24,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 ## Syntax  
   
 ```  
-DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_name   
+DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
   
 
 ## Arguments  
- [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
+ `[ database_name . [schema_name] . | schema_name . ] table_name`  
  The one- to three-part name of the external table to remove. The table name can optionally include the schema, or the database and schema.  
   
 ## Permissions  

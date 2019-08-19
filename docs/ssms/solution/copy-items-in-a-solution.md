@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], copying"
   - "solutions [SQL Server Management Studio], item copying"
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Copy Items in a Solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

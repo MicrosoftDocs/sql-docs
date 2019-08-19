@@ -12,27 +12,13 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Transact-SQL Statements for Always On Availability Groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic introduces the [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements that support deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and creating and managing an given availability group, availability replica and availability database.  
   
- **In This Topic:**  
-  
--   [CREATE ENDPOINT](#CreateEndpoint)  
-  
--   [CREATE AVAILABILITY GROUP](#CreateAG)  
-  
--   [ALTER AVAILABILITY GROUP](#AlterAG)  
-  
--   [ALTER DATABASE SET HADR Options](#AlterDb)  
-  
--   [DROP AVAILABILITY GROUP](#DropAG)  
-  
--   [Restrictions on the AVAILABILITY GROUP Transact-SQL statements](#Restrictions)  
-  
+ 
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
  [CREATE ENDPOINT ... FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) creates a database mirroring endpoint, if none exists on the server instance. Every server instance on which you intend to deploy [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring requires a database mirroring endpoint.  
   

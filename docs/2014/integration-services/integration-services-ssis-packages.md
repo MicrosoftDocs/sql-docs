@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Integration Services packages, about packages"
   - "Integration Services packages"
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Packages
@@ -106,11 +106,6 @@ manager: craigg
 -   [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)  
   
 -   See **Building Packages Programmatically** section in the Developer Guide.  
-  
-## Related Content  
-  
--   [Implementing SQL Server Integration Services with Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
-  
--   [How to: Configure SQL Server Integration Services Package for Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
+
   
   

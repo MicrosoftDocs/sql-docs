@@ -10,11 +10,14 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Script component [Integration Services], connecting to data sources"
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Connecting to Data Sources in the Script Component
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A connection manager is a convenient unit that encapsulates and stores the information that is required to connect to a data source of a particular type. For more information, see [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
  You can make existing connection managers available for access by the custom script in the source or destination component by clicking the **Add** and **Remove** buttons on the **Connection Managers** page of the **Script Transformation Editor**. However, you must write your own custom code to load or save your data, and possibly to open and close the connection to the data source. For more information about the **Connection Managers** page of the **Script Transformation Editor**, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) and [Script Transformation Editor &#40;Connection Managers Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  

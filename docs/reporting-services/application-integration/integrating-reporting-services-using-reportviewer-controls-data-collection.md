@@ -1,17 +1,16 @@
 ---
 title: Data collection in ReportViewer Control 2016
 uthor: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.reviewer: ""
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.custom: ""
 ms.date: 09/18/2018
 ---
-
 # Integrating Reporting Services Using ReportViewer Controls - Data Collection
 
 Anonymous usage data is collected by the control to better understand how customers make use of the product. Usage data enables future development to be focused on improvements that are most relevant to customers.
@@ -22,14 +21,14 @@ An explanation of the data collection and usage practices of Microsoft SQL Serve
 
 Collection of usage data can be disabled through the ```EnableTelemetry``` property.
 
-```
+```xml
 <rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 </rsweb:ReportViewer>
 ```
 
 Or pragmatically before the control is rendered.
     
-```
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
     ReportViewer1.EnableTelemetry = false;

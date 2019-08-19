@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "compound operators"
   - "compound operators, described"
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Compound Operators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -8,7 +8,6 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
 ---
 # SQL Server monitoring partners
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +56,14 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
-[sentryone_datasheet]:https://www.sentryone.com/platform 
+[sentryone_datasheet]:https://www.sentryone.com/products/sentryone-platform/database-performance-monitoring
 [solarwinds_datasheet]:https://www.solarwinds.com/-/media/solarwinds/swdcv2/licensed-products/database-performance-analyzer-sql-server/resources/datasheets/dpa-datasheet-sql-server.ashx
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
-[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview  
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview  
+
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->
 <!--[idera_press]:-->
@@ -77,12 +77,12 @@ To learn more about some of our other partners, see [High availability and disas
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
 [sentryone_twitter]:https://twitter.com/sentryone
-[redgate_twitter]:https://twitter.com/redgate  
+[redgate_twitter]:https://twitter.com/redgate
 
 <!--Supported Systems-->
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
 
 <!--LinkedIn-->
-[sentryone_linkedin]:https://www.linkedin.com/company/sentryone 
+[sentryone_linkedin]:https://www.linkedin.com/company/sentryone
 [redgate_linkedin]:https://www.linkedin.com/company/red-gate-software/
 [solarwinds_linkedin]:https://linkedin.com/showcase/solarwinds-database-performance

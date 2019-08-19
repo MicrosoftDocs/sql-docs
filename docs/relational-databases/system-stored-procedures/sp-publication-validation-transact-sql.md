@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_publication_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Initiates an article validation request for each article in the specified publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -57,10 +56,10 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|Does fast count from **sysindexes.rows**. Counting rows in [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) is much faster than counting rows in the actual table. However, because [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) is lazily updated, the rowcount may not be accurate.|  
 |**2** (default)|Does conditional fast counting by first trying the fast method. If fast method shows differences, reverts to full method. If *expected_rowcount* is NULL and the stored procedure is being used to get the value, a full COUNT(*) is always used.|  
   
- [ **@shutdown_agent=**] *shutdown_agent*  
+`[ @shutdown_agent = ] shutdown_agent`
  Is whether the Distribution Agent should shut down immediately upon completion of the validation. *shutdown_agent* is **bit**, with a default of **0**. If **0**, the replication agent does not shut down. If **1**, the replication agent shuts down after the last article is validated.  
   
- [ **@publisher** = ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

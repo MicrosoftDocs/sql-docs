@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

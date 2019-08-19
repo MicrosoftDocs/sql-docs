@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Connection Strings
 You can use a connection string to connect to a Visual FoxPro data source.  

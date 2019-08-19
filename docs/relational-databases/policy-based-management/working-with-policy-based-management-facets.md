@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Working with Policy-Based Management Facets
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

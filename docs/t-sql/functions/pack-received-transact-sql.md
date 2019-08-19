@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "number of packets read"
   - "packets [SQL Server], number read"
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # &#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

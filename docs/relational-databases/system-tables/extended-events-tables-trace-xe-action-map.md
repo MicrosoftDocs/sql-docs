@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Extended Events Tables - trace_xe_action_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_component_health_alerts (Transact-SQL)

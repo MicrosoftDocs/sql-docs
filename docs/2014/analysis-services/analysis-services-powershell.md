@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/11/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
@@ -99,7 +98,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> $pwd -is [System.IDisposable]
 True  
 ```  
   
- You can now backup or restore an encrypted database file, passing the $pwd variable to the password parameter. To view a complete example that combines this illustration with other cmdlets, see [Backup-ASDatabase cmdlet](/sql/analysis-services/powershell/backup-asdatabase-cmdlet) and [Restore-ASDatabase cmdlet](/sql/analysis-services/powershell/restore-asdatabase-cmdlet).
+ You can now backup or restore an encrypted database file, passing the $pwd variable to the password parameter. To view a complete example that combines this illustration with other cmdlets, see [Backup-ASDatabase cmdlet](/powershell/module/sqlserver/backup-asdatabase) and [Restore-ASDatabase cmdlet](/powershell/module/sqlserver/restore-asdatabase).
   
  As a follow up step, remove both the password and variable from the session.  
   

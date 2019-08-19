@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
@@ -20,11 +19,11 @@ manager: craigg
   
  This lesson contains the following task:  
   
- [Granting Process Database Permissions](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+ [Granting Process Database Permissions](lesson-10-granting-process-database-permissions.md)  
  In this task, you define a security role that has permissions to process the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database, and then you test this security role.  
   
 ## See Also  
- [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
+ [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
  [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

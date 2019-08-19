@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # How to Use the CDC Service Command-Line Interface
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Oracle CDC service program, xdbcdcsvc.exe, normally runs the Oracle CDC Windows service but it can be invoked directly from the command line to create, or delete an Oracle CDC Windows service.  
   
 ### To use the command line  

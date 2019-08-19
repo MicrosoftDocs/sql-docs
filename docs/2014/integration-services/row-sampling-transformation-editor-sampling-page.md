@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.ROWSAMPLINGTRANSFORMATION.COLUMNS.F1"
@@ -13,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Row Sampling Transformation Editor"
 ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Row Sampling Transformation Editor (Sampling Page)

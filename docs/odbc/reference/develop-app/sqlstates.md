@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSTATEs
 SQLSTATEs provide detailed information about the cause of a warning or error. The SQLSTATEs in this manual are based on those found in the ISO/IEF CLI specification, although those SQLSTATEs that start with IM are specific to ODBC.  

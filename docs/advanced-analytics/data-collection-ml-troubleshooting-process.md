@@ -1,27 +1,25 @@
 ---
-title: Troubleshoot data collection for machine learning - SQL Server Machine Learning Services
+title: Troubleshoot data collection for machine learning
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Troubleshoot data collection for machine learning
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article describes data collection methods you should use when attempting to resolve problems on your own or with the help of Microsoft customer support.
 
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R and Python)
-
 ## SQL Server version and edition
 
-SQL Server 2016 R Services is the first release of SQL Server to include integrated R support. SQL Server 2016 Service Pack 1 (SP1) includes several major improvements, including the ability to run external scripts. If you are a SQL Server 2016 customer, you should consider installing SP1 or later.
+SQL Server 2016 R Services is the first release of SQL Server to include integrated R support. SQL Server 2016 Service Pack 1 (SP1) includes several major improvements, including the ability to run external scripts. If you are using SQL Server 2016, you should consider installing SP1 or later.
 
-SQL Server 2017 added Python language integration. You cannot get Python feature integration in earlier releases.
+SQL Server 2017 and later has Python language integration. You cannot get Python feature integration in earlier releases.
 
 For assistance getting edition and versions, see this article, which lists the build numbers for each of the
 [SQL Server versions](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions).

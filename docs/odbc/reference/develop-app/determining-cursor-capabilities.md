@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Determining Cursor Capabilities
 The following four options in **SQLGetInfo** describe what types of cursors are supported and what their capabilities are:  

@@ -22,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: craigg
 ---
 # ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +134,7 @@ ALTER AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ipv4_address', 'ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
@@ -555,10 +554,10 @@ Initiates a manual failover of the availability group without data loss to the s
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ipv4_address*  
  Specifies an IPv4 four-part address for an availability group listener. For example, `10.120.19.155`.  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  Specifies an IPv4 four-part mask for an availability group listener. For example, `255.255.254.0`.  
   
  *ipv6_address*  

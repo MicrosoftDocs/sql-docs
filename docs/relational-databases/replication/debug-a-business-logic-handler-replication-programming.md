@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Debug a Business Logic Handler (Replication Programming)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

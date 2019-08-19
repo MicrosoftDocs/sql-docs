@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Microsoft OLE DB Simple Provider Overview
 The Microsoft OLE DB Simple Provider (OSP) allows ADO to access any data for which a provider has been written using the [OLE DB Simple Provider (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Simple providers are intended to access data sources that require only fundamental OLE DB support, such as in-memory arrays or XML documents.

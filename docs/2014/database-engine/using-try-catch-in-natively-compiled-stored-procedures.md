@@ -26,7 +26,7 @@ manager: craigg
   
 -   ERROR_STATE  
   
-```tsql  
+```sql  
 CREATE PROCEDURE test_try_catch  
 with native_compilation, schemabinding, execute as owner   
 as  

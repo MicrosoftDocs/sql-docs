@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "single-column set of values [SQL Server]"
   - "ALL (Transact-SQL)"
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ IF
    )  
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
-PRINT 'Some items for this order cann't be manufactured in specified number of days or less.' ;  
+PRINT 'Some items for this order can''t be manufactured in specified number of days or less.' ;  
   
 ```  
   

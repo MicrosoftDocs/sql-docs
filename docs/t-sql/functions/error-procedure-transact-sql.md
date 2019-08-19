@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "messages [SQL Server], stored procedure where occurred"
   - "errors [SQL Server], trigger where occurred"
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_PROCEDURE (Transact-SQL)
@@ -43,7 +42,7 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## Return Value  
-When called in a stored procedure CATCH block where an error occurs, `ERROR_PROCEDURE` returns the name of that stored procedure.  
+When called in a CATCH block, `ERROR_PROCEDURE` returns the name of the stored procedure or trigger in which the error originated.
   
 `ERROR_PROCEDURE` returns NULL if the error did not occur within a stored procedure or trigger.  
   

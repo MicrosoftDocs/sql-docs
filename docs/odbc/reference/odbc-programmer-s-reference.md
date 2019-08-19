@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Programmer&#39;s Reference
 The *ODBC Programmer's Reference* contains the following sections.  

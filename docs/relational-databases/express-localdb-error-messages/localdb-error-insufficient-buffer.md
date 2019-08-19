@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_INSUFFICIENT_BUFFER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

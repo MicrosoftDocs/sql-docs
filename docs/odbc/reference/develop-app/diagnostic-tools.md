@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a580492c-1b41-4393-9604-faa0bd28854b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Diagnostic Tools
 Two facilities can assist with diagnosing problems in ODBC applications. Both are available from the ODBC Administrator and implemented by the Driver Manager. *Tracing* provides a means to record to a log file the sequence of function calls. Visual Studio Analyzer allows the analysis of information about the interaction of components in a distributed environment.  

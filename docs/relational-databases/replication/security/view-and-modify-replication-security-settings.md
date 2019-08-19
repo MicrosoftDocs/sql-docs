@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # View and Modify Replication Security Settings
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This topic describes how to view and modify replication security settings in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or Replication Management Objects (RMO). For example, you might want to change the connection of the Log Reader Agent to the Publisher from SQL Server Authentication to Windows Integrated Authentication, or you might need to change the credentials used to run an agent job when the Windows account password has changed. For information about the permissions required by each agent, see [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **In This Topic**  
@@ -65,7 +65,9 @@ manager: craigg
 4.  The **Distributor Properties - \<Distributor>** and **Distribution Database Properties - \<Database>** dialog boxes. For more information about accessing these dialog boxes, see [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 5.  The **Publisher Properties - \<Publisher>** dialog box. For more information about accessing this dialog box, [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To change the password for an account used by one or more agents  
   
 1.  If the account is a SQL Server account, this dialog box will also change the password for the SQL Server account. If the account is a Windows account, change the password in Windows first. For more information, see the Windows documentation.  
@@ -138,9 +140,9 @@ manager: craigg
   
 1.  In the **Subscription Properties - \<Subscription>** dialog box at the Publisher, you can make the following changes:  
   
-    -   To change the account under which the Distribution Agent runs and makes connections to the Distributor, click the **Agent process account** row, and then click the properties (**…**) button in the row. Specify an account and password in the **Distribution Agent Security** dialog box.  
+    -   To change the account under which the Distribution Agent runs and makes connections to the Distributor, click the **Agent process account** row, and then click the properties (**...**) button in the row. Specify an account and password in the **Distribution Agent Security** dialog box.  
   
-    -   To change the context under which the Distribution Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**…**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
+    -   To change the context under which the Distribution Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
          If you use queued updating subscriptions, the Queue Reader Agent also uses the context specified here for connections to the Subscriber.  
   
@@ -150,11 +152,11 @@ manager: craigg
   
 1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, you can make the following changes:  
   
-    -   To change the account under which the Distribution Agent runs and makes connections to the Subscriber, click the **Agent process account** row, and then click the properties (**…**) button in the row. Specify an account and password in the **Distribution Agent Security** dialog box.  
+    -   To change the account under which the Distribution Agent runs and makes connections to the Subscriber, click the **Agent process account** row, and then click the properties (**...**) button in the row. Specify an account and password in the **Distribution Agent Security** dialog box.  
   
          If you use queued updating subscriptions, the Queue Reader Agent also uses the context specified here for connections to the Subscriber.  
   
-    -   To change the context under which the Distribution Agent connects to the Distributor, click the **Distributor Connection** row, and then click the properties (**…**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
+    -   To change the context under which the Distribution Agent connects to the Distributor, click the **Distributor Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -162,9 +164,9 @@ manager: craigg
   
 1.  In the **Subscription Properties - \<Subscription>** dialog box at the Publisher, you can make the following changes:  
   
-    -   To change the account under which the Merge Agent runs and makes connections to the Publisher and Distributor, click the **Agent process account** row, and then click the properties (**…**) button in the row. Specify an account and password in the **Merge Agent Security** dialog box.  
+    -   To change the account under which the Merge Agent runs and makes connections to the Publisher and Distributor, click the **Agent process account** row, and then click the properties (**...**) button in the row. Specify an account and password in the **Merge Agent Security** dialog box.  
   
-    -   To change the context under which the Merge Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**…**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
+    -   To change the context under which the Merge Agent connects to the Subscriber, click the **Subscriber Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -172,15 +174,15 @@ manager: craigg
   
 1.  In the **Subscription Properties - \<Subscription>** dialog box at the Subscriber, you can make the following changes:  
   
-    -   To change the account under which the Merge Agent runs and makes connections to the Subscriber, click the **Agent process account** row, and then click the properties (**…**) button in the row. Specify an account and password in the **Merge Agent Security** dialog box.  
+    -   To change the account under which the Merge Agent runs and makes connections to the Subscriber, click the **Agent process account** row, and then click the properties (**...**) button in the row. Specify an account and password in the **Merge Agent Security** dialog box.  
   
-    -   To change the context under which the Merge Agent connects to the Publisher and Distributor, click the **Publisher Connection** row, and then click the properties (**…**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
+    -   To change the context under which the Merge Agent connects to the Publisher and Distributor, click the **Publisher Connection** row, and then click the properties (**...**) button in the row. Specify the context in the **Enter Connection Information** dialog box.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### To change the account under which the Queue Reader Agent runs  
   
-1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties (**…**) button next to the distribution database.  
+1.  On the **General** page of the **Distributor Properties - \<Distributor>** dialog box, click the properties (**...**) button next to the distribution database.  
   
 2.  In the **Distribution Database Properties - \<Database>** dialog box, click the **Security Settings** button next to the **Agent process account** text box.  
   

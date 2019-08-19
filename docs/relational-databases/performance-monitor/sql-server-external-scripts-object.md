@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, External Scripts Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

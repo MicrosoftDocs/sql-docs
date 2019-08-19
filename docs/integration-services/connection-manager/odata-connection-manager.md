@@ -11,11 +11,14 @@ ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 f1_keywords: 
   - "sql13.dts.designer.odatasource.connectionmanager.f1"
   - "sql13.dts.designer.odataconnectionmanager.f1"
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # OData Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Connect to an OData data source with an OData connection manager. An OData Source component uses an OData connection manager to connect to an OData data source and consume data from the service. For more info, see [OData Source](../../integration-services/data-flow/odata-source.md).  
   
 ## Adding an OData Connection Manager to an SSIS Package  

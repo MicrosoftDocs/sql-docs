@@ -13,7 +13,6 @@ ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # JSON Path Expressions (SQL Server)
@@ -37,6 +36,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 1.  The optional [path mode](#PATHMODE), with a value of **lax** or **strict**.  
   
 2.  The [path](#PATH) itself.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="PATHMODE"></a> Path mode  
  At the beginning of the path expression, optionally declare the path mode by specifying the keyword **lax** or **strict**. The default is **lax**.  

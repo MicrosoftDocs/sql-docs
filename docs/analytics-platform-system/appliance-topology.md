@@ -2,7 +2,6 @@
 title: Appliance topology - Analytics Platform System | Microsoft Docs
 description: Displays summary information on the entire Analytics Platform System.  
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

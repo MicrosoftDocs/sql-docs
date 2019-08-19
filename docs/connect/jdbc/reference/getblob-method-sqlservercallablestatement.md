@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getBlob Method (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

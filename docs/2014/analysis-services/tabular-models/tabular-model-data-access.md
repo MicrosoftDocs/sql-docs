@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
@@ -60,7 +59,7 @@ manager: craigg
   
  Additionally, you can use DAX expressions within the context of an XMLA EXECUTE command statement to send queries to a tabular model that has been deployed in DirectQuery mode.  
   
- For examples of queries on a tabular model using DAX, see [DAX Query Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
+ For examples of queries on a tabular model using DAX, see [DAX Query Syntax Reference](/dax/dax-syntax-reference
   
 ### MDX  
  You can use MDX to create queries against tabular models that use the in-memory cache as the preferred query method (that is, models that have not been deployed in DirectQuery mode). Although clients such as [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] use DAX both for creating aggregations and for querying the model as a data source, if you are familiar with MDX it can be a shortcut to create sample queries in MDX, see [Building Measures in MDX](../multidimensional-models/mdx/mdx-building-measures.md).  

@@ -137,6 +137,6 @@ manager: craigg
  [Move Database Files](move-database-files.md)  
   
 ## See Also  
- [Working with tempdb in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81216)  
+ [Working with tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

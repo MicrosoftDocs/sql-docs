@@ -1,11 +1,10 @@
 ---
 title: "sp_rxPredict | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/20/2018"
+ms.date: "07/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
+ms.technology: machine-learning
   
 ms.topic: "language-reference"
 f1_keywords: 
@@ -15,19 +14,18 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sp_rxPredict procedure"
-author: "HeidiSteen"
-ms.author: "heidist"
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # sp_rxPredict  
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Generates a predicted value for a given input consisting of a machine learning model stored in a binary format in a SQL Server database.
 
 Provides scoring on R and Python machine learning models in near real-time. `sp_rxPredict` is a stored procedure provided as a wrapper for the `rxPredict` R function in [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) and [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), and the [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python function in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). It is written in C++ and is optimized specifically for scoring operations.
 
 Although the model must be created using R or Python, once it is serialized and stored in a binary format on a target database engine instance, it can be consumed from that database engine instance even when R or Python integration is not installed. For more information, see [Real-time scoring with sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
-
 
 ## Syntax
 
@@ -59,11 +57,9 @@ To enable use of the stored procedure, SQLCLR must be enabled on the instance.
 
 The user needs `EXECUTE` permission on the database.
 
-
 ### Supported algorithms
 
 To create and train model, use one of the supported algorithms for R or Python, provided by [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (Standalone)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [SQL Server 2017 Machine Learning Services (R or Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017), or [SQL Server 2017 Server (Standalone) (R or Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
-
 
 #### R: RevoScaleR models
 
@@ -113,7 +109,7 @@ To create and train model, use one of the supported algorithms for R or Python, 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
-  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-referencee/microsoftml/categorical-hash)
+  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
 ### Unsupported model types
 

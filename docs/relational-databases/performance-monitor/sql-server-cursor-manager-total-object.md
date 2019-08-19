@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Cursor Manager Total Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

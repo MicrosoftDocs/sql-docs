@@ -11,11 +11,14 @@ f1_keywords:
   - "sql13.dts.designer.afphivetask.f1"
   - "sql14.dts.designer.afphivetask.f1"
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Azure HDInsight Hive Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Use the **Azure HDInsight Hive Task** to run Hive script on an Azure HDInsight cluster.
      
 To add an **Azure HDInsight Hive Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure HDInsight Hive Task Editor** dialog box.  

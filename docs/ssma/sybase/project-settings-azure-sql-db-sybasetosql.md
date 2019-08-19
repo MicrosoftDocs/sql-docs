@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Project Settings (Azure SQL DB ) (SybaseToSQL)
 The Azure SQL DB project settings let you configure the Azure SQL DB database suffix to be added in the connection dialog and also allow implementing heartbeat mechanism in Azure SQL DB connection.  

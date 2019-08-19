@@ -9,10 +9,13 @@ ms.custom: ""
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ---
 # Schedule the execution of SSIS packages deployed in Azure with SQL Server Management Studio (SSMS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 You can use SQL Server Management Studio (SSMS) to schedule SSIS packages deployed to Azure SQL Database. SQL Server on premises and SQL Database Managed Instance have SQL Server Agent and Managed Instance Agent respectively as a first-class SSIS job scheduler. SQL Database, on the other hand, does not have a built-in first-class SSIS job scheduler. The SSMS feature described in this article provides a familiar user interface that's similar to SQL Server Agent for scheduling packages deployed to SQL Database.
 

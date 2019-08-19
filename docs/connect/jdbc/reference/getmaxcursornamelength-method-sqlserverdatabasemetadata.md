@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getMaxCursorNameLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

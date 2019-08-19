@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Open Condition Dialog Box, Dependent Policies Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

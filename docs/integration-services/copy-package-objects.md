@@ -13,11 +13,14 @@ helpviewer_keywords:
   - "data flow [Integration Services], copying objects"
   - "connection managers [Integration Services], copying"
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Copy Package Objects
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This topic describes how to copy control flow items, data flow items, and connection managers within a package or between packages.  
   
 ### To copy control and data flow items  

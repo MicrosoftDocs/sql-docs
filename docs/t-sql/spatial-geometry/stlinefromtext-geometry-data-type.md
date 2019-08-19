@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STLineFromText (geometry Data Type)"
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STLineFromText (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

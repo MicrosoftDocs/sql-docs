@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

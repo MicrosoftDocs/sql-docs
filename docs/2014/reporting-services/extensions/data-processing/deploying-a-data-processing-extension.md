@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data processing extensions [Reporting Services], deploying"
   - "Extension element"
   - "deploying [Reporting Services], extensions"
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Deploying a Data Processing Extension

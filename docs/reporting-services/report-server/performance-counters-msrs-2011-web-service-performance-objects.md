@@ -1,8 +1,8 @@
 ---
 title: "Performance Counters MSRS 2011 Web Service, Performance Objects | Microsoft Docs"
-ms.date: 03/14/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -15,8 +15,10 @@ helpviewer_keywords:
   - "counters [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+
 ---
 # Performance Counters MSRS 2011 Web Service, Performance Objects
   This topic describes performance counters for the **MSRS 2011 Web Service** and **MSRS 2011 Windows Service** performance objects. These objects are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Native Mode deployment.  
@@ -106,7 +108,7 @@ ms.author: maghan
 |**Total Snapshot Updates**|Total number of updates for report execution snapshots|  
   
 ##  <a name="bkmk_powershell"></a> Use PowerShell Cmdlets to return lists  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script returns the counter sets where the CounterSetName starts with "msr":  
+ ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")The following Windows PowerShell script returns the counter sets where the CounterSetName starts with "msr":  
   
 ```  
 get-counter -listset msr*  

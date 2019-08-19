@@ -1,7 +1,7 @@
 ---
 title: "OLE DB Connection Manager | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -15,11 +15,14 @@ helpviewer_keywords:
   - "connection managers [Integration Services], OLE DB"
   - "connections [Integration Services], OLE DB"
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # OLE DB Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An OLE DB connection manager enables a package to connect to a data source by using an OLE DB provider. For example, an OLE DB connection manager that connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 > [!NOTE]
@@ -81,6 +84,88 @@ manager: craigg
  **Delete**  
  Select a data connection, and then delete it by using the **Delete** button.  
   
+### Managed Identities for Azure Resources Authentication
+When running SSIS packages on [Azure-SSIS integration runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), you can use the [managed identity](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) that is associated with your data factory for Azure SQL Database (or Managed Instance) authentication. The designated factory can access and copy data from or to your database by using this identity.
+
+> [!NOTE]
+>  When you use Azure AD authentication (including managed identity authentication) to connect to Azure SQL Database (or Managed Instance), there are known issues which may result in package execution failure or unexpected behavior change. Refer to [Azure AD features and limitations](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations) for more information.
+
+To use managed identity authentication for Azure SQL Database, follow these steps to configure your database:
+
+1. **Create a group in Azure AD.** Make the managed identity a member of the group.
+    
+   1. [Find the data factory managed identity from the Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Go to your data factory's **Properties**. Copy the **Managed Identity Object ID**.
+    
+   1. Install the [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2) module. Sign in by using the `Connect-AzureAD` command. Run the following commands to create a group and add the managed identity as a member.
+      ```powershell
+      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
+      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
+      ```
+    
+1. **[Provision an Azure Active Directory administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)** for your Azure SQL server on the Azure portal if you haven't already done so. The Azure AD administrator can be an Azure AD user or Azure AD group. If you grant the group with managed identity an admin role, skip steps 3 and 4. The administrator will have full access to the database.
+
+1. **[Create contained database users](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)** for the Azure AD group. Connect to the database from or to which you want to copy data by using tools like SSMS, with an Azure AD identity that has at least ALTER ANY USER permission. Run the following T-SQL: 
+    
+    ```sql
+    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    ```
+
+1. **Grant the Azure AD group needed permissions** as you normally do for SQL users and others. Refer to [Database-Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) for appropriate roles.  For example, run the following code:
+
+    ```sql
+    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    ```
+
+To use managed identity authentication for Azure SQL Database Managed Instance, follow these steps to configure your database:
+    
+1. **[Provision an Azure Active Directory administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)** for your managed instance on the Azure portal if you haven't already done so. The Azure AD administrator can be an Azure AD user or Azure AD group. If you grant the group with managed identity an admin role, skip steps 2-5. The administrator will have full access to the database.
+
+1. **[Find the data factory managed identity from the Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)**. Go to your data factory's **Properties**. Copy the **Managed Identity Application ID** (NOT **Managed Identity Object ID**).
+
+1. **Convert the data factory managed identity to binary type**. Connect to **master** database in your managed instance by using tools like SSMS, with your SQL/Active Directory admin account. Run the following T-SQL against **master** database to get your managed identity application ID as binary:
+    
+    ```sql
+    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
+    select CAST(@applicationId AS varbinary)
+    ```
+
+1. **Add the data factory managed identity as a user** in Azure SQL Database Managed Instance. Run the following T-SQL against **master** database:
+    
+    ```sql
+    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    ```
+
+1. **Grant the data factory managed identity needed permissions**. Refer to [Database-Level Roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) for appropriate roles. Run the following T-SQL against the database from or to which you want to copy data:
+
+    ```sql
+    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
+    ```
+
+Then **configure OLE DB provider** for the OLE DB connection manager. There are two options to do this.
+    
+1. Configure at design time. In SSIS Designer, double-click the OLE DB connection manager to open the **Connection Manager** window. In the **Provider** drop-down list, select [**Microsoft OLE DB Driver for SQL Server**](https://go.microsoft.com/fwlink/?linkid=871294).
+    > [!NOTE]
+    >  Other providers in the drop-down list MIGHT NOT support managed identity authentication.
+    
+1. Configure at run time. When you execute the package via [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) or [Azure Data Factory Execute SSIS Package activity](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity), find the connection manager property **ConnectionString** for the OLE DB connection manager and update the connection property **Provider** to **MSOLEDBSQL** (i.e, Microsoft OLE DB Driver for SQL Server).
+    ```vb
+    Data Source=serverName;Initial Catalog=databaseName;Provider=MSOLEDBSQL;...
+    ```
+
+Finally **configure managed identity authentication** for the OLE DB connection manager. There are two options to do this.
+    
+1. Configure at design time. In SSIS Designer, right-click the OLE DB connection manager and click **Properties** to open the **Properties Window**. Update the property **ConnectUsingManagedIdentity** to **True**.
+    > [!NOTE]
+    >  Currently the connection manager property **ConnectUsingManagedIdentity** DOES NOT take effect (indicating that managed identity authentication does not work) when you run SSIS package in SSIS Designer or [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
+
+1. Configure at run time. When you execute the package via SSMS or Execute SQL Package activity, find the OLE DB connection manager and update its property **ConnectUsingManagedIdentity** to **True**.
+    > [!NOTE]
+    >  In Azure-SSIS integration runtime, all other authentication methods (e.g., integrated security, password) preconfigured on the OLE DB connection manager will be **overridden** when managed identity authentication is used to establish database connection.
+
+> [!NOTE]
+>  To configure managed identity authentication on existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) at least once and redeploy that SSIS project to your Azure-SSIS integration runtime so that the new connection manager property **ConnectUsingManagedIdentity** will automatically be added to all OLE DB connection managers in your SSIS project. The alternative way is to directly use property override with property path **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** at run time.
+
 ## See Also    
  [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)     

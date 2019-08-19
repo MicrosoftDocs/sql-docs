@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
@@ -165,7 +164,7 @@ manager: craigg
      ![Filter and Data panes of Cube Designer](../../2014/tutorials/media/l5-many-to-many-5.gif "Filter and Data panes of Cube Designer")  
   
 ## Next Task in Lesson  
- [Defining Dimension Granularity within a Measure Group](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+ [Defining Dimension Granularity within a Measure Group](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## See Also  
  [Work with Diagrams in Data Source View Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   

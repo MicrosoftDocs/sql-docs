@@ -1,16 +1,16 @@
 ---
-title: Performance tuning for data optimization - SQL Server Machine Learning Services
+title: Performance tuning for data optimization
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 04/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Performance for R Services - data optimization
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article is the third in a series that describes performance optimization for R Services based on two case studies. This article discusses performance optimizations for R or Python scripts that run in SQL Server. It also describes methods that you can use to update your R code, both to boost performance and to avoid known issues.
 

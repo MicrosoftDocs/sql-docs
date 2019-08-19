@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # WMI Provider for Configuration Management Classes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

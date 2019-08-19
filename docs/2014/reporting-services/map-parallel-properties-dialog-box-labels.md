@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.mapparallelproperties.labels.f1"
   - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Map Parallel Properties Dialog Box, Labels

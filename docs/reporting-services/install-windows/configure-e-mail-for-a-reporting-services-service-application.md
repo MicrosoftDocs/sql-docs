@@ -6,8 +6,8 @@ ms.prod_service: "reporting-services-sharepoint"
 
 ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure E-mail for a Reporting Services Service Application

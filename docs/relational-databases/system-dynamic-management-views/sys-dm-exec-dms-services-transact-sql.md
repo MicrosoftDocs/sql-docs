@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 6ac47eef-4293-46b8-8555-07a614837504
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_dms_services (Transact-SQL)

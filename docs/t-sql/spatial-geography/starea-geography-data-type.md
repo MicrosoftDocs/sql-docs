@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STArea method"
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STArea (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.chooseadestination.f1"
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Choose a Destination (SQL Server Import and Export Wizard)

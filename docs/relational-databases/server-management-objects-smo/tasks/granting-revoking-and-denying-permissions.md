@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "permissions [SMO]"
   - "revoking permissions [SMO]"
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Granting, Revoking, and Denying Permissions

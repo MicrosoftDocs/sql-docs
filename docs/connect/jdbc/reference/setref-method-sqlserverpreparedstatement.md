@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 1a09bbf9-6f8f-4a21-85d2-2182111b5ce7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setRef Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # C to SQL: Date
 The identifier for the date ODBC C data type is:  

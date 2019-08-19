@@ -12,11 +12,14 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "connection managers [Integration Services], Excel"
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Loop through Excel Files and Tables by Using a Foreach Loop Container
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The procedures in this topic describe how to loop through the Excel workbooks in a folder, or through the tables in an Excel workbook, by using the Foreach Loop container with the appropriate enumerator.  
 
 > [!IMPORTANT]

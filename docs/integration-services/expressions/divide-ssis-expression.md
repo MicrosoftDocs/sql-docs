@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "/ (divide)"
   - "divide operator (/)"
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Divide (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Divides the first numeric expression by the second one.  
   
 ## Syntax  

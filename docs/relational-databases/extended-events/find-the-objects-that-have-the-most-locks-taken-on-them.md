@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords: 
   - "objects [SQL Server], extended events"
   - "xe"
@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find the Objects That Have the Most Locks Taken on Them
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Database administrators often need to identify the source of locks that are hindering database performance.  

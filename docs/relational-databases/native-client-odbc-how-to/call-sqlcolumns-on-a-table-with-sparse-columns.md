@@ -11,7 +11,6 @@ ms.topic: "reference"
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Call SQLColumns on a Table with Sparse Columns

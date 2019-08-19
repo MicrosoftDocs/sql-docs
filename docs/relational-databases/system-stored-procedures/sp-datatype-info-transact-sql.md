@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -35,10 +34,10 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## Arguments  
- [ **@data_type=** ] *data_type*  
+`[ @data_type = ] data_type`
  Is the code number for the specified data type. To obtain a list of all data types, omit this parameter. *data_type* is **int**, with a default of 0.  
   
- [ **@ODBCVer=** ] *odbc_version*  
+`[ @ODBCVer = ] odbc_version`
  Is the version of ODBC that is used. *odbc_version* is **tinyint**, with a default of 2.  
   
 ## Return Code Values  

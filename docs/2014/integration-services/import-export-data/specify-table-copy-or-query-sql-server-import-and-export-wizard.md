@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.specifytablecopyorquery.f1"
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)

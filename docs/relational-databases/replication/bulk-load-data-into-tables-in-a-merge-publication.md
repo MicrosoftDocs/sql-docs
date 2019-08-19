@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Bulk-Load Data into Tables in a Merge Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

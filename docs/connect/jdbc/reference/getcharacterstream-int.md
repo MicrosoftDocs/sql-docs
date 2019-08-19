@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: eb20714b-52bc-4b6c-b23f-c9c3c9d73783
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getCharacterStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

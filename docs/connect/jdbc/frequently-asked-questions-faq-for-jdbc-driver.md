@@ -1,7 +1,7 @@
 ---
-title: "Frequently Asked Questions (FAQ) for JDBC Driver | Microsoft Docs"
+title: "Frequently asked questions (FAQ) for JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/06/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,33 +10,40 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Frequently Asked Questions (FAQ) for JDBC Driver
+# Frequently asked questions (FAQ) for JDBC driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This page provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 **How can I help improve the JDBC Driver?**  
 The JDBC Driver is open-source and the source code can be found on [GitHub](https://github.com/microsoft/mssql-jdbc). You can help improve the driver by filing issues and contributing to the code base.
 
 **Which versions of SQL Server and Java do the driver support?**  
-See the [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.
+See the [Microsoft JDBC Driver for SQL Server support matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) page for details.
 
 **What is the difference between the JDBC driver packages available on the Microsoft Download Center and the JDBC driver available on GitHub?**  
 The JDBC driver files available on the GitHub repository for the Microsoft JDBC driver are the core of the JDBC driver and are under the open-source license listed in the repository. The driver packages on the Microsoft Download Center include additional libraries for Windows-integrated authentication and enabling XA transactions with the JDBC driver. Those additional libraries are under the license included with the downloadable package.
 
 **What should I know when upgrading my driver?**
+ The Microsoft JDBC Driver 7.4 supports the JDBC 4.2, and 4.3 (partially) specifications and includes three JAR class libraries in the installation package as follows:
+
+| JAR                        | JDBC Specification            | JDK Version |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.4.1.jre12.jar | JDBC 4.3 (partially), and 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+
  The Microsoft JDBC Driver 7.2 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-7.2.1.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
-| mssql-jdbc-7.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
  The Microsoft JDBC Driver 7.0 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
 
@@ -130,6 +137,6 @@ For customers who are using SAP products and require JRE 1.4 support, you may co
 **Can the driver communicate using FIPS validated algorithms?**  
 The Microsoft JDBC Driver does not contain any cryptographic algorithms. If a customer leverages operating system, application, and JVM algorithms that are deemed acceptable by Federal Information Processing Standards (FIPS) and configures the driver to use those algorithms then the driver uses only the designated algorithms for communication.
 
-## See Also
+## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Jet SQLConfigDataSource (Excel Driver)
 > [!NOTE]  

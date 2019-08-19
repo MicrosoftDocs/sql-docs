@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_OAMethod objecttoken , methodname
   
 -   The method returns an array as an output parameter.  
   
- [ _@parametername_**=** ] *parameter*[ **OUTPUT** ]  
+`[ _@parametername = ] parameter[ OUTPUT ]`
  Is a method parameter. If specified, *parameter* must be a value of the appropriate data type.  
   
  To obtain the return value of an output parameter, *parameter* must be a local variable of the appropriate data type, and **OUTPUT** must be specified. If a constant parameter is specified, or if **OUTPUT** is not specified, any return value from an output parameter is ignored.  
@@ -101,7 +100,7 @@ sp_OAMethod objecttoken , methodname
  You can also use **sp_OAMethod** to get a property value.  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
   

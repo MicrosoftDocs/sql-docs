@@ -2,14 +2,14 @@
 title: "RsReportServer.config Configuration File | Microsoft Docs"
 ms.date: 06/12/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # RsReportServer.config Configuration File
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** file stores settings that are used by the Report Server Web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the RSReportServer.config file. Both Native mode and SharePoint mode report servers use the RSReportServer.config, however the two modes do not use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This topic describes the default configuration file that is installed for Native mode and SharePoint mode and some of the important settings and behaviors that are controlled by the configuration file.  
@@ -234,7 +234,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |**ExcludedRenderFormats**, **RenderingExtension**|These settings are used to intentionally exclude export formats that do not work well with file share delivery. These formats are typically used for interactive reporting, preview, or to preload the report cache. They do not produce application files that can be easily viewed from a desktop application.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Report Server E-mail Extension Configuration Settings  
- Report Server Email uses an SMTP network device to send reports to e-mail addresses. This delivery extension must be configured before it can be used. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) and [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ Report Server Email uses an SMTP network device to send reports to e-mail addresses. This delivery extension must be configured before it can be used. For more information, see [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Setting|Description|  
 |-------------|-----------------|  

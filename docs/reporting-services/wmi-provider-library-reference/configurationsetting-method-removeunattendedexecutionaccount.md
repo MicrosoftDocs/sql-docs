@@ -2,7 +2,7 @@
 title: "ConfigurationSetting Method - RemoveUnattendedExecutionAccount | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "RemoveUnattendedExecutionAccount method"
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - RemoveUnattendedExecutionAccount
   Deletes the unattended execution account entry from the report server configuration file.  

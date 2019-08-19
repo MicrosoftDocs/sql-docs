@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## Arguments  
- [ **@dsn =**] **'***dsn***'**  
+`[ @dsn = ] 'dsn'`
  Is the name of the ODBC DSN or OLE DB linked server. *dsn* is **varchar(128)**, with no default.  
   
- [ **@infotype =**] **'***info_type***'**  
+`[ @infotype = ] 'info_type'`
  Is the type of information to return. If *info_type* is not specified or if NULL is specified, all information types are returned. *info_type* is **varchar(128)**, with a default of NULL, and can be one of these values.  
   
 |Value|Description|  
@@ -49,13 +48,13 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Specifies the database name.|  
 |**SQL_SUBSCRIBER**|Specifies the data source can be a Subscriber.|  
   
- [ **@login =**] **'***login***'**  
+`[ @login = ] 'login'`
  Is the login for the data source. If the data source includes a login, specify NULL or omit the parameter. *login*is **varchar(128)**, with a default of NULL.  
   
- [ **@password =**] **'***password***'**  
+`[ @password = ] 'password'`
  Is the password for the login. If the data source includes a login, specify NULL or omit the parameter. *password*is **varchar(128)**, with a default of NULL.  
   
- [ **@dso_type=**] *dso_type*  
+`[ @dso_type = ] dso_type`
  Is the data source type. *dso_type* is **int**, and can be one of these values.  
   
 |Value|Description|  

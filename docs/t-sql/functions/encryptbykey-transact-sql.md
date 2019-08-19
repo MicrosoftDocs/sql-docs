@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], ENCRYPTBYKEY function"
   - "ENCRYPTBYKEY function"
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

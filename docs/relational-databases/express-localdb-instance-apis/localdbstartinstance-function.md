@@ -15,7 +15,6 @@ apitype: "DLLExport"
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBStartInstance Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

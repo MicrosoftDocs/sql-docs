@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

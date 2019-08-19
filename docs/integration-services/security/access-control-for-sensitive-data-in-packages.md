@@ -21,11 +21,14 @@ helpviewer_keywords:
   - "cryptography [Integration Services]"
   - "security [Integration Services], protection levels"
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Access Control for Sensitive Data in Packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To protect the data in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can set a protection level that helps protect just sensitive data or all the data in the package. Furthermore, you can encrypt this data with a password or a user key, or rely on the database to encrypt the data. Also, the protection level that you use for a package is not necessarily static, but changes throughout the life cycle of the package. You often set one protection level during development and another as soon as you deploy the package.  
   
 > [!NOTE]  

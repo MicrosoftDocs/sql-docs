@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DEADLOCK_PRIORITY (Transact-SQL)

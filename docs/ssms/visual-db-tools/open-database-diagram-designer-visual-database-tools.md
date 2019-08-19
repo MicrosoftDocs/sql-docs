@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], Database Diagram Designer"
   - "diagrams [SQL Server], Database Diagram Designer"
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Open Database Diagram Designer (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

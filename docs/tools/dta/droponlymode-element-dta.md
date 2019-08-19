@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DropOnlyMode element"
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # DropOnlyMode Element (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

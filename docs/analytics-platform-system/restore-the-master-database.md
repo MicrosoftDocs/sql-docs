@@ -2,7 +2,6 @@
 title: Restore master database - Analytics Platform System | Microsoft Docs
 description: Restore the master database in Analytics Platform System.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

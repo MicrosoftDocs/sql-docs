@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

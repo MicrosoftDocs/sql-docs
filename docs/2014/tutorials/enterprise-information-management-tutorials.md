@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

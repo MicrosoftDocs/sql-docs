@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Data-tier Application Tables - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -3,11 +3,10 @@ title: Deploy a SQL Server Always On availability group on a Kubernetes cluster
 description: This article explains the parameters for the SQL Server Kubernetes Always On availability group operator global requirements
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
@@ -31,7 +30,7 @@ On Kubernetes, the deployment includes a SQL Server operator, the SQL Server con
 > [!NOTE]
 > You can use any type of Kubernetes cluster. To create a Kubernetes cluster on Azure Kubernetes Service (AKS), see [Create an AKS cluster](https://docs.microsoft.com/azure/aks/create-cluster).
 >
-> Use the latest version of Kubernetes. The specific version depends on your subscription and region. See [Supported Kubernetes versions in AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions).  
+> Use the latest version of Kubernetes. The specific version depends on your subscription and region. See [Supported Kubernetes versions in AKS](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions).  
 >
 > The following script creates a four-node Kubernetes cluster in Azure. Before you run the script replace `<latest version>` with the latest available version. For example `1.12.5`.
 >

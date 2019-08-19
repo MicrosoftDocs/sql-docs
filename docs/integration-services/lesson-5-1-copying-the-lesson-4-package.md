@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Lesson 5-1: Copy the Lesson 4 package
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In this task, you create a copy of the **Lesson 4.dtsx** package from Lesson 4. If you did not complete lesson 4, you can add the completed lesson 4 package that is included with the tutorial to the project, and then make a copy of it to work with. You use this new copy throughout the rest of Lesson 5.  
   

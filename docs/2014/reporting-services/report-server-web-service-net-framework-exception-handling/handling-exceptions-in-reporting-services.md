@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SOAP [Reporting Services], exceptions"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "exceptions [Reporting Services], about exception handling"
   - "SoapException object"
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Handling Exceptions in Reporting Services

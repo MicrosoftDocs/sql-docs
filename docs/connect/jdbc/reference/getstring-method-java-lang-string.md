@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getString Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

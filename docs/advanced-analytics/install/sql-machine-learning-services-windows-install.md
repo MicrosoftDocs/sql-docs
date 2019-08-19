@@ -1,30 +1,28 @@
 ---
-title: Install SQL Server Machine Learning Services (In-Database) on Windows - SQL Server Machine Learning
-description: R in SQL Server or Python on SQL Server installation steps for SQL Server 2017 Machine Learning Services on Windows.
+title: Install SQL Server Machine Learning Services (In-Database) on Windows
+description: R in SQL Server or Python on SQL Server installation steps for SQL Server Machine Learning Services on Windows.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Machine Learning Services on Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Starting in SQL Server 2017, R and Python support for in-database analytics is provided in **SQL Server Machine Learning Services**, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
-
 This article explains how to install the machine learning component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the on-screen prompts.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ SQL Server 2017 (or greater) Setup is required if you want to install Machine Learning Services with R, Python, or Java language support. If instead you have SQL Server 2016 installation media, you can  install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
++ SQL Server 2017 (or greater) Setup is required if you want to install Machine Learning Services with R or Python language support. If instead you have SQL Server 2016 installation media, you can  install [SQL Server R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
 
 + A database engine instance is required. You cannot install just R or Python features, although you can add them incrementally to an existing instance.
 
-+ For business continuity, [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Machine Learning Services. You have to install Machine Learning Services, and configure packages, on each node.
++ For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Machine Learning Services. You have to install Machine Learning Services, and configure packages, on each node.
 
 + Installing Machine Learning Services is *not supported* on a failover cluster in SQL Server 2017. However, it *is supported* with SQL Server 2019. 
  
@@ -48,7 +46,7 @@ This article explains how to install the machine learning component by running t
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-1. Start the setup wizard for SQL Server 2017. You can download 
+1. Start the setup wizard for SQL Server 2017. 
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
@@ -121,13 +119,13 @@ This step requires a server restart. If you are about to enable script execution
     > [!TIP]
     > You can download and install the appropriate version from this page: [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > You can also try out the preview release of [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
+    > You can also use [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
   
 2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
 
-   ```sql
-   sp_configure
-   ```
+    ```sql
+    sp_configure
+    ```
 
     The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
     
@@ -192,21 +190,13 @@ Use the following steps to verify that all components used to launch external sc
     GO
     ```
 
- **Results**
+    **Results**
 
     The script can take a little while to run, the first time the external script runtime is loaded. The results should be something like this:
 
     | hello |
     |----|
     | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
 
 > [!NOTE]
 > Columns or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
@@ -247,6 +237,11 @@ At the instance level, additional configuration might include:
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Create a login for SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [Manage disk quotas](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+In SQL Server 2019 on Windows, the isolation mechanism has changed. This affects **SQLRUserGroup**, firewall rules, file permission, and implied authentication. For more information, see [Isolation changes for Machine Learning Services](sql-server-machine-learning-services-2019.md).
+::: moniker-end
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
@@ -262,9 +257,11 @@ On the database, you might need the following configuration updates:
 
 Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### Add more worker accounts
 
 If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
+::: moniker-end
 
 ### Optimize the server for script execution
 
@@ -286,8 +283,7 @@ The R solutions you create for SQL Server can call basic R functions, functions 
 
 Packages that you want to use from SQL Server must be installed in the default library that is used by the instance. If you have a separate installation of R on the computer, or if you installed packages to user libraries, you won't be able to use those packages from T-SQL.
 
-The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
-
+To install and manage R packages, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## Next steps
 

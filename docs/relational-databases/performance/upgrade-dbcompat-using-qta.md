@@ -20,7 +20,7 @@ ms.author: pelopes
 manager: amitban
 ---
 # Upgrading Databases by using the Query Tuning Assistant
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 When migrating from an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer, and [upgrading the database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest available, a workload may be exposed to the risk of performance regression. This is also possible to a lesser degree when upgrading between [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and any newer version.
 

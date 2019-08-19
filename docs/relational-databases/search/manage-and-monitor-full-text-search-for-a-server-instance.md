@@ -1,19 +1,17 @@
 ---
 title: "Manage and Monitor Full-Text Search for a Server Instance | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], server management"
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
@@ -34,7 +32,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 1.  In Object Explorer, right-click a server, and then click **Properties**.  
   
 2.  In the **Server Properties** dialog box, click the **Advanced** page to view server information about full-text search. The full-text properties are as follows:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **Default Full-Text Language**  
   
          Specifies a default language for full-text indexed columns. Linguistic analysis of full-text indexed data is dependent on the language of the data. The default value of this option is the language of the server. For the language that corresponds to the displayed setting, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  

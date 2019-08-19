@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Basic Always On availability groups for a single database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +22,7 @@ manager: craigg
 ## Limitations  
  Basic availability groups use a subset of features compared to advanced availability groups on SQL Server 2016 Enterprise Edition. Basic availability groups include the following limitations:  
   
-- Limit of two replicas (primary and secondary).  
+- Limit of two replicas (primary and secondary). Basic availabililty groups for SQL Server 2017 on Linux support an additional configuration only replica.
   
 - No read access on secondary replica.  
   

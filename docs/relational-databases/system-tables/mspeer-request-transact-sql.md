@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSpeer_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

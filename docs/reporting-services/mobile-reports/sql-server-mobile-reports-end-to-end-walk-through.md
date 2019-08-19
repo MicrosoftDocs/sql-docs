@@ -8,8 +8,8 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # SQL Server mobile reports: End-to-end walk-through
 Walk through creating mobile reports for any screen size with [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] on the [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] web portal, and viewing them in the Power BI mobile apps.
@@ -33,7 +33,7 @@ To follow along, you need these products:
 *  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) page.
 * To view the result: 
   *   [Sign up for the Power BI service](https://go.microsoft.com/fwlink/?LinkID=513879) and
-  *  [Download the Power BI mobile app](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
+  *  [Download the Power BI mobile app](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
 
   
 ## Create a shared data source  

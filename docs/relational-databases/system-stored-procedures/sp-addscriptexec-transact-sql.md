@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,20 +34,20 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@scriptfile=** ] **'**_scriptfile_**'**  
+`[ @scriptfile = ] 'scriptfile'`
  Is the full path to the SQL script file. *scriptfile* is **nvarchar(4000)**, with no default.  
   
- [ **@skiperror=** ] **'**_skiperror_**'**  
+`[ @skiperror = ] 'skiperror'`
  Indicates whether the Distribution Agent or Merge Agent should stop when an error is encountered during script processing. *SkipError* is **bit**, with a default of 0.  
   
  **0** = the agent will stop.  
   
  **1** = the agent continues the script and ignores the error.  
   
- [ **@publisher=** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

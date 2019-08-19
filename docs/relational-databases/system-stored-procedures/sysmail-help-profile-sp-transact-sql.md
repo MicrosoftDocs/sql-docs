@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +33,10 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The profile id to return information for. *profile_id* is **int**, with a default of NULL.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The profile name to return information for. *profile_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

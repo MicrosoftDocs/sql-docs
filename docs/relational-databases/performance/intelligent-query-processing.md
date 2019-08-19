@@ -2,7 +2,7 @@
 title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: ""
-ms.date: 03/05/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -11,18 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords: 
 author: "joesackmsft"
 ms.author: "josack"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Intelligent query processing in SQL databases
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-The intelligent query processing (QP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort. 
+The intelligent query processing (IQP) feature family includes features with broad impact that improve the performance of existing workloads with minimal implementation effort to adopt. 
 
-![Intelligent Query Processing](./media/3_iqpfeaturefamily.png)
+![Intelligent Query Processing](./media/iqp-feature-family.png)
 
-You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database.  You can set this using Transact-SQL. For example:  
+You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database. You can set this using [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -32,132 +31,23 @@ The following table details all intelligent query processing features, along wit
 
 | **IQP Feature** | **Supported in Azure SQL Database** | **Supported in SQL Server** |**Description** |
 | --- | --- | --- |--- |
-| [Adaptive Joins (Batch Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|Adaptive joins dynamically select a join type during runtime based on actual input rows.|
-| [Approximate Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Yes, public preview| Yes, starting in SQL Server 2019 CTP 2.0, public preview|Provide approximate COUNT DISTINCT for big data scenarios with the benefit of high performance and a low memory footprint. |
-| [Batch Mode on Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|Provide batch mode for CPU-bound relational DW workloads without requiring columnstore indexes.  | 
-| [Interleaved Execution](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|Use the actual cardinality of the multi-statement table valued function encountered on first compilation instead of a fixed guess.|
-| [Memory Grant Feedback (Batch Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Yes, under compatibility level 140| Yes, starting in SQL Server 2017 under compatibility level 140|If a batch mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% memory, reduce the memory grant side for consecutive executions.|
-| [Memory Grant Feedback (Row Mode)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|If a row mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% memory, reduce the memory grant side for consecutive executions.|
-| [Scalar UDF Inlining](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | No | Yes, starting in SQL Server 2019 CTP 2.1 under compatibility level 150, public preview|Scalar UDFs are transformed into equivalent relational expressions that are “inlined” into the calling query, often resulting in significant performance gains.|
-| [Table Variable Deferred Compilation](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Yes, under compatibility level 150, public preview| Yes, starting in SQL Server 2019 CTP 2.0 under compatibility level 150, public preview|Use the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
+| [Adaptive Joins (Batch Mode)](#batch-mode-adaptive-joins) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|Adaptive joins dynamically select a join type during runtime based on actual input rows.|
+| [Approximate Count Distinct](#approximate-query-processing) | Yes, public preview| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Provide approximate COUNT DISTINCT for big data scenarios with the benefit of high performance and a low memory footprint. |
+| [Batch Mode on Rowstore](#batch-mode-on-rowstore) | Yes, under compatibility level 150, public preview| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 under compatibility level 150, public preview|Provide batch mode for CPU-bound relational DW workloads without requiring columnstore indexes.  | 
+| [Interleaved Execution](#interleaved-execution-for-mstvfs) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|Use the actual cardinality of the multi-statement table valued function encountered on first compilation instead of a fixed guess.|
+| [Memory Grant Feedback (Batch Mode)](#batch-mode-memory-grant-feedback) | Yes, under compatibility level 140| Yes, starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] under compatibility level 140|If a batch mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant side for consecutive executions.|
+| [Memory Grant Feedback (Row Mode)](#row-mode-memory-grant-feedback) | Yes, under compatibility level 150, public preview| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 under compatibility level 150, public preview|If a row mode query has operations that spill to disk, add more memory for consecutive executions. If a query wastes > 50% of the memory allocated to it, reduce the memory grant side for consecutive executions.|
+| [Scalar UDF Inlining](#scalar-udf-inlining) | No | Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 under compatibility level 150, public preview|Scalar UDFs are transformed into equivalent relational expressions that are "inlined" into the calling query, often resulting in significant performance gains.|
+| [Table Variable Deferred Compilation](#table-variable-deferred-compilation) | Yes, under compatibility level 150, public preview| Yes, starting in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 under compatibility level 150, public preview|Use the actual cardinality of the table variable encountered on first compilation instead of a fixed guess.|
 
-## Batch mode adaptive joins
+## Batch mode Adaptive joins
+The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned, by using a single cached plan. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.
 
-With this feature, your plan can dynamically switch to a better join strategy during execution by using a single cached plan.
-
-The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.
-Here's how it works:
--  If the row count of the build join input is small enough that a nested loop join would be more optimal than a Hash Join, your plan switches to a Nested Loops algorithm.
--  If the build join input exceeds a specific row count threshold, no switch occurs and your plan continues with a Hash Join.
-
-The following query is used to illustrate an Adaptive Join example:
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-The query returns 336 rows. Enabling [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md), we see the following plan:
-
-![Query result 336 rows](./media/4_AQPStats336Rows.png)
-
-In the plan, we see the following:
-1. We have a columnstore index scan used to provide rows for the hash join build phase.
-1. We have the new Adaptive Join operator. This operator defines a threshold that is used to decide when to switch to a Nested Loops plan. For our example, the threshold is 78 rows. Anything with &gt;= 78 rows will use a Hash Join. If less than the threshold, a Nested Loops Join will be used.
-1. Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard Hash Join operation. Notice that Live Query Statistics shows rows flowing through the operators - in this case "672 of 672".
-1. And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see "0 of 336" rows displayed (the branch is unused).
- Now contrast the plan with the same query, but this time for a *Quantity* value that only has one row in the table:
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-The query returns one row. Enabling Live Query Statistics we see the following plan:
-
-![Query result one row](./media/5_AQPStatsOneRow.png)
-
-In the plan, we see the following:
-- With one row returned, the Clustered Index Seek now has rows flowing through it.
-- And since the Hash Join build phase did not continue, there are no rows flowing through the second branch.
-
-### Adaptive Join benefits
-Workloads with frequent oscillations between small and large join input scans will benefit most from this feature.
-
-### Adaptive Join overhead
-Adaptive joins introduce a higher memory requirement than an indexed Nested Loops Join equivalent plan. The additional memory is requested as if the Nested Loops was a Hash Join. There is also overhead for the build phase as a stop-and-go operation versus a Nested Loops streaming equivalent join. With that additional cost comes flexibility for scenarios where row counts may fluctuate in the build input.
-
-### Adaptive Join caching and re-use
-Batch mode Adaptive Joins work for the initial execution of a statement, and once compiled, consecutive executions will remain adaptive based on the compiled Adaptive Join threshold and the runtime rows flowing through the build phase of the outer input.
-
-### Tracking Adaptive Join activity
-The Adaptive Join operator has the following plan operator attributes:
-
-| Plan attribute | Description |
-|--- |--- |
-| AdaptiveThresholdRows | Shows the threshold use to switch from a hash join to nested loop join. |
-| EstimatedJoinType | What the join type is likely to be. |
-| ActualJoinType | In an actual plan, shows what join algorithm was ultimately chosen based on the threshold. |
-
-The estimated plan shows the Adaptive Join plan shape, along with a defined Adaptive Join threshold and estimated join type.
-
-### Adaptive join and Query Store interoperability
-Query Store captures and is able to force a batch mode Adaptive Join plan.
-
-### Adaptive join eligible statements
-A few conditions make a logical join eligible for a batch mode Adaptive Join:
-- The database compatibility level is 140.
-- The query is a SELECT statement (data modification statements are currently ineligible).
-- The join is eligible to be executed both by an indexed Nested Loops Join or a Hash Join physical algorithm.
-- The Hash Join uses batch mode - either through the presence of a Columnstore index in the query overall or a Columnstore indexed table being referenced directly by the join.
-- The generated alternative solutions of the Nested Loops Join and Hash Join should have the same first child (outer reference).
-
-### Adaptive joins and nested loop efficiency
-If an Adaptive Join switches to a Nested Loops operation, it uses the rows already read by the Hash Join build. The operator does **not** re-read the outer reference rows again.
-
-### Adaptive threshold rows
-The following chart shows an example intersection between the cost of a Hash Join versus the cost of a Nested Loops Join alternative.  At this intersection point, the threshold is determined that in turn determines the actual algorithm used for the join operation.
-
-![Join threshold](./media/6_AQPJoinThreshold.png)
-
-### Disabling adaptive joins without changing the compatibility level
-
-Adaptive joins can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  
-To disable adaptive joins for all query executions originating from the database, execute the following within the context of the applicable database:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-When enabled, this setting will appear as enabled in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
-To re-enable adaptive joins for all query executions originating from the database, execute the following within the context of the applicable database:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-You can also disable adaptive joins for a specific query by designating `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` as a [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint). For example:
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
+For more information, see [Understanding Adaptive joins](../../relational-databases/performance/joins.md#adaptive).
 
 ## Batch mode memory grant feedback
-A query's post-execution plan in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan.  When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
-The following graph shows one example of using batch mode adaptive memory grant feedback. For the first execution of the query, duration was **88 seconds** due to high spills:   
+A query's post-execution plan in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan. When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
+The following graph shows one example of using batch mode adaptive memory grant feedback. For the first execution of the query, duration was **88 seconds** due to high spills:   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -171,23 +61,23 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![High spills](./media/2_AQPGraphHighSpills.png)
 
-With memory grant feedback enabled, for the second execution, duration is **1 second** (down from 88 seconds), spills are removed entirely, and the grant is higher: 
+With memory grant feedback enabled, for the second execution, duration is **1 second** (down from 88 seconds), spills are removed entirely, and the grant is higher: 
 
 ![No spills](./media/3_AQPGraphNoSpills.png)
 
 ### Memory grant feedback sizing
 For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant and update the cached plan. Plans with memory grants under 1 MB will not be recalculated for overages.
-For an insufficiently sized memory grant condition, that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the *spilling_report_to_memory_grant_feedback* xEvent. This event returns the node id from the plan and spilled data size of that node.
+For an insufficiently sized memory grant condition, that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the *spilling_report_to_memory_grant_feedback* xEvent. This event returns the node ID from the plan and spilled data size of that node.
 
 ### Memory grant feedback and parameter sensitive scenarios
-Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as "parameter-sensitive." For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* xEvent. For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as "parameter-sensitive." For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* xEvent. For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### Memory grant feedback caching
-Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
-Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using `OPTION (RECOMPILE)` creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced and it is not stored for that compilation and execution.  However, if an equivalent statement (that is, with the same query hash) that did **not** use `OPTION (RECOMPILE)` was cached and then re-executed, the consecutive statement can benefit from memory grant feedback.
+Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
+Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using `OPTION (RECOMPILE)` creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced and it is not stored for that compilation and execution. However, if an equivalent statement (that is, with the same query hash) that did **not** use `OPTION (RECOMPILE)` was cached and then re-executed, the consecutive statement can benefit from memory grant feedback.
 
 ### Tracking memory grant feedback activity
-You can track memory grant feedback events using the *memory_grant_updated_by_feedback* xEvent. This event tracks the current execution count history, the number of times the plan has been updated by memory grant feedback, the ideal additional memory grant before modification and the ideal additional memory grant after memory grant feedback has modified the cached plan.
+You can track memory grant feedback events using the *memory_grant_updated_by_feedback* xEvent. This event tracks the current execution count history, the number of times the plan has been updated by memory grant feedback, the ideal additional memory grant before modification and the ideal additional memory grant after memory grant feedback has modified the cached plan.
 
 ### Memory grant feedback, resource governor and query hints
 The actual memory granted honors the query memory limit determined by the resource governor or query hint.
@@ -196,7 +86,11 @@ The actual memory granted honors the query memory limit determined by the resour
 Memory grant feedback can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher. To disable batch mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 When enabled, this setting will appear as enabled in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
@@ -204,7 +98,11 @@ When enabled, this setting will appear as enabled in [sys.database_scoped_config
 To re-enable batch mode memory grant feedback for all query executions originating from the database, execute the following within the context of the applicable database:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 You can also disable batch mode memory grant feedback for a specific query by designating `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` as a [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint). For example:
@@ -218,6 +116,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## Row mode memory grant feedback
+
 **Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a public preview feature
 
 > [!NOTE]
@@ -337,14 +236,22 @@ Plans using interleaved execution can be forced. The plan is the version that ha
 Interleaved execution can be disabled at the database or statement scope while still maintaining database compatibility level 140 and higher.  To disable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 When enabled, this setting will appear as enabled in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 To re-enable interleaved execution for all query executions originating from the database, execute the following within the context of the applicable database:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 You can also disable interleaved execution for a specific query by designating `DISABLE_INTERLEAVED_EXECUTION_TVF` as a [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint). For example:
@@ -493,10 +400,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
 ## See also
-
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Query processing architecture guide](../../relational-databases/query-processing-architecture-guide.md)    
 [Showplan logical and physical operators reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Joins](../../relational-databases/performance/joins.md)    
-[Demonstrating adaptive query processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Demonstrating intelligent QP](https://github.com/joesackmsft/Conferences/blob/master/IQPDemos/IQP_Demo_ReadMe.md)   
+[Demonstrating Adaptive Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)       
+[Demonstrating Intelligent Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

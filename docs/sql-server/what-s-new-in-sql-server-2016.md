@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # What's new in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -24,12 +23,12 @@ manager: craigg
 
 This page provides summary information and links to more detailed SQL Server 2016 what's new information for each SQL Server component. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **Try SQL Server today!** 
 - Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
-- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
+- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016).
 
 ## SQL Server 2016 Database Engine
 - You can now configure **multiple tempDB** database files during SQL Server installation and setup.
@@ -57,7 +56,7 @@ SQL Server 2016 Analysis Services provides improved performance, authoring, data
 - New **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** namespace manages tabular mode instances and models. 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) is re-factored to include a second assembly, **Microsoft.AnalysisServices.Core.dll**.
 
-See [Analysis Services Engine (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
+See [Analysis Services Engine (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
 
 ## SQL Server 2016 Integration Services (SSIS)
 - Support for **Always On Availability Groups**

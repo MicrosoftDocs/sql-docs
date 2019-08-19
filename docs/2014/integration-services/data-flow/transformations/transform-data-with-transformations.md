@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "transformations [Integration Services], about transformations"
   - "transforming data [Integration Services]"
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transform Data with Transformations

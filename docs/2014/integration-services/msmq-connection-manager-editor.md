@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.msmqconnectionmanager.f1"
 helpviewer_keywords: 
   - "MSMQ Connection Manager Editor"
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # MSMQ Connection Manager Editor

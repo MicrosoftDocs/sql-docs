@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], data"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], managing"
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Manage Report Data Sources

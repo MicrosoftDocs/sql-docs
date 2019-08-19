@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Recordset, SourceRecordset Properties (RDS)
 Indicates the **Recordset** object returned from a custom business object.  

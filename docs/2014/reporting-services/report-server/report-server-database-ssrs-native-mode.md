@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [Reporting Services]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "reportservertempdb"
   - "reportserver database"
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Server Database (SSRS Native Mode)

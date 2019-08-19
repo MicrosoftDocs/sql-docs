@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Distribution Agent Security (Peer-to-Peer Replication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

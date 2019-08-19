@@ -13,11 +13,14 @@ helpviewer_keywords:
   - "containers [Integration Services], grouping"
   - "grouping tasks"
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Group or Ungroup Components
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **Control Flow**, **Data Flow**, and **Event Handlers** tabs in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer supports collapsible grouping. If a package has many components, the tabs can become crowded, making it difficult to view all the components at one time and to locate the item with which you want to work. The collapsible grouping feature can conserve space on the work surface and make it easier to work with large packages.  
   
  You select the components that you want to group, group them, and then expand or collapse the groups to suit your work. Expanding a group provides access to the properties of the components in the group. The precedence constraints that connect tasks and containers are automatically included in the group.  

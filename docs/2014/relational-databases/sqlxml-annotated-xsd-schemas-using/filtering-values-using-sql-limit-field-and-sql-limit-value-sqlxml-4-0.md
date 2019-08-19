@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "sql:limit-value"
   - "filtering [SQLXML]"
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Filtering Values Using sql:limit-field and sql:limit-value (SQLXML 4.0)

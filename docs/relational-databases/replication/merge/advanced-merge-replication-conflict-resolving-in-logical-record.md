@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Advanced Merge Replication Conflict - Resolving in Logical Record
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

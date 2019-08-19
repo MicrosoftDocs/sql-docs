@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Facet Properties Dialog Box, General Page
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

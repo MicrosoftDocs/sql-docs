@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a79e6049-963f-4ff7-8d3c-dc9ee45b4e2f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # CInstance Class
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

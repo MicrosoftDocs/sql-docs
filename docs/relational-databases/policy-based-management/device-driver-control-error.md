@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Device Driver Control Error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

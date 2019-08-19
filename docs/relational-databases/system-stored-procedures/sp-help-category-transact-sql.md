@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## Arguments  
- [ **@class=**] **'***class***'**  
+`[ @class = ] 'class'`
  The class about which information is requested. *class* is **varchar(8)**, with a default value of **JOB**. *class* can be one of these values.  
   
 |Value|Description|  
@@ -46,7 +45,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERT**|Provides information about an alert category.|  
 |**OPERATOR**|Provides information about an operator category.|  
   
- [ **@type=** ] **'***type***'**  
+`[ @type = ] 'type'`
  The type of category for which information is requested. *type* is **varchar(12)**, with a default of NULL, and can be one of these values.  
   
 |Value|Description|  
@@ -55,10 +54,10 @@ sp_help_category [ [ @class = ] 'class' ]
 |**MULTI -SERVER**|Multiserver job category.|  
 |**NONE**|Category for a class other than **JOB**.|  
   
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the category for which information is requested. *name* is **sysname**, with a default of NULL.  
   
- [ **@suffix=** ] *suffix*  
+`[ @suffix = ] suffix`
  Specifies whether the **category_type** column in the result set is an ID or a name. *suffix* is **bit**, with a default of **0**. **1** shows the **category_type** as a name, and **0** shows it as an ID.  
   
 ## Return Code Values  

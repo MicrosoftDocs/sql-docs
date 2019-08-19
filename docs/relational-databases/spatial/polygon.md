@@ -1,6 +1,6 @@
 ---
 title: "Polygon | Microsoft Docs"
-ms.date: "03/06/2017"
+ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -10,13 +10,14 @@ helpviewer_keywords:
   - "geometry subtypes [SQL Server]"
   - "Polygon geometry subtype [SQL Server]"
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Polygon
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   A **Polygon** is a two-dimensional surface stored as a sequence of points defining an exterior bounding ring and zero or more interior rings.  
   
 ## Polygon instances  
@@ -35,14 +36,16 @@ As shown in the illustration:
 2.  Figure 2 is a **Polygon** instance whose boundary is defined by an exterior ring and two interior rings. The area inside the interior rings is part of the exterior of the **Polygon** instance.  
   
 3.  Figure 3 is a valid **Polygon** instance because its interior rings intersect at a single tangent point.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### Accepted instances  
  Accepted **Polygon** instances are instances that can be stored in a **geometry** or **geography** variable without throwing an exception. The following are accepted **Polygon** instances:  
   
 -   An Empty **Polygon** instance  
--   A **Polygon** instance that has an acceptable exterior ring and zero or more acceptable interior rings  
+-   A **Polygon** instance that has an acceptable exterior ring (**LineString**) and zero or more acceptable interior rings (**LineString**s)  
   
-The following criteria are needed for a ring to be acceptable.  
+The following criteria are needed for a ring (**LineString**) to be acceptable.  
   
 -   The **LineString** instance must be accepted.  
 -   The **LineString** instance must have at least four points.  
@@ -101,11 +104,13 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
 ## Examples  
 ### Example A.  
-The following example creates a simple `geometry``Polygon` instance with a hole and SRID 10.  
+The following example creates a simple `geometry` `Polygon` instance with a gap and SRID 10.
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
+SET @g = geometry::STPolyFromText(
+    'POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))',
+    10);
 ```  
   
 
@@ -114,7 +119,9 @@ An instance that is not valid may be entered and converted to a valid `geometry`
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
+SET @g = geometry::Parse(
+    'POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))'
+    );  
 ```  
   
 ### Example C.  
@@ -128,7 +135,8 @@ SELECT @g.ToString();
 The `geometry` instance returned from the above example is a `MultiPolygon`.  
   
 ```sql  
-MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
+MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)),
+              ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))
 ```  
   
 ### Example D.  

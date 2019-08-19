@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b1d3a50c-3d05-44b3-b1ba-404a013fd627
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # clearWarnings Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

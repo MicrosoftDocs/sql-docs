@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "xs:QName type"
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # The xs:QName Type
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

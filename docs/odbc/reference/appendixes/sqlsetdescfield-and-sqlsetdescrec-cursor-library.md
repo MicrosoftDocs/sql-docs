@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetDescField and SQLSetDescRec (Cursor Library)
 > [!IMPORTANT]  
@@ -49,7 +48,7 @@ manager: craigg
   
  The cursor library executes calls to **SQLSetDescRec** for a bookmark column.  
   
- When working with an ODBC 2.*x* driver, the cursor library returns SQLSTATE HY090 (Invalid string or buffer length) when **SQLSetDescField** or **SQLSetDescRec** is called to set the SQL_DESC_OCTET_LENGTH field for the bookmark record of an ARD to a value not equal to 4. When working with an ODBC 3*.x* driver, the cursor library allows the buffer to be any size.  
+ When working with an ODBC *2.x* driver, the cursor library returns SQLSTATE HY090 (Invalid string or buffer length) when **SQLSetDescField** or **SQLSetDescRec** is called to set the SQL_DESC_OCTET_LENGTH field for the bookmark record of an ARD to a value not equal to 4. When working with an ODBC *3.x* driver, the cursor library allows the buffer to be any size.  
   
  The cursor library executes **SQLSetDescField** when it is called to return the value of the SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE, or SQL_DESC_ROW_STATUS_PTR field. These fields can be returned for any row, not just the bookmark row.  
   

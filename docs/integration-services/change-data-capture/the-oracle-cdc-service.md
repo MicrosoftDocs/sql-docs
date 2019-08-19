@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # The Oracle CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Oracle CDC Service is a Windows service running the program xdbcdcsvc.exe. The Oracle CDC Service can be configured to run multiple Windows services on the same computer, each one with a different Windows service name. Creating multiple Oracle CDC Windows services on a single computer is often done to achieve a better separation between them, or when each needs to work with a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
  An Oracle CDC Service is created using the Oracle CDC Service Configuration console or is defined through the command-line interface built into the xdbcdcsvc.exe program. In both cases, each Oracle CDC Service created is associated with a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance (which may be clustered or mirrored with **Always On** setup) and the connection information (connect string and access credentials) are part of the service configuration.  

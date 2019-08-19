@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Designer [Reporting Services], Access reports"
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "importing reports"
   - "modules [Reporting Services]"
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Supported Access Report Features (SSRS)

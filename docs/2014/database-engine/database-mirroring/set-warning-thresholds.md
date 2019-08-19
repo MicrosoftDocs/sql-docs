@@ -24,7 +24,7 @@ manager: craigg
   
 ## Options  
  *Server instance and its connection status*  
- Name of a partner server instance in the form *SYSTEM***\\***INSTANCE_NAME*. For a default server instance, only the system name is displayed.  
+ Name of a partner server instance in the form _SYSTEM_**\\**_INSTANCE_NAME_. For a default server instance, only the system name is displayed.  
   
  This field also indicates whether the monitor is currently connected to this server instance. The possible connection statuses are:  
   

@@ -11,11 +11,14 @@ helpviewer_keywords:
   - "DATEDIFF statement"
   - "dates [Integration Services], DATEDIFF"
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # DATEDIFF (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the number of date and time boundaries crossed between two specified dates. The *datepart* parameter identifies which date and time boundaries to compare.  
   
 ## Syntax  

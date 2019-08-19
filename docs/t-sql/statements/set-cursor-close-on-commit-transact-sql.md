@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

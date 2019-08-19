@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "OE F1 Help"
   - "OE Help"
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Manage Objects by Using Object Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

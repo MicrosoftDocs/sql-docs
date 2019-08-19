@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: e9761462-b580-41cc-b326-a47ff78e6965
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerResource Constructor ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

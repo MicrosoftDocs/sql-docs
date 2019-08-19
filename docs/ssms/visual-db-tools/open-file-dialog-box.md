@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vs.openfile"
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Open File Dialog Box
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

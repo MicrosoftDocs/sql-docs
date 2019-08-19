@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL:StmtCompleted Event Class

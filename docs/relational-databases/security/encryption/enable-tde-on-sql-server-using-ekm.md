@@ -1,7 +1,7 @@
 ---
 title: "Enable TDE on SQL Server Using EKM | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/15/2016"
+ms.date: "07/25/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -15,11 +15,9 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Enable TDE on SQL Server Using EKM
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This article describes how to enable transparent data encryption (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] to protect a database encryption key by using an asymmetric key stored in an extensible key management (EKM) module with [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  TDE encrypts the storage of an entire database by using a symmetric key called the database encryption key. The database encryption key can also be protected using a certificate, which is protected by the database master key of the master database. For more information about protecting the database encryption key by using the database master key, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). For information about configuring TDE when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running on an Azure VM, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). For information about configuring TDE using a key in the Azure key vault, see [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
@@ -31,9 +29,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   You must be a high privileged user (such as a system administrator) to create a database encryption key and encrypt a database. That user must be able to be authenticated by the EKM module.  
   
--   Upon startup the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] must open the database. To do this, you should create a credential that will be authenticated by the EKM, and add it to a login that is based on an asymmetric key. Users cannot log in using that login, but the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] will be able to authenticate itself with the EKM device.  
+-   Upon startup the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] must open the database. To do this, you should create a credential that will be authenticated by the EKM, and add it to a login that is based on an asymmetric key. Users cannot sign in using that login, but the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] will be able to authenticate itself with the EKM device.  
   
--   If the asymmetric key stored in the EKM module is lost, the database will not be able to be opened by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If the EKM provider lets you back up the asymmetric key, you should create a back up and store it in a secure location.  
+-   If the asymmetric key stored in the EKM module is lost, the database will not be able to be opened by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. If the EKM provider lets you back up the asymmetric key, you should create a backup and store it in a secure location.  
   
 -   The options and parameters required by your EKM provider can differ from what is provided in the code example below. For more information, see your EKM provider.  
   

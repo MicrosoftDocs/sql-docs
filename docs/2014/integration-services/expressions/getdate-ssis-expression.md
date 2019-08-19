@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "GETDATE function"
   - "dates [Integration Services], GETDATE"
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # GETDATE (SSIS Expression)

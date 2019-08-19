@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

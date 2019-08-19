@@ -84,7 +84,9 @@ manager: craigg
   
  Phone from outside the United States and Canada: (609) 452-0606  
   
- Fax: (609) 987-8116 Web: [http://www.rfbd.org/](https://go.microsoft.com/fwlink/?LinkId=48621)  
+ Fax: (609) 987-8116 Web: 
+
+[Microsoft accessibility website](https://www.microsoft.com/accessibility/)  
   
 ## Customer Service for People Who Are Deaf or Hard-of-Hearing  
  If you are deaf or hard-of-hearing, complete access to [!INCLUDE[msCoName](../includes/msconame-md.md)] product and customer services is available through a text telephone (TTY/TDD) service.  

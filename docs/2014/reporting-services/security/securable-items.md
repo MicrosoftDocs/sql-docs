@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "securable items [Reporting Services]"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "security [Reporting Services], securable items listed"
   - "role-based security [Reporting Services], securable items"
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Securable Items

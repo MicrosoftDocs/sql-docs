@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Properties window [SQL Server Management Studio]"
   - "modifying properties"
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Properties Window (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

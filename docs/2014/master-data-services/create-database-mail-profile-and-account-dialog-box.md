@@ -9,7 +9,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.mds.configmanager.dbmailprofileacct.f1"
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

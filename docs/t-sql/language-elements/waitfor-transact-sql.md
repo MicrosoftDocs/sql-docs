@@ -24,9 +24,8 @@ helpviewer_keywords:
   - "WAITFOR statement"
   - "timing executions"
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

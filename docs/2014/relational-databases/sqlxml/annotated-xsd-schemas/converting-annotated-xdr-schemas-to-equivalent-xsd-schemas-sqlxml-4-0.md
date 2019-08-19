@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "mapping schema [SQLXML], conversions"
   - "XSD schemas [SQLXML], converting schemas"
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Converting Annotated XDR Schemas to Equivalent XSD Schemas (SQLXML 4.0)

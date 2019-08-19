@@ -1,16 +1,16 @@
 ---
-title: SQL Server Configuration (R Services) - SQL Server Machine Learning Services
+title: SQL Server Configuration (R Services)
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 03/29/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # SQL Server configuration for use with R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article is the second in a series that describes performance optimization for R Services based on two case studies.  This article provides guidance about the hardware and network configuration of the computer that is used to run SQL Server R Services. It also contains information about ways to configure the SQL Server instance, database, or tables used in a solution. Because use of NUMA in SQL Server blurs the line between hardware and database optimizations, a third section discusses CPU affinitization and resource governance in detail.
 
@@ -161,10 +161,6 @@ For details, including sample code, see this tutorial: [SQL Optimization Tips an
 + [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     How to map soft-NUMA nodes to CPUs
-
-+ [Automatic soft-NUMA: It just runs faster (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
-
-   Describes history as well as implementation details, with performance on newer multi-core servers.
 
 ## Task-specific optimizations
 

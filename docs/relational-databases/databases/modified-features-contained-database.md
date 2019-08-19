@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Modified Features (Contained Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

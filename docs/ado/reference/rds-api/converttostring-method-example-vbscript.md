@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ConvertToString Method Example (VBScript)
 > [!IMPORTANT]

@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.column_master_keys (Transact-SQL)

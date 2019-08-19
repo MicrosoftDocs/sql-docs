@@ -7,9 +7,8 @@ ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.prod_service: sql-tools
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # mssql-cli command-line query tool for SQL Server

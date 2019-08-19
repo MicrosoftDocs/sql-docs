@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "RenderedOutputFile class"
   - "data streams [Reporting Services]"
   - "delivery extensions [Reporting Services], data streams"
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the RenderedOutputFile Class for a Delivery Extension

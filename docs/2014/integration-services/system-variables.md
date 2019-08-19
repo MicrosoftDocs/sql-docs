@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "event handlers [Integration Services], variables"
   - "variables [Integration Services], system"
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # System Variables

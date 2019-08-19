@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "values [SQL Server], maximum"
   - "maximum values [SQL Server]"
 ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MAX (Transact-SQL)

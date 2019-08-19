@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "iPad"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "Report Viewer [Reporting Services]"
   - "iOS"
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices

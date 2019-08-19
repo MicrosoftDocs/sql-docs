@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint integration [Reporting Services], content management"
   - "report parameters [Reporting Services]"
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Set Parameters on a Published Report (Reporting Services in SharePoint Integrated Mode)

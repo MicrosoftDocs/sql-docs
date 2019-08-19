@@ -1,7 +1,7 @@
 ---
 title: "Configure Windows Service Accounts and Permissions | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/08/2018"
+ms.date: "05/28/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -50,7 +50,6 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure Windows Service Accounts and Permissions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ manager: craigg
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** - One or more Distributed Replay client computers that work together with a Distributed Replay controller to simulate concurrent workloads against an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - A trusted service that hosts external executables that are provided by Microsoft, such as the R runtime installed as part of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Satellite processes can be launched by the Launchpad process but will be resource governed based on the configuration of the individual instance. The Launchpad service runs under its own user account, and each satellite process for a specific, registered runtime will inherit the user account of the Launchpad. Satellite processes are created and destroyed on demand during execution time.
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - A trusted service that hosts external executables that are provided by Microsoft, such as the R or Python runtimes installed as part of R Services or Machine Learning Services. Satellite processes can be launched by the Launchpad process but will be resource governed based on the configuration of the individual instance. The Launchpad service runs under its own user account, and each satellite process for a specific, registered runtime will inherit the user account of the Launchpad. Satellite processes are created and destroyed on demand during execution time.
 
     Launchpad cannot create the accounts it uses if you install SQL Server on a computer that is also used as a domain controller. Hence, setup of R Services (In-Database) or Machine Learning Services (In-Database) fails on a domain controller.
 
@@ -165,7 +164,7 @@ Managed service accounts, group managed service accounts, and virtual accounts a
   
 -   <a name="MSA"></a> **Managed Service Accounts**  
   
-     A Managed Service Account (MSA) is a type of domain account created and managed by the domain controller. It is assigned to a single member computer for use running a service. The password is managed automatically by the domain controller. You cannot use a MSA to log into a computer, but a computer can use a MSA to start a Windows service. An MSA has the ability to register Service Principal Name (SPN) with the Active Directory. A MSA is named with a **$** suffix, for example **DOMAIN\ACCOUNTNAME$**. When specifying a MSA, leave the password blank. Because a MSA is assigned to a single computer, it cannot be used on different nodes of a Windows cluster.  
+     A Managed Service Account (MSA) is a type of domain account created and managed by the domain controller. It is assigned to a single member computer for use running a service. The password is managed automatically by the domain controller. You cannot use a MSA to log into a computer, but a computer can use a MSA to start a Windows service. An MSA has the ability to register a Service Principal Name (SPN) within Active Directory when given read and write servicePrincipalName permissions. A MSA is named with a **$** suffix, for example **DOMAIN\ACCOUNTNAME$**. When specifying a MSA, leave the password blank. Because a MSA is assigned to a single computer, it cannot be used on different nodes of a Windows cluster.  
   
     > [!NOTE]  
     >  The MSA must be created in the Active Directory by the domain administrator before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup can use it for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  
@@ -226,7 +225,7 @@ The following table shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
+|R Services or Machine Learning Services|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |PolyBase Engine| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  \*For more information and sample syntax for unattended installations, see [Install SQL Server 2016 from the Command Prompt](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
@@ -295,8 +294,8 @@ This section describes the permissions that [!INCLUDE[ssNoVersion](../../include
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Log on as a service** (SeServiceLogonRight)|  
 |**PolyBase Engine and DMS**| **Log on as a service** (SeServiceLogonRight)  |   
 |**Launchpad:**|**Log on as a service** (SeServiceLogonRight) <br /><br /> **Replace a process-level token** (SeAssignPrimaryTokenPrivilege)<br /><br />**Bypass traverse checking** (SeChangeNotifyPrivilege)<br /><br />**Adjust memory quotas for a process** (SeIncreaseQuotaPrivilege)|     
-|**R Services:** **SQLRUserGroup** (SQL 2016 and 2017)  |**Allow Log on locally** |   
-|**Machine Learning** '**All Application Packages' [AppContainer]** (SQL 2019)  |**Read and execute permissions** to the SQL Server 'Binn', R_Services, and PYTHON_Services directories |   
+|**R Services/Machine Learning Services:** **SQLRUserGroup** (SQL 2016 and 2017)  |Does not have the **Allow Log on locally** permission by default |   
+|**Machine Learning Services** '**All Application Packages' [AppContainer]** (SQL 2019)  |**Read and execute permissions** to the SQL Server 'Binn', R_Services, and PYTHON_Services directories |   
 
  \*The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is disabled on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
@@ -534,9 +533,9 @@ In all installation, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] S
  The account specified during setup is provisioned as a member of the **RSExecRole** database role. For more information, see [Configure the Report Server Service Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 ###  <a name="SSAS"></a> SSAS Provisioning  
- [!INCLUDE[ssAS](../../includes/ssas-md.md)] service account requirements vary depending on how you deploy the server. If you are installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup requires that you configure the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service to run under a domain account. Domain accounts are required to support the managed account facility that is built into SharePoint. For this reason, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup does not provide a default service account, such as a virtual account, for a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation. For more information about provisioning [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, see [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md).  
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)] service account requirements vary depending on how you deploy the server. If you are installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup requires that you configure the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] service to run under a domain account. Domain accounts are required to support the managed account facility that is built into SharePoint. For this reason, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup does not provide a default service account, such as a virtual account, for a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation. For more information about provisioning [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint, see [Configure Power Pivot Service Accounts](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).  
   
- For all other standalone [!INCLUDE[ssAS](../../includes/ssas-md.md)] installations, you can provision the service to run under a domain account, built-in system account, managed account, or virtual account. For more information about account provisioning, see [Configure Service Accounts &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
+ For all other standalone [!INCLUDE[ssAS](../../includes/ssas-md.md)] installations, you can provision the service to run under a domain account, built-in system account, managed account, or virtual account. For more information about account provisioning, see [Configure Service Accounts &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
   
  For clustered installations, you must specify a domain account or a built-in system account. Neither managed accounts nor virtual accounts are supported for [!INCLUDE[ssAS](../../includes/ssas-md.md)] failover clusters.  
   

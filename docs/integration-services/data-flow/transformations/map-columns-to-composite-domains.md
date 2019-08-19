@@ -8,11 +8,14 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Map Columns to Composite Domains
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A composite domain consists of two or more single domains. You can map multiple columns to the domain, or you can map a single column with delimited values to the domain.  
   
  When you have multiple columns, you must map a column to each single domain in the composite domain to apply the composite domain rules to data cleansing. You select the single domains contained in the composite domain, in the Data Quality Client. For more information, see [Create a Composite Domain](../../../data-quality-services/create-a-composite-domain.md).  

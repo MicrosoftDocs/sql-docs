@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getNString Method (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

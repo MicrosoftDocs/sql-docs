@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "denying My Reports folder access"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "security [Reporting Services], My Reports folder"
   - "My Reports folder [Reporting Services]"
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Secure My Reports

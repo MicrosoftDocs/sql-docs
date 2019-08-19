@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "SQL Server Profiler, starting"
   - "starting SQL Server Profiler"
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Profiler Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

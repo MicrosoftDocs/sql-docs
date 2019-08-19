@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication tutorials
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 Replication is a powerful solution for moving data, or subsets of data, between servers. You can replicate data between servers that are fully connected by using transactional replication. You can also replicate data between servers and clients that are intermittently connected by using merge replication. In this article, you will find tutorials that help prepare your server for replication, and then teach you to configure both transactional and merge replication. 
   
 In the replication tutorials, "publisher" refers to the server that contains the source data that's being replicated. "Subscriber" refers to the destination server. The publisher and subscriber might share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see the [overview of the replication publishing model](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  

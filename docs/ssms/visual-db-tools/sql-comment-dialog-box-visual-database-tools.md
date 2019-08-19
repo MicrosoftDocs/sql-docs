@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.sqlcomment"
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # SQL Comment Dialog Box (Visual Database Tools)

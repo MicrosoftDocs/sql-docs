@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "XML [Integration Services]"
   - "XML task [Integration Services]"
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # XML Task

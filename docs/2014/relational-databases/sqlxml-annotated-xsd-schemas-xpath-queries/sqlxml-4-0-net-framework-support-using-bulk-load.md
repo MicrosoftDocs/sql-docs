@@ -12,8 +12,8 @@ helpviewer_keywords:
   - ".NET Framework [SQLXML], XML Bulk Load"
   - "bulk load [SQLXML], .NET environment"
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using SQLXML Bulk Load in the .NET Environment

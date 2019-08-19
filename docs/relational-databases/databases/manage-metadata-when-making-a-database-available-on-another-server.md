@@ -34,7 +34,6 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Manage Metadata When Making a Database Available on Another Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

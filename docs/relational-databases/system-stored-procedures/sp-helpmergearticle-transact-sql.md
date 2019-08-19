@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication about which to retrieve information. *publication*is **sysname**, with a default of **%**, which returns information about all merge articles contained in all publications in the current database.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article for which to return information. *article*is **sysname**, with a default of **%**, which returns information about all merge articles in the given publication.  
   
 ## Result Set  

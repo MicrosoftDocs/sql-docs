@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "XML source [Integration Services]"
   - "XML Source Editor"
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # XML Source
@@ -89,6 +89,6 @@ manager: craigg
  [Extract Data by Using the XML Source](xml-source.md)  
   
 ## Related Content  
- Curated Answer, [Create an XML Destination for an SSIS Package](https://go.microsoft.com/fwlink/?LinkId=321993), on curatedviews.cloudapp.net.  
+ Technical article, [Using an XML file to configure an SSIS package](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerClob Constructor (SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

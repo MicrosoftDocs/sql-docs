@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_cached_plans (Transact-SQL)
@@ -50,14 +49,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Permissions
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
-On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ## Examples  
   
 ### A. Returning the batch text of cached entries that are reused  
  The following example returns the SQL text of all cached entries that have been used more than once.  
   
-```  
+```sql  
 SELECT usecounts, cacheobjtype, objtype, text   
 FROM sys.dm_exec_cached_plans   
 CROSS APPLY sys.dm_exec_sql_text(plan_handle)   
@@ -69,7 +68,7 @@ GO
 ### B. Returning query plans for all cached triggers  
  The following example returns the query plans of all cached triggers.  
   
-```  
+```sql  
 SELECT plan_handle, query_plan, objtype   
 FROM sys.dm_exec_cached_plans   
 CROSS APPLY sys.dm_exec_query_plan(plan_handle)   
@@ -80,7 +79,7 @@ GO
 ### C. Returning the SET options with which the plan was compiled  
  The following example returns the SET options with which the plan was compiled. The `sql_handle` for the plan is also returned. The PIVOT operator is used to output the `set_options` and `sql_handle` attributes as columns rather than as rows. For more information about the value returned in `set_options`, see [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
-```  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
       SELECT plan_handle, epa.attribute, epa.value   
@@ -95,7 +94,7 @@ GO
 ### D. Returning the memory breakdown of all cached compiled plans  
  The following example returns a breakdown of the memory used by all compiled plans in the cache.  
   
-```  
+```sql  
 SELECT plan_handle, ecp.memory_object_address AS CompiledPlan_MemoryObject,   
     omo.memory_object_address, type, page_size_in_bytes   
 FROM sys.dm_exec_cached_plans AS ecp   

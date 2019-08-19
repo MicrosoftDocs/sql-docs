@@ -14,11 +14,14 @@ f1_keywords:
   - "sql13.dts.designer.advancededitor.connections.f1"
   - "sql13.dts.designer.advancededitor.columnmappings.f1"
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Advanced Editor
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Advanced Editor** dialog box to configure to configure properties for the selected [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object.  
   
  The **Advanced Editor** is available for most [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objects that have configurable properties. It is the only editor available for those objects that do not expose a custom user interface.  

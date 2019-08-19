@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create a Trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,9 @@ manager: craigg
 2.  Execute **sp_trace_setevent** with the required parameters to select the events and columns to trace.  
   
 3.  Optionally, execute **sp_trace_setfilter** to set any or a combination of filters.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
   
     > [!IMPORTANT]  

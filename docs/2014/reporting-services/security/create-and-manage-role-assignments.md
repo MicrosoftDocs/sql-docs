@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing role assignments"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "modifying role assignments"
   - "deleting role assignments"
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create and Manage Role Assignments

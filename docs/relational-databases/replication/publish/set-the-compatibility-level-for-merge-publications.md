@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Set the Compatibility Level for Merge Publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,9 @@ manager: craigg
 #### To set the publication compatibility level for a merge publication  
   
 1.  At the Publisher, execute [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), specifying a value for **@publication_compatibility_level** to make the publication compatible with older versions of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. For more information, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To change the publication compatibility level of a merge publication  
   
 1.  Execute [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), specifying **publication_compatibility_level** for **@property** and the appropriate publication compatibility level for **@value**.  

@@ -13,11 +13,14 @@ f1_keywords:
   - "sql13.ssis.designer.odbcdest.columns.f1"
   - "sql13.ssis.designer.odbcdest.errorhandling.f1"
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # ODBC Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The ODBC destination bulk loads data into ODBC-supported database tables. The ODBC destination uses an ODBC connection manager to connect to the data source.  
   
  An ODBC destination includes mappings between input columns and columns in the destination data source. You do not have to map input columns to all destination columns, but depending on the properties of the destination columns, errors may occur if no input columns are mapped to the destination columns. For example, if a destination column does not allow null values, an input column must be mapped to that column. In addition, columns of different types can be mapped, however if the input data is not compatible for the destination column type, an error occurs at runtime. Depending on the error behavior setting, the error will be ignored, cause a failure, or the row is sent to the error output.  

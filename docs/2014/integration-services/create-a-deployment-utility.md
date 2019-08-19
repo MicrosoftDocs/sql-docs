@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying packages [Integration Services], deployment utility"
   - "deployment utility [Integration Services]"
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create a Deployment Utility

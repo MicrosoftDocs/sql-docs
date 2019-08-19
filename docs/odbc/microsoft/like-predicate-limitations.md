@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # LIKE Predicate Limitations
 If data in a column is longer than 255 characters, the LIKE comparison will be based only on the first 255 characters.  

@@ -9,7 +9,6 @@ ms.topic: "reference"
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

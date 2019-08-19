@@ -1,17 +1,17 @@
 ---
-title: Set up a data science client for Python development - SQL Server Machine Learning
+title: Set up a data science client for Python development
 description: Set up a Python local environment (Jupyter Notebook or PyCharm) for remote connections to SQL Server Machine Learning Services with Python.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 11/09/2018  
+ms.date: 06/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Set up a data science client for Python development on SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Python integration is available starting in SQL Server 2017 or later when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
 
@@ -24,7 +24,7 @@ In this article, learn how to configure a Python development workstation so that
 To validate the installation, you can use built-in Jupyter Notebooks as described in this article, or [link the libraries](#install-ide) to PyCharm or any another IDE that you normally use.
 
 > [!Tip]
-> For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
+> For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://youtu.be/D5erljpJDjE).
 
 > [!Note]
 > An alternative to client library installation is using a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as a rich client, which some customers prefer for deeper scenario work. A standalone server is fully decoupled from SQL Server, but because it has the same Python libraries, you can use it as a client for SQL Server in-database analytics. You can also use it for non-SQL-related work, including the ability to import and model data from other data platforms. If you install a standalone server, you can find the Python executable at this location: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. To validate your installation, [open a Jupyter notebook](#python-tools) to run commands using the Python.exe at that location.
@@ -45,9 +45,9 @@ An installation script adds three Microsoft-specific libraries to the Python cli
 
 1. Download an installation script.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server 2017 instance. 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server instance. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server 2017 instance is [bound to Machine Learning Server 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server instance is [bound to Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
 
 2. Open a PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
 
@@ -102,7 +102,7 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 3. Enter `import revoscalepy` and run the command to load one of the Microsoft-specific libraries.
 
-4. Enter and run `print(revoscalepy.__version__)` to return the version information. You should see 9.2.1 or 9.3.0. You can use either of these versions with [revoscalepy on the server](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers). 
+4. Enter and run `print(revoscalepy.__version__)` to return the version information. You should see 9.2.1 or 9.3.0. You can use either of these versions with [revoscalepy on the server](../package-management/installed-package-information.md). 
 
 4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) over a local data set. Other functions get the location of the sample data and create a data source object for a local .xdf file.
 

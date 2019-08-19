@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Execute Method (ADO Connection)
 Executes the specified query, SQL statement, stored procedure, or provider-specific text.  

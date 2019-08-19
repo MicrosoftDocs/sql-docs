@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbdestadapter.connection.f1"
 helpviewer_keywords: 
   - "OLE DB Destination Editor"
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OLE DB Destination Editor (Connection Manager Page)

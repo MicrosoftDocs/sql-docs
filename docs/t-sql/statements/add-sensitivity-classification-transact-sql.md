@@ -1,6 +1,6 @@
 ---
 title: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
@@ -27,7 +27,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.  
 

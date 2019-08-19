@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rowsets

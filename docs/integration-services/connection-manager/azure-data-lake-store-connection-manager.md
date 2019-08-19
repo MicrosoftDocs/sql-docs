@@ -13,10 +13,13 @@ f1_keywords:
 ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: "Lingxi-Li"
 ms.author: "lingxl"
-ms.reviewer: "douglasl"
-manager: craigg
+ms.reviewer: maghan
 ---
 # Azure Data Lake Store Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Store Connection Manager to connect to an Azure Data Lake Storage Gen1 account with one of the two following authentication types:
 -   Azure AD User Identity
 -   Azure AD Service Identity 
@@ -37,7 +40,7 @@ The Azure Data Lake Store Connection Manager is a component of the [SQL Server I
     1.  If you select the **Azure AD User Identity** authentication option, do the following things:
         1. Provide values for the **User Name** and **Password** fields. 
     
-        2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Data Lake Storage Gen1 data, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. To test the connection, select **Test Connection**. If you or the tenant administrator didn't previously consent to allow SSIS to access your Data Lake Storage Gen1 data, select **Accept** when prompted. For more information about this consent experience, see [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
         > [!NOTE] 
         > When you select the **Azure AD User Identity** authentication option, multi-factor authentication and Microsoft account authentication are not supported.

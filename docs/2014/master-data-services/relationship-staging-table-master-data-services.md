@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "relationships staging table [Master Data Services]"
   - "database [Master Data Services], relationships table"
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---
@@ -34,7 +34,7 @@ manager: craigg
 |**ErrorCode**|Displays an error code. For all records with a **ImportStatus_ID** of **2**, see [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md).|  
   
 ## See Also  
- [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent, starting"
   - "command prompt utilities [SQL Server], sqlagent90"
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sqlagent90 Application
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

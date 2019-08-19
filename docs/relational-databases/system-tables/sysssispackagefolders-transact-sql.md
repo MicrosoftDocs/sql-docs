@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackagefolders system table"
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # sysssispackagefolders (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

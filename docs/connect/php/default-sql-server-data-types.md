@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Default SQL Server Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

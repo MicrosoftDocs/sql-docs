@@ -1,7 +1,7 @@
 ---
 title: "sp_migrate_user_to_contained (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Converts a database user that is mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, to a contained database user with password. In a contained database, use this procedure to remove dependencies on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the database is installed. **sp_migrate_user_to_contained** separates the user from the original [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, so that settings such as password and default language can be administered separately for the contained database. **sp_migrate_user_to_contained** can be used before moving the contained database to a different instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to eliminate dependencies on the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance logins.  
   
- **Note** This procedure is only used in a contained database. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  
+> [!NOTE]
+> Be careful when using **sp_migrate_user_to_contained**, as you will not be able to reverse the effect. This procedure is only used in a contained database. For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 ## Syntax  
   
@@ -74,7 +74,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## Examples  
   
 ### A. Migrating a single user  
- The following example migrates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login named `Barry`, to a contained database user with password. The example retains the does not change the user name, and retains the login as enabled.  
+ The following example migrates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login named `Barry`, to a contained database user with password. The example does not change the user name, and retains the login as enabled.  
   
 ```sql  
 sp_migrate_user_to_contained   

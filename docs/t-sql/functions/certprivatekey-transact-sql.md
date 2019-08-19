@@ -15,9 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "CERTPRIVATEKEY"
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+author: VanMSFT
+ms.author: vanto
 ---
 # CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

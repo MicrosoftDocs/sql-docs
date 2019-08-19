@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## Arguments  
- [ **@LoginNamePattern =** ] **'***login***'**  
+`[ @LoginNamePattern = ] 'login'`
  Is a login name. *login* is **sysname**, with a default of NULL. *login* must exist if specified. If *login* is not specified, information about all logins is returned.  
   
 ## Return Code Values  

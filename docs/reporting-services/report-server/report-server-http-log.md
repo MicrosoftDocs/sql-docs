@@ -1,8 +1,8 @@
 ---
 title: "Report Server HTTP Log | Microsoft Docs"
-ms.date: 03/02/2018
+ms.date: 06/12/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 
@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "HTTP [Reporting Services]"
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Server HTTP Log
   The Report Server HTTP log file keeps a record of every HTTP request and response handled by the report server. Because request overflow and timeout errors do not reach the report server, they are not recorded in the log file.  
   
  HTTP logging is not enabled by default. You must modify the ReportingServicesService.exe configuration file to use this feature in your installation.  
   
-## Viewing Log Information  
+## Viewing log information  
  The log is an ASCII text file. You can use any text editor to view the file. The Report Server HTTP log file is equivalent to the W3C extended log file in IIS and uses similar fields so that you can use existing IIS log file viewers to read the report server HTTP log file. The following table provides additional information about the HTTP log file:  
   
 |||  
@@ -26,9 +26,9 @@ ms.author: maghan
 |File name|By default, the file name is ReportServerService_HTTP_\<timestamp>.log. You can customize the prefix of the file name by modifying the HttpTraceFileName attribute in the ReportingServicesService.exe.config file. The timestamp is based on Coordinated Universal Time (UTC).|  
 |File location|The file is located at \Microsoft SQL Server\\*\<SQL Server Instance>*\Reporting Services\LogFiles.|  
 |File format|The file is in EN-US format. It is an ASCII text file.|  
-|File creation and retention|The HTTP log is created after you enable it in the configuration file, restart the service, and the report server handles an HTTP request. If you configure the settings but do not see the log file, open a report or start a report server application (such as Report Manager) to generate an HTTP request to create the file.<br /><br /> A new instance of the log file will be created after each service restart and subsequent HTTP request to the report server.<br /><br /> By default, trace logs are limited to 32 megabytes and deleted after 14 days.|  
+|File creation and retention|The HTTP log is created after you enable it in the configuration file, restart the service, and the report server handles an HTTP request. If you configure the settings but do not see the log file, open a report or start a report server application (such as the web portal) to generate an HTTP request to create the file.<br /><br /> A new instance of the log file will be created after each service restart and subsequent HTTP request to the report server.<br /><br /> By default, trace logs are limited to 32 megabytes and deleted after 14 days.|  
   
-## Configuration Settings for Report Server HTTP Log  
+## Configuration settings for Report Server HTTP log  
  To configure the Report Server HTTP log, use Notepad to modify the ReportingServicesService.exe.config file. The configuration file is located in the \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin folder.  
   
  To enable the HTTP server, you must add **http:4** to the RStrace section of the ReportingServicesService.exe.config file. All other HTTP log file entries are optional. The following example includes all settings so that you can paste the whole section over the RStrace section, and then delete the settings you do not need.
@@ -47,7 +47,7 @@ ms.author: maghan
    </RStrace>  
 ```  
   
-## Log File Fields  
+## Log file fields  
  The following table describes the fields that are available in the log. The field list is configurable; you can specify which fields to include through the **HTTPTraceSwitches** configuration setting. The **Default** column specifies whether the field will be included in the log file automatically if you do not specify **HTTPTraceSwitches**.  
   
 |Field|Description|Default|  
@@ -72,9 +72,8 @@ ms.author: maghan
 |CookieSent|The content of the cookie sent by the server.|No|  
 |Referrer|The previous site visited by the client.|No|  
   
-## See Also  
+## See also  
  [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Errors and Events Reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
   

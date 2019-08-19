@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/17/2018"
+ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_requests dynamic management view"
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-author: stevestein
+author: pmasl
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_requests (Transact-SQL)
@@ -35,10 +34,10 @@ Returns information about each request that is executing within [!INCLUDE[ssNoVe
 |start_time|**datetime**|Timestamp when the request arrived. Is not nullable.|  
 |status|**nvarchar(30)**|Status of the request. This can be one of the following:<br /><br /> Background<br />Running<br />Runnable<br />Sleeping<br />Suspended<br /><br /> Is not nullable.|  
 |command|**nvarchar(32)**|Identifies the current type of command that is being processed. Common command types include the following:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> The text of the request can be retrieved by using sys.dm_exec_sql_text with the corresponding sql_handle for the request. Internal system processes set the command based on the type of task they perform. Tasks can include the following:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Is not nullable.|  
-|sql_handle|**varbinary(64)**|Hash map of the SQL text of the request. Is nullable.|  
+|sql_handle|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure that the query is part of. Is nullable.|  
 |statement_start_offset|**int**|Number of characters into the currently executing batch or stored procedure at which the currently executing statement starts. Can be used together with the sql_handle, the statement_end_offset, and the sys.dm_exec_sql_text dynamic management function to retrieve the currently executing statement for the request. Is nullable.|  
 |statement_end_offset|**int**|Number of characters into the currently executing batch or stored procedure at which the currently executing statement ends. Can be used together with the sql_handle, the statement_end_offset, and the sys.dm_exec_sql_text dynamic management function to retrieve the currently executing statement for the request. Is nullable.|  
-|plan_handle|**varbinary(64)**|Hash map of the plan for SQL execution. Is nullable.|  
+|plan_handle|**varbinary(64)**|Is a token that uniquely identifies a query execution plan for a batch that is currently executing. Is nullable.|  
 |database_id|**smallint**|ID of the database the request is executing against. Is not nullable.|  
 |user_id|**int**|ID of the user who submitted the request. Is not nullable.|  
 |connection_id|**uniqueidentifier**|ID of the connection on which the request arrived. Is nullable.|  
@@ -83,13 +82,14 @@ Returns information about each request that is executing within [!INCLUDE[ssNoVe
 |group_id|**int**|ID of the workload group to which this query belongs. Is not nullable.|  
 |query_hash|**binary(8)**|Binary hash value calculated on the query and used to identify queries with similar logic. You can use the query hash to determine the aggregate resource usage for queries that differ only by literal values.|  
 |query_plan_hash|**binary(8)**|Binary hash value calculated on the query execution plan and used to identify similar query execution plans. You can use query plan hash to find the cumulative cost of queries with similar execution plans.|  
-|statement_sql_handle|**varbinary(64)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> SQL handle of the individual query. |  
-|statement_context_id|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The optional foreign key to sys.query_context_settings. |  
+|statement_sql_handle|**varbinary(64)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> SQL handle of the individual query.<br /><br />This column is NULL if Query Store is not enabled for the database. |  
+|statement_context_id|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The optional foreign key to sys.query_context_settings.<br /><br />This column is NULL if Query Store is not enabled for the database. |  
 |dop |**int** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The degree of parallelism of the query. |  
 |parallel_worker_count |**int** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The number of reserved parallel workers if this is a parallel query.  |  
 |external_script_request_id |**uniqueidentifier** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The external script request ID associated with the current request. |  
 |is_resumable |**bit** |**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates whether the request is a resumable index operation. |  
-|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. |
+|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_server_reads|**bigint**|**Applies to**: Azure SQL Database Hyperscale<br /><br /> Number of page server reads performed by this request. Is not nullable.|  
 
 ## Remarks 
 To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view do not include time spent in preemptive mode.

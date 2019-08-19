@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], mapping data types"
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ""
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0)
@@ -141,7 +140,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     ```  
   
 3.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Here is the partial result set:  

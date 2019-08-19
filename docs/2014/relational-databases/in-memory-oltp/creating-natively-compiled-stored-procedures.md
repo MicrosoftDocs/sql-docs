@@ -24,7 +24,7 @@ manager: craigg
   
  Natively compiled stored procedures are created using [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql). The following example shows a memory-optimized table and a natively compiled stored procedure used for inserting rows into the table.  
   
-```tsql  
+```sql  
 create table dbo.Ord  
 (OrdNo integer not null primary key nonclustered,   
  OrdDate datetime not null,   
@@ -92,7 +92,7 @@ go
   
      Use a wrapper (disk-based) stored procedure, and alter that procedure to point to SP_Vnew. The disadvantage of this approach is the performance impact of the indirection.  
   
-    ```tsql  
+    ```sql  
     ALTER PROCEDURE dbo.SP p1,...,pn  
     AS  
       EXEC dbo.SP_Vnew p1,...,pn  

@@ -40,7 +40,6 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -328,7 +327,7 @@ Is a default value for the parameter. If a *default* value is defined, the funct
   
  In inline TVFs, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
   
- <a name="mstvf"></a> In MSTVFs, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
+ <a name="mstvf"></a> In MSTVFs, \@*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. \@*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
   
  *select_stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).  

@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rsconfigtool.emailsettings.f1"
 helpviewer_keywords: 
   - "SQL11.rsconfigtool.emailsettings.F1"
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # E-mail Settings - Configuration Manager (SSRS Native Mode)

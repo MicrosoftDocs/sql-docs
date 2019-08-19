@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sys.remote_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

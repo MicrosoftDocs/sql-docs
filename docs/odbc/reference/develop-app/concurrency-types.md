@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Concurrency Types
 To solve the problem of reduced concurrency in cursors, ODBC exposes four different types of cursor concurrency:  

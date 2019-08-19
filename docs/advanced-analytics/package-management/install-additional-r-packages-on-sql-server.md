@@ -70,7 +70,7 @@ On a computer with Internet access:
 
 1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example creates the repository in the folder `c:\downloads\rodbcext`.
 
-   ::: monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
@@ -83,7 +83,7 @@ On a computer with Internet access:
 
    ::: moniker-end
 
-   ::: monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
@@ -149,7 +149,6 @@ On a computer with Internet access:
 
 1. Run the following R script to create a local repository for **glue**. This example creates the repository folder in `c:\downloads\glue`.
 
-   ::: monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
@@ -157,23 +156,13 @@ On a computer with Internet access:
    pkgs_needed <- "glue"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
+   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
-   ```
-
    ::: moniker-end
-
-   ::: monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
-   ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
-   local_repo <- "c:/downloads/glue"
-   pkgs_needed <- "glue"
-   pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
-
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
-   ```
-
    ::: moniker-end
+   ```
 
    For the `Rversion` value, use the version of R installed on SQL Server. To verify the installed version, use the following T-SQL command.
 

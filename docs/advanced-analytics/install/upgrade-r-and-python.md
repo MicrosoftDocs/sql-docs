@@ -1,4 +1,4 @@
-package-management/r-package-information---
+---
 title: Upgrade R and Python components
 description: Upgrade R and Python in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql

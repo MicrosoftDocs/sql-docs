@@ -19,6 +19,9 @@ This article lists the updates and know issues for the most recent releases of [
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+
 ## <a id="ctp32"></a> CTP 3.2 (July)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.2.

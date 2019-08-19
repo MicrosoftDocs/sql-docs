@@ -56,19 +56,18 @@ Complete details about support and licensing for release candidate software are 
   - SQL Server Analysis Services
   - SQL Server Reporting Services
   - Always On availability groups on Kubernetes
-  - Accelerated database recovery
 
 - **Workaround**: None. Exclusion applies to all customers, including participants in SQL Early Adopter Program.
 
-- **Applies to**: All CTP releases
+- **Applies to**: Release candidate
 
 ## Updated compiler
 
-- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of CTP 3.2 release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback) immediately.
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of the release candidate release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback) immediately.
 
 - **Workaround**: N/A
 
-- **Applies to**: All CTP releases
+- **Applies to**: Release candidate
 
 ## Installation Wizard may wait between EULA pages
 
@@ -92,6 +91,7 @@ Complete details about support and licensing for release candidate software are 
  
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
+
 - **Applies to**: All CTP releases.
 
 ## Always Encrypted with secure enclaves
@@ -106,9 +106,8 @@ Complete details about support and licensing for release candidate software are 
 
 - **Issue and customer impact**: SQL Server Configuration Manager (SSCM) does not start on a machine without VCRuntime 140. When starting SSCM, the user may see the following dialog: 
 
-  `
-  MMC could not create the snap-in. The snap-in might not have been installed correctly.
-  `
+
+  `MMC could not create the snap-in. The snap-in might not have been installed correctly.`
 
 - **Workaround**:  Install the latest VC Runtime 2013 (x86):
 

@@ -179,7 +179,6 @@ For more details, see [What are SQL Server [!INCLUDE[big-data-clusters](../inclu
 | New feature or update | Details |
 |:-----|:-----|
 |New container registry|[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
-|Always On Availability Group on Docker containers with Kubernetes |[Always On Availability Groups for containers](../linux/sql-server-ag-kubernetes.md) |
 |Replication support |[SQL Server Replication on Linux](../linux/sql-server-linux-replication.md)
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md) |
 |OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md) |

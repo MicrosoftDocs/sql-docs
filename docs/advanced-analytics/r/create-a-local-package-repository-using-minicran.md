@@ -4,7 +4,7 @@ description: Learn how to install R packages offline by using the miniCRAN packa
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/06/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye

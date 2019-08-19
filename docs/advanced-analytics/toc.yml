@@ -1,7 +1,7 @@
 - name: SQL Server Machine Learning Services Documentation
   href: ../advanced-analytics/index.yml
 
-- name: Welcome to SQL Server >>
+- name: Welcome to SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 
 - name: Overview
@@ -167,7 +167,7 @@
       href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
     - name: NYC Taxi data set
       href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
-- name: Samples >
+- name: Samples >>
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
@@ -323,7 +323,7 @@
       href: ../advanced-analytics/r/ref-r-sqlrutils.md
 - name: Resources
   items:
-  - name: Release notes >>
+  - name: Release notes >
     href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:

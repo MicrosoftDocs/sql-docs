@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Create a local R package repository using miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes how to install R packages offline by using the [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) package to create a local repository of packages and dependencies. **miniCRAN** identifies and downloads packages and dependencies into a single folder that you copy to other computers for offline R package installation.
+This article describes how to install R packages offline by using [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) to create a local repository of packages and dependencies. **miniCRAN** identifies and downloads packages and dependencies into a single folder that you copy to other computers for offline R package installation.
 
 You can specify one or more packages, and **miniCRAN** recursively reads the dependency tree for these packages. It then downloads only the listed packages and their dependencies from CRAN or similar repositories.
 

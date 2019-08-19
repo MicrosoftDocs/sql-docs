@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 07/24/2019
+ms.date: 08/19/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -76,15 +76,16 @@ Complete details about support and licensing for release candidate software are 
 
 - **Workaround**: Wait for the Installation Wizard to proceed. The time to wait may exceed 30 minutes.
 
-- **Applies to**: SQL Server 2019 CTP 3.0
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0
 
 ## UTF-8 collations
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
   - In-memory OLTP
-  - External Table for PolyBase
-  - Always Encrypted
+  - External Table for PolyBase ([!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
+  - Always Encrypted (Up to [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
+  - Linked Servers (up to [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2)
 
   > [!Note]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version 18 supports choice of UTF-8 enabled collations in the UI.

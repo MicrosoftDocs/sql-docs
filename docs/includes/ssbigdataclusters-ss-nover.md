@@ -1,1 +1,1 @@
-Big Data Clusters for SQL Server
+SQL Server Big Data Clusters

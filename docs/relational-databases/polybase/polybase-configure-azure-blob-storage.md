@@ -13,7 +13,7 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The article explains how to use PolyBase on a SQL Server instance to query external data in Hadoop.
+The article explains how to use PolyBase on a SQL Server instance to query external data in Azure Blob Storage.
 
 ## Prerequisites
 

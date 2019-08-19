@@ -1,4 +1,4 @@
----
+package-management/r-package-information---
 title: Upgrade R and Python components
 description: Upgrade R and Python in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
@@ -272,7 +272,7 @@ Alternatively, this is more work, but you could also fully uninstall and reinsta
 
 ### Step 3: Add any third-party packages
 
-You might have added other open-source or third-party packages to your package library. Since reversing the binding switches the location of the default package library, you must reinstall the packages to the library that R and Python are now using. For more information, see [Get R package information](../package-management/r-package-information.md).
+You might have added other open-source or third-party packages to your package library. Since reversing the binding switches the location of the default package library, you must reinstall the packages to the library that R and Python are now using. For more information, see [R package information](../package-management/r-package-information.md) and [installation](../package-management/install-additional-r-packages-on-sql-server.md), and [Python package information](../package-management/python-package-information.md) and [installation](../package-management/install-additional-python-packages-on-sql-server.md).
 
 ## SqlBindR.exe command syntax
 

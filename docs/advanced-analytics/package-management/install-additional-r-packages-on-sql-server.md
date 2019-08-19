@@ -76,7 +76,12 @@ On a computer with Internet access:
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
+   monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
+   ::: moniker-end
+   monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
+   ::: moniker-end
    ```
 
    For the `Rversion` value, use the version of R installed on SQL Server. To verify the installed version, use the following T-SQL command.
@@ -138,7 +143,12 @@ On a computer with Internet access:
    pkgs_needed <- "glue"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
+   monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
+   ::: moniker-end
+   monikerRange: ">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
+   ::: moniker-end
    ```
 
    For the `Rversion` value, use the version of R installed on SQL Server. To verify the installed version, use the following T-SQL command.
@@ -163,8 +173,9 @@ On the client computer:
      database = "yourdatabase",
      uid = "yoursqluser",
      pwd = "yoursqlpassword")
+   localRepo = "c:/temp/packages/glue"
 
-   sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos="file:///c:\\temp\\packages\\glue")
+   sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))
    ```
 
    > [!TIP]

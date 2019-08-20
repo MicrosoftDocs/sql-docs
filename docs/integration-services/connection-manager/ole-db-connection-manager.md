@@ -162,7 +162,7 @@ Finally, configure managed identity authentication for the OLE DB connection man
 > [!NOTE]
 >  To configure managed identity authentication on existing packages, the preferred way is to rebuild your SSIS project with the [latest SSIS Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) at least once. Redeploy that SSIS project to your Azure-SSIS integration runtime, so that the new connection manager property `ConnectUsingManagedIdentity` is automatically added to all OLE DB connection managers in your SSIS project. The alternative way is to directly use a property override with property path **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** at runtime.
 
-## See Also    
+## See also    
  [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)     
  [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md)     

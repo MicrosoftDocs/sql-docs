@@ -109,10 +109,10 @@ On a computer with Internet access:
 
 On the client computer you use to connect to SQL Server, open a command prompt and run the following commands to install **RODBCext** and then **sqlmlutils**.
 
-    ```console
-    R -e "install.packages('RODBCext', repos='c:\temp\packages\rodbcext')"
-    R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
-    ```
+```console
+R -e "install.packages('RODBCext', repos='c:\temp\packages\rodbcext')"
+R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
+```
 
 ## Add an R package on SQL Server
 

@@ -5,7 +5,7 @@ description: This article describes security concepts for [!INCLUDE[big-data-clu
 author: nelgson 
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

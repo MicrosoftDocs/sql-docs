@@ -5,7 +5,7 @@ description: Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

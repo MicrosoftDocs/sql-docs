@@ -627,11 +627,11 @@ GO
   
 ## See Also
 
-[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
-[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
-[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
-[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
-[OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)
-[MERGE in Integration Services Packages](../../integration-services/control-flow/merge-in-integration-services-packages.md)
-[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)
-[Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  
+- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
+- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)
+- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)
+- [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)
+- [MERGE in Integration Services Packages](../../integration-services/control-flow/merge-in-integration-services-packages.md)
+- [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)
+- [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)  

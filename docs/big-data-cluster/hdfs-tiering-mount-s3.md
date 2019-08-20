@@ -5,7 +5,7 @@ description: This article explains how to configure HDFS tiering to mount an ext
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/31/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -56,10 +56,10 @@ Now that you have prepared a credential file with access keys, you can start mou
    
 1. Set environment variable MOUNT_CREDENTIALS following the instructions above
 
-1. Mount the remote HDFS storage in S3 using **azdata bdc storage-pool mount create**. Replace the placeholder values before running the following command:
+1. Mount the remote HDFS storage in Azure using **azdata bdc hdfs mount create**. Replace the placeholder values before running the following command:
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -91,7 +91,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Delete the mount
 
-To delete the mount, use the **azdata bdc storage-pool mount delete** command, and specify the mount path in HDFS:
+To delete the mount, use the **azdata bdc hdfs mount delete** command, and specify the mount path in HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>

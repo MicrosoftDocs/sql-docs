@@ -31,6 +31,7 @@ ms.author: sstein
   
 sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , options  
     [ , scrollopt [ , ccopt [ , rowcount ] ] ]  
+    [, '@parameter_name[,...n ]']
 ```  
   
 ## Arguments  
@@ -106,6 +107,9 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |As input value|As return value|  
 |--------------------|---------------------|  
 |When AUTO_FETCH is specified with FAST_FORWARD cursors *rowcount* represents the number of rows to place into the fetch buffer.|Represents the number of rows in the result set. When the *scrollopt* AUTO_FETCH value is specified, *rowcount* returns the number of rows that were fetched into the fetch buffer.|  
+
+*parameter_name*
+Designate one or more parameter names as defined in the params argument.  There must be a parameter supplied for every parameter included in params. This argument is not required when the Transact-SQL statement or batch in params has no parameters defined.
   
 ## Return Code Values  
  If *params* returns a NULL value then the statement is not parameterized.  

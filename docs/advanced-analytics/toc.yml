@@ -229,34 +229,22 @@
       href: ../advanced-analytics/sql-native-scoring.md
   - name: Package management
     items:
-    - name: Default packages
-      href: ../advanced-analytics/package-management/default-packages.md
-    - name: Get package information
-      href: ../advanced-analytics/package-management/installed-package-information.md
+    - name: Install new Python packages
+      items:
+      - name: Get Python package information
+        href: ../advanced-analytics/package-management/python-package-information.md
+      - name: Install Python packages
+        href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
     - name: Install new R packages
       items:
-      - name: Install R package
-        href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-      - name: Use T-SQL
-        href: ../advanced-analytics/r/install-r-packages-tsql.md
-      - name: Use package managers
-        href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-      - name: Use RevoScaleR
-        items:
-        - name: Install using RevoScaleR
-          href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-        - name: Enable remote R package management
-          href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-        - name: Synchronize R packages
-          href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+      - name: Get R package information
+        href: ../advanced-analytics/package-management/r-package-information.md
+      - name: Install R packages
+        href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
       - name: Create a miniCRAN repo
         href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages
         href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-    - name: Install new Python packages
-      items:
-      - name: Use package managers
-        href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
   - name: Administration
     items:
     - name: Manage integration

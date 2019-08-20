@@ -91,7 +91,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 It is not recommended to enable hybrid buffer pool on instances with less than 16-GB RAM.
 
-When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
+When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (32 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access) - /DAX:enable.
 
 Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
 

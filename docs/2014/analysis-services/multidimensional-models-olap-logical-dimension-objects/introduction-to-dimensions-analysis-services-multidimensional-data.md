@@ -25,19 +25,19 @@ manager: craigg
   
  The following diagram illustrates a subsection of the [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] sample database, in which the **FactResellerSales** fact table is related to two dimension tables, **DimReseller** and **DimPromotion**. The **ResellerKey** column in the **FactResellerSales** fact table defines a foreign key relationship to the **ResellerKey** primary key column in the **DimReseller** dimension table. Similarly, the **PromotionKey** column in the **FactResellerSales** fact table defines a foreign key relationship to the **PromotionKey** primary key column in the **DimPromotion** dimension table.  
   
- ![Logical schema for fact dimension relationship](../../../2014/analysis-services/dev-guide/media/dimfactrelationship.gif "Logical schema for fact dimension relationship")  
+ ![Logical schema for fact dimension relationship](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimfactrelationship.gif "Logical schema for fact dimension relationship")  
   
 ## Dimension based on a Snowflake Schema Design  
  Frequently, a more complex structure is required because information from multiple tables is required to define the dimension. In this structure, called a snowflake schema, each dimension is based on attributes from columns in multiple tables linked to each other and ultimately to the fact table by primary key - foreign key relationships. For example, the following diagram illustrates the tables required to completely describe the Product dimension in the **AdventureWorksDW** sample project:  
   
- ![Tables for AdventureWorksAS Product dimension](../../../2014/analysis-services/dev-guide/media/dimproduct.gif "Tables for AdventureWorksAS Product dimension")  
+ ![Tables for AdventureWorksAS Product dimension](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimproduct.gif "Tables for AdventureWorksAS Product dimension")  
   
  To completely describe a product, the product's category and subcategory must be included in the Product dimension. However, that information does not reside directly in the main table for the **DimProduct** dimension. A foreign key relationship from **DimProduct** to **DimProductSubcategory**, which in turn has a foreign key relationship to the **DimProductCategory** table, makes it possible to include the information for product categories and subcategories in the Product dimension.  
   
 ## Snowflake Schema versus Reference Relationship  
  Sometimes, you may have a choice between using a snowflake schema to define attributes in a dimension from multiple tables, or defining two separate dimensions and defining a reference dimension relationship between them. The following diagram illustrates such a scenario.  
   
- ![Logical schema for sample referenced dimension](../../../2014/analysis-services/dev-guide/media/dimindirect.gif "Logical schema for sample referenced dimension")  
+ ![Logical schema for sample referenced dimension](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimindirect.gif "Logical schema for sample referenced dimension")  
   
  In the previous diagram, the **FactResellerSales** fact table does not have a foreign key relationship with the **DimGeography** dimension table. However, the **FactResellerSales** fact table does have a foreign key relationship with the **DimReseller** dimension table, which in turn has a foreign key relationship with the **DimGeography** dimension table. To define a Reseller dimension that contains geography information about each reseller, you would have to retrieve these attributes from the **DimGeography** and the **DimReseller** dimension tables. However, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can achieve the same result by creating two separate dimensions and linking them in a measure group by defining a reference dimension relationship between the two dimensions. For more information about reference dimension relationships, see [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

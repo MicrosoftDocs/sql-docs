@@ -56,7 +56,7 @@ SQL Server 2016 Analysis Services provides improved performance, authoring, data
 - New **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** namespace manages tabular mode instances and models. 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) is re-factored to include a second assembly, **Microsoft.AnalysisServices.Core.dll**.
 
-See [Analysis Services Engine (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
+See [Analysis Services Engine (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
 
 ## SQL Server 2016 Integration Services (SSIS)
 - Support for **Always On Availability Groups**

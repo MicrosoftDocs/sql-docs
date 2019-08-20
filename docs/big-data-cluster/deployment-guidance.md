@@ -82,10 +82,10 @@ Big data cluster deployment options are defined in JSON configuration files. The
 
 You can deploy a big data cluster by running **azdata bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
-The first time you run `azdata` you must include `--accept-eula` to accept the end user license agreement (EULA).
+The first time you run `azdata` you must include `--accept-eula=yes` to accept the end user license agreement (EULA).
 
 ```bash
-azdata bdc create --accept-eula
+azdata bdc create --accept-eula=yes
 ```
 
 In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. 

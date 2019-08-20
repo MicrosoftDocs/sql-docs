@@ -66,8 +66,8 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
 1. Install the necessary Python packages:
 
    ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
+   sudo apt-get update && \
+   sudo apt-get install -y python3 && \
    sudo apt-get install -y python3-pip
    ```
 

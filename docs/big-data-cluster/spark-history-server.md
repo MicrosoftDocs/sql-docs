@@ -86,7 +86,7 @@ Select job ID then click **Graph** on the tool menu to get the job graph view.
 
     ![graph job ID](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ We leave **Progress** as default value. User can check  data flow by selecting **Read** or **Written**** in the dropdown list of **Display**.
++ We leave **Progress** as default value. User can check  data flow by selecting **Read** or **Written** in the dropdown list of **Display**.
 
     ![graph display](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -198,5 +198,5 @@ The Spark History Server has the following known issues:
 
 ## Next steps
 
-* [Get started with SQL Server big data clusters](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [Get started with SQL Server big data clusters](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [Configure Spark settings](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

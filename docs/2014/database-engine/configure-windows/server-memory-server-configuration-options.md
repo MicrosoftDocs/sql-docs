@@ -1,5 +1,5 @@
 ---
-title: "Server Memory Server Configuration Options | Microsoft Docs"
+title: "Server Memory Configuration Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Server Memory Server Configuration Options
+# Server Memory Configuration Options
   Use the two server memory options, **min server memory** and **max server memory**, to reconfigure the amount of memory (in megabytes) that is managed by the SQL Server Memory Manager for a SQL Server process used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The default setting for **min server memory** is 0, and the default setting for **max server memory** is 2147483647 MB. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources.  
   
 > [!NOTE]  
->  Setting **max server memory** to the minimum value can severely reduce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and even prevent it from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **-f** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](database-engine-service-startup-options.md).  
+> Setting **max server memory** to the minimum value can severely reduce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and even prevent it from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **-f** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](database-engine-service-startup-options.md).  
   
  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using memory dynamically, it queries the system periodically to determine the amount of free memory. Maintaining this free memory prevents the operating system (OS) from paging. If less memory is free, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] releases memory to the OS. If more memory is free, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may allocate more memory. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds memory only when its workload requires more memory; a server at rest does not increase the size of its virtual address space.  
   
@@ -57,7 +57,7 @@ The server options **min server memory** and **max server memory** can be set to
 
 <sup>2</sup> Refer to the documentation page on how to [Configure the max worker threads Server Configuration Option](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md), for information on the calculated default worker threads for a given number of affinitized CPUs in the current host.
 
-<sup>3</sup> Refer to the documentation page on [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter. Aplicable only to 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
+<sup>3</sup> Refer to the documentation page on [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014) for information on the *-g* startup parameter. Aplicable only to 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
 |OS Type|Minimum Memory Amounts Allowable for **max server memory**|  
 |-------------|----------------------------------------------------------------|  

@@ -34,13 +34,13 @@ manager: kfile
 |------------|-----------------|  
 |**Edit As Text**|Toggle between the text-based query designer and the graphical query designer. Not all data source types support graphical query designers.|  
 |**Import**|Import an existing query from a file or report. Only file types sql and rdl are supported|  
-|![Run the query](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the result set in the Result pane.|  
+|![Run the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Run the query and display the result set in the Result pane.|  
 |**Command Type**|Select **Text**, **StoredProcedure**, or **TableDirect**. If a stored procedure has parameters, the **Define Query Parameters** dialog box appears when you click **Run** on the toolbar, and you can fill in values as needed.<br /><br /> Note: If a stored procedure returns more than one result set, only the first result set is used to populate the dataset.|  
   
 ### Command Type Text  
  When you create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dataset, the relational query designer opens by default. To switch to the text-based query designer, click the **Edit As Text** toggle button on the toolbar. The text-based query designer presents two panes: the Query pane and the Result pane. The following figure labels each pane.  
   
- ![Generic query designer, for relational data query](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
+ ![Generic query designer, for relational data query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
   
  The following table describes the function of each pane.  
   
@@ -63,7 +63,7 @@ SELECT Name FROM Person.ContactType
   
  The following figure shows the Query and Results panes when you run a stored procedure. In this case, the input parameters are constants.  
   
- ![Stored procedure in text-based query designer](../../analysis-services/media/rs-relational-text-sp.gif "Stored procedure in text-based query designer")  
+ ![Stored procedure in text-based query designer](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Stored procedure in text-based query designer")  
   
  The following table describes the function of each pane.  
   

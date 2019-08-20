@@ -11,7 +11,7 @@ f1_keywords:
 dev_langs:
   - "TSQL"
 helpviewer_keywords: 
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---

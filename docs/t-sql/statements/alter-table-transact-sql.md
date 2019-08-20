@@ -755,7 +755,7 @@ A partitioned table with a clustered columstore index behaves like a partitioned
 
 - The primary key must include the partition key.
 - A unique index must include the partition key. But, including the partition key with an existing unique index can change the uniqueness.
-- To switch partitions, all non-clustered indexes must include the partition key.
+- To switch partitions, all nonclustered indexes must include the partition key.
 
 For **SWITCH** restriction when using replication, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).
 
@@ -1404,7 +1404,7 @@ GO
 DROP TABLE Person.ContactBackup ;
 ```
 
-![Arrow icon used with Back to Top link](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Examples](#Example_Top)
+![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Examples](#Example_Top)
 
 ### <a name="alter_column"></a> Altering a Column Definition
 

@@ -31,7 +31,7 @@ ms.author: sstein
 |**status**|**smallint**|Numeric status of the server audit:<br /><br /> 0 = Not Started<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Runtime Fail<br /><br /> 3 = Target Create Fail<br /><br /> 4 = Shutting Down|  
 |**status_desc**|**nvarchar(256)**|String that shows the status of the server audit:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC of the last status change for the audit.|  
-|**event_session_address**|**varbinary(8)**|Address of the Extended Events session associated with the audit. Related to the **sys.db_xe_sessions.address** catalog view.|  
+|**event_session_address**|**varbinary(8)**|Address of the Extended Events session associated with the audit. Related to the **sys.dm_xe_sessions.address** catalog view.|  
 |**audit_file_path**|**nvarchar(256)**|Full path and file name of the audit file target that is currently being used. Only populated for file audits.|  
 |**audit_file_size**|**bigint**|Approximate size of the audit file, in bytes. Only populated for file audits.|  
   

@@ -21,6 +21,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Set up replication distribution database in Always On availability group
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 

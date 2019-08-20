@@ -63,8 +63,8 @@ author: minewiskan
  A subcube identifier appears as *Subcube_Name*. in BNF notation descriptions of MDX statements.  
   
 ## See Also  
- [The Basic MDX Query &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [Building Subcubes in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
+ [The Basic MDX Query &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Building Subcubes in MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [CREATE SUBCUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [SCOPE Statement &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  

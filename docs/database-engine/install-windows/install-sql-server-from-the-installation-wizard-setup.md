@@ -48,8 +48,7 @@ Before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], re
 
 Microsoft has identified a problem with the Microsoft Visual C++ 2013 runtime binaries that are installed as a prerequisite by SQL Server 2016 and 2017. An update is available to fix this problem. If this update to the Visual C++ runtime binaries isn't installed, SQL Server may experience stability issues in certain scenarios. Before you install SQL Server, follow the instructions in the [SQL Server release notes](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) to see if your computer requires a patch for the Visual C++ runtime binaries. 
 
-This is not applicable to SQL Server 2019.  
-  
+This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 ## To install SQL Server 2016 and 2017  
 
@@ -274,9 +273,9 @@ This is not applicable to SQL Server 2019.
   
      The workflow for the rest of the installation depends on the features that you've specified for your installation. Depending on your selections, you might not see all the pages. 
 
-1. Selecting to install the Polybase feature will add the **PolyBase Configuration** page to the SQL Server setup, displayed after the **Instance Configuration** page. PolyBase requires the Oracle JRE 7 Update 51 (at least), and if this hasn't already been installed, starting with SQL Server 2019, you are able to install the Azul Zulu Open JRE along with SQL Server. On the **Polybase Configuration** page, you can choose to use the SQL Server as a standalone Polybase-enabled instance, or you can use this SQL Server as part of a PolyBase scale-out group. If you choose to use the scale-out group, you will need to specify a port range of up to 6 or more ports.  On the **Java Install Location** page, you can choose to install the Azul Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
+1. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], Polybase no longer requires that Oracle JRE 7 Update 51 (at least) be pre-installed on the computer prior to installing the feature. Selecting to install the Polybase feature will add the **Java Install Location** page to the SQL Server setup displayed after the **Instance Configuration** page. On the Java Install Location page, you can choose to install the Azul Zulu Open JRE included with the [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
-1. Starting with SQL Server 2019, Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the SQL Server setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the SQL Server 2019 installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
+1. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], Java has been added with Language Extensions. Selecting to install the Java feature will add the **Java Install Location** page to the SQL Server setup dialog window, displayed after the **Instance Configuration** page. On the **Java Install Location** page, you can choose to install the Zulu Open JRE included with the [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] installation, or provide a location of a different JRE or JDK that has already been installed on the computer.
 
 1. Use the **Server Configuration - Service Accounts** page to specify the logon accounts for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. The actual services that you configure on this page depend on the features that you selected to install. For more information about configuration settings, see [Installation Wizard help](../../sql-server/install/instance-configuration.md#serverconfig).
   
@@ -309,10 +308,19 @@ This is not applicable to SQL Server 2019.
 
      Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for **tempdb**. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
 
-  
-     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** tab to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation. For more information, see the [max degree of parallelism guidelines](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). This option is only available starting with SQL Server 2019. 
+     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation. 
+     
+    > [!NOTE]  
+    > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
+    
+    For more information, see the [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
 
-     Use the **Database Engine Configuration - Memory** tab to specify the MIN and MAX memory values that this instance of SQL Server will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option. This capability is only available within Setup starting with SQL Server 2019. 
+     Use the **Database Engine Configuration - Memory** page to specify the **min server memory** and **max server memory** values that this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option.
+     
+    > [!NOTE]  
+    > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
+    
+    For more information, see the [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
 
      Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   

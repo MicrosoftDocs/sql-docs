@@ -10377,6 +10377,9 @@
           href: linux/sql-server-linux-availability-group-cross-platform.md
       - name: High availability for containers
         href: linux/sql-server-linux-container-ha-overview.md
+        items:
+        - name: Configure a container in Kubernetes
+          href: linux/tutorial-sql-server-containers-kubernetes.md
     - name: Security
       href: linux/sql-server-linux-security-overview.md
       items:

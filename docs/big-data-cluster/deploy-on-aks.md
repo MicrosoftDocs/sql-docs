@@ -5,7 +5,7 @@ description: Learn how to configure Azure Kubernetes Service (AKS) for [!INCLUDE
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -5,7 +5,7 @@ description: Learn how to install tools used with [!INCLUDE[big-data-clusters-20
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -8,13 +8,27 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
+author: v-makouz
 ms.author: genemi
 ---
 # Features of the Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
     
+## Microsoft ODBC Driver 17.4 for SQL Server on Windows
+
+The ODBC Driver 17.4 includes the ability to adjust TCP Keep-Alive settings. They can be modified by adding values to the Driver or DSN registry keys. The keys located in `HKEY_LOCAL_MACHINE\Software\ODBC\` for system data sources, and in  `HKEY_CURRENT_USER\Software\ODBC\` for user data sources. For DSN the values need to be added to `...\Software\ODBC\ODBC.INI\<DSN Name>` and for the Driver to `...\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`.
+
+See [Registry Entries for ODBC Components](../../../odbc/reference/install/registry-entries-for-odbc-components.md) for more information.
+
+The values are `REG_SZ` and are as follows:
+
+- `KeepAlive` controls how often TCP attempts to verify that an idle connection is still intact by sending a keep-alive packet. The default is 30 seconds.
+
+- `KeepAliveInterval` determines the interval separating keep-alive retransmissions until a response is received. The default is 1 second.
+
+
+
 ## Microsoft ODBC Driver 13.1 for SQL Server on Windows
 
 The ODBC Driver 13.1 for SQL Server contains all the functionality of the previous version (11) and adds support for Always Encrypted and Azure Active Directory authentication when used in conjunction with Microsoft SQL Server 2016.  

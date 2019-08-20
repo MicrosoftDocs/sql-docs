@@ -118,7 +118,7 @@ Complete details about support and licensing for release candidate software are 
 
 ## Always On Availability Group Kubernetes operator not supported
 
-- **Issue and customer impact**: The Kubernetes operator for Always On Availability Groups on containers is a preview feature. Support for production is not expected at the time of SQL Server 2019 RTM. 
+- **Issue and customer impact**: The Kubernetes operator for Always On Availability Groups is not supported in this release candidate and will not be available at RTM. 
 
 - **Workaround**: None
 

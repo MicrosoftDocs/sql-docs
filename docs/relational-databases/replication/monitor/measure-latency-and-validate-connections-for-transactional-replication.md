@@ -107,21 +107,21 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 2.  (Optional) At the Publisher on the publication database, execute [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Verify that the subscription exists and that the status is active.  
   
-3.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), specifying **@publication**. Note the value of the **@tracer_token_id** output parameter.  
+3.  At the Publisher on the publication database, execute [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), specifying **\@publication**. Note the value of the **\@tracer_token_id** output parameter.  
   
 #### To determine latency and validate connections for a transactional publication  
   
 1.  Post a tracer token to the publication using the previous procedure.  
   
-2.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the desired **tracer_id** in the result set.  
+2.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **\@publication**. This returns a list of all tracer tokens posted to the publication. Note the desired **tracer_id** in the result set.  
   
-3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), specifying **@publication** and the tracer token ID from step 2 for **@tracer_id**. This returns latency information for the selected tracer token.  
+3.  At the Publisher on the publication database, execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), specifying **\@publication** and the tracer token ID from step 2 for **\@tracer_id**. This returns latency information for the selected tracer token.  
   
 #### To remove tracer tokens  
   
-1.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **@publication**. This returns a list of all tracer tokens posted to the publication. Note the **tracer_id** for the tracer token to delete in the result set.  
+1.  At the Publisher on the publication database, execute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), specifying **\@publication**. This returns a list of all tracer tokens posted to the publication. Note the **tracer_id** for the tracer token to delete in the result set.  
   
-2.  At the Publisher on the publication database, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), specifying **@publication** and the ID of the tracer to delete from step 2 for **@tracer_id**.  
+2.  At the Publisher on the publication database, execute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), specifying **\@publication** and the ID of the tracer to delete from step 2 for **@tracer_id**.  
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example posts a tracer token record and uses the returned ID of the posted tracer token to view latency information.  

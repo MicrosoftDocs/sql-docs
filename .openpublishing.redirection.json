@@ -13911,11 +13911,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/tutorial-sql-server-containers-kubernetes.md",
-            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "docs/linux/sql-server-linux-kubernetes-connect.md",
             "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
             "redirect_document_id": false

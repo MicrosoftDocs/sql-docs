@@ -19,7 +19,7 @@ author: stevestein
 ms.author: sstein
 ---
 # sp_cursorprepexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Compiles a plan for the submitted cursor statement or batch, then creates and populates the cursor. sp_cursorprepexec combines the functions of sp_cursorprepare and sp_cursorexecute. This procedure is invoked by specifying ID = 5 in a tabular data stream (TDS) packet.  
   

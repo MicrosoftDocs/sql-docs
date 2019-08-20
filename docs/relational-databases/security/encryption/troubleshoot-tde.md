@@ -26,9 +26,7 @@ For the first 48 hours, if the underlying Azure Key vault key access issue is re
 
 If an inaccessible database is no longer needed, it can be deleted immediately to stop incurring costs.  All other actions on the database are not permitted until access to the Azure Key Vault key has been restored and the database is back online.   Changing the TDE option from customer managed to service managed keys on the server is also not supported while a database encrypted with customer managed keys is inaccessible. This is necessary to protect the data from unauthorized access while permissions to the TDE Protector have been revoked. 
 
-After a database has been inaccessible for more than 48 hours, it will no longer auto-heal.  If the required Azure Key Vault key access has been restored, you must re-validate the access manually to bring the database back online.  Bringing the database back online after it was inaccessible for more than 48 hours can take a significant amount of time depending on the size of the database.  
-
-Once the database is back online, previously configured settings such as the geo-link if Geo-DR was configured, PITR history, and tags will be lost.  Therefore, we recommend implementing a notification system that allows to address the underlying key vault issues within 48 hours. 
+After a database has been inaccessible for more than 48 hours, it will no longer auto-heal.  If the required Azure Key Vault key access has been restored, you must re-validate the access manually to bring the database back online.  Bringing the database back online after it was inaccessible for more than 48 hours can take a significant amount of time depending on the size of the database and currently requires a support ticket. Once the database is back online, previously configured settings such as the geo-link if Geo-DR was configured, PITR history, and tags will be lost.  Therefore, we recommend implementing a notification system using [Action Groups](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) that allows to address the underlying key vault issues within 48 hours. 
 
 
 ## Common errors causing databases to become inaccessible
@@ -83,7 +81,7 @@ In the Azure portal, go to the key vault, and then go to **Access policies**. Co
 To learn more, see [Assign an Azure AD identity to your server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> If the logical SQL Server instance was moved to a new subscription after the initial configuration of TDE with Key Vault, repeat the step to configure the Azure AD identity to create a new AppId. Then, add the AppId to the key vault and assign the correct permissions to the key. 
+> If the logical SQL Server instance was moved to a new tenant after the initial configuration of TDE with Key Vault, repeat the step to configure the Azure AD identity to create a new AppId. Then, add the AppId to the key vault and assign the correct permissions to the key. 
 >
 
 ### Missing key vault

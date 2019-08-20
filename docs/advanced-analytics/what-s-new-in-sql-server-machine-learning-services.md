@@ -1,7 +1,7 @@
 ---
 title: What's new
 description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server Machine Learning Services.
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -26,6 +26,7 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
+| RC 1 | [Loopback connection to SQL Server from a Python or R script](connect/loopback-connection.md) is now supported for both Windows and Linux. |
 | CTP 3.2 | No changes. |
 | CTP 3.1 | No changes. |
 | CTP 3.0 | No changes. |

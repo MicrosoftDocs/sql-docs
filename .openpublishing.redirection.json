@@ -13904,6 +13904,31 @@
             "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/index.md",
             "redirect_url": "/bi-reference/adomd/index",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-ag-kubernetes.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-connect.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-create-deployment.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-manage.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-deploy.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
         }
     ]
 }

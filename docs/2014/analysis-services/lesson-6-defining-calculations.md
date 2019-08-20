@@ -39,18 +39,18 @@ manager: craigg
   
  This lesson contains the following tasks:  
   
- [Defining Calculated Members](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [Defining Calculated Members](lesson-6-1-defining-calculated-members.md)  
  In this task, you learn to define calculated members.  
   
- [Defining Named Sets](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Defining Named Sets](lesson-6-2-defining-named-sets.md)  
  In this task, you learn to define named sets.  
   
 ## Next Lesson  
- [Lesson 7: Defining Key Performance Indicators &#40;KPIs&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Lesson 7: Defining Key Performance Indicators &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## See Also  
- [Analysis Services Tutorial Scenario](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
- [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)   
+ [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Create Named Sets](multidimensional-models/create-named-sets.md)   
  [Create Calculated Members](multidimensional-models/create-calculated-members.md)  
   

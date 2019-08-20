@@ -26,20 +26,6 @@ This topic describes how to create a [!INCLUDE[msCoName](../../includes/msconame
   
 These job step scripts may call stored procedures and extended stored procedures. A single [!INCLUDE[tsql](../../includes/tsql-md.md)] job step can contain multiple batches and embedded GO commands. For more information on creating a job, see [Creating Jobs](../../ssms/agent/create-jobs.md).  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To create a Transact-SQL job step, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Security"></a>Security  

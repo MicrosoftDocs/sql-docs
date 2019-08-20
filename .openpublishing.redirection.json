@@ -501,8 +501,18 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/package-management/default-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",
             "redirect_url": "/sql/advanced-analytics/package-management/installed-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/package-management/installed-package-information.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
             "redirect_document_id": true
         },
         {
@@ -932,7 +942,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1632,7 +1642,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1876,8 +1886,38 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/r-package-how-to-enable-or-disable.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/install-r-packages-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/package-install-uninstall-and-sync.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/use-revoscaler-to-manage-r-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/r-package-management-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/install-additional-r-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/install-additional-python-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-python-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1947,8 +1987,13 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/sql-server-r-services-tutorials.md",
-            "redirect_url": "/sql/advanced-analytics/tutorials/machine-learning-services-tutorials",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sql-server-python-tutorials",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/tutorials/machine-learning-services-tutorials.md",
+            "redirect_url": "/sql/advanced-analytics/tutorials/sql-server-python-tutorials",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/advanced-analytics/r-services/sql-server-r-services.md",

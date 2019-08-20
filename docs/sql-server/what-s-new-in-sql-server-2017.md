@@ -84,7 +84,7 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 - New **Detail Rows** end-user action to **Show Details** for aggregated information. [SELECTCOLUMNS](/dax/selectcolumns-function-dax) and **DETAILROWS** functions for creating Detail Rows expressions. (CTP 1.1)
 - DAX **IN** operator for specifying multiple values. (CTP 1.1)
 
-For more information, see [What's new in SQL Server Analysis Services 2017](https://docs.microsoft.com/analysis-services/what-s-new-in-sql-server-analysis-services-2017).
+For more information, see [What's new in SQL Server Analysis Services](/analysis-services/what-s-new-in-analysis-services).
 
 ## SQL Server 2017 Reporting Services (SSRS)
 SQL Server Reporting Services is no longer available to install through SQL Server setup. Go to the Microsoft Download Center to [download Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 

@@ -1,19 +1,18 @@
 ---
-title: Quickstart for a "Hello World" basic Python code execution in T-SQL
-description: Quickstart for Python script in SQL Server. Learn the basics of calling Python script using the sp_execute_external_script system stored procedure in a hello-world exercise.
+title: 'Quickstart: Python "Hello World"'
+description: 'In this quickstart, you learn key concepts by running a "Hello World" Python script on SQL Server Machine Learning Services. You will use the T-SQL sp_execute_external_script system stored procedure.'
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Quickstart: "Hello world" Python script in SQL Server 
+# Quickstart: Run a "Hello world" Python script on SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In this quickstart, you learn key concepts by running a "Hello World" Python script inT-SQL, with an introduction to the **sp_execute_external_script** system stored procedure. 
+In this quickstart, you learn key concepts by running a "Hello World" Python script on SQL Server Machine Learning Services. You'll use the T-SQL **sp_execute_external_script** system stored procedure.
 
 ## Prerequisites
 

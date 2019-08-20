@@ -67,6 +67,9 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
 
    ![PolyBase services](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
+   >[!NOTE]
+   >SQL Server 2019 PolyBase now includes an additional option **Java connector for HDFS data sources**. See [SQL Server preview features](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) for more information about this feature.
+   
 4. On the Server Configuration page, configure the **SQL Server PolyBase Engine Service** and **SQL Server PolyBase Data Movement Service** to run under the same domain account.  
 
    >[!IMPORTANT]

@@ -28,7 +28,7 @@ This tutorial explains how to use a script to load sample data into a SQL Server
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> Load sample data
 
 The following steps use a bootstrap script to download a SQL Server database backup and load the data into your big data cluster. For ease of use, these steps have been broken out into [Windows](#windows) and [Linux](#linux) sections.

@@ -160,7 +160,7 @@ Confirm that the logical SQL Server instance has permissions to the key vault an
 
 To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) for the resource id based on the ARM URL and Subscription+Resourcegroup+ServerName+DatabseName: 
 
-Event when the service loses access to the Azure Key Vault key: 
+**Event when the service loses access to the Azure Key Vault key**
 
 EventName: MakeDatabaseInaccessible 
 
@@ -170,7 +170,7 @@ Description: Database has lost access to Azure key vault key and is now inaccess
 
  
 
-Event when the 48-hour wait time for self-healing begins: 
+**Event when the 48-hour wait time for self-healing begins** 
 
 EventName: MakeDatabaseInaccessible 
 
@@ -180,7 +180,7 @@ Description: Database is waiting for Azure key vault key access to be reestablis
 
  
 
-Event when the database has automatically come back online: 
+**Event when the database has automatically come back online**
 
 EventName: MakeDatabaseAccessible 
 
@@ -190,7 +190,7 @@ Description: Database access to Azure key vault key has been reestablished and d
 
  
 
-Event when the issue wasn’t resolved within 48 hours and Azure Key Vault key access has to be validated manually: 
+**Event when the issue wasn’t resolved within 48 hours and Azure Key Vault key access has to be validated manually** 
 
 EventName: MakeDatabaseInaccessible 
 
@@ -200,7 +200,7 @@ Description: Database is inaccessible and requires user to resolve Azure key vau
 
  
 
-Event when db comes online after manual key re-validation: 
+**Event when db comes online after manual key re-validation**
 
 EventName: MakeDatabaseAccessible 
 
@@ -210,7 +210,7 @@ Description: Database access to Azure key vault key has been reestablished and d
 
  
 
-Event when re-validation of Azure Key Vault key access has succeeded and the db is coming back online: 
+**Event when re-validation of Azure Key Vault key access has succeeded and the db is coming back online**
 
 EventName: MakeDatabaseAccessible 
 
@@ -220,13 +220,14 @@ Description: Restoring database access to Azure key vault key has started.
 
  
 
-Event when re-validation of Azure Key Vault key access has failed:  
+**Event when re-validation of Azure Key Vault key access has failed**
 
 EventName: MakeDatabaseAccessible 
 
 Status: Failed 
 
 Description: Restoring database access to Azure key vault key has failed. 
+
 
 ## Next steps
 

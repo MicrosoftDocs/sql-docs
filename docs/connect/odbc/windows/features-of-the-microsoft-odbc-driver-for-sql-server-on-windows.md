@@ -17,7 +17,7 @@ ms.author: genemi
     
 ## Microsoft ODBC Driver 17.4 for SQL Server on Windows
 
-The ODBC Driver 17.4 includes the ability to adjust TCP Keep-Alive settings. They can be modified by adding values to the Driver or DSN registry keys. The keys located in `HKEY_LOCAL_MACHINE\Software\ODBC\` for system data sources, and in  `HKEY_CURRENT_USER\Software\ODBC\` for user data sources. For DSN the values need to be added to `...\Software\ODBC\ODBC.INI\<DSN Name>` and for the Driver to `...\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`.
+The ODBC Driver 17.4 includes the ability to adjust TCP Keep-Alive settings. They can be modified by adding values to the Driver or DSN registry keys. The keys are located in `HKEY_LOCAL_MACHINE\Software\ODBC\` for system data sources, and in  `HKEY_CURRENT_USER\Software\ODBC\` for user data sources. For DSN the values need to be added to `...\Software\ODBC\ODBC.INI\<DSN Name>` and for the Driver to `...\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`.
 
 See [Registry Entries for ODBC Components](../../../odbc/reference/install/registry-entries-for-odbc-components.md) for more information.
 

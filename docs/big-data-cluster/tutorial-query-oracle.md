@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to query Oracle data from a [!INCLUD
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: aboke
-ms.date: 12/12/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster

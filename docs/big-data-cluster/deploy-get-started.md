@@ -5,7 +5,7 @@ description: Learn the steps and resources for deploying [!INCLUDE[big-data-clus
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

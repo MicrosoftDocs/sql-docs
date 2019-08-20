@@ -13916,22 +13916,22 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-server-linux-kubernetes-connect",
+            "source_path": "docs/linux/sql-server-linux-kubernetes-connect.md",
             "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-server-linux-kubernetes-create-deployment",
+            "source_path": "docs/linux/sql-server-linux-kubernetes-create-deployment.md",
             "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-server-linux-kubernetes-manage",
-            "redirect_url": "/sql/sql-server/sql-server-linux-kubernetes-manage.md",
+            "source_path": "docs/linux/sql-server-linux-kubernetes-manage.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/linux/sql-server-linux-kubernetes-deploy",
+            "source_path": "docs/linux/sql-server-linux-kubernetes-deploy.md",
             "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
             "redirect_document_id": false
         }

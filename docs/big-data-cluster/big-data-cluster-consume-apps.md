@@ -5,7 +5,7 @@ description: Consume an application deployed on [!INCLUDE[big-data-clusters-2019
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/25/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

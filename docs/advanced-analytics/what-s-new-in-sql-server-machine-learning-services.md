@@ -1,7 +1,7 @@
 ---
 title: What's new
 description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server Machine Learning Services.
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

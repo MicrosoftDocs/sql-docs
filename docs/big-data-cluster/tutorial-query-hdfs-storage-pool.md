@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to query HDFS data in a [!INCLUDE[bi
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster

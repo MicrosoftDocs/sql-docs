@@ -5,7 +5,7 @@ description: Learn how to configure minikube for [!INCLUDE[big-data-clusters-201
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

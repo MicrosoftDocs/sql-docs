@@ -2,7 +2,7 @@
 title: "tempdb Database | Microsoft Docs"
 description: This topic provides details regarding the configuration and use of the tempdb database in SQL Server and Azure SQL Database
 ms.custom: "P360"
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.technology: 
@@ -211,7 +211,7 @@ For more information on performance improvements in tempdb, see the following bl
 
 ## Memory-Optimized TempDB Metadata
 
-TempDB metadata contention has historically been a bottleneck to scalability for many workloads running on SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables. In order to opt-in to this new feature, use the following script:
+TempDB metadata contention has historically been a bottleneck to scalability for many workloads running on SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables.  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables.In order to opt-in to this new feature, use the following script:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 

@@ -1,17 +1,17 @@
 ---
 title: Debug/Diagnose Spark Applications 
 titleSuffix: SQL Server big data clusters
-description: Use Spark History Server to debug and diagnose Spark applications running on SQL Server 2019 big data clusters.
+description: Use Spark History Server to debug and diagnose Spark applications running on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server
+# Debug and Diagnose Spark Applications on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Spark History Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -198,5 +198,5 @@ The Spark History Server has the following known issues:
 
 ## Next steps
 
-* [Get started with SQL Server big data clusters](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [Get started with [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [Configure Spark settings](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

@@ -10377,18 +10377,6 @@
           href: linux/sql-server-linux-availability-group-cross-platform.md
       - name: High availability for containers
         href: linux/sql-server-linux-container-ha-overview.md
-        items:
-        - name: Always On Availability groups for SQL Server containers
-          href: linux/sql-server-ag-kubernetes.md
-          items:
-          - name: Deploy
-            href: linux/sql-server-linux-kubernetes-deploy.md
-          - name: Manage
-            href: linux/sql-server-linux-kubernetes-manage.md
-          - name: Connect
-            href: linux/sql-server-linux-kubernetes-connect.md
-          - name: Create deployment scripts
-            href: linux/sql-server-linux-kubernetes-create-deployment.md
     - name: Security
       href: linux/sql-server-linux-security-overview.md
       items:

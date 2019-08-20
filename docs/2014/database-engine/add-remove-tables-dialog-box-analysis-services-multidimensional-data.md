@@ -46,7 +46,7 @@ manager: craigg
  Click to add all tables that are related to the selected tables in **Included objects**.  
   
 ## See Also  
- [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](https://docs.microsoft.com/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data)   
- [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](https://docs.microsoft.com/analysis-services/data-source-view-designer-analysis-services-multidimensional-data)  
+ [Analysis Services Designers and Dialog Boxes &#40;Multidimensional Data&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Data Source View Designer &#40;Analysis Services - Multidimensional Data&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -314,9 +314,9 @@ For more information, see [ALTER INDEX](../../t-sql/statements/alter-index-trans
 Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
 
 ## See Also
-[SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)      
+[SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md)     
+[Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)      
 [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)       
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)     
-[UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)     
-[Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
+[UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)       

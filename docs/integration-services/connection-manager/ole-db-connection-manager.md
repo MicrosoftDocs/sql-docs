@@ -36,7 +36,7 @@ Several [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssIS
     
 You can also use the OLE DB connection manager to access OLE DB data sources in custom tasks written in unmanaged code that uses a language such as C++.    
     
-When you add an OLE DB connection manager to a package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that resolves to an OLE DB connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.    
+When you add an OLE DB connection manager to a package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that resolves to an OLE DB connection at runtime, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.    
     
 The `ConnectionManagerType` property of the connection manager is set to `OLEDB`.    
     

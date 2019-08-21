@@ -1,17 +1,17 @@
 ---
 title: Deployment guidance
 titleSuffix: SQL Server big data clusters
-description: Learn how to deploy SQL Server 2019 big data clusters (preview) on Kubernetes.
+description: Learn how to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) on Kubernetes.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to deploy SQL Server big data clusters on Kubernetes
+# How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -34,7 +34,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 
 ## <a id="prereqs"></a> Kubernetes prerequisites
 
-SQL Server big data clusters require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
 
 > [!NOTE]
 > Note that the client and server Kubernetes versions should be within +1 or -1 minor version. For more information, see [Kubernetes release notes and version skew SKU policy)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -62,7 +62,7 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
-After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade SQL Server big data clusters](deployment-upgrade.md).
+After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Deployment overview
 
@@ -82,10 +82,10 @@ Big data cluster deployment options are defined in JSON configuration files. The
 
 You can deploy a big data cluster by running **azdata bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
-The first time you run `azdata` you must include `--accept-eula` to accept the end user license agreement (EULA).
+The first time you run `azdata` you must include `--accept-eula=yes` to accept the end user license agreement (EULA).
 
 ```bash
-azdata bdc create --accept-eula
+azdata bdc create --accept-eula=yes
 ```
 
 In this scenario, you are prompted for any settings that are not part of the default configuration, such as passwords. 
@@ -196,7 +196,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
+> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see [Monitoring and troubleshoot [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 When the deployment finishes, the output notifies you of success:
 
@@ -309,4 +309,4 @@ To learn more about big data cluster deployment, see the following resources:
 
 - [Configure deployment settings for big data clusters](deployment-custom-configuration.md)
 - [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md)
-- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

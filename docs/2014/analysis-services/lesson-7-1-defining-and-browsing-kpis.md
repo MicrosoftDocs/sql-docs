@@ -262,6 +262,6 @@ manager: craigg
      The gross profit margin for the sale of Bikes by resellers in North America in Q3 CY 2007 appears.  
   
 ## Next Lesson  
- [Lesson 8: Defining Actions](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [Lesson 8: Defining Actions](lesson-8-defining-actions.md)  
   
   

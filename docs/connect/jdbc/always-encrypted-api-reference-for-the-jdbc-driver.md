@@ -1,7 +1,7 @@
 ---
-title: "Always Encrypted API Reference for the JDBC Driver | Microsoft Docs"
+title: "Always Encrypted API reference for the JDBC driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,7 +11,7 @@ ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
 ---
-# Always Encrypted API Reference for the JDBC Driver
+# Always Encrypted API reference for the JDBC driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Always Encrypted allows clients to encrypt sensitive data inside client applications and never reveal the encryption keys to SQL Server. An Always Encrypted enabled driver installed on the client computer achieves this functionality by automatically encrypting and decrypting sensitive data in the SQL Server client application. The driver encrypts the data in sensitive columns before passing the data to SQL Server, and automatically rewrites queries so that the semantics to the application are preserved. Similarly, the driver transparently decrypts data stored in encrypted database columns that are in query results. For more information, see [Always Encrypted (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) and [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
@@ -19,11 +19,11 @@ ms.author: genemi
 > [!NOTE]  
 >  Always Encrypted is supported only by Microsoft JDBC Driver 6.0 or higher for SQL Server with SQL Server 2016.  
   
- ## Always Encrypted API References
+ ## Always Encrypted API references
  
  There are several new additions and modifications to the JDBC driver API for use in client applications that use Always Encrypted.  
   
- **SQLServerConnection Class**  
+ **SQLServerConnection class**  
   
 |Name|Description|  
 |----------|-----------------|  
@@ -34,7 +34,7 @@ ms.author: genemi
 |`public final boolean getSendTimeAsDatetime()`|Returns the setting of the sendTimeAsDatetime connection property.|
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)`|Modifies the setting of the sendTimeAsDatetime connection property.|
 
- **SQLServerConnectionPoolProxy Class**
+ **SQLServerConnectionPoolProxy class**
  
 |Name|Description|  
 |----------|-----------------|  
@@ -42,7 +42,7 @@ ms.author: genemi
 |`public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)` | Modifies the setting of the sendTimeAsDatetime connection property.|
      
   
- **SQLServerDataSource Class**  
+ **SQLServerDataSource class**  
   
 |Name|Description|  
 |----------|-----------------|  
@@ -54,7 +54,7 @@ ms.author: genemi
 |`public void setKeyStoreLocation(String keyStoreLocation)`|Sets the location including the file name for the Java keystore. Note that keyStoreAuthentication must be set with **JavaKeyStorePassword**.|
 |`public String getKeyStoreLocation()`|Retrieves the keyStoreLocation for the Java Key Store.|
   
- **SQLServerColumnEncryptionJavaKeyStoreProvider Class**  
+ **SQLServerColumnEncryptionJavaKeyStoreProvider class**  
   
  The implementation of the key store provider for Java Key Store. This class enables using certificates stored in the Java keystore as column master keys.  
   
@@ -73,7 +73,7 @@ ms.author: genemi
 |`public void setName (String name)`|Sets the name of this key store provider.|
 |`public String getName ()`|Gets the name of this key store provider.|
   
- **SQLServerColumnEncryptionAzureKeyVaultProvider Class**  
+ **SQLServerColumnEncryptionAzureKeyVaultProvider class**  
   
  The implementation of the key store provider for Azure Key Vault. This class enables using keys stored in the Azure Key Vault as column master keys.  
   
@@ -103,7 +103,7 @@ ms.author: genemi
 |----------|-----------------|  
 |`public String getAccessToken(String authority, String resource, String scope);`|The method needs to be overridden. The method is used to get access token to Azure Key Vault.|  
   
- **SQLServerColumnEncryptionKeyStoreProvider Class**  
+ **SQLServerColumnEncryptionKeyStoreProvider class**  
   
  Extend this class to implement a custom key store provider.  
   
@@ -120,7 +120,7 @@ ms.author: genemi
 |`public abstract void setName(String name)`|Sets the name of this key store provider.|
 |`public abstract String getName()`|Gets the name of this key store provider.|  
   
- New or overloaded methods in **SQLServerPreparedStatement** Class  
+ New or overloaded methods in **SQLServerPreparedStatement** class  
   
 |Name|Description|  
 |----------|-----------------|  
@@ -187,7 +187,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  If Always Encrypted is disabled for a query and the query returns results from encrypted columns, the query will return encrypted values. The encrypted values will have the varbinary datatype.  
   
- ## See Also  
- [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+ ## See also  
+ [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

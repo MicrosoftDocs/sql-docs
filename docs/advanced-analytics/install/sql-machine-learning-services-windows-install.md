@@ -1,10 +1,11 @@
 ---
-title: Install SQL Server Machine Learning Services (In-Database) on Windows
-description: R in SQL Server or Python on SQL Server installation steps for SQL Server Machine Learning Services on Windows.
+title: Install SQL Server Machine Learning Services (Python, R) on Windows
+titleSuffix: 
+description: This article explains how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 07/30/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -14,7 +15,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article explains how to install the machine learning component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the on-screen prompts.
+This article explains how to install SQL Server Machine Learning Services on Windows. You can use Machine Learning Services to execute Python and R scripts in-database.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
@@ -239,6 +240,10 @@ At the instance level, additional configuration might include:
 * [Create a login for SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [Manage disk quotas](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) to avoid external scripts running tasks that exhaust disk space
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+In SQL Server 2019 on Windows, the isolation mechanism has changed. This affects **SQLRUserGroup**, firewall rules, file permission, and implied authentication. For more information, see [Isolation changes for Machine Learning Services](sql-server-machine-learning-services-2019.md).
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -253,9 +258,11 @@ On the database, you might need the following configuration updates:
 
 Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### Add more worker accounts
 
 If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
+::: moniker-end
 
 ### Optimize the server for script execution
 

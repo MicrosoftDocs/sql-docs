@@ -79,8 +79,7 @@ Big data cluster deployment options are defined in JSON configuration files. You
 | **aks-dev-test** | Azure Kubernetes Service (AKS) |
 | **kubeadm-dev-test** | Multiple machines (kubeadm) |
 | **minikube-dev-test** | minikube |
-| **kubeadm-prod** | In addition to default configurations, it has required attributes for AD and HA |
-| **aks-dev-test-ha** | In addition to default configurations, it has required attributes for HA |
+| **kubeadm-prod** | In addition to default configurations, it has required attributes for AD integration|
 
 You can deploy a big data cluster by running **azdata bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
@@ -290,7 +289,6 @@ bdc        healthy         ready
 In to this summary status, you can also get more detailed status with the following commands:
 
 - [azdata bdc control status](reference-azdata-bdc-control-status.md)
-- [azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md)
 
 The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
 

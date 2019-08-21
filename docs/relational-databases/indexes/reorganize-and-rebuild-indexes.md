@@ -39,12 +39,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 This article describes how to reorganize or rebuild a fragmented index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] automatically modifies indexes whenever insert, update, or delete operations are made to the underlying data. Over time these modifications can cause the information in the index to become scattered in the database (fragmented). Fragmentation exists when indexes have pages in which the logical ordering, based on the key value, does not match the physical ordering inside the data file. Heavily fragmented indexes can degrade query performance and cause your application to respond slowly, especially scan operations.
 
 You can remedy index fragmentation by reorganizing or rebuilding an index. For partitioned indexes built on a partition scheme, you can use either of these methods on a complete index or a single partition of an index.
-Rebuilding an index drops and re-creates the index. This removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When `ALL` is specified, all indexes on the table are dropped and rebuilt in a single transaction.
-Reorganizing an index uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value.
+-  **Rebuilding an index** drops and re-creates the index. This removes fragmentation, reclaims disk space by compacting the pages based on the specified or existing fill factor setting, and reorders the index rows in contiguous pages. When `ALL` is specified, all indexes on the table are dropped and rebuilt in a single transaction. Foreign key constraints do not have to be dropped in advance. When indexes with 128 extents or more are rebuilt, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.
+-  **Reorganizing an index** uses minimal system resources. It defragments the leaf level of clustered and nonclustered indexes on tables and views by physically reordering the leaf-level pages to match the logical, left to right, order of the leaf nodes. Reorganizing also compacts the index pages. Compaction is based on the existing fill factor value. To view the fill factor setting, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).
 
-## <a name="BeforeYouBegin"></a> Before You Begin
+> [!NOTE]
+> Rebuilding or reorganizing small indexes often does not reduce fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it.  
+  
+In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you could sometimes rebuild a nonclustered index to correct inconsistencies caused by hardware failures.    
+Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], you may still be able to repair such inconsistencies between the index and the clustered index by rebuilding a nonclustered index offline. However, you cannot repair nonclustered index inconsistencies by rebuilding the index online, because the online rebuild mechanism will use the existing nonclustered index as the basis for the rebuild and thus persist the inconsistency. Rebuilding the index offline can sometimes force a scan of the clustered index (or heap) and so remove the inconsistency. To assure a rebuild from the clustered index, drop and recreate the nonclustered index. As with earlier versions, we recommend recovering from inconsistencies by restoring the affected data from a backup; however, you may be able to repair the index inconsistencies by rebuilding the nonclustered index offline. For more information, see [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md). 
 
-### <a name="Fragmentation"></a> Detecting Fragmentation
+## <a name="BeforeYouBegin"></a> Before you begin
+
+### <a name="Fragmentation"></a> Detecting fragmentation
 
 The first step in deciding which defragmentation method to use is to analyze the index to determine the degree of fragmentation. By using the system function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), you can detect fragmentation in a specific index, all indexes on a table or indexed view, all indexes in a database, or all indexes in all databases. For partitioned indexes, **sys.dm_db_index_physical_stats** also provides fragmentation information for each partition.
 
@@ -63,7 +69,7 @@ After the degree of fragmentation is known, use the following table to determine
 |> 5% and < = 30%|ALTER INDEX REORGANIZE|
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
-<sup>1</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online.
+<sup>1</sup> Rebuilding an index can be executed online or offline. Reorganizing an index is always executed online. To achieve availability similar to the reorganize option, you should rebuild indexes online. For more infromation, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
 > [!TIP]
 > These values provide a rough guideline for determining the point at which you should switch between `ALTER INDEX REORGANIZE` and `ALTER INDEX REBUILD`. However, the actual values may vary from case to case. It is important that you experiment to determine the best threshold for your environment. For example, if a given index is used mainly for scan operations, removing fragmentation can improve performance of these operations. The performance benefit is less noticeable for indexes that are used primarily for seek operations. Similarly, removing fragmentation in a heap (a table with no clustered index) is especially useful for nonclustered index scan operations, but has little effect in lookup operations.
@@ -88,8 +94,27 @@ Scenarios that do not require all nonclustered indexes to be automatically rebui
 -  Rebuilding a non-unique clustered index
 -  Changing the index schema, such as applying a partitioning scheme to a clustered index or moving the clustered index to a different filegroup
 
-### <a name="Restrictions"></a> Limitations and Restrictions
+> [!IMPORTANT]
+> An index cannot be reorganized or rebuilt if the filegroup in which it is located is offline or set to read-only. When the keyword ALL is specified and one or more indexes are in an offline or read-only filegroup, the statement fails.  
 
+Consider the following when rebuilding a clustered columnstore index: 
+  
+- The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] has to acquire an exclusive lock on the table or partition while the rebuild occurs. The data is "offline" and unavailable during the rebuild.  
+  
+- The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] defragments the columnstore by physically deleting rows that have been logically deleted from the table; the deleted bytes are reclaimed on the physical media.  
+  
+- The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] reads all data from the original columnstore index, including the delta store. It combines the data into new rowgroups, and compresses the rowgroups into the columnstore.  
+
+- For an Azure SQL Data Warehouse table with an ordered clustered columnstore index, `ALTER INDEX REBUILD` will re-sort the data using TempDB. Monitor TempDB during rebuild operations. If you need more TempDB space, scale up the data warehouse. Scale back down once the index rebuild is complete.
+
+> [!IMPORTANT]
+> While an index rebuild occurs, the physical media must have enough space to store two copies of the index. When the rebuild is finished, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deletes the original index.
+
+When `ALL` is specified with the `ALTER INDEX` statement, relational indexes, both clustered and nonclustered, and XML indexes on the table are reorganized.   
+
+
+
+### <a name="Restrictions"></a> Limitations and Restrictions
 Indexes with more than 128 extents are rebuilt in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the index are marked for deallocation, the data rows are copied and sorted, then moved to new allocation units created to store the rebuilt index. In the physical phase, the allocation units previously marked for deallocation are physically dropped in short transactions that happen in the background, and do not require many locks. For more information about extents, refer to the [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md).
 
 The `ALTER INDEX REORGANIZE` statement requires the data file containing the index to have space available, because the operation can only allocate temporary work pages on the same file, not another file within the filegroup. So although the filegroup might have free pages available, the user can still encounter error 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
@@ -101,12 +126,18 @@ An index cannot be reorganized or rebuilt if the filegroup in which it is locate
 > [!IMPORTANT]
 > When an index is created or rebuilt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], statistics are created or updated by scanning all the rows in the table.
 >
-> However, starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], statistics are not created or updated by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the query optimizer uses the default sampling algorithm to generate these statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use `CREATE STATISTICS` or `UPDATE STATISTICS` with the `FULLSCAN` clause.
+> However, starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], statistics are not created or updated by scanning all the rows in the table when a partitioned index is created or rebuilt. Instead, the Query Optimizer uses the default sampling algorithm to generate these statistics. To obtain statistics on partitioned indexes by scanning all the rows in the table, use `CREATE STATISTICS` or `UPDATE STATISTICS` with the `FULLSCAN` clause.
+
+> [!IMPORTANT]
+> When an index is reorganized in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], statistics are not updated.
+
+An index cannot be reorganized or rebuilt if the filegroup in which it is located is offline or set to read-only. When the keyword `ALL` is specified and one or more indexes are in an offline or read-only filegroup, the statement fails.  
+
+For an Azure SQL Data Warehouse table with an ordered clustered columnstore index, `ALTER INDEX REORGANIZE` does not re-sort the data. To resort the data use `ALTER INDEX REBUILD`.
 
 ### <a name="Security"></a> Security
 
 #### <a name="Permissions"></a> Permissions
-
 Requires `ALTER` permission on the table or view. User must be a member of at least one of the following roles:
 
 - **db_ddladmin** database role <sup>1</sup>
@@ -240,6 +271,9 @@ For more information, see [sys.dm_db_index_physical_stats](../../relational-data
 
 ## <a name="TsqlProcedureReorg"></a> Remove fragmentation using [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
+> [!NOTE]
+> For more examples about using [!INCLUDE[tsql](../../includes/tsql-md.md)] to rebuild or reorganize indexes, see [ALTER INDEX Examples: Columnstore Indexes](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes) and [ALTER INDEX Examples: Rowstore Indexes](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
+
 ### To reorganize a fragmented index
 
 The following example reorganizes the `IX_Employee_OrganizationalLevel_OrganizationalNode` index on the `HumanResources.Employee` table in the AdventureWorks database.
@@ -280,9 +314,9 @@ For more information, see [ALTER INDEX](../../t-sql/statements/alter-index-trans
 Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
 
 ## See Also
-
-- [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)
-- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)
-- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)
-- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)
+[SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)      
+[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)      
+[Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)       
+[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)     
+[UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)     
+[Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    

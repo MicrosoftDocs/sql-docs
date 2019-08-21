@@ -71,7 +71,7 @@ Complete details about support and licensing for release candidate software are 
 
 ## Installation Wizard may wait between EULA pages
 
-- **Issue and customer impact**: During installation with Installation Wizard, the process may wait an excessive amount of time between the end user license agreement (EULA) for R Services and the EULA for Python.
+- **Issue and customer impact**: During installation with Installation Wizard, the process may wait an extended amount of time between the end user license agreement (EULA) for R Services and the EULA for Python.
 
 - **Workaround**: Wait for the Installation Wizard to proceed. The time to wait may exceed 30 minutes.
 
@@ -118,7 +118,7 @@ Complete details about support and licensing for release candidate software are 
 
 ## Always On Availability Group Kubernetes operator not supported
 
-- **Issue and customer impact**: The Kubernetes operator for Always On Availability Groups on containers is a preview feature. Support for production is not expected at the time of SQL Server 2019 RTM. 
+- **Issue and customer impact**: The Kubernetes operator for Always On Availability Groups is not supported in this release candidate and will not be available at RTM. 
 
 - **Workaround**: None
 

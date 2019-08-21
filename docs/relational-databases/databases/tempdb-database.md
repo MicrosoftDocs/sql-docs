@@ -313,7 +313,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 - [Move Database Files](../../relational-databases/databases/move-database-files.md)  
   
-## See Also
-
-- [Working with tempdb in SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
-- [Troubleshooting Insufficient Disk Space in tempdb](https://msdn.microsoft.com/library/ms176029.aspx)

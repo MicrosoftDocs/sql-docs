@@ -43,7 +43,7 @@ helpviewer_keywords:
   - "index rebuild [SQL Server]"
   - "index reorganize [SQL Server]"
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-author: CarlRabeler
+author: pmasl
 ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -1156,15 +1156,16 @@ For additional data compression examples, see [Data Compression](../../relationa
    ``` 
   
 ## See Also  
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
- [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
- [Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
- [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
- [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)   
- [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
+[SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md)     
+[Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)    
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   
+[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
+[Disable Indexes and Constraints](../../relational-databases/indexes/disable-indexes-and-constraints.md)   
+[XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
+[Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)   
+[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
+[EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
   
  

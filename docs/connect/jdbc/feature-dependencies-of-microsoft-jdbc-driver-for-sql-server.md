@@ -1,7 +1,7 @@
 ---
 title: "Feature dependencies of the Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -82,23 +82,23 @@ Specific projects that require either of the preceding features need to explicit
 </dependency>
 ```
 
-## Dependency requirements for the JDBC Driver
+## Dependency requirements for the JDBC driver
 
-### Working with the Azure Key Vault Provider:
+### Working with the Azure Key Vault provider:
 
-- JDBC Driver version 7.4.1 - Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC Driver version 7.2.2 - Dependency versions: Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC Driver version 7.0.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- JDBC Driver version 6.4.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC Driver version 6.2.2 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC Driver version 6.0.0 - Dependency versions: Azure-Keyvault (version 0.9.7), Adal4j (version 1.3.0), and their dependencies ( [sample application](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC driver version 7.4.1 - Dependency versions: Azure-Keyvault (version 1.2.1), Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC driver version 7.2.2 - Dependency versions: Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC driver version 7.0.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC driver version 6.4.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC driver version 6.2.2 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC driver version 6.0.0 - Dependency versions: Azure-Keyvault (version 0.9.7), Adal4j (version 1.3.0), and their dependencies ( [sample application](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > With 6.2.2 and 6.4.0 driver versions, the azure-keyvault-java dependency had been updated to version 1.0.0. However, the new version was not compatible with the previous version (0.9.7) and breaks the existing implementation in the driver. The new implementation in the driver required API changes, which in turn breaks client programs that use the Azure Key Vault Provider.
 >
 > This problem is resolved with latest driver version(s) (7.0.0 onwards). The removed constructor that used the authentication callback mechanism is added back to the Azure Key Vault Provider for backward compatibility.
 
-### Working with Azure Active Directory Authentication:
+### Working with Azure Active Directory authentication:
 
 - JDBC Driver version 7.4.1 - Dependency versions: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10), and their dependencies
 - JDBC Driver version 7.2.2 - Dependency versions: Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies

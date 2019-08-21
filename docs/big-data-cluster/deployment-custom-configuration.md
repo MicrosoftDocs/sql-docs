@@ -5,7 +5,7 @@ description: Learn how to customize a big data cluster deployment with configura
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -170,16 +170,16 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 
 ## <a id="podplacement"></a> Configure pod placement using Kubernetes labels
 
-You can control pod placement on Kubernetes nodes that have specific resources to accommodate various types of workload requirements. For example, you might want to ensure the storage pool pods are placed on nodes with more storage, or SQL Server master instances are placed on nodes that have higher CPU and memory resources. In this case, you will first build a heterogeneous Kubernetes cluster with different types of hardware and then [assign node labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) accordingly. At the time of deploying big data cluster, you can specify same labels at pool level in the cluster deployment configuration file. Kubernetes will then take care of  affinitizing the pods on nodes that match the specified labels.
+You can control pod placement on Kubernetes nodes that have specific resources to accommodate various types of workload requirements. For example, you might want to ensure the storage pool pods are placed on nodes with more storage, or SQL Server master instances are placed on nodes that have higher CPU and memory resources. In this case, you will first build a heterogeneous Kubernetes cluster with different types of hardware and then [assign node labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) accordingly. At the time of deploying big data cluster, you can specify same labels at pool level in the cluster deployment configuration file. Kubernetes will then take care of  affinitizing the pods on nodes that match the specified labels. The specific label key that needs to be added to the nodes in the kubernetes cluster is **mssql-cluster-wide**. The value of this label itself can be any string that you choose.
 
-The following example shows how to edit a custom configuration file to include a node label setting for the SQL Server master instance. Note that there is no *nodeLabel* key in the built in configurations so you will need to either edit a custom configuration file manually or create a patch file and apply it to the custom configuration file.
+The following example shows how to edit a custom configuration file to include a node label setting for the SQL Server master instance, Compute Pool, Data Pool & Storage Pool. Note that there is no *nodeLabel* key in the built in configurations so you will need to either edit a custom configuration file manually or create a patch file and apply it to the custom configuration file. The SQL Server Master instance pod will be deployed on a node that contain a label **mssql-cluster-wide** with value **bdc-master**. The Compute Pool and Data Pool pods will be deployed on nodes that contain a label **mssql-cluster-wide** with value **bdc-sql**. The Storage Pool pods will be deployed on nodes that contain a label **mssql-cluster-wide** with value **bdc-storage**.
 
 Create a file named **patch.json** in your current directory with the following contents:
 
 ```json
 {
   "patch": [
-     {
+    {
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
@@ -193,8 +193,35 @@ Create a file named **patch.json** in your current directory with the following 
              "port": 31433
             }
           ],
-        "nodeLabel": "<yourNodeLabel>"
-       }
+        "nodeLabel": "bdc-master"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Compute')].spec",
+      "value": {
+	"type": "Compute",
+        "replicas": 1,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Data')].spec",
+      "value": {
+	"type": "Data",
+        "replicas": 2,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+	"type": "Storage",
+        "replicas": 3,
+        "nodeLabel": "bdc-storage"
+      }
     }
   ]
 }
@@ -389,4 +416,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## Next steps
 
-For more information about using configuration files in big data cluster deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md#configfile).
+For more information about using configuration files in big data cluster deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

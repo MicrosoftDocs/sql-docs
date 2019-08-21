@@ -17,7 +17,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides an extension for Azure Data Studio that includes deployment notebooks. A deployment notebook includes documentation and code that you can use in Azure Data Studio to create a SQL Server big data cluster.
 
-Originally implemented as an open source project, [notebooks](notebooks-guidance.md) have been implemented into [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
+Originally implemented as an open source project, [notebooks](notebooks-guidance.md) have been implemented into [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). You can use markdown for text in the text cells and one of the available kernels to write code in the code cells.
 
 You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -25,7 +25,7 @@ You can use notebooks to deploy big data clusters for [!INCLUDE[sql-server-2019]
 
 Following prerequisites are required to be able to launch the notebook:
 
-* Latest version of [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download) installed
+* Latest version of [Azure Data Studio Insiders build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installed
 * [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio
 
 In addition to above, deploying SQL Server 2019 big data cluster also requires:
@@ -36,7 +36,7 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 ## Launch the notebook
 
-1. Install and launch the [Azure Data Studio Insiders build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master).
+1. Launch the Azure Data Studio Insiders.
 
 1. On the **Connections** tab, click **...** and select **Deploy SQL Server big data cluster...**.
 
@@ -44,8 +44,11 @@ In addition to above, deploying SQL Server 2019 big data cluster also requires:
 
 1. From the **Deployment Target**, under **Options**, select either **New Azure Kubernetes Cluster** or **Existing Azure Kubernetes Service cluster**.
 
-1. Select **Open Notebook**.
+1. Click **Select** button.
 
+1. This action launches a dialog to collect the user input, provide the required information and review the default values.
+
+1. Click **Open Notebook** button.
 This action launches the appropriate notebook. To complete the deployment, follow the instructions in the notebook to deploy a big data cluster for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on an existing or new Azure Kubernetes Service cluster.
 
 ## Next steps

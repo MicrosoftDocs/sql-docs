@@ -117,7 +117,7 @@ manager: craigg
      Notice that the month names now appear in French and that the measure name now also appears in French.  
   
 ## Next Lesson  
- [Lesson 10: Defining Administrative Roles](../analysis-services/lesson-10-defining-administrative-roles.md)  
+ [Lesson 10: Defining Administrative Roles](lesson-10-defining-administrative-roles.md)  
   
 ## See Also  
  [Dimension Translations](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

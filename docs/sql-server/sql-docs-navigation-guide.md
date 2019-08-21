@@ -1,6 +1,6 @@
 ---
-title: SQL Server docs navigation guide 
-description: A guide for navigating the SQL Server technical documentation - explains such things as the hub page, the table of contents, the header, as well as how to use the breadcrumbs and the  how to use the version filter. 
+title: SQL Server docs navigation tips 
+description: Tips and tricks for navigating the SQL Server technical documentation - explains such things as the hub page, the table of contents, the header, as well as how to use the breadcrumbs and how to use the version filter. 
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ""
@@ -8,10 +8,8 @@ ms.custom: ""
 ms.topic: conceptual
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
-
 # SQL Server docs navigation guide 
 
 This topic provides some tips and tricks for navigating the SQL Server technical documentation space.  
@@ -35,16 +33,15 @@ If you'd like to create a PDF, select the **Download PDF** link found at the bot
 
 ## TOC navigation hints
 
-Entries in the table of contents (TOC) that have a `>` at the end of the entry indicate that you will be taken away from docs.microsoft.com. 
+Entries in the table of contents (TOC) that have a `>` at the end of the entry indicate that you will be taken to technical documentation with a different table of contents. 
 
 ![Single carrots in toc](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-Entries in the TOC that have a `>>` indicate that you will be taken to technical documentation with a different table of contents. 
+Entries in the TOC that have a `>>` indicate that you will be taken away from docs.microsoft.com. 
 
 ![TOC navigation markers](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-If you navigate to one of these pages, you can come back to the main SQL Server technical page, and table of contents, by selecting the "Welcome to SQL Server >>" entry found at the top of each of these table of contents. 
+If you navigate to one of these pages, you can come back to the main SQL Server technical page, and table of contents, by selecting the "Welcome to SQL Server >" entry found at the top of each of these table of contents. 
 
 ![Navigate back to SQL toc](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -56,11 +53,11 @@ On docs.microsoft.com, you can search the content in the table of contents by us
 ## Version filter
 The SQL Server technical documentation provides content for several supported versions and flavors of SQL Server. Features can vary between versions and flavors of SQL Server, and as such, sometimes the content itself can vary. 
 
-You can use the version filter to ensure that you are seeing content for the appropriate version and flavor of SQL Server: 
+You can use the [version filter](versioning-system-monikers-ui-sql-server.md) to ensure that you are seeing content for the appropriate version and flavor of SQL Server: 
 
 ![SQL Docs version filter](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Selecting **SQL Server** > **Hide nothing** ensures that all content is visible, and that nothing is hidden behind the version filter. 
+Selecting **All SQL** \> **Hide nothing** ensures that all content is visible, and that nothing is hidden by the version filter. The **Hide nothing** option may reveal content relevant to several different versions of SQL Server within the same article, which might be contradictory, unclear, or confusing. As such the [**Hide nothing** option is not recommended for routine use](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## Breadcrumbs
 

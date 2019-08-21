@@ -4,7 +4,7 @@ description: Review the implicit and explicit data type conversions between R an
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/10/2019
+ms.date: 08/08/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

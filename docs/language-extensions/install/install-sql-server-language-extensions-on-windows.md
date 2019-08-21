@@ -4,7 +4,7 @@ titleSuffix: SQL Server Language Extensions
 description: Language extensions installation steps for SQL Server 2019 in Windows.
 author: dphansen
 ms.author: davidph 
-ms.date: 07/30/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -40,7 +40,7 @@ Starting in SQL Server 2019, Language Extensions and Java support are provided. 
 
 ## Java JRE or JDK
 
-In CTP 3.2, there are two ways to install and use Java with SQL Server:
+In SQL Server 2019 Release Candidate 1, there are two ways to install and use Java with SQL Server:
 
 1. Use the default Java runtime, Zulu Open JRE version 11.0.3. This runtime is supported and included with the SQL Server installation.
 
@@ -49,7 +49,7 @@ In CTP 3.2, there are two ways to install and use Java with SQL Server:
     Java 11 is currently the supported version on Windows. The Java Runtime Environment (JRE) is the minimum requirement, but Java Development Kit (JDK) is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary. On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
     > [!NOTE]
-    > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for the CTP 3.2 release is Java 11.
+    > Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for the Release Candidate 1 release is Java 11.
     
 ## Get the installation media
 

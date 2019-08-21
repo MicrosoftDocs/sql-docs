@@ -78,7 +78,7 @@ For all customizations, you must first create a copy of the built in configurati
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-This creates two files, **cluster.json** and **control.json** that can be customized by either editing them manually, or you can use **azdata bdc config** command. You can use a combination of jsonpath and jsonpatch libraries to provide ways to edit your config files.
+This creates two files, **bdc.json** and **control.json** that can be customized by either editing them manually, or you can use **azdata bdc config** command. You can use a combination of jsonpath and jsonpatch libraries to provide ways to edit your config files.
 
 
 ### <a id="config-samples"></a> Configure storage class name and/or claims size
@@ -104,7 +104,7 @@ Another option is to manually edit the custom configuration file or to use json 
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
         "type":"Storage",
         "replicas":2,
@@ -129,7 +129,7 @@ Another option is to manually edit the custom configuration file or to use json 
 Apply the patch file. Use **azdata bdc config patch** command to apply the changes in the JSON patch file. The following example applies the patch.json file to a target deployment configuration file custom.json.
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## Next steps

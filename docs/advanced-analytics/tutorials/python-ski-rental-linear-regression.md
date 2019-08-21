@@ -24,7 +24,7 @@ In this article, you'll learn how to:
 > * Import a sample database into SQL Server 
 > * Use Python notebooks in Azure Data Studio
 
-In [part two](python-ski-rental-linear-regression-data-prepare.md), you'll learn how to load the data from SQL Server into a Python data frame, and prepare the data in Python.
+In [part two](python-ski-rental-linear-regression-prepare-data.md), you'll learn how to load the data from SQL Server into a Python data frame, and prepare the data in Python.
 
 In [part three](python-ski-rental-linear-regression-build-compare.md), you'll learn how to create and train multiple machine learning models in Python, and then choose the most accurate one.
 
@@ -40,7 +40,7 @@ In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how 
 
 * SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms) (SSMS).
 
-## Import the sample database
+## Restore the sample database
 
 The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use.
 
@@ -50,3 +50,15 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
    * Import from the **TutorialDB.bak** file you downloaded
    * Name the target database "TutorialDB"
+
+## Next steps
+
+In part one of this tutorial series, you completed these steps:
+
+* Installed the pre-requisites
+* Import a sample database into an SQL Server
+
+To prepare the data from the TutorialDB database, follow part two of this tutorial series:
+
+> [!div class="nextstepaction"]
+> [Python Tutorial: Prepare data to train a linear regression model](python-ski-rental-linear-regression-prepare-data.md)

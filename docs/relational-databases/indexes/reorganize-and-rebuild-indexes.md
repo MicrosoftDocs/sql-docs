@@ -1,7 +1,7 @@
 ---
 title: "Reorganize and Rebuild Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/24/2017"
+ms.date: "08/21/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

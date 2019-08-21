@@ -130,7 +130,7 @@ Run **only one** of the following scripts:
 - Create AG with two synchronous replicas and a configuration replica:
 
    >[!IMPORTANT]
-   >This architecture allows any edition of SQL Server to host the third replica. For example, the third replica can be hosted on SQL Server Enterprise Edition. On Enterprise Edition, the only valid endpoint type is `WITNESS`. 
+   >This architecture allows any edition of SQL Server to host the third replica. For example, the third replica can be hosted on SQL Server Express Edition. On Express Edition, the only valid endpoint type is `WITNESS`. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 

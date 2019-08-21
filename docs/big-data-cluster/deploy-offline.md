@@ -76,6 +76,10 @@ The following big data cluster container images are required for an offline inst
  - **mssql-monitor-telegraf**
  - **mssql-mleap-serving-runtime**
  - **mssql-security-support**
+ - **mssql-control-watchdog**
+ - **mssql-dns**
+ - **mssql-security-domainctl**
+ - **mssql-server-ha**
 
 ## <a id="automated"></a> Automated script
 

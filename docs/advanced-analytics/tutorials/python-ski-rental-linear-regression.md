@@ -18,3 +18,14 @@ Imagine you own a ski rental business and you want to predict the number of rent
 
 In the first part of this series, you'll get set up with the pre-requsites. In parts two and three, you'll develop some Python scripts in a Jupyter notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside SQL Server using T-SQL stored procedures.
 
+In this article, you'll learn how to:
+
+> [!div class="checklist"]
+> * Import a sample database into SQL Server 
+> * Use Python notebooks in Azure Data Studio
+
+In [part two](python-ski-rental-linear-regression-data-prepare.md), you'll learn how to load the data from SQL Server into a Python data frame, and prepare the data in Python.
+
+In [part three](python-ski-rental-linear-regression-build-compare.md), you'll learn how to create and train multiple machine learning models in Python, and then choose the most accurate one.
+
+In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.

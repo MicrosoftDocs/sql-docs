@@ -34,7 +34,7 @@ Before deploying a SQL Server 2019 big data cluster, first [install the big data
 
 ## <a id="prereqs"></a> Kubernetes prerequisites
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] require a minimum Kubernetes version of at least v1.13 for both server and client (kubectl).
 
 > [!NOTE]
 > Note that the client and server Kubernetes versions should be within +1 or -1 minor version. For more information, see [Kubernetes release notes and version skew SKU policy)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -72,13 +72,15 @@ The following sections provide more details on how to configure your big data cl
 
 ## <a id="configfile"></a> Default configurations
 
-Big data cluster deployment options are defined in JSON configuration files. There are three standard deployment profiles with default settings for dev/test environments:
+Big data cluster deployment options are defined in JSON configuration files. You can start your customization of the cluster deployment from the built-in deployment profiles with default settings for dev/test environments:
 
 | Deployment profile | Kubernetes environment |
 |---|---|
 | **aks-dev-test** | Azure Kubernetes Service (AKS) |
 | **kubeadm-dev-test** | Multiple machines (kubeadm) |
 | **minikube-dev-test** | minikube |
+| **kubeadm-prod** | In addition to default configurations, it has required attributes for AD and HA |
+| **aks-dev-test-ha** | In addition to default configurations, it has required attributes for HA |
 
 You can deploy a big data cluster by running **azdata bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
@@ -110,7 +112,7 @@ It is also possible to customize your own deployment configuration profile. You 
    ```
 
    azdata
-   > The `--target` specifies a directory that contains the configuration files, **cluster.json** and **control.json**, based on the `--source` parameter.
+   > The `--target` specifies a directory that contains the configuration files, **bdc.json** and **control.json**, based on the `--source` parameter.
 
 1. To customize settings in your deployment configuration profile, you can edit the deployment configuration file in a tool that is good for editing JSON files, such as VS Code. For scripted automation, you can also edit the custom deployment profile using **azdata bdc config** command. For example, the following command alters a custom deployment profile to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
 
@@ -280,20 +282,15 @@ azdata bdc status show -o table
 The following shows sample output from this command:
 
 ```output
-Kind     Name           State
--------  -------------  -------
-BDC      mssql-cluster  Ready
-Control  default        Ready
-Master   default        Ready
-Compute  default        Ready
-Data     default        Ready
-Storage  default        Ready
+BdcName    HealthStatus    State
+---------  --------------  -------
+bdc        healthy         ready
 ```
 
 In to this summary status, you can also get more detailed status with the following commands:
 
 - [azdata bdc control status](reference-azdata-bdc-control-status.md)
-- [azdata bdc pool status](reference-azdata-bdc-pool-status.md)
+- [azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md)
 
 The output from these commands contain URLs to Kibana and Grafana dashboards for more detailed analysis.
 

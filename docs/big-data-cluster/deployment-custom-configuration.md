@@ -5,7 +5,7 @@ description: Learn how to customize a big data cluster deployment with configura
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -416,4 +416,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## Next steps
 
-For more information about using configuration files in big data cluster deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md#configfile).
+For more information about using configuration files in big data cluster deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

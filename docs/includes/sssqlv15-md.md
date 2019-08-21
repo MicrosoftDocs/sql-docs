@@ -1,1 +1,1 @@
-SQL Server 2019 preview
+SQL Server 2019

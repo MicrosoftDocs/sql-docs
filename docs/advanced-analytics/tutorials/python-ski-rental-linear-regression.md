@@ -39,7 +39,7 @@ In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how 
 
 * revoscalepy package - See [revoscalepy](../python/ref-py-revoscalepy.md) for options to install this package locally.
 
-* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms) (SSMS).
+* SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
 ## Restore the sample database
 

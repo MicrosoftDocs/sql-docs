@@ -52,14 +52,14 @@ For more information about package location and installation paths, see [Get Pyt
 
 ## Install sqlmlutils on the client computer
 
-To use **sqlmlutils**, you first need to install it on the client computer you use to connect to SQL Server.
+To use **sqlmlutils**, you first need to install it on the client computer that you use to connect to SQL Server.
 
 1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist to the client computer. Don't unzip the file.
 
 1. Open a **Command Prompt** and run the following command to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded - this example assumes the downloaded file is `c:\temp\sqlmlutils_0.6.0.zip`.
 
    ```console
-   python.exe -m pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
    ```
 
 ## Add a Python package on SQL Server
@@ -86,19 +86,19 @@ If the client computer you use to connect to SQL Server doesn't have an Internet
 
 #### On a computer with Internet access
 
-1. Run the following Python script to create a local folder that contains the **text-tools** package. This example creates the folder `c:\temp\text-tools`.
+1. Open a **Command Prompt** and run the following command to create a local folder that contains the **text-tools** package. This example creates the folder `c:\temp\text-tools`.
 
-   ```python
-   pip download text-tools -d c:/temp/text-tools
+   ```command
+   pip download text-tools -d c:\temp\text-tools
    ```
 
-1. Copy the `text-tools` folder to the client computer. For example, copy it to `c:\temp\packages\text-tools`.
+1. Copy the `text-tools` folder to the client computer. The following example assumes you copied it to `c:\temp\packages\text-tools`.
 
 #### On the client computer
 
 Use **sqlmlutils** to install each package (WHL file) you find in the local folder that **pip** created. It doesn't matter in what order you install the packages.
 
-In this example, **text-tools** has no dependencies, so there is only one file from the `text-tools` folder for you to install. In contrast, a package such as **scikit-plot** has 11 dependencies, so you would install 12 files (the **scikit-plot** package and 11 dependent packages).
+In this example, **text-tools** has no dependencies, so there is only one file from the `text-tools` folder for you to install. In contrast, a package such as **scikit-plot** has 11 dependencies, so you would find 12 files in the folder (the **scikit-plot** package and the 11 dependent packages), and you would install each of them.
 
 Run the following Python script. Substitute your own SQL Server database connection information, and the actual file path and name of the package. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 

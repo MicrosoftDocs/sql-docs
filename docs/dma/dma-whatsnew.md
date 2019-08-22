@@ -20,7 +20,7 @@ This article lists the additions in each release of Data Migration Assistant (DM
 
 ## DMA v4.5
 
-The v4.5 release of DMA provides support for assessment of migrating SQL Server Integration Services (SSIS) to Azure SQL Database or Azure SQL Database managed instance.
+The v4.5 release of DMA provides support for assessment of migrating SQL Server Integration Services (SSIS) packages hosted in File system to Azure SQL Database or Azure SQL Database managed instance.
 
 ## DMA v4.4
 

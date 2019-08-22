@@ -27,7 +27,7 @@ For more information about package location and installation paths, see [Get Pyt
 
 + You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
 
-+ Install [python](https://www.python.org/) on the client computer you use to connect to SQL Server.
++ Install [python](https://www.python.org/) on the client computer you use to connect to SQL Server. You also may want a Python development environment such as [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
 
 + Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) or [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio or SSMS.
 
@@ -70,7 +70,7 @@ In the following example, you'll add the [text-tools](https://pypi.org/project/t
 
 If the client computer you use to connect to SQL Server has Internet access, you can use **sqlmlutils** to find the **text-tools** package and any dependencies over the Internet, and then install the package to a SQL Server instance remotely.
 
-1. On the client computer, open **Python** or a Python environment such as **IDLE**.
+1. On the client computer, open **Python** or a Python environment.
 
 1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information.
 

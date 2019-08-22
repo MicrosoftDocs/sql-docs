@@ -23,7 +23,7 @@ For more information about package location and installation paths, see [Get Pyt
 > [!NOTE]
 > The standard Python `pip install` command is not recommended for adding Python packages on SQL Server. Instead, use **sqlmlutils** as described in this article.
 
-## Prequisites
+## Prerequisites
 
 + You must have [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installed with the Python language option.
 

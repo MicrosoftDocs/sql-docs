@@ -132,7 +132,7 @@ If you would like to remove the **text-tools** package, use the following Python
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## See Also
+## See also
 
 + To view information about Python packages installed in SQL Server Machine Learning Services, see [Get Python package information](../package-management/python-package-information.md).
 

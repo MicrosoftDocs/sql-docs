@@ -142,8 +142,8 @@ For example, you may have a set of tables where versioning is implemented with t
   
 -   minimal maintenance costs  
   
- When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns to avoid impacting existing applications that are not designed to handle new columns.  
-  
+ When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns (the datetime2 columns **SysStartTime** and **SysEndTime**) to avoid impacting existing applications that are not designed to handle new columns.  
+
 ### Adding versioning to non-temporal tables  
  If you want to start tracking changes for a non-temporal table that contains the data, you need to add the **PERIOD** definition and optionally provide a name for the empty history table that SQL Server will create for you:  
   

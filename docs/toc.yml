@@ -2397,7 +2397,7 @@
     - name: Format Query Results
       href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
       items:
-      - name: Format nested output with PATH ode
+      - name: Format nested output with PATH Mode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
       - name: Format with AUTO Mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md

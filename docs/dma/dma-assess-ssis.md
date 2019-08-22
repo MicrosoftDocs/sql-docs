@@ -40,7 +40,7 @@ The following step-by-step instructions help you perform your first assessment f
 1. Enter package encryption password if applicable, then **Connect**.
 1. Select the File system to assess, and then select **Add**.
   ![Add source](media/dma-assess-ssis/dma-assess-ssis-addsource.png)
-1. Select **Add Sources** to open the connection flyout menu, if need assess multiple folder.
+1. Select **Add Sources** to open the connection flyout menu, if need assess multiple folders.
 1. Click **Start Assessment**.
   ![Start assessment](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 

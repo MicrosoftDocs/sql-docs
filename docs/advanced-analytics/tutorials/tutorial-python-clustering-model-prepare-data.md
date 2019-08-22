@@ -29,17 +29,15 @@ In this article, you'll learn how to:
 > * Separate customers along different dimensions using R
 > * Load the data from the Azure SQL database into an R data frame
 
-In [part two](sql-database-tutorial-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
+In [part two](tutorial-python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
 
-In [part three](sql-database-tutorial-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
-
-[!INCLUDE[ml-preview-note](../../includes/sql-database-ml-preview-note.md)]
+In [part three](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
 
 ## Prerequisites
 
 * Azure subscription - If you don't have an Azure subscription, [create an account](https://azure.microsoft.com/free/) before you begin.
 
-* Azure SQL Database Server with Machine Learning Services enabled - During the public preview, Microsoft will onboard you and enable machine learning for your existing or new databases. Follow the steps in [Sign up for the preview](sql-database-machine-learning-services-overview.md#signup).
+* Azure SQL Database Server with Machine Learning Services enabled - During the public preview, Microsoft will onboard you and enable machine learning for your existing or new databases.
 
 * RevoScaleR package - See [RevoScaleR](https://docs.microsoft.com/sql/advanced-analytics/r/ref-r-revoscaler?view=sql-server-2017#versions-and-platforms) for options to install this package locally.
 
@@ -207,4 +205,4 @@ In part one of this tutorial series, you completed these steps:
 To create a machine learning model that uses this customer data, follow part two of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create a predictive model in R with Azure SQL Database Machine Learning Services (preview)](sql-database-tutorial-clustering-model-build.md)
+> [Tutorial: Create a predictive model in Python with SQL Server Machine Learning Services](tutorial-python-clustering-model-build.md)

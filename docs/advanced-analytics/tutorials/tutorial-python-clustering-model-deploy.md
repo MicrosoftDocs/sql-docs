@@ -25,15 +25,13 @@ In this article, you'll learn how to:
 > * Perform clustering in SQL Database
 > * Use the clustering information
 
-In [part one](sql-database-tutorial-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
+In [part one](tutorial-python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
 
-In [part two](sql-database-tutorial-clustering-model-build.md), you learned how to create and train a K-Means clustering model in Python.
-
-[!INCLUDE[ml-preview-note](../../includes/sql-database-ml-preview-note.md)]
+In [part two](tutorial-python-clustering-model-build.md), you learned how to create and train a K-Means clustering model in Python.
 
 ## Prerequisites
 
-* Part three of this tutorial series assumes you have completed [**part one**](sql-database-tutorial-clustering-model-prepare-data.md) and [**part two**](sql-database-tutorial-clustering-model-build.md).
+* Part three of this tutorial series assumes you have completed [**part one**](tutorial-python-clustering-model-prepare-data.md) and [**part two**](tutorial-python-clustering-model-build.md).
 
 ## Create a stored procedure that generates the model
 
@@ -202,7 +200,7 @@ cluster  customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 Because you stored the clustering procedure in the database, it can perform clustering efficiently against customer data stored in the same database. You can execute the procedure whenever your customer data is updated and use the updated clustering information.
 
-Suppose you want to send a promotional email to customers in cluster 3, the group that has more active return behavior (you can see how the four clusters were described in [part two](sql-database-tutorial-clustering-model-build.md#analyze-the-results)). The following code selects the email addresses of customers in cluster 3.
+Suppose you want to send a promotional email to customers in cluster 3, the group that has more active return behavior (you can see how the four clusters were described in [part two](tutorial-python-clustering-model-build.md#analyze-the-results)). The following code selects the email addresses of customers in cluster 3.
 
 ```sql
 USE [tpcxbb_1gb]
@@ -237,7 +235,9 @@ In part three of this tutorial series, you completed these steps:
 
 To learn more about using R in Azure SQL Database Machine Learning Services (preview), see:
 
+<!-- Replace these
 * [Tutorial: Prepare data to train a predictive model in R with Azure SQL Database Machine Learning Services (preview)](sql-database-tutorial-predictive-model-prepare-data.md)
 * [Write advanced R functions in Azure SQL Database using Machine Learning Services (preview)](sql-database-machine-learning-services-functions.md)
 * [Work with R and SQL data in Azure SQL Database Machine Learning Services (preview)](sql-database-machine-learning-services-data-issues.md)
 * [Add an R package to Azure SQL Database Machine Learning Services (preview)](sql-database-machine-learning-services-add-r-packages.md)
+-->

@@ -64,20 +64,20 @@ To use **sqlmlutils**, you first need to install it on the client computer you u
 
 ## Add a Python package on SQL Server
 
-In the following example, you'll add the [pyglm](https://pypi.org/project/pyglm/) package to SQL Server.
+In the following example, you'll add the [text-tools](https://pypi.org/project/text-tools/) package to SQL Server.
 
 ### Add the package online
 
-If the client computer you use to connect to SQL Server has Internet access, you can use **sqlmlutils** to find the **pyglm** package and any dependencies over the Internet, and then install the package to a SQL Server instance remotely.
+If the client computer you use to connect to SQL Server has Internet access, you can use **sqlmlutils** to find the **text-tools** package and any dependencies over the Internet, and then install the package to a SQL Server instance remotely.
 
 1. On the client computer, open **Python** or a Python environment such as **IDLE**.
 
-1. Use the following commands to install the **pyglm** package. Substitute your own SQL Server database connection information.
+1. Use the following commands to install the **text-tools** package. Substitute your own SQL Server database connection information.
 
    ```python
    import sqlmlutils
    connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
-   sqlmlutils.SQLPackageManager(connection).install("pyglm")
+   sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
 ### Add the package offline
@@ -86,42 +86,50 @@ If the client computer you use to connect to SQL Server doesn't have an Internet
 
 #### On a computer with Internet access
 
-1. Run the following Python script to create a local folder that contains the **pyglm** package. This example creates the folder `c:\temp\pyglm`.
+1. Run the following Python script to create a local folder that contains the **text-tools** package. This example creates the folder `c:\temp\text-tools`.
 
    ```python
-   pip download pyglm -d c:/temp/pyglm
+   pip download text-tools -d c:/temp/text-tools
    ```
 
-1. Copy the `pyglm` folder to the client computer. For example, copy it to `c:\temp\packages\pyglm`.
+1. Copy the `text-tools` folder to the client computer. For example, copy it to `c:\temp\packages\text-tools`.
 
 #### On the client computer
 
 Use **sqlmlutils** to install each package (WHL file) you find in the local folder that **pip** created. It doesn't matter in what order you install the packages.
 
-In this example, **pyglm** has no dependencies, so there is only one file from the `pyglm` folder for you to install. In contrast, the package **scikit-plot** has 11 dependencies, so you would install 12 files (the **scikit-plot** package and 11 dependent packages).
+In this example, **text-tools** has no dependencies, so there is only one file from the `text-tools` folder for you to install. In contrast, a package such as **scikit-plot** has 11 dependencies, so you would install 12 files (the **scikit-plot** package and 11 dependent packages).
 
 Run the following Python script. Substitute your own SQL Server database connection information, and the actual file path and name of the package. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 
 ```python
 import sqlmlutils
 connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
-sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/pyglm/PyGLM-1.0.0-cp37-cp37m-win32.whl")
+sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## Load the package in Python
+## Use the package in SQL Server
 
-To use the package in a Python script in SQL Server, use the `import` command. For **pyglm**, the module name is "glm".
+You can now use the package in a Python script in SQL Server. For example:
 
 ```python
-import glm
+EXECUTE sp_execute_external_script
+  @language = N'Python',
+  @script = N'
+from text_tools.finders import find_best_string
+corpus = "Lorem Ipsum text"
+query = "Ipsum"
+first_match = find_best_string(query, corpus)
+print(first_match)
+  '
 ```
 
 ## Remove the package from SQL Server
 
-If you would like to remove the **pyglm** package, use the following Python command, using the same connection variable you defined earlier.
+If you would like to remove the **text-tools** package, use the following Python command on the client computer, using the same connection variable you defined earlier.
 
 ```python
-sqlmlutils.SQLPackageManager(connection).uninstall("pyglm")
+sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
 ## See Also

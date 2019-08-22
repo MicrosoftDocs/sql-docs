@@ -121,11 +121,11 @@ There are different ways that you can get a list of installed packages. For exam
 
 If you are using the Python command line, you can use either **Pip** or the **conda** package manager, included with the Anaconda Python environment added by SQL Server setup.
 
-1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+1. Open a command prompt and go to `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
 
-1. Right-click **conda.exe** > **Run as administrator**, and enter `conda list` to return a list of packages installed in the current environment.
+1. Enter `conda list` to return a list of packages installed in the current environment.
 
-1. Similarly, right-click **pip.exe** > **Run as administrator**, and enter `pip list` to return the same information. 
+1. Similarly, enter `pip list` to return the same information.
 
 For more information about **conda** and how you can use it to create and manage multiple Python environments, see [Managing environments with conda](https://conda.io/docs/user-guide/tasks/manage-environments.html).
 

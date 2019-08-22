@@ -117,7 +117,7 @@ manager: craigg
      Notice that there are now three groups of members of the **Vacation Hours** attribute that have sales values for products. (The other seven groups contain members with no sales data.)  
   
 ## Next Task in Lesson  
- [Hiding and Disabling Attribute Hierarchies](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [Hiding and Disabling Attribute Hierarchies](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## See Also  
  [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  

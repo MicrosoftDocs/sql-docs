@@ -185,6 +185,8 @@
   items:
   - name: Connect
     items:
+    - name: Loopback connection
+      href: ../advanced-analytics/connect/loopback-connection.md
     - name: Connect to OLAP from R
       items:
       - name: Use data from OLAP cubes in R

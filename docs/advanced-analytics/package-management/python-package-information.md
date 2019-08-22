@@ -5,7 +5,7 @@ ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/15/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -73,19 +73,16 @@ When you select the Python language option during setup, Anaconda 4.2 distributi
 
 ## List all installed Python packages
 
-The `pip` module is installed by default and supports many operations for listing installed packages, in addition to those supported by standard Python. You can run `pip` from a Python command prompt, but you can also call some pip functions from `sp_execute_external_script`.
-
 The following example script displays a list of installed packages and their versions.
 
 ```sql
 EXECUTE sp_execute_external_script 
   @language = N'Python', 
   @script = N'
-import pip
+import pkg_resources
 import pandas as pd
-installed_packages = pip.get_installed_distributions()
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
-   for i in installed_packages])
+installed_packages = pkg_resources.working_set
+installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
 df = pd.DataFrame(installed_packages_list)
 OutputDataSet = df
   '
@@ -103,10 +100,9 @@ If the package is found, the code returns the message "Package scikit-learn is i
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-import pip
 import pkg_resources
 pckg_name = "scikit-learn"
-pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
+pckgs = pandas.DataFrame([(i.key) for i in pkg_resources.working_set], columns = ["key"])
 installed_pckg = pckgs.query(''key == @pckg_name'')
 print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
   '

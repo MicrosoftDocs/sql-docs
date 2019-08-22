@@ -4,7 +4,7 @@ description: Learn how to use Python pip to install new Python packages on an in
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/08/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -56,11 +56,12 @@ To use **sqlmlutils**, you first need to install it on the client computer you u
 
 1. Download the latest **sqlmlutils** zip file from https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist to the client computer. Don't unzip the file.
 
-1. Open a **Command Prompt** and run the following command to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded (this example assumes the file is in your Documents folder).
+1. Open a **Command Prompt** and run the following command to install the **sqlmlutils** package. Substitute the full path to the **sqlmlutils** zip file you downloaded - this example assumes the downloaded file is `c:\temp\sqlmlutils_0.6.0.zip`.
 
    ```console
-   python.exe -m pip install --upgrade --upgrade-strategy only-if-needed %UserProfile%\Documents\sqlmlutils_0.6.0.zip
+   python.exe -m pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
    ```
+
 ## Add a Python package on SQL Server
 
 In the following example, you'll add the [pyglm](https://pypi.org/project/pyglm/) package to SQL Server.
@@ -81,7 +82,7 @@ If the client computer you use to connect to SQL Server has Internet access, you
 
 ### Add the package offline
 
-If the client computer you use to connect to SQL Server doesn't have an Internet connection, you can use **pip** on a computer with Internet access to download the package and any dependencies to a local folder. You then copy the folder to the client computer where you can install the package offline.
+If the client computer you use to connect to SQL Server doesn't have an Internet connection, you can use **pip** on a computer with Internet access to download the package and any dependent packages to a local folder. You then copy the folder to the client computer where you can install the package offline.
 
 #### On a computer with Internet access
 
@@ -95,11 +96,11 @@ If the client computer you use to connect to SQL Server doesn't have an Internet
 
 #### On the client computer
 
-Use **sqlmlutils** to install each package (WHL file) you find in the `pyglm` folder. It doesn't matter in what order you install the packages.
+Use **sqlmlutils** to install each package (WHL file) you find in the local folder that **pip** created. It doesn't matter in what order you install the packages.
 
-In this example, **pyglm** has no dependencies, so you will install only one file from the `pyglm` folder. In contrast, the package **scikit-plot** has 11 dependencies, so you would install 12 files (the **scikit-plot** package and 11 dependent packages).
+In this example, **pyglm** has no dependencies, so there is only one file from the `pyglm` folder for you to install. In contrast, the package **scikit-plot** has 11 dependencies, so you would install 12 files (the **scikit-plot** package and 11 dependent packages).
 
-Run the following Python script. Substitute your own SQL Server database connection information, and the actual file path and name of the package. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file.
+Run the following Python script. Substitute your own SQL Server database connection information, and the actual file path and name of the package. Repeat the `sqlmlutils.SQLPackageManager` statement for each package file in the folder.
 
 ```python
 import sqlmlutils
@@ -107,12 +108,20 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/pyglm/PyGLM-1.0.0-cp37-cp37m-win32.whl")
 ```
 
-## Load the package
+## Load the package in Python
 
-You can now load the package as part of your Python script:
+To use the package in a Python script in SQL Server, use the `import` command. For **pyglm**, the module name is "glm".
 
 ```python
-import pyglm
+import glm
+```
+
+## Remove the package from SQL Server
+
+If you would like to remove the **pyglm** package, use the following Python command, using the same connection variable you defined earlier.
+
+```python
+sqlmlutils.SQLPackageManager(connection).uninstall("pyglm")
 ```
 
 ## See Also

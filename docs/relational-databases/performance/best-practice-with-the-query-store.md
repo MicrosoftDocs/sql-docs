@@ -1,7 +1,7 @@
 ---
 title: "Best Practice with the Query Store | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2019"
+ms.date: "08/21/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -129,7 +129,7 @@ SET QUERY_STORE = ON
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
       QUERY_CAPTURE_MODE = AUTO,
-      MAX_STORAGE_SIZE_MB = 1024,
+      MAX_STORAGE_SIZE_MB = 1000,
       INTERVAL_LENGTH_MINUTES = 60
     );
 ```  
@@ -143,7 +143,8 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,
@@ -151,7 +152,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-The following example sets the Query Capture mode to Auto and set other recommended options in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], and optionally sets the Custom capture policy with its defaults:  
+The following example sets the Query Capture mode to Auto and set other recommended options in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], and **optionally** sets the Custom capture policy with its defaults, instead of the new default Auto capture mode:  
 
 ```sql
 ALTER DATABASE [QueryStoreDB]  
@@ -160,7 +161,7 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,

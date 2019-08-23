@@ -78,6 +78,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
+|-|-|URL|
 |DISTRIBUTED|OPENXML|USE|  
 |DOUBLE|OPTION|USER|  
 |DROP|OR|VALUES|  

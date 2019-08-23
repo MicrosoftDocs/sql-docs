@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-At the time of deploying a big data cluster (BDC), you can configure SQL Server master to be deployed in an availability group configuration. This configuration increases the reliability of SQL Server master, on top of what Kubernetes infrastructure enables with its built-in health monitoring, failure detection and failover mechanisms. Availability groups add redundancy to the SQL Server instance. In this configuration monitoring, failure detection and failover tasks are managed by big data cluster management service, namely the control service.
+At the time of deploying a big data cluster (BDC), you can configure SQL Server master to be deployed in an availability group configuration. This configuration increases the reliability of SQL Server master, on top of what Kubernetes infrastructure enables with its built-in health monitoring, failure detection and failover mechanisms. Availability groups (AG) add redundancy to the SQL Server instance. In this configuration monitoring, failure detection and failover tasks are managed by big data cluster management service, namely the control service.
 In addition, other administration tasks like setting up database mirroring endpoints,  creating the availability group and adding databases to the availability group are all built-in provided by the big data cluster platform.
 
 Here are some of the capabilities that availability groups enable:

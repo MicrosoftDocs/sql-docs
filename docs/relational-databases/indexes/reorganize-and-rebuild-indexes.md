@@ -160,6 +160,8 @@ When an index is **created** or **rebuilt** in [!INCLUDE[ssNoVersion](../../incl
 
 When an index is **reorganized** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], statistics are not updated.
 
+An index cannot be reorganized when `ALLOW_PAGE_LOCKS` is set to OFF.
+
 Up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], rebuilding a clustered columnstore index is an offline operation. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] has to acquire an exclusive lock on the table or partition while the rebuild occurs. The data is offline and unavailable during the rebuild even when using `NOLOCK`, Read-committed Snapshot Isolation (RCSI), or Snapshot Isolation.         
 Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], a clustered columnstore index can be rebuilt using the `ONLINE=ON` option. 
 

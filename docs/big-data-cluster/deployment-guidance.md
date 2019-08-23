@@ -79,7 +79,6 @@ Big data cluster deployment options are defined in JSON configuration files. You
 | **aks-dev-test** | Azure Kubernetes Service (AKS) |
 | **kubeadm-dev-test** | Multiple machines (kubeadm) |
 | **minikube-dev-test** | minikube |
-| **kubeadm-prod** | In addition to default configurations, it has required attributes for AD integration|
 
 You can deploy a big data cluster by running **azdata bdc create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 

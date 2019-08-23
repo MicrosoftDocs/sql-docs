@@ -199,10 +199,10 @@ Requires `ALTER` permission on the table or view. User must be a member of at le
    The logical fragmentation percentage. This indicates the number of pages in an index that are not stored in order.
 
    **Average row size**     
-   The average size of a leaf level row.
+   The average size of a leaf-level row.
 
    **Depth**     
-   The number of levels in the index, including the leaf level.
+   The number of levels in the index, including the leaf-level.
 
    **Forwarded records**     
    The number of records in a heap that have forward pointers to another data location. (This state occurs during an update, when there is not enough room to store the new row in the original location.)
@@ -214,7 +214,7 @@ Requires `ALTER` permission on the table or view. User must be a member of at le
    The type of index. Possible values are **Clustered index**, **Nonclustered index**, and **Primary XML**. Tables can also be stored as a heap (without indexes), but then this Index Properties page cannot be opened.
 
    **Leaf-level rows**     
-   The number of leaf level rows.
+   The number of leaf-level rows.
 
    **Maximum row size**     
    The maximum leaf-level row size.

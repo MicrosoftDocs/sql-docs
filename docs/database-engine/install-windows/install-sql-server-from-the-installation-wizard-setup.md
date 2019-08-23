@@ -307,6 +307,12 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
      For more information, see [Database Engine Configuration - Data Directories page](../../sql-server/install/instance-configuration.md#datadir).
 
      Use the **Database Engine Configuration - TempDB** page to configure the file size, number of files, nondefault installation directories, and file-growth settings for **tempdb**. For more information, see [Database Engine Configuration - TempDB page](../../sql-server/install/instance-configuration.md#tempdb).
+<<<<<<< HEAD
+  
+     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation. This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. For more information, see the [Database Engine Configuration - MaxDOP page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
+
+     Use the **Database Engine Configuration - Memory** page to specify the **min server memory** and **max server memory** values that this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use after startup. You can use the default values, use the calculated recommended values, or manually specify your own values after you've chosen the **Recommended** option. This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. For more information, see the [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+=======
 
      Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** page to specify your max degree of parallelism. This setting determines how many processors a single statement can use during execution. The recommended value is automatically calculated during installation. 
      
@@ -321,6 +327,7 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
     > This page is only available in Setup starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
     For more information, see the [Database Engine Configuration - Memory page](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+>>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
      Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   

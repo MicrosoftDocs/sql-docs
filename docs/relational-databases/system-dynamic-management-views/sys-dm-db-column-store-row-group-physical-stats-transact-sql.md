@@ -64,9 +64,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Examples  
   
 ### A. Calculate fragmentaton to decide when to reorganize or rebuild a columnstore index.  
- For columnstore indexes, the percent of deleted rows  is a good measure for the fragmentation in a rowgroup. When the fragmentation is 20% or more we recommend removing the deleted rows.  For examples, see [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md).  
+ For columnstore indexes, the percent of deleted rows  is a good measure for the fragmentation in a rowgroup. When the fragmentation is 20% or more we recommend removing the deleted rows.  For examples, see [Reorganize and Rebuild Indexes](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- This example joins **sys.dm_db_column_store_row_group_physical_stats** with other system tables and then calculates the `Fragmentation` column as an estimate of the efficiency of each row group in the current database.     To find information on a single table remove the comment hyphens in front of the **WHERE** clause and provide a table name.  
+ This example joins **sys.dm_db_column_store_row_group_physical_stats** with other system tables and then calculates the `Fragmentation` column as an estimate of the efficiency of each row group in the current database. To find information on a single table remove the comment hyphens in front of the **WHERE** clause and provide a table name.  
   
 ```sql  
 SELECT i.object_id,   
@@ -85,12 +85,12 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
   
 ## See Also  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
+ [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [Querying the SQL Server System Catalog FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
- [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   

@@ -55,16 +55,12 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Returns one row for each rowgroup in the current database.  
   
 ## Permissions  
- Requires these permissions:  
-  
--   CONTROL permission on the table.  
-  
--   VIEW DATABASE STATE permission on the database.  
+Requires `CONTROL` permission on the table and `VIEW DATABASE STATE` permission on the database.  
   
 ## Examples  
   
-### A. Calculate fragmentaton to decide when to reorganize or rebuild a columnstore index.  
- For columnstore indexes, the percent of deleted rows  is a good measure for the fragmentation in a rowgroup. When the fragmentation is 20% or more we recommend removing the deleted rows.  For examples, see [Reorganize and Rebuild Indexes](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+### A. Calculate fragmentation to decide when to reorganize or rebuild a columnstore index.  
+ For columnstore indexes, the percent of deleted rows  is a good measure for the fragmentation in a rowgroup. When the fragmentation is 20% or more we recommend removing the deleted rows. For more examples, see [Reorganize and Rebuild Indexes](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
  This example joins **sys.dm_db_column_store_row_group_physical_stats** with other system tables and then calculates the `Fragmentation` column as an estimate of the efficiency of each row group in the current database. To find information on a single table remove the comment hyphens in front of the **WHERE** clause and provide a table name.  
   

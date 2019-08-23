@@ -95,7 +95,7 @@ The result set returned by the **sys.dm_db_column_store_row_group_physical_stats
 This can be used to compute the fragmentation using the formula `100*(ISNULL(deleted_rows,0))/NULLIF(total_rows,0)`. After the degree of fragmentation is known, use the following table to determine the best method to correct the fragmentation.
 
 |**computed fragmentation in percent** value|Applies to version|Corrective statement|
-|-----------------------------------------------|--------------------------|
+|-----------------------------------------------|--------------------------|--------------------------|
 |> = 20%|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|ALTER INDEX REBUILD|
 |> = 20%|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|ALTER INDEX REORGANIZE|
 

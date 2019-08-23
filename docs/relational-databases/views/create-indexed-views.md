@@ -204,7 +204,7 @@ JOIN Sales.SalesOrderHeader AS o
 
 For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).
 
-## See Also
+## See also
 
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
 - [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)

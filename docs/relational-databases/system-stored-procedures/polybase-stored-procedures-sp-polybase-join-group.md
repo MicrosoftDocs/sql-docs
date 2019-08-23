@@ -59,7 +59,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   
 ```  
   
-## See Also  
+## See also  
  [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

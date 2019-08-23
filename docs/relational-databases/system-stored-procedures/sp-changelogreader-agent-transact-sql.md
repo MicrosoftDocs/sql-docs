@@ -77,7 +77,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_changelogreader_agent**.  
   
-## See Also  
+## See also  
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  

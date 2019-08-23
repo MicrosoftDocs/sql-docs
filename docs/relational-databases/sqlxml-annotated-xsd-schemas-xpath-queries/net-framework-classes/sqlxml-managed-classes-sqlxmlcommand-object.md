@@ -111,7 +111,7 @@ public SqlXmlCommand(string cnString)
 |SqlXmlCommandType.UpdateGram|Executes an updategram.|  
 |SqlXmlCommandType.Diffgram|Executes a DiffGram.|  
   
-## See Also  
+## See also  
  [SqlXmlParameter Object &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)   
  [SqlXmlAdapter Object &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
   

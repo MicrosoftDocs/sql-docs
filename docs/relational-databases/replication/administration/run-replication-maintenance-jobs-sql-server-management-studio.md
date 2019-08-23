@@ -68,7 +68,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 4.  In the **Job Properties - \<Job>** dialog box, modify any properties if necessary, and then click **OK**.  
   
-## See Also  
+## See also  
  [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  

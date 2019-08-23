@@ -45,7 +45,7 @@ GetPathLocator(filenamespace_path)
 ## Examples  
  You can use the **GetPathLocator** function when you are migrating files from a file server to a FileTable. In this scenario, you want to move the files into the FileTable, and then replace the original UNC path for each file with the FileTable UNC path. For a complete example, see [Load Files into FileTables](../../relational-databases/blob/load-files-into-filetables.md).  
   
-## See Also  
+## See also  
  [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

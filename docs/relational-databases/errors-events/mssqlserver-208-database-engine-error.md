@@ -63,7 +63,7 @@ Verify the following information and correct the statement as appropriate.
   
 -   The user has permission to access the object. To verify the permissions the user has on the object, use the **Has_Perms_By_Name** system function.  
   
-## See Also  
+## See also  
 [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md)  
 [Metadata Visibility Configuration](~/relational-databases/security/metadata-visibility-configuration.md)  
 [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/has-perms-by-name-transact-sql.md)  

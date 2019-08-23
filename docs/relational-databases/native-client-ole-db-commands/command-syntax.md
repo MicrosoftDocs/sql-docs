@@ -49,7 +49,7 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     EXECUTE SalesByCategory 'Produce', '1995'  
     ```  
   
-## See Also  
+## See also  
  [Commands](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

@@ -76,7 +76,7 @@ ms.author: jroth
 ## Change Data Capture and Always On  
  When you use Always On, change enumeration should be done on the Secondary replication to reduce the disk load on the primary.  
   
-## See Also  
+## See also  
  [Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

@@ -31,7 +31,7 @@ ms.author: sstein
 |**Name**|**Sysname**|The name of the published constraint.|  
 |**Type**|**nvarchar(255)**|A supported constraint type from the [IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) system table.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

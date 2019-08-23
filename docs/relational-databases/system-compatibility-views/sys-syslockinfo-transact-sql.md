@@ -56,7 +56,7 @@ ms.author: "jroth"
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+## See also  
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

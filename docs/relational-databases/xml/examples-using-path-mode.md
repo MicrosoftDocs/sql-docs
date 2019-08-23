@@ -382,7 +382,7 @@ FOR XML PATH('ProductModelData'), root('root');
 </root>
 ```
   
-## See Also  
+## See also  
  [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

@@ -90,7 +90,7 @@ END
 GO  
 ```  
   
-## See Also  
+## See also  
  [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

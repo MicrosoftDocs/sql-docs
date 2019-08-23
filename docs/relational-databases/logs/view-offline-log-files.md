@@ -113,7 +113,7 @@ ms.author: "mathoma"
     > [!NOTE]  
     >  If the log files take too long to load, you can click **Stop** on the Log File Viewer toolbar.  
   
-## See Also  
+## See also  
  [Log File Viewer](../../relational-databases/logs/log-file-viewer.md)  
   
   

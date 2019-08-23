@@ -101,7 +101,7 @@ BEGIN
 END;  
 ```  
   
-## See Also  
+## See also  
  [DML Triggers](../../relational-databases/triggers/dml-triggers.md)  
   
   

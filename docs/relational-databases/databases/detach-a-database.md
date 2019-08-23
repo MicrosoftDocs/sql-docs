@@ -103,7 +103,7 @@ ms.author: "sstein"
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## See Also  
+## See also  
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   

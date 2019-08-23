@@ -87,7 +87,7 @@ The replication agent security model is a little bit different for Azure SQL Dat
 > [!NOTE]  
 >  This information is provided to help you understand what is involved in running agents with the appropriate security context. You should not have to interact directly with the credentials or proxies that have been created.  
   
-## See Also  
+## See also  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)  

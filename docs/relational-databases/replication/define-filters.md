@@ -29,7 +29,7 @@ ms.author: "mathoma"
  **Clear**  
  Click this button to clear all filters that have been previously defined.  
   
-## See Also  
+## See also  
  [Microsoft Replication Conflict Viewer &#40;Merge Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)   
  [Microsoft Replication Conflict Viewer &#40;Transactional Replication&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
   

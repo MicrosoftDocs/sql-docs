@@ -129,7 +129,7 @@ These in-memory OLTP-based DMVs contain updates for columnstore:
 -   The column store index always requires extra storage, typically an additional 10% over rowstore, because it stores a copy of the data.  
 -   Batch processing provides 2x or better query performance, but it is only available for parallel query execution.  
   
-## See Also  
+## See also  
  [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

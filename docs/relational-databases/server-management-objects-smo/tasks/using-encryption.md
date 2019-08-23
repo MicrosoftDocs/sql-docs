@@ -88,7 +88,7 @@ $c.Create("pGFD4bb925DGvbd2439587y")
   
 ```  
   
-## See Also  
+## See also  
  [Using Encryption Keys](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

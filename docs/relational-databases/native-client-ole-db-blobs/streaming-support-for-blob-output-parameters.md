@@ -504,7 +504,7 @@ _Exit:
 }  
 ```  
   
-## See Also  
+## See also  
  [BLOBs and OLE Objects](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
   

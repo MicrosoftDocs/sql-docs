@@ -30,7 +30,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Schedule the Snapshot Agent to run at the following times**  
  Accept the default schedule for running the Snapshot Agent, or click **Change** to specify a schedule.  
   
-## See Also  
+## See also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

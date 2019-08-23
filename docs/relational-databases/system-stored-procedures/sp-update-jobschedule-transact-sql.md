@@ -44,7 +44,7 @@ ms.author: "sstein"
   
  Only members of **sysadmin** can use this stored procedure to update job schedules that are owned by other users.  
   
-## See Also  
+## See also  
  [SQL Server Agent Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   

@@ -45,7 +45,7 @@ ms.author: "jroth"
   
 -   **SqlDependency** object is not supported.  
   
-## See Also  
+## See also  
  [Context Connection](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

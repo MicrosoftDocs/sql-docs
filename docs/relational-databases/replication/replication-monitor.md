@@ -79,7 +79,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   [Sort Columns](../../relational-databases/replication/sort-columns.md)  
   
-## See Also  
+## See also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
 
   

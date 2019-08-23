@@ -86,7 +86,7 @@ EXEC sp_createstats 'indexonly';
 GO  
 ```  
   
-## See Also  
+## See also  
  [Statistics](../../relational-databases/statistics/statistics.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

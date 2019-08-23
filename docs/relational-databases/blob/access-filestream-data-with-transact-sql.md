@@ -68,7 +68,7 @@ ms.author: mikeray
 >  The underlying files are removed by the FILESTREAM garbage collector.  
   
   
-## See Also  
+## See also  
  [Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
  [Avoid Conflicts with Database Operations in FILESTREAM Applications](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   

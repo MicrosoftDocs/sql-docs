@@ -78,7 +78,7 @@ The **Expensive Queries** reports are reset when [!INCLUDE[ssNoVersion](../../in
 On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` and `ALTER TRACE` permissions. 
 On [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requires the `VIEW DATABASE STATE` permission in the database.
 
-## See Also  
+## See also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

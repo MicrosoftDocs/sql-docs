@@ -43,7 +43,7 @@ INNER JOIN sys.trace_xe_action_map AS am
   
  SQL Trace columns that do not map to actions are not included in the table.  
   
-## See Also  
+## See also  
  [trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)  
   
   

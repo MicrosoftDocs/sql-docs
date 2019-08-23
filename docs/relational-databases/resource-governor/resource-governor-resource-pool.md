@@ -117,7 +117,7 @@ User-defined resource pools are those that you create for specific workloads in 
 |Describes how to change resource pool settings.|[Change Resource Pool Settings](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Describes how to delete a resource pool.|[Delete a Resource Pool](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## See Also  
+## See also  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   

@@ -72,7 +72,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  The Extended Events architecture provides a flexible system that allows a variety of objects to be used together to solve specific problems.  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)  
   
   

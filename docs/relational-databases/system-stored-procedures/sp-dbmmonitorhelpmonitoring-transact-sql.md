@@ -52,7 +52,7 @@ sp_dbmmonitorhelpmonitoring
 EXEC sp_dbmmonitorhelpmonitoring;  
 ```  
   
-## See Also  
+## See also  
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   

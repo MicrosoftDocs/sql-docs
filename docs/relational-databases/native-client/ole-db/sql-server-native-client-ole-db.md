@@ -72,7 +72,7 @@ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client O
   
 -   [OLE DB How-to Topics](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## See Also  
+## See also  
  [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

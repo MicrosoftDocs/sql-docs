@@ -47,7 +47,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ## Permissions  
  Requires membership in the **public** role.  
   
-## See Also  
+## See also  
  [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   

@@ -273,7 +273,7 @@ GO
 ## Conclusion  
  The collation behavior of contained databases differs subtly from that in non-contained databases. This behavior is generally beneficial, providing instance-independence and simplicity. Some users may have issues, particularly when a session accesses both contained and non-contained databases.  
   
-## See Also  
+## See also  
  [Contained Databases](../../relational-databases/databases/contained-databases.md)  
   
   

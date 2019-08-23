@@ -109,7 +109,7 @@ EXEC sp_syscollector_create_collection_item
     @collection_item_id = @collection_item_id OUTPUT;  
 ```  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   

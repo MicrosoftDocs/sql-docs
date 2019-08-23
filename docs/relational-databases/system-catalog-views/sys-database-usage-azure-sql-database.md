@@ -42,7 +42,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ## Remarks  
  The **sys.database_usage** view returns one row for each day of your subscription.  
   
-## See Also  
+## See also  
  [SQL Database Pricing Details](https://go.microsoft.com/fwlink/?LinkID=394978)   
  [Accounts and Billing in Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   

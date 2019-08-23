@@ -57,7 +57,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 exec [sys].[sp_xtp_checkpoint_force_garbage_collection] hkdb1  
 ```  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

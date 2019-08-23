@@ -40,7 +40,7 @@ ms.author: sstein
 |**estimated_changes**|**int**|An estimate of the number of row changes that must be applied to the article.|  
 |**relative_cost**|**decimal**|The time spent applying changes for this article versus the total time for the entire session.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

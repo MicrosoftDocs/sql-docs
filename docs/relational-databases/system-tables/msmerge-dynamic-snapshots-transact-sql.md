@@ -29,7 +29,7 @@ ms.author: sstein
 |**dynamic_snapshot_location**|**nvarchar(255)**|The location of the filtered data snapshot for the partition.|  
 |**last_updated**|**datetime**|The date that the filtered data snapshot was refreshed.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

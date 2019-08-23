@@ -88,7 +88,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_link_publication**.  
   
-## See Also  
+## See also  
  [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   

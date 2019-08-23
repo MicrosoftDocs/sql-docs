@@ -57,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Delete an application role.|[DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-application-role-transact-sql.md)|  
 |Using an application role.|[sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)|  
   
-## See Also  
+## See also  
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)  
   
   

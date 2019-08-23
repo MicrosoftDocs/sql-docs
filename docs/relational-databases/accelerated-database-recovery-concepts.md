@@ -128,6 +128,6 @@ The following types of customers should consider enabling ADR:
 - Customers that have experienced long periods of database unavailability due to SQL Server long running recovery (such as unexpected SQL Server restart or manual transaction rollback).
 
 
-## See Also  
+## See also  
 
   

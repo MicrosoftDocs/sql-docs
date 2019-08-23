@@ -33,7 +33,7 @@ ms.author: "jroth"
  [Updating UDT Columns with DataAdapters](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md)  
  Describes how to work with UDTs in **DataSets** and how to update UDT data using **DataAdapters**.  
   
-## See Also  
+## See also  
  [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

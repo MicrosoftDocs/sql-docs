@@ -76,7 +76,7 @@ ms.author: "sstein"
   
  For more examples, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## See Also  
+## See also  
  [Shrink a Database](../../relational-databases/databases/shrink-a-database.md)   
  [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   

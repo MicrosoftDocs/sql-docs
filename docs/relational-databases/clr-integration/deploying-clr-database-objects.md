@@ -99,7 +99,7 @@ ms.author: "jroth"
   
  When you click deploy, Visual Studio will run this script after the deployment of your project.  
   
-## See Also  
+## See also  
  [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

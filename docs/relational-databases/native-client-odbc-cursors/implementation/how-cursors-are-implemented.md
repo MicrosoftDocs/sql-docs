@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   [ODBC Cursor Library](../../../relational-databases/native-client-odbc-cursors/implementation/odbc-cursor-library.md)  
   
-## See Also  
+## See also  
  [Using Cursors &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

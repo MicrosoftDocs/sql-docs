@@ -62,7 +62,7 @@ ms.author: sstein
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

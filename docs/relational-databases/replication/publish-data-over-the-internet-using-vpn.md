@@ -29,7 +29,7 @@ ms.author: "mathoma"
   
  For more information about setting up a VPN, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows documentation.  
   
-## See Also  
+## See also  
  [Replication over the Internet](../../relational-databases/replication/replication-over-the-internet.md)  
   
   

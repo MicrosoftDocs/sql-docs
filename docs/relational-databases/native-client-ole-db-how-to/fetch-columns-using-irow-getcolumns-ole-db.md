@@ -513,7 +513,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## See Also  
+## See also  
  [OLE DB How-to Topics](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

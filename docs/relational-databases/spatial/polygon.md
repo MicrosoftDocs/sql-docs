@@ -149,7 +149,7 @@ SELECT @g.ToString()
   
 The geometry instance returned above is a `Point(1 3)`.  If the `Polygon` given is `POLYGON((1 3, 1 5, 1 3, 1 3))` then `MakeValid()` would return `LINESTRING(1 3, 1 5)`.  
   
-## See Also  
+## See also  
  [STArea &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

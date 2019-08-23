@@ -47,7 +47,7 @@ ms.author: aliceku
   
  For use scenarios, see [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
-## See Also  
+## See also  
  [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

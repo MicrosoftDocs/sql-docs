@@ -77,7 +77,7 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 - [Query columns using Always Encrypted with SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
-## See Also
+## See also
 - [Always Encrypted](always-encrypted-database-engine.md)
 - [Export and import databases using Always Encrypted](always-encrypted-migrate-using-bacpac.md)
 - [Back up and restore databases using Always Encrypted](always-encrypted-migrate-using-backup-restore.md)

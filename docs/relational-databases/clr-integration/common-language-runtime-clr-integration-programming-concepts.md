@@ -60,7 +60,7 @@ ms.author: "jroth"
  [Usage Scenarios and Examples for Common Language Runtime &#40;CLR&#41; Integration](https://msdn.microsoft.com/library/33aac25f-abb4-4f29-af88-4a0dacd80ae7)  
  Describes usage scenarios and code samples using CLR objects.  
   
-## See Also  
+## See also  
  [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Installing the .NET Framework SDK](https://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)  
   

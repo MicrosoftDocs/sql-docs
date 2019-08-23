@@ -113,7 +113,7 @@ ms.author: mikeray
   
  You can set database containment to PARTIAL if you want to use certain features of contained databases, such as contained users. In this case, however, you must be aware that some of the database settings are not contained in the database and are not automatically moved when the database moves.  
   
-## See Also  
+## See also  
  [Manage FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

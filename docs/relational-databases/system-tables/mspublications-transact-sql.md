@@ -45,7 +45,7 @@ ms.author: sstein
 |**allow_queued_tran**|**bit**|Specifies whether publication allows queued updating:<br /><br /> **0 =** Publication is non-queued.<br /><br /> **1** = Publication is queued.|  
 |**options**|**int**|No information is available for this release.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

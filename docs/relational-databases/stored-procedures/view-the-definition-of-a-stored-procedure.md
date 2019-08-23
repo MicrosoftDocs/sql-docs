@@ -101,7 +101,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## See Also  
+## See also  
  [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)   

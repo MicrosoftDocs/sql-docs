@@ -69,7 +69,7 @@ SELECT SESSION_CONTEXT(N'language');
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
-## See Also  
+## See also  
  [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)   
  [Row-Level Security](../../relational-databases/security/row-level-security.md)   

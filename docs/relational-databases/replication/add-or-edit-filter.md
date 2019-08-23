@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
  After you have added or edited a filter, click **OK** to save changes and close the dialog box. The filter you specified is parsed and run against the table in the SELECT clause. If the filter statement contains syntax errors or other problems, you are notified and are able to edit the filter statement.  
   
-## See Also  
+## See also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md)   

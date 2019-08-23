@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## See Also  
+## See also  
  [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)   
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

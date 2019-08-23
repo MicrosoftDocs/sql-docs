@@ -135,7 +135,7 @@ ms.author: "mathoma"
   
  If logical records are used, the Merge Agent must process the changes for each entire logical record together. This has an effect on the amount of time it takes the Merge Agent to replicate the rows. Additionally, because the agent opens a separate transaction for each logical record, locking requirements can increase.  
   
-## See Also  
+## See also  
  [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
   

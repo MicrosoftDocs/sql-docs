@@ -110,7 +110,7 @@ ms.author: "jroth"
 ### SAFE  
  All **EXTERNAL_ACCESS** conditions are checked.  
   
-## See Also  
+## See also  
  [Supported .NET Framework Libraries](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Host Protection Attributes and CLR Integration Programming](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

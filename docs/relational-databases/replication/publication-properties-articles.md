@@ -76,7 +76,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Show only checked objects in the list**  
  Select this check box to show only those articles that are selected in the object pane.  
   
-## See Also  
+## See also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

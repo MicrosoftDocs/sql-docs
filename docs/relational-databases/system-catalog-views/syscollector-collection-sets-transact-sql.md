@@ -49,7 +49,7 @@ ms.author: "sstein"
 ## Remarks  
  The data collector API only allows you to change or delete the collection sets that you create. The collection sets that are provided with the system cannot be modified or deleted. However, you can still enable or disable a system collection set, and change its configuration.  
   
-## See Also  
+## See also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Data Collector Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  

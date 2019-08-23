@@ -68,7 +68,7 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
   
-## See Also  
+## See also  
  [Windows Storage Spaces in Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   
  [Windows Storage Spaces in Windows 2012 R2](https://technet.microsoft.com/library/hh831739.aspx)   
  [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   

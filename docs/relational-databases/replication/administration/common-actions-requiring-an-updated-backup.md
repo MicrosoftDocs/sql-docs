@@ -101,7 +101,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   Enabling or disabling a Publisher at a Distribution Publisher (at the Publisher and Distributor).  
   
-## See Also  
+## See also  
  [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

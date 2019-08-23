@@ -57,7 +57,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
   
  The TextData column of this event contains a description of the reason that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dropped the message.  
   
-## See Also  
+## See also  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

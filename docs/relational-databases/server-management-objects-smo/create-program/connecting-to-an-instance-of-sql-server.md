@@ -220,7 +220,7 @@ public class A {
 }  
 ```  
   
-## See Also  
+## See also  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

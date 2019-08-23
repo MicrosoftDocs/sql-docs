@@ -95,7 +95,7 @@ For documentation of the SELECT...**FOR XML** clause that also applies to Azure 
 **ROOT** [('_RootName_')]  
  Specifies that a single, top-level element be added to the resulting XML. You can optionally specify the root element name to generate. The default value is `<root>`.  
   
-## See Also  
+## See also  
  [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   

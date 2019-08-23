@@ -39,7 +39,7 @@ ms.author: "jroth"
 |**status**|**smallint**|If 1, the mapping should use the credentials of the user.|  
 |**changedate**|**datetime**|Date the mapping information was last changed.|  
   
-## See Also  
+## See also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

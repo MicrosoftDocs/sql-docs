@@ -95,7 +95,7 @@ sp_table_validation [ @table = ] 'table'
 ## Permissions  
  To execute **sp_table_validation**, you must have SELECT permissions on the table being validated.  
   
-## See Also  
+## See also  
  [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   

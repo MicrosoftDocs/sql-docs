@@ -208,7 +208,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   When you specify **client-side-xml="1"** (true) in a template, you are requesting client-side XML formatting. In this case, you can specify FOR XML NESTED. If you specify FOR XML AUTO, the XML formatting occurs on the server side although **client-side-xml="1"** is specified in the template.  
   
-## See Also  
+## See also  
  [FOR XML Security Considerations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [Client-side XML Formatting &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
  [Server-side XML Formatting &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  

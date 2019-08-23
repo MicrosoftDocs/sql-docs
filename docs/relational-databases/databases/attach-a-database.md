@@ -149,7 +149,7 @@ USE <database name>
 EXEC sys.sp_cdc_vupgrade  
 ``` 
  
-## See Also  
+## See also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
  <br>[Manage metadata when making a database available on another server](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Detach a Database](../../relational-databases/databases/detach-a-database.md)  

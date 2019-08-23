@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**ObjectID2**|**int**|ID of the suspect page in the file. This is the same as the **page_id** column of the **suspect_pages** table.|56|Yes|  
 |**Error**|**int**|Type of error that was encountered . This value is the same as the **event_type** value for the page in the **suspect_pages** table.|31|Yes|  
   
-## See Also  
+## See also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

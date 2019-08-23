@@ -56,7 +56,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_posttracertoken**.  
   
-## See Also  
+## See also  
  [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

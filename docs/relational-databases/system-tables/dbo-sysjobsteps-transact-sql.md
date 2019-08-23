@@ -54,7 +54,7 @@ ms.author: "sstein"
 |**proxy_id**|**int**|Proxy for the job step.|  
 |**step_uid**|**uniqueidentifier**|Identifier for the job step.|  
   
-## See Also  
+## See also  
  [SQL Server Agent Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

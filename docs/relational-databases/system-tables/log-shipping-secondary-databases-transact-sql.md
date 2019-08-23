@@ -37,7 +37,7 @@ ms.author: "sstein"
 |**last_restored_file**|**nvarchar(500)**|The filename of the last backup file restored to the secondary database.|  
 |**last_restored_date**|**datetime**|The time and date of the last restore operation on the secondary database.|  
   
-## See Also  
+## See also  
  [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   

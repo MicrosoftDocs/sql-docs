@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |IColumnsRowset::GetColumnsRowset|Retrieves metadata information about a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. For table-valued parameters, this same interface provides detailed metadata information about each column, such as the following:<br /><br /> DBCOLUMN_FLAGS indicates nullability through the DBCOLUMNFLAGS_ISNULLABLE bit.<br /><br /> DBCOLUMN_ISUNIQUE indicates whether the column is an identity column.<br /><br /> DBCOLUMN_COMPUTEMODE indicates whether the column is computed.|  
 |IAccessor::CreateAccessor|To bind a table-valued parameter rowset object to a command parameter, you create an accessor with its *wType* member set to DBTYPE_TABLE. The DBOBJECT structure will contain IID_IRowset or any other valid rowset object interface in the *iid* member. The rest of the fields are treated similarly to DBTYPE_IUNKNOWN.|  
   
-## See Also  
+## See also  
  [OLE DB Table-Valued Parameter Type Support](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Table-Valued Parameter Rowset Creation](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   
  [Use Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  

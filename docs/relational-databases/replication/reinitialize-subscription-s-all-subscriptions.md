@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Mark for Reinitialization**  
  Click to mark each subscription for reinitialization. After a valid snapshot is available, the next time the Distribution Agent or Merge Agent runs for the subscription, the snapshot is applied at the Subscriber.  
   
-## See Also  
+## See also  
  [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

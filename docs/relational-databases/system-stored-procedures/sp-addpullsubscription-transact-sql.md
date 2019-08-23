@@ -87,7 +87,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_addpullsubscription**.  
   
-## See Also  
+## See also  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

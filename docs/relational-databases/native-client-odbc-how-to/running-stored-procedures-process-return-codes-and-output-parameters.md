@@ -187,7 +187,7 @@ DROP PROCEDURE TestParm
 GO  
 ```  
   
-## See Also  
+## See also  
 [Call Stored Procedures &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

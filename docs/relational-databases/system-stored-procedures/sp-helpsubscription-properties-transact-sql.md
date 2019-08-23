@@ -97,7 +97,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_helpsubscription_properties**.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

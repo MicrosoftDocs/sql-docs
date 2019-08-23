@@ -44,7 +44,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 |**TextData**|**ntext**|The text of the error message related to the event. For events that do not report an error, this field is empty. The error message may either be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message or a Windows error message.|1|Yes|  
 |**TransactionID**|**bigint**|The system-assigned ID of the transaction.|4|No|  
   
-## See Also  
+## See also  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

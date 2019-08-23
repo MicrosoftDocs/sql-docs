@@ -29,7 +29,7 @@ ms.author: sstein
 |**dbms**|**sysname**|The DBMS name.<br /><br /> MSSQLSERVER<br /><br /> DB2<br /><br /> ORACLE<br /><br /> SYBASE|  
 |**version**|**varchar(10)**|The DBMS version.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

@@ -30,7 +30,7 @@ ms.author: vanto
  **Created**  
  The date the policy was created.  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

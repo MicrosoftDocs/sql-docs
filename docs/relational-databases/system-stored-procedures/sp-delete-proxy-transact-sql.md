@@ -66,7 +66,7 @@ EXEC dbo.sp_delete_proxy
 GO  
 ```  
   
-## See Also  
+## See also  
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

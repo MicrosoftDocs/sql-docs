@@ -32,7 +32,7 @@ ms.author: genemi
   
  The internal representation of an XML document can be removed from memory by calling the **sp_xml_removedocument** system stored procedure.  
   
-## See Also  
+## See also  
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   

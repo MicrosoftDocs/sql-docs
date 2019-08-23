@@ -37,7 +37,7 @@ As of 2015-07-13, 'sys.dm_xe_objects' is one of these XEvents DMVs that do Not c
 |sys.dm_xe_database_session_events.event_session_address|sys.dm_xe_database_sessions.address|Many-to-one|  
 |sys.dm_xe_database_session_events.event_package_guid, sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|Many-to-one|  
   
-## See Also  
+## See also  
 [Extended events in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [Extended Events](../../relational-databases/extended-events/extended-events.md)  
   

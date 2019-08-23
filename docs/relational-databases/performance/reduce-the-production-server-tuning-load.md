@@ -88,7 +88,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 </DTAXML>  
 ```  
   
-## See Also  
+## See also  
  [Considerations for Using Test Servers](../../relational-databases/performance/considerations-for-using-test-servers.md)   
  [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   

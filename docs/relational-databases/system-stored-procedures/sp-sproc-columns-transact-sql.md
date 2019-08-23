@@ -94,7 +94,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## Permissions  
  Requires SELECT permission on the schema.  
   
-## See Also  
+## See also  
  [Catalog Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

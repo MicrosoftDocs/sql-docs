@@ -108,7 +108,7 @@ On [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requires the `VIEW DAT
   
  The Resource Governor feature enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools. Beginning with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], each pool behaves like a small independent server instance and requires 2 semaphores. The number of rows that are returned from **sys.dm_exec_query_resource_semaphores** can be up to 20 times more than the rows that are returned in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## See Also  
+## See also  
  [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

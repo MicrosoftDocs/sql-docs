@@ -211,7 +211,7 @@ where name = 'lock_mode'
   
  Using this table as an example, assume that you have a column named mode, and its value is 5. The table indicates that 5 maps to X, which means the lock type is Exclusive.  
   
-## See Also  
+## See also  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
  [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  

@@ -52,7 +52,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Writes|**bigint**|Number of page writes issued by the remote procedure call.|17|Yes|  
 |XactSequence|**bigint**|Token that describes the current transaction.|50|Yes|  
   
-## See Also  
+## See also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

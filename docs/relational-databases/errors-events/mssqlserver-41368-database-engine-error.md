@@ -35,6 +35,6 @@ When accessing a memory-optimized table from an explicit transaction that was st
 ## User Action  
 When accessing a memory-optimized table from an explicit or implicit READ COMMITTED transaction, use SNAPSHOT to access the table. This can be achieved by using the table hint WITH (SNAPSHOT) (for more information, see [Transactions with In-Memory Tables and Procedures](~/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)) or by setting the database option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT to ON (for more information, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)).  
   
-## See Also  
+## See also  
 [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

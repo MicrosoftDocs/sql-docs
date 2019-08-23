@@ -503,7 +503,7 @@ Use the Utility Administration tabs to manage policy, security, and data warehou
   
  [Monitor Instances of SQL Server in the SQL Server Utility](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## See Also  
+## See also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Troubleshoot the SQL Server Utility](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   

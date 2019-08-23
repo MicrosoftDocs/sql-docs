@@ -61,7 +61,7 @@ GO
 EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';  
 ```  
   
-## See Also  
+## See also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   

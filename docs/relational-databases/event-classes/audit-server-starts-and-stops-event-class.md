@@ -39,7 +39,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**StartTime**|**datetime**|Time at which the event started, if available.|14|Yes|  
 |**Success**|**int**|1 = success. 0 = failure. For example, a value of 1 indicates success of a permissions check and a value of 0 indicates failure of that check.|23|Yes|  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md)  

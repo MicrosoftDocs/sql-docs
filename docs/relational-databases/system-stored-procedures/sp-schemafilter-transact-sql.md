@@ -63,7 +63,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor can execute **sp_schemafilter**.  
   
-## See Also  
+## See also  
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

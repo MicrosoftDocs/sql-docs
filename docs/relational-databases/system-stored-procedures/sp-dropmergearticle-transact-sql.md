@@ -155,7 +155,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-## See Also  
+## See also  
  [Delete an Article](../../relational-databases/replication/publish/delete-an-article.md)   
  [Add Articles to and Drop Articles from Existing Publications](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

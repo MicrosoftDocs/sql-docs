@@ -43,7 +43,7 @@ ms.author: sstein
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+## See also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Extended Events](../../relational-databases/extended-events/extended-events.md)  

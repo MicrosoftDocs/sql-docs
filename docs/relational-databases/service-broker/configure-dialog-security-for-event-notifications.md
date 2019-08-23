@@ -80,7 +80,7 @@ ms.author: vanto
 |Switch to the source database on which to create the event notification, and if you are not already connected as the source database user, do so now.|Switch to the target database to receive event notification messages.|  
 |[Create the event notification](../../t-sql/statements/create-event-notification-transact-sql.md), and specify the broker service and identifier of the target database.||  
   
-## See Also  
+## See also  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

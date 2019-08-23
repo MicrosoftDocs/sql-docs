@@ -41,7 +41,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ## Return Code Values  
  0 (success) or >0 (failure)  
   
-## See Also  
+## See also  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

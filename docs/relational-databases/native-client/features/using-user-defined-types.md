@@ -200,7 +200,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  When converting from C to SQL data types, SQL_C_WCHAR, SQL_C_BINARY, and SQL_C_CHAR can all be converted to SQL_SS_UDT. Note however that binary data is converted to a hex string when converting from the SQL_C_WCHAR and SQL_C_CHAR SQL data types.  
   
-## See Also  
+## See also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

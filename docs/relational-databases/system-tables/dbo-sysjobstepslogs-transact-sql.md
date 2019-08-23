@@ -34,7 +34,7 @@ ms.author: "sstein"
 |**log_size**|**int**|Size of the job step log in bytes.|  
 |**step_uid**|**uniqueidentifier**|Unique identifier of the job step.|  
   
-## See Also  
+## See also  
  [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
  [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)  
   

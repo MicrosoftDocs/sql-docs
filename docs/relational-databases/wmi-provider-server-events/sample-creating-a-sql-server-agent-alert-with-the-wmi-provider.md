@@ -129,7 +129,7 @@ GO
   
  The `DeadlockGraph` column should contain an XML document that shows all the properties of the deadlock graph event.  
   
-## See Also  
+## See also  
  [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

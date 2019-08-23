@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |StartTime|**datetime**|Time at which the event started, if available.|14|Yes|  
 |TextData|**ntext**|*physical device name* [ ( *logical device name* ) ]. The logical device name displays only if it is defined in the sys.backup_devices catalog view.|1|Yes|  
   
-## See Also  
+## See also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

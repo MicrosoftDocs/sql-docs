@@ -257,7 +257,7 @@ To show the current state of the encryption scan, `encryption_scan_state` has be
  [SQL Server Encryption](../../../relational-databases/security/encryption/sql-server-encryption.md)  
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
    
-## See Also  
+## See also  
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)  
   

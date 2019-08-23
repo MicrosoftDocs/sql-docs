@@ -27,7 +27,7 @@ ms.author: "jroth"
 DBCC xp_hello(FREE)  
 ```  
   
-## See Also  
+## See also  
  [DBCC dllname &#40;FREE&#41; &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)  
   
   

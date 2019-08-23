@@ -64,7 +64,7 @@ GO
 ## Permissions  
  **sp_user_counter** is available for all users but can be restricted for any query counter.  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

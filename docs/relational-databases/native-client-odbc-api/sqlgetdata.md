@@ -90,7 +90,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## See Also  
+## See also  
  [SQLGetData Function](https://go.microsoft.com/fwlink/?LinkId=59350)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

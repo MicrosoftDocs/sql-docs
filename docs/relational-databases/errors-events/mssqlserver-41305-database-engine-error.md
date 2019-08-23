@@ -34,6 +34,6 @@ For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/re
 ## User Action  
 Retry the failed transaction.  
   
-## See Also  
+## See also  
 [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

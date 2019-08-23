@@ -9064,7 +9064,7 @@ The table contains error message numbers and the description, which is the text 
 |	[41399](mssqlserver-41399-database-engine-error.md)	|		|		|	The sort operation is too complex. Consult SQL Server Books Online for more information.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-## See Also
+## See also
 
 [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
 [Cause and Resolution of Database Engine Errors](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)

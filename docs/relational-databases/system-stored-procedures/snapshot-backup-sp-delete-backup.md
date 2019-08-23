@@ -39,7 +39,7 @@ sys.sp_delete_backup
 ## Permissions  
  Requires ALTER ANY DATABASE permission or ALTER permission on the specified database.  
   
-## See Also  
+## See also  
  [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
  [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
   

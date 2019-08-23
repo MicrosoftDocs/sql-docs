@@ -167,7 +167,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] index enhancements are represented by new properties in the <xref:Microsoft.SqlServer.Management.Smo.Index> object.  
   
-## See Also  
+## See also  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

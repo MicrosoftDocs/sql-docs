@@ -284,7 +284,7 @@ WHERE s.ticket = r.ticket AND
       r.date = '2016-05-11';  
 ```  
   
-## See Also  
+## See also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)     

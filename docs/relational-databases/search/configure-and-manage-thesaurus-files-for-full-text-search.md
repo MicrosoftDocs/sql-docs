@@ -218,7 +218,7 @@ You can configure the thesaurus for a given language by editing its thesaurus fi
   
 -   A thesaurus must not contain any duplicate entries among the `<sub>` entries of expansion sets and the `<pat>` elements of replacement sets.  
 
-## See Also  
+## See also  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

@@ -35,7 +35,7 @@ ms.author: jrasnick
 |**_Total**|Information for the Query Store for this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |\<database name>|Query Store information for this database.|  
   
-## See Also  
+## See also  
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

@@ -70,7 +70,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## Permissions  
  Members of the **sysadmin** fixed server role can execute **sp_helpreplicationdboption** for any database. Members of the **db_owner** fixed database role can execute **sp_helpreplicationdboption** for that database.  
   
-## See Also  
+## See also  
  [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

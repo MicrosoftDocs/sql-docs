@@ -209,7 +209,7 @@ Snapshot
 -   Enter a path in the **Before applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script.    
 -   Enter a path in the **After applying the snapshot, execute this script** text box or click **Browse** to specify a location for the script. 
   
-## See Also  
+## See also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   

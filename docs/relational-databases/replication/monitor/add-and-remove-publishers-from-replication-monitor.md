@@ -100,7 +100,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 2.  Right-click the Publisher group, and then click **Remove**.  
   
-## See Also  
+## See also  
  [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)   
  [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   

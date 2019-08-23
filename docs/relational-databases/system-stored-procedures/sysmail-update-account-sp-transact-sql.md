@@ -142,7 +142,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-## See Also  
+## See also  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

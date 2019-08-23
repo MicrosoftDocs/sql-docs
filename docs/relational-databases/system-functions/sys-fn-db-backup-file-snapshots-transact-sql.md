@@ -43,7 +43,7 @@ sys.fn_db_backup_file_snapshots
 ## Permissions  
  Requires VIEW DATABASE STATE permission on the database.  
   
-## See Also  
+## See also  
  [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)   
  [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   

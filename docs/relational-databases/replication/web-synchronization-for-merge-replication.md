@@ -75,7 +75,7 @@ ms.author: "mathoma"
   
 3.  The Merge Agent at the Subscriber then accepts the HTTPS response and applies the download changes to the subscription database.  
   
-## See Also  
+## See also  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   

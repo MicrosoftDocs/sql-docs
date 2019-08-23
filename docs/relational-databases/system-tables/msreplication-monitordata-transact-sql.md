@@ -58,7 +58,7 @@ ms.author: sstein
 |**mergelatestsessionconnectiontype**|**int**|Connection used for the most recent Merge Agent session, which can be one of the following values:<br /><br /> **1** = local area network (LAN)<br /><br /> **2** = dial-up network connection|  
 |**retention_period_unit**|**tinyint**|Defines the unit used when defining retention, which can be one of these values:<br /><br /> **1** = week<br /><br /> **2** = month<br /><br /> **3** = year|  
   
-## See Also  
+## See also  
  [Programmatically Monitor Replication](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

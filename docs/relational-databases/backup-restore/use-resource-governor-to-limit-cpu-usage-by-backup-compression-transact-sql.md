@@ -273,7 +273,7 @@ GO
   
  [&#91;Top&#93;](#Top)  
   
-## See Also  
+## See also  
  [Create and Test a Classifier User-Defined Function](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   

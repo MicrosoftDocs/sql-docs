@@ -31,7 +31,7 @@ ms.author: sstein
 |**next_xact_id**|**varbinary(16)**|The temporary log sequence number used by backup operations.|  
 |**nextx_xact_seqno**|**varbinary(16)**|The temporary log sequence number used by backup operations.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -52,7 +52,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_grant_publication_access**.  
   
-## See Also  
+## See also  
  [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md)   

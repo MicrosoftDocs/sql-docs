@@ -49,7 +49,7 @@ ms.author: vanto
   
 -   [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

@@ -70,7 +70,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_replicationdboption**.  
   
-## See Also  
+## See also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Delete a Publication](../../relational-databases/replication/publish/delete-a-publication.md)   

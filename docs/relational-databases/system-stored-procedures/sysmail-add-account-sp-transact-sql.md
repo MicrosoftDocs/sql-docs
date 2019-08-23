@@ -111,7 +111,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-## See Also  
+## See also  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Create a Database Mail Account](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

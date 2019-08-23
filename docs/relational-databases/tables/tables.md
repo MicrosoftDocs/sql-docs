@@ -94,7 +94,7 @@ Wide tables have the following performance implications.
 |Describes how to create a computed column in a table.|[Specify Computed Columns in a Table](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|
 |Describes how to specify a default value for a column. This value is used if another value is not supplied.|[Specify Default Values for Columns](../../relational-databases/tables/specify-default-values-for-columns.md)|
 
-## See Also
+## See also
  [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 
  [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 

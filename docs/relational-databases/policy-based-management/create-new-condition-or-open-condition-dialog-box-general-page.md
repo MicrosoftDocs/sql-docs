@@ -43,7 +43,7 @@ ms.author: vanto
   
 -   Press the SHIFT or CTRL keys, and then click two or more clauses to select a range. Right-click the selected area, and then click **Group Clauses**.  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

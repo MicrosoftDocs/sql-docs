@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Most errors reported by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver can be effectively diagnosed using only the information returned by **SQLGetDiagRec**. In some cases, however, the information returned by the driver-specific diagnostic fields is important in diagnosing an error. When coding an ODBC error handler for applications using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver, it is a good idea to also use **SQLGetDiagField** to retrieve at least the SQL_DIAG_SS_MSGSTATE and SQL_DIAG_SS_SEVERITY driver-specific fields. If a particular error can be raised at several locations in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code, SQL_DIAG_SS_MSGSTATE indicates to a Microsoft support engineer specifically where an error was raised, which sometimes aids in diagnosing a problem.  
   
-## See Also  
+## See also  
  [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

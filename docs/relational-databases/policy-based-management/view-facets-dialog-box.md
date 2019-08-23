@@ -30,7 +30,7 @@ ms.author: vanto
  **Export Current State as Policy**  
  Click to export the described state of the facet properties as a new policy in an XML file.  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

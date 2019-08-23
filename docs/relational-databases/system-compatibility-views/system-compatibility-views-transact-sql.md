@@ -54,7 +54,7 @@ ms.author: "jroth"
   
  Example: If a user creates a user-table called **syslanguages** in a user-database, in SQL Server 2008, the statement `SELECT * from dbo.syslanguages;` in that database would return the values from the user table. Beginning in SQL Server 2012, this practice will return data from the system view **sys.syslanguages**.  
   
-## See Also  
+## See also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   

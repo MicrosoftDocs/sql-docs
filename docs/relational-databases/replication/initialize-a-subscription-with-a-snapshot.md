@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   Transfer snapshot files using File Transfer Protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
-## See Also  
+## See also  
  [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)   
  [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   

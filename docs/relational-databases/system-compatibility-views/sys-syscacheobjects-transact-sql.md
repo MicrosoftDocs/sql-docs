@@ -53,7 +53,7 @@ ms.author: "jroth"
 |**sqlbytes**|**int**|Length in bytes of the procedure definition or batch submitted.|  
 |**sql**|**nvarchar(3900)**|Module definition or the first 3900 characters of the batch submitted.|  
   
-## See Also  
+## See also  
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

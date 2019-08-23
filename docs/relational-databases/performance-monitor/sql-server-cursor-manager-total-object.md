@@ -26,7 +26,7 @@ ms.author: jrasnick
 |**Cursor conversion rate**|Number of cursor conversions per second.|  
 |**Cursor flushes**|Total number of run-time statement recreations by cursors.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

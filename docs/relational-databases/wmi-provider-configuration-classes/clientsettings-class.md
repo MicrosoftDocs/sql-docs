@@ -24,7 +24,7 @@ ms.author: "carlrab"
   
  This class enables programmatic management of the client.  
   
-## See Also  
+## See also  
  [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

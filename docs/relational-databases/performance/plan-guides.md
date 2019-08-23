@@ -163,7 +163,7 @@ where SalesOrderID =  @so_id',
 |Describes how to use SQL Server Profiler to create and test plan guides.|[Use SQL Server Profiler to Create and Test Plan Guides](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Describes how to validate plan guides.|[Validate Plan Guides After Upgrade](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## See Also  
+## See also  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   

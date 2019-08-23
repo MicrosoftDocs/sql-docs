@@ -37,7 +37,7 @@ ms.author: mikeray
   
 9. To refresh data, right-click the **Managed Instances** node in **Utility Explorer**, then select **Refresh**. List view data are displayed in the **Utility Explorer** content pane. For more information, see [View Resource Health Policy Results &#40;SQL Server Utility&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md).  
   
-## See Also  
+## See also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)  
   

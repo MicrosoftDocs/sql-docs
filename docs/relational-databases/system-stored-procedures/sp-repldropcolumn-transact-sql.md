@@ -74,7 +74,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ## Permissions  
  Only members of the sysadmin fixed server role at the Publisher or members of the db_owner or db_ddladmin fixed database roles on the publication database can execute sp_repldropcolumn.  
   
-## See Also  
+## See also  
  [Deprecated Features in SQL Server Replication](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

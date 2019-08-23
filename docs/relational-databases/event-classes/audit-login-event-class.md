@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**TextData**|**ntext**|Semicolon-delimited list of all set options.|1|Yes|  
 |**GroupID**|**int**|ID of the workload group where the SQL Trace event fires.|66|Yes|  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

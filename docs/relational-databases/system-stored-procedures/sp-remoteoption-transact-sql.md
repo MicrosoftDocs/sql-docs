@@ -44,7 +44,7 @@ sp_remoteoption [ [ @remoteserver = ] 'remoteserver' ]
   
  `The trusted option in remote login mapping is no longer supported.`  
   
-## See Also  
+## See also  
  [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
   

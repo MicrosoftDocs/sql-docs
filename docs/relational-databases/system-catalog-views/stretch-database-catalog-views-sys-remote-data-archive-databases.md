@@ -30,7 +30,7 @@ ms.reviewer: mikeray
 |**remote_database_name**|**sysname**|The name of the remote database.|  
 |**data_source_id**|**int**|The data source used to connect to the remote server|  
   
-## See Also  
+## See also  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

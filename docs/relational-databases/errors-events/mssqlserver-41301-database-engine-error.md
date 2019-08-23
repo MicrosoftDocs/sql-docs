@@ -34,6 +34,6 @@ This error can also be caused by too many dependent transactions. Any write tran
 ## User Action  
 Don't do any work on the transaction. Call ROLLBACK TRAN to roll back the transaction. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## See Also  
+## See also  
 [Enable and Disable AlwaysOn Availability Groups &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
   

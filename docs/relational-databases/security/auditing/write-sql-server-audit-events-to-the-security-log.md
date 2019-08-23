@@ -97,7 +97,7 @@ The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssn
   
 7.  Close the Security Policy tool.  
   
-## See Also  
+## See also  
  [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

@@ -66,7 +66,7 @@ ms.author: sstein
 |**replicate_ddl**|**int**|Indicates if schema replication is supported for the publication. **1** indicates that DDL statements executed at the publisher are replicated, and **0** indicates that DDL statements are not replicated. For more information, see [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Not supported for non-SQL Publishers.*|  
 |**options**|**int**|Bitmap that specifies additional publishing options, where the bitwise option values are:<br /><br /> **0x1** - enabled for peer-to-peer replication.<br /><br /> **0x2** - publish only local changes.<br /><br /> **0x4** - enabled for non-SQL Server subscribers.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

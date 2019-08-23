@@ -194,7 +194,7 @@ DROP ASSEMBLY TestProcs;
 Go  
 ```  
   
-## See Also  
+## See also  
  [CLR Integration and Transactions](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

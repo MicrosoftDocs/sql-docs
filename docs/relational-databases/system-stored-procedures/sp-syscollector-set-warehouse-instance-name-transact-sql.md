@@ -60,7 +60,7 @@ EXEC sp_syscollector_set_warehouse_instance_name N'RemoteSERVER'; -- the default
 GO  
 ```  
   
-## See Also  
+## See also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
   

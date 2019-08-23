@@ -114,7 +114,7 @@ This example illustrates a method to transfer data from one database into a memo
     GO 
     ```
    
-## See Also  
+## See also  
  [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

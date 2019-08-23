@@ -122,7 +122,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## See Also  
+## See also  
  [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   

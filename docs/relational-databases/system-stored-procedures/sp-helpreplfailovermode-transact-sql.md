@@ -64,7 +64,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_helpreplfailovermode**.  
   
-## See Also  
+## See also  
  [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

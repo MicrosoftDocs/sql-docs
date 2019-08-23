@@ -21,7 +21,7 @@ ms.author: "jroth"
   
  For more information, see the **Microsoft.SqlServer.Server.SqlTriggerContext** class reference documenation in the .NET Framework SDK documentation.  
   
-## See Also  
+## See also  
  [CLR Triggers](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

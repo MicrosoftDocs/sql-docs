@@ -108,7 +108,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
   
  The error handling function of an application for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections should call **SQLGetDiagRec** until it returns SQL_NO_DATA. It should then act on any messages other than the ones with a *pfNative* code of 5701 or 5703.  
   
-## See Also  
+## See also  
  [Communicating with SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

@@ -45,7 +45,7 @@ ms.author: genemi
   
 -   [Examples: Using PATH Mode](../../relational-databases/xml/examples-using-path-mode.md)  
   
-## See Also  
+## See also  
  [Add Namespaces to Queries with WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  

@@ -398,7 +398,7 @@ GO
  
 
   
-## See Also  
+## See also  
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  

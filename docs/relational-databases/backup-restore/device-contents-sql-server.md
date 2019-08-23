@@ -61,7 +61,7 @@ ms.author: mikeray
 |**User Name**|The name of the user who performed the backup operation.|  
 |**Expiration**|The date and time the backup set expires.|  
   
-## See Also  
+## See also  
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

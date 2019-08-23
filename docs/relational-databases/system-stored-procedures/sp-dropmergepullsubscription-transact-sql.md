@@ -60,7 +60,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the user that created the merge pull subscription can execute **sp_dropmergepullsubscription**. The **db_owner** fixed database role is only able to execute **sp_dropmergepullsubscription** if the user that created the merge pull subscription belongs to this role.  
   
-## See Also  
+## See also  
  [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   

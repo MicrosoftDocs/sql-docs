@@ -141,6 +141,6 @@ RESTORE DATABASE [imoltp]
 GO
 ```
 
-## See Also  
+## See also  
  [Backup, Restore, and Recovery of Memory-Optimized Tables](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
 

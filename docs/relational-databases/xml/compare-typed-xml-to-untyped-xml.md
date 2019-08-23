@@ -150,7 +150,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
 
  Note that you can still use a simple SQL select statement to retrieve the whole XML data type, even if it contains negative years. It is recommended that you replace negative years with a year within the newly supported range or change the type of the element or attribute to **xs:string**.  
   
-## See Also  
+## See also  
  [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)   
  [XML Data Modification Language &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

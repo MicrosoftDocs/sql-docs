@@ -81,7 +81,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## Denial of Service Through AUTO_CLOSE  
  Do not configure contained databases to auto close. If closed, opening the database to authenticate a user consumes additional resources and could contribute to a denial of service attack.  
   
-## See Also  
+## See also  
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

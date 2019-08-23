@@ -80,7 +80,7 @@ sp_cursoroption cursor, code, value
 |0x0002|SCROLL_LOCKS|  
 |0x0004 or 0x0008|OPTIMISTIC|  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  

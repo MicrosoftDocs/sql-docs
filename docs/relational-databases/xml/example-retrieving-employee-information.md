@@ -112,7 +112,7 @@ Tag | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
   
  This process is repeated for rest of the rows in the rowset. Note the importance of ordering the rows in the universal table so that FOR XML EXPLICIT can process the rowset in order and generate the XML you want.  
   
-## See Also  
+## See also  
  [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

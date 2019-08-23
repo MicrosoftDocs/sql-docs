@@ -129,7 +129,7 @@ The **Subscription Properties** dialog box at the Subscriber allows you to view 
  
 For more information about configuration, see [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md). 
   
-## See Also  
+## See also  
  [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

@@ -39,7 +39,7 @@ A good starting point for sizing storage for this area is to reserve four times 
 ## Encryption  
  In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the storage for memory-optimized tables will be encrypted as part of enabling TDE on the database. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md). In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] checkpoint files are not encrypted even if TDE is enabled on the database.
   
-## See Also  
+## See also  
  [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

@@ -33,7 +33,7 @@ ms.author: mikeray
 > [!NOTE]  
 >  For information about joined availability databases, see the **replica_id** and **group_database_id** columns in [sys.databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-## See Also  
+## See also  
  [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)   
  [sys.database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
  [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

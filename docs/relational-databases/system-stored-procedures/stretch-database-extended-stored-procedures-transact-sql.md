@@ -48,7 +48,7 @@ Removes the authenticated connection between a local Stretch-enabled database an
  [sys.sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md) 
  Tests the connection from SQL Server to the remote Azure server and reports problems that may prevent data migration.
  
-## See Also  
+## See also  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

@@ -32,7 +32,7 @@ The batch or module specified by **\@plan_handle** does not contain a statement 
 ## User Action  
 Specify a different value for **\@plan_handle**.  
   
-## See Also  
+## See also  
 [Plan Guides](~/relational-databases/performance/plan-guides.md)  
 [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
 [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

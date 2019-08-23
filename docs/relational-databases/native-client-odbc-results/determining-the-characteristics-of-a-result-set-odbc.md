@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  If an application uses a particular set of metadata more than one time, it will probably benefit from caching the information in private variables when it is first obtained. This prevents later calls to the ODBC catalog functions for the same information, which force the driver to make round trips to the server.  
   
-## See Also  
+## See also  
  [Processing Results &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

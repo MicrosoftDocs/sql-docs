@@ -67,7 +67,7 @@ FOR XML EXPLICIT;
 ...
 ```
   
-## See Also  
+## See also  
  [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

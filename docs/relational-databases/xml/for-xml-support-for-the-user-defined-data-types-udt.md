@@ -20,7 +20,7 @@ ms.author: genemi
   
  To use FOR XML with CLR user-defined data types, make sure that the data type has an XML serialization, and use an explicit cast to XML in the FOR XML select clause.  
   
-## See Also  
+## See also  
  [FOR XML Support for Various SQL Server Data Types](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

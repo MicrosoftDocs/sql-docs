@@ -104,7 +104,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     DEALLOCATE trig_cur;  
     ```  
   
-## See Also  
+## See also  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DML Triggers](../../relational-databases/triggers/dml-triggers.md)   
  [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)  

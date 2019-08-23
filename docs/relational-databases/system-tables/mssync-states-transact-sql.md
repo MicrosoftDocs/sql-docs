@@ -29,7 +29,7 @@ ms.author: sstein
 |**publisher_db**|**sysname**|The Name of the publication database.|  
 |**publication_id**|**int**|The ID of the publication.|  
   
-## See Also  
+## See also  
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Integration Services Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
  [Backup and Restore Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   

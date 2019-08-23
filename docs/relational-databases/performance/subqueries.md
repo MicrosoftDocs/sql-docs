@@ -766,7 +766,7 @@ WHERE ProductSubcategoryID = 1;
 GO
 ```   
 
-## See Also  
+## See also  
 [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)       
 [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)     
 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)     

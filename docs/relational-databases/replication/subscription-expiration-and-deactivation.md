@@ -63,7 +63,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   If, after a clean up, the publication retention period is increased and a subscription tries to merge with the Publisher (which has already deleted the metadata), the subscription will not expire because of the increased retention value. However, the Publisher does not have enough metadata to download changes to the Subscriber, which leads to non-convergence.  
   
-## See Also  
+## See also  
  [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  

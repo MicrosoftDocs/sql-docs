@@ -51,7 +51,7 @@ ms.author: mikeray
  Red line  
  Can only be positioned along the timeline where the restore is possible. Moving the red line along the timeline adjusts the date and time displayed in the **Date** and **Time** boxes.  
   
-## See Also  
+## See also  
  [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   

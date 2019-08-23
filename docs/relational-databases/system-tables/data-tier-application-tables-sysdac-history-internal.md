@@ -73,7 +73,7 @@ WHERE instance_id NOT IN
 ## Permissions  
  Requires membership in the sysadmin fixed server role. Read-only access to this view is available to all users with permissions to connect to the master database.  
   
-## See Also  
+## See also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;Transact-SQL&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  

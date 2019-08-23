@@ -46,7 +46,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
 ## Permissions  
  Requires membership in the sysadmin fixed server role or db_owner fixed database role.  
   
-## See Also  
+## See also  
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

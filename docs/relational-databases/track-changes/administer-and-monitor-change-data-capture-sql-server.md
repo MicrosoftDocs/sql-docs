@@ -175,7 +175,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
 When you apply cumulatives updates or service packs to an instance, at restart, the instance can enter in Script Upgrade mode. In this mode, SQL Server may run a step to analyze and upgrade internal CDC tables, which could result in recreating objects like indexes on capture tables. Depending on the amount of data involved, this step might take some time or cause high transaction log usage for enabled CDC databases.
 
 
-## See Also
+## See also
 
 - [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
 - [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)

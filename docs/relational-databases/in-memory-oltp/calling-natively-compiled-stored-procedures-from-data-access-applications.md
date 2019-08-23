@@ -427,6 +427,6 @@ int _tmain() {
 }  
 ```
 
-## See Also
+## See also
 
 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

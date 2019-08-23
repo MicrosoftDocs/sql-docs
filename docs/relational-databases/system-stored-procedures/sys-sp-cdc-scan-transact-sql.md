@@ -62,7 +62,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ## Permissions  
  Requires membership in the db_owner fixed database role.  
   
-## See Also  
+## See also  
  [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

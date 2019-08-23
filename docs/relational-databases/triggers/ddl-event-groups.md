@@ -309,7 +309,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## See Also  
+## See also  
  [Event Notifications](../../relational-databases/service-broker/event-notifications.md)   
  [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)   
  [DDL Events](../../relational-databases/triggers/ddl-events.md)  

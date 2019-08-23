@@ -29,7 +29,7 @@ ms.author: sstein
 |**parameter_name**|**sysname**|The name of the parameter.|  
 |**value**|**nvarchar(255)**|The value of the parameter.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -44,7 +44,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   SQLXML 4.0 does not preserve XML declaration processing instructions (for example, ) based on the behavior of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Instead, the XML declaration is treated as a directive to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML parser, and its attributes (version, encoding, and standalone) are lost after data is converted to the **xml** data type. The XML data is stored internally as UCS-2. All other processing instructions in the XML instance are preserved; they are allowed in the **xml** column and can be supported by SQLXML.  
   
-## See Also  
+## See also  
  [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

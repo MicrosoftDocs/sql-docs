@@ -51,7 +51,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 |**TextData**|**ntext**|The reason that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] could not deliver the message.|1|Yes|  
 |**TransactionID**|**bigint**|The system-assigned ID of the transaction.|4|No|  
   
-## See Also  
+## See also  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

@@ -31,7 +31,7 @@ ms.author: "carlrab"
   
 -   Verify the SHA thumbprint for the specified instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## See Also  
+## See also  
  [Encryption Hierarchy](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

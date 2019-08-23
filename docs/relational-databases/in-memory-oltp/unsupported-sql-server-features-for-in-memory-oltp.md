@@ -77,6 +77,6 @@ With a few exceptions, cross-database transactions are not supported. The follow
     - Contained database authentication is supported. However, all In-Memory OLTP objects are marked as breaking containment in the dynamic management view (DMV) **dm_db_uncontained_entities**.
 
   
-## See Also  
+## See also  
 
 - [SQL Server Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

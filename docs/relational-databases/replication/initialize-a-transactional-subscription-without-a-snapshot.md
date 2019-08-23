@@ -69,7 +69,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
  To initialize a subscription with an alternative method, see [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## See Also  
+## See also  
  [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

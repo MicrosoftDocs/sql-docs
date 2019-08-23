@@ -55,7 +55,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changedistributor_property**.  
   
-## See Also  
+## See also  
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   

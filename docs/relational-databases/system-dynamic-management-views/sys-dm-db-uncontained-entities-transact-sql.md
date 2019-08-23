@@ -79,7 +79,7 @@ LEFT JOIN sys.objects AS SO
     ON UE.major_id = SO.object_id;  
 ```  
   
-## See Also  
+## See also  
  [Contained Databases](../../relational-databases/databases/contained-databases.md)  
   
   

@@ -51,7 +51,7 @@ ms.author: "mathoma"
   
  ![Web synchronization with republishing](../../relational-databases/replication/media/web-sync05.gif "Web synchronization with republishing")  
   
-## See Also  
+## See also  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   

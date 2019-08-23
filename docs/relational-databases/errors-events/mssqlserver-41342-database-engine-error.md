@@ -32,6 +32,6 @@ Memory-optimized tables require a processor model that supports atomic compare-a
 ## User Action  
 Upgrade your processor. If your processor supports the instruction and you are running SQL Server in a virtual machine, change the configuration to support the instruction CMPXCHG16B.  
   
-## See Also  
+## See also  
 [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -34,7 +34,7 @@ ms.author: "sstein"
 |**next_run_date**|**int**|Next date on which the job is scheduled to run. The date is formatted YYYYMMDD.|  
 |**next_run_time**|**int**|Time at which the job is scheduled to run. The time is formatted HHMMSS, and uses a 24-hour clock.|  
   
-## See Also  
+## See also  
  [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

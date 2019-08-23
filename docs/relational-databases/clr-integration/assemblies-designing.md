@@ -110,7 +110,7 @@ System.Data.OracleClient
 System.Configuration  
 ```  
   
-## See Also  
+## See also  
  [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   

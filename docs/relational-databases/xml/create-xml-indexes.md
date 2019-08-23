@@ -194,7 +194,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## See Also  
+## See also  
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

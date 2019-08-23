@@ -43,7 +43,7 @@ ms.author: "sstein"
 ## Permissions  
  Requires VIEW ANY DEFINITION permission to view contents, requires CONTROL SERVER permission to change contents.  
   
-## See Also  
+## See also  
  [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   

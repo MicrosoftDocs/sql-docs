@@ -105,7 +105,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## Permissions  
  Only members of the **sysadmin** fixed server role and the **db_owner** fixed database role can execute **sp_helpmergepullsubscription**.  
   
-## See Also  
+## See also  
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

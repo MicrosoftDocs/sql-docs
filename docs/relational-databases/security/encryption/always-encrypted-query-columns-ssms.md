@@ -212,5 +212,5 @@ WHERE [SSN] = @SSN;
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
 
-## See Also
+## See also
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

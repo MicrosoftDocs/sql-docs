@@ -62,7 +62,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_addqreader_agent**.  
   
-## See Also  
+## See also  
  [Enable Updating Subscriptions for Transactional Publications](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
  [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

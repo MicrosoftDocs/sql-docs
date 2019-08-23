@@ -117,7 +117,7 @@ if @@rowcount = 0
   
  After running this stored procedure, you can use the resulting script to create the stored procedure manually at the Subscribers.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

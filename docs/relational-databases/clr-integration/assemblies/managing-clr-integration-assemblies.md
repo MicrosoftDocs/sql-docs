@@ -39,7 +39,7 @@ ms.author: "jroth"
  [Dropping an Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)  
  Discusses dropping CLR assemblies from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## See Also  
+## See also  
  [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
   

@@ -33,7 +33,7 @@ ms.author: sstein
 |**flush_request_time**|**datetime**|Indicates the date and time when the last change occurred to article metadata that required the Log Reader Agent to update its metadata cache.|  
 |**version**|**sysname**|A text string that characterizes the version of the non-SQL Server Publisher.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

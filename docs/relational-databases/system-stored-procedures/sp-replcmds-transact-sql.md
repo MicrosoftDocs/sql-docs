@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_replcmds**.  
   
-## See Also  
+## See also  
  [Error Messages](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   

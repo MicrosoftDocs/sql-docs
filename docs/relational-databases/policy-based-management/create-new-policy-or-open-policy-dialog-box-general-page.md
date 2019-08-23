@@ -64,7 +64,7 @@ ms.author: vanto
  **Server restriction**  
  Select the types of servers that are appropriate for this policy. Options are **None** or select a condition that filters the possible servers.  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

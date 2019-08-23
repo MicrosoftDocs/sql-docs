@@ -319,7 +319,7 @@ EXEC sp_create_plan_guide
 GO  
 ```  
   
-## See Also  
+## See also  
  [Plan Guides](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   

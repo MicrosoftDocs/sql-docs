@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Dynamic cursors are the opposite of static cursors. Dynamic cursors reflect all changes made to the rows in their result set. The data values, order, and membership of the rows in the result set can change on each fetch.  
   
-## See Also  
+## See also  
  [Using Cursors &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

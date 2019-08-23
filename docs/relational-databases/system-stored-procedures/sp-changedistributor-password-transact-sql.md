@@ -46,7 +46,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changedistributor_password**.  
   
-## See Also  
+## See also  
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)   
  [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   

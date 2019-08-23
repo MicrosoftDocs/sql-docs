@@ -153,7 +153,7 @@ REVERT;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Security Functions &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   

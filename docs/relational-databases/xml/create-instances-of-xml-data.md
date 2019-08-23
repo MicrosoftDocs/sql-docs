@@ -208,7 +208,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 |-----------|-----------------|  
 |[Retrieve and Query XML Data](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Describes the parts of XML instances that are not preserved when they are stored in databases.|  
   
-## See Also  
+## See also  
  [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)   
  [XML Data Modification Language &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

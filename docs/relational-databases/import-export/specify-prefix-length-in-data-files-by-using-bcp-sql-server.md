@@ -86,7 +86,7 @@ ms.custom: "seo-lt-2019"
 > [!NOTE]  
 >  To specify a prefix length in a data file that was not created by using **bcp**, use the lengths provided in [Prefix Lengths for Bulk Export](#PrefixLengthsExport), earlier in this topic.  
   
-## See Also  
+## See also  
  [bcp Utility](../../tools/bcp-utility.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Specify Field Length by Using bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

@@ -154,7 +154,7 @@ ms.author: "mathoma"
   
 7.  Repeat step 6 for each partition that is deleted.  
   
-## See Also  
+## See also  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   

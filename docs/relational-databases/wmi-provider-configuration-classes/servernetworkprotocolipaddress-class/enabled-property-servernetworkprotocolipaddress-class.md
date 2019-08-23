@@ -36,7 +36,7 @@ object.Enabled [= value]
 ## Property Value/Return Value  
  A Boolean value that specifies whether the IP address is enabled: **true** if the IP address is enabled, or **false** if the IP address is disabled.  
   
-## See Also  
+## See also  
  [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

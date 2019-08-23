@@ -40,7 +40,7 @@ Contains a row for each trusted assembly for the server.
 
 Use **Need to add sp_add_trusted_assembly** and **Need to add sys.trusted_assemblies** add or remove assemblies from `sys.trusted_assemblies`.
 
-## See Also  
+## See also  
   [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
   [sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
   [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  

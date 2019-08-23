@@ -120,7 +120,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Maximum concurrent processes**  
  The maximum number of Merge Agents that can run at the same time (requires **Limit concurrent processes**). If the number of agents synchronizing exceeds the maximum, agents are put in a queue until the number drops under the maximum.  
   
-## See Also  
+## See also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

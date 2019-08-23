@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 7.  Calling a method to set properties and passing the count and the array of DBPROPSET structures.  
   
-## See Also  
+## See also  
  [Creating a SQL Server Native Client OLE DB Provider Application](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [Properties (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   

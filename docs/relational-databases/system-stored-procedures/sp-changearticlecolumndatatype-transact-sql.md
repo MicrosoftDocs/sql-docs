@@ -75,7 +75,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_changearticlecolumndatatype**.  
   
-## See Also  
+## See also  
  [Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

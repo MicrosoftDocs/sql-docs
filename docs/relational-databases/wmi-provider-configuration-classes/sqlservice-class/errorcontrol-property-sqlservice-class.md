@@ -54,7 +54,7 @@ object.ErrorControl [= value]
 ## Remarks  
  The value indicates the action taken by the startup program if a failure occurs. All errors are logged by the computer system.  
   
-## See Also  
+## See also  
  [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

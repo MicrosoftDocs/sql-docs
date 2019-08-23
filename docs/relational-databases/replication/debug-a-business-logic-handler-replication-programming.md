@@ -76,7 +76,7 @@ ms.author: "mathoma"
   
 11. Assuming that no other breakpoints are set and the proper commands are replicated, the execution stops when it reaches the breakpoint in the business logic handler.  
   
-## See Also  
+## See also  
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

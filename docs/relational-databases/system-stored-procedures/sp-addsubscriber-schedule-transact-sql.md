@@ -125,7 +125,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_addsubscriber_schedule**.  
   
-## See Also  
+## See also  
  [sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

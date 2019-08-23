@@ -58,7 +58,7 @@ sp_fulltext_pendingchanges table_id
   
  To find out how many changes are pending for a particular table, use the **TableFullTextPendingChanges** property of the OBJECTPROPERTYEX function.  
   
-## See Also  
+## See also  
  [Full-Text Search and Semantic Search Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   

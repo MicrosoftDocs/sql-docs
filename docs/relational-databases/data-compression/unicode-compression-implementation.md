@@ -52,7 +52,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Vietnamese|39%|  
 |Japanese|15%|  
   
-## See Also  
+## See also  
  [Data Compression](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)   
  [Page Compression Implementation](../../relational-databases/data-compression/page-compression-implementation.md)   

@@ -68,7 +68,7 @@ T1.Id  T1.Name  T2.Id
 </T1>  
 ```  
   
-## See Also  
+## See also  
  [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

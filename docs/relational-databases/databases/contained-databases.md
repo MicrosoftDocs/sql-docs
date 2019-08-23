@@ -143,7 +143,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ### database_uncontained_usage event  
  This XEvent occurs whenever an uncontained entity is identified at run time. This includes entities originated in client code. This XEvent will occur only for actual uncontained entities. However, the event only occurs at run time. Therefore, any uncontained user entities you have not run will not be identified by this XEvent  
   
-## See Also  
+## See also  
  [Modified Features &#40;Contained Database&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   

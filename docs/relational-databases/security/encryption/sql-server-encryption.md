@@ -76,7 +76,7 @@ You can use encryption in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
  [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 Security and Protection](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Current information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security.  
   
-## See Also  
+## See also  
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server and Database Encryption Keys &#40;Database Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Back Up and Restore Reporting Services Encryption Keys](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     

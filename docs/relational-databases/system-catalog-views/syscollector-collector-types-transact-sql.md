@@ -51,7 +51,7 @@ ms.author: "sstein"
 |Corrected the data type for the **collection_package_path** column, and updated the description to indicate that the value is nullable.|  
 |Corrected the data type for the **upload_package_path** column, and updated the description to indicate that the value is nullable.|  
   
-## See Also  
+## See also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Data Collector Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  

@@ -95,7 +95,7 @@ GO
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   
-## See Also  
+## See also  
  [Manage and Monitor Full-Text Search for a Server Instance](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md)  
   

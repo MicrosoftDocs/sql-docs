@@ -97,7 +97,7 @@ GO
  If the options are not set as shown, queries and modifications on **xml** data type methods will fail.  
   
   
-## See Also  
+## See also  
  [Create Instances of XML Data](../../relational-databases/xml/create-instances-of-xml-data.md)  
   
   

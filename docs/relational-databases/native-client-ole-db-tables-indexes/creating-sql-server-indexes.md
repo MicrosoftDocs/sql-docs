@@ -148,7 +148,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## See Also  
+## See also  
  [Tables and Indexes](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

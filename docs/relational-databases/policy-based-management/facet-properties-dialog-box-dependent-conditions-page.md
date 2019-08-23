@@ -21,7 +21,7 @@ ms.author: vanto
  **Name**  
  Lists the name of each condition that references the current facet.  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

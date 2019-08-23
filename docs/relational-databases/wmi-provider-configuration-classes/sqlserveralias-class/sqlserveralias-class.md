@@ -31,7 +31,7 @@ ms.author: "carlrab"
   
  **Note:** The [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) inherits the **Put** method from the Provider class. However, it does not return any results as indicated by the **Provider::Put** method. For more information, see the WMI documentation.  
   
-## See Also  
+## See also  
  [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

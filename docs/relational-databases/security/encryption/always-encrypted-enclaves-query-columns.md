@@ -31,6 +31,6 @@ The following types of queries involve the use of a secure enclave:
 ## Next Steps
 - [Query columns using Always Encrypted with secure enclaves with SSMS](always-encrypted-enclaves-query-columns-ssms.md)
 
-## See Also
+## See also
 - [Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 

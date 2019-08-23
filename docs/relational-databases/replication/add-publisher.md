@@ -62,7 +62,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **New Group**  
  Click to create a new Publisher group. A Publisher group provides a convenient way to organize Publishers within Replication Monitor. Groups do not affect the replication of data or the relationship among servers in a replication topology.  
   
-## See Also  
+## See also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

@@ -79,7 +79,7 @@ EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks
 GO  
 ```  
   
-## See Also  
+## See also  
  [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

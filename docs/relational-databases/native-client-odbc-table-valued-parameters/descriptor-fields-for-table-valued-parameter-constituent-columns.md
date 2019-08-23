@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  If SQL_CA_SS_COL_HAS_DEFAULT_VALUE is set for a table-valued parameter column, SQL_DESC_DATA_PTR for that column must be a null pointer. Otherwise, SQLExecute or SQLExecDirect will return SQL_ERROR. A diagnostic record will be generated with SQLSTATE=07S01 and the message "Invalid use of default parameter for parameter \<p>, column \<c>", where \<p> is the parameter ordinal and \<c> is the column ordinal.  
   
-## See Also  
+## See also  
  [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

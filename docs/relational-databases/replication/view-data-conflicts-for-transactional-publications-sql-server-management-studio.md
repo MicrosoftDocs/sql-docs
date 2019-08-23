@@ -57,7 +57,7 @@ ms.author: "mathoma"
   
 6.  Close the Replication Conflict Viewer.  
   
-## See Also  
+## See also  
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   

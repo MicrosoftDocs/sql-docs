@@ -66,7 +66,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Create a Workload Group](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [Create a Resource Pool](../../relational-databases/resource-governor/create-a-resource-pool.md)   

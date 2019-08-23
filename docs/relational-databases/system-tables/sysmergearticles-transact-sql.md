@@ -85,7 +85,7 @@ ms.author: sstein
 |**stream_blob_columns**|**bit**|Specifies whether a data stream optimization is used when replicating binary large object columns. **1** means that the optimization is attempted.|  
 |**preserve_rowguidcol**|**bit**|Indicates if replication uses an existing rowguid column. A value of **1** means that an existing ROWGUIDCOL column is used. **0** means that replication added the ROWGUIDCOL column.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

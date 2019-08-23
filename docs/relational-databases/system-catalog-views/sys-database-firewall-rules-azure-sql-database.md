@@ -42,7 +42,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ## Permissions  
  This view is available in the **master** database and in each user database. Read-only access to this view is available to all users with permission to connect to the database.  
   
-## See Also
+## See also
 [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
 [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)  
 [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  

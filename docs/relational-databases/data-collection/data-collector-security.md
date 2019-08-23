@@ -138,7 +138,7 @@ ms.author: mathoma
 ### mdw_reader Role  
  Members of the **mdw_reader** role have Read access to the management data warehouse. Because the purpose of this role is to support troubleshooting by providing access to historical data, members of this role cannot view other elements of the management data warehouse schema.  
   
-## See Also  
+## See also  
  [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

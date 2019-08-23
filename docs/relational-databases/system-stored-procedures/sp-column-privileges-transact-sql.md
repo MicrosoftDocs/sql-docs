@@ -83,7 +83,7 @@ EXEC sp_column_privileges @table_name = 'Employee'
     ,@column_name = 'SalariedFlag';  
 ```  
   
-## See Also  
+## See also  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -202,7 +202,7 @@ The Full-Text Engine uses two types of filters when it populates a full-text ind
   
 To work around this problem, mark the filter for the container document (the Word document, in this example) as a single-threaded filter. To mark a filter as a single-threaded filter, set the **ThreadingModel** registry value for the filter to **Apartment Threaded**. For information about single-threaded apartments, see the white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159).  
   
-## See Also  
+## See also  
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range Server Configuration Option](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)   

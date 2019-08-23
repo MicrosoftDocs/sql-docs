@@ -55,7 +55,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ## Permissions  
  Only members of the **replmonitor** fixed database role in the distribution database or the publication access list for the publication can execute **sp_helpmergearticlecolumn**.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

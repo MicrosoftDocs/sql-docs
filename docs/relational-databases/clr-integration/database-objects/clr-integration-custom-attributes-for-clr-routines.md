@@ -61,7 +61,7 @@ ms.author: "jroth"
   
  For more information, see [SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025).  
   
-## See Also  
+## See also  
  [CLR User-Defined Aggregates](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [CLR User-Defined Functions](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [CLR User-Defined Types](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   

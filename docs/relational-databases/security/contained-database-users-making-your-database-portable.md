@@ -78,7 +78,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
 - Since contained database users are database level principals, you need to create contained database users in every database that you would use them. The identity is confined to the database and is independent in all aspects from a user with same name and same password in another database in the same server.  
 - Use the same strength passwords that you would normally use for logins.  
   
-## See Also
+## See also
 
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   

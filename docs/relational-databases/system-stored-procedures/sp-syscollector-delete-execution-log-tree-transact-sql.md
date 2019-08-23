@@ -47,7 +47,7 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ## Permissions  
  Requires membership in the **dc_operator** (with EXECUTE permission) fixed database role to execute this procedure.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

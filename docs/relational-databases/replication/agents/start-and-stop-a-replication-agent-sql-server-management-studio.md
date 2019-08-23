@@ -61,7 +61,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 3.  Right-click an agent, and then click **Start Agent** or **Stop Agent**.  
   
-## See Also  
+## See also  
  [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  

@@ -287,7 +287,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** data type support lets you request that the result of a FOR XML query be returned as **xml** data type, instead of as string or image typed data, by specifying the [TYPE directive](../../relational-databases/xml/type-directive-in-for-xml-queries.md). When the TYPE directive is used in FOR XML queries, it provides programmatic access to the FOR XML results similar to that shown in [Use XML Data in Applications](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
-## See Also  
+## See also  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

@@ -45,7 +45,7 @@ A query execution plan is a definition of the following:
 
 -   [Plan Guides](../../relational-databases/performance/plan-guides.md)  
 
-## See Also  
+## See also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    

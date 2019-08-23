@@ -56,7 +56,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_dropsubscriber**.  
   
-## See Also  
+## See also  
  [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

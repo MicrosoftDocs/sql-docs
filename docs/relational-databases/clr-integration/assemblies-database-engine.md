@@ -50,7 +50,7 @@ ms.author: "jroth"
 |[Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)|Explains how to create and drop assemblies, how and when to modify assemblies, and how to retrieve metadata about assemblies.|  
 |[Getting Information About Assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)|Lists the catalog views and functions that can be queried for metadata about assemblies.|  
   
-## See Also  
+## See also  
  [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

@@ -49,7 +49,7 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_restoremergeidentityrange**.  
   
-## See Also  
+## See also  
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)  

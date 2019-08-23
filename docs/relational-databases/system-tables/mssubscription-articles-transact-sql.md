@@ -32,7 +32,7 @@ ms.author: sstein
 |**owner**|**sysname**|The owner of the subscription.|  
 |**cft_table**|**sysname**|The name of the conflict table for this article, for queued updating replication type.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

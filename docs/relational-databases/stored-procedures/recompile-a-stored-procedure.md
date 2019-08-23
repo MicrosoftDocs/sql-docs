@@ -109,7 +109,7 @@ EXEC sp_recompile N'dbo.uspProductByVendor';
 GO
 ```  
   
-## See Also  
+## See also  
  [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Rename a Stored Procedure](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

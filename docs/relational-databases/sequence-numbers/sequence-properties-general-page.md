@@ -82,7 +82,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Permissions  
  Requires **CREATE SEQUENCE**, **ALTER**, or **CONTROL** permission on the SCHEMA.  
   
-## See Also  
+## See also  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   

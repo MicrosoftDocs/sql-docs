@@ -248,7 +248,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_change_agent_parameter**.  
   
-## See Also  
+## See also  
  [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   

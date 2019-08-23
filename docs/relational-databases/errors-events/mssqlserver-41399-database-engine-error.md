@@ -32,6 +32,6 @@ Sorting the result of join and aggregation operations increases the complexity o
 ## User Action  
 Decrease the complexity of the query by removing joins or aggregate functions.  
   
-## See Also  
+## See also  
 [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

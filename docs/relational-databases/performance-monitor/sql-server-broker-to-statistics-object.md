@@ -33,7 +33,7 @@ ms.author: jrasnick
 |**Tran Objects Marked Dirty/sec**|The number of times per second that transmission objects were marked as dirty. Transmission objects are marked as dirty by the first modification that causes the in-memory copy to differ from the copy stored in **tempdb**. Transmission objects are modified when [!INCLUDE[ssSB](../../includes/sssb-md.md)] has to record a change in the state of message transmissions for the dialog.|  
 |**Tran Object Writes/sec**|The number of times per second that a batch of transmission objects were written to **tempdb** work tables. Large numbers of writes could indicate that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory is being stressed.|  
   
-## See Also  
+## See also  
  [SQL Server, Access Methods Object](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)   
  [SQL Server, Memory Manager Object](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

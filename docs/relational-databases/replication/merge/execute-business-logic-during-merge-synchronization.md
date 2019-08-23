@@ -84,7 +84,7 @@ ms.author: "mathoma"
   
 -   An Internet Information Services (IIS) server if Web synchronization is used. Use a pull subscription synchronized with Web synchronization, and the business logic handler will execute at the IIS Server.  
   
-## See Also  
+## See also  
  [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)   

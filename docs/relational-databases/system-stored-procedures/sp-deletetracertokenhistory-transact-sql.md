@@ -80,7 +80,7 @@ Only the following personnel have the authority to execute **sp_deletetracertoke
 - Members of the **db_owner** fixed database role, in the publication database.
 - The **db_owner** of the fixed database.
 
-## See Also
+## See also
 
 [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 

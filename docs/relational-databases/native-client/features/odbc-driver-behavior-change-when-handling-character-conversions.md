@@ -103,7 +103,7 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
   
 -   If you do not bind, you can retrieve the data in chunks by using **SQLGetData** and **SQLParamData**.  
   
-## See Also  
+## See also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

@@ -28,7 +28,7 @@ ms.author: mikeray
  **Schedule**  
  Click the schedule icon to specify when the subplan tasks should run, or click the schedule icon with a red x to remove the existing subplan schedule.  
   
-## See Also  
+## See also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

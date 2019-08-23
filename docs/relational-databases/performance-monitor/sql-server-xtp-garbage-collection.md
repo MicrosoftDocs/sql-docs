@@ -34,7 +34,7 @@ ms.author: jrasnick
 |**Sweep rows touched/sec**|The number of rows touched during dusty corner sweeps (on average), per second.|  
 |**Sweep scans started/sec**|The number of dusty corner sweep scans started (on average), per second.|  
   
-## See Also  
+## See also  
  [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

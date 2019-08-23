@@ -160,7 +160,7 @@ JOIN sys.schemas AS s
 ```  
     
   
-## See Also  
+## See also  
  [Securables](../../relational-databases/security/securables.md)   
  [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

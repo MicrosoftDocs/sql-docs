@@ -63,7 +63,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
  To modify Publisher and Distributor properties, see [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-## See Also  
+## See also  
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)  
   

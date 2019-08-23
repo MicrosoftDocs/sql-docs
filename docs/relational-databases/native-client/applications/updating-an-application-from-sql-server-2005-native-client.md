@@ -41,7 +41,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Stricter SQL_C_TYPE _TIMESTAMP and DBTYPE_DBTIMESTAMP parameter validation.|Prior to [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client, **datetime** values were rounded to fit the scale of **datetime** and **smalldatetime** columns by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client (and later) applies the stricter validation rules that are defined in the ODBC core specification for fractional seconds. If a parameter value cannot be converted to the SQL type by using the scale specified or implied by the client binding without truncation of trailing digits, an error is returned.|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] might return different results when a trigger runs.|Changes introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] might cause an application to have different results returned from a statement that caused a trigger to run when **NOCOUNT OFF** was in effect. In this situation, your application might generate an error. To resolve this error, set **NOCOUNT ON** in the trigger or call SQLMoreResults to advance to the next result.|  
   
-## See Also  
+## See also  
  [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

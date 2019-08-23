@@ -87,7 +87,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
   
  [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## See Also  
+## See also  
  [Secure the Subscriber](../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

@@ -34,7 +34,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client cannot conn
 ## User Action  
 Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager tool to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to accept remote connections.  
   
-## See Also  
+## See also  
 [Network Protocols and Network Libraries](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Client Network Configuration](~/database-engine/configure-windows/client-network-configuration.md)  
 [Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  

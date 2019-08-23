@@ -77,7 +77,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Describes how to delete or disable DML triggers.|[Delete or Disable DML Triggers](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Describes how to manage trigger security.|[Manage Trigger Security](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## See Also  
+## See also  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

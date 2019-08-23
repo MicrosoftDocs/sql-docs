@@ -61,7 +61,7 @@ ms.author: "mathoma"
 ## Performance of Precomputed Partitions  
  There is a small performance cost with precomputed partitions when changes are uploaded from the Subscriber to the Publisher, but the bulk of merge processing time is spent evaluating partitions and downloading changes from the Publisher to the Subscriber, so the net gain can still be significant. The performance benefit will vary, depending on the number of Subscribers synchronizing concurrently and the number of updates per synchronization that move rows from one partition to another.  
   
-## See Also  
+## See also  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

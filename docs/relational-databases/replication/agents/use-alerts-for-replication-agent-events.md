@@ -82,7 +82,7 @@ close hc
 deallocate hc  
 ```  
   
-## See Also  
+## See also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Monitoring &#40;Replication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

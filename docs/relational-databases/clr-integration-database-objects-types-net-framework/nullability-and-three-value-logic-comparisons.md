@@ -38,7 +38,7 @@ ms.author: "jroth"
 ## Overflow Detection  
  In the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR, the addition of two very large numbers may not throw an exception. Instead, if no check operator has been used, the returned result may "wrap around" as a negative integer. In **System.Data.SqlTypes**, exceptions are thrown for all overflow and underflow errors, and divide-by-zero errors.  
   
-## See Also  
+## See also  
  [SQL Server Data Types in the .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

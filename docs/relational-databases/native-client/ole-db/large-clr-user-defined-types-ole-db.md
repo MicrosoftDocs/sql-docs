@@ -166,7 +166,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  When **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) is set to "80", large UDT types appear to clients in the same way that they appear for down-level clients.  
   
-## See Also  
+## See also  
  [Large CLR User-Defined Types](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

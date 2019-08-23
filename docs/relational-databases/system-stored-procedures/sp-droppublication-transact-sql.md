@@ -54,7 +54,7 @@ sp_droppublication [ @publication= ] 'publication'
 ## Examples  
  [!code-sql[HowTo#sp_droppublication](../../relational-databases/replication/codesnippet/tsql/sp-droppublication-trans_1.sql)]  
   
-## See Also  
+## See also  
  [Delete a Publication](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   

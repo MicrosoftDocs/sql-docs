@@ -114,7 +114,7 @@ When a conflict is resolved in merge replication, the data from the losing row i
   
     -   At the Subscriber on the subscription database, execute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Specify the name of the source table (from step 1) on which the conflict occurred for `@source_object`. (Optional) Specify a value of `@publication` to restrict returned conflict information to a specific publication. This returns delete conflict information stored at the Subscriber.  
   
-## See Also  
+## See also  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Specify a Merge Article Resolver](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
   

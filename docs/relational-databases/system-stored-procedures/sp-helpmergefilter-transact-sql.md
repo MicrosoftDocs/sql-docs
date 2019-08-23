@@ -67,7 +67,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role and the **db_owner** fixed database role can execute **sp_helpmergefilter**.  
   
-## See Also  
+## See also  
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   

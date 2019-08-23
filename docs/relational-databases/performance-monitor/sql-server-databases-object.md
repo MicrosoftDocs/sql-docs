@@ -77,7 +77,7 @@ ms.author: jrasnick
 |**XTP Controller Log Processed/sec**|The amount of log bytes processed by the XTP controller thread, per second.|
 |**XTP Memory Used (KB)**|The amount of memory used by XTP in the database.| 
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   

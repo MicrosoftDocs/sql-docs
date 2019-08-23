@@ -33,6 +33,6 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-lin
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.
 
-## See Also
+## See also
 
 [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/big-data-cluster-overview.md)?

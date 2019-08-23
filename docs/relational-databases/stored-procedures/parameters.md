@@ -75,7 +75,7 @@ GO
 
 An application can use parameter markers bound to program variables to exchange data between application variables, parameters, and return codes.
 
-## See Also
+## See also
 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   

@@ -27,7 +27,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Bookmarks can also be used with the **SQLBulkOperations** function to perform operations on a set of rows starting at the bookmark.  
   
-## See Also  
+## See also  
  [Scrolling and Fetching Rows](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
   
   

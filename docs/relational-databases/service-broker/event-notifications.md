@@ -90,7 +90,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Describes how to configure [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog security for event notifications that send messages to a service broker on a remote server.|[Configure Dialog Security for Event Notifications](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
 |Describes how to return information about event notifications.|[Get Information About Event Notifications](../../relational-databases/service-broker/get-information-about-event-notifications.md)|  
   
-## See Also  
+## See also  
  [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)   
  [DML Triggers](../../relational-databases/triggers/dml-triggers.md)   
  [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)  

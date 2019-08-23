@@ -27,7 +27,7 @@ ms.author: "jroth"
   
  The benefit of using transaction promotion is that when a connection is opened with an active **TransactionScope** transaction, and no other connections are opened, the transaction commits as a lightweight transaction, rather than incurring the additional overhead of a full distributed transaction. For more information about **TransactionScope**, see [Using System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
   
-## See Also  
+## See also  
  [CLR Integration and Transactions](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

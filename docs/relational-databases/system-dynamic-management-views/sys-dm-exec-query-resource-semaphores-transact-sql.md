@@ -61,7 +61,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
  The Resource Governor feature enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and higher, each pool behaves like a small independent server instance and requires 2 semaphores.  
   
-## See Also  
+## See also  
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
   

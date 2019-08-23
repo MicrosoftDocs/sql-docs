@@ -36,7 +36,7 @@ ms.author: "carlrab"
   
  ![Trace events and event groups](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "Trace events and event groups")  
   
-## See Also  
+## See also  
  [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [Using WQL with the WMI Provider for Server Events](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

@@ -87,7 +87,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## Permissions  
  Only members of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the publication access list for the publication can execute **sp_helpsubscriberinfo**.  
   
-## See Also  
+## See also  
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   

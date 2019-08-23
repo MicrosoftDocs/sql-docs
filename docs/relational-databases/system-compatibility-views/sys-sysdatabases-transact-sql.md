@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |**filename**|**nvarchar(260)**|Operating-system path and name for the primary file for the database.<br /><br /> **filename** is visible to **dbcreator**, **sysadmin**, the database owner with CREATE ANY DATABASE permissions, or grantees that have any one of the following permissions: ALTER ANY DATABASE, CREATE ANY DATABASE, VIEW ANY DEFINITION. To return the path and file name, query the [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) compatibility view, or the [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) view.|  
 |**version**|**smallint**|Internal version number of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code with which the database was created. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
-## See Also  
+## See also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  

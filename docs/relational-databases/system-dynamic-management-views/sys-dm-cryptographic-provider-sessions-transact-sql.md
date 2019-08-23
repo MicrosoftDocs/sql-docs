@@ -51,7 +51,7 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 ## Remarks  
  The **sys.dm_cryptographic_provider_sessions** view is visible to the public for the current connection. To view all cryptographic connections, you must have the **CONTROL** server permission.  
   
-## See Also  
+## See also  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   

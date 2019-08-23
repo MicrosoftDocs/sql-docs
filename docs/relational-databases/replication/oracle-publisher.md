@@ -32,7 +32,7 @@ ms.author: "mathoma"
 > [!NOTE]  
 >  If the server against which the wizard is running has not yet been configured as a Distributor, you are prompted to configure it now.  
   
-## See Also  
+## See also  
  [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)   
 
   

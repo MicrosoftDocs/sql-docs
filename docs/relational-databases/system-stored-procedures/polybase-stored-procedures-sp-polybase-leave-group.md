@@ -49,7 +49,7 @@ sp_polybase_leave_group;
 EXEC sp_polybase_leave_group ;  
 ```  
   
-## See Also  
+## See also  
  [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

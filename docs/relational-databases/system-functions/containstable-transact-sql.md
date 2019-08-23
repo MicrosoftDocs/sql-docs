@@ -274,7 +274,7 @@ GO
 > [!NOTE]  
 >  The LANGUAGE *language_term* argumentis not required for using *top_n_by_rank.*  
   
-## See Also  
+## See also  
  [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
  [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   

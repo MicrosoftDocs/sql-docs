@@ -71,7 +71,7 @@ GO
 EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';  
 ```  
   
-## See Also  
+## See also  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

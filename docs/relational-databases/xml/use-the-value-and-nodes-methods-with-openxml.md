@@ -68,7 +68,7 @@ DEALLOCATE name_cursor
   
  The combination of **nodes()** and **value()** functions uses XML indexes effectively. As a result, this combination can exhibit more scalability than **OpenXml**.  
   
-## See Also  
+## See also  
  [OPENXML &#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)  
   
   

@@ -90,7 +90,7 @@ ms.author: genemi
  **Password**  
  Provide a password to use when authenticating. This option is not available.  
   
-## See Also  
+## See also  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md)  
   

@@ -33,7 +33,7 @@ ms.author: "sstein"
 ## Remarks  
  Only members of the **sysadmin** fixed server role can access this table.  
   
-## See Also  
+## See also  
  [dbo.syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
  [dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   

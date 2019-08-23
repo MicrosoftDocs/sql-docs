@@ -62,7 +62,7 @@ ms.author: "jroth"
   
  For example, the **System.DirectoryServices** namespace is not supported. You must register the System.DirectoryServices.dll assembly with **UNSAFE** permissions before you can call it from your code. The **UNSAFE** permission is necessary because classes in the **System.DirectoryServices** namespace do not meet the requirements for **SAFE** or **EXTERNAL_ACCESS**. For more information, see [CLR Integration Programming Model Restrictions](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) and [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
-## See Also  
+## See also  
  [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR Integration Programming Model Restrictions](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)  

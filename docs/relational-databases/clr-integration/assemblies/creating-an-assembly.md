@@ -123,7 +123,7 @@ WITH PERMISSION_SET = UNSAFE;
   
  For more details about the permissions for each of the settings, see [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-## See Also  
+## See also  
  [Managing CLR Integration Assemblies](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Altering an Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Dropping an Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   

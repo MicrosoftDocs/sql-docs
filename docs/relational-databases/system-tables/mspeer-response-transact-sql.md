@@ -32,7 +32,7 @@ ms.author: sstein
 |**peer_db**|**sysname**|The subscription database at the peer that generated the response.|  
 |**received_date**|**datetime**|The date and time that the peer request was received.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

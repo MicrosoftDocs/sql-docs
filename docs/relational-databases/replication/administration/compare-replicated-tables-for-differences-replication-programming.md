@@ -68,7 +68,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
     -   (Optional) Use **-strict** to enforce strict schema comparison between source and destination tables.  
   
-## See Also  
+## See also  
  [Validate Data at the Subscriber](../../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

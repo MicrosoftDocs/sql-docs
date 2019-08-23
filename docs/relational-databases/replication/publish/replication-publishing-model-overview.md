@@ -60,7 +60,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 ## Subscription  
  A subscription is a request for a copy of a publication to be delivered to a Subscriber. The subscription defines what publication will be received, where, and when. There are two types of subscriptions: push and pull. For more information about push and pull subscriptions, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md).  
   
-## See Also  
+## See also  
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [Configure Replication for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   

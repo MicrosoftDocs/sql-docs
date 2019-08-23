@@ -82,7 +82,7 @@ WHERE migs.group_handle = 24;
   
  This query provides the name of the database, schema, and table where an index is missing. It also provides the names of the columns that should be used for the index key. When writing the CREATE INDEX DDL statement to implement missing indexes, list equality columns first and then inequality columns in the ON \<*table_name*> clause of the CREATE INDEX statement. Included columns should be listed in the INCLUDE clause of the CREATE INDEX statement. To determine an effective order for the equality columns, order them based on their selectivity, listing the most selective columns first (leftmost in the column list).  
   
-## See Also  
+## See also  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   

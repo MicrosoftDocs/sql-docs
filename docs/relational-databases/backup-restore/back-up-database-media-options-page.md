@@ -95,7 +95,7 @@ ms.author: mikeray
   
  - **Rewind the tape before unloading**: Before unloading the tape, release, and rewind it. This is enabled only if **Unload the tape after backup** is selected.  
   
-## See Also  
+## See also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Back Up Files and Filegroups &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

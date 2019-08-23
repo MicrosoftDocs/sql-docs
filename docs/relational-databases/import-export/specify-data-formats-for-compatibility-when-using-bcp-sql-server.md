@@ -112,7 +112,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 ## Related Content  
  None.  
   
-## See Also  
+## See also  
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Data Formats for Bulk Import or Bulk Export &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [bcp Utility](../../tools/bcp-utility.md)   

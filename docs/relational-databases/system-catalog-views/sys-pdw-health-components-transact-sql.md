@@ -23,7 +23,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |group_id|**Int**|The logical component group to which this component belongs. See [sys.pdw_health_components (Parallel Data Warehouse)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
 |component_name|**nvarchar(255)**|Name of the component.|NOT NULL|  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

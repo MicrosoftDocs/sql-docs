@@ -41,7 +41,7 @@ ms.author: jrasnick
 |**Version Store unit creation**|The number of allocation units that have been created in the snapshot isolation store since the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] was started.|  
 |**Version Store unit truncation**|The number of allocation units that have been removed from the snapshot isolation store since the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] was started.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

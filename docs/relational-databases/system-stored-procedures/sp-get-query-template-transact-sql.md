@@ -106,7 +106,7 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  The order and naming of parameters in the output of sp_get_query_template can change between quick-fix engineering, service pack, and version upgrades of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Upgrades can also cause a different set of constant literals to be parameterized for the same query, and different spacing to be applied in the results of both output parameters.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Specify Query Parameterization Behavior by Using Plan Guides](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  

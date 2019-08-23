@@ -33,7 +33,7 @@ ms.author: sstein
 |**index_ordinal**|**tinyint**|Ordinal (1-based) of the column within the index.|  
 |**column_id**|**int**|ID of the column in the source table.|  
   
-## See Also  
+## See also  
  [cdc.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

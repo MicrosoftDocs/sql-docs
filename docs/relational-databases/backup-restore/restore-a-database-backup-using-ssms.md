@@ -245,7 +245,7 @@ The `Sales` database will be restored to the Microsoft Azure storage container `
 11.	Enter the container, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, in the text boxes for **Data file folder:** and **Log file folder:**.
 12.	Click **OK**.
 
-## See Also    
+## See also    
  [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Restore a Database to a New Location &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     

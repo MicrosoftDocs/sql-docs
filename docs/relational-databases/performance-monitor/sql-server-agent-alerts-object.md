@@ -28,7 +28,7 @@ ms.author: jrasnick
 > [!NOTE]  
 >  To use this SQL Server Agent object, users must be a member of the **sysadmin** fixed server role.  
   
-## See Also  
+## See also  
  [Alerts](../../ssms/agent/alerts.md)   
  [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

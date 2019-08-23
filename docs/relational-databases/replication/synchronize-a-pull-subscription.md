@@ -823,7 +823,7 @@ Finally
 End Try  
 ```  
   
-## See Also  
+## See also  
  [Synchronize Data](../../relational-databases/replication/synchronize-data.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  

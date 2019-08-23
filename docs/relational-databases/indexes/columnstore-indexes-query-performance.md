@@ -153,7 +153,7 @@ With string predicate pushdown, the query execution computes the predicate again
     -   No string predicate pushdown if dictionary exceeds 64 KB entries.    
     -   Expression evaluating NULLs are not supported.    
     
-## See Also    
+## See also    
  [Columnstore Indexes Design Guidance](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Columnstore Indexes Data Loading Guidance](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Get started with Columnstore for real time operational analytics](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     

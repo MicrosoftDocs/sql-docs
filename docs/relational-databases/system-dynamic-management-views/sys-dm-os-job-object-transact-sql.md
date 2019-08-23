@@ -48,7 +48,7 @@ A job object is a Windows construct that implements CPU, memory, and IO resource
 On SQL Database Managed Instance, requires `VIEW SERVER STATE` permission. 
 On SQL Database, requires the `VIEW DATABASE STATE` permission in the database.  
  
-## See Also  
+## See also  
 
 For information on Managed Instances, see [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

@@ -92,7 +92,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor can execute **sp_MSchange_distribution_agent_properties**.  
   
-## See Also  
+## See also  
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)  
   

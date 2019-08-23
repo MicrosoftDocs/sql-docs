@@ -48,7 +48,7 @@ ms.author: jrasnick
 |**Target Server Memory (KB)**|Indicates the ideal amount of memory the server can consume.|  
 |**Total Server Memory (KB)**|Specifies the amount of memory the server has committed using the memory manager.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Buffer Manager Object](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
 [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  

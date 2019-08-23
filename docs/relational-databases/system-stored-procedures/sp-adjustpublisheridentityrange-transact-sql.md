@@ -55,7 +55,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_adjustpublisheridentityrange**.  
   
-## See Also  
+## See also  
  [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

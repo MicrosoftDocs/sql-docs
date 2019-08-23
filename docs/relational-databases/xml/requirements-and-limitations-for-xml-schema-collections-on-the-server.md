@@ -69,7 +69,7 @@ ms.author: genemi
 |[Large XML Schema Collections and Out-of-Memory Conditions](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Provides solutions for the out-of-memory condition that sometimes occurs with large schema collections.|  
 |[Non-Deterministic Content Models](../../relational-databases/xml/non-deterministic-content-models.md)|Describes the limitations regarding non-deterministic content models.|  
   
-## See Also  
+## See also  
  [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Compare Typed XML to Untyped XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Grant Permissions on an XML Schema Collection](../../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md)   

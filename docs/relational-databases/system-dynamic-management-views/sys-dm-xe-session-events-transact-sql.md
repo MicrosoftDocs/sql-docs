@@ -42,7 +42,7 @@ ms.author: sstein
 |sys.dm_xe_session_events.event_session_address|sys.dm_xe_sessions.address|Many-to-one|  
 |sys.dm_xe_session_events.event_package_guid,<br /><br /> sys.dm_xe_session_events.event_name|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Many-to-one|  
   
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

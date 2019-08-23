@@ -45,7 +45,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_drop_agent_profile**.  
   
-## See Also  
+## See also  
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
  [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   

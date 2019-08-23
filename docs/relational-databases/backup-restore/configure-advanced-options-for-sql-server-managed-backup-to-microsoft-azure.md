@@ -107,7 +107,7 @@ ms.author: mikeray
 ## Next Steps  
  After configuring advanced options and custom schedules, you must enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] on the target database or SQL Server instance. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## See Also  
+## See also  
  [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

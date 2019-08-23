@@ -45,7 +45,7 @@ ms.author: mikeray
  **New**  
  Displays the **Connection Properties** dialog box. Used to configure new connection information for logging to a remote server.  
   
-## See Also  
+## See also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

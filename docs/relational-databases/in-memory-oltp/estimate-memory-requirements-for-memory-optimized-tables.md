@@ -185,7 +185,7 @@ Table variables defined in a large SQL batch, as opposed to a procedure scope, w
 
 The above calculations estimate your memory needs for the table as it currently exists. In addition to this memory, you need to estimate the growth of the table and provide sufficient memory to accommodate that growth.  For example, if you anticipate 10% growth then you need to multiple the results from above by 1.1 to get the total memory needed for your table.  
   
-## See Also
+## See also
 
 [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
 

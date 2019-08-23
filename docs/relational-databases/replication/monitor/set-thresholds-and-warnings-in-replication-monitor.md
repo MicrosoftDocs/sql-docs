@@ -157,7 +157,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 5.  Click **Close**.  
   
-## See Also  
+## See also  
  [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

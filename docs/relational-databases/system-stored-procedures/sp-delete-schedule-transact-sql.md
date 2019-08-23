@@ -98,7 +98,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## See Also  
+## See also  
  [Implement Jobs](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   

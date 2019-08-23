@@ -27,7 +27,7 @@ ms.author: vanto
 |[syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)|[syspolicy_system_health_state](../../relational-databases/system-catalog-views/syspolicy-system-health-state-transact-sql.md)|  
 |[syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)||  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

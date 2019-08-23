@@ -59,7 +59,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
 -   [Freeing a Statement Handle](../../relational-databases/native-client-odbc-queries/freeing-a-statement-handle.md)  
   
-## See Also  
+## See also  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

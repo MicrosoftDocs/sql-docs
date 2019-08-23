@@ -93,7 +93,7 @@ $myview.Create()
 $myview.Drop();  
 ```  
   
-## See Also  
+## See also  
  <xref:Microsoft.SqlServer.Management.Smo.View>  
   
   

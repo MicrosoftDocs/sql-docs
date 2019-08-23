@@ -30,5 +30,5 @@ This following table describes the SQL Server **Memory Broker Clerks** performan
 
 There is an instance of the counter for the buffer pool, and the column store object pool.
 
-## See Also  
+## See also  
 [Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

@@ -26,7 +26,7 @@ ms.author: mikeray
  **seconds**  
  The number of seconds between auto-refresh attempts. Defaults to 60 seconds. Refreshes every 5 seconds when set to 5 or less.  
   
-## See Also  
+## See also  
  [Monitor Job Activity](../../ssms/agent/monitor-job-activity.md)  
   
   

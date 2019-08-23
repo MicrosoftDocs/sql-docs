@@ -32,7 +32,7 @@ ms.author: "sstein"
 |**dest_create_params**|**int**|Internal use only.|  
 |**dest_nullable**|**bit**|Is if the non-SQL Server data type supports a NULL value.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Specify Data Type Mappings for an Oracle Publisher](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -40,7 +40,7 @@ ms.author: "sstein"
 |**nosync_type**|**tinyint**|The type of subscription initialization:<br /><br /> **0** = automatic (snapshot)<br /><br /> **1** = replication support only<br /><br /> **2** = initialize with backup<br /><br /> **3** = initialize from log sequence number (LSN)<br /><br /> For more information, see the **\@sync_type** parameter of [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|The name of the Subscriber.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  

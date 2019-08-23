@@ -115,7 +115,7 @@ BEGIN
 END;  
 ```  
   
-## See Also  
+## See also  
  [OLE Automation Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE Automation Sample Script](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

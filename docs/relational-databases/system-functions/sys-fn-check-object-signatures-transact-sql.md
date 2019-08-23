@@ -85,7 +85,7 @@ GO
   
 ```  
   
-## See Also  
+## See also  
  [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

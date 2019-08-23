@@ -82,7 +82,7 @@ EXEC @hr = sp_OAMethod @object,
    @checkoutput OUT  
 ```  
   
-## See Also  
+## See also  
  [OLE Automation Sample Script](../../relational-databases/stored-procedures/ole-automation-sample-script.md)   
  [OLE Automation Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   

@@ -251,7 +251,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)  
   
   

@@ -54,7 +54,7 @@ object.SetStartMode(StartMode)
   
 ## Remarks  
   
-## See Also  
+## See also  
  [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

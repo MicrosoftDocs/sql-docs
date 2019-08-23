@@ -55,7 +55,7 @@ after line feed" />
   
 -   The line feed character in the third row is entitized as &#xA.  
   
-## See Also  
+## See also  
  [FOR XML Support for Various SQL Server Data Types](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

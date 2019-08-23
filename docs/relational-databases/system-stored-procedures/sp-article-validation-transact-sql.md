@@ -88,7 +88,7 @@ sp_article_validation [ @publication = ] 'publication'
 ## Permissions  
  Only users with SELECT ALL permissions on the source table for the article being validated can execute **sp_article_validation**.  
   
-## See Also  
+## See also  
  [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   

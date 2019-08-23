@@ -167,7 +167,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  Both `@g1` and `@g2` use the same exterior bounding ring: a circle with a radius of 5 and they both use a square for an interior ring.  However, the instance `@g1` is valid, but the instance `@g2` is invalid. The reason that @g2 is invalid is that the interior ring splits the interior space bounded by the exterior ring into four separate regions. The following drawing shows what occurred:  
   
-## See Also  
+## See also  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   

@@ -77,7 +77,7 @@ ms.author: "sstein"
   
  For information about files, see [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
   
-## See Also  
+## See also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

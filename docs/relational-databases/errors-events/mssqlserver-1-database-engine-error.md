@@ -50,7 +50,7 @@ To resolve this error, try one of the following actions:
   
 -   Make sure that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is started on the server.  
   
-## See Also  
+## See also  
 [Configure a Windows Firewall for Database Engine Access](~/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
 [Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Network Protocols and Network Libraries](~/sql-server/install/network-protocols-and-network-libraries.md)  

@@ -37,7 +37,7 @@ An unrestored log is a log that has been received by the mirror server instance 
 ## User Action  
 Check the loads on the principal and mirror server instances and their network connection for the cause.  
   
-## See Also  
+## See also  
 [Database Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/database-mirroring-sql-server.md)  
 [Use Warning Thresholds and Alerts on Mirroring Performance Metrics &#40;SQL Server&#41;](~/database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

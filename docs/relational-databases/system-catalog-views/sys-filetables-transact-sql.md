@@ -33,7 +33,7 @@ ms.author: sstein
 |**filename_collation_id**||Is the collation identifier defined for the FileTable|  
 |**filename_collation_name**||Is the collation name defined for the FileTable.|  
   
-## See Also  
+## See also  
  [Manage FileTables](../../relational-databases/blob/manage-filetables.md)   
  [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  
   

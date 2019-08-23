@@ -38,7 +38,7 @@ ms.author: "sstein"
  [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)  
  Contains one row for each upgraded database maintenance plan.  
   
-## See Also  
+## See also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

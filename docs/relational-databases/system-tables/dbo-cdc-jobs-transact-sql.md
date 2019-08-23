@@ -37,7 +37,7 @@ ms.author: sstein
 |**retention**|**bigint**|The number of minutes that change rows are to be retained in change tables.<br /><br /> **retention** is valid only for cleanup jobs.|  
 |**threshold**|**bigint**|The maximum number of delete entries that can be deleted using a single statement on cleanup.|  
   
-## See Also  
+## See also  
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   
  [sys.sp_cdc_change_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)   
  [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)   

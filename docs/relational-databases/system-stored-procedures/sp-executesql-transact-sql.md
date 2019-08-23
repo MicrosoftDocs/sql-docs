@@ -243,7 +243,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-## See Also  
+## See also  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

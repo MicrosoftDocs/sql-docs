@@ -114,7 +114,7 @@ Designate one or more parameter names as defined in the params argument.  There 
 ## Return Code Values  
  If params returns a NULL value, then the statement is not parameterized.  
   
-## See Also  
+## See also  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   

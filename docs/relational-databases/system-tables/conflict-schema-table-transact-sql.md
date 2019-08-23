@@ -41,7 +41,7 @@ ms.author: sstein
 |__$change_id|**binary (8)**|For a local row, this value is equal to the __$row_id of the incoming row that conflicted with the local row. This value is NULL for an incoming row.|  
 |\<base table column names>|\<base table column types>|The conflict table contains one column for each column in the base table.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

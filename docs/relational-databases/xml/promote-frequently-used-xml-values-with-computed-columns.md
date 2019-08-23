@@ -248,7 +248,7 @@ as
   
  The delete trigger is identical to the non-CLR version. However, the update trigger just replaces the function udf_XML2Table() with CLR_udf_XML2Table().  
   
-## See Also  
+## See also  
  [Use XML in Computed Columns](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

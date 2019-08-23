@@ -67,7 +67,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 2.  Disable distribution and then re-enable it. For more information, see [Configure Distribution](../../relational-databases/replication/configure-distribution.md).  
   
-## See Also  
+## See also  
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

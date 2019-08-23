@@ -92,7 +92,7 @@ EXEC sp_create_plan_guide
   
 5.  If the plan guide is of type OBJECT or SQL, verify that the **Showplan XML** event contains the **PlanGuideDB** and **PlanGuideName** attributes for the plan guide that you expected to match the query. Or, in the case of a TEMPLATE plan guide, verify that the **Showplan XML** event contains the **TemplatePlanGuideDB** and **TemplatePlanGuideName** attributes for the expected plan guide. This verifies that the plan guide is working. These attributes are contained under the **\<StmtSimple>** element of the plan.  
   
-## See Also  
+## See also  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

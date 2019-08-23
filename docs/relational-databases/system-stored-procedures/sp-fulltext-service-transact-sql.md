@@ -85,7 +85,7 @@ EXEC sp_fulltext_service @action='upgrade_option', @value=1;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   
  [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

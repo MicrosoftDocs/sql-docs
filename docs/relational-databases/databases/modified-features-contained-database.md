@@ -45,7 +45,7 @@ ms.author: "sstein"
 ## User Options  
  When enabling contained databases, the [user options Option](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) must be set to 0 for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## See Also  
+## See also  
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Contained Databases](../../relational-databases/databases/contained-databases.md)  
   

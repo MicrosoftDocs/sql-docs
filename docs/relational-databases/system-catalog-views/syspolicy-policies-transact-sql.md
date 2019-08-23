@@ -49,7 +49,7 @@ ms.author: vanto
 ## Permissions  
  Requires membership in the PolicyAdministratorRole role in the msdb database.  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

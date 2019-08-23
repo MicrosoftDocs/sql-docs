@@ -94,7 +94,7 @@ ms.custom: "seo-lt-2019"
     EXEC sp_fulltext_service 'restart_all_fdhosts';   
     ```  
   
-## See Also  
+## See also  
  [Set the Service Account for the Full-text Filter Daemon Launcher](../../relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  

@@ -30,7 +30,7 @@ ms.author: jrasnick
 |**SuperLatch Promotions/sec**|Number of latches that have been promoted to SuperLatches in the last second.|  
 |**Total Latch Wait Time (ms)**|Total latch wait time (in milliseconds) for latch requests in the last second.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

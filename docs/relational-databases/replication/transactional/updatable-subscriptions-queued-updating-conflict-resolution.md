@@ -72,7 +72,7 @@ ms.author: "mathoma"
 ### Subscriber Wins  
  Conflict detection under the Subscriber wins policy means the last Subscriber transaction to update the Publisher wins. In this case, when a conflict is detected, the transaction sent by the Subscriber is still used and the Publisher is updated. This policy is suitable for applications where such changes do not compromise data integrity.  
   
-## See Also  
+## See also  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

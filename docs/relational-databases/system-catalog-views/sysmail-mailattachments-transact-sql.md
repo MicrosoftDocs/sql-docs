@@ -41,7 +41,7 @@ ms.author: "sstein"
 ## Permissions  
  Granted to the **sysadmin** fixed server role and the **DatabaseMailUserRole** database role. When executed by a member of the **sysadmin** fixed server role, this view shows all attachments. All other users only see the attachments for messages that they submitted.  
   
-## See Also  
+## See also  
  [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   

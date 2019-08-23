@@ -42,7 +42,7 @@ If the recovery failed because of a persistent I/O error, a torn page, or other 
   
 If you are unable to resolve this problem, contact your primary support provider. Have the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log available for review.  
   
-## See Also  
+## See also  
 [Back Up and Restore of SQL Server Databases](~/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
 [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  
 [sys.sysdatabases &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  

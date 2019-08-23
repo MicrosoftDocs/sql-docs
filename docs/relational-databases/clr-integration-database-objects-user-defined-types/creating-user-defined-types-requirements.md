@@ -159,7 +159,7 @@ ms.author: "jroth"
   
  UDTs are not serialized in FOR XML queries. To execute a FOR XML query that displays the XML serialization of UDTs, explicitly convert each UDT column to the **xml** data type in the SELECT statement. You can also explicitly convert the columns to **varbinary**, **varchar**, or **nvarchar**.  
   
-## See Also  
+## See also  
  [Creating a User-Defined Type](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

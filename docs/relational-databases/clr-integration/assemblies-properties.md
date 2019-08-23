@@ -42,7 +42,7 @@ ms.author: "jroth"
  **Version**  
  Displays the version number of the assembly.  
   
-## See Also  
+## See also  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

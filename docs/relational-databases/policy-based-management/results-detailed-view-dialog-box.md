@@ -43,7 +43,7 @@ ms.author: vanto
  **Additional help**  
  Click the hyperlink to open a Web page that is related to this policy. The Additional Help hyperlink is configured when the policy is created and might be blank or unavailable.  
   
-## See Also  
+## See also  
  [Policy Management Node &#40;Object Explorer&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

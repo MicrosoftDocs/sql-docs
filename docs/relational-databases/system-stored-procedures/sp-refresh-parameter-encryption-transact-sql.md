@@ -149,7 +149,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## See Also 
+## See also 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted Wizard](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

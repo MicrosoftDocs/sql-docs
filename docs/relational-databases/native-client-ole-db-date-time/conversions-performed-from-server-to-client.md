@@ -59,7 +59,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |12|The string is parsed as an ISO literal and converted to the target type. If this fails, the string is parsed as an OLE date literal (which also has time components) and converted from an OLE date (DBTYPE_DATE) to the target type. The string must conform to the syntax for literals of the target type allowed for ISO format parsing to succeed. For OLE parsing to succeed, the string must conform to the syntax recognized by OLE. If the string cannot be parsed, DBSTATUS_E_CANTCONVERTVALUE is set. If any component values are out of range, DBSTATUS_E_DATAOVERFLOW is set.|  
 |13|The string is parsed as an ISO literal and converted to the target type. If this fails, the string is parsed as an OLE date literal (which also has time components) and converted from an OLE date (DBTYPE_DATE) to the target type. The string must conform to the syntax for datetime literals, unless the destination is DBTYPE_DATE or DBTYPE_DBTIMESTAMP. If this is the case, either a datetime or time literal is allowed for ISO format parsing to succeed. For OLE parsing to succeed, the string must conform to the syntax recognized by OLE. If the string cannot be parsed, DBSTATUS_E_CANTCONVERTVALUE is set. If any component values are out of range, DBSTATUS_E_DATAOVERFLOW is set.|  
   
-## See Also  
+## See also  
  [Bindings and Conversions &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

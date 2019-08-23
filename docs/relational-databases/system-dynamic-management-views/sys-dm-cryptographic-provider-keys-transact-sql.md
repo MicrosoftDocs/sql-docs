@@ -62,7 +62,7 @@ SELECT * FROM sys.dm_cryptographic_provider_keys(1234567);
 GO  
 ```  
   
-## See Also  
+## See also  
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

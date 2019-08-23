@@ -47,7 +47,7 @@ ms.author: jrasnick
 |**Transactions**|Number of transaction enlistments (local, DTC, bound all combined).|  
 |**User Connections**|Counts the number of users currently connected to SQL Server.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

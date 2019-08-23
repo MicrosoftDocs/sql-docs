@@ -68,7 +68,7 @@ When SYSTEM_VERSIONING is set to ON, schema modification operations are limited.
 
 **SELECT** permission is unchanged for **SELECT** statements that do not affect the history table. For **SELECT** statements that affect the history table, **SELECT** permission is required on both the current table and the history table.
 
-## See Also
+## See also
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md) 
 - [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)

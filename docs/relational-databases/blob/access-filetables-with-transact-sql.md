@@ -63,7 +63,7 @@ ms.author: mikeray
   
 -   The value of **last_access_time** cannot be earlier than **last_write_time** and **creation_time**.  
   
-## See Also  
+## See also  
  [Load Files into FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Access FileTables with File Input-Output APIs](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   

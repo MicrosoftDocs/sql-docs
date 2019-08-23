@@ -61,7 +61,7 @@ GO
   
  The [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) catalog view also returns information about XML schema collections. This information includes the name of the collection, the creation date, and the owner of the collection.  
   
-## See Also  
+## See also  
  [XML Schema Collections &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

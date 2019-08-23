@@ -201,7 +201,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  If you do not bind your database to a named resource pool, it is bound to the 'default' pool. Since default resource pool is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for most other allocations, you will not be able to monitor memory consumed by memory-optimized tables using the DMV sys.dm_resource_governor_resource_pools accurately for the database of interest.  
   
-## See Also  
+## See also  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   

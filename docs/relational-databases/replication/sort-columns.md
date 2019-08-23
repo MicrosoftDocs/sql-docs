@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Clear All**  
  Remove all rows from the sorting grid. To remove a single row, select the row and press the Delete key.  
   
-## See Also  
+## See also  
  [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

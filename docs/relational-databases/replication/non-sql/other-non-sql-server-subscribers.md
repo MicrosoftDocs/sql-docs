@@ -108,7 +108,7 @@ ms.author: "mathoma"
   
  For more information about the OLE DB provider, see the documentation supplied with your OLE DB provider.  
   
-## See Also  
+## See also  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

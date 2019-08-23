@@ -71,7 +71,7 @@ SELECT @var
 GO  
 ```  
   
-## See Also  
+## See also  
  [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

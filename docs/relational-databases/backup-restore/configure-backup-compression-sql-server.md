@@ -47,7 +47,7 @@ ms.author: mikeray
          You can control the backup compression behavior of log backups.  
   
   
-## See Also  
+## See also  
  [Backup Compression &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)  
   
   

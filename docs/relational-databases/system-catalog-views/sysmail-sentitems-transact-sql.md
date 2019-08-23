@@ -61,7 +61,7 @@ ms.author: "sstein"
 ## Permissions  
  Granted to **sysadmin** fixed server role and **databasemailuserrole** database role. When executed by a member of the **sysadmin** fixed server role, this view shows all sent messages. All other users only see the messages that they sent.  
   
-## See Also  
+## See also  
  [Database Mail Messaging Objects](../../relational-databases/database-mail/database-mail-messaging-objects.md)  
   
   

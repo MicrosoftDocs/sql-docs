@@ -34,7 +34,7 @@ ms.author: carlrab
 |[xp_loginconfig](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)|[xp_sqlmaint](../../relational-databases/system-stored-procedures/xp-sqlmaint-transact-sql.md)|  
 ||[xp_sscanf](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)|  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

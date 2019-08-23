@@ -63,7 +63,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Last Synchronization**  
  The time at which the Distribution Agent last ran. If synchronization is in progress, **In progress** is displayed.  
   
-## See Also  
+## See also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [View information and perform tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  

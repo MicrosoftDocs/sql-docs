@@ -31,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**TargetLoginSid**|**int**|For actions that target a login (for example, adding a new login), the security identification number (SID) of the targeted login.|43|Yes|  
 |**TextData**|**ntext**|Text information about the Full-Text event. Typically this field provides information about the connection between the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process and the full-text filter daemon process|1|Yes|  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

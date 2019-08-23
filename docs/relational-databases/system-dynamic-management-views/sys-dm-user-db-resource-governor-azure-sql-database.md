@@ -110,7 +110,7 @@ FROM sys.dm_user_db_resource_governance
 ORDER BY database_name;  
 ```
 
-## See Also
+## See also
 
 - [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
 - [sys.dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)

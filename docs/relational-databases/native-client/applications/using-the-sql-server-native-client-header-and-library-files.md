@@ -96,7 +96,7 @@ include "sqlncli.h";
   
  For more information, see Performing [Performing Bulk Copy Operations](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
   
-## See Also  
+## See also  
  [Building Applications with SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

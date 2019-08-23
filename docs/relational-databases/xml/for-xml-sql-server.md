@@ -109,7 +109,7 @@ Now the disambiguated query returns the following text:
 <x LastName="Achong"/>
 ```
 
-## See Also
+## See also
 
 [Basic Syntax of the FOR XML Clause](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)  
 [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  

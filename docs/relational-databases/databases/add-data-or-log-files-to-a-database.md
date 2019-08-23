@@ -110,7 +110,7 @@ ms.author: "sstein"
   
  For more examples, see [ALTER DATABASE File and Filegroup Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## See Also  
+## See also  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Delete Data or Log Files from a Database](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
  [Increase the Size of a Database](../../relational-databases/databases/increase-the-size-of-a-database.md)  

@@ -63,7 +63,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## See Also  
+## See also  
  [Database Mail Log and Audits](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
   

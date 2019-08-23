@@ -64,7 +64,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role and the **db_owner** fixed database role can execute **sp_helpmergearticleconflicts**.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

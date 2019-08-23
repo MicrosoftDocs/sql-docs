@@ -51,7 +51,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Replication jobs**  
  This option is available only from the **Generate SQL Script** dialog box.  
   
-## See Also  
+## See also  
  [Scripting Replication](../../relational-databases/replication/scripting-replication.md)  
   
   

@@ -142,7 +142,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  If the PRINT or RAISERROR statement comes after an SQL statement (such as a SELECT statement), then the PRINT or RAISERROR information is returned when [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)positions on the result set containing the error. **SQLMoreResults** returns SQL_SUCCESS_WITH_INFO or SQL_ERROR depending on the severity of the message. Messages are retrieved by calling **SQLGetDiagRec** until it returns SQL_NO_DATA.  
   
-## See Also  
+## See also  
  [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

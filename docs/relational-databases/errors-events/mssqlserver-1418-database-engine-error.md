@@ -86,7 +86,7 @@ To identify the listening ports and the processes that have those ports opened, 
   
     **netstat -ano**  
   
-## See Also  
+## See also  
 [ALTER ENDPOINT &#40;Transact-SQL&#41;](~/t-sql/statements/alter-endpoint-transact-sql.md)  
 [The Database Mirroring Endpoint &#40;SQL Server&#41;](~/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
 [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](~/database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  

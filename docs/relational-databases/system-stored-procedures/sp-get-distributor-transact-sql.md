@@ -46,7 +46,7 @@ sp_get_distributor
 ## Permissions  
  Any user can execute **sp_get_distributor**. A non-NULL result set is returned when this stored procedure is executed by members of the **db_owner** or **replmonitor** fixed database roles on the distribution database, or members of the **db_owner** fixed database role on at least one published database. A non-NULL result set is also returned when this stored procedure is executed by users in the publication access list (PAL) of at least one published database, or in the PAL of the distribution database for a non-SQL Server Publisher, can also execute **sp_get_distributor**.  
   
-## See Also  
+## See also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Distributor and Publisher Information Script](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

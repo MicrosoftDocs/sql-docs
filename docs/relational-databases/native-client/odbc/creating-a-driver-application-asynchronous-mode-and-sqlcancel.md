@@ -44,7 +44,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Sometimes a command is outstanding for a long time. If the application needs to cancel the command without waiting for a reply, it can do so by calling **SQLCancel** with the same statement handle as the outstanding command. This is the only time **SQLCancel** should be used. Some programmers use **SQLCancel** when they have processed part way through a result set and want to cancel the rest of the result set. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) or [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) should be used to cancel the remainder of an outstanding result set, not **SQLCancel**.  
   
-## See Also  
+## See also  
  [Creating a SQL Server Native Client ODBC Driver Application](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
   

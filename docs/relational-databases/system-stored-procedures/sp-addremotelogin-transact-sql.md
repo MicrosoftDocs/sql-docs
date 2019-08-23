@@ -81,7 +81,7 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## See Also  
+## See also  
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   

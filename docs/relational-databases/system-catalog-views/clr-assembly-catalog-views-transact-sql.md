@@ -27,7 +27,7 @@ ms.author: "sstein"
 |[sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|[sys.assembly_references](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|  
 |[sys.assembly_files](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)||  
   
-## See Also  
+## See also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

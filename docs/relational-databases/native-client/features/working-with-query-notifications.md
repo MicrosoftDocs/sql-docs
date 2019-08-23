@@ -129,7 +129,7 @@ RECEIVE * FROM MyQueue
   
  Submission of a query for notification that was submitted by the same user under the same database context and has the same template, same parameter values, same notification ID, and same delivery location of an existing active subscription, will renew the existing subscription, resetting the new specified time-out. This means that if notification is requested for identical queries, only one notification will be sent. This would apply to a query duplicated in a batch, or a query in a stored procedure that was called multiple times.  
   
-## See Also  
+## See also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

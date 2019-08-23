@@ -49,7 +49,7 @@ Returns information about the current external resource pool state, the current 
 
 Requires `VIEW SERVER STATE` permission.
 
-## See Also  
+## See also  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

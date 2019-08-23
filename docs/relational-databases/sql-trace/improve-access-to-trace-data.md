@@ -35,7 +35,7 @@ ms.author: "mathoma"
   
 5.  Click **OK** to save the change.  
   
-## See Also  
+## See also  
  [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

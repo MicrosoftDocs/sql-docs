@@ -565,7 +565,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 ##  <a name="FollowUp"></a> Follow Up: After you modify replication security settings  
  After changing an agent login or password, you must stop and restart the agent before the change takes effect.  
   
-## See Also  
+## See also  
  [Replication Management Objects Concepts](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Upgrade Replication Scripts &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md)   

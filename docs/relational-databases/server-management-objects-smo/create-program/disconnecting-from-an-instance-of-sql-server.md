@@ -69,7 +69,7 @@ srv.ConnectionContext.Disconnect();
 }  
 ```  
   
-## See Also  
+## See also  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx)  
   

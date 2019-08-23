@@ -546,6 +546,6 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 ## Next steps  
 For examples of queries, see [PolyBase Queries](../../relational-databases/polybase/polybase-queries.md).  
   
-## See Also  
+## See also  
 [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
 [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

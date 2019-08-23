@@ -167,7 +167,7 @@ SELECT @g.ToString(), @g.STLength();
 ### Polygon and CurvePolygon comparison  
 **CurvePolygon** instances can use **CircularString** and **CompoundCurve** instances when defining their exterior and interior rings.  **Polygon** instances cannot use the circular arc segment types: **CircularString** and **CompoundCurve**.  
 
-## See Also  
+## See also  
 - [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx) 
 - [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   

@@ -31,7 +31,7 @@ There are various ways to configure client data access without installing [!INCL
 
 You can also host a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] on your own network, and allow clients to access data through your network, either directly or through a web application.
 
-## See Also
+## See also
 
 [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Securing SQL Server](../../relational-databases/security/securing-sql-server.md)  

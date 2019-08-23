@@ -37,7 +37,7 @@ Your system must have the following installed:
   
 -   Internet Explorer 6 or a later version.  
   
-## See Also  
+## See also  
 [Tutorial: Getting Started with the Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Tutorial: Writing Transact-SQL Statements](../../t-sql/tutorial-writing-transact-sql-statements.md)  
 [hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  

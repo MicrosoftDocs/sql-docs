@@ -161,7 +161,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Comparability for IRowsetFind  
  All comparison operators are allowed for the new date/time types, because they appear as string types rather than date/time types.  
   
-## See Also  
+## See also  
  [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

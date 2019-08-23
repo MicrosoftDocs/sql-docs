@@ -47,7 +47,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Publisher, members of the **db_owner** fixed database role on the publication database, or users in the publication access list (PAL) can execute **sp_replsetoriginator**.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

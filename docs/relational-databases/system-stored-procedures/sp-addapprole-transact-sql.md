@@ -76,7 +76,7 @@ EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;
 GO  
 ```  
   
-## See Also  
+## See also  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

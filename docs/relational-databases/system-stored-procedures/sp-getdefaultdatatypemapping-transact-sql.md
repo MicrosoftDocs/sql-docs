@@ -117,7 +117,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_getdefaultdatatypemapping**.  
   
-## See Also  
+## See also  
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
  [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
  [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   

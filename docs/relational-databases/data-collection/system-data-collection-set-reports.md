@@ -126,7 +126,7 @@ ms.author: mathoma
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Waits|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Waits graph displays waits encountered by threads that executed by wait category. You can access a detailed report by clicking any segment in the graph. In addition to providing graphical [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wait statistics over a narrower time frame, this report provides information about wait categories in tabular format. For each category, such as CPU and its subcategories, the table shows the number of waits, the wait time, and percentage of total wait time.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Activity|Different aspects of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activity can be accessed from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Activity graph. The reports that you can obtain by clicking a point on the SQL Compilations/sec graph line are as follows:<br /><br /> <br /><br /> Connections and sessions<br /><br /> Requests<br /><br /> Plan cache hit ratio<br /><br /> tempdb characteristics|  
   
-## See Also  
+## See also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
  [View a Collection Set Report &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   

@@ -53,7 +53,7 @@ int main() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Add a Data Source &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

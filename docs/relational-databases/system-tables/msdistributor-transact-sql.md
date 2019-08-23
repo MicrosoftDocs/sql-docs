@@ -28,7 +28,7 @@ ms.author: sstein
 |**property**|**sysname**|The name of the property|  
 |**value**|**nvarchar(3000)**|The value of the property|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

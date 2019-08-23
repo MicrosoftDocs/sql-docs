@@ -187,7 +187,7 @@ GO
 |VERSIONING_STATE_CHANGE|Internal use only.|  
 |KTM_VIRTUAL_CLOCK|Internal use only.|  
   
-## See Also  
+## See also  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
 [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server, Latches Object](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

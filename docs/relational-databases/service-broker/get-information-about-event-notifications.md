@@ -40,7 +40,7 @@ ms.author: "mathoma"
 > [!NOTE]  
 >  This catalog view does not return event groups.  
   
-## See Also  
+## See also  
  [Event Notifications](../../relational-databases/service-broker/event-notifications.md)  
   
   

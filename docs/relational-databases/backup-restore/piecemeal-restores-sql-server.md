@@ -167,7 +167,7 @@ ms.author: mathoma
   
 4.  The differential backup followed by any other backups that were restored in the original piecemeal restore sequence to restore the data up to the original recovery point.  
 
-## See Also  
+## See also  
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

@@ -264,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   If the values of the elements or attributes contain any special URL characters that have special meaning in the URL, they are encoded only in the DBOBJECT URL value and are encoded only when the special character is part of a table or column name. In the result, the character `#` that is part of table name `Col#&2` is encoded as `_x0023_ in the DBOJBECT URL`.  
   
-## See Also  
+## See also  
  [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

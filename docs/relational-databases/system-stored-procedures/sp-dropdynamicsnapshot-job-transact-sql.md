@@ -58,7 +58,7 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_dropdynamicsnapshot**.  
   
-## See Also  
+## See also  
  [sp_adddynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
   
   

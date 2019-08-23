@@ -48,7 +48,7 @@ ms.author: "jroth"
   
 -   [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
-## See Also  
+## See also  
  [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)   
  [Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)  

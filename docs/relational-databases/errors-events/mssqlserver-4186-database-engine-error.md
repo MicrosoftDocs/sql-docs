@@ -100,6 +100,6 @@ Error 4186 can be corrected in one of the following ways:
   
 -   Remove the column from the OUTPUT clause.  
   
-## See Also  
+## See also  
 [OUTPUT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/output-clause-transact-sql.md)  
   

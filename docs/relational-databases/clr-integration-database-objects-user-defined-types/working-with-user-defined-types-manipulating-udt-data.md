@@ -257,7 +257,7 @@ SET PointValue = null
 WHERE ID = 2  
 ```  
   
-## See Also  
+## See also  
  [Working with User-Defined Types in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

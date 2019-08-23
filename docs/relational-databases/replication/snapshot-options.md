@@ -132,7 +132,7 @@ You can specify scripts to execute at the Subscriber before or after the snapsho
   
 
 
-## See Also  
+## See also  
  [Initialize a Subscription with a Snapshot](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Transfer snapshot through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)   
  [Configure Snapshot Properties &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)     

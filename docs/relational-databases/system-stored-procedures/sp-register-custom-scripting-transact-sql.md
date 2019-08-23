@@ -69,7 +69,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## Permissions  
  Only members of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role can execute **sp_register_custom_scripting**.  
   
-## See Also  
+## See also  
  [sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

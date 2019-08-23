@@ -45,7 +45,7 @@ object.SetNumericalValue(NumValue)
 ## Remarks  
  The property value type must be numeric to be able to set the property to a numeric value.  
   
-## See Also  
+## See also  
  [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

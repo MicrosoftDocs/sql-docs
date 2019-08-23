@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**TextData**|**ntext**|Full-text crawl type. The value can be Full, Incremental, Manual, or Auto.|1|Yes|  
 |**TransactionID**|**bigint**|System-assigned ID of the transaction.|4|Yes|  
   
-## See Also  
+## See also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

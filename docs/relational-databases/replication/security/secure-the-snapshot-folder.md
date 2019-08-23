@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
  For information about setting and changing the password for access to snapshots through FTP, see the section "FTP Snapshot Delivery" in the topic [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
-## See Also  
+## See also  
  [Modify snapshot options](../../../relational-databases/replication/snapshot-options.md)   
  [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

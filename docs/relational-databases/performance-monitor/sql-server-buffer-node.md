@@ -35,7 +35,7 @@ ms.author: jrasnick
 > [!NOTE]  
 >  The counter values and sums may not match precisely due to the dynamic nature of the counters and the sampling accuracy.  
   
-## See Also  
+## See also  
  [SQL Server, Buffer Manager Object](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   

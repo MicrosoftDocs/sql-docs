@@ -235,7 +235,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### SQLSpecialColumns  
  The values returned for the columns DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH, and DECIMAL_DIGTS UDTs are as described in the "Metadata Returned by SQLColumns and SQLProcedureColumns (Catalog Metadata)" section, earlier in this topic.  
   
-## See Also  
+## See also  
  [Large CLR User-Defined Types](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

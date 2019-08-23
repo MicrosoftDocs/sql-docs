@@ -235,7 +235,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## See Also  
+## See also  
  [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

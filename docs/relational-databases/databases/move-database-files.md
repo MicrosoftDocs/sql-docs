@@ -42,7 +42,7 @@ ms.author: "sstein"
 |[Move User Databases](../../relational-databases/databases/move-user-databases.md)|Describes the procedures for moving user database files and full-text catalog files to a new location.|  
 |[Move System Databases](../../relational-databases/databases/move-system-databases.md)|Describes the procedures for moving system database files to a new location.|  
   
-## See Also  
+## See also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  

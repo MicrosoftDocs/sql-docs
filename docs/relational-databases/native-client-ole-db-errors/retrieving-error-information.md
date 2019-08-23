@@ -213,7 +213,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## See Also  
+## See also  
  [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

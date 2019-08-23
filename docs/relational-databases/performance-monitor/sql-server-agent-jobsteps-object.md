@@ -44,7 +44,7 @@ ms.author: jrasnick
 |**Snapshot**|Information for job steps that use the **Snapshot** subsystem.|  
 |**TSQL**|Information for job steps that execute [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## See Also  
+## See also  
  [Manage Job Steps](../../ssms/agent/manage-job-steps.md)   
  [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

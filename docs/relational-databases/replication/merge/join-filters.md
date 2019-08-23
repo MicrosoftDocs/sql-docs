@@ -81,7 +81,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      It is strongly recommended that all such logic be expressed in a join filter rather than a subquery. If your application requires a row filter to use a subsquery, ensure that the subquery only references lookup data that does not change.  
   
-## See Also  
+## See also  
  [Filter Published Data for Merge Replication](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

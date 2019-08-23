@@ -39,7 +39,7 @@ The DBCC statement cannot proceed because the specified index is disabled. After
   
 2.  Rerun the DBCC statement.  
   
-## See Also  
+## See also  
 [Enable Indexes and Constraints](~/relational-databases/indexes/enable-indexes-and-constraints.md)  
 [ALTER INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/alter-index-transact-sql.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

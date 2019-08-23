@@ -108,7 +108,7 @@ go
 </MyRoot>  
 ```  
   
-## See Also  
+## See also  
  [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

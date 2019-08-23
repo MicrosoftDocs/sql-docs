@@ -256,7 +256,7 @@ snapshot [ -?]
   
  To start the Snapshot Agent, execute **snapshot.exe** from the command prompt. For information, see [Replication Agent Executables](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## See Also  
+## See also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

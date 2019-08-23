@@ -58,7 +58,7 @@ ms.author: sstein
 |**internet_timeout**|**int**|The length of time, in seconds, before a Web synchronization request expires.|  
 |**hostname**|**sysname**|Specifies the value for **HOST_NAME** when this function is used in the **WHERE** clause of a join filter or logical record relationship.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   

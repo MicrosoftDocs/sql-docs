@@ -108,7 +108,7 @@ INSERT INTO @LocationTVP (LocationName, CostRate)
 EXEC usp_InsertProductionLocation @LocationTVP;
 ```
 
-## See Also
+## See also
 
 - [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)

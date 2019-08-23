@@ -70,7 +70,7 @@ class SQLWEPExample
 }  
 ```  
   
-## See Also  
+## See also  
  [WMI Provider for Server Events Concepts](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

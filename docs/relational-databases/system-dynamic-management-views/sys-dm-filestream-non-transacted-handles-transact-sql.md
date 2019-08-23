@@ -62,7 +62,7 @@ ms.author: sstein
 |share_write|bit|Opened with share_write allowed.|  
 |share_delete|bit|Opened with share_delete allowed.|  
   
-## See Also  
+## See also  
  [Manage FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

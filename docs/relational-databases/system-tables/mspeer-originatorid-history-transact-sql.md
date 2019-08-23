@@ -33,7 +33,7 @@ ms.author: sstein
 |originator_version|**int**|Identifies the version number of the Publisher.|  
 |inserted_date|**datetime**|Date and time that the row for the originator ID was inserted into this table.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

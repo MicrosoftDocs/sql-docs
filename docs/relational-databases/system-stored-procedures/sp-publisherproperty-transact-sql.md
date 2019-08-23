@@ -74,7 +74,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor can execute **sp_publisherproperty**.  
   
-## See Also  
+## See also  
  [Configure the Transaction Set Job for an Oracle Publisher &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

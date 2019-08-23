@@ -313,7 +313,7 @@ Web synchronization is supported on IIS, beginning with version 5.0. The Configu
   
     2.  Connect to the server in diagnostic mode. If the certificate is installed properly, the **Security Alert** dialog box will not appear. If the dialog box appears, the Merge Agent will fail when it tries to connect to the computer that is running IIS. You must make sure that the certificate for the server that you are accessing has been added to the certificate store at the Subscriber as a trusted certificate. For more information about exporting certificates, see the IIS documentation.  
   
-## See Also  
+## See also  
  [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)  
   

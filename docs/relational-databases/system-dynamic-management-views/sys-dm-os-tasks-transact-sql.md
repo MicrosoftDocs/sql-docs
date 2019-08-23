@@ -89,7 +89,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## See Also  
+## See also  
 [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md)     
   

@@ -27,7 +27,7 @@ ms.author: sstein
 |-----------------|---------------|-----------------|  
 |**dynamic_snapshot_view_name**|**sysname**|The name of the temporary filtered data snapshot view.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

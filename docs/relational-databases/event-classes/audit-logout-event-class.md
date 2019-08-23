@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**Writes**|**bigint**|Number of logical write I/Os issued by the user during the connection.|17|Yes|  
 |**GroupID**|**int**|ID of the workload group where the SQL Trace event fires.|66|Yes|  
   
-## See Also  
+## See also  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

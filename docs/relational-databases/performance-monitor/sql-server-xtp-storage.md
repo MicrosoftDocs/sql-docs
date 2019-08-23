@@ -29,7 +29,7 @@ ms.author: jrasnick
 |**Merges Installed**|The number of merges successfully installed.|  
 |**Total Files Merged**|The total number of source files merged. This count can be used to find the average number of source files in the merge.|  
   
-## See Also  
+## See also  
  [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

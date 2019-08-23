@@ -139,7 +139,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## See Also  
+## See also  
  [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)   
  [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)  
   

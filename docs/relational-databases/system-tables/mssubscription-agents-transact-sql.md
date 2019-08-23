@@ -43,7 +43,7 @@ ms.author: sstein
 |**last_sync_time**|**datetime**|The date and time when the *last_sync_summary* and *last_sync_status* columns were updated. Pull or anonymous distribution agents running as SqlServer Agent Service jobs do not update these columns. The history information instead logs to the job history table in that case.|  
 |**queue_server**|**sysname**|Internal use only.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  

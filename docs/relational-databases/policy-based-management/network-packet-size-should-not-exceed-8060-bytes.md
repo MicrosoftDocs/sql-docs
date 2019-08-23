@@ -23,7 +23,7 @@ ms.author: vanto
 ## For More Information  
  [Microsoft Knowledge Base article 903002](https://go.microsoft.com/fwlink/?linkid=117749)  
   
-## See Also  
+## See also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
     -   [Allow Non-Administrators to Use Replication Monitor](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   
-## See Also  
+## See also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

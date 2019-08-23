@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Scrollable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider rowsets are supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursors. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imposes limitations on cursors that are sensitive to changes made by other users of the database. Specifically, the rows in some cursors cannot be ordered, and trying to create a rowset by using a command that contains an SQL ORDER BY clause can fail. For more information, see [Rowsets and SQL Server Cursors](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## See Also  
+## See also  
  [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

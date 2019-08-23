@@ -60,7 +60,7 @@ Status
 STARTED  
 ```  
   
-## See Also  
+## See also  
  [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)   
  [sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
  [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  

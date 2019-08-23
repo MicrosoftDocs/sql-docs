@@ -100,7 +100,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
    @pktab_catalog = N'AdventureWorks2012';  
 ```  
   
-## See Also  
+## See also  
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   

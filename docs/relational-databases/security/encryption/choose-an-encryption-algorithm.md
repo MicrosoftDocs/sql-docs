@@ -67,7 +67,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Encrypting database files using transparent data encryption.|[Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)|  
 |How to encrypt one column of a table.|[Encrypt a Column of Data](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## See Also  
+## See also  
  [SQL Server Encryption](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Encryption Hierarchy](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

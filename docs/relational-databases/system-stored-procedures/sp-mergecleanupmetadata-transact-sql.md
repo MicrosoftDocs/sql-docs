@@ -111,7 +111,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  To use this stored procedure, the Publisher must be running [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. The Subscribers must be running either [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] or [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, Service Pack 2.  
   
-## See Also  
+## See also  
  [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
  [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
  [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  

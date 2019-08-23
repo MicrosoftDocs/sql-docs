@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Use Date/Time/Datetime/Datetimeoffset Data with Client-Side Conversions Consistent with Existing Conversions  
  The ODBC standard describes how conversions between existing date, time, and timestamp types work. These are extended in a consistent manner to include conversions between all date and time types introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
-## See Also  
+## See also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

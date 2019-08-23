@@ -75,7 +75,7 @@ FROM sys.database_files;
 ```
 For more information when using [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], see [Determining Database Size in Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) on the SQL Customer Advisory Team blog.
   
-## See Also  
+## See also  
  [Databases and Files Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [File States](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

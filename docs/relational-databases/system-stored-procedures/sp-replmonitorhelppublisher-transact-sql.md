@@ -57,7 +57,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor or members of the **db_owner** or **replmonitor** fixed database roles in the distribution database can execute **sp_replmonitorhelppublisher**.  
   
-## See Also  
+## See also  
  [Programmatically Monitor Replication](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

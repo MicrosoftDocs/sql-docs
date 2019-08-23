@@ -32,6 +32,6 @@ This message indicates that the database is in read-only mode. Repairs are not p
 ## User Action  
 Set the database to read-write by using ALTER DATABASE, and then re-run the DBCC command.  
   
-## See Also  
+## See also  
 [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
   

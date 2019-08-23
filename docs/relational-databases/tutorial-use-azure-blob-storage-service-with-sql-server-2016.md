@@ -473,7 +473,7 @@ To delete the resource group, run the following powershell code:
 
 
   
-## See Also
+## See also
 
 [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [File-Snapshot Backups for Database Files in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  

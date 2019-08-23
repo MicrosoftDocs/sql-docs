@@ -39,7 +39,7 @@ ms.author: sstein
 |**isnullable**|**bit**|Indicates whether the column accepts NULL values, where **1** means that NULL values are accepted.|  
 |**iscaptured**|**bit**|Indicates whether a trigger exists on the column, which may exist even if the column in not published in an article. A value of **1** means that the trigger exists on the column.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

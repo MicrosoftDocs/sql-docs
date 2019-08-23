@@ -151,7 +151,7 @@ Replication Monitor provides the **Agents** tab, which includes information abou
     
 
 
-## See Also  
+## See also  
  [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  

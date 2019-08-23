@@ -104,7 +104,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the sp_cdc_generate_wrapper_function stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema's defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
   
-## See Also  
+## See also  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   

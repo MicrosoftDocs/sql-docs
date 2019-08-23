@@ -69,7 +69,7 @@ The **Publisher Properties** dialog box allows you to view and modify properties
  **Add**  
  Click **Add** to add a Subscriber, and then click **Add SQL Server Subscriber** or **Add Non-SQL Server Subscriber**.  
   
-## See Also  
+## See also  
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
 

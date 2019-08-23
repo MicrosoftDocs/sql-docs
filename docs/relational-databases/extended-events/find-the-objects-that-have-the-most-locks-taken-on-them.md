@@ -108,7 +108,7 @@ After the statements in the preceding Transact-SQL script finish, the **Results*
 - object_id
 - lock_count
   
-## See Also
+## See also
 
 [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)  
 [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

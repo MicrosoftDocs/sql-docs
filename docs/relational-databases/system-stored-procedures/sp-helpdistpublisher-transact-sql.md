@@ -66,7 +66,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## Permissions  
  Members of the **sysadmin** fixed server role may execute **sp_helpdistpublisher** for any Publisher using the local server as a Distributor. Members of the **db_owner** fixed database role or the **replmonitor** role in a distribution database may execute **sp_helpdistpublisher** for any Publisher using that distribution database. Users in the publication access list for a publication at the specified *publisher* may execute **sp_helpdistpublisher**. If *publisher* is not specified, information is returned for all Publishers that the user has rights to access.  
   
-## See Also  
+## See also  
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   

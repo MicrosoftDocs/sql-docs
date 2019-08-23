@@ -31,6 +31,6 @@ The following articles discuss the aspects specific to managing enclave-enabled 
 ## Next Steps
 - [Provision enclave-enabled keys](always-encrypted-enclaves-provision-keys.md)
 
-## See Also  
+## See also  
 - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

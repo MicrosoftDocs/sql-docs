@@ -67,7 +67,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## Permissions  
  Only the database owner, members of the **sysadmin** fixed server role, and the **db_owner** fixed database role (if you are changing the current database) can execute this procedure.  
   
-## See Also  
+## See also  
  [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   

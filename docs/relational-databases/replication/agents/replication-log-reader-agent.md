@@ -196,7 +196,7 @@ logread [-?]
 |---------------------|  
 |Added the **-ExtendedEventConfigFile** parameter.|  
   
-## See Also  
+## See also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

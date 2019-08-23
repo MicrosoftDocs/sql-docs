@@ -234,7 +234,7 @@ int main() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [Profiling ODBC Driver Performance](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   

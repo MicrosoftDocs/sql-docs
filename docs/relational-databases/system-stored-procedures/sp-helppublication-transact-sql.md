@@ -114,7 +114,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
  For a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, only members of the sysadmin fixed server role at the Distributor or members of the db_owner fixed database role on the distribution database or users in the PAL can execute sp_helppublication.  
   
-## See Also  
+## See also  
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   

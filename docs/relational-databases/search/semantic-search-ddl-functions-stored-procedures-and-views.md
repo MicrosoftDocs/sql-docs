@@ -68,7 +68,7 @@ ms.custom: "seo-lt-2019"
 |[sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|[Manage and Monitor Semantic Search](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
 |[sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)|[Manage and Monitor Semantic Search](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
   
-## See Also  
+## See also  
  [Manage and Monitor Semantic Search](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

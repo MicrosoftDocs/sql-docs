@@ -66,7 +66,7 @@ The following example uses ALTER INDEX to set several options on the index `AK_S
   
 1.  To add, remove, or change the position of an index column, you must drop and recreate the index.  
   
-## See Also  
+## See also  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   

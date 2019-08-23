@@ -51,7 +51,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Binding Parameters](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
-## See Also  
+## See also  
  [Executing Queries &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

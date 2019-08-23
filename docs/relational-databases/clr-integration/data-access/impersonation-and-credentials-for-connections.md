@@ -69,7 +69,7 @@ catch
   
  Furthermore, if you obtained the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows identity instance, by default you cannot propagate that instance to another computer; Windows security infrastructure restricts that by default. There is, however, a mechanism called "delegation" that enables propagation of Windows identities across multiple trusted computers. You can learn more about delegation in the TechNet article, "[Kerberos Protocol Transition and Constrained Delegation](https://go.microsoft.com/fwlink/?LinkId=50419)".  
   
-## See Also  
+## See also  
  [SqlContext Object](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
   
   

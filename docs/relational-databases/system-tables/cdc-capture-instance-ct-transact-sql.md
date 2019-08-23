@@ -75,7 +75,7 @@ The `__$command_id` column was column was introduced in a cumulative update in v
   
  For insert and delete operations, all the bits in the update mask are set. For update operations, the update mask in both the update old and update new rows will be modified to reflect the columns that changed during update.  
   
-## See Also  
+## See also  
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   

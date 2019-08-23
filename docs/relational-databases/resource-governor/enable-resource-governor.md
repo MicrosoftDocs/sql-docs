@@ -64,7 +64,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Disable Resource Governor](../../relational-databases/resource-governor/disable-resource-governor.md)   
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

@@ -114,7 +114,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|Cumulative amount of time the driver spent processing after SQL_PERF_START, including the time spent waiting for replies from the server.|  
 |msNetworkServerTime|Cumulative amount of time the driver spent waiting for replies from the server.|  
   
-## See Also  
+## See also  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Profiling ODBC Driver Performance How-to Topics &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

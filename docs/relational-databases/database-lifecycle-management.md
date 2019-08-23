@@ -40,7 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  To read the complete topic, see [Database Lifecycle Management (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
-## See Also  
+## See also  
  [Azure Home Page](https://www.windowsazure.com/)   
  [Azure Developer Center](https://www.windowsazure.com/develop/overview/)   
  [Azure Manage Center](https://www.windowsazure.com/manage/overview/)   

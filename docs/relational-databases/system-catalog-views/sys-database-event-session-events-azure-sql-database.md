@@ -42,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |From|To|Relationship|  
 |sys.database_event_session_events.event_session_id|sys.database_event_sessions.event_session_id|Many to one|  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)  
   
   

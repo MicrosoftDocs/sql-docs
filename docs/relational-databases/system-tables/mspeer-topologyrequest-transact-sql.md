@@ -29,7 +29,7 @@ ms.author: sstein
 |publication|**sysname**|Name of the publication from which the topology status request originated.|  
 |sent_date|**datetime**|Date and time that the topology status request was initiated.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

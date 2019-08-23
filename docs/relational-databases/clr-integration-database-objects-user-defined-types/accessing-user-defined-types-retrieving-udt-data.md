@@ -450,7 +450,7 @@ static void Main()
 }  
 ```  
   
-## See Also  
+## See also  
  [Accessing User-Defined Types in ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

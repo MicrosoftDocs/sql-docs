@@ -21,7 +21,7 @@ ms.author: "jroth"
 ## Parameter Collation  
  When you create a common language runtime (CLR) routine, and a parameter of a CLR method bound to the routine is of type **SQLString**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates an instance of the parameter with the default collation of the database containing the calling routine. If a parameter is not a **SqlType** (for example, **String** rather than **SQLString**), the collation information from the database is not associated with the parameter.  
   
-## See Also  
+## See also  
  [SQL Server Data Types in the .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

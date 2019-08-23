@@ -87,7 +87,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 { CALL [MyDB].[MyOwner].[My.Table] }  
 ```  
   
-## See Also  
+## See also  
  [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

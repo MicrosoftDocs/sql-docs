@@ -94,7 +94,7 @@ Every login belongs to the `public` fixed server role, and every database user b
   
 -   [Application Roles](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## See Also  
+## See also  
  [Securing SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

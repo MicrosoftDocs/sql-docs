@@ -211,7 +211,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
  [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Security and Protection](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Provides up-to-date information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] security.  
   
-## See Also  
+## See also  
  [SQL Server Audit Action Groups and Actions](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [SQL Server Audit Records](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   

@@ -42,7 +42,7 @@ ms.author: sstein
 |**active_start_date**|**int**|The date when the Distribution Agent will first be scheduled, formatted as YYYYMMDD.|  
 |**active_end_date**|**int**|The date when the Distribution Agent will stop being scheduled, formatted as YYYYMMDD.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

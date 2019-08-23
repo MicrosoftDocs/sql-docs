@@ -45,7 +45,7 @@ ms.author: sstein
 ## Remarks  
  The sys.dm_cryptographic_provider_properties view is visible to the public.  
   
-## See Also  
+## See also  
  [Security Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   

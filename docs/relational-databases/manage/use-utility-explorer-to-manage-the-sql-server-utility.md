@@ -59,7 +59,7 @@ ms.author: mikeray
   
  Powershell does not have F1 help, but it does include a **Get-Help** cmdlet that provides information about using Powershell. For more information about using Get-Help, see [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-## See Also  
+## See also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configure Health Policies &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
  [Object Explorer](../../ssms/object/object-explorer.md)  

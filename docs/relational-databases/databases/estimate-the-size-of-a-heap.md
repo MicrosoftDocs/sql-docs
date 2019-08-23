@@ -101,7 +101,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
      For information about the space requirements of sparse columns, see [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## See Also  
+## See also  
  [Heaps &#40;Tables without Clustered Indexes&#41;](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md)   
  [Clustered and Nonclustered Indexes Described](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Create Clustered Indexes](../../relational-databases/indexes/create-clustered-indexes.md)   

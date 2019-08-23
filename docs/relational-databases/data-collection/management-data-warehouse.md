@@ -119,7 +119,7 @@ ms.author: mathoma
 |Added the core.performance_counter_report_group_items table to the "Core schema" section.|  
 |Updated the list of tables in the "Snapshots schema" section. Added snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory, and snapshots.io_virtual_file_stats. Removedsnapshots.os_process_memory and snapshots.distinct_query_stats.|  
   
-## See Also  
+## See also  
  [Management Data Warehouse Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   

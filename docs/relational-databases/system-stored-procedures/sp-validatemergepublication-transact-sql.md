@@ -53,7 +53,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_validatemergepublication**.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  

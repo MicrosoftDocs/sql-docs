@@ -42,7 +42,7 @@ ms.author: "jroth"
 |**compressed**|**bit**|Always returns 0. This indicates that the procedure is compressed.|  
 |**text**|**nvarchar(4000)**|Actual text of the SQL definition statement.<br /><br /> The semantics of the decoded expression are equivalent to the original text; however, there are no syntactic guarantees. For example, white spaces are removed from the decoded expression.<br /><br /> This [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-compatible view obtains information from current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] structures and can return more characters than the **nvarchar(4000)** definition. **sp_help** returns **nvarchar(4000)** as the data type of the text column. When working with **syscomments** consider using **nvarchar(max)**. For new development work, do not use **syscomments**.|  
   
-## See Also  
+## See also  
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

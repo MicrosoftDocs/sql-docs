@@ -33,7 +33,7 @@ ms.author: sstein
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifies the logical record to which a deleted row belongs.|  
 |**logical_record_lineage**|**Varbinary(501)**|The subscriber nickname, version number pairs that are used to maintain a history of deletes for the logical record to which this row belongs.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

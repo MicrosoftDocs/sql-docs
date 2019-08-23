@@ -55,7 +55,7 @@ Processing results in an ODBC application involves first determining the charact
 > [!NOTE]  
 >  To cancel processing a result set before [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) returns SQL_NO_DATA, call [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
-## See Also  
+## See also  
 [Retrieve Result Set Information &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

@@ -24,7 +24,7 @@ ms.author: jrasnick
 |----------|-----------------|  
 |**SQL Server Restarted**|The number of times the Microsoft SQL Server has been successfully restarted by SQL Server Agent since the last time that SQL Server Agent started.|  
   
-## See Also  
+## See also  
  [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

@@ -433,7 +433,7 @@ COMMIT TRAN
   
 -   When a client queries for changes, record the last synchronization version number for each client on the server. If there is a problem with the data, the last synchronized version numbers would not match. This indicates that a reinitialization is required.  
   
-## See Also  
+## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [About Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Manage Change Tracking &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   

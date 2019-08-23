@@ -172,7 +172,7 @@ ms.author: genemi
 
 - XML elements can be nested up to 128 levels.
   
-## See Also  
+## See also  
  [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

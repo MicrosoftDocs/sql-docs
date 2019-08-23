@@ -47,7 +47,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## See Also  
+## See also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md)  

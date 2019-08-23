@@ -61,7 +61,7 @@ ms.author: vanto
  **Password**  
  Enter the password for the login. This option is editable only if you have selected to connect by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
-## See Also  
+## See also  
  [Policy Management Node &#40;Object Explorer&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

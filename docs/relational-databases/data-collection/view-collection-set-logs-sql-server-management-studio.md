@@ -36,7 +36,7 @@ ms.custom: "seo-lt-2019"
   
      The **Log File Viewer** opens, displaying only the log file for the collection set that you selected.  
   
-## See Also  
+## See also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
  [Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md)  
   

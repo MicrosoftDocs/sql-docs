@@ -42,7 +42,7 @@ The following example uses the method `STGeometryN()` to retrieve a description 
 SELECT @g.STGeometryN(1).STAsText();  
 ```  
   
-## See Also  
+## See also  
  [Point](../../relational-databases/spatial/point.md)   
  [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   

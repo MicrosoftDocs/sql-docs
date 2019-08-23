@@ -23,7 +23,7 @@ Session options are fixed in atomic blocks, as described in [Atomic Blocks](atom
   
  **SET FMTONLY** in not supported with natively compiled stored procedures. Use [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) instead.  
   
-## See Also  
+## See also  
  [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

@@ -89,7 +89,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_articlefilter**.  
   
-## See Also  
+## See also  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Define and Modify a Static Row Filter](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

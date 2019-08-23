@@ -45,7 +45,7 @@ sp_execute handle OUTPUT
 > [!NOTE]  
 >  *bound_param* must match the declarations made by the sp_prepare*params* value and can be in the form *@name = value* or *value*.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)  
   

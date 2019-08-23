@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The cursor library allows applications to use multiple active statements on a connection, as well as scrollable, updatable cursors. The cursor library must be loaded to support this functionality. Use [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) to specify how the cursor library should be used and [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) to specify the cursor type, concurrency, and rowset size.  
   
-## See Also  
+## See also  
  [How Cursors Are Implemented](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
   

@@ -61,7 +61,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## Permissions  
  Members of the **db_owner** fixed database role or the **replmonitor** role in a distribution database and users in the publication access list of a publication using the distribution database can execute **sp_helpdistributiondb** to return file-related information. Members of the **public** role can execute **sp_helpdistributiondb** to return non-file-related information for distribution databases to which they have access.  
   
-## See Also  
+## See also  
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   

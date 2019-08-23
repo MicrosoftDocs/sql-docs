@@ -28,7 +28,7 @@ ms.author: "mathoma"
   
 3.  Repeat steps 1 and 2 at the Subscriber to clean up metadata on the subscription database.  
   
-## See Also  
+## See also  
  [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

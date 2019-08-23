@@ -43,7 +43,7 @@ ms.author: "mathoma"
 |HREPL_Article_I_J|View|View created for each published table, used to query the published table.|  
 |HREPL_Log_I_J_K|View|View created for each published table, used to query the change tracking table.|  
   
-## See Also  
+## See also  
  [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glossary of Terms for Oracle Publishing](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  

@@ -28,5 +28,5 @@ This table describes the **SQL Server XTP IO Governor** counters.
 |**Total Rate Objects Published**|Total number of Rate objects published.|
  
 
-## See Also  
+## See also  
 [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

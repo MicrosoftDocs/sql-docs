@@ -58,7 +58,7 @@ ms.author: sstein
 |subscriber_number|**int**|Internal use only.|  
 |last_makegeneration_datetime|**datetime**|The last **datetime** that the makegeneration process ran for the Publisher. For more information, see the -MakeGenerationInterval parameter in [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -75,7 +75,7 @@ END;
 |Describes how to return information about logon triggers.|[sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)<br /><br /> [sys.server_trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql.md)|  
 |Describes how to capture logon trigger event data.||  
   
-## See Also  
+## See also  
  [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)  
   
   

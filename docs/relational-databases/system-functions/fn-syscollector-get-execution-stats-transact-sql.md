@@ -55,7 +55,7 @@ fn_syscollector_get_execution_stats ( log_id )
 ## Permissions  
  Requires SELECT for **dc_operator**.  
   
-## See Also  
+## See also  
  [syscollector_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   

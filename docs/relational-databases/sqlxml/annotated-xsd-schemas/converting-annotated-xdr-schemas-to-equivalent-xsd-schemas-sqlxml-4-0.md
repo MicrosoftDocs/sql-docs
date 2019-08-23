@@ -51,7 +51,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  -?  
  Returns a list of options that you can specify with **cvtschema**, along with an explanation.  
   
-## See Also  
+## See also  
  [Mapping XSD Data Types to XPath Data Types &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
  [XSD Annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   

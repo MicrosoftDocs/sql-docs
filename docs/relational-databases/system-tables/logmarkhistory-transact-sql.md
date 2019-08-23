@@ -33,7 +33,7 @@ ms.author: "sstein"
 |**lsn**|**numeric(25,0)**|Log sequence number of transaction record where mark occurred.|  
 |**mark_time**|**datetime**|Commit time of marked transaction (local time).|  
   
-## See Also  
+## See also  
  [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
  [Use Marked Transactions to Recover Related Databases Consistently &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

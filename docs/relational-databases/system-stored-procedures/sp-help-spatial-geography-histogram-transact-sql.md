@@ -75,7 +75,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  
 ```  
   
-## See Also  
+## See also  
  [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

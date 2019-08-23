@@ -53,7 +53,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## Permissions  
  Only members of the **sysadmin** fixed server role and the **db_owner** fixed database role can execute **sp_enumcustomresolvers**.  
   
-## See Also  
+## See also  
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Implement a Custom Conflict Resolver for a Merge Article](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   

@@ -200,7 +200,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
   
-## See Also  
+## See also  
  [Specify Parameters](../../relational-databases/stored-procedures/specify-parameters.md)   
  [Configure the scan for startup procs Server Configuration Option](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

@@ -31,7 +31,7 @@ ms.author: sstein
 |**using_partition_groups**|**bit**|Indicates whether the partition belongs to a publication that uses precomputed partitions, and can be one of these values:<br /><br /> **0** = publication does not use precomputed partitions.<br /><br /> **1** = publication uses precomputed partitions<br /><br /> For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |**HOST_NAME_FN**|**nvarchar(128)**|The value supplied when using parameterized row filters to generate partitions. For more information, see [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

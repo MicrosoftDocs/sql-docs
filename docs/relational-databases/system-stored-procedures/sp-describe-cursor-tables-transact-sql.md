@@ -123,7 +123,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Cursors](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Confirm Password**  
  Re-enter the password to confirm it was entered correctly.  
   
-## See Also  
+## See also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   

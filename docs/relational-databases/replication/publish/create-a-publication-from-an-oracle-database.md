@@ -136,7 +136,7 @@ ms.author: "mathoma"
   
 6.  At the Distributor on the distribution database, execute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Specify the publication name used in step 4 for **\@publication** and the Windows credentials under which the Snapshot Agent runs for **\@job_name** and **\@password**. To use Oracle Standard Authentication when connecting to the Publisher, you must also specify a value of **0** for **\@publisher_security_mode** and the Oracle login information for **\@publisher_login** and **\@publisher_password**. This creates a Snapshot Agent job for the publication.  
   
-## See Also  
+## See also  
  [Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Configure the Transaction Set Job for an Oracle Publisher &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   

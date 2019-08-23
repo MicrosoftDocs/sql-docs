@@ -49,6 +49,6 @@ A dirty page is written to disk in one of three ways:
 
 The lazy writing, eager writing, and checkpoint processes do not wait for the I/O operation to complete. They always use asynchronous (or overlapped) I/O and continue with other work, checking for I/O success later. This allows SQL Server to maximize both CPU and I/O resources for the appropriate tasks.
 
-## See Also
+## See also
 [Pages and Extents Architecture Guide](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Reading Pages](../relational-databases/reading-pages.md)

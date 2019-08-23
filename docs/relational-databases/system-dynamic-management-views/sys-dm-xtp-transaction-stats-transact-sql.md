@@ -62,7 +62,7 @@ ms.author: sstein
 ## Permissions  
  Requires VIEW SERVER STATE permission on the server.  
   
-## See Also  
+## See also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

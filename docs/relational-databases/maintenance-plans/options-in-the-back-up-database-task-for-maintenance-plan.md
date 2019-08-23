@@ -128,7 +128,7 @@ ms.author: mikeray
  **Password**  
  Provide a password to use when authenticating. This option is not available.  
   
-## See Also  
+## See also  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   

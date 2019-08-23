@@ -21,7 +21,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 > [!NOTE]  
 >  Subscription type cannot be changed after a subscription is created.  
   
-## See Also  
+## See also  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  

@@ -32,7 +32,7 @@ ms.author: sstein
 |**revision**|**int**|Internal use only.|  
 |**install_failures**|**int**|Internal use only.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

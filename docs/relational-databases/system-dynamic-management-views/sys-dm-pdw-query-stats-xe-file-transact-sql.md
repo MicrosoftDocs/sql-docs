@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |data|**xml**|||  
 |pdw_node_id|**int**|Node on which this Xevent instance is running.||  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

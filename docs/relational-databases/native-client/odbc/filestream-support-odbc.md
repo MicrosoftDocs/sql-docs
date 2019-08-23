@@ -260,7 +260,7 @@ return r;
 }  
 ```  
   
-## See Also  
+## See also  
  [SQL Server Native Client Programming](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

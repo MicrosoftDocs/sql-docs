@@ -38,7 +38,7 @@ ms.author: "mathoma"
   
 -   Limit the number of events returned. With [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] you can limit the number of events returned by saving the trace to a table and setting the maximum number of rows. Trace results are still returned to the [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] screen after the maximum number of rows has been reached, but the cost of recording the results to a table is eliminated.  
   
-## See Also  
+## See also  
  [Filter a Trace](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

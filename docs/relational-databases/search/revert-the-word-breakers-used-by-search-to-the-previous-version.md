@@ -372,7 +372,7 @@ ms.custom: "seo-lt-2019"
 |Current CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Current file name|MsWb70804.dll|  
   
-## See Also  
+## See also  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search)
  

@@ -252,7 +252,7 @@ ms.author: "sstein"
   
 5.  Delete the `tempdb.mdf` and `templog.ldf` files from the original location.  
   
-## See Also  
+## See also  
  [Resource Database](../../relational-databases/databases/resource-database.md)   
  [tempdb Database](../../relational-databases/databases/tempdb-database.md)   
  [master Database](../../relational-databases/databases/master-database.md)   

@@ -41,7 +41,7 @@ ms.author: "sstein"
 ## Remarks  
  Multiple secondary databases on the same secondary server for a given primary database share some settings in the **log_shipping_secondary** table. If a shared setting is altered for one of them, the setting is altered for all of them.  
   
-## See Also  
+## See also  
  [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   

@@ -21,7 +21,7 @@ ms.author: "mathoma"
 ## Breaking Changes Made in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] does not support replication to or from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## See Also  
+## See also  
  [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)  
   
   

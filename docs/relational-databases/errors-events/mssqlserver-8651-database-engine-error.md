@@ -66,7 +66,7 @@ Run the following DBCC commands to free several [!INCLUDE[ssNoVersion](../../inc
   
 If the problem continues, you will need to investigate further and possibly reduce workload.  
   
-## See Also  
+## See also  
 [DBCC FREESYSTEMCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)  
 [DBCC FREESESSIONCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)  
 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)  

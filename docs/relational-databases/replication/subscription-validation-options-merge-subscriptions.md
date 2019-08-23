@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
  **Verify the row counts and compare checksums to verify the row data**  
  In addition to taking a count of rows at the Publisher and Subscriber, a checksum of all the data is calculated using the binary checksum algorithm. If the row count fails, the checksum is not performed. This option is not valid for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## See Also  
+## See also  
  [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

@@ -384,7 +384,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## See Also
+## See also
 
  [SQLSetConnectAttr Function](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   

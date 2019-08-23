@@ -35,6 +35,6 @@ The most likely cause is that an add-file operation completed on the principal d
 ## User Action  
 Look in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log for the cause of this error. Try to resolve the cause and resume mirroring on the database.  
   
-## See Also  
+## See also  
 [Troubleshoot Database Mirroring Configuration &#40;SQL Server&#41;](~/database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   

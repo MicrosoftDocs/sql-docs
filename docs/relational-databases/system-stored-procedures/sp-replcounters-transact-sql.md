@@ -48,7 +48,7 @@ sp_replcounters
 ## Permissions  
  Requires membership in the **db_owner** fixed database role or **sysadmin** fixed server role.  
   
-## See Also  
+## See also  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   

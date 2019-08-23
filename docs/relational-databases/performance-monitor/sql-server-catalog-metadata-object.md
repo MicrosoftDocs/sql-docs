@@ -29,5 +29,5 @@ This following table describes the SQL Server **Catalog Metadata** performance o
 
 There is one instance of the counter for each database.
 
-## See Also  
+## See also  
 [Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

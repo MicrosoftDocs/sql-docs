@@ -218,6 +218,6 @@ Consult the documentation for your HSM and CSP for how to configure the CSP on a
 - [Provision Always Encrypted keys using SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Provision Always Encrypted keys using PowerShell](configure-always-encrypted-keys-using-powershell.md)
   
-## See Also 
+## See also 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Overview of key management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

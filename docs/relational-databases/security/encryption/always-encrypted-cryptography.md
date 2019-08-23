@@ -171,7 +171,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## .NET Reference  
  For details about the algorithms, discussed in this document, see the **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs**, and **SqlColumnEncryptionCertificateStoreProvider.cs** files in the [.NET Reference](https://referencesource.microsoft.com/).  
   
-## See Also  
+## See also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Develop applications using Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

@@ -266,7 +266,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   To grant a permission to a login, see [Grant a Permission to a Principal](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
-## See Also  
+## See also  
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

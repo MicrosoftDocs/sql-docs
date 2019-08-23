@@ -33,7 +33,7 @@ ms.author: "carlrab"
   
 -   Enable and disable the IP address.  
   
-## See Also  
+## See also  
  [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

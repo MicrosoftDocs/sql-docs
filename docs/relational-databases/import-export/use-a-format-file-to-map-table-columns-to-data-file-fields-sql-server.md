@@ -242,7 +242,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 
   
-## See Also  
+## See also  
 [bcp Utility](../../tools/bcp-utility.md)   
  [Use a Format File to Skip a Table Column &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Use a Format File to Skip a Data Field &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  

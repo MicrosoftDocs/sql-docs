@@ -31,7 +31,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
 |**current_utc_offset**|**nvarchar(12)**|Current offset to UTC. For example, **+01:00** or **-07:00**.|  
 |**is_currently_dst**|**bit**|True if currently observing daylight savings time.|  
   
-## See Also  
+## See also  
  [GETUTCDATE &#40;Transact-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   

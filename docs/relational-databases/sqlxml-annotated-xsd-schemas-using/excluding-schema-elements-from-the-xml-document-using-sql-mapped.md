@@ -99,7 +99,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  Note that the ContactID, FirstName, and LastName are present, but HomeAddress is not because the mapping schema specified 0 for the **sql:mapped** attribute.  
   
-## See Also  
+## See also  
  [Default Mapping of XSD Elements and Attributes to Tables and Columns &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

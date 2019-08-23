@@ -33,7 +33,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |[Unprepare SQL Event Class](../../relational-databases/event-classes/unprepare-sql-event-class.md)|Indicates that the SqlClient, ODBC, OLE DB, or DB-Library has deleted a prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statements.|  
 |[XQuery Static Type Event Class](../../relational-databases/event-classes/xquery-static-type-event-class.md)|Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an XQuery expression.|  
   
-## See Also  
+## See also  
  [Transact-SQL Reference &#40;Database Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

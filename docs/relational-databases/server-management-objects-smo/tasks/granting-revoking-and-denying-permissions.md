@@ -249,7 +249,7 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## See Also  
+## See also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   [Commands Generating Multiple-Rowset Results](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## See Also  
+## See also  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

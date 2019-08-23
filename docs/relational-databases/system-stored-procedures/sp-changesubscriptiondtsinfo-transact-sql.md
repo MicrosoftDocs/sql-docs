@@ -58,7 +58,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role, **db_owner** fixed database role, or the creator of the subscription can execute **sp_changesubscriptiondtsinfo**.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

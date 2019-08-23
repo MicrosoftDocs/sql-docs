@@ -34,7 +34,7 @@ ms.author: "mathoma"
   
 -   Use a business logic handler to respond to many conditions during synchronization. These include data changes, conflicts, and errors. For more information, see [Execute Business Logic During Merge Synchronization](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
   
-## See Also  
+## See also  
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

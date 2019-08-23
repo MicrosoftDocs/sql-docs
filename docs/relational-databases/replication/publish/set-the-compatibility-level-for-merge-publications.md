@@ -123,7 +123,7 @@ GO
   
 ```  
   
-## See Also  
+## See also  
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

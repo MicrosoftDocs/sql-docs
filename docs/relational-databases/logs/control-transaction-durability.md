@@ -200,7 +200,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shutdown and restart    
  For delayed durability, there is no difference between an unexpected shutdown and an expected shutdown/restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Like catastrophic events, you should plan for data loss. In a planned shutdown/restart some transactions that have not been written to disk may first be saved to disk, but you should not plan on it. Plan as though a shutdown/restart, whether planned or unplanned, loses the data the same as a catastrophic event.    
     
-## See Also    
+## See also    
  [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   

@@ -170,7 +170,7 @@ Thread.EndThreadAffinity();
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also disallows calls to .NET Framework APIs that are annotated with the **SharedState**, **Synchronization**, and **ExternalProcessMgmt** host protection attributes. This prevents SAFE and EXTERNAL_ACCESS assemblies from calling any APIs that enable sharing state, performing synchronization, and affecting the integrity of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information, see [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
-## See Also  
+## See also  
  [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

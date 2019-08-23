@@ -35,7 +35,7 @@ SELECT * FROM sys.dm_column_encryption_enclave;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Configure the enclave type for Always Encrypted Server Configuration Option](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
   
   

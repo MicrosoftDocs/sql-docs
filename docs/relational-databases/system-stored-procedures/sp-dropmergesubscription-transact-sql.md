@@ -74,7 +74,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_dropmergesubscription**.  
   
-## See Also  
+## See also  
  [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

@@ -37,7 +37,7 @@ ms.author: jrasnick
 |**Total Log requiring undo**|Total kilobytes of log that must be undone.|Secondary replica|  
 |**Transaction Delay**|Delay in waiting for unterminated commit acknowledgment for all the current transactions, in milliseconds. Divide by *Mirrored Write Transaction/sec* to get *Avg Transaction Delay*. For more information, see [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/)|Primary replica|  
   
-## See Also
+## See also
   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Availability Replica](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   

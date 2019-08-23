@@ -46,7 +46,7 @@ ms.author: "jroth"
 |---------------------|  
 |Updated the description of the **Accumulate** method; it now accepts more than one parameter.|  
   
-## See Also  
+## See also  
  [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
  [Invoking CLR User-Defined Aggregate Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)  
   

@@ -61,6 +61,6 @@ Expect the following good result:
 <MyTable Col1="1" Col2="Bw==" />
 ```
 
-## See Also
+## See also
 
 [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)

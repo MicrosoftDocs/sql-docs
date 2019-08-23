@@ -71,7 +71,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 |12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Dialog Created** event when [!INCLUDE[ssSB](../../includes/sssb-md.md)] creates an endpoint for a dialog. [!INCLUDE[ssSB](../../includes/sssb-md.md)] creates an endpoint whenever a new dialog is established, regardless of whether the current database is the initiator or the target of the dialog.|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates an END CONVERSATION WITH CLEANUP event when the [!INCLUDE[ssDE](../../includes/ssde-md.md)] executes an END CONVERSATION statement that includes the WITH CLEANUP clause.|  
   
-## See Also  
+## See also  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

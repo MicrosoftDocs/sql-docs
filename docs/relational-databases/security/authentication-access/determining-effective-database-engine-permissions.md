@@ -147,7 +147,7 @@ REVERT;
 ```
 For the details of the syntax, see [HAS_PERMS_BY_NAME](../../../t-sql/functions/has-perms-by-name-transact-sql.md).
 
-## See Also:
+## See also:
 
 [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
 [Tutorial: Getting Started with Database Engine](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 

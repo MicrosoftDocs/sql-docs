@@ -53,7 +53,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo will include the new data source initialization properties SSPROP_INIT_SERVERSPN and SSPROP_INIT_FAILOVERPARTNERSPN, or the new data source properties SSPROP_AUTHENTICATION_METHOD and SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::SetProperties|IDBProperties::SetProperties can be called to set the values of the new data source initialization properties SSPROP_INITSERVERSPN and SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> These properties can be set at any time, but if the data source is already open, the following error will be returned: DB_E_ERRORSOCCURRED, "Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done."|  
   
-## See Also  
+## See also  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

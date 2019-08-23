@@ -37,7 +37,7 @@ ms.author: "jroth"
 |**description**|**nvarchar(255)**|Explanation of the error with placeholders for parameters.|  
 |**msglangid**|**smallint**|System message group ID.|  
   
-## See Also  
+## See also  
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

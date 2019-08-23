@@ -87,7 +87,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 3.  Execute the application (`https://server/GetSalesOrderInfo.aspx`).  
   
-## See Also  
+## See also  
  [Use Nested FOR XML Queries](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

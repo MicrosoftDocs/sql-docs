@@ -151,5 +151,5 @@ Your application will connect to the **ContosoHR** database from [Tutorial: Gett
     ```
 2. Build and run the application.  
 
-## See Also
+## See also
 - [Using Always Encrypted with the .NET Framework Data Provider for SQL Server](encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)

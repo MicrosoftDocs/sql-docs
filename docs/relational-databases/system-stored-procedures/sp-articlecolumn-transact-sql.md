@@ -97,7 +97,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_articlecolumn**.  
   
-## See Also  
+## See also  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Define and Modify a Column Filter](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md)   

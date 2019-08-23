@@ -44,7 +44,7 @@ The following tools can be used to monitor replication:
 -   **System Monitor** - can be useful for monitoring performance, providing a number of counters for replication. For more information, see [Monitoring Replication with System Monitor](../../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).  
   
 
-## See Also  
+## See also  
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
 
   

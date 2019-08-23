@@ -70,7 +70,7 @@ ms.reviewer: ""
  **Password**  
  Provide a password to use when authenticating. This option is not available.  
   
-## See Also  
+## See also  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

@@ -92,7 +92,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## Example  
  [!code-sql[HowTo#sp_helpmergearticle](../../relational-databases/replication/codesnippet/tsql/sp-helpmergearticle-tran_1.sql)]  
   
-## See Also  
+## See also  
  [View and Modify Article Properties](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   

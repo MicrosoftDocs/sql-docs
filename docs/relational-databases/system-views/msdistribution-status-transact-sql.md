@@ -30,7 +30,7 @@ ms.author: "sstein"
 |**UndelivCmdsInDistDB**|**int**|The number of commands pending delivery to Subscribers.|  
 |**DelivCmdsInDistDB**|**int**|The number of commands delivered to Subscribers.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

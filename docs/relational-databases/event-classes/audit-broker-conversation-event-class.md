@@ -52,7 +52,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |3|Invalid Signature|Broker could not verify the message signature supplied by the sender using the public key in the sender's certificate. This may indicate that the message is corrupt, that the message has been tampered with, that the remote service and the local service are not configured with the same user certificate, or that the certificate is out of date.|  
 |4|Run As Target Failure|The destination user does not have receive permissions on the destination queue. To prevent unauthorized users from receiving messages, Service Broker does not enqueue messages with a destination user that cannot receive from the queue, regardless of whether the initiating user has permission to enqueue messages.|  
   
-## See Also  
+## See also  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

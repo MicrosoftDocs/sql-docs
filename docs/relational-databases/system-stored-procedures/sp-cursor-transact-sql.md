@@ -167,7 +167,7 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  It is possible to submit one parameter as a named parameter, i.e. "`@VALUES`". In this case no other named parameters may be used.  
   
-## See Also  
+## See also  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

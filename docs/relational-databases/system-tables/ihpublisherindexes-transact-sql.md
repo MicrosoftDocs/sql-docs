@@ -31,7 +31,7 @@ ms.author: sstein
 |**name**|**sysname**|The name of the published index.|  
 |**type**|**nvarchar(255)**|A supported index type from the [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) system table.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

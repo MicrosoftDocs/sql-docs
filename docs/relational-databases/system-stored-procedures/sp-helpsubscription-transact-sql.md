@@ -103,7 +103,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## Permissions  
  Execute permissions default to the **public** role. Users are only returned information for subscriptions that they created. Information on all subscriptions is returned to members of the **sysadmin** fixed server role at the Publisher or members of the **db_owner** fixed database role on the publication database.  
   
-## See Also  
+## See also  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

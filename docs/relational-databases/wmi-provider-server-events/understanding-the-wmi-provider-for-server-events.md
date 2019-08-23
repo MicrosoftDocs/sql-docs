@@ -57,7 +57,7 @@ GO
   
  For an example of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent management application that uses the WMI Provider for Server Events, see [Sample: Creating a SQL Server Agent Alert Using the WMI Provider for Server Events](https://technet.microsoft.com/library/ms186385.aspx). For an example of a management application that uses the WMI Provider for Server Events in managed code, see [Sample: Using the WMI Event Provider in Managed Code](https://technet.microsoft.com/library/ms179315.aspx). More information is also available about WMI in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
-## See Also  
+## See also  
  [WMI Provider for Server Events Concepts](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

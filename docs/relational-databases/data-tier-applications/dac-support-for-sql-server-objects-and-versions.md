@@ -118,7 +118,7 @@ ms.author: "sstein"
   
 -   **Workarounds** - Extract and export operations will write full-fidelity BCP data files into the .dacpac or .bacpac files. To avoid limitations, use the SQL Server BCP.exe command line utility to deploy full-fidelity data to a target database from a DAC package.  
   
-## See Also  
+## See also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

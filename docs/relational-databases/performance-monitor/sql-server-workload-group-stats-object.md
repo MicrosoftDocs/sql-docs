@@ -40,7 +40,7 @@ ms.author: jrasnick
 |**Requests completed/sec**|The number of requests that have completed in this workload group. This number is cumulative.|  
 |**Suboptimal plans/sec**|The number of suboptimal plans that are generated in this workload group per second.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Resource Pool Stats Object](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  

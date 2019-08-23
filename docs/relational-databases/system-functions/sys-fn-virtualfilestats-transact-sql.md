@@ -95,7 +95,7 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## See Also  
+## See also  
  [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

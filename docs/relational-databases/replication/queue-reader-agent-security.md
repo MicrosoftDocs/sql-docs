@@ -28,7 +28,7 @@ ms.author: "mathoma"
  **Password** and **Confirm password**  
  Enter the password for the Windows account.  
   
-## See Also  
+## See also  
  [Identity and access control for replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   

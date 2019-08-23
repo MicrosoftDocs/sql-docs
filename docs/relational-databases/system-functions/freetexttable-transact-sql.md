@@ -158,7 +158,7 @@ GO
 > [!NOTE]
 >  The LANGUAGE *language_term* parameter is not required to use the *top_n_by_rank* parameter.  
   
-## See Also  
+## See also  
  [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   

@@ -217,7 +217,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_addsubscriber**.  
   
-## See Also  
+## See also  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   

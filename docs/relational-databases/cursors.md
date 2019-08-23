@@ -126,7 +126,7 @@ If neither a [!INCLUDE[tsql](../includes/tsql-md.md)] nor API cursor has been re
 [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)    
 [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## See Also  
+## See also  
 [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
 [Cursors &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
 [Cursor Functions &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

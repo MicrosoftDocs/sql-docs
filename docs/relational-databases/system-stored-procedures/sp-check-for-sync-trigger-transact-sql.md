@@ -83,7 +83,7 @@ RETURN
 ## Permissions  
  **sp_check_for_sync_trigger** stored procedure can be executed by any user with SELECT permissions in the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) system view.  
   
-## See Also  
+## See also  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

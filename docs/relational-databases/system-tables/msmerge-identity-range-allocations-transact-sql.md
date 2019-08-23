@@ -40,7 +40,7 @@ ms.author: sstein
 |**max_used**|**numeric(38)**|The highest identity value used.|  
 |**time_of_allocation**|**datetime**|The time when the assignment was made.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

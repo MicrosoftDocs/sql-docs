@@ -26,7 +26,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 |Tables referenced by views are required.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that all tables referenced by views and indexed views that are published be available at the Subscriber. If the referenced tables are not published as articles in this publication, they must be created at the Subscriber manually.|Use the **Back** button to navigate to the **Articles** page. Add any required objects.|  
 |Objects referenced by stored procedures are required.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires that all objects referenced by published stored procedures, such as tables and user-defined functions, be available at the Subscriber. If the referenced objects are not published as articles in this publication, they must be created at the Subscriber manually.|Use the **Back** button to navigate to the **Articles** page. Add any required objects.|  
   
-## See Also  
+## See also  
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   

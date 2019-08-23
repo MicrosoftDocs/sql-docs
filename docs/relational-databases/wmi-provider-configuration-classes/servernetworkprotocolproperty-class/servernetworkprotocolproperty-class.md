@@ -35,7 +35,7 @@ ms.author: "carlrab"
   
 -   Set flags for the current property.  
   
-## See Also  
+## See also  
  [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

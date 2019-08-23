@@ -34,7 +34,7 @@ ms.author: sstein
 |**object_id**|**int**|Object ID of the system-defined object related to a FileTable.<br /><br /> References the object in **sys.objects**.|  
 |**parent_object_id**|**int**|Object ID of the parent FileTable.<br /><br /> References the object in **sys.objects**.|  
   
-## See Also  
+## See also  
  [Create, Alter, and Drop FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Manage FileTables](../../relational-databases/blob/manage-filetables.md)  
   

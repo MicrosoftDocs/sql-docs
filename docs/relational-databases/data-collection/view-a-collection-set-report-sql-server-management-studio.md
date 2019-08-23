@@ -48,7 +48,7 @@ ms.author: mathoma
  **Duration**  
  Specify the time range to include in the report. The default value is 240 minutes. The possible values to select from are 15 minutes, 60 minutes, 240 minutes (4 hours), 720 minutes (12 hours), and 1440 minutes (24 hours).  
   
-## See Also  
+## See also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
  [Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)   
  [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  

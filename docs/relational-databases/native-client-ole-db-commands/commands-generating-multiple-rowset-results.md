@@ -45,7 +45,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [Using IMultipleResults to Process Multiple Result Sets](../../relational-databases/native-client-ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## See Also  
+## See also  
  [Commands](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

@@ -60,7 +60,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## Permissions  
  Execute permissions default to the **public** role.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

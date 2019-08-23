@@ -39,7 +39,7 @@ ms.author: jrasnick
 |**Extended Stored Procedures**|Catalog information for extended stores procedures.|  
 |**Temporary Tables & Table Variables**|Cache information related to temporary tables and table variables.|  
   
-## See Also  
+## See also  
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, Buffer Manager Object](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

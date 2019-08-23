@@ -91,7 +91,7 @@ AND    si.object_id=object_id('T')
   
  This query returns the column name on which the specified XML index is created.  
   
-## See Also  
+## See also  
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

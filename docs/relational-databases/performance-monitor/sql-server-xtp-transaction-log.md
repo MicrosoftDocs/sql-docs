@@ -23,7 +23,7 @@ ms.author: jrasnick
 |**Log bytes written/sec**|The number of bytes written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log by the In-Memory OLTP engine (on average), per second.|  
 |**Log records written/sec**|The number of records written to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transaction log by the In-Memory OLTP engine (on average), per second.|  
   
-## See Also  
+## See also  
  [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

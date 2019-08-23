@@ -44,7 +44,7 @@ ms.author: "sstein"
 |**schema_option**|**binary**|Indicates what is to be scripted out. See [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) for a list of supported schema options.|  
 |**dest_owner**|**sysname**|The owner of the published object at the destination database.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

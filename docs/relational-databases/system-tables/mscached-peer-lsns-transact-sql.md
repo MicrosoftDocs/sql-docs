@@ -37,7 +37,7 @@ ms.author: sstein
 ## Remarks  
  LSN values are only used immediately after insertion, and they have no lasting meaning in the system.  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

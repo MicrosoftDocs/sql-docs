@@ -94,7 +94,7 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## See Also  
+## See also  
  [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Service tier capabilities and limits](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  

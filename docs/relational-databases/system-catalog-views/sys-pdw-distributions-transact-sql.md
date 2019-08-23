@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |name|**nvarchar(32)**|String identifier associated with the distribution, used as a suffix on distributed tables.|String composed of 'A-Z','a-z','0-9','_','-'.|  
 |position|**int**|Position of the distribution within a node respective to other distributions on that node.|1 to the number of distributions per node.|  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

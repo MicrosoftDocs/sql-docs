@@ -32,7 +32,7 @@ ms.author: "mathoma"
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## See Also  
+## See also  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
   

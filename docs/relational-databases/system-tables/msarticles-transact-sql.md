@@ -36,7 +36,7 @@ ms.author: sstein
 |**description**|**nvarchar(255)**|The description of the article.|  
 |**destination_owner**|**sysname**|The name of the schema of the table created at the Subscriber.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

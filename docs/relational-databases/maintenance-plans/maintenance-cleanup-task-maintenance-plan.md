@@ -90,7 +90,7 @@ ms.author: mikeray
  **Password**  
  Provide a password to use when authenticating. This option is not available.  
   
-## See Also  
+## See also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

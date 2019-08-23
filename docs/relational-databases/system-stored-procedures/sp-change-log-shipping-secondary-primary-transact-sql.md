@@ -85,7 +85,7 @@ sp_change_log_shipping_secondary_primary
 ## Permissions  
  Only members of the **sysadmin** fixed server role can run this procedure.  
   
-## See Also  
+## See also  
  [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

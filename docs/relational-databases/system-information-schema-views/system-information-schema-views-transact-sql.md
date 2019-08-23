@@ -62,7 +62,7 @@ FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
 
-## See Also
+## See also
 
 - [System Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

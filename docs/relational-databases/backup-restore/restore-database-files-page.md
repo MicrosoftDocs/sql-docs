@@ -43,7 +43,7 @@ ms.author: mikeray
  **Restore As**  
  Lists the file names that the restored files are to be saved as. Enter or search for the appropriate file name.  
   
-## See Also  
+## See also  
  [Restore Database &#40;General Page&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)   
  [Restore Database &#40;Options Page&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)   
  [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)   

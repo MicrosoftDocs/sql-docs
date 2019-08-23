@@ -67,7 +67,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## Permissions  
  Only members of the **db_owner** fixed database role on the publication database can execute **sp_lookupcustomresolver**.  
   
-## See Also  
+## See also  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Execute Business Logic During Merge Synchronization](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

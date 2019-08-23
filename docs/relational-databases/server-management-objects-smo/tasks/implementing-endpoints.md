@@ -127,7 +127,7 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## See Also  
+## See also  
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

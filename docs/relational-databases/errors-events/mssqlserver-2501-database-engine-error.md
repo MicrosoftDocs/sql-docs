@@ -48,6 +48,6 @@ This error can be caused by one of the following problems:
   
 -   Verify that the object exists in the system tables. To verify whether a table or other schema-scoped object exists, query the [sys.objects](~/relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view. If the object is not in the system tables, the object has been deleted, or the user does not have permissions to view the object metadata. For more information about how to view object metadata, see [Metadata Visibility Configuration](~/relational-databases/security/metadata-visibility-configuration.md).  
   
-## See Also  
+## See also  
 [Catalog Views &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

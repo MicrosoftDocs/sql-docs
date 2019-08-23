@@ -204,7 +204,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Subsequent parameters are used to pass the values to be substituted for the *local variable name* in the statement.  
   
-## See Also  
+## See also  
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

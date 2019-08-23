@@ -714,7 +714,7 @@ Exit:
 } //end function  
 ```  
   
-## See Also  
+## See also  
  [BLOBs and OLE Objects](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Using Large Value Types](../../relational-databases/native-client/features/using-large-value-types.md)  
   

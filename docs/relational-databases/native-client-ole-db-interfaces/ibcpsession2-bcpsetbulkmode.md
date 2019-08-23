@@ -355,7 +355,7 @@ int main() {
 }  
 ```  
   
-## See Also  
+## See also  
  [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

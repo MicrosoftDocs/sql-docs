@@ -30,7 +30,7 @@ ms.author: "mathoma"
   
 -   Select **Queue changes and commit when possible** for a queued updating subscription.  
   
-## See Also  
+## See also  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

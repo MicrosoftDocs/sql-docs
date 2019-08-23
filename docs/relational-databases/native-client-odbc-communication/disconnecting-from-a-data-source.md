@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  After disconnecting, an application can reuse the allocated connection handle, either to connect to a different data source or reconnect to the same data source. The decision to remain connected instead of disconnecting and reconnecting later requires that the application writer consider the relative costs of each option. Connecting to a data source and remaining connected can be relatively costly, depending on the connection medium. In making a trade-off, the application must also make assumptions about the probability and timing of additional operations on the same data source. An application may also have to use more than one connection.  
   
-## See Also  
+## See also  
  [Communicating with SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

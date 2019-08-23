@@ -43,6 +43,6 @@ If the problem is not hardware-related and a known clean backup is available, re
   
 Consider changing the databases to use the PAGE_VERIFY CHECKSUM option. For information about PAGE_VERIFY, see [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-## See Also  
+## See also  
 [Manage the suspect_pages Table &#40;SQL Server&#41;](~/relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

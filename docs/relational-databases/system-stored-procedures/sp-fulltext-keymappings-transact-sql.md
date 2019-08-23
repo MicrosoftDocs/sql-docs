@@ -132,7 +132,7 @@ GO
 ||`docid`|`key`|  
 |`4`|`4`|`4`|  
   
-## See Also  
+## See also  
  [Full-Text Search and Semantic Search Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

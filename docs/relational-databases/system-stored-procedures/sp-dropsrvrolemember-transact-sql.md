@@ -79,7 +79,7 @@ Is the name of a server role. *role* is **sysname**, with a default of NULL. *ro
 EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';  
 ```  
   
-## See Also  
+## See also  
  [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   

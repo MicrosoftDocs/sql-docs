@@ -59,7 +59,7 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## See Also  
+## See also  
  [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)   
  [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   

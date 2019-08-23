@@ -27,7 +27,7 @@ ms.author: "mathoma"
   
 -   [New Peer Initialization &#40;Peer-to-Peer Replication&#41;](../../relational-databases/replication/new-peer-initialization-peer-to-peer-replication.md)  
   
-## See Also  
+## See also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   

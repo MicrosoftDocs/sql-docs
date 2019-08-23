@@ -80,7 +80,7 @@ ms.author: "mathoma"
   
     -   **immediate** - fail over to immediate updating when connectivity has been restored.  
   
-## See Also  
+## See also  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

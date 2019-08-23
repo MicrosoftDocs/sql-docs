@@ -222,7 +222,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```
 
-## See Also
+## See also
 
  [Extended events in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

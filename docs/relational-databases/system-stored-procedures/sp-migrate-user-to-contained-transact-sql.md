@@ -110,7 +110,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## See Also  
+## See also  
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Contained Databases](../../relational-databases/databases/contained-databases.md)  
   

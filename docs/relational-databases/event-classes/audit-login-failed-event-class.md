@@ -41,7 +41,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**Success**|**int**|1 = success. 0 = failure. This event will always show failure.|23|Yes|  
 |**TextData**|**ntext**|Text value dependent on the event class captured in the trace.|1|Yes|  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -124,7 +124,7 @@ SELECT KWBPOP.* FROM
 GO  
 ```  
   
-## See Also  
+## See also  
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   
  [Improve the Performance of Full-Text Indexes](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   

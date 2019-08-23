@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**TextData**|**ntext**|Text description of the event subclass value.|1|Yes|  
 |**Type**|**int**|Type of job.|57|Yes|  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Auto Stats Event Class](../../relational-databases/event-classes/auto-stats-event-class.md)  

@@ -87,7 +87,7 @@ EXEC dbo.sp_delete_jobstep
 GO  
 ```  
   
-## See Also  
+## See also  
  [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   

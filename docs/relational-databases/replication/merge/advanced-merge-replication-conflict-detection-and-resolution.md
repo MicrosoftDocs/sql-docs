@@ -143,7 +143,7 @@ Resolve Merge Replication Conflicts
   
 -   Replication [!INCLUDE[tsql](../../../includes/tsql-md.md)] Programming: [View Conflict Information for Merge Publications &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
-## See Also  
+## See also  
  [Synchronize Data](../../../relational-databases/replication/synchronize-data.md)  
   
   

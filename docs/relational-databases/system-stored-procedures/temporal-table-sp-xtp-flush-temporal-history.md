@@ -47,7 +47,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ## Permissions  
  Requires db_owner permissions.  
   
-## See Also  
+## See also  
  [Performance Considerations with Memory-Optimized System-Versioned Temporal Tables](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  
   
   

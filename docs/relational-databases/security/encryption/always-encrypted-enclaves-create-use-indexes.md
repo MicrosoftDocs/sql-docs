@@ -81,6 +81,6 @@ For step-by-step instructions on how to use this method, see [Tutorial: Creating
 ## Next Steps
 - [Query columns using Always Encrypted with secure enclaves](always-encrypted-enclaves-query-columns.md).
 
-## See Also  
+## See also  
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md).
 - [sp_enclave_send_keys (Transact-SQL)](../../system-stored-procedures/sp-enclave-send-keys-sql.md)

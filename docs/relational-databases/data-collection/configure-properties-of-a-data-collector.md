@@ -41,7 +41,7 @@ ms.author: mathoma
  **Number of times to retry if upload fails**  
  Specifies the number of times to retry an upload to the management data warehouse if an upload fails. The default is 1.  
   
-## See Also  
+## See also  
  [Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md)   
  [Configure the Management Data Warehouse &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

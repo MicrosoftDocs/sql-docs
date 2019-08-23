@@ -51,7 +51,7 @@ ms.author: sstein
 |Corrected the description for the target_data column to indicate that the value is nullable.|  
 |Corrected the "Relationship Cardinalities" table.|  
   
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

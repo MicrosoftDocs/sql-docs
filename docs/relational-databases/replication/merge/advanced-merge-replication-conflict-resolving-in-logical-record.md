@@ -99,7 +99,7 @@ ms.author: "mathoma"
   
  ![Series of tables showing changes to related rows](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series of tables showing changes to related rows")  
   
-## See Also  
+## See also  
  [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  
   
   

@@ -93,7 +93,7 @@ ms.author: "mathoma"
   
      The logs include **Audit Collection** and **Windows NT**.  
   
-## See Also  
+## See also  
  [Log File Viewer](../../relational-databases/logs/log-file-viewer.md)   
  [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [View Offline Log Files](../../relational-databases/logs/view-offline-log-files.md)  

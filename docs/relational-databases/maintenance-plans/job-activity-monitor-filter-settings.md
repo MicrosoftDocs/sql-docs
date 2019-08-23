@@ -59,7 +59,7 @@ ms.author: mikeray
  **Clear**  
  Returns the filter settings back to the default settings.  
   
-## See Also  
+## See also  
  [Monitor Job Activity](../../ssms/agent/monitor-job-activity.md)  
   
   

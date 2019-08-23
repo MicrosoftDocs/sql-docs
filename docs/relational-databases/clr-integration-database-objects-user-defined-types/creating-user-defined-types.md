@@ -324,7 +324,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## See Also  
+## See also  
  [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

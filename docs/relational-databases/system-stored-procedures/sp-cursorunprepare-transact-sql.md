@@ -36,7 +36,7 @@ sp_cursorunprepare handle
  *handle*  
  Is the *handle* value that is returned by sp_cursorprepare when the statement is prepared.  
   
-## See Also  
+## See also  
  [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -53,7 +53,7 @@ select rw.wait_id
   join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id
 ```
 
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -22,7 +22,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |group_id|**int**|Unique identifier for components and devices.<br /><br /> Key for this view.|NOT NULL|  
 |group_name|**nvarchar(255)**|Logical group name for the components and devices.|NOT NULL|  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   [SQLSTATE Mappings](https://go.microsoft.com/fwlink/?LinkId=89355)  
   
-## See Also  
+## See also  
  [Handling Errors and Messages](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

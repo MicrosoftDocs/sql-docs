@@ -27,7 +27,7 @@ ms.author: "carlrab"
   
  The [Starting and Stopping Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) class represents properties that are unique to the service. These properties are not in the list of properties that is associated with the [SqlService Class](https://technet.microsoft.com/library/ms186497.aspx) class. The [SqlServiceAdvancedProperty Class](https://technet.microsoft.com/library/ms182447.aspx) class allows representation of string, numeric, or Boolean properties. You can use this class to view the unique properties of the specified service.  
   
-## See Also  
+## See also  
  [Starting, Stopping, and Pausing Services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

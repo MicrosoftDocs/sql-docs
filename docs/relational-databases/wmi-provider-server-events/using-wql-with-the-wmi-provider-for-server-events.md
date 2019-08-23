@@ -134,7 +134,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## See Also  
+## See also  
  [WMI Provider for Server Events Concepts](https://technet.microsoft.com/library/ms180560.aspx)   
  [Event Notifications (Database Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
   

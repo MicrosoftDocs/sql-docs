@@ -29,7 +29,7 @@ ms.author: mathoma
 ## Explanation  
 A structural inconsistency occurred on the database page that is referenced in the error message.  
   
-## See Also  
+## See also  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [Database Files and Filegroups](~/relational-databases/databases/database-files-and-filegroups.md)  
   

@@ -77,7 +77,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
  Each transaction is identified by a transaction sequence number that is assigned when the transaction begins. Transactions start at the time a BEGIN TRANSACTION or BEGIN WORK statement is executed. However, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] assigns the transaction sequence number with the execution of the first [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that accesses data after the BEGIN TRANSACTION or BEGIN WORK statement. The transaction sequence numbers are incremented by one.  
   
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transaction Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

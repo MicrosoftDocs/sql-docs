@@ -55,6 +55,6 @@ REPAIR will deallocate the page. If the page was from an in-row data allocation 
 > [!CAUTION]  
 > This repair may cause data loss.  
   
-## See Also  
+## See also  
 [MSSQLSERVER_2534](~/relational-databases/errors-events/mssqlserver-2534-database-engine-error.md)  
   

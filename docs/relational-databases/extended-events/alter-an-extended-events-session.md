@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   In the **Properties** dialog box, make the appropriate changes, and then click **OK**.  
   
-## See Also  
+## See also  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [Create an Extended Events Session Using Query Editor](quick-start-extended-events-in-sql-server.md)  
   

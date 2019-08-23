@@ -63,7 +63,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  When an existing table that contains data is converted to page compression, each page is rebuilt and evaluated. Rebuilding all the pages causes the rebuilding of the table, index, or partition.  
   
-## See Also  
+## See also  
  [Data Compression](../../relational-databases/data-compression/data-compression.md)   
  [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)  
   

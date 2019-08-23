@@ -82,7 +82,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb
 GO  
 ```  
   
-## See Also  
+## See also  
  [Install and Configure Semantic Search](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

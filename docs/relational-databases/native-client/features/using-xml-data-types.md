@@ -263,7 +263,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The XML standard requires UTF-16 encoded XML to start with a byte-order mark (BOM), UTF-16 character code 0xFEFF. When working with a SQL_C_BINARY binding, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client does not require or add a BOM, as the encoding is implied by the binding. The intent is to provide simplicity in dealing with other XML processors and storage systems. In this case a BOM should be present with UTF-16 encoded XML, and the application need not be concerned with the actual encoding, because the majority of XML processors (including [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) deduce the encoding by inspecting the first few bytes of the value. XML data received from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client using SQL_C_BINARY bindings are always encoded in UTF-16 with a BOM and without an embedded encoding declaration.  
   
-## See Also  
+## See also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

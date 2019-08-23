@@ -75,7 +75,7 @@ ms.author: "sstein"
   
  For more information, see [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md).  
   
-## See Also  
+## See also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Upgrade a Data-tier Application](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

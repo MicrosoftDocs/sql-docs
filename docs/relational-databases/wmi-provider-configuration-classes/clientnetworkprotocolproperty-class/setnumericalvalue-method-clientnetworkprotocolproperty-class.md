@@ -44,7 +44,7 @@ object.SetNumericalValue [= value]
   
 ## Remarks  
   
-## See Also  
+## See also  
  [Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

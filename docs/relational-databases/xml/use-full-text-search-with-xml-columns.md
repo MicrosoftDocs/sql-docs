@@ -59,7 +59,7 @@ WHERE  CONTAINS(xCol,'run')
   
  When XML is decomposed into relational columns by using AXSD that are full-text indexed, XPath queries that occur over the XML view do not perform full-text search on the underlying tables.  
   
-## See Also  
+## See also  
  [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

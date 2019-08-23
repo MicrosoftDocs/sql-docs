@@ -38,7 +38,7 @@ ms.author: sstein
 |**src_nullable**|**bit**|Indicates whether the destination column in the mapping allows NULL values, where a value of NULL means that this definition is not required.|  
 |**default_datatype_mapping_id**|**int**|Identifies the default data type mapping by specifying its **map_id** in table [MSdbms_datatype_mapping](../../relational-databases/system-tables/msdbms-datatype-mapping-transact-sql.md).|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Specify Data Type Mappings for an Oracle Publisher](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

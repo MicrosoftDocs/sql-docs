@@ -36,7 +36,7 @@ ms.author: "sstein"
 ## Permissions  
  Requires SELECT for **dc_operator**, **dc_proxy**.  
   
-## See Also  
+## See also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Data Collector Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  

@@ -70,7 +70,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## See Also  
+## See also  
  [Execute a Stored Procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

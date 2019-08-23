@@ -68,7 +68,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |---------------------|  
 |Documented SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
-## See Also  
+## See also  
  [SQLBrowseConnect Function](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

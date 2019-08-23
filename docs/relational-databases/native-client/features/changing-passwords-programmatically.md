@@ -111,7 +111,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver returns SQL_ERROR in four cases for this feature: password expiration, password policy conflict, account lockout, and when the old password property is set while using Windows Authentication. The driver returns the appropriate error messages to the user when [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) is invoked.  
   
-## See Also  
+## See also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

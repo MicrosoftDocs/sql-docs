@@ -35,6 +35,6 @@ Use the name of an existing principal or get the IMPERSONATE permission on that 
 ALTER AUTHORIZATION ON DATABASE:: DBName TO [NewLogin]  
 ```  
   
-## See Also  
+## See also  
 [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

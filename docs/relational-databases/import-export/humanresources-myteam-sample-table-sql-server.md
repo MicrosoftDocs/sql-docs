@@ -67,7 +67,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     > [!NOTE]  
     >  These statements skip the fourth column, `Background`. This has a default value. Skipping this column causes this `INSERT` statement to leave this column blank.  
   
-## See Also  
+## See also  
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

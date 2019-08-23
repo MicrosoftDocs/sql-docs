@@ -57,7 +57,7 @@ sp_denylogin [ @loginame = ] 'login'
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  
 ```  
   
-## See Also  
+## See also  
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

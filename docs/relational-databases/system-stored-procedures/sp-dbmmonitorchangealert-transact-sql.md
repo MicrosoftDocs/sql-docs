@@ -99,7 +99,7 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 4, 1000, 0 ;
 EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;  
 ```  
   
-## See Also  
+## See also  
  [Monitoring Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  

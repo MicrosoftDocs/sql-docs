@@ -83,7 +83,7 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 WHERE document_id = 7 AND display_term = 'performance';  
 ```  
   
-## See Also  
+## See also  
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   
  [Improve the Performance of Full-Text Indexes](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [Full-Text Search and Semantic Search Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   

@@ -49,7 +49,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
  **Show only parameters used in this profile**  
  Clear to show all valid parameters for a given agent.  
   
-## See Also  
+## See also  
  [Work with Replication Agent Profiles](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)  

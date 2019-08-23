@@ -35,7 +35,7 @@ ms.reviewer: mikeray
 |**is_migration_paused**|**bit**|Indicates whether migration is currently paused.|  
 |**is_reconciled**|**bit**| Indicates whether the remote table and the SQL Server table are in sync.<br/><br/>When the value of **is_reconciled** is 1 (true), the remote table and the SQL Server table are in sync, and you can run queries that include the remote data.<br/><br/>When the value of **is_reconciled** is 0 (false), the remote table and the SQL Server table are not in sync. Recently migrated rows have to be migrated again. This occurs when you restore the remote Azure database, or when you delete rows manually from the remote table. Until you reconcile the tables, you can't run queries that include the remote data. To reconcile the tables, run [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md). |  
   
-## See Also  
+## See also  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

@@ -77,7 +77,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## See Also  
+## See also  
  [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Service tier capabilities and limits](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

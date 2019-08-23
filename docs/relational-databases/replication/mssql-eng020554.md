@@ -64,7 +64,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## See Also  
+## See also  
  [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   

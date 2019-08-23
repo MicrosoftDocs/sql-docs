@@ -34,6 +34,6 @@ ms.author: mathoma
 ## User Action  
 Reduce the level of CASE statements to 10 or less.  
   
-## See Also  
+## See also  
 [CASE &#40;Transact-SQL&#41;](~/t-sql/language-elements/case-transact-sql.md)  
   

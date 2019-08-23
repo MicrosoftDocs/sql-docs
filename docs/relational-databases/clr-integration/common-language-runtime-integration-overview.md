@@ -54,7 +54,7 @@ CLR Integration enables you to implement complex features that are available in 
  [Enabling CLR Integration](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  Describes how to enable CLR integration.  
   
-## See Also  
+## See also  
  [Installing the .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)  ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only)   
  [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

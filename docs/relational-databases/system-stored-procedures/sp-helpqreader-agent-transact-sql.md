@@ -53,7 +53,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## Permissions  
  When the value of *frompublisher* is **1**, only members of the **sysadmin** fixed server role at the Publisher or members of the **db_owner** fixed database role on the publication database can execute **sp_helpqreader_agent**. Otherwise, only members of the **sysadmin** fixed server role at the Distributor or members of the **db_owner** fixed database role on the distribution database can execute **sp_helpqreader_agent**.  
   
-## See Also  
+## See also  
  [Enable Updating Subscriptions for Transactional Publications](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

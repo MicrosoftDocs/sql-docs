@@ -27,7 +27,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## See Also  
+## See also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)  
   
   

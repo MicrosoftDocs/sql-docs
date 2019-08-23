@@ -60,7 +60,7 @@ To troubleshoot this message:
     > [!NOTE]  
     > Different time zones for the two server instances should not cause a problem.  
   
-## See Also  
+## See also  
 [log_shipping_monitor_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)  
 [About Log Shipping &#40;SQL Server&#41;](~/database-engine/log-shipping/about-log-shipping-sql-server.md)  
 [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)  

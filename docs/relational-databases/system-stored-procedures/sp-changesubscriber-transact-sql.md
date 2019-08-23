@@ -153,7 +153,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changesubscriber**.  
   
-## See Also  
+## See also  
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   

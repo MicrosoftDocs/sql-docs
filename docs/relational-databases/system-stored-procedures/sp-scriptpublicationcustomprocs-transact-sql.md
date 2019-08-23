@@ -72,7 +72,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## Permissions  
  Execute permission is granted to **public**; a procedural security check is performed inside this stored procedure to restrict access to members of the **sysadmin** fixed server role and **db_owner** fixed database role in current database.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

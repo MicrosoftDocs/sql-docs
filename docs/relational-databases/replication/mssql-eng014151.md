@@ -44,7 +44,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   If the error continues to occur, increase the logging of the agent and specify an output file for the log. Depending on the context of the error, this could provide the steps leading up to the error and/or additional error messages.  
   
-## See Also  
+## See also  
  [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   

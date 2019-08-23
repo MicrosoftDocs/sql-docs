@@ -578,7 +578,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |New [connection string](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) keyword: `Column Encryption Setting=enabled`|Enables or disables Always Encrypted functionality for the connection.| 4.6 
   
 
-## See Also
+## See also
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)

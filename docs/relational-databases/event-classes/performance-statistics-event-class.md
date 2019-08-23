@@ -146,7 +146,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |PlanHandle|**image**|The plan handle of the compiled plan for the trigger. This can be used to obtain the XML plan using the dm_exec_query_plan dynamic management view.|65|Yes|  
 |GroupID|**int**|ID of the workload group where the SQL Trace event fires.|66|Yes|  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Showplan XML for Query Compile Event Class](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)   

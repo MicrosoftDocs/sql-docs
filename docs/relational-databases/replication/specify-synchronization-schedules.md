@@ -320,7 +320,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## See Also  
+## See also  
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)   

@@ -203,7 +203,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 ## Permissions  
 Requires membership of **db_owner** role.
   
-## See Also  
+## See also  
  [Compatibility Levels and Database Engine Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     

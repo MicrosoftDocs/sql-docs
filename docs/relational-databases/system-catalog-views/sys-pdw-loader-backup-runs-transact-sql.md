@@ -40,7 +40,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |rows_rejected|**bigint**|Number of rows rejected as part of this operation.||  
 |rows_inserted|**bigint**|Number of rows inserted into the database table(s) as part of this operation.||  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -137,7 +137,7 @@ ms.author: "mathoma"
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## See Also  
+## See also  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   

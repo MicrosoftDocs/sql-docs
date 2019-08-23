@@ -192,7 +192,7 @@ The following table shows replication settings that control compression during r
 -   Data compression is incompatible with sparse columns. Therefore, tables containing sparse columns cannot be compressed nor can sparse columns be added to a compressed table.  
 -   Enabling compression can cause query plans to change because the data is stored using a different number of pages and number of rows per page.  
   
-## See Also  
+## See also  
  [Row Compression Implementation](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Page Compression Implementation](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Unicode Compression Implementation](../../relational-databases/data-compression/unicode-compression-implementation.md)   

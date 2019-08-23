@@ -64,7 +64,7 @@ GO
 EXEC sp_syscollector_upload_collection_set @name = 'Simple Collection Set' ;  
 ```  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   

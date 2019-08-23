@@ -203,7 +203,7 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## See Also  
+## See also  
  [MATCH (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  

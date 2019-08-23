@@ -198,7 +198,7 @@ qtf is the frequency of the term in the query.
 ```  
   
   
-## See Also  
+## See also  
  [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)  
   
   

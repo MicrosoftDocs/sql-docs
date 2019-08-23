@@ -43,7 +43,7 @@ ms.author: sstein
 |**source_object**|**sysname**|The name of the published table associated with the alert.|  
 |**alert_error_text**|**ntext**|The text of the alert.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

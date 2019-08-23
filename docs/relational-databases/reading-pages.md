@@ -48,6 +48,6 @@ For example, assume that you have a table with 500,000 pages. UserA executes a T
 
 Without advanced scanning, each user would have to compete for buffer space and cause disk arm contention. The same pages would then be read once for each user, instead of read one time and shared by multiple users, slowing down performance and taxing resources.
 
-## See Also
+## See also
 [Pages and Extents Architecture Guide](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Writing Pages](../relational-databases/writing-pages.md)

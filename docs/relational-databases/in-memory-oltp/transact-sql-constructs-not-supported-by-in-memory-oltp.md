@@ -179,7 +179,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Feature|bound transaction|Bound sessions cannot participate in transactions that access memory-optimized tables. Do not bind the session before executing the procedure.|  
 |Feature|DTC|Transactions that access memory-optimized tables cannot be distributed transactions.|  
   
-## See Also  
+## See also  
  [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

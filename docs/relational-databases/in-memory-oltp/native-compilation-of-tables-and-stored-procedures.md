@@ -203,7 +203,7 @@ The files produced when a table or stored procedure is compiled include the DLL 
 
 No user interaction is needed to manage these files. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will create and remove the files as necessary.
 
-## See Also
+## See also
 
 [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

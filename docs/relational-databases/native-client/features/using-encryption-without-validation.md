@@ -54,7 +54,7 @@ For information about connection string keywords, see [Using Connection String K
 ## SQL Server Native Client ODBC Driver  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports encryption without validation through additions to the [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) and [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) functions. SQL_COPT_SS_TRUST_SERVER_CERTIFICATE has been added to accept either SQL_TRUST_SERVER_CERTIFICATE_YES or SQL_TRUST_SERVER_CERTIFICATE_NO, with SQL_TRUST_SERVER_CERTIFICATE_NO being the default. In addition, a new connection string keyword, "TrustServerCertificate", has been added. It accepts yes or no values; "no" is the default.  
   
-## See Also  
+## See also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

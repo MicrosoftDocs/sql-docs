@@ -36,7 +36,7 @@ Typically, the daemon will recover from the error. If it is consistently failing
   
 2.  Look at the crawl log to identify any new document that failed to be full-text indexed, and remove it.  
   
-## See Also  
+## See also  
 [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
 [Configure and Manage Word Breakers and Stemmers for Search](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
 [Configure and Manage Filters for Search](~/relational-databases/search/configure-and-manage-filters-for-search.md)  

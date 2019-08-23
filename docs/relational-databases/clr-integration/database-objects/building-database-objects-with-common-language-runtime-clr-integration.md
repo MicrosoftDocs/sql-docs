@@ -65,7 +65,7 @@ ms.author: "jroth"
  [CLR Triggers](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  Describes how to implement and use CLR triggers.  
   
-## See Also  
+## See also  
  [Common Language Runtime &#40;CLR&#41; Integration Overview](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

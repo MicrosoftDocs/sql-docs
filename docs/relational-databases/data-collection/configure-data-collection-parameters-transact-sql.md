@@ -33,7 +33,7 @@ ms.custom: "seo-lt-2019"
     EXEC sp_syscollector_set_cache_directory N'D:\tempdata';  
     ```  
   
-## See Also  
+## See also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

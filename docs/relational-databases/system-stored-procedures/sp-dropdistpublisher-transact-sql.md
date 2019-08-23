@@ -64,7 +64,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_dropdistpublisher**.  
   
-## See Also  
+## See also  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   

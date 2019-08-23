@@ -60,7 +60,7 @@ ms.author: genemi
   
      Note that WITH XMLNAMESPACES is the recommended way to add XML namespaces.  
   
-## See Also  
+## See also  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

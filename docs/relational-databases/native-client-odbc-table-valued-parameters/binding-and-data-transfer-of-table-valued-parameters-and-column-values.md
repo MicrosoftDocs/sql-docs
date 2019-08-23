@@ -86,7 +86,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 6.  Calls SQLParamData again. If there are any data-at-execution parameters among the table-valued parameter columns, these will be identified by the value *ValuePtrPtr* returned by SQLParamData. When all column values are available, SQLParamData will again return the *ParameterValuePtr* value for the table-valued parameter, and the application begins again.  
   
-## See Also  
+## See also  
  [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

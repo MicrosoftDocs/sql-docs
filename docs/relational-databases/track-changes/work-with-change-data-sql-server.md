@@ -122,7 +122,7 @@ ms.author: jroth
 ### Using the Datetime Wrapper Functions to Transition Between Capture Instances  
  Change data capture supports up to two capture instances for a single tracked source table. The principal use of this capability is to accommodate a transition between multiple capture instances when data definition language (DDL) changes to the source table expand the set of available columns for tracking. When transitioning to a new capture instance, one way to protect higher application levels from changes in the names of the underlying query functions is to use a wrapper function to wrap the underlying call. Then, ensure that the name of the wrapper function remains the same. When the switch is to occur, the old wrapper function can be dropped, and a new one with the same name created that references the new query functions. By first modifying the generated script to create a wrapper function of the same name, you can make the switch to a new capture instance without affecting higher application layers.  
   
-## See Also  
+## See also  
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

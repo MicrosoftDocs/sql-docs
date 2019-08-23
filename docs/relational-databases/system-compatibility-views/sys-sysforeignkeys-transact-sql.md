@@ -38,7 +38,7 @@ ms.author: "jroth"
 |**rkey**|**smallint**|ID of the referenced column.|  
 |**keyno**|**smallint**|Position of the column in the reference column list.|  
   
-## See Also  
+## See also  
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

@@ -53,7 +53,7 @@ ms.author: "jroth"
  [Application Domains and CLR Integration Security](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  Describes how assemblies are loaded into application domains.  
   
-## See Also  
+## See also  
  [Managing CLR Integration Assemblies](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

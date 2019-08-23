@@ -62,7 +62,7 @@ ms.author: "jroth"
 |**collation**|**sysname**|Server collation as set by **sp_serveroption\@collation name**.|  
 |**nonsqlsub**|bit|0 = server is an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = server is not an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
-## See Also  
+## See also  
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

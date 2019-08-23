@@ -28,7 +28,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |counter_value|**Decimal(38,10)**|Current value of the counter.||  
 |last_update_time|**Datetime2(3)**|Timestamp of last time the value was updated.||  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

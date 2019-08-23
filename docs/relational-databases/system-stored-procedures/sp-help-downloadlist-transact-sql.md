@@ -122,7 +122,7 @@ EXEC dbo.sp_help_downloadlist
 GO  
 ```  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -40,7 +40,7 @@ ms.author: "sstein"
 ## Permissions  
  Requires membership in the sysadmin fixed server role.  
   
-## See Also  
+## See also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   

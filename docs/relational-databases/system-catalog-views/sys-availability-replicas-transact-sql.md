@@ -56,7 +56,7 @@ If the local server instance is unable to talk to the WSFC failover cluster, for
 ### Permissions  
  Requires VIEW ANY DEFINITION permission on the server instance.  
   
-## See Also  
+## See also  
  [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

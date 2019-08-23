@@ -297,7 +297,7 @@ ms.author: jrasnick
   
  ![Arrow icon used with Back to Top link](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Section](#Top)  
   
-## See Also  
+## See also  
  [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

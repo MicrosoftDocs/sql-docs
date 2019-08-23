@@ -51,5 +51,5 @@ This following table describes the SQL Server **FileTable** performance objects.
 |**Time to get FileTable item BASE**|For internal use only.|
 |**Time update FileTable item BASE**|For internal use only.| 
  
-## See Also  
+## See also  
 [Monitor Resource Usage (System Monitor)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

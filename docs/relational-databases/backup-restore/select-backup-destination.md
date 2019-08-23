@@ -47,7 +47,7 @@ ms.author: mikeray
 |**Tape drive**|Choose this option to select a tape drive as the backup destination from the list of tape drives that are physically connected to the computer that is running the server instance.<br /><br /> Note: Tape backup devices on remote computers are not valid backup destinations.|  
 |**Backup device**|Choose this option to select an existing logical backup device. These logical backup devices correspond to tape drives that are physically connected to the computer that is running the server instance.<br /><br /> Note: For information about how to create a tape backup device, see [Define a Logical Backup Device for a Tape Drive &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
-## See Also  
+## See also  
  [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

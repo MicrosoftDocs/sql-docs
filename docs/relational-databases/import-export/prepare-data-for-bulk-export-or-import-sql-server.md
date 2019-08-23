@@ -84,7 +84,7 @@ ms.custom: "seo-lt-2019"
 |---------------------|  
 |Added information about using the OLE DB Provider for Jet to import CSV data.|  
   
-## See Also  
+## See also  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

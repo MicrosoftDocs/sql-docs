@@ -31,7 +31,7 @@ ms.author: sstein
 |**publisherindex_id**|**int**|Identifies an index from the [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) table associated with the column.|  
 |**indid**|**int**|Indicates position of the column in the published table.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

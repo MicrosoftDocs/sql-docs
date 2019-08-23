@@ -27,7 +27,7 @@ ms.author: sstein
 |-----------------|---------------|-----------------|  
 |**type**|**nvarchar(255)**|The name of a supported non-SQL Server index type.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

@@ -38,7 +38,7 @@ ms.author: sstein
 |------------------------|----------------|  
 |Specify the time that the External Program before exiting.|[sysmail_configure_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|  
   
-## See Also  
+## See also  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Database Mail Log and Audits](../../relational-databases/database-mail/database-mail-log-and-audits.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  

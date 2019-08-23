@@ -50,7 +50,7 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
 ## Permissions  
  Requires SELECT permission for mdw_reader.  
   
-## See Also  
+## See also  
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   
   

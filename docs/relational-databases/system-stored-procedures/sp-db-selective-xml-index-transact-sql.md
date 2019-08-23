@@ -99,7 +99,7 @@ EXECUTE sys.sp_db_selective_xml_index;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Selective XML Indexes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

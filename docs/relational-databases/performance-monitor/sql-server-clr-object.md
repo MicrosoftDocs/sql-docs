@@ -24,7 +24,7 @@ ms.author: jrasnick
 |------------------|-----------------|  
 |**CLR Execution**|Total execution time in CLR (microseconds)|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

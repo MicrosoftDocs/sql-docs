@@ -291,7 +291,7 @@ SQL Server Version  |Redistributable Install Link
   
 -   PowerShell [Azure Key Vault Cmdlets](/powershell/module/azurerm.keyvault/) reference  
   
-## See Also
+## See also
 
  [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)  

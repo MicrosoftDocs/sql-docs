@@ -211,7 +211,7 @@ ORDER BY created_time DESC
   
  If the number of deleted rows in compressed rowgroups > 20%, plateauing in older rowgroups with < 5% variation (referred to as cold rowgroups) set COMPRESSION_DELAY = (youngest_rowgroup_created_time -  current_time). Note that this approach works best with a stable and relatively homogeneous workload.  
   
-## See Also  
+## See also  
  [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md)   
  [Columnstore Indexes Data Loading](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore Indexes Query Performance](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

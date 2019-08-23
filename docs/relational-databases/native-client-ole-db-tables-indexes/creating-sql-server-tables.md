@@ -212,7 +212,7 @@ SAFE_EXIT:
     }  
 ```  
   
-## See Also  
+## See also  
  [Tables and Indexes](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

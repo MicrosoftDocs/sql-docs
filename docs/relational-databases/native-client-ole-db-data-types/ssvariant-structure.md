@@ -73,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |UnknownType|UNUSED|UNUSED|UNUSED|UNUSED|  
 |BLOBType|UNUSED|UNUSED|UNUSED|UNUSED|  
   
-## See Also  
+## See also  
  [Data Types &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  
   
   

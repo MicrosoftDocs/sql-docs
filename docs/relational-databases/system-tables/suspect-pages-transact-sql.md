@@ -38,7 +38,7 @@ ms.author: "sstein"
 ## Permissions  
  Anyone with access to **msdb** can read the data in the **suspect_pages** table. Anyone with UPDATE permission on the suspect_pages table can update its records. Members the **db_owner** fixed database role on **msdb** or the **sysadmin** fixed server role can insert, update, and delete records.  
   
-## See Also  
+## See also  
  [Restore Pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Database Suspect Data Page Event Class](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
  [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   

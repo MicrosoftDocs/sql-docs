@@ -32,7 +32,7 @@ The plan guide name exceeds 124 characters, the maximum number allowed.
 ## User Action  
 Specify a name that contains fewer than 125 characters.  
   
-## See Also  
+## See also  
 [Plan Guides](~/relational-databases/performance/plan-guides.md)  
 [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
 [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

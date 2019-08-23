@@ -55,7 +55,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changeqreader_agent**.  
   
-## See Also  
+## See also  
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   

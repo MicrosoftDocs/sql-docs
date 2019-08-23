@@ -54,7 +54,7 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the **db_owner** fixed database role can execute **sp_mergesubscription_cleanup**.  
   
-## See Also  
+## See also  
  [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)   
  [sp_expired_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
  [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   

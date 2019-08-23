@@ -208,7 +208,7 @@ WHERE ProductModelID = 19
   
  The space use of XML indexes can be found in the table-valued function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). It provides information, such as the number of disk pages occupied, average row size in bytes, and number of records, for all index types.. This also includes XML indexes. This information is available for each database partition. XML indexes use the same partitioning scheme and partitioning function of the base table.  
   
-## See Also  
+## See also  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

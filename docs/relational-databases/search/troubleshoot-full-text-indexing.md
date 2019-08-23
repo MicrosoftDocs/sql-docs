@@ -52,7 +52,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  When restoring the transaction log of a database, you might see a warning indicating that the full-text index is not in a consistent state. The reason for this is that the full-text index on a table was modified after the database was backed up. To bring the full-text index to a consistent state, you must run a full population (crawl) on the table. For more information, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).  
   
   
-## See Also  
+## See also  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)  
   

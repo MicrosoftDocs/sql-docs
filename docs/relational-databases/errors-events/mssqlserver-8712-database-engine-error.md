@@ -32,7 +32,7 @@ An index that is specified in the USE PLAN hint does not exist.
 ## User Action  
 Ensure all indexes that are specified in the USE PLAN hint exist.  
   
-## See Also  
+## See also  
 [Query Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)  
 [Plan Guides](~/relational-databases/performance/plan-guides.md)  
   

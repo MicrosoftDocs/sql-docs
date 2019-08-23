@@ -144,7 +144,7 @@ GO
   
  Note that the function name as exposed in [!INCLUDE[tsql](../../includes/tsql-md.md)] does not need to match the name of the target public static method.  
   
-## See Also  
+## See also  
  [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Overview of CLR Integration Custom Attributes](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md)   

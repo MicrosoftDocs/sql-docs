@@ -40,7 +40,7 @@ The In-memory OLTP engine continues to use memory-optimized filegroup based on F
 > [!NOTE]
 > [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) is not supported.  
   
-## See Also   
+## See also   
 [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)     
 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
 [ALTER DATABASE File and Filegroup Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)    

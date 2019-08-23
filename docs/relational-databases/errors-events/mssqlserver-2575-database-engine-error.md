@@ -52,6 +52,6 @@ If running DBCC CHECKDB with one of the REPAIR clauses does not correct the prob
 #### Results of Running REPAIR Options  
 DBCC will rebuild the index.  
   
-## See Also  
+## See also  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

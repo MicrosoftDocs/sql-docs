@@ -34,6 +34,6 @@ You can suppress these log entries by using [!INCLUDE[ssNoVersion](../../include
   
 For information about using trace flags, see SQL Server Books Online.  
   
-## See Also  
+## See also  
 [Trace Flags &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   

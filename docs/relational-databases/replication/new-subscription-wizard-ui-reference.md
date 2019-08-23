@@ -38,7 +38,7 @@ This section provides information on the following pages of the New Subscription
   
 -   [HOST_NAME Values](../../relational-databases/replication/host-name-values.md)  
   
-## See Also  
+## See also  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

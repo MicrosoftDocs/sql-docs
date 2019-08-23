@@ -60,7 +60,7 @@ GO
 EXEC sp_databases;  
 ```  
   
-## See Also  
+## See also  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [HAS_DBACCESS &#40;Transact-SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   

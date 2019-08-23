@@ -122,7 +122,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## See Also  
+## See also  
  [Stored Procedures](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

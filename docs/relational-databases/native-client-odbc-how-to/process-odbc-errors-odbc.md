@@ -232,7 +232,7 @@ DROP PROCEDURE BadOne
 GO  
 ```  
   
-## See Also  
+## See also  
  [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

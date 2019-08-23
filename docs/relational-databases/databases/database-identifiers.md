@@ -105,7 +105,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > [!NOTE]
 > Some rules for the format of regular identifiers depend on the database compatibility level. This level can be set by using [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
-## See Also
+## See also
 
 - [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
 - [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

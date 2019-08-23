@@ -63,7 +63,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## Permissions  
  **sp_getqueuedrows** requires SELECT permissions on the table specified in *tablename*.  
   
-## See Also  
+## See also  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

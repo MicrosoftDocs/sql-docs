@@ -95,7 +95,7 @@ ms.author: vanto
     > [!NOTE]  
     >  Using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication does not limit the permissions of local administrators on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
-## See Also  
+## See also  
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

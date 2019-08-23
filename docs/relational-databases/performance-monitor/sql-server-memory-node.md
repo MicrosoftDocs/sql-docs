@@ -27,7 +27,7 @@ ms.author: jrasnick
 |**Target Node Memory**|Specifies the ideal amount of memory for this node.|  
 |**Total Node Memory**|Indicates the total amount of memory the server has committed on this node.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Buffer Manager Object](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  

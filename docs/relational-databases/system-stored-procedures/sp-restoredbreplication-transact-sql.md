@@ -55,7 +55,7 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## Permissions  
  Only members of the **sysadmin** or **dbcreator** fixed server role or the **dbo** database schema can execute **sp_restoredbreplication**.  
   
-## See Also  
+## See also  
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

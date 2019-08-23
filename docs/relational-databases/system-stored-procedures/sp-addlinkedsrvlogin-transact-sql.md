@@ -110,7 +110,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 > [!IMPORTANT]  
 >  This example does not use Windows Authentication. Passwords will be transmitted unencrypted. Passwords may be visible in data source definitions and scripts that are saved to disk, in backups, and in log files. Never use an administrator password in this kind of connection. Consult your network administrator for security guidance specific to your environment.  
   
-## See Also  
+## See also  
  [Linked Servers Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   

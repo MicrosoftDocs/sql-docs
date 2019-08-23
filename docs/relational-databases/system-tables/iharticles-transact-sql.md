@@ -59,7 +59,7 @@ ms.author: sstein
 |**instance_id**|**int**|Identifies the current instance of the article log for the published table.|  
 |**use_default_datatypes**|**bit**|Indicates whether the article uses default data type mappings; a value of **1** indicates that default data type mappings are used.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

@@ -55,7 +55,7 @@ WHERE session_id = (
 	SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## See Also  
+## See also  
  [dbo.sysjobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

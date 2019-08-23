@@ -68,7 +68,7 @@ Here is a sample result set on Linux:
  |Linux	|Ubuntu	|16.04	|	|NULL	|1033 |  
 
   
-## See Also  
+## See also  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  

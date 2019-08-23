@@ -34,7 +34,7 @@ ms.author: jrasnick
 |**Kill Connection Errors**|Tracks severe errors that cause [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to kill the current connection.|  
 |**User Errors**|Information about user errors.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

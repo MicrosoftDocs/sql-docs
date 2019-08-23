@@ -38,7 +38,7 @@ object.SetEnableMethod()
   
 ## Remarks  
   
-## See Also  
+## See also  
  [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

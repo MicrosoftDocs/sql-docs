@@ -129,7 +129,7 @@ WHERE name = N'MyOptionsTest';
 GO  
 ```  
   
-## See Also  
+## See also  
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

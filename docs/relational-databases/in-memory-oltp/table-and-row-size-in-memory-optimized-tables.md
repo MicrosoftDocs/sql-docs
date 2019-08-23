@@ -234,7 +234,7 @@ where object_id = object_id('dbo.Orders')
 
 [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) blog post further details some of these intricacies.   
  
-## See Also  
+## See also  
  [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

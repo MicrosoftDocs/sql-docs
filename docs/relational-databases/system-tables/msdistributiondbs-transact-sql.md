@@ -30,7 +30,7 @@ ms.author: sstein
 |**max_distretention**|**int**|The maximum retention period, in hours, before transactions are deleted.|  
 |**history_retention**|**int**|The number of hours to retain history.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

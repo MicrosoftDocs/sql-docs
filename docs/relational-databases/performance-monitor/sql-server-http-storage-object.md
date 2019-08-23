@@ -35,7 +35,7 @@ ms.author: jrasnick
 |**Write Bytes/sec**|Amount of data being transferred from the HTTP storage per second during write operations.|  
 |**Writes/sec**|Number of writer per second on the HTTP storage.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

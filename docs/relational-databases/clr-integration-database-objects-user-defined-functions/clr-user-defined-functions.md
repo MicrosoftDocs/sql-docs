@@ -33,7 +33,7 @@ ms.author: "jroth"
  [CLR User-Defined Aggregates](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
  Describes how to implement and use user-defined aggregates.  
   
-## See Also  
+## See also  
  [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md)  
   
   

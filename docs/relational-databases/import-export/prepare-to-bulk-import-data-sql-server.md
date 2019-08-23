@@ -62,7 +62,7 @@ ms.author: mathoma
   
      Many utilities and text editors display hidden characters, which are usually at the end of the data file. During a bulk-import operation, hidden characters in an ASCII data file can cause problems that cause an error of "unexpected null found". Finding and removing all the hidden characters should help prevent this problem.  
   
-## See Also  
+## See also  
  [Import and Export Bulk Data by Using the bcp Utility &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp Utility](../../tools/bcp-utility.md)   

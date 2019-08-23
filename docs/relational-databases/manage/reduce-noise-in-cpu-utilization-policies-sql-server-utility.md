@@ -51,7 +51,7 @@ ms.author: mikeray
   
  Based on default values, 672 data points are collected every week, but the policy threshold is 0%. So by default, this policy does not generate processor underutilization violations. For more information about how to change the global CPU utilization policies for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or data-tier applications, see [Utility Administration &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). For more information about how to change CPU utilization policies for individual instances of SQL Server, see [Managed Instance Details &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). For more information about how to change CPU utilization policies for individual data-tier applications, see [Deployed Data-tier Application Details &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
-## See Also  
+## See also  
  [Utility Administration &#40;SQL Server Utility&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
  [Monitor Instances of SQL Server in the SQL Server Utility](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Modify a Resource Health Policy Definition &#40;SQL Server Utility&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)   

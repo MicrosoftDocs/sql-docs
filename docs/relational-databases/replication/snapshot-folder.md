@@ -30,7 +30,7 @@ For an Azure SQL Database managed instance, the snapshot folder must be an Azure
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommends that you use a network share as a snapshot folder location. Local paths (those starting with a drive letter, such as C:\\) are not accessible to agents on other computers.  
   
-## See Also  
+## See also  
  [Modify snapshot options](../../relational-databases/replication/snapshot-options.md)   
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   

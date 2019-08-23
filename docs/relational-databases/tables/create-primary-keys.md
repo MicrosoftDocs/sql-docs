@@ -95,7 +95,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
 ```
 
-## See Also
+## See also
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 

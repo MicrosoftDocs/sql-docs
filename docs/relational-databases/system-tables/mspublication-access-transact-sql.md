@@ -28,7 +28,7 @@ ms.author: sstein
 |**publication_id**|**int**|The ID of the publication.|  
 |**login**|**sysname**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows accounts that exist at both Publisher and Distributor side.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

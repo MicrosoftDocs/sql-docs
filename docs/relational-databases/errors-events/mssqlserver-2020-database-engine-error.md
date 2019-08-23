@@ -77,6 +77,6 @@ FROM Production.Document
 WHERE Status = 2;  
 GO</pre>  
   
-## See Also  
+## See also  
 [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  
   

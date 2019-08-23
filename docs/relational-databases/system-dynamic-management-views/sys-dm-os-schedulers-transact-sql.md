@@ -184,5 +184,5 @@ current_workers_count active_workers_count work_queue_count
 128                   108                  0  
 ```  
   
-## See Also  
+## See also  
  [SQL Server Operating System Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

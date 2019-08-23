@@ -111,7 +111,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_adddistpublisher**.  
   
-## See Also  
+## See also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   

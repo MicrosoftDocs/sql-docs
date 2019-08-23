@@ -116,7 +116,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |---------------------|  
 |Added **SqlGeography**, **SqlGeometry**, and **SqlHierarchyId** types to the mapping table.|  
   
-## See Also  
+## See also  
  [SQL Server Data Types in the .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

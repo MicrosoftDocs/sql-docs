@@ -24,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |**event_name**|**nvarchar(255)**|Name of the specific diagnostics event.||  
 |**property_name**|**nvarchar(255)**|Name of a property of the event.||  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -41,6 +41,6 @@ Stores the association or relationship of a particular job with one or more targ
 A value above *4* means that the SQL Agent does not know the state of that job. The *last_run_outcome* is initially set to *5* when a job gets created.
 
 
-## See Also
+## See also
 
 [SQL Server Agent Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

@@ -18,7 +18,7 @@ ms.author: mikeray
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This section contains the F1 Help for the **Maintenance Plans** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## See Also  
+## See also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

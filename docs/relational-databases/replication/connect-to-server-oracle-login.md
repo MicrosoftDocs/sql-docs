@@ -33,7 +33,7 @@ ms.author: "mathoma"
  **Login** and **Password**  
  If you selected **Oracle Standard Authentication** for the **Authentication** option, specify the login and password to use, which must be the same as those specified for the replication administrative user schema.  
   
-## See Also  
+## See also  
  [Glossary of Terms for Oracle Publishing](../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)  
   
   

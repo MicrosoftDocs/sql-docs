@@ -93,7 +93,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role, members of the **db_owner** fixed database role, or the creator of the subscription can execute **sp_reinitsubscription**.  
   
-## See Also  
+## See also  
  [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

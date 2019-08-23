@@ -46,7 +46,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 ## User Action  
  The Log Reader Agent, Queue Reader Agent, and Distribution Agent typically run continuously, whereas the other agents typically run on demand or on a schedule. If you do not expect an agent to have completed a run, check the status of the agent. For more information, see [Monitor Replication Agents](../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
-## See Also  
+## See also  
  [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   

@@ -162,7 +162,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Example: Specifying the XMLTEXT Directive](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
-## See Also  
+## See also  
  [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   

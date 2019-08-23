@@ -170,7 +170,7 @@ $tb.Drop()
   
 ```  
   
-## See Also  
+## See also  
  <xref:Microsoft.SqlServer.Management.Smo.Table>  
   
   

@@ -36,7 +36,7 @@ Typically, access to data that is being changed by another transaction is denied
 ## User Action  
 This error cancels the query. Either resubmit the query or remove the NOLOCK locking hint.  
   
-## See Also  
+## See also  
 [MSSQLSERVER_605](../../relational-databases/errors-events/mssqlserver-605-database-engine-error.md)  
 [Table Hints &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-table.md)  
 [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  

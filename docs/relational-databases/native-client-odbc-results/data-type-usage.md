@@ -43,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |User-defined type (UDT)|UDT columns are mapped as SQL_SS_UDT. If a UDT column is mapped explicitly to another type in the SQL statement using the ToString() or ToXMLString() methods of the UDT, or via the CAST/CONVERT functions, the type of the column in the result set will reflect the actual type to which the column was converted.<br /><br /> The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver can only bind to a UDT column as binary. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] only supports conversion between the SQL_SS_UDT and SQL_C_BINARY data types.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will automatically convert XML to Unicode text. The XML type is mapped as SQL_SS_XML.|  
   
-## See Also  
+## See also  
  [Processing Results &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

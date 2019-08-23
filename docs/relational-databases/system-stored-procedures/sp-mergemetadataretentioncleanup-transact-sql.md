@@ -57,7 +57,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## Permissions  
  Only members of the **db_owner** fixed database role or users in the publication access list for a published database can execute **sp_mergemetadataretentioncleanup**.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

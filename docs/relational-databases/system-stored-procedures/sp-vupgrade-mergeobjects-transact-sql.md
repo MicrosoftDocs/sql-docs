@@ -57,7 +57,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ## Permissions  
  Requires membership in the **sysadmin** fixed server role.  
   
-## See Also  
+## See also  
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   

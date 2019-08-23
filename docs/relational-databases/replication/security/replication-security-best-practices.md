@@ -62,7 +62,7 @@ ms.author: "mathoma"
   
     -   In situations that require [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication, access to UNC snapshot shares is often not available (for example access might be blocked by a firewall). In this case, you can transfer the snapshot to Subscribers through file transfer protocol (FTP). For more information, see [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
-## See Also  
+## See also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication over the Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
  [Secure the Subscriber](../../../relational-databases/replication/security/secure-the-subscriber.md)   

@@ -38,7 +38,7 @@ object.GetNextOrderValue()
   
 ## Remarks  
   
-## See Also  
+## See also  
  [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)   
  [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   

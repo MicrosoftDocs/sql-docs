@@ -88,7 +88,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 |Enable or disable download-only subscriptions (changing to or from other upload options does not require any special actions).|**sp_changemergearticle**|Change to or from a value of **2** for **subscriber_upload_options**|Reinitialize subscriptions.|  
 |Change destination table owner.|**sp_changemergearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
-## See Also  
+## See also  
  [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Create and Apply the Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md)   

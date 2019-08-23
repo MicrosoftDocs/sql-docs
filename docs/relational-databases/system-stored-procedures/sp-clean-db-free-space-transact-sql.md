@@ -67,7 +67,7 @@ EXEC sp_clean_db_free_space
 @dbname = N'AdventureWorks2012' ;  
 ```  
   
-## See Also  
+## See also  
  [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
  <br>[Ghost Cleanup Process Guide](../ghost-record-cleanup-process-guide.md) 
   

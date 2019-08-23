@@ -37,7 +37,7 @@ SERVER=(localdb)\v11.0
   
  If necessary, you can create a LocalDB instance with sqllocaldb.exe. You can also use sqlcmd.exe to add and modify databases in a LocalDB instance. For example, **sqlcmd -S (localdb)\v11.0**.  
   
-## See Also  
+## See also  
  [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

@@ -142,7 +142,7 @@ Here is the T-SQL to achieve the workaround and simulate MERGE.
     ****/  
   
   
-## See Also  
+## See also  
  [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)   
  [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   

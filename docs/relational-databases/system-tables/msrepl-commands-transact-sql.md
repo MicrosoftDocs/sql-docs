@@ -36,7 +36,7 @@ ms.author: sstein
 |**hashkey**|**int**|Internal-use only.|  
 |**originator_lsn**|**varbinary(16)**|Identifies the LSN for the command in the originating publication. This is used in peer-to-peer transactional replication.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)  

@@ -25,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |property_value|**nvarchar(255)**|The current property value.|NULL|  
 |update_time|**datetime**|The last time the metric was updated.|NOT NULL|  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

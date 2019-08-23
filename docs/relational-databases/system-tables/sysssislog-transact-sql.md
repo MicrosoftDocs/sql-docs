@@ -42,7 +42,7 @@ ms.author: lle
 |databytes|**image**|An optional byte array that contains additional information.|  
 |message|**nvarchar**|A description of the event and the information associated with the event.|  
   
-## See Also  
+## See also  
  [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md)   
   
   

@@ -53,7 +53,7 @@ sp_delete_firewall_rule [@name =] 'name'
 EXEC sp_delete_firewall_rule N'Example setting 1';   
 ```  
   
-## See Also  
+## See also  
  [Azure SQL Database Firewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [How to: Configure Firewall Settings (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   

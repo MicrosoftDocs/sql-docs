@@ -57,7 +57,7 @@ SELECT * FROM sys.dm_cryptographic_provider_algorithms(1234567);
 GO  
 ```  
   
-## See Also  
+## See also  
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Security-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   

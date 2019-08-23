@@ -132,7 +132,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  For more information, see [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
-## See Also  
+## See also  
  [Server-Level Roles](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Database-Level Roles](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Application Roles](../../../relational-databases/security/authentication-access/application-roles.md)  

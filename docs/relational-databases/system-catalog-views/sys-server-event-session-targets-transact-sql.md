@@ -45,7 +45,7 @@ ms.author: sstein
 |From|To|Relationship|  
 |sys.server_event_session_targets.event_session_id|sys.server_event_sessions.event_session_id|Many to one|  
   
-## See Also  
+## See also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Extended Events](../../relational-databases/extended-events/extended-events.md)  

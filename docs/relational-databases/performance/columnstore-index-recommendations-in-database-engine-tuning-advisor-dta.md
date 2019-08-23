@@ -46,7 +46,7 @@ To  enable columnstore recommendations when using dta.exe command line utility, 
 
 For more information on dta.exe command line utility, see [dta Utility](../../tools/dta/dta-utility.md)
 
-## See Also
+## See also
 [Columnstore Indexes Guide](../../relational-databases/indexes/columnstore-indexes-overview.md)       
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)      
 [Tutorial: Database Engine Tuning Advisor](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)

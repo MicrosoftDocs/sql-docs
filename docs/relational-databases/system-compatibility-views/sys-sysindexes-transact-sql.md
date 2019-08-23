@@ -78,7 +78,7 @@ ms.author: "jroth"
   
 -   Use application-level information to determine when to update statistics. For example, every time the maximum value of an **identity** column changes by more than 10,000, or every time a bulk insert operation is performed.  
   
-## See Also  
+## See also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

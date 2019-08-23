@@ -58,7 +58,7 @@ ms.author: "sstein"
 |**collation**|**int**|The name of the collation of the column. NULL for non-character based columns.|  
 |**tdscollation**|**int**|The name of the collation of the column when returned in a tabular data stream (TDS).|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

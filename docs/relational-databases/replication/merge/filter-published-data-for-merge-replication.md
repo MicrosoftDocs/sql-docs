@@ -26,7 +26,7 @@ ms.author: "mathoma"
   
  A filter must not include the **rowguidcol** used by replication to identify rows. By default this is the column added at the time you set up merge replication and is named **rowguid**.  
   
-## See Also  
+## See also  
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

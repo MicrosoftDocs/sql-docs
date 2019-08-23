@@ -47,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Describes how to return information about a view such as the view definition.|[Get Information About a View](../../relational-databases/views/get-information-about-a-view.md)|  
 |Describes how to rename a view.|[Rename Views](../../relational-databases/views/rename-views.md)|  
   
-## See Also  
+## See also  
  [Create Views over XML Columns](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
   

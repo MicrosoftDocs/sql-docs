@@ -303,7 +303,7 @@ GO
 ``` 
 
 
-## See Also
+## See also
 
 [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   

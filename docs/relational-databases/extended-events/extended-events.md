@@ -124,7 +124,7 @@ SELECT
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## See Also
+## See also
 
 [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)  
 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  

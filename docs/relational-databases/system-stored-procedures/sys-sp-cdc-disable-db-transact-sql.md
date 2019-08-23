@@ -62,7 +62,7 @@ EXECUTE sys.sp_cdc_disable_db;
 GO  
 ```  
   
-## See Also  
+## See also  
  [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)   
  [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)  
   

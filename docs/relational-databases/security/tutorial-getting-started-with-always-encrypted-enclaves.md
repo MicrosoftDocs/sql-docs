@@ -338,7 +338,7 @@ After completing this tutorial, you can go to one of the following tutorials:
 - [Tutorial: Develop a .NET Framework application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Creating and using indexes on enclave-enabled columns using randomized encryption](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
-## See Also
+## See also
 - [Configure enclave type for Always Encrypted Server Configuration Option](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
 - [Provision enclave-enabled keys](encryption/always-encrypted-enclaves-provision-keys.md)
 - [Configure column encryption in-place with Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)

@@ -257,7 +257,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not save the XML encoding when XML data is persisted in the database. Therefore, the original encoding of XML fields is not available when XML data is exported. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses UTF-16 encoding when exporting XML data.  
   
 
-## See Also  
+## See also  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [bcp Utility](../../tools/bcp-utility.md)   

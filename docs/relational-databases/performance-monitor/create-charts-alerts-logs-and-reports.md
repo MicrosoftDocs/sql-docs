@@ -56,7 +56,7 @@ ms.author: jrasnick
   
  For more information about creating charts, alerts, logs, and reports, or about Windows objects and counters, see the Windows documentation.  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

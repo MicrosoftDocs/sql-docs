@@ -41,7 +41,7 @@ ms.author: "mathoma"
 |[Limit Trace File and Table Sizes](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|Contains information about how to limit the size of files and tables where trace data is written. Note that only [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] can write trace information to tables.|  
 |[Schedule Traces](../../relational-databases/sql-trace/schedule-traces.md)|Contains information about how to set the start time and the end time for tracing.|  
   
-## See Also  
+## See also  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

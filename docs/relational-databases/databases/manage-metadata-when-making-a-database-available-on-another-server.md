@@ -327,7 +327,7 @@ The TRUSTWORHTY database property is used to indicate whether this instance of S
  For more information about this feature, see [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
   
-## See Also  
+## See also  
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   

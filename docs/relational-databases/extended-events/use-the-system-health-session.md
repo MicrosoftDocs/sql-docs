@@ -83,7 +83,7 @@ If you delete the system_health session, you can restore it by executing the **u
   
 Be aware that after you restore the session, you must start the session by using the `ALTER EVENT SESSION` statement or by using the **Extended Events** node in Object Explorer. Otherwise, the session starts automatically the next time that you restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
-## See Also  
+## See also  
  [Extended Events](../../relational-databases/extended-events/extended-events.md)    
  [Extended Events Tools](../../relational-databases/extended-events/extended-events-tools.md)    
  [Database Engine Errors](../../relational-databases/errors-events/database-engine-events-and-errors.md)    

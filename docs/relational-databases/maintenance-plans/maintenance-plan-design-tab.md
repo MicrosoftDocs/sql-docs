@@ -108,7 +108,7 @@ ms.author: mikeray
  **Zoom**  
  Changes the size of the tasks on the design surface  
   
-## See Also  
+## See also  
  [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Create a Maintenance Plan](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

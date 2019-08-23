@@ -71,7 +71,7 @@ ms.author: "jroth"
 ### Scalable Memory Usage  
  In order for managed garbage collection to perform and scale well in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], avoid large, single allocation. Allocations greater than 88 kilobytes (KB) in size will be placed on the Large Object Heap, which will cause garbage collection to perform and scale much worse than many smaller allocations. For example, if you need to allocate a large multi-dimensional array, it is better to allocate a jagged (scattered) array.  
   
-## See Also  
+## See also  
  [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

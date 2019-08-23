@@ -52,7 +52,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_dropdistributiondb**.  
   
-## See Also  
+## See also  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   

@@ -145,7 +145,7 @@ ms.author: "jroth"
   
     ```  
   
-## See Also  
+## See also  
  [srv_wsendmsg &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

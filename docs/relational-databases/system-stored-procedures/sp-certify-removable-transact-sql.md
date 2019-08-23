@@ -85,7 +85,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 EXEC sp_certify_removable inventory, AUTO;  
 ```  
   
-## See Also  
+## See also  
  [Database Detach and Attach &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_create_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

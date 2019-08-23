@@ -71,7 +71,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |User-defined types|No|This is represented internally as **varbinary**.|  
 |FILESTREAM|No|This is represented internally as **varbinary**.|  
   
-## See Also  
+## See also  
  [Data Compression](../../relational-databases/data-compression/data-compression.md)   
  [Page Compression Implementation](../../relational-databases/data-compression/page-compression-implementation.md)  
   

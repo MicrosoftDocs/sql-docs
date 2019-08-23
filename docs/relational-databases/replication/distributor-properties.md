@@ -80,7 +80,7 @@ The **Publishers** page of the **Distributor Properties** dialog box allows you 
 -   The agent connects to the Publisher using the credentials specified in the **Publisher Properties** dialog box, which is available from the **Publishers** page of the **Distributor Properties** dialog box.    
 -   The agent connects to the Subscriber using the credentials specified for the Distribution Agent in the New Subscription Wizard.  For more information, see  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md). 
   
-## See Also  
+## See also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
   

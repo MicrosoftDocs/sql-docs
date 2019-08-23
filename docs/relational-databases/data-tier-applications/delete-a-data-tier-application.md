@@ -219,7 +219,7 @@ $dacName  = "<myApplication>"
 $dacStore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```
   
-## See Also  
+## See also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   

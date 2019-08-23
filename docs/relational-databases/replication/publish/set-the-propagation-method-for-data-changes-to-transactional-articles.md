@@ -154,7 +154,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 2.  Repeat step 1 for each propagation method to be changed.  
   
-## See Also  
+## See also  
  [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
   

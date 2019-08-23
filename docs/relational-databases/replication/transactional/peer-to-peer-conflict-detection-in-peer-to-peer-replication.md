@@ -94,7 +94,7 @@ ms.author: "mathoma"
   
     5.  Execute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md): specify 'p2p_continue_onconflict' for the @property parameter and **false** for the @value parameter.  
   
-## See Also  
+## See also  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

@@ -175,7 +175,7 @@ GO
   
 -   *\<uniquifier>* is a system-generated string to make the name unique. This string may contain the FileTable name and a unique identifier.  
   
-## See Also  
+## See also  
  [Manage FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

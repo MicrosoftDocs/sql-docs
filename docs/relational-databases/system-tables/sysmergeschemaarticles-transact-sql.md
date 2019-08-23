@@ -38,7 +38,7 @@ ms.author: sstein
 |**destination_object**|**sysname**|The name of the destination object in the subscription database. This value applies only to schema-only articles, such as stored procedures, views, and UDFs.|  
 |**destination_owner**|**sysname**|The owner of the object in the subscription database, if it is not **dbo**.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -35,7 +35,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |received_time|**datetime**|Last time a network package was received by this node.||  
 |error_id|**nvarchar(36)**|Unique identifier of the last error that occurred on this node.||  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

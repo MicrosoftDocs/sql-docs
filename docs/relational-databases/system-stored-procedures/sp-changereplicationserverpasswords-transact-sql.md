@@ -69,7 +69,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_changereplicationserverpasswords**.  
   
-## See Also  
+## See also  
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

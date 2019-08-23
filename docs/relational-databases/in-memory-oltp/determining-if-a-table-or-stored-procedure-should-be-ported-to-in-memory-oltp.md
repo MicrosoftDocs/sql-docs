@@ -166,7 +166,7 @@ Scan and contention statistics on the table details report is gathered and aggre
   
     -   A migration checklist report for <object_name> is the only report in the location specified by folder_path2.  
   
-## See Also  
+## See also  
  [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

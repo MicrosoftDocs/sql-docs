@@ -223,7 +223,7 @@ EXEC sp_add_jobstep
 GO  
 ```  
   
-## See Also  
+## See also  
  [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   

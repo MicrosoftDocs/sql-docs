@@ -59,5 +59,5 @@ This table describes the **SQL Server XTP Databases** counters.
 |**Tail Cache Page Count Peak**|Highest number of pages allocated in the Tail Cache. This is a very low-level counter, not intended for customer use.|
 
 
-## See Also  
+## See also  
 [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

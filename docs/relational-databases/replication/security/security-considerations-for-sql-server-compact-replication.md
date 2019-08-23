@@ -17,7 +17,7 @@ ms.author: "mathoma"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Securing connectivity between an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Database Engine and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] involves properly configuring security for both Microsoft Internet Information Services (IIS) and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## See Also  
+## See also  
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)  
   

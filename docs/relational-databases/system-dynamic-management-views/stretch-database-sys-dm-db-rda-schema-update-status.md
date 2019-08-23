@@ -39,7 +39,7 @@ ms.author: pelopes
 |**error_severity**|**int**|If the remote data archive schema update fails, the severity of the error that occurred; otherwise, null.|  
 |**error_state**|**int**|If the remote data archive schema update fails, the state of the error that occurred; otherwise, null. The error_state indicates the condition or location where the error occurred.|  
   
-## See Also  
+## See also  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

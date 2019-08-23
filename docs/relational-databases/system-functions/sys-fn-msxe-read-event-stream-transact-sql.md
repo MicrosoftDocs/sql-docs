@@ -53,7 +53,7 @@ sys.fn_MSxe_read_event_stream ( session_name)
 |type|**Integer (4)**|The event type. Is not nullable.|  
 |data|**Image (16)**|The event image data. Is nullable.|  
   
-## See Also  
+## See also  
  [Extended Events Dynamic Management Views](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Extended Events](../../relational-databases/extended-events/extended-events.md)  

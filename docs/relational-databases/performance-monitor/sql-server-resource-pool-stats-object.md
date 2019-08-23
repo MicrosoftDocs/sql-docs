@@ -54,7 +54,7 @@ ms.author: jrasnick
 |**Used memory (KB)**|The amount of memory used, in kilobytes (KB), for the resource pool.|  
 
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Workload Group Stats Object](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  

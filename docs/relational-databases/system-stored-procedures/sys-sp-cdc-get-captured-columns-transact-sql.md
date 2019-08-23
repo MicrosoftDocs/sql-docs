@@ -82,7 +82,7 @@ EXECUTE sys.sp_cdc_get_captured_columns
 GO  
 ```  
   
-## See Also  
+## See also  
  [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

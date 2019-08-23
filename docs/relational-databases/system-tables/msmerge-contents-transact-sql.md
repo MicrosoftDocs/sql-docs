@@ -36,7 +36,7 @@ ms.author: sstein
 |**logical_record_lineage**|**varbinary(501)**|Subscriber nickname, version number pairs that are used to maintain a history of changes to the top-level parent row in a logical record. For all child rows in a logical record, this value is NULL.|  
 |**logical_relation_change_gen**|**bigint**|The generation value associated with the last change that caused realignment in the logical record, where an existing row moved into or out of a logical record.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

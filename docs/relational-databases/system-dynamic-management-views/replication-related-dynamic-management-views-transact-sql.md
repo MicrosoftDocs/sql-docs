@@ -25,7 +25,7 @@ ms.author: sstein
 |[sys.dm_repl_articles](../../relational-databases/system-dynamic-management-views/sys-dm-repl-articles-transact-sql.md)|[sys.dm_repl_schemas](../../relational-databases/system-dynamic-management-views/sys-dm-repl-schemas-transact-sql.md)|  
 |[sys.dm_repl_tranhash](../../relational-databases/system-dynamic-management-views/sys-dm-repl-tranhash-transact-sql.md)|[sys.dm_repl_traninfo](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)|  
   
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

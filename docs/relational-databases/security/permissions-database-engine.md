@@ -453,7 +453,7 @@ SELECT * FROM sys.database_permissions
 GO  
 ```  
   
-## See Also  
+## See also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   

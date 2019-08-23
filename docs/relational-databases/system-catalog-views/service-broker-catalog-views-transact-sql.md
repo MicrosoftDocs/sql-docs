@@ -31,7 +31,7 @@ ms.author: "sstein"
 |[sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)|[sys.services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)|  
 |[sys.service_contract_message_usages](../../relational-databases/system-catalog-views/sys-service-contract-message-usages-transact-sql.md)|[sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)|  
   
-## See Also  
+## See also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [sys.service_broker_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   

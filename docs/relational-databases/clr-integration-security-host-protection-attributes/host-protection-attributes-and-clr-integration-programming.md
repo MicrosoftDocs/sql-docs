@@ -64,7 +64,7 @@ ms.author: "jroth"
  [Disallowed Types and Members in System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Lists the types and members in System.Core.dll whose HPA values are disallowed.  
   
-## See Also  
+## See also  
  [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [CLR Integration Programming Model Restrictions](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  

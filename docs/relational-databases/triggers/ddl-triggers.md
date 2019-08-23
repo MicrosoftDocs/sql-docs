@@ -113,7 +113,7 @@ GO
 |Describes how to return information about an event that fires a DDL trigger by using the EVENTDATA function.|[Use the EVENTDATA Function](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Describes how to manage trigger security.|[Manage Trigger Security](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## See Also  
+## See also  
  [DML Triggers](../../relational-databases/triggers/dml-triggers.md)   
  [Logon Triggers](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  

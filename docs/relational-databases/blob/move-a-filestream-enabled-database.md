@@ -56,7 +56,7 @@ ms.author: mikeray
     GO  
     ```  
   
-## See Also  
+## See also  
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

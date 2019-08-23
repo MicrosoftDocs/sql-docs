@@ -60,7 +60,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or the user who created the pull subscription can execute **sp_droppullsubscription**. The **db_owner** fixed database role is only able to execute **sp_droppullsubscription** if the user who created the pull subscription belongs to this role.  
   
-## See Also  
+## See also  
  [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

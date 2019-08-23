@@ -49,7 +49,7 @@ ms.author: sstein
 |**custom_script**|**nvarchar(2048)**|The registered custom stored procedure or script that is executed at the end of the DDL trigger.|  
 |**fire_triggers_on_snapshot**|**bit**|Indicates whether or not replicated triggers are executed when the snapshot is applied, which can be one of these values:<br /><br /> **0** = Triggers are not executed.<br /><br /> **1** = Triggers are executed.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

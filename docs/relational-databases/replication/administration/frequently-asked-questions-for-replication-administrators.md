@@ -225,7 +225,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 ### Does replication work in conjunction with clustering?  
  Yes. No special considerations are required because all data is stored on one set of disks on the cluster.  
   
-## See Also  
+## See also  
  [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   

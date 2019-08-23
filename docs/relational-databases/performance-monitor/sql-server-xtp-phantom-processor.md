@@ -27,7 +27,7 @@ ms.author: jrasnick
 |**Phantom rows touched/sec**|The number of rows touched by phantom scans (on average), per second.|  
 |**Phantom scans started/sec**|The number of phantom scans started (on average), per second.|  
   
-## See Also  
+## See also  
  [SQL Server XTP &#40;In-Memory OLTP&#41; Performance Counters](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

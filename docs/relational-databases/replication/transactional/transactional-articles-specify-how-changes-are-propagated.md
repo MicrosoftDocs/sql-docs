@@ -209,7 +209,7 @@ end
 go  
 ```  
   
-## See Also  
+## See also  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

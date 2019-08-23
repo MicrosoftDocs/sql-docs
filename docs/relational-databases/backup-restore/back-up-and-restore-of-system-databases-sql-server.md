@@ -66,7 +66,7 @@ ms.author: mathoma
   
 -   [Move System Databases](../../relational-databases/databases/move-system-databases.md)  
   
-## See Also  
+## See also  
  [Distribution Database](../../relational-databases/replication/distribution-database.md)   
  [master Database](../../relational-databases/databases/master-database.md)   
  [msdb Database](../../relational-databases/databases/msdb-database.md)   

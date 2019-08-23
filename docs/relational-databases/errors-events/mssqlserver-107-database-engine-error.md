@@ -56,6 +56,6 @@ or
 SELECT ErrorLog.* FROM dbo.ErrorLog;  
 ```  
   
-## See Also  
+## See also  
 [MSSQLSERVER_4104](~/relational-databases/errors-events/mssqlserver-4104-database-engine-error.md)  
   

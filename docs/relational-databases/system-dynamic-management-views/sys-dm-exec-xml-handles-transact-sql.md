@@ -69,7 +69,7 @@ dm_exec_xml_handles (session_id | 0 )
 SELECT * FROM sys.dm_exec_xml_handles(0);  
 ```  
   
-## See Also  
+## See also  
  <br>[Dynamic Management Views and Functions (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
  <br>[Execution Related Dynamic Management Views and Functions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
  <br>[sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)

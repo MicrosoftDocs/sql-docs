@@ -102,7 +102,7 @@ ms.author: "carlrab"
   
  You can manually force the checkpoint followed by log backup to expedite the garbage collection. In production scenarios, the automatic checkpoints and log backups taken as part of backup strategy will seamlessly transition CFPs through these phases without requiring any manual intervention. The impact of the garbage collection process is that databases with memory-optimized tables may have a larger storage size compared to its size in memory. If checkpoint and log backups do not happen, the on-disk footprint of checkpoint files continues to grow.  
   
-## See Also  
+## See also  
  [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

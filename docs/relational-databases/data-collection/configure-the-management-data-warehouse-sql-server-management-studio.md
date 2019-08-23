@@ -127,7 +127,7 @@ ms.author: mathoma
  **Close**  
  Close the wizard.  
   
-## See Also  
+## See also  
  [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)   

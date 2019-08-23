@@ -86,7 +86,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor can execute **sp_MSchange_logreader_agent_properties**.  
   
-## See Also  
+## See also  
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

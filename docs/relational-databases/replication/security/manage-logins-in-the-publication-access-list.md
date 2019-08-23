@@ -66,7 +66,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 1.  At the Publisher on the publication database, execute [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). For `@publication`, specify the publication name; and for `@login`, specify the name of the login or group that is being removed.  
   
-## See Also  
+## See also  
  [Manage Logins in the Publication Access List](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

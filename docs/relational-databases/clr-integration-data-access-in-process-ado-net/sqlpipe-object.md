@@ -133,7 +133,7 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## See Also  
+## See also  
  [SqlDataRecord Object](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
  [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [SQL Server In-Process Specific Extensions to ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  

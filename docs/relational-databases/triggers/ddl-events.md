@@ -107,7 +107,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |CREATE_SERVER_AUDIT_SPECIFICATION|ALTER_SERVER_AUDIT_SPECIFICATION|DROP_SERVER_AUDIT_SPECIFICATION|  
 |CREATE_WORKLOAD_GROUP|ALTER_WORKLOAD_GROUP|DROP_WORKLOAD_GROUP|  
   
-## See Also  
+## See also  
  [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)   
  [Event Notifications](../../relational-databases/service-broker/event-notifications.md)   
  [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md)  

@@ -24,7 +24,7 @@ ms.author: "mathoma"
  **Databases and publications**  
  Displays all databases on the server that contain at least one publication that is enabled for peer-to-peer replication. Select a publication to continue.  
   
-## See Also  
+## See also  
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   

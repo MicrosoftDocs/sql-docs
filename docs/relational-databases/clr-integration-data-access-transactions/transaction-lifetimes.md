@@ -25,7 +25,7 @@ ms.author: "jroth"
   
 -   An attempt to roll back a transaction not started in the same procedure causes the transaction to stop responding (preventing any other side-effecting operation from happening). The transaction discontinues until the CLR code goes out of scope. Note that this can be useful when you detect an error inside your procedure and want to make sure the whole transaction terminates.  
   
-## See Also  
+## See also  
  [CLR Integration and Transactions](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

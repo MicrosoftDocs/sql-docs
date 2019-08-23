@@ -316,7 +316,7 @@ Transactional and merge replication allow you to validate that data at the Subsc
   
  [!code-vb[HowTo#rmo_vb_ValidateMergeSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_validatemergesub)]  
   
- ## See Also  
+ ## See also  
 [Best Practices for Replication Administration](../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   
   

@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Because the rowset size was set to 1 more than the number of rows in the result set, the server detects the end of the cursor and closes the cursor.  
   
-## See Also  
+## See also  
  [Cursor Programming Details &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
   

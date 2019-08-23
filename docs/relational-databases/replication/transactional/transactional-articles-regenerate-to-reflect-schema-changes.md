@@ -38,7 +38,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
      The next time a relevant schema change is made, this script executes on each Subscriber within the same transaction as the DDL command. After the schema change is made, the script is unregistered. You must re-register the script to have it executed after a subsequent schema change.  
   
-## See Also  
+## See also  
  [Specify How Changes Are Propagated for Transactional Articles](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
  [Make Schema Changes on Publication Databases](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
   

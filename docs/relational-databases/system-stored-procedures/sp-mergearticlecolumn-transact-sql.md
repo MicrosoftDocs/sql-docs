@@ -87,7 +87,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_mergearticlecolumn**.  
   
-## See Also  
+## See also  
  [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md)   

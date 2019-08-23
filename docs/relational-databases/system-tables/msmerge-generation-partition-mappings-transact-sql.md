@@ -30,7 +30,7 @@ ms.author: sstein
 |**partition_id**|**int**|Identifies the partition.|  
 |**changecount**|**int**|The number of times that the partition has changed.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

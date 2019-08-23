@@ -58,7 +58,7 @@ The live execution plan can also be accessed from the **[Activity Monitor](../..
 ## Permissions  
  Requires the database level `SHOWPLAN` permission to populate the **Live Query Statistics** results page, the server level `VIEW SERVER STATE` permission to see the live statistics, and requires any permissions necessary to execute the query.  
   
-## See Also  
+## See also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

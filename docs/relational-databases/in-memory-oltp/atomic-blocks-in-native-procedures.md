@@ -158,7 +158,7 @@ GO
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Uncaught exceptions cause the atomic block to roll back, but not cause the transaction to abort unless the error is transaction dooming.|  
   
-## See Also  
+## See also  
  [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

@@ -60,7 +60,7 @@ ms.author: mikeray
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)|**Added**|[Manage FileTables](../../relational-databases/blob/manage-filetables.md)|  
   
-## See Also  
+## See also  
  [Manage FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

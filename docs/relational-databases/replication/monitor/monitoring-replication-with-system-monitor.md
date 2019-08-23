@@ -36,7 +36,7 @@ ms.author: "mathoma"
 |Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Downloaded Changes/sec|The number of rows per second replicated from the Publisher to the Subscriber.|  
 |Merge Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Merge|Uploaded Changes/sec|The number of rows per second replicated from the Subscriber to the Publisher.|  
   
-## See Also  
+## See also  
  [Monitoring &#40;Replication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

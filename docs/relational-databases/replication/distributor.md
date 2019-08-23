@@ -41,7 +41,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 > [!NOTE]  
 >  To use a remote server as the Distributor, the remote server must already be configured as a Distributor. The server against which this wizard is running must be enabled as a Publisher on that Distributor.  
   
-## See Also  
+## See also  
  [Configure Distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   

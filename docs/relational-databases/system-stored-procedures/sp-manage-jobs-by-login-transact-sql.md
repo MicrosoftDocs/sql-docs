@@ -68,7 +68,7 @@ EXEC dbo.sp_manage_jobs_by_login
 GO  
 ```  
   
-## See Also  
+## See also  
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

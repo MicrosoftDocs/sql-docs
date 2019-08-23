@@ -30,7 +30,7 @@ ms.author: sstein
 |**id**|**int**|The ID of the row.|  
 |**publisher_engine_edition**|**int**|The edition of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, which can be one of the following:<br /><br /> **10** = Personal Edition<br /><br /> **11** = Desktop Engine (MSDE)<br /><br /> **20** = Standard<br /><br /> **21** = Workgroup<br /><br /> **30** = Enterprise (Evaluation)<br /><br /> **31** = Developer<br /><br /> **40** = Express (Express cannot be a publisher. This value is present for completeness.)|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

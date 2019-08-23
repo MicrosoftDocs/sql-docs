@@ -35,7 +35,7 @@ ms.author: genemi
 |**string**|Values of this type must comply with the format of the SQL **nvarchar(max)** type.|  
 |**anyURI**|Values of this type can be no more than 4000 Unicode characters in length.|  
   
-## See Also  
+## See also  
  [Requirements and Limitations for XML Schema Collections on the Server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

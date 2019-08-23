@@ -48,7 +48,7 @@ ms.author: "mathoma"
   
  [Set a Maximum Table Size for a Trace Table &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
-## See Also  
+## See also  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
   

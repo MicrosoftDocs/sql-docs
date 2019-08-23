@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |SSPROP_ENABLEFASTLOAD|R/W: Read/write Default: VARIANT_FALSE<br /><br /> Description: To enable bulk copy from memory, SSPROP_ENABLEFASTLOAD property should be set to VARIANT_TRUE. With this property set on the data source, the newly created session allows consumer access to the [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) interface.<br /><br /> If the property is set to VARIANT_TRUE, **IRowsetFastLoad** interface is available through **IOpenRowset::OpenRowset** by requesting the **IID_IRowsetFastLoad** interface or by setting **SSPROP_IRowsetFastLoad** to VARIANT_TRUE.|  
 |SSPROP_ENABLEBULKCOPY|R/W: Read/write Default: VARIANT_FALSE<br /><br /> Description: To enable bulk copy from files, SSPROP_ENABLEBULKCOPY property should be set to VARIANT_TRUE. With this property set on the data source, consumer access to the IBCPSession interface is available under the same level as Sessions.<br /><br /> SSPROP_IRowsetFastLoad must also be set to VARIANT_TRUE.|  
   
-## See Also  
+## See also  
  [Data Source Objects &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

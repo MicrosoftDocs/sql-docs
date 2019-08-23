@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |5|Authentication Failure|An Authentication Failure event reports that Service Broker cannot perform authentication for the connection due to an error. For Windows Authentication, this event reports that Service Broker is unable to use Windows Authentication. For certificate-based authentication, this event reports that Service Broker is unable to access the certificate.|  
 |6|Authorization Failure|An Authorization Failure event reports that Service Broker denied authorization for the connection. For Windows Authentication, this event reports that the security identifier for the connection does not match a database user. For certificate-based authentication, this event reports that the public key delivered in the message does not correspond to a certificate in the database.|  
   
-## See Also  
+## See also  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  

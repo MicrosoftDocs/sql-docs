@@ -258,7 +258,7 @@ CREATE TABLE Customers (
 GO  
   
 ```  
-## See Also  
+## See also  
 - [Configure Always Encrypted using SSMS](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)   
 - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)   
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md) 

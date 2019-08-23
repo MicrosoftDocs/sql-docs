@@ -509,7 +509,7 @@ database_name.owner_name.table_name
  **Tuning Log**  
  Contains information regarding this tuning session. To print this log, right-click the log, and then click **Print**.  
   
-## See Also  
+## See also  
  [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   

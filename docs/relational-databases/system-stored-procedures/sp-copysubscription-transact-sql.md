@@ -59,7 +59,7 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_copysubscription**.  
   
-## See Also  
+## See also  
  [Alternate Snapshot Folder Locations](../../relational-databases/replication/snapshot-options.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

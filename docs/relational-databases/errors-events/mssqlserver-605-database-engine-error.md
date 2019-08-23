@@ -83,6 +83,6 @@ If the problem is not hardware related, perform one of the following tasks:
     > [!CAUTION]  
     > If you are not sure what effect DBCC CHECKDB with a REPAIR clause has on your data, contact your primary support provider before running this statement.  
   
-## See Also  
+## See also  
 [DBCC CHECKTABLE &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
   

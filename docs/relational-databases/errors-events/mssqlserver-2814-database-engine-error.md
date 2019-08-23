@@ -64,6 +64,6 @@ The following table lists the reasons for recompilation.
   
 3.  If the problem persists, contact Microsoft Customer Support Services.  
   
-## See Also  
+## See also  
 [SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
   

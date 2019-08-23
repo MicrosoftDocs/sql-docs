@@ -46,7 +46,7 @@ RAW mode transforms each row in the query result set into an XML element that ha
   
 -   [Example: Querying XMLType Columns](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   
-## See Also  
+## See also  
  [Add Namespaces to Queries with WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Use AUTO Mode with FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   

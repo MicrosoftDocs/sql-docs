@@ -143,7 +143,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## Next Steps
 - [Develop applications using Always Encrypted](always-encrypted-client-development.md)
 
-## See Also  
+## See also  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
  - [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)

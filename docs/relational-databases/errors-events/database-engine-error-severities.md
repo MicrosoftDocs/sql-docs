@@ -62,7 +62,7 @@ ms.author: mathoma
 ## Retrieving Error Severity  
  The ERROR_SEVERITY system function can be used to retrieve the severity of the error that caused the CATCH block of a TRY...CATCH construct to be run. ERROR_SEVERITY returns NULL if called outside the scope of a CATCH block. For more information, see [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
   
-## See Also  
+## See also  
  [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   

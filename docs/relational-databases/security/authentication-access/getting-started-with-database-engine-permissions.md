@@ -230,7 +230,7 @@ JOIN sys.database_principals AS dRole
   
 -   [Tutorial: Writing Transact-SQL Statements](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## See Also  
+## See also  
  [Security Center for SQL Server Database Engine and Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [Security Functions &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [Security-Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   

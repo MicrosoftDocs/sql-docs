@@ -25,7 +25,7 @@ ms.author: "jroth"
   
  There are some cases in which you may need to open a separate regular connection to the same server. For example, there are certain restrictions on using the context connection, described in [Restrictions on Regular and Context Connections](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md).  
   
-## See Also  
+## See also  
  [Context Connection](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

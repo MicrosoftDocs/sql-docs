@@ -237,7 +237,7 @@ Go
   
  Note that an explicit declaration in the XQuery prolog overrides the namespace prefix and the default element namespace that are defined in the WITH clause.  
   
-## See Also  
+## See also  
  [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery Language Reference &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   

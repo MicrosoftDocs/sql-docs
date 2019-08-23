@@ -50,7 +50,7 @@ ms.author: mikeray
     |**Database**|Name of the database where the marked transaction was committed.|  
     |**User Name**|Name of the database user who committed the marked transaction.|  
   
-## See Also  
+## See also  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Restore a Transaction Log Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

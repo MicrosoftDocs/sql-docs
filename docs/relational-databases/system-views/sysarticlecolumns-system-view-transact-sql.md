@@ -31,7 +31,7 @@ ms.author: "sstein"
 |**is_xml**|**int**|Is if the column is an **xml** column. A value of **1** indicates an **xml** column.|  
 |**is_max**|**int**|Is if the column is a Large Value data type column (**varchar(max)**, **nvarchar(max)** or **varbinary(max)**). A value of **1** indicates a Large Value column.|  
   
-## See Also  
+## See also  
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sysarticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   

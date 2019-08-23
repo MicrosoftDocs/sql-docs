@@ -79,7 +79,7 @@ JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups
 ORDER BY object_name(i.object_id), i.name, row_group_id;  
 ```  
   
-## See Also  
+## See also  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [Columnstore Index Architecture](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         

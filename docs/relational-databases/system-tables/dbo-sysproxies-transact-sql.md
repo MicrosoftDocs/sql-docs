@@ -38,7 +38,7 @@ ms.author: "sstein"
 ## Remarks  
  Only members of the **sysadmin** fixed server role can access the **sysproxies** table.  
   
-## See Also  
+## See also  
  [dbo.sysproxylogin &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
  [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
  [dbo.syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  

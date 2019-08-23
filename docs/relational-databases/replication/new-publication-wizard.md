@@ -71,7 +71,7 @@ ms.author: "mathoma"
   
 -   [Snapshot Agent &#40;New Publication Wizard&#41;](../../relational-databases/replication/snapshot-agent-new-publication-wizard.md)  
   
-## See Also  
+## See also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
 

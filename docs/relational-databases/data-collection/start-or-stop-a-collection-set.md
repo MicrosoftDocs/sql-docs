@@ -104,7 +104,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## See Also  
+## See also  
  [Data Collector Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   

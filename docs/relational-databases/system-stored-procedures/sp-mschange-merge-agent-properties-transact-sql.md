@@ -88,7 +88,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor can execute **sp_MSchange_merge_agent_properties**.  
   
-## See Also  
+## See also  
  [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   

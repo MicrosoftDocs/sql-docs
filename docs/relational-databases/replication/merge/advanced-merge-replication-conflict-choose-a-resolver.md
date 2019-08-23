@@ -36,7 +36,7 @@ ms.author: "mathoma"
 |Flag multiple changes to any value in a logical record as a conflict.|Use the default resolver with logical record-level tracking (the logical records feature does not support custom resolvers or business logic handlers).|  
 |Conflict outcome data needs to be different from original conflict data.|Use an article resolver that calculates new values.|  
   
-## See Also  
+## See also  
  [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Republish Data](../../../relational-databases/replication/republish-data.md)  

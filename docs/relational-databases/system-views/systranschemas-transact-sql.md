@@ -30,7 +30,7 @@ ms.author: "sstein"
 |**endlsn**|**binary**|LSN value at the end of the schema change.|  
 |**typeid**|**int**|Type of schema change.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

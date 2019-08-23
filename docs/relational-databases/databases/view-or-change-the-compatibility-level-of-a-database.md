@@ -89,5 +89,5 @@ SET COMPATIBILITY_LEVEL = 120;
 GO  
 ```  
   
-## See Also
+## See also
  [ALTER DATABASE &#40;Transact-SQL&#41; Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

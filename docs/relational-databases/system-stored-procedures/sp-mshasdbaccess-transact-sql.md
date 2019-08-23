@@ -38,7 +38,7 @@ sp_MShasdbaccess
 ## Permissions  
  Execute permission is granted to the **public** role.  
   
-## See Also  
+## See also  
  [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
   
   

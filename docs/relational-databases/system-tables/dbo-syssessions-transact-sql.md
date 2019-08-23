@@ -35,7 +35,7 @@ ms.author: "sstein"
 ## Remarks  
  Only users who are members of the **sysadmin** fixed server role can access this table.  
   
-## See Also  
+## See also  
  [dbo.sysjobactivity &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   

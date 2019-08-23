@@ -332,7 +332,7 @@ GO
   
  When you are concatenating values of type sysname, you should use temporary variables large enough to hold the maximum 128 characters per value. If possible, call `QUOTENAME()` directly inside the dynamic [!INCLUDE[tsql](../../includes/tsql-md.md)]. Otherwise, you can calculate the required buffer size as explained in the previous section.  
   
-## See Also  
+## See also  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

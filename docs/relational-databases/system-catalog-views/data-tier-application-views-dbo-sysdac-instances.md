@@ -44,7 +44,7 @@ ms.author: "sstein"
 ## Permissions  
  Requires membership in the sysadmin fixed server role to view all of the columns. Members of the public role can view the instance_name, description, and type_version columns.  
   
-## See Also  
+## See also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Data-tier Application Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   

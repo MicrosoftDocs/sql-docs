@@ -107,7 +107,7 @@ srcdata
 > [!IMPORTANT]  
 >  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://msdn.microsoft.com/security/).  
   
-## See Also  
+## See also  
  [srv_sendrow &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  

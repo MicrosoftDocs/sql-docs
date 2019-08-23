@@ -30,7 +30,7 @@ ms.author: vanto
  **To file**  
  To save the policy as an XML file, type the path and name of the file or use the Browse (**...**) button.  
   
-## See Also  
+## See also  
  [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

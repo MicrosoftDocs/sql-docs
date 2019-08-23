@@ -75,7 +75,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  **SQLSetPos** is preferred over WHERE CURRENT OF when you are using server cursors. If you are using a static, updatable cursor with the ODBC cursor library, the cursor library implements WHERE CURRENT OF updates by adding a WHERE clause with the key values for the underlying table. This can cause unintended updates if the keys in the table are not unique.  
   
-## See Also  
+## See also  
  [Using Cursors &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

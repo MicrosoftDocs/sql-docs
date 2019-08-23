@@ -107,7 +107,7 @@ GO
   
  You cannot read data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] into program variables using bulk copy; there is nothing like a "bcp_readrow" function. You can only send data from the application to the server.  
   
-## See Also  
+## See also  
  [Performing Bulk Copy Operations &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

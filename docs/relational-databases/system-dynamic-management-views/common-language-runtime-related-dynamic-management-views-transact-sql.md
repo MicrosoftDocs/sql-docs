@@ -25,7 +25,7 @@ ms.author: sstein
 |[sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|[sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|  
 |[sys.dm_clr_properties](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|[sys.dm_clr_tasks](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|  
   
-## See Also  
+## See also  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

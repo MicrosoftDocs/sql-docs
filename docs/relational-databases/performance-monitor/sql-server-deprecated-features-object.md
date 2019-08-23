@@ -272,7 +272,7 @@ This following table describes the SQL Server **Deprecated Features** performanc
 |xp_loginconfig|The xp_loginconfig procedure was encountered. Use the IsIntegratedSecurityOnly argument of SERVERPROPERTY instead. Occurs once per query.|  
 |xp_revokelogin|The xp_revokelogin procedure was encountered. Use ALTER LOGIN DISABLE or DROP LOGIN instead. Occurs once per compilation.|  
   
-## See Also  
+## See also  
  [Deprecated Database Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Deprecated Full-Text Search Features in SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement Event Class](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   

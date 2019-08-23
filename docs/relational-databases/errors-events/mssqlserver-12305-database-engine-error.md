@@ -29,6 +29,6 @@ ms.author: mathoma
 ## User Action  
 Do not use inline table variables.  
   
-## See Also  
+## See also  
 [In-Memory OLTP &#40;In-Memory Optimization&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

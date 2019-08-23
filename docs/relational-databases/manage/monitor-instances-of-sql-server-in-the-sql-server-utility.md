@@ -22,7 +22,7 @@ ms.author: mikeray
 |[View Resource Health Policy Results &#40;SQL Server Utility&#41;](../../relational-databases/manage/view-resource-health-policy-results-sql-server-utility.md)|Describes viewing the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility dashboard and list view in SSMS Utility Explorer.|  
 |[Modify a Resource Health Policy Definition &#40;SQL Server Utility&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)|Describes viewing or modifying [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility resource health policy definitions.|  
   
-## See Also  
+## See also  
  [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

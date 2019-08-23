@@ -133,7 +133,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Examples: Using AUTO Mode](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## See Also  
+## See also  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

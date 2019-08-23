@@ -106,7 +106,7 @@ ms.author: "jroth"
 |**Local data access**|Yes|Yes|Yes|  
 |**Ability to call native code**|No|No|Yes|  
   
-## See Also  
+## See also  
  [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Host Protection Attributes and CLR Integration Programming](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [CLR Integration Programming Model Restrictions](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   

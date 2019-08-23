@@ -63,7 +63,7 @@ HRESULT Abort(void);
  E_OUTOFMEMORY  
  Out of memory error.  
   
-## See Also  
+## See also  
  [ISSAbort &#40;OLE DB&#41;](https://msdn.microsoft.com/library/7c4df482-4a83-4da0-802b-3637b507693a)  
   
   

@@ -47,7 +47,7 @@ To access the XEvent Profiler, follow these steps:
 
    ![XEProfiler Viewer](media/xevents-xe-profiler-start-viewer.png)
 
-## See Also
+## See also
 [Extended Events](../../relational-databases/extended-events/extended-events.md)  
 [Extended Events Tools](../../relational-databases/extended-events/extended-events-tools.md)  
   

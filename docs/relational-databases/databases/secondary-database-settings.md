@@ -110,7 +110,7 @@ ms.author: "sstein"
  **Disable this job**  
  Suspend restore operations to the secondary database.  
   
-## See Also  
+## See also  
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

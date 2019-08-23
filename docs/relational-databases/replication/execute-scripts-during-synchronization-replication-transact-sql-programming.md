@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 4.  The specified script will be executed at each Subscriber when the agent next runs to synchronize the subscription.  
   
-## See Also  
+## See also  
  [Synchronize Data](../../relational-databases/replication/synchronize-data.md)  
   
   

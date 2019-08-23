@@ -35,7 +35,7 @@ ms.author: sstein
 |**status**|**tinyint**|The status of the subscription.|  
 |**subscription_time**|**datetime**|The time the subscription was added.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

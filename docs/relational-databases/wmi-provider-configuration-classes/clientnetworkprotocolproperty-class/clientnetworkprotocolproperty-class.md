@@ -34,7 +34,7 @@ ms.author: "carlrab"
   
 -   Set flags for the current property.  
   
-## See Also  
+## See also  
  [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

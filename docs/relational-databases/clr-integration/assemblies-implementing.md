@@ -106,7 +106,7 @@ ms.author: "jroth"
   
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
-## See Also  
+## See also  
  [Assemblies &#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Getting Information About Assemblies](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   

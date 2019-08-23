@@ -300,7 +300,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
     </root>  
     ```  
   
-## See Also  
+## See also  
  [float and real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   

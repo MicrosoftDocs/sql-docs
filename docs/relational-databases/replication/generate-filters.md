@@ -43,7 +43,7 @@ ms.author: "mathoma"
   
  After the statement is parsed, replication creates the necessary join filters. If you have not yet configured the Distributor for the Publisher against which this wizard is running, you are prompted to configure it.  
   
-## See Also  
+## See also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md)   

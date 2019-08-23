@@ -167,7 +167,7 @@ EXEC dbo.sp_update_schedule
 GO  
 ```  
   
-## See Also  
+## See also  
  [Create and Attach Schedules to Jobs](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Schedule a Job](../../ssms/agent/schedule-a-job.md)   
  [Create a Schedule](../../ssms/agent/create-a-schedule.md)   

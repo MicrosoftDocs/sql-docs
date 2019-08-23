@@ -50,7 +50,7 @@ sp_enumdsn
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_enumdsn**.  
   
-## See Also  
+## See also  
  [sp_dsninfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

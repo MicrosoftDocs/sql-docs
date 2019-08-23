@@ -130,7 +130,7 @@ ms.author: "mathoma"
 |---------------------|------------------------------------|  
 |Any Windows user that has the required permissions.|Internet Information Services (IIS) Manager. |  
   
-## See Also  
+## See also  
  [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   

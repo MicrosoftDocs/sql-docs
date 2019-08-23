@@ -35,7 +35,7 @@ EXEC sp_configure 'locks', 0;
   
  [Microsoft Knowledge Base article 271509](https://go.microsoft.com/fwlink/?linkid=117788)  
   
-## See Also  
+## See also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

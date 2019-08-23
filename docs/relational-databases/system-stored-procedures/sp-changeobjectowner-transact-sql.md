@@ -64,7 +64,7 @@ EXEC sp_changeobjectowner 'authors', 'Corporate\GeorgeW';
 GO  
 ```  
   
-## See Also  
+## See also  
  [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   

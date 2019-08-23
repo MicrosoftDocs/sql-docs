@@ -39,7 +39,7 @@ ms.author: "jroth"
  [Transaction Lifetimes](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  Describes the difference in lifetime between transactions started in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures and transactions started in CLR applications.  
   
-## See Also  
+## See also  
  [Data Access from CLR Database Objects](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

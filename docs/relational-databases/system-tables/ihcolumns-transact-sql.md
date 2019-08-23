@@ -38,7 +38,7 @@ ms.author: sstein
 |**mapped_scale**|**int**|The scale of the column at Subscriber.|  
 |**mapped_nullable**|**bit**|Indicates whether the column at the Subscriber accepts NULL values, where **1** means that NULL values are accepted.|  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

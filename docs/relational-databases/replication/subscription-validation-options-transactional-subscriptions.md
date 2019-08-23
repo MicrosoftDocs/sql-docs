@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
  **Stop the Distribution Agent after the validation has completed**  
  By default, the Distribution Agent runs continuously. Select this option to stop the agent after validation is performed. This allows you to check whether validation was successful before continuing to replicate data to the Subscriber.  
   
-## See Also  
+## See also  
  [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

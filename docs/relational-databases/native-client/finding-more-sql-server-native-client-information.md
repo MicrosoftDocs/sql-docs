@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The Window DAC SDK includes documentation for ActiveX Data Objects (ADO), OLE DB, and Open Database Connectivity (ODBC).  
   
 
-## See Also  
+## See also  
  [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

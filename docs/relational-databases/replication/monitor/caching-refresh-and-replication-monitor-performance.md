@@ -48,7 +48,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 -   Avoid registering a large number of Distributors and setting Replication Monitor to automatically connect to all of them.  
   
-## See Also  
+## See also  
  [Run Replication Maintenance Jobs &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   

@@ -29,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Lock (SQL_CONCUR_LOCK)  
   
-## See Also  
+## See also  
  [Cursor Properties](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
   

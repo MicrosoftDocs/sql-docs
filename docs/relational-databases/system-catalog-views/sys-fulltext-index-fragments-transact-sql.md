@@ -60,7 +60,7 @@ GO
 ## Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## See Also  
+## See also  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md)  
   

@@ -47,7 +47,7 @@ Specify the logins and passwords for replication agents when you configure repli
 
 Support for the use of group Managed Service Accounts (gMSA) is introduced in SQL Server 2014. For more information, see the blog [Replication and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/).
   
-## See Also  
+## See also  
  [Threat and Vulnerability Mitigation &#40;Replication&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

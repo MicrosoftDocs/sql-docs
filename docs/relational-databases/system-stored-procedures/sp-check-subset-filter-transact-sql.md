@@ -68,7 +68,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_check_subset_filter**.  
   
-## See Also  
+## See also  
  [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
   
   

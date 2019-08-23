@@ -38,7 +38,7 @@ object.FlagName [= value]
   
 ## Remarks  
   
-## See Also  
+## See also  
  [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

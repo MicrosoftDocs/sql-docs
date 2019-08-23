@@ -35,7 +35,7 @@ ms.author: sstein
 |**dynamic_snapshot_location**|**nvarchar(255)**|The path to the folder where the snapshot files will be read from if a filtered data snapshot is used.|  
 |**partition_id**|**int**|The ID of the data partition to which the job belongs.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

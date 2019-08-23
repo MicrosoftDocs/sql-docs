@@ -50,7 +50,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_getagentparameter**.  
   
-## See Also  
+## See also  
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

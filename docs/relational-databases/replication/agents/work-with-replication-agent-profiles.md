@@ -283,7 +283,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 ##  <a name="FollowUp"></a> Follow Up: After Changing Agent Parameters  
 Agent parameter changes take effect the next time the agent is started. If the agent runs continuously, you must stop and restart the agent. Starting with SQL Server 2017 CU3, some agent parameter changes take effect without having to restart the Agents. 
   
-## See Also  
+## See also  
  [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)   
  [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   

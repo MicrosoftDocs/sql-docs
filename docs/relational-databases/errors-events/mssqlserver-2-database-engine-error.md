@@ -34,7 +34,7 @@ ms.author: mathoma
 ## User Action  
 Make sure that the server is started.  
   
-## See Also  
+## See also  
 [Manage the Database Engine Services](~/database-engine/configure-windows/manage-the-database-engine-services.md)  
 [Configure Client Protocols](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Network Protocols and Network Libraries](~/sql-server/install/network-protocols-and-network-libraries.md)  

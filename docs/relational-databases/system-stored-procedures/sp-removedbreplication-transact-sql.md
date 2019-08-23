@@ -77,7 +77,7 @@ GO
   
 ```  
   
-## See Also  
+## See also  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

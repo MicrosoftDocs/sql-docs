@@ -115,7 +115,7 @@ ORDER BY state, file_type
   
 
   
-## See Also  
+## See also  
  [Memory-Optimized Table Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

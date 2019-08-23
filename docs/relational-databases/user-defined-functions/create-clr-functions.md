@@ -51,7 +51,7 @@ ms.author: "jroth"
 ## Accessing Native Code  
  CLR functions can be used to access native (unmanaged) code, such as code written in C or C++, via the use of PInvoke from managed code (see [Calling Native Functions from Managed Code](https://go.microsoft.com/fwlink/?LinkID=181929) for details). This can allow you to re-use legacy code as CLR UDFs, or write performance-critical UDFs in native code. This requires using an UNSAFE assembly. See [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) for cautions about use of UNSAFE assemblies.  
   
-## See Also  
+## See also  
  [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [Create User-defined Aggregates](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)   
  [Execute User-defined Functions](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   

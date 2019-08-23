@@ -75,7 +75,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **sysadmin** fixed server role at the Distributor or members of the **db_owner** fixed database role in the distribution database can execute **sp_replmonitorsubscriptionpendingcmds**. Members of the publication access list for a publication that uses the distribution database can execute **sp_replmonitorsubscriptionpendingcmds** to return pending commands for that publication.  
   
-## See Also  
+## See also  
  [Programmatically Monitor Replication](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

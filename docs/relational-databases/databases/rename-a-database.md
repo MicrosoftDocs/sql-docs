@@ -122,7 +122,7 @@ GO
 ```
 
 
-## See Also
+## See also
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Database Identifiers](../../relational-databases/databases/database-identifiers.md)  

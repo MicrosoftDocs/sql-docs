@@ -64,7 +64,7 @@ EXEC dbo.sp_add_targetsvrgrp_member
 GO  
 ```  
   
-## See Also  
+## See also  
  [sp_delete_targetsvrgrp_member &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

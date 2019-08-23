@@ -63,7 +63,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_adddistributor**.  
   
-## See Also  
+## See also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   

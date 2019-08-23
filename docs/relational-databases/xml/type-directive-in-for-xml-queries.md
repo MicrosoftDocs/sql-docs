@@ -142,7 +142,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## See Also  
+## See also  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

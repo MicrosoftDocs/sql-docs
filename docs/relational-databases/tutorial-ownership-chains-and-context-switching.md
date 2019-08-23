@@ -325,7 +325,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## See Also  
+## See also  
 [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

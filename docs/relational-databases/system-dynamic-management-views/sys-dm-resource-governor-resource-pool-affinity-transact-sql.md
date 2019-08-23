@@ -36,7 +36,7 @@ ms.author: sstein
 ## Remarks  
  Pools that are created with an affinity of AUTO will not appear in this view because they have no affinity. For more information, see the [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) and [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) statements.  
   
-## See Also  
+## See also  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

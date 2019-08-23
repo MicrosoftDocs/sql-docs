@@ -73,7 +73,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
-## See Also  
+## See also  
  [SQL Server Native Client Programming](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   

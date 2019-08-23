@@ -126,7 +126,7 @@ This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)]
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## See Also  
+## See also  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

@@ -92,7 +92,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## See Also  
+## See also  
  [Use Nested FOR XML Queries](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

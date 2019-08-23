@@ -37,7 +37,7 @@ ms.author: sstein
 |**storage_connection_string**|**nvarchar(779)**|Value of Azure SQL Database storage connection string.|  
 
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

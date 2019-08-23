@@ -134,7 +134,7 @@ ms.author: "sstein"
   
 6.  Use the **Import** method of the **Microsoft.SqlServer.Management.Dac.DacStore** type to import the BACPAC. Specify the BACPAC file created by the export.  
   
-## See Also  
+## See also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Export a Data-tier Application](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Import a BACPAC File to Create a New User Database](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

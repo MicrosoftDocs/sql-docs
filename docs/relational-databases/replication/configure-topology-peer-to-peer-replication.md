@@ -75,7 +75,7 @@ ms.author: "mathoma"
  **Remove Peer Connection**  
  Remove a connection between two nodes. For example, if you remove a connection between Node A and Node B, replication drops two subscriptions: the one that enables Node A to receive changes from the publication at Node B, and the one that enables Node B to receive changes from the publication at Node A.  
   
-## See Also  
+## See also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Administer a Peer-to-Peer Topology &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## See Also
+## See also
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

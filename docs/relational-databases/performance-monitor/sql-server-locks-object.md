@@ -48,7 +48,7 @@ ms.author: jrasnick
 |**Page**|A lock on an 8-kilobyte (KB) page in a database.|  
 |**RID**|Row ID. A lock on a single row in a heap.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -72,7 +72,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
  You can set these properties by using [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) when the publication is created, or by using [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) after the publication is created. As noted earlier, merge replication does not support partition switching. To execute SWITCH PARTITION on a table that is enabled for merge replication, remove the table from the publication.  
   
-## See Also  
+## See also  
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

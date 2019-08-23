@@ -40,7 +40,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
   
 2.  In the **Subscription \<SubscriptionName>** detail window, click **Action**, and then click **Auto Refresh**. The refresh rate is determined by the **Refresh rate** setting in the **Publisher Settings** dialog box.  
   
-## See Also  
+## See also  
  [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

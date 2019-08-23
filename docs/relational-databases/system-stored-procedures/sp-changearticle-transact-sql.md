@@ -237,7 +237,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role or **db_owner** fixed database role can execute **sp_changearticle**.  
   
-## See Also  
+## See also  
  [View and Modify Article Properties](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

@@ -292,7 +292,7 @@ The intermediate-level pages are filled to near capacity, leaving sufficient spa
  **Filter Expression**  
  Defines which data rows to include in the filtered index. For example, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## See Also  
+## See also  
  [Set Index Options](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

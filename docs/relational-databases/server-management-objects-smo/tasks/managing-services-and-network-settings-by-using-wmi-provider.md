@@ -207,7 +207,7 @@ $svc.ServiceState
   
 ```  
   
-## See Also  
+## See also  
  [WMI Provider for Configuration Management Concepts](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

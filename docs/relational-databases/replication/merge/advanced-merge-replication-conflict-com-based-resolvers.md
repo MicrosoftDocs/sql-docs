@@ -39,7 +39,7 @@ ms.author: "mathoma"
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Download Only Conflict Resolver|No inputs.|Changes uploaded to the Publisher are rejected; changes are downloaded to the Subscriber.|Supports all conflict types.|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLServer Stored Procedure Resolver|Name of the stored procedure the resolver should call to handle the conflict.|Conflict resolution depends on the logic in the stored procedure you specify.|Supports update conflicts. For more information, see [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)|  
   
-## See Also  
+## See also  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)  
   

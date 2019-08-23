@@ -131,7 +131,7 @@ GO
   
 ```  
   
-## See Also  
+## See also  
  [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md)   

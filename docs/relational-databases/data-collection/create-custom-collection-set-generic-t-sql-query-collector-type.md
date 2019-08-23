@@ -155,7 +155,7 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Data Collector Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Manage Schedules](../../ssms/agent/manage-schedules.md)   
  [Start or Stop a Collection Set](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  

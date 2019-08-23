@@ -45,7 +45,7 @@ ms.author: sstein
 |**publisher_seqno**|**varbinary(16)**|The sequence number of the transaction at the Publisher for this subscription.|  
 |**ss_cplt_seqno**|**varbinary(16)**|The sequence number used to signify the completion of the concurrent snapshot processing.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  

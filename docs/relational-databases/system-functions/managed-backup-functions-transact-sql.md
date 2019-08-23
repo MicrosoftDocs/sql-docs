@@ -36,7 +36,7 @@ ms.author: mikeray
   
  [managed_backup.fn_backup_instance_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
   
-## See Also  
+## See also  
  [SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

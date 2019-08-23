@@ -79,7 +79,7 @@ SELECT
 |-----------------|--------------------------|  
 |table types|[Memory-Optimized Table Variables](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
-## See Also  
+## See also  
  [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [Implementing SQL_VARIANT in a Memory-Optimized Table](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
  [Table and Row size in Memory-Optimized Table](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  

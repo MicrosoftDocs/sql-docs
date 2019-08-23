@@ -64,7 +64,7 @@ Consider the following when working with temporal tables:
 
 - A history table cannot be configured as current table in a chain of history tables.
 
-## See Also
+## See also
 
 - [Temporal Tables](../../relational-databases/tables/temporal-tables.md)
 - [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)

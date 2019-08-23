@@ -173,5 +173,5 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## See Also  
+## See also  
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  

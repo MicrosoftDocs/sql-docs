@@ -32,7 +32,7 @@ ms.author: sstein
 |**tran_end_time**|**datetime**|Time that the transaction ended.|  
 |**tran_id**|**varbinary(10)**|ID of the transaction.|  
   
-## See Also  
+## See also  
  [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [cdc.&#60;capture_instance&#62;_CT &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
   

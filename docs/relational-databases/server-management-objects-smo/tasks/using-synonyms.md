@@ -76,7 +76,7 @@ $syn.BaseServer = $srv.Name
 $syn.Create()  
 ```  
   
-## See Also  
+## See also  
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../../t-sql/statements/create-synonym-transact-sql.md)  
   
   

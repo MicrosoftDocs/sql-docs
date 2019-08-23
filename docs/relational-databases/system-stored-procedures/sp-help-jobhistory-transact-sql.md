@@ -172,7 +172,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## See Also  
+## See also  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

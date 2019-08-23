@@ -85,7 +85,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 6.  Remove references to the procedure from any dependent objects and scripts.  
   
-## See Also  
+## See also  
  [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Rename a Stored Procedure](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

@@ -740,7 +740,7 @@ public void Read(System.IO.BinaryReader r)
   
  For the complete code listing for the **Currency** UDT, see [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
   
-## See Also  
+## See also  
  [Creating a User-Defined Type](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  
   
   

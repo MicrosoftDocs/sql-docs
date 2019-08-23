@@ -45,6 +45,6 @@ ms.author: sstein
 ### Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  
   
-## See Also  
+## See also  
  [sys.dm_server_registry &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

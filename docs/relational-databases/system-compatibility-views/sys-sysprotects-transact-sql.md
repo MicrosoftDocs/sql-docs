@@ -38,7 +38,7 @@ ms.author: "jroth"
 |**columns**|**varbinary(8000)**|Bitmap of columns to which these SELECT or UPDATE permissions apply.<br /><br /> Bit 0 = All columns.<br /><br /> Bit 1 = Permissions apply to that column.<br /><br /> NULL = No information.|  
 |**grantor**|**smallint**|User ID of the user that issued the GRANT or DENY permissions. Overflows or returns NULL if the number of users and roles exceeds 32,767.|  
   
-## See Also  
+## See also  
  [Mapping System Tables to System Views &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Compatibility Views &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

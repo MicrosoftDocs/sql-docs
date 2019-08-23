@@ -101,7 +101,7 @@ ms.author: "mathoma"
   
      This defines a new article for the publication. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-## See Also  
+## See also  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

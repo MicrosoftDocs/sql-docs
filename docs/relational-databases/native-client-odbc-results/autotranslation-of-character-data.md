@@ -55,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Data always must be converted when moved from character to Unicode.  
   
-## See Also  
+## See also  
  [Processing Results &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   

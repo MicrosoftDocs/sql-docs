@@ -84,7 +84,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role, the **db_owner** fixed database role, and the publication access list for the publication can execute **sp_helpdynamicsnapshot_job**.  
   
-## See Also  
+## See also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

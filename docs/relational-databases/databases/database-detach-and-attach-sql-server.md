@@ -142,7 +142,7 @@ When you attach a database onto another server instance, to provide a consistent
   
 -   [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## See Also  
+## See also  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

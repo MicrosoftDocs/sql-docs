@@ -62,7 +62,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## Permissions  
  Only members of the **sysadmin** fixed server role can execute **sp_dropdistributor**.  
   
-## See Also  
+## See also  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   

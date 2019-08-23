@@ -45,7 +45,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 |Maintain replication agents.|**db_owner** database role in the appropriate database or **sysadmin** server role on the appropriate server.<br /><br /> If the agent was created by a user in the **sysadmin** role, and a proxy account was not specified for the agent, the agent runs under the context of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. In this case, a user in the **db_owner** role cannot modify the job associated with the agent.|  
 |Start or stop a replication agent.|Owner of the agent job or **sysadmin** server role on the appropriate server.|  
   
-## See Also  
+## See also  
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   

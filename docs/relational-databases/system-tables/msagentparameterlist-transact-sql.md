@@ -31,7 +31,7 @@ ms.author: sstein
 |**min_value**|**int**|Sets a lower bound for the agent parameter, where NULL indicates no lower bound.|  
 |**max_value**|**int**|Sets an upper bound for the agent parameter, where NULL indicates no upper bound.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

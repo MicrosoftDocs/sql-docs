@@ -278,7 +278,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  Take action to mitigate the potential memory issues. For more information see [Resolve Out Of Memory Issues](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
   
-## See Also  
+## See also  
  [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

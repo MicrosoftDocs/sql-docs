@@ -56,7 +56,7 @@ EXEC msdb.dbo.sp_syspolicy_repair_policy_automation;
 GO  
 ```  
   
-## See Also  
+## See also  
  [Policy-Based Management Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

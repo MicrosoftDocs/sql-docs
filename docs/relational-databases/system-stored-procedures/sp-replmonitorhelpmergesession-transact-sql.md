@@ -94,7 +94,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## Permissions  
  Only members of the **db_owner** or **replmonitor** fixed database role on the distribution database at the Distributor or on the subscription database at the Subscriber can execute **sp_replmonitorhelpmergesession**.  
   
-## See Also  
+## See also  
  [Programmatically Monitor Replication](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

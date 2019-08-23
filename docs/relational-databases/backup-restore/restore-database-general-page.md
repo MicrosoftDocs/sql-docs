@@ -71,7 +71,7 @@ ms.author: mikeray
 ## Restoring from Microsoft Azure Storage  
 Select **URL** from the **Backup media type:** drop-down list from the **Select backup devices** dialog box.  Then click **Add** to open the **Select a Backup File Location** dialog where you can select an existing SQL Server credential/Azure storage container, add a new Azure storage container with a shared access signature, or generate a shared access signature and SQL Server credential for an existing storage container. Once connected to the storage account, the backup files are displayed in the **Locate Backup File in Microsoft Azure** dialog where you can select the file to use for the restore.  See also, [Connect to A Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## See Also  
+## See also  
  [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Restore a Backup from a Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [Restore a Database to a Marked Transaction &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   

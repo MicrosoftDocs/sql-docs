@@ -31,7 +31,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |total_processor_elapsed_time|**bigint**|Total kernel time used by the thread.||  
 |total_user_elapsed_time|**bigint**|Total user time used by the thread||  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -44,7 +44,7 @@ ms.author: jrasnick
 |**Waits in progress**|Number of processes currently waiting on the following type.|  
 |**Waits started per second**|Number of waits started per second of the selected type of wait.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

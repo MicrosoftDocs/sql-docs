@@ -106,7 +106,7 @@ WHERE DatabaseName = "AdventureWorks2012"
 ## Working with Event Data on the Client Side  
  After the WMI Provider for Server Events creates the required event notification in the target database, the event notification sends event data to the target service in msdb that is named **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. The target service puts the event into a queue in **msdb** that is named **WMIEventProviderNotificationQueue**. (Both the service and the queue are dynamically created by the provider when it first connects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) The provider then reads the XML event data from this queue and transforms it into managed object format (MOF) before returning it to the client application. The MOF data is made up of the properties of the event that is requested by the WQL query as a Common Information Model (CIM) class definition. Each property has a corresponding CIM type. For example, the `SPID` property is returned as CIM type **Sint32**. The CIM types for each property are listed under each event class in [WMI Provider for Server Events Classes and Properties](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
-## See Also  
+## See also  
  [WMI Provider for Server Events Concepts](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

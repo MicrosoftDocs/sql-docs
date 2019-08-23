@@ -57,7 +57,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |5|Authentication Failure|An Authentication Failure event reports that a database mirroring endpoint cannot perform authentication for the connection due to an error. For Windows Authentication, this event reports that the database mirroring endpoint is unable to use Windows Authentication. For certificate-based authentication, this event reports that the database mirroring endpoint is unable to access the certificate.|  
 |6|Authorization Failure|An Authorization Failure event reports that a database mirroring endpoint denied authorization for the connection. For Windows Authentication, this event reports that the security identifier for the connection does not match a database user. For certificate-based authentication, this event reports that the public key delivered in the message does not correspond to a certificate in the **master** database.|  
   
-## See Also  
+## See also  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

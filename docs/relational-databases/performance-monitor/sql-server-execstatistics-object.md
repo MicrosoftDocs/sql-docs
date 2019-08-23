@@ -36,7 +36,7 @@ ms.author: jrasnick
 |**Execs in progress**|Number of execs in progress of the selected type of execution.|  
 |**Exec started per second**|Number of exes started per second of the selected type of execution.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

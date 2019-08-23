@@ -96,7 +96,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  The query lacks a **WHERE** clause that uses `STDistance()` in a form specified in the syntax section so the query cannot use a spatial index.  
   
-## See Also  
+## See also  
  [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

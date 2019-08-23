@@ -156,7 +156,7 @@ ms.custom: "seo-lt-2019"
   
  Use this page to view a description of the collection set that this properties page refers to.  
   
-## See Also  
+## See also  
  [Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   

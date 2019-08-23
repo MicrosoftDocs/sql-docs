@@ -67,7 +67,7 @@ ms.author: "sstein"
 |**options**|**int**|A bitmap that specifies additional publishing options, where the bitwise option values are as follows:<br /><br /> **0x1** - Enabled for peer-to-peer replication.<br /><br /> **0x2** - Publish only local changes for peer-to-peer replication.<br /><br /> **0x4** - Enabled for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subscribers.<br /><br /> **0x8** - Enabled for peer-to-peer conflict detection.|  
 |**originator_id**|**smallint**|Identifies each node in a peer-to-peer replication topology for the purposes of conflict detection. For more information, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

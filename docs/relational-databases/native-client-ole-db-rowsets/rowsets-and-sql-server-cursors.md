@@ -147,7 +147,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Regardless of the method used to populate the rowset and form the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor block, the cursor block is active until the next row-fetching method is executed on the rowset.  
   
-## See Also  
+## See also  
  [Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

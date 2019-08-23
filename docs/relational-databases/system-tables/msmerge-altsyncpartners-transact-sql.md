@@ -29,7 +29,7 @@ ms.author: sstein
 |**alternate_subid**|**uniqueidentifier**|The identifier for the Subscriber who is the alternate synchronization partner.|  
 |**description**|**nvarchar(255)**|The description of the alternate synchronization partner.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

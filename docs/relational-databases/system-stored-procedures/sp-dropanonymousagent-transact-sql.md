@@ -48,7 +48,7 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ## Permissions  
  Only members of the **db_owner** fixed database role in the distribution database can execute **sp_dropanonymousagent**.  
   
-## See Also  
+## See also  
  [Replication Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

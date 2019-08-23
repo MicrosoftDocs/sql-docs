@@ -30,7 +30,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |status|**nvarchar(32)**|Alert status|NULL|  
 |condition_value|**bit**|Indicates whether the alert is allowed to occur during system operation.|NULL<br /><br /> Possible values<br /><br /> 0 - alert is not generated.<br /><br /> 1 - alert is generated.|  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

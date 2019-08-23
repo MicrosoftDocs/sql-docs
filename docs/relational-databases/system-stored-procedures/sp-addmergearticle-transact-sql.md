@@ -388,7 +388,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## Permissions  
  Requires membership in the **sysadmin** fixed server role or the **db_owner** fixed database role.  
   
-## See Also  
+## See also  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md)   

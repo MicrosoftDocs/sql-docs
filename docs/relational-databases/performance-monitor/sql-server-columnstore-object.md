@@ -33,7 +33,7 @@ ms.author: jrasnick
 |**Total Rowgroups Merge Compressed**|Number of compressed target rowgroups created with MERGE since the start of SQL Server.|  
 |**Total Source Rowgroups Merged**|Number of source rowgroups merged since the start of SQL Server.|  
   
-## See Also  
+## See also  
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

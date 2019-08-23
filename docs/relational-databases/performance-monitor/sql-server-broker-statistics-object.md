@@ -58,7 +58,7 @@ ms.author: jrasnick
 |**SQL SEND Total**|The total number of [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND statements executed.|  
 |**SQL SENDs/sec**|The number of [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND statements executed per second.|  
   
-## See Also  
+## See also  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

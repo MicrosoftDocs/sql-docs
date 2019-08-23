@@ -112,7 +112,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 > [!NOTE]  
 >  Edits are only applied if they are part of the row that is chosen for resolution. For example, if you make edits under **Publisher**, and then click **Accept Subscriber**, the edits are discarded.  
   
-## See Also  
+## See also  
  [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

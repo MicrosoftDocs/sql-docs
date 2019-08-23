@@ -129,6 +129,6 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## See Also  
+## See also  
 
 [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

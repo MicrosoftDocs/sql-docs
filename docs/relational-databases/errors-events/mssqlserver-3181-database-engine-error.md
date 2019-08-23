@@ -35,7 +35,7 @@ The available disk space may be insufficient to restore the backup being verifie
 ## User Action  
 Restore the backup to a location with sufficient disk space, or provide more space on the disk.  
   
-## See Also  
+## See also  
 [Restore a Database to a New Location &#40;SQL Server&#41;](~/relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
 [Restore Files to a New Location &#40;SQL Server&#41;](~/relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
 [RESTORE &#40;Transact-SQL&#41;](~/t-sql/statements/restore-statements-transact-sql.md)  

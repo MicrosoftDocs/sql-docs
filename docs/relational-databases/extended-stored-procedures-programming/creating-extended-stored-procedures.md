@@ -69,7 +69,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  To debug an extended stored procedure DLL, copy it to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn directory. To specify the executable for the debugging session, enter the path and file name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executable file (for example, C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). For information about sqlservr arguments, see [sqlservr Application](../../tools/sqlservr-application.md).  
   
-## See Also  
+## See also  
  [srv_got_attention &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

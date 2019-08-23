@@ -62,7 +62,7 @@ ms.author: jrasnick
 |**Target pages**|Ideal number of pages in the buffer pool.|
 
   
-## See Also  
+## See also  
  [SQL Server:Buffer Node](../../relational-databases/performance-monitor/sql-server-buffer-node.md)   
  [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [SQL Server, Plan Cache Object](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   

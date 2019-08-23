@@ -79,7 +79,7 @@ EXEC sp_datatype_info_90 -9;
 GO  
 ```  
   
-## See Also  
+## See also  
  [SQL Data Warehouse Stored Procedures](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

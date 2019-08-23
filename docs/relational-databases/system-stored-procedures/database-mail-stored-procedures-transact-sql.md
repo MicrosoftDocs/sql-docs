@@ -41,7 +41,7 @@ ms.author: "sstein"
 |[sysmail_delete_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)|[sysmail_update_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|  
 |[sysmail_help_account_sp](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)||  
   
-## See Also  
+## See also  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

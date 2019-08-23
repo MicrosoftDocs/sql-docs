@@ -24,7 +24,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 |physical_name|**nvarchar(32)**|Property name as defined by the manufacturer.<br /><br /> property_id, component_id, and physical_name form the key for this view.|NOT NULL|  
 |logical_name|**nvarchar(255)**|Property name as defined by [!INCLUDE[ssDW](../../includes/ssdw-md.md)].|NOT NULL<br /><br /> 0 - Device instance is unique.<br /><br /> 1 - Device instance is not unique.|  
   
-## See Also  
+## See also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

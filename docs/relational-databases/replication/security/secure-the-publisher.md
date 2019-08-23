@@ -65,7 +65,7 @@ The following replication agents connect to the Publisher:
 ## Queue Reader Agent  
  There is one Queue Reader Agent for all Publishers and publications (that allow queued updating subscriptions) associated with a given Distributor. For more information, see [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
-## See Also  
+## See also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  

@@ -32,7 +32,7 @@ An existing plan guide contains the same scope and starting offset value as the 
 ## User Action  
 Disable the existing plan guide before enabling the specified plan guide.  
   
-## See Also  
+## See also  
 [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
 [Plan Guides](~/relational-databases/performance/plan-guides.md)  
 [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

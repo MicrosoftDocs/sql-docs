@@ -177,7 +177,7 @@ enum SQLVARENUM {
   
  When an application specifies DBTYPE_DBTIMESTAMP in *wType*, it can override the mapping to **datetime2** by supplying a type name in *pwszTypeName*. If **datetime** is specified, *bScale* must be 3. If **smalldatetime** is specified, *bScale* must be 0. If *bScale* is not consistent with *wType* and *pwszTypeName*,DB_E_BADSCALE is returned.  
   
-## See Also  
+## See also  
  [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

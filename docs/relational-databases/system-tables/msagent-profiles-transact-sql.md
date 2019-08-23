@@ -32,7 +32,7 @@ ms.author: sstein
 |**description**|**nvarchar(3000)**|The description of the profile.|  
 |**def_profile**|**bit**|Specifies whether this profile is the default for this agent type.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -28,7 +28,7 @@ ms.custom: seo-dt-2019
   
 -   Sending a row that has not had all its columns defined with **srv_describe** causes the application to raise an informational error message and return FAIL to the client. In this case, the row is not sent.  
   
-## See Also  
+## See also  
  [Creating Extended Stored Procedures](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)  
   
   

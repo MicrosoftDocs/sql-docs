@@ -154,7 +154,7 @@ The **Agents** tab displays information about the agents and maintenance jobs th
  The number of conflicts occurring at the Subscriber during the merge process.  
 
   
-## See Also  
+## See also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Monitoring Replication](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)  
   

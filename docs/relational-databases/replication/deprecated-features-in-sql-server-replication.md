@@ -25,7 +25,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] does not support replication to or from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Replication is supported if each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] endpoint is within two major versions of the current version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consequently, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] does not support replication to or from [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
   
-## See Also  
+## See also  
  [Replication Backward Compatibility](../../relational-databases/replication/replication-backward-compatibility.md)  
   
   

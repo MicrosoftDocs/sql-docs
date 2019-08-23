@@ -37,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
  **Miscellaneous**  
  Includes information on the Subscriber and Subscriber type.  
   
-## See Also  
+## See also  
  [View and Modify Distributor and Publisher Properties](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)  
   

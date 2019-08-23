@@ -94,7 +94,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## Permissions  
  Only members of the **db_owner** or **replmonitor** fixed database role in the distribution database can execute **sp_replmonitorchangepublicationthreshold**.  
   
-## See Also  
+## See also  
  [Programmatically Monitor Replication](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

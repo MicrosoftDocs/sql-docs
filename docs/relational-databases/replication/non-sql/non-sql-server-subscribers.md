@@ -107,7 +107,7 @@ For information about creating subscriptions to Oracle and IBM DB2, see [Oracle 
   
 -   Non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers cannot be automatically initialized from a backup.  
   
-## See Also  
+## See also  
  [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   

@@ -99,7 +99,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## See Also  
+## See also  
  [CLR Integration and Transactions](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

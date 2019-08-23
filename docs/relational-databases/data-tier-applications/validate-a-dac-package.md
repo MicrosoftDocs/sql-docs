@@ -163,7 +163,7 @@ $fileStream.Close()
   
  Alternatively, unpack the DACs into separate folders. You can then use a difference tool, such as the WinDiff utility, to analyze the differences.  
   
-## See Also  
+## See also  
  [Data-tier Applications](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Deploy a Data-tier Application](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Upgrade a Data-tier Application](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

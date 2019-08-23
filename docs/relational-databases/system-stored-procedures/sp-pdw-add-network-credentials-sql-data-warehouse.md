@@ -71,7 +71,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 > [!NOTE]  
 >  To perform the database backup over InfiniBand, be sure to use the InfiniBand IP address of the backup server.  
   
-## See Also  
+## See also  
  [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   

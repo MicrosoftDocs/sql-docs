@@ -43,7 +43,7 @@ ms.author: "sstein"
 ## Permissions  
  You must be a member of the **sysadmin** fixed server role or the **DatabaseMailUserRole** database role to access this view. Members of **DatabaseMailUserRole** who are not members of the **sysadmin** role, can only see the events for e-mails that they submit.  
   
-## See Also  
+## See also  
  [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)  
   

@@ -46,7 +46,7 @@ ms.author: "mathoma"
   
  ALTER TRACE on the server.  
   
-## See Also  
+## See also  
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [View and Analyze Traces with SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)  
   

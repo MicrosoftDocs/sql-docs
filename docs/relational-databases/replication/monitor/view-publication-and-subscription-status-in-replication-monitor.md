@@ -106,7 +106,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allver
 |Synchronizing|![UI icon: replication agent running](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "UI icon: replication agent running")|  
 |Not Synchronizing|![UI icon: replication agent stopped](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
   
-## See Also  
+## See also  
  [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

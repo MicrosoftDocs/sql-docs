@@ -99,7 +99,7 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Creating a SQL Server Native Client OLE DB Provider Application](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

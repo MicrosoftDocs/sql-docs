@@ -139,7 +139,7 @@ EXEC sp_estimate_data_compression_savings 'Production', 'WorkOrderRouting', NULL
 GO  
 ```  
   
-## See Also  
+## See also  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   

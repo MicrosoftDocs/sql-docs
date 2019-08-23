@@ -245,7 +245,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 ```
 
   
-## See Also  
+## See also  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

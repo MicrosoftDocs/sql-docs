@@ -599,7 +599,7 @@ To rely again on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] q
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
 
-## See Also  
+## See also  
  [Best Practice with the Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Using the Query Store with In-Memory OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md)   

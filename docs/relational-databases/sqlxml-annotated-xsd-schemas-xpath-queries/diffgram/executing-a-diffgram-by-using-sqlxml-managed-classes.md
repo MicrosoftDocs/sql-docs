@@ -173,7 +173,7 @@ class Test
   
 8.  At the command prompt, execute DiffgramSample.exe.  
   
-## See Also  
+## See also  
  [DiffGram Examples &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)  
   
   

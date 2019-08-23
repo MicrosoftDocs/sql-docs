@@ -42,7 +42,7 @@ ms.author: jrasnick
 |Describes how to change workload group settings.|[Change Workload Group Settings](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
 |Describes how to delete a workload group.|[Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md)|  
   
-## See Also  
+## See also  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Enable Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

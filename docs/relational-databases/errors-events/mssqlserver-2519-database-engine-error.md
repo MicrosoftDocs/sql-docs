@@ -32,6 +32,6 @@ This informational message indicates that the query processor could not provide 
 ## User Action  
 None  
   
-## See Also  
+## See also  
 [MSSQLSERVER_2518](~/relational-databases/errors-events/mssqlserver-2518-database-engine-error.md)  
   

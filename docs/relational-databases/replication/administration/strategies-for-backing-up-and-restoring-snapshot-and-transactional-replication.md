@@ -341,7 +341,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversio
   
 2.  Make sure that the database is consistent with the publication database with regard to replication configuration and settings.  
   
-## See Also  
+## See also  
  [Back Up and Restore of SQL Server Databases](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Back Up and Restore Replicated Databases](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)   

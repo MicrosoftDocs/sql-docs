@@ -57,7 +57,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## See Also  
+## See also  
  [Managing CLR Integration Assemblies](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Altering an Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

@@ -30,7 +30,7 @@ ms.author: sstein
 |**progress_token**|**nvarchar(500)**|Identifies a file that has been successfully delivered, where the value is a combination of the file name and path.|  
 |**progress_timestamp**|**datetime**|The **datetime** value that indicates when a snapshot file was successfully delivered.|  
   
-## See Also  
+## See also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replication Views &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

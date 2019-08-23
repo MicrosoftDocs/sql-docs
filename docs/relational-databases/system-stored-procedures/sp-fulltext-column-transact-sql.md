@@ -111,7 +111,7 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
 > [!NOTE]  
 >  All columns listed in a single full-text query function clause must use the same language.  
   
-## See Also  
+## See also  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   

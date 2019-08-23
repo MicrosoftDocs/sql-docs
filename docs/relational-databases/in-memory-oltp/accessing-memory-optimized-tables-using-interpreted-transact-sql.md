@@ -62,7 +62,7 @@ When accessing a memory-optimized table from an explicit or implicit transaction
   
 An isolation level table hint is not required for memory-optimized tables accessed by queries running in [auto-commit mode](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
   
-## See Also
+## See also
 
 [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 

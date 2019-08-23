@@ -88,7 +88,7 @@ ms.author: "mathoma"
   
 6.  Click **OK** on both dialog boxes.  
   
-## See Also  
+## See also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  

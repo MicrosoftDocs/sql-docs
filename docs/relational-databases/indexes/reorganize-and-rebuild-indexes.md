@@ -192,43 +192,43 @@ Requires `ALTER` permission on the table or view. User must be a member of at le
 
    The following information is available on the **Fragmentation** page:
 
-   **Page fullness**
+   **Page fullness**     
    Indicates average fullness of the index pages, as a percentage. 100% means the index pages are completely full. 50% means that, on average, each index page is half full.
 
    **Total fragmentation**
    The logical fragmentation percentage. This indicates the number of pages in an index that are not stored in order.
 
-   **Average row size**
+   **Average row size**     
    The average size of a leaf level row.
 
-   **Depth**
+   **Depth**     
    The number of levels in the index, including the leaf level.
 
-   **Forwarded records**
+   **Forwarded records**     
    The number of records in a heap that have forward pointers to another data location. (This state occurs during an update, when there is not enough room to store the new row in the original location.)
 
-   **Ghost rows**
+   **Ghost rows**     
    The number of rows that are marked as deleted but not yet removed. These rows will be removed by a clean-up thread, when the server is not busy. This value does not include rows that are being retained due to an outstanding snapshot isolation transaction.
 
-   **Index type**
+   **Index type**     
    The type of index. Possible values are **Clustered index**, **Nonclustered index**, and **Primary XML**. Tables can also be stored as a heap (without indexes), but then this Index Properties page cannot be opened.
 
-   **Leaf-level rows**
+   **Leaf-level rows**     
    The number of leaf level rows.
 
-   **Maximum row size**
+   **Maximum row size**     
    The maximum leaf-level row size.
 
-   **Minimum row size**
+   **Minimum row size**     
    The minimum leaf-level row size.
 
-   **Pages**
+   **Pages**     
    The total number of data pages.
 
-   **Partition ID**
+   **Partition ID**     
    The partition ID of the b-tree containing the index.
 
-   **Version ghost rows**
+   **Version ghost rows**     
    The number of ghost records that are being retained due to an outstanding snapshot isolation transaction.
 
 ## <a name="TsqlProcedureFrag"></a> Check index fragmentation using [!INCLUDE[tsql](../../includes/tsql-md.md)]

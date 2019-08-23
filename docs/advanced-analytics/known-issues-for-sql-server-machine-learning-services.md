@@ -498,7 +498,7 @@ This has been fixed in SQL Server 2017 Cumulative Update 14 (CU14).
 
 ### 6. Bad interpreter error when installing Python packages with pip on Linux 
 
-On SQL Server 2019, if you try to use `pip`. For example:
+On SQL Server 2019, if you try to use **pip**. For example:
 
 ```bash
 /opt/mssql/mlservices/runtime/python/bin/pip -h
@@ -510,7 +510,7 @@ You will then get this error:
 
 **Workaround**
 
-Install `pip` from the [Python Package Authority (PyPA)](https://www.pypa.io):
+Install **pip** from the [Python Package Authority (PyPA)](https://www.pypa.io):
 
 ```bash
 wget 'https://bootstrap.pypa.io/get-pip.py' 

@@ -18,6 +18,9 @@ ms.technology: big-data-cluster
 This article describes several useful Kubernetes commands that you can use to monitor and troubleshoot a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. It shows how to view in-depth details of a pod or other Kubernetes artifacts that are located in the big data cluster. This article also covers common tasks, such as copying files to or from a container running one of the SQL Server big data cluster services.
 
 > [!TIP]
+> For monitoring status of big data clusters components you can use [**azdata bdc status**](deployment-guidance.md#status) commands or the built-in [troubleshooting notebooks](manage-notebooks.md) in provided with Azure Data Studio.
+
+> [!TIP]
 > Run the following **kubectl** commands on either a Windows (cmd or PS) or Linux (bash) client machine. They require previous authentication in the cluster and a cluster context to run against. For example, for a previously created AKS cluster you can run `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` to download the Kubernetes cluster configuration file and set the cluster context.
 
 ## Get status of pods

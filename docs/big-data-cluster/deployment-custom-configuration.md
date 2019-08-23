@@ -77,9 +77,10 @@ You can also set resource level configurations or update the configurations for 
 }
 ```
 
-For updating resource level configurations like instances in a pool, you will update the resource spec. For example:
+For updating resource level configurations like instances in a pool, you will update the resource spec. For example, to update the number of instances in the compute pool you will modify this section in **bdc.json** configuration file:
 ```json
 "resources": {
+    ...
     "compute-0": {
         "metadata": {
             "kind": "Pool",
@@ -90,12 +91,14 @@ For updating resource level configurations like instances in a pool, you will up
             "replicas": 4
         }
     }
+    ...
 }
 ``` 
 
-Similarly for changing the default settings of a service only for a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will udpate the **storage-0** resource with a **settings** section for **spark** service.
+Similarly for changing the settings of a signle service within a specific resource. For example, if you want to change the Spark memory settings only for the Spark component in the Storage pool, you will udpate the **storage-0** resource with a **settings** section for **spark** service in the **bdc.json** configuration file.
 ```json
 "resources":{
+    ...
      "storage-0": {
         "metadata": {
             "kind": "Pool",
@@ -115,13 +118,15 @@ Similarly for changing the default settings of a service only for a specific res
             }
         }
     }
+    ...
 }
 ```
 
-If you want to apply same configurations for a service associated with multiple resources, you will update the corresponding **settings** in the **services** section. For example, if you would like to set same same settings for Spark across both storage pool and Spark pools, you will update the **settings** section in the **spark** service section.
+If you want to apply same configurations for a service associated with multiple resources, you will update the corresponding **settings** in the **services** section. For example, if you would like to set same same settings for Spark across both storage pool and Spark pools, you will update the **settings** section in the **spark** service section in the **bdc.json** configuration file.
 
 ```json
 "services": {
+    ...
     "spark": {
         "resources": [
             "sparkhead",
@@ -135,6 +140,7 @@ If you want to apply same configurations for a service associated with multiple 
             "executorCores": "1"
         }
     }
+    ...
 }
 ```
 
@@ -278,26 +284,10 @@ For more information about storage configuration, see [Data persistence with SQL
 You can also configure the storage pools to run without spark and create a separate spark pool. This enables you to scale spark compute power independent of storage. To see how to configure the spark pool, see the [JSON patch file example](#jsonpatch) at the end of this article.
 
 
-By default, the **includeSpark** setting for the storage pool resource is set to true, so you must add the **includeSpark** field into the storage configuration in order to make changes. The following JSON patch file shows how to add this.
-
-```json
-{
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.resources.storage-0.spec",
-      "value": {
-        "type": "Storage",
-        "replicas": 2,
-        "includeSpark": false
-      }
-    }
-  ]
-}
-```
+By default, the **includeSpark** setting for the storage pool resource is set to true, so you must edit the **includeSpark** field into the storage configuration in order to make changes. The following command shows how to edit this value using inline json.
 
 ```bash
-azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
 ```
 
 ## <a id="podplacement"></a> Configure pod placement using Kubernetes labels
@@ -326,8 +316,7 @@ Create a file named **patch.json** in your current directory with the following 
         ],
         "settings": {
           "sql": {
-            "hadr.enabled": "false",
-            "hadr.headless.service.name": "master-svc"
+            "hadr.enabled": "false"
           }
         },
         "nodeLabel": "bdc-master"

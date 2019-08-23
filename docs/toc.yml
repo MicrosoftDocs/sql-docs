@@ -261,9 +261,9 @@
         items:
         - name: Backup To URL
           href: relational-databases/backup-restore/sql-server-backup-to-url.md
-        - name: Backup To Azure Blob Storage (PowerShell)
+        - name: Backup To Azure blob storage
           href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-        - name: Delete backup blog files
+        - name: Delete backup log files
           href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
         - name: Restore
           href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md

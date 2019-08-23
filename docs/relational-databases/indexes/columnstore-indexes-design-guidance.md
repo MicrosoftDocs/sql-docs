@@ -67,7 +67,7 @@ For more information, see [Columnstore indexes - data warehousing](../../relatio
 
 Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered B-tree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
 
-By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since an non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
+By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since a non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
 
 Consider using a B-tree index on a columnstore index to:
 * Run queries that search for particular values or small ranges of values.

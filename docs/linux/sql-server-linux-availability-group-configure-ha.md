@@ -188,7 +188,7 @@ You can also configure an AG with `CLUSTER_TYPE=EXTERNAL` using SQL Server Manag
 
 ### Join secondary replicas to the AG
 
-The pacemaker user requires `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group on all replicas. To grant permissions, run the following Transact-SQL script after the availability group is created on the primary replica and each secondary replica immediately after they are added to the availability group. Before you run the script, replace `<pacemakerLogin>` with the name of the pacemaker user account.(if needed [create-a-sql-server-login-for-pacemaker](sql-server-linux-availability-group-cluster-ubuntu?view=sql-server-2017#create-a-sql-server-login-for-pacemaker.md) )
+The pacemaker user requires `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group on all replicas. To grant permissions, run the following Transact-SQL script after the availability group is created on the primary replica and each secondary replica immediately after they are added to the availability group. Before you run the script, replace `<pacemakerLogin>` with the name of the pacemaker user account. If you do not have a login for pacemaker, [create a sql server login for pacemaker](sql-server-linux-availability-group-cluster-ubuntu?view=sql-server-2017#create-a-sql-server-login-for-pacemaker.md).
 
 ```Transact-SQL
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>

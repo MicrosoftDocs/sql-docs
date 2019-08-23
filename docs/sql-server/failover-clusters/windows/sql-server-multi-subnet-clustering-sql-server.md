@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "09/01/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stretch cluster"
@@ -17,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Multi-Subnet Clustering (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +24,7 @@ manager: craigg
 ##  <a name="VisualElement"></a> SQL Server Multi-Subnet Failover Cluster (Two-Nodes, Two-Subnets)  
  The following illustration represents a two node, two subnet failover cluster instance (FCI) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Multi-Subnet Architecture with MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Multi-Subnet Architecture with MultiSubnetFailover")  
+ ![Multi-Subnet Architecture with MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Multi-Subnet Architecture with MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Multi-Subnet Failover Cluster Instance Configurations  
@@ -46,7 +43,9 @@ manager: craigg
 ##  <a name="ComponentsAndConcepts"></a> IP Address Resource Considerations  
  In a multi-subnet failover cluster configuration, the IP addresses are not owned by all the nodes in the failover cluster, and may not be all online during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] startup. Beginning in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], you can set the IP address resource dependency to **OR**. This enables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to be online when there is at least one valid IP address that it can bind to.  
   
-> **NOTE:** In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], a stretch V-LAN technology was used in multi-site cluster configurations to expose a single IP address for failover across sites. With the new capability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to cluster nodes across different subnets, you can now configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters across multiple sites without implementing the stretch V-LAN technology.  
+  > [!NOTE] 
+  > - In the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions earlier than [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], a stretch V-LAN technology was used in multi-site cluster configurations to expose a single IP address for failover across sites. With the new capability of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to cluster nodes across different subnets, you can now configure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clusters across multiple sites without implementing the stretch V-LAN technology.  
+
   
 ### IP Address Resource OR Dependency Considerations  
  You may want to consider the following failover behavior if you set the IP address resource dependency is set to **OR**:  
@@ -61,9 +60,12 @@ manager: craigg
 ##  <a name="DNS"></a> Client Recovery Latency During Failover  
  A multi-subnet FCI by default enables the RegisterAllProvidersIP cluster resource for its network name. In a multi-subnet configuration, both the online and offline IP addresses of the network name will be registered at the DNS server. The client application then retrieves all registered IP addresses from the DNS server and attempts to connect to the addresses either in order or in parallel. This means that client recovery time in multi-subnet failovers no longer depend on DNS update latencies. By default, the client tries the IP addresses in order. When the client uses the new optional **MultiSubnetFailover=True** parameter in its connection string, it will instead try the IP addresses simultaneously and connects to the first server that responds. This can help minimize the client recovery latency when failovers occur. For more information, see [Always On Client Connectivity (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) and [Create or Configure an Availability Group Listener (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- With legacy client libraries or third party data providers, you cannot use the **MultiSubnetFailover** parameter in your connection string. To help ensure that your client application works optimally with multi-subnet FCI in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], try to adjust the connection timeout in the client connection string by 21 seconds for each additional IP address. This ensures that the client’s reconnection attempt does not timeout before it is able to cycle through all IP addresses in your multi-subnet FCI.  
+ With legacy client libraries or third party data providers, you cannot use the **MultiSubnetFailover** parameter in your connection string. To help ensure that your client application works optimally with multi-subnet FCI in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], try to adjust the connection timeout in the client connection string by 21 seconds for each additional IP address. This ensures that the client's reconnection attempt does not timeout before it is able to cycle through all IP addresses in your multi-subnet FCI.  
   
  The default client connection time-out period for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio and **sqlcmd** is 15 seconds.  
+ 
+ > [!NOTE]
+ > - If you are using multiple subnets, and have a static DNS, you will need to have a process in place to update the DNS record associated with the listener before you perform a failover as otherwise the network name will not come online.
   
    
 ##  <a name="RelatedContent"></a> Related Content  
@@ -73,8 +75,8 @@ manager: craigg
 |Installing a SQL Server Failover Cluster|[Create a New SQL Server Failover Cluster (Setup)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |In-place upgrade of your existing SQL Server Failover Cluster|[Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Maintaining your existing SQL Server Failover Cluster|[Add or Remove Nodes in a SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Use the Failover Cluster Management snap-in to view WSFC events and logs|[View Events and Logs for a Failover Cluster](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|Use Windows PowerShell to create a log file for all nodes (or a specific a node) in a WSFC failover cluster|[Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)|  
+|Use the Failover Cluster Management snap-in to view WSFC events and logs|[View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|Use Windows PowerShell to create a log file for all nodes (or a specific a node) in a WSFC failover cluster|[Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
   
 
   

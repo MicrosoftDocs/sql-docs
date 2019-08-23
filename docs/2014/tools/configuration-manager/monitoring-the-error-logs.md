@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "configmgr-client"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server]"
@@ -24,7 +21,6 @@ helpviewer_keywords:
   - "error logs [SQL Server]"
   - "logs [SQL Server], Windows application logs"
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg

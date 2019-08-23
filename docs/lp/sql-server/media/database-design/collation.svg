@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 298 110">
+  <defs>
+    <symbol id="IZ_Rule" data-name="IZ_Rule" viewBox="0 0 32.425 50">
+      <path d="M24.525,24.9a12.364,12.364,0,0,1-16.6,0L6.725,50l9.5-9.6,9.5,9.6Z" fill="#ba141a"/>
+      <circle cx="16.225" cy="16.2" r="16.2" fill="#dd5900"/>
+      <circle cx="16.225" cy="16.2" r="12.2" fill="#ff8c00"/>
+      <path d="M4.725,27.7a16.193,16.193,0,0,1,22.9-22.9Z" fill="#fff" opacity="0.15" style="isolation: isolate"/>
+    </symbol>
+  </defs>
+  <title>2 - collation</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g>
+      <g>
+        <path d="M78.176,93.9a3.719,3.719,0,0,0,3.57,3.862c.1,0,.2,0,.292,0H170.9a3.719,3.719,0,0,0,3.862-3.57c0-.1,0-.2,0-.292V29.511H78.176Z" fill="#59b4d9"/>
+        <path d="M170.9,12.77H82.038a3.719,3.719,0,0,0-3.862,3.57c0,.1,0,.2,0,.292V30.8h96.583V16.632a3.718,3.718,0,0,0-3.569-3.862C171.091,12.766,170.993,12.766,170.9,12.77Z" fill="#a0a1a2"/>
+        <path d="M82.038,12.77a3.719,3.719,0,0,0-3.862,3.57c0,.1,0,.2,0,.292V93.9a3.719,3.719,0,0,0,3.57,3.862c.1,0,.2,0,.292,0h37.025L162.524,12.77Z" fill="#fff" opacity="0.1" style="isolation: isolate"/>
+        <path d="M94.594,53.336l-.971-.972a.6.6,0,0,1-.126-.846.6.6,0,0,1,.126-.125L96.2,49.138l.323-.323c.323,0,.323,0,.323.323l7.081,7.737L116.481,41.1a1.129,1.129,0,0,1,.643-.323h.323l2.9,2.255.323.323v.323l-16.1,20.283Z" fill="#fff"/>
+        <rect x="120.673" y="53.013" width="38.632" height="6.44" fill="#fff" opacity="0.6" style="isolation: isolate"/>
+        <path d="M94.594,78.445l-.971-.971a.6.6,0,0,1-.126-.846.627.627,0,0,1,.126-.126L96.2,74.248l.323-.323c.323,0,.323,0,.323.323L103.925,82,116.488,66.21a1.123,1.123,0,0,1,.644-.323h.323l2.9,2.254.323.323v.323l-16.1,20.283Z" fill="#fff"/>
+        <rect x="120.673" y="78.445" width="38.632" height="6.44" fill="#fff" opacity="0.6" style="isolation: isolate"/>
+      </g>
+      <use width="32.425" height="50" transform="translate(186.358 12.767) scale(1.063)" xlink:href="#IZ_Rule"/>
+    </g>
+  </g>
+</svg>

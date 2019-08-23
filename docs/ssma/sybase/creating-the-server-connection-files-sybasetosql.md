@@ -4,21 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Sybase Console,Creating Server Connection Files"
   - "Sybase Console,Server Connection File Validation"
 ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
-caps.latest.revision: 14
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Creating the Server Connection Files (SybaseToSQL)
 Server information can be specified either in the servers section of the script file or in a separate server connection file. The command line parameter for the server connection file is, `-c <serverconnectionfile>`. If the same server id is present in both the script file and server connection file, then the server definition in the script file is considered.  
@@ -70,7 +63,7 @@ Server information can be specified either in the servers section of the script 
 ```  
   
 ```  
-2.<!—Sample of server connection file commands-->  
+2.<!-Sample of server connection file commands-->  
 <sybase name="<source-server-unique-name>">  
   
   <advanced-mode>  
@@ -103,7 +96,7 @@ Server information can be specified either in the servers section of the script 
 ```  
   
 ## Server Connection File Validation  
-The user can easily validate his/her server connection file against the schema definition file **S2SSConsoleScriptServersSchema.xsd** available in the ‘Schemas’ folder.  
+The user can easily validate his/her server connection file against the schema definition file **S2SSConsoleScriptServersSchema.xsd** available in the 'Schemas' folder.  
   
 ## Next Step  
 The next step in operating the console is [Executing the SSMA Console &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  

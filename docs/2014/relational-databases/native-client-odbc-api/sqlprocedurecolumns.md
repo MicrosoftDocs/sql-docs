@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLProcedureColumns function"
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -72,7 +69,7 @@ manager: craigg
  `SQLProcedureColumns` supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLProcedureColumns Function](http://go.microsoft.com/fwlink/?LinkId=59363)   
+ [SQLProcedureColumns Function](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -1,24 +1,18 @@
 ---
 title: "Supported combinations of SharePoint and Reporting Services server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2017"
+ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint mode"
   - "add-in for sharepoint"
   - "rsSharePoint"
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-caps.latest.revision: 39
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Supported combinations of SharePoint and Reporting Services server
@@ -44,17 +38,18 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
-|5|SQL Server 2012 SP3|SQL Server 2014 and SQL Server 2012 SP3|SharePoint 2013|
-|6|SQL Server 2012 SP2|SQL Server 2014 and SQL Server 2012 SP2|SharePoint 2013|
-|7|SQL Server 2012 SP1|SQL Server 2014 and SQL Server 2012 SP1|SharePoint 2013|
-|8|SQL Server 2012 and SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
-|9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
-|10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2012 and SQL Server 2012 SP1 or later|SharePoint 2010|
-|12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
-|13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
-|14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
-|15|SQL Server 2008 SP2|SQL Server 2008 and SQL Server 2008 SP2|SharePoint 2007|
+|5|SQL Server 2012 SP4|SQL Server 2014 and SQL Server 2012 SP4|SharePoint 2013|
+|6|SQL Server 2012 SP3|SQL Server 2014 and SQL Server 2012 SP3|SharePoint 2013|
+|7|SQL Server 2012 SP2|SQL Server 2014 and SQL Server 2012 SP2|SharePoint 2013|
+|8|SQL Server 2012 SP1|SQL Server 2014 and SQL Server 2012 SP1|SharePoint 2013|
+|9|SQL Server 2012 and SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
+|10|SQL Server 2012|SQL Server 2012|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
+|12|SQL Server 2008 R2|SQL Server 2012 and SQL Server 2012 SP1 or later|SharePoint 2010|
+|13|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
+|14|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
+|15|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
+|16|SQL Server 2008 SP2|SQL Server 2008 and SQL Server 2008 SP2|SharePoint 2007|
 
  *Exception: Power view integration is not supported.
 
@@ -77,7 +72,7 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 ## Next steps
 
  [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

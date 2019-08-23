@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,10 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Append Method (ADOX Groups)
 Adds a new [Group](../../../ado/reference/adox-api/group-object-adox.md) object to the [Groups](../../../ado/reference/adox-api/groups-collection-adox.md) collection.  

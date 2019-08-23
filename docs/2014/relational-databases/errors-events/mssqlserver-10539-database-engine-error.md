@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "10539 (Database Engine error)"
 ms.assetid: 49c26ff7-18b8-4f07-a087-f45f63463b3b
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

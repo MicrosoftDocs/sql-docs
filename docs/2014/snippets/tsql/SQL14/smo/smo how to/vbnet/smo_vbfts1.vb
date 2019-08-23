@@ -24,7 +24,7 @@ Module SMO_VBFTS1
         'Define a FullTextIndex object varaible by supplying the parent table argument in the constructor.
         Dim fti As FullTextIndex
         fti = New FullTextIndex(tb)
-        'Define a FullTextIndexColumn object variable by supplying the parent index and column name arguements in the constructor.
+        'Define a FullTextIndexColumn object variable by supplying the parent index and column name arguments in the constructor.
         Dim ftic As FullTextIndexColumn
         ftic = New FullTextIndexColumn(fti, "Name")
         'Add the indexed column to the index.

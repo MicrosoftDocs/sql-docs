@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,10 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Append Method (ADOX Procedures)
 Adds a new [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) object to the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

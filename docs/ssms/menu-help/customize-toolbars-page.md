@@ -4,20 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.customize.toolbars"
+f1_keywords:
   - "sql13.swb.vs.customizetool.f1"
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Customize (Toolbars Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,4 +47,3 @@ Specifies whether shortcut key combinations appear in ToolTips for commands on t
   
 **Keyboard**  
 Displays the **Keyboard** pane of the **Options** dialog box, which allows you to change and define shortcut key combinations for commands.  
-  

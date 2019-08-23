@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "xp_grantlogin"
@@ -20,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +36,10 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the Windows user or group to be added. The Windows user or group must be qualified with a Windows domain name in the form *Domain*\\*User*. *login* is **sysname**, with no default.  
   
- [ **@logintype =** ] **'***logintype***'**  
+`[ @logintype = ] 'logintype'`
  Is the security level of the login being granted access. *logintype* is **varchar(5)**, with a default of NULL. Only **admin** can be specified. If **admin** is specified, *login* is granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and added as a member of the **sysadmin** fixed server role.  
   
 ## Return Code Values  

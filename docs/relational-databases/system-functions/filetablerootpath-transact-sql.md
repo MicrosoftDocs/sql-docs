@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FileTableRootPath_TSQL"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "FileTableRootPath function"
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 15
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +27,7 @@ manager: craigg
   
 ```  
   
-FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )  
+FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )  
 ```  
   
 ## Arguments  
@@ -76,7 +71,7 @@ SELECT @root = FileTableRootPath();
   
 SELECT @fullPath = @root + file_stream.GetFileNamespacePath()  
 FROM DocumentStore  
-WHERE Name = N’document.docx’;  
+WHERE Name = N'document.docx';  
 ```  
   
 ## Security  
@@ -93,13 +88,13 @@ WHERE Name = N’document.docx’;
   
 ```  
 USE MyDocumentDatabase;  
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase"  
 SELECT FileTableRootPath();  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable"  
 SELECT FileTableRootPath(N'dbo.MyFileTable');  
   
--- returns “\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable”  
+-- returns "\\MYSERVER\MSSQLSERVER\MyDocumentDatabase\MyFileTable"  
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   

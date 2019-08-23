@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "old diagrams [SQL Server]"
@@ -19,10 +16,8 @@ helpviewer_keywords:
   - "legacy database diagrams"
   - "diagrams [SQL Server], upgrading"
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)

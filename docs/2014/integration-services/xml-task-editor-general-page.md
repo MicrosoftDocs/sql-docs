@@ -4,25 +4,21 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.xmltask.general.f1"
 helpviewer_keywords: 
   - "XML Task Editor"
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
-caps.latest.revision: 42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # XML Task Editor (General Page)
   Use the **General Node** of the **XML Task Editor** dialog box to specify the operation type and configure the operation.  
   
- To learn about this task, see [XML Task](control-flow/xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
+ To learn about this task, see [XML Task](control-flow/xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
   
 ## Static Options  
  **OperationType**  
@@ -47,7 +43,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **Source**  
- If **Source** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **Source** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **Source** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -108,7 +104,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -154,7 +150,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -200,7 +196,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -235,7 +231,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **XPathStringSource**  
- If **XPathStringSourceType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **XPathStringSourceType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **XPathStringSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -280,7 +276,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -355,7 +351,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -401,7 +397,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   

@@ -1,15 +1,10 @@
 ---
 title: "Upgrade Reports (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2018"
+ms.date: 06/04/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.prod_service: "reporting-services-native"
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], upgrading"
@@ -21,10 +16,8 @@ helpviewer_keywords:
   - "report definition files [Reporting Services]"
   - ".rdl files"
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 70
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Upgrade Reports (SSRS)
@@ -140,10 +133,10 @@ Report definition (.rdl) files are automatically upgraded in the following ways:
 ## Next steps
 
 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Breaking Changes in SQL Server Reporting Services in SQL Server 2016](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+[Behavior Changes to SQL Server Reporting Services  in SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

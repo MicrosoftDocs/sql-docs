@@ -5,18 +5,14 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CREATE INDEX [ODBC]"
   - "SQL grammar [ODBC], create index"
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CREATE INDEX Statement
 The syntax of the CREATE INDEX statement is:  

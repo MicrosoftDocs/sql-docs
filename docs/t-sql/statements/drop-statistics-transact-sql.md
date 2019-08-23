@@ -5,9 +5,7 @@ ms.date: "03/22/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP STATISTICS"
@@ -23,10 +21,8 @@ helpviewer_keywords:
   - "table statistics [SQL Server]"
   - "statistical information [SQL Server], removing"
 ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
-caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP STATISTICS (Transact-SQL)

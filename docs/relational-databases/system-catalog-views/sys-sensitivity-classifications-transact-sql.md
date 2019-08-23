@@ -1,18 +1,14 @@
 ---
 title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
-ms.date: "06/17/2018"
+ms.date: 03/25/2019
 ms.reviewer: ""
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.service: "sql-database"
 ms.technology: t-sql
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.custom: ""
 ms.manager: craigg
-ms.author: giladm
-author: giladmit
+ms.author: arib
+author: vainolo
 f1_keywords:
   - "sys.sensitivity_classifications "
 dev_langs:
@@ -29,7 +25,7 @@ helpviewer_keywords:
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.sensitivity_classifications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Returns a row for each classified item in the database.
 
@@ -60,10 +56,14 @@ Returns a row for each classified item in the database.
 
 The following example returns a table listing the table name, column name, label, label ID, information type, information type ID for each classified column in the database.
 
+> [!NOTE]
+> Label is a keyword for Azure SQL Data Warehouse.
+
 ```sql
 SELECT
-    sys.all_objects.name AS TableName, sys.all_columns.name As ColumnName,
-    Label, Label_ID, Information_Type, Information_Type_ID
+    SCHEMA_NAME(sys.all_objects.schema_id) as SchemaName,
+    sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
+    [Label], [Label_ID], [Information_Type], [Information_Type_ID]
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id
@@ -71,10 +71,13 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
                          and sys.sensitivity_classifications.minor_id = sys.all_columns.column_id
 ```
 
+## Permissions  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
 ## See Also  
 
-[ADD SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Getting started with SQL Information Protection](http://aka.ms/sqlip)
+[Getting started with SQL Information Protection](https://aka.ms/sqlip)

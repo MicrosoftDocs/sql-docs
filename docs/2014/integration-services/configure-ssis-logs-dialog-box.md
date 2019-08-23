@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredtslogs.loggingdetails.f1"
@@ -16,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure SSIS Logs dialog box"
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-caps.latest.revision: 25
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure SSIS Logs Dialog Box

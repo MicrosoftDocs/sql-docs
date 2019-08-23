@@ -6,17 +6,13 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.scriptpanel"
   - "sql.data.tools.design.table.context.view"
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Create Database Objects Using Table Designer
 Not only is the new **SQL Server** node in **SQL Server Object Explorer** very similar to SSMS visually, but you can create new objects using contextual menus that function like their SSMS-counterparts.  
@@ -56,14 +52,14 @@ For example, you can create a new database under the **Databases** node. Similar
     > [!WARNING]  
     > When you are editing objects from a connected database, do not save them to your local drive. To save your changes to the database properly, follow the steps in the next [How to: Update a Connected Database with Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) procedure.  
   
-6.  Repeat the above steps to create another table named **Customer**. This time, add the following columns to the Customer table using the Columns Grid. And remember to change the script so that the table’s name is `[dbo].[Customer]`.  
+6.  Repeat the above steps to create another table named **Customer**. This time, add the following columns to the Customer table using the Columns Grid. And remember to change the script so that the table's name is `[dbo].[Customer]`.  
   
     |Name|Data Type|**Allow Nulls**|  
     |--------|-------------|-------------------|  
     |Id|int|unchecked|  
     |Name|nvarchar (128)|unchecked|  
   
-7.  Create one more table named **Products**. Add the following columns to the Products table using the Columns Grid. And remember to change the script so that the table’s name is `[dbo].[Products]`.  
+7.  Create one more table named **Products**. Add the following columns to the Products table using the Columns Grid. And remember to change the script so that the table's name is `[dbo].[Products]`.  
   
     |Name|Data Type|**Allow Nulls**|  
     |--------|-------------|-------------------|  

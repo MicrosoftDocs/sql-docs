@@ -108,7 +108,7 @@
           topicHref: /sql/relational-databases/performance-monitor/monitor-resource-usage-system-monitor
         - name: Failover Clusters
           tocHref: /sql/sql-server/failover-clusters/
-          topicHref: /sql/sql-server/failover-clusters/windows-server-failover-clustering-wsfc-with-sql-server
+          topicHref: /sql/sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server
         - name: Always On Availability Groups
           tocHref: /sql/database-engine/availability-groups/windows/
           topicHref: /sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server
@@ -290,10 +290,10 @@
           items:
           - name: Administration
             tocHref: /sql/relational-databases/replication/administration/
-            topicHref: /sql/relational-databases/replication/administration/administration-replication
+            topicHref: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
           - name: Agents
             tocHref: /sql/relational-databases/replication/agents/
-            topicHref: /sql/relational-databases/replication/agents/replication-agents
+            topicHref: /sql/relational-databases/replication/agents/replication-agents-overview
           - name: Developer's Guide - Replication
             tocHref: /sql/relational-databases/replication/concepts/
             topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
@@ -305,7 +305,7 @@
             topicHref: /sql/relational-databases/replication/merge/merge-replication
           - name: Monitor
             tocHref: /sql/relational-databases/replication/monitor/
-            topicHref: /sql/relational-databases/replication/monitor/monitoring-replication-overview
+            topicHref: /sql/relational-databases/replication/monitoring-replication
           - name: Non-SQL
             tocHref: /sql/relational-databases/replication/non-sql/
             topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
@@ -317,7 +317,7 @@
             topicHref: /sql/relational-databases/replication/transactional/transactional-replication
           - name: Security
             tocHref: /sql/relational-databases/replication/security/
-            topicHref: /sql/relational-databases/replication/security/security-and-protection-replication
+            topicHref: /sql/relational-databases/replication/security/view-and-modify-replication-security-settings
         - name: Native Client Programming
           tocHref: /sql/relational-databases/native-client/
           topicHref: /sql/relational-databases/native-client/sql-server-native-client-programming

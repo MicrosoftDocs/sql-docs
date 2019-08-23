@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -72,11 +69,11 @@ manager: craigg
   
  The following sample shows retry logic in an interpreted [!INCLUDE[tsql](../includes/tsql-md.md)] stored procedure that contains a call either to a natively compiled stored procedure or to a cross-container transaction.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  
-  -- number of retries – tune based on the workload  
+  -- number of retries - tune based on the workload  
   DECLARE @retry INT = 10  
   
   WHILE (@retry > 0)  
@@ -88,7 +85,7 @@ BEGIN
       --       or  
   
       -- BEGIN TRANSACTION  
-      --   …  
+      --   ...  
       -- COMMIT TRANSACTION  
   
       SET @retry = 0  

@@ -1,26 +1,19 @@
 ---
 title: "Change Data Capture and Other SQL Server Features | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
+ms.date: "01/02/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "track-changes"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change data capture [SQL Server], other SQL Server features and"
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
-caps.latest.revision: 14
-author: "rothja"
-ms.author: "jroth"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Change Data Capture and Other SQL Server Features
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   This topic describes how the following features interact with change data capture:  
   
 -   [Change tracking](#ChangeTracking)  
@@ -43,7 +36,7 @@ manager: craigg
   
 2.  Create the capture job and cleanup job on the new principal database (the former mirror database). To create the jobs, use the [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) stored procedure.  
   
- To view the current configuration of a cleanup or capture job, use the [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) stored procedure on the new principal server instance. For a given database, the capture job is named cdc.*database_name*_capture, and the cleanup job is named cdc.*database_name*_cleanup, where *database_name* is the name of the database.  
+ To view the current configuration of a cleanup or capture job, use the [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) stored procedure on the new principal server instance. For a given database, the capture job is named cdc.*database\_name*\_capture, and the cleanup job is named cdc.*database\_name*\_cleanup, where *database_name* is the name of the database.  
   
  To change the configuration of a job, use the [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) stored procedure.  
   
@@ -70,7 +63,7 @@ manager: craigg
   
 -   If a database is detached and attached to the same server or another server, change data capture remains enabled.  
   
--   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Enterprise, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Error message 934 is displayed:  
+-   If a database is attached or restored with the **KEEP_CDC** option to any edition other than Standard or Enterprise, the operation is blocked because change data capture requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard or Enterprise editions. Error message 934 is displayed:  
   
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   

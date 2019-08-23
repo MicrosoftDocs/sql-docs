@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.calculationsview.f1"
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg

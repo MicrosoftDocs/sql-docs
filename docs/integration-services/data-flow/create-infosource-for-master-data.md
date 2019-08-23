@@ -5,17 +5,17 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Create InfoSource for Master Data
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Create InfoSource for Master Data** dialog box to create a new InfoSource for master data in the SAP Netweaver BW system.  
   
  You can open the **Create InfoSource for Master Data** dialog box from the **Connection Manager** page of the **SAP BW Destination Editor**. To learn more about the SAP BW destination, see [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
@@ -45,7 +45,7 @@ manager: craigg
  After you select an InfoObject, the component populates the **InfoObject name** text box with the name of the selected InfoObject.  
   
  **New**  
- Create a new InfoObject. This option option opens the **Create New InfoObject** dialog box in which you can create the new InfoObject. For more information about this dialog box, see [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
+ Create a new InfoObject. This option opens the **Create New InfoObject** dialog box in which you can create the new InfoObject. For more information about this dialog box, see [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md).  
   
  After you create an InfoObject, the component populates the **InfoObject name** text box with the name of the new InfoObject.  
   

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "encryption [SQL Server], replicating data"
   - "encryption [SQL Server replication]"
   - "publishing [SQL Server replication], encrypted columns"
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -84,7 +80,7 @@ manager: craigg
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
 ## See Also  
- [Security Overview &#40;Replication&#41;](security-overview-replication.md)   
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md)   
  [Create Identical Symmetric Keys on Two Servers](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

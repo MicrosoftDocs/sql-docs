@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large data, CLR integration"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "SqlBytes data type"
   - "SqlChars data type"
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clusters [SQL Server], removing failover clustered instance"
@@ -14,10 +12,8 @@ helpviewer_keywords:
   - "uninstalling failover clustered instances"
   - "removing failover clustered instances"
 ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Remove a SQL Server Failover Cluster Instance (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

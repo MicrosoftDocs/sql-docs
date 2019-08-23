@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_enum_login_for_proxy_TSQL"
@@ -19,10 +16,10 @@ helpviewer_keywords:
   - "sp_enum_login_for_proxy"
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-manager: craigg
+author: VanMSFT
 ---
 # sp_enum_login_for_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lists associations between security principals and proxies.  
@@ -32,7 +29,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -40,13 +36,13 @@ sp_enum_login_for_proxy
 ```  
   
 ## Arguments  
- [ **@name**= ] '*name*'  
+`[ @name = ] 'name'`
  The name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principal, login, server role, or **msdb** database role to list proxies for. The name is **nvarchar(256)**, with a default of NULL.  
   
- [ **@proxy_id**= ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to list information for. The *proxy_id* is **int**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to list information for. The *proxy_name* is **sysname**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
 ## Return Code Values  
@@ -60,6 +56,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|The name of the proxy.|  
 |**name**|**sysname**|Name of the security principal for the association.|  
 |**flags**|**int**|Type of the security principal.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login<br /><br /> **1** = Fixed system role<br /><br /> **2** = Database role in **msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## Remarks  
  When no parameters are provided, **sp_enum_login_for_proxy** lists information about all logins in the instance for every proxy.  
@@ -78,7 +75,7 @@ sp_enum_login_for_proxy
 ### A. Listing all associations  
  The following example lists all permissions established between logins and proxies in the current instance.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -89,7 +86,7 @@ GO
 ### B. Listing proxies for a specific login  
  The following example lists the proxies that the login `terrid` has access to.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

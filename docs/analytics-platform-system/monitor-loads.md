@@ -2,7 +2,6 @@
 title: Monitor loads for Parallel Data Warehouse | Microsoft Docs
 description: Monitor active and recent loads by using the Analytics Platform System (APS) Admin Console or the Parallel Data Warehouse (PDW) System Views."
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -25,7 +24,7 @@ To monitor this type of load, see [Monitoring Active Queries](monitor-active-que
 Regardless of the method used to monitor a load, the login must have permission to access the underlying data sources. 
 
 <!-- MISSING LINKS
-For the permissions to grant, see “Use All of the Admin Console” in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
+For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
 
 --> 
   
@@ -70,7 +69,7 @@ To monitor active and recent loads by using SQL Server PDW views, follow the ste
     LEFT OUTER JOIN   
     sys.pdw_loader_backup_runs lbr   
     ON (er.request_id=lbr.requst_id)   
-    WHERE er.request_id=’12738’;  
+    WHERE er.request_id='12738';  
     ```  
   
 <!-- MISSING LINKS

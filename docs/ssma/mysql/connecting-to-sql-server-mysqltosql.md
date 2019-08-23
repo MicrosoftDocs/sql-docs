@@ -4,21 +4,14 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "connecting to SQL Server 2008, SQL Server permission"
   - "connecting to SQL Server 2008, synchronization"
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: 18
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Connecting to SQL Server (MySQLToSQL)
 To migrate MySQL databases to SQL Server, you must connect to the target instance of SQL Server. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Server and displays database metadata in the SQL Server Metadata Explorer. SSMA stores information of the instance of SQL Server you are connected to, but does not store passwords.  
@@ -76,7 +69,7 @@ It is allowed to connect/reconnect to higher versions of SQL Server.
   
 4.  You will be able to connect to only [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
-5.  Higher version compatibility is not valid for “SQL Azure”.  
+5.  Higher version compatibility is not valid for "SQL Azure".  
   
 ||||||||  
 |-|-|-|-|-|-|-|  

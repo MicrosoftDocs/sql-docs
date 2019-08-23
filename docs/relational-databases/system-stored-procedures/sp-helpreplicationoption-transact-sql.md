@@ -4,28 +4,20 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpreplicationoption"
   - "sp_helpreplicationoption_TSQL"
 helpviewer_keywords: 
   - "sp_helpreplicationoption"
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Shows the types of replication options enabled for a server. This stored procedure is executed at any server on any database.  
   
@@ -39,7 +31,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## Arguments  
- [ **@optname =**] **'***option_name***'**  
+`[ @optname = ] 'option_name'`
  Is the name of the replication option to query for. *option_name* is **sysname**, with a default of NULL.  
   
 |Value|Description|  

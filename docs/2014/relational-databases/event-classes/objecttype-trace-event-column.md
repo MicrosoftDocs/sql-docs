@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "event classes [SQL Server], Object Type column values"
   - "Object Type column values [SQL Server]"
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication], column"
@@ -15,7 +12,6 @@ helpviewer_keywords:
   - "modifying filters"
   - "column filters [SQL Server replication]"
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -72,17 +68,17 @@ manager: craigg
   
 2.  At the Publisher on the publication database, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql). This defines the columns to include or remove from the article.  
   
-    -   If publishing only a few columns from a table with many columns, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) once for each column being added. Specify the column name for **@column** and a value of **add** for **@operation**.  
+    -   If publishing only a few columns from a table with many columns, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) once for each column being added. Specify the column name for **\@column** and a value of **add** for **\@operation**.  
   
-    -   If publishing most of the columns in a table with many columns, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), specifying a value of **null** for **@column** and a value of **add** for **@operation** to add all columns. Then execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), once for each column being excluded, specifying a value of **drop** for **@operation** and the excluded column name for **@column**.  
+    -   If publishing most of the columns in a table with many columns, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), specifying a value of **null** for **\@column** and a value of **add** for **\@operation** to add all columns. Then execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), once for each column being excluded, specifying a value of **drop** for **\@operation** and the excluded column name for **\@column**.  
   
-3.  At the Publisher on the publication database, execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specify the publication name for **@publication** and the name of the filtered article for **@article**. This creates the synchronization objects for the filtered article.  
+3.  At the Publisher on the publication database, execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specify the publication name for **\@publication** and the name of the filtered article for **\@article**. This creates the synchronization objects for the filtered article.  
   
 #### To change a column filter to include additional columns for an article published in a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) once for each column being added. Specify the column name for **@column** and a value of **add** for **@operation**.  
+1.  At the Publisher on the publication database, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) once for each column being added. Specify the column name for **\@column** and a value of **add** for **\@operation**.  
   
-2.  At the Publisher on the publication database, execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specify the publication name for **@publication** and the name of the filtered article for **@article**. If the publication has existing subscriptions, specify a value of **1** for **@change_active**. This re-creates the synchronization objects for the filtered article.  
+2.  At the Publisher on the publication database, execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specify the publication name for **\@publication** and the name of the filtered article for **\@article**. If the publication has existing subscriptions, specify a value of **1** for **\@change_active**. This re-creates the synchronization objects for the filtered article.  
   
 3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
@@ -90,9 +86,9 @@ manager: craigg
   
 #### To change a column filter to remove columns for an article published in a snapshot or transactional publication  
   
-1.  At the Publisher on the publication database, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) once for each column being removed. Specify the column name for **@column** and a value of **drop** for **@operation**.  
+1.  At the Publisher on the publication database, execute [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) once for each column being removed. Specify the column name for **\@column** and a value of **drop** for **\@operation**.  
   
-2.  At the Publisher on the publication database, execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specify the publication name for **@publication** and the name of the filtered article for **@article**. If the publication has existing subscriptions, specify a value of **1** for **@change_active**. This re-creates the synchronization objects for the filtered article.  
+2.  At the Publisher on the publication database, execute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Specify the publication name for **\@publication** and the name of the filtered article for **\@article**. If the publication has existing subscriptions, specify a value of **1** for **\@change_active**. This re-creates the synchronization objects for the filtered article.  
   
 3.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
@@ -104,13 +100,13 @@ manager: craigg
   
 2.  At the Publisher on the publication database, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql). This defines the columns to include or remove from the article.  
   
-    -   If publishing only a few columns from a table with many columns, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) once for each column being added. Specify the column name for **@column** and a value of **add** for **@operation**.  
+    -   If publishing only a few columns from a table with many columns, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) once for each column being added. Specify the column name for **\@column** and a value of **add** for **\@operation**.  
   
-    -   If publishing most of the columns in a table with many columns, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql), specifying a value of **null** for **@column** and a value of **add** for **@operation** to add all columns. Then execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql), once for each column being excluded, specifying a value of **drop** for **@operation** and the excluded column name for **@column**.  
+    -   If publishing most of the columns in a table with many columns, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql), specifying a value of **null** for **\@column** and a value of **add** for **\@operation** to add all columns. Then execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql), once for each column being excluded, specifying a value of **drop** for **\@operation** and the excluded column name for **\@column**.  
   
 #### To change a column filter to include additional columns for an article published in a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) once for each column being added. Specify the column name for **@column**, a value of **add** for **@operation** and a value of **1** for both **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+1.  At the Publisher on the publication database, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) once for each column being added. Specify the column name for **\@column**, a value of **add** for **\@operation** and a value of **1** for both **\@force_invalidate_snapshot** and **\@force_reinit_subscription**.  
   
 2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   
@@ -118,7 +114,7 @@ manager: craigg
   
 #### To change a column filter to remove columns for an article published in a merge publication  
   
-1.  At the Publisher on the publication database, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) once for each column being removed. Specify the column name for **@column**, a value of **drop** for **@operation** and a value of **1** for both **@force_invalidate_snapshot** and **@force_reinit_subscription**.  
+1.  At the Publisher on the publication database, execute [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) once for each column being removed. Specify the column name for **\@column**, a value of **drop** for **\@operation** and a value of **1** for both **\@force_invalidate_snapshot** and **\@force_reinit_subscription**.  
   
 2.  Rerun the Snapshot Agent job for the publication to generate an updated snapshot.  
   

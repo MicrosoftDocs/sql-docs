@@ -1,84 +1,65 @@
 ---
 title: "Lesson 1: Creating a Report Server Project (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/30/2016"
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 1: Creating a Report Server Project (Reporting Services)
 
- > For content related to previous versions of SQL Server, see [Lesson 1: Creating a Report Server Project (Reporting Services)](https://msdn.microsoft.com/library/ms167559(SQL.120).aspx).
+In this lesson, you create a *report server project* and a *report definition (.rdl)* file using *Report Designer*.
 
-In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file in [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] within Visual Studio. 
+> [!NOTE]
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts.
 
-To create a report with [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], first you need a report server project where you can save your report definition (.rdl) file and other resource files you need for your report. 
+When you create reports with Report Designer, it creates a report server project that contains the report files and other resource files used by the report(s).
 
-In the following lessons, you define a data source for your report, define a dataset, and define the report layout. When you run the report, the data is retrieved and combined with the layout, and then rendered on your screen. From there you can export it, print it, or save it.  
+## To create a report server project
   
-  
-  
-## To create a report server project  
-  
-1.  Open [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
-  
-2.  On the **File** menu > **New** > **Project**.  
+1. From the **File** menu, select **New** > **Project**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  Under **Installed** > **Templates** > **Business Intelligence**, click **Reporting Services**.
+2. In the left-most column under **Installed**, select **Reporting Services**. In some cases, it may be under the group **Business Intelligence**.
 
-    ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
+    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
-5. Click **Report Server Project** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
+    > [!IMPORTANT]
+    > For VS, if you don't see Reporting Services in the left column, add the Report Designer by installing the SSDT workload. From the **Tools** menu, select **Get Tools and Features...** and select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Tools** menu, select **Extensions and Updates** > **Online**. In the center column, select **Microsoft Reporting Services Projects** > **Download** from the displayed extensions. For SSDT, See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-   >**Note**: If you don't see the **Business Intelligence** or **Report Server Project** options, you need to update SSDT with the Business Intelligence templates. See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
-  
-5.  In **Name**, type **Tutorial**.  
+3. Select the **Report Server Project** icon &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;in the center column of the **New Project** dialog box.
 
-    By default, it's created in your Visual Studio 2015\Projects folder in a new directory.
-    
-    ![ssrs-ssdt-01-solution-location](../reporting-services/media/ssrs-ssdt-01-solution-location.png)
-  
-6.  Click **OK** to create the project.  
-  
-    The Tutorial project is displayed in the Solution Explorer pane on the right.  
-  
-## To create a new report definition file  
-  
-1.  In the **Solution Explorer** pane, right-click the **Reports** > **Add** > **New Item**. 
+4. In the **Name** text box, type "Tutorial" for the project name. By default, the **Location** text box displays the path to your "Documents\Visual Studio 20xx\Projects\" folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a VS solution, then VS also creates a solution file (.sln).
 
-    >**Tip**: If you don't see the **Solution Explorer** pane, on the **View** menu, click **Solution Explorer**. 
+5. Select **OK** to create the project. The Tutorial project is displayed in the **Solution Explorer** pane on the right.
+  
+## Creating a report definition file (RDL)  
+  
+1. In the **Solution Explorer** pane, right-click on the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** menu > **Solution Explorer**.
+
+2. Select **Add** > **New Item**.
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
-  
-2.  In the **Add New Item** window, click **Report** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png).  
-  
-3.  In **Name**, type **Sales Orders.rdl** and then click **Add**.  
-  
-    Report Designer opens and displays the new .rdl file in Design view.  
-    
-    ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
-  
-     Report Designer is a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] component that runs in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. It has two views: **Design** and **Preview**. Click each tab to change views.  
-  
-    You define your data in the **Report Data** pane. You define your report layout in **Design** view. You can run the report and see what it looks like in **Preview** view.  
-  
-## Next lesson  
-You have successfully created a report project called "Tutorial" and added a report definition (.rdl) file to the report project. Next, you will specify a data source to use for the report. See [Lesson 2: Specifying Connection Information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
-  
-## See Also  
-[Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
-  
 
+3. In the **Add New Item** window, select the **Report** icon.
+
+4. Type "Sales Orders.rdl" into the **Name** text box.
+
+5. Select the **Add button** on the lower right side of the **Add New Item** dialog box to complete the process. Report Designer opens and displays the Sales Orders report file in Design view.
+
+    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+
+## Next steps
+
+So far you've created the Tutorial report project and the Sales Orders report. In the remaining lessons, you're going to learn how to:
+
+- Configure a data source for the report.
+- Create a dataset from the data source.
+- Design and format the report layout.
+
+Continue with [Lesson 2: Specifying Connection Information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

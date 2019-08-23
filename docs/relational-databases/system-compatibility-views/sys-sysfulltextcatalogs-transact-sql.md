@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysfulltextcatalogs"
@@ -21,10 +18,8 @@ helpviewer_keywords:
   - "sys.sysfulltextcatalogs compatibility view"
   - "sysfulltextcatalogs system table"
 ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
-caps.latest.revision: 38
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysfulltextcatalogs (Transact-SQL)

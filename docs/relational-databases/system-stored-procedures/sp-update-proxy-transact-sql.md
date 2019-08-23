@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_proxy"
@@ -21,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +41,25 @@ sp_update_proxy
 ```  
   
 ## Arguments  
- [ **@proxy_id**= ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to change. The *proxy_id* is **int**, with a default of NULL.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to change. The *proxy_name* is **sysname**, with a default of NULL.  
   
- [ **@credential_name** = ] **'***credential_name***'**  
+`[ @credential_name = ] 'credential_name'`
  The name of the new credential for the proxy. The *credential_name* is **sysname**, with a default of NULL. Either *credential_name* or *credential_id* may be specified.  
   
- [ **@credential_id** = ] *credential_id*  
+`[ @credential_id = ] credential_id`
  The identification number of the new credential for the proxy. The *credential_id* is **int**, with a default of NULL. Either *credential_name* or *credential_id* may be specified.  
   
- [ **@new_name**= ] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  The new name of the proxy. The *new_name* is **sysname**, with a default of NULL. When provided, the procedure changes the name of the proxy to *new_name*. When this argument is NULL, the name of the proxy remains unchanged.  
   
- [ **@enabled** = ] *is_enabled*  
+`[ @enabled = ] is_enabled`
  Is whether the proxy is enabled. The *is_enabled* flag is **tinyint**, with a default of NULL. When *is_enabled* is **0**, the proxy is not enabled, and cannot be used by a job step. When this argument is NULL, the status of the proxy remains unchanged.  
   
- [ **@description**= ] **'***description***'**  
+`[ @description = ] 'description'`
  The new description of the proxy. The *description* is **nvarchar(512)**, with a default of NULL. When this argument is NULL, the description of the proxy remains unchanged.  
   
 ## Return Code Values  

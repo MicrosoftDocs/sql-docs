@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "high availability [SQL Server], solutions"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "availability [SQL Server]"
   - "server availability [SQL Server]"
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
-caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -31,12 +28,12 @@ manager: craigg
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides several options for creating high availability for a server or database. The high-availability options include the following:  
   
  AlwaysOn Failover Cluster Instances  
- As part of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn offering, AlwaysOn Failover Cluster Instances leverages Windows Server Failover Clustering (WSFC) functionality to provide local high availability through redundancy at the server-instance level—a *failover cluster instance* (FCI). An FCI is a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is installed across Windows Server Failover Clustering (WSFC) nodes and, possibly, across multiple subnets. On the network, an FCI appears to be an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on a single computer, but the FCI provides failover from one WSFC node to another if the current node becomes unavailable.  
+ As part of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn offering, AlwaysOn Failover Cluster Instances leverages Windows Server Failover Clustering (WSFC) functionality to provide local high availability through redundancy at the server-instance level-a *failover cluster instance* (FCI). An FCI is a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is installed across Windows Server Failover Clustering (WSFC) nodes and, possibly, across multiple subnets. On the network, an FCI appears to be an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on a single computer, but the FCI provides failover from one WSFC node to another if the current node becomes unavailable.  
   
- For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
+ For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] is an enterprise-level high-availability and disaster recovery solution introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to enable you to maximize availability for one or more user databases. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] requires that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances reside on Windows Server Failover Clustering (WSFC) nodes. For more information, see [ AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] is an enterprise-level high-availability and disaster recovery solution introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] to enable you to maximize availability for one or more user databases. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] requires that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances reside on Windows Server Failover Clustering (WSFC) nodes. For more information, see [AlwaysOn Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
 >  An FCI can leverage [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] to provide remote disaster recovery at the database level. For more information, see [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  

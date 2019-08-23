@@ -1,13 +1,11 @@
 ---
 title: "GROUP BY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "03/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GROUP"
@@ -33,7 +31,6 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - GROUP BY- Transact-SQL
@@ -87,6 +84,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -306,19 +304,19 @@ For a GROUP BY clause that uses ROLLUP, CUBE, or GROUPING SETS, the maximum numb
  
 -   The following example generates 4097 (2<sup>12</sup> + 1) grouping sets and will fail.  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
 -   The following example generates 4097 (2<sup>12</sup> + 1) groups and will fail. Both `CUBE ()` and the `()` grouping set produce a grand total row and duplicate grouping sets are not eliminated.  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
 -   This example uses the backwards compatible syntax. It generates 8192 (2<sup>13</sup>) grouping sets and will fail.  
   
-    ```  
+    ```sql
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
@@ -330,7 +328,7 @@ The GROUP BY clause supports all GROUP BY features that are included in the SQL-
   
 -   Grouping sets are not allowed in the GROUP BY clause unless they are part of an explicit GROUPING SETS list. For example, `GROUP BY Column1, (Column2, ...ColumnN`) is allowed in the standard but not in Transact-SQL.  Transact-SQL supports `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` and `GROUP BY Column1, Column2, ... ColumnN`, which are semantically equivalent. These are semantically equivalent to the previous `GROUP BY` example. This is to avoid the possibility that `GROUP BY Column1, (Column2, ...ColumnN`) might be misinterpreted as `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, which are not semantically equivalent.  
   
--   Grouping sets are not allowed inside grouping sets. For example, `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` is allowed in the SQL-2006 standard but not in Transact-SQL. Transact-SQL allows `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` or `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, which are semantically equivalent to the first GROUP BY example and have a more clear syntax.  
+-   Grouping sets are not allowed inside grouping sets. For example, `GROUP BY GROUPING SETS (A1, A2,...An, GROUPING SETS (C1, C2, ...Cn))` is allowed in the SQL-2006 standard but not in Transact-SQL. Transact-SQL allows `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` or `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, which are semantically equivalent to the first GROUP BY example and have a more clear syntax.  
   
 -   GROUP BY [ALL/DISTINCT] is only allowed in a simple GROUP BY clause that contains column expressions. It is not allowed with the GROUPING SETS, ROLLUP, CUBE, WITH CUBE or WITH ROLLUP constructs. ALL is the default and is implicit. It is also only allowed in the backwards compatible syntax.
   
@@ -340,7 +338,7 @@ The GROUP BY clause supports all GROUP BY features that are included in the SQL-
 |Feature|SQL Server Integration Services|SQL Server compatibility level 100 or higher|SQL Server 2008 or later with compatibility level 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT aggregates|Not supported for WITH CUBE or WITH ROLLUP.|Supported for WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE, or ROLLUP.|Same as compatibility level 100.|  
-|User-defined function with CUBE or ROLLUP name in the GROUP BY clause|User-defined function **dbo.cube(***arg1***,***...argN***)** or **dbo.rollup(***arg1***,**...*argN***)** in the GROUP BY clause is allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined function **dbo.cube (***arg1***,**...argN**)** or **dbo.rollup(**arg1**,***...argN***)** in the GROUP BY clause is not allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> The following error message is returned: "Incorrect syntax near the keyword 'cube'&#124;'rollup'."<br /><br /> To avoid this problem, replace `dbo.cube` with `[dbo].[cube]` or `dbo.rollup` with `[dbo].[rollup]`.<br /><br /> The following example is allowed: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined function **dbo.cube (***arg1***,***...argN*) or **dbo.rollup(***arg1***,***...argN***)** in the GROUP BY clause is allowed<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|User-defined function with CUBE or ROLLUP name in the GROUP BY clause|User-defined function **dbo.cube(**_arg1_**,**_...argN_**)** or **dbo.rollup(**_arg1_**,**..._argN_**)** in the GROUP BY clause is allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|User-defined function **dbo.cube (**_arg1_**,**...argN**)** or **dbo.rollup(**arg1**,**_...argN_**)** in the GROUP BY clause is not allowed.<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> The following error message is returned: "Incorrect syntax near the keyword 'cube'&#124;'rollup'."<br /><br /> To avoid this problem, replace `dbo.cube` with `[dbo].[cube]` or `dbo.rollup` with `[dbo].[rollup]`.<br /><br /> The following example is allowed: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|User-defined function **dbo.cube (**_arg1_**,**_...argN_) or **dbo.rollup(**_arg1_**,**_...argN_**)** in the GROUP BY clause is allowed<br /><br /> For example: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Not supported|Supported|Supported|  
 |CUBE|Not supported|Supported|Not supported|  
 |ROLLUP|Not supported|Supported|Not supported|  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.numbered_procedures_TSQL"
@@ -20,10 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.numbered_procedures catalog view"
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.numbered_procedures (Transact-SQL)

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
@@ -22,10 +20,8 @@ helpviewer_keywords:
   - "Configure Management Data Warehouse Wizard"
   - "management data warehouse, configuring"
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure the Management Data Warehouse (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +52,9 @@ manager: craigg
     -   Right-click **Data Collection**, and then click **Properties**. On the **General** tab, specify the existing management data warehouse and the server that it is installed on.  
   
 6.  Repeat step 5 until all the database instances that use the data collector are configured to upload data to the shared management data warehouse.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ####  <a name="Wizard"></a> Configure Management Data Warehouse Wizard  
  **Welcome Page**  
   

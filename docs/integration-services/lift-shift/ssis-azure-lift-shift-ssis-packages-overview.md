@@ -1,20 +1,22 @@
 ---
 title: "Deploy and run SSIS packages in Azure | Microsoft Docs"
 description: Learn how you can move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Microsoft Azure cloud.
-ms.date: "07/01/2018"
+ms.date: "09/23/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud
-You can now move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Azure cloud. Deploy, run, and manage SSIS projects and packages in the SSIS Catalog (SSISDB) on Azure SQL Database or SQL Database Managed Instance (Preview) with familiar tools such as SQL Server Management Studio (SSMS).
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+You can now move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Azure cloud. Deploy, run, and manage SSIS projects and packages in the SSIS Catalog (SSISDB) on Azure SQL Database or SQL Database Managed Instance with familiar tools such as SQL Server Management Studio (SSMS).
 
 ## Benefits
 Moving your on-premises SSIS workloads to Azure has the following potential benefits:
@@ -30,7 +32,7 @@ The most significant difference is the separation of storage from runtime. Azure
 | Location | Storage | Runtime | Scalability |
 |---|---|---|---|
 | On premises | SQL Server | SSIS runtime hosted by SQL Server | SSIS Scale Out (in SQL Server 2017 and later)<br/><br/>Custom solutions (in prior versions of SQL Server) |
-| On Azure | SQL Database or SQL Database Managed Instance (Preview) | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
+| On Azure | SQL Database or SQL Database Managed Instance | Azure-SSIS Integration Runtime, a component of Azure Data Factory | Scaling options for the Azure-SSIS Integration Runtime |
 | | | | |
 
 ## Provision SSIS on Azure

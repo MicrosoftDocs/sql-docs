@@ -6,18 +6,14 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Create method [ADOX], Visual Basic example"
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Create Method Example (VB)
 The following code shows how to create a new Microsoft Jet database with the [Create](../../../ado/reference/adox-api/create-method-adox.md) method.  
@@ -26,7 +22,7 @@ The following code shows how to create a new Microsoft Jet database with the [Cr
 Attribute VB_Name = "Create"  
 Option Explicit  
   
-' BeginCreateDatabseVB  
+' BeginCreateDatabaseVB  
 Sub CreateDatabase()  
     On Error GoTo CreateDatabaseError  
   

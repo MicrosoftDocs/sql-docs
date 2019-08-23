@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.savecopyas.f1"
@@ -18,12 +16,14 @@ helpviewer_keywords:
   - "SSIS packages, saving"
   - "SQL Server Integration Services packages, saving"
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Save Packages
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] you build packages by using [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and save the packages to the file system as XML files (.dtsx files). You can also save copies of the package XML file to the msdb database in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to the package store. The package store represents the folders in the file system location that the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service manages.  
   
  If you save a package to the file system, you can later use the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service to import the package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or to the package store. For more information, see [Integration Services Service &#40;SSIS Service&#41;](../integration-services/service/integration-services-service-ssis-service.md).  
@@ -65,7 +65,7 @@ manager: craigg
   
 5.  If saving to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], specify the authentication type and, if using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a user name and password.  
   
-6.  To specify the package path, either type the path or click the browse button **(…)** to specify the location of the package. The default name of the package is Package. Optionally, update the package name to one that suits your needs.  
+6.  To specify the package path, either type the path or click the browse button **(...)** to specify the location of the package. The default name of the package is Package. Optionally, update the package name to one that suits your needs.  
   
      If you select **SQL Server** as the **Package Path** option, the package path consists of logical folders in **msdb** and the package name. For example, if the package DownloadMonthlyData is associated with the Finance folder within the MSDB folder (the default name of the root logical folder in **msdb**), the package path for the package named DownloadMonthlyData is MSDB/Finance/DownloadMonthlyData  
   
@@ -75,7 +75,7 @@ manager: craigg
   
 7.  Review the package protection level.  
   
-8.  Optionally, click the browse button **(…)** by the **Protection level** box to change the protection level.  
+8.  Optionally, click the browse button **(...)** by the **Protection level** box to change the protection level.  
   
     -   In the **Package Protection Level** dialog box, select a different protection level.  
   

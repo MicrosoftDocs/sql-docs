@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 298 110">
+  <defs>
+    <symbol id="Threat_Protection" data-name="Threat Protection" viewBox="0 0 64 64">
+      <circle cx="32" cy="32" r="31" fill="#e5e5e5" stroke="#556a8a" stroke-miterlimit="10" stroke-width="2"/>
+      <g>
+        <path d="M49.12,14.88a.681.681,0,0,0-.63-.63h-.95a11.849,11.849,0,0,1-6.64,2.21c-3.48,0-5.69-1.89-7.27-3.15-.31-.31-.64-.91-.95-1.22H31.42c-.31.31-.63.91-.95,1.22-1.58,1.26-3.79,3.15-6.95,3.15a12.781,12.781,0,0,1-7-2.21h-.94c-.32,0-.32.31-.64.63C9.3,30,16.57,47.64,31.74,55.2h.95C47.54,47.64,54.82,30,49.12,14.88Z" fill="#55d2f6"/>
+        <path d="M32.69,55.2h-.63V12.09h.63c.31.31.64.91.95,1.22,1.58,1.26,3.79,3.15,7.27,3.15a11.849,11.849,0,0,0,6.64-2.21h.95a.681.681,0,0,1,.63.63C54.82,30,47.54,47.64,32.69,55.2Z" fill="#ace8f9"/>
+        <path d="M32.06,55.2h-.32C16.57,47.64,9.3,30,15,14.88c.32-.32.32-.63.63-.63h.95a12.8,12.8,0,0,0,7,2.21c3.16,0,5.37-1.89,7-3.15.32-.32.63-.9.95-1.22h1.26c.32.32.63.9.95,1.22,1.58,1.26,3.79,3.15,7.27,3.15a11.875,11.875,0,0,0,6.64-2.21h.95a.681.681,0,0,1,.63.63C54.81,30,47.54,47.64,32.69,55.2Z" fill="none" stroke="#556a8a" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </symbol>
+  </defs>
+  <title>8 - ssl</title>
+  <g id="background_blue" data-name="background blue">
+    <rect y="-0.181" width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <use width="64" height="64" transform="translate(106.16 11.979) scale(1.339)" xlink:href="#Threat_Protection"/>
+  </g>
+</svg>

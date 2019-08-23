@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Creating an Assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   The assembly that is called or referenced was created in the same database.  
   
 ## Specifying Security When Creating Assemblies  
- When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. When the **CREATE ASSEMBLY** statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: **SAFE**, **EXTERNAL_ACCESS**, or **UNSAFE**. When the **CREATE ASSEMBLY** statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** is the default permission set and works for the majority of scenarios. To specify a given security level, you modify the syntax of the CREATE ASSEMBLY statement as follows:  
   
@@ -75,7 +73,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  The assembly is strong name signed or Authenticode signed with a certificate. This strong name (or certificate) is created inside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as an asymmetric key (or certificate), and has a corresponding login with **EXTERNAL ACCESS ASSEMBLY** permission (for external access assemblies) or **UNSAFE ASSEMBLY** permission (for unsafe assemblies).  
   
 2.  The database owner (DBO) has **EXTERNAL ACCESS ASSEMBLY** (for **EXTERNAL ACCESS** assemblies) or **UNSAFE ASSEMBLY** (for **UNSAFE** assemblies) permission, and the database has the [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) set to **ON**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  The two conditions listed above are also checked at assembly load time (which includes execution). At least one of the conditions must be met in order to load the assembly.  
   
  We recommend that the [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) on a database not be set to **ON** only to run common language runtime (CLR) code in the server process. Instead, we recommend that an asymmetric key be created from the assembly file in the master database. A login mapped to this asymmetric key must then be created, and the login must be granted **EXTERNAL ACCESS ASSEMBLY** or **UNSAFE ASSEMBLY** permission.  
@@ -131,6 +131,6 @@ WITH PERMISSION_SET = UNSAFE;
  [Dropping an Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md)   
- [Allowing Partially Trusted Callers](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Allowing Partially Trusted Callers](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

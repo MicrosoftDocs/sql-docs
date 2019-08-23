@@ -2,17 +2,15 @@
 title: SQL Data Discovery & Classification | Microsoft Docs
 description: SQL Data Discovery & Classification
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
-ms.tgt_pltfrm: na
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
 ---
 # SQL Data Discovery and Classification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,22 +21,21 @@ Discovering and classifying your most sensitive data (business, financial, healt
 * Controlling access to and hardening the security of databases/columns containing highly sensitive data.
 
 > [!NOTE]
-> Data Discovery & Classification is **supported for SQL Server 2008 and later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).
+> Data Discovery & Classification is **supported for SQL Server 2008 and later, and can be used with SSMS 17.5 or later**. For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).
 
 ## <a id="subheading-1"></a>Overview
 Data Discovery & Classification introduces a set of advanced services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:
-* **Discovery & recommendations** – The classification engine scans your database and identifies columns containing potentially sensitive data. It then provides you an easy way to review and apply the appropriate classification recommendations, as well as to manually classify columns.
-* **Labeling** – Sensitivity classification labels can be persistently tagged on columns.
+* **Discovery & recommendations** - The classification engine scans your database and identifies columns containing potentially sensitive data. It then provides you an easy way to review and apply the appropriate classification recommendations, as well as to manually classify columns.
+* **Labeling** - Sensitivity classification labels can be persistently tagged on columns.
 * **Visibility** - The database classification state can be viewed in a detailed report that can be printed/exported to be used for compliance & auditing purposes, as well as other needs.
 
 ## <a id="subheading-2"></a>Discovering, classifying & labeling sensitive columns
 The following section describes the steps for discovering, classifying, and labeling columns containing sensitive data in your database, as well as viewing the current classification state of your database and exporting reports.
 
 The classification includes two metadata attributes:
-* Labels – The main classification attributes, used to define the sensitivity level of the data stored in the column.  
-* Information Types – Provide additional granularity into the type of data stored in the column.
+* Labels - The main classification attributes, used to define the sensitivity level of the data stored in the column.  
+* Information Types - Provide additional granularity into the type of data stored in the column.
 
-<br>
 **To classify your SQL Server database:**
 
 1. In SQL Server Management Studio (SSMS) connect to the SQL Server.
@@ -94,7 +91,7 @@ The classification metadata for *Information Types* and *Sensitivity Labels* is 
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-The metadata can be accessed using the Extended Properties catalog view [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+The metadata can be accessed using the Extended Properties catalog view [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
 
 The following code example returns all classified columns with their corresponding classifications:
 
@@ -138,14 +135,29 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
+Or on SQL Server 2019 :
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+	label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+	JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
+```
+
 ## <a id="subheading-4"></a>Next steps
 
 For Azure SQL Database, see [Azure SQL Database Data Discovery & Classification](https://go.microsoft.com/fwlink/?linkid=866265).
 
 Consider protecting your sensitive columns by applying column level security mechanisms:
 
-* [Dynamic Data Masking](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking) for obfuscating sensitive columns in use.
-* [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) for encrypting sensitive columns at rest.
+* [Dynamic Data Masking](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) for obfuscating sensitive columns in use.
+* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) for encrypting sensitive columns at rest.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

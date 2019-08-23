@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "Enabled Property (ServerNetworkProtocolIpAddress Class)"
@@ -19,10 +15,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Enabled property"
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
-caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Enabled Property (ServerNetworkProtocolIpAddress Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,6 +37,6 @@ object.Enabled [= value]
  A Boolean value that specifies whether the IP address is enabled: **true** if the IP address is enabled, or **false** if the IP address is disabled.  
   
 ## See Also  
- [Configuring Server Network Protocols and Net-Libraries](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuring Server Network Protocols and Net-Libraries](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
@@ -54,7 +52,7 @@ manager: craigg
     > [!NOTE]  
     >  If you need more room to type your query, press SHIFT+ALT+ENTER, to switch to full-screen mode.  
   
-11. In Solution Explorer, right-click **SQLQuery1**, and then click **Rename**. Type **Check Workorders****.sql** as the new name for the query and press ENTER.  
+11. In Solution Explorer, right-click **SQLQuery1**, and then click **Rename**. Type **Check Workorders.sql** as the new name for the query and press ENTER.  
   
 12. To save your solution and script project, on the **File** menu, click **Save All**.  
   

@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/04/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -40,7 +37,7 @@ manager: craigg
 
 
 1.  **Create a Microsoft Azure storage account:** The backups are stored in the Microsoft Azure storage service. You must first create a Microsoft Azure storage account, if you do not already have an account.
-    - SQL Server 2014 uses page blobs, which are different than block and append blobs. Therefore you must create a general purpose account, and not a blob account. For more information, see [About Azure storage accounts](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+    - SQL Server 2014 uses page blobs, which are different than block and append blobs. Therefore you must create a general purpose account, and not a blob account. For more information, see [About Azure storage accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Make a note of the storage account name, and the access keys. The storage account name and access key information is used to create a SQL Credential. The SQL Credential is used to authenticate to the storage account.  
  
 2.  **Create a SQL Credential:** Create a SQL Credential using the name of the storage account as the Identity and the storage access key as the password.  
@@ -147,7 +144,7 @@ manager: craigg
  The steps described in this section are specifically for configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the first time on the database. You can modify the existing configurations using the same system stored procedure **smart_admin.sp_set_db_backup** and provide the new values. For more information, see [SQL Server Managed Backup to Microsoft Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ### Enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the Instance with Default Settings  
- This tutorial describes the steps to enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance, ‘MyInstance’,\\. It includes steps to enable monitoring the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] health status.  
+ This tutorial describes the steps to enable and configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the instance, 'MyInstance',\\. It includes steps to enable monitoring the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] health status.  
   
  **Permissions:**  
   
@@ -159,7 +156,7 @@ manager: craigg
 
 
 1.  **Create a Microsoft Azure storage account:** The backups are stored in the Microsoft Azure storage service. You must first create a Microsoft Azure storage account, if you do not already have an account.
-    - SQL Server 2014 uses page blobs, which are different than block and append blobs. Therefore you must create a general purpose account, and not a blob account. For more information, see [About Azure storage accounts](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+    - SQL Server 2014 uses page blobs, which are different than block and append blobs. Therefore you must create a general purpose account, and not a blob account. For more information, see [About Azure storage accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Make a note of the storage account name, and the access keys. The storage account name and access key information is used to create a SQL Credential. The SQL Credential is used to authenticate to the storage account.  
   
 2.  **Create a SQL Credential:** Create a SQL Credential using the name of the storage account as the Identity and the storage access key as the password.  

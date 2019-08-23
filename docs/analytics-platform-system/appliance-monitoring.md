@@ -2,7 +2,6 @@
 title: Appliance monitoring - Analytics Platform System | Microsoft Docs
 description: This appliance monitoring guide describes the tools and tasks for monitoring the Analytics Platform System appliance. 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -54,7 +53,7 @@ For situations when System Center is not available with your data center monitor
   
 If your monitoring solution does not support direct Transact\-SQL queries, or you do not have a monitoring tool, then you can use scripts to perform monitoring tasks, such as sending email when an alert occurs.  The TechNet wiki contains a scripted monitoring solution example.  
   
--   [Power Shell Monitoring Example for SQL Server PDW](http://go.microsoft.com/fwlink/?LinkId=248020)  
+-   [Power Shell Monitoring Example for SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
 ## <a name="Tasks"></a>Related Monitoring Tasks  
   

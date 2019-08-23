@@ -4,19 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.lookin"
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Choose Search Folders Dialog Box (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,4 +49,3 @@ Lists folders added from the **Folders list**. These folders will be included in
   
 **Apply**  
 Save the set of search folders listed in **Selected folders** list as a named folder set. This folder set then can be chosen in the **Look in** field on all tabs of the **Find and Replace** window. Closes the Choose Search Folders dialog box.  
-  

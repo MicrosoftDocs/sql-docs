@@ -2,7 +2,6 @@
 title: Import SCOM Management Pack - Analytics Platform System | Microsoft Docs
 description: Follow these steps to import the System Center Operations Manager (SCOM) Management Packs for Analytics Platform System (APS). The management packs are required to monitor Parallel Data Warehouse from SCOM. 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -55,7 +54,7 @@ The management packs must be installed. See [Install the SCOM Management Packs &
   
 1.  Right-click the **Management Packs** node, and then click **Import Management Packs**.  
   
-2.  Choose **Add from disk**….  
+2.  Choose **Add from disk**....  
   
     ![Right-click Management Packs](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW.png "SCOM_PDW")  
   

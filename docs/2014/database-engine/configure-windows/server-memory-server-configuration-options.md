@@ -1,13 +1,10 @@
 ---
-title: "Server Memory Server Configuration Options | Microsoft Docs"
+title: "Server Memory Configuration Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Virtual Memory Manager"
@@ -21,18 +18,17 @@ helpviewer_keywords:
   - "manual memory options [SQL Server]"
   - "memory [SQL Server], servers"
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Server Memory Server Configuration Options
+# Server Memory Configuration Options
   Use the two server memory options, **min server memory** and **max server memory**, to reconfigure the amount of memory (in megabytes) that is managed by the SQL Server Memory Manager for a SQL Server process used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The default setting for **min server memory** is 0, and the default setting for **max server memory** is 2147483647 MB. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources.  
   
 > [!NOTE]  
->  Setting **max server memory** to the minimum value can severely reduce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and even prevent it from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **–f** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](database-engine-service-startup-options.md).  
+> Setting **max server memory** to the minimum value can severely reduce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance and even prevent it from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **-f** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](database-engine-service-startup-options.md).  
   
  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is using memory dynamically, it queries the system periodically to determine the amount of free memory. Maintaining this free memory prevents the operating system (OS) from paging. If less memory is free, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] releases memory to the OS. If more memory is free, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may allocate more memory. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds memory only when its workload requires more memory; a server at rest does not increase the size of its virtual address space.  
   
@@ -43,18 +39,31 @@ manager: craigg
  Allowing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use memory dynamically is recommended; however, you can set the memory options manually and restrict the amount of memory that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can access. Before you set the amount of memory for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine the appropriate memory setting by subtracting, from the total physical memory, the memory required for the OS and any other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (and other system uses, if the computer is not wholly dedicated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). This difference is the maximum amount of memory you can assign to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Setting the Memory Options Manually  
- Set **min server memory** and **max server memory** to span a range of memory values. This method is useful for system or database administrators to configure an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with the memory requirements of other applications that run on the same computer.  
+The server options **min server memory** and **max server memory** can be set to span a range of memory values. This method is useful for system or database administrators to configure an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with the memory requirements of other applications, or other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that run on the same host.
+
+> [!NOTE]
+> The **min server memory** and **max server memory** options are advanced options. If you are using the **sp_configure** system stored procedure to change these settings, you can change them only when **show advanced options** is set to 1. These settings take effect immediately without a server restart.  
   
- Use **min server memory** to guarantee a minimum amount of memory available to the SQL Server Memory Manager for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not immediately allocate the amount of memory specified in **min server memory** on startup. However, after memory usage has reached this value due to client load, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot free memory unless the value of **min server memory** is reduced.  
-  
+<a name="min_server_memory"></a> Use **min_server_memory** to guarantee a minimum amount of memory available to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not immediately allocate the amount of memory specified in **min server memory** on startup. However, after memory usage has reached this value due to client load, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot free memory unless the value of **min server memory** is reduced. For example, when several instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can exist concurrently in the same host, set the min_server_memory parameter instead of max_server_memory for the purpose of reserving memory for an instance. Also, setting a min_server_memory value is essential in a virtualized environment to ensure memory pressure from the underlying host does not attempt to deallocate memory from the buffer pool on a guest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] virtual machine (VM) beyond what is needed for acceptable performance.
+ 
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not guaranteed to allocate the amount of memory specified in **min server memory**. If the load on the server never requires allocating the amount of memory specified in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will run with less memory.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not guaranteed to allocate the amount of memory specified in **min server memory**. If the load on the server never requires allocating the amount of memory specified in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will run with less memory.  
   
+<a name="max_server_memory"></a> Use **max_server_memory** to guarantee the OS does not experience detrimental memory pressure. To set max server memory configuration, monitor overall consumption of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process in order to determine memory requirements. To be more accurate with these calculations for a single instance:
+ -  From the total OS memory, reserve 1GB-4GB to the OS itself.
+ -  Then subtract the equivalent of potential [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory allocations outside the **max server memory** control, which is comprised of **_stack size <sup>1</sup> \* calculated max worker threads <sup>2</sup> + -g startup parameter <sup>3</sup>_** (or 256MB by default if *-g* is not set). What remains should be the max_server_memory setting for a single instance setup.
+ 
+<sup>1</sup> Refer to the [Memory Management Architecture guide](https://docs.microsoft.com/sql/relational-databases/memory-management-architecture-guide#stacksizes) for information on thread stack sizes per architecture.
+
+<sup>2</sup> Refer to the documentation page on how to [Configure the max worker threads Server Configuration Option](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md), for information on the calculated default worker threads for a given number of affinitized CPUs in the current host.
+
+<sup>3</sup> Refer to the documentation page on [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014) for information on the *-g* startup parameter. Aplicable only to 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
+
 |OS Type|Minimum Memory Amounts Allowable for **max server memory**|  
 |-------------|----------------------------------------------------------------|  
 |32-bit|64 MB|  
-|64-bit|128 MB|  
-  
+|64-bit|128 MB| 
+
 ## How to configure memory options using SQL Server Management Studio  
  Use the two server memory options, **min server memory** and **max server memory**, to reconfigure the amount of memory (in megabytes) managed by the SQL Server Memory Manager for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources.  
   
@@ -81,9 +90,9 @@ manager: craigg
 3.  If **Maximize data throughput for network applications** is selected, choose any other option, click **OK**, and then close the rest of the dialog boxes.  
   
 ## Lock Pages in Memory  
- This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The SQL Server **Lock Pages in Memory** option is set to ON in 32-bit and 64-bit instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows "Locked Pages in Memory” (LPIM) user right. In earlier versions of SQL Server, setting the Lock Pages option for a 32-bit instance of SQL Server, requires that the account with privileges to run sqlservr.exe have the LPIM user right and the 'awe_enabled' configuration option is set to ON.  
+ This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The SQL Server **Lock Pages in Memory** option is set to ON in 32-bit and 64-bit instances of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows "Locked Pages in Memory" (LPIM) user right. In earlier versions of SQL Server, setting the Lock Pages option for a 32-bit instance of SQL Server, requires that the account with privileges to run sqlservr.exe have the LPIM user right and the 'awe_enabled' configuration option is set to ON.  
   
- To disable the **Lock Pages In Memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the “Locked Pages in Memory” user right for the SQL Server startup account.  
+ To disable the **Lock Pages In Memory** option for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], remove the "Locked Pages in Memory" user right for the SQL Server startup account.  
   
 ### To Disable Lock Pages in Memory  
  **To disable the lock pages in memory option:**  
@@ -132,9 +141,9 @@ manager: craigg
 |-|-------------|-------------|  
 |Conventional memory|Up to process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:<br /><br /> 2 GB<br /><br /> 3 GB with **/3gb** boot parameter*<br /><br /> 4 GB on WOW64\*\*|Up to process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions:<br /><br /> 8 TB on x64 architecture|  
   
- ***/3gb** is an operating-system boot parameter. For more information, visit the [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ ***/3gb** is an operating-system boot parameter. For more information, visit the [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- **WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a 64-bit operating system. For more information, visit the [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ **WOW64 (Windows on Windows 64) is a mode in which 32-bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on a 64-bit operating system. For more information, visit the [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## Examples  
   

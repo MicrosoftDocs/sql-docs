@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "single-user mode [SQL Server], startup option"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "startup options [SQL Server]"
   - "starting SQL Server, options"
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -52,17 +48,17 @@ manager: craigg
 |**-n**|Does not use the Windows application log to record [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events. If you start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with **-n**, we recommend that you also use the **-e** startup option. Otherwise, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events are not logged.|  
 |**-s**|Allows you to start a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Without the **-s** parameter set, the default instance will try to start. You must switch to the appropriate BINN directory for the instance at a command prompt before starting **sqlservr.exe**. For example, if Instance1 were to use \mssql$Instance1 for its binaries, the user must be in the \mssql$Instance1\binn directory to start **sqlservr.exe -s instance1**.|  
 |**-T**  *trace#*|Indicates that an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should be started with a specified trace flag (*trace#*) in effect. Trace flags are used to start the server with nonstandard behavior. For more information, see [Trace Flags &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).<br /><br /> **\*\* Important \*\*** When specifying a trace flag with the **-T** option, use an uppercase "T" to pass the trace flag number. A lowercase "t" is accepted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but this sets other internal trace flags that are required only by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support engineers. (Parameters specified in the Control Panel startup window are not read.)|  
-|**-x**|Disables the following monitoring features:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance monitor counters<br /><br /> Keeping CPU time and cache-hit ratio statistics<br /><br /> Collecting information for the DBCC SQLPERF command<br /><br /> Collecting information for some dynamic management views<br /><br /> Many extended-events event points<br /><br /> <br /><br /> **\*\* Warning \*\*** When you use the **–x** startup option, the information that is available for you to diagnose performance and functional problems with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is greatly reduced.|  
+|**-x**|Disables the following monitoring features:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance monitor counters<br /><br /> Keeping CPU time and cache-hit ratio statistics<br /><br /> Collecting information for the DBCC SQLPERF command<br /><br /> Collecting information for some dynamic management views<br /><br /> Many extended-events event points<br /><br /> <br /><br /> **\*\* Warning \*\*** When you use the **-x** startup option, the information that is available for you to diagnose performance and functional problems with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is greatly reduced.|  
 |**-E**|Increases the number of extents that are allocated for each file in a filegroup. This option may be helpful for data warehouse applications that have a limited number of users running index or data scans. It should not be used in other applications because it might adversely affect performance. This option is not supported in 32-bit releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## Using Startup Options for Troubleshooting  
- Some startup options, such as single-user mode and minimal configuration mode, are principally used during troubleshooting. Starting the server for troubleshooting with the **–m** or **–f** options is easiest at the command line, while manually starting sqlservr.exe.  
+ Some startup options, such as single-user mode and minimal configuration mode, are principally used during troubleshooting. Starting the server for troubleshooting with the **-m** or **-f** options is easiest at the command line, while manually starting sqlservr.exe.  
   
 > [!NOTE]  
 >  When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started by using **net start**, startup options use a slash (/) instead of a hyphen (-).  
   
 ## Using Startup Options During Normal Operations  
- You may want to use some startup options every time you start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These options, such as **–g** or starting with a trace flag, are most easily done by configuring the startup parameters by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. These tool saves the startup options as registry keys, enabling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to always start with the startup options.  
+ You may want to use some startup options every time you start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These options, such as **-g** or starting with a trace flag, are most easily done by configuring the startup parameters by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. These tool saves the startup options as registry keys, enabling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to always start with the startup options.  
   
 ## Compatibility Support  
  The **-h**  parameter is not supported in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This parameter was used in earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to reserve virtual memory address space for Hot Add memory metadata when AWE is enabled. For more information, see [Discontinued SQL Server Features in SQL Server 2014](../../getting-started/discontinued-sql-server-features-in-sql-server-2014.md).  

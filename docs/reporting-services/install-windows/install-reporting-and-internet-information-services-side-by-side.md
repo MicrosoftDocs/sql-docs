@@ -1,22 +1,15 @@
 ---
 title: "Install Reporting and Internet Information Services Side-by-Side | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying [Reporting Services], IIS"
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 40
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Install Reporting and Internet Information Services Side-by-Side
@@ -44,11 +37,11 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
   
 |Example|Request|  
 |-------------|-------------|  
-|`http://123.234.345.456:80/reports`|Receives all requests that are sent to `http://123.234.345.456/reports` or `http://\<computername>/reports` if a domain name service can resolve the IP address to that host name.|  
-|`http://+:80/reports`|Receives any requests that are sent to any IP address or host name that is valid for that computer as long as the URL contains the "reports" virtual directory name.|  
-|`http://123.234.345.456:80`|Receives any request that specifies `http://123.234.345.456` or `http://\<computername>` if a domain name service can resolve the IP address to that host name.|  
-|`http://+:80`|Receives requests that are not already received by other applications, for any application endpoints that are mapped to **All Assigned**.|  
-|`http://*:80`|Receives requests that are not already received by other applications, for application endpoints that are mapped to **All Unassigned**.|  
+|`https://123.234.345.456:80/reports`|Receives all requests that are sent to `https://123.234.345.456/reports` or `https://\<computername>/reports` if a domain name service can resolve the IP address to that host name.|  
+|`https://+:80/reports`|Receives any requests that are sent to any IP address or host name that is valid for that computer as long as the URL contains the "reports" virtual directory name.|  
+|`https://123.234.345.456:80`|Receives any request that specifies `https://123.234.345.456` or `https://\<computername>` if a domain name service can resolve the IP address to that host name.|  
+|`https://+:80`|Receives requests that are not already received by other applications, for any application endpoints that are mapped to **All Assigned**.|  
+|`https://*:80`|Receives requests that are not already received by other applications, for application endpoints that are mapped to **All Unassigned**.|  
   
  One indication of a port conflict is that you will see the following error message: 'System.IO.FileLoadException: The process cannot access the file because it is being used by another process. (Exception from HRESULT: 0x80070020).'  
   
@@ -57,9 +50,9 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
   
 |Application|URL reservation|Description|Request receipt|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Report Server|`http://+:80/ReportServer`|Strong wildcard on port 80, with report server virtual directory.|Receives all requests on port 80 that specify the report server virtual directory. The Report Server Web service receives all requests to http://\<computername>/reportserver.|  
-|Web portal|`http://+:80/Reports`|Strong wildcard on port 80, with Reports virtual directory.|Receives all requests on port 80 that specify the reports virtual directory. The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] receives all requests to http://\<computername>/reports.|  
-|IIS|`http://*:80/`|Weak wildcard on port 80.|Receives any remaining requests on port 80 that are not received by another application.|  
+|Report Server|`https://+:80/ReportServer`|Strong wildcard on port 80, with report server virtual directory.|Receives all requests on port 80 that specify the report server virtual directory. The Report Server Web service receives all requests to https://\<computername>/reportserver.|  
+|Web portal|`https://+:80/Reports`|Strong wildcard on port 80, with Reports virtual directory.|Receives all requests on port 80 that specify the reports virtual directory. The [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] receives all requests to https://\<computername>/reports.|  
+|IIS|`https://*:80/`|Weak wildcard on port 80.|Receives any remaining requests on port 80 that are not received by another application.|  
 
 ## Side-by-Side Deployments of SQL Server Reporting Services on IIS 8.0, 8.5
 
@@ -69,7 +62,7 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
   
 -   A report server instance installed in the default configuration, where the URL reservation also specifies port 80 and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] application also uses "Reports" for the virtual directory name.  
   
- Given this configuration, a request that is sent to http://\<computername>:80/reports will be received by the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. The application that is accessed through the Reports virtual directory in IIS will no longer receive requests after the report server instance is installed.  
+ Given this configuration, a request that is sent to https://\<computername>:80/reports will be received by the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. The application that is accessed through the Reports virtual directory in IIS will no longer receive requests after the report server instance is installed.  
   
  If you are running side-by-side deployments of older and newer versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you are likely to encounter the routing problem just described. This is because all versions of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] use "ReportServer" and "Reports" as virtual directory names for the report server and the [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] applications, increasing the likelihood that you will have a "reports" and "reportserver" virtual directories in IIS.  
   
@@ -85,4 +78,4 @@ You can install and run SQL Server Reporting Services (SSRS) and Internet Inform
 [Configure a URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Install Reporting Services Native Mode Report Server](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

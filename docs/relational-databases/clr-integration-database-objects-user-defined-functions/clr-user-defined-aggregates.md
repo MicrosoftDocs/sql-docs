@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "aggregate functions [CLR integration]"
@@ -14,10 +12,8 @@ helpviewer_keywords:
   - "calculations [CLR integration]"
   - "user-defined functions [CLR integration]"
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
-caps.latest.revision: 35
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR User-Defined Aggregates
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

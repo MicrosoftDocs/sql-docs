@@ -6,9 +6,7 @@ ms.date: "07/06/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "SSIS"
@@ -20,13 +18,14 @@ helpviewer_keywords:
   - "DTS [Integration Services], about Integration Services"
   - "data integration [Integration Services]"
   - "Data Transformation Services"
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # SQL Server Integration Services
 
- > For content related to previous versions of SQL Server, see [SQL Server Integration Services](sql-server-integration-services.md).
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is a platform for building enterprise-level data integration and data transformations solutions. Use [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects and data.
 
@@ -41,8 +40,8 @@ You can use the graphical [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.
 For info about installing SQL Server Integration Services with SQL Server, and about additional downloads you may want or need, see [Install Integration Services](install-windows/install-integration-services.md).
 
 ##  ![info_tip](../sql-server/media/info-tip.png) Resources
--   [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
--   [Get help on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+-   [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [Get help on Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
 -   [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)
 -   [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

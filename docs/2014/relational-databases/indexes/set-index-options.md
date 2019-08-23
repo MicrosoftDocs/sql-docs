@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ALLOW_ROW_LOCKS option"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "ALLOW_PAGE_LOCKS option"
   - "ONLINE"
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -61,11 +58,11 @@ manager: craigg
   
 #### To modify the properties of an index in Table Designer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index’s properties.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index's properties.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Right-click the table on which you want to modify an index’s properties and select **Design**.  
+3.  Right-click the table on which you want to modify an index's properties and select **Design**.  
   
 4.  On the **Table Designer** menu, click **Indexes/Keys**.  
   
@@ -75,15 +72,15 @@ manager: craigg
   
 7.  Click **Close**.  
   
-8.  On the **File** menu, select **Save***table_name*.  
+8.  On the **File** menu, select **Save**_table_name_.  
   
 #### To modify the properties of an index in Object Explorer  
   
-1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index’s properties.  
+1.  In Object Explorer, click the plus sign to expand the database that contains the table on which you want to modify an index's properties.  
   
 2.  Click the plus sign to expand the **Tables** folder.  
   
-3.  Click the plus sign to expand the table on which you want to modify an index’s properties.  
+3.  Click the plus sign to expand the table on which you want to modify an index's properties.  
   
 4.  Click the plus sign to expand the **Indexes** folder.  
   
@@ -93,7 +90,7 @@ manager: craigg
   
 7.  Change the settings of any and all properties to customize the index.  
   
-8.  To add, remove, or change the position of an index column, select the **General** page from the **Index Properties -** *index_name* dialog box. For more information, see [Index Properties F1 Help](index-properties-f1-help.md)  
+8.  To add, remove, or change the position of an index column, select the **General** page from the **Index Properties -** _index_name_ dialog box. For more information, see [Index Properties F1 Help](index-properties-f1-help.md)  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

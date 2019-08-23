@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying [Reporting Services], IIS"
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-caps.latest.revision: 34
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Install Reporting Services and Internet Information Services Side-by-Side (SSRS Native Mode)
   You can install and run [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) and Internet Information Services (IIS) on the same computer. The version of IIS that you are using determines the interoperability issues you must address.  
@@ -41,9 +37,9 @@ manager: craigg
   
 |Example|Request|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Receives all requests that are sent to http://123.234.345.456/reports or http://\<computername>/reports if a domain name service can resolve the IP address to that host name.|  
+|http:\//123.234.345.456:80/reports|Receives all requests that are sent to http:\//123.234.345.456/reports or http://\<computername>/reports if a domain name service can resolve the IP address to that host name.|  
 |http://+:80/reports|Receives any requests that are sent to any IP address or host name that is valid for that computer as long as the URL contains the "reports" virtual directory name.|  
-|http://123.234.345.456:80|Receives any request that specifies http://123.234.345.456 or http://\<computername> if a domain name service can resolve the IP address to that host name.|  
+|http:\//123.234.345.456:80|Receives any request that specifies http:\//123.234.345.456 or http://\<computername> if a domain name service can resolve the IP address to that host name.|  
 |http://+:80|Receives requests that are not already received by other applications, for any application endpoints that are mapped to **All Assigned**.|  
 |http://*:80|Receives requests that are not already received by other applications, for application endpoints that are mapped to **All Unassigned**.|  
   

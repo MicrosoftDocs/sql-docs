@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_jobstep"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_jobstep"
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
-caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +35,15 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job from which the step will be removed. *job_id*is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job from which the step will be removed. *job_name*is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *job_id* or *job_name* must be specified; both cannot be specified.  
   
- [ **@step_id=** ] *step_id*  
+`[ @step_id = ] step_id`
  The identification number of the step being removed. *step_id*is **int**, with no default.  
   
 ## Return Code Values  

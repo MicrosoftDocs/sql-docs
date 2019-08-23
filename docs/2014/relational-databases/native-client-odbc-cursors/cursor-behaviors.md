@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "scrollable cursors [SQL Server]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
   - "sensitivity behavior of cursor"
   - "ODBC cursors, cursor behaviors"
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg

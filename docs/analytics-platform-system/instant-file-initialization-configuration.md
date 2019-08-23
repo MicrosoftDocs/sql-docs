@@ -2,7 +2,6 @@
 title: Configure Instant File Initialization - Analytics Platform System | Microsoft Docs
 description: Configure Instant File Initialization on Analytics Platform System. Instant file initialization is a SQL Server feature that allows data file operations to run more quickly.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -49,5 +48,5 @@ The backup process requires a network credential (Windows user account) that can
   
 ![DWConfig Appliance PDW Instant File Initialization](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-For more information about instant file initialization, see [Instant File Initialization](http://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
+For more information about instant file initialization, see [Instant File Initialization](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
   

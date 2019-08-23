@@ -5,19 +5,15 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQLCompleteAsync"
 helpviewer_keywords: 
   - "SQLCompleteAsync function [ODBC]"
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLCompleteAsync Function
 **Conformance**  
@@ -36,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```vb  
+```cpp  
   
 SQLRETURN SQLCompleteAsync(  
       SQLSMALLINT HandleType,  

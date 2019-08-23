@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cdc_cleanup_change_table"
@@ -23,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +69,9 @@ sys.sp_cdc_cleanup_change_table
     >  The new low watermark might not be the low watermark that is specified in the stored procedure call. If other entries in the cdc.lsn_time_mapping table share the same commit time, the smallest start_lsn represented in the group of entries is selected as the adjusted low watermark. If the @low_water_mark parameter is NULL or the current low watermark is greater than the new lowwatermark, the start_lsn value for the capture instance is left unchanged.  
   
 2.  Change table entries with __$start_lsn values less than the low watermark are then deleted. The delete threshold is used to limit the number of rows deleted in a single transaction. A failure to successfully delete entries is reported, but does not affect any change to the capture instance low watermark that might have been made based on the call.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Use sys.sp_cdc_cleanup_change_table in the following circumstances:  
   
 -   The cleanup Agent job reports delete failures.  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_OACreate"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OACreate"
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +34,18 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## Arguments  
  *progid*  
- Is the programmatic identifier (ProgID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'***OLEComponent***.***Object***'**  
+ Is the programmatic identifier (ProgID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'**_OLEComponent_**.**_Object_**'**  
   
  *OLEComponent* is the component name of the OLE Automation server, and *Object* is the name of the OLE object. The specified OLE object must be valid and must support the **IDispatch** interface.  
   
  For example, SQLDMO.SQLServer is the ProgID of the SQL-DMO **SQLServer** object. SQL-DMO has a component name of SQLDMO, the **SQLServer** object is valid, and (like all SQL-DMO objects) the **SQLServer** object supports **IDispatch**.  
   
  *clsid*  
- Is the class identifier (CLSID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'{***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'**. The specified OLE object must be valid and must support the **IDispatch** interface.  
+ Is the class identifier (CLSID) of the OLE object to create. This character string describes the class of the OLE object and has the form: **'{**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'**. The specified OLE object must be valid and must support the **IDispatch** interface.  
   
  For example, {00026BA1-0000-0000-C000-000000000046} is the CLSID of the SQL-DMO **SQLServer** object.  
   
- *objecttoken* **OUTPUT**  
+ _objecttoken_ **OUTPUT**  
  Is the returned object token, and must be a local variable of data type **int**. This object token identifies the created OLE object and is used in calls to the other OLE Automation stored procedures.  
   
  *context*  
@@ -82,7 +77,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  The created OLE object is automatically destroyed at the end of the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement batch.  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
   

@@ -5,19 +5,15 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], migrating files"
   - "FileTables [SQL Server], bulk loading"
   - "FileTables [SQL Server], loading files"
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Load Files into FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,9 @@ You can use the following methods to load files into a FileTable:
 2.  Use xcopy or a similar tool to copy the .jpg files, with their directory structure, into the root directory of the FileTable.  
   
 3.  Fix the metadata in the **PhotoMetadata** table, by using code similar to the following example:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
@@ -86,7 +84,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT with CHECK_CONSTRAINTS clause.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) without IGNORE_CONSTRAINTS clause.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) without IGNORE_CONSTRAINTS clause.  
   
 -   Bulk loading operations that do not enforce constraints fail unless the FileTable system-defined constraints have been disabled. This category includes the following operations:  
   
@@ -94,7 +92,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT without CHECK_CONSTRAINTS clause.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) with IGNORE_CONSTRAINTS clause.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) with IGNORE_CONSTRAINTS clause.  
   
 ###  <a name="HowToBulkLoad"></a> How To: Bulk Load Files into a FileTable  
  You can use various methods to bulk load files into a FileTable:  
@@ -111,7 +109,7 @@ UPDATE PhotoMetadata
   
     -   Disable the FileTable namespace and call without the **CHECK_CONSTRAINTS** clause. Then re-enable the FileTable namespace.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   Call with the **IGNORE_CONSTRAINTS** clause.  
   

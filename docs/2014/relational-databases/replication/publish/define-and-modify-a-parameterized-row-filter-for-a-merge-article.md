@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/02/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameterized filters [SQL Server replication], defining"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "modifying filters, parameterized row"
   - "dynamic filters [SQL Server replication]"
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "1461 (Database Engine error)"
 ms.assetid: fce10907-4753-441b-b624-f28e00ed7520
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

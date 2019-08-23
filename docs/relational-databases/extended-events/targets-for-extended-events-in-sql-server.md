@@ -1,22 +1,19 @@
-﻿---
+---
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/17/2018"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Targets for Extended Events in SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -82,7 +79,7 @@ SQL Server extended events can inter-operate with Event Tracing for Windows (ETW
 This ETW target processes *synchronously* the data it receives, whereas most targets process *asynchronously*.
 
 > [!NOTE]
-> Azure SQL Database does not support the ETW target. Nor does Azure SQL Database Managed Instance.
+> Azure SQL Database does not support the `etw_classic_sync_target target`.
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -151,7 +148,7 @@ The **event_file** target writes event session output from buffer to a disk file
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> Azure SQL Database supports the **event_file** target, but only by using a blob in Azure Storage for the output. SQL Database cannot store event output in a file on your local harddrive.
+> Azure SQL Database only supports storing `xel` files on Azure blob storage. 
 >
 > For an **event_file** code example particular to SQL Database (and to SQL Database Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
@@ -517,6 +514,7 @@ To test the event session, we purposely prevented to acquired locks from being r
 3. Purposely not issue a COMMIT TRANSACTION, until after we examined the targets.
 4. Later after testing, we issued a COMMIT TRANSACTION.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 The simple **event_counter** target provided the following output rows. Because 52-50=2, the output tells us we should see 2 unpaired lock_acquired events when we examine the output from the pair-matching target.
 

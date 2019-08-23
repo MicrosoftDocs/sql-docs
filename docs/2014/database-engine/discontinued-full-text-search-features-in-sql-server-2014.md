@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], discontinued features"
   - "discontinued features [full-text search]"
 ms.assetid: 70587b3c-cc77-4681-924d-a1df7cdf1517
-caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
 manager: craigg

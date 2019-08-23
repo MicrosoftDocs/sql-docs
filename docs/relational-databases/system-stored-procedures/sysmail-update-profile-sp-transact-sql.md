@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_update_profile_sp"
@@ -20,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +34,13 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The profile id to update. *profile_id* is **int**, with a default of NULL. At least one of *profile_id* or *profile_name* must be specified. If both are specified, the procedure changes the name of the profile.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The name of the profile to update or the new name for the profile. *profile_name* is **sysname**, with a default of NULL. At least one of *profile_id* or *profile_name* must be specified. If both are specified, the procedure changes the name of the profile.  
   
- [ **@description** = ] **'***description***'**  
+`[ @description = ] 'description'`
  The new description for the profile. *description* is **nvarchar(256)**, with a default of NULL.  
   
 ## Return Code Values  

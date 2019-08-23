@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 api_name: 
   - "AliasName Property (SqlServerAlias Class)"
@@ -19,7 +15,6 @@ topic_type:
 helpviewer_keywords: 
   - "AliasName property"
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg

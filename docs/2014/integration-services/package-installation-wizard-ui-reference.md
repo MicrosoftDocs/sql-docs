@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.deploymentwizard.confirminstallation.f1"
@@ -21,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Package Installer Wizard"
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-caps.latest.revision: 23
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package Installation Wizard UI Reference

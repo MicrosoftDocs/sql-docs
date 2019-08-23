@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "conventions [SMO]"
@@ -17,10 +14,8 @@ helpviewer_keywords:
   - "syntax [SMO]"
   - "SQL Server Management Objects, syntax conventions"
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
-caps.latest.revision: 30
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Syntax Conventions

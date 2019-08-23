@@ -1,19 +1,15 @@
 ---
 title: "Overview of Key Management for Always Encrypted | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/20/2016"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Overview of Key Management for Always Encrypted
@@ -29,7 +25,7 @@ When discussing Always Encrypted keys and key management it is important to unde
 
 - ***Column master keys*** are key-protecting keys used to encrypt column encryption keys. Column master keys must be stored in a trusted key store, such as Windows Certificate Store, Azure Key Vault, or a hardware security module. The database only contains metadata about column master keys (the type of key store and location). The column master key metadata is stored in the [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) catalog view.  
 
-It is important to note that the key metadata in the database system does not contain plaintext column master keys or plaintext column encryption keys. The database only contains information about the type and location of column master keys, and encrypted values of column encryption keys. This means that plaintext keys are never exposed to the database system ensuring that data protected using Always Encrypted is safe, even if the database system gets compromised. To ensure the database system cannot gain access to the plaintext keys, be sure to run your key management tools on a different machine than the one hosting your database - review the [Security Considerations for Key Management](#SecurityForKeyManagement) section below for details.
+It is important to note that the key metadata in the database system does not contain plaintext column master keys or plaintext column encryption keys. The database only contains information about the type and location of column master keys, and encrypted values of column encryption keys. This means that plaintext keys are never exposed to the database system ensuring that data protected using Always Encrypted is safe, even if the database system gets compromised. To ensure the database system cannot gain access to the plaintext keys, be sure to run your key management tools on a different machine than the one hosting your database - review the [Security Considerations for Key Management](#security-considerations-for-key-management) section below for details.
 
 Because the database only contains encrypted data (in Always Encrypted protected columns), and cannot access the plaintext keys, it cannot decrypt the data. This means that querying Always Encrypted columns will simply return encrypted values, so client applications that need to encrypt or decrypt protected data must be able to access the column master key, and related column encryption keys. For details, see [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
@@ -41,7 +37,7 @@ The process of managing keys can be divided into the following high-level tasks:
 
 - **Key provisioning** - Creating the physical keys in a trusted key store (for example, in the Windows Certificate Store, Azure Key Vault, or a hardware security module), encrypting column encryption keys with column master keys, and creating metadata for both types of keys in the database.
 
-- **Key rotation** - Periodically replacing an existing key with a new key. You may need to rotate a key if the key has been compromised, or in order to comply with your organization’s policies or compliance regulations that mandate cryptographic keys must be rotated. 
+- **Key rotation** - Periodically replacing an existing key with a new key. You may need to rotate a key if the key has been compromised, or in order to comply with your organization's policies or compliance regulations that mandate cryptographic keys must be rotated. 
 
 
 ## <a name="KeyManagementRoles"></a> Key Management Roles
@@ -49,7 +45,7 @@ The process of managing keys can be divided into the following high-level tasks:
 There are two distinct roles of users who manage Always Encrypted keys; Security Administrators and Database Administrators (DBAs):
 
 - **Security Administrator** - generates column encryption keys and column master keys and manages key stores containing the column master keys. To perform these tasks, a Security Administrator needs to be able to access the keys and the key store, but does not need access to the database.
-- **DBA** – manages metadata about the keys in the database. To perform key management tasks, a DBA needs to be able to manage key metadata in the database, but does not need access to the keys or the key store holding the column master keys.
+- **DBA** - manages metadata about the keys in the database. To perform key management tasks, a DBA needs to be able to manage key metadata in the database, but does not need access to the keys or the key store holding the column master keys.
 
 Considering the above roles, there are two different ways to perform key management tasks for Always Encrypted; *with role separation*, and *without role separation*. Depending on the needs of your organization you can select the key management process that best suits your requirements.
 
@@ -67,19 +63,19 @@ When Always Encrypted keys are managed without role separation, a single person 
 
 Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) and [PowerShell](../../scripting/sql-server-powershell.md):
 
-- **SQL Server Management Studio (SSMS)** – provides dialogs and wizards that combine tasks involving key store access and database access, so SSMS does not support role separation, but it makes configuring your keys easy. For more information about managing keys using SSMS, see:
+- **SQL Server Management Studio (SSMS)** - provides dialogs and wizards that combine tasks involving key store access and database access, so SSMS does not support role separation, but it makes configuring your keys easy. For more information about managing keys using SSMS, see:
     - [Provisioning Column Master Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [Provisioning Column Encryption Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [Rotating Column Master Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
     - [Rotating Column Encryption Keys](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
 
 
-- **SQL Server PowerShell** – includes cmdlets for managing Always Encrypted keys with and without role separation. For more information, see:
+- **SQL Server PowerShell** - includes cmdlets for managing Always Encrypted keys with and without role separation. For more information, see:
     - [Configure Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> Security Considerations for Key Management
+## Security Considerations for Key Management
 
 The primary objective of Always Encrypted is to ensure sensitive data stored in a database is safe, even if the database system or its hosting environment gets compromised. Examples of security attacks where Always Encrypted can help prevent sensitive data leaks include:
 
@@ -90,7 +86,7 @@ The primary objective of Always Encrypted is to ensure sensitive data stored in 
 
 To ensure Always Encrypted is effective in preventing these types of attacks, your key management process must ensure the column master keys and column encryption keys, as well as credentials to a key store containing the column master keys, are never revealed to a potential attacker. Here are a few guidelines, you should follow:
 
-- Never generate column master keys or column encryption keys on a computer hosting your database. Instead generate the keys on a separate computer, which is either dedicated for key management, or is a machine hosting applications that will need access to the keys anyway. This means that **you should never run tools used to generate the keys on the computer hosting your database** because if an attacker accesses a computer used to provision or maintain your Always Encrypted keys, the attacker can potentially get your keys, even if the keys only appear in the tool’s memory for a short time.
+- Never generate column master keys or column encryption keys on a computer hosting your database. Instead generate the keys on a separate computer, which is either dedicated for key management, or is a machine hosting applications that will need access to the keys anyway. This means that **you should never run tools used to generate the keys on the computer hosting your database** because if an attacker accesses a computer used to provision or maintain your Always Encrypted keys, the attacker can potentially get your keys, even if the keys only appear in the tool's memory for a short time.
 - To ensure your key management process does not inadvertently reveal column master keys or column encryption keys, it is critical to identify potential adversaries and security threats before defining and implementing a key management process. For example, if your goal is to ensure DBAs have no access to sensitive data, then a DBA cannot be responsible for generating the keys. A DBA, however, *can* manage key metadata in the database, as the metadata does not contain the plaintext keys.
 
 ## Next Steps

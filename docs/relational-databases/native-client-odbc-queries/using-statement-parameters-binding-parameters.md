@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, parameters"
@@ -22,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Statement Parameters - Binding Parameters
@@ -57,7 +54,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Named parameters are only supported when using the [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** statement or the ODBC CALL escape sequence to execute a stored procedure.  
   
- If **SQL_DESC_NAME** is set for a stored procedure parameter, all stored procedure parameters in the query should also set **SQL_DESC_NAME**.  If literals are used in stored procedure calls, where parameters have **SQL_DESC_NAME** set, the literals should use the format *'name*=*value*', where *name* is the stored procedure parameter name (for example, @p1). For more information, see [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ If **SQL_DESC_NAME** is set for a stored procedure parameter, all stored procedure parameters in the query should also set **SQL_DESC_NAME**.  If literals are used in stored procedure calls, where parameters have **SQL_DESC_NAME** set, the literals should use the format *'name*=*value*', where *name* is the stored procedure parameter name (for example, @p1). For more information, see [Binding Parameters by Name (Named Parameters)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## See Also  
  [Using Statement Parameters](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

@@ -6,14 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
-caps.latest.revision: 12
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Manage Tables, Relationships, and Fix Errors
 Topics in this section describe how to use the Table Designer to design tables and manage table relationships. Additional topics describe how to fix common syntax or semantic errors.  

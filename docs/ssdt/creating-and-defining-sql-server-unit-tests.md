@@ -6,17 +6,13 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.DatabaseMethodNameDialog"
   - "sql.data.tools.unittesting.designer"
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
-caps.latest.revision: 10
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Creating and Defining SQL Server Unit Tests
 You can run SQL Server unit tests to verify whether changes to one or more database objects in a schema have broken existing functionality in a database application. These tests complement the unit tests that your software developers create. You must run both kinds of tests to verify the behavior of your application.  
@@ -43,7 +39,7 @@ In the following table, you can find descriptions of common tasks that support t
 [Running SQL Server Unit Tests](../ssdt/running-sql-server-unit-tests.md)  
 After you create your SQL Server unit tests, you can run them from the Test View window, the SQL Server Unit Test Designer, or by using Team Foundation Build.  
   
-[Scenario: Define Custom Test Conditions for Database Unit Tests](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scenario: Define Custom Test Conditions for Database Unit Tests](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 You can create a custom test condition to test a behavior that the default test conditions cannot verify.  
   
 ## See Also  

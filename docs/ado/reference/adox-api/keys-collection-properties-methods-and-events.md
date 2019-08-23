@@ -6,16 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Keys collection [ADOX], members"
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Keys Collection Properties, Methods, and Events
 ## Properties  

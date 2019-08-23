@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "617 (Database Engine error)"
 ms.assetid: 213545d9-08a7-4427-bfd1-8b7e16644281
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

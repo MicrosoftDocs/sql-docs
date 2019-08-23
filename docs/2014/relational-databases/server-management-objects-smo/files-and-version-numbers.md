@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Management Objects, versions"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "SMO [SQL Server], versions"
   - "versions [SMO]"
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg

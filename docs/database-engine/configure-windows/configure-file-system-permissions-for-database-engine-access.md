@@ -5,19 +5,15 @@ ms.date: "06/06/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "file system permissions"
   - "service account [SQL Server], file system permissions"
   - "permissions [SQL Server], file system"
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure File System Permissions for Database Engine Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

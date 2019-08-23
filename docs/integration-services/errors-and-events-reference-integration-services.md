@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, events"
@@ -15,12 +13,14 @@ helpviewer_keywords:
   - "errors [Integration Services]"
   - "Integration Services, errors"
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Errors and Events Reference (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This section of the documentation contains information about several errors and events related to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Cause and resolution information is included for error messages.  
   
  For more information about [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages, including a list of most [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] errors and their descriptions, see [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md). However, the list currently does not include troubleshooting information.  

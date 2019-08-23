@@ -5,21 +5,19 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "connection managers [Integration Services], programming"
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Working with Connection Managers Programmatically
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the AcquireConnection method of the associated connection manager class is the method that you call most often when you are working with connection managers in managed code. When you write managed code, you have to call the AcquireConnection method to use the functionality of a connection manager. You have to call this method regardless of whether you are writing managed code in a Script task, Script component, custom object, or custom application.  
   
  To call the AcquireConnection method successfully, you have to know the answers to the following questions:  

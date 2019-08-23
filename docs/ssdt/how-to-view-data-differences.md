@@ -6,16 +6,12 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datacompare.f1"
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
-caps.latest.revision: 6
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: View Data Differences
 After you compare the data in two databases, you will see each *database object* that you compared and its status. You can also view results for the records within each object, grouped by status.  

@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "behavior changes [SQL Server]"
   - "Database Engine [SQL Server], what's new"
   - "Transact-SQL behavior changes"
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
-caps.latest.revision: 134
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -22,10 +18,10 @@ manager: craigg
 # Behavior Changes to Database Engine Features in SQL Server 2014
   This topic describes behavior changes in the [!INCLUDE[ssDE](../includes/ssde-md.md)]. Behavior changes affect how features work or interact in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] as compared to earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## Behavior Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Behavior Changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], queries against an XML document that contains strings over a certain length (more than 4020 characters) can return incorrect results. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], such queries return the correct results.  
   
-## Behavior Changes in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Behavior Changes in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### Metadata Discovery  
  Improvements in the [!INCLUDE[ssDE](../includes/ssde-md.md)] beginning with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] allow SQLDescribeCol to obtain more accurate descriptions of the expected results than those returned by SQLDescribeCol in previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../relational-databases/native-client/features/metadata-discovery.md).  
@@ -96,7 +92,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### sqlcmd.exe Behavior Change in XML Mode  
- There are behavior changes if you use sqlcmd.exe with XML mode (:XML ON command) when executing a SELECT * from T FOR XML ….  
+ There are behavior changes if you use sqlcmd.exe with XML mode (:XML ON command) when executing a SELECT * from T FOR XML ....  
   
 ### DBCC CHECKIDENT Revised Message  
  In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the message returned by the DBCC CHECKIDENT command has changed only when it is used with RESEED *new_reseed_value*  to change current identity value. The new message is "Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator."  

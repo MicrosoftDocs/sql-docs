@@ -8,12 +8,11 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # NameToSet (MDX)
 
 
-  Returns a set that contains the member specified by a Multidimensional Expressions (MDX)–formatted string.  
+  Returns a set that contains the member specified by a Multidimensional Expressions (MDX)-formatted string.  
   
 ## Syntax  
   

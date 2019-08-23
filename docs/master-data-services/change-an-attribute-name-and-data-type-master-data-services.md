@@ -5,18 +5,14 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], changing name"
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
-caps.latest.revision: 9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: "erikre"
+manager: erikre
 ---
 # Change an Attribute Name and Data Type (Master Data Services)
 

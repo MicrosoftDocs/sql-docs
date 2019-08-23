@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services, technical reference"
   - "multidimensional data [Analysis Services], technical reference"
   - "technical reference [Analysis Services - multidimensional data]"
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -36,7 +32,7 @@ manager: craigg
  ![Small File Folder Icon](../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Query and Expression Language Reference**  
  [Multidimensional Expressions &#40;MDX&#41; Reference](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
- [Data Analysis Expressions &#40;DAX&#41; Reference](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)  
+ [Data Analysis Expressions &#40;DAX&#41; Reference](/dax/data-analysis-expressions-dax-reference)  
   
  [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)  
   
@@ -45,8 +41,8 @@ manager: craigg
   
 ## See Also  
  [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Analysis Services Schema Rowsets](../schema-rowsets/analysis-services-schema-rowsets.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis  &#40;XMLA&#41; Reference](../xmla/xml-for-analysis-xmla-reference.md)  
+ [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

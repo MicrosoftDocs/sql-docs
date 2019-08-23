@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes creation, columnstore"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "columnstore index, described"
   - "xVelocity, columnstore indexes"
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
@@ -125,7 +122,7 @@ manager: craigg
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  nonclustered columnstore index  
- A *nonclustered columnstore index* is a read-only index created on an existing clustered index or heap table. It contains a copy of a subset of columns, up to and including all of the columns in the table.. The table is read-only while it contains a non-clustered columnstore index.  
+ A *nonclustered columnstore index* is a read-only index created on an existing clustered index or heap table. It contains a copy of a subset of columns, up to and including all of the columns in the table.. The table is read-only while it contains a nonclustered columnstore index.  
   
  A nonclustered columnstore index provides a way to have a columnstore index for running analysis queries while at the same time performing read-only operations on the original table.  
   

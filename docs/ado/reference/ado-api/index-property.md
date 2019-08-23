@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,10 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Index property"
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Index Property
 Indicates the name of the index currently in effect for a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

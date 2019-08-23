@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.newpubwizard.subscribertypes.f1"
 ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -37,6 +33,5 @@ manager: craigg
  [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
-  
+
   

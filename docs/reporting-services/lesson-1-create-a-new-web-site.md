@@ -1,26 +1,17 @@
 ---
 title: "Lesson 1: Create a New Web Site | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
+ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 1: Create a New Web Site
-In this lesson you’ll learn how to create a new website project using the ASP.NET website template for Visual C#.  
+In this lesson you'll learn how to create a new website project using the ASP.NET website template for Visual C#.  
   
 ## To create a new website  
   
@@ -35,4 +26,4 @@ In this lesson you’ll learn how to create a new website project using the ASP.
 The website project opens and will launch the **Report Wizard**. **Cancel** out of the Data Source and Report Wizard as we will create a custom dataset in the next step.  
   
 ## Next Task  
-You’ve successfully created a new website project. Next, you will create a data connection and a data table for the parent report. See [Lesson 2: Define a Data Connection and Data Table for Parent Report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).
+You've successfully created a new website project. Next, you will create a data connection and a data table for the parent report. See [Lesson 2: Define a Data Connection and Data Table for Parent Report](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).

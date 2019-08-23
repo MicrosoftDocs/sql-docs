@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying reports"
@@ -35,7 +32,6 @@ helpviewer_keywords:
   - "warnings [Upgrade Advisor]"
   - "analyzing system [Upgrade Advisor], reports"
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -84,6 +80,6 @@ manager: craigg
  [How to: Export Reports](../../../2014/sql-server/install/how-to-export-reports.md)   
  [How to: Filter Reports](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Resolving Upgrade Issues](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

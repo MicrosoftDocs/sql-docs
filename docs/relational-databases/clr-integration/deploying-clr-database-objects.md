@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -13,10 +12,8 @@ helpviewer_keywords:
   - "deploying assemblies [CLR integration]"
   - "deploying [CLR integration]"
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 35
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Deploying CLR Database Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,9 @@ manager: craigg
 2.  Resolve all build errors and warnings before deploying the assembly to the test server.  
   
 3.  Select **Deploy** from the **Build** menu. The assembly will then be registered in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and database specified when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] project was first created in Visual Studio.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To deploy the assembly using Transact-SQL  
   
 1.  Compile the assembly from the source file using the command line compilers included with the .NET Framework.  
@@ -72,7 +71,7 @@ manager: craigg
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- For more information about creating the different types of managed database objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [CLR User-Defined Aggregates](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [CLR Stored Procedures](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), and [CLR Triggers](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ For more information about creating the different types of managed database objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [CLR User-Defined Aggregates](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [CLR Stored Procedures](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), and [CLR Triggers](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## Deploying the Assembly to Production Servers  
  Once the CLR database objects have been tested and verified on the test server, they can be distributed to production servers. For more information about debugging managed database objects, see [Debugging CLR Database Objects](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  

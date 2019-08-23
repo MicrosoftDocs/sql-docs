@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sparse columns, ODBC"
   - "sparse columns, SQL Server Native Client"
   - "sparse columns, OLE DB"
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -33,7 +30,7 @@ manager: craigg
 |**select \* from table** or IOpenRowset::OpenRowset.|Returns all columns that are not members of the sparse `column_set`, plus an XML column that contains the values of all non-null columns that are members of the sparse `column_set`.|  
 |Reference a column by name.|The column can be referenced regardless of its sparse column status or `column_set` membership.|  
 |Access `column_set` member columns through a computed XML column.|Columns that are members of the sparse `column_set` can be accessed by selecting the `column_set` by name and can have values inserted and updated by updating the XML in the `column_set` column.<br /><br /> The value must conform to the schema for `column_set` columns.|  
-|Retrieve metadata for all columns in a table through SQLColumns with a column search pattern of NULL or ‘%’ (ODBC); or through the DBSCHEMA_COLUMNS schema rowset with no column restriction (OLE DB).|Returns a row for all columns that are not members of a `column_set`. If the table has a sparse `column_set`, a row will be returned for it.<br /><br /> Note that this does not return metadata for columns that are members of a `column_set`.|  
+|Retrieve metadata for all columns in a table through SQLColumns with a column search pattern of NULL or '%' (ODBC); or through the DBSCHEMA_COLUMNS schema rowset with no column restriction (OLE DB).|Returns a row for all columns that are not members of a `column_set`. If the table has a sparse `column_set`, a row will be returned for it.<br /><br /> Note that this does not return metadata for columns that are members of a `column_set`.|  
 |Retrieve metadata for all columns, regardless of sparseness or membership in a `column_set`. This might return a very large number of rows.|Set the descriptor field SQL_SOPT_SS_NAME_SCOPE to SQL_SS_NAME_SCOPE_EXTENDED and call [SQLColumns](../../native-client-odbc-api/sqlcolumns.md) (ODBC).<br /><br /> Call IDBSchemaRowset::GetRowset for the DBSCHEMA_COLUMNS_EXTENDED schema rowset (OLE DB).<br /><br /> This scenario is not possible from an application that uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client from a release earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. However, such an application could query system views directly.|  
 |Retrieve metadata only for columns that are members of a `column_set`. This might return a very large number of rows.|Set the descriptor field SQL_SOPT_SS_NAME_SCOPE to SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET and call SQLColumns (ODBC).<br /><br /> Call IDBSchemaRowset::GetRowset for the DBSCHEMA_SPARSE_COLUMN_SET schema rowset (OLE DB).<br /><br /> This scenario is not possible from an application that uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client from a release earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. However, such an application could query system views.|  
 |Determine whether a column is sparse.|Consult the SS_IS_SPARSE column of the SQLColumns result set (ODBC).<br /><br /> Consult the SS_IS_SPARSE column of the DBSCHEMA_COLUMNS schema rowset (OLE DB).<br /><br /> This scenario is not possible from an application that uses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client from a release earlier than [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. However, such an application could query system views.|  

@@ -8,12 +8,11 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # StrToMember (MDX)
 
 
-  Returns the member specified by a Multidimensional Expressions (MDX)–formatted string.  
+  Returns the member specified by a Multidimensional Expressions (MDX)-formatted string.  
   
 ## Syntax  
   

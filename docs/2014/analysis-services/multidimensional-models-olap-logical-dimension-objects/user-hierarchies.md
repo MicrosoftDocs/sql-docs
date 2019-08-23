@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "members [Analysis Services], hierarchies"
@@ -26,7 +22,6 @@ helpviewer_keywords:
   - "multilevel hierarchies [Analysis Services]"
   - "unbalanced hierarchies [Analysis Services]"
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -51,7 +46,7 @@ manager: craigg
   
  The Year, Quarter, and Month attributes are used to construct a user-defined hierarchy, named Calendar, in the time dimension. The relationship between the levels and members of the Calendar dimension (a regular dimension) is shown in the following diagram.  
   
- ![Level and member hierarchy for a time dimension](../../../2014/analysis-services/dev-guide/media/as-levelconcepts.gif "Level and member hierarchy for a time dimension")  
+ ![Level and member hierarchy for a time dimension](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-levelconcepts.gif "Level and member hierarchy for a time dimension")  
   
 > [!NOTE]  
 >  Any hierarchy other than the default two-level attribute hierarchy is called a user-defined hierarchy. For more information about attribute hierarchies, see [Attributes and Attribute Hierarchies](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
@@ -81,7 +76,7 @@ manager: craigg
 ### Parent-Child Hierarchies  
  Parent-child hierarchies for dimensions are defined by using a special attribute, called a parent attribute, to determine how members relate to each other. A parent attribute describes a *self-referencing relationship*, or *self-join*, within a dimension main table. Parent-child hierarchies are constructed from a single parent attribute. Only one level is assigned to a parent-child hierarchy, because the levels present in the hierarchy are drawn from the parent-child relationships between members associated with the parent attribute. The dimension schema of a parent-child hierarchy depends on a self-referencing relationship present on the dimension main table. For example, the following diagram illustrates the **DimOrganization** dimension main table in the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sample database.  
   
- ![Self-referencing join in DimOrganization table](../../../2014/analysis-services/dev-guide/media/dimorganization.gif "Self-referencing join in DimOrganization table")  
+ ![Self-referencing join in DimOrganization table](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "Self-referencing join in DimOrganization table")  
   
  In this dimension table, the **ParentOrganizationKey** column has a foreign key relationship with the **OrganizationKey** primary key column. In other words, each record in this table can be related through a parent-child relationship with another record in the table. This kind of self-join is generally used to represent organization entity data, such as the management structure of employees in a department.  
   

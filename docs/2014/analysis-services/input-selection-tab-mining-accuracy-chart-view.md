@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1"
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg

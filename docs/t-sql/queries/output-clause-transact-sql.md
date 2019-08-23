@@ -5,9 +5,7 @@ ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "OUTPUT_TSQL"
@@ -30,10 +28,8 @@ helpviewer_keywords:
   - "displaying deleted rows"
   - "UPDATE statement [SQL Server], OUTPUT clause"
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # OUTPUT Clause (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -131,13 +127,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Is an explicit column reference. Any reference to the table being modified must be correctly qualified by either the INSERTED or the DELETED prefix as appropriate, for example: INSERTED**.***column_name*.  
+ Is an explicit column reference. Any reference to the table being modified must be correctly qualified by either the INSERTED or the DELETED prefix as appropriate, for example: INSERTED**.**_column\_name_.  
   
  $action  
  Is available only for the MERGE statement. Specifies a column of type **nvarchar(10)** in the OUTPUT clause in a MERGE statement that returns one of three values for each row: 'INSERT', 'UPDATE', or 'DELETE', according to the action that was performed on that row.  
   
 ## Remarks  
- The OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } clause can be defined in a single INSERT, UPDATE, DELETE, or MERGE statement.  
+ The OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } clause can be defined in a single INSERT, UPDATE, DELETE, or MERGE statement.  
   
 > [!NOTE]  
 >  Unless specified otherwise, references to the OUTPUT clause refer to both the OUTPUT clause and the OUTPUT INTO clause.  
@@ -212,7 +208,7 @@ DELETE Sales.ShoppingCartItem
 ## Parallelism
  An OUTPUT clause that returns results to the client will always use a serial plan.
 
-In the context of a database set to compatibility level 130 or higher, if an INSERT...SELECT operation uses a WITH (TABLOCK) hint for the SELECT statement and also uses OUTPUT…INTO to insert into a temporary or user table, then the target table for the INSERT…SELECT will be eligible for parallelism depending on the subtree cost.  The target table referenced in the OUTPUT INTO clause will not be eligible for parallelism. 
+In the context of a database set to compatibility level 130 or higher, if an INSERT...SELECT operation uses a WITH (TABLOCK) hint for the SELECT statement and also uses OUTPUT...INTO to insert into a temporary or user table, then the target table for the INSERT...SELECT will be eligible for parallelism depending on the subtree cost.  The target table referenced in the OUTPUT INTO clause will not be eligible for parallelism. 
  
 ## Triggers  
  Columns returned from OUTPUT reflect the data as it is after the INSERT, UPDATE, or DELETE statement has completed but before triggers are executed.  
@@ -351,7 +347,7 @@ GO
 ```  
   
 ### C. Using OUTPUT INTO with an UPDATE statement  
- The following example updates the `VacationHours` column in the `Employee` table by 25 percent for the first 10 rows. The `OUTPUT` clause returns the `VacationHours` value that exists before applying the `UPDATE` statement in the column `deleted.VacationHours`, and the updated value in the column `inserted.VacationHours` to the `@MyTableVar``table` variable.  
+ The following example updates the `VacationHours` column in the `Employee` table by 25 percent for the first 10 rows. The `OUTPUT` clause returns the `VacationHours` value that exists before applying the `UPDATE` statement in the column `deleted.VacationHours`, and the updated value in the column `inserted.VacationHours` to the `@MyTableVar` table variable.  
   
  Two `SELECT` statements follow that return the values in `@MyTableVar` and the results of the update operation in the `Employee` table.  
   

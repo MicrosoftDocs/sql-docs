@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "security, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: 11
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Develop using Always Encrypted with .NET Framework Data Provider
@@ -250,9 +246,9 @@ cmd.ExecuteNonQuery();
 
 ## Working with Column Master Key Stores
 
-To encrypt a parameter value or to decrypt data in query results, the .NET Framework Data Provider for SQL Server needs to obtain a column encryption key that is configured for the target column. Column encryption keys are stored in the encrypted form in the database metadata. Each column encryption key has a corresponding column master key that was used to encrypt the column encryption key. The database metadata does not store the column master keys – it only contains the information about a key store containing a particular column master key and the location of the key in the key store.
+To encrypt a parameter value or to decrypt data in query results, the .NET Framework Data Provider for SQL Server needs to obtain a column encryption key that is configured for the target column. Column encryption keys are stored in the encrypted form in the database metadata. Each column encryption key has a corresponding column master key that was used to encrypt the column encryption key. The database metadata does not store the column master keys - it only contains the information about a key store containing a particular column master key and the location of the key in the key store.
 
-To obtain a plaintext value of a column encryption key, the .NET Framework Data Provider for SQL Server first obtains the metadata about both the column encryption key and its corresponding column master key, and then it uses the information in the metadata to contact the key store, containing the column master key, and to decrypt the encrypted column encryption key. The .NET Framework Data Provider for SQL Server communicates with a key store using a column master key store provider – which is an instance of a class derived from [SqlColumnEncryptionKeyStoreProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx).
+To obtain a plaintext value of a column encryption key, the .NET Framework Data Provider for SQL Server first obtains the metadata about both the column encryption key and its corresponding column master key, and then it uses the information in the metadata to contact the key store, containing the column master key, and to decrypt the encrypted column encryption key. The .NET Framework Data Provider for SQL Server communicates with a key store using a column master key store provider - which is an instance of a class derived from [SqlColumnEncryptionKeyStoreProvider Class](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx).
 
 
 The process to obtain a column encryption key:
@@ -569,7 +565,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## See Also
 
 - [Always Encrypted (Database Engine)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted blog](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [Always Encrypted blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL Database tutorial: Protect sensitive data with Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 

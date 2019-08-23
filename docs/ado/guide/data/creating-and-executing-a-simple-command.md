@@ -6,17 +6,13 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Command object [ADO], creating and executing"
   - "commands [ADO], creating and executing"
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Creating and Executing a Simple Command
 A simple command is one that is not parameterized and requires no persistence. There are three ways to create and execute a simple command.  

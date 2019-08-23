@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,10 +13,8 @@ helpviewer_keywords:
   - "Policy-Based Management, stored procedures"
   - "stored procedures [Policy-Based Management]"
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Policy-Based Management Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

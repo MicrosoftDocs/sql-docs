@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -29,33 +26,33 @@ manager: craigg
 ### Specifying the Isolation Level of Individual Operations  
  To set a different isolation level for a set of statements in a transaction, you can use `SET TRANSACTION ISOLATION LEVEL`. The following example of a transaction uses the serializable isolation level as default. The insert and select operations on t3, t2, and t1 are executed under repeatable read isolation.  
   
-```tsql  
+```sql  
 set transaction isolation level serializable  
 go  
   
 begin transaction  
- ……  
+ ......  
   set transaction isolation level repeatable read  
   
   insert t3 select * from t1 join t2 on t1.id=t2.id  
   
   set transaction isolation level serializable  
- ……  
+ ......  
 commit  
 ```  
   
  To set an isolation level for individual read operations that is different from the transaction default, you can use a table hint (for example, serializable). Every select corresponds to a read operation and every update and every delete corresponds to a read, because the row always needs to be read before it can be updated or deleted. Insert operations do not have an isolation level, because writes are always isolated in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In the following example, the default isolation level for the transaction is read committed, but table t1 is accessed under serializable and t2 under snapshot isolation.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
 begin transaction  
- ……  
+ ......  
   
   insert t3 select * from t1 (serializable) join t2 (snapshot) on t1.id=t2.id  
   
-  ……  
+  ......  
 commit  
 ```  
   
@@ -77,7 +74,7 @@ commit
  Transactional consistency for a set of reads refers to whether the row versions read are all guaranteed to include updates from precisely the same set of transactions.  
   
  Stability guarantees the system gives to transaction T about the data read.  
- Stability refers to whether the transaction’s reads are repeatable. That is, if the reads were repeated would they return the same rows and row versions?  
+ Stability refers to whether the transaction's reads are repeatable. That is, if the reads were repeated would they return the same rows and row versions?  
   
  Certain guarantees refer to the logical end time of the transaction. In general, the logical end time is the time the transaction is committed to the database. If memory-optimized tables are accessed by the transaction, the logical end time is technically the beginning of the validation phase. (For more information, see the transaction lifetime discussion in [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
@@ -100,7 +97,7 @@ commit
   
  Consider the following transaction,  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -146,7 +143,7 @@ commit
   
  The memory-optimized side of the transaction can reach one of two levels: if condition1 is true, it reaches serializable, while if it is false, the memory-optimized side reaches only snapshot isolation.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   

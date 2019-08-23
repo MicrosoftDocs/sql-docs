@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
@@ -30,7 +27,7 @@ manager: craigg
   
  To setup the **imoltp** database for our example, first create an empty folder: **c:\imoltp_data**, and then run the following code:  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -52,7 +49,7 @@ GO
   
  Next, run the following code to create the disk-based table, two (2) memory-optimized tables, and the natively-compiled stored procedure that will be used to demonstrate the different data access methods:  
   
-```tsql  
+```sql  
 USE imoltp  
 GO  
   
@@ -117,7 +114,7 @@ GO
   
  To complete the example run the following code multiple times. Ignore the results from the first run which is negatively affected by initial memory allocation.  
   
-```tsql  
+```sql  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
   

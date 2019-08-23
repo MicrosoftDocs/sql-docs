@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQLSpecialColumns function"
 ms.assetid: dffe02ed-8f79-4c9a-af34-98130bbe5462
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -34,7 +31,7 @@ manager: craigg
  **SQLSpecialColumns** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLSpecialColumns Function](http://go.microsoft.com/fwlink/?LinkId=59371)   
+ [SQLSpecialColumns Function](https://go.microsoft.com/fwlink/?LinkId=59371)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

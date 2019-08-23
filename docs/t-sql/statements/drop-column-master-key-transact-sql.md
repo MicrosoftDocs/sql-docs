@@ -5,9 +5,7 @@ ms.date: "04/20/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP COLUMN MASTER KEY"
@@ -19,10 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_master_keys catalog view"
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
-caps.latest.revision: 14
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DROP COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

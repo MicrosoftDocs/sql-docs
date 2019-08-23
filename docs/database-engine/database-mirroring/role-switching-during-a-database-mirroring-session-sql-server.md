@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "role switching [SQL Server]"
@@ -19,10 +17,8 @@ helpviewer_keywords:
   - "failover [SQL Server], database mirroring"
   - "database mirroring [SQL Server], failover"
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
-caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Role Switching During a Database Mirroring Session (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

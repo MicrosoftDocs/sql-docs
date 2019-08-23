@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_jobsteplog"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_jobsteplog"
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +37,26 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## Arguments  
- [ **@job_id =**] **'***job_id***'**  
+`[ @job_id = ] 'job_id'`
  The job identification number for the job that contains the job step log to be removed. *job_id* is **int**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@step_id =**] *step_id*  
+`[ @step_id = ] step_id`
  The identification number of the step in the job for which the job step log is to be deleted. If not included, all job step logs in the job are deleted unless **@older_than** or **@larger_than** are specified. *step_id* is **int**, with a default of NULL.  
   
- [ **@step_name =**] **'***step_name***'**  
+`[ @step_name = ] 'step_name'`
  The name of the step in the job for which the job step log is to be deleted. *step_name* is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *step_id* or *step_name* can be specified, but both cannot be specified.  
   
- [ **@older_than =**] **'***date***'**  
+`[ @older_than = ] 'date'`
  The date and time of the oldest job step log you want to keep. All job step logs that are older than this date and time are removed. *date* is **datetime**, with a default of NULL. Both **@older_than** and **@larger_than** can be specified.  
   
- [ **@larger_than =**] **'***size_in_bytes***'**  
+`[ @larger_than = ] 'size_in_bytes'`
  The size in bytes of the largest job step log you want to keep. All job step logs that are larger that this size are removed. Both **@larger_than** and **@older_than** can be specified.  
   
 ## Return Code Values  

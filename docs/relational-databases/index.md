@@ -1,3 +1,3 @@
 --- 
-redirect_url: /sql/relational-databases/database-features 
---- 
+redirect_url: /sql/relational-databases/databases/databases 
+---

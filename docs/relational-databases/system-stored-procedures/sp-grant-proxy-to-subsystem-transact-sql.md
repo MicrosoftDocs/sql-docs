@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_grant_login_to_subsystem_TSQL"
@@ -18,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_grant_proxy_to_subsystem"
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
+author: VanMSFT
 ms.author: vanto
-manager: craigg
-manager: craigg
 ---
 # sp_grant_proxy_to_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Grants a proxy access to a subsystem.  
@@ -32,20 +29,19 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 sp_grant_proxy_to_subsystem  
      { [ @proxy_id = ] proxy_id | [ @proxy_name = ] 'proxy_name' },  
      { [ @subsystem_id = ] subsystem_id | [ @subsystem_name = ] 'subsystem_name' }  
 ```  
   
 ## Arguments  
- [ **@proxy_id =** ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to grant access for. The *proxy_id* is **int**, with a default of NULL. Either *proxy_id* or *proxy_name* must be specified, but both cannot be specified.  
   
- [ **@proxy_name =** ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to grant access for. The *proxy_name* is **sysname**, with a default of NULL. Either *proxy_id* or *proxy_name* must be specified, but both cannot be specified.  
   
- [ **@subsystem_id =** ] *id*  
+`[ @subsystem_id = ] id`
  The id number of the subsystem to grant access to. The *subsystem_id* is **int**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
   
 |Value|Description|  
@@ -61,8 +57,9 @@ sp_grant_proxy_to_subsystem
 |**10**|Analysis Services Command|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution|  
 |**12**|PowerShell Script|  
+| &nbsp; | &nbsp; |
   
- [ **@subsystem_name =** ] **'***subsystem_name***'**  
+`[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to grant access to. The **subsystem_name** is **sysname**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
   
 |Value|Description|  
@@ -78,6 +75,7 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Analysis Services Command|  
 |**Dts**|SSIS package execution|  
 |**PowerShell**|PowerShell Script|  
+| &nbsp; | &nbsp; |
   
 ## Remarks  
  Granting a proxy access to a subsystem does not change the permissions for the principal specified in the proxy.  
@@ -90,7 +88,7 @@ sp_grant_proxy_to_subsystem
 ### A. Granting access to a subsystem by ID  
  The following example grants the proxy `Catalog application proxy` access to the ActiveX Scripting subsystem.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -103,7 +101,7 @@ GO
 ### B. Granting access to a subsystem by name.  
  The following example grants the proxy `Catalog application proxy` access to the SSIS package execution subsystem.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

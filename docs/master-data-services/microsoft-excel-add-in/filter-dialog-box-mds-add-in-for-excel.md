@@ -5,15 +5,11 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: master-data-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-caps.latest.revision: 8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Filter Dialog Box (MDS Add-in for Excel)
 
@@ -40,7 +36,7 @@ manager: craigg
   
 |Control Name|Description|  
 |------------------|-----------------|  
-|Attribute|Displays an attribute you want to filter by. If no attributes are listed, it’s because they have not been added.<br /><br /> Note: You can filter by attributes that you don’t plan to show in the worksheet.|  
+|Attribute|Displays an attribute you want to filter by. If no attributes are listed, it's because they have not been added.<br /><br /> Note: You can filter by attributes that you don't plan to show in the worksheet.|  
 |Operator|Displays operators that correspond to the type of attribute that was selected. For more information, see [Filter Operators &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
 |Criteria|The criteria you want to filter by.|  
 |Update Summary|When working with large datasets, click to update the **Summary** section with details of the amount of data that will be loaded.|  

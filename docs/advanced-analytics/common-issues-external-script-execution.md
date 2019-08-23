@@ -1,22 +1,19 @@
 ---
-title: Common issues with Launchpad service and external script execution in SQL Server| Microsoft Docs
+title: Common issues with Launchpad service and external script execution
 ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 05/31/2018  
+ms.technology: 
+ms.date: 07/30/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Common issues with Launchpad service and external script execution in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- SQL Server Trusted Launchpad service supports external script execution for R and Python. On SQL Server 2016 R Services, SP1 provides the service. SQL Server 2017 includes the Launchpad ervice as part of the intitial installation.
+SQL Server Trusted Launchpad service supports external script execution for R and Python. 
 
-Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols. This article provides troubleshooting guidance for many issues. For any we missed, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
-
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols. This article provides troubleshooting guidance for many issues. For any we missed, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
 ## Determine whether Launchpad is running
 
@@ -48,7 +45,7 @@ For information about these user rights, see the "Windows privileges and rights"
 
 ## User group for Launchpad cannot log on locally
 
-During setup of Machine Learning services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
+During setup of Machine Learning Services, SQL Server creates the Windows user group **SQLRUserGroup** and then provisions it with all rights necessary for Launchpad to connect to SQL Server and run external script jobs. If this user group is enabled, it is also used to execute Python scripts.
 
 However, in organizations where more restrictive security policies are enforced, the rights that are required by this group might have been manually removed, or they might be automatically revoked by policy. If the rights have been removed, Launchpad can no longer connect to SQL Server, and SQL Server cannot call the external runtime.
 
@@ -64,7 +61,7 @@ If you installed SQL Server as a database administrator or you are a database ow
 
 To correct the problem, in SQL Server Management Studio, a security administrator can modify the SQL login or Windows user account by running the following script:
 
-```SQL
+```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
@@ -74,6 +71,7 @@ For more information, see [GRANT (Transact-SQL](../t-sql/statements/grant-transa
 
 This section lists the most common error messages that Launchpad returns.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## "Unable to launch runtime for R script"
 
 If the Windows group for R users (also used for Python) cannot log on to the instance that is running R Services, you might see the following errors:
@@ -93,10 +91,11 @@ If the Windows group for R users (also used for Python) cannot log on to the ins
 
     * *Security logs indicate that the account NT SERVICE was unable to log on*
 
-For information about how to grant this user group the necessary permissions, see [Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
+For information about how to grant this user group the necessary permissions, see [Install SQL Server R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.
+::: moniker-end
 
 ## "Logon failure: the user has not been granted the requested logon type"
 
@@ -127,7 +126,7 @@ If you have installed and then enabled machine learning, but you get this error 
 
     a. Review the launcher's .config file and ensure that the working directory is valid.
 
-    b. Ensure that the Windows group that's used by Launchpad can connect to the SQL Server instance, as described in the [previous section](#bkmk_LaunchpadTS).
+    b. Ensure that the Windows group that's used by Launchpad can connect to the SQL Server instance.
 
     c. If you change any of the service properties, restart the Launchpad service.
 
@@ -153,7 +152,7 @@ This error can mean one of several things:
 
 - Launchpad might have insufficient external users to run the external query. For example, if you are running more than 20 external queries concurrently, and there are only 20 default users, one or more queries might fail.
 
-- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer’s resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](r/operationalizing-your-r-code.md).
+- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer's resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](r/operationalizing-your-r-code.md).
 
 ## "Can't find package"
 
@@ -167,7 +166,7 @@ This error can happen in many ways:
 
 To determine the location of the R package library that's used by the instance, open SQL Server Management Studio (or any other database query tool), connect to the instance, and then run the following stored procedure:
 
-```SQL
+```sql
 EXEC sp_execute_external_script @language = N'R',  
 @script = N' print(normalizePath(R.home())); print(.libPaths());'; 
 ```
@@ -182,9 +181,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 To resolve the issue, you must reinstall the package to the SQL Server instance library.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 >[!NOTE]
->If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+>If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](install/upgrade-r-and-python.md).
+::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## Launchpad shuts down due to mismatched DLLs
 
 If you install the database engine with other features, patch the server, and then later add the Machine Learning feature by using the original media, the wrong version of the Machine Learning components might be installed. When Launchpad detects a version mismatch, it shuts down and creates a dump file.
@@ -223,7 +225,7 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 3. Use the fsutil utility with the *file* argument to specify a short file path for the folder that's specified in WORKING_DIRECTORY.
 
 4. Edit the configuration file to specify the same working directory that you entered in the WORKING_DIRECTORY property. Alternatively, you can specify a different working directory and choose an existing path that's already compatible with the 8dot3 notation.
-
+::: moniker-end
 
 ## Next steps
 

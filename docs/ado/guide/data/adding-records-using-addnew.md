@@ -6,18 +6,14 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "AddNew method [ADO]"
   - "ADO, adding data"
   - "editing data [ADO], AddNew method"
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Adding Records Using AddNew Method
 This is the basic syntax of the **AddNew** method:

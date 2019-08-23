@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.routes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2018"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "routes"
@@ -20,10 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.routes catalog view"
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.routes (Transact-SQL)
@@ -31,8 +26,6 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 
   This catalog views contains one row per route. Service Broker uses routes to locate the network address for a service.   
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-  
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name of the route, unique within the database. Not NULLABLE.|  

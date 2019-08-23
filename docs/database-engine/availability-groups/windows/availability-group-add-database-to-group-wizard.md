@@ -1,12 +1,11 @@
 ---
-title: "Availability Group - Add Database to Group Wizard | Microsoft Docs"
-ms.custom: ""
+title: "Add a database to an availability group with the 'Availability Group Wizard'"
+description: "Add a database to an Always On availability group using the 'Availability Group Wizard' within SQL Server Management Studio." 
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.adddatabasewizard.f1"
@@ -14,32 +13,22 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], wizards"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
-# Availability Group - Add Database to Group Wizard
+# Add a database to an Always On availability group with the 'Availability Group Wizard'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the Add Database to Availability Group Wizard to help you add one or more databases to an existing Always On availability group.  
   
 > [!NOTE]  
 >  For information about using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell to add a database, see [Add a Database to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  
   
- **In This Topic:**  
-  
--   **Before you begin:**  
-  
-     [Prerequisites and Restrictions](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To add a database, using:**  [Add Database to Availability Group Wizard (SQL Server Management Studio)](#SSMSProcedure)  
+
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  If you have never added a database to an availability group, see the "Availability Databases" section in [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Prerequisites, Restrictions, and Recommendations  
+##  <a name="Prerequisites"></a> Prerequisites, Restrictions, and Recommendations  
   
 -   You must be connected to the server instance that hosts the current primary replica.  
   
@@ -53,13 +42,11 @@ manager: craigg
   
      If you are unable to use the wizard to perform full initial data synchronization, you need to prepare your secondary databases manually. You can do this before or after running the wizard. For more information, see [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
-##  <a name="SSMSProcedure"></a> Using the Add Database to Availability Group Wizard (SQL Server Management Studio)  
- **To Use the Add Database to Availability Group Wizard**  
+##  Use the 'New Availability Group' Wizard
   
 1.  In Object Explorer, connect to the server instance that hosts the primary replica of the availability group, and expand the server tree.  
   
@@ -72,6 +59,10 @@ manager: craigg
      If the database contains a database master key, enter the password for the database master key in the **Password** column.  
   
 5.  On the **Select Initial Data Synchronization** page, choose how you want your new secondary databases to be created and joined to the availability group. Choose one of the following options:  
+
+    - **Automatic Seeding**
+      
+      Select this option to use automatic seeding. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This restores the back up of the database on the secondary replica without having to do so manually. For more information about automatic seeding, see [Automatic Seeding](automatic-seeding-secondary-replicas.md).
   
     -   **Full**  
   

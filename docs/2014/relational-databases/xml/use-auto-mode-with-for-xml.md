@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, AUTO mode"
@@ -15,9 +12,8 @@ helpviewer_keywords:
   - "FOR XML AUTO mode"
   - "AUTO FOR XML mode"
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-caps.latest.revision: 29
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use AUTO Mode with FOR XML

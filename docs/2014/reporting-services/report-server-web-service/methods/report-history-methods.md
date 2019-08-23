@@ -4,21 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "report history [Reporting Services], methods"
   - "historical data [Reporting Services]"
   - "methods [Reporting Services], report history"
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
-caps.latest.revision: 34
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Report History Methods
   You can use these methods to create and manage item history snapshots.  

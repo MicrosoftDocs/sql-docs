@@ -411,7 +411,7 @@ Module Module1
 
             'Because reading and writing are finished, FILESTREAM 
             'must be closed. This closes the c# FileStream class, 
-            'but does not necessarily close the the underlying 
+            'but does not necessarily close the underlying 
             'FILESTREAM handle. 
             sqlFileStream.Close()
 

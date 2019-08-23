@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "9004 (Database Engine error)"
 ms.assetid: b528bb49-340c-4a81-9c8d-cefce6562f16
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

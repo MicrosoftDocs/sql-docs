@@ -5,20 +5,20 @@ ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.DTS.DESIGNER.AFPDWUPTASK.F1"
   - "sql14.dts.designer.afpdwuptask.f1"
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: 5
 author: "Lingxi-Li"
 ms.author: "lingxl"
-manager: craigg
 ---
 # Azure SQL DW Upload Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 The **Azure SQL DW Upload Task** enables an SSIS package to copy tabular data to Azure SQL Data Warehouse (DW) from file system or Azure Blob Storage.
 The task leverages PolyBase to improve performance, as described in the article [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).

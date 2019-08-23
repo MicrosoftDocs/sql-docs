@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-cross-instance"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "roles [SQL Server], SQL Server Agent"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "Windows domain accounts [SQL Server]"
   - "security [SQL Server], SQL Server Agent"
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -72,7 +68,7 @@ manager: craigg
 ## Supported Service Account Types  
  The following table lists the Windows account types that can be used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.  
   
-|Service account type|Non-clustered Server|Clustered server|Domain controller (non-clustered)|  
+|Service account type|Nonclustered Server|Clustered server|Domain controller (nonclustered)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows domain account (member of Windows Administrators group)|Supported|Supported|Supported|  
 |Windows domain account (non-administrative)|Supported<sup>1</sup>|Supported<sup>1</sup>|Supported<sup>1</sup>|  

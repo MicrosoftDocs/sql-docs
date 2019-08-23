@@ -1,28 +1,25 @@
 ---
 title: "SQLNumResultCols Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLNumResultCols"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLNumResultCols"
 helpviewer_keywords: 
   - "SQLNumResultCols function [ODBC]"
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLNumResultCols Function
 **Conformance**  
@@ -33,11 +30,11 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLNumResultCols(  
-     SQLHSTMT        StatementHandle,  
-     SQLSMALLINT *   ColumnCountPtr);  
+     SQLHSTMT        StatementHandle,  
+     SQLSMALLINT *   ColumnCountPtr);  
 ```  
   
 ## Arguments  

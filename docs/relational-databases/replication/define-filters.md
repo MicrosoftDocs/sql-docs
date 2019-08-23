@@ -4,21 +4,16 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.replconflictviewer.definefilters.f1"
 helpviewer_keywords: 
   - "Define Filters dialog box"
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
-caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Define Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +21,7 @@ manager: craigg
   
 ## Options  
  **Operator**  
- Select an operator for the filter, such as **Less than or Equal to**.  
+ Select an operator for the filter, such as **Less than or Equal to**.
   
  **Value**  
  Enter a value for the filter. Most operators only require a value in the first **Value** column, but the **Between** and **Not Between** operators require a value in both of the **Value** columns.  

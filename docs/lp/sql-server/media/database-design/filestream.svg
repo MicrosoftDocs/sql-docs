@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 298 110">
+  <defs>
+    <clipPath id="clip-path">
+      <path d="M256.543,94.7H27.048S68.925,82.623,87.727,63.2c35.373-36.519,75.285-30.391,98.967-3.069S256.543,94.7,256.543,94.7Z" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path d="M44.593,28.892C62.806,16.141,79.864,9.236,101.726,42.618s94.138,49.791,114.136,51.005S43.739,94.7,43.739,94.7Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <title>2 - filestream</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g>
+      <g>
+        <g clip-path="url(#clip-path)">
+          <g>
+            <line x1="55.276" y1="93.845" x2="55.276" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="65.532" y1="93.845" x2="65.532" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="75.787" y1="93.845" x2="75.787" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="86.043" y1="93.845" x2="86.043" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="96.299" y1="93.845" x2="96.299" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="106.554" y1="93.845" x2="106.554" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="116.81" y1="93.845" x2="116.81" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="127.066" y1="93.845" x2="127.066" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="137.321" y1="93.845" x2="137.321" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="147.577" y1="93.845" x2="147.577" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="157.833" y1="93.845" x2="157.833" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="168.088" y1="93.845" x2="168.088" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="178.344" y1="93.845" x2="178.344" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="188.599" y1="93.845" x2="188.599" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="198.855" y1="93.845" x2="198.855" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="209.111" y1="93.845" x2="209.111" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+            <line x1="219.366" y1="93.845" x2="219.366" y2="11.8" fill="none" stroke="#bad80a" stroke-miterlimit="10" stroke-width="2.564"/>
+          </g>
+        </g>
+        <g clip-path="url(#clip-path-2)">
+          <g>
+            <rect x="50.576" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="60.831" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="71.087" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="81.343" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="91.598" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="101.854" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="112.109" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="122.365" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="132.621" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="142.876" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="153.132" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="163.388" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="173.643" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="183.899" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="194.155" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="204.41" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+            <rect x="214.666" y="11.8" width="2.564" height="82.045" fill="#2e6ca4"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <polygon points="204.071 37.256 204.071 64.313 174.696 64.313 174.696 24.938 191.133 24.938 204.071 37.256" fill="#fff"/>
+        <polygon points="204.071 37.438 190.946 37.438 190.946 24.938 204.071 37.438" fill="#55d2f6"/>
+        <path d="M203.133,64.625h-27.5a1.252,1.252,0,0,1-1.25-1.25v-37.5a1.252,1.252,0,0,1,1.25-1.25h15.8l12.948,12.466V63.375A1.252,1.252,0,0,1,203.133,64.625Zm-27.5-38.75v37.5h27.5V37.622l-12.2-11.747Z" fill="#2e6ca4"/>
+        <rect x="175.633" y="25.875" width="10" height="37.5" fill="#e5e5e5"/>
+        <polygon points="203.758 38.375 190.008 38.375 190.008 25.25 191.258 25.25 191.258 37.125 203.758 37.125 203.758 38.375" fill="#2e6ca4"/>
+        <rect x="179.383" y="37.125" width="8.125" height="1.25" fill="#2e6ca4"/>
+        <rect x="179.383" y="42.75" width="20" height="1.25" fill="#2e6ca4"/>
+        <rect x="179.383" y="48.375" width="20" height="1.25" fill="#2e6ca4"/>
+        <rect x="179.383" y="54" width="20" height="1.25" fill="#2e6ca4"/>
+      </g>
+      <g>
+        <g>
+          <g>
+            <rect x="222.987" y="29.469" width="48.438" height="34.375" rx="1.609" ry="1.609" fill="#fff"/>
+            <path d="M269.815,64.625H224.6a2.393,2.393,0,0,1-2.39-2.391V31.078a2.393,2.393,0,0,1,2.39-2.39h45.219a2.393,2.393,0,0,1,2.391,2.39V62.234A2.394,2.394,0,0,1,269.815,64.625ZM224.6,30.25a.83.83,0,0,0-.828.828V62.234a.83.83,0,0,0,.828.829h45.219a.829.829,0,0,0,.828-.829V31.078a.829.829,0,0,0-.828-.828Z" fill="#2e6ca4"/>
+          </g>
+          <path d="M226.893,43.531h0a.782.782,0,0,1,.782.782V49a.781.781,0,0,1-.782.781h0a.781.781,0,0,1-.781-.781V44.313A.782.782,0,0,1,226.893,43.531Z" fill="#2e6ca4"/>
+        </g>
+        <rect x="230.018" y="32.594" width="38.281" height="28.125" fill="#e5e5e5"/>
+        <g>
+          <path d="M266.6,23.906l-.554-.554a3.126,3.126,0,0,0-4.42,0l0,0L243.44,41.547,240.956,49l7.461-2.484L266.6,28.32A3.125,3.125,0,0,0,266.6,23.906Z" fill="#fff"/>
+          <rect x="241.914" y="34.759" width="25.781" height="2.344" transform="translate(49.224 190.698) rotate(-45)" fill="#e5e5e5"/>
+          <polygon points="248.323 46.063 248.206 46.172 241.573 48.383 243.784 41.75 243.901 41.641 248.323 46.063" fill="#2bc7f4"/>
+          <path d="M267.128,26.109a2.719,2.719,0,0,1-.782,1.938l-1.82,1.82-4.437-4.422,1.82-1.82a2.742,2.742,0,0,1,3.878-.028l.028.028.555.555A2.7,2.7,0,0,1,267.128,26.109Z" fill="#2bc7f4"/>
+          <path d="M239.721,50.234l3.036-9.109L261.075,22.8a3.911,3.911,0,0,1,5.527,0l.556.555a3.913,3.913,0,0,1,0,5.517L248.839,47.2Zm4.4-8.265-1.932,5.8,5.8-1.933,18.057-18.065a2.349,2.349,0,0,0,0-3.31L265.5,23.9a2.348,2.348,0,0,0-3.315,0Z" fill="#2e6ca4"/>
+          <rect x="245.386" y="40.35" width="1.562" height="6.519" transform="translate(41.264 186.839) rotate(-45)" fill="#2e6ca4"/>
+        </g>
+        <path d="M233.3,55.063a5.555,5.555,0,0,1,1.742-2.032c2.89-1.5,2.195,1.282,3.125,2.227a4.2,4.2,0,0,0,1.312,1.117c1.617.656,4.3-.922,7.086-1.609a9.468,9.468,0,0,1,6.352.445.976.976,0,0,0,.953-1.7c-1.641-.922-7.5-.883-9.141,0-5.687,3.047-4.883-.781-6.172-1.9-2.617-2.226-5.609.149-6.976,2.493-.633,1.086,1.07,2.031,1.7.953Z" fill="#2bc7f4"/>
+      </g>
+    </g>
+  </g>
+</svg>

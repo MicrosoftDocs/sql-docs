@@ -3,13 +3,7 @@ title: "Validate a DAC Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data-tier application [SQL Server], validate"
@@ -19,19 +13,19 @@ helpviewer_keywords:
   - "data-tier application [SQL Server], view"
   - "view DAC"
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Validate a DAC Package
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   It is a good practice to review the contents of a DAC package before deploying it in production, and to validate the upgrade actions before upgrading an existing DAC. This is especially true when deploying packages that were not developed in your organization.  
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
 2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="Prerequisites"></a> Prerequisites  
  We recommend that you do not deploy a DAC package from unknown or untrusted sources. Such DACs could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema. Before you use a DAC from an unknown or untrusted source, deploy it on an isolated test instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], run [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database, and also examine the code, such as stored procedures or other user-defined code, in the database.  
   
@@ -40,15 +34,15 @@ manager: craigg
   
  **View a DAC in SQL Server Developer Tools**  
   
-1.  Open the **File** menu, select **New**, and then select **Project…**.  
+1.  Open the **File** menu, select **New**, and then select **Project...**.  
   
 2.  Select the **SQL Server** project template, and specify a **Name**, **Location**, and **Solution name**.  
   
-3.  In **Solution Explorer**, right click the project node and select **Properties…**.  
+3.  In **Solution Explorer**, right click the project node and select **Properties...**.  
   
 4.  On the **Project Settings** tab, in the **Output Types** section, select the **Data-tier Application (.dacpac File)** check box, and then close the properties dialog.  
   
-5.  In **Solution Explorer**, right click the project node and select **Import Data-tier Application…**.  
+5.  In **Solution Explorer**, right click the project node and select **Import Data-tier Application...**.  
   
 6.  Use **Solution Explorer** to open all of the files in the DAC, such as the server selection policy and the pre- and post-deployment scripts.  
   

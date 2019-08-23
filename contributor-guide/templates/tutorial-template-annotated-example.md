@@ -1,7 +1,7 @@
 ---
 <!------------------
 
-This is an annotated example of a tutorial with high CSAT (https://docs.microsoft.com/en-us/azure/app-service-web/web-sites-dotnet-get-started). 
+This is an annotated example of a tutorial with high CSAT (https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-get-started). 
 
 Tutorials show users how to solve a problem. They include prerequisites and steps. They are not "learn concepts" topics. 
 

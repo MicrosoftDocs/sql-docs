@@ -1,26 +1,23 @@
 ---
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/19/2018"
+ms.date: "05/14/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: quickstart
 helpviewer_keywords: 
   - "JSON"
   - "JSON, built-in support"
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
-manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
+monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # JSON data in SQL Server
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
 
@@ -28,10 +25,10 @@ JSON functions in SQL Server enable you to combine NoSQL and relational concepts
 
 *JSON as a bridge between NoSQL and relational worlds*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
- 
-Here's an example of JSON text: 
- 
-```json 
+
+Here's an example of JSON text:
+
+```json
 [{
 	"name": "John",
 	"skills": ["SQL", "C#", "Azure"]
@@ -39,7 +36,7 @@ Here's an example of JSON text:
 	"name": "Jane",
 	"surname": "Doe"
 }]
-``` 
+```
  
 By using SQL Server built-in functions and operators, you can do the following things with JSON text: 
  
@@ -123,7 +120,7 @@ FROM OPENJSON(@json)
   
 **Results**  
   
-|id|firstName|lastName|age|dateOfBirth|  
+|ID|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -164,7 +161,7 @@ The result of this query is shown in the following table:
 
 **Results**  
   
-|id|firstName|lastName|age|dateOfBirth|skill|  
+|ID|firstName|lastName|age|dateOfBirth|skill|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL| 
@@ -174,6 +171,10 @@ The result of this query is shown in the following table:
 `OUTER APPLY OPENJSON` will join first level entity with sub-array and return flatten resultset. Due to JOIN, the second row will be repeated for every skill.
 
 ### Convert SQL Server data to JSON or export JSON
+
+>[!NOTE]
+>Converting Azure SQL Data Warehouse data to JSON or exporting JSON is not supported.
+
 Format SQL Server data or the results of SQL queries as JSON by adding the **FOR JSON** clause to a **SELECT** statement. Use **FOR JSON** to delegate the formatting of JSON output from your client applications to SQL Server. For more information, see [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
 The following example uses PATH mode with the **FOR JSON** clause:  
@@ -210,27 +211,27 @@ For more information, see [Format query results as JSON with FOR JSON (SQL Serve
 
 ## Use cases for JSON data in SQL Server
 
-JSON support in SQL Server and Azure SQL Database lets you combine relational and NoSQL concepts. You can easily transform relational to semi-structured data and vice-versa. JSON is not a replacement for existing relational models, however. Here are some specific use cases that benefit from the JSON support in SQL Server and in SQL Database. For more info, see [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+JSON support in SQL Server and Azure SQL Database lets you combine relational and NoSQL concepts. You can easily transform relational to semi-structured data and vice-versa. JSON is not a replacement for existing relational models, however. Here are some specific use cases that benefit from the JSON support in SQL Server and in SQL Database.
 
 ### Simplify complex data models
 
-Consider denormalizing your data model with JSON fields in place of multiple child tables. For more info, see [Simplify data access using de-normalized models](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/).
+Consider denormalizing your data model with JSON fields in place of multiple child tables.
 
 ### Store retail and e-commerce data
 
-Store info about products with a wide range of variable attributes in a denormalized model for flexibility. For more info, see [Designing Product Catalogs in SQL Server using JSON](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/) and [Indexing data in JSON product catalogs](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/).
+Store info about products with a wide range of variable attributes in a denormalized model for flexibility.
 
 ### Process log and telemetry data
 
-Load, query, and analyze log data stored as JSON files with all the power of the Transact-SQL language. For more info, see the section *Log and telemetry data analysis* in [JSON in SQL Server – Use cases](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/).
+Load, query, and analyze log data stored as JSON files with all the power of the Transact-SQL language.
 
 ### Store semi-structured IoT data
 
-When you need real-time analysis of IoT data, load the incoming data directly into the database instead of staging it in a storage location. For more info, see [Working with Azure IoT data in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/).
+When you need real-time analysis of IoT data, load the incoming data directly into the database instead of staging it in a storage location.
 
 ### Simplify REST API development
 
-Transform relational data from your database easily into the JSON format used by the REST APIs that support your web site. For more info, see [Simplify REST API development for modern Single-page apps with SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/).
+Transform relational data from your database easily into the JSON format used by the REST APIs that support your web site.
 
 ## Combine relational and JSON data
 SQL Server provides a hybrid model for storing and processing both relational and JSON data by using standard Transact-SQL language. You can organize collections of your JSON documents in tables, establish relationships between them, combine strongly typed scalar columns stored in tables with flexible key/value pairs stored in JSON columns, and query both scalar and JSON values in one or more tables by using full Transact-SQL.
@@ -243,7 +244,7 @@ Here are some use cases that show how you can use the built-in JSON support in [
 
 ## Store and index JSON data in SQL Server
 
-JSON is a textual format so the JSON documents can be stored in `NVARCHAR` columns in a SQL Database. Since `NVARCHAR` type is supported in all SQL Server sub-systems you can put JSON documents in tables with **CLUSTERED COLUMNSTORE** indexes, **memory optimized** tables, or external files that can be read using OPENROWSET or Polybase.
+JSON is a textual format so the JSON documents can be stored in `NVARCHAR` columns in a SQL Database. Since `NVARCHAR` type is supported in all SQL Server sub-systems you can put JSON documents in tables with **CLUSTERED COLUMNSTORE** indexes, **memory optimized** tables, or external files that can be read using OPENROWSET or PolyBase.
 
 To learn more about your options for storing, indexing, and optimizing JSON data in SQL Server, see the following articles:
 -   [Store JSON documents in SQL Server or SQL Database](store-json-documents-in-sql-tables.md)
@@ -254,7 +255,7 @@ To learn more about your options for storing, indexing, and optimizing JSON data
 
 You can format information that's stored in files as standard JSON or line-delimited JSON. SQL Server can import the contents of JSON files, parse it by using the **OPENJSON** or **JSON_VALUE** functions, and load it into tables.  
   
--   If your JSON documents are stored in local files, on shared network drives, or in Azure Files locations that can be accessed by SQL Server, you can use bulk import to load your JSON data into SQL Server. For more information about this scenario, see [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx).  
+-   If your JSON documents are stored in local files, on shared network drives, or in Azure Files locations that can be accessed by SQL Server, you can use bulk import to load your JSON data into SQL Server.
   
 -   If your line-delimited JSON files are stored in Azure Blob storage or the Hadoop file system, you can use PolyBase to load JSON text, parse it in Transact-SQL code, and load it into tables.  
 
@@ -291,7 +292,7 @@ SET @jsonVariable = N'[
   
 INSERT INTO SalesReport  
 SELECT SalesOrderJsonData.*  
-FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')  
+FROM OPENJSON (@jsonVariable, N'$')  
            WITH (  
               Number   varchar(200) N'$.Order.Number',   
               Date     datetime     N'$.Order.Date',  
@@ -301,10 +302,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   AS SalesOrderJsonData;  
 ```  
   
-You can provide the content of the JSON variable by an external REST service, send it as a parameter from a client-side JavaScript framework, or load it from external files. You can easily insert, update, or merge results from JSON text into a SQL Server table. For more information about this scenario, see the following blog posts:
--   [Import JSON data in SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/09/22/openjson-the-easiest-way-to-import-json-text-into-table/)
--   [Upsert JSON documents in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/03/upsert-json-documents-in-sql-server-2016)
--   [Load GeoJSON data into SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)  
+You can provide the content of the JSON variable by an external REST service, send it as a parameter from a client-side JavaScript framework, or load it from external files. You can easily insert, update, or merge results from JSON text into a SQL Server table.
 
 ## Analyze JSON data with SQL queries  
 If you must filter or aggregate JSON data for reporting purposes, you can use **OPENJSON** to transform JSON to relational format. You can then use standard [!INCLUDE[tsql](../../includes/tsql-md.md)] and built-in functions to prepare the reports.  
@@ -332,14 +330,14 @@ If you have a web service that takes data from the database layer and returns it
   
 For example, you might want to generate JSON output that's compliant with the OData specification. The web service expects a request and response in the following format: 
   
--   Request: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+- Request: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   Response: `{"@odata.context":"http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+- Response: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
-This OData URL represents a request for the ProductID and ProductName columns for the product with `id` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
+This OData URL represents a request for the ProductID and ProductName columns for the product with `ID` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
   
 ```sql  
-SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
+SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
 FROM Production.Product  
@@ -347,7 +345,7 @@ WHERE ProductID = 1
 FOR JSON AUTO  
 ```  
   
-The output of this query is JSON text that's fully compliant with the OData spec. Formatting and escaping are handled by SQL Server. SQL Server can also format query results in any format, such as OData JSON or GeoJSON. For more information, see [Returning spatial data in GeoJSON format](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/returning-spatial-data-in-geojson-format-part-1).  
+The output of this query is JSON text that's fully compliant with the OData spec. Formatting and escaping are handled by SQL Server. SQL Server can also format query results in any format, such as OData JSON or GeoJSON.  
   
 ## Test drive built-in JSON support with the AdventureWorks sample database
 To get the AdventureWorks sample database, download at least the database file and the samples and scripts file from [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=49502). 
@@ -374,10 +372,6 @@ Here's what you can do with the scripts that are included in the file:
   
 ## Learn more about JSON in SQL Server and Azure SQL Database  
   
-### Microsoft blog posts  
-  
-For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
-
 ### Microsoft videos
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following video:

@@ -4,26 +4,20 @@ ms.custom: ""
 ms.date: "04/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "tutorials [SQL Server replication]"
   - "walkthroughs [SQL Server replication]"
   - "replication [SQL Server], tutorials"
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
-caps.latest.revision: 13
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication tutorials
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 Replication is a powerful solution for moving data, or subsets of data, between servers. You can replicate data between servers that are fully connected by using transactional replication. You can also replicate data between servers and clients that are intermittently connected by using merge replication. In this article, you will find tutorials that help prepare your server for replication, and then teach you to configure both transactional and merge replication. 
   
 In the replication tutorials, "publisher" refers to the server that contains the source data that's being replicated. "Subscriber" refers to the destination server. The publisher and subscriber might share the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], but it is not a requirement. For more information, see the [overview of the replication publishing model](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
@@ -48,7 +42,7 @@ Learn how to configure transactional replication to replicate data between fully
 Learn how to configure merge replication to exchange data between a server and one or more clients that are only occasionally connected.  
   
 ## See also  
-[Security and protection for replication](../../relational-databases/replication/security/security-and-protection-replication.md) 
+[View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) 
 
 [Transactional replication overview](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 

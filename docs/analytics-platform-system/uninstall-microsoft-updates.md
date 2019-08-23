@@ -2,7 +2,6 @@
 title: Uninstall Microsoft updates - Analytics Platform System | Microsoft Docs"
 description: Uninstall Microsoft updates in Analytics Platform System (APS).
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -21,11 +20,11 @@ To perform these steps, you will need:
   
 -   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance.  
   
--   Knowledge of the Fabric Domain Administrator account to log in to the *<Fabric Domain>***-HST01** node.  
+-   Knowledge of the Fabric Domain Administrator account to log in to the <em><Fabric Domain></em>**-HST01** node.  
   
 ## <a name="HowToUninstallMSFT"></a>To uninstall Microsoft updates  
   
-1.  Log in to the *<Fabric Domain>***-HST01** node as the Fabric Domain Administrator.  
+1.  Log in to the <em><Fabric Domain></em>**-HST01** node as the Fabric Domain Administrator.  
   
 2.  To uninstall all updates that are approved for WSUS to uninstall, open a Command Prompt window and enter the following command. Replace the placeholder items *<  >* with the appropriate information.  
   

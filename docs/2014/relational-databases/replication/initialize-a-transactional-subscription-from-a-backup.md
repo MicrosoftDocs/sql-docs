@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "transactional replication, backup and restore"
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -32,7 +28,7 @@ manager: craigg
   
     -   If the value is **1**, the publication supports this functionality.  
   
-    -   If the value is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) at the Publisher on the publication database. Specify a value of **allow_initialize_from_backup** for **@property** and a value of `true` for **@value**.  
+    -   If the value is **0**, execute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) at the Publisher on the publication database. Specify a value of **allow_initialize_from_backup** for **\@property** and a value of `true` for **\@value**.  
   
 2.  For a new publication, execute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) at the Publisher on the publication database. Specify a value of `true` for **allow_initialize_from_backup**. For more information, see [Create a Publication](publish/create-a-publication.md).  
   
@@ -45,23 +41,23 @@ manager: craigg
   
 5.  At the Publisher on the publication database, execute the stored procedure [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Specify the following parameters:  
   
-    -   **@sync_type** - a value of **initialize with backup**.  
+    -   **\@sync_type** - a value of **initialize with backup**.  
   
-    -   **@backupdevicetype** - the type of backup device: **logical** (default), **disk**, or **tape**.  
+    -   **\@backupdevicetype** - the type of backup device: **logical** (default), **disk**, or **tape**.  
   
-    -   **@backupdevicename** - the logical or physical backup device to use for the restore.  
+    -   **\@backupdevicename** - the logical or physical backup device to use for the restore.  
   
          For a logical device, specify the name of the backup device specified when **sp_addumpdevice** was used to create the device.  
   
          For a physical device, specify a complete path and file name, such as `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\BACKUP\Mybackup.dat'` or `TAPE = '\\.\TAPE0'`.  
   
-    -   (Optional) **@password** - a password that was provided when the backup set was created.  
+    -   (Optional) **\@password** - a password that was provided when the backup set was created.  
   
-    -   (Optional) **@mediapassword** - a password that was provided when the media set was formatted.  
+    -   (Optional) **\@mediapassword** - a password that was provided when the media set was formatted.  
   
-    -   (Optional) **@fileidhint** - identifier for the backup set to be restored. For example, specifying **1** indicates the first backup set on the backup medium and **2** indicates the second backup set.  
+    -   (Optional) **\@fileidhint** - identifier for the backup set to be restored. For example, specifying **1** indicates the first backup set on the backup medium and **2** indicates the second backup set.  
   
-    -   (Optional for tape devices) **@unload** - specify a value of **1** (default) if the tape should be unloaded from the drive after the restore is complete and **0** if it should not be unloaded.  
+    -   (Optional for tape devices) **\@unload** - specify a value of **1** (default) if the tape should be unloaded from the drive after the restore is complete and **0** if it should not be unloaded.  
   
 6.  (Optional) For a pull subscription, execute [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) and [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) at the Subscriber on the subscription database. For more information, see [Create a Pull Subscription](create-a-pull-subscription.md).  
   

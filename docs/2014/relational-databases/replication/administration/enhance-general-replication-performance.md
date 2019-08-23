@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], design and performance"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "performance [SQL Server replication], general considerations"
   - "transactional replication, performance"
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -74,7 +70,7 @@ manager: craigg
   
     -   For merge replication, it can be more efficient to use business logic handlers. For more information, see [Execute Business Logic During Merge Synchronization](../merge/execute-business-logic-during-merge-synchronization.md).  
   
-     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify the Processing Order of Merge Articles](../merge/specify-the-processing-order-of-merge-articles.md).  
+     If you use triggers to maintain referential integrity in tables published for merge replication, specify the processing order of tables to reduce the number of retries required for the Merge Agent. For more information, see [Specify Merge Replication properties](../publish/specify-merge-replication-properties.md).  
   
 -   Limit the use of Large Object (LOB) data types.  
   
@@ -114,7 +110,7 @@ manager: craigg
   
      When large amounts of changes need to be sent to Subscribers, reinitializing them with a new snapshot might be faster than using replication to move the individual changes. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
-     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks using Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## Snapshot Considerations  
   
@@ -150,11 +146,11 @@ manager: craigg
   
 -   Reduce the verbose levels of replication agents except during initial testing, monitoring, or debugging.  
   
-     Reduce the **–HistoryVerboseLevel** parameter and the **–OutputVerboseLevel** parameter of the Distribution Agents or Merge Agents. This reduces the number of new rows inserted to track agent history and output. Instead, previous history messages with the same status are updated to the new history information. Increase the verbose levels for testing, monitoring, and debugging so that you have as much information about agent activity as possible.  
+     Reduce the **-HistoryVerboseLevel** parameter and the **-OutputVerboseLevel** parameter of the Distribution Agents or Merge Agents. This reduces the number of new rows inserted to track agent history and output. Instead, previous history messages with the same status are updated to the new history information. Increase the verbose levels for testing, monitoring, and debugging so that you have as much information about agent activity as possible.  
   
--   Use the **–MaxBCPThreads** parameter of the Snapshot Agent, Merge Agent, and Distribution Agent (the number of threads specified should not exceed the number of processors on the computer). This parameter specifies the number of bulk copy operations that can be performed in parallel when the snapshot is created and applied.  
+-   Use the **-MaxBCPThreads** parameter of the Snapshot Agent, Merge Agent, and Distribution Agent (the number of threads specified should not exceed the number of processors on the computer). This parameter specifies the number of bulk copy operations that can be performed in parallel when the snapshot is created and applied.  
   
--   Use the **–UseInprocLoader** parameter of the Distribution Agent and the Merge Agent (this parameter cannot be used if published tables include XML columns). This parameter causes the agent to use the BULK INSERT command when the snapshot is applied.  
+-   Use the **-UseInprocLoader** parameter of the Distribution Agent and the Merge Agent (this parameter cannot be used if published tables include XML columns). This parameter causes the agent to use the BULK INSERT command when the snapshot is applied.  
   
  Agent parameters can be specified in agent profiles and on the command line. For more information, see:  
   

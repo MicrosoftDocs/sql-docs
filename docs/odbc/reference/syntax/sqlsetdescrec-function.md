@@ -1,28 +1,25 @@
 ---
 title: "SQLSetDescRec Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLSetDescRec"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll"
 apitype: "dllExport"
 f1_keywords: 
   - "SQLSetDescRec"
 helpviewer_keywords: 
   - "SQLSetDescRec function [ODBC]"
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLSetDescRec Function
 **Conformance**  
@@ -33,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetDescRec(  
       SQLHDESC      DescriptorHandle,  
@@ -98,7 +95,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|Memory management error|The function call could not be processed because the underlying memory objects could not be accessed, possibly because of low memory conditions.|  
 |HY016|Cannot modify an implementation row descriptor|The *DescriptorHandle* argument was associated with an IRD.|  
 |HY021|Inconsistent descriptor information|The *Type* field, or any other field associated with the SQL_DESC_TYPE field in the descriptor, was not valid or consistent.<br /><br /> Descriptor information checked during a consistency check was not consistent. (See "Consistency Checks," later in this section.)|  
-|HY090|Invalid string or buffer length|(DM) The driver was an ODBC 2*.x* driver, the descriptor was an ARD, the *ColumnNumber* argument was set to 0, and the value specified for the argument *BufferLength* was not equal to 4.|  
+|HY090|Invalid string or buffer length|(DM) The driver was an ODBC *2.x* driver, the descriptor was an ARD, the *ColumnNumber* argument was set to 0, and the value specified for the argument *BufferLength* was not equal to 4.|  
 |HY117|Connection is suspended due to unknown transaction state. Only disconnect and read-only functions are allowed.|(DM) For more information about suspended state, see [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Connection timeout expired|The connection timeout period expired before the data source responded to the request. The connection timeout period is set through **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver does not support this function|(DM) The driver associated with the *DescriptorHandle* does not support the function.|  

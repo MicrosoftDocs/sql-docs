@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [SQL Server], names"
   - "renaming columns"
   - "column names [SQL Server]"
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -62,7 +58,7 @@ manager: craigg
   
 2.  Under **Column Name**, select the name you want to change and type a new one.  
   
-3.  On the **File** menu, click **Save***table name*.  
+3.  On the **File** menu, click **Save**_table name_.  
   
 > [!NOTE]  
 >  You can also change the name of a column in the **Column Properties** tab. Select the column whose name you want to change and type a new value for **Name**.  

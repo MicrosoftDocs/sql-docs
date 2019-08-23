@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "10/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection access to availability replicas"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "Availability Groups [SQL Server], active secondary replicas"
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -207,7 +204,7 @@ GO
   
 -   For queries running only on memory-optimized tables, the only supported isolation levels are snapshot, repeatable read, and serializable. Any queries with read-uncommitted or read committed isolation level returns an error unless you have enabled the option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT at the database level.  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -225,7 +222,7 @@ GO
   
 -   No locking hints are supported on memory-optimized tables. For example, all of the following queries fail with an error. Only NOLOCK hint is allowed and it is NOOP when used with memory-optimized tables.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -235,9 +232,9 @@ GO
     SELECT * FROM t_hk WITH (UPDLOCK)  
     ```  
   
--   For cross-container transactions, transactions with session isolation level “snapshot” that access memory-optimized tables is not supported. For example,  
+-   For cross-container transactions, transactions with session isolation level "snapshot" that access memory-optimized tables is not supported. For example,  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  
@@ -289,7 +286,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: The official SQL Server AlwaysOn Team Blog](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

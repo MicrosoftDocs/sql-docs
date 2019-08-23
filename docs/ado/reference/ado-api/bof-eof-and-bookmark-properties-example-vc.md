@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -16,10 +14,8 @@ helpviewer_keywords:
   - "EOF property [ADO], VC++ example"
   - "BOF property [ADO], VC++ example"
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # BOF, EOF, and Bookmark Properties Example (VC++)
 The first function in this example uses the [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) and [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) properties to display a message if a user tries to move past the first or last record of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). It uses the [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) property to let the user flag a record in a **Recordset** and return to it later.  

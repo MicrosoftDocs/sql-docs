@@ -1,29 +1,34 @@
 ---
-title: Upgrade and installation FAQ for SQL Server Machine Learning | Microsoft Docs
+title: Upgrade and installation frequently asked questions (FAQ)
+ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 04/15/2018  
+  
+ms.date: 06/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+ms.author: davidph
+author: dphansen
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning or R Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
 
 + Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first before reading these notes. To get version information, run `@@VERSION` in a query from SQL Server Management Studio.
-+ Upgrade to the most current release or service release as soon as possible, to resolve any issues that were fixed in recent releases.
++ Upgrade to the most current release or service release as soon as possible to resolve any issues that were fixed in recent releases.
 
-**Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
+**Applies to:** SQL Server 2016 R Services, SQL Server Machine Learning Services (In-Database)
 
 ## Requirements and restrictions on older versions of SQL Server 2016 
 
 Depending on the build of SQL Server that you are installing, some of the following limitations might apply:
 
 - In early versions of SQL Server 2016 R Services, 8dot3 notation was required on the drive that contains the working directory. If you installed a pre-release version, upgrading to SQL Server 2016 Service Pack 1 should fix this issue. This requirement does not apply to releases after SP1.
+
+- Currently, you cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. However, SQL Server 2019 preview does provide failover support if you would like to evaluate this capability in a test environment. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
+
+- On an Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
 
 - Side-by-side installation with another version of R, or with other releases from Revolution Analytics, is not supported.
 
@@ -53,7 +58,7 @@ You can upgrade your version of SQL Server by re-running the setup wizard.
 + [Upgrade SQL Server Using the Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 You can upgrade just the machine learning components by using a process called binding: 
-+ [Use SqlBindR to upgrade machine learning components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Use SqlBindR to upgrade machine learning components](../install/upgrade-r-and-python.md)
 
 ### End of support for in-place upgrades from prerelease versions
 
@@ -93,7 +98,7 @@ If you installed a pre-release version of Microsoft R Server, you must uninstall
 
 ## R Services and R Server (Standalone) side-by-side errors 
 
-In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time sometimes caused setup to fail with an “access denied” message. This issue was fixed in Service Pack 1 for SQL Server 2016.
+In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time sometimes caused setup to fail with an "access denied" message. This issue was fixed in Service Pack 1 for SQL Server 2016.
 
 If you encountered this error, and need to upgrade these features, perform a slipstream installation of SQL Server 2016 with SP1. There are two ways to resolve the issue, both of which require uninstalling and reinstalling.
 

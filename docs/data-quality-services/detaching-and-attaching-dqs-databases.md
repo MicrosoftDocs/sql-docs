@@ -5,16 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Detaching and Attaching DQS Databases
 
@@ -73,7 +68,7 @@ manager: craigg
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  The **database details** (lower) pane displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (…).  
+5.  The **database details** (lower) pane displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (...).  
   
 6.  Click **OK** to attach the DQS_MAIN database.  
   

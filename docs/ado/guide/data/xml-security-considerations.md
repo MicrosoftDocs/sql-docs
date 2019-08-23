@@ -6,16 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XML security in ADO"
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # XML Security Considerations
 The ADO Save and Open methods on the Recordset object are not considered safe operations to run in Internet Explorer. Thus, if these methods are used in a script code that is running in an application or control that is hosted in a browser, the security configuration of the browser will have an effect on its behavior.  

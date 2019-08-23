@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "xp_logininfo_TSQL"
@@ -20,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +35,13 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## Arguments  
- [ **@acctname =** ] **'***account_name***'**  
+`[ @acctname = ] 'account_name'`
  Is the name of a Windows user or group granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* is **sysname**, with a default of NULL. If *account_name* is not specified, all Windows groups and Windows users that have been explicitly granted login permission are reported. *account_name* must be fully qualified. For example, 'ADVWKS4\macraes', or 'BUILTIN\Administrators'.  
   
  **'all'** | **'members'**  
- Specifies whether to report information about all permission paths for the account, or to report information about the members of the Windows group. **@option** is **varchar(10)**, with a default of NULL. Unless **all** is specified, only the first permission path is displayed.  
+ Specifies whether to report information about all permission paths for the account, or to report information about the members of the Windows group. **\@option** is **varchar(10)**, with a default of NULL. Unless **all** is specified, only the first permission path is displayed.  
   
- [ **@privilege =** ] *variable_name*  
+`[ @privilege = ] variable_name`
  Is an output parameter that returns the privilege level of the specified Windows account. *variable_name* is **varchar(10)**, with a default of 'Not wanted'. The privilege level returned is **user**, **admin**, or **null**.  
   
  OUTPUT  
@@ -73,7 +69,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  If *account_name* and **members** are specified, a list of the next-level members of the group is returned. If *account_name* is a local group, the listing can include local users, domain users, and groups. If *account_name* is a domain account, the list is made up of domain users. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must connect to the domain controller to retrieve group membership information. If the server cannot contact the domain controller, no information will be returned.  
   
- **xp_logininfo** only returns information from Active Director global groups, not universal groups.  
+ **xp_logininfo** only returns information from Active Directory global groups, not universal groups.  
   
 ## Permissions  
  Requires membership in the **sysadmin** fixed server role or membership in the **public** fixed database role in the **master** database with EXECUTE permission granted.  

@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10012"
@@ -17,10 +14,9 @@ helpviewer_keywords:
   - "DMX [Analysis Services], user interface"
   - "query designers [DMX]"
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
-caps.latest.revision: 34
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Analysis Services DMX Query Designer User Interface
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Data Mining Expressions (DMX) queries and Multidimensional Expression (MDX) queries for an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source. This topic describes the DMX query designer. For more information about the MDX query designer, see [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
@@ -34,13 +30,13 @@ manager: craigg
 |------------|-----------------|  
 |**Edit As Text**|Disabled for this data source type.|  
 |**Import**|Import an existing query from a report definition (.rdl) file on the file system. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Change to MDX query view](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Switch to the MDX query designer mode.|  
+|![Change to MDX query view](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Switch to the MDX query designer mode.|  
 |![Change to DMX query language view](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Switch to the DMX query designer mode.|  
-|![Refresh result data](../../analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Refresh metadata from the data source.|  
-|![Delete](../../analysis-services/media/rsqdicon-delete.gif "Delete")|Delete the selected column in the Data pane from the query.|  
-|![Icon for the Query Parameters dialog box](../../analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Display the **Query Parameters** dialog box. When you assign a default value to a variable, a corresponding report parameter is created when you switch to the Layout view in Report Designer.|  
-|![Run the query](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Prepare the query.|  
-|![Switch to Design mode](../../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Toggle between Design mode and Query mode. To change to result view, right-click on the Design pane and choose **Result**.|  
+|![Refresh result data](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Refresh metadata from the data source.|  
+|![Delete](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Delete")|Delete the selected column in the Data pane from the query.|  
+|![Icon for the Query Parameters dialog box](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Display the **Query Parameters** dialog box. When you assign a default value to a variable, a corresponding report parameter is created when you switch to the Layout view in Report Designer.|  
+|![Run the query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Prepare the query.|  
+|![Switch to Design mode](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Toggle between Design mode and Query mode. To change to result view, right-click on the Design pane and choose **Result**.|  
   
 ## Graphical DMX Query Designer in Design Mode  
  When you edit a dataset that uses an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data source that has no valid cubes but that does have valid mining models, the graphical query designer opens in Design mode. The following figure labels the panes for Design mode.  

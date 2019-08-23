@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Reporting Services], configuring"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "databases [Reporting Services], connections"
   - "security [Reporting Services], database connections"
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg

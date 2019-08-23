@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10426"
@@ -16,9 +13,9 @@ helpviewer_keywords:
   - "dialog boxes"
   - "Help, dialog boxes"
   - "user interface, dialog boxes"
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Report Builder F1 Help
   This section contains Help for Report Builder wizards, views, panes, and dialog boxes. You can also open Help by pressing F1 or by clicking the Help button in a dialog box.  

@@ -6,17 +6,13 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data shaping [ADO], parameterized commands"
   - "parameterized commands [ADO]"
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Operation of Parameterized Commands
 If you are working with a large child **Recordset**, especially compared to the size of the parent **Recordset**, but need to access only a few child chapters, you might find it more efficient to use a parameterized command.  
@@ -33,7 +29,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- The parent and child tables have a column name in common, cust_id*.* The *child-command* has a "?" placeholder, to which the RELATE clause refers (that is, "...PARAMETER 0").  
+ The parent and child tables have a column name in common, *cust_id*. The *child-command* has a "?" placeholder, to which the RELATE clause refers (that is, "...PARAMETER 0").  
   
 > [!NOTE]
 >  The PARAMETER clause pertains solely to the shape command syntax. It is not associated with either the ADO [Parameter](../../../ado/reference/ado-api/parameter-object.md) object or the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  
@@ -50,7 +46,7 @@ SHAPE {SELECT * FROM customer}
   
 5.  A reference to the retrieved child rows (that is, the chapter of the child **Recordset**) is placed in the chapter column of the current row of the parent **Recordset**.  
   
-6.  Steps 3–5 are repeated when the chapter column of another row is accessed.  
+6.  Steps 3-5 are repeated when the chapter column of another row is accessed.  
   
  The **Cache Child Rows** dynamic property is set to **True** by default. The caching behavior varies depending upon the parameter values of the query. In a query with a single parameter, the child **Recordset** for a given parameter value will be cached between requests for a child with that value. The following code demonstrates this:  
   

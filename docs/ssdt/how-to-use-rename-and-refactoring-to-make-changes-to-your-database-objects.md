@@ -6,8 +6,6 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.dbrefactoring.previewdialog"
@@ -16,10 +14,8 @@ f1_keywords:
   - "sql.data.tools.dbrefactoring.moveschemadialog"
   - "sql.data.tools.dbrefactoring.renameserverdatabasedialog"
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-caps.latest.revision: 18
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Use Rename and Refactoring to Make Changes to your Database Objects
 The Refactor contextual menu in the Transact\-SQL Editor allows you to rename or move an object to a different schema, and do a preview of all affected areas before committing the change. You can also use the Refactor menu to fully qualify all references to database objects, or expand any wildcard characters in `SELECT` statements in your database project.  

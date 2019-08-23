@@ -5,18 +5,14 @@ ms.date: "09/01/2016"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "copying columns"
   - "columns [SQL Server], copying"
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Copy Columns from One Table to Another (Database Engine)
@@ -32,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
      [Security](#Security)  
   
--   **To coy columns, using:**  
+-   **To copy columns, using:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -61,7 +57,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 4.  Click the tab for the table into which you want to copy the columns.  
   
 5.  Select the column you want to follow the inserted columns and, from the **Edit** menu, click **Paste**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### To copy data from one table to another  
   
 1.  Follow the directions for copying column definitions above.  
@@ -75,7 +73,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 4.  In the **Add Table** dialog box, select the source and destination table, click **Add**, and then close the **Add Table** dialog box. 
 
-5.  Right-click an open area of the the Query Editor, point to **Change Type**, and then click **Insert Results**.  
+5.  Right-click an open area of the Query Editor, point to **Change Type**, and then click **Insert Results**.  
 
 6.  In the **Choose Target Table for Insert Results** dialog box, select the destination table. 
 

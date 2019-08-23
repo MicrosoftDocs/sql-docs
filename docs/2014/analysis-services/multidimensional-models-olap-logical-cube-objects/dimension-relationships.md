@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "relationships [Analysis Services]"
@@ -21,7 +17,6 @@ helpviewer_keywords:
   - "fact dimensions [Analysis Services]"
   - "relationships [Analysis Services], dimensions"
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -32,16 +27,16 @@ manager: craigg
  A relationship between a dimension and a measure group consists of the dimension and fact tables participating in the relationship and a granularity attribute that specifies the granularity of the dimension in the particular measure group.  
   
 ## Regular Dimension Relationships  
- A regular dimension relationship between a cube dimension and a measure group exists when the key column for the dimension is joined directly to the fact table. This direct relationship is based on a primary key–foreign key relationship in the underlying relational database, but might also be based on a logical relationship that is defined in the data source view. A regular dimension relationship represents the relationship between dimension tables and a fact table in a traditional star schema design. For more information about regular relationships, see [Define a Regular Relationship and Regular Relationship Properties](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
+ A regular dimension relationship between a cube dimension and a measure group exists when the key column for the dimension is joined directly to the fact table. This direct relationship is based on a primary key-foreign key relationship in the underlying relational database, but might also be based on a logical relationship that is defined in the data source view. A regular dimension relationship represents the relationship between dimension tables and a fact table in a traditional star schema design. For more information about regular relationships, see [Define a Regular Relationship and Regular Relationship Properties](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md).  
   
 ## Reference Dimension Relationships  
  A reference dimension relationship between a cube dimension and a measure group exists when the key column for the dimension is joined indirectly to the fact table through a key in another dimension table, as shown in the following illustration.  
   
- ![Logical diagram, referenced dimension relationship](../../../2014/analysis-services/dev-guide/media/as-refdimension1.gif "Logical diagram, referenced dimension relationship")  
+ ![Logical diagram, referenced dimension relationship](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "Logical diagram, referenced dimension relationship")  
   
  A reference dimension relationship represents the relationship between dimension tables and a fact table in a snowflake schema design. When dimension tables are connected in a snowflake schema, you can define a single dimension using columns from multiple tables, or you can define separate dimensions based on the separate dimension tables and then define a link between them using the reference dimension relationship setting. The following figure shows one fact table named **InternetSales**, and two dimension tables called **Customer** and **Geography**, in a snowflake schema.  
   
- ![Logical schema, referenced dimension relationship](../../../2014/analysis-services/dev-guide/media/as-refdim-schema1.gif "Logical schema, referenced dimension relationship")  
+ ![Logical schema, referenced dimension relationship](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "Logical schema, referenced dimension relationship")  
   
  You can create a dimension with the **Customer** table as the dimension main table and the **Geography** table included as a related table. A regular relationship is then defined between the dimension and the InternetSales measure group.  
   
@@ -49,16 +44,16 @@ manager: craigg
   
  There is no limit to the number of reference dimensions that can be chained together, as shown in the following illustration.  
   
- ![Logical diagram, referenced dimension relationship](../../../2014/analysis-services/dev-guide/media/as-refdimension2.gif "Logical diagram, referenced dimension relationship")  
+ ![Logical diagram, referenced dimension relationship](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "Logical diagram, referenced dimension relationship")  
   
  For more information about referenced relationships, see [Define a Referenced Relationship and Referenced Relationship Properties](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## Fact Dimension Relationships  
  Fact dimensions, frequently referred to as degenerate dimensions, are standard dimensions that are constructed from attribute columns in fact tables instead of from attribute columns in dimension tables. Useful dimensional data is sometimes stored in a fact table to reduce duplication. For example, the following diagram displays the **FactResellerSales** fact table, from the [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] sample database.  
   
- ![Columns in fact table can support dimensions](../../../2014/analysis-services/dev-guide/media/as-factdim.gif "Columns in fact table can support dimensions")  
+ ![Columns in fact table can support dimensions](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "Columns in fact table can support dimensions")  
   
- The table contains attribute information not only for each line of an order issued by a reseller, but about the order itself. The attributes circled in the previous diagram identify the information in the **FactResellerSales** table that could be used as attributes in a dimension. In this case, two additional pieces of information, the carrier tracking number and the purchase order number issued by the reseller, are represented by the CarrierTrackingNumber and CustomerPONumber attribute columns. This information is interesting—for example, users would definitely be interested in seeing aggregated information, such as the total product cost, for all the orders being shipped under a single tracking number. But, without a dimension data for these two attributes cannot be organized or aggregated.  
+ The table contains attribute information not only for each line of an order issued by a reseller, but about the order itself. The attributes circled in the previous diagram identify the information in the **FactResellerSales** table that could be used as attributes in a dimension. In this case, two additional pieces of information, the carrier tracking number and the purchase order number issued by the reseller, are represented by the CarrierTrackingNumber and CustomerPONumber attribute columns. This information is interesting-for example, users would definitely be interested in seeing aggregated information, such as the total product cost, for all the orders being shipped under a single tracking number. But, without a dimension data for these two attributes cannot be organized or aggregated.  
   
  In theory, you could create a dimension table that uses the same key information as the FactResellerSales table and move the other two attribute columns, CarrierTrackingNumber and CustomerPONumber, to that dimension table. However, you would be duplicating a significant portion of data and adding unnecessary complexity to the data warehouse to represent just two attributes as a separate dimension.  
   
@@ -73,7 +68,7 @@ manager: craigg
 ## Many to Many Dimension Relationships  
  In most dimensions, each fact joins to one and only one dimension member, and a single dimension member can be associated with multiple facts. In relational database terminology, this is referred to as a one-to-many relationship. However, it is frequently useful to join a single fact to multiple dimension members. For example, a bank customer might have multiple accounts (checking, saving, credit card, and investment accounts), and an account can also have joint or multiple owners. The Customer dimension constructed from such relationships would then have multiple members that relate to a single account transaction.  
   
- ![Logical schema/many-to-many dimension relationship](../../../2014/analysis-services/dev-guide/media/as-many-dimension1.gif "Logical schema/many-to-many dimension relationship")  
+ ![Logical schema/many-to-many dimension relationship](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "Logical schema/many-to-many dimension relationship")  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lets you define a many-to-many relationship between a dimension and a fact table.  
   

@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.ssms.isoperations.executions.f1"
   - "sql12.ssis.ssms.isoperations.general.f1"
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-caps.latest.revision: 7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Active Operations Dialog Box

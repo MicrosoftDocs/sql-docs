@@ -1,13 +1,10 @@
 ---
 title: "Bike Buyer DMX Tutorial | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "10/19/2018"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DMX [Analysis Services], tutorials"
@@ -16,10 +13,9 @@ helpviewer_keywords:
   - "Data Mining Extensions [Analysis Services], tutorials"
   - "tutorials [Data Mining]"
 ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Bike Buyer DMX Tutorial
   In this tutorial, you will learn how create, train, and explore mining models by using the Data Mining Extensions (DMX) query language. You will then use these mining models to create predictions that determine whether a customer will purchase a bicycle.  
@@ -66,7 +62,7 @@ manager: craigg
  ALTER MINING STRUCTURE  
  Use this statement to add a mining model to a mining structure that already exists on the server. This statement is useful if you want to create a mining structure that contains several different mining models. There are several reasons that you would want to add more than one mining model in a single mining structure. For example, you might create several mining models that use different algorithms to see which algorithm works best. You might create several mining models that use the same algorithm, but with a parameter set differently for each mining model to find the best setting for the parameter.  
   
- For more information, see [ALTER MINING STRUCTURE &#40;DMX&#41;]((~/dmx/alter-mining-structure-dmx.md).  
+ For more information, see [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Because you will create a mining structure that contains several mining models, you will use the second method in this tutorial.  
   
@@ -99,7 +95,7 @@ manager: craigg
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   The [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database. By default, the sample databases are not installed, to enhance security. To install official sample databases for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visit the [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) page and select the databases that you want to install..  
+-   The [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database. By default, the sample databases are not installed, to enhance security. To install official sample databases for [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visit the [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) page and select the databases that you want to install..  
   
 > [!NOTE]  
 >  When you review tutorials, we recommend that you add **Next topic** and **Previous topic** buttons to the document viewer toolbar.  

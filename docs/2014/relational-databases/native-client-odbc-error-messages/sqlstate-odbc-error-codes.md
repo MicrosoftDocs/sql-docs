@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, errors"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SQLSTATEs"
   - "errors [ODBC], cause information"
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -25,9 +22,9 @@ manager: craigg
   
  For more information about the state error codes, see the following topics:  
   
--   [Appendix A: ODBC Error Codes](http://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Appendix A: ODBC Error Codes](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
--   [SQLSTATE Mappings](http://go.microsoft.com/fwlink/?LinkId=89355)  
+-   [SQLSTATE Mappings](https://go.microsoft.com/fwlink/?LinkId=89355)  
   
 ## See Also  
  [Handling Errors and Messages](handling-errors-and-messages.md)  

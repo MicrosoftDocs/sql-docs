@@ -5,9 +5,7 @@ ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STGeomCollFromWKB (geometry Data Type)"
@@ -17,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomCollFromWKB (geometry Data Type)"
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomCollFromWKB (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +43,9 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  CLR return type: **SqlGeometry**  
   
 ## Remarks  
- The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MulitPoint**, depending on the corresponding WKB input.  
+ The OGC type of the **geometry** instance returned by `STGeomCollFromWKB()` is set to **GeomCollection**, **MultiPolygon**, **MultiLineString**, or **MultiPoint**, depending on the corresponding WKB input.  
   
- This method will throw a FormatException  exception if the input is not well-formatted.  
+ This method will throw a FormatException exception if the input isn't well-formatted.  
   
 ## Examples  
  The following example uses `STGeomCollFromWKB()` to create a **geometry** instance.  
@@ -63,5 +59,3 @@ SELECT @g.STAsText();
 ## See Also  
  [OGC Static Geometry Methods](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
-  
-

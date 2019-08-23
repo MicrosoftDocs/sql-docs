@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
@@ -62,7 +58,7 @@ manager: craigg
     9. Click OK to close the Internet Options dialog box.  
   
 ##  <a name="installdb"></a> Install a database server  
- This topic assumes your farm topology is based on the one described in the article [Multiple servers for a three-tier farm](http://go.microsoft.com/fwlink/?LinkId=182771). If you already have a farm that is operational, skip ahead to [Install PowerPivot for SharePoint](#installppapp).  
+ This topic assumes your farm topology is based on the one described in the article [Multiple servers for a three-tier farm](https://go.microsoft.com/fwlink/?LinkId=182771). If you already have a farm that is operational, skip ahead to [Install PowerPivot for SharePoint](#installppapp).  
   
  If you are just getting started with your topology, begin by installing a SQL Server Database Engine. These instructions result in a database server that can be accessed by the SharePoint servers in your farm.  
   
@@ -127,7 +123,7 @@ manager: craigg
   
  Use the following instructions in SharePoint 2010 documentation to install and configure a SharePoint 2010 farm that includes two web servers and an application server:  
   
- [Multiple servers for a three-tier farm (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=182771)  
+ [Multiple servers for a three-tier farm (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=182771)  
   
  When asked to specify a database server, specify the database server you installed earlier.  
   
@@ -160,7 +156,7 @@ manager: craigg
  Similarly, a computer that has just Central Administration, without PowerPivot for SharePoint on the same computer, will require the ADOMD.NET client library. This library is used by the PowerPivot Management Dashboard to access internal data it uses to populate the dashboard. For more information, see [Install ADOMD.NET on Web Front-End Servers Running Central Administration](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).  
   
 ##  <a name="configsrvr"></a> Configure the server  
- Use the PowerPivot Configuration Tool to configure PowerPivot for SharePoint. The tool will scan the farm’s existing configuration and provide options for installing or activating the SharePoint features that are needed by PowerPivot for SharePoint. During this step, the Claims to Windows Token Service will be started. Additionally, if other required SharePoint features are not yet enabled, the configuration tool will add them to the list and include actions for enabling the feature.  
+ Use the PowerPivot Configuration Tool to configure PowerPivot for SharePoint. The tool will scan the farm's existing configuration and provide options for installing or activating the SharePoint features that are needed by PowerPivot for SharePoint. During this step, the Claims to Windows Token Service will be started. Additionally, if other required SharePoint features are not yet enabled, the configuration tool will add them to the list and include actions for enabling the feature.  
   
  For more information, see [Configure or Repair PowerPivot for SharePoint 2010 &#40;PowerPivot Configuration Tool&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
   
@@ -180,7 +176,7 @@ manager: craigg
 ##  <a name="activatePP"></a> Activate PowerPivot Feature Integration for Site Collections  
  Feature activation at the site collection level makes application pages and templates available to your sites, including configuration pages for scheduled data refresh and application pages for PowerPivot Gallery and Data Feed libraries.  
   
- The PowerPivot Configuration Tool will activate feature integration for the site collection that you specify. You can run the tool multiple times to select additional site collections. Alternatively, site administrators can configure feature activation from within SharePoint. For more information, see [Activate PowerPivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ The PowerPivot Configuration Tool will activate feature integration for the site collection that you specify. You can run the tool multiple times to select additional site collections. Alternatively, site administrators can configure feature activation from within SharePoint. For more information, see [Activate PowerPivot Feature Integration for Site Collections in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca).  
   
 ##  <a name="verify"></a> Verify integration and server availability  
  PowerPivot query processing in the farm occurs when a user or application opens an Excel workbook that contains PowerPivot data. At a minimum, you can check pages on SharePoint sites to verify that PowerPivot features are available. However, to fully verify an installation, you must have a PowerPivot workbook that you can publish to SharePoint and access from a library. For testing purposes, you can publish a sample workbook that already contains PowerPivot data and use it to confirm that SharePoint integration is correctly configured.  
@@ -197,7 +193,7 @@ manager: craigg
   
  To verify PowerPivot data access on the server, do the following:  
   
-1.  [Download](http://go.microsoft.com/fwlink/?LinkID=219108) the Picnic data sample that accompanies a Reporting Services tutorial. You will use the sample workbook in this download to verify PowerPivot data access. Extract the files.  
+1.  [Download](https://go.microsoft.com/fwlink/?LinkID=219108) the Picnic data sample that accompanies a Reporting Services tutorial. You will use the sample workbook in this download to verify PowerPivot data access. Extract the files.  
   
 2.  Upload a PowerPivot workbook to PowerPivot Gallery or any SharePoint library.  
   
@@ -221,10 +217,10 @@ manager: craigg
  After you verify the installation, finish service configuration by creating a PowerPivot Gallery or tuning individual configuration settings. To make full use of the server components you just installed, you can download [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] to create and then publish your first PowerPivot workbook.  
   
 ####  <a name="bkmk_disk"></a> Set Upper Limits on Disk Space Usage  
- You can set a maximum limit on how much disk space is used for PowerPivot data files that are cached to disk. The default is to use all available disk space. For instructions on how to limit disk space usage, see [Configure Disk Space Usage &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md).  
+ You can set a maximum limit on how much disk space is used for PowerPivot data files that are cached to disk. The default is to use all available disk space. For instructions on how to limit disk space usage, see [Configure Disk Space Usage &#40;PowerPivot for SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint).  
   
 ####  <a name="Upload"></a> Increase File Maximum Upload Size for SharePoint Web Applications  
- Because PowerPivot workbooks can be large, you might want to increase the maximum file upload size. There are two file size settings to configure: Maximum Upload Size for the web application, and Maximum Workbook Size in Excel Services. The maximum file size should be set to the same value in both applications. For instructions, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+ Because PowerPivot workbooks can be large, you might want to increase the maximum file upload size. There are two file size settings to configure: Maximum Upload Size for the web application, and Maximum Workbook Size in Excel Services. The maximum file size should be set to the same value in both applications. For instructions, see [Configure Maximum File Upload Size &#40;PowerPivot for SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
   
 #### Grant SharePoint Permissions to Workbook Users  
  Users will need SharePoint permissions before they can publish or view workbooks. Be sure to grant **View** permissions to users who need to need to view published workbooks and **Contribute** permissions to users who publish or manage workbooks. You must be a site collection administrator to grant permissions.  
@@ -256,13 +252,13 @@ manager: craigg
  Server-side data refresh allows users to re-import updated data to their workbooks in unattended mode. In order for data refresh to succeed, the server must have the same data provider that was used to originally import the data. In addition, the user account under which data refresh runs often requires read permissions on the external data sources. Be sure to check the requirements for enabling and configuring data refresh to ensure a successful outcome. For more information, see [PowerPivot Data Refresh with SharePoint 2010](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 #### Create a PowerPivot Gallery  
- PowerPivot Gallery is a library that includes preview and presentation options for viewing PowerPivot workbooks on a SharePoint site. Using PowerPivot Gallery to publish and view PowerPivot workbooks is recommended for its preview capability. In addition, if you also deployed Reporting Services to the same SharePoint server, a PowerPivot Gallery provides ease of use in creating reports. You can launch Report Builder from within PowerPivot Gallery to base a new report on a published PowerPivot workbook. For more information about creating and using the library, see [Create and Customize PowerPivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md) and [Use PowerPivot Gallery](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
+ PowerPivot Gallery is a library that includes preview and presentation options for viewing PowerPivot workbooks on a SharePoint site. Using PowerPivot Gallery to publish and view PowerPivot workbooks is recommended for its preview capability. In addition, if you also deployed Reporting Services to the same SharePoint server, a PowerPivot Gallery provides ease of use in creating reports. You can launch Report Builder from within PowerPivot Gallery to base a new report on a published PowerPivot workbook. For more information about creating and using the library, see [Create and Customize PowerPivot Gallery](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery) and [Use PowerPivot Gallery](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/use-power-pivot-gallery).  
   
 #### Tune Configuration Settings  
- A PowerPivot service application is created using default properties and values. You can modify configuration settings for individual service applications to change the methodology by which requests are allocated, set server timeouts, change the thresholds for query response report events, or specify how long usage data is retained. For more information about configuration in Central Administration or about using PowerPivot features in SharePoint Web applications, see [PowerPivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+ A PowerPivot service application is created using default properties and values. You can modify configuration settings for individual service applications to change the methodology by which requests are allocated, set server timeouts, change the thresholds for query response report events, or specify how long usage data is retained. For more information about configuration in Central Administration or about using PowerPivot features in SharePoint Web applications, see [PowerPivot Server Administration and Configuration in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
 ## See Also  
- [Features Supported by the Editions of SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Install PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
  [Deployment Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   

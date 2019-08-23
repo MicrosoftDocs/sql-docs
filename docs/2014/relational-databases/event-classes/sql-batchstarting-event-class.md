@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
 helpviewer_keywords: 
   - "SQL:BatchStarting event class"
 ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg

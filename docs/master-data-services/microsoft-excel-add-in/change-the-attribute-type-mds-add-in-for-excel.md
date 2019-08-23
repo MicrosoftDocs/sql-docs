@@ -5,15 +5,11 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: master-data-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
-caps.latest.revision: 8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change the Attribute Type (MDS Add-in for Excel)
 
@@ -54,7 +50,7 @@ manager: craigg
   
 -   Changes the data type of the attribute.  
   
--   Generates a copy of the attribute with the suffix “_old” that contains the previous values. This is called a deprecated attribute.  
+-   Generates a copy of the attribute with the suffix "_old" that contains the previous values. This is called a deprecated attribute.  
   
 ## See Also  
  [Attributes &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   

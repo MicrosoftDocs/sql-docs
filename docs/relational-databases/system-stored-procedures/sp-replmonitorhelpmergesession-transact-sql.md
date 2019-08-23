@@ -4,28 +4,20 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replmonitorhelpmergesession_TSQL"
   - "sp_replmonitorhelpmergesession"
 helpviewer_keywords: 
   - "sp_replmonitorhelpmergesession"
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns information on past sessions for a given replication Merge Agent, with one row returned for each session that matches the filtering criterion. This stored procedure, which is used to monitor merge replication, is executed at the Distributor on the distribution database or at the Subscriber on the subscription database.  
   
@@ -44,10 +36,10 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## Arguments  
- [ **@agent_name** = ] **'***agent_name***'**  
+`[ @agent_name = ] 'agent_name'`
  Is the name of the agent. *agent_name* is **nvarchar(100)** with no default.  
   
- [ **@hours** = ] *hours*  
+`[ @hours = ] hours`
  Is the range of time, in hours, for which historical agent session information is returned. *hours* is **int**, which can be one of the following ranges.  
   
 |Value|Description|  
@@ -56,7 +48,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**0** (default)|Returns information on all past agent runs.|  
 |> **0**|Returns information on agent runs that occurred in the last *hours* number of hours.|  
   
- [ **@session_type** = ] *session_type*  
+`[ @session_type = ] session_type`
  Filters the result set based on the session end result. *session_type* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -64,13 +56,13 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**1** (default)|Agent sessions with a retry or succeed result.|  
 |**0**|Agent sessions with a failure result.|  
   
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL. This parameter is used when executing **sp_replmonitorhelpmergesession** at the Subscriber.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with a default of NULL. This parameter is used when executing **sp_replmonitorhelpmergesession** at the Subscriber.  
   
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of NULL. This parameter is used when executing **sp_replmonitorhelpmergesession** at the Subscriber.  
   
 ## Result Sets  

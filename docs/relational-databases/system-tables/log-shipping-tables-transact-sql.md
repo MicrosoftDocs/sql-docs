@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,10 +13,8 @@ helpviewer_keywords:
   - "log shipping [SQL Server], system tables"
   - "system tables [SQL Server], log shipping"
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
-caps.latest.revision: 15
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Log Shipping Tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

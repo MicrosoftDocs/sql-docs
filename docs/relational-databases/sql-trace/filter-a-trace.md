@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "sql-trace"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server], events"
@@ -18,10 +14,8 @@ helpviewer_keywords:
   - "filters [SQL Server], traces"
   - "traces [SQL Server], filters"
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
-caps.latest.revision: 28
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Filter a Trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +38,9 @@ manager: craigg
 2.  Identify the data and data columns that contain the information you need.  
   
 3.  Identify a subset of the data you need and define filters based on that subset of data.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  For example, you may be interested only in events that take longer than a certain length of time. You could create a trace that includes events where the **Duration** data column is greater than 300 milliseconds. Your trace will not include events that finish in less than 300 milliseconds.  
   
  You can create filters by using SQL Server Profiler or Transact-SQL stored procedures.  

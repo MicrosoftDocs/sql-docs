@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.conninformixdb.f1"
 ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg

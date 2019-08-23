@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <testSuite 
     name="CTESelects" projectPath="/Microsoft/SqlServer/Snippets/TSQL/CTE"
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/UXTestSpec"
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/UXTestSpec"
     managementDatabaseConnectionString="data source=SqlSampTest;initial catalog=UXTest;integrated security=SSPI;persist security info=False"
     testDatabaseConnectionString="data source=localhost;initial catalog=AdventureWorks;integrated security=SSPI;persist security info=False"
     rootDirectory="\\sunbeam\Yukon_CodeSnippets\TSQL\Select"

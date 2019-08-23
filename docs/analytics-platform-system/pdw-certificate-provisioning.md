@@ -2,7 +2,6 @@
 title: PDW certificate provisioning - Analytics Platform System | Microsoft Docs
 description: The PDW Certificate Provisioning page of the Analytics Platform System Configuration Manager imports or removes the certificate used by the PDW region. 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -24,7 +23,7 @@ Before installing the certificate, do the following:
 ## For Security Reasons, Obtain a Trusted Certificate  
 SQL Server PDW supports using a certificate to encrypt connections to the Control node; including connections to the **Admin Console**.  
   
-By default, the **Admin Console** includes a self-signed certificate that provides privacy, but not server authentication. This can leave communications vulnerable to a man-in-the-middle attack. When a user connects to the Admin Console by using the self-signed certificate, Internet Explorer returns the error: “There is a problem with this website's security certificate”.  
+By default, the **Admin Console** includes a self-signed certificate that provides privacy, but not server authentication. This can leave communications vulnerable to a man-in-the-middle attack. When a user connects to the Admin Console by using the self-signed certificate, Internet Explorer returns the error: "There is a problem with this website's security certificate".  
   
 Although the connection through the self-signed certificate encrypts in-flight data between the client and the server, the connection is still at risk from attackers.  
   
@@ -36,7 +35,10 @@ The certification path must contain the fully qualified domain name that maps to
 Use the Analytics Platform System**Configuration Manager** to add or remove the trusted certificate. Directly using the Microsoft Windows HTTP Services Certificate Configuration Tool (**winHttpCertCfg.exe**) to manage the certificate is unsupported.  
   
 ## Import or Remove the Certificate  
-The following instructions show how to import or remove the appliance certificate.  
+The following instructions show how to import or remove the appliance certificate.
+
+> [!WARNING]
+> To renew an expired certificate you must remove the existing certificate BEFORE importing the new one.
   
 ### To import the certificate  
   

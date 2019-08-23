@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backups [SQL Server replication], snapshot replication"
@@ -21,22 +18,21 @@ helpviewer_keywords:
   - "sync with backup [SQL Server replication]"
   - "backups [SQL Server replication], transactional replication"
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
-caps.latest.revision: 59
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   When you design a backup and restore strategy for snapshot and transactional replication, there are three areas to consider:  
   
--   Which databases to back up.  
-  
--   Backup settings for transactional replication.  
-  
+-   Which databases to back up.
+-   Backup settings for transactional replication.
 -   The steps that are required to restore a database. These depend on the type of replication and options chosen.  
   
  This topic covers each of these areas in the next three sections. For information about backup and restore for Oracle publishing, see [Backup and Restore for Oracle Publishers](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## Backing up Databases  
  For snapshot and transactional replication, you should regularly back up the following databases:  
@@ -117,7 +113,7 @@ manager: craigg
   
          For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Remove the replication configuration from the Publisher, Distributor and Subscribers, and then re-create the configuration. When you re-create subscriptions, specify that the Subscriber already has the data. The restore is completed.  
   
@@ -134,7 +130,7 @@ manager: craigg
   
          For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-         For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+         For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Use the [tablediff utility](../../../tools/tablediff-utility.md) or another tool to manually synchronize the Publisher with the Subscriber. This enables you to recover data from the subscription database that was not contained in the publication database backup. Go to step c.  
   
@@ -156,7 +152,7 @@ manager: craigg
   
      For more information about how to run the Distribution Agent, see [Start and Stop a Replication Agent &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) and [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-     For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+     For more information about how to verify commands, see [View Replicated Commands and Other Information in the Distribution Database &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) and [View information and perform tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  If you are using queued updating subscriptions, connect to each Subscriber and delete all rows from the [MSreplication_queue &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) table in the subscription database. Go to step 4.  
   
@@ -285,7 +281,7 @@ manager: craigg
   
     2.  Mark all publications for validation. Reinitialize any subscriptions that fail validation. Recovery is completed.  
   
-         For more information about validation, see [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). For more information about reinitialization, see [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+         For more information about validation, see [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). For more information about reinitialization, see [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### msdb Database (Distributor)  
   
@@ -301,7 +297,7 @@ manager: craigg
   
 4.  Mark all publications for validation. Reinitialize any subscriptions that fail validation. Recovery is completed.  
   
-     For more information about validation, see [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md). For more information about reinitialization, see [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md).  
+     For more information about validation, see [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md). For more information about reinitialization, see [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md).  
   
 #### master Database (Distributor)  
   

@@ -1,21 +1,16 @@
 ---
 title: "T-SQL Tutorial: Configure permissions on database objects | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2018"
+ms.date: "07/31/2018"
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server 2016"
 helpviewer_keywords: 
   - "database permissions"
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Lesson 2: Configure permissions on database objects
@@ -33,7 +28,9 @@ To complete this tutorial, you need SQL Server Management Studio and access to a
 If you don't have access to a SQL Server instance, select your platform from the following links. If you choose SQL Authentication, use your SQL Server login credentials.
 - **Windows**: [Download SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [Download SQL Server 2017 on Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
-  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Create a login
 To access the [!INCLUDE[ssDE](../includes/ssde-md.md)], users require a login. The login can represent the user's identity as a Windows account or as a member of a Windows group, or the login can be a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] login that exists only in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Whenever possible you should use Windows Authentication.  
   
@@ -85,7 +82,7 @@ Type and execute the following statements (replacing `computer_name` with the na
 ## Create views and stored procedures
 As an administrator, you can execute the SELECT from the **Products** table and the **vw_Names** view, and execute the **pr_Names** procedure; however, Mary cannot. To grant Mary the necessary permissions, use the GRANT statement.  
 
-### Grant permission to stored prcoedure  
+### Grant permission to stored procedure  
 Execute the following statement to give `Mary` the `EXECUTE` permission for the `pr_Names` stored procedure.
   
   ```sql  

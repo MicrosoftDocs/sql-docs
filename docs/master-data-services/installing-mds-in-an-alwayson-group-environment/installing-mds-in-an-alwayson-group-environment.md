@@ -5,15 +5,11 @@ ms.date: "07/28/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ""
-caps.latest.revision: ""
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 
 
@@ -128,7 +124,7 @@ cost.
 
 Figure 1. A Typical AlwaysOn Availability Group Configuration
 
-If you don’t need to consider disaster recovery, you don’t need to have
+If you don't need to consider disaster recovery, you don't need to have
 a replica in a second data center. If you need to improve HA, then you
 could have more synchronous replicas in the same primary data center
 with.
@@ -188,7 +184,7 @@ the WSFC feature on each instance. You need administrator permissions.
 3.  Select the **Failover Clustering** checkbox, and then click **Next**
     to finish the installation. See Figure 2.
 
-    If you’re asked for confirmation to **Add features that are required
+    If you're asked for confirmation to **Add features that are required
 for Failover clustering**, click **Add Features**. See Figure 3.
 
     ![Add Roles and Features Wizard, Failover Clustering](media/Fig2_SelectFeatures.png)
@@ -244,13 +240,13 @@ page shows you the validation summary. See Figures 6 and 7.
 7.  On the **Summary** page, check for any warning or error messages.
 
     Errors must be fixed. However, warnings may not be an issue. A warning
-message means that “the tested item might meet the requirement, but
-there is something you should check”. For example, figure 7 shows a
-“validate disk access latency” warning, that may be due to the disk
+message means that "the tested item might meet the requirement, but
+there is something you should check". For example, figure 7 shows a
+"validate disk access latency" warning, that may be due to the disk
 being busy on other tasks temporarily, and you may ignore it. You
 should check the online document for each warning and error message
 for more details. See Figure 7.
- 
+ 
     ![Validate Configuration Wizard, Validating page](media/Fig6_ValidationTests.png)
 
     Figure 6
@@ -455,27 +451,26 @@ other nodes as replicas. See Figure 17.
     Figure 17
 
     For each replica, configure the following **Synchronous Commit**,
-**Automatic Failover**, and **Readable Secondary** settings. See Figure
-17.
+**Automatic Failover**, and **Readable Secondary** settings. See Figure 17.
 
-    **Synchronous Commit**: This guarantees that if a transaction is
+**Synchronous Commit**: This guarantees that if a transaction is
 committed on the primary replica of a database, then the transaction
 is also committed on all other synchronous replicas. Asynchronous
 commit does not guarantee this, and it may lag behind the primary
 replica.
 
-    You should usually enable synchronous commit only when the two nodes
+You should usually enable synchronous commit only when the two nodes
 are in the same data center. If they are in different data centers,
 synchronous commit may slow down the database performance.
 
-    If this checkbox is not selected, then asynchronous commit is used.
+If this checkbox is not selected, then asynchronous commit is used.
 
-    **Automatic Failover:** When the primary replica is down, the AG will
+**Automatic Failover:** When the primary replica is down, the AG will
 automatically failover to its secondary replica when automatic
 failover is selected. This can only be enabled on the replicas with
 synchronous commits.
 
-    **Readable Secondary:** By default, users cannot connect to any
+**Readable Secondary:** By default, users cannot connect to any
 secondary replicas. This will enable users to connect to the secondary
 replica with read-only access.
 
@@ -492,7 +487,7 @@ replica with read-only access.
     d.  Enter DHCP in the **Network Mode** text box, and then click **Next** to continue.
 
     >[!NOTE] 
-    >Optionally, you can choose “Static IP” as the **Network Mode**
+    >Optionally, you can choose "Static IP" as the **Network Mode**
     >and enter a static IP. You can also enter a port other than 1433. 
 
     ![Configure the Listener](media/Fig18_AvailabilityGroupCreateListener.png)
@@ -543,7 +538,7 @@ lists other options.
     asynchronous replica. This is to verify that failover happens
     correctly without issues.
 
- The AlwaysOn setup is completed.
+ The AlwaysOn setup is completed.
 
 For more information about AlwaysOn Availability Group, see [SQL Server
 2016 AlwaysOn Availability Group](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server).

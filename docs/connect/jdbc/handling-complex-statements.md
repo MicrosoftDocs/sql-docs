@@ -1,21 +1,17 @@
 ---
-title: "Handling Complex Statements | Microsoft Docs"
+title: "Handling complex statements | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Handling Complex Statements
+# Handling complex statements
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   When you use the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you might have to handle complex statements, including statements that are dynamically generated at runtime. Complex statements often perform a variety of tasks, including updates, inserts, and deletes. These types of statements might also return multiple result sets and output parameters. In these situations, the Java code that runs the statements might not know in advance the types and number of objects and data returned.  
@@ -28,7 +24,7 @@ manager: craigg
   
  [!code[JDBC#HandlingComplexStatements1](../../connect/jdbc/codesnippet/Java/handling-complex-statements_1.java)]  
   
-## See Also  
- [Using Statements with the JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+## See also  
+ [Using statements with the JDBC driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

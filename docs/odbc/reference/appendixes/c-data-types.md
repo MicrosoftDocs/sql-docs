@@ -5,9 +5,7 @@ ms.date: "07/12/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], C data types"
@@ -15,10 +13,8 @@ helpviewer_keywords:
   - "C data types [ODBC]"
   - "C buffers [ODBC]"
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # C Data Types
 ODBC C data types indicate the data type of C buffers used to store data in the application.  
@@ -73,7 +69,7 @@ struct tagDATE_STRUCT {
 struct tagTIME_STRUCT {  
    SQLUSMALLINT hour;  
    SQLUSMALLINT minute;  
-   SQLUSMALLINT second;  
+   SQLUSMALLINT second;  
 } TIME_STRUCT;[a]  
 ```  
   
@@ -85,7 +81,7 @@ struct tagTIME_STRUCT {
   
 ```  
 struct tagTIMESTAMP_STRUCT {  
-   SQLSMALLINT year;  
+   SQLSMALLINT year;  
    SQLUSMALLINT month;  
    SQLUSMALLINT day;  
    SQLUSMALLINT hour;  

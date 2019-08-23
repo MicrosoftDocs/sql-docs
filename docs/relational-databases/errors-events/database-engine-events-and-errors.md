@@ -1,25 +1,21 @@
 ---
 title: "Database Engine Events and Errors | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/27/2018"
+ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
-
 # Database Engine Errors
-The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view. 
 
+The table contains error message numbers and the description, which is the text of the error message from the sys.messages catalog view.
 
 ## Errors -2 to 999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	[-2](mssqlserver-neg2-database-engine-error.md)	|		|		|	Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding. (Microsoft SQL Server, Error: -2).	|
@@ -575,6 +571,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 1000 to 1999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	1001	|	16	|	No	|	Line %d: Length or precision specification %d is invalid.	|
@@ -836,7 +833,7 @@ The table contains error message numbers and the description, which is the text 
 |	1724	|	16	|	No	|	Filegroup '%.*ls' is not a FILESTREAM filegroup or partition scheme of FILESTREAM filegroups.	|
 |	1725	|	16	|	No	|	Cannot add FILESTREAM column to %S_MSG '%.*ls' because an INSTEAD OF trigger exists on the %S_MSG.	|
 |	1726	|	16	|	No	|	Cannot add FILESTREAM filegroup or partition scheme since table '%.*ls' has a FILESTREAM filegroup or partition scheme already.	|
-|	1727	|	16	|	No	|	Cannot create non-clustered index '%.*ls' on table '%.*ls' with the FILESTREAM_ON clause.	|
+|	1727	|	16	|	No	|	Cannot create nonclustered index '%.*ls' on table '%.*ls' with the FILESTREAM_ON clause.	|
 |	1728	|	16	|	No	|	Cannot create index '%.*ls' on table '%.*ls' because the computed column '%.*ls' uses a FILESTREAM column.	|
 |	1729	|	16	|	No	|	Cannot create table '%.*ls' because the partitioning column '%.*ls' uses a FILESTREAM column.	|
 |	1730	|	16	|	No	|	Creating or altering compressed table '%.*ls' failed because the uncompressed row size would be %d, including %d bytes of internal overhead. This exceeds the maximum allowable table row size of %d bytes.	|
@@ -844,7 +841,7 @@ The table contains error message numbers and the description, which is the text 
 |	1732	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because a table cannot have more than one sparse column set. Modify the statement so that only one column is specified as COLUMN_SET FOR ALL_SPARSE_COLUMNS.	|
 |	1733	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because a sparse column set must be a nullable xml column. Modify the column definition to allow null values.	|
 |	1734	|	16	|	No	|	Cannot create the sparse column set '%.*ls' in the table '%.*ls' because the table already contains one or more sparse columns. A sparse column set cannot be added to a table if the table contains a sparse column.	|
-|	1736	|	16	|	No	|	The column '%.*ls' in the table '%.*ls' cannot be referenced in a CHECK constraint or computed column definition because the column is a sparse column set. A sparse column set cannot be referenced in a a CHECK constraint or computed column definition.	|
+|	1736	|	16	|	No	|	The column '%.*ls' in the table '%.*ls' cannot be referenced in a CHECK constraint or computed column definition because the column is a sparse column set. A sparse column set cannot be referenced in a CHECK constraint or computed column definition.	|
 |	1738	|	10	|	No	|	Cannot create table '%.*ls' with only a column set column and without any non-computed columns in the table.	|
 |	1750	|	10	|	No	|	Could not create constraint. See previous errors.	|
 |	1752	|	16	|	No	|	Column '%.*ls' in table '%.*ls' is invalid for creating a default constraint.	|
@@ -924,7 +921,7 @@ The table contains error message numbers and the description, which is the text 
 |	1846	|	16	|	No	|	Cannot find SQL Volume Shadow Copy (VSS) Writer component for database '%ls' while creating auto-recovered VSS snapshot for online DBCC check.	|
 |	1847	|	16	|	No	|	The current version of the operating system doesn't support auto-recovered Volume Shadow Copy (VSS) snapshots.	|
 |	1848	|	16	|	No	|	Volume Shadow Copy Service (VSS) failed to create an auto-recovered snapshot of database '%ls' for online DBCC check.	|
-|	1849	|	16	|	No	|	CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABSE to add FILESTREAM filegroups and files.	|
+|	1849	|	16	|	No	|	CREATE DATABASE failed because FILESTREAM filegroups were declared and ALLOW_SNAPSHOT_ISOLATION or READ_COMMITTED_SNAPSHOT is set to ON in the model database. Either set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the model database, or create the database without declaring any FILESTREAM filegroups, set ALLOW_SNAPSHOT_ISOLATION and READ_COMMITTED_SNAPSHOT to OFF in the new database, and then use ALTER DATABASE to add FILESTREAM filegroups and files.	|
 |	1901	|	16	|	No	|	Cannot create index or statistics '%.*ls' on view '%.*ls' because key column '%.*ls' is imprecise, computed and not persisted. Consider removing reference to column in view index or statistics key or changing column to be precise. If column is computed in base table consider marking it PERSISTED there.	|
 |	1902	|	16	|	No	|	Cannot create more than one clustered index on %S_MSG '%.*ls'. Drop the existing clustered index '%.*ls' before creating another.	|
 |	[1904](mssqlserver-1904-database-engine-error.md)	|	16	|	No	|	The %S_MSG '%.*ls' on table '%.*ls' has %d column names in %S_MSG key list. The maximum limit for index or statistics key column list is %d.	|
@@ -1006,6 +1003,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 2000 to 2999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	2002	|	16	|	No	|	Cannot create a procedure for replication with group number greater than one.	|
@@ -1288,6 +1286,7 @@ The table contains error message numbers and the description, which is the text 
 |	2597	|	10	|	No	|	Ignoring trace flag %d. It is either an invalid trace flag or a trace flag that can only be specified during server startup.	|
 |	2599	|	16	|	No	|	Cannot switch to in row text in table "%.*ls".	|
 |	2601	|	14	|	No	|	Cannot insert duplicate key row in object '%.*ls' with unique index '%.*ls'.	|
+|	2628	|	16	|	No	|	String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.|
 |	2627	|	14	|	No	|	Violation of %ls constraint '%.*ls'. Cannot insert duplicate key in object '%.*ls'.	|
 |	2701	|	10	|	No	|	Database name '%.*ls' ignored, referencing object in tempdb.	|
 |	2702	|	16	|	No	|	Database '%.*ls' does not exist.	|
@@ -1308,7 +1307,7 @@ The table contains error message numbers and the description, which is the text 
 |	2720	|	16	|	No	|	Cannot schema bind %S_MSG '%.*ls' because it references system object '%.*ls'.	|
 |	2722	|	16	|	No	|	Xml data type methods are not allowed in expressions in this context.	|
 |	2724	|	10	|	No	|	Parameter or variable '%.*ls' has an invalid data type.	|
-|	2725	|	16	|	No	|	An online operation cannot be performed for %S_MSG '%.*ls' because the index contains column '%.*ls' of data type text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, or large CLR type. For a non-clustered index, the column could be an include column of the index. For a clustered index, the column could be any column of the table. If DROP_EXISTING is used, the column could be part of a new or old index. The operation must be performed offline.	|
+|	2725	|	16	|	No	|	An online operation cannot be performed for %S_MSG '%.*ls' because the index contains column '%.*ls' of data type text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, or large CLR type. For a nonclustered index, the column could be an include column of the index. For a clustered index, the column could be any column of the table. If DROP_EXISTING is used, the column could be part of a new or old index. The operation must be performed offline.	|
 |	2726	|	16	|	No	|	Partition function '%.*ls' uses %d columns which does not match with the number of partition columns used to partition the table or index.	|
 |	2727	|	11	|	No	|	Cannot find index '%.*ls'.	|
 |	2728	|	16	|	No	|	Cannot partition on more than %d columns.	|
@@ -1373,9 +1372,11 @@ The table contains error message numbers and the description, which is the text 
 |	2812	|	16	|	No	|	Could not find stored procedure '%.*ls'.	|
 |	2813	|	16	|	No	|	%.*ls is not supported on this edition of SQL Server.	|
 |	[2814](mssqlserver-2814-database-engine-error.md)	|	10	|	No	|	A possible infinite recompile was detected for SQLHANDLE %hs, PlanHandle %hs, starting offset %d, ending offset %d. The last recompile reason was %d.	|
+|	2628	|	16	|	No	|	String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 3000 - 3999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	3002	|	16	|	No	|	Cannot BACKUP or RESTORE a database snapshot.	|
@@ -1688,7 +1689,7 @@ The table contains error message numbers and the description, which is the text 
 |	3745	|	16	|	No	|	Only a clustered index can be dropped online.	|
 |	3746	|	16	|	No	|	Cannot drop the clustered index of view '%.*ls' because the view is being used for replication.	|
 |	3747	|	16	|	No	|	Cannot drop a clustered index created on a view using drop clustered index clause. Clustered index '%.*ls' is created on view '%.*ls'.	|
-|	3748	|	16	|	No	|	Cannot drop non-clustered index '%.*ls' using drop clustered index clause.	|
+|	3748	|	16	|	No	|	Cannot drop nonclustered index '%.*ls' using drop clustered index clause.	|
 |	3749	|	16	|	No	|	Cannot drop XML Index '%.*ls' using old 'Table.Index' syntax, use 'Index ON Table' syntax instead.	|
 |	3750	|	10	|	No	|	Warning: Index '%.*ls' on %S_MSG '%.*ls' was disabled as a result of disabling the clustered index on the %S_MSG.	|
 |	3751	|	16	|	No	|	Cannot use SP_DROPEXTENDEDPROC or DBCC DROPEXTENDEDPROC with '%.*ls' because '%.*ls' is a %S_MSG. Use %ls.	|
@@ -1816,6 +1817,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 4000 to 4999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	4001	|	10	|	No	|	Client sends a sp_reset_connection while there is still pending requests, server is disconnecting.	|
@@ -2653,7 +2655,7 @@ The table contains error message numbers and the description, which is the text 
 |	5904	|	17	|	Yes	|	Unable to issue checkpoint: there are not enough locks available. Background checkpoint process will remain suspended until locks are available. To free up locks, list transactions and their locks, and terminate transactions with the highest number of locks.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-# Errors 6000 to 6999
+## Errors 6000 to 6999
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
@@ -3150,6 +3152,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 7000 to 7999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	7000	|	16	|	No	|	OPENXML document handle parameter must be of data type int.	|
@@ -3419,7 +3422,7 @@ The table contains error message numbers and the description, which is the text 
 |	7802	|	16	|	No	|	Functions that have a return type of "%.*ls" are unsupported through SOAP invocation.	|
 |	7803	|	15	|	No	|	The clause %.*ls can not be used in the %.*ls statement.	|
 |	7804	|	15	|	No	|	%.*ls and %.*ls can not share the same value.	|
-|	7805	|	16	|	No	|	The parameter SITE can not be prefixed by a scheme such as 'http://'. Valid values for SITE include {'*' | '+' | 'site_name'}.	|
+|	7805	|	16	|	No	|	The parameter SITE can not be prefixed by a scheme such as 'https://'. Valid values for SITE include {'*' | '+' | 'site_name'}.	|
 |	7806	|	16	|	No	|	The URL specified by endpoint '%.*ls' is already registered to receive requests or is reserved for use by another service.	|
 |	7807	|	16	|	No	|	An error ('0x%x') occurred while attempting to register the endpoint '%.*ls'.	|
 |	7808	|	10	|	No	|	The endpoint '%.*ls' could not be unregistered.	|
@@ -3593,6 +3596,7 @@ The table contains error message numbers and the description, which is the text 
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
 ## Errors 8000 to 8999
+
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
 |	8001	|	16	|	No	|	The incoming tabular data stream (TDS) remote procedure call (RPC) protocol stream is incorrect. Meta-information is invalid for the Sql Variant parameter.	|
@@ -3930,7 +3934,7 @@ The table contains error message numbers and the description, which is the text 
 |	8604	|	16	|	No	|	ALTER TABLE SWITCH statement failed. Table '%.*ls' has a column level check constraint '%.*ls' on column '%.*ls' that is not loadable for semantic validation.	|
 |	8605	|	10	|	No	|	Index creation operation will use %ld KB of memory specified in the advanced sp_configure option "min memory per query (KB)" instead of %lu KB specified in "index create memory (KB)" option because the former has to be smaller than the latter.	|
 |	8606	|	17	|	No	|	This index operation requires %I64d KB of memory per DOP. The total requirement of %I64d KB for DOP of %lu is greater than the sp_configure value of %lu KB set for the advanced server configuration option "index create memory (KB)". Increase this setting or reduce DOP and rerun the query.	|
-|	8607	|	16	|	No	|	The table '%.*ls' cannot be modified because one or more non-clustered indexes reside in a filegroup which is not online.	|
+|	8607	|	16	|	No	|	The table '%.*ls' cannot be modified because one or more nonclustered indexes reside in a filegroup which is not online.	|
 |	8608	|	16	|	No	|	The query could not be completed due to an online index build operation and must be recompiled.	|
 |	8616	|	10	|	No	|	The index hints for table '%.*ls' were ignored because the table was considered a fact table in the star join.	|
 |	8618	|	16	|	No	|	The query processor could not produce a query plan because a worktable is required, and its minimum row size exceeds the maximum allowable of %d bytes. A typical reason why a worktable is required is a GROUP BY or ORDER BY clause in the query. If the query has a GROUP BY or ORDER BY clause, consider reducing the number and/or size of the fields in the clause. Consider using prefix (LEFT()) or hash (CHECKSUM()) of fields for grouping or prefix for ordering. Note however that this will change the behavior of the query.	|
@@ -5353,7 +5357,7 @@ The table contains error message numbers and the description, which is the text 
 |	13409	|	10	|	No	|	Collation '%ls' will be removed in a future version of SQL Server. Avoid using this collation in new development work, and plan to modify applications that currently use it.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-# Errors 14,000 to 14,999
+## Errors 14,000 to 14,999
 
 | Error| Severity | Event Logged | Description|
 | :------ | :------| :------| :----------------------------- |
@@ -8204,7 +8208,7 @@ The table contains error message numbers and the description, which is the text 
 |	22831	|	16	|	No	|	Could not update the metadata that indicates database %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22832	|	16	|	No	|	Could not update the metadata that indicates table %s is enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22833	|	16	|	No	|	Could not update the metadata that indicates table %s is not enabled for Change Data Capture. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
-|	22834	|	16	|	No	|	Could not modify the the verbose logging status for table %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
+|	22834	|	16	|	No	|	Could not modify the verbose logging status for table %s. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22835	|	16	|	No	|	Could not update the metadata for database %s to indicate that a Change Data Capture job has been dropped. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22836	|	16	|	No	|	Could not update the metadata for database %s to indicate that a Change Data Capture job has been added. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
 |	22837	|	16	|	No	|	Could not delete table entries or drop objects associated with capture instance '%s'. The failure occurred when executing the command '%s'. The error returned was %d: '%s'. Use the action and error to determine the cause of the failure and resubmit the request.	|
@@ -9060,12 +9064,7 @@ The table contains error message numbers and the description, which is the text 
 |	[41399](mssqlserver-41399-database-engine-error.md)	|		|		|	The sort operation is too complex. Consult SQL Server Books Online for more information.	|
 |	&nbsp;	|	&nbsp;	|&nbsp;		|	&nbsp;	|
 
-
-
-
 ## See Also
-[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)  
-[Cause and Resolution of Database Engine Errors](http://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)  
 
-  
-  
+[Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)
+[Cause and Resolution of Database Engine Errors](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "10535 (Database Engine error)"
 ms.assetid: 478fd978-11d9-4155-8329-f599fdbec14b
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

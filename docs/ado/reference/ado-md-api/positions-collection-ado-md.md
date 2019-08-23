@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -17,10 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Positions collection [ADO MD]"
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Positions Collection (ADO MD)
 Contains the [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objects that define a point on an axis.  

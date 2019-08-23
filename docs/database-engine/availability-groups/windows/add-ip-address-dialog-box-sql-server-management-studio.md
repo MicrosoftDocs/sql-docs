@@ -1,20 +1,17 @@
 ---
-title: "Add IP Address Dialog Box (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "'Add IP Address' in 'New Availability Group Listener' dialog box"
+description: "Describes the options of the 'Add IP Address' dialog box found on the 'Specify Replicas' page in the SQL Server Management Studio 'Availability Group Wizard'. "
+ms.custom: "seodec18"   
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Add IP Address Dialog Box (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

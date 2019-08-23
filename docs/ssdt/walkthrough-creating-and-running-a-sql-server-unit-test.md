@@ -6,14 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Walkthrough: Creating and Running a SQL Server Unit Test
 In this walkthrough, you create a SQL Server unit test that verifies the behavior of several stored procedures. You create SQL Server unit tests to help identify code defects that might cause incorrect application behavior. You can run SQL Server unit tests and application tests as part of an automated suite of tests.  
@@ -37,7 +33,7 @@ In this walkthrough, you perform the following tasks:
 After one of the unit tests detects an error in a stored procedure, you correct that error and re-run your test.  
   
 ## Prerequisites  
-To complete this walkthrough, you must be able to connect to a database server (or LocalDB database) on which you have permissions to create and deploy a database. For more information, see [Required Permissions for Database Features of Visual Studio](http://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
+To complete this walkthrough, you must be able to connect to a database server (or LocalDB database) on which you have permissions to create and deploy a database. For more information, see [Required Permissions for Database Features of Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
 ## <a name="CreateScript"></a>Create a Script that Contains a Database Schema  
   
@@ -553,7 +549,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 4.  In the **Test Conditions** pane, click **Expected Schema** in the list, and then click **Add Test Condition**.  
   
-5.  In the **Properties** window, in the **Configuration** property, click the browse button ('**…**').  
+5.  In the **Properties** window, in the **Configuration** property, click the browse button ('**...**').  
   
 6.  In the **Configuration for expectedSchemaCondition1** dialog box, specify a connection to your database. For example, if you used the default deployment location, which is LocalDB, you would click **New Connection** specify **(LocalDB)\Projects**. Then, choose the name of the database.  
   
@@ -618,7 +614,7 @@ The tests assume that the database starts in a clean state. You will create test
   
 13. In the **Test Conditions** pane, click **Data Checksum** in the list, and then click **Add Test Condition**.  
   
-14. In the **Properties** window, in the **Configuration** property, click the browse button ('**…**').  
+14. In the **Properties** window, in the **Configuration** property, click the browse button ('**...**').  
   
 15. In the **Configuration for checksumCondition1** dialog box, specify a connection to your database.  
   
@@ -965,7 +961,7 @@ To create and verify a negative test, you must perform the following tasks:
     You specify that you expect to see a specific exception. You can optionally specify a specific error number. If you do not add this attribute, the unit test will fail, and a message appears in the Test Results window  
   
     > [!IMPORTANT]  
-    > Currently, Visual Studio 2012 does not support the ExpectedSqlException attribute. For information to work around this, see [Unable to Run "Expected Failure" Database Unit Test](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Currently, Visual Studio 2012 does not support the ExpectedSqlException attribute. For information to work around this, see [Unable to Run "Expected Failure" Database Unit Test](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test).  
   
 3.  On the File menu, click Save SqlServerUnitTests1.cs.  
   

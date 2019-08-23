@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
@@ -37,7 +34,7 @@ manager: craigg
 -   A Windows Azure storage account and a SQL Credential that stores the authentication information to the storage account should both be created before configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For more information see [Introduction to Key Components and Concepts](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic, and [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] creates the necessary containers to store the backups. The container name is created using ‘machine name-instance name’ format. For AlwaysOn Availability Groups the container is named using the GUID of the availability group.  
+    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] creates the necessary containers to store the backups. The container name is created using 'machine name-instance name' format. For AlwaysOn Availability Groups the container is named using the GUID of the availability group.  
   
 ###  <a name="Security"></a> Security  
   
@@ -97,7 +94,7 @@ manager: craigg
   
     2.  From the Standard bar, click **New Query**.  
   
-    3.  Copy and paste the following example into the query window and click `Execute`. This example enables [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the database ‘TestDB’. The retention period is set to 30 days. This sample uses the encryption option by specifying the encryption algorithm and the encryptor information.  
+    3.  Copy and paste the following example into the query window and click `Execute`. This example enables [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the database 'TestDB'. The retention period is set to 30 days. This sample uses the encryption option by specifying the encryption algorithm and the encryptor information.  
   
     ```  
     Use msdb;  
@@ -119,7 +116,7 @@ manager: craigg
     >   
     >  For more information on creating a certificate for encryption, see the Create a Backup Certificate step in [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-     For more information on this stored procedure, see [smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)  
+     For more information on this stored procedure, see [smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)  
   
      To review the configuration settings for a database use the following query:  
   
@@ -130,9 +127,9 @@ manager: craigg
     ```  
   
 ##  <a name="InstanceConfigure"></a> Enable and Configure Default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings for the Instance  
- You can enable and configure default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings at the instance level in two ways:  By using the system stored procedure `smart_backup.set_instance_backup` or **SQL Server Management Studio**. The two methods are explained below:  
+ You can enable and configure default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings at the instance level in two ways:  By using the system stored procedure `smart_admin.set_instance_backup` or **SQL Server Management Studio**. The two methods are explained below:  
   
- **smart_backup.set_instance_backup:**. By specifying the value **1** for *@enable_backup* parameter, you can enable backup and set the default configurations. Once applied at the instance level, these default settings are applied to any new database that is added to this instance.  When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time, the following information must be provided in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on the instance:  
+ **smart_admin.set_instance_backup:**. By specifying the value **1** for *@enable_backup* parameter, you can enable backup and set the default configurations. Once applied at the instance level, these default settings are applied to any new database that is added to this instance.  When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time, the following information must be provided in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on the instance:  
   
 -   The retention period.  
   
@@ -192,7 +189,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
     $encryptionOption = New-SqlBackupEncryptionOption -EncryptionAlgorithm Aes128 -EncryptorType ServerCertificate -EncryptorName "MyBackupCert"  
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –BackupEnabled $True –BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -BackupEnabled $True -BackupRetentionPeriodInDays 10 -EncryptionOption $encryptionOption  
     ```  
   
 > [!IMPORTANT]  
@@ -315,7 +312,7 @@ GO
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Set-SqlSmartAdmin –BackupEnabled $False  
+    Set-SqlSmartAdmin -BackupEnabled $False  
     ```  
   
 ##  <a name="InstancePause"></a> Pause [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the Instance Level  
@@ -345,7 +342,7 @@ Go
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –MasterSwitch $False  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $False  
     ```  
   
 #### To resume [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Using Transact-SQL  
@@ -372,7 +369,7 @@ GO
   
     ```  
     C:\ PS> cd SQLSERVER:\SQL\Computer\MyInstance   
-    Get-SqlSmartAdmin | Set-SqlSmartAdmin –MasterSwitch $True  
+    Get-SqlSmartAdmin | Set-SqlSmartAdmin -MasterSwitch $True  
     ```  
   
   

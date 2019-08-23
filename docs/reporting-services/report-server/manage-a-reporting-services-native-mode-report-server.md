@@ -1,26 +1,19 @@
 ---
 title: "Manage a Reporting Services Native Mode Report Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.prod_service: "reporting-services-native"
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services Configuration tool"
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Manage a Reporting Services Native Mode Report Server
   This section contains procedures for configuring a native mode report server instance using the Reporting Services Configuration Manager.  
@@ -32,14 +25,14 @@ manager: "kfile"
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Provides steps for starting the Reporting Services Configuration tool.  
   
- [Configure a Service Account &#40;SSRS Configuration Manager&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Explains how to specify account and password information for the Report Server service.  
   
  [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
  Explains how to manually register an SPN for a report server that runs under a domain user account on a network that uses Kerberos authentication.  
   
  [Configure a URL  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
- Explains how to establish one or more URLs used to access the Report Server Web service and Report Manager.  
+ Explains how to establish one or more URLs used to access the Report Server Web service and the web portal.  
   
  [Create a Native Mode Report Server Database  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Provides steps for creating a report server database. This step is required for deploying a Reporting Services installation.  
@@ -48,14 +41,14 @@ manager: "kfile"
  [Configure a Native Mode Report Server Scale-Out Deployment &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Provides steps for configuring multiple report servers to share a report server database.  
   
- [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [E-Mail Delivery in Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   
  Provides steps for configuring a report server for e-mail distribution.  
   
  [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
  Explains how to open ports used for inbound requests and outbound responses from a report server.  
   
  [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Describes additional steps required to connect to Report Manager or a report server using `http://localhost`.  
+ Describes additional steps required to connect to the web portal or a report server using `https://localhost`.  
   
  [Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explains how to configure a remote report server instance so that you can connect to and configure it from a different computer.  

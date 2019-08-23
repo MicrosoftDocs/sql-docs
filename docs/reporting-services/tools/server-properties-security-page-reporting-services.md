@@ -1,22 +1,15 @@
 ---
 title: "Server Properties (Security Page) - Reporting Services | Microsoft Docs"
-ms.custom: ""
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "reporting-services"
-ms.technology: 
-ms.tgt_pltfrm: ""
+ms.prod_service: "reporting-services-native"
+ms.technology: tools
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.serverproperties.security.f1"
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
-caps.latest.revision: 11
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
-ms.date: "06/10/2016"
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 06/10/2016
 ---
 
 # Server Properties (Security Page) - Reporting Services

@@ -1,13 +1,11 @@
 ---
 title: "CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/12/2017"
+ms.date: "06/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE SYMMETRIC KEY"
@@ -22,10 +20,8 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], creating"
   - "symmetric keys [SQL Server]"
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
-caps.latest.revision: 72
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## Arguments  
  *Key_name*  
- Specifies the unique name by which the symmetric key is known in the database. The names of temporary keys should begin with one number (#) sign. For example, **#temporaryKey900007**. You cannot create a symmetric key that has a name that starts with more than one #. You cannot create a temporary symmetric key using an EKM provider.  
+ Specifies the unique name by which the symmetric key is known in the database. Temporary keys are designated when the _key_name_ begins with one number (#) sign. For example, **#temporaryKey900007**. You cannot create a symmetric key that has a name that starts with more than one #. You cannot create a temporary symmetric key using an EKM provider.  
   
  AUTHORIZATION *owner_name*  
  Specifies the name of the database user or application role that will own this key.  
@@ -79,13 +75,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  This option is not available in a contained database.  
   
- KEY_SOURCE **='***pass_phrase***'**  
+ KEY_SOURCE **='**_pass\_phrase_**'**  
  Specifies a pass phrase from which to derive the key.  
   
- IDENTITY_VALUE **='***identity_phrase***'**  
+ IDENTITY_VALUE **='**_identity\_phrase_**'**  
  Specifies an identity phrase from which to generate a GUID for tagging data that is encrypted with a temporary key.  
   
- PROVIDER_KEY_NAME**='***key_name_in_provider***'**  
+ PROVIDER_KEY_NAME**='**_key\_name\_in\_provider_**'**  
  Specifies the name referenced in the Extensible Key Management provider.  
   
 > [!NOTE]  

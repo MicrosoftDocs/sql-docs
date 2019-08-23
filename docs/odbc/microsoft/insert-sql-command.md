@@ -5,17 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "INSERT [ODBC]"
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # INSERT - SQL Command
 Appends a record to the end of a table that contains the specified field values.  
@@ -27,7 +23,7 @@ Appends a record to the end of a table that contains the specified field values.
 ```  
   
 INSERT INTO dbf_name [(fname1 [, fname2, ...])]  
-   VALUES (eExpression1 [, eExpression2, ...])  
+   VALUES (eExpression1 [, eExpression2, ...])  
 ```  
   
 ## Arguments  

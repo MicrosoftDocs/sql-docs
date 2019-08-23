@@ -6,18 +6,14 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.design.table.columnspecification.index.dialog"
   - "sql.data.tools.design.table.columnsgrid.view"
   - "sql.data.tools.design.table.scriptpanel"
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Use the Table Designer to Manage Tables and Relationships
 The Table Designer provides a visual experience alongside the Transact\-SQL Editor for creating and editing table structure, including table-specific programming objects, for SQL Server databases.  It is launched when you create a new table for a connected database or a project, or when you double-click to edit a table in either SQL Server Object Explorer or Solution Explorer.  

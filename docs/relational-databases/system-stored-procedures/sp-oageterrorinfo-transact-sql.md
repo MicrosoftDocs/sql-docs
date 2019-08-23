@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_OAGetErrorInfo_TSQL"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAGetErrorInfo"
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +40,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Is either the object token of an OLE object that was previously created by using **sp_OACreate** or it is NULL. If *objecttoken* is specified, error information for that object is returned. If NULL is specified, the error information for the entire batch is returned.  
   
- *source* **OUTPUT**  
+ _source_ **OUTPUT**  
  Is the source of the error information. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *description* **OUTPUT**  
+ _description_ **OUTPUT**  
  Is the description of the error. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *helpfile* **OUTPUT**  
+ _helpfile_ **OUTPUT**  
  Is the help file for the OLE object. If specified, it must be a local **char**, **nchar**, **varchar**, or **nvarchar** variable. The return value is truncated to fit the local variable if necessary.  
   
- *helpid* **OUTPUT**  
+ _helpid_ **OUTPUT**  
  Is the help file context ID. If specified, it must be a local **int** variable.  
   
 > [!NOTE]  
@@ -94,7 +89,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  For more information about processing HRESULT Return Codes, see [OLE Automation Return Codes and Error Information](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
  The following example displays OLE Automation error information.  

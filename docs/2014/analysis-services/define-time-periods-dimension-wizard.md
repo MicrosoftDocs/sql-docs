@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.timefrequency.f1"
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -2,7 +2,6 @@
 title: Configure SCOM to monitor Analytics Platform System | Microsoft Docs
 description: Follow these steps to configure the System Center Operations Manager (SCOM) management packs for Analytics Platform System. The Management Packs are required to monitor Analytics Platform System from SCOM. 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -32,13 +31,13 @@ Here are detailed instructions on how to do the tasks:
   
 1.  Create the **APS Watcher** Run As account with **Windows** account type for the **APS Watcher** domain user.  
   
-    1.  Navigate to the **Administration** pane, right-click on **Run As Configuration** -> **Accounts** and select **Create Run As Account…**  
+    1.  Navigate to the **Administration** pane, right-click on **Run As Configuration** -> **Accounts** and select **Create Run As Account...**  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
     2.  The **Create Run As Account Wizard** dialog will open. On the **Introduction** page, click **Next**.  
   
-    3.  On the **General Properties** page, select **Windows** from **Run As Account type** and specify “APS Watcher” as the **Display name**.  
+    3.  On the **General Properties** page, select **Windows** from **Run As Account type** and specify "APS Watcher" as the **Display name**.  
   
         ![CreateRunAsAccountWizardGeneralProperties](./media/configure-scom-to-monitor-analytics-platform-system/CreateRunAsAccountWizardGeneralProperties.png "CreateRunAsAccountWizardGeneralProperties")  
   
@@ -69,7 +68,7 @@ Here are detailed instructions on how to do the tasks:
   
     4.  On the **General Properties** page, click **Next**.  
   
-    5.  On the **Run As Accounts** page, click the **Add…** button and select the previously created **APS Watcher** Run As account.  
+    5.  On the **Run As Accounts** page, click the **Add...** button and select the previously created **APS Watcher** Run As account.  
   
         ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
   
@@ -102,7 +101,7 @@ Here are detailed instructions on how to do the tasks:
   
     1.  Navigate to the **Microsoft APS Action Account** properties as described in step 2.  
   
-    2.  On the **Run As Accounts** page, click **Add…** and 
+    2.  On the **Run As Accounts** page, click **Add...** and 
     3.  select the newly created Run As account.  
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  

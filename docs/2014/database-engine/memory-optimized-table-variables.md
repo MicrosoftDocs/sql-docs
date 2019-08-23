@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "07/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -37,7 +34,7 @@ manager: craigg
   
  The following sample shows a memory-optimized table type from the AdventureWorks-based In-Memory OLTP sample ([SQL Server 2014 In-Memory OLTP Sample](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
-```tsql
+```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
    AS TABLE
 (
@@ -78,7 +75,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
 ## Table-Valued Parameters  
  The following sample script shows the declaration of a table variable as the memory-optimized table type `Sales.SalesOrderDetailType_inmem`, the insert of three rows into the variable, and passing the variable as a TVP into `Sales.usp_InsertSalesOrder_inmem`.  
   
-```tsql  
+```sql  
 DECLARE @od Sales.SalesOrderDetailType_inmem,  
   @SalesOrderID uniqueidentifier,  
   @DueDate datetime2 = SYSDATETIME()  
@@ -100,7 +97,7 @@ EXEC Sales.usp_InsertSalesOrder_inmem
 ## #temp Table Replacement  
  The following sample shows memory-optimized table types and table variables as a replacement for #temp tables that are local to a stored procedure.  
   
-```tsql  
+```sql  
 -- Using SQL procedure and temp table  
 CREATE TABLE #tempTable (c INT NOT NULL PRIMARY KEY NONCLUSTERED)  
   
@@ -136,7 +133,7 @@ GO
 ## Creating a Single Result Set  
  The following sample shows how to store intermediate results and create single result sets based on multiple queries in natively compiled stored procedures. The sample is computing the union `SELECT c1 FROM dbo.t1 UNION SELECT c1 FROM dbo.t2`.  
   
-```tsql  
+```sql  
 CREATE DATABASE hk  
 GO  
 ALTER DATABASE hk ADD FILEGROUP hk_mod CONTAINS MEMORY_OPTIMIZED_DATA  

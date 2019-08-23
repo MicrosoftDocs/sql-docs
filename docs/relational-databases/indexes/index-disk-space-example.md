@@ -5,9 +5,7 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "online index disk space"
@@ -17,10 +15,8 @@ helpviewer_keywords:
   - "indexes [SQL Server], disk space requirements"
   - "offline index disk space [SQL Server]"
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Index Disk Space Example
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,16 +56,18 @@ manager: craigg
   
      Clustered index: 1 million * 200 bytes / 80% ~ 250 MB  
   
-     Nonclustered index A: 1 million * (50 – 8 + 24) bytes / 80% ~ 83 MB  
+     Nonclustered index A: 1 million * (50 - 8 + 24) bytes / 80% ~ 83 MB  
   
-     Nonclustered index B: 1 million * (80 – 8 + 24) bytes / 80% ~ 120 MB  
+     Nonclustered index B: 1 million * (80 - 8 + 24) bytes / 80% ~ 120 MB  
   
      Total size of new structures: 453 MB  
   
      Total disk space required to support both the source and target structures for the duration of the index operation is 816 MB (363 + 453). The space currently allocated to the source structures will be deallocated after the index operation is committed.  
   
 3.  Determine additional temporary disk space for sorting.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
   
     1.  When SORT_IN_TEMPDB is set to ON, **tempdb** must have sufficient disk space to hold the largest index (1 million * 200 bytes ~ 200 MB). Fill factor is not considered in the sorting operation.  

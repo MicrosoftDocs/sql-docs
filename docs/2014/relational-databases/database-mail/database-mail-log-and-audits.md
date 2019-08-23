@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "auditing [SQL Server]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "audits [SQL Server], Database Mail"
   - "Database Mail [SQL Server], logging"
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg

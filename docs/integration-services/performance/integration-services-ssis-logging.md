@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.configuredtslogs.containers.f1"
@@ -29,12 +27,14 @@ helpviewer_keywords:
   - "Text File log provider"
   - "SQL Server log provider"
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Integration Services (SSIS) Logging
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes log providers that you can use to implement logging in packages, containers, and tasks. With logging, you can capture run-time information about a package, helping you audit and troubleshoot a package every time it is run. For example, a log can capture the name of the operator who ran the package and the time the package began and finished.  
   
  You can configure the scope of logging that occurs during a package execution on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information, see [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
@@ -206,7 +206,7 @@ manager: craigg
   
 -   The Derived Column transformation that is named "Calculate LineItemTotalCost" spent 356 ms. performing calculations on incoming rows.  
   
--   The Aggregate transformation that is named "Sum Quantity and LineItemTotalCost" spent a combined 220 ms—141 in PrimeOutput and 79 in ProcessInput—performing calculations and passing the data to the next transformation.  
+-   The Aggregate transformation that is named "Sum Quantity and LineItemTotalCost" spent a combined 220 ms-141 in PrimeOutput and 79 in ProcessInput-performing calculations and passing the data to the next transformation.  
 
 ## <a name="ssdt"></a> Enable Package Logging in SQL Server Data Tools
   This procedure describes how to add logs to a package, configure package-level logging, and save the logging configuration to an XML file. You can add logs only at the package level, but the package does not have to perform logging to enable logging in the containers that the package includes.  
@@ -676,4 +676,4 @@ SQL Server Integration Services provides a rich set of custom events for writing
 -   [Events Logged by an Integration Services Package](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## Related Content  
- [DTLoggedExec Tool for Full and Detail Logging (CodePlex Project)](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [DTLoggedExec Tool for Full and Detail Logging (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=150579)  

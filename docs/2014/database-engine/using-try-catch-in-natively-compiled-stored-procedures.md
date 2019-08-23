@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -29,7 +26,7 @@ manager: craigg
   
 -   ERROR_STATE  
   
-```tsql  
+```sql  
 CREATE PROCEDURE test_try_catch  
 with native_compilation, schemabinding, execute as owner   
 as  

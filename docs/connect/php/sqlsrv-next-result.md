@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_next_result"
@@ -18,10 +16,8 @@ helpviewer_keywords:
   - "stored procedure support"
   - "API Reference, sqlsrv_next_result"
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

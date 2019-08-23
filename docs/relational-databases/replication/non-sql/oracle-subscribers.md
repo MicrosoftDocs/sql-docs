@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [SQL Server replication], non-SQL Server Subscribers"
@@ -17,10 +14,8 @@ helpviewer_keywords:
   - "heterogeneous Subscribers, Oracle"
   - "mapping data types [SQL Server replication]"
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Oracle Subscribers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +44,9 @@ manager: craigg
     |Specify the host information to identify the database listener|The host is the name or DNS alias of the computer on which the Oracle listener is running, which is typically the same computer on which the database resides. For some protocols, you must provide additional information. For example, if you select TCP, you must supply the port on which the listener is listening for connection requests to the target database. The default TCP configuration uses port 1521.|  
   
 3.  Create a snapshot or transactional publication, enable it for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers, and then create a push subscription for the Subscriber. For more information, see [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### Setting directory permissions  
  The account under which the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service on the Distributor runs must be granted read and execute permissions for the directory (and all subdirectories) where the Oracle client networking software is installed.  
   
@@ -85,7 +82,7 @@ manager: craigg
   
     -   Ensure that empty strings are not inserted into the published table as column values.  
   
-    -   Use the **–SkipErrors** parameter for the Distribution Agent if it is acceptable to be notified of failures in the Distribution Agent history log and to continue processing. Specify the Oracle error code 1400 (**-SkipErrors1400**).  
+    -   Use the **-SkipErrors** parameter for the Distribution Agent if it is acceptable to be notified of failures in the Distribution Agent history log and to continue processing. Specify the Oracle error code 1400 (**-SkipErrors1400**).  
   
     -   Modify the generated create table script, removing the NOT NULL attribute from any character columns that may have associated empty strings, and supply the modified script as a custom create script for the article using the @creation_script parameter of [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   

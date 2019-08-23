@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "CreateIndex function"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "indexes [OLE DB]"
   - "adding indexes"
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg

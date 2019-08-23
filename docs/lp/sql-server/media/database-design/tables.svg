@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 298 110">
+  <defs>
+    <symbol id="IZ_Table" data-name="IZ_Table" viewBox="0 0 50 42.6">
+      <path d="M0,40.7a1.837,1.837,0,0,0,1.9,1.9H48.1A1.837,1.837,0,0,0,50,40.7V7.6H0Z" fill="#a0a1a2"/>
+      <path d="M48.1,0H1.9A1.837,1.837,0,0,0,0,1.9V7.6H50V1.9A1.837,1.837,0,0,0,48.1,0" fill="#7a7a7a"/>
+      <rect x="18.8" y="10.9" width="12.6" height="7.6" fill="#fff"/>
+      <rect x="18.8" y="21.2" width="12.6" height="7.6" fill="#fcd116"/>
+      <rect x="33.8" y="21.2" width="12.6" height="7.6" fill="#fcd116"/>
+      <rect x="33.8" y="10.9" width="12.6" height="7.6" fill="#fff"/>
+      <rect x="3.8" y="10.9" width="12.6" height="7.6" fill="#fff"/>
+      <rect x="3.8" y="21.2" width="12.6" height="7.6" fill="#fff"/>
+      <rect x="3.8" y="31.4" width="12.6" height="7.6" fill="#fcd116"/>
+      <rect x="18.8" y="31.4" width="12.6" height="7.6" fill="#fcd116"/>
+      <rect x="33.8" y="31.4" width="12.6" height="7.6" fill="#fcd116"/>
+      <path d="M1.9,0A2.043,2.043,0,0,0,0,1.9V40.7a2.043,2.043,0,0,0,1.9,1.9H4L43.6,0Z" fill="#fff" opacity="0.2" style="isolation: isolate"/>
+    </symbol>
+  </defs>
+  <title>2 - tables</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <use width="50" height="42.6" transform="translate(102.606 15.453) scale(1.878)" xlink:href="#IZ_Table"/>
+  </g>
+</svg>

@@ -1,19 +1,15 @@
 ---
 title: "Back up Multiple Databases to Azure Blob Storage - PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/20/2016"
+ms.date: "05/21/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Back up Multiple Databases to Azure Blob Storage - PowerShell
 
@@ -30,7 +26,7 @@ In addition, there are other cmdlets that may be required to automate backups to
 For a list of all available cmdlets, see [SqlServer cmdlets](/powershell/module/sqlserver).
   
 > [!TIP]  
-> The **SqlCredential** cmdlets are used in Backup and Restore to Windows Azure Blob storage scenarios. For more information on credentials and their use, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
+> The **SqlCredential** cmdlets are used in Backup and Restore to Azure Blob storage scenarios. For more information on credentials and their use, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
   
 ### PowerShell for Multi-Database, Multi-Instance Backup Operations
 

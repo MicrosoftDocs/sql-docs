@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpdevice"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpdevice"
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +36,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@devname =** ] **'***name***'**  
+`[ @devname = ] 'name'`
  Is the name of the backup device for which information is reported. The value of *name* is always **sysname**.  
   
 ## Return Code Values  

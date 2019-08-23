@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: native-client
-ms.tgt_pltfrm: ""
+ms.technology: 
 ms.topic: "reference"
 helpviewer_keywords: 
   - "date/time [OLE DB]"
   - "OLE DB, date/time improvements"
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg

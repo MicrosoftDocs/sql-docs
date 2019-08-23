@@ -1,21 +1,17 @@
 ---
-title: "Using SSL Encryption | Microsoft Docs"
+title: "Using SSL encryption | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
-# Using SSL Encryption
+# Using SSL encryption
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -32,14 +28,14 @@ The topics in this section describe how the [!INCLUDE[jdbcNoVersion](../../inclu
 > [!NOTE]  
 > The **hostNameInCertificate** connection property is recommended to validate an SSL certificate.  
 
-## In This Section  
+## In this section  
 
 | Topic                                                                                                        | Description                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Understanding SSL Support](../../connect/jdbc/understanding-ssl-support.md)                                 | Describes how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports SSL encryption.                                              |
-| [Connecting with SSL Encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Describes how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using the new SSL specific connection properties. |
-| [Configuring the Client for SSL Encryption](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Describes how to configure the default trust store at the client-side and how to import a private certificate to the client computer's trust store.   |
+| [Understanding SSL support](../../connect/jdbc/understanding-ssl-support.md)                                 | Describes how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supports SSL encryption.                                              |
+| [Connecting with SSL encryption](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Describes how to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database by using the new SSL specific connection properties. |
+| [Configuring the client for SSL encryption](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Describes how to configure the default trust store at the client-side and how to import a private certificate to the client computer's trust store.   |
   
-## See Also
+## See also
 
-[Securing JDBC Driver Applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Securing JDBC driver applications](../../connect/jdbc/securing-jdbc-driver-applications.md)  

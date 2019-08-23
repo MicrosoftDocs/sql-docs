@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dimprocessingtransformation.advanced.f1"
 helpviewer_keywords: 
   - "Dimension Processing Destination Editor"
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
-caps.latest.revision: 27
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Dimension Processing Destination Editor (Advanced Page)
@@ -90,7 +86,7 @@ manager: craigg
 |**ReportAndStop**|Report the error and stop processing.|  
   
  **Error log path**  
- Type the path of the error log, or click the **browse(…)** button to select a destination.  
+ Type the path of the error log, or click the **browse(...)** button to select a destination.  
   
  **Browse (...)**  
  Select a path for the error log.  

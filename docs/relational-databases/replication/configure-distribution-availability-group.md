@@ -1,12 +1,10 @@
 ---
 title: "Configure SQL Server distribution database in availability group | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/23/2018"
+ms.date: "01/16/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication [SQL Server], distribution"
@@ -19,19 +17,20 @@ helpviewer_keywords:
   - "distribution databases [SQL Server replication]"
   - "merge replication [SQL Server replication], configuring distribution"
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Set up replication distribution database in Always On availability group
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article explains how to set up a SQL Server replication distribution databases in an Always On availability group (AG).
 
-SQL Server 2017 CU 6 introduces support for replication distribution database in an AG through the following mechanisms:
+SQL Server 2017 CU6 and SQL Server 2016 SP2-CU3 introduces support for replication distribution database in an AG through the following mechanisms:
 
 - The distribution database AG needs to have a listener. When the publisher adds the distributor, it uses the listener name as the distributor name.
-- The replication jobs are created with the listener name as the distributor name.
+- The replication jobs are created with the listener name as the distributor name. Replication snapshot, log reader and distribution agent (push subscription) jobs created on the distribution server gets created on all secondary replicas of the AG for Distribution DB.
+ >[!NOTE]
+ >Distribution agent jobs for pull susbcriptions are created on the subscriber server and not on the distribution server. 
 - A new job monitors the state (primary or secondary in AG) of the distribution databases and disables or enables the replication jobs based on the distribution databases state.
 
 After a distribution database in the AG is configured based on the steps described below, replication configuration and run time jobs can run properly before and after distribution database AG failover.
@@ -45,6 +44,7 @@ After a distribution database in the AG is configured based on the steps describ
 - Adding or removing nodes to existing distribution database AG.
 - A distributor may have multiple distribution databases. Each distribution database can be in its own AG and can be not in any AG. Multiple distribution databases can share an AG.
 - Publisher and distributor need to be on separate SQL Server instances.
+- If the listener for the availability group hosting the distribution database is configured to use a non-default port, then its required to setup an alias for the listener and the non-default port.
 
 ## Limitations or exclusions
 
@@ -60,6 +60,7 @@ After a distribution database in the AG is configured based on the steps describ
 - The distribution database AG must have a listener configured.
 - Secondary replicas in a distribution database AG can be synchronous or asynchronous. Synchronous mode is recommended and preferred.
 - Bidirectional transactional replication is not supported.
+- SSMS does not show Distribution Database as synchronizing/synchronized, when distribution database is added to an availability group.
 
 
    >[!NOTE]
@@ -109,6 +110,8 @@ This example configures a new distributor and publisher and puts the distributio
    The value of `@working_directory` should be a network path independent of DIST1, DIST2, and DIST3.
 
 1. On DIST2 and DIST3, run:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
@@ -187,13 +190,15 @@ This example adds a new distributor to an existing replication configuration wit
    sp_adddistributiondb 'distribution'
    ```
 
-1. On DIST3, run: 
+4. On DIST3, run: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    The value of `@working_directory` should be the same as what was specified for DIST1 and DIST2.
+
+4. On DIST3, you must recreate Linked Servers to the subscribers.
 
 ## Remove a replica from distribution database AG
 
@@ -229,7 +234,7 @@ This example removes a distributor from a current distribution database AG while
 
 ## Remove a publisher from distribution database AG
 
-This example removes a publisher from a distributor’s current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
+This example removes a publisher from a distributor's current distribution database AG while the rest of the publishers served by this distribution database AG are not affected. In this example, an existing configuration has distribution database in an AG. DIST1, DIST2, and DIST3 are the distributors, `distribution` is the distribution database in AG, and PUB1 and PUB2 are the publishers served by `distribution` database. The example removes PUB1 from these distributors.
 
 ### Publisher workflow
 
@@ -386,9 +391,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
- /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+ /* For security reasons the linked server remote logins password is changed with ######## */
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## See Also  

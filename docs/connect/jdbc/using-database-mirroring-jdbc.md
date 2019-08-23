@@ -1,22 +1,18 @@
 ---
-title: "Using Database Mirroring (JDBC) | Microsoft Docs"
+title: "Using database mirroring (JDBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Using Database Mirroring (JDBC)
+# Using database mirroring (JDBC)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -32,14 +28,14 @@ In the case where the Partner_A server is irreparably damaged, a Partner_C serve
 
 Alternative database mirroring configurations offer different levels of performance and data safety, and support different forms of failover. For more information, see "Overview of Database Mirroring" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.
 
-## Programming Considerations
+## Programming considerations
 
 When the principal database server fails, the client application receives errors in response to API calls, which indicate that the connection to the database has been lost. When this occurs, any uncommitted changes to the database are lost and the current transaction is rolled back. If this occurs, the application should close the connection (or release the data source object) and try to reopen it. On connection, the new connection is transparently redirected to the mirror database, which now acts as the principal server, without the client having to modify the connection string or data source object.
 
 When a connection is initially established, the principal server sends the identity of its failover partner to the client that will be used when failover occurs. When an application tries to establish an initial connection with a failed principal server, the client doesn't know the identity of the failover partner. To allow clients the opportunity to cope with this scenario, the failoverPartner connection string property, and optionally the [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) data source method, allows the client to specify the identity of the failover partner on its own. The client property is used only in this scenario; if the principal server is available, it isn't used.
 
 > [!NOTE]  
-> When a failoverPartner is specified in either the connection string or with a data source object, the databaseName property must also be set or else an exception will be thrown. If the failoverPartner and databaseName are not specified explicitly, the application will not attempt to failover when the principal database server fails. In other words, the transparent redirection only works for connections that explicitly specify the failoverPartner and databaseName. For more information about failoverPartner and other connection string properties, see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).
+> When a failoverPartner is specified in either the connection string or with a data source object, the databaseName property must also be set or else an exception will be thrown. If the failoverPartner and databaseName are not specified explicitly, the application will not attempt to failover when the principal database server fails. In other words, the transparent redirection only works for connections that explicitly specify the failoverPartner and databaseName. For more information about failoverPartner and other connection string properties, see [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md).
 
 If the failover partner server supplied by the client doesn't refer to a server acting as a failover partner for the specified database, and if the server/database referred to is in a mirroring arrangement, the connection is refused by the server. Although the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) class provides the [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md) method, this method only returns the name of the failover partner specified in the connection string or the setFailoverPartner method. To retrieve the name of the actual failover partner that is currently being used, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement:
 
@@ -107,6 +103,6 @@ public class ClientFailover {
 }
 ```
 
-## See Also
+## See also
 
-[Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

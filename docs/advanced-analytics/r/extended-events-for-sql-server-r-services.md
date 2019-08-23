@@ -1,26 +1,26 @@
 ---
-title: Extended events for SQL Server Machine Learning Services | Microsoft Docs
+title: Extended events for monitoring R and Python processes
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 04/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Extended events for SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server provides a set of extended events to use in troubleshooting operations related to the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], as well as Python or R jobs sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-**Applies to:**  SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**Applies to:**  SQL Server 2016 R Services, SQL Server Machine Learning Services
 
 ## SQL Server events for machine learning
 
 To view a list of events related to SQL Server, run the following query from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-```SQL
+```sql
 SELECT o.name AS event_name, o.description
 FROM sys.dm_xe_objects o
 JOIN sys.dm_xe_packages p
@@ -93,7 +93,7 @@ SQL Server Machine Learning Services starts some services that run outside of th
 
     **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
-The configuration file must be named the same as the executable, using the format “[name].xevents.xml”. In other words, the files must be named as follows:
+The configuration file must be named the same as the executable, using the format "[name].xevents.xml". In other words, the files must be named as follows:
 
 + `Launchpad.xevents.xml`
 + `bxlserver.xevents.xml`

@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.browsecube.securitycontext.f1"
 ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg

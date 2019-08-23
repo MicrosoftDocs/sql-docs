@@ -1,13 +1,11 @@
 ---
 title: "SET FMTONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "FMTONLY_TSQL"
@@ -21,20 +19,24 @@ helpviewer_keywords:
   - "SET FMTONLY statement"
   - "FMTONLY option"
 ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
-caps.latest.revision: 48
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET FMTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/tsql-appliesto-ss-all-md.md)]
 
   Returns only metadata to the client. Can be used to test the format of the response without actually running the query.  
-  
-> [!NOTE]  
->  Do not use this feature. This feature has been replaced by [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), and [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md).  
-  
+
+> [!NOTE]
+> Do not use this feature. This feature has been replaced by the following items:
+>
+> - [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
+> - [sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -42,50 +44,104 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```  
 SET FMTONLY { ON | OFF }   
 ```  
-  
-## Remarks  
- No rows are processed or sent to the client because of the request when SET FMTONLY is turned ON.  
-  
- The setting of SET FMTONLY is set at execute or run time and not at parse time.  
-  
+
+## Remarks
+
+When `FMTONLY` is `ON`, a rowset is returned with the column names, but without any data rows.
+
+`SET FMTONLY ON` has no effect when the Transact-SQL batch is parsed. The effect occurs during execution run time.
+
+The default value is `OFF`.
+
 ## Permissions  
  Requires membership in the public role.  
-  
-## Examples  
-  
-### A: View the column header information for a query without actually running the query.  
- The following example changes the `SET FMTONLY` setting to `ON` and executes a `SELECT` statement. The setting causes the statement to return the column information only; no rows of data are returned.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SET FMTONLY ON;  
-GO  
-SELECT *   
-FROM HumanResources.Employee;  
-GO  
-SET FMTONLY OFF;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### B. View the column header information for a query without actually running the query.  
- The following example shows how to return only the column header (metadata) information for a query. The batch begins with FMTONLY set to OFF and changes FMTONLY to ON before the SELECT statement. This causes the SELECT statement to return only the column headers; no rows of data are returned.  
-  
-```  
--- Uses AdventureWorks  
-  
-BEGIN  
-    SET FMTONLY OFF;  
-    SET DATEFORMAT mdy;  
-    SET FMTONLY ON;  
-    SELECT * FROM dbo.DimCustomer;  
-    SET FMTONLY OFF;  
-END  
-  
-```  
-  
+
+## Examples
+
+The following Transact-SQL code example sets `FMTONLY` to `ON`. This setting causes SQL Server to return only metadata information about the selected columns. Specifically, the column names are returned. No data rows are returned.
+
+In the example, the test execution of stored procedure `prc_gm29` returns the following:
+
+- Multiple rowsets.
+- Columns from multiple tables, in one of its `SELECT` statements.
+
+<!--
+Issue 2246 inspired this code example, and the replacement of the two pre-existing examples. 2019/June/03, GM.
+-->
+
+```sql
+go
+SET NoCount ON;
+
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+CREATE TABLE #tabTemp41
+(
+   KeyInt41        int           not null,
+   Name41          nvarchar(16)  not null,
+   TargetDateTime  datetime      not null  default GetDate()
+);
+
+CREATE TABLE #tabTemp42
+(
+   KeyInt42 int          not null,   -- JOIN-able to KeyInt41.
+   Name42   nvarchar(16) not null
+);
+go
+
+INSERT into #tabTemp41 (KeyInt41, Name41) values (10, 't41-c');
+INSERT into #tabTemp42 (KeyInt42, Name42) values (10, 't42-p');
+go
+
+CREATE PROCEDURE prc_gm29
+AS
+begin
+SELECT * from #tabTemp41;
+SELECT * from #tabTemp42;
+
+SELECT t41.KeyInt41, t41.TargetDateTime, t41.Name41, t42.Name42
+   from
+                 #tabTemp41 as t41
+      INNER JOIN #tabTemp42 as t42 on t42.KeyInt42 = t41.KeyInt41
+end;
+go
+
+SET DATEFORMAT mdy;
+
+SET FMTONLY ON;
+EXECUTE prc_gm29;   -- Returns multiple tables.
+SET FMTONLY OFF;
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+/****  Actual Output:
+[C:\JunkM\]
+>> osql.exe -S myazuresqldb.database.windows.net -U somebody -P secret -d MyDatabase -i C:\JunkM\Issue-2246-a.SQL 
+
+ KeyInt41    Name41           TargetDateTime
+ ----------- ---------------- -----------------------
+
+ KeyInt42    Name42
+ ----------- ----------------
+
+ KeyInt41    TargetDateTime          Name41           Name42
+ ----------- ----------------------- ---------------- ----------------
+
+
+[C:\JunkM\]
+>>
+****/
+```
+
 ## See Also  
  [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

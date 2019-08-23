@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "10/04/2016"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "identities [SQL Server replication]"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "transactional replication, identity range management"
   - "identity columns [SQL Server], replication"
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
-caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -96,7 +92,7 @@ manager: craigg
  For example, you could specify 10000 for **@pub_identity_range**, 1000 for **@identity_range** (assuming fewer updates at the Subscriber), and 80 percent for **@threshold**. After 800 inserts at a Subscriber (80 percent of 1000), a Subscriber is assigned a new range. After 8000 inserts at the Publisher, the Publisher is assigned a new range. When a new range is assigned, there will be a gap in the identity range values in the table. Specifying a higher threshold results in smaller gaps, but the system is less fault-tolerant: if the Distribution Agent cannot run for some reason, a Subscriber could more easily run out of identities.  
   
 ## Assigning ranges for manual identity range management  
- If you specify manual identity range management, you must ensure that the Publisher and each Subscriber use different identity ranges. For example, consider a table at the Publisher with an identity column defined as `IDENTITY(1,1)`: the identity column starts at 1 and is incremented by 1 each time a row is inserted. If the table at the Publisher has 5,000 rows, and you expect some growth in the table over the life of the application, the Publisher could use the range 1-10,000. Given two Subscribers, Subscriber A could use 10,001–20,000, and Subscriber B could use 20,001-30,000.  
+ If you specify manual identity range management, you must ensure that the Publisher and each Subscriber use different identity ranges. For example, consider a table at the Publisher with an identity column defined as `IDENTITY(1,1)`: the identity column starts at 1 and is incremented by 1 each time a row is inserted. If the table at the Publisher has 5,000 rows, and you expect some growth in the table over the life of the application, the Publisher could use the range 1-10,000. Given two Subscribers, Subscriber A could use 10,001-20,000, and Subscriber B could use 20,001-30,000.  
   
  After a Subscriber is initialized with a snapshot or through another means, execute DBCC CHECKIDENT to assign the Subscriber a starting point for its identity range. For example, at Subscriber A, you would execute `DBCC CHECKIDENT('<TableName>','reseed',10001)`. At Subscriber B, you would execute `CHECKIDENT('<TableName>','reseed',20001)`.  
   

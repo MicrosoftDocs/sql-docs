@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbconnection.f1"
 helpviewer_keywords: 
   - "Configure OLE DB Connection Manager dialog box"
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
-caps.latest.revision: 20
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure OLE DB Connection Manager

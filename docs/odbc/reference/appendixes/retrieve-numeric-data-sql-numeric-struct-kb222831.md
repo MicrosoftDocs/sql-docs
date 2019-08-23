@@ -1,20 +1,15 @@
 ---
 title: "Retrieve numeric data with SQL_NUMERIC_STRUCT | Microsoft Docs" 
 description: "C/C++ using ODBC retrieves the SQL Server numeric data type by using SQL_NUMERIC_STRUCT, related to SQL_C_NUMERIC."
-documentationCenter: ""
-authors: "MightyPen"
-manager: craigg
 editor: ""
 ms.prod: sql
-ms.prod_service: connectivity
-ms.suite: "sql"
-ms.technology: "dbe-data-tier-apps"
-ms.devlang: "C++"
+ms.technology:
+ms.devlang: cpp
 ms.topic: conceptual
 ms.custom: ""
-ms.tgt_pltfrm: "NA"
 ms.date: "07/13/2017"
 ms.author: genemi
+author: MightyPen
 ---
 # Retrieve numeric data with SQL\_NUMERIC\_STRUCT
 
@@ -33,7 +28,7 @@ The article [C Data Types](c-data-types.md) provides more information about the 
 The SQL\_NUMERIC\_STRUCT is defined in the sqltypes.h header file as follows:
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -62,7 +57,7 @@ This code sample shows you how to:
 >
 > Microsoft provides these code samples "as is" without warranty of any kind, either expressed or implied, including but not limited to the implied warranties of merchantability and/or fitness for a particular purpose.
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -215,7 +210,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### Interim results:
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -238,7 +233,7 @@ Now the challenge is to construct the scaled integer out of this string array. E
 Code that implements the conversion from little endian mode to the scaled integer. It is up to the application developer to implement this functionality. The following code example is just one of the many possible ways.
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -281,7 +276,7 @@ The following sample program illustrates the use of SQL\_C\_NUMERIC, by insertin
 The ODBC driver you use to run this program must support ODBC 3.0 functionality.
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>
@@ -370,14 +365,14 @@ void main() {
 <!--
 GeneMi historical notes, 2017/July/12. Per Jason.C
 
-http://go.microsoft.com/fwlink/?LinkId=147596
+https://go.microsoft.com/fwlink/?LinkId=147596
 
-https://support.microsoft.com/en-us/help/222831
+https://support.microsoft.com/help/222831
 
-http://web.archive.org/web/20140319133434/http:/support.microsoft.com:80/kb/222831
+https://web.archive.org/web/20140319133434/http:/support.microsoft.com:80/kb/222831
 
-http://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/181254
+https://web.archive.org/web/20080505073901/http:/support.microsoft.com:80/kb/181254
 
-https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/c-data-types
+https://docs.microsoft.com/sql/odbc/reference/appendixes/c-data-types
 -->
 

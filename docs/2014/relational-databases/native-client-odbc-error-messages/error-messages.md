@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: native-client
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client ODBC driver, errors"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "ODBC error handling, message types"
   - "errors [ODBC], types"
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg

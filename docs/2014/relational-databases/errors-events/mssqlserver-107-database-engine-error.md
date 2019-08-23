@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "107 (Database Engine error)"
 ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

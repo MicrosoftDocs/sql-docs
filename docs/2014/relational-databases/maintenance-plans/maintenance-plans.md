@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.AG.MAINTPLAN.LEGACY.F1"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "maintenance plans [SQL Server], database compatibility level displayed in designer"
   - "maintenance plans [SQL Server]"
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

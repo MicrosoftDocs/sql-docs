@@ -5,17 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Lock Pages in Memory option"
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Enable the Lock Pages in Memory Option (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ manager: craigg
   
 5.  In the pane, double-click **Lock pages in memory**.  
   
-6.  In the **Local Security Setting – Lock pages in memory** dialog box, click **Add User or Group**.  
+6.  In the **Local Security Setting - Lock pages in memory** dialog box, click **Add User or Group**.  
   
 7.  In the **Select Users, Service Accounts, or Groups** dialog box, select the SQL Server Service account.  
   

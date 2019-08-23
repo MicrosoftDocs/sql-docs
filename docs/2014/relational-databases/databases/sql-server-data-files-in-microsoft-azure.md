@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -41,10 +37,10 @@ manager: craigg
 ### Windows Azure Storage Concepts  
  When using SQL Server Data Files in Windows Azure feature, you need to create a storage account and a container in Windows Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
   
- In Windows Azure, a storage account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is under 500 TB. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](http://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). A container provides a grouping of a set of Blobs. All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Windows Azure Storage: block and page blobs. This new feature uses Page blobs, which can be up to 1TB in size, and are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ In Windows Azure, a storage account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is under 500 TB. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). A container provides a grouping of a set of Blobs. All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Windows Azure Storage: block and page blobs. This new feature uses Page blobs, which can be up to 1TB in size, and are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### Windows Azure Billing Considerations  
- Estimating the cost of using Windows Azure Services is an important matter in the decision making and planning process. When storing SQL Server data files in Windows Azure Storage, you need to pay costs associated with storage and transactions. In addition, the implementation of SQL Server Data Files in Windows Azure Storage feature requires a renewal of Blob lease every 45 to 60 seconds implicitly. This also results in transaction costs per database file, such as .mdf or .ldf. Based on our estimations, the cost of renewing leases for two database files (.mdf and .ldf) would be about 2 cents per month according to the current pricing model. We recommend that you use the information on the [Azure Pricing](http://azure.microsoft.com/pricing/) page to help estimate the monthly costs associated with the use of Windows Azure Storage and Windows Azure Virtual Machines.  
+ Estimating the cost of using Windows Azure Services is an important matter in the decision making and planning process. When storing SQL Server data files in Windows Azure Storage, you need to pay costs associated with storage and transactions. In addition, the implementation of SQL Server Data Files in Windows Azure Storage feature requires a renewal of Blob lease every 45 to 60 seconds implicitly. This also results in transaction costs per database file, such as .mdf or .ldf. Based on our estimations, the cost of renewing leases for two database files (.mdf and .ldf) would be about 2 cents per month according to the current pricing model. We recommend that you use the information on the [Azure Pricing](https://azure.microsoft.com/pricing/) page to help estimate the monthly costs associated with the use of Windows Azure Storage and Windows Azure Virtual Machines.  
   
 ### SQL Server Concepts  
  When using this new enhancement, you are required to do the followings:  
@@ -55,7 +51,7 @@ manager: craigg
   
 -   You must store the information regarding Windows Azure Storage container, its associated policy name, and SAS key in the SQL Server credential store.  
   
- The following example assumes that a Windows Azure Storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'your SAS key'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Create and Use a Shared Access Signature](http://msdn.microsoft.com/library/azure/jj721951.aspx)  
+ The following example assumes that a Windows Azure Storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'your SAS key'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Create and Use a Shared Access Signature](https://msdn.microsoft.com/library/azure/jj721951.aspx)  
   
 ```  
   
@@ -89,9 +85,9 @@ ON
 ### Installation Prerequisites  
  The followings are installation prerequisites when storing SQL Server Data Files in Windows Azuree.  
   
--   **SQL Server on-premises:** SQL Server 2014 version includes this feature. To learn how to download SQL Server 2014, see [SQL Server 2014](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   **SQL Server on-premises:** SQL Server 2014 version includes this feature. To learn how to download SQL Server 2014, see [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
--   SQL Server running in a Windows Azure virtual machine: If you are installing SQL Server on a Windows Azure Virtual Machine, install SQL Server 2014, or update your existing instance. Similarly, you can also create a new virtual machine in Windows Azure using SQL Server 2014 platform image. To learn how to download SQL Server 2014, see [SQL Server 2014](http://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   SQL Server running in a Windows Azure virtual machine: If you are installing SQL Server on a Windows Azure Virtual Machine, install SQL Server 2014, or update your existing instance. Similarly, you can also create a new virtual machine in Windows Azure using SQL Server 2014 platform image. To learn how to download SQL Server 2014, see [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
   

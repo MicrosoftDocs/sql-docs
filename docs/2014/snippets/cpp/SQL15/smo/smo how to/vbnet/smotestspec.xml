@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
-<testSuite name="SMOTest" projectPath="/Microsoft/SqlServer/TestHarness" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/UXTestSpec"
+<testSuite name="SMOTest" projectPath="/Microsoft/SqlServer/TestHarness" xmlns="https://schemas.microsoft.com/sqlserver/2004/07/UXTestSpec"
     managementDatabaseConnectionString="data source=localhost;initial catalog=UXTest;integrated security=SSPI;persist security info=False"
     testDatabaseConnectionString="data source=localhost;initial catalog=AdventureWorks2012;integrated security=SSPI;persist security info=False"
     rootDirectory="C:\Program Files\UEDevelopmentTools\Samples\Tools\UXTest\"

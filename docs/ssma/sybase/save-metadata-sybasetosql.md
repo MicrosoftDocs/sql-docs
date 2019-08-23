@@ -4,18 +4,11 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Save Metadata  (SybaseToSQL)
 The **Save Metadata** dialog box prompts you to load metadata into your SSMA project before saving it. This lets you have a complete project file that you can use offline and send to other people, such as technical support personnel.  

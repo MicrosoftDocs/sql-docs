@@ -4,24 +4,24 @@ ms.custom: ""
 ms.date: "10/25/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
-caps.latest.revision: 7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Configuring Storage for Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You need to configure storage capacity and input/output operations per second (IOPS).  
   
 ## Storage Capacity  
- Use the information in [Estimate Memory Requirements for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) to estimate the in-memory size of the database's durable memory-optimized tables. Because indexes are not persisted for memory-optimized tables, do not include the size of indexes. Once you determine the size, you need to provide disk space that is four times the size of durable, in-memory tables.  
+
+Use the information in [Estimate Memory Requirements for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) to estimate the in-memory size of the database's durable memory-optimized tables. Because indexes aren't persisted for memory-optimized tables, don't include the size of indexes. 
+ 
+After you determine the size, you must provide disk space sufficient to hold the checkpoint files, which are used to store newly changed data. The data that's stored contains not only the contents of new rows that are added to the in-memory tables, but also new versions of existing rows. This storage grows when rows are inserted or updated. Row versions are merged and storage is reclaimed when log truncation occurs. If log truncation is delayed for any reason, the in-memory OLTP store will grow.
+
+A good starting point for sizing storage for this area is to reserve four times the size of durable, in-memory tables. Monitor the space usage and be prepared to expand the storage that's available to it if necessary.
   
 ## Storage IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] can significantly increase your workload throughput. Therefore, it is important to ensure that IO is not a bottleneck.  

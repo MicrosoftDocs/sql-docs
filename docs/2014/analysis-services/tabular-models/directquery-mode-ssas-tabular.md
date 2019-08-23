@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.realtime.f1"
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -26,7 +22,7 @@ manager: craigg
   
 -   [Authoring Models for Use with DirectQuery Mode](#bkmk_Design)  
   
-    -   [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [Validation and Design Restrictions for DirectQuery Mode](#bkmk_Validation)  
   
@@ -68,7 +64,7 @@ manager: craigg
   
  When you do this, the model designer automatically configures the workspace database to run in a hybrid mode that lets you continue to work with the cached data. The model designer will also notify you of any features in your model that are incompatible with DirectQuery mode. The following list summarizes the main requirements to keep in mind:  
   
--   **Data sources:** DirectQuery models can only use data from a single SQL Server data source. When DirectQuery mode has been turned on for a model, you can use no other types of data in the model designer, including tables added by copy-paste operations. All other import options are disabled. Any tables included in a query must be part of the SQL Server data source. See [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)for more information.  
+-   **Data sources:** DirectQuery models can only use data from a single SQL Server data source. When DirectQuery mode has been turned on for a model, you can use no other types of data in the model designer, including tables added by copy-paste operations. All other import options are disabled. Any tables included in a query must be part of the SQL Server data source. See [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)for more information.  
   
 -   **Support for calculated columns:** Calculated columns are not supported for DirectQuery models. However, you can create measures and KPIs, which operate over sets of data. See the section on [validation](#bkmk_Validation) for more information.  
   
@@ -80,7 +76,7 @@ manager: craigg
   
 -   **Client restrictions:** When a model is in DirectQuery mode, it can only be queried by using DAX. You cannot use MDX to create queries. This means that you cannot use the Excel Pivot Client, because Excel uses MDX.  
   
-     However, you can create queries against a DirectQuery model in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] if you use a DAX table query as part of an XMLA Execute statement, For more information, see [DAX Query Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
+     However, you can create queries against a DirectQuery model in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] if you use a DAX table query as part of an XMLA Execute statement, For more information, see [DAX Query Syntax Reference](/dax/dax-syntax-reference
   
  When you have resolved all the design issues and tested your model, you are ready for deployment. At this point, you can set the preferred method for answering queries against the model. Do you want users to have access to the cache, or always use only the relational data source?  
   
@@ -132,7 +128,7 @@ manager: craigg
   
 -   Consider whether users have the necessary level of access to the data in the relational data store.  
   
--   Users who view the same model or report might see different data, depending on the user’s security context.  
+-   Users who view the same model or report might see different data, depending on the user's security context.  
   
 -   If the model cache has been preserved, the cache is secured using the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] security model (roles). The cache might contain data that the model designer is privileged to see but the user is not. Model and report designers should either clear the cache, or secure this data by controlling access via roles.  
   
@@ -156,7 +152,7 @@ manager: craigg
 |Property name|Description|  
 |-------------------|-----------------|  
 |**DirectQueryMode property**|This property enables use of DirectQuery mode in the model designer. You must set this property to `On` to change any of the other DirectQuery properties.<br /><br /> For more information, see [Enable DirectQuery Design Mode &#40;SSAS Tabular&#41;](enable-directquery-mode-in-ssdt.md).|  
-|**QueryMode property**|This property specifies the default query method for a DirectQuery model, You set this property in the model designer when you deploy the model, but you can override it later. The property has these values:<br /><br /> **DirectQuery** – This setting specifies all queries to the model should use the relational data source only.<br /><br /> **DirectQuery with In-Memory** - This setting specifies, by default, queries should be answered by using the relational source, unless otherwise specified in the connection string from the client.<br /><br /> **In-Memory** - This setting specifies  queries should be answered by using the cache only.<br /><br /> **In-Memory with DirectQuery** - This setting specifies, by default. queries should be answered by using the cache, unless otherwise specified in the connection string from the client.<br /><br /> <br /><br /> For more information, see [Set or Change the Preferred Connection Method for DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
+|**QueryMode property**|This property specifies the default query method for a DirectQuery model, You set this property in the model designer when you deploy the model, but you can override it later. The property has these values:<br /><br /> **DirectQuery** - This setting specifies all queries to the model should use the relational data source only.<br /><br /> **DirectQuery with In-Memory** - This setting specifies, by default, queries should be answered by using the relational source, unless otherwise specified in the connection string from the client.<br /><br /> **In-Memory** - This setting specifies  queries should be answered by using the cache only.<br /><br /> **In-Memory with DirectQuery** - This setting specifies, by default. queries should be answered by using the cache, unless otherwise specified in the connection string from the client.<br /><br /> <br /><br /> For more information, see [Set or Change the Preferred Connection Method for DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
 |**DirectQueryMode property**|After the model has been deployed, you can change the preferred query data source for a DirectQuery model, by changing this property in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]<br /><br /> Like the previous property, this property specifies the default data source for the model, and has these values:<br /><br /> **InMemory**: Queries can use the cache only.<br /><br /> **DirectQuerywithInMemory**: Queries use the relational data source by default, unless otherwise specified in the connection string from the client.<br /><br /> **InMemorywithDirectQuery**: Queries use the cache by default, unless otherwise specified in the connection string from the client.<br /><br /> (**DirectQuery**: Queries use the relational data source only.<br /><br /> <br /><br /> For more information, see [Set or Change the Preferred Connection Method for DirectQuery](../set-or-change-the-preferred-connection-method-for-directquery.md).|  
 |**Impersonation Settings property**|This property defines the credentials used to connect to the SQL Server data source at query time. You can set this property in the model designer, and you can change the value later, after the model has been deployed.<br /><br /> Note that these credentials are used only for answering queries against the relational data store; they are not the same as the credentials used for processing the cache of a hybrid model.<br /><br /> Impersonation cannot be used when the model is used within memory only. The setting `ImpersonateCurrentUser`, is invalid unless the model is using DirectQuery mode.|  
   
@@ -179,5 +175,3 @@ manager: craigg
  [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
  [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-model-projects-ssas-tabular.md)   
  [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
@@ -52,7 +48,7 @@ manager: craigg
   
 8.  In the **Maximum Rows** box, type `10`.  
   
-9. In the **Caption** box, type `Drillthrough to Order Details…`.  
+9. In the **Caption** box, type `Drillthrough to Order Details...`.  
   
      These settings limit the number of rows returned and specify the caption that appears in the client application menu. The following image shows these settings in the **AdditionalProperties** box.  
   
@@ -141,13 +137,13 @@ manager: craigg
      ![Orders shipped to Adam Powell](../../2014/tutorials/media/l8-action8.gif "Orders shipped to Adam Powell")  
   
 ## Next Lesson  
- [Lesson 9: Defining Perspectives and Translations](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md)  
   
 ## See Also  
  [Actions &#40;Analysis Services - Multidimensional Data&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Actions in Multidimensional Models](multidimensional-models/actions-in-multidimensional-models.md)   
  [Dimension Relationships](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Defining a Fact Relationship](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [Defining a Fact Relationship](lesson-5-2-defining-a-fact-relationship.md)   
  [Define a Fact Relationship and Fact Relationship Properties](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

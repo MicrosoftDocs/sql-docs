@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Predicting Associations (Intermediate Data Mining Tutorial)
   After the models have been processed, you can use the information about associations stored in the model to create predictions. In the final task of this lesson, you learn how to build prediction queries against the association models that you created. This lesson assumes that you are familiar with how to use the Prediction Query Builder and want to learn how to build prediction queries against association models. For more information how to use Prediction Query Builder, see [Data Mining Query Interfaces](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
@@ -79,7 +75,7 @@ manager: craigg
   
 5.  In the **Mining Model** pane, select the nested table `vAssocSeqLineItems`, and drag it into the grid, to the **Criteria/Argument** box for the `PredictAssociation` function. Type `,3` after the nested table name just as in the previous procedure.  
   
-6.  In the **Singleton Query Input** dialog box, click the **Value** box next to **vAssoc Seq Line Items**, and then click the **(…)** button.  
+6.  In the **Singleton Query Input** dialog box, click the **Value** box next to **vAssoc Seq Line Items**, and then click the **(...)** button.  
   
 7.  In the **Nested Table Input** dialog box, select `Touring Tire` in the **Key column** pane, and then click **Add**.  
   
@@ -99,7 +95,7 @@ manager: craigg
   
 1.  Click the **Design** button in the corner of the Prediction Query Builder to switch back to the query building grid.  
   
-2.  In the **Singleton Query Input** dialog box, click the **Value** box next to **vAssoc Seq Line Items**, and then click the **(…)** button.  
+2.  In the **Singleton Query Input** dialog box, click the **Value** box next to **vAssoc Seq Line Items**, and then click the **(...)** button.  
   
 3.  In the **Key column** pane, select `Touring Tire`, and then click **Add**.  
   
@@ -121,9 +117,9 @@ manager: craigg
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291…|0.252…|  
-|Water Bottle|2866|0.192…|0.175…|  
-|Patch Kit|2113|0.142…|0.132|  
+|Sport-100|4334|0.291...|0.252...|  
+|Water Bottle|2866|0.192...|0.175...|  
+|Patch Kit|2113|0.142...|0.132|  
   
 ## Working with Results  
  When there are many nested tables in the results, you might want to flatten the results for easier viewing. To do this, you can manually modify the query and add the `FLATTENED` keyword.  

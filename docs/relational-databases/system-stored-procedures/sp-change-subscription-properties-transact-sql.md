@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_change_subscription_properties_TSQL"
   - "sp_change_subscription_properties"
@@ -21,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_change_subscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Updates information for pull subscriptions. This stored procedure is executed at the Subscriber on the subscription database.  
   
@@ -43,22 +36,22 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@property=**]  **'***property***'**  
+`[ @property = ] 'property'`
  Is the property to be changed. *property* is **sysname**.  
   
- [ **@value=**]  **'***value***'**  
+`[ @value = ] 'value'`
  Is the new value of the property. *value* is **nvarchar(1000)**, with no default.  
   
- [ **@publication_type =** ] *publication_type*  
+`[ @publication_type = ] publication_type`
  Specifies the replication type of the publication. *publication_type* is **int**, and can be one of these values.  
   
 |Value|Publication type|  

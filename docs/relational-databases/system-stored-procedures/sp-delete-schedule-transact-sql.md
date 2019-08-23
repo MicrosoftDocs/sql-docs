@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_schedule"
@@ -18,10 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_schedule"
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,17 +34,17 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## Arguments  
- [ **@schedule_id=** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The schedule identification number of the schedule to delete. *schedule_id* is **int**, with a default of NULL.  
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to delete. *schedule_name* is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
- [ **@force_delete** = ] *force_delete*  
+`[ @force_delete = ] force_delete`
  Specifies whether the procedure should fail if the schedule is attached to a job. *Force_delete* is bit, with a default of **0**. When *force_delete* is **0**, the stored procedure fails if the schedule is attached to a job. When *force_delete* is **1**, the schedule is deleted regardless of whether the schedule is attached to a job.  
   
 ## Return Code Values  

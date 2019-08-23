@@ -5,19 +5,15 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "point of failure [SQL Server]"
   - "restoring databases [SQL Server], point of failure"
   - "database restores [SQL Server], point of failure"
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore Database to Point of Failure - Full Recovery
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,9 @@ manager: craigg
     ```  
   
 5.  Recover the database by running the following RESTORE DATABASE statement:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     RESTORE DATABASE <database_name>   
        WITH RECOVERY;  

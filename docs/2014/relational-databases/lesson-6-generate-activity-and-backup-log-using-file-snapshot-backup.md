@@ -4,13 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -34,7 +30,7 @@ manager: craigg
   
 1.  First, create a test database in the source machine and add some data to it.  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     CREATE DATABASE TestDB1Alter;   
@@ -50,7 +46,7 @@ manager: craigg
   
 2.  Run the following code:  
   
-    ```tsql  
+    ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
     -- the new location of the file in Windows Azure Storage container.   
@@ -61,24 +57,24 @@ manager: craigg
   
     ```  
   
-3.  When you run this, you will see this message: “The file "TestDB1Alter" has been modified in the system catalog. The new path will be used the next time the database is started.”  
+3.  When you run this, you will see this message: "The file "TestDB1Alter" has been modified in the system catalog. The new path will be used the next time the database is started."  
   
 4.  Then, set the database offline.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET OFFLINE;   
     GO  
   
     ```  
   
-5.  Now, you need to copy the data files to Windows Azure Storage by using one of the following methods: [AzCopy Tool](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx), or a third-party storage explorer tool.  
+5.  Now, you need to copy the data files to Windows Azure Storage by using one of the following methods: [AzCopy Tool](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [Storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx), or a third-party storage explorer tool.  
   
      **Important:** When using this new enhancement, always make sure that you create a page blob not a block blob.  
   
 6.  Then, set the database online.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET ONLINE;   
     GO  

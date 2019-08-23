@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data members [Analysis Services]"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "parent-child dimensions [Analysis Services]"
   - "MembersWithData property"
 ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "regular identifiers [Integration Services]"
@@ -20,12 +18,14 @@ helpviewer_keywords:
   - "expressions [Integration Services], identifiers"
   - "qualified identifiers [Integration Services]"
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Identifiers (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In expressions, identifiers are columns and variables that are available to the operation. Expressions can use regular and qualified identifiers.  
   
 ## Regular Identifiers  
@@ -99,7 +99,7 @@ manager: craigg
 ## Unique Variable Names  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports custom variables and provides a set of system variables. By default, custom variables belong to the **User** namespace, and system variables belong to the **System** namespace. You can create additional namespaces for custom variables and update the namespace names to suit the needs of your application. The expression builder lists in-scope variables in all namespaces.  
   
- All variables have scope and belong to a namespace. A variable has package scope or the scope of a container or task in the package. The expression builder in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lists only the in-scope variables. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ All variables have scope and belong to a namespace. A variable has package scope or the scope of a container or task in the package. The expression builder in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lists only the in-scope variables. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
  Variables used in expressions must have unique names for the expression evaluator to evaluate the expression correctly. If a package uses multiple variables with the same name, their namespaces must be different. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides a namespace resolution operator, consisting of two colons (::), for qualifying a variable with its namespace. For example, the following expression uses two variables named **Count**; one belongs to the **User** namespace and one to the **MyNamespace** namespace.  
   
@@ -119,6 +119,6 @@ manager: craigg
 ```  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), on pragmaticworks.com  
   
   

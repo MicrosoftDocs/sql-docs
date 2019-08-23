@@ -5,8 +5,6 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], parameters"
@@ -14,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 author: "pmasl"
 ms.author: "pelopes"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Parameters

@@ -1,16 +1,11 @@
 ---
 title: "Grant user access to a report server | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/15/2017"
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.prod_service: "reporting-services-native"
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing role assignments"
@@ -19,10 +14,8 @@ helpviewer_keywords:
   - "modifying role assignments"
   - "deleting role assignments"
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-caps.latest.revision: 54
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Grant user access to a report server
 
@@ -32,7 +25,7 @@ manager: "kfile"
 
  **SharePoint mode report servers:** For a report server that is configured for SharePoint integrated mode, you configure access from a SharePoint site using SharePoint permissions. Permission levels on the SharePoint site determine access to report server content and operations. You must be a site administrator to grant permissions on a SharePoint site. For more information, see [Granting Permissions on Report Server Items on a SharePoint Site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Native mode report servers:** This topic is focused on a report server that is configured for native mode and the use of the web portal to assign users to a role. There are two types of roles:
+ **Native mode report servers:** This article is focused on a report server that is configured for native mode and the use of the web portal to assign users to a role. There are two types of roles:
 
 - Item-level roles are used to view, add, and manage report server content, subscriptions, report processing, and report history. Item-level role assignments are defined on the root node (the Home folder) or on specific folders or items farther down the hierarchy.
 
@@ -56,24 +49,24 @@ Review the following list before adding users to a native mode report server.
 
 1. Start the [web portal](../web-portal-ssrs-native-mode.md).
 
-2. Select the *gear icon* in the upper right.
+2. Select the **Gear** icon in the upper right and then select **Site Settings** from the dropdown menu.
 
-3. Select **Site Settings**.
+    ![Report server web portal gear icon and dropdown menu](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. Select **Security**.
+3. Select **Security**.
 
-5. Select **Add group or user**.
+4. Select **Add group or user**.
 
-6. In **Group or user**, enter a Windows domain user or group account in this format: \<domain>\\<account\>. 
+5. In **Group or user**, enter a Windows domain user or group account in this format: \<domain>\\<account\>.
 
     > [!NOTE]
     > If you are using forms authentication or custom security, specify the user or group account in the format that is correct for your deployment.
 
-7. Select a system role, and then select **OK**.
+6. Select a system role, and then select **OK**.
 
     Roles are cumulative, so if you select both System Administrator and System User, a user or group will be able to perform the tasks in both roles.
 
-8. Repeat to create assignments for additional users or groups.
+7. Repeat to create assignments for additional users or groups.
 
 ### To add a user or group to an item role
 
@@ -98,10 +91,8 @@ Review the following list before adding users to a native mode report server.
 
 ## Next steps
 
-[Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[Role Assignments](../../reporting-services/security/role-assignments.md)   
+[Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Role Assignments](../../reporting-services/security/role-assignments.md)  
 [Role Definitions](../../reporting-services/security/role-definitions.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

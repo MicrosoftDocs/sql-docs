@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.process.incrementalupdate.f1"
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg

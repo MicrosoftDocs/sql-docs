@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], altering"
   - "FileTables [SQL Server], dropping"
   - "FileTables [SQL Server], creating"
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: 23
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create, Alter, and Drop FileTables
@@ -64,7 +61,7 @@ manager: craigg
   
  The following example creates a new FileTable and specifies user-defined values for both **FILETABLE_DIRECTORY** and **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -75,7 +72,7 @@ GO
   
  The following example also creates a new FileTable. Since user-defined values are not specified, the value of **FILETABLE_DIRECTORY** becomes the name of the FileTable, the value of **FILETABLE_COLLATE_FILENAME** becomes database_default, and the primary key and unique contraints receive system-generated names.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -93,7 +90,7 @@ GO
   
 -   A FileTable requires a valid FILESTREAM filegroup, since a FileTable contains a FILESTREAM column. You can optionally specify a valid FILESTREAM filegroup as part of the **CREATE TABLE** command for creating a FileTable. If you do not specify a filegroup, then the FileTable uses the default FILESTREAM filegroup for the database. If the database does not have a FILESTREAM filegroup, then an error is raised.  
   
--   You cannot create a table constraint as part of a **CREATE TABLE…AS FILETABLE** statement. However you can add the constraint later by using an **ALTER TABLE** statement.  
+-   You cannot create a table constraint as part of a **CREATE TABLE...AS FILETABLE** statement. However you can add the constraint later by using an **ALTER TABLE** statement.  
   
 -   You cannot create a FileTable in the **tempdb** database or in any of the other system databases.  
   
@@ -110,7 +107,7 @@ GO
   
  **Example**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -136,12 +133,12 @@ GO
   
 -   The FileTable directory and the sub-directories that it contained disappear from the FILESTREAM file and directory hierarchy of the database.  
   
- The DROP TABLE command fails if there are open file handles in the FileTable’s file namespace. For information about closing open handles, see [Manage FileTables](manage-filetables.md).  
+ The DROP TABLE command fails if there are open file handles in the FileTable's file namespace. For information about closing open handles, see [Manage FileTables](manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> Other Database Objects Are Created When You Create a FileTable  
  When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  
@@ -159,9 +156,9 @@ GO
 |||  
 |-|-|  
 |**Columns**|**Index type**|  
-|[path_locator] ASC|Primary Key, non-clustered|  
-|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, non-clustered|  
-|[stream_id] ASC|Unique, non-clustered|  
+|[path_locator] ASC|Primary Key, nonclustered|  
+|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, nonclustered|  
+|[stream_id] ASC|Unique, nonclustered|  
   
  **Constraints that are created when you create a new FileTable**  
  When you create a new FileTable, the following system-defined constraints are also created:  

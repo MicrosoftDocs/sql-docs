@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.relationalobjectsdialog.f1"
 ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg

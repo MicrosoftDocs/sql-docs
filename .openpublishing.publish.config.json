@@ -6,16 +6,19 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "en-us",
+      "xref_query_tags": ["/uwp/api", "/dotnet"],
       "monikers": [],
       "moniker_ranges": [
-        "= sql-server-2014",
-        "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+        "sql-server-2014",
+        "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
+        "ZonePivotGroups": "Toc",
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "LandingData": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
@@ -42,12 +45,24 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "samples",
+      "url": "https://github.com/dotnet/samples",
+      "branch": "master",
+      "branch_mapping": {
+        "live": "live"
+      }
+    },
+    {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
       "branch": "master"
     }
   ],
   "branch_target_mapping": {
+    "release-sqlseattle": [
+      "Publish",
+      "PDF"
+    ],
     "live": [
       "Publish",
       "PDF"
@@ -60,6 +75,8 @@
   "need_generate_pdf_url_template": true,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
+  "enable_branch_build_custom_validation": true,
+  "enable_pull_request_custom_validation": true,
   "Targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"

@@ -1,33 +1,29 @@
 ---
 title: "Configure Publishing and Distribution | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/15/2018"
+ms.date: "09/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: replication
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
  - "replication [SQL Server], distribution"
  - "distribution configuration [SQL Server replication]"
  - "publishing [SQL Server replication], configuring"
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Configure Publishing and Distribution
-[!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
  This topic describes how to configure publishing and distribution in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin 
 
 ###  <a name="Security"></a> Security 
-For more information, see [Secure Deployment &#40;Replication&#41;](../../relational-databases/replication/security/secure-deployment-replication.md).
+For more information, see [View and modify replication security settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio 
 Configure distribution using the New Publication Wizard or the Configure Distribution Wizard. After the Distributor is configured, view and modify properties in the **Distributor Properties - \<Distributor>** dialog box. Use the Configure Distribution Wizard if you want to configure a Distributor so that members of the `db_owner` fixed database roles can create publications, or because you want to configure a remote Distributor that is not a Publisher.
@@ -39,6 +35,8 @@ Configure distribution using the New Publication Wizard or the Configure Distrib
 2. Right-click the **Replication** folder, and then click **Configure Distribution**.
 
 3. Follow the Configure Distribution Wizard to: 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - Select a Distributor. To use a local Distributor, select **ServerName will act as its own Distributor; SQL Server will create a distribution database and log**. To use a remote Distributor, select **Use the following server as the Distributor**, and then select a server. The server must already be configured as a Distributor, and the Publisher must be enabled to use the Distributor. For more information, see [Enable a Remote Publisher at a Distributor &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).
 
@@ -63,7 +61,7 @@ Replication publishing and distribution can be configured programmatically using
 
 2. At the Distributor, which is also the Publisher, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md), specifying the UNC share that will be used as default snapshot folder for `@working_directory`.
 
-   For a distributor on SQL Database Managed Instance (preview) use an Azure storage account for `@working_directory` and the storage access key for `@storage_connection_string`. 
+   For a distributor on SQL Database Managed Instance, use an Azure storage account for `@working_directory` and the storage access key for `@storage_connection_string`. 
 
 3. At the Publisher, execute [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Specify the database being published for `@dbname`, the type of replication for `@optname`, and a value of `true` for `@value`.
 
@@ -77,7 +75,7 @@ Replication publishing and distribution can be configured programmatically using
 
 2. At the Distributor, execute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md), specifying the UNC share that will be used as default snapshot folder for `@working_directory`. If the Distributor will use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher, you must also specify a value of `0` for `@security_mode` and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for `@login` and `@password`.
 
-   For a distributor on SQL Database Managed Instance (preview) use an Azure storage account for `@working_directory` and the storage access key for `@storage_connection_string`. 
+   For a distributor on SQL Database Managed Instance, use an Azure storage account for `@working_directory` and the storage access key for `@storage_connection_string`. 
 
 3. At the Publisher on the master database, execute [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md). Specify the strong password used in step 1 for `@password`. This password will be used by the Publisher when connecting to the Distributor.
 
@@ -130,7 +128,7 @@ The following example demonstrates how to configure publishing and distribution 
 
 5. Install the Distributor by calling the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Specify a secure password (used by the Publisher when connecting to the remote Distributor) and the <xref:Microsoft.SqlServer.Replication.DistributionDatabase> object from step 3. For more information, see [Secure the Distributor](../../relational-databases/replication/security/secure-the-distributor.md).
 
-   > `IMPORTANT!!` When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
+   > `IMPORTANT!!` When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
 6. Create an instance of the <xref:Microsoft.SqlServer.Replication.DistributionPublisher> class.
 
@@ -154,8 +152,8 @@ The following example demonstrates how to configure publishing and distribution 
 
 11. Call the <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> method. Pass the name of the remote Distributor and the password for the remote Distributor specified in step 5.
 
->[!IMPORTANT]
-When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](http://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.
+> [!IMPORTANT]
+> When possible, prompt users to enter security credentials at runtime. If you must store credentials, use the [cryptographic services](https://go.microsoft.com/fwlink/?LinkId=34733) provided by the Windows .NET Framework.
 
 ###  <a name="PShellExample"></a> Example (RMO) 
 You can programmatically configure replication publishing and distribution by using Replication Management Objects (RMO).

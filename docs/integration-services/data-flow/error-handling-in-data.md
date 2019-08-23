@@ -5,9 +5,7 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.configureerroroutput.f1"
@@ -22,12 +20,14 @@ helpviewer_keywords:
   - "data flow [Integration Services], errors"
   - "expressions [Integration Services], errors"
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: janinezhang
+ms.author: janinez
 ---
 # Error Handling in Data
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When a data flow component applies a transformation to column data, extracts data from sources, or loads data into destinations, errors can occur. Errors frequently occur because of unexpected data values. For example, a data conversion fails because a column contains a string instead of a number, an insertion into a database column fails because the data is a date and the column has a numeric data type, or an expression fails to evaluate because a column value is zero, resulting in a mathematical operation that is not valid.  
   
  Errors typically fall into one the following categories:  
@@ -145,7 +145,7 @@ Use the **Configure Error Output** dialog box to configure error handling option
 ## See Also  
  [Data Flow](../../integration-services/data-flow/data-flow.md)   
  [Transform Data with Transformations](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
- [Connect Components with Paths](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Connect Components with Paths](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Data Flow Task](../../integration-services/control-flow/data-flow-task.md)   
  [Data Flow](../../integration-services/data-flow/data-flow.md)  
   

@@ -5,9 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DecryptByKey_TSQL"
@@ -20,10 +18,8 @@ helpviewer_keywords:
   - "decryption [SQL Server], symmetric keys"
   - "DECRYPTBYKEY function"
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-caps.latest.revision: 39
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ This function uses a symmetric key to decrypt data.
   
 ## Syntax  
   
-```  
+```sql
   
 DecryptByKey ( { 'ciphertext' | @ciphertext }   
     [ , add_authenticator, { authenticator | @authenticator } ] )  
@@ -63,6 +59,8 @@ A variable containing data from which an authenticator generates. Must match the
 `DECRYPTBYKEY` uses a symmetric key. The database must have this symmetric key already open. `DECRYPTBYKEY` will allow multiple keys open at the same time. You do not have to open the key immediately before cipher text decryption.  
   
 Symmetric encryption and decryption typically operates relatively quickly, and it works well for operations involving large data volumes.  
+
+The `DECRYPTBYKEY` call must happen in the context of the database containing the encryption key. Ensure this by calling `DECRYPTBYKEY` from an object (such as a view, or stored procedure, or function) that resides in the database. 
   
 ## Permissions  
 The symmetric key must already be open in the current session. See [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md) for more information.  
@@ -72,7 +70,7 @@ The symmetric key must already be open in the current session. See [OPEN SYMMETR
 ### A. Decrypting by using a symmetric key  
 This example decrypts ciphertext with a symmetric key.  
   
-```  
+```sql  
 -- First, open the symmetric key with which to decrypt the data.  
 OPEN SYMMETRIC KEY SSN_Key_01  
    DECRYPTION BY CERTIFICATE HumanResources037;  
@@ -92,7 +90,7 @@ GO
 ### B. Decrypting by using a symmetric key and an authenticating hash  
 This example decrypts data originally encrypted together with an authenticator.  
   
-```  
+```sql  
 -- First, open the symmetric key with which to decrypt the data  
 OPEN SYMMETRIC KEY CreditCards_Key11  
    DECRYPTION BY CERTIFICATE Sales09;  
@@ -109,6 +107,61 @@ SELECT CardNumber, CardNumber_Encrypted
 GO  
   
 ```  
+
+### C. Fail to decrypt when not in the context of database with key
+The following example demonstrates that `DECRYPTBYKEY` must be executed in the context of the database that contains the key. The row will not be decrypted when `DECRYPTBYKEY` is executed in the Master database; the result is NULL. 
+
+```sql
+-- Create the database
+CREATE DATABASE TestingDecryptByKey
+GO
+
+USE [TestingDecryptByKey]
+
+-- Create the table and view
+CREATE TABLE TestingDecryptByKey.dbo.Test(val VARBINARY(8000) NOT NULL);
+GO
+CREATE VIEW dbo.TestView AS SELECT CAST(DecryptByKey(val) AS VARCHAR(30)) AS DecryptedVal FROM TestingDecryptByKey.dbo.Test;
+GO
+
+-- Create the key, and certificate
+USE TestingDecryptByKey;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'ItIsreallyLong1AndSecured!Passsword#';
+CREATE CERTIFICATE TestEncryptionCertificate WITH SUBJECT = 'TestEncryption';
+CREATE SYMMETRIC KEY TestEncryptSymmmetricKey WITH ALGORITHM = AES_256, IDENTITY_VALUE = 'It is place for test',
+KEY_SOURCE = 'It is source for test' ENCRYPTION BY CERTIFICATE TestEncryptionCertificate;
+
+-- Insert rows into the table
+DECLARE @var VARBINARY(8000), @Val VARCHAR(30);
+SELECT @Val = '000-123-4567';
+OPEN SYMMETRIC KEY TestEncryptSymmmetricKey DECRYPTION BY CERTIFICATE TestEncryptionCertificate;
+SELECT @var = EncryptByKey(Key_GUID('TestEncryptSymmmetricKey'), @Val);
+SELECT CAST(DecryptByKey(@var) AS VARCHAR(30)), @Val;
+INSERT INTO dbo.Test VALUES(@var);
+GO
+
+-- Switch to master
+USE [Master];
+GO
+
+-- Results show the date inserted
+SELECT DecryptedVal FROM TestingDecryptByKey.dbo.TestView;
+
+-- Results are NULL because we are not in the context of the TestingDecryptByKey Database
+SELECT CAST(DecryptByKey(val) AS VARCHAR(30)) AS DecryptedVal FROM TestingDecryptByKey.dbo.Test;
+GO
+
+-- Clean up resources
+USE TestingDecryptByKey;
+
+DROP SYMMETRIC KEY TestEncryptSymmmetricKey REMOVE PROVIDER KEY;
+DROP CERTIFICATE TestEncryptionCertificate;
+
+Use [Master]
+DROP DATABASE TestingDecryptByKey;
+GO
+```
+
   
 ## See Also  
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   

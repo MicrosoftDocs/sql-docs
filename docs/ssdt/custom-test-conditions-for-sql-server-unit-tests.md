@@ -6,14 +6,10 @@ ms.date: "02/09/2017"
 ms.prod: "sql"
 ms.technology: ssdt
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
-caps.latest.revision: 13
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Custom Test Conditions  for SQL Server Unit Tests
 You can add custom test conditions for SQL Server unit tests. However, you must first install the test condition before you can use it, whether you created the extension or you are installing one that someone else created.  

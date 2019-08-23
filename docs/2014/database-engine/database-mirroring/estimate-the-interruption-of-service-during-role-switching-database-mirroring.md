@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parallel redo [SQL Server]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "redo [database mirroring]"
   - "database mirroring [SQL Server], failover"
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -50,7 +47,7 @@ manager: craigg
  Failover time for the database depends on how fast the mirror server can roll forward the log in the redo queue, which, in turn, is determined primarily by the system hardware and the current work load. Potentially, a principal database can become so busy that the principal server ships log to the mirror server much faster than it can roll the log forward. In this situation, failover might take significant time while the mirror server rolls forward the log in the redo queue. To learn the current size of the redo queue, use the **Redo Queue** counter in the database mirroring performance object. For more information, see [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
   
 ### Estimating the Failover Redo Rate  
- You can measure the amount of time required to roll forward log records—the *redo rate*—by using a test copy of the production database.  
+ You can measure the amount of time required to roll forward log records-the *redo rate*-by using a test copy of the production database.  
   
  The method for estimating roll forward time during failover depends on the number of threads the mirror server uses during the redo phase. The number of threads depends on the following:  
   

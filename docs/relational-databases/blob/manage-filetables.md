@@ -5,18 +5,14 @@ ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], security"
   - "FileTables [SQL Server], managing access"
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Manage FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +108,9 @@ GO
 2.  Non-transactional access is enabled at the database level.  
   
 3.  A valid directory has been specified at the database level.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="BasicsEnabling"></a> Disabling and Re-enabling the FileTable Namespace at the Table Level  
  Disabling the FileTable namespace disables all the system-defined constraints and triggers that were created with the FileTable. This is useful in cases where a FileTable has to be reorganized on a large scale by using [!INCLUDE[tsql](../../includes/tsql-md.md)] operations without incurring the expense of enforcing FileTable semantics. However these operations can leave the FileTable in an inconsistent state, and can prevent the re-enabling of the FileTable namespace.  
   
@@ -218,7 +216,7 @@ GO
   
  Many administrative tools and operations, (including backup, log backup, and transactional replication) read transactionally consistent data by reading the transaction logs. At this time, they read any FILESTREAM data updated as part of a transaction. When non-transactional access is not enabled at the database level, these tools and operations work with full transactional consistency.  
   
- However, when full non-transactional access is enabled, then a FileTable could contain data that was updated more recently (through a non-transactional update) than the transaction that the tool or process is reading from the transaction log. This means that a “point in time” restore operation to a specific transaction may contain FILESTREAM data that is more recent than that transaction. This is the expected behavior when non-transactional updates are allowed on FileTables.  
+ However, when full non-transactional access is enabled, then a FileTable could contain data that was updated more recently (through a non-transactional update) than the transaction that the tool or process is reading from the transaction log. This means that a "point in time" restore operation to a specific transaction may contain FILESTREAM data that is more recent than that transaction. This is the expected behavior when non-transactional updates are allowed on FileTables.  
   
 ##  <a name="Monitor"></a> SQL Server Profiler and FileTables  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler can capture the Windows File Open and File Close operations in trace output for files that are stored in a FileTable.  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/09/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.agdashboard.f1"
@@ -14,10 +12,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], policies"
   - "Availability Groups [SQL Server], dashboard"
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use the Always On Availability Group dashboard (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +33,12 @@ manager: craigg
 -   Synchronization mode and state    
 -   Time to restore log  
   
-##  Before You Begin  
   
-### Prerequisites  
+## Prerequisites  
  You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica of an availability group.  
   
-### Security  
-  
-#### Permissions  
+ 
+### Permissions  
  Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  To start the Always On dashboard  
@@ -53,7 +47,7 @@ manager: craigg
   
 2.  Expand the **Always On High Availability** node, right-click the **Availability Groups** node, and then click **Show Dashboard**.  
   
-###  Change Always On Dashboard Options  
+##  Change Always On Dashboard Options  
  You can use the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On Dashboard behavior for automatic refreshing and enabling an auto-defined Always On policy.  
   
 1.  From the **Tools** menu, click **Options**.  
@@ -213,8 +207,7 @@ The **Availability replica** pane displays the following columns:
     -   For a secondary database, indicates that the database has not started log synchronization because of a connection issue, is being suspended, or is going through transition states during startup or a role switch.  
   
 -   **Synchronizing**:
--   
-     On a primary replica:   
+- On a primary replica:   
     - On a primary database, indicates that this database is ready to accept a scan request from a secondary database.  
     - On a secondary replica, indicates that there is active data movement going on for that secondary database. 
   
@@ -321,6 +314,11 @@ The **Availability replica** pane displays the following columns:
  **Last Redone Time**  
  Indicates the time when the last log record was redone on the secondary database. This value is hidden by default.  
  
+
+   > [!NOTE]  
+   >  Most data is based on sys.dm_hadr_database_replica_states, so some restriction may apply. 
+   >  For more information, please see [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+
 
 ## Always On Availability Group latency reports
 The availability group latency report is a reporting tool built into the availability group dashboard and available in the [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) release. This feature provides an easy-to-understand report detailing time spent during various phases of the log transport process. This provides a way to narrow down the potential cause of latency during the synchronization process. 

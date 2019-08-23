@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report history [Reporting Services], viewing snapshots"
@@ -25,10 +22,9 @@ helpviewer_keywords:
   - "displaying report snapshots"
   - "report snapshots [Reporting Services], creating"
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
-caps.latest.revision: 34
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # View or Delete Report History (Report Manager)
   Report history is kept with the report upon which it is based. Any user who has permission to view a report can view its history.  

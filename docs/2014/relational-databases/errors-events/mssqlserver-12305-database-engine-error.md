@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "12305 (Database Engine error)"
 ms.assetid: 5a65a9fb-6db1-40dd-b410-3199bb410261
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

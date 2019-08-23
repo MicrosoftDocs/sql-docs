@@ -5,9 +5,7 @@ ms.date: "07/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PATINDEX"
@@ -21,10 +19,8 @@ helpviewer_keywords:
   - "pattern searching [SQL Server]"
   - "PATINDEX function"
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-caps.latest.revision: 53
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PATINDEX (Transact-SQL)
@@ -48,42 +44,44 @@ PATINDEX ( '%pattern%' , expression )
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md), typically a column that is searched for the specified pattern. *expression* is of the character string data type category.  
   
 ## Return Types  
- **bigint** if *expression* is of the **varchar(max)** or **nvarchar(max)** data types; otherwise **int**.  
+**bigint** if *expression* is of the **varchar(max)** or **nvarchar(max)** data types; otherwise **int**.  
   
 ## Remarks  
- If either *pattern* or *expression* is NULL, PATINDEX returns NULL.  
-  
- PATINDEX performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use COLLATE to apply an explicit collation to the input.  
+If either *pattern* or *expression* is NULL, PATINDEX returns NULL.  
+ 
+The starting position for PATINDEX is 1.
+ 
+PATINDEX performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use COLLATE to apply an explicit collation to the input.  
   
 ## Supplementary Characters (Surrogate Pairs)  
- When using SC collations, the return value will count any UTF-16 surrogate pairs in the *expression* parameter as a single character. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+When using SC collations, the return value will count any UTF-16 surrogate pairs in the *expression* parameter as a single character. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- 0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in PATINDEX.  
+0x0000 (**char(0)**) is an undefined character in Windows collations and cannot be included in PATINDEX.  
   
 ## Examples  
   
 ### A. Simple PATINDEX example  
  The following example checks a short character string (`interesting data`) for the starting location of the characters `ter`.  
   
-```  
+```sql  
 SELECT PATINDEX('%ter%', 'interesting data');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `3`  
+`3`  
   
 ### B. Using a pattern with PATINDEX  
- The following example finds the position at which the pattern `ensure` starts in a specific row of the `DocumentSummary` column in the `Document` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+The following example finds the position at which the pattern `ensure` starts in a specific row of the `DocumentSummary` column in the `Document` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 -----------  
@@ -91,30 +89,30 @@ GO
 (1 row(s) affected)
 ```  
   
- If you do not restrict the rows to be searched by using a `WHERE` clause, the query returns all rows in the table and reports nonzero values for those rows in which the pattern was found, and zero for all rows in which the pattern was not found.  
+If you do not restrict the rows to be searched by using a `WHERE` clause, the query returns all rows in the table and reports nonzero values for those rows in which the pattern was found, and zero for all rows in which the pattern was not found.  
   
 ### C. Using wildcard characters with PATINDEX  
  The following example uses % and _ wildcards to find the position at which the pattern `'en'`, followed by any one character and `'ure'` starts in the specified string (index starts at 1):  
   
-```  
+```sql  
 SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 -----------  
 8  
 ```  
   
- `PATINDEX` works just like `LIKE`, so you can use any of the wildcards. You do not have to enclose the pattern between percents. `PATINDEX('a%', 'abc')` returns 1 and `PATINDEX('%a', 'cba')` returns 3.  
+`PATINDEX` works just like `LIKE`, so you can use any of the wildcards. You do not have to enclose the pattern between percents. `PATINDEX('a%', 'abc')` returns 1 and `PATINDEX('%a', 'cba')` returns 3.  
   
  Unlike `LIKE`, `PATINDEX` returns a position, similar to what `CHARINDEX` does.  
   
 ### D. Using COLLATE with PATINDEX  
  The following example uses the `COLLATE` function to explicitly specify the collation of the expression that is searched.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
@@ -122,25 +120,24 @@ GO
 ```  
   
 ### E. Using a variable to specify the pattern  
- The following example uses a variable to pass a value to the *pattern* parameter. This example uses the  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+The following example uses a variable to pass a value to the *pattern* parameter. This example uses the  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
 SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- ------------  
- 22
- ```  
-  
-
+```
+------------  
+22
+```  
   
 ## See Also  
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

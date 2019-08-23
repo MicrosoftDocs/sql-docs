@@ -5,17 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DELETE TAG command [ODBC]"
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DELETE TAG Command
 Removes a tag or tags from a compound index (.cdx) file.  
@@ -25,7 +21,7 @@ Removes a tag or tags from a compound index (.cdx) file.
 ```  
   
 DELETE TAG TagName1 [OF CDXFileName1]  
-   [, TagName2 [OF CDXFileName2]] ...  
+   [, TagName2 [OF CDXFileName2]] ...  
   Or   
 DELETE TAG ALL [OF CDXFileName]  
 ```  

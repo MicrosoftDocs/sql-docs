@@ -3,21 +3,16 @@ title: "Create, Alter, and Drop FileTables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: filestream
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], altering"
   - "FileTables [SQL Server], dropping"
   - "FileTables [SQL Server], creating"
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Create, Alter, and Drop FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +50,9 @@ manager: craigg
     2.  If you do not provide a value for **FILETABLE_COLLATE_FILENAME**, or you specify **database_default**, the column inherits the collation of the current database. If the current database collation is case-sensitive, an error is raised and the **CREATE TABLE** operation fails.  
   
 3.  You can also specify the names to be used for the 3 primary key and unique constraints that are automatically created. If you do not provide names, then the system generates names as described later in this topic.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  
@@ -95,7 +92,7 @@ GO
   
 -   A FileTable requires a valid FILESTREAM filegroup, since a FileTable contains a FILESTREAM column. You can optionally specify a valid FILESTREAM filegroup as part of the **CREATE TABLE** command for creating a FileTable. If you do not specify a filegroup, then the FileTable uses the default FILESTREAM filegroup for the database. If the database does not have a FILESTREAM filegroup, then an error is raised.  
   
--   You cannot create a table constraint as part of a **CREATE TABLE…AS FILETABLE** statement. However you can add the constraint later by using an **ALTER TABLE** statement.  
+-   You cannot create a table constraint as part of a **CREATE TABLE...AS FILETABLE** statement. However you can add the constraint later by using an **ALTER TABLE** statement.  
   
 -   You cannot create a FileTable in the **tempdb** database or in any of the other system databases.  
   
@@ -138,7 +135,7 @@ GO
   
 -   The FileTable directory and the sub-directories that it contained disappear from the FILESTREAM file and directory hierarchy of the database.  
   
- The DROP TABLE command fails if there are open file handles in the FileTable’s file namespace. For information about closing open handles, see [Manage FileTables](../../relational-databases/blob/manage-filetables.md).  
+ The DROP TABLE command fails if there are open file handles in the FileTable's file namespace. For information about closing open handles, see [Manage FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ##  <a name="BasicsOtherObjects"></a> Other Database Objects Are Created When You Create a FileTable  
  When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
@@ -161,9 +158,9 @@ GO
 |||  
 |-|-|  
 |**Columns**|**Index type**|  
-|[path_locator] ASC|Primary Key, non-clustered|  
-|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, non-clustered|  
-|[stream_id] ASC|Unique, non-clustered|  
+|[path_locator] ASC|Primary Key, nonclustered|  
+|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, nonclustered|  
+|[stream_id] ASC|Unique, nonclustered|  
   
  **Constraints that are created when you create a new FileTable**  
  When you create a new FileTable, the following system-defined constraints are also created:  

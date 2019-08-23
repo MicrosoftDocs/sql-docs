@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined error messages [SQL Server]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "errors [SQL Server], severity"
   - "TRY...CATCH [SQL Server]"
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -53,17 +50,17 @@ manager: craigg
   
  RAISERROR can be used to generate user-defined error messages with severities from 1 through 25. RAISERROR can reference a user-defined error message stored in the **sys.messages** catalog view or build a message dynamically. When using the user-defined error message in **sys.messages** while generating an error, the severity specified by RAISERROR overrides the severity specified in **sys.messages**. For more information, see [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql).  
   
-## Error Severity and TRY…CATCH  
- A TRY…CATCH construct catches all execution errors with severity greater than 10 that do not terminate the database connection.  
+## Error Severity and TRY...CATCH  
+ A TRY...CATCH construct catches all execution errors with severity greater than 10 that do not terminate the database connection.  
   
- Errors with severity from 0 through 10 are informational messages and do not cause execution to jump from the CATCH block of a TRY…CATCH construct.  
+ Errors with severity from 0 through 10 are informational messages and do not cause execution to jump from the CATCH block of a TRY...CATCH construct.  
   
  Errors that terminate the database connection, usually with severity from 20 through 25, are not handled by the CATCH block because execution is aborted when the connection terminates.  
   
  For more information, see [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   
 ## Retrieving Error Severity  
- The ERROR_SEVERITY system function can be used to retrieve the severity of the error that caused the CATCH block of a TRY…CATCH construct to be run. ERROR_SEVERITY returns NULL if called outside the scope of a CATCH block. For more information, see [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
+ The ERROR_SEVERITY system function can be used to retrieve the severity of the error that caused the CATCH block of a TRY...CATCH construct to be run. ERROR_SEVERITY returns NULL if called outside the scope of a CATCH block. For more information, see [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
   
 ## See Also  
  [Understanding Database Engine Errors](../native-client-ole-db-errors/errors.md)   

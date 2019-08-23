@@ -5,9 +5,7 @@ ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STATS_DATE_TSQL"
@@ -21,10 +19,8 @@ helpviewer_keywords:
   - "last time statistics updated"
   - "stats update date"
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-caps.latest.revision: 43
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STATS_DATE (Transact-SQL)

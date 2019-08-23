@@ -5,19 +5,15 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database mirroring [SQL Server], removing"
   - "stopping database mirroring [SQL Server]"
   - "removing database mirroring [SQL Server]"
 ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Removing Database Mirroring (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

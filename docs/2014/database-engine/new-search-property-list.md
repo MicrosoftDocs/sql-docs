@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.spl.newsearchpropertylist.f1"
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg

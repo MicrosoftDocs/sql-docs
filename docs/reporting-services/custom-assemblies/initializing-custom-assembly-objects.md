@@ -1,28 +1,19 @@
 ---
 title: "Initializing Custom Assembly Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "custom-assemblies"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: custom-assemblies
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "initializing custom assemblies [Reporting Services]"
   - "custom assemblies [Reporting Services], initializing"
   - "OnInit method"
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-caps.latest.revision: 36
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Initializing Custom Assembly Objects
   In some cases, you may need to initialize property and field values in your custom assembly classes when you instantiate them. You will most likely need to initialize your custom classes with values available to you from the report's global object collections. You do this by overriding the **OnInit** method of the **Code** object of a report. To access **OnInit**, use the **Code** element of the report definition. There are two techniques for initializing property or field values of the classes in a custom assembly that you plan to use in your report: You can either declare and create a new instance of your class using **OnInit**, or you can call a publicly available method using **OnInit**.  

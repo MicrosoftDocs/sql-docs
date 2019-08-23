@@ -1,20 +1,15 @@
 ---
 title: "Master Data Services Installation and Configuration | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/28/2017"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-caps.latest.revision: 44
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Installation and Configuration
 
@@ -33,12 +28,12 @@ For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes
 For links to videos and other training resources to help you learn [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Learn Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Download**  
->-   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
->-   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
- 
+> -   To download [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Have an Azure account?  Then go **[Here](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server already installed.  
+> 
 > **Can't create an MDS web site?**
->>Check out this Microsoft support article for instructions on how to resolve this problem.
-[Can't create an MDS website through a low-privilege account in SQL Server 2016](https://aka.ms/mdssupport) 
+> >Check out this Microsoft support article for instructions on how to resolve this problem.
+> [Can't create an MDS website through a low-privilege account in SQL Server 2016](https://aka.ms/mdssupport) 
 
 ## Internet Explorer and Silverlight
 - When you install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 machine, you may have to configure Internet Explorer Enhanced Security to allow scripting for the Web application site. Otherwise, browsing to the site on the server computer will fail.
@@ -116,20 +111,31 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
  **To set up the database and website using the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
-> [!WARNING]  
-    >  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Information Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
-    
+> [!WARNING]
+>  You must [install IIS](#InstallIIS) before launching the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] Configuration Manager. Otherwise, the Configuration Manager will display an Internet Information Services error and you will not be able to create the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application.  
+> 
 > **Browser Requirement**
->>The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
+> >The [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] web application works only in Internet Explorer (IE) 9 or later. IE 8 and earlier versions, Microsoft Edge and Chrome are not supported.    
   
 1.  Launch the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], and click **Database Configuration** in the left pane.  
   
 2.  Click **Create Database**, and then click **Next** in the **Create Database Wizard**.  
   
-3.  On the **Database Server** page, select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click **Next**.
-  
+3.  On the **Database Server** page, specify the SQL Server instance. 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] adds support for SQL Server Managed Instance. Set the value of **SQL Server Instance** to the host of an Azure SQL Database managed instance. For example, `xxxxxx.xxxxxx.database.windows.net`.
+
+4. Select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click **Next**.
+
+    >For [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], to connect to Azure SQL Database managed instance, use one of the following authentication types:
+    >
+    >- Azure Active Directory Integrated Authentication: **Current User – Active Directory Integrated**
+    >- SQL Server Authentication: **SQL Server Account**.
+    >
+    >In Azure SQL Database managed instance, the user must be a member of the `sysadmin` fixed server role.
+
     > [!NOTE]  
-    >  When you select **Current User – Integrated Security** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM. 
+    >  When you select **Current User - Integrated Security** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
@@ -191,7 +197,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Click **Apply**. The **Configuration Complete** message box displays. Click **OK** in the message box to launch the web application. The web site address is http://*server name*/*web application*/. 
+15. Click **Apply**. The **Configuration Complete** message box displays. Click **OK** in the message box to launch the web application. The web site address is https://*server name*/*web application*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -269,7 +275,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
     1.  Navigate to the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] web site that you set up. See the [Setting up the Database and Website](#SetUpWeb) section.  
   
-         The web site address is http://*server name*/*web application*/.  
+         The web site address is https://*server name*/*web application*/.  
   
     2.  Select a model from the **Model** list box, and click **Explorer**.  
   

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 110">
+  <title>2 - xml-data</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g>
+      <polygon points="181.75 25.88 174.07 18.2 170.87 15 170.55 15 114.55 15 114.55 95 184.95 95 184.95 29.4 184.95 29.08 181.75 25.88" fill="#59b4d9"/>
+      <polygon points="170.55 18.2 117.75 18.2 117.75 91.8 181.75 91.8 181.75 29.4 170.55 29.4 170.55 18.2" fill="#fff" opacity="0.8" style="isolation: isolate"/>
+      <path d="M137.921,64.808l-15.507-7.45v-1.84l15.507-8.092v3.3L126.582,56.35v.069l11.339,5.106Z" fill="#59b4d9"/>
+      <path d="M157.543,41.608,145.51,70.642h-3.664l11.982-29.034Z" fill="#59b4d9"/>
+      <path d="M177.322,57.254,161.815,64.7V61.422l11.36-5.052v-.1l-11.36-5.628v-3.3l15.507,8.075Z" fill="#59b4d9"/>
+    </g>
+  </g>
+</svg>

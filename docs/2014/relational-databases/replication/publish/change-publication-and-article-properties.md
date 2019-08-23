@@ -4,10 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying article properties"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "publications [SQL Server replication], changing properties"
   - "articles [SQL Server replication], properties"
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -91,7 +87,7 @@ manager: craigg
 |Change destination table owner.|**sp_changemergearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
 ## See Also  
- [Administration &#40;Replication&#41;](../administration/administration-replication.md)   
+ [Replication Administration FAQ](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Create and Apply the Snapshot](../create-and-apply-the-snapshot.md)   
  [Reinitialize Subscriptions](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

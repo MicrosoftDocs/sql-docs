@@ -5728,8 +5728,10 @@
     items:
     - name: What's new
       href: dma/dma-whatsnew.md
-    - name: Assess
+    - name: Assess SQL Database
       href: dma/dma-assesssqlonprem.md
+    - name: Assess SQL Server Integration Services (SSIS)
+      href: dma/dma-assess-ssis.md
     - name: Identify the right Azure SQL Database SKU
       href: dma/dma-sku-recommend-sql-db.md
     - name: Upgrade SQL Server to a later version

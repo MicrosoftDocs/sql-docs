@@ -152,7 +152,8 @@ Rowstore indexes with more than 128 extents are rebuilt in two separate phases: 
 
 The `ALTER INDEX REORGANIZE` statement requires the data file containing the index to have space available, because the operation can only allocate temporary work pages on the same file, not another file within the filegroup. So although the filegroup might have free pages available, the user can still encounter error 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
 
-Creating and rebuilding non-aligned indexes on a table with more than 1,000 partitions is possible, but is not recommended. Doing so may cause degraded performance or excessive memory consumption during these operations.
+> [!WARNING]
+> Creating and rebuilding nonaligned indexes on a table with more than 1,000 partitions is possible, but is not supported. Doing so may cause degraded performance or excessive memory consumption during these operations. Microsoft recommends using only aligned indexes when the number of partitions exceed 1,000.  
 
 An index cannot be reorganized or rebuilt if the filegroup in which it is located is **offline** or set to **read-only**. When the keyword `ALL` is specified and one or more indexes are in an offline or read-only filegroup, the statement fails.
 
@@ -313,7 +314,7 @@ object_id   TableName                   index_id    IndexName                   
 8. Click **OK.**
 
 > [!NOTE]
-> Reorganizing a columnstore index using [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] will combine `COMPRESSED` rowgroups together, but does not force all rowgroups to be compressed into the columnstore. For that purpose, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] example [below](#TsqlProcedureReorg). 
+> Reorganizing a columnstore index using [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] will combine `COMPRESSED` rowgroups together, but does not force all rowgroups to be compressed into the columnstore. CLOSED rowgroups will be compressed but OPEN rowgroups will not be compressed into the columnstore. To compress all rowgroups, use the [!INCLUDE[tsql](../../includes/tsql-md.md)] example [below](#TsqlProcedureReorg). 
 
 ### To reorganize all indexes in a table
 

@@ -1,18 +1,17 @@
 ---
-title: Known issues for R language and Python integration
+title: Known issues for Python and R
 ms.prod: sql
 ms.technology: machine-learning
-
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Known issues in Machine Learning Services
+# Known issues in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server 2016 R Services](r/sql-server-r-services.md) and [SQL Server Machine Learning Services with R and Python](what-is-sql-server-machine-learning.md).
+This article describes known problems or limitations with machine learning components that are provided as an option in [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
 
 ## Setup and configuration issues
 
@@ -497,6 +496,33 @@ Beginning with SQL Server 2017 Cumulative Update 12 (CU12), numeric, decimal and
 
 This has been fixed in SQL Server 2017 Cumulative Update 14 (CU14).
 
+### 6. Bad interpreter error when installing Python packages with pip on Linux 
+
+On SQL Server 2019, if you try to use **pip**. For example:
+
+```bash
+/opt/mssql/mlservices/runtime/python/bin/pip -h
+```
+
+You will then get this error:
+
+> *bash: /opt/mssql/mlservices/runtime/python/bin/pip: /opt/microsoft/mlserver/9.4.7/bin/python/python: bad interpreter: No such file or directory*
+
+**Workaround**
+
+Install **pip** from the [Python Package Authority (PyPA)](https://www.pypa.io):
+
+```bash
+wget 'https://bootstrap.pypa.io/get-pip.py' 
+/opt/mssql/mlservices/bin/python/python ./get-pip.py 
+```
+
+**Recommendation**
+
+Use [sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python) or [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) to install Python packages.
+
+**Applies to:** SQL Server 2019 on Linux
+
 ## Revolution R Enterprise and Microsoft R Open
 
 This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -517,8 +543,6 @@ For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-
 
 Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisions 0.88-0.91 and 0.93 and later are known to be compatible.
 
-## See also
-
-[What's new in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+## Next steps
 
 [Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-faq.md)

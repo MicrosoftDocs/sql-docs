@@ -254,7 +254,7 @@ GO
 
 The previous statement returns a result set similar to the following.
 
-```cmd
+```
 object_id   TableName    index_id    IndexName                                             avg_fragmentation_in_percent
 ----------- ------------ ----------- ----------------------------------------------------- ------------------------------
 1557580587  Employee     1           PK_Employee_BusinessEntityID                          0
@@ -289,7 +289,7 @@ ORDER BY object_name(i.object_id), i.name;
 ```
 The previous statement returns a result set similar to the following.
 
-```cmd
+```
 object_id   TableName                   index_id    IndexName                       Fragmentation
 ----------- --------------------------- ----------- ------------------------------- ---------------
 114099447   FactResellerSalesXL_CCI     1           IndFactResellerSalesXL_CCI      0

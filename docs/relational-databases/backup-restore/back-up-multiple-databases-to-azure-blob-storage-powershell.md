@@ -34,12 +34,12 @@ The following sections include scripts for various operations like creating a SQ
   
 The following are considerations for the sample scripts:  
   
-- Navigate SQL Server PowerShell paths: Windows PowerShell implements cmdlets to navigate the path structure that represents the hierarchy of objects supported by a PowerShell provider. When you have navigated to a node in the path, you can use other cmdlets to perform basic operations on the current object.  
+- SQL Server PowerShell implements cmdlets to navigate the path structure that represents the hierarchy of objects supported by a PowerShell provider. When you have navigated to a node in the path, you can use other cmdlets to perform basic operations on the current object.
+
+  For more information, see [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).
 
 - **Get-ChildItem** cmdlet: The information returned by the **Get-ChildItem** depends on the location in a SQL Server PowerShell path. For example, if the location is at the computer level, this cmdlet returns all the SQL Server database engine instances installed on the computer. Or, if the location is at the object level such as databases, then it returns a list of database objects. By default the **Get-ChildItem** cmdlet does not return system objects. Use the `–Force` parameter to see the system objects.
-  
-    For more information, see [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
-  
+
 - An Azure storage account and SQL credential are required prerequisites and for all backup and restore operations to the Azure Blob storage service.
   
 ### Create a SQL credential on all instances of SQL Server
@@ -57,7 +57,7 @@ $storageKey = "<myStorageAccessKey>"
 $secureString = ConvertTo-SecureString $storageKey -AsPlainText -Force  
 $credentialName = "myCredential-$(Get-Random)"
 
-Write-Host "Generating credentials... " $credentialName
+Write-Host "Generate credential: " $credentialName
   
 #cd to sql server and get instances  
 cd $sqlPath
@@ -68,9 +68,12 @@ foreach ($instance in $instances)  {
     try {
         $path = "$($sqlPath)\$($instance.DisplayName)\credentials"
         New-SqlCredential -Name $credentialName -Identity $storageAccount -Secret $secureString -Path $path -ea Stop | Out-Null
-        Write-Host "Generated credential: $($path)\$($credentialName)"  }
-    catch { write-host $_.Exception.Message } }
-```  
+        Write-Host "...generated credential $($path)\$($credentialName)."  }
+    catch { Write-Host $_.Exception.Message } }
+```
+
+> [!NOTE]
+> The statement `-ea Stop | Out-Null` is used for user-defined exception output. If you prefer default PowerShell error messages, this statement can be removed. 
 
 ### Remove a SQL credential from all instances of SQL Server
 
@@ -82,7 +85,7 @@ import-module sqlps
 $sqlPath = "sqlserver:\sql\$($env:COMPUTERNAME)"
 $credentialName = "<myCredential>"
 
-Write-Host "Deleting credentials... " $credentialName
+Write-Host "Delete credential: " $credentialName
 
 cd $sqlPath
 $instances = Get-ChildItem
@@ -91,9 +94,9 @@ $instances = Get-ChildItem
 foreach ($instance in $instances)  {
     try {
         $path = "$($sqlPath)\$($instance.DisplayName)\credentials\$($credentialName)"
-        Remove-SqlCredential -Path $path -ea stop
-        Write-Host "Deleted credential: $($path)"  }
-    catch { write-host $_.Exception.Message } }
+        Remove-SqlCredential -Path $path -ea Stop | Out-Null
+        Write-Host "...deleted credential $($path)."  }
+    catch { Write-Host $_.Exception.Message } }
 ```  
   
 ### Full backup for all databases
@@ -109,7 +112,7 @@ $blobContainer = "<myBlobContainer>"
 $backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
 $credentialName = "<myCredential>"
 
-Write-Host "Backing up databases: " $backupUrlContainer
+Write-Host "Backup database: " $backupUrlContainer
   
 cd $sqlPath
 $instances = Get-ChildItem
@@ -142,7 +145,7 @@ $blobContainer = "<myBlobContainer>"
 $backupUrlContainer = "https://$storageAccount.blob.core.windows.net/$blobContainer/"  
 $credentialName = "<myCredential>"
 
-Write-Host "Backing up databases: " $instanceName " to " $backupUrlContainer
+Write-Host "Backup database: " $instanceName " to " $backupUrlContainer
   
 cd "$($sqlPath)\$($instanceName)"
 

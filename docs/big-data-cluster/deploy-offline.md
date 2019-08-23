@@ -28,7 +28,7 @@ The following steps describe how to pull the big data cluster container images f
 > [!TIP]
 > The following steps explain the process. However, to simplify the task, you can use the [automated script](#automated) instead of manually running these commands.
 
-1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-CTP3.2-ubuntu**.  
+1. Pull the big data cluster container images by repeating the following command. Replace `<SOURCE_IMAGE_NAME>` with each [image name](#images). Replace `<SOURCE_DOCKER_TAG>` with the tag for the big data cluster release, such as **2019-RC1-ubuntu**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -112,7 +112,7 @@ You can use an automated python script that will automatically pull all required
 
 ## Install tools offline
 
-Big data cluster deployments require several tools, including **Python**, **azdata**, and **kubectl**. Use the following steps to install these tools on an offline server.
+Big data cluster deployments require several tools, including **Python**, `azdata`, and **kubectl**. Use the following steps to install these tools on an offline server.
 
 ### <a id="python"></a> Install python offline
 
@@ -134,13 +134,13 @@ Big data cluster deployments require several tools, including **Python**, **azda
 
 ### <a id="azdata"></a> Install azdata offline
 
-1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the **azdata** packages to the current folder.
+1. On a machine with internet access and [Python](https://wiki.python.org/moin/BeginnersGuide/Download), run the following command to download all off the `azdata` packages to the current folder.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. Copy the downloaded packages and the **requirements.txt** file to the target machine.
+1. Copy the downloaded packages and the `requirements.txt` file to the target machine.
 
 1. Run the following command on the target machine, specifying the folder that you copied the previous files into.
 
@@ -158,7 +158,7 @@ To install **kubectl** to an offline machine, use the following steps.
 
 ## Deploy from private repository
 
-To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following **azdata** commands demonstrate how to change the Docker settings in a custom deployment configuration file named **control.json**:
+To deploy from the private repository, use the steps described in the [deployment guide](deployment-guidance.md), but use a custom deployment configuration file that specifies your private Docker repository information. The following `azdata` commands demonstrate how to change the Docker settings in a custom deployment configuration file named `control.json`:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -166,7 +166,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-The deployment prompts you for the docker username and password, or you can specify them in the **DOCKER_USERNAME** and **DOCKER_PASSWORD** environment variables.
+The deployment prompts you for the docker username and password, or you can specify them in the `DOCKER_USERNAME` and `DOCKER_PASSWORD` environment variables.
 
 ## Next steps
 

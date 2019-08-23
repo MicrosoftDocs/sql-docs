@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\GitSync\\sql-docs-pr\\docs\\2014\\snippets\\csharp\\SQL15\\replication\\howto\\cs\\RMOHowTo.csproj",
+  "TargetFramework": "v4.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

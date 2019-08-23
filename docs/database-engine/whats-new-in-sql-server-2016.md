@@ -94,7 +94,7 @@ For more details, see these topics in the [Columnstore Indexes Guide](../relatio
 
 - [Columnstore Indexes for Data Warehousing](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
-- [Columnstore Indexes Defragmentation](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
+- [Reorganize and Rebuild Indexes](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 
 ## Database scoped configurations

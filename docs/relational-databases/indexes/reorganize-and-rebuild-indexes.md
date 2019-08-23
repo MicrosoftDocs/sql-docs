@@ -32,7 +32,7 @@ author: pmasl
 ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Reorganize and Rebuild Indexes
+# Reorganize and rebuild indexes
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -54,7 +54,7 @@ Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], you may still
 ## <a name="Fragmentation"></a> Detecting fragmentation
 The first step in deciding which defragmentation method to use is to analyze the index to determine the degree of fragmentation. 
 
-### Detecting framentation on rowstore indexes
+### Detecting fragmentation on rowstore indexes
 By using the system function [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), you can detect fragmentation in a specific index, all indexes on a table or indexed view, all indexes in a database, or all indexes in all databases. For partitioned indexes, **sys.dm_db_index_physical_stats** also provides fragmentation information for each partition.
 
 The result set returned by the **sys.dm_db_index_physical_stats** function includes the following columns:
@@ -82,7 +82,7 @@ Very low levels of fragmentation (less than 5 percent) should typically not be a
 > [!NOTE]
 > Rebuilding or reorganizing small rowstore indexes often does not reduce fragmentation. The pages of small indexes are sometimes stored on mixed extents. Mixed extents are shared by up to eight objects, so the fragmentation in a small index might not be reduced after reorganizing or rebuilding it. 
 
-### Detecting framentation on columnstore indexes
+### Detecting fragmentation on columnstore indexes
 By using the DMV [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) you can determine the percentage of deleted rows, which is a good measure for the fragmentation in a rowgroup. Use this information to compute the fragmentation in a specific index, all indexes on a table, all indexes in a database, or all indexes in all databases. 
 
 The result set returned by the **sys.dm_db_column_store_row_group_physical_stats** DMV includes the following columns:
@@ -100,7 +100,7 @@ This can be used to compute the fragmentation using the formula `100*(ISNULL(del
 |> = 20%|Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|ALTER INDEX REORGANIZE|
 
 ## Index defragmentation considerations
-Under certain conditions, rebuilding a clustered index will automatically rebuild any nonclustered index that reference the clustering key, if the physical or logical identifiers contained in the nonclustered index records needs to change.
+Under certain conditions, rebuilding a clustered index will automatically rebuild any nonclustered index that reference the clustering key, if the physical or logical identifiers contained in the nonclustered index records need to change.
 
 Scenarios that force all rowstore nonclustered indexes to be automatically rebuilt on a table:
 
@@ -131,7 +131,7 @@ Rebuild a partition instead of the entire table:
 -   For partitioned tables, you do not need to rebuild the entire columnstore index because fragmentation is likely to occur in only the partitions that have been modified recently. Fact tables and large dimension tables are usually partitioned in order to perform backup and management operations on chunks of the table.  
 
 Rebuild a partition after heavy DML operations:  
--   Rebuilding a partition will defragment the partition and reduce disk storage. Rebuilding will delete all rows from the columnstore that are marked for deletion, and it will move all rowgroups from the delta store into the columnstore. Note, there can be multiple rowgroups in the delta store that each have less than one million rows.  
+-   Rebuilding a partition will defragment the partition and reduce disk storage. Rebuilding will delete all rows from the columnstore that are marked for deletion, and it will move all rowgroups from the delta store into the columnstore. Note, there can be multiple rowgroups in the delta store that have less than one million rows.  
   
 Rebuild a partition after loading data:  
 -   This ensures all data is stored in the columnstore. When concurrent processes each load less than 100,000 rows into the same partition at the same time, the partition can end up with multiple delta stores. Rebuilding will move all delta store rows into the columnstore.  
@@ -147,7 +147,7 @@ When reorganizing a columnstore index, the [!INCLUDE[ssde_md](../../includes/ssd
 
 After performing data loads, you can have multiple small rowgroups in the delta store. You can use `ALTER INDEX REORGANIZE` to force all of the rowgroups into the columnstore, and then to combine the rowgroups into fewer rowgroups with more rows.  The reorganize operation will also remove rows that have been deleted from the columnstore. 
 
-## <a name="Restrictions"></a> Limitations and Restrictions
+## <a name="Restrictions"></a> Limitations and restrictions
 Rowstore indexes with more than 128 extents are rebuilt in two separate phases: logical and physical. In the logical phase, the existing allocation units used by the index are marked for deallocation, the data rows are copied and sorted, then moved to new allocation units created to store the rebuilt index. In the physical phase, the allocation units previously marked for deallocation are physically dropped in short transactions that happen in the background, and do not require many locks. For more information about extents, refer to the [Pages and Extents Architecture Guide](../../relational-databases/pages-and-extents-architecture-guide.md).
 
 The `ALTER INDEX REORGANIZE` statement requires the data file containing the index to have space available, because the operation can only allocate temporary work pages on the same file, not another file within the filegroup. So although the filegroup might have free pages available, the user can still encounter error 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`

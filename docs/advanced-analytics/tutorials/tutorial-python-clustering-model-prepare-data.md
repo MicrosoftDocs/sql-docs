@@ -33,37 +33,48 @@ In [part two](tutorial-python-clustering-model-build.md), you'll learn how to cr
 
 In [part three](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
 
-## Prerequisites
+## Prerequisites - **CHANGE**
 
-* Azure subscription - If you don't have an Azure subscription, [create an account](https://azure.microsoft.com/free/) before you begin.
+* Install [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language option.
 
-* Azure SQL Database Server with Machine Learning Services enabled - During the public preview, Microsoft will onboard you and enable machine learning for your existing or new databases.
+* Install [python](https://www.python.org/) and a Python development environment. This article assumes you're using [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 
-* RevoScaleR package - See [RevoScaleR](https://docs.microsoft.com/sql/advanced-analytics/r/ref-r-revoscaler?view=sql-server-2017#versions-and-platforms) for options to install this package locally.
+* Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) or [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio or SSMS.
 
-* R IDE - This tutorial uses [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
+* You need some Python libraries that aren't included with SQL Server Machine Learning Services. Follow the instructions at [How to install Python client libraries for remote access to a Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
 
-* SQL query tool - This tutorial assumes you're using [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) or [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS).
-
-## Sign in to the Azure portal
-
-Sign in to the [Azure portal](https://portal.azure.com/).
+  ```python
+  pip install matplotlib
+  pip install scipy
+  pip install sklearn
+  ```
 
 ## Import the sample database
 
-The sample dataset used in this tutorial has been saved to a **.bacpac** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/default.asp).
+The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/default.asp).
 
-1. Download the file [tpcxbb_1gb.bacpac](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bacpac).
+1. Download the file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) to the SQL Server backup folder. For the default database instance, the folder is:
 
-1. Follow the directions in [Import a BACPAC file to create an Azure SQL database](https://docs.microsoft.com/azure/sql-database/sql-database-import), using these details:
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\`
 
-   * Import from the **tpcxbb_1gb.bacpac** file you downloaded
-   * During the public preview, choose the **Gen5/vCore** configuration for the new database
-   * Name the new database "tpcxbb_1gb"
+1. Open SSMS, connect to SQL Server, and open a new query window. Then run the following commands to restore the database.
+
+   ```sql
+   USE master;
+   GO
+   
+   RESTORE DATABASE tpcxbb_1gb
+   FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\tpcxbb_1gb.bak'
+   WITH MOVE 'tpcxbb_1gb' TO 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\tpcxbb_1gb.mdf'
+       , MOVE 'tpcxbb_1gb_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\tpcxbb_1gb.ldf';
+   GO
+   ```
 
 ## Separate customers
 
-Create a new RScript file in RStudio and run the following script.
+Create a new file in Visual Studio Code and enter the following script.
+
+Create a new script file in RStudio and run the following script.
 In the SQL query, you're separating customers along the following dimensions:
 
 * **orderRatio** = return order ratio (total number of orders partially or fully returned versus the total number of orders)
@@ -73,77 +84,67 @@ In the SQL query, you're separating customers along the following dimensions:
 
 In the **paste** function, replace **Server**, **UID**, and **PWD** with your own connection information.
 
-```r
-# Define the connection string to connect to the tpcxbb_1gb database
-connStr <- paste("Driver=SQL Server",
-               "; Server=", "<Azure SQL Database Server>",
-               "; Database=tpcxbb_1gb",
-               "; UID=", "<user>",
-               "; PWD=", "<password>",
-                  sep = "");
+```python
+# Load packages.
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import revoscalepy as revoscale
+from scipy.spatial import distance as sci_distance
+from sklearn import cluster as sk_cluster
 
 
-#Define the query to select data from SQL Server
-input_query <- "
-SELECT ss_customer_sk AS customer
-    ,round(CASE 
-            WHEN (
-                       (orders_count = 0)
-                    OR (returns_count IS NULL)
-                    OR (orders_count IS NULL)
-                    OR ((returns_count / orders_count) IS NULL)
-                    )
-                THEN 0.0
-            ELSE (cast(returns_count AS NCHAR(10)) / orders_count)
-            END, 7) AS orderRatio
-    ,round(CASE 
-            WHEN (
-                     (orders_items = 0)
-                  OR (returns_items IS NULL)
-                  OR (orders_items IS NULL)
-                  OR ((returns_items / orders_items) IS NULL)
-                 )
-            THEN 0.0
-            ELSE (cast(returns_items AS NCHAR(10)) / orders_items)
-            END, 7) AS itemsRatio
-    ,round(CASE 
-            WHEN (
-                     (orders_money = 0)
-                  OR (returns_money IS NULL)
-                  OR (orders_money IS NULL)
-                  OR ((returns_money / orders_money) IS NULL)
-                 )
-            THEN 0.0
-            ELSE (cast(returns_money AS NCHAR(10)) / orders_money)
-            END, 7) AS monetaryRatio
-    ,round(CASE 
-            WHEN (returns_count IS NULL)
-            THEN 0.0
-            ELSE returns_count
-            END, 0) AS frequency
-FROM (
-    SELECT ss_customer_sk,
+
+def perform_clustering():
+    ################################################################################################
+
+    ## Connect to DB and select data
+
+    ################################################################################################
+
+    # Connection string to connect to SQL Server named instance.
+    conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+
+    input_query = '''SELECT
+    ss_customer_sk AS customer,
+    ROUND(COALESCE(returns_count / NULLIF(1.0*orders_count, 0), 0), 7) AS orderRatio,
+    ROUND(COALESCE(returns_items / NULLIF(1.0*orders_items, 0), 0), 7) AS itemsRatio,
+    ROUND(COALESCE(returns_money / NULLIF(1.0*orders_money, 0), 0), 7) AS monetaryRatio,
+    COALESCE(returns_count, 0) AS frequency
+    FROM
+    (
+      SELECT
+        ss_customer_sk,
         -- return order ratio
-        COUNT(DISTINCT (ss_ticket_number)) AS orders_count,
+        COUNT(distinct(ss_ticket_number)) AS orders_count,
         -- return ss_item_sk ratio
         COUNT(ss_item_sk) AS orders_items,
         -- return monetary amount ratio
-        SUM(ss_net_paid) AS orders_money
-    FROM store_sales s
-    GROUP BY ss_customer_sk
+        SUM( ss_net_paid ) AS orders_money
+      FROM store_sales s
+      GROUP BY ss_customer_sk
     ) orders
-LEFT OUTER JOIN (
-    SELECT sr_customer_sk,
+    LEFT OUTER JOIN
+    (
+      SELECT
+        sr_customer_sk,
         -- return order ratio
-        count(DISTINCT (sr_ticket_number)) AS returns_count,
+        count(distinct(sr_ticket_number)) as returns_count,
         -- return ss_item_sk ratio
-        COUNT(sr_item_sk) AS returns_items,
+        COUNT(sr_item_sk) as returns_items,
         -- return monetary amount ratio
-        SUM(sr_return_amt) AS returns_money
+        SUM( sr_return_amt ) AS returns_money
     FROM store_returns
-    GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
-"
+    GROUP BY sr_customer_sk ) returned ON ss_customer_sk=sr_customer_sk'''
+
+
+    # Define the columns we wish to import.
+    column_info = {
+        "customer": {"type": "integer"},
+        "orderRatio": {"type": "integer"},
+        "itemsRatio": {"type": "integer"},
+        "frequency": {"type": "integer"}
+    }
 ```
 
 ## Load the data into a data frame

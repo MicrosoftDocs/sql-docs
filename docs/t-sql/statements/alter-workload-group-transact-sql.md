@@ -76,14 +76,14 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!IMPORTANT]
 > Setting *value* to 0 prevents queries with SORT and HASH JOIN operations in user-defined workload groups from running.     
 >
-> We do not recommend setting *value* greater than 70 because the server may be unable to set aside enough free memory if other concurrent queries are running. This may eventually lead to query time-out error 8645.      
+> It is not recommended to set *value* greater than 70 because the server may be unable to set aside enough free memory if other concurrent queries are running. This may eventually lead to query time-out error 8645.      
   
 > [!NOTE]  
->  If the query memory requirements exceed the limit that is specified by this parameter, the server does the following:  
+> If the query memory requirements exceed the limit that is specified by this parameter, the server does the following:  
 >   
-> For user-defined workload groups, the server tries to reduce the query degree of parallelism until the memory requirement falls under the limit, or until the degree of parallelism equals 1. If the query memory requirement is still greater than the limit, error 8657 occurs.  
+> -  For user-defined workload groups, the server tries to reduce the query degree of parallelism until the memory requirement falls under the limit, or until the degree of parallelism equals 1. If the query memory requirement is still greater than the limit, error 8657 occurs.  
 >   
-> For internal and default workload groups, the server permits the query to obtain the required memory.  
+> -  For internal and default workload groups, the server permits the query to obtain the required memory.  
 >   
 > Be aware that both cases are subject to time-out error 8645 if the server has insufficient physical memory.  
   

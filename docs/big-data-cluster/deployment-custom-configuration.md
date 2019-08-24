@@ -541,6 +541,75 @@ Use **azdata bdc config** commands to apply the changes in the JSON patch file. 
 azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
+## Disable ElasticSearch to run in privileged mode
+By default, ElasticSearch container runs in privilege mode in big data cluster. This is to make sure that at container initialization time, the container has enough permissions to update a setting on the host requried when ElasticSearch processes higher amount of logs. You can find more information about this topic in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html). 
+
+For disabling the container that runs ElasticSearch to run in privileged mode, you  must updated the **settings** section in the **control.json** and specify the value of **vm.max_map_count** to **-1**. Here is a sample of how this section would look like:
+```json
+"settings": {
+    "ElasticSearch": {
+        "vm.max_map_count": "-1"
+      }
+}
+```
+
+You can manully edit the **control.json** and add the above section to the **spec**, or you can create a patch file **elasticsearch-patch.json** like below and use **azdata** CLI to patch the **config.json** file:
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "spec",
+      "value": {
+        "docker": {
+            "registry": "mcr.microsoft.com",
+            "repository": "mssql/bdc",
+            "imageTag": "2019-RC1-ubuntu",
+            "imagePullPolicy": "Always"
+        },
+        "storage": {
+            "data": {
+                "className": "default",
+                "accessMode": "ReadWriteOnce",
+                "size": "15Gi"
+            },
+            "logs": {
+                "className": "default",
+                "accessMode": "ReadWriteOnce",
+                "size": "10Gi"
+            }
+        },
+        "endpoints": [
+            {
+                "name": "Controller",
+                "serviceType": "LoadBalancer",
+                "port": 30080
+            },
+            {
+                "name": "ServiceProxy",
+                "serviceType": "LoadBalancer",
+                "port": 30777
+            }
+        ],
+        "settings": {
+            "ElasticSearch": {
+                "vm.max_map_count": "-1"
+       	     }
+        }
+       }
+    }
+  ]
+}
+```
+
+Run this command to patch the configuration file:
+```
+azdata bdc config patch --config-file control.json --patch-file elasticsearch-patch.json
+```
+
+> [!IMPORTANT]
+> We recommend as a best practice to manually update the **max_map_count** setting manually on each host int he Kubernetes cluster as per instructions in [this article](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 ## Next steps
 
 For more information about using configuration files in big data cluster deployments, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

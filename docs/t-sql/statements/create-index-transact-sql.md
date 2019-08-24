@@ -1,7 +1,7 @@
 ---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -51,7 +51,7 @@ helpviewer_keywords:
   - "secondary indexes [SQL Server]"
   - "XML indexes [SQL Server], creating"
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-author: CarlRabeler
+author: pmasl
 ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -267,6 +267,7 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 Filtered indexes do not apply to XML indexes and full-text indexes. For UNIQUE indexes, only the selected rows must have unique index values. Filtered indexes do not allow the IGNORE_DUP_KEY option.
 
 ON *partition_scheme_name* **( _column_name_ )**      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies the partition scheme that defines the filegroups onto which the partitions of a partitioned index will be mapped. The partition scheme must exist within the database by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* specifies the column against which a partitioned index will be partitioned. This column must match the data type, length, and precision of the argument of the partition function that *partition_scheme_name* is using. *column_name* is not restricted to the columns in the index definition. Any column in the base table can be specified, except when partitioning a UNIQUE index, *column_name* must be chosen from among those used as the unique key. This restriction allows the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to verify uniqueness of key values within a single partition only.
@@ -282,11 +283,13 @@ If _partition_scheme_name_ or _filegroup_ is not specified and the table is part
 For more information about partitioning indexes, [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ON _filegroup_name_      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Creates the specified index on the specified filegroup. If no location is specified and the table or view is not partitioned, the index uses the same filegroup as the underlying table or view. The filegroup must already exist.
 
 ON **"**default**"**      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Creates the specified index on the same filegroup or partition scheme as the table or view.
@@ -297,6 +300,7 @@ The term default, in this context, is not a keyword. It is an identifier for the
 > "default" does not indicate the database default filegroup in the context of CREATE INDEX. This differs from CREATE TABLE, where "default" locates the table on the database default filegroup.
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Specifies the placement of FILESTREAM data for the table when a clustered index is created. The FILESTREAM_ON clause allows FILESTREAM data to be moved to a different FILESTREAM filegroup or partition scheme.
@@ -334,6 +338,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the object can 
 Specifies the options to use when you create the index.
 
 PAD_INDEX = { ON | **OFF** }      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies index padding. The default is OFF.
@@ -349,6 +354,7 @@ The PAD_INDEX option is useful only when FILLFACTOR is specified, because PAD_IN
 In backward compatible syntax, WITH PAD_INDEX is equivalent to WITH PAD_INDEX = ON.
 
 FILLFACTOR **=**_fillfactor_      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies a percentage that indicates how full the [!INCLUDE[ssDE](../../includes/ssde-md.md)] should make the leaf level of each index page during index creation or rebuild. *fillfactor* must be an integer value from 1 to 100. If *fillfactor* is 100, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] creates indexes with leaf pages filled to capacity.
@@ -361,6 +367,7 @@ The FILLFACTOR setting applies only when the index is created or rebuilt. The [!
 For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
+
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Specifies whether to store temporary sort results in **tempdb**. The default is OFF.
@@ -406,7 +413,10 @@ To restore automatic statistics updating, set the STATISTICS_NORECOMPUTE to OFF,
 
 In backward compatible syntax, WITH STATISTICS_NORECOMPUTE is equivalent to WITH STATISTICS_NORECOMPUTE = ON.
 
-STATISTICS_INCREMENTAL = { ON | **OFF** }      
+STATISTICS_INCREMENTAL = { ON | **OFF** }     
+
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 When **ON**, the statistics created are per partition statistics. When **OFF**, the statistics tree is dropped and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-computes the statistics. The default is **OFF**.
 
 If per partition statistics are not supported the option is ignored and a warning is generated. Incremental stats are not supported for following statistics types:
@@ -442,7 +452,7 @@ In backward compatible syntax, WITH DROP_EXISTING is equivalent to WITH DROP_EXI
 ONLINE = { ON | **OFF** }      
 Specifies whether underlying tables and associated indexes are available for queries and data modification during the index operation. The default is OFF.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Online index operations are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
 ON      
@@ -450,6 +460,18 @@ Long-term table locks are not held for the duration of the index operation. Duri
 
 OFF      
 Table locks are applied for the duration of the index operation. An offline index operation that creates, rebuilds, or drops a clustered index, or rebuilds or drops a nonclustered index, acquires a Schema modification (Sch-M) lock on the table. This prevents all user access to the underlying table for the duration of the operation. An offline index operation that creates a nonclustered index acquires a Shared (S) lock on the table. This prevents updates to the underlying table but allows read operations, such as SELECT statements.
+
+For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
+
+Indexes, including indexes on global temp tables, can be created online except for the following cases:
+
+- XML index
+- Index on a local temp table
+- Initial unique clustered index on a view
+- Disabled clustered indexes
+- Columnstore indexes
+- Clustered index, if the underlying table contains LOB data types (**image**, **ntext**, **text**) and spatial data types
+- **varchar(max)** and **varbinary(max)** columns cannot be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns can be built or rebuilt using the **ONLINE** option. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] does not permit the **ONLINE** option when the base table contains **varchar(max)** or **varbinary(max)** columns
 
 For more information, see [How Online Index Operations Work](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -465,25 +487,17 @@ Index operation is resumable.
  OFF      
 Index operation is not resumable.
 
-MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**)      
+MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**)   
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (public preview)
 
 Indicates time (an integer value specified in minutes) that a resumable online index operation is executed before being paused.
 
-> [!WARNING]
+> [!IMPORTANT]
 > For more detailed information about index operations that can be performed online, see [Guidelines for Online Index Operations](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
- Indexes, including indexes on global temp tables, can be created online with the following exceptions:
-
-- XML index
-- Index on a local temp table.
-- Initial unique clustered index on a view.
-- Disabled clustered indexes.
-- Clustered index if the underlying table contains LOB data types: **image**, **ntext**, **text**, and spatial types.
-- **varchar(max)** and **varbinary(max)** columns cannot be part of an index. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) and in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], when a table contains **varchar(max)** or **varbinary(max)** columns, a clustered index containing other columns, can be built or rebuilt using the **ONLINE** option. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] does not permit the **ONLINE** option when the base table contains **varchar(max)** or **varbinary(max)** columns.
-
-For more information, see [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
+> [!NOTE] 
+> Resumable online index rebuilds are not supported on columnstore indexes.
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -507,18 +521,17 @@ Page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../inclu
 OFF      
 Page locks are not used.
 
-
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Specifies whether or not to optimize for last-page insert contention. The default is OFF. See the [Sequential Keys](#sequential-keys) section for more information.
 
-MAXDOP = _max_degree_of_parallelism_      
+MAXDOP = *max_degree_of_parallelism*      
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Overrides the **max degree of parallelism** configuration option for the duration of the index operation. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Use MAXDOP to limit the number of processors used in a parallel plan execution. The maximum is 64 processors.
 
-_max_degree_of_parallelism_ can be:
+*max_degree_of_parallelism* can be:
 
 1      
 Suppresses parallel plan generation.
@@ -1121,6 +1134,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
 
 ## See Also
 [SQL Server Index Architecture and Design Guide](../../relational-databases/sql-server-index-design-guide.md)     
+[Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)  
 [Indexes and ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)     
 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)     

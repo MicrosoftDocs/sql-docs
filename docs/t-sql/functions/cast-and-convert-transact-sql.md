@@ -92,7 +92,7 @@ An integer expression that specifies how the CONVERT function will translate *ex
 ## Return types
 Returns *expression*, translated to *data_type*.
 
-## <a name="datetime"></a> Date and Time styles  
+## Date and Time styles  
 For a date or time data type *expression*,  *style* can have one of the values shown in the following table. Other values are processed as 0. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the only styles supported, when converting from date and time types to **datetimeoffset**, are 0 or 1. All other conversion styles return error 9809.
   
 > [!NOTE]
@@ -636,7 +636,7 @@ SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date],
 ```  
 
 ### J. Using CONVERT with datetime data in different formats  
-Starting with `GETDATE()` values, this example uses `CONVERT` to display of all the date and time styles in section [Date and Time styles](#datetime) of this article.
+Starting with `GETDATE()` values, this example uses `CONVERT` to display of all the date and time styles in section [Date and Time styles](#date-and-time-styles) of this article.
 
 |Format #|Example query|Sample result|
 |--------|------------------------------------|------------------|

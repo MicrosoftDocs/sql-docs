@@ -1417,7 +1417,7 @@
       - name: Data Warehouse
         href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
       - name: Defragment
-        href: relational-databases/indexes/columnstore-indexes-defragmentation.md
+        href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
   - name: SQL Graph
     href: relational-databases/graphs/sql-graph-overview.md
     items:
@@ -2397,7 +2397,7 @@
     - name: Format Query Results
       href: relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md
       items:
-      - name: Format nested output with PATH Mode
+      - name: Format nested output with PATH ode
         href: relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md
       - name: Format with AUTO Mode
         href: relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md
@@ -4097,9 +4097,9 @@
       items:
       - name: Privacy supplement
         href: sql-server/sql-server-privacy.md
-      - name: Configure SQL Server usage and diagnostic data
+      - name: Configure SQL Server usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
-      - name: Configure tools usage and diagnostic data
+      - name: Configure tools usage and diagnostic data
         href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
       - name: Local audit for SQL Server
         href: sql-server/usage-and-diagnostic-data-in-local-audit.md

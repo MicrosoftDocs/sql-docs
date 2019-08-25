@@ -31,7 +31,7 @@ CREATE TABLE Department
 (    
      DeptID int NOT NULL PRIMARY KEY CLUSTERED  
    , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
+   , ManagerID int  NULL  
    , ParentDeptID int NULL  
    , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
    , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
@@ -67,7 +67,7 @@ CREATE TABLE Department
 (    
      DeptID int NOT NULL PRIMARY KEY CLUSTERED  
    , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
+   , ManagerID int  NULL  
    , ParentDeptID int NULL  
    , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
    , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
@@ -97,7 +97,7 @@ CREATE TABLE DepartmentHistory
 (    
      DeptID int NOT NULL  
    , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
+   , ManagerID int  NULL  
    , ParentDeptID int NULL  
    , SysStartTime datetime2 NOT NULL  
    , SysEndTime datetime2 NOT NULL   
@@ -112,7 +112,7 @@ CREATE TABLE Department
 (    
     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
    , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
+   , ManagerID int  NULL  
    , ParentDeptID int NULL  
    , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
    , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL     

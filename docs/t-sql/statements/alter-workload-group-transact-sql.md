@@ -21,7 +21,7 @@ ms.author: carlrab
 # ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Changes an existing Resource Governor workload group configuration, and optionally assigns it to a to a Resource Governor resource pool.  
+  Changes an existing Resource Governor workload group configuration, and optionally assigns it to a Resource Governor resource pool.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
@@ -121,7 +121,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
 -   Workload group MAX_DOP overrides sp_configure 'max degree of parallelism'.  
   
--   If the query is marked as serial (MAX_DOP = 1 ) at compile time, it cannot be changed back to parallel at run time regardless of the workload group or sp_configure setting.  
+-   If the query is marked as serial (MAX_DOP = 1) at compile time, it cannot be changed back to parallel at run time regardless of the workload group or sp_configure setting.  
   
  After DOP is configured, it can only be lowered on grant memory pressure. Workload group reconfiguration is not visible while waiting in the grant memory queue.  
   
@@ -170,7 +170,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
- The following example shows how to move a workload group from the pool that it is in to the default pool.  
+ The following example shows how to move a workload group from the pool that it's in to the default pool.  
   
 ```sql  
 ALTER WORKLOAD GROUP adHoc  

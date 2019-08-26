@@ -18,7 +18,7 @@ ms.technology: big-data-cluster
 This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters release candidate on Windows or Linux with installer packages.
 
 - For Windows, [install `azdata` CLI with the Microsoft Windows Installer](#windows)
-- For Linux (Ubuntu or Debian), [install `azdata` CLI with `apt`](#azdata-ap)
+- For Linux (Ubuntu or Debian), [install `azdata` CLI with `apt`](#azdata-apt)
 
 <!--
 ## <a id="prerequisites"></a> Prerequisites

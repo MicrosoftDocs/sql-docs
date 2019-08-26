@@ -23,7 +23,7 @@ monikerRange: "= azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sq
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-Removes the space character `char(32)` or other specified characters from the start or end of a string.  
+Removes the space character `char(32)` or other specified characters from the start and end of a string.  
 
 ## Syntax
 

@@ -15,10 +15,14 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters release candidate on Windows or Linux with installer packages.
+This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters release candidate on Windows or Linux with a package manager. Before these package managers were available, the installation of `azdata` required `pip`. See [Install `azdata` without package manager](./deploy-install-azdata.md).
 
-- For Windows, [install `azdata` CLI with the Microsoft Windows Installer](#windows)
-- For Linux (Ubuntu or Debian), [install `azdata` CLI with `apt`](#azdata-apt)
+The package managers are designed for various operating systems and distributions.
+
+- For Windows, [install `azdata` with the Microsoft Windows Installer](#windows)
+- For Linux (Ubuntu or Debian), [install `azdata` with `apt`](#azdata-apt)
+
+At this time, there are no package managers to install `azdata` on other operating systems or distributions.
 
 <!--
 ## <a id="prerequisites"></a> Prerequisites
@@ -32,29 +36,29 @@ pip3 install -U requests
 > [!IMPORTANT]
 > If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading `azdata` and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
 -->
-## <a id="windows"></a>Install `azdata` CLI with the Microsoft Windows Installer
+## <a id="windows"></a>Install `azdata` with the Microsoft Windows Installer
 
-To install `azdata` CLI on with the Microsoft Windows Installer,
+To install `azdata` on with the Microsoft Windows Installer,
 
-1. Remove `azdata` CLI if it was installed using `pip`. If `azdata` was installed using Windows Installer, proceed to the next step.
-1. Install `azdata` CLI using the Windows Installer.
+1. Remove `azdata` if it was installed using `pip`. If `azdata` was installed using Windows Installer, proceed to the next step.
+1. Install `azdata` using the Windows Installer.
 
 ## Uninstall if previous installation done with `pip`
 
-If you have an existing version of `azdata` CLI installed using `pip` please first remove it:
+If you have an existing version of `azdata` installed using `pip`, first remove it:
 
 ```bash
 $ pip3 uninstall -y -r http://helsinki.redmond.corp.microsoft.com/browse/packages/python/aris-p-release-candidate-gb/azdata/requirements.txt
 ```
 
-Once removed, [install `azdata` CLI on Windows](#windows).
+Once removed, [install `azdata` on Windows](#windows).
 
 >[!NOTE]
 >If your previous installation was done using the MSI, you will not need to uninstall any current versions before using the MSI installer.
 
 ## <a id="install-azdata-windows"></a>Install `azdata` with Windows Installer
 
-Use the Windows Installer to install or update `azdata` CLI on Windows.
+Use the Windows Installer to install or update `azdata` on Windows.
 
 [Download the `azdata` Windows Installer]()
 
@@ -73,11 +77,12 @@ The program to uninstall is called **`Azdata CLI`** . Select this application, t
 
 ## <a id="linux"></a>Linux `azdata` installation
 
-`azdata CLI` installation package is available for Ubuntu or Debian with `apt`.
+`azdata` installation package is available for Ubuntu or Debian with `apt`.
 
 ### <a id="azdata-apt"></a>Install `azdata` with apt (Ubuntu or Debian)
 
-> **Note:** The Azdata CLI package does not use the system Python, rather installs its own Python interpreter.
+>[!NOTE]
+>The `azdata` package does not use the system Python, rather installs its own Python interpreter.
 
 1. Get packages needed for the install process:
 
@@ -92,7 +97,7 @@ The program to uninstall is called **`Azdata CLI`** . Select this application, t
     sudo curl -sL http://repo.corp.microsoft.com/browse/repo/ubuntu/dpgswdist.v1.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg > /dev/null
     ```
 
-3. Add the Azdata CLI repository information:
+3. Add the `azdata` repository information:
 
     ```bash
     sudo echo "deb [trusted=yes arch=amd64] http://repo.corp.microsoft.com/browse/repo/ubuntu/azdata-test mssql main" | tee /etc/apt/sources.list.d/azdata-cli.list
@@ -113,7 +118,7 @@ The program to uninstall is called **`Azdata CLI`** . Select this application, t
 
 ## Update
 
-Upgrade the Azdata CLI only:
+Upgrade `azdata` only:
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
@@ -127,10 +132,10 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
     sudo apt-get remove -y azdata-cli
     ```
 
-2. Remove the Azdata CLI repository information:
+2. Remove the `azdata` repository information:
 
     >[!NOTE]
-    >This step is not needed if you plan on installing Azdata CLI in the future
+    >This step is not needed if you plan on installing `azdata` in the future
 
     ```bash
     sudo rm /etc/apt/sources.list.d/azdata-cli.list

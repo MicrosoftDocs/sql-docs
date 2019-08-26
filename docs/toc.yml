@@ -65,7 +65,7 @@
       items:
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
-      - name: Install azdata 
+      - name: Install azdata
         items:
         - name: With package manager
           href: big-data-cluster/deploy-install-azdata-installer.md

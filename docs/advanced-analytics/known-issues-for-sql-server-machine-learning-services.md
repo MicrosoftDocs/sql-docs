@@ -519,7 +519,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 **Recommendation**
 
-Use [sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python) or [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) to install Python packages.
+See [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
 
 **Applies to:** SQL Server 2019 on Linux
 

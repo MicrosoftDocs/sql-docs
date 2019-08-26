@@ -55,10 +55,10 @@ sp_estimate_data_compression_savings
  [ @object_name= ] '*object_name*'  
  Is the name of the table or indexed view that the index is on. *object_name* is **sysname**.  
   
- [ @index_id= ] '*index_id*'  
+ [ @index_id= ] *index_id*  
  Is the ID of the index. *index_id* is **int**, and can be one of the following values: the ID number of an index, NULL, or 0 if *object_id* is a heap. To return information for all indexes for a base table or view, specify NULL. If you specify NULL, you must also specify NULL for *partition_number*.  
   
- [ @partition_number= ] '*partition_number*'  
+ [ @partition_number= ] *partition_number*  
  Is the partition number in the object. *partition_number* is **int**, and can be one of the following values: the partition number of an index or heap, NULL or 1 for a nonpartitioned index or heap.  
   
  To specify the partition, you can also specify the [$partition](../../t-sql/functions/partition-transact-sql.md) function. To return information for all partitions of the owning object, specify NULL.  

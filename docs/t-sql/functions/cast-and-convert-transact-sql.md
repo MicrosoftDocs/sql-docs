@@ -232,7 +232,7 @@ SELECT CAST(CAST(@myval AS varbinary(20)) AS decimal(10,5));
 SELECT CONVERT(decimal(10,5), CONVERT(varbinary(20), @myval));  
 ```  
   
-> [!NOTE]  
+> [!WARNING]  
 > Do not construct **binary** values, and then convert them to a data type of the numeric data type category. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not guarantee that the result of a **decimal** or **numeric** data type conversion, to **binary**, will be the same between versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 The following example shows a resulting expression that is too small to display.
@@ -321,8 +321,15 @@ When using SC collations, the behavior of `CONVERT`, is analogous to that of `CA
 ## Compatibility support
 In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default style for CAST and CONVERT operations on **time** and **datetime2** data types is 121, except when either type is used in a computed column expression. For computed columns, the default style is 0. This behavior impacts computed columns when they are created, used in queries involving auto-parameterization, or used in constraint definitions.
   
-Under compatibility level 110 and higher, the CAST and CONVERT operations on the **time** and **datetime2** datatypes always have 121 as the default style. If a query relies on the old behavior, use a compatibility level less than 110, or explicitly specify the 0 style in the affected query.
-  
+Under [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) 110 and higher, the CAST and CONVERT operations on the **time** and **datetime2** data types always have 121 as the default style. If a query relies on the old behavior, use a compatibility level less than 110, or explicitly specify the 0 style in the affected query.
+
+|[Compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) value|Default style for CAST and CONVERT<sup>1</sup>|Default style for computed column|  
+|------------|------------|------------|
+|< **110**|121|0|  
+|> = **110**|121|121|  
+
+<sup>1</sup> Except for computed columns
+
 Upgrading the database to compatibility level 110 and higher will not change user data that has been stored to disk. You must manually correct this data as appropriate. For example, if you used SELECT INTO to create a table from a source containing a computed column expression described above, the data (using style 0) would be stored rather than the computed column definition itself. You must manually update this data to match style 121.
   
 ## <a name="BKMK_examples"></a> Examples  

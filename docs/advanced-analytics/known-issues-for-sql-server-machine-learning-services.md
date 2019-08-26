@@ -519,7 +519,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 **Recommendation**
 
-See [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server).
+See [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
 
 **Applies to:** SQL Server 2019 on Linux
 

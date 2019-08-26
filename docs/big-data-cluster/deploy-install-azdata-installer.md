@@ -24,18 +24,6 @@ The package managers are designed for various operating systems and distribution
 
 At this time, there are no package managers to install `azdata` on other operating systems or distributions. For these platforms, see [Install `azdata` without package manager](./deploy-install-azdata.md).
 
-<!--
-## <a id="prerequisites"></a> Prerequisites
-
-`azdata` is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install `azdata` tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
-In addition, you must also install and update the latest version of *requests* Python package:
-```bash
-pip3 install -U requests
-```
-
-> [!IMPORTANT]
-> If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading `azdata` and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
--->
 ## <a id="windows"></a>Install `azdata` with the Microsoft Windows Installer
 
 To install `azdata` on with the Microsoft Windows Installer,
@@ -43,7 +31,7 @@ To install `azdata` on with the Microsoft Windows Installer,
 1. Remove `azdata` if it was installed using `pip`. If `azdata` was installed using Windows Installer, proceed to the next step.
 1. Install `azdata` using the Windows Installer.
 
-## Uninstall if previous installation done with `pip`
+### Uninstall if previous installation done with `pip`
 
 If you have an existing version of `azdata` installed using `pip`, first remove it:
 
@@ -56,7 +44,7 @@ Once removed, [install `azdata` on Windows](#windows).
 >[!NOTE]
 >If your previous installation was done using the MSI, you will not need to uninstall any current versions before using the MSI installer.
 
-## <a id="install-azdata-windows"></a>Install `azdata` with Windows Installer
+### <a id="install-azdata-windows"></a>Install with Windows Installer
 
 Use the Windows Installer to install or update `azdata` on Windows.
 
@@ -64,7 +52,7 @@ Use the Windows Installer to install or update `azdata` on Windows.
 
 When the installer asks if it can make changes to your computer, click `Yes`.
 
-## Uninstall `azdata` with Windows Installer
+### Uninstall `azdata` with Windows Installer
 
 To uninstall `azdata` with Windows Installer, follow the instructions for the appropriate operating system.
 
@@ -75,7 +63,7 @@ To uninstall `azdata` with Windows Installer, follow the instructions for the ap
 
 The program to uninstall is called **`Azdata CLI`** . Select this application, then click the `Uninstall` button.
 
-## <a id="linux"></a>Linux `azdata` installation
+## <a id="linux"></a>Install `azdata` for Linux
 
 `azdata` installation package is available for Ubuntu or Debian with `apt`.
 
@@ -116,7 +104,7 @@ The program to uninstall is called **`Azdata CLI`** . Select this application, t
     azdata --version
     ```
 
-## Update
+### Update
 
 Upgrade `azdata` only:
 
@@ -124,7 +112,7 @@ Upgrade `azdata` only:
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-## Uninstall
+### Uninstall
 
 1. Uninstall with apt-get remove:
 

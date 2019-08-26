@@ -1,5 +1,5 @@
 ---
-title: Install azdata
+title: Install azdata without package manager
 titleSuffix: SQL Server big data clusters
 description: Learn how to install the azdata tool for installing and managing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview).
 author: MikeRayMSFT 
@@ -11,11 +11,13 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# Install `azdata` for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] without a package manager
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes how to install the `azdata` tool for the release candidate on Windows or Linux.
+
+For Windows and Linux (Ubuntu or Debian distributions), you can install with a [package manager](./deploy-install-azdata-installer.md) for a simpler experience.
 
 ## <a id="prerequisites"></a> Prerequisites
 
@@ -28,7 +30,7 @@ pip3 install -U requests
 > [!IMPORTANT]
 > If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading `azdata` and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
 
-## <a id="windows"></a> Windows azdata installation
+## <a id="windows"></a> Windows `azdata` installation
 
 1. On a Windows client, download the necessary Python package from [https://www.python.org/downloads/](https://www.python.org/downloads/). For python3.5.3 and later, pip3 is also installed when you install Python. 
 
@@ -59,7 +61,7 @@ pip3 install -U requests
    pip3 install -r https://aka.ms/azdata
    ```
 
-## <a id="linux"></a> Linux azdata installation
+## <a id="linux"></a> Linux `azdata` installation
 
 On Linux, you must install Python 3.5 and then upgrade pip. The following example shows the commands that would work for Ubuntu. For other Linux platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
@@ -100,7 +102,7 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    ```
 
    > [!NOTE]
-   > The `--user` switch installs azdata to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./azdata` from there.
+   > The `--user` switch installs `azdata` to the Python user install directory. This is typically `~/.local/bin` on Linux. Either add this directory to your path or navigate to the user install directory and run `./azdata` from there.
 
 ## Next steps
 

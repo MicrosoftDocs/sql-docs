@@ -2907,6 +2907,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2914,6 +2915,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2924,7 +2931,7 @@ RESULT_SET_CACHING {ON | OFF}
 Is the name of the database to be modified.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-Applies to Azure SQL Data Warehouse (preview)
+**Applies to** Azure SQL Data Warehouse (preview)
 
 This command must be run while connected to the `master` database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column, is_result_set_caching_on, is introduced in `sys.databases` to show the result cache setting for a database.  
 
@@ -2942,6 +2949,19 @@ Specifies that query result sets returned from this database will not be cached 
 command|Like|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Applies to** Azure SQL Data Warehouse (preview)
+
+Snapshot isolation must be enabled by setting the ALLOW_SNAPSHOT_ISOLATION ON database option before it is used in transactions. This activates the mechanism for storing row versions in the Persisted Version Store (PVS).  You must enable snapshot isolation in each database that uses it with the Transact-SQL ALTER DATABASE statement. 
+
+Setting READ_COMMITTED_SNAPSHOT ON/OFF for a database will kill all open connections to this database.  Users may want to make the change during database maintenance or wait until all transactions are drained.  The database does not have to be in single-user mode.
+
+Changing READ_COMMITTED_SNAPSHOT setting at session level is not supported.   
+
+To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+
+
 ## Remarks
 
 Cached result set is reused for a query if all of the following requirements are all met:
@@ -2954,12 +2974,9 @@ Once result set caching is turned ON for a database, results are cached for all 
 
 ## Permissions
 
-Requires these permissions:
+To set RESULT_SET_CACHING option, a user needs server-level principal login (the one created by the provisioning process) or be a member of the `dbmanager` database role.  
 
-- Server-level principal login (the one created by the provisioning process), or
-- Member of the `dbmanager` database role.
-
-The owner of the database cannot alter the database unless the owner is a member of the dbmanager role.
+To set READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the database.
 
 ## Examples
 
@@ -3022,6 +3039,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### Enable Read_Committed_Snapshot option for a database
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## See also

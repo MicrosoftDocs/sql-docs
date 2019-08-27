@@ -85,8 +85,6 @@
         href: big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
         href: big-data-cluster/deploy-offline.md
-      - name: Active Directory mode
-        href: big-data-cluster/deployment-active-directory.md
       - name: Deploy with high availability
         href: big-data-cluster/deployment-high-availability.md
       - name: Kubernetes clusters

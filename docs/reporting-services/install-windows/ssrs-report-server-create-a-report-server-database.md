@@ -6,7 +6,7 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/15/2018
+ms.date: 08/27/2019
 ---
 
 # Create a report server database 
@@ -60,7 +60,18 @@ The **Report Server Installation Options** page has only one option for SharePoi
 ## Database server version requirements
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is used to host the report server databases. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance can be local or remote. The following supported versions of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can host the report server databases:  
-  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+- Azure SQL Managed Instance
+
+- SQL Server 2019
+
+::: moniker-end
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+- SQL Server 2017  
+::: moniker-end
+
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  

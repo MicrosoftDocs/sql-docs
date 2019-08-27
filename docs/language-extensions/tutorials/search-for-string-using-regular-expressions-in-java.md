@@ -182,7 +182,7 @@ If you are using Windows, follow the steps below to create an external language 
 
 1. Create a .zip file containing the extension.
 
-    As part of the SQL Server setup on Windows, the Java extension **.dll** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\javaextension.dll`.
+    As part of the SQL Server setup on Windows, the Java extension **.zip** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. THis zip file contains the **javaextension.dll**.
 
     Compress the `javaextension.dll` into a **.zip** file. For example: `javaextension.zip`.
 
@@ -191,20 +191,20 @@ If you are using Windows, follow the steps below to create an external language 
     ```sql
     CREATE EXTERNAL LANGUAGE Java
     FROM
-    (CONTENT = N'[Path to .zip file]\javaextension.zip', FILE_NAME = 'javaextension.dll')
+    (CONTENT = N'[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip', FILE_NAME = 'javaextension.dll')
     GO
     ```
 
 ### Create external language on Linux
 
-On Linux, you don't need to manually create a **.tar.gz** file. As part of setup, there is already generated a **.tar.gz** file under the following path:
-`/opt/mssql/lib/extensibility/java-lang-extension.tar.gz`.
+As part of setup, the extension **.tar.gz** file is saved under the following path:
+`/opt/mssql-extensibility/lib/java-lang-extension.tar.gz`.
 
 To create an external language Java, run the following T-SQL statement on Linux:
 
 ```sql
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'/opt/mssql/lib/extensibility/java-lang-extension.tar.gz', file_name = 'javaextension.so');
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', file_name = 'javaextension.so');
 GO
 ```
 

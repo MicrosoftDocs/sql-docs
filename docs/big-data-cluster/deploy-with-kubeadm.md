@@ -57,11 +57,11 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 
    ```bash
    KUBE_DPKG_VERSION=1.15.0-00
-   sudo apt-get update && /
-   sudo apt-get install -y ebtables ethtool && /
-   sudo apt-get install -y docker.io && /
-   sudo apt-get install -y apt-transport-https && /
-   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && /
+   sudo apt-get update && \
+   sudo apt-get install -y ebtables ethtool && \
+   sudo apt-get install -y docker.io && \
+   sudo apt-get install -y apt-transport-https && \
+   sudo apt-get install -y kubelet=$KUBE_DPKG_VERSION kubeadm=$KUBE_DPKG_VERSION kubectl=$KUBE_DPKG_VERSION && \
    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
    ```
  

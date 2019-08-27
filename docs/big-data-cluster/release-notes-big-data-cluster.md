@@ -5,22 +5,17 @@ description: This article describes the latest updates and known issues for [!IN
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Release notes for big data clusters on SQL Server
+# Release notes for SQL Server Big Data Clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="rc"></a> Release candidate (August)
 
@@ -30,11 +25,14 @@ The following sections describe the new features and known issues for big data c
 
 |New feature or update | Details |
 |:---|:---|
+|SQL Server Always On Availability Group |The release candidate creates an availability group to provide:<br/><br/> High availability <br/><br/>Read-scale out <br/><br/>Scale-out data insertion into data pool |
+|`azdata` |Simplified installation for the tool with [installation manager](./deploy-install-azdata-installer.md)<br/><br/>Notebook commands<br/><br/>New `azdata bdc` status command experience |
+|Azure Data Studio|New SQL Server Big Data Cluster status dashboard. |
 | &nbsp; | &nbsp; |
 
 ### Known issues
 
-The following sections describe the known issues and limitations with this release.
+SQL Server 2019 Big Data Clusters release candidate build number is different than the SQL Server 2019 release candidate build number.
 
 ## <a id="ctp32"></a> CTP 3.2 (July)
 
@@ -57,13 +55,13 @@ The following sections describe the known issues and limitations with this relea
 
 #### PolyBase
 
-- Push-down of TOP clause when the count is > 1000 is not supported in this release. All rows will be read from the remote data source in such cases.
+- Push-down of TOP clause when the count is > 1000 is not supported in this release. All rows will be read from the remote data source in such cases. (Fixed in release candidate)
 
 - Push-down of colocated joins to external data sources is not supported in this release. For example, push-down of two data pool tables of ROUND_ROBIN distribution type will get the data to SQL Master instance or Compute Pool instance to perform the join operation.
 
 #### Compute Pool
 
-- Big data cluster deployment only supports compute pool with one instance.
+- Big data cluster deployment only supports compute pool with one instance. (Fixed in release candidate)
 
 #### Storage Pool
 

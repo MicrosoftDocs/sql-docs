@@ -43,11 +43,11 @@ In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to 
 
   You can also use your own Python IDE, such as a Jupyter notebook or [Visual Studio Code](https://code.visualstudio.com/docs) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
-* revoscalepy package - See [revoscalepy](../python/ref-py-revoscalepy.md) for options to install this package locally.
+* revoscalepy package - The revoscalepy package is included in SQL Server Machine Learning Services. To use the package on a client computer, see [Set up a data science client for Python development on SQL Server Machine Learning Services](../python/setup-python-client-tools-sql.md) for options to install this package locally.
 
 * SQL query tool - This tutorial assumes you're using [Azure Data Studio](../../azure-data-studio/what-is.md). You can also use [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) (SSMS).
 
-* Additional Python packages - Use the following Python script to install additional Python packages that are used by the Python examples in this tutorial series.
+* Additional Python packages - The examples in this tutorial series use Python packages that you may not have installed. Use the following Python script to install these packages.
 
   ```python
   pip install matplotlib
@@ -80,14 +80,7 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your Azure SQL Database server.
-
-From the Azure portal, follow these steps:
-
-1. From the left-hand menu in the Azure portal, select **All resources** or **SQL databases**.
-1. In the **Filter by name...** field, enter **tpcxbb_1gb**, and select your subscription.
-1. Select your **tpcxbb_1gb** database.
-1. On the **Overview** page, select **Delete**.
+***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from SQL Server.
 
 ## Next steps
 

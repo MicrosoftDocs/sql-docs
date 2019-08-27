@@ -25,7 +25,7 @@ In this article, you'll learn how to:
 
 In [part two](python-ski-rental-linear-regression-prepare-data.md), you'll learn how to load the data from SQL Server into a Python data frame, and prepare the data in Python.
 
-In [part three](python-ski-rental-linear-regression-build-compare.md), you'll learn how to create and train a linear regression modes in Python.
+In [part three](python-ski-rental-linear-regression-train-model.md), you'll learn how to train a linear regression model in Python.
 
 In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.
 

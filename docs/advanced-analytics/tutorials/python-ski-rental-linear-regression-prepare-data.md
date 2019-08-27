@@ -22,7 +22,7 @@ In this article, you'll learn how to:
 
 In [part one](python-ski-rental-linear-regression.md), you learned how to restore the sample database.
 
-In [part three](python-ski-rental-linear-regression-build-compare.md), you'll learn how to create and train a linear regression machine learning model in Python.
+In [part three](python-ski-rental-linear-regression-train-model.md), you'll learn how to train a linear regression machine learning model in Python.
 
 In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.
 
@@ -35,6 +35,8 @@ In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how 
 To use the data in Python, you'll load the data from the SQL Server database into a pandas data frame.
 
 Create a new Python notebook in Azure Data Studio and run the following script. Replace `<SQL Server>` with your own SQL Server name.
+
+The Python script below imports the dataset from the **dbo.rental_data** table in your database to a pandas data frame **df**.
 
 ```python
 import pandas as pd
@@ -111,7 +113,7 @@ In part two of this tutorial series, you completed these steps:
 * Load the data from the SQL Server database into a **pandas** data frame
 * Prepare the data in Python by removing some columns
 
-To create a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:
+To train a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Python Tutorial: Train a linear regression model](python-ski-rental-linear-regression-prepare-data.md)
+> [Python Tutorial: Train a linear regression model](python-ski-rental-linear-regression-train-model.md)

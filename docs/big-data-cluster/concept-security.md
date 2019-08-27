@@ -1,17 +1,17 @@
 ---
 title: Security concepts
 titleSuffix: SQL Server big data clusters
-description: This article describes security concepts for SQL Server 2019 big data cluster (preview). This includes describing the cluster endpoints and cluster authentication.
+description: This article describes security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This includes describing the cluster endpoints and cluster authentication.
 author: nelgson 
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Security concepts for SQL Server big data clusters
+# Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -77,7 +77,7 @@ Communication with non-SQL services within the big data cluster, such as Livy to
 
 ## Next steps
 
-To learn more about the SQL Server big data clusters, see the following resources:
+To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
 
-- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

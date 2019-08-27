@@ -209,11 +209,11 @@
       items:
       - name: azdata
         items:
-          - name: azdata
+        - name: azdata
           href: big-data-cluster/reference-azdata.md
-          - name: notebook
+        - name: notebook
           href: big-data-cluster/reference-azdata-notebook.md
-          - name: sql
+        - name: sql
           href: big-data-cluster/reference-azdata-sql.md
       - name: App Deploy
         items:

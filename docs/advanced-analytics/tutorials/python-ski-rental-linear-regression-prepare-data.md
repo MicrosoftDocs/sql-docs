@@ -22,7 +22,7 @@ In this article, you'll learn how to:
 
 In [part one](python-ski-rental-linear-regression.md), you learned how to restore the sample database.
 
-In [part three](python-ski-rental-linear-regression-build-compare.md), you'll learn how to create and train multiple machine learning models in Python, and then choose the most accurate one.
+In [part three](python-ski-rental-linear-regression-build-compare.md), you'll learn how to create and train a linear regression machine learning model in Python.
 
 In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.
 
@@ -30,32 +30,88 @@ In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how 
 
 * Part two of this tutorial assumes you have completed [part one](python-ski-rental-linear-regression.md) and its prerequisites.
 
-## Restore the sample database
+## Explore and prepare the data
 
-The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use.
+To use the data in Python, you'll load the data from the SQL Server database into a pandas data frame.
 
-1. Download the file [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
+Create a new Python notebook in Azure Data Studio and run the following script. Replace `<SQL Server>` with your own SQL Server name.
 
-1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
+```python
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
+from revoscalepy import rx_import
 
-   * Import from the **TutorialDB.bak** file you downloaded
-   * Name the target database "TutorialDB"
+# Connection string to your SQL Server instance
+conn_str = 'Driver=SQL Server;Server=<SQL Server>;Database=TutorialDB;Trusted_Connection=True;'
 
-1. You can verify that the dataset exists after you have restored the database by querying the **dbo.rental_data** table:
+# Define the columns you will import
+ column_info = {
+         "Year" : { "type" : "integer" },
+         "Month" : { "type" : "integer" },
+         "Day" : { "type" : "integer" },
+         "RentalCount" : { "type" : "integer" },
+         "WeekDay" : {
+             "type" : "factor",
+             "levels" : ["1", "2", "3", "4", "5", "6", "7"]
+         },
+         "Holiday" : {
+             "type" : "factor",
+             "levels" : ["1", "0"]
+         },
+         "Snow" : {
+             "type" : "factor",
+             "levels" : ["1", "0"]
+         }
+     }
 
-    ```sql
-    USE TutorialDB;
-    SELECT * FROM [dbo].[rental_data];
-    ```
+# Get the data from the SQL Server table
+data_source = RxSqlServerData(table="dbo.rental_data",
+                               connection_string=conn_str, column_info=column_info)
+computeContext = RxInSqlServer(
+     connection_string = conn_str,
+     num_tasks = 1,
+     auto_cleanup = False
+)
+
+RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
+
+# import data source and convert to pandas dataframe
+df = pd.DataFrame(rx_import(input_data = data_source))
+print("Data frame:", df)
+
+# Get all the columns from the dataframe.
+columns = df.columns.tolist()
+
+# Filter the columns to remove ones we don't want to use in the training
+columns = [c for c in columns if c not in ["Year"]]
+```
+
+You should see results similar to the following.
+
+```results
+Rows Processed: 453
+Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
+0     20        1      1          445     2        2  2014
+1     13        2      2           40     2        5  2014
+2     10        2      3          456     2        1  2013
+3     31        2      3           38     2        2  2014
+4     24        2      4           23     2        5  2014
+5     11        2      2           42     2        4  2015
+6     28        2      4          310     2        1  2013
+...
+[453 rows x 7 columns]
+```
 
 ## Next steps
 
-In part one of this tutorial series, you completed these steps:
+In part two of this tutorial series, you completed these steps:
 
-* Installed the pre-requisites
-* Import a sample database into an SQL Server
+* Load the data from the SQL Server database into a **pandas** data frame
+* Prepare the data in Python by removing some columns
 
-To prepare the data from the TutorialDB database, follow part two of this tutorial series:
+To create a machine learning model that uses data from the TutorialDB database, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Python Tutorial: Prepare data to train a linear regression model](python-ski-rental-linear-regression-prepare-data.md)
+> [Python Tutorial: Train a linear regression model](python-ski-rental-linear-regression-prepare-data.md)

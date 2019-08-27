@@ -28,7 +28,7 @@ The following table lists common big data cluster tools and how to install them:
 | **python** | Yes | Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Many parts of big data clusters for SQL Server use python. | [Install python](#python)|
 | **azdata** | Yes | Command-line tool for installing and managing a big data cluster. | [Install](deploy-install-azdata.md) |
 | **kubectl**<sup>1</sup> | Yes | Command-line tool for monitoring the underlying Kuberentes cluster ([More info](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio (insiders)** | Yes | Cross-platform graphical tool for querying SQL Server ([More info](./deploy-big-data-tools-download.md)). | [Install](https://aka.ms/azdata-insiders) |
+| **Azure Data Studio - SQL Server 2019 release candidate (RC)** | Yes | Cross-platform graphical tool for querying SQL Server ([More info](#rc)). | [Install](#rc-windows) |
 | **SQL Server 2019 extension** | Yes | Extension for Azure Data Studio that supports connecting to the big data cluster. Also provides a Data Virtualization wizard. | [Install](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | For AKS | Modern command-line interface for managing Azure services. Used with AKS big data cluster deployments ([More info](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Install](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Optional | Modern command-line interface for querying SQL Server ([More info](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
@@ -77,7 +77,7 @@ The remaining tools are only required in certain scenarios. **Azure CLI** can be
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-## Download and install Azure Data Studio SQL Server 2019 release candidate (RC)
+## <a id=rc></a> Download and install Azure Data Studio SQL Server 2019 release candidate (RC)
 
 Azure Data Studio SQL Server 2019 RC provides a capabilities and features specifically for SQL Server 2019 RC.
 
@@ -91,7 +91,7 @@ For normal, production releases of Azure Data Studio, follow the instructions at
 
 For details about the latest release, see the [release notes](../big-data-cluster/release-notes-big-data-cluster.md).
 
-### Get Azure Data Studio for Windows
+### <a id="rc-windows"></a> Get Azure Data Studio for Windows
 
 This release of [!INCLUDE[name-sos](../includes/name-sos-short.md)] includes a standard Windows installer experience, and a .zip file.
 

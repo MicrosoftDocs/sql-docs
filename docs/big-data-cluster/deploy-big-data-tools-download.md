@@ -24,7 +24,7 @@ For normal, production releases of Azure Data Studio, follow the instructions at
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2100809)|August 15, 2019 |1.10.0|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2100672)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2100810)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2100714)|August 15, 2019 |1.10.0|
 
-For details about the latest release, see the [release notes](../big-data-clusters/release-notes-big-data-custer.md).
+For details about the latest release, see the [release notes](../big-data-cluster/release-notes-big-data-cluster.md).
 
 ## Get Azure Data Studio for Windows
 
@@ -165,4 +165,4 @@ See one of the following quickstarts to get started:
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
-[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) and [usage data collection](usage-data-collection.md).
+[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) and [usage data collection](../azure-data-studio/usage-data-collection.md).

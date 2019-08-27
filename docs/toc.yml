@@ -4163,6 +4163,8 @@
   - name: Upgrade SQL Server
     href: database-engine/install-windows/upgrade-sql-server.md
     items:
+    - name: Compatibility Certification
+      href: database-engine/install-windows/compatibility-certification.md
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
@@ -4198,8 +4200,10 @@
         href: database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md
       - name: Complete the Upgrade
         href: database-engine/install-windows/complete-the-database-engine-upgrade.md
-      - name: Change the Database Compatibility Mode & Use the Query Store
+      - name: Change the Database Compatibility Mode & use the Query Store
         href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+      - name: Change the Database Compatibility Mode with Query Tuning Assistant
+        href: relational-databases/performance/upgrade-dbcompat-using-qta.md
   - name: Configuration
     href: database-engine/configure-windows/database-engine-instances-sql-server.md
     items:
@@ -5710,7 +5714,7 @@
         href: https://azure.microsoft.com/updates/?product=sql-server-stretch-database
       - name: Videos >>
         href: https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database
-  - name: Database Experimentation Wizard
+  - name: Database Experimentation Assistant (DEA)
     href: dea/database-experimentation-assistant-overview.md
     items:
     - name: Get started
@@ -6560,12 +6564,12 @@
           href: relational-databases/policy-based-management/view-the-properties-of-a-policy-based-management-facet.md
         - name: Copy a Facet State to an XML File
           href: relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md
-      - name: Monitor & Enforce Best Practices by Using Policy-Based Management
+      - name: Monitor & Enforce Best Practices by using Policy-Based Management
         href: relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md
         items:
         - name: Asymmetric Keys Encryption Strength
           href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
-        - name: Check Disk Input & Output Subsystem for IO Delay Problems
+        - name: Check Disk Input & Output Subsystem for I/O Delay Problems
           href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
         - name: Check Disk Input-Output Subsystem for Read Retry Problems
           href: relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md
@@ -6878,7 +6882,7 @@
         href: relational-databases/sql-trace/limit-trace-file-and-table-sizes.md
       - name: Schedule Traces
         href: relational-databases/sql-trace/schedule-traces.md
-    - name: Query store
+    - name: Query Store
       href: relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       items:
       - name: In-Memory OLTP
@@ -6935,7 +6939,7 @@
             href: relational-databases/performance-monitor/sql-server-xtp-databases.md
           - name: Garbage Collection
             href: relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-          - name: IO Governor
+          - name: I/O Governor
             href: relational-databases/performance-monitor/sql-server-xtp-io-governor.md
           - name: Phantom Processor
             href: relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
@@ -7056,7 +7060,7 @@
       items:
       - name: Configuring Storage Spaces with a NVDIMM-N write-back cache
         href: relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
-    - name: Database tuning advisor
+    - name: Database Tuning Advisor
       href: relational-databases/performance/database-engine-tuning-advisor.md
       items:
       - name: Concepts
@@ -7303,6 +7307,8 @@
         href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
       - name: Validate Plan Guides After Upgrade
         href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+    - name: Query Tuning Assistant
+      href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Resource governor
       href: relational-databases/resource-governor/resource-governor.md
       items:

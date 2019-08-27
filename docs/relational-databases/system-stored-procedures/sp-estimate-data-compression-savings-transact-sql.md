@@ -1,7 +1,7 @@
 ---
 title: "sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 08/26/2019"
+ms.date: "08/26/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""

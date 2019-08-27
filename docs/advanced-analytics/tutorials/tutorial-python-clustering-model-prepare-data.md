@@ -1,10 +1,10 @@
 ---
 title: "Tutorial: Prepare data to perform clustering in Python"
-description: In part one of this three-part tutorial series, you'll prepare the data from a SQL Server database to perform clustering in Python with SQL Server Machine Learning Services.
+description: In part two of this four-part tutorial series, you'll prepare the data from a SQL Server database to perform clustering in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/23/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
@@ -14,61 +14,23 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Tutorial: Prepare data to perform clustering in Python with SQL Server Machine Learning Services
 
-In part one of this three-part tutorial series, you'll import and prepare the data from a SQL database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
-
-*Clustering* can be explained as organizing data into groups where members of a group are similar in some way.
-You'll use the **K-Means** algorithm to perform the clustering of customers in a dataset of product purchases and returns. By clustering customers, you can focus your marketing efforts more effectively by targeting specific groups.
-K-Means clustering is an *unsupervised learning* algorithm that looks for patterns in data based on similarities.
-
-In parts one and two of this series, you'll develop some Python scripts in Visual Studio Code to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside a SQL database using stored procedures.
+In part two of this four-part tutorial series, you'll import and prepare the data from a SQL database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into an Azure SQL database
 > * Separate customers along different dimensions using R
 > * Load the data from the Azure SQL database into an R data frame
 
-In [part two](tutorial-python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
+In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and imported the sample database.
 
-In [part three](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
+In [part three](tutorial-python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
 
-## Prerequisites - **CHANGE**
+In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
 
-* Install [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language option.
+## Prerequisites
 
-* Install [python](https://www.python.org/) and a Python development environment. This article assumes you're using [Visual Studio Code](https://code.visualstudio.com/download) with the [Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
-
-* Install [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) or [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) on the client computer you use to connect to SQL Server. You can use other database management or query tools, but this article assumes Azure Data Studio or SSMS.
-
-* You need some Python libraries that aren't included with SQL Server Machine Learning Services. Follow the instructions at [How to install Python client libraries for remote access to a Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
-
-  ```python
-  pip install matplotlib
-  pip install scipy
-  pip install sklearn
-  ```
-
-## Import the sample database
-
-The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/default.asp).
-
-1. Download the file [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak) to the SQL Server backup folder. For the default database instance, the folder is:
-
-   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\`
-
-1. Open SSMS, connect to SQL Server, and open a new query window. Then run the following commands to restore the database.
-
-   ```sql
-   USE master;
-   GO
-   
-   RESTORE DATABASE tpcxbb_1gb
-   FROM DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\tpcxbb_1gb.bak'
-   WITH MOVE 'tpcxbb_1gb' TO 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\tpcxbb_1gb.mdf'
-       , MOVE 'tpcxbb_1gb_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\tpcxbb_1gb.ldf';
-   GO
-   ```
+* Part two of this tutorial assumes you have fulfilled the prerequisites of [**part one**](tutorial-python-clustering-model.md).
 
 ## Separate customers
 
@@ -92,8 +54,6 @@ import pandas as pd
 import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
-
-
 
 def perform_clustering():
     ################################################################################################
@@ -197,13 +157,12 @@ From the Azure portal, follow these steps:
 
 ## Next steps
 
-In part one of this tutorial series, you completed these steps:
+In part two of this tutorial series, you completed these steps:
 
-* Import a sample database into an Azure SQL database
 * Separate customers along different dimensions using R
 * Load the data from the Azure SQL database into an R data frame
 
-To create a machine learning model that uses this customer data, follow part two of this tutorial series:
+To create a machine learning model that uses this customer data, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
 > [Tutorial: Create a predictive model in Python with SQL Server Machine Learning Services](tutorial-python-clustering-model-build.md)

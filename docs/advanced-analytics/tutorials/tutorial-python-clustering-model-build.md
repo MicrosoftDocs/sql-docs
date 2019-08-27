@@ -1,10 +1,10 @@
 ---
 title: "Tutorial: Build a clustering model in Python"
-description: In part two of this three-part tutorial series, you'll build a K-Means model to perform clustering in Python with SQL Server Machine Learning Services.
+description: In part three of this four-part tutorial series, you'll build a K-Means model to perform clustering in Python with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/23/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Tutorial: Build a clustering model in Python with SQL Server Machine Learning Services
 
-In part two of this three-part tutorial series, you'll build a K-Means model in Python to perform clustering. In the next part of this series, you'll deploy this model in a SQL database with SQL Server Machine Learning Services.
+In part three of this four-part tutorial series, you'll build a K-Means model in Python to perform clustering. In the next part of this series, you'll deploy this model in a SQL database with SQL Server Machine Learning Services.
 
 In this article, you'll learn how to:
 
@@ -23,13 +23,15 @@ In this article, you'll learn how to:
 > * Perform clustering
 > * Analyze the results
 
-In [part one](tutorial-python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
+In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and imported the sample database.
 
-In [part three](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
+In [part two](tutorial-python-clustering-model-prepare-data.md), you learned how to prepare the data from a SQL database to perform clustering.
+
+In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
 
 ## Prerequisites
 
-* Part two of this tutorial assumes you have completed [**part one**](tutorial-python-clustering-model-prepare-data.md) and its prerequisites.
+* Part three of this tutorial assumes you have fulfilled the prerequisites of [**part one**](tutorial-python-clustering-model.md), and completed the steps in [**part two**](tutorial-python-clustering-model-prepare-data.md).
 
 ## Define the number of clusters
 
@@ -138,13 +140,13 @@ From the Azure portal, follow these steps:
 
 ## Next steps
 
-In part two of this tutorial series, you completed these steps:
+In part three of this tutorial series, you completed these steps:
 
 * Define the number of clusters for a K-Means algorithm
 * Perform clustering
 * Analyze the results
 
-To deploy the machine learning model you've created, follow part three of this tutorial series:
+To deploy the machine learning model you've created, follow part four of this tutorial series:
 
 > [!div class="nextstepaction"]
 > [Tutorial: Deploy a clustering model in Python with SQL Server Machine Learning Services](tutorial-python-clustering-model-deploy.md)

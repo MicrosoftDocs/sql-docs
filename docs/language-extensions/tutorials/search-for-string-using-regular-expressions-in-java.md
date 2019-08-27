@@ -182,7 +182,7 @@ If you are using Windows, follow the steps below to create an external language 
 
 1. Create a .zip file containing the extension.
 
-    As part of the SQL Server setup on Windows, the Java extension **.zip** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. THis zip file contains the **javaextension.dll**.
+    As part of the SQL Server setup on Windows, the Java extension **.zip** file is installed in this location: `[SQL Server install path]\MSSQL\Binn\java-lang-extension.zip`. This zip file contains the **javaextension.dll**.
 
     Compress the `javaextension.dll` into a **.zip** file. For example: `javaextension.zip`.
 

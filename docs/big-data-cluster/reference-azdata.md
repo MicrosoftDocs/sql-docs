@@ -24,6 +24,8 @@ The following article provides reference for the **azdata** tool for [[!INCLUDE[
 |[azdata bdc](reference-azdata-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
 |[azdata login](#azdata-login) | Log in to the cluster's controller endpoint.
 |[azdata logout](#azdata-logout) | Log out of cluster.
+|[azdata sql](./reference-azdata-sql.md) | Submit T-SQL queries.
+|[azdata notebook](./reference-azdata-notebook.md) | Execute a Jupyter notebook.
 
 ## azdata login
 When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to log in.  If you do not know the controller endpoint, you may log in by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, that is, export KUBECONFIG=path/to/.kube/config.

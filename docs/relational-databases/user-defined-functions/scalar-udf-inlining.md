@@ -117,7 +117,7 @@ The execution plan for this query in SQL Server 2017 (compatibility level 140 an
 
 ![Query Plan without inlining](./media/query-plan-without-udf-inlining.png)
 
-As the plan shows, SQL Server adopts a simple strategy here: for every tuple in the `CUSTOMER` table, invoke the UDF and output the results. This strategy is na?ve and inefficient. With inlining, such UDFs are transformed into equivalent scalar subqueries, which are substituted in the calling query in place of the UDF.
+As the plan shows, SQL Server adopts a simple strategy here: for every tuple in the `CUSTOMER` table, invoke the UDF and output the results. This strategy is naive and inefficient. With inlining, such UDFs are transformed into equivalent scalar subqueries, which are substituted in the calling query in place of the UDF.
 
 For the same query, the plan with the UDF inlined looks as below.
 

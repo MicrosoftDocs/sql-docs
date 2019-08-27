@@ -73,7 +73,7 @@ On a computer with Internet access:
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -86,7 +86,7 @@ On a computer with Internet access:
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -152,7 +152,7 @@ On a computer with Internet access:
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
    pkgs_needed <- "glue"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -165,7 +165,7 @@ On a computer with Internet access:
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
    pkgs_needed <- "glue"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);

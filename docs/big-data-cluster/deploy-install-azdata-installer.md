@@ -36,7 +36,7 @@ If you have an existing version of `azdata` installed using `pip`, first remove 
 pip3 uninstall -y -r http://helsinki.redmond.corp.microsoft.com/browse/packages/python/aris-p-release-candidate-gb/azdata/requirements.txt
 ```
 
-Once removed, [install `azdata` on Windows](#windows).
+Once removed, [install `azdata` on Windows](#install-azdata-windows).
 
 >[!NOTE]
 >If your previous installation was done using the MSI, you will not need to uninstall any current versions before using the MSI installer.

@@ -32,11 +32,7 @@ The following sections describe the new features and known issues for big data c
 
 ### Known issues
 
-SQL Server 2019 Big Data Clusters release candidate build number is greater than the SQL Server 2019 release candidate build number.
-
-#### Build version
-
-SQL Server 2019 Big Data Clusters has different build
+SQL Server 2019 Big Data Clusters release candidate build number is different than the SQL Server 2019 release candidate build number.
 
 ## <a id="ctp32"></a> CTP 3.2 (July)
 

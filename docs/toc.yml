@@ -65,6 +65,8 @@
       items:
       - name: Install big data tools
         href: big-data-cluster/deploy-big-data-tools.md
+      - name: Deploy Azure Data Studios (BDC release candidate)
+        href: big-data-cluster/deploy-big-data-tools-download.md
       - name: Install azdata
         items:
         - name: With package manager

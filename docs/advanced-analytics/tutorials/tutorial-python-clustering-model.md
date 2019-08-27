@@ -18,16 +18,15 @@ In this four-part tutorial series, you'll use Python to develop and deploy a K-M
 
 In part one of this series, you'll set up the prerequisites for the tutorial and then import a sample dataset to a SQL database. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
 
-*Clustering* can be explained as organizing data into groups where members of a group are similar in some way.
-You'll use the **K-Means** algorithm to perform the clustering of customers in a dataset of product purchases and returns. By clustering customers, you can focus your marketing efforts more effectively by targeting specific groups.
+*Clustering* can be explained as organizing data into groups where members of a group are similar in some way. For this tutorial series, imagine you own a retail business. You'll use the **K-Means** algorithm to perform the clustering of customers in a dataset of product purchases and returns. By clustering customers, you can focus your marketing efforts more effectively by targeting specific groups.
 K-Means clustering is an *unsupervised learning* algorithm that looks for patterns in data based on similarities.
 
-In parts two and three of this series, you'll develop some Python scripts in Visual Studio Code to prepare your data and train a machine learning model. Then, in part four, you'll run those Python scripts inside a SQL database using stored procedures.
+In parts two and three of this series, you'll develop some Python scripts in an Azure Data Studio notebook to prepare your data and train a machine learning model. Then, in part four, you'll run those Python scripts inside a SQL database using stored procedures.
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into an Azure SQL database
+> * Import a sample database into a SQL Server database
 
 In [part two](tutorial-python-clustering-model-prepare-data.md), you'll learn how to prepare the data from a SQL database to perform clustering.
 
@@ -86,7 +85,7 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
 In part one of this tutorial series, you completed these steps:
 
-* Import a sample database into an Azure SQL database
+* Import a sample database into a SQL Server database
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 

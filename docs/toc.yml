@@ -209,6 +209,7 @@
       items:
       - name: azdata
         items:
+          - name: azdata
           href: big-data-cluster/reference-azdata.md
           - name: notebook
           href: big-data-cluster/reference-azdata-notebook.md

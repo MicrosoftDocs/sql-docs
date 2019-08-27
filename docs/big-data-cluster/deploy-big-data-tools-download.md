@@ -18,16 +18,13 @@ This article explains how to download and install Azure Data Studio (Big Data Cl
 
 For normal, production releases of Azure Data Studio, follow the instructions at [Download and install Azure Data Studio](../azure-data-studio/download.md).
 
-> [!NOTE]
-> If you're updating from SQL Operations Studio and want to keep your settings, keyboard shortcuts, or code snippets, see [Move user settings](#move-user-settings).
-
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
 |Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2100710)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2100711)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2100712)|August 15, 2019 |1.10.0|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2100809)|August 15, 2019 |1.10.0|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2100672)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2100810)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2100714)|August 15, 2019 |1.10.0|
 
-For details about the latest release, see the [release notes](release-notes.md).
+For details about the latest release, see the [release notes](../big-data-clusters/release-notes-big-data-custer.md).
 
 ## Get Azure Data Studio for Windows
 
@@ -161,9 +158,8 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 ## Next Steps
 
 See one of the following quickstarts to get started:
-- [Connect & Query SQL Server](quickstart-sql-server.md)
-- [Connect & Query Azure SQL Database](quickstart-sql-database.md)
-- [Connect & Query Azure Data Warehouse](quickstart-sql-dw.md)
+- [Deploy Big Data Cluster](quickstart-big-data-cluster-deploy.md)
+- [Connect to Big Data Cluster](connect-to-big-data-cluster.md)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

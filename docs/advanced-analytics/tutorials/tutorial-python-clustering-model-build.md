@@ -41,15 +41,31 @@ You can read more about K-Means in [A complete guide to K-means clustering algor
 The algorithm accepts two inputs: The data itself, and a predefined number "*k*" representing the number of clusters to generate.
 The output is *k* clusters with the input data partitioned among the clusters.
 
+The goal of K-means is to group the items into k clusters such that all items in same cluster are as similar to each other, and as different from items in other clusters, as possible.
+
 To determine the number of clusters for the algorithm to use, use a plot of the within groups sum of squares, by number of clusters extracted. The appropriate number of clusters to use is at the bend or "elbow" of the plot.
 
-```r
-# Determine number of clusters by using a plot of the within groups sum of squares,
-# by number of clusters extracted. 
-wss <- (nrow(customer_data) - 1) * sum(apply(customer_data, 2, var))
-for (i in 2:20)
-    wss[i] <- sum(kmeans(customer_data, centers = i)$withinss)
-plot(1:20, wss, type = "b", xlab = "Number of Clusters", ylab = "Within groups sum of squares")
+```python
+################################################################################################
+
+    ## Determine number of clusters using the Elbow method
+    
+    ################################################################################################
+    
+    cdata = customer_data
+    K = range(1, 20)
+    KM = (sk_cluster.KMeans(n_clusters=k).fit(cdata) for k in K)
+    centroids = (k.cluster_centers_ for k in KM)
+    
+    D_k = (sci_distance.cdist(cdata, cent, 'euclidean') for cent in centroids)
+    dist = (np.min(D, axis=1) for D in D_k)
+    avgWithinSS = [sum(d) / cdata.shape[0] for d in dist]
+    plt.plot(K, avgWithinSS, 'b*-')
+    plt.grid(True)
+    plt.xlabel('Number of clusters')
+    plt.ylabel('Average within-cluster sum of squares')
+    plt.title('Elbow for KMeans clustering')
+    plt.show()
 ```
 
 ![Elbow graph](./media/python-tutorial-elbow-graph.png)
@@ -58,60 +74,59 @@ Based on the graph, it looks like *k = 4* would be a good value to try. That *k*
 
 ## Perform clustering
 
-In the following R script, you'll use the function **rxKmeans**, which is the K-Means function in the RevoScaleR package.
+In the following Python script, you'll use the KMeans function from the sklearn package.
 
-```r
-# Output table to hold the customer group mappings.
-# This is a table where the cluster mappings will be saved in the database.
-return_cluster = RxSqlServerData(table = "return_cluster", connectionString = connStr);
-# Set the seed for the random number generator for predictability
-set.seed(10);
-# Generate clusters using rxKmeans and output key / cluster to a table in SQL database
-# called return_cluster
-clust <- rxKmeans( ~ orderRatio + itemsRatio + monetaryRatio + frequency,
-                   customer_returns,
-                   numClusters=4,
-                   outFile=return_cluster,
-                   outColName="cluster",
-                   extraVarsToWrite=c("customer"),
-                   overwrite=TRUE);
+```python
+################################################################################################
+## Perform clustering using Kmeans
+################################################################################################
 
-# Read the customer returns cluster table from the database
-customer_cluster <- rxDataStep(return_cluster);
+    # It looks like k=4 is a good number to use based on the elbow graph.
+    n_clusters = 4
+
+    means_cluster = sk_cluster.KMeans(n_clusters=n_clusters, random_state=111)
+    columns = ["orderRatio", "itemsRatio", "monetaryRatio", "frequency"]
+    est = means_cluster.fit(customer_data[columns])
+    clusters = est.labels_
+    customer_data['cluster'] = clusters
+
+    # Print some data about the clusters:
+
+    # For each cluster, count the members.
+    for c in range(n_clusters):
+        cluster_members=customer_data[customer_data['cluster'] == c][:]
+        print('Cluster{}(n={}):'.format(c, len(cluster_members)))
+        print('-'* 17)
+
+    # Print mean values per cluster.
+    print(customer_data.groupby(['cluster']).mean())
+
+
+perform_clustering()
 ```
 
 ## Analyze the results
 
-Now that you've done the clustering using K-Means, the next step is to analyze the result and see if you can find any actionable information.
+Now that you've performed clustering using K-Means, the next step is to analyze the result and see if you can find any actionable information.
 
-The **clust** object contains the results from the K-Means clustering.
-
-```r
-#Look at the clustering details to analyze results
-clust
-```
+Look at the clustering mean values and cluster sizes printed from the previous script.
 
 ```results
-Call:
-rxKmeans(formula = ~orderRatio + itemsRatio + monetaryRatio + 
-    frequency, data = customer_returns, outFile = return_cluster, 
-    outColName = "cluster", extraVarsToWrite = c("customer"), 
-    overwrite = TRUE, numClusters = 4)
-Data: customer_returns
-Number of valid observations: 37336
-Number of missing observations: 0 
-Clustering algorithm:  
+Cluster0(n=31675):
+-------------------
+Cluster1(n=4989):
+-------------------
+Cluster2(n=1):
+-------------------
+Cluster3(n=671):
+-------------------
 
-K-means clustering with 4 clusters of sizes 31675, 671, 2851, 2139
-Cluster means:
-   orderRatio   itemsRatio monetaryRatio frequency
-1 0.000000000 0.0000000000    0.00000000  0.000000
-2 0.007451565 0.0000000000    0.04449653  4.271237
-3 1.008067345 0.2707821817    0.49515232  1.031568
-4 0.000000000 0.0004675082    0.10858272  1.186068
-Within cluster sum of squares by cluster:
-         1          2          3          4
-    0.0000  1329.0160 18561.3157   363.2188
+         customer  orderRatio  itemsRatio  monetaryRatio  frequency
+cluster
+0        50854.809882    0.000000    0.000000       0.000000   0.000000
+1        51332.535779    0.721604    0.453365       0.307721   1.097815
+2        57044.000000    1.000000    2.000000     108.719154   1.000000
+3        48516.023845    0.136277    0.078346       0.044497   4.271237
 ```
 
 The four cluster means are given using the variables defined in [part one](tutorial-python-clustering-model-prepare-data.md#separate-customers):
@@ -124,19 +139,14 @@ The four cluster means are given using the variables defined in [part one](tutor
 Data mining using K-Means often requires further analysis of the results, and further steps to better understand each cluster, but it can provide some good leads.
 Here are a couple ways you could interpret these results:
 
-* Cluster 1 (the largest cluster) seems to be a group of customers that are not active (all values are zero).
+* Cluster 0 (the largest cluster) seems to be a group of customers that are not active (all values are zero).
 * Cluster 3 seems to be a group that stands out in terms of return behavior.
+
+Cluster 0 is a set of customers who are clearly not active. Perhaps you can target marketing efforts towards this group to trigger an interest for purchases. In the next step, you'll query the database for the email addresses of customers in cluster 0, so that you can send a marketing email to them.
 
 ## Clean up resources
 
 ***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your Azure SQL Database server.
-
-From the Azure portal, follow these steps:
-
-1. From the left-hand menu in the Azure portal, select **All resources** or **SQL databases**.
-1. In the **Filter by name...** field, enter **tpcxbb_1gb**, and select your subscription.
-1. Select your **tpcxbb_1gb** database.
-1. On the **Overview** page, select **Delete**.
 
 ## Next steps
 

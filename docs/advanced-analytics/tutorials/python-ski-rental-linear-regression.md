@@ -3,7 +3,7 @@ title: 'Python tutorial: Ski rentals (linear regression)'
 description: 
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -51,6 +51,13 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
    * Import from the **TutorialDB.bak** file you downloaded
    * Name the target database "TutorialDB"
+
+1. You can verify that the dataset exists after you have restored the database by querying the **dbo.rental_data** table:
+
+    ```sql
+    USE TutorialDB;
+    SELECT * FROM [dbo].[rental_data];
+    ```
 
 ## Next steps
 

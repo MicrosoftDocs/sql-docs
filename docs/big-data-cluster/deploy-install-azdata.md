@@ -1,7 +1,7 @@
 ---
-title: Install azdata without package manager
+title: Install azdata using pip
 titleSuffix: SQL Server big data clusters
-description: Learn how to install the azdata tool for installing and managing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview).
+description: Learn how to install the azdata tool for installing and managing [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (preview) with pip.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,13 +11,13 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install `azdata` for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] without a package manager
+# Install `azdata` for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] using `pip`
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to install the `azdata` tool for the release candidate on Windows or Linux.
+This article describes how to install the `azdata` tool for the release candidate on Windows or Linux using `pip`.
 
-For Windows and Linux (Ubuntu or Debian distributions), you can install with a [package manager](./deploy-install-azdata-installer.md) for a simpler experience.
+For Windows and Linux (Ubuntu distribution), you can install with a [package manager](./deploy-install-azdata-installer.md) for a simpler experience.
 
 ## <a id="prerequisites"></a> Prerequisites
 

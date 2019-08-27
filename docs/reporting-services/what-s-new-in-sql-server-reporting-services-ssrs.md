@@ -31,6 +31,18 @@ To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] preview Reporting Services is available and can be downloaded from the **[Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=100122)**.
 
+### Azure SQL Managed Instance support
+
+You may use Azure SQL Managed Instance to host your database catalog used for SQL Server Reporting Services that is hosted either in a VM or in your data center.  Please note that support is limited to using database credentials for the connection to SQL MI.
+
+### Power BI Premium dataset support
+
+Customers can connect to those models using either Microsoft Report Builder or SQL Server Data Tools and publish those reports to SSRS 2019 using the SQL Server Analysis Services connectivity option.  Users will need to use a stored Windows Username/Password to enable the scenario.
+
+### AltText (alternative text) support for report elements
+
+Using tooltips, authors may specify text for each element on the report and have this properly identified by screen reader technology as such.
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

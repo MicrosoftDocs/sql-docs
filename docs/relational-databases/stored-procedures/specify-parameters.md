@@ -77,6 +77,8 @@ GO
   
 > [!NOTE]  
 >  If the default value is a character string that contains embedded blanks or punctuation, or if it starts with a number (for example, 6xxx), it must be enclosed in single, straight quotation marks.  
+
+> [!NOTE] Default parameters are not supported in Azure SQL Data Warehouse or Parallel Data Warehouse. 
   
  If no value can be specified appropriately as a default for the parameter, specify NULL as the default. It is a good idea to have the procedure return a customized message if the procedure is executed without a value for the parameter.  
   

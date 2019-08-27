@@ -103,10 +103,10 @@ You can create push subscriptions programmatically by using replication stored p
   
    - (Optional) A value of **0** for **\@subscriber_security_mode** and the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login information for **\@subscriber_login** and **\@subscriber_password**. Specify these parameters if you need to use SQL Server Authentication when connecting to the Subscriber.  
   
-  - A schedule for the Distribution Agent job for this subscription. For more information, see [Specify synchronization schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
+   - A schedule for the Distribution Agent job for this subscription. For more information, see [Specify synchronization schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-    > [!IMPORTANT]
-    > When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before running this stored procedure. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> [!IMPORTANT]
+> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before running this stored procedure. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### To create a push subscription to a merge publication  
   
@@ -141,8 +141,8 @@ You can create push subscriptions programmatically by using replication stored p
   
    - A schedule for the Merge Agent job for this subscription. For more information, see [Specify synchronization schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-   > [!IMPORTANT]
-   > When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before running this stored procedure. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> [!IMPORTANT]
+> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before running this stored procedure. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  The following example creates a push subscription to a transactional publication. Login and password values are supplied at runtime through **sqlcmd** scripting variables.  
@@ -196,8 +196,8 @@ You can create push subscriptions programmatically by using replication stored p
   
 8. Call the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method.  
   
-   > [!IMPORTANT]
-   > When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+> [!IMPORTANT]
+> When you're creating a push subscription at a Publisher with a remote Distributor, the values supplied for all properties, including <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before calling the <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> method. For more information, see [Enable encrypted connections to the database engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### To create a push subscription to a merge publication  
   
@@ -225,7 +225,7 @@ You can create push subscriptions programmatically by using replication stored p
    - Name of the publication for <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>.    
    - The <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> and <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> fields of <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> to provide the credentials for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the Merge Agent runs at the Distributor. This account is used to make local connections to the Distributor and to make remote connections through Windows Authentication.  
   
-     > [!NOTE:]
+     > [!NOTE]
      > Setting <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> is not required when the subscription is created by a member of the **sysadmin** fixed server role, but we recommend it. In this case, the agent will impersonate the SQL Server Agent account. For more information, see [Replication Agent security model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
    - (Optional) A value of **true** (the default) for <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> to create an agent job that is used to synchronize the subscription. If you specify **false**, the subscription can only be synchronized programmatically.  

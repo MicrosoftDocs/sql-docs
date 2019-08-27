@@ -24,7 +24,7 @@ In [part one](python-ski-rental-linear-regression.md), you learned how to restor
 
 In [part three](python-ski-rental-linear-regression-train-model.md), you'll learn how to train a linear regression machine learning model in Python.
 
-In [part four](python-ski-rental-linear-regression-deploy.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.
+In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.
 
 ## Prerequisites
 

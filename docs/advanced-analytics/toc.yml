@@ -84,6 +84,7 @@
     - name: Create a Python model using revoscalepy
       href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
     - name: Create a clustering model
+      items:
       - name: 1 - Introduction
         href: tutorial-python-clustering-model.md
       - name: 2 - Prepare the data

@@ -25,7 +25,7 @@ The following sections describe the new features and known issues for big data c
 
 |New feature or update | Details |
 |:---|:---|
-|SQL Server Always On Availability Group |The release candidate creates an availability group to provide:<br/><br/> High availability <br/><br/>Read-scale out <br/><br/>Scale-out data insertion into data pool |
+|SQL Server Always On Availability Group |When you deploy a SQL Server Big Data Cluster, you can configure the deployment to create an availability group to provide:<br/><br/>- High availability <br/><br/>- Read-scale out <br/><br/>- Scale-out data insertion into data pool<br/><br>See [Deploy with high availability](../big-data-cluster/deployment-high-availability.md). |
 |`azdata` |Simplified installation for the tool with [installation manager](./deploy-install-azdata-installer.md)<br/><br/>Notebook commands<br/><br/>New `azdata bdc` status command experience |
 |Azure Data Studio|New SQL Server Big Data Cluster status dashboard. |
 | &nbsp; | &nbsp; |

@@ -89,9 +89,9 @@
       - name: 2 - Prepare the data
         href: tutorial-python-clustering-model-prepare data.md
       - name: 3 - Create the model
-        href: tutorial-python-clustering-model-model-build.md
+        href: tutorial-python-clustering-model-build.md
       - name: 4 - Deploy the model
-        href: tutorial-python-clustering-model-model-deploy.md
+        href: tutorial-python-clustering-model-deploy.md
       - name: Python for SQL developers
       items:
       - name: 1 - Introduction

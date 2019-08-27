@@ -172,13 +172,13 @@
       - name: "* (Multiply)"
         href: ../dmx/multiply-dmx.md
       - name: (Divide) (DMX)
-        href: ../dmx/divide-dmx
+        href: ../dmx/divide-dmx.md
       - name: "< (Less Than)"
         href: ../dmx/less-than-dmx.md
       - name: "> (Greater Than)"
         href: ../dmx/greater-than-dmx.md
       - name: "= (Equal To)"
-        href: ../dmx/equal-to-dmx
+        href: ../dmx/equal-to-dmx.md
       - name: "<> (Not Equal To)"
         href: ../dmx/not-equal-to-dmx.md
       - name: "<= (Less Than or Equal To)"

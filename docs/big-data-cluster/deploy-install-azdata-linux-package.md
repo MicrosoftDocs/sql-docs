@@ -26,9 +26,9 @@ At this time, there are no package managers to install `azdata` on other operati
 
 ## <a id="linux"></a>Install `azdata` for Linux
 
-`azdata` installation package is available for Ubuntu or Debian with `apt`.
+`azdata` installation package is available for Ubuntu with `apt`.
 
-### <a id="azdata-apt"></a>Install `azdata` with apt (Ubuntu or Debian)
+### <a id="azdata-apt"></a>Install `azdata` with apt (Ubuntu)
 
 >[!NOTE]
 >The `azdata` package does not use the system Python, rather installs its own Python interpreter.

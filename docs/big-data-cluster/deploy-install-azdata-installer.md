@@ -32,8 +32,8 @@ To install `azdata` on with the Microsoft Windows Installer,
 
 If you have an existing version of `azdata` installed using `pip`, first remove it:
 
-```bash
-$ pip3 uninstall -y -r http://helsinki.redmond.corp.microsoft.com/browse/packages/python/aris-p-release-candidate-gb/azdata/requirements.txt
+```powershell
+pip3 uninstall -y -r http://helsinki.redmond.corp.microsoft.com/browse/packages/python/aris-p-release-candidate-gb/azdata/requirements.txt
 ```
 
 Once removed, [install `azdata` on Windows](#windows).

@@ -5,22 +5,17 @@ description: This article describes the latest updates and known issues for [!IN
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Release notes for big data clusters on SQL Server
+# Release notes for SQL Server Big Data Clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article lists the updates and know issues for the most recent releases of [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="rc"></a> Release candidate (August)
 
@@ -37,7 +32,11 @@ The following sections describe the new features and known issues for big data c
 
 ### Known issues
 
-The following sections describe the known issues and limitations with this release.
+SQL Server 2019 Big Data Clusters release candidate build number is greater than the SQL Server 2019 release candidate build number.
+
+#### Build version
+
+SQL Server 2019 Big Data Clusters has different build
 
 ## <a id="ctp32"></a> CTP 3.2 (July)
 

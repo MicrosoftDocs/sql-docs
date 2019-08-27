@@ -1,9 +1,9 @@
 ---
 title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "08/27/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -25,7 +25,7 @@ ms.author: carlrab
 manager: craigg
 ---
 # EXECUTE AS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Sets the execution context of a session.  
   
@@ -54,7 +54,7 @@ manager: craigg
  Specifies the execution context to be impersonated is a login. The scope of impersonation is at the server level.  
   
 > [!NOTE]  
->  This option is not available in a contained database or in SQL Database.  
+>  This option is not available in a contained database or SQL Database or SQL Data Warehouse.  
   
  USER  
  Specifies the context to be impersonated is a user in the current database. The scope of impersonation is restricted to the current database. A context switch to a database user does not inherit the server-level permissions of that user.  
@@ -85,9 +85,10 @@ manager: craigg
 >  The cookie **OUTPUT** parameter for is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(100)**. Applications should reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.  
   
  CALLER  
- When used inside a module, specifies the statements inside the module are executed in the context of the caller of the module.  
-  
- When used outside a module, the statement has no action.  
+ When used inside a module, specifies the statements inside the module are executed in the context of the caller of the module.
+ When used outside a module, the statement has no action.
+ > [!NOTE]  
+>  This option is not available in SQL Datawarehouse.  
   
 ## Remarks  
  The change in execution context remains in effect until one of the following occurs:  

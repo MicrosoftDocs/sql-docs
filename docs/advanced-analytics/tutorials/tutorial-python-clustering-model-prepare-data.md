@@ -34,17 +34,16 @@ In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to 
 
 ## Separate customers
 
-Create a new file in Visual Studio Code and enter the following script.
-
-Create a new script file in RStudio and run the following script.
-In the SQL query, you're separating customers along the following dimensions:
+To prepare for clustering customers, you'll first separate customers along the following dimensions:
 
 * **orderRatio** = return order ratio (total number of orders partially or fully returned versus the total number of orders)
 * **itemsRatio** = return item ratio (total number of items returned versus the number of items purchased)
 * **monetaryRatio** = return amount ratio (total monetary amount of items returned versus the amount purchased)
 * **frequency** = return frequency
 
-In the **paste** function, replace **Server**, **UID**, and **PWD** with your own connection information.
+Open a new notebook in Azure Data Studio and enter the following script.
+
+In the connection string, replace connection details as needed.
 
 ```python
 # Load packages.
@@ -109,51 +108,32 @@ def perform_clustering():
 
 ## Load the data into a data frame
 
-Now use the following script to return the results from the query to an R data frame using the **rxSqlServerData** function.
-As part of the process, you'll define the type for the selected columns (using colClasses) to make sure that the types are correctly transferred to R.
+Results from the query are returned to Python using the revoscalepy RxSqlServerData function. As part of the process, you'll use the column information you defined in the previous script.
 
-```r
-# Query SQL Server using input_query and get the results back
-# to data frame customer_returns
-# Define the types for selected columns (using colClasses),
-# to make sure that the types are correctly transferred to R
-customer_returns <- rxSqlServerData(
-                     sqlQuery=input_query,
-                     colClasses=c(customer ="numeric",
-                                  orderRatio="numeric",
-                                  itemsRatio="numeric",
-                                  monetaryRatio="numeric",
-                                  frequency="numeric" ),
-                     connectionString=connStr);
-
-# Transform the data from an input dataset to an output dataset
-customer_data <- rxDataStep(customer_returns);
-
-# Take a look at the data just loaded from SQL Server
-head(customer_data, n = 5);
+```python
+data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
+                                        connection_string=conn_str)
+    revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
+    # import data source and convert to pandas dataframe.
+    customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+    print("Data frame:", customer_data.head(n=5))
 ```
 
 You should see results similar to the following.
 
 ```results
-  customer orderRatio itemsRatio monetaryRatio frequency
-1    29727          0          0      0.000000         0
-2    26429          0          0      0.041979         1
-3    60053          0          0      0.065762         3
-4    97643          0          0      0.037034         3
-5    32549          0          0      0.031281         4
+Rows Read: 37336, Total Rows Processed: 37336, Total Chunk Time: 0.172 seconds
+Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
+0    29727.0    0.000000    0.000000       0.000000          0
+1    97643.0    0.068182    0.078176       0.037034          3
+2    57247.0    0.000000    0.000000       0.000000          0
+3    32549.0    0.086957    0.068657       0.031281          4
+4     2040.0    0.000000    0.000000       0.000000          0
 ```
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your Azure SQL Database server.
-
-From the Azure portal, follow these steps:
-
-1. From the left-hand menu in the Azure portal, select **All resources** or **SQL databases**.
-1. In the **Filter by name...** field, enter **tpcxbb_1gb**, and select your subscription.
-1. Select your **tpcxbb_1gb** database.
-1. On the **Overview** page, select **Delete**.
+***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your SQL Server.
 
 ## Next steps
 

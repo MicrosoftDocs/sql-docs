@@ -21,8 +21,8 @@ The following article provides reference for the `sql` shell in the `azdata` too
 
 |     |     |
 | --- | --- |
-|[`azdata sql query` | The query command allows execution of a T-SQL query.
-|[`azdata sql shell` | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
+|`azdata sql query` | The query command allows execution of a T-SQL query.
+|`azdata sql shell` | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
 
 ## More information
 

@@ -20,7 +20,7 @@ The following article provides reference for the `bdc notebook run` commands in 
 ## Commands
 |     |     |
 | --- | --- |
-[`azdata bdc notebook run`](#azdata-bdc-status-show) | Run a notebook.
+`azdata bdc notebook run` | Run a notebook.
 
 ## Example
 

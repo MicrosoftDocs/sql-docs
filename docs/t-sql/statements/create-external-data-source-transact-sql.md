@@ -84,7 +84,7 @@ Provides the connectivity protocol and path to the external data source.
 | Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | MongoDB or CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+) - Windows only           |
+| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019+) - Windows only           |
 | Bulk Operations             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+)                  |
 
 Location path:

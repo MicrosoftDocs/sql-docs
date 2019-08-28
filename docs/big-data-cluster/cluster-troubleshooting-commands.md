@@ -5,7 +5,7 @@ description: This article provides useful commands for monitoring and troublesho
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -116,7 +116,7 @@ For a date or time data type *expression*,  *style* can have one of the values s
 
 <sup>6</sup> Only supported when casting from character data to **datetime** or **smalldatetime**. When casting character data representing only date or only time components to the **datetime** or **smalldatetime** data types, the unspecified time component is set to 00:00:00.000, and the unspecified date component is set to 1900-01-01.
   
-<sup>7</sup>Use the optional time zone indicator **Z** to make it easier to map XML **datetime** values that have time zone information to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** values that have no time zone. Z indicates time zone UTC-0. The HH:MM offset, in the + or - direction, indicates other time zones. For example: `2006-12-12T23:45:12-08:00`.
+<sup>7</sup> Use the optional time zone indicator **Z** to make it easier to map XML **datetime** values that have time zone information to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** values that have no time zone. Z indicates time zone UTC-0. The HH:MM offset, in the + or - direction, indicates other time zones. For example: `2006-12-12T23:45:12-08:00`.
   
 When converting **smalldatetime** to character data, the styles that include seconds or milliseconds show zeros in these positions. When converting from **datetime** or **smalldatetime** values, use an appropriate **char** or **varchar** data type length to truncate unwanted date parts.
   

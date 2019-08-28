@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # TRY_PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Returns the result of an expression, translated to the requested data type, or null if the cast fails in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use TRY_PARSE only for converting from string to date/time and number types.  
   

@@ -13,19 +13,20 @@ ms.technology: big-data-cluster
 
 # azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
 | --- | --- |
+|[azdata notebook](reference-azdata-notebook.md) | Commands for viewing, running, and managing notebooks from a terminal. |
+|[azdata sql](reference-azdata-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
 |[azdata app](reference-azdata-app.md) | Create, delete, run, and manage applications. |
 |[azdata bdc](reference-azdata-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
-|[azdata notebook](reference-azdata-notebook.md) | Commands for viewing, running, and managing notebooks from a terminal. |
+|[azdata control](reference-azdata-control.md) | Create, delete, and manage control planes. |
 [azdata login](#azdata-login) | Log in to the cluster's controller endpoint.
 [azdata logout](#azdata-logout) | Log out of cluster.
-|[azdata sql](reference-azdata-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
 ## azdata login
 When your cluster is deployed, it will list the controller endpoint during deployment, which you should use to login.  If you do not know the controller endpoint, you may login by having your cluster's kube config on your system in the default location of <user home>/.kube/config or use the KUBECONFIG env var, i.e. export KUBECONFIG=path/to/.kube/config.
 ```bash

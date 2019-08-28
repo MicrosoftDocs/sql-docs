@@ -13,22 +13,14 @@ ms.technology: big-data-cluster
 
 # azdata bdc sql
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
 | --- | --- |
-[azdata bdc sql](#azdata-bdc-sql) | BDC SQL service commands.
-
-## azdata bdc sql
-
-Commands return information about the state of SQL Server instances in the cluster. For example,
-
-```bash
-azdata bdc sql status show
-```
+[azdata bdc sql status](reference-azdata-bdc-sql-status.md) | Sql service status commands.
 
 ## Next steps
 

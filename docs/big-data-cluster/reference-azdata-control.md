@@ -1,7 +1,7 @@
 ---
-title: azdata sql reference
+title: azdata control reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata sql commands.
+description: Reference article for azdata control commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata sql
+# azdata control
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
@@ -20,18 +20,33 @@ The following article provides reference for the **sql** commands in the **azdat
 ## Commands
 |     |     |
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
-[azdata sql query](#azdata-sql-query) | The query command allows execution of a T-SQL query.
-## azdata sql shell
-The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
+[azdata control create](#azdata-control-create) | Create control plane.
+[azdata control delete](#azdata-control-delete) | Delete control plane.
+## azdata control create
+Create control plane - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
 ```bash
-azdata sql shell 
+azdata control create [--name -n] 
+                      [--config-profile -c]  
+                      [--accept-eula -a]  
+                      [--node-label -l]  
+                      [--force -f]
 ```
 ### Examples
-Example command line to start the interactive experience.
+Control deployment.
 ```bash
-azdata sql shell
+azdata control create
 ```
+### Optional Parameters
+#### `--name -n`
+Control plane name, used for kubernetes namespaces.
+#### `--config-profile -c`
+Cluster config profile, used for deploying the cluster: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'kubeadm-dev-test']
+#### `--accept-eula -a`
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula.
+#### `--node-label -l`
+Node label, used to designate what nodes to deploy to.
+#### `--force -f`
+Force create, the user will not be prompted for any values and all issues will be printed as partof stderr.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -43,22 +58,23 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## azdata sql query
-The query command allows execution of a T-SQL query.
+## azdata control delete
+Delete control plane - kube config is required on your system.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata control delete --name -n 
+                      [--force -f]
 ```
 ### Examples
-Select the list of tables names.  Database defaults to master.
+Control deployment.
 ```bash
-azdata sql query 'SELECT name FROM SYS.TABLES'
+azdata control delete
 ```
 ### Required Parameters
-#### `--database -d`
-Database to run query in.  Default is master.
-#### `-q`
-T-SQL query to execute.
+#### `--name -n`
+Control plane name, used for kubernetes namespace.
+### Optional Parameters
+#### `--force -f`
+Force delete control plane.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

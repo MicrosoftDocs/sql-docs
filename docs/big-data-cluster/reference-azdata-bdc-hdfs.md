@@ -13,13 +13,14 @@ ms.technology: big-data-cluster
 
 # azdata bdc hdfs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
 | --- | --- |
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Hdfs service status commands.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | The HDFS shell is a simple interactive command shell for HDFS file system.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | List the status of the given file or directory.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Determine if a file or directory exists.  Returns True if exists and False otherwise.

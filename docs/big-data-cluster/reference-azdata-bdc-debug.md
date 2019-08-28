@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
@@ -23,7 +23,7 @@ The following article provides reference for the **sql** commands in the **azdat
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copy logs.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | Trigger logging dump.
 ## azdata bdc debug copy-logs
-Copy the debug logs from the Big Data Cluster - kube config is required on your system.
+Copy the debug logs from the Big Data Cluster - Kubernetes configuration is required on your system.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
@@ -55,7 +55,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for mor
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc debug dump
-Trigger logging dump and copy it out from container - kube config is required on your system.
+Trigger logging dump and copy it out from container - Kubernetes configuration is required on your system.
 ```bash
 azdata bdc debug dump --namespace -n 
                       --container -c  

@@ -1,15 +1,5 @@
 {
     "redirections": [
-         {
-            "source_path": "docs/big-data-cluster/reference-azdata-sql.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
-            "redirect_document_id": false
-        },  
-        {
-            "source_path": "docs/big-data-cluster/reference-azdata-notebook.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
-            "redirect_document_id": false
-        },
         {
             "source_path": "docs/big-data-cluster/reference-mssqlctl-bdc-app-template.md",
             "redirect_url": "/sql/big-data-cluster/reference-azdata-bdc-app-template",

@@ -179,6 +179,8 @@
         href: big-data-cluster/cluster-troubleshooting-commands.md
       - name: Manage with notebook
         href: big-data-cluster/manage-notebooks.md
+      - name: Manage with controller dashboard
+        href: big-data-cluster/manage-with-controller-dashboard.md
     - name: Notebooks
       items:
       - name: Notebooks overview

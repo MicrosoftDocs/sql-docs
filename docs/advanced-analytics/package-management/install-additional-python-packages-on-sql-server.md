@@ -88,7 +88,7 @@ If the client computer you use to connect to SQL Server doesn't have an Internet
 
 1. Open a **Command Prompt** and run the following command to create a local folder that contains the **text-tools** package. This example creates the folder `c:\temp\text-tools`.
 
-   ```command
+   ```console
    pip download text-tools -d c:\temp\text-tools
    ```
 

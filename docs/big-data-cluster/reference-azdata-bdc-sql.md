@@ -25,7 +25,7 @@ The following article provides reference for the **sql** commands in the **azdat
 
 ## azdata bdc sql
 
-SQL service commands to get information about the SQL Server instances in the cluster
+SQL service commands to get information about the SQL Server instances in the cluster.
 
 ```bash
 azdata bdc sql status show

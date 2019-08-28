@@ -213,6 +213,8 @@
           href: big-data-cluster/reference-azdata-notebook.md
         - name: sql
           href: big-data-cluster/reference-azdata-sql.md
+        - name: control
+          href: big-data-cluster/reference-azdata-control.md
       - name: App Deploy
         items:
         - name: app
@@ -223,6 +225,10 @@
         items:
         - name: bdc
           href: big-data-cluster/reference-azdata-bdc.md
+        - name: bdc app
+          href: big-data-cluster/reference-azdata-bdc-app.md
+        - name: bdc app status
+          href: big-data-cluster/reference-azdata-bdc-app-status.md
         - name: bdc config
           href: big-data-cluster/reference-azdata-bdc-config.md
         - name: bdc control
@@ -233,10 +239,16 @@
           href: big-data-cluster/reference-azdata-bdc-debug.md
         - name: bdc endpoint
           href: big-data-cluster/reference-azdata-bdc-endpoint.md
+        - name: bdc gateway
+          href: big-data-cluster/reference-azdata-bdc-gateway.md
+        - name: bdc gateway status
+          href: big-data-cluster/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
           href: big-data-cluster/reference-azdata-bdc-hdfs.md
         - name: bdc hdfs mount
           href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+        - name: bdc hdfs status
+          href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
         - name: bdc pool
           href: big-data-cluster/reference-azdata-bdc-pool.md
         - name: bdc pool status
@@ -249,10 +261,12 @@
           href: big-data-cluster/reference-azdata-bdc-spark-session.md        
         - name: bdc spark statement
           href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
-        - name: bdc status
-          href: big-data-cluster/reference-azdata-bdc-status.md
+        - name: bdc spark status
+          href: big-data-cluster/reference-azdata-bdc-spark-status.md        
         - name: bdc sql
           href: big-data-cluster/reference-azdata-bdc-sql.md
+        - name: bdc status
+          href: big-data-cluster/reference-azdata-bdc-status.md
 - name: Business continuity
   items:
   - name: Overview

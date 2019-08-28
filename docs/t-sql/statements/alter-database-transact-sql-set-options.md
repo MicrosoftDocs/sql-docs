@@ -2953,13 +2953,17 @@ command|Like|%DWResultCacheDb%|
 <a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
 **Applies to** Azure SQL Data Warehouse (preview)
 
-Snapshot isolation must be enabled by setting the ALLOW_SNAPSHOT_ISOLATION ON database option before it is used in transactions. This activates the mechanism for storing row versions in the Persisted Version Store (PVS).  You must enable snapshot isolation in each database that uses it with the Transact-SQL ALTER DATABASE statement. 
+ON
+Enables the READ_COMMITTED_SNAPSHOT option at the database level.
 
-Setting READ_COMMITTED_SNAPSHOT ON/OFF for a database will kill all open connections to this database.  Users may want to make the change during database maintenance or wait until all transactions are drained.  The database does not have to be in single-user mode.
+OFF
+Turn off READ_COMMITTED_SNAPSHOT option at the database level.
 
-Changing READ_COMMITTED_SNAPSHOT setting at session level is not supported.   
+Turning READ_COMMITTED_SNAPSHOT ON or OFF for a database will kill all open connections to this database.  You may want to make this change during database maintenance window or wait until there is no active connection to the database except for the connection executing the ALTER DATABSE command.  The database does not have to be in single-user mode.  Changing READ_COMMITTED_SNAPSHOT setting at session level is not supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
-To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long open transactions can also cause increase in the size of the database if there are data changes by these transactions which blocks the cleanup of versions.  
+
+
 
 
 ## Remarks

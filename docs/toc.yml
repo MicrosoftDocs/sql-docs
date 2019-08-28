@@ -253,6 +253,8 @@
           href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
         - name: bdc status
           href: big-data-cluster/reference-azdata-bdc-status.md
+        - name: bdc sql
+          href: big-data-cluster/reference-azdata-bdc-sql.md
 - name: Business continuity
   items:
   - name: Overview

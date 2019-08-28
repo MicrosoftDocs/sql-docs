@@ -85,9 +85,9 @@ For normal, production releases of Azure Data Studio, follow the instructions at
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2102435)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2102523)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2102524)|August 27, 2019 |RC 1.1|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2102436)|August 27, 2019 |RC 1.1|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2102526)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2102437)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2102525)|August 27, 2019 |RC 1.1|
+|Windows|[User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2102435)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2102523)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2102524)|August 27, 2019 |RC 1.11.0-insiders|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2102436)|August 27, 2019 |RC 1.11.0-insiders|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2102526)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2102437)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2102525)|August 27, 2019 |RC 1.11.0-insiders|
 
 For details about the latest release, see the [release notes](../big-data-cluster/release-notes-big-data-cluster.md).
 

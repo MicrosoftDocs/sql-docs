@@ -37,26 +37,26 @@ At this time, there are no package managers to install `azdata` on other operati
 
     ```bash
     sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release
+    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release -y
     ```
 
 2. Download and install the signing key:
 
     ```bash
-    sudo curl -sL http://repo.corp.microsoft.com/browse/repo/ubuntu/dpgswdist.v1.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg > /dev/null
+    sudo curl -sL http://repo.corp.microsoft.com/browse/repo/ubuntu/dpgswdist.v1.asc | gpg --dearmor |sudo tee /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg > /dev/null
     ```
 
 3. Add the `azdata` repository information:
 
     ```bash
-    sudo echo "deb [trusted=yes arch=amd64] http://repo.corp.microsoft.com/browse/repo/ubuntu/azdata-test mssql main" | tee /etc/apt/sources.list.d/azdata-cli.list
+    sudo echo "deb [trusted=yes arch=amd64] http://repo.corp.microsoft.com/browse/repo/ubuntu/azdata-test mssql main" |sudo tee /etc/apt/sources.list.d/azdata-cli.list
     ```
 
 4. Update repository information and install `azdata`:
 
     ```bash
     sudo apt-get update
-    sudo apt-get install azdata-cli
+    sudo apt-get install azdata-cli -y
     ```
 
 5. Verify installation:

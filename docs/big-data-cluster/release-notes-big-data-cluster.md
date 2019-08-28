@@ -27,13 +27,12 @@ The following sections describe the new features and known issues for big data c
 |:---|:---|
 |SQL Server Always On Availability Group |When you deploy a SQL Server Big Data Cluster, you can configure the deployment to create an availability group to provide:<br/><br/>- High availability <br/><br/>- Read-scale out <br/><br/>- Scale-out data insertion into data pool<br/><br>See [Deploy with high availability](../big-data-cluster/deployment-high-availability.md). |
 |`azdata` |Simplified installation for the tool with [installation manager](./deploy-install-azdata-installer.md)<br/><br/>[`azdata notebook` command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` command](./reference-azdata-bdc-status.md) |
-|Azure Data Studio|[Download the Release Candidate build of Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Added troubleshooting notebooks through SQL Server 2019 guide Jupyter Book.<br/><br/>Added controller login experience.<br/><br/>Added controller dashboard to view service endpoints, view cluster health status, and access troubleshooting notebooks.<br/><br/>Improved notebook cell output/editing performance.
- |
+|Azure Data Studio|[Download the Release Candidate build of Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Added troubleshooting notebooks through SQL Server 2019 guide Jupyter Book.<br/><br/>Added controller login experience.<br/><br/>Added controller dashboard to view service endpoints, view cluster health status, and access troubleshooting notebooks.<br/><br/>Improved notebook cell output/editing performance.|
 | &nbsp; | &nbsp; |
 
 ### Known issues
 
-SQL Server 2019 Big Data Clusters release candidate build number is different than the SQL Server 2019 release candidate build number.
+SQL Server 2019 Big Data Clusters release candidate refresh build number is `15.0.1900.47`.
 
 ## <a id="ctp32"></a> CTP 3.2 (July)
 

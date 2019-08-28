@@ -1,7 +1,7 @@
 ---
 title: azdata bdc config reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc commands.
+description: Reference article for azdata bdc config commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -15,14 +15,14 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The following article provides reference for the **bdc config** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Initializes a Big Data Cluster configuration profile that can be used with cluster create.
 [azdata bdc config list](#azdata-bdc-config-list) | Lists available configuration profile choices.
-[azdata bdc config show](#azdata-bdc-config-show) | Shows the BDC's current config or the config of a local file you specify, i.e. custom/cluster.json.
+[azdata bdc config show](#azdata-bdc-config-show) | Shows the BDC's current config or the config of a local file you specify, i.e. custom/bdc.json.
 [azdata bdc config add](#azdata-bdc-config-add) | Add a value for a json path in a config file.
 [azdata bdc config remove](#azdata-bdc-config-remove) | Remove a value for a json path in a config file.
 [azdata bdc config replace](#azdata-bdc-config-replace) | Replace a value for a json path in a config file.
@@ -52,7 +52,7 @@ Config profile source: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--force -f`
 Force overwrite of the target file.
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. 
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -87,7 +87,7 @@ Default config profile: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test'
 What config type you would like to see.
 `cluster`
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. 
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -100,7 +100,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for mor
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config show
-Shows the BDC's current config or the config of a local file you specify, i.e. custom/cluster.json. The command can also take in a json path if you would like to only get a section.  You can also specify a target file to output to.  If a target file is not specified, it will just be output to the terminal.
+Shows the BDC's current config or the config of a local file you specify, i.e. custom/bdc.json. The command can also take in a json path if you would like to only get a section.  You can also specify a target file to output to.  If a target file is not specified, it will just be output to the terminal.
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
@@ -114,15 +114,15 @@ azdata bdc config show
 ```
 In a local config file, get a value at the end of a simple json key path.
 ```bash
-azdata bdc config show --config-file custom-config/cluster.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
 ```
 In a local config file, gets a value at the end of a json key path with a conditional
 ```bash
-azdata bdc config show --config-file custom-config/cluster.json  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
 ```
 ### Optional Parameters
 #### `--config-file -c`
-Big data cluster config file path if you don't want the config of the cluster you are currentlylogged in to, i.e. custom/cluster.json
+Big data cluster config file path if you don't want the config of the cluster you are currentlylogged in to, i.e. custom/bdc.json
 #### `--target -t`
 Output file to store the result in. Default: directed to stdout.
 #### `--json-path -j`
@@ -153,7 +153,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 ```
 ### Required Parameters
 #### `--config-file -c`
-Big data cluster config file path of the config you would like to set, i.e. custom/cluster.json
+Big data cluster config file path of the config you would like to set, i.e. custom/bdc.json
 #### `--json-values -j`
 A key value pair list of json paths to values: key1.subkey1=value1,key2.subkey2=value2. You may provide inline json values such as: key='{"kind":"cluster","name":"test-cluster"}' or provide a file path, such as key=./values.json. Add does NOT support conditionals.  Please see http://jsonpatch.com/ for examples of how your path should look.  If you would like to access an array, you must do so by indicating the index, such as key.0=value
 ### Global Arguments
@@ -180,7 +180,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 ```
 ### Required Parameters
 #### `--config-file -c`
-Big data cluster config file path of the config you would like to set, i.e. custom/cluster.json
+Big data cluster config file path of the config you would like to set, i.e. custom/bdc.json
 #### `--json-path -j`
 A list of json paths based on the jsonpatch library that indicates which values you would like removed, such as: key1.subkey1,key2.subkey2. Remove does NOT support conditionals. Please see http://jsonpatch.com/ for examples of how your path should look.  If you would like to access an array, you must do so by indicating the index, such as key.0=value
 ### Global Arguments
@@ -211,11 +211,11 @@ azdata bdc config replace --config-file custom/control.json --json-values 'spec.
 ```
 Ex 3 - Replace pool storage, including replicas (Storage Pool).
 ```bash
-azdata bdc config replace --config-file custom/cluster.json --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
 ### Required Parameters
 #### `--config-file -c`
-Big data cluster config file path of the config you would like to set, i.e. custom/cluster.json
+Big data cluster config file path of the config you would like to set, i.e. custom/bdc.json
 #### `--json-values -j`
 A key value pair list of json paths to values: key1.subkey1=value1,key2.subkey2=value2. You may provide inline json values such as: key='{"kind":"cluster","name":"test-cluster"}' or provide a file path, such as key=./values.json. Replace supports conditionals through the jsonpath library.  To use this, start your path with a $. This will allow you to do a conditional such as -j $.key1.key2[?(@.key3=='someValue'].key4=value. You may see examples below. For additional help, please see: https://jsonpath.com/
 ### Global Arguments
@@ -252,14 +252,14 @@ azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 ```
 Ex 3 - Replace pool storage, including replicas (Storage Pool) with patch file.
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 
     Patch File Example (patch.json): 
         {"patch":[{"op":"replace","path":"$.spec.pools[?(@.spec.type == 'Storage')].spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
 ### Required Parameters
 #### `--config-file -c`
-Big data cluster config file path of the config you would like to set, i.e. custom/cluster.json
+Big data cluster config file path of the config you would like to set, i.e. custom/bdc.json
 #### `--patch-file -p`
 Path to a patch json file that is based off the jsonpatch library: http://jsonpatch.com/. You must start your patch json file with a key called "patch", whose value is an array of patch operations you intend to make. For the path of a patch operation, you may use dot notation, such as key1.key2 for most operations. If you would like to do a replace operation, and you are replacing a value in an array that requires a conditional, please use the jsonpath notation by beginning your path with a $. This will allow you to do a conditional such as $.key1.key2[?(@.key3=='someValue'].key4. Please see the examples below. For additional help with conditionals, please see: https://jsonpath.com/.
 ### Global Arguments
@@ -276,4 +276,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

@@ -1,5 +1,5 @@
 ---
-title: azdata sql
+title: azdata sql reference
 titleSuffix: SQL Server big data clusters
 description: Reference article for azdata sql commands.
 author: MikeRayMSFT
@@ -11,43 +11,69 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# `azdata sql`
+# azdata sql
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-The following article provides reference for the `sql` shell in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see 
+[azdata reference](reference-azdata.md)
 
 ## Commands
-
 |     |     |
 | --- | --- |
-|`azdata sql query` | The query command allows execution of a T-SQL query.
-|`azdata sql shell` | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
-
-## More information
-
-Requires login to controller. The following example, logs a user into a cluster, and connects to the controller, then initiates `azdata sql` shell.
+[azdata sql shell](#azdata-sql-shell) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
+[azdata sql query](#azdata-sql-query) | The query command allows execution of a T-SQL query.
+## azdata sql shell
+The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
 
 ```bash
-azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
-
-azdata sql shell
+azdata sql shell 
 ```
 
-The SQL Server `sa` or controller password is needed. It can be set for the session by setting the environment variable `MSSQL_SA_PASSWORD`.
-
-If SQL Server sa password is not set then `CONTROLLER_PASSWORD` is used.
-
-By default, `mssql-cli` collects usage data in order to improve your experience.
-
-The data is anonymous and does not include command-line argument values.
-
-The data is collected by Microsoft.
-
-Disable telemetry collection by setting environment variable `MSSQL_CLI_TELEMETRY_OPTOUT` to '`True` or `1`.
-
-Refer to [Microsoft Privacy statement](https://privacy.microsoft.com/privacystatement).
+### Examples
+Example command line to start the interactive experience.
+```bash
+azdata sql shell
+```
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
+## azdata sql query
+The query command allows execution of a T-SQL query.
+```bash
+azdata sql query --database -d 
+                 -q
+```
+### Examples
+Select the list of tables names.  Database defaults to master.
+```bash
+azdata sql query 'SELECT name FROM SYS.TABLES'
+```
+### Required Parameters
+#### `--database -d`
+Database to run query in.  Default is master.
+#### `-q`
+T-SQL query to execute.
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

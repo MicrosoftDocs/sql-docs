@@ -13,21 +13,22 @@ ms.technology: big-data-cluster
 
 # azdata app
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-The following article provides reference for the **app** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
 |     |     |
 | --- | --- |
-[azdata app template](reference-azdata-app-template.md) | Templates.
-[azdata app init](#azdata-app-init) | Kickstart new application skeleton.
-[azdata app create](#azdata-app-create) | Create application.
-[azdata app update](#azdata-app-update) | Update application.
-[azdata app list](#azdata-app-list) | List application(s).
-[azdata app delete](#azdata-app-delete) | Delete application.
-[azdata app run](#azdata-app-run) | Run application.
-[azdata app describe](#azdata-app-describe) | Describe application.
+|[azdata app template](reference-azdata-app-template.md) | Templates.
+|[azdata app init](#azdata-app-init) | Kickstart new application skeleton.
+|[azdata app create](#azdata-app-create) | Create application.
+|[azdata app update](#azdata-app-update) | Update application.
+|[azdata app list](#azdata-app-list) | List application(s).
+|[azdata app delete](#azdata-app-delete) | Delete application.
+|[azdata app run](#azdata-app-run) | Run application.
+|[azdata app describe](#azdata-app-describe) | Describe application.
+
 ## azdata app init
 Helps you to kickstart new application skeleton and/or spec files based on runtime environments.
 ```bash
@@ -43,15 +44,15 @@ Scaffold a new application `spec.yaml` only.
 ```bash
 azdata app init --spec
 ```
-Scaffold a new R application skeleton based on the `r` template.
+Scaffold a new R application application skeleton based on the `r` template.
 ```bash
 azdata app init --name reduce --template r
 ```
-Scaffold a new Python application skeleton based on the `python` template.
+Scaffold a new Python application application skeleton based on the `python` template.
 ```bash
 azdata app init --name reduce --template python
 ```
-Scaffold a new SSIS application skeleton based on the `ssis` template.
+Scaffold a new SSIS application application skeleton based on the `ssis` template.
 ```bash
 azdata app init --name reduce --template ssis            
 ```
@@ -265,4 +266,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference] (reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

@@ -13,12 +13,11 @@ ms.technology: big-data-cluster
 
 # azdata bdc
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-The following article provides reference for the **bdc** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.
@@ -41,15 +40,11 @@ azdata bdc create [--name -n]
                   [--force -f]
 ```
 ### Examples
-
 Guided BDC deployment experience - you will receive prompts for needed values.
-
 ```bash
 azdata bdc create
 ```
-
 BDC deployment with arguments.
-
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```
@@ -57,20 +52,17 @@ BDC deployment with specified name instead of default name in the profile.
 ```bash
 azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
 ```
-
 BDC deployment with arguments - no prompts will be given as the --force flag is used.
-
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 ```
-
 ### Optional Parameters
 #### `--name -n`
 Big data cluster name, used for kubernetes namespaces.
 #### `--config-profile -c`
 Big data cluster config profile, used for deploying the cluster: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at [https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534).
+Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula and https://go.microsoft.com/fwlink/?LinkId=2002534.
 #### `--node-label -l`
 Big data cluster node label, used to designate what nodes to deploy to.
 #### `--force -f`
@@ -117,4 +109,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

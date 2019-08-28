@@ -17,9 +17,9 @@ ms.technology: big-data-cluster
 
 This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters release candidate on Windows. Before the Windows Installation was available, the installation of `azdata` required `pip`.
 
->For Linux (Ubuntu), [install `azdata` with `apt`](./deploy-install-azdata-linux-package.md).
+>For Linux (Ubuntu), see [install `azdata` with installer](./deploy-install-azdata-linux-package.md).
 
-At this time, there are no package managers to install `azdata` on other operating systems or distributions. For these platforms, see [Install `azdata` without package manager](./deploy-install-azdata.md).
+At this time, there are no package managers to install `azdata` on other operating systems or distributions. For these platforms, see [install `azdata` without package manager](./deploy-install-azdata.md).
 
 ## Install `azdata` with the Microsoft Windows Installer
 
@@ -45,7 +45,7 @@ Once removed, [install `azdata` on Windows](#install-azdata-windows).
 
 Use the Windows Installer to install or update `azdata` on Windows.
 
-[Download the `azdata` Windows Installer]()
+[Download the `azdata` Windows Installer](http://aka.ms/azdata-wmi)
 
 When the installer asks if it can make changes to your computer, click `Yes`.
 

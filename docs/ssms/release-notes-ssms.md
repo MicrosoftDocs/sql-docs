@@ -104,6 +104,8 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 
 - There is a limitation on the size of the data you see from SSMS results shown in grid, text, or file.
 
+- Default language for SQL logins may display as Arabic in the Login Properties dialog, regardless of the actual default language set for the login. To view the actual default language for a given login, use T-SQL to select the login's **default_language_name** from **master.sys.server_principles**.
+
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team. 
 
 ## Previous SSMS releases

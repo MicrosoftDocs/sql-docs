@@ -321,9 +321,9 @@ When using SC collations, the behavior of `CONVERT`, is analogous to that of `CA
 ## Compatibility support
 In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the default style for CAST and CONVERT operations on **time** and **datetime2** data types is 121, except when either type is used in a computed column expression. For computed columns, the default style is 0. This behavior impacts computed columns when they are created, used in queries involving auto-parameterization, or used in constraint definitions.
   
-Under [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) 110 and higher, the CAST and CONVERT operations on the **time** and **datetime2** data types always have 121 as the default style. If a query relies on the old behavior, use a compatibility level less than 110, or explicitly specify the 0 style in the affected query.
+Under [compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) 110 and higher, the CAST and CONVERT operations on the **time** and **datetime2** data types always have 121 as the default style. If a query relies on the old behavior, use a compatibility level less than 110, or explicitly specify the 0 style in the affected query.
 
-|[Compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) value|Default style for CAST and CONVERT<sup>1</sup>|Default style for computed column|  
+|[Compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) value|Default style for CAST and CONVERT<sup>1</sup>|Default style for computed column|  
 |------------|------------|------------|
 |< **110**|121|0|  
 |> = **110**|121|121|  

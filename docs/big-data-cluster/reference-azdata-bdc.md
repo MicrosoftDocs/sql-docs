@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # azdata bdc
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
@@ -24,14 +24,18 @@ The following article provides reference for the **sql** commands in the **azdat
 [azdata bdc delete](#azdata-bdc-delete) | Delete Big Data Cluster.
 [azdata bdc config](reference-azdata-bdc-config.md) | Configuration commands.
 [azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | Endpoint commands.
-[azdata bdc status](reference-azdata-bdc-status.md) | Status commands.
 [azdata bdc debug](reference-azdata-bdc-debug.md) | Debug commands.
-[azdata bdc control](reference-azdata-bdc-control.md) | Control commands.
-[azdata bdc pool](reference-azdata-bdc-pool.md) | Pool commands.
+[azdata bdc status](reference-azdata-bdc-status.md) | BDC status commands.
+[azdata bdc control](reference-azdata-bdc-control.md) | Control service commands.
+[azdata bdc sql](reference-azdata-bdc-sql.md) | Sql service commands.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Hdfs service commands.
+[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark service commands.
+[azdata bdc gateway](reference-azdata-bdc-gateway.md) | Gateway service commands.
+[azdata bdc app](reference-azdata-bdc-app.md) | App service commands.
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | The HDFS module provides commands to access an HDFS file system.
 [azdata bdc spark](reference-azdata-bdc-spark.md) | The Spark commands allow the user to interact with the Spark system by creating and managing sessions, statements, and batches.
 ## azdata bdc create
-Create a SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
+Create a SQL Server Big Data Cluster - Kubernetes configuration is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -60,7 +64,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Big data cluster name, used for kubernetes namespaces.
 #### `--config-profile -c`
-Big data cluster config profile, used for deploying the cluster: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+Big data cluster config profile, used for deploying the cluster: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
 Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/azdata-eula and https://go.microsoft.com/fwlink/?LinkId=2002534.
 #### `--node-label -l`
@@ -79,13 +83,13 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for mor
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc delete
-Delete the SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD'].
+Delete the SQL Server Big Data Cluster - Kubernetes configuration is required on your system.
 ```bash
 azdata bdc delete --name -n 
                   [--force -f]
 ```
 ### Examples
-BDC deletion where the controller username and password are already set in your system environment.
+BDC delete.
 ```bash
 azdata bdc delete --name <cluster_name>
 ```

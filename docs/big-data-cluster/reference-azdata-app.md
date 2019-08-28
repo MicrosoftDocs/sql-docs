@@ -20,24 +20,18 @@ The following article provides reference for the **sql** commands in the **azdat
 ## Commands
 |     |     |
 | --- | --- |
-|[azdata app template](reference-azdata-app-template.md) | Templates.
-|[azdata app init](#azdata-app-init) | Kickstart new application skeleton.
-|[azdata app create](#azdata-app-create) | Create application.
-|[azdata app update](#azdata-app-update) | Update application.
-|[azdata app list](#azdata-app-list) | List application(s).
-|[azdata app delete](#azdata-app-delete) | Delete application.
-|[azdata app run](#azdata-app-run) | Run application.
-|[azdata app describe](#azdata-app-describe) | Describe application.
-
+[azdata app template](reference-azdata-app-template.md) | Templates.
+[azdata app init](#azdata-app-init) | Kickstart new application skeleton.
+[azdata app create](#azdata-app-create) | Create application.
+[azdata app update](#azdata-app-update) | Update application.
+[azdata app list](#azdata-app-list) | List application(s).
+[azdata app delete](#azdata-app-delete) | Delete application.
+[azdata app run](#azdata-app-run) | Run application.
+[azdata app describe](#azdata-app-describe) | Describe application.
 ## azdata app init
 Helps you to kickstart new application skeleton and/or spec files based on runtime environments.
 ```bash
-azdata app init [--spec -s] 
-                [--name -n]  
-                [--version -v]  
-                [--template -t]  
-                [--destination -d]  
-                [--url -u]
+azdata app init 
 ```
 ### Examples
 Scaffold a new application `spec.yaml` only.
@@ -56,19 +50,6 @@ Scaffold a new SSIS application application skeleton based on the `ssis` templat
 ```bash
 azdata app init --name reduce --template ssis            
 ```
-### Optional Parameters
-#### `--spec -s`
-Generate just an application spec.yaml.
-#### `--name -n`
-Application name.
-#### `--version -v`
-Application version.
-#### `--template -t`
-Template name. For a full list off supported template names run `azdata app template list`
-#### `--destination -d`
-Where to place the application skeleton. Default: current working directory.
-#### `--url -u`
-Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -83,17 +64,13 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app create
 Create an application.
 ```bash
-azdata app create --spec -s 
-                  
+azdata app create 
 ```
 ### Examples
 Create a new application from a directory containing a valid spec.yaml deployment specification.
 ```bash
 azdata app create --spec /path/to/dir/with/spec/yaml
 ```
-### Required Parameters
-#### `--spec -s`
-Path to a directory with a YAML spec file describing the application.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -108,19 +85,13 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app update
 Update an application.
 ```bash
-azdata app update [--spec -s] 
-                  [--yes -y]
+azdata app update 
 ```
 ### Examples
 Update an existing application from a directory containing a valid spec.yaml deployment specification.
 ```bash
 azdata app update --spec /path/to/dir/with/spec/yaml    
 ```
-### Optional Parameters
-#### `--spec -s`
-Path to a directory with a YAML spec file describing the application.
-#### `--yes -y`
-Do not prompt for confirmation when updating an application from the CWD's spec.yaml file.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -135,8 +106,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app list
 List an application(s).,
 ```bash
-azdata app list [--name -n] 
-                [--version -v]
+azdata app list 
 ```
 ### Examples
 List application by name and version.
@@ -151,11 +121,6 @@ List all application versions by name.
 ```bash
 azdata app list
 ```
-### Optional Parameters
-#### `--name -n`
-Application name.
-#### `--version -v`
-Application version.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -170,19 +135,13 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app delete
 Delete an application.
 ```bash
-azdata app delete --name -n 
-                  --version -v
+azdata app delete 
 ```
 ### Examples
 Delete application by name and version.
 ```bash
 azdata app delete --name reduce --version v1    
 ```
-### Required Parameters
-#### `--name -n`
-Application name.
-#### `--version -v`
-Application version.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -197,9 +156,7 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app run
 Run an application.
 ```bash
-azdata app run --name -n 
-               --version -v  
-               [--inputs]
+azdata app run 
 ```
 ### Examples
 Run application with no input parameters.
@@ -214,14 +171,6 @@ Run application with multiple input parameters.
 ```bash
 azdata app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
-### Required Parameters
-#### `--name -n`
-Application name.
-#### `--version -v`
-Application version.
-### Optional Parameters
-#### `--inputs`
-Application input parameters in a CSV `name=value` format.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -236,22 +185,13 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app describe
 Describe an application.
 ```bash
-azdata app describe [--spec -s] 
-                    [--name -n]  
-                    [--version -v]
+azdata app describe 
 ```
 ### Examples
 Describe the application.
 ```bash
 azdata app describe --name reduce --version v1    
 ```
-### Optional Parameters
-#### `--spec -s`
-Path to a directory with a YAML spec file describing the application.
-#### `--name -n`
-Application name.
-#### `--version -v`
-Application version.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -266,4 +206,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference] (reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

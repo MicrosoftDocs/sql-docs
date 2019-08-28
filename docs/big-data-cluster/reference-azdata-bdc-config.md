@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
@@ -48,7 +48,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 File path of where you would like the config profile placed, defaults to cwd with custom-config.json.
 #### `--source -s`
-Config profile source: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+Config profile source: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--force -f`
 Force overwrite of the target file.
 #### `--accept-eula -a`
@@ -82,7 +82,7 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### Optional Parameters
 #### `--config-profile -c`
-Default config profile: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+Default config profile: ['aks-dev-test', 'kubeadm-prod', 'minikube-dev-test', 'kubeadm-dev-test']
 #### `--type -t`
 What config type you would like to see.
 `cluster`
@@ -116,9 +116,9 @@ In a local config file, get a value at the end of a simple json key path.
 ```bash
 azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
 ```
-In a local config file, gets a value at the end of a json key path with a conditional
+In a local config file, gets the resources within a service
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec.pools[?(@.spec.type=="Storage")].spec' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json  --json-path '$.spec.services.sql.resources' --target section.json
 ```
 ### Optional Parameters
 #### `--config-file -c`
@@ -155,7 +155,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--config-file -c`
 Big data cluster config file path of the config you would like to set, i.e. custom/bdc.json
 #### `--json-values -j`
-A key value pair list of json paths to values: key1.subkey1=value1,key2.subkey2=value2. You may provide inline json values such as: key='{"kind":"cluster","name":"test-cluster"}' or provide a file path, such as key=./values.json. Add does NOT support conditionals.  Please see http://jsonpatch.com/ for examples of how your path should look.  If you would like to access an array, you must do so by indicating the index, such as key.0=value
+A key value pair list of json paths to values: key1.subkey1=value1,key2.subkey2=value2. You may provide inline json values such as: key='{"kind":"cluster","name":"test-cluster"}' or provide a file path, such as key=./values.json. Add does NOT support conditionals.  If the inline value you are providing is a key value pair itself with '=' and ',' please escape those characters.  For example, key1="key2\=val2\,key3\=val3". Please see http://jsonpatch.com/ for examples of how your path should look.  If you would like to access an array, you must do so by indicating the index, such as key.0=value
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -209,15 +209,15 @@ Ex 2 - Replace control plane storage.
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
 ```
-Ex 3 - Replace pool storage, including replicas (Storage Pool).
+Ex 3 - Replace storage-0 resource spec, including replicas.
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
 ```
 ### Required Parameters
 #### `--config-file -c`
 Big data cluster config file path of the config you would like to set, i.e. custom/bdc.json
 #### `--json-values -j`
-A key value pair list of json paths to values: key1.subkey1=value1,key2.subkey2=value2. You may provide inline json values such as: key='{"kind":"cluster","name":"test-cluster"}' or provide a file path, such as key=./values.json. Replace supports conditionals through the jsonpath library.  To use this, start your path with a $. This will allow you to do a conditional such as -j $.key1.key2[?(@.key3=='someValue'].key4=value. You may see examples below. For additional help, please see: https://jsonpath.com/
+A key value pair list of json paths to values: key1.subkey1=value1,key2.subkey2=value2. You may provide inline json values such as: key='{"kind":"cluster","name":"test-cluster"}' or provide a file path, such as key=./values.json. Replace supports conditionals through the jsonpath library.  To use this, start your path with a $. This will allow you to do a conditional such as -j $.key1.key2[?(@.key3=='someValue'].key4=value. If the inline value you are providing is a key value pair itself with '=' and ',' please escape those characters.  For example, key1="key2\=val2\,key3\=val3". You may see examples below. For additional help, please see: https://jsonpath.com/
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -255,7 +255,7 @@ Ex 3 - Replace pool storage, including replicas (Storage Pool) with patch file.
 azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 
     Patch File Example (patch.json): 
-        {"patch":[{"op":"replace","path":"$.spec.pools[?(@.spec.type == 'Storage')].spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
+        {"patch":[{"op":"replace","path":"$.spec.resources.storage-0.spec","value":{"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}}]}
 ```
 ### Required Parameters
 #### `--config-file -c`

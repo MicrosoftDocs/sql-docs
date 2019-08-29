@@ -93,7 +93,7 @@ These options correspond to the same five available in the DSN setup UI above.
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_Windows driver only_.) Integrated Windows Authentication using ADAL, which involves redeeming Windows account credentials for an AAD-issued access token, assuming the target database is in Azure SQL Database. Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. (_Windows driver only_.) AAD Interactive Authentication uses Azure Multi-factor Authentication technology to set up connection. In this mode, by providing the login ID, a Azure Authentication dialog is triggered and allows the user to input the password to complete the connection. The username is passed in the connection string.
+7. (_Windows driver only_.) AAD Interactive Authentication uses Azure Multi-factor Authentication technology to set up connection. In this mode, by providing the login ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection. The username is passed in the connection string.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)

@@ -44,7 +44,7 @@ ms.author: sstein
 manager: craigg
 ---
 # Deploy a SQL Server Database to a Microsoft Azure Virtual Machine
-  Use the **Deploy a SQL Server Database to a Azure VM** wizard to deploy a database from an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a Azure Virtual Machine (VM). The wizard utilizes a full database backup operation, so it always copies the complete database schema and the data from a SQL Server user database. The wizard also does all of the Azure VM configuration for you, so no pre-configuration of the VM is required.  
+  Use the **Deploy a SQL Server Database to an Azure VM** wizard to deploy a database from an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in an Azure Virtual Machine (VM). The wizard utilizes a full database backup operation, so it always copies the complete database schema and the data from a SQL Server user database. The wizard also does all of the Azure VM configuration for you, so no pre-configuration of the VM is required.  
   
  You cannot use the wizard for differential backups because the wizard will not overwrite an existing database that has the same database name. To replace an existing database on the VM, you must first drop the existing database or change the database name. If there is a naming conflict between the database name for an in-flight deploy operation and an existing database on the VM, the wizard will suggest an appended database name for the in-flight database to enable you to complete the operation.  
   
@@ -66,7 +66,7 @@ manager: craigg
   
 -   If you are deploying the database to an existing VM, the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be configured to listen on a TCP/IP port.  
   
--   Either a Azure VM or Gallery image you plan to use for creation of the VM must have the SQL Server Cloud Adapter configured and running.  
+-   Either an Azure VM or Gallery image you plan to use for creation of the VM must have the SQL Server Cloud Adapter configured and running.  
   
 -   You must configure an open endpoint for your SQL Server Cloud Adapter on the Azure gateway with private port 11435.  
   
@@ -95,7 +95,7 @@ manager: craigg
   
  The deployment feature does not support hosted services that are associated with an Affinity Group. For example, storage accounts associated with an Affinity Group cannot be selected for use on the **Deployment Settings** page of this wizard.  
   
- The SQL Server version in the VM must be the same or later than the source SQL Server version. SQL Server database versions that can be deployed to a Azure VM using this wizard:  
+ The SQL Server version in the VM must be the same or later than the source SQL Server version. SQL Server database versions that can be deployed to an Azure VM using this wizard:  
   
 -   SQL Server 2008  
   
@@ -105,7 +105,7 @@ manager: craigg
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- SQL Server database versions running in a Azure VM database can be deployed to:  
+ SQL Server database versions running in an Azure VM database can be deployed to:  
   
 -   SQL Server 2012  
   
@@ -177,7 +177,7 @@ manager: craigg
 
   
 ##  <a name="Introduction"></a> Introduction Page  
- This page describes the **Deploy a SQL Server Database to a Azure VM** wizard.  
+ This page describes the **Deploy a SQL Server Database to an Azure VM** wizard.  
   
  **Options**  
   

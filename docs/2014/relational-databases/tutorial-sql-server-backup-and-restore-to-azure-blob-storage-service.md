@@ -18,7 +18,7 @@ manager: craigg
  This tutorial shows you how to create a Windows Storage account, a blob container, creating credentials to access the storage account, writing a backup to the blob service, and performing a simple restore. This tutorial is divided into four lessons:  
   
  [Lesson 1: Create Azure Storage Objects](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
- In this lesson, you create a Azure storage account and a blob container.  
+ In this lesson, you create an Azure storage account and a blob container.  
   
  [Lesson 2: Create a SQL Server Credential](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  In this lesson, you create a Credential to store security information used to access the Azure storage account.  
@@ -34,7 +34,7 @@ manager: craigg
   
 -   An instance of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], and AdventureWorks2012 database installed.  
   
-     The SQL Server instance can be on-premises or in a Azure Virtual Machine.  
+     The SQL Server instance can be on-premises or in an Azure Virtual Machine.  
   
      You can use a user database in place of AdventureWorks2012, and modify the tsql syntax accordingly.  
   

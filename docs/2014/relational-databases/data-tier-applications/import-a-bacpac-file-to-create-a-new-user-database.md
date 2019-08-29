@@ -95,7 +95,7 @@ manager: craigg
   
 -   **Import from local disk** - Click **Browse...** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
   
--   **Import from Azure** - Imports a BACPAC file from a Azure container. You must connect to a Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.  
+-   **Import from Azure** - Imports a BACPAC file from an Azure container. You must connect to an Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. The temporary file will be created at the specified location and will remain there after the operation completes.  
   
      When browsing Azure, you will be able to switch between containers within a single account. You must specify a single .bacpac file to continue the import operation. Note that you can sort columns by **Name**, **Size**, or **Date Modified**.  
   

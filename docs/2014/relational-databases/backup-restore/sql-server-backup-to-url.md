@@ -48,12 +48,12 @@ manager: craigg
 ###  <a name="intorkeyconcepts"></a> Introduction to Key Components and Concepts  
  The following two sections introduce the Azure Blob storage service, and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components used when backing up to or restoring from the Azure Blob storage service. It is important to understand the components and the interaction between them to do a backup to or restore from the Azure Blob storage service.  
   
- Creating a Azure account is the first step to this process. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the **Azure storage account name** and its **access key** values to authenticate and write and read blobs to the storage service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential stores this authentication information and is used during the backup or restore operations. For a complete walkthrough of creating a storage account and performing a simple restore, see [Tutorial Using Azure Storage Service for SQL Server Backup and Restore](https://go.microsoft.com/fwlink/?LinkId=271615).  
+ Creating an Azure account is the first step to this process. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the **Azure storage account name** and its **access key** values to authenticate and write and read blobs to the storage service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Credential stores this authentication information and is used during the backup or restore operations. For a complete walkthrough of creating a storage account and performing a simple restore, see [Tutorial Using Azure Storage Service for SQL Server Backup and Restore](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
  ![mapping storage account to sql credentials](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "mapping storage account to sql credentials")  
   
 ###  <a name="Blob"></a> Azure Blob Storage Service  
- **Storage Account:** The storage account is the starting point for all storage services. To access the Azure Blob Storage service, first create a Azure storage account. The **storage account name** and its **access key** properties are required to authenticate to the Azure Blob Storage service and its components.  
+ **Storage Account:** The storage account is the starting point for all storage services. To access the Azure Blob Storage service, first create an Azure storage account. The **storage account name** and its **access key** properties are required to authenticate to the Azure Blob Storage service and its components.  
   
  **Container:** A container provides a grouping of a set of Blobs, and can store an unlimited number of Blobs. To write a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup to the Azure Blob service, you must have at least the root container created.  
   
@@ -66,7 +66,7 @@ manager: craigg
  For more information about page Blobs, see [Understanding Block and Page Blobs](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
- **URL:** A URL specifies a Uniform Resource Identifier (URI) to a unique backup file. The URL is used to provide the location and name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup file. In this implementation, the only valid URL is one that points to a page Blob in a Azure storage account. The URL must point to an actual Blob, not just a container. If the Blob does not exist, it is created. If an existing Blob is specified, BACKUP fails, unless the "WITH FORMAT" option is specified.  
+ **URL:** A URL specifies a Uniform Resource Identifier (URI) to a unique backup file. The URL is used to provide the location and name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup file. In this implementation, the only valid URL is one that points to a page Blob in an Azure storage account. The URL must point to an actual Blob, not just a container. If the Blob does not exist, it is created. If an existing Blob is specified, BACKUP fails, unless the "WITH FORMAT" option is specified.  
   
 > [!WARNING]  
 >  If you choose to copy and upload a backup file to the Azure Blob storage service, use page blob as your storage option. Restores from Block Blobs are not supported. RESTORE from a block blob type fails with an error.  

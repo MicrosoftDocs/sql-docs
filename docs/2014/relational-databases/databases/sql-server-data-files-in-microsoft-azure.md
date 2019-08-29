@@ -51,7 +51,7 @@ manager: craigg
   
 -   You must store the information regarding Azure Storage container, its associated policy name, and SAS key in the SQL Server credential store.  
   
- The following example assumes that a Azure Storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'your SAS key'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Create and Use a Shared Access Signature](https://msdn.microsoft.com/library/azure/jj721951.aspx)  
+ The following example assumes that an Azure Storage container has been created, and a policy has been created with read, write, list, rights. Creating a policy on a container generates a SAS key which is safe to keep unencrypted in memory and needed by SQL Server to access the blob files in the container. In the following code snippet, replace `'your SAS key'` with an entry similar to the following: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. For more information, see [Create and Use a Shared Access Signature](https://msdn.microsoft.com/library/azure/jj721951.aspx)  
   
 ```  
   
@@ -87,11 +87,11 @@ ON
   
 -   **SQL Server on-premises:** SQL Server 2014 version includes this feature. To learn how to download SQL Server 2014, see [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
--   SQL Server running in a Azure virtual machine: If you are installing SQL Server on a Azure Virtual Machine, install SQL Server 2014, or update your existing instance. Similarly, you can also create a new virtual machine in Azure using SQL Server 2014 platform image. To learn how to download SQL Server 2014, see [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   SQL Server running in an Azure virtual machine: If you are installing SQL Server on an Azure Virtual Machine, install SQL Server 2014, or update your existing instance. Similarly, you can also create a new virtual machine in Azure using SQL Server 2014 platform image. To learn how to download SQL Server 2014, see [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Limitations  
   
--   In the current release of this feature, storing `FileStream` data in Azure Storage is not supported. You can store `Filestream` data in a Azure Storage integrated local database but you cannot move Filestream data between machines using Azure Storage. For `FileStream` data, we recommend that you continue using the traditional techniques to move the files (.mdf, .ldf) associated with Filestream between different machines.  
+-   In the current release of this feature, storing `FileStream` data in Azure Storage is not supported. You can store `Filestream` data in an Azure Storage integrated local database but you cannot move Filestream data between machines using Azure Storage. For `FileStream` data, we recommend that you continue using the traditional techniques to move the files (.mdf, .ldf) associated with Filestream between different machines.  
   
 -   Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error code **5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"**.  
   

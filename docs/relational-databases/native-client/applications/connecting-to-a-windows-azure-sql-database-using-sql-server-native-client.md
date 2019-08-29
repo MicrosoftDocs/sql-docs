@@ -1,5 +1,5 @@
 ---
-title: "Connecting to a Azure SQL Database Using SQL Server Native Client | Microsoft Docs"
+title: "Connecting to an Azure SQL Database Using SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
@@ -11,7 +11,7 @@ author: MightyPen
 ms.author: genemi
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Connecting to a Azure SQL Database Using SQL Server Native Client
+# Connecting to an Azure SQL Database Using SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 

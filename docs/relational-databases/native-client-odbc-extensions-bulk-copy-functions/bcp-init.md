@@ -38,7 +38,7 @@ RETCODE bcp_init (
 ```  
 
 Unicode and ANSI names:
-- bcp_init (ANSI)
+- bcp_initA (ANSI)
 - bcp_initW (Unicode)
 
 ## Arguments  

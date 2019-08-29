@@ -1,7 +1,7 @@
 ---
-title: azdata bdc control reference
+title: azdata bdc sql reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc control commands.
+description: Reference article for azdata bdc sql commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata bdc control
+# azdata bdc sql
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
@@ -20,7 +20,7 @@ This article is a reference article for **azdata**.
 ## Commands
 |     |     |
 | --- | --- |
-[azdata bdc control status](reference-azdata-bdc-control-status.md) | Control service status commands.
+[azdata bdc sql status](reference-azdata-bdc-sql-status.md) | Sql service status commands.
 
 ## Next steps
 

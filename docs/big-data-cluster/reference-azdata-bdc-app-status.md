@@ -1,7 +1,7 @@
 ---
-title: azdata bdc control status reference
+title: azdata bdc app status reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc control status commands.
+description: Reference article for azdata bdc app status commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata bdc control status
+# azdata bdc app status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
@@ -20,25 +20,25 @@ This article is a reference article for **azdata**.
 ## Commands
 |     |     |
 | --- | --- |
-[azdata bdc control status show](#azdata-bdc-control-status-show) | Control service status.
-## azdata bdc control status show
-Control service status.
+[azdata bdc app status show](#azdata-bdc-app-status-show) | App service status.
+## azdata bdc app status show
+App service status.
 ```bash
-azdata bdc control status show [--resource -r] 
-                               [--all -a]
+azdata bdc app status show [--resource -r] 
+                           [--all -a]
 ```
 ### Examples
-Get status of service.
+Get status of app service.
 ```bash
-azdata bdc control status show
+azdata bdc app status show
 ```
-Get status of control service with all instances.
+Get status of app service with all instances.
 ```bash
-azdata bdc control status show --all
+azdata bdc app status show --all
 ```
-Get status of the control resource within the control service.
+Get status of the appproxy resource within the app service.
 ```bash
-azdata bdc control status show --resource control
+azdata bdc app status show --resource appproxy
 ```
 ### Optional Parameters
 #### `--resource -r`

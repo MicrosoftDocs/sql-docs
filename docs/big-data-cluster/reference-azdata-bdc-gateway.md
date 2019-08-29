@@ -1,7 +1,7 @@
 ---
-title: azdata bdc control reference
+title: azdata bdc gateway reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc control commands.
+description: Reference article for azdata bdc gateway commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata bdc control
+# azdata bdc gateway
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
@@ -20,7 +20,7 @@ This article is a reference article for **azdata**.
 ## Commands
 |     |     |
 | --- | --- |
-[azdata bdc control status](reference-azdata-bdc-control-status.md) | Control service status commands.
+[azdata bdc gateway status](reference-azdata-bdc-gateway-status.md) | Gateway service status commands.
 
 ## Next steps
 

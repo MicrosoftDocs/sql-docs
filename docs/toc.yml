@@ -67,8 +67,6 @@
         href: big-data-cluster/deploy-big-data-tools.md
       - name: Install azdata
         items:
-        - name: With Windows Installer
-          href: big-data-cluster/deploy-install-azdata-installer.md
         - name: With Linux package manager
           href: big-data-cluster/deploy-install-azdata-linux-package.md
         - name: With pip

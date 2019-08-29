@@ -23,6 +23,7 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
+monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest"
 ---
 # EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

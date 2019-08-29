@@ -19,7 +19,6 @@ This article describes how to install `azdata` for SQL Server 2019 Big Data Clus
 
 The package managers are designed for various operating systems and distributions.
 
-- For Windows, [install `azdata` with the Microsoft Windows Installer](./deploy-install-azdata-installer.md)
 - For Linux (Ubuntu), [install `azdata` with `apt`](#azdata-apt)
 
 At this time, there are no package managers to install `azdata` on other operating systems or distributions. For these platforms, see [Install `azdata` without package manager](./deploy-install-azdata.md).

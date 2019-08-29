@@ -1,10 +1,15 @@
 {
     "redirections": [
         {
+            "source_path": "docs/big-data-cluster/deploy-install-azdata-installer.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
             "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false
-        },  
+        },
         {
             "source_path": "docs/relational-databases/security/feature-restrictions.md",
             "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",

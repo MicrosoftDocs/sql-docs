@@ -37,9 +37,8 @@ CREATE TABLE Department
   , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
 )    
-WITH (SYSTEM_VERSIONING = ON)   
-;  
-```  
+WITH (SYSTEM_VERSIONING = ON);
+```
   
 ### Important remarks  
   
@@ -62,22 +61,18 @@ WITH (SYSTEM_VERSIONING = ON)
 ## Creating a temporal table with a default history table  
  Creating a temporal table with a default history table is a convenient option when you want to control naming and still rely on the system to create the history table with the default configuration. In the example below, a new table is created with system-versioning enabled with the name of the history table explicitly defined.  
   
-```  
+```
 CREATE TABLE Department   
 (
-    DeptID INT NOT NULL PRIMARY KEY CLUSTERED  
-  , DeptName VARCHAR(50) NOT NULL  
-  , ManagerID INT NULL  
-  , ParentDeptID INT NULL  
-  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
-  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
-  , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)     
-)   
-WITH
-   (   
-      SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory)   
-   )   
-;  
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL
+  , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 ```  
   
 ### Important remarks  
@@ -93,16 +88,16 @@ WITH
  Creating a temporal table with user-defined history table is a convenient option when the user wants to specify a history table with specific storage options and additional indexes. In the example below, a user-defined history table is created with a schema that is aligned with the temporal table that will be created. To this user-defined history table,  a clustered columnstore index and additional non clustered rowstore (B-tree) index is created for point lookups. After this user-defined history table is created, the system-versioned temporal table is created specifying the user-defined history table as the default history table.  
   
 ```  
-CREATE TABLE DepartmentHistory   
+CREATE TABLE DepartmentHistory
 (
-    DeptID INT NOT NULL  
-  , DeptName VARCHAR(50) NOT NULL  
-  , ManagerID INT NULL  
-  , ParentDeptID INT NULL  
-  , SysStartTime DATETIME2 NOT NULL  
-  , SysEndTime DATETIME2 NOT NULL   
-);   
-GO   
+    DeptID INT NOT NULL
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 NOT NULL
+  , SysEndTime DATETIME2 NOT NULL
+);
+GO
 
 CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory
     ON DepartmentHistory;
@@ -120,9 +115,8 @@ CREATE TABLE Department
   , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL     
   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
 )
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
-;
-```  
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
+```
   
 ### Important remarks  
   
@@ -194,8 +188,7 @@ ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidTo] datetime2 NOT NULL;
 ALTER TABLE ProjectTaskCurrent   
     ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
 ALTER TABLE ProjectTaskCurrent   
-    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON));
 ```  
   
 #### Important remarks  

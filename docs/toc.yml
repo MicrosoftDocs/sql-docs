@@ -2512,7 +2512,7 @@
       items:
       - name: Components
         href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
-      - name: Connecting to a Azure
+      - name: Connecting to Azure SQL with native C
         href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
       - name: ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory
         href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md

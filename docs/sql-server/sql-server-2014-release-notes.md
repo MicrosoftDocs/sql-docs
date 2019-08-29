@@ -328,10 +328,10 @@ For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and 
   
 For more information, see [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkID=391254)  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM on Windows Azure Virtual Machines  
+### <a name="AzureVM"></a>SQL Server 2014 RTM on Azure Virtual Machines  
   
-#### The Add Azure Replica Wizard returns an error when configuring an Availability Group Listener in Windows Azure  
-**Issue:** If an Availability Group has a Listener, the Add Azure Replica Wizard will return an error when trying to configure the Listener in Windows Azure.  
+#### The Add Azure Replica Wizard returns an error when configuring an Availability Group Listener in Azure  
+**Issue:** If an Availability Group has a Listener, the Add Azure Replica Wizard will return an error when trying to configure the Listener in Azure.  
   
 This issue is because Availability Group Listeners require assigning one IP address in every subnet hosting Availability Group replicas, including the Azure subnet.  
   
@@ -339,9 +339,9 @@ This issue is because Availability Group Listeners require assigning one IP addr
   
 1.  In the Listener page, assign a free static IP address in the Azure subnet that will host the Availability Group replica to the Availability Group Listener.  
   
-    This workaround will allow the Wizard to complete adding the replica in Windows Azure.  
+    This workaround will allow the Wizard to complete adding the replica in Azure.  
   
-2.  After the Wizard completes, you will need to finish the configuration of the Listener in Windows Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
+2.  After the Wizard completes, you will need to finish the configuration of the Listener in Azure as described in [Listener Configuration for AlwaysOn Availability Groups in Azure](https://msdn.microsoft.com/library/dn376546.aspx)  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   

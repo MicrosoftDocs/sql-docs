@@ -23,12 +23,12 @@ manager: craigg
  In-Memory OLTP is a memory-optimized database engine integrated into the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] engine. In-Memory OLTP is optimized for OLTP. For more information, see [In-Memory OLTP &#40;In-Memory Optimization&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
  
   
-###  <a name="DataFiles"></a> SQL Server Data Files in Windows Azure  
- [SQL Server Data Files in Windows Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) enables native support for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database files stored as Windows Azure Blobs. This feature allows you to create a database in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running in on-premises or in a virtual machine in Windows Azure with a dedicated storage location for your data in Windows Azure Blob Storage.  
+###  <a name="DataFiles"></a> SQL Server Data Files in Azure  
+ [SQL Server Data Files in Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) enables native support for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database files stored as Azure Blobs. This feature allows you to create a database in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running in on-premises or in a virtual machine in Azure with a dedicated storage location for your data in Azure Blob Storage.  
   
   
-###  <a name="AzureVM"></a> Host a SQL Server Database in a Windows Azure Virtual Machine  
- Use the [Deploy a SQL Server Database to a Windows Azure Virtual Machine](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Wizard to host a database from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a Windows Azure Virtual Machine.  
+###  <a name="AzureVM"></a> Host a SQL Server Database in a Azure Virtual Machine  
+ Use the [Deploy a SQL Server Database to a Azure Virtual Machine](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Wizard to host a database from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a Azure Virtual Machine.  
   
   
 ###  <a name="Backup"></a> Backup and Restore Enhancements  
@@ -36,11 +36,11 @@ manager: craigg
   
 -   **SQL Server Backup to URL**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL was introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 supported only by [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell and SMO. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to backup to or restore from Windows Azure Blob storage service. The new option is available both for the Backup task, and maintenance plans. For more information, see [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz), and [Restoring from Windows Azure storage Using SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL was introduced in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2 supported only by [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell and SMO. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] you can use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to backup to or restore from Azure Blob storage service. The new option is available both for the Backup task, and maintenance plans. For more information, see [Using Backup Task in SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server Backup to URL Using Maintenance Plan Wizard](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz), and [Restoring from Azure storage Using SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
--   **SQL Server Managed Backup to Windows Azure**  
+-   **SQL Server Managed Backup to Azure**  
   
-     Built on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is a service that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides to manage and schedule database and log backups. In this release only backup to Windows Azure storage is supported. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] can be configured both at the database and at instance level allowing for both granular control at the database level and automating at the instance level. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] can be configured on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances running on-premises and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances running on Windows Azure virtual machines. It is recommended for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances running on Windows Azure virtual machines. For more information, see [SQL Server Managed  Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Built on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Backup to URL, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is a service that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides to manage and schedule database and log backups. In this release only backup to Azure storage is supported. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] can be configured both at the database and at instance level allowing for both granular control at the database level and automating at the instance level. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] can be configured on [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances running on-premises and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances running on Azure virtual machines. It is recommended for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances running on Azure virtual machines. For more information, see [SQL Server Managed  Backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 -   **Encryption for Backups**  
   
@@ -162,7 +162,7 @@ manager: craigg
   
 ##  <a name="Deployment"></a> Deployment Enhancements  
 ### Azure VM
-[Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) enables deployment of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database to a Windows Azure VM.  
+[Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) enables deployment of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database to a Azure VM.  
 
 ### ReFS
 Deployment of databases on ReFS is now supported.   

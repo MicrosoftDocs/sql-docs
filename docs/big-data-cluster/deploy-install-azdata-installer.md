@@ -30,11 +30,19 @@ To install `azdata` on with the Microsoft Windows Installer,
 
 ### Uninstall if previous installation done with `pip`
 
-If you have an existing version of `azdata` installed using `pip`, first remove it:
+If you have any previous releases of **mssqlctl** installed, remove it. The following command removes the CTP 3.1 version of **mssqlctl**.
 
-```powershell
-pip3 uninstall -y -r http://helsinki.redmond.corp.microsoft.com/browse/packages/python/aris-p-release-candidate-gb/azdata/requirements.txt
-```
+   ```bash
+   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   ```
+
+If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.
+
+   For CTP 3.2, run the following command.
+
+   ```bash
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
+   ```
 
 Once removed, [install `azdata` on Windows](#install-azdata-windows).
 

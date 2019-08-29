@@ -252,7 +252,7 @@ featureFlags:
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <p>SQL Server backup and restore to Windows Azure Blob Storage Service</p>
+                                            <p>SQL Server backup and restore to Azure Blob Storage Service</p>
                                         </div>
                                     </div>
                                 </div>

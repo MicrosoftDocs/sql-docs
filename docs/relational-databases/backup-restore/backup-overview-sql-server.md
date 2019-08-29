@@ -73,7 +73,7 @@ ms.author: mikeray
 ## Backup media terms and definitions  
   
  **[backup device](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- A disk or tape device to which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups are written and from which they can be restored. SQL Server backups can also be written to a Windows Azure Blob storage service, and **URL** format is used to specify the destination and the name of the backup file.. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ A disk or tape device to which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups are written and from which they can be restored. SQL Server backups can also be written to a Azure Blob storage service, and **URL** format is used to specify the destination and the name of the backup file.. For more information, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[backup media](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  One or more tapes or disk files to which one or more backup have been written.  
@@ -143,7 +143,7 @@ ms.author: mikeray
   
 -   [Restore a Backup from a Device &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Create a backup**  
   
@@ -166,7 +166,7 @@ ms.author: mikeray
   
 -   [Use Resource Governor to Limit CPU Usage by Backup Compression &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## And more! 
  [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

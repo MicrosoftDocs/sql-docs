@@ -17,6 +17,7 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
+monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest"
 ---
 # TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]

@@ -9,6 +9,7 @@ ms.technology: native-client
 ms.topic: "reference"
 apiname: 
   - "bcp_init"
+  - "bcp_initW"
 apilocation: 
   - "sqlncli11.dll"
 apitype: "DLLExport"
@@ -23,12 +24,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Initializes the bulk copy operation.  
-  
+Initializes the bulk copy operation.  
+
 ## Syntax  
   
 ```  
-  
 RETCODE bcp_init (  
         HDBC hdbc,  
         LPCTSTR szTable,  
@@ -36,7 +36,11 @@ RETCODE bcp_init (
         LPCTSTR szErrorFile,  
         INT eDirection);  
 ```  
-  
+
+Unicode and ANSI names:
+- bcp_init (ANSI)
+- bcp_initW (Unicode)
+
 ## Arguments  
  *hdbc*  
  Is the bulk copy-enabled ODBC connection handle.  
@@ -213,7 +217,7 @@ int main() {
 }  
   
 ```  
-  
+
 ## See Also  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   

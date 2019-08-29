@@ -67,8 +67,6 @@
         href: big-data-cluster/deploy-big-data-tools.md
       - name: Install azdata
         items:
-        - name: With Windows Installer
-          href: big-data-cluster/deploy-install-azdata-installer.md
         - name: With Linux package manager
           href: big-data-cluster/deploy-install-azdata-linux-package.md
         - name: With pip
@@ -2544,7 +2542,7 @@
       items:
       - name: Components
         href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
-      - name: Connecting to a Azure
+      - name: Connecting to Azure SQL using native client
         href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
       - name: ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory
         href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md

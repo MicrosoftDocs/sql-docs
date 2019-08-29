@@ -8135,8 +8135,6 @@
       items:
       - name: SQL injection
         href: relational-databases/security/sql-injection.md
-      - name: Feature restrictions
-        href: relational-databases/security/feature-restrictions.md
       - name: TRUSTWORTHY database property
         href: relational-databases/security/trustworthy-database-property.md
       - name: Password policy
@@ -12137,8 +12135,6 @@
         href: relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
       - name: sys.server_role_members
         href: relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
-      - name: sys.sql_feature_restrictions
-        href: relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
       - name: sys.sql_logins
         href: relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
       - name: sys.symmetric_keys

@@ -56,7 +56,6 @@ SSMS 18.2 is the latest general availability (GA) release of SSMS. If you need a
 | Query Execution or Results | Added a *Completion time* in the messages to track when a given query completed its execution. |
 | Query Execution or Results | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256   and 64 K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
 | ShowPlan | Added a new attribute in QueryPlan when [inline scalar UDF feature](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) is enabled  (ContainsInlineScalarTsqludfs). |
-| SMO | Added support for *Feature Restrictions*. For more information on the feature itself, see [Feature Restrictions](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
 | SMO | Added support for *SQL Assessment API*. For more information, see [SQL Assessment API](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
 |  |  |
 
@@ -233,7 +232,6 @@ SSMS 18.1 is the latest general availability (GA) release of SSMS. If you need a
 |Always Encrypted| The Enable Always Encrypted checkbox in the new Always Encrypted tab in the Connect to Server dialog now provides an easy way to enable/disable Always Encrypted for a database connection.|
 |Always Encrypted with secure enclaves| Several enhancements have been made to support  Always Encrypted with secure enclaves in SQL Server 2019 preview:  A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).  The new checkbox in the New Column Master Key dialog to control whether a new column master key allows enclave computations.  Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.|
 |Audit Files|Changed authentication method from Storage Account Key based to Azure AD-based authentication.|
-|Audit Files|Updated list of known audit actions to include FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.|
 |Data Classification| Reorganized data classification task menu: added sub menu to the database tasks menu and added an option to open the report from the menu without opening the classify data window first.|
 |Data Classification|Added new feature 'Data classification' to SMO. Column object exposes new properties: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId, and IsClassified (read-only). For more information, see [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
 |Data Classification|Added new "Classification Report" menu item to the "Data Classification" flyout.|

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Resource Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # LOG (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the base-10 logarithm of a numeric expression.  
   
 ## Syntax  

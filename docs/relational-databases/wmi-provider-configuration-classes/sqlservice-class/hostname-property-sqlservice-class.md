@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # HostName Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

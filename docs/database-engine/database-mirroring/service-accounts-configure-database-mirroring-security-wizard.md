@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Service Accounts (Configure Database Mirroring Security Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

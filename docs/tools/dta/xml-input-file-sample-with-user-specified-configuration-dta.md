@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sample applications [DTA]"
 ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # XML Input File Sample with User-specified Configuration (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

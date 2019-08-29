@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # SqlPipe Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

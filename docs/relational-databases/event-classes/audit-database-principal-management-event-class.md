@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Principal Management Event Class

@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMLineFromWKB method"
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STMLineFromWKB (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

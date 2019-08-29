@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Extended Events Packages

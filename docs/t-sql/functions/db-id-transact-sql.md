@@ -1,7 +1,7 @@
 ---
 title: "DB_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/30/2017"
+ms.date: "08/13/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -20,9 +20,8 @@ helpviewer_keywords:
   - "displaying database ID numbers"
   - "DB_ID function"
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DB_ID (Transact-SQL)
@@ -47,6 +46,9 @@ The name of the database whose database ID number `DB_ID` will return. If the ca
 
 ## Remarks
 `DB_ID` may only be used to return the database identifier of the current database in Azure SQL Database. NULL is returned if the specified database name is other than the current database.
+
+> [!NOTE]
+> When used with Azure SQL Database, `DB_ID` may not return the same result as querying `database_id` from **sys.databases**. If the caller of `DB_ID` is comparing the result to other **sys** views, then **sys.databases** should be queried instead.
   
 ## Permissions  
 If the caller of `DB_ID` does not own a specific non-**master** or non-**tempdb** database, `ALTER ANY DATABASE` or `VIEW ANY DATABASE` server-level permissions at minimum are required to see the corresponding `DB_ID` row. For the **master** database, `DB_ID` needs `CREATE DATABASE` permission at minimum. The database to which the caller connects will always appear in **sys.databases**.

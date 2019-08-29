@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SoapException class"
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SoapException Errors Table

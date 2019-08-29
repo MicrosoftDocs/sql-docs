@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Overview and Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: "jodebrui"
 ms.author: "jodebrui"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Overview and Usage Scenarios
@@ -88,7 +87,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository
 
 - [Quorum doubles key database's workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet improved the performance of batch data load and removed the need to maintain a mid-tier cache, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center was able to dramatically improve data ingestion rate from domain controllers, and handle spikes in the workload, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
+- Beth Israel Deaconess Medical Center was able to dramatically improve data ingestion rate from domain controllers, and handle spikes in the workload, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
 ### Caching and session state
 
@@ -219,7 +218,7 @@ GO
 
 [In-Memory OLTP Technologies for Faster T-SQL Performance](https://msdn.microsoft.com/library/mt694156.aspx)   
 Perf demo using In-Memory OLTP can be found at: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
-[17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=l5l5eophmK4) (demo is at 8:25)   
+[17-minute video explaining In-Memory OLTP and showing the demo](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
 [Script to enable In-Memory OLTP and set recommended options](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
 [Main In-Memory OLTP documentation](in-memory-oltp-in-memory-optimization.md)   
 [Performance and resource utilization benefits of In-Memory OLTP in Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  

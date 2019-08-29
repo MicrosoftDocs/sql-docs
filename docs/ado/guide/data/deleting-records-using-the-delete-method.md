@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Deleting Records Using the Delete Method
 Using the **Delete** method marks the current record or a group of records in a **Recordset** object for deletion. If the **Recordset** object does not allow record deletion, an error occurs. If you are in immediate update mode, deletions occur in the database immediately. If a record cannot be successfully deleted (due to database integrity violations, for example), the record will remain in edit mode after the call to **Update.** This means that you must cancel the update using [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) before moving off the current record (for example, using [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md), or [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

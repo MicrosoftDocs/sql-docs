@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # View a Collection Set Report (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

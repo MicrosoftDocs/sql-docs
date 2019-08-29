@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: f963fb70-377d-43f5-8d56-326591f6d3e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsPositionedUpdate Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

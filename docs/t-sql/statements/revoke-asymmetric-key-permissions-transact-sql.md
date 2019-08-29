@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Asymmetric Key Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Refresh Method Example (VB)
 This example demonstrates using the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method to refresh the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection for a stored procedure [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  

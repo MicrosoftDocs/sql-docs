@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "FOR XML clause, TYPE directive"
   - "TYPE directive"
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # TYPE Directive in FOR XML Queries

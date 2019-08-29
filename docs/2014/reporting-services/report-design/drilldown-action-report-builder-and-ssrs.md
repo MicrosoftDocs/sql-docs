@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10249"
@@ -38,8 +37,8 @@ f1_keywords:
   - "10062"
   - "10053"
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Drilldown Action (Report Builder and SSRS)

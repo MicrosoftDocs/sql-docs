@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Extract Data by Using the OLE DB Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To add and configure an OLE DB source, the package must already include at least one Data Flow task.  
   
 ### To extract data using an OLE DB Source  

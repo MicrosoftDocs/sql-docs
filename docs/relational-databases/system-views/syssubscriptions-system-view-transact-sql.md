@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # syssubscriptions (System View) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ apitype: "DLLExport"
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBUnshareInstance Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

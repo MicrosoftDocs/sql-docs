@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ProtocolOrder Property (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

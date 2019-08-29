@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Validate Partition Information for a Merge Subscriber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

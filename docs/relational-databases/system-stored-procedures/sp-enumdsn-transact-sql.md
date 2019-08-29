@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

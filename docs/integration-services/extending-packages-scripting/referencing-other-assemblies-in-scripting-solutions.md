@@ -24,9 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Referencing Other Assemblies in Scripting Solutions
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] class library provides the script developer with a powerful set of tools for implementing custom functionality in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The Script task and the Script component can also use custom managed assemblies.  
   
 > [!NOTE]

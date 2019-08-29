@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # VBScript ADO Programming
 ## Creating an ADO Project  

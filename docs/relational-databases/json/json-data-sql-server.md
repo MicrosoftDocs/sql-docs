@@ -1,7 +1,7 @@
 ---
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/19/2018"
+ms.date: "05/14/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -13,12 +13,11 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
-manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # JSON data in SQL Server
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
 
@@ -26,10 +25,10 @@ JSON functions in SQL Server enable you to combine NoSQL and relational concepts
 
 *JSON as a bridge between NoSQL and relational worlds*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
- 
-Here's an example of JSON text: 
- 
-```json 
+
+Here's an example of JSON text:
+
+```json
 [{
 	"name": "John",
 	"skills": ["SQL", "C#", "Azure"]
@@ -37,7 +36,7 @@ Here's an example of JSON text:
 	"name": "Jane",
 	"surname": "Doe"
 }]
-``` 
+```
  
 By using SQL Server built-in functions and operators, you can do the following things with JSON text: 
  
@@ -121,7 +120,7 @@ FROM OPENJSON(@json)
   
 **Results**  
   
-|id|firstName|lastName|age|dateOfBirth|  
+|ID|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -162,7 +161,7 @@ The result of this query is shown in the following table:
 
 **Results**  
   
-|id|firstName|lastName|age|dateOfBirth|skill|  
+|ID|firstName|lastName|age|dateOfBirth|skill|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL| 
@@ -172,6 +171,10 @@ The result of this query is shown in the following table:
 `OUTER APPLY OPENJSON` will join first level entity with sub-array and return flatten resultset. Due to JOIN, the second row will be repeated for every skill.
 
 ### Convert SQL Server data to JSON or export JSON
+
+>[!NOTE]
+>Converting Azure SQL Data Warehouse data to JSON or exporting JSON is not supported.
+
 Format SQL Server data or the results of SQL queries as JSON by adding the **FOR JSON** clause to a **SELECT** statement. Use **FOR JSON** to delegate the formatting of JSON output from your client applications to SQL Server. For more information, see [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
 The following example uses PATH mode with the **FOR JSON** clause:  
@@ -288,8 +291,8 @@ SET @jsonVariable = N'[
   ]'
   
 INSERT INTO SalesReport  
-SELECT SalesOrderJsonData.*  
-FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')  
+--INSERT INTO <sampleTable>  
+FROM OPENJSON (@jsonVariable, N'$')  
            WITH (  
               Number   varchar(200) N'$.Order.Number',   
               Date     datetime     N'$.Order.Date',  
@@ -327,11 +330,11 @@ If you have a web service that takes data from the database layer and returns it
   
 For example, you might want to generate JSON output that's compliant with the OData specification. The web service expects a request and response in the following format: 
   
--   Request: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+- Request: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   Response: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+- Response: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
-This OData URL represents a request for the ProductID and ProductName columns for the product with `id` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
+This OData URL represents a request for the ProductID and ProductName columns for the product with `ID` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
   
 ```sql  
 SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'

@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
-# catalog.set_customized_logging_level_description
+# catalog.set_customized_logging_level_description 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Changes the description of an existing customized logging level. For more info about customized logging levels, see [Integration Services &#40;SSIS&#41; Logging](../../integration-services/performance/integration-services-ssis-logging.md).  

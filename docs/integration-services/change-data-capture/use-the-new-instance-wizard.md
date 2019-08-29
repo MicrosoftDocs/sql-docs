@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Use the New Instance Wizard
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The New Instance wizard is used to create a new instance for a CDC service. You open the Create an Oracle CDC Instance wizard from the CDC Designer Console. You can do the following in the New Instance wizard.  
   
 -   [Create the SQL Server Change Database](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  

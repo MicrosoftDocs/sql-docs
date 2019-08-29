@@ -1,7 +1,7 @@
 ---
 title: "Overview of Key Management for Always Encrypted | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/20/2016"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Overview of Key Management for Always Encrypted
@@ -26,7 +25,7 @@ When discussing Always Encrypted keys and key management it is important to unde
 
 - ***Column master keys*** are key-protecting keys used to encrypt column encryption keys. Column master keys must be stored in a trusted key store, such as Windows Certificate Store, Azure Key Vault, or a hardware security module. The database only contains metadata about column master keys (the type of key store and location). The column master key metadata is stored in the [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) catalog view.  
 
-It is important to note that the key metadata in the database system does not contain plaintext column master keys or plaintext column encryption keys. The database only contains information about the type and location of column master keys, and encrypted values of column encryption keys. This means that plaintext keys are never exposed to the database system ensuring that data protected using Always Encrypted is safe, even if the database system gets compromised. To ensure the database system cannot gain access to the plaintext keys, be sure to run your key management tools on a different machine than the one hosting your database - review the [Security Considerations for Key Management](#SecurityForKeyManagement) section below for details.
+It is important to note that the key metadata in the database system does not contain plaintext column master keys or plaintext column encryption keys. The database only contains information about the type and location of column master keys, and encrypted values of column encryption keys. This means that plaintext keys are never exposed to the database system ensuring that data protected using Always Encrypted is safe, even if the database system gets compromised. To ensure the database system cannot gain access to the plaintext keys, be sure to run your key management tools on a different machine than the one hosting your database - review the [Security Considerations for Key Management](#security-considerations-for-key-management) section below for details.
 
 Because the database only contains encrypted data (in Always Encrypted protected columns), and cannot access the plaintext keys, it cannot decrypt the data. This means that querying Always Encrypted columns will simply return encrypted values, so client applications that need to encrypt or decrypt protected data must be able to access the column master key, and related column encryption keys. For details, see [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
@@ -76,7 +75,7 @@ Always Encrypted keys can be managed using [SQL Server Management Studio (SSMS)]
     - [Rotate Always Encrypted Keys using PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> Security Considerations for Key Management
+## Security Considerations for Key Management
 
 The primary objective of Always Encrypted is to ensure sensitive data stored in a database is safe, even if the database system or its hosting environment gets compromised. Examples of security attacks where Always Encrypted can help prevent sensitive data leaks include:
 

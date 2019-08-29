@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQLXML, samples"
   - "examples [SQLXML], requirements"
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Requirements for Running SQLXML Examples

@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "sp_xml_preparedocument"
   - "XML [SQL Server], system stored procedures"
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # XML System Stored Procedures
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

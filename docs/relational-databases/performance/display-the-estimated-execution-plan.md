@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Display the Estimated Execution Plan

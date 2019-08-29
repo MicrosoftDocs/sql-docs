@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # AcceptStop Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -12,9 +12,12 @@ f1_keywords:
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Review and Generate Supplemental Logging Scripts
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Scripts** tab to run or re-run a script on the Oracle source database that sets up supplemental logging.  
   
  Before you run the scripts select one of the following:  

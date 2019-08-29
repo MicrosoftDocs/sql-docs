@@ -18,9 +18,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a Custom Data Flow Component
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The data flow task consists of components that connect to a variety of data sources and then transform and route that data at high speed. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides an extensible object model that lets developers create custom sources, transformations, and destinations that you can use in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] and in deployed packages. This section contains topics that will guide you in developing custom data flow components.  
   
 ## In This Section  

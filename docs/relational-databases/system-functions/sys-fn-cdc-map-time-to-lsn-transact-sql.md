@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

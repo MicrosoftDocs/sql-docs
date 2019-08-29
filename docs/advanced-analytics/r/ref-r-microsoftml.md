@@ -1,17 +1,17 @@
 ---
-title: MicrosoftML R function library - SQL Server Machine Learning Services
-description: Introduction to the MicrosoftML function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
+title: MicrosoftML R function library
+description: Introduction to the MicrosoftML function library in SQL Server 2016 R Services and SQL Server Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/04/2018  
+ms.date: 06/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # MicrosoftML (R library in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **MicrosoftML** is an R function library from Microsoft providing high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data.
 
@@ -26,7 +26,7 @@ The **MicrosoftML** library is distributed in multiple Microsoft products, but u
 The **MicrosoftML** library is based on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 or later](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R client](set-up-a-data-science-client.md)
 
@@ -135,7 +135,7 @@ This section lists the functions by category to give you an idea of how each one
 
 Functions in **MicrosoftML** are callable in R code encapsulated in stored procedures. Most developers build **MicrosoftML** solutions locally, and then migrate finished R code to stored procedures as a deployment exercise.
 
-The **MicrosoftML** package for R is installed "out-of-the-box" in SQL Server 2017. It is also available for use with SQL Server 2016 if you upgrade the R components for the instance: [Upgrade an instance of SQL Server using binding](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+The **MicrosoftML** package for R is installed "out-of-the-box" in SQL Server 2017. It is also available for use with SQL Server 2016 if you upgrade the R components for the instance: [Upgrade an instance of SQL Server using binding](../install/upgrade-r-and-python.md)
 
 The package is not loaded by default. As a first step, load the **MicrosoftML** package, and then load **RevoScaleR** if you need to use remote compute contexts or related connectivity or data source objects. Then, reference the individual functions you need.
 

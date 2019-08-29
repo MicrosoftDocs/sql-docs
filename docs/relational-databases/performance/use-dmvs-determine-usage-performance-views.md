@@ -1,7 +1,6 @@
 ---
 title: Use DMVs to Determine Usage Statistics and Performance of Views
 description: Use DMVs to Determine Usage Statistics and Performance of Views
-manager: craigg
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018

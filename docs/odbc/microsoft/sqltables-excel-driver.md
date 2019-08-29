@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLTables (Excel Driver)
 > [!NOTE]  

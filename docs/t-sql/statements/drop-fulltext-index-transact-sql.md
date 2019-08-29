@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

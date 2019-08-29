@@ -1,23 +1,23 @@
 ---
-title: R-to-SQL data type conversions - SQL Server Machine Learning Services
-description: Review the implicit and explicit data type converstions between R and SQL Server in data science and machine learning solutions.
+title: R-to-SQL data type conversions
+description: Review the implicit and explicit data type conversions between R and SQL Server in data science and machine learning solutions.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/10/2018  
+ms.date: 08/08/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Data type mappings betweenR and SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# Data type mappings between R and SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 For R solutions that run on the R integration feature in SQL Server Machine Learning Services, review the list of unsupported data types, and data type conversions that might be performed implicitly when data is passed between R libraries and SQL Server.
 
 ## Base R version
 
-SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R, are aligned with specific releases of Microsoft R Open. For example, the latest release, SQL Server 2017 Machine Learning Services, is built on Microsoft R Open 3.3.3.
+SQL Server 2016 R Services and SQL Server Machine Learning Services with R, are aligned with specific releases of Microsoft R Open. For example, the latest release, SQL Server Machine Learning Services, is built on Microsoft R Open 3.3.3.
 
 To view the R version associated with a particular instance of SQL Server, open **RGui**. For the default instance, the path would be as follows: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 

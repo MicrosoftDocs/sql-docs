@@ -15,11 +15,10 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Adds a new agent job used to schedule synchronization of a pull subscription to a merge publication. This stored procedure is executed at the Subscriber on the subscription database.  
   

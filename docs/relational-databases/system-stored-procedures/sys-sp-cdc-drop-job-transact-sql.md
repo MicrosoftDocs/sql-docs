@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

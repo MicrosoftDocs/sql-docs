@@ -9,7 +9,6 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 
 # WideWorldImporters data generation

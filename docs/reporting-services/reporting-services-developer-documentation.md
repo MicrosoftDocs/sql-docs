@@ -1,8 +1,7 @@
 ---
 title: "Reporting Services Developer Documentation | Microsoft Docs"
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services

@@ -15,9 +15,8 @@ f1_keywords:
   - "sql13.swb.connection.login.sqlserver.f1"
   - "sql13.swb.manageSS2k.f1"
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Connect to Server (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

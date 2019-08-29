@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR User-Defined Aggregates - Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

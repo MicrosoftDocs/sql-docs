@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ee5f55e9-fbef-401a-be18-a2e5873c8720
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Disallowed Types and Members in System.Data.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_help_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns all the parameters of a profile from the [MSagent_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) system table. This stored procedure is executed at the Distributor where the agent is running, on any database.  
   
@@ -32,7 +31,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## Arguments  
- [ **@profile_id=**] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile from the [MSagent_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) table. *profile_id* is **int**, with a default of **-1**, which returns all parameters.  
   
 ## Result Sets  

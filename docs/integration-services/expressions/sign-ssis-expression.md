@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SIGN (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the positive (+1), negative (-1), or zero (0) sign of a numeric expression.  
   
 ## Syntax  

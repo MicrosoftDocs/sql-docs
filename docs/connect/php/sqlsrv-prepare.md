@@ -1,7 +1,7 @@
 ---
 title: "sqlsrv_prepare | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/11/2019"
+ms.date: "04/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -60,8 +59,8 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\*** constant that specifies PHP data type of the returned value.|  
     |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\*** constant that specifies the SQL Server data type of the input value.|  
   
-*$options* [OPTIONAL]: An associative array that sets query properties. The following table lists the supported keys and corresponding values:  
-  
+*$options* [OPTIONAL]: An associative array that sets <a name="properties">query properties</a>. The following table lists the supported keys and corresponding values:
+
 |Key|Supported values|Description|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|A positive integer|Configures the size of the buffer that holds the result set for a client-side cursor.<br /><br />The default is 10240 KB. For more information, read [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CursorLocationEnum
 Specifies the location of the cursor service.  

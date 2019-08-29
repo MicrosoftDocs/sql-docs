@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Index Architecture and Design Guide
@@ -272,7 +271,7 @@ If the clustered index is not created with the `UNIQUE` property, the [!INCLUDE[
     For example, an employee ID uniquely identifies employees. A clustered index or [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint on the `EmployeeID` column would improve the performance of queries that search for employee information based on the employee ID number. Alternatively, a clustered index could be created on `LastName`, `FirstName`, `MiddleName` because employee records are frequently grouped and queried in this way, and the combination of these columns would still provide a high degree of difference. 
 
     > [!TIP]
-    > If not specified differently, when creating a [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creates a [clustered index](#clustered_index) to support that constraint.
+    > If not specified differently, when creating a [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) constraint, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] creates a [clustered index](#Clustered) to support that constraint.
     > Although a *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* can be used to enforce uniqueness as a PRIMARY KEY, it is not an efficient clustering key.
     > If using a *uniqueidentifier* as PRIMARY KEY, the recommendation is to create it as a nonclustered index, and use another column such as an `IDENTITY` to create the clustered index.   
   

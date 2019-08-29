@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsValid (geometry Data Type)"
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIsValid (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

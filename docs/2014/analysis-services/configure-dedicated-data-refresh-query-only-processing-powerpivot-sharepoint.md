@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 author: minewiskan

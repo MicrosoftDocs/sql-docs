@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,12 @@ Oracle version information:
 -   Publishing data from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers.  
 
 -   Publishing data to and from Oracle has the following restrictions:  
-  | |2016 or earlier |2017 or later |
-  |-------|-------|--------|
+
+  | Replication|2016 or earlier |2017 or later |
+  |:-----------|:---------------|:-------------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
   |Replication to Oracle |Up to Oracle 12c |Not supported |
+  | &nbsp; | &nbsp; | &nbsp; |
 
 
  Heterogeneous replication to non-SQL Server subscribers is deprecated. Oracle Publishing is deprecated. To move data, create solutions using change data capture and [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

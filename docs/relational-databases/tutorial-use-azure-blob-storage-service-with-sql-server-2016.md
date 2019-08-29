@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/09/2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
@@ -14,7 +14,6 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Tutorial: Use Azure Blob storage service with SQL Server 2016
 
@@ -37,7 +36,9 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Download [AdventureWorks2016 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Assign the user account to the role of [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) and grant [alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) permissions. 
- 
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## 1 - Create stored access policy and shared access storage
 
 In this section, you will use an [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) script to create a shared access signature on an Azure Blob container using a stored access policy.  
@@ -97,20 +98,20 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
-    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
+    $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
     # Creates a new container in blob storage  
-    $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+    $container = New-AzStorageContainer -Context $storageContext -Name $containerName  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+    $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
 
     # Gets the Shared Access Signature for the policy  
-    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
+    $sas = New-AzStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
     # Sets the variables for the new container you just created
-    $container = Get-AzureStorageContainer -Context $storageContext -Name $containerName
+    $container = Get-AzStorageContainer -Context $storageContext -Name $containerName
     $cbc = $container.CloudBlobContainer 
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  

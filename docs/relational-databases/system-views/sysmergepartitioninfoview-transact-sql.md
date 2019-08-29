@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_lock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ```  
   
 ## Arguments  
- [ **@spid1 =** ] **'***session ID1***'**  
+`[ @spid1 = ] 'session ID1'`
  Is a [!INCLUDE[ssDE](../../includes/ssde-md.md)] session ID  number from **sys.dm_exec_sessions** for which the user wants locking information. *session ID1* is **int** with a default value of NULL. Execute **sp_who** to obtain process information about the session. If *session ID1* is not specified, information about all locks is displayed.  
   
- [ **@spid2 =** ] **'***session ID2***'**  
+`[ @spid2 = ] 'session ID2'`
  Is another [!INCLUDE[ssDE](../../includes/ssde-md.md)] session ID number from **sys.dm_exec_sessions** that might have a lock at the same time as *session ID1* and about which the user also wants information. *session ID2* is **int** with a default value of NULL.  
   
 ## Return Code Values  

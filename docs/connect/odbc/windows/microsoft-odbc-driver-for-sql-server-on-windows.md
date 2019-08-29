@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -31,7 +30,7 @@ The Microsoft ODBC Driver for SQL Server can be used to create new applications.
 ## Documentation  
 This documentation for the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] includes:  
   
--   [Release Notes](../../../connect/odbc/windows/release-notes.md)  
+-   [Release Notes for ODBC to SQL Server on Windows](../../../connect/odbc/windows/release-notes-odbc-sql-server-windows.md)  
 -   [Features of the Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
 -   [System Requirements, Installation, and Driver Files](../../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)  
 -   [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  

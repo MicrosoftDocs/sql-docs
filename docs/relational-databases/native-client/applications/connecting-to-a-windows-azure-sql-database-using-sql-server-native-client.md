@@ -1,5 +1,5 @@
 ---
-title: "Connecting to a Windows Azure SQL Database Using SQL Server Native Client | Microsoft Docs"
+title: "Connecting to a Azure SQL Database Using SQL Server Native Client | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""
@@ -9,14 +9,13 @@ ms.topic: "reference"
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Connecting to a Windows Azure SQL Database Using SQL Server Native Client
+# Connecting to a Azure SQL Database Using SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  For a sample that shows how to connect to a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Development: How-to Topics (Windows Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
+  For a sample that shows how to connect to a [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Development: How-to Topics (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx).  
   
 ## Known Issues When Connecting to a SQL Database  
  The following are known issues when connecting to a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

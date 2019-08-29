@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "order of operator execution [Transact-SQL]"
   - "precedence [SQL Server], operators"
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Operator Precedence (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

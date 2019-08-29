@@ -15,9 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # OData Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service.
 
 ## Supported protocols and data formats

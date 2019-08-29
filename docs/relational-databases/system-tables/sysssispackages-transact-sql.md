@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackages system table"
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

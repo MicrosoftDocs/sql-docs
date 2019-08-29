@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Profiling ODBC Driver Performance Data

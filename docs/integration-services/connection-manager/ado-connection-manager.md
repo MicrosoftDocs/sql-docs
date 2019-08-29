@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ADO Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An ADO connection manager enables a package to connect to ActiveX Data Objects (ADO) objects, such as a recordset. This connection manager is typically used in custom tasks written in an earlier version of a language, such as Microsoft Visual Basic 6.0, or in custom tasks that are part of an existing application that uses ADO to connect to a data source.  
   
  When you add an ADO connection manager to a package, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to an ADO connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package. The **ConnectionManagerType** property of the connection manager is set to **ADO**.  

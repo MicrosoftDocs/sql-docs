@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Adding and Modifying Data Sources Using Setup
 > [!IMPORTANT]  

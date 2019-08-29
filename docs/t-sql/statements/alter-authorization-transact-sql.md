@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER AUTHORIZATION (Transact-SQL)

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLGetFunctions (Visual FoxPro ODBC Driver)
 > [!NOTE]  

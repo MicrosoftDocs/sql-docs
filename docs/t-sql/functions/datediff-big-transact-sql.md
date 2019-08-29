@@ -1,7 +1,7 @@
 ---
 title: "DATEDIFF_BIG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/29/2017"
+ms.date: "07/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,19 +32,20 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
   
 ## Syntax  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## Arguments  
 *datepart*  
-The part of *startdate* and *enddate* that specifies the type of boundary crossed. `DATEDIFF_BIG` will not accept user-defined variable equivalents. This table lists all valid *datepart* arguments.
+The part of *startdate* and *enddate* that specifies the type of boundary crossed.
 
 > [!NOTE]
-> `DATEDIFF_BIG` does not accept user-defined variable equivalents for the *datepart* arguments.
+> `DATEDIFF_BIG` will not accept *datepart* values from user-defined variables or as quoted strings.
+
+This table lists all valid *datepart* argument names and abbreviations.
   
-|*datepart*|Abbreviations|  
+|*datepart* name| *datepart* abbreviation|  
 |---|---|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
@@ -59,7 +59,10 @@ The part of *startdate* and *enddate* that specifies the type of boundary crosse
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> Each specific *datepart* name and abbreviations for that *datepart* name will return the same value.
+
 *startdate*  
 An expression that can resolve to one of the following values:
 
@@ -76,12 +79,10 @@ For *date*, `DATEDIFF_BIG` will accept a column expression, expression, string l
 See *startdate*.
   
 ## Return Type  
-
 Signed **bigint**  
   
 ## Return Value  
-Returns the count (as a signed bigint value) of the specified datepart boundaries crossed between the specified startdate and enddate.
--   Each specific *datepart* and the abbreviations for that *datepart* will return the same value.  
+Returns the **bigint** difference between the *startdate* and *enddate*, expressed in the coundary set by *datepart*.
   
 For a return value out of range for **bigint** (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807), `DATEDIFF_BIG` returns an error. Unlike `DATEDIFF` which returns an **int** and therefore may overflow with a precision of **minute** or higher, `DATEDIFF_BIG` can only overflow if using **nanosecond** precision where the difference between *enddate* and *startdate* is more than 292 years, 3 months, 10 days, 23 hours, 47 minutes and 16.8547758 seconds.
   

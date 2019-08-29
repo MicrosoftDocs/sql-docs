@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Edit Instance Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Properties editor to make changes to the CDC instance after you create the initial configurations. You can do the following in the Properties editor.  
   
 -   [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Managed  Backup to Windows Azure | Microsoft Docs"
+title: "SQL Server Managed  Backup to Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -11,9 +11,9 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# SQL Server Managed  Backup to Windows Azure
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] manages and automates SQL Server backups to the Windows Azure Blob storage service. The backup strategy used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is based on the retention period and the transaction workload on the database. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supports point in time restore for the retention time period specified.   
-[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] can be enabled at the database level or at the instance level to manage all the databases on the instance of SQL Server. The SQL Server can be running on-premises or in hosted environments like the Windows Azure virtual machine. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is recommended for SQL Server running on Windows Azure Virtual Machines.  
+# SQL Server Managed  Backup to Azure
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] manages and automates SQL Server backups to the Azure Blob storage service. The backup strategy used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is based on the retention period and the transaction workload on the database. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supports point in time restore for the retention time period specified.   
+[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] can be enabled at the database level or at the instance level to manage all the databases on the instance of SQL Server. The SQL Server can be running on-premises or in hosted environments like the Azure virtual machine. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is recommended for SQL Server running on Azure Virtual Machines.  
   
 ## Benefits of Automating SQL Server Backup Using [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -25,11 +25,11 @@ manager: craigg
   
     -   The option of enabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] and setting the retention period at the database level, allows you to override the default settings set at the instance level. This allows you to have more granular control on the recoverability for a specific database.  
   
--   With [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], you do not have to specify the type or frequency of the backups for a database.  You specify the retention period, and [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] determines the type and frequency of backups for a database stores the backups on Windows Azure Blob storage service. For more details on the set of criteria that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses to create the backup strategy,, see the [Components and Concepts](#Concepts) section in this topic.  
+-   With [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], you do not have to specify the type or frequency of the backups for a database.  You specify the retention period, and [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] determines the type and frequency of backups for a database stores the backups on Azure Blob storage service. For more details on the set of criteria that [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] uses to create the backup strategy,, see the [Components and Concepts](#Concepts) section in this topic.  
   
 -   When configured to use encryption, you have additional security for the backup data. For more information, see [Backup Encryption](backup-encryption.md)  
   
- For more details on the benefits of using Windows Azure Blob storage for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+ For more details on the benefits of using Azure Blob storage for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups, see [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 ## Terms and Definitions  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
@@ -50,9 +50,9 @@ manager: craigg
 ###  <a name="Prereqs"></a> Prerequisites  
  **Prerequisites:**  
   
- **Windows Azure Storage service** is used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to store the backup files.    The concepts, structure, and requirements for creating a Windows Azure storage account is explained in detail in the [Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic.  
+ **Azure Storage service** is used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to store the backup files.    The concepts, structure, and requirements for creating a Azure storage account is explained in detail in the [Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic.  
   
- **SQL Credential** is used to store the information required to authenticate to the Windows Azure storage account. The SQL Credential object stores the account name and the access key information. For more information, see the [Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) section in the **SQL Server Backup to URL** topic. For a walkthrough on how to create a SQL Credential to store Windows Azure Storage authentication information, see [Lesson 2: Create a SQL Server Credential](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
+ **SQL Credential** is used to store the information required to authenticate to the Azure storage account. The SQL Credential object stores the account name and the access key information. For more information, see the [Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) section in the **SQL Server Backup to URL** topic. For a walkthrough on how to create a SQL Credential to store Azure Storage authentication information, see [Lesson 2: Create a SQL Server Credential](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
   
 ###  <a name="Concepts_Components"></a> Concepts and Key Components  
  The [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] is a feature that manages the backup operations. It stores the metadata in the **msdb** database and uses system jobs to write full database and transaction log backups.  
@@ -78,7 +78,7 @@ manager: craigg
 |[smart_admin.fn_available_backups &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)|Stored Procedure used to retrieve available backups for a specified database or for all the databases in an instance.|  
 |[smart_admin.fn_get_current_xevent_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)|System function that returns the current extended event settings.|  
 |[smart_admin.fn_get_health_status &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql)|System function that returns the aggregated counts of errors logged by Extended Events for a specified period.|  
-|[Monitor SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)|Extended Events for monitoring, email notification of errors and warnings, SQL Server Policy Based Management for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|  
+|[Monitor SQL Server Managed Backup to Azure](sql-server-managed-backup-to-microsoft-azure.md)|Extended Events for monitoring, email notification of errors and warnings, SQL Server Policy Based Management for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|  
   
 #### Backup Strategy  
  **Backup Strategy used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  
@@ -87,7 +87,7 @@ manager: craigg
   
  **Backup Container and File Naming Conventions:**  
   
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] names the Windows Azure storage container using the SQL Server Instance Name for all databases except availability databases.  For availability databases, the Availability Group GUID is used to name the Windows Azure storage container.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] names the Azure storage container using the SQL Server Instance Name for all databases except availability databases.  For availability databases, the Availability Group GUID is used to name the Azure storage container.  
   
  The backup file for non availability databases are named using the following convention: The name is created using the first 40 characters of the database name, the database GUID without the '-', and the timestamp. The underscore character is inserted between segments as separators. The **.bak** file extension is used for full backup and **.log** for log backups. For Avaialbility Group databases, in addition to the file naming convention described above, the Availability Group database GUID is added after the 40 characters of the database name. The Availability Group database GUID value is the value for group_database_id in sys.databases.  
   
@@ -132,29 +132,29 @@ manager: craigg
   
 -   System Databases are not supported.  
   
--   Windows Azure Blob Storage service is the only supported backup storage option. Backups to disk or tape are not supported.  
+-   Azure Blob Storage service is the only supported backup storage option. Backups to disk or tape are not supported.  
   
--   Currently, the maximum file size allowed for a Page Blob in Windows Azure Storage is 1 TB. Backup files larger than 1 TB will fail. In order to avoid this situation, we recommend that for large databases, use compression and test the backup file size prior to setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You can either test by backing up to a local disk or manually backing up to Windows Azure storage using `BACKUP TO URL` Transact-SQL statement. For more information, see [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+-   Currently, the maximum file size allowed for a Page Blob in Azure Storage is 1 TB. Backup files larger than 1 TB will fail. In order to avoid this situation, we recommend that for large databases, use compression and test the backup file size prior to setting up [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. You can either test by backing up to a local disk or manually backing up to Azure storage using `BACKUP TO URL` Transact-SQL statement. For more information, see [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Recovery Models: Only databases set to Full or Bulk-logged model are supported.  Databases set to simple recovery model are not supported.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] may have some limitations when it is configured with other technologies supporting backup, high availability, or disaster recovery. For more information, see [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] may have some limitations when it is configured with other technologies supporting backup, high availability, or disaster recovery. For more information, see [SQL Server Managed Backup to Azure: Interoperability and Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   
 |||  
 |-|-|  
 |**Task descriptions**|**Topic**|  
-|Basic tasks like configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database, or configuring default settings at the instance level, disabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at instance or database level, pausing and restarting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Setting up SQL Server Managed Backup to Windows Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for databases in Availability Group.|[Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
-|Tools and Concepts and tasks related to monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|[Monitor SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
-|Tools and steps to troubleshooting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Troubleshooting SQL Server Managed  Backup to Windows Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
+|Basic tasks like configuring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database, or configuring default settings at the instance level, disabling [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at instance or database level, pausing and restarting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[SQL Server Managed Backup to Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
+|**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Setting up SQL Server Managed Backup to Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**Tutorial:** Step by Step instructions to configuring and monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for databases in Availability Group.|[Setting up SQL Server Managed Backup to Azure for Availability Groups](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|Tools and Concepts and tasks related to monitoring [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|[Monitor SQL Server Managed Backup to Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
+|Tools and steps to troubleshooting [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Troubleshooting SQL Server Managed  Backup to Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## See Also  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server Backup to URL](sql-server-backup-to-url.md)   
- [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
- [Troubleshooting SQL Server Managed  Backup to Windows Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
+ [SQL Server Managed Backup to Azure: Interoperability and Coexistence](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
+ [Troubleshooting SQL Server Managed  Backup to Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

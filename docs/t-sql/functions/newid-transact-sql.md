@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "uniqueidentifier data type"
   - "NEWID function"
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # NEWID (Transact-SQL)

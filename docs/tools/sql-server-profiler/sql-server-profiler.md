@@ -23,9 +23,8 @@ helpviewer_keywords:
   - "database performance [SQL Server], SQL Server Profiler"
   - "trace [SQL Server]"
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

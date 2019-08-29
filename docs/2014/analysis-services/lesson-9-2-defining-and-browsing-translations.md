@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
@@ -118,7 +117,7 @@ manager: craigg
      Notice that the month names now appear in French and that the measure name now also appears in French.  
   
 ## Next Lesson  
- [Lesson 10: Defining Administrative Roles](../analysis-services/lesson-10-defining-administrative-roles.md)  
+ [Lesson 10: Defining Administrative Roles](lesson-10-defining-administrative-roles.md)  
   
 ## See Also  
  [Dimension Translations](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

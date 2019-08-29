@@ -22,9 +22,12 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Multiple Flat Files Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A Multiple Flat Files connection manager enables a package to access data in multiple flat files. For example, a Flat File source can use a Multiple Flat Files connection manager when the Data Flow task is inside a loop container, such as the For Loop container. On each loop of the container, the Flat File source loads data from the next file name that the Multiple Flat Files connection manager provides.  
   
  When you add a Multiple Flat Files connection manager to a package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that will resolve to a Multiple Flat Files connection at run time, sets the properties on the Multiple Flat Files connection manager, and adds the Multiple Flat Files connection manager to the **Connections** collection of the package.  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_virtual_address_dump (Transact-SQL)

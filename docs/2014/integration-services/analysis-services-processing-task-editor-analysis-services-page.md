@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.asprocessingtask.as.f1"
@@ -45,7 +44,7 @@ manager: craigg
 |--------------|-----------------|  
 |**Object Name**|Lists the specified object names.|  
 |**Type**|Lists the types of the specified objects.|  
-|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Multidimensional Model Object Processing](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Multidimensional Model Object Processing](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Settings**|Lists processing settings for the specified objects.|  
   
  **Add**  

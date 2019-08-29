@@ -10,9 +10,12 @@ ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 1-1: Create a new Integration Services project
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 The first step in creating a package in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. This example project includes templates for the data sources, data source views, and packages that make up a data transformation solution.  
   

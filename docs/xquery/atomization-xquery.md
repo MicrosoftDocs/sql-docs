@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Atomization (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

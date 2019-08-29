@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 55f4bd55-aa61-4d5c-98fd-f85824206ea0
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server Agent F1 Help

@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Move User Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,9 @@ manager: craigg
     ```  
   
 5.  Verify the file change by running the following query.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
     FROM sys.master_files  

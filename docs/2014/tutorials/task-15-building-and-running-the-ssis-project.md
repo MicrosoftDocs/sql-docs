@@ -7,9 +7,11 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
-
+ms.author: lle
+author: lrtoyou1223
 ---
 # Task 15: Building and Running the SSIS Project
+
   In this task, you build and run the SSIS project. If you have the 64-bit version of Excel 2010 installed on your computer, you should set the value of **Run64BitRuntime** to **False** for the Excel source to work.  
   
 1.  In the **Solution Explorer** window, click **Project** on the menu, and click **CleanseAndCurateSuppliers Properties**.  

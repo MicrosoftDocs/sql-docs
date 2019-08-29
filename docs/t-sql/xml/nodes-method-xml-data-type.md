@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-manager: "craigg"
 ---
 # nodes() Method (xml Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,15 +71,15 @@ A `nodes()` method invocation with the query expression `/root/Location` would r
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 You can then query this rowset by using **xml** data type methods. The following query extracts the subtree of the context item for each generated row:  

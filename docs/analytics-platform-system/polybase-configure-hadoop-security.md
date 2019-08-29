@@ -2,7 +2,6 @@
 title: "Configure PolyBase Hadoop security in Analytics Platform System | Microsoft Docs"
 description: Explains how to configure PolyBase in Parallel Data Warehouse to connect to external Hadoop. 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -36,113 +35,7 @@ A common way to secure communication in a hadoop cluster is by changing the hado
    </property> 
 ```
 
-## Example XML files for CDH 5.X cluster
-
-Yarn-site.xml with yarn.application.classpath and mapreduce.application.classpath configuration.
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<!-- Put site-specific property overrides in this file. -->
- <configuration>
-   <property>
-      <name>yarn.resourcemanager.connect.max-wait.ms</name>
-      <value>40000</value>
-   </property>
-   <property>
-      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
-      <value>30000</value>
-   </property>
-<!-- Applications' Configuration-->
-   <property>
-     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
-      <name>yarn.application.classpath</name>
-      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
-   </property>
-
-<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-   <property>
-      <name>yarn.resourcemanager.principal</name>
-      <value></value>
-   </property>
--->
-</configuration>
-```
-
-If you choose to break your two configuration settings into the mapred-site.xml and the yarn-site.xml, then the files would be the following:
-
-**yarn-site.xml**
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<!-- Put site-specific property overrides in this file. -->
- <configuration>
-   <property>
-      <name>yarn.resourcemanager.connect.max-wait.ms</name>
-      <value>40000</value>
-   </property>
-   <property>
-      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
-      <value>30000</value>
-   </property>
-<!-- Applications' Configuration-->
-   <property>
-     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
-      <name>yarn.application.classpath</name>
-      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
-   </property>
-
-<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-   <property>
-      <name>yarn.resourcemanager.principal</name>
-      <value></value>
-   </property>
--->
-</configuration>
-```
-
-**mapred-site.xml**
-
-Note that we added the property mapreduce.application.classpath. In CDH 5.x, you will find the configuration values under the same naming convention in Ambari.
-
-```xml
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-<!-- Put site-specific property overrides in this file. -->
-<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
-   <property>
-     <name>mapred.min.split.size</name>
-       <value>1073741824</value>
-   </property>
-   <property>
-     <name>mapreduce.app-submission.cross-platform</name>
-     <value>true</value>
-   </property>
-<property>
-     <name>mapreduce.application.classpath</name>
-     <value>$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH</value>
-   </property>
-
-
-<!--kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
-   <property>
-     <name>mapreduce.jobhistory.principal</name>
-     <value></value>
-   </property>
-   <property>
-     <name>mapreduce.jobhistory.address</name>
-     <value></value>
-   </property>
--->
-</configuration>
-```
-
-## Kerberos configuration  
+## <a id="kerberossettings"></a> Kerberos configuration  
 
 Note, when PolyBase authenticates to a Kerberos secured cluster, it expects the hadoop.rpc.protection setting is 'Authenticate' by default. This leaves the data communication between Hadoop nodes unencrypted. To use 'Privacy' or 'Integrity' settings for hadoop.rpc.protection, update the core-site.xml file on the PolyBase server. For more information, see the previous section [Connecting to Hadoop Cluster with Hadoop.rpc.protection](#rpcprotection).
 

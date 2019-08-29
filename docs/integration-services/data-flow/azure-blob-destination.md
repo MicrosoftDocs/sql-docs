@@ -13,9 +13,12 @@ f1_keywords:
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Blob Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  The **Azure Blob Destination** component enables an SSIS package to write data to an Azure blob. The supported file formats are: CSV and AVRO. 
    
  Drag-drop **Azure Blob Destination** to the data flow designer and double-click it to see the editor).  

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_dbmmonitordropmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

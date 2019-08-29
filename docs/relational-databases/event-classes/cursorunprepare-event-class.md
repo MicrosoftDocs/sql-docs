@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CursorUnprepare Event Class

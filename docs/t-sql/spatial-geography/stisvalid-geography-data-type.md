@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsValid method (geography)"
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIsValid (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

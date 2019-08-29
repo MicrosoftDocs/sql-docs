@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "inline XSD schema generation [SQL Server]"
   - "XMLDATA option"
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Generate an Inline XSD Schema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

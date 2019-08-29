@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
-# catalog.event_messages
+# catalog.event_messages 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays information about messages that were logged during operations.  

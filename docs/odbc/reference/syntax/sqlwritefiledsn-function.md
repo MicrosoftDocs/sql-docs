@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLWriteFileDSN Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLWriteFileDSN(  
      LPCSTR     lpszFileName,  

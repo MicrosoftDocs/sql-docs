@@ -1,13 +1,12 @@
 ---
-title: VDI Backup Specification - SQL Server on Linux | Microsoft Docs
+title: VDI Backup Specification - SQL Server on Linux
 description: SQL Server Backup Virtual Device Interface Specification.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ---
@@ -24,7 +23,7 @@ This document covers the interfaces provided by the SQL Server on Linux virtual 
 - SQL Server on Linux does not support named instances so references to instance name have been removed. 
 - The shared library is implemented in libsqlvdi.so installed at /opt/mssql/lib/libsqlvdi.so
 
-This document is an addendum to **vbackup.chm** that details the Windows VDI Specification. Download the [Windows VDI Specification](https://www.microsoft.com/download/details.aspx?id=17282).
+This document is an addendum to **vbackup.chm** that details the MS SQL Server VDI Specifications on Windows. Download the [SQL VDI Specification on Windows](https://www.microsoft.com/download/details.aspx?id=17282).
 
 Also review the sample VDI backup solution on the [SQL Server Samples GitHub repository](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 

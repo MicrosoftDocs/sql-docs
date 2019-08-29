@@ -21,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_check_join_filter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Is used to verify a join filter between two tables to determine if the join filter clause is valid. This stored procedure also returns information about the supplied join filter, including if it can be used with precomputed partitions for the given table. This stored procedure is executed at the Publisher on the publication. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
@@ -40,13 +39,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## Arguments  
- [ **@filtered_table**= ] **'**_filtered_table_**'**  
+`[ @filtered_table = ] 'filtered_table'`
  Is the name of a filtered table. *filtered_table* is **nvarchar(400)**, with no default.  
   
- [ **@join_table**= ] **'**_join_table_**'**  
+`[ @join_table = ] 'join_table'`
  Is the name of a table being joined to *filtered_table*. *join_table* is **nvarchar(400)**, with no default.  
   
- [ **@join_filterclause** = ] **'**_join_filterclause_**'**  
+`[ @join_filterclause = ] 'join_filterclause'`
  Is the join filter clause being tested. *join_filterclause* is **nvarchar(1000)**, with no default.  
   
 ## Result Sets  

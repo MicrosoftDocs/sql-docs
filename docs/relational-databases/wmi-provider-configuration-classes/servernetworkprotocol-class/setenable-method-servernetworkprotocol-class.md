@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SetEnable Method (ServerNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

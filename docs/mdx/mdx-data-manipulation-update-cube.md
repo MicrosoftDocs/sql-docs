@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # MDX Data Manipulation - UPDATE CUBE
 
@@ -61,7 +60,7 @@ UPDATE [ CUBE ] Cube_Name
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:**Every leaf cell that contributes to the updated cell will be changed according to the following expression.  
+ **USE_EQUAL_INCREMENT:** Every leaf cell that contributes to the updated cell will be changed according to the following expression.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   

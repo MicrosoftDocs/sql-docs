@@ -23,9 +23,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Working with Images with the Script Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A database of products or users frequently includes images in addition to text and numeric data. The **System.Drawing** namespace in the Microsoft .NET Framework provides classes for manipulating images.  
   
  [Example 1: Convert Images to JPEG Format](#example1)  

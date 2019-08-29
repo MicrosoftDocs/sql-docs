@@ -20,11 +20,11 @@ ms.author: pelopes
 manager: amitban
 ---
 # Upgrading Databases by using the Query Tuning Assistant
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 When migrating from an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer, and [upgrading the database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest available, a workload may be exposed to the risk of performance regression. This is also possible to a lesser degree when upgrading between [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and any newer version.
 
-Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and with every new version, all query optimizer changes are gated to the latest database compatibility level, so execution plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest available. For more information on query optimizer changes introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Cardinality Estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md). For more information about compatibility levels and how they can affect upgrades, see [Compatibility Levels and SQL Server Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades).
+Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], and with every new version, all query optimizer changes are gated to the latest database compatibility level, so execution plans are not changed right at point of upgrade but rather when a user changes the `COMPATIBILITY_LEVEL` database option to the latest available. For more information on query optimizer changes introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Cardinality Estimator](../../relational-databases/performance/cardinality-estimation-sql-server.md). For more information about compatibility levels and how they can affect upgrades, see [Compatibility Levels and Database Engine Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades).
 
 This gating capability provided by the database compatibility level, in combination with Query Store gives you a great level of control over the query performance in the upgrade process if the upgrade follows the recommended workflow seen below. For more information on the recommended workflow for upgrading the compatibility level, see [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
@@ -204,7 +204,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 Requires membership of **db_owner** role.
   
 ## See Also  
- [Compatibility Levels and SQL Server Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [Compatibility Levels and Database Engine Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [Performance Monitoring and Tuning Tools](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Change the Database Compatibility Mode and Use the Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

@@ -1,7 +1,7 @@
 ---
-title: "Retrieving Result Set Data Sample | Microsoft Docs"
+title: "Retrieving result set data sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Retrieving Result Set Data Sample
+# Retrieving result set data sample
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -27,10 +26,10 @@ The code file for this sample is named RetrieveResultSet.java, and it can be fou
 
 ## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../../connect/jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC driver](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> The [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System requirements for the JDBC driver](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
@@ -115,6 +114,6 @@ public class RetrieveRS {
 
 ```
 
-## See Also
+## See also
 
-[Working with Result Sets](../../../connect/jdbc/code-samples/working-with-result-sets.md)
+[Working with result sets](../../../connect/jdbc/code-samples/working-with-result-sets.md)

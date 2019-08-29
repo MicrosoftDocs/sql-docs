@@ -1,7 +1,7 @@
 ---
 title: "INDEXPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "indexes [SQL Server], viewing"
   - "indexes [SQL Server], properties"
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INDEXPROPERTY (Transact-SQL)
@@ -63,7 +62,8 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsRowLockDisallowed**|Row-locking value set by the ALLOW_ROW_LOCKS option of ALTER INDEX.|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = Row locking is disallowed.<br /><br /> 0 = Row locking is allowed.<br /><br /> NULL = Input is not valid.|  
 |**IsStatistics**|*index_or_statistics_name* is statistics created by the CREATE STATISTICS statement or by the AUTO_CREATE_STATISTICS option of ALTER DATABASE.|1 = True<br /><br /> 0 = False or XML index.|  
 |**IsUnique**|Index is unique.|1 = True<br /><br /> 0 = False or XML index.|  
-|**IsColumnstore**|Index is an xVelocity memory optimized columnstore index.|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**IsColumnstore**|Index is an xVelocity memory optimized columnstore index.|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsOptimizedForSequentialKey**|Index has optimization for last-page inserts enabled.|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later. <br><br>1 = True<br><br>0 = False| 
   
 ## Return Types  
  **int**  

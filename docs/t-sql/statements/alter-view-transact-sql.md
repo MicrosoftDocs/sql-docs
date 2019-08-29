@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

@@ -10,9 +10,12 @@ ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 4: Add error flow redirection with SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 To handle errors that may occur in the transformation process, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] lets you decide on a per-component and per-column basis how to handle data that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can't transform. You can choose to ignore a failure in certain columns, redirect the entire failed row, or fail the component. By default, components in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] are configured to fail when errors occur. The failed component in turn causes the package to fail and processing then stops.  
   

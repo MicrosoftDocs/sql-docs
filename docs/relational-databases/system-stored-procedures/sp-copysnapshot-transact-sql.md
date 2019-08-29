@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_copysnapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Copies the snapshot folder of the specified publication to the folder listed in the **@destination_folder**. This stored procedure is executed at the Publisher on the publication database. This stored procedure is useful for copying a snapshot to removable media, such as CD-ROM.  
+  Copies the snapshot folder of the specified publication to the folder listed in the **\@destination_folder**. This stored procedure is executed at the Publisher on the publication database. This stored procedure is useful for copying a snapshot to removable media, such as CD-ROM.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -34,16 +33,16 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication whose snapshot contents are to be copied. *publication* is **sysname**, with no default.  
   
- [ **@destination_folder=**] **'**_destination_folder_**'**  
+`[ @destination_folder = ] 'destination_folder'`
  Is the name of the folder where the contents of the publication snapshot are to be copied. *destination_folder*is **nvarchar(255)**, with no default. The *destination_folder* can be an alternate location such as on another server, on a network drive, or on removable media (such as CD-ROMs or removable disks).  
   
- [ **@subscriber=**] **'**_subscriber_**'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is sysname, with a default of NULL.  
   
- [ **@subscriber_db=**] **'**_subscriber_db_**'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is sysname, with a default of NULL.  
   
 ## Return Code Values  

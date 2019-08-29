@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.delete_environment (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Deletes an environment from a folder in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

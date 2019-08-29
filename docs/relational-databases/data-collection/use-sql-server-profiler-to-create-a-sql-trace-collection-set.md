@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use SQL Server Profiler to Create a SQL Trace Collection Set
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -20,7 +19,9 @@ manager: craigg
 1.  Create and export a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace.  
   
 2.  Script a new collection set based on an exported trace.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  The scenario for the following procedures involves collecting data about any stored procedure that requires 80 milliseconds or longer to complete. In order to complete these procedures you should be able to:  
   
 -   Use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create and configure a trace.  

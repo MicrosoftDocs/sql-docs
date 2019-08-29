@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Browse Objects in a SQL Server Database Project
 The SQL Server Object Explorer in Visual Studio now contains a dedicated Projects node, under which all SQL Server database projects in your solution are grouped in an SQL Server Management Studio-like hierarchy.  

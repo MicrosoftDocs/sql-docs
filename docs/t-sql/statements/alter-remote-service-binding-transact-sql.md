@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

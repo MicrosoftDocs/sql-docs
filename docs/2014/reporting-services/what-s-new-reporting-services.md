@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "what's new [Reporting Services]"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, what's new"
   - "SSRS, what's new"
 ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # What&#39;s New (Reporting Services)
@@ -26,7 +25,7 @@ manager: kfile
   
  For information about other [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] products and technologies, see [What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
- For more information on changes related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
+ For more information on changes related to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, see [What's New in Analysis Services and Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services).  
   
 ## See Also  
  [Reporting Services Backward Compatibility](reporting-services-backward-compatibility.md)   

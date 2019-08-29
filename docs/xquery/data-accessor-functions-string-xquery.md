@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Data Accessor Functions - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

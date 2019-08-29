@@ -18,15 +18,18 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Deploy Integration Services (SSIS) Projects and Packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports two deployment models, the project deployment model and the legacy package deployment model. The project deployment model enables you to deploy your projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
 For more information about the legacy package deployment model, see [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. With this deployment model, you were not able to deploy one or more packages without deploying the whole project. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the package deployment model, which lets you deploy one or more packages without deploying the whole project.  
+>  The project deployment model was introduced in [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. With this deployment model, you were not able to deploy one or more packages without deploying the whole project. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] introduced the Incremental Package Deployment feature, which lets you deploy one or more packages without deploying the whole project.  
 
 > [!NOTE]
 > This article describes how to deploy SSIS packages in general, and how to deploy packages on premises. You can also deploy SSIS packages to the following platforms:
@@ -336,7 +339,7 @@ Launch the wizard by either:
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
   
- You can query views for a list of server environments, environment references, and environment variables. You can also call stored to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ You can query views for a list of server environments, environment references, and environment variables. You can also call stored procedures to add, delete, and modify environments, environment references, and environment variables. For more information, see the **Server Environments, Server Variables and Server Environment References** section in [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### To create and use a server environment  
   

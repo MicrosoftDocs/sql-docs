@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Managed Backup to Windows Azure - Retention and Storage Settings | Microsoft Docs"
+title: "SQL Server Managed Backup to Azure - Retention and Storage Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: "sql-server-2014"
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ---
-# SQL Server Managed Backup to Windows Azure - Retention and Storage Settings
+# SQL Server Managed Backup to Azure - Retention and Storage Settings
   This topic describes the basic steps to configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a database and to configure default settings for the instance. The topic also describes the steps necessary to pause and resume [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] services for the instance.  
   
- For a complete walkthrough of setting up [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] see [Setting up SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ For a complete walkthrough of setting up [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] see [Setting up SQL Server Managed Backup to Azure](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Setting up SQL Server Managed Backup to Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  
   
@@ -22,7 +22,7 @@ manager: craigg
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   Do not enable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on databases that are currently using maintenance plans or log shipping. For more information on interoperability and coexistence with other SQL Server features, see [SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+-   Do not enable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on databases that are currently using maintenance plans or log shipping. For more information on interoperability and coexistence with other SQL Server features, see [SQL Server Managed Backup to Azure: Interoperability and Coexistence](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
   
@@ -31,7 +31,7 @@ manager: craigg
     > [!WARNING]  
     >  If SQL Server Agent is stopped for a period of time and then restarted, you may see an increased backup activity depending on the length of time elapsed between the stop and start of SQL Agent, and there might be a backlog of log backups waiting to run. Consider configuring SQL Server Agent to start automatically on start up.  
   
--   A Windows Azure storage account and a SQL Credential that stores the authentication information to the storage account should both be created before configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For more information see [Introduction to Key Components and Concepts](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic, and [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+-   A Azure storage account and a SQL Credential that stores the authentication information to the storage account should both be created before configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For more information see [Introduction to Key Components and Concepts](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic, and [Lesson 2: Create a SQL Server Credential](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] creates the necessary containers to store the backups. The container name is created using 'machine name-instance name' format. For AlwaysOn Availability Groups the container is named using the GUID of the availability group.  
@@ -44,7 +44,7 @@ manager: craigg
 
   
 ###  <a name="Considerations"></a> Considerations for enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for Databases and Instances  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] can be enabled for individual databases separately or for the entire instance. The choices depend on the recoverability requirements for the databases on the instance, requirements for managing multiple databases and instances, and using Windows Azure storage strategically.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] can be enabled for individual databases separately or for the entire instance. The choices depend on the recoverability requirements for the databases on the instance, requirements for managing multiple databases and instances, and using Azure storage strategically.  
   
 #### Enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the Database Level  
  If a database has specific requirements for backup and retention period (recoverability SLA) that is different from other databases on the instance, configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the database level for this database. Database level settings override instance level configuration settings. However both these options can be used together on the same instance. Following is a list of advantages and considerations when enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] at the database level.  
@@ -66,7 +66,7 @@ manager: craigg
   
 -   Can be applied to databases that have the same retention period requirements.  
   
--   You can still configure individual databases that require a different retention period even with [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] backup enabled at in instance level with default settings. You can also disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for databases if you do not intend to use Windows Azure storage for the backups.  
+-   You can still configure individual databases that require a different retention period even with [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] backup enabled at in instance level with default settings. You can also disable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for databases if you do not intend to use Azure storage for the backups.  
   
 ##  <a name="DatabaseConfigure"></a> Enable and Configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a Database  
  The system stored procedure `smart_admin.sp_set_db_backup` is used to enable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a specific database. When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time on the database, the following information must be specified in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:  
@@ -75,7 +75,7 @@ manager: craigg
   
 -   The retention period.  
   
--   SQL Credential used to authenticate to the Windows Azure storage account.  
+-   SQL Credential used to authenticate to the Azure storage account.  
   
 -   Either specify not to encrypt using *@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
@@ -127,13 +127,13 @@ manager: craigg
     ```  
   
 ##  <a name="InstanceConfigure"></a> Enable and Configure Default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings for the Instance  
- You can enable and configure default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings at the instance level in two ways:  By using the system stored procedure `smart_backup.set_instance_backup` or **SQL Server Management Studio**. The two methods are explained below:  
+ You can enable and configure default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] settings at the instance level in two ways:  By using the system stored procedure `smart_admin.set_instance_backup` or **SQL Server Management Studio**. The two methods are explained below:  
   
- **smart_backup.set_instance_backup:**. By specifying the value **1** for *@enable_backup* parameter, you can enable backup and set the default configurations. Once applied at the instance level, these default settings are applied to any new database that is added to this instance.  When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time, the following information must be provided in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on the instance:  
+ **smart_admin.set_instance_backup:**. By specifying the value **1** for *@enable_backup* parameter, you can enable backup and set the default configurations. Once applied at the instance level, these default settings are applied to any new database that is added to this instance.  When [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is enabled for the first time, the following information must be provided in addition to enabling [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on the instance:  
   
 -   The retention period.  
   
--   SQL Credential used to authenticate to the Windows Azure storage account.  
+-   SQL Credential used to authenticate to the Azure storage account.  
   
 -   The encryption option. Either specify not to encrypt using *@encryption_algorithm* = **NO_ENCRYPTION** or specify a supported encryption algorithm. For more information on encryption, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   

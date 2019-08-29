@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

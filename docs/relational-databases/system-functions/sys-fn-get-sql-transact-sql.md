@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

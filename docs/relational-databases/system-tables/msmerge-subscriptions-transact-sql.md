@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

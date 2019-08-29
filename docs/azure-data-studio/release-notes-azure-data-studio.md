@@ -1,20 +1,113 @@
-﻿---
+---
 title: Release notes
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
-ms.custom: "seodec18"
-ms.date: "03/22/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "08/15/2019"
 ---
+
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## August 2019
+
+August 15, 2019 &nbsp; / &nbsp; version: 1.10.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Release of SandDance 1.3.1 extension | &bull; &nbsp; Smart chart detection <br/>&bull; &nbsp; 3D Visualizations <br/> &bull; &nbsp; Data filtering |
+| Notebook Improvements | &bull; &nbsp; Add code or text cell in-line <br/>&bull; &nbsp; Added ability to right-click SQL results grid to save result as CSV, JSON, etc. <br/> &bull; &nbsp; Improvement to notebook loading performance for loading JSON faster <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
+| SQL Server 2019 Support |  This release includes support for additional SQL Server 2019 Big Data Cluster features including: <br/> &bull; &nbsp; Reduced time taken to load table and column information on the object mapping page. <br/> &bull; &nbsp; Fixed a bug with loading existing database scoped credentials on the connection details page. <br/> &bull; &nbsp; Increased default sample size used for PROSE parsing. | 
+| Dacpac extension now supports AAD | 
+| Visual Studio Code July Release Merge 1.37 | Latest improvements can be found [here](https://code.visualstudio.com/updates/v1_37). |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
+| &nbsp; | &nbsp; |
+
+## July 2019
+
+July 11, 2019 &nbsp; / &nbsp; version: 1.9.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Release of SentryOne Plan Explorer extension | Our valued Microsoft partner, SentryOne, will be shipping their [SentryOne Plan Explorer extension for Azure Data Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio). <br> This is a free extension, which provides enhanced plan diagrams for queries run in Azure Data Studio, with optimized layout algorithms and intuitive color-coding to help quickly identify the most expensive operators affecting query performance. To learn more about the extension, check out SentryOne's blog post [here](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio). |
+| New Features coming to Schema Compare | &bull; &nbsp; Schema Compare File Support (.SCMP) <br/>&bull; &nbsp; Cancel Schema Compare Support <br/>&bull; &nbsp; Complete changes can be found [here](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
+| Notebook Improvements | &bull; &nbsp; Plotly Python Support <br/>&bull; &nbsp; Open Notebook from Browser <br/> &bull; &nbsp; Python Package Management Dialog <br/> &bull; &nbsp; Performance and Markdown Enhancements <br/> &bull; &nbsp; Keyboard Shortcuts Update <br/>  &bull; &nbsp; Bug Fixes and Minor Features can be found [here](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
+| SQL Server 2019 Support |  This release includes support for additional SQL Server 2019 Big Data Cluster features including: <br/> &bull; &nbsp; Service Endpoints table within the Management Dashboard that lists all key services in the cluster. <br/> &bull; &nbsp; Cluster Status Notebook shows how you can query & troubleshoot cluster status across all services and pods.| 
+| Updated Language Packs Available| There are now 10 language packs available in the Extension Manager marketplace. Simply, search for the specific language using the extension marketplace and install. Once you install the selected language, Azure Data Studio will prompt you to restart with the new language. |
+| SQL Server Profiler Update | The SQL Server Profile extension has been updated to include new features including: <br/> &bull; &nbsp; Filtering by Database Name <br/> &bull; &nbsp; Copy & Paste Support <br/> &bull; &nbsp; Save/Load Filter <br/>A full list of improvements for SQL Server Profiler Extension can be found [here](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+).  |
+| Visual Studio Code May Release Merge 1.35 | Latest improvements can be found [here](https://code.visualstudio.com/updates/v1_35). |
+| Resolved bugs and issues | In previous releases of Azure Data Studio, if a user database was selected when connecting from the Connection dialog, the resulting Object Explorer entry was scoped entirely to that single database. Beginning in this release, that behavior is being changed so that server level properties are also shown in the object explorer. <br/> For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
+| &nbsp; | &nbsp; |
+
+
+## June 2019
+
+June 6, 2019 &nbsp; / &nbsp; version: 1.8.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Release of Central Management Servers (CMS) extension | Central Management Servers store a list of instances of SQL Server that is organized into one or more central management server groups. Users can connect to their own existing CMS servers and manage their servers like adding and removing servers. To learn more, you can read [here](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| Release of Database Administration Tool Extensions for Windows | This extension launches two of the most used experiences in SQL Server Management Studio from Azure Data Studio. Users can right click on many different objects (such as Databases, Tables, Columns, Views, and more) and select Properties to view the SSMS Properties Dialog for that object. In addition, users can right click on a database and select Generate Scripts to launch the well known SSMS Generate Scripts Wizard. 
+| Schema Compare Improvements | &bull; &nbsp; Added Exclude/Include Options <br/>&bull; &nbsp; Generate Script opens script after being generated <br/>&bull; &nbsp; Removed double scroll bars  <br/>&bull; &nbsp; Formatting and layout improvements <br/>&bull; &nbsp; Complete changes can be found [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
+| Moved Messages section to own tab | When users ran SQL queries, results and messages were on stacked panels. Now they are in separate tabs in one panel like in SSMS. |
+| SQL Notebook Improvements | &bull; &nbsp; Users can now choose to use their own Python 3 or Anaconda installs in notebooks <br/>&bull; &nbsp; Multiple Stability + fit/finish fixes <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Visual Studio Code April Release Merge 1.34 | Latest improvements can be found [here](https://code.visualstudio.com/updates/v1_34) |
+| Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
+| &nbsp; | &nbsp; |
+
+### Known Issues
+- Database Administration Tool Extensions for Windows
+    - Can’t launch properties from disconnected server node
+    - Can’t launch properties for Azure servers
+    - Not all objects have property dialogs
+    - Dialogs take a long time to start up
+    - Errors launching servers with some types of connections (such as AAD)
+- Notebooks
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) Allow users to use system Python for Notebooks
+- Schema Compare
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) Schema Compare tasks show default cancel context menu which does nothing
+
+## May 2019
+
+May 8, 2019 &nbsp; / &nbsp; version: 1.7.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Release of Schema Compare extension | Schema Compare is a well-known feature in SQL Server Data Tools (SSDT), and its primary use case is to compare and visualize the differences between databases and .dacpac files and to execute actions to make them the same. |
+| Moved Task view to Output Window | Users can now view the status of long running tasks like Backup, Restore, and Schema Compare in the Task view in Output window
+| Added Welcome page | &bull; &nbsp; Links to common actions like New Query, New File, New Notebook <br/>&bull; &nbsp; Links to documentation and GitHub |
+| SQL Notebook Improvements | &bull; &nbsp; Markdown rendering improvements, including better support for notes and tables <br/>&bull; &nbsp; Usability improvements to the toolbar <br/>&bull; &nbsp; Markdown links for trusted notebooks no longer require Cmd/Ctrl + click and can be clicked directly <br/>&bull; &nbsp; Improvements in cleaning up Jupyter processes after closing notebooks and reducing errors when starting multiple notebooks concurrently <br/>&bull; &nbsp; Improvements to SQL notebook connections to ensure errors do not occur when running 2 notebooks against the same database <br/>&bull; &nbsp; Improvements to notebook autoscrolling to the currently executing cell when clicking the Run Cells button from the toolbar <br/>&bull; &nbsp; General stability and performance improvements |
+| Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
+| &nbsp; | &nbsp; |
+
+## April 2019
+
+April 18, 2019 &nbsp; / &nbsp; version: 1.6.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Renamed **Servers** tab to **Connections** | |
+| Moved Azure Resource Explorer as an Azure viewlet under Connections | Users can now view their Azure SQL instances through Azure viewlet in the Connections view and expand to view objects under each server or database.|
+| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click auto-resize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to “select all” functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in ADS when ADS is started again |
+| Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## March 2019 (Hotfix)
 
@@ -57,7 +150,7 @@ March 18, 2019 &nbsp; / &nbsp; version: 1.5.1
 **Workaround:** Will be fixed in next release. 
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Dacpac Extract crashes SqlToolsService if invalid version is used <br/>
 **Workaround:** Restart Azure Data Studio and ensure correct version is used.
-- New Notebook and Open Notebook icons are lost <br/> 
+- New Notebook and Open Notebook icons are lost <br/>
 **Workaround:** The legacy connection type is deprecated. We recommend connecting to the SQL Server endpoint and you’ll get all the actions (New Notebook, Spark Job) as expected. 
 
 ## February 2019
@@ -68,7 +161,7 @@ February 13, 2019 &nbsp; / &nbsp; version: 1.4.5
 
 | Change | Details |
 | :----- | :------ |
-| Added **Admin pack for SQL Server** extension pack. | This makes it easier to install SQL Server admin-related extensions. This includes:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Added **Admin pack for SQL Server** extension pack. | This makes it easier to install SQL Server admin-related extensions. This includes:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
 | Added filtering extended event support in Profiler extension. | &nbsp; |
 | Added Save as XML feature that can save T-SQL results as XML. | &nbsp; |
 | Added Data-Tier Application Wizard improvements. | &bull; &nbsp; Added Generate script button<br/>&bull; &nbsp; Added view to give warnings of possible data loss during deployment. |
@@ -170,7 +263,7 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
 | :----- | :------ |
 | Query Results Grid performance and UX improvements for large number of result sets. | &nbsp; |
 | Visual Studio Code source code refresh from 1.23 to 1.26.1 with Grid Layout and Improved Settings Editor (preview). | &nbsp; |
-| Accessibility improvements for screen reader, keyboard navigation and high-contrast. | &nbsp; |
+| Accessibility improvements for screen reader, keyboard navigation, and high-contrast. | &nbsp; |
 | Added `Connection name` option to provide an alternative display name in the Servers view-let. | &nbsp; |
 | &nbsp; | &nbsp; |
 
@@ -305,7 +398,7 @@ June 20, 2018 &nbsp; / &nbsp; version: 0.30.6 &nbsp; / &nbsp; Public Preview
 ### GitHub Issues Fixes, June 2018
 
 - Feature request ([issue 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Please make the results grid auto-fit column width to data, and remember manual changes if the same query is re-run.
-- Fix [issue 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Should show add message and add account account button when linked account is empty.
+- Fix [issue 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Should show add message and add account button when linked account is empty.
 - Fix [issue 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Linked account tab is broken when the view is collapsed.
 - Fix [issue 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL Tools Service crashes when opening .sql file from disk.
 - Fix [issue 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Missing SQL keyword "BETWEEN".

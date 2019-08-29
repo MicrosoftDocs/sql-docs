@@ -3,14 +3,13 @@ title: How to use SQL Notebooks in Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Learn how to use SQL Notebooks in Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "03/17/2019"
+ms.date: "06/28/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "achatter; alayu; sstein"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
-manager: craigg
 ---
 # How to use notebooks in Azure Data Studio
 
@@ -39,9 +38,9 @@ There are multiple ways to launch a new notebook.
 
 ## Supported kernels and attach to context
 
-The Notebook Installation in Azure Data Studio natively supports SQL Kernel. If you are a SQL developer and would like to use Notebooks then this would be your chosen Kernel. 
+The Notebook Installation in Azure Data Studio natively supports SQL Kernel. If you are a SQL developer and would like to use Notebooks, then this would be your chosen Kernel. 
 
-The SQL Kernel can also be used to connect to PostgreSQL server instances. If you are a PostgreSQL developer and would like to connect to your PostgreSQL Server then download the [**PostgreSQL extension**](postgres-extension.md) in the Azure Data Studio extension marketplace.
+The SQL Kernel can also be used to connect to PostgreSQL server instances. If you are a PostgreSQL developer and would like to connect to your PostgreSQL Server, then download the [**PostgreSQL extension**](postgres-extension.md) in the Azure Data Studio extension marketplace.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -84,11 +83,11 @@ Once the installation succeeds, you will find a notification in the Task History
 |Spark Kernel|Write Scala and R code using Spark compute from the cluster.
 |Python Kernel|Write Python code for local development.
 
-`Attach to` provides the context for the Kernel to attach. If you are using SQL Kernel then you can `Attach to` any of your SQL Server instances.
+`Attach to` provides the context for the Kernel to attach. If you are using SQL Kernel, then you can `Attach to` any of your SQL Server instances.
 
 If you are using Python3 Kernel the `Attach to` is `localhost`. You can use this kernel for your local Python development.
 
-When you are connected to SQL Server 2019 big data cluster, the default `Attach to` is that end point of the cluster and will let you submit Python,Scala and R code using the Spark compute of the cluster.
+When you are connected to SQL Server 2019 big data cluster, the default `Attach to` is that end point of the cluster and will let you submit Python, Scala and R code using the Spark compute of the cluster.
 
 ### Code Cells and Markdown Cells
 
@@ -110,7 +109,7 @@ Clicking outside the text cell will show the markdown text.
 
 Notebooks open in Azure Data Studio are default **Trusted**.
 
-If you open a Notebook from some other source it will be opened in **Non Trusted** mode and then you can make it **Trusted**.
+If you open a Notebook from some other source, it will be opened in **Non Trusted** mode and then you can make it **Trusted**.
 
 ### Save 
 
@@ -157,14 +156,13 @@ import <package-name>
 
 When you run this command, `Module not found` is returned. If your package exists, then you will not get the error.
 
-If it returns a `Module not Found` error, then click on **Manage Packages** to launch the terminal . You can now install packages locally. Use the following commands to install the packages:
+If it returns a `Module not Found` error, then click on **Manage Packages** to launch the wizard experience. 
 
-```bash
-./pip install <package-name>
-```
+![image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > On Mac please follow the instructions in the Terminal window for installing packages. 
+In this wizard you will be able to see the **Installed** packages. You can search through the list and the associated version of each of these packages. If you need to **uninstall** any of these packages then you can click on one of the packages and then click on the **Uninstall selected packages** option.
+
+You will also be able to click on **Add new** packages to **Search** for a particular package, choose the related version and click **install**. By default, we select the latest version of the searched package. 
 
 After the package is installed, you should be able to go in the Notebook cell and type in following command:
 
@@ -172,11 +170,7 @@ After the package is installed, you should be able to go in the Notebook cell an
 import <package-name>
 ```
 
-To uninstall a package, use the following command from your terminal:
-
-```bash
-./pip uninstall <package-name>
-```
+If you need to **uninstall** any of these packages then you can click on one or multiple packages and then click on the **Uninstall selected packages** option.
 
 ## Next steps
 

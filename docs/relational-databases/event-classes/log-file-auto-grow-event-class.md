@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Log File Auto Grow Event Class

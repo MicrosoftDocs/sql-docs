@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "BefferWithTolerance method"
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # BufferWithTolerance (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

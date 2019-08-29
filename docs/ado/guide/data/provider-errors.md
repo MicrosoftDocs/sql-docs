@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Provider Errors
 When a provider error occurs, a run-time error of -2147467259 is returned. When you receive this error, check the **Errors** collection of the active **Connection** object, which will contain one or more errors describing what occurred.  

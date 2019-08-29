@@ -1,20 +1,21 @@
 ---
 title: Ingest data into a SQL Server data pool
-titleSuffix: SQL Server 2019 big data clusters
-description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview) with the sp_data_pool_table_insert_data stored procedure.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 03/27/2018
+titleSuffix: SQL Server big data clusters
+description: This tutorial demonstrates how to ingest data into the data pool of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Tutorial: Ingest data into a SQL Server data pool with Transact-SQL
 
-This tutorial demonstrates how to use Transact-SQL to load data into the [data pool](concept-data-pool.md) of a SQL Server 2019 big data cluster (preview). With SQL Server big data clusters, data from a variety of sources can be ingested and distributed across data pool instances.
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+This tutorial demonstrates how to use Transact-SQL to load data into the [data pool](concept-data-pool.md) of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. With [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], data from a variety of sources can be ingested and distributed across data pool instances.
 
 In this tutorial, you learn how to:
 
@@ -51,7 +52,15 @@ The following steps create an external table in the data pool named **web_clicks
    GO
    ```
 
-1. Create an external table named **web_clickstream_clicks_data_pool** in the data pool. The `SqlDataPool` data source is a special data source type that can be used from the master instance of any big data cluster.
+1. Create an external data source to the data pool if it does not already exist.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
+   ```
+
+1. Create an external table named **web_clickstream_clicks_data_pool** in the data pool.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -64,27 +73,22 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.4, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 3.1, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Load data
 
 The following steps ingest sample web clickstream data into the data pool using the external table created in the previous steps.
 
-1. Define variables for the query that you want to use to insert data into the data pool. Then use the **model..sp_data_pool_table_insert_data** stored procedure to insert the results from the query into the data pool (the **web_clickstream_clicks_data_pool** external table).
+1. Use an `INSERT INTO` statement to insert the results from the query into the data pool (the **web_clickstream_clicks_data_pool** external table).
 
    ```sql
-   DECLARE @db_name SYSNAME = 'Sales'
-   DECLARE @schema_name SYSNAME = 'dbo'
-   DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-   DECLARE @query NVARCHAR(MAX) = '
+   INSERT INTO web_clickstream_clicks_data_pool
    SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-   FROM sales.dbo.web_clickstreams
+     FROM sales.dbo.web_clickstreams_hdfs
    INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-      AND wcs_user_sk IS NOT NULL)
+                           AND wcs_user_sk IS NOT NULL)
    GROUP BY wcs_user_sk, i_category_id
-   HAVING COUNT_BIG(*) > 100;'
-
-   EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   HAVING COUNT_BIG(*) > 100;
    ```
 
 1. Inspect the inserted data with two SELECT queries.

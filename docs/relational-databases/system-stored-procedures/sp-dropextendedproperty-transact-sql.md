@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

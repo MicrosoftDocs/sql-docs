@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "namespaces [SQLXML], XPath queries"
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)

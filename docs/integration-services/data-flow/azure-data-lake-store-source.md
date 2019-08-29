@@ -13,9 +13,12 @@ f1_keywords:
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure Data Lake Store Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **Azure Data Lake Store Source** component enables an SSIS package to read data from an Azure Data Lake Store. The supported file formats are: Text and Avro.
   
  The **Azure Data Lake Store Source** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

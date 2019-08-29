@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Lesson 9: Build and Run the Application

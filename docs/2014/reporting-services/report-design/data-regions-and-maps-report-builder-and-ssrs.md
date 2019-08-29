@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data regions"
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Regions and Maps (Report Builder and SSRS)

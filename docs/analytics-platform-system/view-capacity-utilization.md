@@ -2,7 +2,6 @@
 title: View capacity utilization in Analytics Platform System | Microsoft Docs
 description: View capacity utilization in Analytics Platform System.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "SMTPServer"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "SMTPServer property"
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SMTPServer Property (WMI MSReportServer_ConfigurationSetting)

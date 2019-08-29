@@ -2,7 +2,6 @@
 title: "What's new in Analytics Platform System - a scale-out data warehouse"
 description: "See what's new in Microsoft Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
 author: "mzaman1"
-manager: "craigg"
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"
@@ -14,6 +13,19 @@ ms.reviewer: "martinle"
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.4"></a>
+## APS CU7.4
+Release date - May 2019
+
+### Loading large rows with dwloader
+Starting from APS CU7.4, customers will be able to use a new dwloader to load rows into tables that are larger than 32 KB (32,768 bytes). The new dwloader supports the -l switch that takes an integer value between 32768 and 33554432 (in bytes) to load rows larger than 32 KB. Only use this option when loading large rows (greater than 32 KB) as this switch will allocate more memory on the client and the server and may slow down loads. You can download the new dwloader from [download site](https://www.microsoft.com/download/details.aspx?id=57472).  
+
+### HDP 3.0 and 3.1 support with PolyBase
+PolyBase on APS now supports HDP 3.0 and 3.1 with this update. Use option 7 for HDP 3.x versions. For more information, see [PolyBase connectivity](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) page.
+
+### UTF16 file support with PolyBase
+PolyBase now support reading delimited text files that are in UTF16 (LE) encoding. See [create external file format](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) for setup details. 
+
 <a name="h2-aps-cu7.3"></a>
 ## APS CU7.3
 Release date - December 2018

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Always On Availability Groups troubleshooting and monitoring guide
  This guide helps you get started on monitoring Always On Availability Groups and troubleshooting some of the common issues in availability groups. It provides original content as well as a landing page of useful information that is published elsewhere. While this guide cannot fully discuss all the issues that can occur in the large area of availability groups, it can point you in the right direction in your root-cause analysis and resolution of issues. 

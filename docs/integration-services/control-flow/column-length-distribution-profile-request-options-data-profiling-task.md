@@ -12,9 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Column Length Distribution Profile Request Options (Data Profiling Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Length Distribution Profile Request** selected in the requests pane. A Column Length Distribution profile reports all the distinct lengths of string values in the selected column and the percentage of rows in the table that each length represents. This profile can help you identify problems in your data such as invalid values. For example, you profile a column of two-character United States state codes and discover values longer than two characters.  
   
 > [!NOTE]  

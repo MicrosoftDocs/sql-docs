@@ -1,10 +1,9 @@
 ---
 title: "Display Row and Column Headers on Multiple Pages (Report Builder and SSRS) | Microsoft Docs"
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 03/01/2017

@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT_WS function"
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT_WS (Transact-SQL)

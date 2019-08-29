@@ -9,9 +9,12 @@ ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to an Excel Data Source (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This article shows you how to connect to a **Microsoft Excel** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
 
 The following screen shot shows a sample connection to a Microsoft Excel workbook.

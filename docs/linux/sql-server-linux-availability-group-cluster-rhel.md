@@ -2,13 +2,12 @@
 title: Configure RHEL Cluster for SQL Server Availability Group
 titleSuffix: SQL Server
 description: Learn about availability group clusters when running Red Hat Enterprise Linux (RHEL)
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ---
@@ -156,7 +155,7 @@ For information on Pacemaker cluster properties, see [Pacemaker Clusters Propert
 To create the availability group resource, use `pcs resource create` command and set the resource properties. The following command creates a `ocf:mssql:ag` master/slave type resource for availability group with name `ag1`.
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]

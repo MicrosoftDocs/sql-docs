@@ -2,7 +2,7 @@
 title: "EditionID Property (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "EditionID property"
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # MSReportServer_Instance Properties - EditionID
   Returns the edition of the report server. Read-only.  

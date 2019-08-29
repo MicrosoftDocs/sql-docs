@@ -10,9 +10,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 5-3: Modify the Directory property configuration value
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In this task, you modify the configuration setting, stored in the **SSISTutorial.dtsConfig** file, to set the **Value** property of the package-level variable `User::varFolderName`. The variable updates the **Directory** property of the Foreach Loop container. The modified value points to the **New Sample Data** folder that you created in the previous task. After you modify the configuration setting and run the package, the **Directory** property is updated from the variable in the configuration file. Previously, the **Directory** property value was part of the package.  
   

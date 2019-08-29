@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using 16-Bit and 32-Bit Applications with 32-Bit Drivers
 > [!IMPORTANT]  

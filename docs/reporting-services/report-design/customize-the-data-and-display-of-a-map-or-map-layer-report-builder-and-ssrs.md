@@ -2,7 +2,7 @@
 title: "Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -21,8 +21,8 @@ f1_keywords:
   - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
   - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS)
   After you add a map or map layer to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report by using a wizard, you might want to change the way the map looks in the report. You can make improvements by considering the following ideas:  

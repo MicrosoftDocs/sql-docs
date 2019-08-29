@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "bulk exporting [SQL Server], data formats"
   - "XML bulk load [SQL Server]"
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Examples of Bulk Import and Export of XML Documents (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
     
 ##  <a name="top"></a>

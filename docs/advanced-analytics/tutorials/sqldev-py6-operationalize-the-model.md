@@ -1,17 +1,17 @@
 ---
-title: Predict potential outcomes using Python models - SQL Server Machine Learning
+title: Predict potential outcomes using Python models
 description: Tutorial showing how to operationalize embedded PYthon script in SQL Server stored procedures with T-SQL functions 
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/02/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Run predictions using Python embedded in a stored procedure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
 
@@ -167,8 +167,8 @@ Sometimes, instead of batch scoring, you might want to pass in a single case, ge
 
 In this section, you'll learn how to create single predictions by calling two stored procedures:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) is designed for single-row scoring using the scikit-learn model.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) is designed for single-row scoring using the revoscalepy model.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) is designed for single-row scoring using the scikit-learn model.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) is designed for single-row scoring using the revoscalepy model.
 + If you haven't trained a model yet, return to [Step 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
 Both models take as input a series of single values, such as passenger count, trip distance, and so forth. A table-valued function, `fnEngineerFeatures`, is used to convert latitude and longitude values from the inputs to a new feature, direct distance. [Lesson 4](sqldev-py4-create-data-features-using-t-sql.md) contains a description of this table-valued function.

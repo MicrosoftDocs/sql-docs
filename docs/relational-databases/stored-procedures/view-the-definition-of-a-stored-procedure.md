@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Definition of a Stored Procedure
@@ -57,7 +56,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  Expand **Stored Procedures**, right-click the procedure and then click **Script Stored Procedure as**, and then click one of the following: **Create To**, **Alter To**, or **Drop and Create To**.  
   
 4.  Select **New Query Editor Window**. This will display the procedure definition.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To view the definition of a procedure in Query Editor**  
   

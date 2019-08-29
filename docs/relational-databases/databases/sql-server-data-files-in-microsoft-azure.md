@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server data files in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ manager: craigg
 ## Concepts and Requirements  
   
 ### Azure Storage Concepts  
- When using SQL Server Data Files in Windows Azure feature, you need to create a storage account and a container in Windows Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
+ When using SQL Server Data Files in Azure feature, you need to create a storage account and a container in Azure. Then, you need to create a SQL Server credential, which includes information on the policy of the container as well as a shared access signature that is necessary to access the container.  
   
  In [Microsoft Azure](https://azure.microsoft.com), an [Azure storage](https://azure.microsoft.com/services/storage/) account represents the highest level of the namespace for accessing Blobs. A storage account can contain an unlimited number of containers, as long as their total size is below the storage limits. For the latest information on storage limits, see [Azure Subscription and Service Limits, Quotas, and Constraints](https://docs.microsoft.com/azure/azure-subscription-service-limits). A container provides a grouping of a set of [Blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). All Blobs must be in a container. An account can contain an unlimited number of containers. Similarly, a container can store an unlimited number of Blobs as well. There are two types of blobs that can be stored in Azure Storage: block and page blobs. This new feature uses Page blobs, which are more efficient when ranges of bytes in a file are modified frequently. You can access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
@@ -119,7 +118,7 @@ ON
  Use PowerShell cmdlets to store SQL Server data files in Azure Blob Storage service by referencing a Blob Storage URL path instead of a file path. Access Blobs using the following URL format: `https://storageaccount.blob.core.windows.net/<container>/<blob>` .  
   
 ### SQL Server object and performance counters support  
- Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Windows Azure Storage.  
+ Starting with SQL Server 2014, a new SQL Server object has been added to be used with SQL Server Data Files in Azure Storage feature. The new SQL Server object is called as [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) and it can be used by System Monitor to monitor activity when running SQL Server with Azure Storage.  
   
 ### SQL Server Management Studio support  
  SQL Server Management Studio allows you to use this feature via several dialog windows. For example, you can type the URL path of the storage container, such as > https://teststorageaccnt.blob.core.windows.net/testcontainer/ :
@@ -163,6 +162,9 @@ ON
     Resolution: Make sure to execute the Alter Database statement when the database is online. When copying the data files to Azure Storage, always create a page blob not a block blob. Otherwise, ALTER Database will fail. Review the instructions given in Lesson 7 in [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 3.  *Error code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*   
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   
      To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, simply remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  

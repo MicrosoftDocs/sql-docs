@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Service Broker Catalog Views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

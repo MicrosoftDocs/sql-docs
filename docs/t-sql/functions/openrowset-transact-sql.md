@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "OLE DB data sources [SQL Server]"
   - "ad hoc connection information"
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # OPENROWSET (Transact-SQL)
@@ -137,7 +136,7 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, t
 |ACP|Converts columns of **char**, **varchar**, or **text** data type from the ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows code page (ISO 1252) to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|  
 |OEM (default)|Converts columns of **char**, **varchar**, or **text** data type from the system OEM code page to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code page.|  
 |RAW|No conversion occurs from one code page to another. This is the fastest option.|  
-|*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **&#42;&#42; Important &#42;&#42;** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|  
+|*code_page*|Indicates the source code page on which the character data in the data file is encoded; for example, 850.<br /><br /> **Important** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|  
   
  ERRORFILE ='*file_name*'  
  Specifies the file used to collect rows that have formatting errors and cannot be converted to an OLE DB rowset. These rows are copied into this error file from the data file "as is."  
@@ -407,8 +406,17 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
+```sql
+select *
+from openrowset('MSDASQL'
+				,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
+				,'select * from E:\Tlog\TerritoryData.csv') 
+;
+```
+
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> - The ODBC driver should be 64-bit. Open the **Drivers** tab of the [OBDC Data Sources](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) application in Windows to verify this. There is 32-bit `Microsoft Text Driver (*.txt, *.csv)` that will not work with a 64-bit version of sqlservr.exe. 
+> - Azure SQL Database does not support reading from Windows files.
 
 
 ### I. Accessing data from a file stored on Azure Blob storage   

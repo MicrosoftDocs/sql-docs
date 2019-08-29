@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # State Property (SqlService Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

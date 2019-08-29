@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Using Set Expressions
 
@@ -52,7 +51,7 @@ manager: kfile
   
  consists of three tuples, each of which contains two explicit references to members on the Product Categories hierarchy of the Product dimension and the Calendar hierarchy of the Date dimension.  
   
- For examples of functions that return sets, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ For examples of functions that return sets, see [Working with Members, Tuples, and Sets &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## See Also  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  

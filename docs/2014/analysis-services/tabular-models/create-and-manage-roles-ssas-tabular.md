@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.rolemanager.f1"
@@ -62,7 +61,7 @@ manager: kfile
  [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md)   
  [Perspectives &#40;SSAS Tabular&#41;](perspectives-ssas-tabular.md)   
  [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [CUSTOMDATA Function &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME Function &#40;DAX&#41;](/dax/username-function-dax)   
+ [CUSTOMDATA Function &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

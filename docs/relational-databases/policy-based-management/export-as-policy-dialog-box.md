@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Export As Policy Dialog Box
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

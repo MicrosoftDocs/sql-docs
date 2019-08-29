@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## Arguments  
- [ **@distributor =**] **'**_distributor_**'**  
+`[ @distributor = ] 'distributor'`
  Is the name of the Distributor where the custom resolver is located. *distributor* is **sysname**, with a default of NULL. *This parameter is deprecated and will be removed in a future release.*  
   
 ## Result Sets  

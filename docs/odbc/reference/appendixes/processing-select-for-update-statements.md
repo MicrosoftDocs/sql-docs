@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Processing SELECT FOR UPDATE Statements
 > [!IMPORTANT]  

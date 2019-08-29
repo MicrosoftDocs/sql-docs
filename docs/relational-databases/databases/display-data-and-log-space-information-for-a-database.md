@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Display Data and Log Space Information for a Database
@@ -43,7 +42,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 2.  Expand **Databases**.  
   
 3.  Right-click a database, point to **Reports**, point to **Standard Reports,**, and then click **Disk Usage**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To display data and log space information for a database by using sp_spaceused  

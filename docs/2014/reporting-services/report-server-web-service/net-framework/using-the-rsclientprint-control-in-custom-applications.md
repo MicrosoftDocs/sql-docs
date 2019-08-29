@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "RSPrintClient control"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "custom printing [Reporting Services]"
   - "client-side printing"
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the RSClientPrint Control in Custom Applications
@@ -89,7 +87,7 @@ manager: kfile
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- When you are running the report in Windows Azure SQL Reporting, you use the following CLSID values.  
+ When you are running the report in Azure SQL Reporting, you use the following CLSID values.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   

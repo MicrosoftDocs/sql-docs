@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

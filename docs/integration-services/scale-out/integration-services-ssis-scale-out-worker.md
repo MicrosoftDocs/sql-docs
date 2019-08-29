@@ -10,9 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: craigg
 ---
 # Integration Services (SSIS) Scale Out Worker
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 The Scale Out Worker runs the Scale Out Worker service to pull execution tasks from Scale Out Master. Then the worker runs the packages locally with `ISServerExec.exe`.
 

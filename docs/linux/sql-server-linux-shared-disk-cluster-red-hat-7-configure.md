@@ -1,13 +1,12 @@
 ---
-title: Configure Red Hat Enterprise Linux shared cluster for SQL Server | Microsoft Docs
+title: Configure Red Hat Enterprise Linux shared cluster for SQL Server
 description: Implement high availability by configuring Red Hat Enterprise Linux shared disk cluster for SQL Server.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ---
@@ -111,7 +110,7 @@ There are a variety of solutions for providing shared storage. This walk-through
 ### Configure shared storage with NFS
 
 > [!IMPORTANT] 
-> Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on non-clustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
+> Hosting database files on a NFS server with version <4 is not supported in this release. This includes using NFS for shared disk failover clustering as well as databases on nonclustered instances. We are working on enabling other NFS server versions in the upcoming releases. 
 
 On the NFS Server do the following:
 

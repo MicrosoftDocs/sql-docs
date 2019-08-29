@@ -6,10 +6,11 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "en-us",
+      "xref_query_tags": ["/uwp/api", "/dotnet"],
       "monikers": [],
       "moniker_ranges": [
-        "= sql-server-2014",
-        "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+        "sql-server-2014",
+        "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -42,6 +43,14 @@
       "url": "https://github.com/Microsoft/templates.msdn.msft",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "samples",
+      "url": "https://github.com/dotnet/samples",
+      "branch": "master",
+      "branch_mapping": {
+        "live": "live"
+      }
     },
     {
       "path_to_root": "_themes.pdf",

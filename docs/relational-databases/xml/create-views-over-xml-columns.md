@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "views [XML in SQL Server]"
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Create Views over XML Columns
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

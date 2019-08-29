@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +34,16 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The profile ID of the profile to delete. *profile_id* is **int**, with a default of NULL. Either the *profile_id* or the *profile_name* may be specified.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The profile name of the profile to delete. *profile_name* is **sysname**, with a default of NULL. Either the *profile_id* or the *profile_name* may be specified.  
   
- [ **@account_id** = ] *account_id*  
+`[ @account_id = ] account_id`
  The account ID to delete. *account_id* is **int**, with a default of NULL. Either the *account_id* or the *account_name* may be specified.  
   
- [ **@account_name** = ] **'***account_name***'**  
+`[ @account_name = ] 'account_name'`
  The name of the account to delete. *account_name* is **sysname**, with a default of NULL. Either the *account_id* or the *account_name* may be specified.  
   
 ## Return Code Values  

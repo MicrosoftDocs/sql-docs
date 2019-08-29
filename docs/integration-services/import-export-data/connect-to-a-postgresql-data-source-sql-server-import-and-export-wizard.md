@@ -9,9 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This topic shows you how to connect to a **PostgreSQL** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. 
 
 > [!IMPORTANT]

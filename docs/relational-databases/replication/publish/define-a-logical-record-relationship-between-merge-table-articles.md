@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Define a Logical Record Relationship Between Merge Table Articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

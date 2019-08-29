@@ -20,9 +20,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Raw File Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Raw File destination writes raw data to a file. Because the format of the data is native to the destination, the data requires no translation and little parsing. This means that the Raw File destination can write data more quickly than other destinations such as the Flat File and the OLE DB destinations.  
   
  In addition to writing raw data to a file, you can also use the Raw File destination to generate an empty raw file that contains only the columns (metadata-only file), without having to run the package. You use the Raw File source to retrieve raw data that was previously written by the destination. You can also point the Raw File source to the metadata-only file.  

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Microsoft ADO.NET for SQL Server
 

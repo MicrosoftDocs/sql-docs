@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ^ (Bitwise Exclusive OR) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a bitwise exclusive OR operation of two integer values. It compares each bit of its first operand to the corresponding bit of its second operand. If one bit is 0 and the other bit is 1, the corresponding result bit is set to 1. If both bits are 0 or both bits are 1, the corresponding result bit is set to 0.  
   
  Both conditions must be a signed integer data type or both conditions must be an unsigned integer data type.  

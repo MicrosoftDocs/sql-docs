@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Getting Started with the SSMA for Sybase Console (SybaseToSQL)
 This section describes the procedure for launching and getting started with the SSMA for Sybase console application. Also listed herein are the conventions used in a typical SSMA Console output window.  

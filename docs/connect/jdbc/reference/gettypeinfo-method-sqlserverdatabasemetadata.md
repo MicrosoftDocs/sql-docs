@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getTypeInfo Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

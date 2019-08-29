@@ -12,9 +12,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create Relationships
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Create Relationships** dialog box to edit mappings between the source columns and the lookup table columns that you configured in the Fuzzy Lookup Transformation Editor, the Lookup Transformation Editor, and the Term Lookup Transformation Editor.  
   
 > [!NOTE]  

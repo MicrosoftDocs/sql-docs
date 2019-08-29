@@ -8,10 +8,9 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 78d9f0e8-eca8-458e-a1ad-29ffa0838ef7
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Notification Services (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

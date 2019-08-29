@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Customize Database Build and Deployment by Using Build and Deployment Contributors
 Visual Studio provides extensibility points that you can use to modify the behavior of the build and deployment actions for database projects.  

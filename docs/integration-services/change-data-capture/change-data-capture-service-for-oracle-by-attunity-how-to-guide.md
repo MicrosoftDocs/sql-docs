@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Change Data Capture Service for Oracle by Attunity How to Guide
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This section describes how to carry out tasks in the CDC Service Configuration Console.  
   
 ## Learn how to use the CDC Service for Oracle Service Configuration UI  

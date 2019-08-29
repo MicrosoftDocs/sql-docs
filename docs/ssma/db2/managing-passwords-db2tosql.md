@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Managing Passwords (DB2ToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

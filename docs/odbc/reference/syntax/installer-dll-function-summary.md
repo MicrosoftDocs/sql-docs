@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Installer DLL Function Summary
 The following table describes the functions in the installer DLL. For more information about the syntax and semantics for each function, see [Installer DLL API Reference](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

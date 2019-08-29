@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "saving tables"
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Save Selected Tables on a Diagram (Visual Database Tools)

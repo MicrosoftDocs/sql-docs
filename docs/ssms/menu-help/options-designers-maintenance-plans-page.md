@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.MaintenancePlans"
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Options (Designers - Maintenance Plans Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

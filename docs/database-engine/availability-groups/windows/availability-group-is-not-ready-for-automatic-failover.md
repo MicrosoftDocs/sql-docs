@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Always On availability group is not ready for automatic failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schema Rowset Support (OLE DB)

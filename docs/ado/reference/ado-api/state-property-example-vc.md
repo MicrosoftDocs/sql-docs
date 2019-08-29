@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # State Property Example (VC++)
 This example uses the [State](../../../ado/reference/ado-api/state-property-ado.md) property to display a message while asynchronous connections are opening and asynchronous commands are executing.  

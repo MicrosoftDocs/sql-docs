@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: cb4d0b91-db1d-4a6f-a87c-8ea125215afc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # supportsMultipleResultSets Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

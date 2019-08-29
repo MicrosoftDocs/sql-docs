@@ -1,6 +1,6 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: "02/11/2019"
+ms.date: "07/26/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -8,7 +8,7 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: "ulvii"
 ms.author: "v-ulibra"
-manager: "v-mabarw"
+manager: v-mabarw
 ---
 
 # Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server
@@ -44,19 +44,21 @@ Install the ODBC driver for Ubuntu by following the instructions on the [Linux a
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.3/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.3/mods-available/pdo_sqlsrv.ini
 exit
+sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
+
+If there is only one PHP version in the system then the last step can be simplified to `phpenmod sqlsrv pdo_sqlsrv`.
+
 ### Step 4. Install Apache and configure driver loading
 ```
 sudo su
-apt-get install libapache2-mod-php7.2 apache2
+apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.3
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
-echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 exit
 ```
 ### Step 5. Restart Apache and test the sample script
@@ -86,31 +88,16 @@ yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ### Step 2. Install prerequisites
 Install the ODBC driver for Red Hat 7 by following the instructions on the [Linux and macOS installation page](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-Compiling the PHP drivers with PECL with PHP 7.2 or 7.3 requires a more recent GCC than the default:
-```
-sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
-sudo yum install devtoolset-7
-scl enable devtoolset-7 bash
-```
 ### Step 3. Install the PHP drivers for Microsoft SQL Server
 ```
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/pdo_sqlsrv.ini
+echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
 exit
 ```
-An issue in PECL may prevent correct installation of the latest version of the drivers even if you have upgraded GCC. To install, download the packages and compile manually (similar steps for pdo_sqlsrv):
-```
-pecl download sqlsrv
-tar xvzf sqlsrv-5.6.0.tgz
-cd sqlsrv-5.6.0/
-phpize
-./configure --with-php-config=/usr/bin/php-config
-make
-sudo make install
-```
+
 You can alternatively download the prebuilt binaries from the [Github project page](https://github.com/Microsoft/msphpsql/releases), or install from the Remi repo:
 ```
 sudo yum install php-sqlsrv
@@ -158,10 +145,14 @@ locale-gen
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.3/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.3/mods-available/pdo_sqlsrv.ini
 exit
+sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
+
+If there is only one PHP version in the system then the last step can be simplified to `phpenmod sqlsrv pdo_sqlsrv`.
+
 ### Step 4. Install Apache and configure driver loading
 ```
 sudo su
@@ -169,8 +160,6 @@ apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.3
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
-echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 ```
 ### Step 5. Restart Apache and test the sample script
 ```
@@ -181,7 +170,7 @@ To test your installation, see [Testing your installation](#testing-your-install
 ## Installing the drivers on Suse 12 and 15
 
 > [!NOTE]
-> In the following instructions, replace <SuseVersion> with your version of Suse - if you are using Suse Enterprise Linux 15, it will be SLE_15 or SLE_15_SP1, and similarly for other versions. Not all versions of PHP are available for all versions of Suse Linux - please refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of Suse have the default version PHP available, or to `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of Suse.
+> In the following instructions, replace <SuseVersion> with your version of Suse - if you are using Suse Enterprise Linux 15, it will be SLE_15 or SLE_15_SP1. For Suse 12, use SLE_12_SP4 (or above if applicable). Not all versions of PHP are available for all versions of Suse Linux - please refer to `http://download.opensuse.org/repositories/devel:/languages:/php` to see which versions of Suse have the default version PHP available, or to `http://download.opensuse.org/repositories/devel:/languages:/php:/` to see which other versions of PHP are available for which versions of Suse.
 
 > [!NOTE]
 > Packages for PHP 7.3 are not available for Suse 12. 
@@ -272,7 +261,7 @@ apachectl -V | grep SERVER_CONFIG_FILE
 ``` 
 and substitute the path for `httpd.conf` in the following commands:
 ```
-echo "LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
+echo "LoadModule php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### Step 5. Restart Apache and test the sample script

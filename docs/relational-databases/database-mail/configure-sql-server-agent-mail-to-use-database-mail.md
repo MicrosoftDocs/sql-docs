@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Configure SQL Server Agent Mail to Use Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

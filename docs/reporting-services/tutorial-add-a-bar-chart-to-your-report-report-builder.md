@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Add a Bar Chart to Your Report (Report Builder)
 In this tutorial, you use a wizard in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] to create a bar chart in a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report. Then you add a filter and enhance the chart. 

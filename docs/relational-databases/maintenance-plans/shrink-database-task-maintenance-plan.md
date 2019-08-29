@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Shrink Database Task (Maintenance Plan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Thread-Safety Notes on API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

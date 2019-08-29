@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "ConnectionPoolSize"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "ConnectionPoolSize property"
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # ConnectionPoolSize Property (WMI MSReportServer_ConfigurationSetting)

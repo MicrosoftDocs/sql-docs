@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

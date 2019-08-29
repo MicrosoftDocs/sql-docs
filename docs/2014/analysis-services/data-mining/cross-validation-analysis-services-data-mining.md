@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [Analysis Services], data mining"
@@ -100,7 +99,7 @@ manager: craigg
   
  The stored procedures are grouped by mining model type. One set of stored procedures works with clustering models only. The other set of stored procedures works with other mining models.  
   
- For each type of mining model, clustered or non-clustered, the stored procedures perform cross-validation in two separate phases.  
+ For each type of mining model, clustered or nonclustered, the stored procedures perform cross-validation in two separate phases.  
   
  **Partition data and generate metrics for partitions**  
   

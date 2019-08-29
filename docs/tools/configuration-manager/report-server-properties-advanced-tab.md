@@ -8,10 +8,9 @@ ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Report Server Properties (Advanced Tab)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

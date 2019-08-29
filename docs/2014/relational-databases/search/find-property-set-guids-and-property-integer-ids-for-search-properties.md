@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], search property lists"
   - "search property lists [SQL Server], configuring"
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Find Property Set GUIDs and Property Integer IDs for Search Properties

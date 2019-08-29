@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

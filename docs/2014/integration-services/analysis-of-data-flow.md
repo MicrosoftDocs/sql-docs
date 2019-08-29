@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang

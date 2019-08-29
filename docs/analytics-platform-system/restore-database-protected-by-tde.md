@@ -2,7 +2,6 @@
 title: Restore a database protected by TDE - Parallel Data Warehouse | Microsoft Docs
 description: Use the following steps to restore a database that is encrypted by using transparent data encryption in Analytics Platform System Parallel Data Warehouse.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

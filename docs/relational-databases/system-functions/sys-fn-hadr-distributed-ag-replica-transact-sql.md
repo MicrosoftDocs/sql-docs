@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sys.fn_hadr_distributed_ag_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

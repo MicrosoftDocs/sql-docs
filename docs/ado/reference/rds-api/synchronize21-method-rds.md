@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Synchronize21 Method (RDS)
 Synchronize the given recordset with the database specified by the connection string for use with ADO 2.1.  

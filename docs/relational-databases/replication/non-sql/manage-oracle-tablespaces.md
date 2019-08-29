@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Manage Oracle Tablespaces
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

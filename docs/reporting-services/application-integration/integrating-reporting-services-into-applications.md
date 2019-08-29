@@ -1,12 +1,12 @@
 ---
 title: "Integrating Reporting Services into Applications | Microsoft Docs"
-ms.date: 09/18/2018
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
 ms.topic: reference
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 
 ---
@@ -23,7 +23,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
   
 ## Report server web service
 
- The Report Server Web service is the primary interface for developing against [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Whether you are developing code to manage your report catalog or developing code to render reports to a supported format, the Web service exposes all the necessary methods to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into your applications. An example of one such application is Report Manager, which is included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; it uses the Web service to manage the report server database.  
+ The Report Server Web service is the primary interface for developing against [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Whether you are developing code to manage your report catalog or developing code to render reports to a supported format, the Web service exposes all the necessary methods to integrate [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into your applications. An example of one such application is the web portal, which is included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; it uses the Web service to manage the report server database.  
   
 ## Report Viewer controls for Visual Studio
 

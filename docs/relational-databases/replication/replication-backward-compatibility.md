@@ -18,10 +18,10 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication Backward Compatibility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Backward compatibility is important to understand if you are upgrading, or if you have more than one version of SQL Server in a replication topology. 
 

@@ -16,9 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Reuse of Package Objects
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Frequently packages functionality that you want to reuse. For example, if you created a set of tasks, you might want to reuse the items together as a group, or you might want to reuse a single item such as a connection manager that you created in a different [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 ## Copy and Paste  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

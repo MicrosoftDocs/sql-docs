@@ -12,7 +12,6 @@ ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Manage Full-Text Catalogs
@@ -46,7 +45,9 @@ GO
     >  Full-text catalog IDs begin at 00005 and are incremented by one for each new catalog created.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="props"></a> Get the properties of a full-text catalog  
 Use the [!INCLUDE[tsql](../../includes/tsql-md.md)] function **FULLTEXTCATALOGPROPERTY** to get the value of various properties related to full-text catalogs. For more info, see [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 

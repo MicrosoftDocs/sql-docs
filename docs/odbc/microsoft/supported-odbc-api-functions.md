@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Supported ODBC API Functions
 The purpose of leveling is to inform the application what features are available to it from the driver. The Microsoft ODBC Desktop Database Drivers support all Core and Level 1 functions.  

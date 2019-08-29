@@ -21,7 +21,6 @@ helpviewer_keywords:
   - "SQLSetConnectAttr function"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Working with Snapshot Isolation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

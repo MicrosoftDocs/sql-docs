@@ -13,9 +13,12 @@ f1_keywords:
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Validate Dialog Box
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Validate** dialog box to check for common problems in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a project or package.  
   
  If there is a problem, a message is displayed at the top of the dialog box. Otherwise, the term Ready displays at the top.  

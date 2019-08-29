@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLConfigDataSource (dBASE Driver)
 > [!NOTE]  

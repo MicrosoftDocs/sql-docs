@@ -1,5 +1,5 @@
 ---
-title: Quickstart to predict from model using R - SQL Server Machine Learning
+title: Quickstart to predict from model using R
 description: In this quickstart, learn about scoring using a prebuilt model in R and SQL Server data.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,10 +8,10 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Quickstart: Predict from model using R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this quickstart, use the model you created in the previous quickstart to score predictions against fresh data. To perform _scoring_ using new data, get one of the trained models from the table, and then call a new set of data on which to base predictions. Scoring is a term sometimes used in data science to mean generating predictions, probabilities, or other values based on new data fed into a trained model.
 

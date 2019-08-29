@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "data updates [SQL Server], OLE DB"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Updating Data in Rowsets - Resynchronizing Rows
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

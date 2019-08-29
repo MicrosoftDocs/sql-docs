@@ -10,9 +10,12 @@ ms.topic: "reference"
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Change Data Capture Service for Oracle by Attunity F1 Help
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You use the CDC Service Configuration Console to define a local Oracle CDC Service, update it, and delete it.  
   
  The topics in this section help provide information about the information you need to provide when using the CDC Service Configuration Console.  

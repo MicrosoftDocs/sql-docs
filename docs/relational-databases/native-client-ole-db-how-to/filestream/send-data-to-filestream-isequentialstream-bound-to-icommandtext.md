@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Send Data to FILESTREAM - ISequentialStream Bound to ICommandText

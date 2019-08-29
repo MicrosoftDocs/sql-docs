@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Getting Long Data
 DBMSs define *long data* as any character or binary data over a certain size, such as 255 characters. This data may be small enough to be stored in a single buffer, such as a part description of several thousand characters. However, it might be too long to store in memory, such as long text documents or bitmaps. Because such data cannot be stored in a single buffer, it is retrieved from the driver in parts with **SQLGetData** after the other data in the row has been fetched.  

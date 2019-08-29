@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: craigg
 ---
 # Install Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

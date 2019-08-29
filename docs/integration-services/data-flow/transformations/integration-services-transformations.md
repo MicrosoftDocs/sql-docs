@@ -21,9 +21,12 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services Transformations
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] transformations are the components in the data flow of a package that aggregate, merge, distribute, and modify data. Transformations can also perform lookup operations and generate sample datasets. This section describes the transformations that [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes and explains how they work.  
   
 ## Business Intelligence Transformations  

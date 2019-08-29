@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Split a Dataset by Using the Conditional Split Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To add and configure a Conditional Split transformation, the package must already include at least one Data Flow task and a source.  
   
 ### To conditionally split a dataset  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple language support [Analysis Services]"
@@ -71,7 +70,7 @@ manager: craigg
   
 ## See Also  
  [Internationalization for Windows Applications](/windows/desktop/Intl/international-support)   
- [Go Global Developer Center](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Microsoft Globalization Documentation](/globalization/)   
  [Writing Windows Store apps with locale-based adaptive design](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Developing Universal Windows Apps with C# and XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

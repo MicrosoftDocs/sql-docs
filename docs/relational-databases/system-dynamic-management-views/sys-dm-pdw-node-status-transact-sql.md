@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_node_status (Transact-SQL)

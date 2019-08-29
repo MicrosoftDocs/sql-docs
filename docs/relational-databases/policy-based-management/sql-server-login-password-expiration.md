@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SQL Server Login Password Expiration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

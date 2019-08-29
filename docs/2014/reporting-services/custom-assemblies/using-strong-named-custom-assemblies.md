@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "AllowPartiallyTrustedCallersAttribute attribute"
@@ -15,8 +13,8 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], strong names"
   - "custom assemblies [Reporting Services], strong-named"
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using Strong-Named Custom Assemblies

@@ -12,9 +12,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Review Data Type Mapping (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 If you specified a data type mapping that may not succeed in the **Mappings** list of the **Column Mappings** dialog box, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Review Data Type Mapping** page. On this page, you review detailed information about data type conversions that the wizard has to perform to make the source data compatible with the destination. This information includes visual cues to distinguish data type conversions that are expected to succeed from conversions that may cause errors or truncations. For each conversion, you decide whether to accept the conversion that the wizard suggests, and you specify how to handle any errors that may occur.   
   
 > [!TIP]

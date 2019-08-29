@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "FOR XML clause, TYPE directive"
   - "TYPE directive"
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # TYPE Directive in FOR XML Queries
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

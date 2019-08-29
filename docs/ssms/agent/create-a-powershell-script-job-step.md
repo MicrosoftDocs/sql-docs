@@ -1,7 +1,7 @@
 ---
 title: "Create a PowerShell Script Job Step | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/20/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "job steps [PowerShell]"
   - "SQL Server Agent jobs, PowerShell steps"
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create a PowerShell Script Job Step
@@ -26,25 +25,13 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 
 This topic describes how to create and define a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step that executes a PowerShell script in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To create a PowerShell Script job step, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Security"></a>Security  
 For detailed information, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="SSMS"></a>Using SQL Server Management Studio  
   
 #### To create a PowerShell Script job step  

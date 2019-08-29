@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # bcp_readfmt

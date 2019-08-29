@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "attributes [Master Data Services], free-form attributes"
   - "attributes [Master Data Services]"
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

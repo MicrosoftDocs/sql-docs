@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getBestRowIdentifier Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

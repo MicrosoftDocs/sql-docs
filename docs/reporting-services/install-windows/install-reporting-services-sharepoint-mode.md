@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "installing Reporting Services, SharePoint integrated mode"
   - "installation options [Reporting Services]"
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install Reporting Services 2016 in SharePoint mode

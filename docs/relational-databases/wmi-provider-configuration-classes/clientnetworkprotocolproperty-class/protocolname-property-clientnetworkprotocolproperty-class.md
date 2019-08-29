@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 77c53201-4fab-481e-9b3b-57d0b8b83113
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ProtocolName Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

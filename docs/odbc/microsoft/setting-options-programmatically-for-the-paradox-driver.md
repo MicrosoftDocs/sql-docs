@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Setting Options Programmatically for the Paradox Driver
 

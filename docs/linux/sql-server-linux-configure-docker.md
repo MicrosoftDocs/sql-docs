@@ -1,22 +1,21 @@
 ---
-title: Configuration options for SQL Server on Docker | Microsoft Docs
+title: Configuration options for SQL Server on Docker
 description: Explore different ways of using and interacting with SQL Server 2017 and 2019 preview container images in Docker. This includes persisting data, copying files, and troubleshooting.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: vin-yu 
+ms.author: vinsonyu
+ms.reviewer: vanto
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: "sql-linux"
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 ---
 # Configure SQL Server container images on Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article explains how to configure and use the [mssql-server-linux container image](https://hub.docker.com/r/microsoft/mssql-server-linux/) with Docker. This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
+This article explains how to configure and use the [mssql-server-linux container image](https://hub.docker.com/_/microsoft-mssql-server) with Docker. This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows.
 
 > [!NOTE]
 > This article specifically focuses on using the mssql-server-linux image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
@@ -35,16 +34,16 @@ This configuration article provides additional usage scenarios in the following 
 
 ## <a id="rhel"></a> Run RHEL-based container images
 
-All of the documentation on SQL Server Linux container images point to Ubuntu-based containers. Beginning with SQL Server 2019 preview, you can use containers based on Red Hat Enterprise Linux (RHEL). Change the container repository from **mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu** to **mcr.microsoft.com/mssql/rhel/server:2019-CTP2.3** in all of your docker commands.
+All of the documentation on SQL Server Linux container images point to Ubuntu-based containers. Beginning with SQL Server 2019 preview, you can use containers based on Red Hat Enterprise Linux (RHEL). Change the container repository from **mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu** to **mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2** in all of your docker commands.
 
 For example, the following command pulls the latest SQL Server 2019 preview container that uses RHEL:
 
 ```bash
-sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.3
+sudo docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
 ```
 
 ```PowerShell
-docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP2.3
+docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
 ```
 
 ::: moniker-end
@@ -77,11 +76,11 @@ docker run --name sqlenterprise `
       -d "store/microsoft/mssql-server-linux:2017-latest"
  ```
 
-      > [!IMPORTANT]
-      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+> [!IMPORTANT]
+> By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
 
-      > [!NOTE]
-      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+> [!NOTE]
+> For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
 
 ::: moniker-end
 
@@ -166,13 +165,13 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 The following example creates two SQL Server 2019 preview containers and maps them to ports **1401** and **1402** on the host machine.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ::: moniker-end
@@ -226,11 +225,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ::: moniker-end
@@ -260,11 +259,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 ::: moniker-end
 
@@ -304,7 +303,7 @@ docker ps
 To start a bash terminal in the container run:
 
 ```bash
-docker exec -ti <Container ID> /bin/bash
+docker exec -it <Container ID> /bin/bash
 ```
 
 Now you can run commands as though you are running them at the terminal inside the container. When finished, type `exit`. This exits in the interactive command session, but your container continues to run.
@@ -390,14 +389,14 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -p 1433:1433 --name sql1 \
    -e 'TZ=America/Los_Angeles'\
-   -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ```PowerShell
 sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
    -p 1433:1433 --name sql1 `
    -e "TZ=America/Los_Angeles" `
-   -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 ::: moniker-end
 
@@ -405,7 +404,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 There are scenarios where you might not want to use the latest SQL Server container image. To run a specific SQL Server container image, use the following steps:
 
-1. Identify the Docker **tag** for the release you want to use. To view the available tags, see [the mssql-server-linux Docker hub page](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+1. Identify the Docker **tag** for the release you want to use. To view the available tags, see [the mssql-server-linux Docker hub page](https://hub.docker.com/_/microsoft-mssql-server).
 
 2. Pull the SQL Server container image with the tag. For example, to pull the RC1 image, replace `<image_tag>` in the following command with `rc1`.
 
@@ -549,22 +548,27 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu`.
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu`.
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu`.
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu`.
 ```
 
 ::: moniker-end
 
+- If you get an error such as **'Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.30tdout=1&tail=all: dial unix /var/run/docker.sock: connect: permission denied'** when trying to start a container, then add your user to the docker group in Ubuntu. Then logout and login again as this change will affect new sessions. 
+
+   ```bash
+    usermod -aG docker $USER
+    ```
 - Check to see if there are any error messages from container.
 
     ```bash
     docker logs e69e056c702d
     ```
 
-- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this article.
+- Make sure that you meet the minimum memory and disk requirements specified in the [prerequisites](quickstart-install-connect-docker.md#requirements) section of the quickstart article.
 
 - If you are using any container management software, make sure it supports container processes running as root. The sqlservr process in the container runs as root.
 
@@ -586,7 +590,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "M
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ```bash
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ::: moniker-end

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying [Reporting Services], configuration files"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "modifying configuration files"
   - "configuration files [Reporting Services]"
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Configuration Files

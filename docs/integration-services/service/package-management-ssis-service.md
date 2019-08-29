@@ -27,9 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Package Management (SSIS Service)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Package management includes monitoring, managing, importing and exporting packages.  
  
  ## Package Store  

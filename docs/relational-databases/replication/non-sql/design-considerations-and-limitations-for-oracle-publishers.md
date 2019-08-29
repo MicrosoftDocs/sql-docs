@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Design Considerations and Limitations for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time zones [Reporting Services]"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "schedules [Reporting Services], clock settings"
   - "schedules [Reporting Services], time zones"
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Change Time Zones and Clock Settings on a Report Server

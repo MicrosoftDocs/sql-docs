@@ -2,14 +2,14 @@
 title: "Exporting to a CSV File (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Exporting to a CSV File (Report Builder and SSRS)
   The Comma-Separated Value (CSV) rendering extension renders paginated reports as a flattened representation of data from a report in a standardized, plain-text format that is easily readable and exchangeable with many applications.  

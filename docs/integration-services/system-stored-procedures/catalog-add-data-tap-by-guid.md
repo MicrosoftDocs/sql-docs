@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
-# catalog.add_data_tap_by_guid
+# catalog.add_data_tap_by_guid 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Adds a data tap to a specific data flow path in a package data flow, for an instance of the execution.  

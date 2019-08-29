@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_add_agent_profile"
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: mashamsft
+ms.author: mathoma
 ---
 # sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Creates a new profile for a replication agent. This stored procedure is executed at the Distributor on any database.  
   

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Troubleshooting (AccessToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

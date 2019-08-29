@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # REVERSE (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression in reverse order.  
   
 ## Syntax  

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "XMLDATA option"
   - "FOR XML clause, inline XDR schema generation"
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Generate an Inline XDR Schema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

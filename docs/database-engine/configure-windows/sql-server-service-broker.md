@@ -22,16 +22,62 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
-# SQL Server Service Broker
+# Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] provides native support for messaging and queuing applications in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. This makes it easier for developers to create sophisticated applications that use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components to communicate between disparate databases. Developers can use [!INCLUDE[ssSB](../../includes/sssb-md.md)] to easily build distributed and reliable applications.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] provide native support for messaging and queuing in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Developers can easily create sophisticated applications that use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] components to communicate between disparate databases, and build distributed and reliable applications.  
   
- Application developers who use [!INCLUDE[ssSB](../../includes/sssb-md.md)] can distribute data workloads across several databases without programming complex communication and messaging internals. This reduces development and test work because [!INCLUDE[ssSB](../../includes/sssb-md.md)] handles the communication paths in the context of a conversation. It also improves performance. For example, front-end databases supporting Web sites can record information and send process intensive tasks to queue in back-end databases. [!INCLUDE[ssSB](../../includes/sssb-md.md)] ensures that all tasks are managed in the context of transactions to assure reliability and technical consistency.  
+## When to use Service Broker
+
+ Use Service Broker components to implement native in-database asynchronous message processing functionalities. Application developers who use [!INCLUDE[ssSB](../../includes/sssb-md.md)] can distribute data workloads across several databases without programming complex communication and messaging internals. Service Broker reduces development and test work because [!INCLUDE[ssSB](../../includes/sssb-md.md)] handles the communication paths in the context of a conversation. It also improves performance. For example, front-end databases supporting Web sites can record information and send process intensive tasks to queue in back-end databases. [!INCLUDE[ssSB](../../includes/sssb-md.md)] ensures that all tasks are managed in the context of transactions to assure reliability and technical consistency.  
   
+## Overview
+
+  Service Broker is a message delivery framework that enables you to create native in-database service-oriented applications. Unlike classic query processing functionalities that constantly read data from the tables and process them during the query lifecycle, in service-oriented application you have database services that are exchanging the messages. Every service has a queue where the messages are placed until they are processed.
+  
+![Service broker](media/service-broker.png)
+  
+  The messages in the queues can be fetched using the Transact-SQL `RECEIVE` command or by the activation procedure that will be called whenever the message arrives in the queue.
+  
+### Creating services
+ 
+  Database services are created by using the [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) Transact SQL statement. Service can be associated with the message queue create by using the [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) statement:
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### Sending messages
+  
+  Messages are sent on the conversation between the services using the [SEND](../../t-sql/statements/send-transact-sql.md) Transact-SQL statement. A conversation is a communication channel that is established between the services using the `BEGIN DIALOG` Transact-SQL statement. 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   The message will be sent to the `ExpenssesService` and placed in `dbo.ExpenseQueue`. Because there is no activation procedure associated to this queue, the message will remain in the queue until someone reads it.
+
+### Processing messages
+
+   The messages that are placed in the queue can be selected by using a standard `SELECT` query. The `SELECT` statement will not modify the queue and remove the messages. To read and pull the messages from the queue, you can use the [RECEIVE](../../t-sql/statements/receive-transact-sql.md) Transact-SQL statement.
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  Once you process all messages from the queue, you should close the conversation using the [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact-SQL statement.
+
 ## Where is the documentation for Service Broker?  
  The reference documentation for [!INCLUDE[ssSB](../../includes/sssb-md.md)] is included in the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] documentation. This reference documentation includes the following sections:  
   

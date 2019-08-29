@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Import Data from Excel to Master Data Services (MDS Add-in for Excel)
 

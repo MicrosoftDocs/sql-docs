@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine Tuning Advisor [SQL Server], tutorials"
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Lesson 1: Basic Navigation in Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # View and Modify Replication Agent Command Prompt Parameters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

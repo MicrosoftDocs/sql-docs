@@ -10,10 +10,13 @@ ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: janinezhang
 ms.author: janinez
-manager: craigg
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # catalog.add_execution_worker (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Adds a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker to an instance of execution in Scale Out.

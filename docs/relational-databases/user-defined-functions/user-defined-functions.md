@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # User-Defined Functions

@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, breakpoint action"
   - "Transact-SQL debugger, breakpoint when hit action"
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify a Breakpoint Action

@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GeomFromGML (geometry Data Type)"
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # GeomFromGml (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

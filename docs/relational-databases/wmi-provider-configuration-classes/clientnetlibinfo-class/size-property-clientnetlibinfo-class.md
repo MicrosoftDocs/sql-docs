@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Size Property (ClientNetLibInfo Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View the Contents of a Backup Tape or File (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

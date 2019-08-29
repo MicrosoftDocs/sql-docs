@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # HEX (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a string representing the hexadecimal value of an integer.  
   
 ## Syntax  

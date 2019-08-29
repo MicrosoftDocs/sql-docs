@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Change Audit Event Class

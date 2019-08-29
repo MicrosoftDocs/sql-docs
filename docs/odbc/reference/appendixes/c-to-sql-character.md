@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # C to SQL: Character
 The identifiers for the character ODBC C data type are:  

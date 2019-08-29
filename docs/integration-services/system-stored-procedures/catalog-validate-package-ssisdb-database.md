@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.validate_package (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Asynchronously validates a package in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

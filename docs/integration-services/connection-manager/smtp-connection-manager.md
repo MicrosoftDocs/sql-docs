@@ -16,9 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SMTP Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An SMTP connection manager enables a package to connect to a Simple Mail Transfer Protocol (SMTP) server. The Send Mail task that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes uses an SMTP connection manager.  
   
  When using Microsoft Exchange as the SMTP server, you may need to configure the SMTP connection manager to use Windows Authentication. Exchange servers may be configured to not allow unauthenticated SMTP connections.  

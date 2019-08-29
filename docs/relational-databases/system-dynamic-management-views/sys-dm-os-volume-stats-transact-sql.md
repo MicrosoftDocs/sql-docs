@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/02/2017"
+ms.date: "06/06/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -18,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_os_volume_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Returns information about the operating system volume (directory) on which the specified databases and files are stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this dynamic management function to check the attributes of the physical disk drive or return available free space information about the directory.  
   
@@ -62,14 +61,14 @@ sys.dm_os_volume_stats (database_id, file_id)
 ## Security  
   
 ### Permissions  
- Requires VIEW SERVER STATE permission.  
+ Requires `VIEW SERVER STATE` permission.  
   
 ## Examples  
   
 ### A. Return total space and available space for all database files  
  The following example returns the total space and available space (in bytes) for all database files in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 SELECT f.database_id, f.file_id, volume_mount_point, total_bytes, available_bytes  
 FROM sys.master_files AS f  
 CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);  
@@ -78,7 +77,7 @@ CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);
 ### B. Return total space and available space for the current database  
  The following example returns the total space and available space (in bytes) for the database files in the current database.  
   
-```  
+```sql  
 SELECT database_id, f.file_id, volume_mount_point, total_bytes, available_bytes  
 FROM sys.database_files AS f  
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  

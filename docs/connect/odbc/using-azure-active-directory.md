@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Using Azure Active Directory with the ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -94,7 +93,7 @@ These options correspond to the same five available in the DSN setup UI above.
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_Windows driver only_.) Integrated Windows Authentication using ADAL, which involves redeeming Windows account credentials for an AAD-issued access token, assuming the target database is in Azure SQL Database. Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. (_Windows driver only_.) AAD Interactive Authentication uses Azure Multi-factor Authentication technology to set up connection. In this mode, by providing the login ID, a Windows Azure Authentication dialog is triggered and allows the user to input the password to complete the connection. The username is passed in the connection string.
+7. (_Windows driver only_.) AAD Interactive Authentication uses Azure Multi-factor Authentication technology to set up connection. In this mode, by providing the login ID, a Azure Authentication dialog is triggered and allows the user to input the password to complete the connection. The username is passed in the connection string.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
@@ -158,7 +157,7 @@ The following sample shows the code required to connect to SQL Server using Azur
     ...
     free(pAccToken);
 ~~~
-The following is a sample connection string for use with Azure Active Directory Interactive Authentication. Note that it does not contain PWD field as the password would be entered using Windows Azure Authentication screen.
+The following is a sample connection string for use with Azure Active Directory Interactive Authentication. Note that it does not contain PWD field as the password would be entered using Azure Authentication screen.
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Start or Stop a Collection Set
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,9 @@ manager: craigg
 1.  In Object Explorer, expand the **Management** node, expand **Data Collection**, and then expand **System Data Collection Sets**.  
   
 2.  Right-click the collection set that you want to start, and then click **Start Data Collection Set**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      A message box displays the results of this action, and a green arrow on the icon for the collection set indicates that the collection set has started.  
   
 #### To stop a collection set  

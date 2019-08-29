@@ -2,7 +2,6 @@
 title: High availability in Analytics Platform System | Microsoft Docs
 description: Learn how Analytics Platform System (APS) is architected for high availability. 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

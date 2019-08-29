@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## Arguments  
- [ **@name_in_db =** ] **'***security_account***'**  
+`[ @name_in_db = ] 'security_account'`
  Is the name of database user or database role in the current database. *security_account* must exist in the current database. *security_account* is **sysname**, with a default of NULL. If *security_account* is not specified, **sp_helpuser** returns information about all database principals.  
   
 ## Return Code Values  

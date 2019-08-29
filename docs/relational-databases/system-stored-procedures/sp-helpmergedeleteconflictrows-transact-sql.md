@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +34,16 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. If the publication is specified, all conflicts qualified by the publication are returned.  
   
- [ **@source_object=**] **'**_source_object_**'**  
+`[ @source_object = ] 'source_object'`
  Is the name of the source object. *source_object* is **nvarchar(386)**, with a default of NULL.  
   
- [ **@publisher=**] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher.*publisher* is **sysname**, with a default of NULL.  
   
- [ **@publisher_db=**] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publisher database.*publisher_db* is **sysname**, with a default of NULL.  
   
 ## Result Sets  

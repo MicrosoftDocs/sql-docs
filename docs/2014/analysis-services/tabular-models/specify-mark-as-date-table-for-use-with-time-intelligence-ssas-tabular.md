@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
@@ -47,6 +46,6 @@ manager: craigg
   
 ## See Also  
  [Calculations &#40;SSAS Tabular&#41;](calculations-ssas-tabular.md)   
- [Time Intelligence Functions &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
+ [Time Intelligence Functions &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

@@ -9,7 +9,6 @@ ms.reviewer: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # WideWorldImportersDW use of SQL Server features and capabilities

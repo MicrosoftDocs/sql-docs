@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Accessing a Visual FoxPro Data Source from Microsoft Excel
 If you have Microsoft Query installed, you can create a data source in Microsoft Excel that connects to Visual FoxPro data.  

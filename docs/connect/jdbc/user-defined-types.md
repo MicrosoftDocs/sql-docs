@@ -1,7 +1,7 @@
 ---
-title: "User Defined Types | Microsoft Docs"
+title: "User defined types | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# User Defined Types
+# User defined types
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -21,6 +20,6 @@ User-defined types (UDTs) were introduced in [!INCLUDE[ssVersion2005](../../incl
 
 There is no behavior change for UDTs that are less than or equal to 8,000 bytes, but larger UDTs are supported and report their size as "unlimited".
 
-## See Also
+## See also
 
-[Understanding the JDBC Driver Data Types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[Understanding the JDBC driver data types](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

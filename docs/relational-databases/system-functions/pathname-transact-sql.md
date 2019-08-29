@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

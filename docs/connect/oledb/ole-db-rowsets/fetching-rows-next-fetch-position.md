@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "rowsets [OLE DB], fetching"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Fetching Rows - Next Fetch Position
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

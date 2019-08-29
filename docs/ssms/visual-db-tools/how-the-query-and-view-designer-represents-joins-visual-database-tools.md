@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "joins [SQL Server], Query and View Designer"
   - "Diagram pane [Visual Database Tools]"
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # How the Query and View Designer Represents Joins (Visual Database Tools)

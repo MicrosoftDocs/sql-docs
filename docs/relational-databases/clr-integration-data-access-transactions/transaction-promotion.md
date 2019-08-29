@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Transaction Promotion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

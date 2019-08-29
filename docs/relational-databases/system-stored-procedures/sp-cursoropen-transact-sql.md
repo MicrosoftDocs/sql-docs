@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

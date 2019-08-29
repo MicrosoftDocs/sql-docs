@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "queries [XML in SQL Server], nested FOR XML"
   - "XML [SQL Server], FOR XML queries"
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Shape XML with Nested FOR XML Queries
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

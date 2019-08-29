@@ -9,9 +9,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to a Flat File Data Source (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This topic shows you how to connect to a **flat file** (text file) data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. For flat files, these two pages of the wizard present different sets of options, so this topic describes the flat file source and the flat file destination separately.
 
 ## An alternative for simple text import

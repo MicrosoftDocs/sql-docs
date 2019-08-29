@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], SQLXML"
   - "bulk load [SQLXML], examples"
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # XML Bulk Load Examples (SQLXML 4.0)

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Outdated Backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report models [Reporting Services], creating"
   - "Report Manager [Reporting Services], model creation"
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create a Model Using Report Manager

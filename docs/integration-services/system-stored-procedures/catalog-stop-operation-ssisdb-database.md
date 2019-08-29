@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.stop_operation (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Stops a validation or instance of execution in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

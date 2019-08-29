@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan All for Query Compile Event Class

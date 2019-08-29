@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Data-tier Application Tables - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

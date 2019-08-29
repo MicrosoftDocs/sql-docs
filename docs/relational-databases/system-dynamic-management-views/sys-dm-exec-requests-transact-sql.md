@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/17/2018"
+ms.date: "06/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_requests dynamic management view"
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-author: stevestein
+author: pmasl
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_requests (Transact-SQL)
@@ -83,13 +82,14 @@ Returns information about each request that is executing within [!INCLUDE[ssNoVe
 |group_id|**int**|ID of the workload group to which this query belongs. Is not nullable.|  
 |query_hash|**binary(8)**|Binary hash value calculated on the query and used to identify queries with similar logic. You can use the query hash to determine the aggregate resource usage for queries that differ only by literal values.|  
 |query_plan_hash|**binary(8)**|Binary hash value calculated on the query execution plan and used to identify similar query execution plans. You can use query plan hash to find the cumulative cost of queries with similar execution plans.|  
-|statement_sql_handle|**varbinary(64)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> SQL handle of the individual query. |  
-|statement_context_id|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The optional foreign key to sys.query_context_settings. |  
+|statement_sql_handle|**varbinary(64)**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> SQL handle of the individual query.<br /><br />This column is NULL if Query Store is not enabled for the database. |  
+|statement_context_id|**bigint**|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The optional foreign key to sys.query_context_settings.<br /><br />This column is NULL if Query Store is not enabled for the database. |  
 |dop |**int** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The degree of parallelism of the query. |  
 |parallel_worker_count |**int** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The number of reserved parallel workers if this is a parallel query.  |  
 |external_script_request_id |**uniqueidentifier** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The external script request ID associated with the current request. |  
 |is_resumable |**bit** |**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates whether the request is a resumable index operation. |  
-|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. |
+|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. For more information, see [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_server_reads|**bigint**|**Applies to**: Azure SQL Database Hyperscale<br /><br /> Number of page server reads performed by this request. Is not nullable.|  
 
 ## Remarks 
 To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view do not include time spent in preemptive mode.

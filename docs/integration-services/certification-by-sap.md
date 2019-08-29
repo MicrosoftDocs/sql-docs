@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Certification by SAP
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Microsoft Connector 1.1 for SAP BW has received certification from SAP for integration with SAP NetWeaver.  
   
  ![SAP certified - Integration with SAP NetWeaver](../integration-services/media/sapcertifiedforssis11.gif "SAP certified - Integration with SAP NetWeaver")  

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Uninstall an Existing Instance of SQL Server (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

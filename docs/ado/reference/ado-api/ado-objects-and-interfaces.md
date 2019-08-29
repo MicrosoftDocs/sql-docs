@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADO Objects and Interfaces
 The relationships between these objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  

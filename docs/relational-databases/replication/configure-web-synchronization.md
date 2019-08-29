@@ -32,7 +32,6 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Configure Web Synchronization
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,9 @@ manager: craigg
 3.  Configure a merge publication to allow Web synchronization.  
   
 4.  Configure one or more subscriptions to use Web synchronization.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  If you plan to replicate large volumes of data or use large data types such as **varchar(max)**, read the section "Replicating Large Volumes of Data" in this topic.  
   
@@ -130,7 +131,7 @@ manager: craigg
   
 -   If you replicate large volumes of data, you might have to adjust the Merge Agent batch size.  
   
- Batch size for merge replication is measured in *generations*, which are collections of changes per article. The number of generations in a batch is specified by using the–**DownloadGenerationsPerBatch** and –**UploadGenerationsPerBatch** parameters of the Merge Agent. For more information, see [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ Batch size for merge replication is measured in *generations*, which are collections of changes per article. The number of generations in a batch is specified by using the -**DownloadGenerationsPerBatch** and -**UploadGenerationsPerBatch** parameters of the Merge Agent. For more information, see [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  For large volumes of data, specify a small number for each of the batching parameters. We recommend that you start with a value of 10, and then tune based on application needs and performance. Typically, these parameters are specified in an agent profile. For more information about profiles, see [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

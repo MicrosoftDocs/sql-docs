@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # CompareBookmarks Method Example (VC++)
 This example demonstrates the [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) method. The relative value of bookmarks is seldom needed unless a particular bookmark is somehow special.  

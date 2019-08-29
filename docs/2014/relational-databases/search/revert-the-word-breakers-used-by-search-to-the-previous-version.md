@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Revert the Word Breakers Used by Search to the Previous Version

@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: c09ea433-d283-4f83-af69-d458aad59217
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_server_diagnostics_log_configurations

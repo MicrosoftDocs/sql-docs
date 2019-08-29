@@ -1,7 +1,7 @@
 ---
-title: "Modifying Result Set Data Sample | Microsoft Docs"
+title: "Modifying result set data sample | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 
-# Modifying Result Set Data Sample
+# Modifying result set data sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -106,6 +105,6 @@ public class UpdateResultSet {
 }
 ```
 
-## See Also
+## See also
 
-[Working with Result Sets](../../connect/jdbc/working-with-result-sets.md)
+[Working with result sets](../../connect/jdbc/working-with-result-sets.md)

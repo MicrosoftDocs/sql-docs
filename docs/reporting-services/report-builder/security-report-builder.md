@@ -2,14 +2,14 @@
 title: "Security (Report Builder) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Security (Report Builder)
   Report Builder is a report authoring client application that is designed to work with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server. The report server can be configured to work in native mode as a stand-alone server or in SharePoint integrated mode to support reports on a SharePoint site.  
@@ -90,7 +90,7 @@ ms.author: maghan
   
 -   [Security Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- For more information about data sources, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ For more information about data sources, see [Data Connections, Data Sources, and Connection Strings in Report Builder](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Understanding Models and Security Filters  
@@ -110,7 +110,7 @@ ms.author: maghan
   
   
 ## See Also  
- [Install and Uninstall Report Builder](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [Install Report Builder](../install-windows/install-report-builder.md)  
  [Report Parameters &#40;Report Builder and Report Designer&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

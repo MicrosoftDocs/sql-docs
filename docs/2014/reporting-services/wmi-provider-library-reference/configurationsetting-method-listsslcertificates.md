@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ListSSLCertificates method"
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # ListSSLCertificates Method (WMI MSReportServer_ConfigurationSetting)

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)
@@ -91,5 +90,6 @@ public static int Main(String[] args)
      This creates an executable (DocSample.exe).  
   
 4.  At the command prompt, execute DocSample.exe.  
-  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

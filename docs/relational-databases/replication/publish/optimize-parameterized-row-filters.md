@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Optimize Parameterized Row Filters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

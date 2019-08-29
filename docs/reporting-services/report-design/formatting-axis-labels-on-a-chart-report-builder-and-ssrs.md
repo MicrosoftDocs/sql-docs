@@ -2,7 +2,7 @@
 title: "Formatting Axis Labels on a Chart (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -25,8 +25,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Formatting Axis Labels on a Chart (Report Builder and SSRS)
   Coordinate-based chart types (column, bar, area, point, line, and range) have two axes that are used to categorize and display data relationships. Different types of formatting will be applied to each axis.  

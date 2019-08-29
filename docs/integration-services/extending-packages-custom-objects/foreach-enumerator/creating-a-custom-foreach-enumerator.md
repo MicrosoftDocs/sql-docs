@@ -15,9 +15,12 @@ helpviewer_keywords:
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Creating a Custom Foreach Enumerator
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The steps involved in creating a custom foreach enumerator are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
 -   Create a new class that inherits from the base class. For a foreach enumerator, the base class is <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>.  

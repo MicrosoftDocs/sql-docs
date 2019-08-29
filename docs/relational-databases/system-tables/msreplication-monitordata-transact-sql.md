@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

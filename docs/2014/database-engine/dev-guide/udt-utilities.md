@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft

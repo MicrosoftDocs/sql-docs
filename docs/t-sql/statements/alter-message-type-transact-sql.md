@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

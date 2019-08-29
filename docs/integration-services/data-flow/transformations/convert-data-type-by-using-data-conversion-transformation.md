@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Convert Data Type by Using Data Conversion Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To add and configure a Data Conversion transformation, the package must already include at least one Data Flow task and one source.  
   
 ### To convert data to a different data type  

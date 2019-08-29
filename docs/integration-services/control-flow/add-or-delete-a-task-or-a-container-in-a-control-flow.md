@@ -15,9 +15,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add or Delete a Task or a Container in a Control Flow
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When you are working in the control flow designer, the Toolbox in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer lists the tasks that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides for building control flow in a package. For more information about the Toolbox, see [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
   
  A package can include multiple instances of the same task. Each instance of a task is uniquely identified in the package, and you can configure each instance differently.  

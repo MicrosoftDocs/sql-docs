@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getBinaryStream Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Modules and Prologs - XQuery Prolog
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

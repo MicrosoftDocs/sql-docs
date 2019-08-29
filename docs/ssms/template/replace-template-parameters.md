@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "Replace (Query) Template Parameters dialog box"
   - "replacing template parameters"
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Replace Template Parameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

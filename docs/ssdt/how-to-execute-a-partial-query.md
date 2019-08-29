@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Execute a Partial Query
 The Transact\-SQL Editor allows you to highlight a specific segment of the script and execute it as a single query. This makes it easy for you to debug sections of complex queries.  

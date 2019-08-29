@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10040"
@@ -13,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Expression dialog box [Reporting Services]"
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Expression Dialog Box

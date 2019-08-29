@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Column Name Limitations
 Column names can contain any valid characters (for example, spaces). If column names contain any characters except letters, numbers, and underscores, the name must be delimited by enclosing it in back quotes (`).  

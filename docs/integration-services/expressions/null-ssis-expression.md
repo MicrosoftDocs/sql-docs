@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # NULL (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a null value of a requested data type.  
   
 ## Syntax  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Handling Large Object (LOB) Parameters in the CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

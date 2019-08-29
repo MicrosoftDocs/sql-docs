@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

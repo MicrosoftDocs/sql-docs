@@ -12,9 +12,12 @@ f1_keywords:
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Manage an Oracle CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can use the CDC Service Configuration Console to manage a specific CDC Service.  
   
  **To select the CDC service you want to work with**  

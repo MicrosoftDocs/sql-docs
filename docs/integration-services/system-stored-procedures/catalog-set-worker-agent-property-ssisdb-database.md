@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.set_worker_agent_property (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Sets the property of a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker.

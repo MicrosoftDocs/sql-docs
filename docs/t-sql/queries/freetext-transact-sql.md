@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

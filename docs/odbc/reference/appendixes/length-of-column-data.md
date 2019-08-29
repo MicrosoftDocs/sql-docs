@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Length of Column Data
 > [!IMPORTANT]  

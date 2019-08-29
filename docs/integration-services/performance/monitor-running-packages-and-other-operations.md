@@ -13,9 +13,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Monitor Running Packages and Other Operations
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package executions, project validations, and other operations by using one of more of the following tools. Certain tools such as data taps are available only for projects that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
 -   Logs  

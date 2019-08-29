@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, starting"
   - "starting jobs"
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Start a Job

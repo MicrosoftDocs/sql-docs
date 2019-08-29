@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Object:Altered Event Class

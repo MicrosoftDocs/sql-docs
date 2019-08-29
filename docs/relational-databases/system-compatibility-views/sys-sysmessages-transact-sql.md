@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysmessages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

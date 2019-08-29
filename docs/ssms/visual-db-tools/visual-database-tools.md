@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

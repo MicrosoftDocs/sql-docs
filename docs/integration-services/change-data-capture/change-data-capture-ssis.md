@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Change Data Capture (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], change data capture offers an effective solution to the challenge of efficiently performing incremental loads from source tables to data marts and data warehouses.  
   
 ## What is Change Data Capture?  

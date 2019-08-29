@@ -1,27 +1,28 @@
 ---
 title: Configure Azure Kubernetes Service
-titleSuffix: SQL Server 2019 big data clusters
-description: Learn how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 02/28/2019
+titleSuffix: SQL Server big data clusters
+description: Learn how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
-# Configure Azure Kubernetes Service for SQL Server 2019 big data cluster (preview) deployments
+# Configure Azure Kubernetes Service for SQL Server big data cluster deployments
 
-This article describes how to configure Azure Kubernetes Service (AKS) for SQL Server 2019 big data cluster (preview) deployments.
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+This article describes how to configure Azure Kubernetes Service (AKS) for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] deployments.
 
 AKS makes it simple to create, configure, and manage a cluster of virtual machines that are preconfigured with a Kubernetes cluster to run containerized applications. This enables you to use your existing skills or draw upon a large and growing body of community expertise, to deploy and manage container-based applications on Microsoft Azure.
 
 This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If you don't have an Azure subscription, create a free account before you begin.
 
-> [!TIP] 
-> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
+> [!TIP]
+> You can also script the deployment of AKS and a big data cluster in one step. For more information, see how to do this in a [python script](quickstart-big-data-cluster-deploy.md) or an Azure Data Studio [notebook](deploy-notebooks.md).
 
 ## Prerequisites
 
@@ -31,12 +32,12 @@ This article describes the steps to deploy Kubernetes on AKS using Azure CLI. If
    - **SQL Server 2019 extension**
    - **Azure CLI**
 
-- Minimum 1.10 version for Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
+- Minimum 1.13 version for Kubernetes server. For AKS, you need to use `--kubernetes-version` parameter to specify a version different than the default.
 
 - For an optimal experience while validating basic scenarios on AKS, use:
-   - Minimum of 3 agent VMs
-   - 4 vCPUs per VM
+   - 8 vCPUs across all nodes
    - 32 GB of memory per VM
+   - 24 or more attached disks across all nodes
 
    > [!TIP]
    > Azure infrastructure offers multiple size options for VMs, see [here](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) for selections in the region you are planning to deploy.
@@ -63,28 +64,74 @@ An Azure resource group is a logical group in which Azure resources are deployed
    az account set --subscription <subscription id>
    ```
 
-1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbigdatagroup` in the `westus2` location.
+1. Create a resource group with the **az group create** command. The following example creates a resource group named `sqlbdcgroup` in the `westus2` location.
 
    ```azurecli
-   az group create --name sqlbigdatagroup --location westus2
+   az group create --name sqlbdcgroup --location westus2
    ```
+
+## Verify available Kubernetes versions
+
+Use the latest available version of Kubernetes. The latest available version depends on the location where you are deploying the cluster. The following command returns Kubernetes versions available in a specific location.
+
+Before you run the command, update the script. Replace `<Azure data center>` with the location of your cluster.
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+Choose the latest available version for your cluster. Record the version number. You will use it in the next step.
 
 ## Create a Kubernetes cluster
 
-1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with three Linux agent nodes. Make sure you create the AKS cluster in the same resource group that you used in the previous sections.
+1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named *kubcluster* with one Linux agent node of size **Standard_L8s**.
 
-    ```azurecli
+   Before you run the script, replace `<version number>` with the version number you identified in the previous step.
+
+   Make sure you create the AKS cluster in the same resource group that you used in the previous sections.
+
+   **bash:**
+
+   ```bash
    az aks create --name kubcluster \
-    --resource-group sqlbigdatagroup \
-    --generate-ssh-keys \
-    --node-vm-size Standard_L4s \
-    --node-count 3 \
-    --kubernetes-version 1.10.9
-    ```
+   --resource-group sqlbdcgroup \
+   --generate-ssh-keys \
+   --node-vm-size Standard_L8s \
+   --node-count 1 \
+   --kubernetes-version <version number>
+   ```
 
-   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. So in the example above, there are **3** VMs of size **Standard_L4s** used for the agent nodes of your AKS cluster.
+   **PowerShell:**
+
+   ```powershell
+   az aks create --name kubcluster `
+   --resource-group sqlbdcgroup `
+   --generate-ssh-keys `
+   --node-vm-size Standard_L8s `
+   --node-count 1 `
+   --kubernetes-version <version number>
+   ```
+
+   You can increase or decrease the number of Kubernetes agent nodes by changing the `--node-count <n>` where `<n>` is the number of agent nodes you want to use. This does not include the master Kubernetes node, which is managed behind the scenes by AKS. The previous example only uses a single node for evaluation purposes.
 
    After several minutes, the command completes and returns JSON-formatted information about the cluster.
+
+   > [!TIP]
+   > If you get any errors creating the cluster in AKS, see the [troubleshooting section](#troubleshoot) of this article.
 
 1. Save the JSON output from the previous command for later use.
 
@@ -93,17 +140,24 @@ An Azure resource group is a logical group in which Azure resources are deployed
 1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command. This step downloads credentials and configures the kubectl CLI to use them.
 
    ```azurecli
-   az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
+   az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
 1. To verify the connection to your cluster, use the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) command to return a list of the cluster nodes.  The example below shows the output if you were to have 1 master and 3 agent nodes.
 
-   ```
+   ```bash
    kubectl get nodes
    ```
 
+## <a id="troubleshoot"></a> Troubleshooting
+
+If you have any problems creating an Azure Kubernetes Service with the previous commands, try the following resolutions:
+
+- Make sure that you have installed the [latest Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Try the same steps using a different resource group and cluster name.
+
 ## Next steps
 
-The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy SQL Server 2019 big data to the cluster. For more information on how to deploy big data clusters, see the following article:
+The steps in this article configured a Kubernetes cluster in AKS. The next step is to deploy a SQL Server 2019 big data cluster on the AKS Kubernetes cluster. For more information on how to deploy big data clusters, see the following article:
 
-[How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+[How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

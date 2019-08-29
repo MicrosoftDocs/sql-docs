@@ -18,9 +18,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Identify the Source of Packages with Digital Signatures
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package can be signed with a digital certificate to identify its source. After a package has been signed with a digital certificate, you can have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] check the digital signature before loading the package. To have [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] check the signature, you set an option in either [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] or in the **dtexec** utility (dtexec.exe), or set an optional registry value.  
   
 ## Sign a package with a digital certificate  

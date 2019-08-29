@@ -13,7 +13,6 @@ helpviewer_keywords:
   - "ghost clean up process" 
 author: MashaMSFT
 ms.author: mathoma
-manager: "craigg"
 ---
 # Ghost cleanup process guide
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Always On Client Connectivity (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

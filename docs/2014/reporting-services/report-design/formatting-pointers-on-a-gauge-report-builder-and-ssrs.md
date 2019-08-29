@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Formatting Pointers on a Gauge (Report Builder and SSRS)

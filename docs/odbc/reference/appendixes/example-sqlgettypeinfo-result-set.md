@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Example SQLGetTypeInfo Result Set
 An application calls **SQLGetTypeInfo** to determine which data types are supported by a data source and the characteristics of those data types. The following tables show a sample result set returned by **SQLGetTypeInfo** for a data source that supports SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR, and SQL_INTERVAL_DAY_TO_SECOND.  

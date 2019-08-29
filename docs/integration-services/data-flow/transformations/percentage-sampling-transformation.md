@@ -21,9 +21,12 @@ helpviewer_keywords:
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Percentage Sampling Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Percentage Sampling transformation creates a sample data set by selecting a percentage of the transformation input rows. The sample data set is a random selection of rows from the transformation input, to make the resultant sample representative of the input.  
   
 > [!NOTE]  

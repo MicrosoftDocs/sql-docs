@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "Transact-SQL cursors, attributes"
   - "global cursors [SQL Server]"
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

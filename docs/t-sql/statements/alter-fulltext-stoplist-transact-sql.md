@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

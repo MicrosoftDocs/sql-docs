@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], queries"
   - "templates [SQLXML], annotated XSD schemas in queries"
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using Annotated XSD Schemas in Queries (SQLXML 4.0)

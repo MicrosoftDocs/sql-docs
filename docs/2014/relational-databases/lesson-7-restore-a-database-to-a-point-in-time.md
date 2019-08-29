@@ -1,25 +1,24 @@
 ---
-title: "Lesson 8. Restore a database to Windows Azure Storage | Microsoft Docs"
+title: "Lesson 8. Restore a database to Azure Storage | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Lesson 8. Restore a database to Windows Azure Storage
-  In this lesson, you will learn how to create a backup file locally and then restore it to Windows Azure Storage. Note that you can have your database either on either on-premises or in a virtual machine in Windows Azure. To follow this lesson, you do not need to complete Lesson 4, 5, 6, and 7.  
+# Lesson 8. Restore a database to Azure Storage
+  In this lesson, you will learn how to create a backup file locally and then restore it to Azure Storage. Note that you can have your database either on either on-premises or in a virtual machine in Azure. To follow this lesson, you do not need to complete Lesson 4, 5, 6, and 7.  
   
  This lesson assumes that you already completed the following steps:  
   
--   You have a Windows Azure Storage account.  
+-   You have a Azure Storage account.  
   
--   You have created a container under your Windows Azure Storage account.  
+-   You have created a container under your Azure Storage account.  
   
 -   You have created a policy on a container with read, write, and list rights. You also generated a SAS key.  
   
@@ -27,13 +26,13 @@ manager: craigg
   
 -   You have created a database in the source machine.  
   
- To restore a database to Windows Azure Storage, you can follow these steps:  
+ To restore a database to Azure Storage, you can follow these steps:  
   
 1.  In the source machine, start SQL Server Management Studio.  
   
 2.  When connected to the newly created database, open the query window. Run the following statement:  
   
-    ```tsql  
+    ```sql  
   
     USE TestDB3Restore;   
     GO   
@@ -47,7 +46,7 @@ manager: craigg
   
 3.  Next, copy and run the following statements in the Query window.  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     GO   
@@ -62,7 +61,7 @@ manager: craigg
   
      At the end of this step, your container should list data (.mdf) and (.ldf) files on the Management Portal.  
   
- To restore a database with data and log files pointing to Windows Azure Storage using SQL Server Management Studio user interface, perform these steps:  
+ To restore a database with data and log files pointing to Azure Storage using SQL Server Management Studio user interface, perform these steps:  
   
 1.  In **Object Explorer**, click the server name to expand the server tree.  
   
@@ -92,6 +91,6 @@ manager: craigg
   
  **Next Lesson:**  
   
- [Lesson 9. Restore a database from Windows Azure Storage](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [Lesson 9. Restore a database from Azure Storage](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

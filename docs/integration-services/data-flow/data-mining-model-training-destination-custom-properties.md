@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Data Mining Model Training Destination Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Data Mining Model Training destination has both custom properties and the properties common to all data flow components.  
   
  The following table describes the custom properties of the Data Mining Model Training destination. All properties are read/write.  

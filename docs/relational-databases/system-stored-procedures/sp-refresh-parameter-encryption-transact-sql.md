@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)
@@ -41,10 +40,10 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## Arguments
 
-[ **@name =** ] **'***module_name***'**   
+`[ @name = ] 'module_name'`
 Is the name of the stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger. *module_name* cannot be a common language runtime (CLR) stored procedure or a CLR function. *module_name* cannot be schema-bound. *module_name* is `nvarchar`, with no default. *module_name* can be a multi-part identifier, but can only refer to objects in the current database.
 
-[ **@namespace =** ] **'** < class > **'**   
+`[ @namespace = ] ' < class > '`
 Is the class of the specified module. When *module_name* is a DDL trigger, `<class>` is required. `<class>` is `nvarchar(20)`. Valid inputs are `DATABASE_DDL_TRIGGER` and `SERVER_DDL_TRIGGER`.  	
 
 ## Return Code Values  

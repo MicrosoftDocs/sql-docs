@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], modifying"
   - "modifying indexes"
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Modify XML Indexes

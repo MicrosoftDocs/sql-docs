@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLError Function
 **Conformance**  

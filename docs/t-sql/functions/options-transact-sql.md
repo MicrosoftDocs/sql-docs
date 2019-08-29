@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "@@OPTIONS function"
   - "current SET options"
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # &#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

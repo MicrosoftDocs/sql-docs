@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Modify an Existing Trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +23,9 @@ manager: craigg
 1.  If the trace is already running, execute **sp_trace_setstatus** by specifying **@status = 0** to stop the trace.  
   
 2.  To modify trace events, execute **sp_trace_setevent** by specifying the changes through the parameters. Listed in order, the parameters are:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **@traceid** (Trace ID)  
   
     -   **@eventid** (Event ID)  

@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP PROCEDURE (Transact-SQL)

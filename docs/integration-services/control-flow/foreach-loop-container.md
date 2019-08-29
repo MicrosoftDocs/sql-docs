@@ -1,7 +1,7 @@
 ---
 title: "Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/22/2017"
+ms.date: "05/22/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -30,9 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Foreach Loop Container
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Foreach Loop container defines a repeating control flow in a package. The loop implementation is similar to **Foreach** looping structure in programming languages. In a package, looping is enabled by using a Foreach enumerator.  The Foreach Loop container repeats the control flow for each member of a specified enumerator.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides the following enumerator types:  
@@ -43,7 +46,7 @@ manager: craigg
   
 -   Foreach ADO.NET Schema Rowset enumerator to enumerate the schema information about a data source. For example, you can enumerate and get a list of the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
--   Foreach File enumerator to enumerate files in a folder. The enumerator can traverse subfolders. For example, you can read all the files that have the *.log file name extension in the Windows folder and its subfolders.  
+-   Foreach File enumerator to enumerate files in a folder. The enumerator can traverse subfolders. For example, you can read all the files that have the *.log file name extension in the Windows folder and its subfolders. Note that the order in which the files are retrieved cannot be specified.  
   
 -   Foreach From Variable enumerator to enumerate the enumerable object that a specified variable contains. The enumerable object can be an array, an ADO.NET **DataTable**, an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enumerator, and so on. For example, you can enumerate the values of an array that contains the name of servers.  
   
@@ -58,6 +61,8 @@ manager: craigg
 -   Foreach Azure Blob enumerator to enumerate blobs in a blob container in Azure Storage.  
 
 -   Foreach ADLS File enumerator to enumerate files in a directory in Azure Data Lake Store.
+
+-   Foreach Data Lake Storage Gen2 File enumerator to enumerate files in a directory in Azure Data Lake Store Gen2.
   
  The following diagram shows a Foreach Loop container that has a File System task. The Foreach loop uses the Foreach File enumerator, and the File System task is configured to copy a file. If the folder that the enumerator specifies contains four files, the loop repeats four times and copies four files.  
   
@@ -88,6 +93,7 @@ manager: craigg
 |Foreach HDFS File Enumerator|Specify a folder and the files to enumerate, the format of the file name of the retrieved files, and whether to traverse subfolders.|  
 |Foreach Azure Blob|Specify the Azure blob container that containers blobs to be enumerated.|  
 |Foreach ADLS File|Specify the Azure Data Lake Store directory that contains the files to be enumerated.|
+|Foreach Data Lake Storage Gen2 File|Specify the Azure Data Lake Storage Gen2 directory that contains the files to be enumerated, along with other options.|
 
 ## Add enumeration to a control flow with a Foreach Loop container
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the Foreach Loop container, a control flow element that makes it simple to include a looping construct that enumerates files and objects in the control flow of a package. For more information, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -205,6 +211,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 |**Foreach HDFS File Enumerator**|Enumerate HDFS files in the specified HDFS location. Selecting this value displays the dynamic options in the section, **Foreach HDFS File Enumerator**.|  
 |**Foreach Azure Blob Enumerator**|Enumerate blob files in the specified blob location. Selecting this value displays the dynamic options in the section, **Foreach Azure Blob Enumerator**.|  
 |**Foreach ADLS File Enumerator**|Enumerate files in the specified Data Lake Store directory. Selecting this value displays the dynamic options in the section, **Foreach ADLS File Enumerator**.|
+|**Foreach Data Lake Storage Gen2 File Enumerator**|Enumerate files in the specified Data Lake Storage Gen2 directory. Selecting this value displays the dynamic options in the section, **Foreach Data Lake Storage Gen2 File Enumerator**.|
   
  **Expressions**  
  Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(...)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
@@ -460,6 +467,9 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Blob directory**  
  Specify the blob directory that contains the blob files to be enumerated. The blob directory is a virtual hierarchical structure.  
   
+ **Search recursively**  
+ Specify whether to recursively search within sub-directories.
+
  **Blob name filter**  
  Specify a name filter to enumerate files with a certain name pattern. For example, `MySheet*.xls\*` includes files such as MySheet001.xls and MySheetABC.xlsx.  
   
@@ -480,6 +490,30 @@ Specifies a file name filter. Only files whose names match the specified pattern
   
 **SearchRecursively**  
 Specifies whether to search recursively within the specified directory.  
+
+####  <a name="ForeachBlobFsFile"></a> Enumerator = Foreach Data Lake Storage Gen2 File Enumerator 
+The **Foreach Data Lake Storage Gen2 File Enumerator** enables an SSIS package to enumerate files in Azure Data Lake Storage Gen2.
+
+**AzureStorageConnection**  
+Specifies an existing Azure Storage Connection Manager or creates a new one that references a Data Lake Storage Gen2 service.
+
+**FolderPath**  
+Specifies the path of the folder to enumerate files in.
+
+**SearchRecursively**  
+Specifies whether to search recursively within the specified folder.
+
+***Notes on Service Principal Permission Configuration***
+
+Data Lake Storage Gen2 permission is determined by both [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) and [ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Pay attention that ACLs are configured using the Object ID (OID) of the service principal for the app registration as detailed [here](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+This is different from the Application (client) ID that is used with RBAC configuration.
+When a security principal is granted RBAC data permissions through a built-in role, or through a custom role, these permissions are evaluated first upon authorization of a request.
+If the requested operation is authorized by the security principal's RBAC assignments, then authorization is immediately resolved and no additional ACL checks are performed.
+Alternatively, if the security principal does not have an RBAC assignment, or the request's operation does not match the assigned permission, then ACL checks are performed to determine if the security principal is authorized to perform the requested operation.
+For the enumerator to work, grant at least **Execute** permission starting from the root file system, along with **Read** permission for the target folder.
+Alternatively, grant at least the **Storage Blob Data Reader** role with RBAC.
+See [this](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) article for details.
 
 ## Variable Mappings Page - Foreach Loop Editor
  Use the **Variables Mappings** page of the **Foreach Loop Editor** dialog box to map variables to the collection value. The value of the variable is updated with the collection values on each iteration of the loop.  

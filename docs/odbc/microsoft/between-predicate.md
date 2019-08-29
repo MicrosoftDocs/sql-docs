@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # BETWEEN Predicate
 The syntax:  

@@ -13,7 +13,6 @@ ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
 author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use FOR JSON output in SQL Server and in client apps (SQL Server)

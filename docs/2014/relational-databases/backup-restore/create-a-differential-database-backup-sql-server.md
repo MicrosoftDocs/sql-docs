@@ -148,7 +148,7 @@ manager: craigg
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a full and a differential database backup for the `MyAdvWorks` database.  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   

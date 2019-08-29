@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "DeleteEncryptedInformation method"
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # DeleteEncryptedInformation Method (WMI MSReportServer_ConfigurationSetting)

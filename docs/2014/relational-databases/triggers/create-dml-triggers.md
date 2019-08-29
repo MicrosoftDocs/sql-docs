@@ -64,7 +64,7 @@ manager: craigg
   
 7.  In the **Query Editor**, replace the comment `-- Insert statements for trigger here` with the following statement:  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  

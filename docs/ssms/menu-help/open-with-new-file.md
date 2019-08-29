@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Open With dialog box"
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Open With (New File)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

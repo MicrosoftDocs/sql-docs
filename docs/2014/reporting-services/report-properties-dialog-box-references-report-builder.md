@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10082"
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Properties Dialog Box, References (Report Builder)

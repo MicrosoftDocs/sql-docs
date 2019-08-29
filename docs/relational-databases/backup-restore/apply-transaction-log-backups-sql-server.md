@@ -1,7 +1,7 @@
 ---
 title: "Apply Transaction Log Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/13/2016"
+ms.date: "08/14/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Apply Transaction Log Backups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,12 @@ manager: craigg
 |8:00 P.M.|Back up transaction log.|  
 |9:45 P.M.|Failure occurs.|  
   
-> **NOTE:** For an explanation of this example sequence of backups, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+> For an explanation of this example sequence of backups, see [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  To restore the database to its state at 9:45 P.M. (the point of failure), either of the following alternative procedures can be used:  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **Alternative 1: Restore the database by using the most recent full database backup**  
   
 1.  Create a tail-log backup of the currently active transaction log as of the point of failure.  
@@ -67,7 +68,7 @@ manager: craigg
   
  **Alternative 2: Restore the database by using an earlier full database backup**  
   
-> **NOTE:** This alternative process is useful if a problem prevents you from using the 6:00 P.M. full database backup. This process takes longer than restoring from the 6:00 P.M. full database backup.  
+> This alternative process is useful if a problem prevents you from using the 6:00 P.M. full database backup. This process takes longer than restoring from the 6:00 P.M. full database backup.  
   
 1.  Create a tail-log backup of the currently active transaction log as of the point of failure.  
   
@@ -75,7 +76,7 @@ manager: craigg
   
      This alternative points out the redundant security offered by maintaining a chain of transaction log backups across a series of full database backups.  
   
-> **NOTE:** In some cases, you can also use transaction logs to restore a database to a specific point in time. For more information, [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+> In some cases, you can also use transaction logs to restore a database to a specific point in time. For more information, [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 ##  <a name="RelatedTasks"></a> Related tasks  
  **To apply a transaction log backup**  

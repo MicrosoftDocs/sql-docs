@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10131"
   - "sql12.rtp.rptdesigner.placeholderproperties.general.f1"
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Placeholder Properties Dialog Box, General (Report Builder and SSRS)

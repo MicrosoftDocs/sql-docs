@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Delete Packages
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can delete packages saved to the file system. If you delete a package, it is deleted permanently and it cannot be restored to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 > [!NOTE]  

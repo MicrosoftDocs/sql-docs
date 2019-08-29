@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helppublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns information on the Snapshot agent for a given publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -33,10 +32,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@publisher =** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # How to Create the SQL Server Change Database Instance
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This procedure describes how to use the CDC Designer Console to create CDC instances.  
   
 ### To create CDC instances  

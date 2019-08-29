@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # SQL Server Agent Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

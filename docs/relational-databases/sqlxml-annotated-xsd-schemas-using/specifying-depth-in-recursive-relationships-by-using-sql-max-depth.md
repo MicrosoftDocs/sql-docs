@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "recursive joins [SQLXML]"
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ""
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying Depth in Recursive Relationships by Using sql:max-depth
@@ -142,7 +141,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
     ```  
   
 5.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template. For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  This is the result:  
   
 ```  

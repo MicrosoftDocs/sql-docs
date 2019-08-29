@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 0d9fce3c-3772-46ce-a7a3-4f4988dc6cae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER - Database Engine error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

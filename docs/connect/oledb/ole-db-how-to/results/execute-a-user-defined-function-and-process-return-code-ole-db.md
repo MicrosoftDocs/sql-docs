@@ -12,7 +12,6 @@ helpviewer_keywords:
   - "user-defined functions [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Execute a User-Defined Function and Process Return Code (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

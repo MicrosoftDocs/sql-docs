@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "formats [Reporting Services], URL rendering"
   - "URL access [Reporting Services], rendering formats"
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Export a Report Using URL Access

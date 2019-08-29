@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -230,7 +229,9 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   Node `b`, because a predicate is applied over node`b` in the XQuery expression.  
   
 2.  **Principle 2**: For best performance, index all nodes that are required to evaluate a given XQuery expression. If you index only some of the nodes, then the selective XML index improves the evaluation of sub-expressions that include only indexed nodes.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  To improve the performance of the SELECT statement shown above, you can create the following selective XML index:  
   
 ```sql  

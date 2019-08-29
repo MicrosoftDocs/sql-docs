@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Tutorial: Introducing Expressions

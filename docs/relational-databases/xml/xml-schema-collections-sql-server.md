@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server]"
   - "schema collections [SQL Server], about XML schema collections"
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # XML Schema Collections (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

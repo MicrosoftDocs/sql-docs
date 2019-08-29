@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.extended_operation_info (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays extended information for all operations in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

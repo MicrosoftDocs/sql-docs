@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setResponseBuffering Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

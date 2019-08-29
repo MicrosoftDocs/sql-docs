@@ -1,8 +1,7 @@
 ---
 title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
@@ -29,15 +28,15 @@ In addition to an active internet connection so you can browse to the [!INCLUDE[
 
 - Reports that you want to pin from must use stored credentials. This is not a requirement of the [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] integration itself but of the refresh process for the pinned items.  The action of pinning a report item creates a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription to manage the refresh schedule of the tiles in [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions require stored credentials. If a report does not use stored credentials, a user can still pin report items but when the associated subscription attempts to refresh the data to [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)], you will see an error message similar to the following on the **My Subscriptions** page.
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
 
 For more information on how to store credentials, see the section "Configure stored credentials for a report-specific data source" in [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 An administrator can review the  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files for more information.  They will see messages similar to the following. A great way to  review and monitor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] logs files is to use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query over the files.  for more information and a short video, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
 ## <a name="bkmk_steps2integrate"></a> To Integrate and Register the Report Server
 
@@ -108,7 +107,7 @@ This sections summarizes the basic steps and technologies involved when you inte
 
 1. Users preview reports in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] and the first time they click to pin a report item from the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. They will be redirected to the Azure AD sign-in page. They can also sign in from the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. When users sign in to the Azure managed tenant, a relationship is established between their Azure account and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permissions.  For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. They will be redirected to the Azure AD sign-in page. They can also sign in from the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. When users sign in to the Azure managed tenant, a relationship is established between their Azure account and the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permissions.  For more information, see [My Settings for Power BI Integration &#40;web portal&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. A user security token is returned to the report server.
 
@@ -120,7 +119,7 @@ This sections summarizes the basic steps and technologies involved when you inte
 
 7. A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription is created to manage the scheduled refresh of the report item to the dashboard tile. The subscription uses the security token that was created when the user signed in.
 
-     The token is good for **90 days**, after which users need to sign in again to create a new user token. When the token is expired,  the pinned tiles will still be displayed on the dashboard but the data will no longer be refreshed.  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions used for the pinned items will error until a new user token is created. See [My Settings for Power BI Integration &#40;web portal&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). for more information.
+     The token is good for **90 days**, after which users need to sign in again to create a new user token. When the token is expired,  the pinned tiles will still be displayed on the dashboard but the data will no longer be refreshed.  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions used for the pinned items will error until a new user token is created. See [My Settings for Power BI Integration &#40;web portal&#41;](../my-settings-for-power-bi-integration-web-portal.md). for more information.
 
 The second time a user pins an item, the steps 1-4 are skipped and instead the App id and URLS are retrieved from the ReportServer database and the flow continues with step 5.
 
@@ -148,7 +147,7 @@ The second time a user pins an item, the steps 1-4 are skipped and instead the A
 
 ## Next steps
 
-[My Settings for Power BI Integration](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[My Settings for Power BI Integration &#40;web portal&#41;](../my-settings-for-power-bi-integration-web-portal.md)  
 [Pin Reporting Services items to Power BI Dashboards](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 

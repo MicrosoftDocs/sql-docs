@@ -15,7 +15,6 @@ helpviewer_keywords:
   - "bulk copy [OLE DB], about bulk copy"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

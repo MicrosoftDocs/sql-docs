@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR User-Defined Functions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

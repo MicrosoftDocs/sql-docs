@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSdistributiondbs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

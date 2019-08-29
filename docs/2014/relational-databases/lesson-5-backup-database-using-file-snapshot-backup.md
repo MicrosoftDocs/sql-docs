@@ -1,5 +1,5 @@
 ---
-title: "Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure | Microsoft Docs"
+title: "Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
@@ -11,22 +11,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure
-  This lesson assumes that you already have another SQL Server, which might reside in another on-premises computer or in a virtual machine in Windows Azure. For information on how to create a SQL Server virtual machine in Windows Azure, see [Provisioning a SQL Server Virtual Machine on Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). After provisioning a SQL Server virtual machine in Windows Azure, make sure that you can connect to an instance of SQL Server in this virtual machine via SQL Server Management Studio in another computer.  
+# Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Azure
+  This lesson assumes that you already have another SQL Server, which might reside in another on-premises computer or in a virtual machine in Azure. For information on how to create a SQL Server virtual machine in Azure, see [Provisioning a SQL Server Virtual Machine on Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). After provisioning a SQL Server virtual machine in Azure, make sure that you can connect to an instance of SQL Server in this virtual machine via SQL Server Management Studio in another computer.  
   
  This lesson also assumes that you already completed the following steps:  
   
--   You have a Windows Azure Storage account.  
+-   You have a Azure Storage account.  
   
--   You have created a container under your Windows Azure Storage account.  
+-   You have created a container under your Azure Storage account.  
   
 -   You have created a policy on a container with read, write, and list rights. You also generated a SAS key.  
   
 -   You have created a SQL Server credential on the source machine.  
   
--   You already have created a destination SQL Server virtual machine in Windows Azure. We recommend that you create it by selecting a platform image that includes SQL Server 2014.  
+-   You already have created a destination SQL Server virtual machine in Azure. We recommend that you create it by selecting a platform image that includes SQL Server 2014.  
   
- To migrate a database from SQL Server on-premises to another virtual machine in Windows Azure, you can follow these steps:  
+ To migrate a database from SQL Server on-premises to another virtual machine in Azure, you can follow these steps:  
   
 1.  In the source machine (which is an on-premises computer in this tutorial), open a query window in SQL Server Management Studio. Detach your database to move it to another machine by executing these statements:  
   
@@ -85,7 +85,7 @@ manager: craigg
   
              At the end of this step, the destination machine has imported the encryption certificate that was backed up from the source machine. Next, you can attach the data files in the destination machine.  
   
-    2.  Then, create a database with data and log files pointing to the existing files in Windows Azure Storage by using FOR ATTACH option. In the query window, run the following statement:  
+    2.  Then, create a database with data and log files pointing to the existing files in Azure Storage by using FOR ATTACH option. In the query window, run the following statement:  
   
         ```sql  
   
@@ -118,7 +118,7 @@ manager: craigg
   
  Note that the encrypted database was transferred to another compute instance with no data movement.  
   
- To create a database with data and log files pointing to the existing files in Windows Azure Storage using SQL Server Management Studio user interface, perform these steps:  
+ To create a database with data and log files pointing to the existing files in Azure Storage using SQL Server Management Studio user interface, perform these steps:  
   
 1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.  
   
@@ -140,6 +140,6 @@ manager: craigg
   
  **Next Lesson:**  
   
- [Lesson 7: Move your data files to Windows Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lesson 7: Move your data files to Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

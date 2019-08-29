@@ -77,20 +77,18 @@ On Linux, you must install Python 3.5 and then upgrade pip. The following exampl
    sudo -H pip3 install --upgrade pip
    ```
 
-1. If you have any previous releases of the tool installed (previously named **mssqlctl**), it is important to uninstall it first before installing the latest version of `azdata`.
+1. If you have any previous releases of the tool installed (prior to CTP 3.2, the tool was called **mssqlctl**), it is important to uninstall it first before installing the latest version of `azdata`. The following command removes the CTP 3.1 version of **mssqlctl**.
 
-   For CTP 3.1 or lower, run the following command. Replace `ctp3.1` in the command with the version of **mssqlctl** that you are uninstalling. 
-
-   ```powershell
-   pip3 uninstall -r https://aka.ms/azdata
+   ```bash
+   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 1. If you have any previous releases of `azdata` installed, it is important to uninstall it first before installing the latest version.
 
-   For CTP 3.2 or higher, run the following command.
+   For CTP 3.2, run the following command.
 
-   ```powershell
-   pip3 uninstall -r https://aka.ms/azdata
+   ```bash
+   pip3 uninstall -r https://azdatacli.blob.core.windows.net/python/azdata/2019-ctp3.2/requirements.txt
    ```
 
 1. Install `azdata` with the following command:

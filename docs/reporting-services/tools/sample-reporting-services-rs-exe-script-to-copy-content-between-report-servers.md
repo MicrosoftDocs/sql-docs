@@ -249,26 +249,26 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Native mode to native mode - Windows Azure virtual machine  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Native mode to native mode - Azure virtual machine  
  The following example migrates content:  
   
 -   From a Native mode report server **SourceServer**.  
   
--   To a **TargetServer** Native mode report server running on a Windows Azure virtual machine. The **TargetServer** isn't joined to the domain of the **SourceServer** and the **User2** is an administrator on the Windows Azure virtual machine **TargetServer**.  
+-   To a **TargetServer** Native mode report server running on a Azure virtual machine. The **TargetServer** isn't joined to the domain of the **SourceServer** and the **User2** is an administrator on the Azure virtual machine **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
-> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Windows Azure virtual machines, see [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
+> For information on how to use Windows PowerShell to create [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers on Azure virtual machines, see [Use PowerShell to Create a Azure VM With a Native Mode Report Server](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint mode -'bi' site collection to a native mode server on a Windows Azure virtual machine. 
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint mode -'bi' site collection to a native mode server on a Azure virtual machine. 
  The following example migrates content:  
   
 -   From a SharePoint mode report server **SourceServer** that contains a site collection of "sites/bi" and a shared documents library.  
   
--   To a **TargetServer** Native mode report server running on a Windows Azure virtual machine. The **TargetServer** isn't joined to the domain of the **SourceServer** and the **User2** is an administrator on the Windows Azure virtual machine **TargetServer**.  
+-   To a **TargetServer** Native mode report server running on a Azure virtual machine. The **TargetServer** isn't joined to the domain of the **SourceServer** and the **User2** is an administrator on the Azure virtual machine **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  

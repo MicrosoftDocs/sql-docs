@@ -14,13 +14,13 @@ ms.author: mikeray
 # SQL Server Backup to URL Best Practices and Troubleshooting
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Windows Azure Blob service.  
+  This topic includes best practices and troubleshooting tips for SQL Server backup and restores to the Azure Blob service.  
   
- For more information about using Windows Azure Blob storage service for SQL Server backup or restore operations, see:  
+ For more information about using Azure Blob storage service for SQL Server backup or restore operations, see:  
   
 -   [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Azure Blob Storage Service](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## Managing Backups  
  The following list includes general recommendations to manage backups:  
@@ -29,7 +29,7 @@ ms.author: mikeray
   
 -   When creating a container, it is recommended that you set the access level to **private**, so only users or accounts that can provide the required authentication information can read or write the blobs in the container.  
   
--   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in a Windows Azure Virtual Machine, use a storage account in the same region as the virtual machine to avoid data transfer costs between regions. Using the same region also ensures optimal performance for backup and restore operations.  
+-   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in a Azure Virtual Machine, use a storage account in the same region as the virtual machine to avoid data transfer costs between regions. Using the same region also ensures optimal performance for backup and restore operations.  
   
 -   Failed backup activity can result in an invalid backup file. We recommend periodic identification of failed backups and deleting the blob files. For more information, see [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   
@@ -39,18 +39,18 @@ ms.author: mikeray
   
 ## Handling Large Files  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. Azure [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) has maximum processing times for blobs that you can take into consideration.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. Azure [SLA for Storage](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) has maximum processing times for blobs that you can take into consideration.  
   
 -   Using the `WITH COMPRESSION` option as recommended in the [Managing Backup](##managing-backups) section, it is very important when backing up large files.  
   
 ## Troubleshooting Backup To or Restore from URL  
- Following are some quick ways to troubleshoot errors when backing up to or restoring from the Windows Azure Blob storage service.  
+ Following are some quick ways to troubleshoot errors when backing up to or restoring from the Azure Blob storage service.  
   
  To avoid errors due to unsupported options or limitations, review the list of limitations, and support for BACKUP and RESTORE commands information in the [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) article.  
   
  **Authentication Errors:**  
   
--   The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Windows Azure Blob storage service. Failures related to credential could be the following:  
+-   The `WITH CREDENTIAL` is a new option and required to back up to or restore from the Azure Blob storage service. Failures related to credential could be the following:  
   
      The credential specified in the **BACKUP** or **RESTORE** command does not exist. To avoid this issue, you can include T-SQL statements to create the credential if one does not exist in the backup statement. The following is an example you can use:  
   
@@ -64,7 +64,7 @@ ms.author: mikeray
   
 -   The credential exists but the login account that is used to run the backup command does not have permissions to access the credentials. Use a login account in the **db_backupoperator** role with ***Alter any credential*** permissions.  
   
--   Verify the storage account name and key values. The information stored in the credential must match the property values of the Windows Azure storage account you are using in the backup and restore operations.  
+-   Verify the storage account name and key values. The information stored in the credential must match the property values of the Azure storage account you are using in the backup and restore operations.  
   
  **Backup Errors/Failures:**  
   

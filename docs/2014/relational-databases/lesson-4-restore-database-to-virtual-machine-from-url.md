@@ -16,9 +16,9 @@ manager: craigg
   
  This lesson assumes you already completed the following steps:  
   
--   You have a Windows Azure Storage account.  
+-   You have a Azure Storage account.  
   
--   You have created a container under your Windows Azure Storage account.  
+-   You have created a container under your Azure Storage account.  
   
 -   You have created a policy on a container with read, write, and list rights. You also generated a SAS key.  
   
@@ -85,6 +85,6 @@ GO
   
  **Next Lesson:**  
   
- [Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lesson 6: Migrate a database from a source machine on-premises to a destination machine in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

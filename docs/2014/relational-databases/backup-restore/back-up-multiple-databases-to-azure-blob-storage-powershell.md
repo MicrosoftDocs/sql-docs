@@ -1,5 +1,5 @@
 ---
-title: "Use PowerShell to Backup Multiple Databases to Windows Azure Blob Storage Service | Microsoft Docs"
+title: "Use PowerShell to Backup Multiple Databases to Azure Blob Storage Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# Use PowerShell to Backup Multiple Databases to Windows Azure Blob Storage Service
-  This topic provides sample scripts that can be used to automate backups to Windows Azure Blob storage service using PowerShell cmdlets.  
+# Use PowerShell to Backup Multiple Databases to Azure Blob Storage Service
+  This topic provides sample scripts that can be used to automate backups to Azure Blob storage service using PowerShell cmdlets.  
   
 ## Overview of PowerShell cmdlets for Backup and Restore  
- The `Backup-SqlDatabase` and `Restore-SqlDatabase` are the two main cmdlets available to do backup and restore operations. In addition, there are other cmdlets that may be required to automate backups to Windows Azure Blob storage like the set of **SqlCredential** cmdlets  Following is a list of PowerShell cmdlets available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that are used in backup and restore operations:  
+ The `Backup-SqlDatabase` and `Restore-SqlDatabase` are the two main cmdlets available to do backup and restore operations. In addition, there are other cmdlets that may be required to automate backups to Azure Blob storage like the set of **SqlCredential** cmdlets  Following is a list of PowerShell cmdlets available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that are used in backup and restore operations:  
   
  Backup-SqlDatabase  
  This cmdlet is used to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Backup.  
@@ -24,7 +24,7 @@ manager: craigg
  Used to restore a database.  
   
  New-SqlCredential  
- This cmdlet is used to create a SQL Credential to use for SQL Server Backup to Windows Azure Storage. For more information on credentials and their use in SQL Server Backup and Restore, see [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ This cmdlet is used to create a SQL Credential to use for SQL Server Backup to Azure Storage. For more information on credentials and their use in SQL Server Backup and Restore, see [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  This cmdlet is used to retrieve the Credential object and its properties.  
@@ -36,7 +36,7 @@ manager: craigg
  This cmdlet is used to change or set the properties of the SQL Credential Object.  
   
 > [!TIP]  
->  The Credential cmdlets are used in Backup and Restore to Windows Azure Blob storage scenarios.  
+>  The Credential cmdlets are used in Backup and Restore to Azure Blob storage scenarios.  
   
 ### PowerShell for Multi-Database, Multi-Instance Backup Operations  
  The following sections include scripts for various operations like creating a SQL Credential on multiple instance of SQL Server, backing up all user databases in an instance of SQL Server, and such. You can use these scripts to automate or schedule backup operations according to the requirements of your environment. The scripts provided here are examples, and may be modified or extended for your environment.  
@@ -49,7 +49,7 @@ manager: craigg
   
      For more information, see [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   
-3.  Although each code sample can be tried independently by changing the variable values, creating a Windows Azure Storage Account and a SQL Credential are prerequisites and required for all backup and restore operations to Windows Azure Blob storage service.  
+3.  Although each code sample can be tried independently by changing the variable values, creating a Azure Storage Account and a SQL Credential are prerequisites and required for all backup and restore operations to Azure Blob storage service.  
   
 ### Create a SQL Credential on All the Instances of SQL Server  
  There are two sample scripts, and both create a SQL Credential "mybackupToURL" on all the instances of SQL Server on a computer. The first example creates is simple and creates the credential and does not trap exceptions.  For example, if there was already an existing credential with the same name on one of the instances of the computer, the script would fail. The second example traps errors and allows the script to continue.  
@@ -259,7 +259,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## See Also  
- [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [SQL Server Backup and Restore with Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

@@ -27,7 +27,9 @@ The following prerequisites are required to launch the notebook:
 
 In addition to above, SQL Server 2019 Big Data Cluster also requires:
 
-* [azdata](deploy-install-azdata.md)
+* **azdata**
+    - [Windows installer](deploy-install-azdata-installer.md)
+    - [Linux package manager](deploy-install-azdata-linux-package.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI](/cli/azure/install-azure-cli)
 

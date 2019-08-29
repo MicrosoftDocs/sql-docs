@@ -46,6 +46,8 @@ Run the following T-SQL script to create the stored procedure. The procedure rec
 
 ```sql
 USE [tpcxbb_1gb]
+GO
+
 CREATE procedure [dbo].[py_generate_customer_return_clusters]
 AS
 
@@ -117,7 +119,7 @@ GO
 
 ## Perform clustering in SQL Database
 
-Now that you've created the stored procedure, execute the following script to perform clustering.
+Now that you've created the stored procedure, execute the following script to perform clustering using the procedure.
 
 ```sql
 --Creating a table for storing the clustering data
@@ -140,6 +142,32 @@ EXEC [dbo].[py_generate_customer_return_clusters];
 
 -- Select contents of the table to verify it works
 SELECT * FROM py_customer_clusters;
+```
+
+```sql
+--Create a table to store the predictions in
+
+DROP TABLE IF EXISTS [dbo].[py_customer_clusters];
+GO
+
+CREATE TABLE [dbo].[py_customer_clusters] (
+    [Customer] [bigint] NULL
+    , [OrderRatio] [float] NULL
+    , [itemsRatio] [float] NULL
+    , [monetaryRatio] [float] NULL
+    , [frequency] [float] NULL
+    , [cluster] [int] NULL
+    ,
+    ) ON [PRIMARY]
+GO
+
+--Execute the clustering and insert results into table
+INSERT INTO py_customer_clusters
+EXEC [dbo].[py_generate_customer_return_clusters];
+
+-- Select contents of the table to verify it works
+SELECT *
+FROM py_customer_clusters;
 ```
 
 ## Use the clustering information

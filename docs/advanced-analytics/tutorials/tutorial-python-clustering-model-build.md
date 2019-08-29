@@ -45,27 +45,25 @@ The goal of K-means is to group the items into k clusters such that all items in
 
 To determine the number of clusters for the algorithm to use, use a plot of the within groups sum of squares, by number of clusters extracted. The appropriate number of clusters to use is at the bend or "elbow" of the plot.
 
-Append the following to the previous script.
-
 ```python
-    ################################################################################################
-    ## Determine number of clusters using the Elbow method
-    ################################################################################################
-    
-    cdata = customer_data
-    K = range(1, 20)
-    KM = (sk_cluster.KMeans(n_clusters=k).fit(cdata) for k in K)
-    centroids = (k.cluster_centers_ for k in KM)
-    
-    D_k = (sci_distance.cdist(cdata, cent, 'euclidean') for cent in centroids)
-    dist = (np.min(D, axis=1) for D in D_k)
-    avgWithinSS = [sum(d) / cdata.shape[0] for d in dist]
-    plt.plot(K, avgWithinSS, 'b*-')
-    plt.grid(True)
-    plt.xlabel('Number of clusters')
-    plt.ylabel('Average within-cluster sum of squares')
-    plt.title('Elbow for KMeans clustering')
-    plt.show()
+################################################################################################
+## Determine number of clusters using the Elbow method
+################################################################################################
+
+cdata = customer_data
+K = range(1, 20)
+KM = (sk_cluster.KMeans(n_clusters=k).fit(cdata) for k in K)
+centroids = (k.cluster_centers_ for k in KM)
+
+D_k = (sci_distance.cdist(cdata, cent, 'euclidean') for cent in centroids)
+dist = (np.min(D, axis=1) for D in D_k)
+avgWithinSS = [sum(d) / cdata.shape[0] for d in dist]
+plt.plot(K, avgWithinSS, 'b*-')
+plt.grid(True)
+plt.xlabel('Number of clusters')
+plt.ylabel('Average within-cluster sum of squares')
+plt.title('Elbow for KMeans clustering')
+plt.show()
 ```
 
 ![Elbow graph](./media/python-tutorial-elbow-graph.png)
@@ -76,41 +74,28 @@ Based on the graph, it looks like *k = 4* would be a good value to try. That *k*
 
 In the following Python script, you'll use the KMeans function from the sklearn package.
 
-Append the following to the previous script.
-
 ```python
-    ################################################################################################
-    ## Perform clustering using Kmeans
-    ################################################################################################
+################################################################################################
+## Perform clustering using Kmeans
+################################################################################################
 
-    # It looks like k=4 is a good number to use based on the elbow graph.
-    n_clusters = 4
+# It looks like k=4 is a good number to use based on the elbow graph.
+n_clusters = 4
 
-    means_cluster = sk_cluster.KMeans(n_clusters=n_clusters, random_state=111)
-    columns = ["orderRatio", "itemsRatio", "monetaryRatio", "frequency"]
-    est = means_cluster.fit(customer_data[columns])
-    clusters = est.labels_
-    customer_data['cluster'] = clusters
+means_cluster = sk_cluster.KMeans(n_clusters=n_clusters, random_state=111)
+columns = ["orderRatio", "itemsRatio", "monetaryRatio", "frequency"]
+est = means_cluster.fit(customer_data[columns])
+clusters = est.labels_
+customer_data['cluster'] = clusters
 
-    # Print some data about the clusters:
+# Print some data about the clusters:
 
-    # For each cluster, count the members.
-    for c in range(n_clusters):
-        cluster_members=customer_data[customer_data['cluster'] == c][:]
-        print('Cluster{}(n={}):'.format(c, len(cluster_members)))
-        print('-'* 17)
-```
-
-To view the mean values per cluster, temporarily add the following to the previous script.
-
-```python
-    print(customer_data.groupby(['cluster']).mean())
-```
-
-Then run the function:
-
-```python
-perform_clustering()
+# For each cluster, count the members.
+for c in range(n_clusters):
+    cluster_members=customer_data[customer_data['cluster'] == c][:]
+    print('Cluster{}(n={}):'.format(c, len(cluster_members)))
+    print('-'* 17)
+print(customer_data.groupby(['cluster']).mean())
 ```
 
 ## Analyze the results

@@ -51,7 +51,7 @@ In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to 
   1. Expand **Extensions** and select **Notebook configuration**
   1. Under **Python Path**, enter the path where you installed the libraries (for example, `C:\path-to-python-for-mls`)
   1. Make sure **Use Existing Python** is checked
-  1. Exit Azure Data Studio
+  1. Restart Azure Data Studio
 
   If you're using a different Python IDE, follow similar steps for your IDE.
 

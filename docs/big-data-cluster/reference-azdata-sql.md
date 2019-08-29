@@ -1,7 +1,7 @@
 ---
-title: azdata app template reference
+title: azdata sql reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata app template commands.
+description: Reference article for azdata sql commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,30 +11,26 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata app template
+# azdata sql
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 This article is a reference article for **azdata**. 
 
 ## Commands
 |     |     |
 | --- | --- |
-[azdata app template list](#azdata-app-template-list) | Fetch supported templates.
-[azdata app template pull](#azdata-app-template-pull) | Download supported templates.
-## azdata app template list
-Fetch supported templates under the specified [URL] github repository.
+[azdata sql shell](#azdata-sql-shell) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
+[azdata sql query](#azdata-sql-query) | The query command allows execution of a T-SQL query.
+## azdata sql shell
+The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
 ```bash
-azdata app template list 
+azdata sql shell 
 ```
 ### Examples
-Fetch all templates under the default template repository location.
+Example command line to start the interactive experience.
 ```bash
-azdata app template list
-```
-Fetch all templates under a different repository location.
-```bash
-azdata app template list --url https://github.com/diffrent/templates.git
+azdata sql shell
 ```
 ### Global Arguments
 #### `--debug`
@@ -47,24 +43,22 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## azdata app template pull
-Download supported templates under the specified [URL] github repository.
+## azdata sql query
+The query command allows execution of a T-SQL query.
 ```bash
-azdata app template pull 
+azdata sql query --database -d 
+                 -q
 ```
 ### Examples
-Download all templates under the default template repository location.
+Select the list of tables names.  Database defaults to master.
 ```bash
-azdata app template pull
+azdata sql query 'SELECT name FROM SYS.TABLES'
 ```
-Download all templates under a different repository location.
-```bash
-azdata app template list --url https://github.com/diffrent/templates.git
-```
-Download individual template by name.
-```bash
-azdata app template pull --name ssis
-```
+### Required Parameters
+#### `--database -d`
+Database to run query in.  Default is master.
+#### `-q`
+T-SQL query to execute.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

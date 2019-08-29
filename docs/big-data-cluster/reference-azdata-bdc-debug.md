@@ -5,7 +5,7 @@ description: Reference article for azdata bdc debug commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,9 +13,9 @@ ms.technology: big-data-cluster
 
 # azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-The following article provides reference for the **bdc debug** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md).
+This article is a reference article for **azdata**. 
 
 ## Commands
 |     |     |
@@ -23,7 +23,7 @@ The following article provides reference for the **bdc debug** commands in the *
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copy logs.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | Trigger logging dump.
 ## azdata bdc debug copy-logs
-Copy the debug logs from the Big Data Cluster - kube config is required on your system.
+Copy the debug logs from the Big Data Cluster - Kubernetes configuration is required on your system.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
@@ -55,7 +55,7 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for mor
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc debug dump
-Trigger logging dump and copy it out from container - kube config is required on your system.
+Trigger logging dump and copy it out from container - Kubernetes configuration is required on your system.
 ```bash
 azdata bdc debug dump --namespace -n 
                       --container -c  
@@ -84,4 +84,6 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). For more information about how to install the **azdata** tool, see [Install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](deploy-install-azdata.md).
+- For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+- For more information about how to install the **azdata** tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

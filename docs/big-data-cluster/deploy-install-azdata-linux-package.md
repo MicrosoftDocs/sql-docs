@@ -56,7 +56,7 @@ At this time, there are no package managers to install `azdata` on other operati
 
     ```bash
     sudo apt-get update
-    sudo apt-get install azdata-cli -y
+    sudo apt-get install -y azdata-cli 
     ```
 
 5. Verify installation:

@@ -59,15 +59,25 @@ Enabling TLS encryption increases the security of data transmitted across networ
 > When creating encrypted connections for an Azure Search indexer to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an Azure VM, see [Configure a connection from an Azure Search indexer to SQL Server on an Azure VM](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
 
 ## Certificate Requirements
-For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load an TLS certificate, the certificate must meet the following conditions:
+For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS certificate, the certificate must meet the following conditions:
 
 - The certificate must be in either the local computer certificate store or the current user certificate store.
+
 - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Account must have the necessary permission to access the TLS certificate.
+
 - The current system time must be after the **Valid from** property of the certificate and before the Valid to property of the certificate.
+
 - The certificate must be meant for server authentication. This requires the **Enhanced Key Usage** property of the certificate to specify **Server Authentication (1.3.6.1.5.5.7.3.1)**.
+
 - The certificate must be created by using the **KeySpec** option of **AT_KEYEXCHANGE**. Usually, the certificate's key usage property (**KEY_USAGE**) will also include key encipherment (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
+
 - The **Subject** property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  is running on a failover cluster, the common name must match the host name or FQDN of the virtual server and the certificates must be provisioned on all nodes in the failover cluster.
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and the [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) support wildcard certificates. Other clients might not support wildcard certificates. For more information, see the client documentation and [KB 258858](http://support.microsoft.com/kb/258858).
+
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and the [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates. For more information, see the client documentation and [KB 258858](http://support.microsoft.com/kb/258858).       
+  Wildcard certificate cannot be selected by using the SQL Server Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
+
+  > [!WARNING]  
+  > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 ## To provision (install) a certificate on a single server  
 With [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], certificate management is integrated into the SQL Server Configuration Manager. SQL Server Configuration Manager for [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] can be used with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Refer to [Certificate Management (SQL Server Configuration Manager)](../../database-engine/configure-windows/manage-certificates.md) to add a certificate on a single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
@@ -117,14 +127,6 @@ If using [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssS
 
 > [!NOTE]
 > To ensure secure connectivity between client and server, configure the client to request encrypted connections. More details are explained [later in this article](#to-configure-the-client-to-request-encrypted-connections).
-
-### Wildcard Certificates
-Starting with [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SNAC) support wildcard certificates. SNAC has since been deprecated and replaced with the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Other clients might not support wildcard certificates. For more information, see the client documentation. 
-
-Wildcard certificate cannot be selected by using the SQL Server Configuration Manager. To use a wildcard certificate, you must edit the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` registry key, and enter the thumbprint of the certificate, without spaces, to the **Certificate** value.  
-
-> [!WARNING]  
-> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 ## To configure the client to request encrypted connections  
 

@@ -45,11 +45,11 @@ The goal of K-means is to group the items into k clusters such that all items in
 
 To determine the number of clusters for the algorithm to use, use a plot of the within groups sum of squares, by number of clusters extracted. The appropriate number of clusters to use is at the bend or "elbow" of the plot.
 
-```python
-################################################################################################
+Append the following to the previous script.
 
+```python
+    ################################################################################################
     ## Determine number of clusters using the Elbow method
-    
     ################################################################################################
     
     cdata = customer_data
@@ -76,10 +76,12 @@ Based on the graph, it looks like *k = 4* would be a good value to try. That *k*
 
 In the following Python script, you'll use the KMeans function from the sklearn package.
 
+Append the following to the previous script.
+
 ```python
-################################################################################################
-## Perform clustering using Kmeans
-################################################################################################
+    ################################################################################################
+    ## Perform clustering using Kmeans
+    ################################################################################################
 
     # It looks like k=4 is a good number to use based on the elbow graph.
     n_clusters = 4
@@ -97,11 +99,17 @@ In the following Python script, you'll use the KMeans function from the sklearn 
         cluster_members=customer_data[customer_data['cluster'] == c][:]
         print('Cluster{}(n={}):'.format(c, len(cluster_members)))
         print('-'* 17)
+```
 
-    # Print mean values per cluster.
+To view the mean values per cluster, temporarily add the following to the previous script.
+
+```python
     print(customer_data.groupby(['cluster']).mean())
+```
 
+Then run the function:
 
+```python
 perform_clustering()
 ```
 

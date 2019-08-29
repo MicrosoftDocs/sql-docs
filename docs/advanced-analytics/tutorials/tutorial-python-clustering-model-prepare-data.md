@@ -110,16 +110,22 @@ def perform_clustering():
 
 Results from the query are returned to Python using the revoscalepy RxSqlServerData function. As part of the process, you'll use the column information you defined in the previous script.
 
+Append the following to the previous script.
+
 ```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
+    data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
+                                            connection_string=conn_str)
     revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
     # import data source and convert to pandas dataframe.
     customer_data = pd.DataFrame(revoscale.rx_import(data_source))
     print("Data frame:", customer_data.head(n=5))
 ```
 
-You should see results similar to the following.
+Run the function, and you should see results similar to the following.
+
+```python
+perform_clustering()
+```
 
 ```results
 Rows Read: 37336, Total Rows Processed: 37336, Total Chunk Time: 0.172 seconds

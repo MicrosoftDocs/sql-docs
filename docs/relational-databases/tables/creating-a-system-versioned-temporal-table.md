@@ -28,14 +28,14 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ```  
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
 )    
 WITH (SYSTEM_VERSIONING = ON)   
 ;  
@@ -64,16 +64,16 @@ WITH (SYSTEM_VERSIONING = ON)
   
 ```  
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)     
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
+  , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)     
 )   
-WITH    
+WITH
    (   
       SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory)   
    )   
@@ -94,32 +94,34 @@ WITH
   
 ```  
 CREATE TABLE DepartmentHistory   
-(    
-     DeptID int NOT NULL  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 NOT NULL  
-   , SysEndTime datetime2 NOT NULL   
+(
+    DeptID INT NOT NULL  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 NOT NULL  
+  , SysEndTime DATETIME2 NOT NULL   
 );   
 GO   
-CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory   
-   ON DepartmentHistory;   
-CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS   
-   ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);   
-GO   
+
+CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory
+    ON DepartmentHistory;
+CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS
+    ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);
+GO
+
 CREATE TABLE Department   
-(    
+(
     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL     
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
-)    
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))   
-;  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL     
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
+;
 ```  
   
 ### Important remarks  
@@ -149,18 +151,19 @@ For example, you may have a set of tables where versioning is implemented with t
   
 ```  
 CREATE SCHEMA History;   
-GO   
+GO
+
+ALTER TABLE InsurancePolicy
+    ADD   
+        SysStartTime DATETIME2(0) GENERATED ALWAYS AS ROW START HIDDEN
+            CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
+      , SysEndTime DATETIME2(0) GENERATED ALWAYS AS ROW END HIDDEN
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2 (0), '9999-12-31 23:59:59'),
+        PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
+GO
+
 ALTER TABLE InsurancePolicy   
-   ADD   
-      SysStartTime datetime2(0) GENERATED ALWAYS AS ROW START HIDDEN    
-           CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()  
-      , SysEndTime datetime2(0) GENERATED ALWAYS AS ROW END HIDDEN    
-           CONSTRAINT DF_SysEnd DEFAULT CONVERT(datetime2 (0), '9999-12-31 23:59:59'),   
-      PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);   
-GO   
-ALTER TABLE InsurancePolicy   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy));
 ```  
   
 #### Important remarks  
@@ -189,9 +192,9 @@ ALTER TABLE ProjectTaskCurrent ALTER COLUMN [ValidTo] datetime2 NOT NULL;
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidFrom] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidTo] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskCurrent   
-   ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
+    ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
 ALTER TABLE ProjectTaskCurrent   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))   
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))   
 ;  
 ```  
   
@@ -216,5 +219,3 @@ ALTER TABLE ProjectTaskCurrent
  [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
  [Changing the Schema of a System-Versioned Temporal Table](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
  [Stopping System-Versioning on a System-Versioned Temporal Table](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
-  
-  

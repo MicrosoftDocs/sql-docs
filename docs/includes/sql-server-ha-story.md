@@ -4,7 +4,7 @@ One common task everyone deploying SQL Server has to account for is making sure 
 
 SQL Server 2017 introduces many new features or enhancements to existing ones, some of which are for availability. The biggest addition to SQL Server 2017 is the support for SQL Server on Linux distributions. For a full list of the new features in SQL Server 2017, see the topic [What's new in SQL Server](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017).
 
-This article is focused on covering the availability scenarios in SQL Server 2017 as well as the new and enhanced availability features in SQL Server 2017. The scenarios include hybrid ones that will be able to span SQL Server deployments on both Windows Server and Linux, as well as ones that can increase the number of readable copies of a database. While this article does not cover availability options external to SQL Server, such as those provided by virtualization, everything discussed here applies to SQL Server installations inside a guest virtual machine whether in the public cloud or hosted by anon premises hypervisor server.
+This article is focused on covering the availability scenarios in SQL Server 2017 as well as the new and enhanced availability features in SQL Server 2017. The scenarios include hybrid ones that will be able to span SQL Server deployments on both Windows Server and Linux, as well as ones that can increase the number of readable copies of a database. While this article does not cover availability options external to SQL Server, such as those provided by virtualization, everything discussed here applies to SQL Server installations inside a guest virtual machine whether in the public cloud or hosted by an on premises hypervisor server.
 
 ## SQL Server 2017 scenarios using the availability features
 
@@ -128,9 +128,7 @@ The list below highlights some differences with FCIs on Windows Server versus Li
 * The common name used by FCIs in Linux is defined in DNS, and should be the same as the resource created for the FCI.
 
 #### Log shipping
-If recovery point and recovery time objectives are more flexible, or databases are not considered to be highly mission critical, log shipping is another proven availability feature in SQL Server. Based on SQL Server's native backups, the process for log shipping automatically generates transaction log backups, copies them to one or more instances known as a warm standby, and automatically applies the transaction log backups to that standby. Log shipping uses SQL Server Agent jobs to automate the process of backing up, copying, and applying the transaction log backups. 
-> [!IMPORTANT] 
-> On Linux, SQL Server Agent jobs is not included as part of the installation of SQL Server itself. It is available in the package mssql-server-Agent jobs which must also be installed to use log shipping.
+If recovery point and recovery time objectives are more flexible, or databases are not considered to be highly mission critical, log shipping is another proven availability feature in SQL Server. Based on SQL Server's native backups, the process for log shipping automatically generates transaction log backups, copies them to one or more instances known as a warm standby, and automatically applies the transaction log backups to that standby. Log shipping uses SQL Server Agent jobs to automate the process of backing up, copying, and applying the transaction log backups.
 
 ![Log Shipping](media/sql-server-ha-story/image5.png)
  

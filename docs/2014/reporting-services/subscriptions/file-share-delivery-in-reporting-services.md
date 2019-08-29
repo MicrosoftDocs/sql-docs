@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], file share delivery"
   - "file share delivery [Reporting Services]"
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # File Share Delivery in Reporting Services

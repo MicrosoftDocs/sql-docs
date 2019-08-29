@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.move_project - SSISDB Database
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Moves a project from one folder to another within the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

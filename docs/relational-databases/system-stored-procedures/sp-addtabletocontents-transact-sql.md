@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -17,22 +17,14 @@ helpviewer_keywords:
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # View and Modify Push Subscription Properties
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how to view and modify push subscription properties in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
-  
- **In This Topic**  
-  
--   **To view and modify push subscription properties, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replication Management Objects (RMO)](#RMOProcedure)  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  View and modify push subscription properties from the Publisher in:  

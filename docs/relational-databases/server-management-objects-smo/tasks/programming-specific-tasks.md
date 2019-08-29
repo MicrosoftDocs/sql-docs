@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "SMO [SQL Server], programming"
   - "SMO [SQL Server], tasks"
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Programming Specific Tasks

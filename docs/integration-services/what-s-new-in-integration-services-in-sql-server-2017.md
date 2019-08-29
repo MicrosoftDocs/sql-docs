@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # What&#39;s New in Integration Services in SQL Server 2017
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This topic describes the features that have been added or updated in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
 > [!NOTE]

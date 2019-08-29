@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # File Locations for Default and Named Instances of SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,8 +111,8 @@ manager: craigg
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component DLLs for the Data Transformation Run-time engine, the Data Transformation Pipeline engine, and the **dtexec** command prompt utility|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fixed path|  
 |DLLs that provide managed connection support for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|Fixed path|  
 |DLLs for each type of enumerator that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|Fixed path|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service, WMI providers|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fixed path|  
-|Components that are shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\ |Fixed path|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service, WMI providers|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\\ |Fixed path|  
+|Components that are shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Shared\\ |Fixed path|  
   
 > [!WARNING]
 > Ensure that the \Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ folder is protected with limited permissions.  

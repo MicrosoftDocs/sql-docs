@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Filestream and FileTable system stored procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

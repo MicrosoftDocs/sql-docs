@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # restorefile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

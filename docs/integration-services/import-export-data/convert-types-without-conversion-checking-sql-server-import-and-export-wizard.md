@@ -11,9 +11,12 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Convert Types without Conversion Checking (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you select the existing tables and views to copy or review the query that you provided, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard may show **Convert Types without Conversion Checking**. The wizard shows this page when it can't locate one or more of the data type conversion and mapping files that it needs to map data types between your source and destination. The page includes information that helps you to understand what's missing.
   
  Click **Next** to continue without knowing whether data type conversions will succeed. Otherwise, click **Back** to change your selections, or click **Cancel** to exit the wizard.

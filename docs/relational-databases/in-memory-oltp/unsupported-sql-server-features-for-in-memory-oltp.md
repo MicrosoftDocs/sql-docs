@@ -1,7 +1,7 @@
 ---
 title: "Unsupported SQL Server Features for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/19/2017"
+ms.date: "05/29/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unsupported SQL Server Features for In-Memory OLTP
@@ -33,9 +32,9 @@ The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 |Linked Server|You cannot access linked servers in the same query or transaction as memory-optimized tables. For more information, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Bulk logging|Regardless of the recovery model of the database, all operations on durable memory-optimized tables are always fully logged.|  
 |Minimal logging|Minimal logging is not supported for memory-optimized tables. For more information about minimal logging, see [The Transaction Log &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) and [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|Change tracking|Change tracking can be enabled on a database with In-Memory OLTP objects. However, changes in memory-optimized tables are not tracked.|  
+|Change tracking|Change tracking cannot be enabled on a database that contains In-Memory OLTP objects. |
 | DDL triggers | Neither database-level nor server-level DDL triggers are supported with In-Memory OLTP tables or with natively compiled modules. |  
-| Change Data Capture (CDC) | CDC cannot be used with a database that has memory-optimized tables, because internally CDC uses a DDL trigger for DROP TABLE. |  
+| Change Data Capture (CDC) | SQL Server 2017 CU15 and higher support enabling CDC on a database that has memory optimized tables. This is only applicable to the database and any on-disk tables in the database. In earlier versions of SQL Server, CDC cannot be used with a database that has memory-optimized tables, because internally CDC uses a DDL trigger for DROP TABLE. |  
 | Fiber mode | Fiber mode is not supported with memory-optimized tables:<br /><br />If fiber mode is active, you cannot create databases with memory-optimized filegroups, nor can you add memory-optimized filegroups to existing databases.<br /><br />You can enable fiber mode if there are databases with memory-optimized filegroups. However, enabling fiber mode requires a server restart. In that situation, databases with memory-optimized filegroups would fail to recover. Then you would see an error message suggesting that you disable fiber mode to use databases with memory-optimized filegroups.<br /><br />If fiber mode is active, attaching and restoring a databases which has a memory-optimized filegroup fails. The databases would be marked as suspect.<br /><br />For more information, see [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Service Broker limitation|Cannot access a queue from a natively compiled stored procedure.<br /><br /> Cannot access a queue in a remote database in a transaction that accesses memory-optimized tables.|  
 |Replication on subscribers|Transactional replication to memory-optimized tables on subscribers is supported, but with some restrictions. For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)|  

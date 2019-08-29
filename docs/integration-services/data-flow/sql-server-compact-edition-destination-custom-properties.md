@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # SQL Server Compact Edition Destination Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact destination has both custom properties and the properties common to all data flow components.  
   
  The following table describes the custom properties of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact destination. All properties are read/write.  

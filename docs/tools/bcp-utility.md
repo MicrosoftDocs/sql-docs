@@ -25,16 +25,17 @@ helpviewer_keywords:
   - "file importing [SQL Server]"
   - "column exporting [SQL Server]"
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
+
 # bcp Utility
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > For using bcp on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
-> 
+>
 > For detailed information about using bcp with Azure SQL Data Warehouse, see [Load data with bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
   The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format. The **bcp** utility can be used to import large numbers of new rows into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the **queryout** option, the utility requires no knowledge of [!INCLUDE[tsql](../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table or understand the structure of the table and the types of data that are valid for its columns.  
@@ -51,7 +52,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-**Version Information**
+### Version Information
 
 Release number: 15.0 <br>
 Build number: 15.0.1000.34<br>
@@ -60,12 +61,13 @@ Release date: October 18, 2018
 The new version of SQLCMD supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, SQL Data Warehouse, and Always Encrypted features.
 The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and SQL Data Warehouse.
 
-**System Requirements**
-Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
-This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
- 
-To check the BCP version execute `bcp /v` command and confirm that 15.0.1000.34 or higher is in use.
+### System Requirements
 
+Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2
+
+This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+
+To check the BCP version execute `bcp /v` command and confirm that 15.0.1000.34 or higher is in use.
 
 <table><th>Syntax</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -85,6 +87,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
     [<a href="#K">-K application_intent</a>]
+    [<a href="#l">-l login_timeout</a>]
     [<a href="#L">-L last_row</a>]
     [<a href="#m">-m max_errors</a>]
     [<a href="#n">-n</a>]
@@ -312,6 +315,9 @@ Specifies that empty columns should retain a null value during the operation, ra
   
 **-K** _**application\_intent**_<a name="K"></a>   
 Declares the application workload type when connecting to a server. The only value that is possible is **ReadOnly**. If **-K** is not specified, the bcp utility will not support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  
+**-l** _**login\_timeout**_<a name="l"></a>  
+Specifies a login timeout. The -l option specifies the number of seconds before a login to SQL Server times out when you try to connect to a server. The default login timeout is 15 seconds. The login timeout must be a number between 0 and 65534. If the value supplied is not numeric or does not fall into that range, bcp generates an error message. A value of 0 specifies an infinite timeout.
   
 **-L** _**last\_row**_<a name="L"></a>  
 Specifies the number of the last row to export from a table or import from a data file. This parameter requires a value greater than (>) 0 but less than (<) or equal to (=) the number of the last row. In the absence of this parameter, the default is the last row of the file.  
@@ -551,7 +557,7 @@ The examples below make use of the `WideWorldImporters` sample database for SQL 
 
 The script below creates an empty copy of the `WideWorldImporters.Warehouse.StockItemTransactions` table and then adds a primary key constraint.  Run the following T-SQL script in SQL Server Management Studio (SSMS)
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 

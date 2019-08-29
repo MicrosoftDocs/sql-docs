@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add or Delete a Component in a Data Flow
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Data flow components are sources, destinations, and transformations in a data flow. Before you can add components to a data flow, the control flow in the package must include a Data Flow task.  
   
  The following procedures describe how to add or delete a component in the data flow of a package.  

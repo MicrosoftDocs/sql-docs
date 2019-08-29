@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Microsoft Distributed Transaction Coordinator (ODBC)
@@ -24,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 1.  Connect to MS DTC by using the MS DTC OLE DtcGetTransactionManager function. For information about MS DTC, see Microsoft Distributed Transaction Coordinator.  
   
-2.  Call SQL DriverConnect once for each Microsoft® SQL Server™ connection you want to establish.  
+2.  Call SQL DriverConnect once for each SQL Server connection you want to establish.  
   
 3.  Call the MS DTC OLE ITransactionDispenser::BeginTransaction function to begin an MS DTC transaction and obtain a Transaction object that represents the transaction.  
   
@@ -33,7 +32,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 5.  Call [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) once for each SQL Server you want to update.  
   
 6.  Call the MS DTC OLE ITransaction::Commit function to commit the MS DTC transaction. The Transaction object is no longer valid.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  To perform a series of MS DTC transactions, repeat Steps 3 through 6.  
   
  To release the reference to the Transaction object, call the MS DTC OLE ITransaction::Return function.  

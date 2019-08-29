@@ -8,9 +8,12 @@ ms.custom: ""
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 This quickstart demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then use Transact-SQL statements to deploy an SSIS project to the SSIS Catalog. 
 

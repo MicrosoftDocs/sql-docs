@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shared data sources [Reporting Services]"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "deleting shared data sources"
   - "modifying shared data sources"
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create, Delete, or Modify a Shared Data Source (Report Manager)

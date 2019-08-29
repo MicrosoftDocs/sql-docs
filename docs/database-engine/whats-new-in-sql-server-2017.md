@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # What's new in Database Engine - SQL Server 2017
@@ -29,7 +28,7 @@ This topic describes improvements made to the [!INCLUDE[ssdenoversion-md](../inc
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] now offers graph database capabilities to model more meaninginful relationship-oriented data. This includes new [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) syntax for creating node and edge tables, and the keyword [MATCH](../t-sql/queries/match-sql-graph.md) for queries. For more information, see [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md).   
 - A new generation of query processing improvements that will adapt optimization strategies to your application workload's runtime conditions. For this first version of the **adaptive query processing** feature family, we have three new improvements: **batch mode adaptive joins**, **batch mode memory grant feedback**, and **interleaved execution** for multi-statement table valued functions.  See [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md).
 - Automatic tuning is a database feature that provides insight into potential query performance problems, recommend solutions, and automatically fix identified problems. Automatic tuning in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], notifies you whenever a potential performance issue is detected, and lets you apply corrective actions, or lets the [!INCLUDE[ssde-md](../includes/ssde-md.md)] automatically fix performance problems. For more information, see [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md).
-- PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Performance of bwtree (non-clustered) index rebuild for MEMORY_OPTIMIZED tables during database recovery has been significantly optimized. This improvement substantially reduces the database recovery time when non-clustered indexes are used.  
+- PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Performance of bwtree (nonclustered) index rebuild for MEMORY_OPTIMIZED tables during database recovery has been significantly optimized. This improvement substantially reduces the database recovery time when nonclustered indexes are used.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) has three new columns: socket_count, cores_per_socket, numa_node_count. This is useful when you run your server in a VM, as exceding NUMA can lead overcommited hosts that in the end transforms to performance issues.
 - A new column modified_extent_page_count\, is introduced in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) to track differential changes in each database file of the database. The new column modified_extent_page_count allows you to build smart backup solution, which performs differential backup if percentage changed pages in the database is below a threshold (say 70-80%) else perform full database backup.
 - SELECT INTO ... ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) now supports loading a table into a filegroup other than a default filegroup of the user using the **ON** keyword support added in SELECT INTO TSQL syntax.
@@ -45,7 +44,7 @@ This topic describes improvements made to the [!INCLUDE[ssdenoversion-md](../inc
 - Availability Groups can now work across Windows-Linux to enable cross-OS migrations and testing.
 - Temporal Tables Retention Policy support added,
 - New DMV SYS.DM_DB_STATS_HISTOGRAM
-- Online non-clustered columnstore index build and rebuild support added
+- Online nonclustered columnstore index build and rebuild support added
 - [sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) is added for examining statistics.
 - The Database Tuning Advisor (DTA) released with SQL Server Management Studio version 16.4, when analyzing SQL Server 2016 and later, has additional options.    
    - Improved performance. For more information, see [Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations](../relational-databases/performance/performance-improvements-using-dta-recommendations.md).

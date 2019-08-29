@@ -2,13 +2,12 @@
 title: Get started with SQL Server on Ubuntu
 titleSuffix: SQL Server
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 07/16/2018
+author: VanMSFT 
+ms.author: vanto
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
+ms.custom: "sqlfreshmay19"
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
@@ -30,18 +29,21 @@ In this quickstart, you install SQL Server 2019 preview on Ubuntu 16.04. You the
 ::: moniker-end
 
 > [!TIP]
-> This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> This tutorial requires user input and an internet connection. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
 You must have a Ubuntu 16.04 machine with **at least 2 GB** of memory.
 
-To install Ubuntu on your own machine, go to [https://www.ubuntu.com/download/server](https://www.ubuntu.com/download/server). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+To install Ubuntu 16.04 on your own machine, go to [http://releases.ubuntu.com/xenial/](http://releases.ubuntu.com/xenial/). You can also create Ubuntu virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > At this time, the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) for Windows 10 is not supported as an installation target.
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+
+> [!NOTE]
+> Ubuntu 18.04 is not yet officially supported, but running SQL Server is possible with [modifications](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -91,7 +93,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 5. Once the configuration is done, verify that the service is running:
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.
@@ -137,7 +139,7 @@ To configure SQL Server on Ubuntu, run the following commands in a terminal to i
 5. Once the configuration is done, verify that the service is running:
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. If you plan to connect remotely, you might also need to open the SQL Server TCP port (default 1433) on your firewall.

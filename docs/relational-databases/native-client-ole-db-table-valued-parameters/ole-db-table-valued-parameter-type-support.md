@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLE DB Table-Valued Parameter Type Support

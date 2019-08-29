@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Data Migration Settings (MySQLToSQL)
   

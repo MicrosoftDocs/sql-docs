@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ sp_redirect_publisher
 ```  
   
 ## Arguments  
- [ **@original_publisher** = ] **'***original_publisher***'**  
+`[ @original_publisher = ] 'original_publisher'`
  The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that originally published the database. *original_publisher* is **sysname**, with no default.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  
   
- [ **@redirected_publisher** = ] **'***redirected_publisher***'**  
+`[ @redirected_publisher = ] 'redirected_publisher'`
  The availability group listener name associated with the availability group that will be the new publisher. *redirected_publisher* is **sysname**, with no default. When the availability group listener is configured to non-default port, specify the port number along with listener name, such as `'Listenername,51433'`  
   
 ## Return Code Values  

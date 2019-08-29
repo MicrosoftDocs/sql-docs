@@ -12,9 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Stored Procedures (Integration Services Catalog)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This section describes the [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures that are available for administering [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f10d228a-9c63-4b68-abec-c10b26b258a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerConnectionPoolDataSource Constructors
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

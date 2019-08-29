@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IBCPSession::BCPReadFmt (OLE DB)

@@ -2,7 +2,7 @@
 title: "Export a Report Using URL Access | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "formats [Reporting Services], URL rendering"
   - "URL access [Reporting Services], rendering formats"
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Export a Report Using URL Access
   You can optionally specify the format in which to render a report by using the *rs:Format* URL parameter.  The HTML4.0 and HTM5 formats (rendering extension) will render in the browser and for other formats, the browser will prompt to save the report output to a local file.  
@@ -22,13 +22,17 @@ ms.author: maghan
 ```  
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  And, from a SharePoint integrated mode report server:  
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
 ```  
-  
+ 
+::: moniker-end
+ 
  For example the following  URL command in your browser exports a PPTX report from a named instance of the report server:  
   
 ```  

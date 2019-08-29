@@ -1,9 +1,7 @@
 ---
-title: "Editions and supported features of SQL Server 2017 ~ Linux | Microsoft Docs"
-ms.custom: "sql-linux"
-ms.date: "09/14/2017"
+title: "Editions and supported features of SQL Server 2017 ~ Linux"
+ms.date: 09/14/2017
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: linux
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "installing SQL Server, editions"
   - "editions [SQL Server], about edition options"
   - "Setup [SQL Server]"
-ms.assetid: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ---
 # Editions and supported features of SQL Server 2017 on Linux
 
@@ -107,7 +104,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Mirrored backups|Yes|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|
 |Encrypted backup|Yes|Yes|No|No|
-|Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|
+|Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|
   
 <sup>1</sup> On Enterprise edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes. 
 
@@ -121,7 +118,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|  
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|  
-|Online non-clustered columnstore index rebuild|Yes|No|No|No|
+|Online nonclustered columnstore index rebuild|Yes|No|No|No|
 |In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes|
 |Persistent Main Memory|Yes|Yes|Yes|Yes|
 |Table and index partitioning|Yes|Yes|Yes|Yes|  

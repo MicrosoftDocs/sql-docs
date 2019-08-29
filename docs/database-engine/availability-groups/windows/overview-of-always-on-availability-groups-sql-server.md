@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Overview of Always On Availability Groups (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +122,7 @@ manager: craigg
   
 -   **Read-only access to one or more secondary replicas (readable secondary replicas)**  
   
-     Any availability replica can be configured to allow read-only access to its local databases when performing the secondary role, though some operations are not fully supported. Also, if you would like to prevent read-only workloads from running on the primary replica, you can configure the replicas to allow only read-write access when running under the primary role. For more information, see [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Any secondary availability replica can be configured to allow only read-only access to its local databases, though some operations are not fully supported. This will prevent read-write connection attempts to the secondary replica. It is also possible to prevent read-only workloads on the _primary_ replica by only allowing read-write access. This will prevent read-only connections from being made to the primary replica. For more information, see [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      If an availability group currently possesses an availability group listener and one or more readable secondary replicas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can route read-intent connection requests to one of them (*read-only routing*). For more information, see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   

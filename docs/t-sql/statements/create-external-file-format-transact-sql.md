@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -242,7 +241,7 @@ Notes about the table:
  Store all missing values as NULL. Any NULL values that are stored by using the word NULL in the delimited text file are imported as the string 'NULL'.
   
    Encoding = {'UTF8' | 'UTF16'}  
- In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server and PDW, PolyBase doesn't support reading UTF16 encoded files.
+ In Azure SQL Data Warehouse and PDW (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
   
  DATA_COMPRESSION = *data_compression_method*  
  Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.

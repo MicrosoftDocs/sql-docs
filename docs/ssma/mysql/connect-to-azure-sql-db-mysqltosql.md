@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Connect to Azure SQL DB (MySQLToSQL)
 Use the Connect to SQL Azure dialog box to connect to the SQL Azure database that you want to migrate.  

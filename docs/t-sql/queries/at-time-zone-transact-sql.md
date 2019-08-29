@@ -1,6 +1,6 @@
 ---
 title: "AT TIME ZONE (Transact-SQL) | Microsoft Docs"
-ms.date: "11/16/2016"
+ms.date: "06/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
+monikerRange: "= azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Converts an *inputdate* to the corresponding *datetimeoffset* value in the target time zone. When *inputdate* is provided without offset information, the function applies the offset of the time zone assuming that *inputdate* is in the target time zone. If *inputdate* is provided as a *datetimeoffset* value, then **AT TIME ZONE** clause converts it into the target time zone using the time zone conversion rules.  
   
@@ -118,7 +118,7 @@ Since some information (such as timezone rules) is maintained outside of [!INCLU
 ### A. Add target time zone offset to datetime without offset information  
  Use **AT TIME ZONE** to add offset based on time zone rules when you know that the original **datetime** values are provided in the same time zone:  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -130,21 +130,20 @@ FROM Sales.SalesOrderHeader;
 ### B. Convert values between different time zones  
  The following example converts values between different time zones:  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
 SELECT SalesOrderID, OrderDate,   
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,  
-    OrderDate AT TIME ZONE 'Pacific Standard Time'   
-    AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
+    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
 FROM Sales.SalesOrderHeader;  
 ```  
   
 ### C. Query Temporal Tables using local time zone  
  The following example selects data from a temporal table.  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   

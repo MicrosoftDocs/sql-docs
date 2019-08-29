@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Procedure Calls
 A *procedure* is an executable object stored on the data source. Generally, it is one or more SQL statements that have been precompiled. The escape sequence for calling a procedure is  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Error Object Properties, Methods, and Events
 ## Properties  

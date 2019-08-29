@@ -15,9 +15,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Variables Window
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Variables** window to create and modify user-defined variables and view system variables.  
   
  By default, the **Variables** window is located below the **Connection Managers** area in the SSIS Designer, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. If you don't see the **Variables** window, click **Variables** on the **SSIS** menu to display the window.  

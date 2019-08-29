@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Tutorial: Introducing Expressions
 In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you use expressions with common functions and operators to create powerful and flexible [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports. 

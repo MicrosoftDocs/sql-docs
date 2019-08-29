@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@filename =** ] **'***name***'**  
+`[ @filename = ] 'name'`
  Is the logical name of any file in the current database. *name* is **sysname**, with a default of NULL. If *name* is not specified, the attributes of all files in the current database are returned.  
   
 ## Return Code Values  

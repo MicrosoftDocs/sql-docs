@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "queries [SQL Server], columns"
   - "adding columns"
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Add Columns to Queries (Visual Database Tools)

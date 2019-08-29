@@ -9,9 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Connect to an Oracle Data Source (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This topic shows you how to connect to an **Oracle** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. There are several data providers that you can use to connect to Oracle.
 
 > [!IMPORTANT]

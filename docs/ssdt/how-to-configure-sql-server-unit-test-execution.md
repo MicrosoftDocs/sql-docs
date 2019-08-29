@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # How to: Configure SQL Server Unit Test Execution
 By configuring your test project, you can specify several settings that control aspects of how your SQL Server unit tests are run. These configuration settings are stored in your test project's app.config file. If you edit this file directly, the new values appear in the test configuration dialog box.  

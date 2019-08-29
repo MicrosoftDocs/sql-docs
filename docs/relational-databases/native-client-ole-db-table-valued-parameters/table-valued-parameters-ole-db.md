@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table-Valued Parameters (OLE DB)

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # INSERT Statement Limitations
 Inserted data is truncated on the right without warning if it is too long to fit into the column.  

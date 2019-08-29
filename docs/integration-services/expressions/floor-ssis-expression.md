@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # FLOOR (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the largest integer that is less than or equal to a numeric expression.  
   
 ## Syntax  

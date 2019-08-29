@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "MSReportServer_Instance Methods"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "MSReportServer_Instance class"
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # MSReportServer_Instance Methods

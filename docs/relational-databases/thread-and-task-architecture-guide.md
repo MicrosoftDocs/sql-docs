@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Thread and Task Architecture Guide

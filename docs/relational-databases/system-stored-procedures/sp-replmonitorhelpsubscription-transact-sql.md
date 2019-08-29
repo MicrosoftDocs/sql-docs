@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replmonitorhelpsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Returns current status information for subscriptions belonging to one or more publications at the Publisher and returns one row for each returned subscription. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   
@@ -39,16 +38,16 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher the status of which is being monitored. *publisher* is **sysname**, with a default value of NULL. If **null**, information is returned for all Publishers that use the Distributor.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the published database. *publisher_db* is **sysname**, with a default value of NULL. If NULL, then information is returned for all published databases at the Publisher.  
   
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication being monitored. *publication* is **sysname**, with a default value of NULL.  
   
- [ **@publication_type** = ] *publication_type*  
+`[ @publication_type = ] publication_type`
  If the type of publication. *publication_type* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -58,7 +57,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|Merge publication.|  
 |NULL (default)|Replication tries to determine the publication type.|  
   
- [ **@mode** = ] *mode*  
+`[ @mode = ] mode`
  Is the filtering mode to use when returning subscription monitoring information. *mode* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -72,13 +71,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Returns only subscriptions that are currently being synchronized.|  
 |**7**|Returns only subscriptions that are not currently being synchronized.|  
   
- [ **@topnum** = ] *topnum*  
+`[ @topnum = ] topnum`
  Restricts the result set to only the specified number of subscriptions at the top of the returned data. *topnum* is **int**, with no default.  
   
- [ **@exclude_anonymous** = ] *exclude_anonymous*  
+`[ @exclude_anonymous = ] exclude_anonymous`
  Is if anonymous pull subscriptions are excluded from the result set. *exclude_anonymous* is **bit**, with a default of **0**; a value of **1** means that anonymous subscriptions are excluded and a value of **0** means that they are included.  
   
- [ **@refreshpolicy=** ] *refreshpolicy*  
+`[ @refreshpolicy = ] refreshpolicy`
  Internal use only.  
   
 ## Result Sets  

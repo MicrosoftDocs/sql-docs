@@ -16,9 +16,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # System Variables
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a set of system variables that store information about the running package and its objects. These variables can be used in expressions and property expressions to customize packages, containers, tasks, and event handlers.  
   
  All variables-system and user-defined- can be used in the parameter bindings that the Execute SQL task uses to map variables to parameters.  

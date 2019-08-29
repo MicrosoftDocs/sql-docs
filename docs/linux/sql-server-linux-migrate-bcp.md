@@ -1,13 +1,11 @@
 ---
-title: Bulk copy data to SQL Server on Linux | Microsoft Docs
+title: Bulk copy data to SQL Server on Linux
 description: 
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ---

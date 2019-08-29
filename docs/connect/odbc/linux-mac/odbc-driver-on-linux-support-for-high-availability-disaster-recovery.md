@@ -1,7 +1,7 @@
 ---
 title: "ODBC Driver on Linux and macOS - High Availability and Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/04/2018"
+ms.date: "04/05/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ODBC Driver on Linux and macOS Support for High Availability and Disaster Recovery
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -99,4 +98,4 @@ An ODBC application that uses [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]
 
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)  
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

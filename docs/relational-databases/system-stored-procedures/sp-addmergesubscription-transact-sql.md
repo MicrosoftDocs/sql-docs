@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_addmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Creates a push or pull merge subscription. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -183,7 +182,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Allows conflicts to be resolved interactively for all articles that allow interactive resolution. *use_interactive_resolver* is **nvarchar(5)**, with a default of FALSE.  
   
 `[ @merge_job_name = ] 'merge_job_name'`
- The *@merge_job_name* parameter is deprecated and cannot be set. *merge_job_name* is **sysname**, with a default of NULL.  
+ The *\@merge_job_name* parameter is deprecated and cannot be set. *merge_job_name* is **sysname**, with a default of NULL.  
   
 `[ @hostname = ] 'hostname'`
  Overrides the value returned by [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) when this function is used in the WHERE clause of a parameterized filter. *Hostname* is **sysname**, with a default of NULL.  
@@ -197,7 +196,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## Remarks  
  **sp_addmergesubscription** is used in merge replication.  
   
- When **sp_addmergesubscription** is executed by a member of the **sysadmin** fixed server role to create a push subscription, the Merge Agent job is implicitly created and runs under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. We recommend that you execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) and specify the credentials of a different, agent-specific Windows account for **@job_login** and **@job_password**. For more information, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ When **sp_addmergesubscription** is executed by a member of the **sysadmin** fixed server role to create a push subscription, the Merge Agent job is implicitly created and runs under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account. We recommend that you execute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) and specify the credentials of a different, agent-specific Windows account for **\@job_login** and **\@job_password**. For more information, see [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## Example  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

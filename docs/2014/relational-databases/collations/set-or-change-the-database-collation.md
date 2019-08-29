@@ -86,7 +86,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use the [COLLATE](/sql/t-sql/statements/collations) clause to specify a collation name. The example creates the database `MyOptionsTest` that uses the `Latin1_General_100_CS_AS_SC` collation. After you create the database, execute the `SELECT` statement to verify the setting.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -112,7 +112,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use the [COLLATE](/sql/t-sql/statements/collations) clause in an [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) statement to change the collation name. Execute the `SELECT` statement to verify the change.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  

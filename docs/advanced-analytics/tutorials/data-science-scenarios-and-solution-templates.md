@@ -1,16 +1,16 @@
 ---
-title: Data science scenarios and solution templates - SQL Server Machine Learning
+title: Data science scenarios and solution templates
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 03/29/2019
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Data science scenarios and solution templates
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Templates are sample solutions that demonstrate best practices and provide building blocks to help you implement a solution fast. Each template is designed to solve a specific problem, for a specific vertical or industry. The tasks in each template extend from data preparation and feature engineering to model training and scoring. Use these templates to learn how [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] works. Then, feel free to customize the template to fit your own scenario and build a custom solution. 
 
@@ -19,8 +19,6 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 > [!TIP]
 > 
 > Most of the templates come in multiple versions supporting both on-premises and cloud platforms for machine learning. For example, you can build the solution using only SQL Server, or you can build the solution in Microsoft R Server, or in Azure Machine Learning.
-
-+ For details and updates, see this announcement: [Exciting new templates in Azure ML](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + For download and setup instructions, see [How to use the templates](#bkmk_HowTo).
 
@@ -62,8 +60,6 @@ Each solution includes sample data, R code or Python code, and SQL stored proced
 [Predictive maintenance template (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **What:** Predictive maintenance aims to increase the efficiency of maintenance tasks by capturing past failures and using that information to predict when or where a device might fail. The ability to forecast device obsolescence is especially valuable for applications that rely on distributed data or sensors. this method could also be applied to monitor or predict error in IoT (Internet of Things) devices.
-
-See this announcement for more information: [New predictive maintenance template](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **How:** This solution focuses on answering the question, "When will an in-service machine fail?" The input data represents simulated sensor measurements for aircraft engines. Data obtained from monitoring the engine's current operation conditions, such as the current working cycle, settings, and sensor measurements, are used to create three types of predictive models:
 

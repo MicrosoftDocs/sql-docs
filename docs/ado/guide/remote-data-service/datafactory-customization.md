@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # DataFactory Customization
 Remote Data Service (RDS) provides a way to easily perform data access in a three-tier client/server system. A client data control specifies connection and command string parameters to perform a query on a remote data source, or connection string and [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object parameters to perform an update.  

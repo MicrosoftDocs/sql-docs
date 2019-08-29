@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STUnion (geometry Data Type)"
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STUnion (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "08/13/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
@@ -43,9 +43,8 @@ helpviewer_keywords:
   - "stripe sets [SQL Server]"
   - "cross-platform backups"
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: mashamsft
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions"
 ---
 # BACKUP (Transact-SQL)
@@ -173,7 +172,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## Arguments
@@ -322,8 +321,10 @@ Used to specify encryption for a backup. You can specify an encryption algorithm
 
 If you choose to encrypt you will also have to specify the encryptor using the encryptor options:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+The `SERVER CERTIFICATE` and `SERVER ASYMMETRIC KEY` are a certificate and an asymmetric key created in `master` database. For more information see [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) and [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md) respectively.
 
 > [!WARNING]
 > When encryption is used in conjunction with the `FILE_SNAPSHOT` argument, the metadata file itself is encrypted using the specified encryption algorithm and the system verifies that [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) was completed for the database. No additional encryption happens for the data itself. The backup fails if the database was not encrypted or if the encryption was not completed before the backup statement was issued.
@@ -468,7 +469,7 @@ If you are taking a backup that you plan to copy onto and restore from a CD-ROM,
 BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
-The total space used by the buffers is determined by: *buffercount/maxtransfersize*.
+The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.
@@ -797,6 +798,7 @@ This section contains the following examples:
 - G. [Backing up to an existing mirrored media set](#existing_mirrored_media_set)
 - H. [Creating a compressed backup in a new media set](#creating_compressed_backup_new_media_set)
 - I. [Backing up to the Microsoft Azure Blob storage service](#url)
+- J. [Track the progress of backup statement](#backup_progress)
 
 > [!NOTE]
 > The backup how-to topics contain additional examples. For more information, see [Backup Overview](../../relational-databases/backup-restore/backup-overview-sql-server.md).
@@ -943,6 +945,17 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
+### <a name="backup_progress"></a> J. Track the progress of backup statement
+
+The following query returns information about the currently running backup statements:
+```sql
+SELECT query = a.text, start_time, percent_complete,
+    eta = dateadd(second,estimated_completion_time/1000, getdate())
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+WHERE r.command LIKE 'BACKUP%'
+```
+
 ## See Also
 
 - [Backup Devices](../../relational-databases/backup-restore/backup-devices-sql-server.md)
@@ -1017,7 +1030,7 @@ Specifies a complete database backup. During a database backup, the managed inst
 > [!IMPORTANT]
 > A database backup created on a managed instance can only be restored on another managed instance. It cannot be restored to a SQL Server on-premises instance (similar to the way that a backup of a SQL Server 2016 database cannot be restored to a SQL Server 2012 instance).
 
-When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database managed instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)
+When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database managed instance automatic backups, see [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* | **@**_database\_name\_var_ }
 Is the database from which the complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.
@@ -1050,8 +1063,8 @@ Used to specify encryption for a backup. You can specify an encryption algorithm
 
 If you choose to encrypt you will also have to specify the encryptor using the encryptor options:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **Backup Set Options**
 
@@ -1091,7 +1104,7 @@ Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 
 BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }
 Specifies the total number of I/O buffers to be used for the backup operation. You can specify any positive integer; however, large numbers of buffers might cause "out of memory" errors because of inadequate virtual address space in the Sqlservr.exe process.
 
-The total space used by the buffers is determined by: *buffercount/maxtransfersize*.
+The total space used by the buffers is determined by: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
 > For important information about using the `BUFFERCOUNT` option, see the [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.

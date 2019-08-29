@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_connection_stats (Azure SQL Database)
@@ -95,6 +94,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## See Also
 
- [Troubleshooting Windows Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Troubleshoot connection issues to Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # put_OLEDBCommand Method
 This method performs no operation and always returns S_OK.  

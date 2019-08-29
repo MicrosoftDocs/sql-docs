@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # CODEPOINT (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the Unicode code point of the leftmost character of a character expression.  
   
 ## Syntax  

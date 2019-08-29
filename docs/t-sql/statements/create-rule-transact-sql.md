@@ -29,7 +29,6 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

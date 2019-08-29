@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring Witness
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

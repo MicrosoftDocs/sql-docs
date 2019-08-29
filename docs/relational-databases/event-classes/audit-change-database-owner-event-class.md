@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 2f1dd4fc-2540-423c-80ad-c5bc712c42e0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Change Database Owner Event Class

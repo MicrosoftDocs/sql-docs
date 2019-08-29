@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "dropping indexes"
   - "XML indexes [SQL Server], dropping"
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Drop XML Indexes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

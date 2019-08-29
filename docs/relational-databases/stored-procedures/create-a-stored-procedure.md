@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Stored Procedure

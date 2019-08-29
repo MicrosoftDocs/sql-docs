@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create a Subscription for a Non-SQL Server Subscriber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

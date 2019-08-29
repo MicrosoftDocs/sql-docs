@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Delete backup blob files with active leases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,9 @@ manager: craigg
     >  SQL Server issues a lease ID to establish exclusive access during the restore operation. The restore lease ID is BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
 3.  **Delete the Blob:** To delete a blob with an active lease, you must first break the lease.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="Code_Example"></a> PowerShell script example  
   
 > [!IMPORTANT]

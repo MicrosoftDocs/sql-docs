@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "W3C XPath specification"
   - "XPath queries [SQLXML], functionality"
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Introduction to Using XPath Queries (SQLXML 4.0)

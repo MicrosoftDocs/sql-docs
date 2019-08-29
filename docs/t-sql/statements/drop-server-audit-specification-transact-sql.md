@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

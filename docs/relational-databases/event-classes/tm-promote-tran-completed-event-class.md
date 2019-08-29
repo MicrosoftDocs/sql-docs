@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TM: Promote Tran Completed Event Class

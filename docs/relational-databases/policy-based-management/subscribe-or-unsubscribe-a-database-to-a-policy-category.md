@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Subscribe or Unsubscribe a Database  to a Policy Category
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # ODBC Source Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The following table describes the custom properties of the ODBC source. All properties can be set from SSIS property expressions.  
   
 |Property name|Data Type|Description|  

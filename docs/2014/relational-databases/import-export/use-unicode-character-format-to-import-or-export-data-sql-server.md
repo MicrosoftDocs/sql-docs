@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], Unicode character"
   - "Unicode [SQL Server], bulk importing and exporting"
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Use Unicode Character Format to Import or Export Data (SQL Server)

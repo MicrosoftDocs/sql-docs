@@ -16,7 +16,6 @@ helpviewer_keywords:
   - "initialization properties [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Initialization and Authorization Properties
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

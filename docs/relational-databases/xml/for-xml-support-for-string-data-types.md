@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "strings [SQL Server], XML"
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # FOR XML Support for String Data Types
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -21,9 +21,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Coding and Debugging the Script Task
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After configuring the Script task in the **Script Task Editor**, you write your custom code in the Script task development environment.  
   
 ## Script Task Development Environment  

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 547e4be4-a8e4-48ce-9d8d-37b169985081
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.all_objects (Transact-SQL)

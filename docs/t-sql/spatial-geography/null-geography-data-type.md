@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "Null (geography Data Type)"
   - "Null method"
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Null (geography Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

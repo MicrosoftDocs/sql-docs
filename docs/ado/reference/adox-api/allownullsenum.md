@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # AllowNullsEnum
 Specifies whether records with null values are indexed.  

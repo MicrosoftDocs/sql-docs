@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Clear Method (ADO)
 Removes all the [Error](../../../ado/reference/ado-api/error-object.md) objects from the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection.  

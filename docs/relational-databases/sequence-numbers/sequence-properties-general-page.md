@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sequence Properties (General Page)

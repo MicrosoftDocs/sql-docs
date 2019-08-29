@@ -10,7 +10,6 @@ ms.topic: "reference"
 ms.assetid: 2e5a4fd8-5164-495a-9986-3477aef8d8a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IDBProperties (OLE DB)

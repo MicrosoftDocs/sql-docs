@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -474,7 +473,7 @@ manager: craigg
   
  `SQLCMD returned 100 to the command shell`  
   
-### G. Using sqlcmd to set encryption on Windows Azure SQL Database  
+### G. Using sqlcmd to set encryption on Azure SQL Database  
  A `sqlcmd`can be executed on a connection to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] data on to specify encryption and certificate trust. Two `sqlcmd```options are available:  
   
 -   The -N switch is used by the client to request an encrypted connection. This option is equivalent to the ADO.net option `ENCRYPT = true`.  

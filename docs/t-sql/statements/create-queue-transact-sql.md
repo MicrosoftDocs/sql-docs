@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +53,10 @@ CREATE QUEUE <object>
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        queue_name  
-}   
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
   
 <procedure> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        stored_procedure_name  
-}  
+{ database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }  
   
 ```  
   
@@ -163,32 +156,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|Unique identifier for the message.|  
   
 ## Permissions  
- Permission for creating a queue uses members of the db_ddladmin or db_owner fixed database roles and the sysadmin fixed server role.  
+ Permission for creating a queue uses members of the `db_ddladmin` or `db_owner` fixed database roles, or the `sysadmin` fixed server role.  
   
- REFERENCES permission for a queue defaults to the owner of the queue, members of the db_ddladmin or db_owner fixed database roles, and members of the sysadmin fixed server role.  
+ `REFERENCES` permission for a queue defaults to the owner of the queue, members of the `db_ddladmin` or `db_owner` fixed database roles, or members of the `sysadmin` fixed server role.  
   
- RECEIVE permission for a queue defaults to the owner of the queue, members of the db_owner fixed database role, and members of the sysadmin fixed server role.  
+ `RECEIVE` permission for a queue defaults to the owner of the queue, members of the `db_owner` fixed database role, or members of the `sysadmin` fixed server role.  
   
 ## Examples  
   
 ### A. Creating a queue with no parameters  
  The following example creates a queue that is available to receive messages. No activation stored procedure is specified for the queue.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### B. Creating an unavailable queue  
  The following example creates a queue that is unavailable to receive messages. No activation stored procedure is specified for the queue.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### C. Creating a queue and specify internal activation information  
  The following example creates a queue that is available to receive messages. The queue starts the stored procedure `expense_procedure` when a message enters the queue. The stored procedure executes as the user `ExpenseUser`. The queue starts a maximum of `5` instances of the stored procedure.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +193,7 @@ CREATE QUEUE ExpenseQueue
 ### D. Creating a queue on a specific filegroup  
  The following example creates a queue on the filegroup `ExpenseWorkFileGroup`.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +201,7 @@ CREATE QUEUE ExpenseQueue
 ### E. Creating a queue with multiple parameters  
  The following example creates a queue on the `DEFAULT` filegroup. The queue is unavailable. Messages are retained in the queue until the conversation that they belong to ends. When the queue is made available through ALTER QUEUE, the queue starts the stored procedure `2008R2.dbo.expense_procedure` to process messages. The stored procedure executes as the user who ran the `CREATE QUEUE` statement. The queue starts a maximum of `10` instances of the stored procedure.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

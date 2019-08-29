@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Delete a Policy-Based Management Policy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

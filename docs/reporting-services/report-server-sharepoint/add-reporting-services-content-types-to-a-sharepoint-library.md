@@ -2,14 +2,14 @@
 title: "Add Reporting Services content types to a SharePoint library | Microsoft Docs"
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
 
 
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Add Reporting Services content types to a SharePoint library
@@ -56,7 +56,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 2.  Go to **Site settings**.  
   
-    -   In SharePoint 2013, click the **Settings** icon. ![SharePoint Settings](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
+    -   In SharePoint 2013, click the **Settings** icon. ![SharePoint Settings](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
   
     -   In SharePoint 2010, click **Site Actions**, then click **Site Settings**.  
   

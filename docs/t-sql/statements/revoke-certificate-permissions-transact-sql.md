@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # REVOKE Certificate Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 71db8ef6-341b-4465-99db-5c63e48d4c7d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Increase or Disable Blocked Process Threshold
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

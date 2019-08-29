@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # SQL Trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,9 +19,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Merge Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Merge transformation combines two sorted datasets into a single dataset. The rows from each dataset are inserted into the output based on values in their key columns.  
   
  By including the Merge transformation in a data flow, you can perform the following tasks:  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, LogPool FreePool Object
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

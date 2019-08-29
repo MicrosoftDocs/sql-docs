@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Cell Object Properties, Methods, and Events
 ## Properties/Collections  

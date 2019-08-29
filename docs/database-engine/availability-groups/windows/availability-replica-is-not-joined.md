@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Availability replica is not joined to an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

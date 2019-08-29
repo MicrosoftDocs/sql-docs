@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "OPENROWSET function, bulk importing"
   - "data formats [SQL Server], default values"
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Keep Nulls or Use Default Values During Bulk Import (SQL Server)

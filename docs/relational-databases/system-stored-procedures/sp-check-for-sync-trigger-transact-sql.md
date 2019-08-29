@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_check_for_sync_trigger (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Determines whether a user-defined trigger or stored procedure is being called in the context of a replication trigger that is used for immediate updating subscriptions. This stored procedure is executed at the Publisher on the publication database or at the Subscriber on the subscription database.  
   
@@ -47,7 +46,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Del**|DELETE trigger|  
 |NULL (default)||  
   
- [ **@fonpublisher =** ] *fonpublisher*  
+`[ @fonpublisher = ] fonpublisher`
  Specifies the location where the stored procedure is executed. *fonpublisher* is **bit**, with a default value of 0. If 0, the execution is at the Subscriber, and if 1, the execution is at the Publisher.  
   
 ## Return Code Values  

@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "decryption [SQL Server], certificates"
   - "DECRYPTBYCERT function"
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

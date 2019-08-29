@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Understanding the Script Component Object Model
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As discussed in [Coding and Debugging the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), the Script component project contains three project items:  
   
 1.  The **ScriptMain** item, which contains the **ScriptMain** class in which you write your code. The **ScriptMain** class inherits from the **UserComponent** class.  

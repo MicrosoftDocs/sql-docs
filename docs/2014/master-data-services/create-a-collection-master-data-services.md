@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "creating collections [Master Data Services]"
   - "collections [Master Data Services], creating"
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

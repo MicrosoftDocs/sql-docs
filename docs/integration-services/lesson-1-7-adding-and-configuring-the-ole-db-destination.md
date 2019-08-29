@@ -10,9 +10,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 1-7: Add and configure the OLE DB destination
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Your package can now extract data from the flat file source and transform that data into a format compatible with the destination. The next task is to load the transformed data into the destination. To load the data, you add an OLE DB destination to the data flow. The OLE DB destination can use a database table, view, or a SQL command to load data into a variety of OLE DB-compliant databases.  
   

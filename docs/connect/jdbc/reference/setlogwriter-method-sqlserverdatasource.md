@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # setLogWriter Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

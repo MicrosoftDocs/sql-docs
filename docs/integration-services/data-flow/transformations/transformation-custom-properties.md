@@ -41,9 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transformation Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In addition to the properties that are common to most data flow objects in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model, many data flow objects have custom properties that are specific to the object. These custom properties are available only at run time, and are not documented in the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Reference Documentation.  
   
  This topic lists and describes the custom properties of the various data flow transformations. For information about the properties common to most data flow objects, see [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  

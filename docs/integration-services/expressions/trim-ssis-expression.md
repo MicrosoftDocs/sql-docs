@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # TRIM (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression after removing leading and trailing spaces.  
   
 > [!NOTE]  

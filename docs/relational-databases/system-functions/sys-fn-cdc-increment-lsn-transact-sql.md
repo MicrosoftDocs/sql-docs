@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

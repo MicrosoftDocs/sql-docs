@@ -21,9 +21,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Coding and Debugging the Script Component
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, the Script component has two modes: metadata design mode and code design mode. When you open the **Script Transformation Editor**, the component enters metadata design mode, in which you configure metadata and set component properties. After you have set the properties of the Script component and configured the input and outputs in metadata design mode, you can switch to code design mode to write your custom script. For more information about metadata design mode and code design mode, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  
   
 ## Writing the Script in Code Design Mode  

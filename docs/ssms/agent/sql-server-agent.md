@@ -1,7 +1,5 @@
 ---
 title: "SQL Server Agent | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -11,28 +9,24 @@ helpviewer_keywords:
   - "SQL Server Agent, about SQL Server Agent"
   - "automatic administration steps"
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
+ms.custom: ""
+ms.date: "01/19/2017"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is a Microsoft Windows service that executes scheduled administrative tasks, which are called *jobs* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-**In This Topic**  
-  
--   [Benefits of SQL Server Agent](#Benefits)  
-  
--   [Components of SQL Server Agent](#Components)  
-  
--   [Security for SQL Server Agent Administration](#Security)  
-  
-## <a name="Benefits"></a>Benefits of SQL Server Agent  
+
+## <a name="Benefits"></a>Benefits of SQL Server Agent 
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store job information. Jobs contain one or more job steps. Each step contains its own task, for example, backing up a database.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent can run a job on a schedule, in response to a specific event, or on demand. For example, if you want to back up all the company servers every weekday after hours, you can automate this task. Schedule the backup to run after 22:00 Monday through Friday; if the backup encounters a problem, SQL Server Agent can record the event and notify you.  

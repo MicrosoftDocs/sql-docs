@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Client-side and Server-side Formatting (SQLXML 4.0)

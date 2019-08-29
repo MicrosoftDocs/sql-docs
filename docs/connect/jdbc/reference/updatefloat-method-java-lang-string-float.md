@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # updateFloat Method (java.lang.String, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

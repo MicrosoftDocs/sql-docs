@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring Monitor (Status Page)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

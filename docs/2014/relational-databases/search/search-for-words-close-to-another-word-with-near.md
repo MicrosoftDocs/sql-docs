@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "full-text queries [SQL Server], proximity"
   - "queries [full-text search], proximity"
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Search for Words Close to Another Word with NEAR

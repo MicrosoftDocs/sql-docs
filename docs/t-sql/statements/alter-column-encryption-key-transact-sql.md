@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

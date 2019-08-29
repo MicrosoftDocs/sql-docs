@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration Architecture  - Performance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

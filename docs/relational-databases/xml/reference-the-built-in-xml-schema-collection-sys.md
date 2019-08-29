@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server], predefined"
   - "built-in XML schema collections [SQL Server]"
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Reference the Built-in XML Schema Collection (sys)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

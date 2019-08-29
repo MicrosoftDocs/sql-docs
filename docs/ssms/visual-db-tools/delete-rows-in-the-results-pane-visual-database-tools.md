@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "deleting rows"
   - "Results pane"
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Delete Rows in the Results Pane (Visual Database Tools)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "AUTO mode"
   - "security [SQLXML], FOR XML"
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # FOR XML Security Considerations (SQLXML 4.0)

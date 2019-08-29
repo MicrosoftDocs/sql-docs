@@ -1,7 +1,7 @@
 ---
 title: "Release notes for the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/07/2019"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -10,31 +10,81 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Release notes for the Microsoft JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
-
-## 7.2.1
+## 7.4.1
 
 ### Compliance
 
-February 11, 2019
+August 2, 2019
 
 | Compliance change | Details |
 | :---------------- | :------ |
-| Download the latest updates for JDBC Driver 7.2. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| Fully compliant with JDBC API Specification 4.2. | The jars in the 7.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.2.1.jre11.jar file from the 7.2 package should be used with Java 11. |
+| Download the latest updates for JDBC Driver 7.4. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 7.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.4.1.jre11.jar file from the 7.4 package should be used with Java 11. |
+| Compatible with Java Development Kit (JDK) version 12.0, 11.0, and 1.8. | Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11.0 and 1.8. |
+| &nbsp; | &nbsp; |
+
+### Support for JDK 12
+
+Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development Kit (JDK) version 12.0 in addition to JDK 11.0 and 1.8.
+
+### Introduces NTLM authentication
+
+| NTLM change | Details |
+| :--------- | :------ |
+| Supports NTLM authentication mode. | This mode of authentication allows both Windows and non-Windows clients to authenticate themselves against SQL Server using Windows domain users. |
+| More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
+| &nbsp; | &nbsp; |
+
+### Introduces querying ParameterMetaData via _useFmtOnly_
+
+| useFmtOnly change | Details |
+| :---------- | :------ |
+| **useFmtOnly** connection property added. | This feature allows users to optionally query ParameterMetaData via the `SET FMTONLY ON` legacy API. This is useful for scenarios where `sp_describe_undeclared_parameters` doesn't perform as expected. |
+| More details and limitations. | See [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| &nbsp; | &nbsp; |
+
+### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.1
+
+| Key Vault SDK change | Details |
+| :------------------- | :------ |
+| Updated its Maven dependency on _Microsoft Azure Key Vault SDK for Java_ to version 1.2.1. | &nbsp; |
+| Removes _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency. | &nbsp; |
+| Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
+| &nbsp; | &nbsp; |
+
+### Known issues
+
+| Known issues | Details |
+| :----------- | :------ |
+| When using NTLM Authentication. | Enabling Extended Protection and encrypted connections at the same time is currently not supported. |
+| When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. See [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) for more details and workaround suggestions. |
+| &nbsp; | &nbsp; |
+
+## 7.2.2
+
+### Compliance
+
+April 16, 2019
+
+| Compliance change | Details |
+| :---------------- | :------ |
+| Download the latest updates for JDBC Driver 7.2. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 7.2 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-7.2.2.jre11.jar file from the 7.2 package should be used with Java 11. |
 | Compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8. | Microsoft JDBC Driver 7.2 for SQL Server is now compatible with Java Development Kit (JDK) version 11.0 in addition to JDK 1.8. |
 | &nbsp; | &nbsp; |
 
 > [!NOTE]
 > An issue with SQL statement parsing was found in the JDBC 7.2 Release To Web (RTW) driver released on January 31, 2019. The change was rolled back, and new jars (version 7.2.1) were released on February 11, 2019.
 >
-> Update your projects to use the 7.2.1 release jars. For more information, view release notes for [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1).
+> Another update was made on the driver to fix issues with ActivityIDs not getting cleaned up properly. The new jars (version 7.2.2) were released on April 16, 2019.
+> 
+> We recommend updating your projects to use the 7.2.2 release jars. For more information, view release notes for [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) and [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
 ### Active Directory _Managed Service Identity_ (MSI) authentication
 
@@ -82,7 +132,8 @@ February 11, 2019
 
 | Known issues | Details |
 | :----------- | :------ |
-| Parameterized queries, in certain cases. | An update of the 7.2 version, which will be v7.2.1, will be released in February 2019 to address this issue. |
+| Parameterized queries, in certain cases. | An update of the 7.2.0 version, v7.2.1, was released in February 2019 to address this issue. |
+| Cleaning up of ActivityIds. | An update of the 7.2.1 version, v7.2.2, was released in April 2019 to address this issue. |
 | &nbsp; | &nbsp; |
 
 ## 7.0
@@ -101,11 +152,11 @@ Microsoft JDBC Driver 7.0 for SQL Server now provides support for SQL Server spa
 
 Microsoft JDBC Driver 7.0 for SQL Server now implements `beginRequest()` and `endRequest()` APIs from the `java.sql.Connection` class. These APIs were introduced with JDBC 4.3 specifications and JDK 9. For more information about the driver's implementation of these APIs, see [JDBC 4.3 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
-### Support for SQL data discovery and classification
+### Support for SQL Data Discovery and Classification
 
-Microsoft JDBC Driver 7.0 for SQL Server provides support for SQL data discovery and classification with any target database that supports this feature. The driver now exposes `SQLServerResultSet.getSensitivityClassification()` APIs to extract this information from the fetched `ResultSet`.
+Microsoft JDBC Driver 7.0 for SQL Server provides support for SQL Data Discovery and Classification with any target database that supports this feature. The driver now exposes `SQLServerResultSet.getSensitivityClassification()` APIs to extract this information from the fetched `ResultSet`.
 
-For more information about how to use this feature with the JDBC Driver, see the sample in [SQL data discovery and classification](../../connect/jdbc/data-discovery-classification-sample.md).
+For more information about how to use this feature with the JDBC Driver, see the sample in [SQL Data Discovery and Classification](../../connect/jdbc/data-discovery-classification-sample.md).
 
 ### Added connection property: useBulkCopyForBatchInsert
 
@@ -207,7 +258,7 @@ Microsoft JDBC Driver 6.2 for SQL Server is fully compliant with JDBC specificat
 >
 > Another improvement upgraded the Azure Key Vault dependent library version to 1.0.0, and new jars (version 6.2.2) were released on October 19, 2017.
 >
-> Download the latest updates for JDBC Driver 6.2 from [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), and [Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Please update your projects to use the 6.2.2 release jars. For more information, view release notes for [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) and [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2).
+> Download the latest updates for JDBC Driver 6.2 from [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), and [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Please update your projects to use the 6.2.2 release jars. For more information, view release notes for [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) and [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2).
 
 ### Azure AD support for Linux
 

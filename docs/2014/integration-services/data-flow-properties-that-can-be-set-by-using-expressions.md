@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -73,7 +72,7 @@ manager: craigg
 -   [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md)  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](http://pragmaticworks.com/cheatsheet/), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), on pragmaticworks.com  
   
 ## See Also  
  [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md)   

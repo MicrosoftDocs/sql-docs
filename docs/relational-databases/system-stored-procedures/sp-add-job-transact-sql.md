@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

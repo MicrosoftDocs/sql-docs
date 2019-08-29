@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Interface Conformance Levels
 The purpose of leveling is to inform the application what features are available to it from the driver. A leveling scheme based on functions does not sufficiently achieve this goal. In ODBC 3.*x*, drivers are classified based on the features they possess. Supporting the feature can include supporting the function; it can also include supporting a descriptor field, a statement attribute, a "Y" value for an information type returned by **SQLGetInfo**, and so on.  

@@ -15,9 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Parsing Non-Standard Text File Formats with the Script Component
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When your source data is arranged in a non-standard format, you may find it more convenient to consolidate all your parsing logic in a single script than to chain together multiple [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] transformations to achieve the same result.  
   
  [Example 1: Parsing Row-Delimited Records](#example1)  

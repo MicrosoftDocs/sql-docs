@@ -15,10 +15,10 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication Distribution Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Replication Distribution Agent is an executable that moves the snapshot (for snapshot replication and transactional replication) and the transactions held in the distribution database tables (for transactional replication) to the destination tables at the Subscribers.  
   
 > [!NOTE]  
@@ -105,10 +105,10 @@ distrib [-?]
  Is the number of rows to send in a bulk copy operation. When performing a **bcp in** operation, the batch size is the number of rows to send to the server as one transaction, and also the number of rows that must be sent before the Distribution Agent logs a **bcp** progress message. When performing a **bcp out** operation, a fixed batch size of **1000** is used.  
   
  **-CommitBatchSize** _commit_batch_size_  
- Is the number of transactions to be issued to the Subscriber before a COMMIT statement is issued. The default is 100.  
+ Is the number of transactions to be issued to the Subscriber before a COMMIT statement is issued. The default is 100 and the max is 10000.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- Is the number of replication commands to be issued to the Subscriber before a COMMIT statement is issued. The default is 1000.  
+ Is the number of replication commands to be issued to the Subscriber before a COMMIT statement is issued. The default is 1000 and the max is 10000. 
   
  **-Continuous**  
  Specifies whether the agent attempts to poll replicated transactions continually. If specified, the agent polls replicated transactions from the source at polling intervals, even if there are no transactions pending.  

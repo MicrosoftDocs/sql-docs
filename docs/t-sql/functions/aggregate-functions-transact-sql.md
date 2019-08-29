@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "summarizing functions"
   - "aggregate functions [SQL Server]"
 ms.assetid: 0c06ae42-eb0a-4d77-9d74-aa1e7f344009
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Aggregate Functions (Transact-SQL)
@@ -25,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 An aggregate function performs a calculation on a set of values, and returns a single value. Except for `COUNT`, aggregate functions ignore null values. Aggregate functions are often used with the GROUP BY clause of the SELECT statement.
   
-All aggregate functions are deterministic. In other words, aggregate functions return the same value each time that they are called, when called with a specific set of input values. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information about function determinism. The [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md) may follow all aggregate functions, except the GROUPING or GROUPING_ID functions.
+All aggregate functions are deterministic. In other words, aggregate functions return the same value each time that they are called, when called with a specific set of input values. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information about function determinism. The [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md) may follow all aggregate functions, except the STRING_AGG, GROUPING or GROUPING_ID functions.
   
 Use aggregate functions as expressions only in the following situations:
 -   The select list of a SELECT statement (either a subquery or an outer query).  

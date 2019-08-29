@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

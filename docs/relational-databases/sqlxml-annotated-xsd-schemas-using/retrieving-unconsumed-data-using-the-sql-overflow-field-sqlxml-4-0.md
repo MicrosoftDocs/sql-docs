@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "sql:overflow-field"
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ""
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)
@@ -95,7 +94,9 @@ GO
     ```  
   
 3.  Create and use the SQLXML 4.0 Test Script (Sqlxml4test.vbs) to execute the template.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Here is the result set:  

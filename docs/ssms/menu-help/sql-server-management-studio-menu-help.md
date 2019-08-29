@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], Help"
   - "SQL Server Management Studio Help [SQL Server], menu items"
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # SQL Server Management Studio Menu Help
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

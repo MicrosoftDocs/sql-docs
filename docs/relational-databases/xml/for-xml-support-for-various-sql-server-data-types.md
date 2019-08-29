@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "FOR XML clause, data type support"
   - "data types [SQL Server], FOR XML clause"
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # FOR XML Support for Various SQL Server Data Types
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

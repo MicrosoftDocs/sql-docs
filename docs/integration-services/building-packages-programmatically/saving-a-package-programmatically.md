@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Saving a Package Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After building a new package programmatically, or modifying an existing one, you usually want to save your changes.  
   
  All of the methods used in this topic to save packages require a reference to the **Microsoft.SqlServer.ManagedDTS** assembly. After you add the reference in a new project, import the <xref:Microsoft.SqlServer.Dts.Runtime> namespace with a **using** or **Imports** statement.  

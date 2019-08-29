@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # View Resource Governor Properties
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +55,9 @@ manager: craigg
 3.  For descriptions of the fields in the page, see [Resource Governor Properties](#RGProp).  
   
 4.  To save any changes, click **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGProp"></a> Resource Governor properties  
  **Classifier function name**  
  Specify the classifier function by selecting from the list.  

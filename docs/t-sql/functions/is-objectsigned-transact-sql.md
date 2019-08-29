@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IS_OBJECTSIGNED function"
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

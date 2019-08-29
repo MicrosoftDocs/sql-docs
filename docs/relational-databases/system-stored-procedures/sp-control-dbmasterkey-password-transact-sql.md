@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

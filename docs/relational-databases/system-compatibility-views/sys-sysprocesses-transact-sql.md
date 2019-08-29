@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

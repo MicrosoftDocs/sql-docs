@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Recover from Failover Cluster Instance Failure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

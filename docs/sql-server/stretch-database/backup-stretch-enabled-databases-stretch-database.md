@@ -10,7 +10,6 @@ helpviewer_keywords:
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Backup Stretch-enabled databases (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

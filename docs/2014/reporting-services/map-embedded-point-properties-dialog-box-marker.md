@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1"
   - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Map Embedded Point Properties Dialog Box, Marker

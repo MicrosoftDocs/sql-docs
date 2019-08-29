@@ -2,7 +2,7 @@
 title: "Scripting and PowerShell with Reporting Services | Microsoft Docs"
 ms.date: 09/14/2015
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Reporting Services, scripting"
   - "scripting [Reporting Services]"
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Scripting and PowerShell with Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports a wide range of development and management scenarios through script, including the rs.exe command line utility, PowerShell cmdlets for SharePoint mode report servers, and leveraging the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] object model from PowerShell for both Native and SharePoint mode.  
@@ -25,7 +25,7 @@ ms.author: maghan
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET script as the script language that can be processed by the RS.exe utility, a script host that runs on the report server.  
   
 ## Reporting Services SharePoint mode PowerShell cmdlets and samples  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode includes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cmdlets for report server administration.  
   
@@ -40,7 +40,7 @@ ms.author: maghan
     -   List Data Extensions  
   
 ## Reporting Services Object model and Powershell samples  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
  PowerShell calling the core object model and for the most part valid for SharePoint and native mode, for example the migration work, subscription work, and more related samples for subscriptions work in SQL15.  
   

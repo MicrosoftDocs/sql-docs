@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Logical Expressions (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Performance Center for SQL Server Database Engine and Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

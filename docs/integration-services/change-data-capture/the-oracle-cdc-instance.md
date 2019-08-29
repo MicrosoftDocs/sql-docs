@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # The Oracle CDC Instance
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Oracle CDC Instance is a process created by the Oracle CDC Service to process changes captured from a single Oracle source database. The Oracle CDC Instance retrieves its configuration from the **cdc.xdbcdc_config** table and maintains its state in the **cdc.xdbcdc_state** table. These tables are part of the CDC database, which defines the Oracle CDC Instance. For more information about the xdbcdc database and tables see [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
   
  The following describes the tasks carried out by the Oracle CDC instance:  

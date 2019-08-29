@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Developing a User Interface for a Custom Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you have overridden the implementation of the properties and methods of the base class to provide your custom functionality, you may want to create a custom user interface for your connection manager. If you do not create a custom user interface, users can configure your connection manager only by using the Properties window.  
   
  In a custom user interface project or assembly, you normally have two classes-a class that implements <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, and the Windows form that it displays to gather information from the user.  

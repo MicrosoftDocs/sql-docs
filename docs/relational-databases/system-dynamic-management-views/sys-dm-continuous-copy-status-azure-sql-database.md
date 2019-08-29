@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_continuous_copy_status (Azure SQL Database)

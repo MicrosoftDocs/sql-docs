@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLBindCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  

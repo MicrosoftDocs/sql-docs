@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor and Troubleshoot Memory Usage
@@ -43,7 +42,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  Click **New Query**.  
   
 3.  Paste this code into the new query window and execute each section.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     -- create a database to be used  
     CREATE DATABASE IMOLTP_DB  

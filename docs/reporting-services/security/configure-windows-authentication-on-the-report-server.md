@@ -2,7 +2,7 @@
 title: "Configure Windows Authentication on the Report Server | Microsoft Docs"
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Windows authentication [Reporting Services]"
   - "Reporting Services, configuration"
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure Windows Authentication on the Report Server
   By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without additional configuration. If you want to use a different security provider for Windows integrated security (for example, if you want to use Kerberos directly), or if you modified the default values and want to restore the original settings, you can use the information in this topic to specify authentication settings on the report server.  
@@ -126,7 +126,7 @@ ms.author: maghan
   
 -   Register an SPN for the Report Server service under the domain user account. For more information, see [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Change the service account to run under a built-in account such as Network Service. Built-in accounts map HTTP SPN to the Host SPN, which is defined when you join a computer to your network. For more information, see [Configure a Service Account &#40;SSRS Configuration Manager&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Change the service account to run under a built-in account such as Network Service. Built-in accounts map HTTP SPN to the Host SPN, which is defined when you join a computer to your network. For more information, see [Configure a Service Account &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
   
 -   Use NTLM. NTLM will generally work in cases where Kerberos authentication fails. To use NTLM, remove **RSWindowsNegotiate** from the RSReportServer.config file and verify that only **RSWindowsNTLM** is specified. If you choose this approach, you can continue to use a domain user account for the Report Server service even if you do not define an SPN for it.  
   

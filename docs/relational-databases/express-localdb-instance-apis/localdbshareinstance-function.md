@@ -15,7 +15,6 @@ apitype: "DLLExport"
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBShareInstance Function
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create and Deploy a Cache for the Lookup Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can create and deploy a cache file (.caw) for the Lookup transformation. The reference dataset is stored in the cache file.  
   
  The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in the reference dataset.  

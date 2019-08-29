@@ -109,8 +109,6 @@ manager: craigg
   
 -   [Bulk Loading into a Partitioned Table](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Project REAL: Data Lifecycle -- Partitioning](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
-  
 -   [Query Processing Enhancements on Partitioned Tables and Indexes](https://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  

@@ -2,7 +2,6 @@
 title: Configure PolyBase connectivity - Analytics Platform System | Microsoft Docs
 description: Explains how to configure PolyBase in Parallel Data Warehouse to connect to external Hadoop or Microsoft Azure storage blob data sources. Use PolyBase to run queries that integrate data from multiple sources, including Hadoop, Azure blob storage, and Parallel Data Warehouse.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual

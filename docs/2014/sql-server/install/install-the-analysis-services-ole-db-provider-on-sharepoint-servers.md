@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: markingmyname
@@ -112,7 +111,7 @@ manager: craigg
   
 3.  See the section "Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2012 SP1". Download the file and start the installation.  
   
-4.  On the **Feature Selection** page, select **Analysis Services OLE DB Provider for SQL Server**. Unselect the other components and complete the installation. For more information on spPowerPivot.msi, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+4.  On the **Feature Selection** page, select **Analysis Services OLE DB Provider for SQL Server**. Unselect the other components and complete the installation. For more information on spPowerPivot.msi, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 5.  Register MSOLAP.5 as a trusted provider with SharePoint Excel Services. For more information, see [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   

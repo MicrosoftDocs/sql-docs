@@ -1,19 +1,16 @@
 ---
 title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
-ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-
-
-ms.topic: conceptual
+ms.prod_service: "reporting-services-native"
 helpviewer_keywords: 
   - "SSRS, upgrading"
   - "Reporting Services, upgrades"
   - "SQL Server Reporting Services, upgrading"
   - "upgrading Reporting Services"
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
+ms.topic: conceptual
+ms.date: 08/17/2017
 ---
 
 # Upgrade and Migrate Reporting Services
@@ -21,13 +18,16 @@ ms.author: maghan
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   This topic is an overview of the upgrade and migration options for SQL Server Reporting Services. There are two general approaches to upgrading a SQL Server Reporting Services deployment:  
-  
+ 
 -   **Upgrade:** You upgrade the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components on the servers and instances where they are currently installed. This is commonly called an "in place" upgrade. In-place upgrade is not supported from one mode of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to another. For example, you cannot upgrade a Native Mode report server to a SharePoint mode report server. You can migrate your report items from one mode to another. For more information, see the 'Native to SharePoint Migration' section later in this document.  
   
 -   **Migrate**: You install and configure a new SharePoint environment, copy your report items and resources to the new environment, and configure the new environment to use existing content. A lower level form of migration is to copy the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] databases, configuration files, and if you are using SharePoint mode, the SharePoint content databases.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode
-  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+   
 ##  <a name="bkmk_known_issues"></a> Known Upgrade Issues and Best Practices  
  For a detailed list of the supported editions and versions you can upgrade, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
@@ -217,7 +217,7 @@ ms.author: maghan
   
 -   Write code that calls the WMI provider to copy data between databases. For more information about this approach, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
--   If you have just a few items, you can republish reports, report models, and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. You must re-create role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. You will lose report history and report execution log data.  
+-   If you have just a few items, you can republish reports, and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. You must re-create role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. You will lose report history and report execution log data.  
   
   
 ##  <a name="bkmk_additional_resources"></a> Additional Resources  

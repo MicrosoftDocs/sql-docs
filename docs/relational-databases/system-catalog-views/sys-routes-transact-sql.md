@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.routes (Transact-SQL)

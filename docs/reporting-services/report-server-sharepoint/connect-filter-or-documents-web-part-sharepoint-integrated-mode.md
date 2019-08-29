@@ -2,13 +2,13 @@
 title: "Connect Filter or Documents web part with a Reporting Services Report Viewer web part | Microsoft Docs"
 ms.date: 11/26/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
 
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Connect Filter or Documents web part with a Reporting Services Report Viewer web part
 

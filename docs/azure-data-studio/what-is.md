@@ -1,23 +1,24 @@
 ---
-title: Overview
+title: What is Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. 
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
 ms.topic: "overview"
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18, sqlfreshmay19"
+ms.date: "05/14/2019"
 ---
 
 # What is Azure Data Studio?
 
 Azure Data Studio is a cross-platform database tool for data professionals using the Microsoft family of on-premises and cloud data platforms on Windows, MacOS, and Linux.
 
-Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with Intellisense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
+Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
+
+The source code for Azure Data Studio and its data providers is available on GitHub under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. For more information, see [Azure Data Studio FAQ](faq.md).
 
 **[Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
@@ -155,9 +156,12 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Vulnerability Assessment||Yes|
 |XEvent Management||Yes|
 
-
-
 ## Next steps
+
 - [Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
+
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

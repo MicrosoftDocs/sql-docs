@@ -1,17 +1,17 @@
 ---
-title: Deploy an R model for predictions on SQL Server - SQL Server Machine Learning
+title: Deploy an R model for predictions on SQL Server
 description: Tutorial showing how to deploy an R model on SQL Server for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 11/26/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Deploy the R model and use it in SQL Server (walkthrough)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In this lesson, learn how to deploy R models in a production environment by calling a trained model from a stored procedure. You can invoke the stored procedure from R or any application programming language that supports [!INCLUDE[tsql](../../includes/tsql-md.md)] (such as C#, Java, Python, and so forth) and use the model to make predictions on new observations.
 
@@ -99,7 +99,7 @@ Create a stored procedure, *PredictTipBatchMode*, that generates multiple predic
 
     ```R
     input <- "N'SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) AS direct_distance FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a LEFT OUTER JOIN ( SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND  a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'";
-    q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
+    q <- paste("EXEC PredictTipBatchMode @input = ", input, sep="");
     ```
 
 4. To run the stored procedure from R, call the **sqlQuery** method of the **RODBC** package and use the SQL connection `conn` that you defined earlier:

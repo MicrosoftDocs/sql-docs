@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # SQL Server Audit (Database Engine)
@@ -104,7 +103,9 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 3.  Enable the audit.  
   
 4.  Read the audit events by using the Windows **Event Viewer**, **Log File Viewe**r, or the fn_get_audit_file function.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  For more information, see [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) and [Create a Server Audit and Database Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## Considerations  
@@ -160,7 +161,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 |Catalog views|Description|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
+|[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contains information about the database audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance for all databases.|  
 |[sys.server_audits](../../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)|Contains one row for each [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit in a server instance.|  
 |[sys.server_audit_specifications](../../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)|Contains information about the server audit specifications in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audit on a server instance.|  

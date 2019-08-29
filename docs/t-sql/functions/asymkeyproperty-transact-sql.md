@@ -15,9 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "ASYMKEYPROPERTY"
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+author: VanMSFT
+ms.author: vanto
 ---
 # ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

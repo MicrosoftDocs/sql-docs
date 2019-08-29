@@ -10,7 +10,6 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: "dnethi"
 ms.author: "dinethi"
-manager: craigg
 ---
 # SQL Server Management Studio (SSMS) Support Policy
 

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "XPath operators [SQLXML]"
   - "operators [SQLXML]"
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Specifying Relational Operators in XPath Queries (SQLXML 4.0)

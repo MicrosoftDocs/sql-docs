@@ -13,9 +13,12 @@ f1_keywords:
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Azure HDInsight Delete Cluster Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 The **Azure HDInsight Delete Cluster Task** enables an SSIS package to delete an Azure HDInsight cluster in the specified Azure subscription and resource group.
   
 The **Azure HDInsight Delete Cluster Task** is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).

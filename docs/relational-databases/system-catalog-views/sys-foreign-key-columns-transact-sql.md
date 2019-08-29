@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.foreign_key_columns (Transact-SQL)

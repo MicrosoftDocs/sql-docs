@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +34,16 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## Arguments  
- [**@publication=**] **'***publication***'**  
+ [**\@publication=**] **'***publication***'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@subscriber=** ] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with no default.  
   
- [ **@subscriber_db=** ] **'***subscriber_db***'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with no default.  
   
- [ **@level=** ] *level*  
+`[ @level = ] level`
  Is the type of validation to perform. *level* is **tinyint**, with no default. Level can be one of these values.  
   
 |Level value|Description|  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # msdb Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

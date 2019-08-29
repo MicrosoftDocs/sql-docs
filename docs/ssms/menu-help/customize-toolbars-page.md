@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords:
   - "sql13.swb.vs.customizetool.f1"
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Customize (Toolbars Page)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

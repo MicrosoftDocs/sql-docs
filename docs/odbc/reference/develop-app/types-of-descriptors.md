@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Types of Descriptors
 A descriptor is used to describe one of the following:  

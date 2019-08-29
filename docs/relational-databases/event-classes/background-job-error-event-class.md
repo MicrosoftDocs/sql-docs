@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Background Job Error Event Class

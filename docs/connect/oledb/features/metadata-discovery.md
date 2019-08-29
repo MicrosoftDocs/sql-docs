@@ -10,7 +10,6 @@ ms.technology: connectivity
 ms.topic: "reference"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Metadata Discovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

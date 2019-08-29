@@ -25,9 +25,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Set Package Properties
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When you create a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by using the graphical interface that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, you set the properties of the package object in the Properties window.  
   
  The **Properties** window provides a categorized and alphabetical list of properties. To arrange the **Properties** window by category, click the Categorized icon.  

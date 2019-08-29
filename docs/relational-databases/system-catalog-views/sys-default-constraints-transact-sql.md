@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.default_constraints (Transact-SQL)

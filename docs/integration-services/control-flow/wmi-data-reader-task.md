@@ -17,9 +17,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # WMI Data Reader Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The WMI Data Reader task runs queries using the Windows Management Instrumentation (WMI) Query Language that returns information from WMI about a computer system. You can use the WMI Data Reader task for the following purposes:  
   
 -   Query the Windows event logs on a local or remote computer and write the information to a file or variable.  
@@ -95,7 +98,7 @@ Select * FROM Win32_QuickFixEngineering
 ## WMI Data Reader Task Editor (General Page)
   Use the **General** page of the **WMI Data Reader Task Editor** dialog box to name and describe the WMI Data Reader task.  
   
-  For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+  For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](/windows/win32/wmisdk/querying-with-wql), in the MSDN Library.  
   
 ### Options  
  **Name**  
@@ -110,7 +113,7 @@ Select * FROM Win32_QuickFixEngineering
 ## WMI Data Reader Task Editor (WMI Options Page)
   Use the **WMI Options** page of the **WMI Data Reader Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and the destination of the query result.  
   
- For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+ For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](/windows/win32/wmisdk/querying-with-wql), in the MSDN Library.  
   
 ### Static Options  
  **WMIConnectionName**  

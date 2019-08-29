@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

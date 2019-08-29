@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sys.server_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Extended events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/10/2016"
+ms.date: "05/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -10,7 +10,6 @@ ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Quickstart: Extended events in SQL Server
@@ -547,10 +546,11 @@ The system views for extended events include:
     - CREATE EVENT SESSION clauses.
     - The SSMS UI controls.
 
+## Code examples can differ for Azure SQL Database
 
-<a name="appendix1"></a>
-## Appendix: SELECTs to ascertain permission owner in advance
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
+## <a name="appendix1"></a> Appendix: SELECTs to ascertain permission owner in advance
 
 The permissions mentioned in this article are:
 

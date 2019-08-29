@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

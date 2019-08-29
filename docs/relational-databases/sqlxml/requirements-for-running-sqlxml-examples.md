@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Requirements for Running SQLXML Examples

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # IHpublisherconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

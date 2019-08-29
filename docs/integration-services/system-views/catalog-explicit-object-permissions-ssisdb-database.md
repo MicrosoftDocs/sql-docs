@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.explicit_object_permissions (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays only the permissions that have been explicitly assigned to the user.  

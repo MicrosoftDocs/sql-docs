@@ -1,8 +1,7 @@
 ---
 title: "Configure the Report Server Service Account (SSRS Configuration Manager) | Microsoft Docs"
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.topic: conceptual

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "Transact-SQL bulk export/import operations"
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Import Bulk Data by Using BULK INSERT or OPENROWSET(BULK...) (SQL Server)

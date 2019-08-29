@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## Arguments  
- [ **@artid=**] *artid*  
+`[ @artid = ] artid`
  Is the article ID. *artid* is **int**, with no default.  
   
 ## Result Sets  

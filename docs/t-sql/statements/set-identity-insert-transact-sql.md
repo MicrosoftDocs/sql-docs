@@ -22,10 +22,10 @@ helpviewer_keywords:
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
+monkerRange:  "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Allows explicit values to be inserted into the identity column of a table.  
 
@@ -88,7 +88,8 @@ FROM dbo.Tool;
 GO  
   
 -- Try to insert an explicit ID value of 3;  
--- should return a warning.  
+-- should return an error:
+-- An explicit value for the identity column in table 'AdventureWorks2012.dbo.Tool' can only be specified when a column list is used and IDENTITY_INSERT is ON.
 INSERT INTO dbo.Tool (ID, Name) VALUES (3, 'Garden shovel');  
 GO  
 -- SET IDENTITY_INSERT to ON.  

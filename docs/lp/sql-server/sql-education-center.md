@@ -9,7 +9,6 @@ ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.date: 12/15/2018
 featureFlags:
 - clicktale
@@ -253,7 +252,7 @@ featureFlags:
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <p>SQL Server backup and restore to Windows Azure Blob Storage Service</p>
+                                            <p>SQL Server backup and restore to Azure Blob Storage Service</p>
                                         </div>
                                     </div>
                                 </div>

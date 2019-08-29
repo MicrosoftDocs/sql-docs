@@ -13,9 +13,12 @@ f1_keywords:
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Package Properties Dialog Box
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Package Properties** dialog box to view properties for packages that are stored on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
  For more information, see [Integration Services &#40;SSIS&#41; Server](../integration-services-ssis-packages.md).  

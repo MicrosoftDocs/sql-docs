@@ -87,6 +87,7 @@
         }
       },
       "extendBreadcrumb": true,
+      "toc_preview": true,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
       "feedback_product_url": "https://feedback.azure.com/forums/908035-sql-server/",
@@ -98,11 +99,27 @@
       "feedback_system": {
         "advanced-analytics/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
+        "big-data-cluster/**/*.md": "GitHub",
+        "database-engine/**/*.md": "GitHub",
         "linux/**/*.md": "GitHub",
-        "sql-server/**/*.md": "GitHub"
+        "powershell/**/*.md": "GitHub",
+        "relational-databases/**/*.md": "GitHub",
+        "sql-server/**/*.md": "GitHub",
+        "ssms/**/*.md": "GitHub",
+        "tools/**/*.md": "GitHub",
+        "t-sql/**/*.md": "GitHub"
       },
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
+      },
+
+      "manager": {
+        "**/*.md": "jroth",
+        "advanced-analytics/**/*.md": "cgronlun",
+        "dmx/**/*.md": "kfile",
+        "language-extensions/**/*.md": "cgronlun",
+        "mdx/**/*.md": "kfile",
+        "reporting-services/**/*.md": "kfile"
       },
 
       "titleSuffix": {
@@ -113,10 +130,12 @@
         "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
         "2014/sql-server/failover-clusters/**/*.md": "SQL Server Always On",
     
+        "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
         "analysis-services/**/*.md": "",
         "azure-data-studio/**/*.md": "Azure Data Studio",
         "database-engine/availability-groups/**/*.md": "SQL Server Always On",
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
+        "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On"
@@ -147,13 +166,14 @@
         "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "dmx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "integration-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "mdx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "relational-databases/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions",
         "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017 || = sqlallproducts-allversions",
         "samples/**/*.md": "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
@@ -173,12 +193,12 @@
     "groups": {
 
       "gr-sql-2014-b": {
-        "moniker_range": "= sql-server-2014",
+        "moniker_range": "sql-server-2014",
         "dest": "temp2014b"
       },
 
       "gr-sql-2016-a": {
-        "moniker_range": "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "moniker_range": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions",
         "dest": "temp2016a"
       }
     },

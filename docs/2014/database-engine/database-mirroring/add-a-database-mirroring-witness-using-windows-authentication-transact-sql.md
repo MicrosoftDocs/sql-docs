@@ -27,7 +27,7 @@ manager: craigg
   
 ### To establish a witness  
   
-1.  On the witness server instance, ensure that an endpoint exists for database mirroring. Regardless of the number of mirroring session to be supported, the server instance must have only one database mirroring endpoint. If you intend to use this server instance exclusively as a witness in database mirroring sessions, assign the role of witness to the endpoint (ROLE**=**WITNESS). If you intend to use this server instance as a partner in one or more other database mirroring sessions, assign the role of the endpoint as ALL.  
+1.  On the witness server instance, ensure that an endpoint exists for database mirroring. Regardless of the number of mirroring session to be supported, the server instance must have only one database mirroring endpoint. If you intend to use this server instance exclusively as a witness in database mirroring sessions, assign the role of witness to the endpoint (ROLE **=** WITNESS). If you intend to use this server instance as a partner in one or more other database mirroring sessions, assign the role of the endpoint as ALL.  
   
      To execute a SET WITNESS statement, the database mirroring session must already be started (between the partners), and the STATE of the endpoint of the witness must be set to STARTED.  
   
@@ -46,7 +46,7 @@ manager: craigg
   
 3.  Connect to the principal server and issue the following statement:  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=**_<server_network_address>_  
+     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
   
      where *<database_name>* is the name of the database to be mirrored (this name is the same on both partners), and *<server_network_address>* is the server network address of the witness server instance.  
   

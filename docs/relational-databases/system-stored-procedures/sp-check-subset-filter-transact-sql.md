@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_check_subset_filter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Is used to check a filter clause against any table to determine if the filter clause is valid for the table. This stored procedure returns information about the supplied filter, including if the filter qualifies for use with precomputed partitions. This stored procedure is executed at the Publisher on the database containing the publication.  
   
@@ -39,13 +38,13 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## Arguments  
- [ **@filtered_table**= ] **'***filtered_table***'**  
+`[ @filtered_table = ] 'filtered_table'`
  Is the name of a filtered table. *filtered_table* is **nvarchar(400)**, with no default.  
   
- [ **@subset_filterclause** = ] **'***subset_filterclause***'**  
+`[ @subset_filterclause = ] 'subset_filterclause'`
  Is the filter clause being tested. *subset_filterclause* is **nvarchar(1000)**, with no default.  
   
- [ **@has_dynamic_filters**= ] *has_dynamic_filters*  
+`[ @has_dynamic_filters = ] has_dynamic_filters`
  Is if the filter clause is a parameterized row filter. *has_dynamic_filters* is **bit**, with a default of NULL and is an output parameter. Returns a value of **1** when the filter clause is a parameterized row filter.  
   
 ## Result Sets  

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "record updates [SQLXML]"
   - "record deletions [SQLXML]"
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Using DiffGrams to Modify Data in SQLXML 4.0

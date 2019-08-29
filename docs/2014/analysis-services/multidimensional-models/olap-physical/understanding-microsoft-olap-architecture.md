@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "multidimensional data [Analysis Services], about multidimensional data"
@@ -42,7 +40,7 @@ manager: craigg
  [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **International Considerations**  
- [Globalization scenarios for Analysis Services Multiidimensional](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
+ [Globalization scenarios for Analysis Services Multiidimensional](../../globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
 ## See Also  
  [Technical Reference &#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  

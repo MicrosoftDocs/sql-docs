@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan All Event Class

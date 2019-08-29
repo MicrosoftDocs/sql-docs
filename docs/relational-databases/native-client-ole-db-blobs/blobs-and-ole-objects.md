@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BLOBs and OLE Objects

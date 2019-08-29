@@ -2,14 +2,14 @@
 title: "ODBC Connection Type (SSRS) | Microsoft Docs"
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 
 ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ODBC Connection Type (SSRS)
   To include data from an ODBC data provider, you must have a dataset that is based on a report data source of type ODBC. This built-in data source type is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ODBC data processing extension.  
@@ -34,7 +34,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
 > [!NOTE]  
 >  It is recommended that you do not add login information such as passwords to the connection string. Report Builder provides a separate tab on the **Data Source** dialog box that you can use to enter credentials.  
   
- For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credentials in Report Builder](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ For more information, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) or [Specify Credential and Connection Information for Report Data Sources](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Remarks"></a> Remarks  
@@ -62,7 +62,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Provides an overview of accessing data for your report.  
   
- [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Provides information about data connections and data sources.  
   
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

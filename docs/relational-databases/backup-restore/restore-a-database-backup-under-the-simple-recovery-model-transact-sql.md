@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a928fa36-e285-476f-9a7b-6840a8bb7283
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore a Database Backup Under the Simple Recovery Model (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

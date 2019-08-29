@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Choose an Authentication Mode
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,9 @@ manager: craigg
 2.  In the **Run** dialog box, type **secpol.msc**, and then click **OK**.  
   
 3.  In the **Local Security Settings** application, expand **Security Settings**, expand **Account Policies**, and then click **Password Policy**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      The password policies are described in the results pane.  
   
 ### Disadvantages of SQL Server Authentication  

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrading Always On Availability Group Replica Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ Before you begin, review the following important information:
 - [Check if change data capture  or replication is used for any AG databases](#special-steps-for-change-data-capture-or-replication): If any databases in the AG are enabled for change data capture (CDC), complete these [instructions](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade, which upgrades the replicas in place. A higher version of a SQL Server instance cannot be added as a new replica to an existing AG. For example, a SQL Server 2017 replica cannot be added to an existing SQL Server 2016 AG. To migrate to a new version of the SQL Server instance using AGs, the only supported method is a distributed AG, which is in SQL Server 2016 Enterprise Edition or later.
+>Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade and should not exist in that state for extended periods of time as the upgrade should take place quickly. The other option for upgrading SQL Server 2016 and later is through the use of a distributed availability group.
 
 ## Rolling Upgrade Basics for Always On AGs  
 Observe the following guidelines when performing server upgrades or updates in order to minimize downtime and data loss for your AGs:  
@@ -74,17 +73,23 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 1.  Remove automatic failover on all synchronous-commit replicas  
   
-2.  Upgrade all remote secondary replica instances running asynchronous-commit secondary replicas  
+2.  Upgrade all asynchronous-commit secondary replica instances. 
   
-3.  Upgrade the all local replica secondary instances that are not currently running the primary replica  
+3.  Upgrade all remote synchronous-commit secondary replica instances. 
+
+4.  Upgrade all local synchronous-commit secondary replica instances. 
   
-4.  Manually fail over the AG to a local synchronous-commit secondary replica  
+4.  Manually fail over the AG to a (newly upgraded) local synchronous-commit secondary replica.  
   
-5.  Upgrade or update the local replica instance that formerly hosted the primary replica  
+5.  Upgrade or update the local replica instance that formerly hosted the primary replica.  
   
-6.  Configure automatic failover partners as desired  
+6.  Configure automatic failover partners as desired.
   
  If necessary, you can perform an extra manual failover to return the AG to its original configuration.  
+ 
+   > [!NOTE]
+   > - Upgrading a synchronous-commit replica and taking it offline will not delay transactions on the primary. Once the secondary replica is disconnected, transactions are committed on the primary without waiting for logs to harden on the secondary replica. 
+   > - If `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to either `1` or `2`, the Primary replica may be unavailabile for read/writes when a corresponding number of sync secondary replicas are not available during the update process. 
   
 ## AG with One Remote Secondary Replica  
  If you have deployed an AG only for disaster recovery, you may need to fail over the AG to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:  

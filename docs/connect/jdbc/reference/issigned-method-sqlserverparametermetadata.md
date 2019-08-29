@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # isSigned Method (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

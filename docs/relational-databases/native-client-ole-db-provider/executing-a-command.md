@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: bb0b3cbf-fe45-46ba-b2ec-c5a39e3c7081
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a Command

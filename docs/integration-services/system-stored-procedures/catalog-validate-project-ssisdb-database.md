@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.validate_project (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Asynchronously validates a project in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

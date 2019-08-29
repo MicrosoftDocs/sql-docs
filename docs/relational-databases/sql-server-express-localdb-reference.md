@@ -11,7 +11,6 @@ ms.topic: "reference"
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SQL Server Express LocalDB Reference
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/05/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitions [Analysis Services], data slices"

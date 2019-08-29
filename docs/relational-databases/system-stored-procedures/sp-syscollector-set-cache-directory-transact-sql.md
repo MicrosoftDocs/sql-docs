@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## Arguments  
- [ **@cache_directory =** ] **'***cache_directory***'**  
+`[ @cache_directory = ] 'cache_directory'`
  The directory in the file system where collected data is stored temporarily. *cache_directory* is **nvarchar(255)**, with a default value of NULL. If no value is specified, the default temporary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory is used.  
   
 ## Return Code Values  

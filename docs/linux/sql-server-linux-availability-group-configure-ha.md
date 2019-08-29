@@ -2,13 +2,12 @@
 title: Configure SQL Server Always On Availability Group for high availability on Linux
 titleSuffix: SQL Server
 description: Learn about creating a SQL Server Always On Availability Group (AG) for high availability on Linux.
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
-ms.date: 02/14/2018
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ms.assetid: 
 ---
@@ -127,10 +126,11 @@ Run **only one** of the following scripts:
    >[!IMPORTANT]
    >After you run the preceding script to create an AG with three synchronous replicas, do not run the following script:
 
+<a name="configOnly"></a>
 - Create AG with two synchronous replicas and a configuration replica:
 
    >[!IMPORTANT]
-   >This architecture allows any edition of SQL Server to host the third replica. For example, the third replica can be hosted on SQL Server Enterprise Edition. On Enterprise Edition, the only valid endpoint type is `WITNESS`. 
+   >This architecture allows any edition of SQL Server to host the third replica. For example, the third replica can be hosted on SQL Server Express Edition. On Express Edition, the only valid endpoint type is `WITNESS`. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -188,16 +188,16 @@ You can also configure an AG with `CLUSTER_TYPE=EXTERNAL` using SQL Server Manag
 
 ### Join secondary replicas to the AG
 
-The pacemaker user requires `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group on all replicas. To grant permissions, run the following Transact-SQL script after the availability group is created on the primary replica and each secondary replica immediately after they are added to the availability group. Before you run the script, replace `<pacemakerLogin>` with the name of the pacemaker user account.
+The pacemaker user requires `ALTER`, `CONTROL`, and `VIEW DEFINITION` permissions on the availability group on all replicas. To grant permissions, run the following Transact-SQL script after the availability group is created on the primary replica and each secondary replica immediately after they are added to the availability group. Before you run the script, replace `<pacemakerLogin>` with the name of the pacemaker user account. If you do not have a login for pacemaker, [create a sql server login for pacemaker](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker).
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 The following Transact-SQL script joins a SQL Server instance to an AG named `ag1`. Update the script for your environment. On each SQL Server instance that hosts a secondary replica, run the following Transact-SQL to join the AG.
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
 		 
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

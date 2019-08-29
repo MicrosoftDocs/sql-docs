@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Troubleshoot: Availability group exceeded RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

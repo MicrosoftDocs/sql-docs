@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # storesLowerCaseIdentifiers Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

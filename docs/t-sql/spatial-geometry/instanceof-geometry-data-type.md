@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "InstanceOf (geometry Data Type)"
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # InstanceOf (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

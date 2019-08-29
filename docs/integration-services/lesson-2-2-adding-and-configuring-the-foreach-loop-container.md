@@ -10,9 +10,12 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Lesson 2-2: Add and configure the Foreach Loop container
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 In this task, you add the ability to loop through a folder of flat files and apply Lesson 1's data flow transformation to each of those flat files. You do this by adding and configuring a Foreach Loop container to the control flow.  
   

@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Principal Server Instance (Configure Database Mirroring Security Wizard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

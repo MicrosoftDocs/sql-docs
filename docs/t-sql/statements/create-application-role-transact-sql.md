@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

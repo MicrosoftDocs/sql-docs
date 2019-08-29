@@ -18,9 +18,12 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Integration Services (SSIS) Projects and Solutions
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provides [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for the development of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages reside in projects. To create and work with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, you must install the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] environment. For more information, see [Install Integration Services](../integration-services/install-windows/install-integration-services.md).  

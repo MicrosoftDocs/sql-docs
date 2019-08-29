@@ -8,9 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Using MSDeploy with dbSqlPackage Provider
 **DbSqlPackage** is an **MSDeploy** provider that allows you interact with SQL Server/SQL Azure databases. **DbSqlPackage** supports the following actions:  

@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create InfoSource for Master Data
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Create InfoSource for Master Data** dialog box to create a new InfoSource for master data in the SAP Netweaver BW system.  
   
  You can open the **Create InfoSource for Master Data** dialog box from the **Connection Manager** page of the **SAP BW Destination Editor**. To learn more about the SAP BW destination, see [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

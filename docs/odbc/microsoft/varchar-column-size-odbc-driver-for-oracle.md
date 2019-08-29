@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # VARCHAR Column Size (ODBC Driver for Oracle)
 > [!IMPORTANT]  

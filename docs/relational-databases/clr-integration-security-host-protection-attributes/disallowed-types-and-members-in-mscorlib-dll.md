@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Disallowed Types and Members in mscorlib.dll
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

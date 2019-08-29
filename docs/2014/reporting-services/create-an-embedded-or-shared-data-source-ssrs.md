@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], creating"
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create an Embedded or Shared Data Source (SSRS)

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # cdc.ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

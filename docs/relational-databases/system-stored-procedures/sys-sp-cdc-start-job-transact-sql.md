@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## Arguments  
- [ [ **@job_type=** ] **'**_job_type_**'** ]  
+`[ [ @job_type = ] 'job_type' ]`
  Type of job to add. *job_type* is **nvarchar(20)** with a default of **capture**. Valid inputs are **capture** and **cleanup**.  
   
 ## Return Code Values  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 46b54f74-e4a3-4318-87cf-8a97c38a2718
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # WHERE Clause Limitations
 The maximum number of clauses in a WHERE clause is 40.  

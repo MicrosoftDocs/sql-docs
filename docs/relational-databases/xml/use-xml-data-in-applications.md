@@ -23,9 +23,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], ADO.NET"
   - "XML [SQL Server], SQL Server Native Client"
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Use XML Data in Applications
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

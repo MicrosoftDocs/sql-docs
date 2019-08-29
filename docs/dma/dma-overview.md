@@ -2,7 +2,7 @@
 title: "Overview of Data Migration Assistant (SQL Server) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to migrate SQL Server databases to other SQL Server or Azure databases
 ms.custom: ""
-ms.date: "03/12/2019"
+ms.date: "08/23/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ""
 author: HJToland3
 ms.author: rajpo
-manager: craigg
 ---
 
 # Overview of Data Migration Assistant
@@ -53,6 +52,16 @@ To install DMA, download the latest version of the tool from the [Microsoft Down
   - SQL Server and Windows logins
 
 - After a successful migration, applications can connect to the target SQL Server databases seamlessly.
+
+- Assess on-premises SQL Server Integration Services (SSIS) package(s) migrating to Azure SQL Database or Azure SQL Database managed instance. The assessment helps to discover issues that can affect the migration. These are described as compatibility issues and are organized in the following categories:
+
+  - Migration blockers: discovers the compatibility issues that block migrating source package(s) to Azure. DMA provides recommendations to help you address those issues.
+
+  - Information issues: detects partially supported or deprecated features that are used in source package(s).
+
+  > [!NOTE]
+  > The assessment of packages hosted in File system is supported only.
+  > The assessment of packages hosted in MSDB, Package Store or SSISDB comes later.
 
 ## Prerequisites
 To run an assessment, you have to be a member of the SQL Server **sysadmin** role.

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,9 @@ manager: craigg
 4.  In the **Category** box, click the **Database Maintenance**.  
   
 5.  In the **Description** box, type **Archive Database Mail messages**, and then click **Steps**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [Overview](#Process_Overview)  
   
 ## To create a step to archive the Database Mail messages  

@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Using System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

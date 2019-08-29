@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # Bind a Database with Memory-Optimized Tables to a Resource Pool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -2,7 +2,7 @@
 title: "Change Map Legends-Color Scale-Associated Rules in Report Builder-SSRS | Microsoft Docs"
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 
@@ -31,8 +31,8 @@ f1_keywords:
   - "10540"
   - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Change Map Legends, Color Scale, and Associated Rules (Report Builder and SSRS)
   In a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, a map can contain map legends, a color scale, and a distance scale. These parts of a map help users interpret the data visualization on the map.  

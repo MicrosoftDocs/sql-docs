@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Reference (Database Engine)
@@ -26,10 +25,10 @@ This topic gives the basics about how to find and use the Microsoft Transact-SQL
 
 Some of the Microsoft tools that issue T-SQL commands are:
 
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
-- [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
-- [sqlcmd](../tools/sqlcmd-utility.md).  
-- [Azure Data Studio (preview)](../azure-data-studio/what-is.md).  
+- [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [sqlcmd](../tools/sqlcmd-utility.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
   
  
 ## Locate the Transact-SQL reference topics  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Protecting Your SQL Server Intellectual Property
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

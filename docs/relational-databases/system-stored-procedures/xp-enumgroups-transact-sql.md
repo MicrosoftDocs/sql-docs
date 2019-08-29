@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

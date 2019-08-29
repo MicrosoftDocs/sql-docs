@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML Web service [Reporting Services], delivery extension settings"
@@ -21,8 +19,8 @@ helpviewer_keywords:
   - "mail [Reporting Services]"
   - "Web service [Reporting Services], delivery extension settings"
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Delivery Extension Settings

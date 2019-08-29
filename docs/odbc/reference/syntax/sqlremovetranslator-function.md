@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLRemoveTranslator Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLRemoveTranslator(  
      LPCSTR    lpszTranslator,  

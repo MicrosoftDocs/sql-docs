@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Reporting Services]"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Scheduling and Delivery Processor performance object [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)

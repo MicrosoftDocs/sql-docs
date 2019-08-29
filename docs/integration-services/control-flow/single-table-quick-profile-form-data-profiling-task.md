@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Single Table Quick Profile Form (Data Profiling Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Single Table Quick Profile Form** to configure the Data Profiling task quickly to profile a single table or view by using default settings.  
   
  For more information about how to use the Data Profiling Task, see [Setup of the Data Profiling Task](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). For more information about how to use the Data Profile Viewer To analyze the output of the Data Profiling Task, see [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md).  

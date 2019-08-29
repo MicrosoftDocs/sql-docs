@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "Report Builder 1.0, SharePoint integration"
   - "model item security [Reporting Services]"
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Set Permissions for Report Server Operations in a SharePoint Web Application

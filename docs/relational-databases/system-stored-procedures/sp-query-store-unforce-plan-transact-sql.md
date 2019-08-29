@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_unforce_plan (Transact-SQL)
@@ -38,10 +37,10 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## Arguments  
- [ **@query_id =** ] *query_id*  
+`[ @query_id = ] query_id`
  Is the id of the query. *query_id* is a **bigint**, with no default.  
   
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan that will no longer be enforced. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  
@@ -50,7 +49,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## Remarks  
   
 ## Permissions  
- Requires the **EXECUTE** permission on the database, and **INSERT**, **UPDATE**, and **DELETE** permission on the query store catalog views.  
+ Requires the **ALTER** permission on the database.
   
 ## Examples  
  The following example returns information about the queries in the query store.  

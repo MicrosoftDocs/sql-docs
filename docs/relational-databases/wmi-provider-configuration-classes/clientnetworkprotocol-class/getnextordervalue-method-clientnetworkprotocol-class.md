@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

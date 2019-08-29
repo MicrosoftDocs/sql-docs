@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Type System (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -14,9 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Add File Connection Manager Dialog Box UI Reference
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Add File Connection Manager** dialog box to define a connection to a group of files or folders.  
   
  To learn more about the Multiple Files connection manager, see [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md).  

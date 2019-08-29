@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHECK_CONSTRAINTS (Transact-SQL)
@@ -31,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(**128**)**|Constraint qualifier.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Name of the schema to which the constraint belongs.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(**128**)**|Name of the schema to which the constraint belongs.<br /><br /> &#42;&#42; Important &#42;&#42; Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**CONSTRAINT_NAME**|**sysname**|Constraint name.|  
 |**CHECK_CLAUSE**|**nvarchar(**4000**)**|Actual text of the [!INCLUDE[tsql](../../includes/tsql-md.md)] definition statement.|  
   

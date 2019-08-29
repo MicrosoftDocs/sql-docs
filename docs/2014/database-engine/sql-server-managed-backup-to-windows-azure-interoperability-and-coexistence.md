@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence | Microsoft Docs"
+title: "SQL Server Managed Backup to Azure: Interoperability and Coexistence | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ---
-# SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence
+# SQL Server Managed Backup to Azure: Interoperability and Coexistence
   This topic describes [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] interoperability and coexistence with several features in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features include the following: AlwaysOn Availability Groups, Database Mirroring, Backup Maintenance Plans, Log Shipping, Ad hoc backups, Detach Database, and Drop Database.  
   
 ### AlwaysOn Availability Groups  
- AlwaysOn Availability Groups that are configured as a Windows Azure-only solution supported for [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. On-premises only, or Hybrid AlwaysOn Availability Group configurations are not supported. For more information and other considerations, see [Setting up SQL Server Managed Backup to Windows Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
+ AlwaysOn Availability Groups that are configured as a Azure-only solution supported for [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. On-premises only, or Hybrid AlwaysOn Availability Group configurations are not supported. For more information and other considerations, see [Setting up SQL Server Managed Backup to Azure for Availability Groups](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)  
   
 ### Database Mirroring  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is supported only on the principal database. If both the principal and the mirror are configured to use [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], the mirrored database is skipped and will not be backed up. However, in the event of a failover, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will start the backup process after the mirror has completed role switching and is online. The backups will be stored in a new container in this case. If the mirror is not configured to use [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], in the event of a failover, no backups are taken. We recommend that you configure [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] on both the principal and the mirror so backups continue in the event of a failover.  
@@ -33,7 +33,7 @@ manager: craigg
  You cannot configure Log Shipping and [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for the same database at the same time. Doing so will affect the recoverability of the database using either functionality.  
   
 ### Ad Hoc Backups Using Transact-SQL and SQL Server Management Studio  
- Ad hoc or one time backups created outside [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] using Transact-SQL or SQL Server Management Studio may affect the [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] process depending on the type of backup and the storage media used. Log backups to a different Windows Azure storage account than what [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is using, or any other destination than the Windows Azure Blob storage service, will cause a log chain break. We recommend that you use the [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) stored procedure to initiate a backup on databases that have [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] enabled. You can initiate either a full database or log backup using this stored procedure.  
+ Ad hoc or one time backups created outside [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] using Transact-SQL or SQL Server Management Studio may affect the [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] process depending on the type of backup and the storage media used. Log backups to a different Azure storage account than what [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is using, or any other destination than the Azure Blob storage service, will cause a log chain break. We recommend that you use the [smart_admin.sp_backup_on_demand &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) stored procedure to initiate a backup on databases that have [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] enabled. You can initiate either a full database or log backup using this stored procedure.  
   
 ### Drop Database and Detach Database  
  If a database that has [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] enabled is detached or dropped, although no additional backups are possible, the previous backups remain in the storage until the retention period has elapsed, at which point the backups will be purged.  

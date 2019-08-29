@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "version flags [Master Data Services], creating"
   - "versions [Master Data Services], creating flags"
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

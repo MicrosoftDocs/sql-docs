@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.plan_guides (Transact-SQL)

@@ -11,9 +11,8 @@ f1_keywords:
   - "vdtsql.chm:69649"
   - "vdt.dlgbox.insertinto"
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Choose Target Table for Insert Values Dialog Box (Visual Database Tools)

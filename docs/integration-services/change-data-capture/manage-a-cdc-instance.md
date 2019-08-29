@@ -12,9 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Manage a CDC Instance
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can use the CDC Designer Console to view information about the instances that you create and to manage the operation of the instances.  
   
  Click on the name of an instance in the left pane to view the information about the instance.  

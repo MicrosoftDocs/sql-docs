@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Create InfoPackage
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Create InfoPackage** dialog box to create a new InfoPackage in the SAP Netweaver BW system.  
   
  You can open the **Create InfoPackage** dialog box from the **Connection Manager** page of the **SAP BW Destination Editor**. To learn more about the SAP BW destination, see [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

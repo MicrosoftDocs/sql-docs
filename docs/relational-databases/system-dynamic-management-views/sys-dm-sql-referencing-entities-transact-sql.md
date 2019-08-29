@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_sql_referencing_entities (Transact-SQL)

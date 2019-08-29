@@ -10,7 +10,6 @@ ms.reviewer: "alayu; sstein"
 ms.topic: "quickstart"
 author: "yualan"
 ms.author: "alayu"
-manager: craigg
 ---
 # Quickstart: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect and query data in Azure SQL Data Warehouse
 

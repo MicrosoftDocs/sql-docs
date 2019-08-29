@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10160"
   - "sql12.rtp.rptdesigner.datasetproperties.query.f1"
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Dataset Properties Dialog Box, Query

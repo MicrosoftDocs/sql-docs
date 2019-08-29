@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Data Accessor Functions
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

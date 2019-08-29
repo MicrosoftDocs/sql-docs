@@ -38,9 +38,8 @@ f1_keywords:
   - "sql.data.tools.dbassemblyinfo"
   - "sql.data.tools.extendedpropertieseditor.dialog"
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Database Project Settings
 You use database project settings to control aspects of your database, debugging and build configurations. These settings fall into the following categories.  

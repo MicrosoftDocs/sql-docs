@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], My Subscriptions page"
   - "My Subscriptions page [Reporting Services]"
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Use My Subscriptions

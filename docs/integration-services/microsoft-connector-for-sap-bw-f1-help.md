@@ -12,9 +12,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Microsoft Connector for SAP BW F1 Help
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This section contains the F1 Help topics for the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. These topics are also available from the user interface by pressing the F1 key, or by clicking Help on wizard pages and dialog boxes.  
 
 > [!IMPORTANT]

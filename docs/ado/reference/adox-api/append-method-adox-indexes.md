@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Append Method (ADOX Indexes)
 Adds a new [Index](../../../ado/reference/adox-api/index-object-adox.md) object to the [Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) collection.  

@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], renaming"
   - "renaming solutions"
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Rename Solutions and Project Items
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

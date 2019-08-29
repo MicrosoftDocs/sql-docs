@@ -6,10 +6,9 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
-ms.reviewer: genemi
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ""
 ---
 # Driver history for Microsoft SQL Server
 
@@ -53,7 +52,7 @@ Introduced in 2009 as an open-source project, the Microsoft Drivers for PHP for 
 
 ### Microsoft Driver for Node.js for SQL Server
 
-The Microsoft Driver for Node.js for SQL Server allows Node.js applications on Microsoft Windows and Microsoft Windows Azure to access Microsoft SQL Server and Microsoft Windows Azure SQL Database. Development efforts are no longer being focused on this driver. It is not recommended to create new applications using the Microsoft Driver for Node.js for SQL Server.
+The Microsoft Driver for Node.js for SQL Server allows Node.js applications on Microsoft Windows and Microsoft Azure to access Microsoft SQL Server and Microsoft Azure SQL Database. Development efforts are no longer being focused on this driver. It is not recommended to create new applications using the Microsoft Driver for Node.js for SQL Server.
 
 For more information about the Microsoft Driver for Node.js for SQL Server, see [WindowsAzure / node-sqlserver](https://github.com/Azure/node-sqlserver).
 
@@ -93,7 +92,7 @@ These components are still supported in the current release of MDAC/WDAC, but th
 
   There is no 64-bit version of the Jet Database Engine, the Jet OLEDB Driver, the Jet ODBC Drivers, or Jet DAO available. For more information, see [KB article 957570](https://support.microsoft.com/kb/957570). On 64-bit versions of Windows, 32-bit Jet runs under the Windows WOW64 subsystem. For more information on WOW64, see the [MSDN WOW64 documentation](/windows/desktop/WinProg64/wow64-implementation-details). Native 64-bit applications cannot communicate with the 32-bit Jet drivers running in WOW64.
 
-  Instead of Microsoft Jet, Microsoft recommends using [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express) when developing new, non-Microsoft Access applications requiring a relational data store. These new or converted Jet applications can continue to use Jet with the intention of using Microsoft Office 2003 and earlier files (.mdb and .xls) for non-primary data storage. However, for these applications, you should plan to migrate from Jet to the 2007 Office System Driver. You can [download the 2007 Office System Driver](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=7554f536-8c28-4598-9b72-ef94e038c891), which allows you to read from and write to pre-existing files in either Office 2003 (.mdb and .xls) or the Office 2007 (*.accdb, *.xlsm, *.xlsx and *.xlsb) file formats.
+  Instead of Microsoft Jet, Microsoft recommends using [Microsoft SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express) when developing new, non-Microsoft Access applications requiring a relational data store. These new or converted Jet applications can continue to use Jet with the intention of using Microsoft Office 2003 and earlier files (.mdb and .xls) for non-primary data storage. However, for these applications, you should plan to migrate from Jet to the Microsoft Access Database Engine. You can [download the Microsoft Access Database Engine](https://www.microsoft.com/download/details.aspx?id=54920), which allows you to read from and write to pre-existing files in either Office 2003 (.mdb and .xls) or the Office 2007 (*.accdb, *.xlsm, *.xlsx and *.xlsb) file formats.
 
   > [!IMPORTANT]
   > Please read the 2007 Office System End User License Agreement for specific usage limitations.

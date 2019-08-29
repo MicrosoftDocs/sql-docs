@@ -11,9 +11,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Stretch Database, stored procedures"
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Stretch Database Extended Stored Procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

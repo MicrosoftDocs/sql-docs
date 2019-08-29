@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # SQLServerXAConnection Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

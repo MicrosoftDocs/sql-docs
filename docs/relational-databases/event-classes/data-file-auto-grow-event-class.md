@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data File Auto Grow Event Class

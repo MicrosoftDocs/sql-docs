@@ -10,9 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Raw File Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Source Custom Properties**  
   
  The Raw File source has both custom properties and the properties common to all data flow components.  

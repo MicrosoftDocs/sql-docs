@@ -40,6 +40,7 @@ manager: craigg
   
 ## See Also  
  [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
+ [Installing updates from the command prompt](installing-updates-from-the-command-prompt.md)
  [Add Features to an Instance of SQL Server 2014 &#40;Setup&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [Drop a SQL Server 2014 Installation](repair-a-failed-sql-server-installation.md)  
   

@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # catalog.folders (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays the folders in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 03/27/2018
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -8,50 +8,37 @@ ms.topic: "article"
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # SQL Server 2019 preview release notes
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
-- [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. For related information, see:
 
-> [!NOTE]
-> Preview releases of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] are made available for you to experience the features of the upcoming release. They are not supported or licensed for production use. The following scenarios are explicitly unsupported:
->
-> - Side-by-side installation with other versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-> - Upgrade an existing instance of SQL Server from any version
+>[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**Try [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]!**
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
-- Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
+>[!NOTE]
+>The content is published for the [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate. The release candidate is pre-release software. The information is subject to change. For information about support scenarios, refer to [Support](#support).
 
-## CTP 2.4
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] release candidate (RC)
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is available only as Evaluation Edition. No other editions are available. Support for CTP releases is described in `license_Eval.rtf` with your installation media.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-Limited support may be found at one of the following locations:
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC is available only as Evaluation Edition. No other editions are available.
 
-- Forums
-  - [SQL Server Feedback](https://aka.ms/sqlfeedback)
-  - [Getting started with SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
-  - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [SQL Server Documentation](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+Complete details about support and licensing for release candidate software are in `license_Eval.rtf` with your installation media.
 
-- Or tweet [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
-### Documentation (CTP 2.4)
+## Documentation
 
-- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
+- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies to**.
 
 - **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements.
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
-### Hardware and software requirements (CTP 2.4)
+## Hardware and software requirements
 
 - **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
 
@@ -63,51 +50,79 @@ Limited support may be found at one of the following locations:
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
-### Updated compiler
+## <a name = "release-notes"></a>Features excluded from support
 
-- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of CTP 2.3 release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](http://aka.ms/sqlfeedback) immediately.
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
+  - SQL Server Analysis Services
+  - SQL Server Reporting Services
+  - Always On availability groups on Kubernetes
+
+- **Workaround**: None. Exclusion applies to all customers, including participants in SQL Early Adopter Program.
+
+- **Applies to**: Release candidate
+
+## Updated compiler
+
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of the release candidate release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](https://aka.ms/sqlfeedback) immediately.
 
 - **Workaround**: N/A
 
-- **Applies to**: SQL Server 2019 CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **Applies to**: Release candidate
 
-### UTF-8 collations
+## Installation Wizard may wait between EULA pages
+
+- **Issue and customer impact**: During installation with Installation Wizard, the process may wait an extended amount of time between the end user license agreement (EULA) for R Services and the EULA for Python.
+
+- **Workaround**: Wait for the Installation Wizard to proceed. The time to wait may exceed 30 minutes.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0
+
+## UTF-8 collations
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
-  - Linked Server
   - In-memory OLTP
-  - External Table for PolyBase
-  - Always Encrypted
+  - External Table for PolyBase ([!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
+  - Always Encrypted (Up to [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
+  - Linked Servers (up to [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2)
 
   > [!Note]
-  > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version supports choice of UTF-8 enabled collations in the UI.
+  > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version 18 supports choice of UTF-8 enabled collations in the UI.
  
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
-### SQL Graph
+- **Applies to**: All CTP releases.
 
-- **Issue and customer impact**: Tools that are dependent on DacFx like import-export, will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
+## Always Encrypted with secure enclaves
 
-- **Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
+- **Issue and customer impact**: Rich computations are pending performance optimizations and error-handling enhancements, and are currently disabled by default.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
+- **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-### Always Encrypted with secure enclaves
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1
 
-- **Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc.), and are currently disabled by default.
+## SQL Server Configuration Manager may not start
 
-- **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+- **Issue and customer impact**: SQL Server Configuration Manager (SSCM) does not start on a machine without VCRuntime 140. When starting SSCM, the user may see the following dialog: 
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
 
-### System Dynamic Management Views
+  `MMC could not create the snap-in. The snap-in might not have been installed correctly.`
 
-- **Issue and customer impact**: The system table-valued function [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) returns random values in the `dependency` column.
+- **Workaround**:  Install the latest VC Runtime 2013 (x86):
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3.
+  - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+  - [Direct](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
+
+## Always On Availability Group Kubernetes operator not supported
+
+- **Issue and customer impact**: The Kubernetes operator for Always On Availability Groups is not supported in this release candidate and will not be available at RTM. 
+
+- **Workaround**: None
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Release candidate
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

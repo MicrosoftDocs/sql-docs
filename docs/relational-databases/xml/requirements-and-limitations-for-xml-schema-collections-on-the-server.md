@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "schema collections [SQL Server], guidelines"
   - "lexical representation"
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Requirements and Limitations for XML Schema Collections on the Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

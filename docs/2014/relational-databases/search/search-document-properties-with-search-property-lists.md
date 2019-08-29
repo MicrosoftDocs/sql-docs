@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], about"
   - "property searching [SQL Server]"
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Search Document Properties with Search Property Lists
@@ -163,7 +163,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Querying Search Properties with CONTAINS  
  The basic [CONTAINS](/sql/t-sql/queries/contains-transact-sql) syntax for a property-scoped full-text query is as follows:  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

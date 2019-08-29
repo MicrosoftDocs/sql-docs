@@ -1,20 +1,21 @@
 ---
 title: Ingest data with Spark jobs
-titleSuffix: SQL Server 2019 big data clusters
-description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview) using Spark jobs in Azure Data Studio.
-author: rothja 
-ms.author: jroth 
-manager: craigg
-ms.date: 03/27/2018
+titleSuffix: SQL Server big data clusters
+description: This tutorial demonstrates how to ingest data into the data pool of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using Spark jobs in Azure Data Studio.
+author: MikeRayMSFT 
+ms.author: mikeray
+ms.reviewer: shivsood
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
 ---
 
 # Tutorial: Ingest data into a SQL Server data pool with Spark jobs
 
-This tutorial demonstrates how to use Spark jobs to load data into the [data pool](concept-data-pool.md) of a SQL Server 2019 big data cluster (preview). 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+This tutorial demonstrates how to use Spark jobs to load data into the [data pool](concept-data-pool.md) of a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
 In this tutorial, you learn how to:
 
@@ -49,7 +50,7 @@ The following steps create an external table in the data pool named **web_clicks
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. Create an external table named **web_clickstreams_spark_results** in the data pool.
@@ -67,13 +68,13 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.4, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 3.1, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Start a Spark streaming job
 
 The next step is to create a Spark streaming job that loads web clickstream data from the storage pool (HDFS) into the external table you created in the data pool.
 
-1. In Azure Data Studio, connect to the **HDFS/Spark gateway** of your big data cluster. For more information, see [Connect to the HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+1. In Azure Data Studio, connect to the master instance of your big data cluster. For more information, see [Connect to a big data cluster](connect-to-big-data-cluster.md).
 
 1. Double-click on the HDFS/Spark gateway connection in the **Servers** window. Then select **New Spark Job**.
 

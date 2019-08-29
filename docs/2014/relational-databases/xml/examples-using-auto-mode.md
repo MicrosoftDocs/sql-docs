@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "AUTO FOR XML mode, examples"
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Examples: Using AUTO Mode

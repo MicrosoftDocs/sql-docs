@@ -15,7 +15,6 @@ apitype: "Assembly"
 ms.assetid: 108f0e2c-7dc5-4195-8248-0758a75a314e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getMaxColumnsInIndex Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

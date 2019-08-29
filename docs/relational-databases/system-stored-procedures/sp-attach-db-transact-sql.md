@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

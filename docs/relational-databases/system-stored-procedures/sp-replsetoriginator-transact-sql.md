@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sp_replsetoriginator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Used to invoke loopback detection and handling in bidirectional transactional replication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -33,10 +32,10 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## Arguments  
- [ **@server_name=**] **'***server_name***'**  
+`[ @server_name = ] 'server_name'`
  Is the name of the server where the transaction is being applied. *originating_server* is **sysname**, with no default.  
   
- [ **@database_name=**] **'***database_name***'**  
+`[ @database_name = ] 'database_name'`
  Is the name of the database where the transaction is being applied. *originating_db* is **sysname**, with no default.  
   
 ## Return Code Values  

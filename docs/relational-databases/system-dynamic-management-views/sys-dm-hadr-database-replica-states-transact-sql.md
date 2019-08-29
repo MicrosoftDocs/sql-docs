@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

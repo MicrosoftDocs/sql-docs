@@ -1,7 +1,7 @@
 ---
 title: "Managing Service Broker | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/24/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,13 +11,13 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Service Broker [SMO]"
 ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
-monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: "markingmyname"
+ms.author: "maghan"
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Managing Service Broker
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   In SMO, the [!INCLUDE[ssSB](../../../includes/sssb-md.md)] objects are found in the **Microsoft.SqlServer.Management.Smo.Broker** namespace, which requires a reference to the Microsoft.SqlServer.Smo.dll. A reference to the Microsoft.SqlServer.ServiceBrokerEnum.dll is also required for supporting class information.  
   

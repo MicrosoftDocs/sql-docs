@@ -16,9 +16,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Script Task Examples
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Script task is a multi-purpose tool that you can use in a package to fill almost any requirement that is not met by the tasks included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. This topic lists Script task code samples that demonstrate some of the available functionality.  
   
 > [!NOTE]  

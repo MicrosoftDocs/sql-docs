@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # RuleEnum
 Specifies the rule to follow when a [Key](../../../ado/reference/adox-api/key-object-adox.md) is deleted.  

@@ -10,7 +10,6 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Lesson 1: Connecting to the Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,6 +52,8 @@ The sample databases and samples are not included with [!INCLUDE[ssNoVersion](..
 2.  In the **Connect to Server** dialog box, click **Cancel**.  
 3.  If Registered Servers is not displayed, on the **View** menu, click **Registered Servers**.
 4.  With **Database Engine** selected on the Registered Servers toolbar, expand **Database Engine**, right-click **Local Server Groups**, point to **Tasks**, and then click **Register Local Servers**. All instances of the [!INCLUDE[ssDE](../includes/ssde-md.md)] installed on the computer are displayed. The default instance is unnamed and is shown as the computer name. A named instance displays as the computer name followed by a backward slash (\\) and then the name of the instance. For [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], the instance is named *<computer_name>*\sqlexpress unless the name was changed during setup.  
+
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##### To verify that the Database Engine is running
 

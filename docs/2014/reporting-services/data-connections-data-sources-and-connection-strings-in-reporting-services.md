@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [Reporting Services], data sources"
@@ -17,8 +16,8 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "logins [Reporting Services]"
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Connections, Data Sources, and Connection Strings in Reporting Services
@@ -80,7 +79,7 @@ manager: kfile
   
 -   **Data source type** The connection type, for example, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Choose this value from the drop-down list of connection types.  
   
--   **Connection information** Connection information includes the name and location of the data source, and connection properties that are specific to each data provider. The *connection string* is the text representation of connection information. For example, if the data source is a SQL Server database, you can specify the name of the database. For embedded data sources, you can also write expression-based connection strings that are evaluated at run time. For more information, see [Expression-based Connection Strings](#Expressions) later in this topic.  
+-   **Connection information** Connection information includes the name and location of the data source, and connection properties that are specific to each data provider. The *connection string* is the text representation of connection information. For example, if the data source is a SQL Server database, you can specify the name of the database. For embedded data sources, you can also write expression-based connection strings that are evaluated at run time. For more information, see [Expression-based Connection Strings](#bkmk_Expressions_in_connection_strings) later in this topic.  
   
 -   **Credentials** You provide the credentials that are needed to access the data. The data source owner must have granted you the appropriate permissions to access both the data source and the specific data on the data source. For example, to connect to the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database installed on a network server, you must have permission to connect to the server and also read-only permission to access the database.  
   
@@ -125,11 +124,11 @@ manager: kfile
 |SQL Server database on the local server|`data source="(local)";initial catalog=AdventureWorks`|Set data source type to `Microsoft SQL Server`.|  
 |SQL Server Instance<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Set data source type to `Microsoft SQL Server`.|  
 |SQL Server Express database|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Set data source type to `Microsoft SQL Server`.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)] in the cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to `Windows Azure SQL Database`. For more information, see [SQL Azure Connection Type &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)] in the cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Set data source type to `Azure SQL Database`. For more information, see [SQL Azure Connection Type &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Set data source type to `Microsoft SQL Server Parallel Data Warehouse`. For more information, see [SQL Server Parallel Data Warehouse Connection Type &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Analysis Services database on the local server|`data source=localhost;initial catalog=Adventure Works DW`|Set data source type to `Microsoft SQL Server Analysis Services`. For more information, see [Analysis Services Connection Type for MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) or [Analysis Services Connection Type for DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Analysis Services tabular model database with Sales perspective|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Set data source type to `Microsoft SQL Server Analysis Services`. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
-|Report model data source on a report server configured in native mode|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace. For more information, see [Report Model Connection &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md).|  
+|Analysis Services tabular model database with Sales perspective|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Set data source type to `Microsoft SQL Server Analysis Services`. Specify perspective name in cube= setting. For more information, see [Perspectives &#40;SSAS Tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
+|Report model data source on a report server configured in native mode|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace.
 |Report model data source on a report server configured in SharePoint integrated mode|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Specify the report server or document library URL and the path to the published model in the report server folder or document library folder namespace.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Set the data source type to `OLE DB Provider for OLAP Services 8.0`.<br /><br /> You can achieve a faster connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] data sources if you set the `ConnectTo` property to `8.0`. To set this property, use the **Connection Properties** dialog box, **Advanced Properties** tab.|  
 |Oracle server|`data source=myserver`|Set the data source type to `Oracle`. The Oracle client tools must be installed on the Report Designer computer and on the report server. For more information, see [Oracle Connection Type &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md).|  
@@ -140,9 +139,7 @@ manager: kfile
 |XML data source, XML document|`http://localhost/XML/Customers.xml`|Set the data source type to `XML`. The connection string is a URL to the XML document.|  
 |XML data source, embedded XML document|*Empty*|Set the data source type to `XML`. The XML data is embedded in the report definition.|  
   
- If you fail to connect to a report server using `localhost`, check that the network protocol for TCP/IP protocol is enabled. For more information, see [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
-  
- For more information about the configurations needed to connect to these data source types, see the specific data connection topic under [Add Data from External Data Sources &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) or [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+If you fail to connect to a report server using `localhost`, check that the network protocol for TCP/IP protocol is enabled. For more information, see [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
   
 ##  <a name="bkmk_special_password_characters"></a> Special characters in a password  
  If you configure your ODBC or SQL data source to prompt for a password or to include the password in the connection string, and a user enters the password with special characters like punctuation marks, some underlying data source drivers cannot validate the special characters. When you process the report, the message "Not a valid password" may indicate this problem. If changing the password is impractical, you can work with your database administrator to store the appropriate credentials on the server as part of a system ODBC data source name (DSN). For more information, see "OdbcConnection.ConnectionString" in the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK documentation.  
@@ -179,5 +176,3 @@ manager: kfile
  [Set Deployment Properties &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

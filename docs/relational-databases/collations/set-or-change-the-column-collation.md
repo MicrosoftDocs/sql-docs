@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set or Change the Column Collation

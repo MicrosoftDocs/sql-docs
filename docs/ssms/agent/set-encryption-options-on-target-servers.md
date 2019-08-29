@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "target servers [SQL Server], encryption"
   - "multiserver environments [SQL Server], setting encryption options on target servers"
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Set Encryption Options on Target Servers

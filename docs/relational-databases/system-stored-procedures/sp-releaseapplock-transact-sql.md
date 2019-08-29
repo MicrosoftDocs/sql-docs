@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_releaseapplock (Transact-SQL)

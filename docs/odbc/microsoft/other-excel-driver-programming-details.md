@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Other Excel Driver Programming Details
 > [!NOTE]  

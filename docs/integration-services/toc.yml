@@ -1,8 +1,9 @@
-- name: SQL Server ++
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
-
-- name: SQL Server Integration Services
+- name: SQL Server Integration Services (SSIS)
   href: ../integration-services/sql-server-integration-services.md
+
+- name: Welcome to SQL Server >
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+
 - name: Overview
   items:
   - name: What's New in Integration Services in SQL Server 2016
@@ -229,6 +230,8 @@
     href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
   - name: Azure SQL DW Upload Task
     href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+  - name: Flexible File Task
+    href: ../integration-services/control-flow/flexible-file-task.md
   - name: Back Up Database Task
     href: ../integration-services/control-flow/back-up-database-task.md
   - name: Bulk Insert Task
@@ -407,6 +410,10 @@
   href: ../integration-services/data-flow/azure-data-lake-store-source.md
 - name: Azure Data Lake Store Destination
   href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: Flexible File Source
+  href: ../integration-services/data-flow/flexible-file-source.md
+- name: Flexible File Destination
+  href: ../integration-services/data-flow/flexible-file-destination.md
 - name: CDC Flow Components
   href: ../integration-services/data-flow/cdc-flow-components.md
   items:
@@ -441,7 +448,7 @@
 - name: Dimension Processing Destination
   href: ../integration-services/data-flow/dimension-processing-destination.md
   items:
-  - name: Dimension Processing Destination Custom Properies
+  - name: Dimension Processing Destination Custom Properties
     href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
 - name: Excel Source
   href: ../integration-services/data-flow/excel-source.md
@@ -1433,6 +1440,17 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Hadoop and HDFS Support in Integration Services (SSIS)
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
+- name: Microsoft Connector for Oracle
+  href: ../integration-services/data-flow/oracle-connector.md
+  items:
+  - name: Oracle Connection Manager
+    href: ../integration-services/data-flow/oracle-connection-manager.md
+  - name: Oracle source
+    ref: ../integration-services/data-flow/oracle-source.md
+  - name: Oracle destination
+    href: ../integration-services/data-flow/oracle-destination.md
+  - name: Data type support
+    href: ../integration-services/data-flow/oracle-data-type-support.md
 - name: Microsoft Connectors for Oracle and Teradata by Attunity
   href: ../integration-services/attunity-connectors.md
 - name: SQL Server Import and Export Wizard
@@ -1785,11 +1803,11 @@
         href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: Resources
   items:
-  - name: Get help in the SSIS forum +
+  - name: SSIS forum >>
     href: https://social.msdn.microsoft.com/Forums/en-US/home
-  - name: Get help on Stack Overflow +
+  - name: Stack Overflow >>
     href: https://stackoverflow.com/questions/tagged/ssis
-  - name: Follow the SSIS team blog +
+  - name: SSIS blog >>
     href: https://blogs.msdn.microsoft.com/ssis/
-  - name: Report issues & request features +
+  - name: Product feedback >>
     href: https://feedback.azure.com/forums/908035-sql-server

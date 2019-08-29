@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Manually Fail Over a Database Mirroring Session (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

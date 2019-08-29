@@ -17,9 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Web Service Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Web Service task executes a Web service method. You can use the Web Service task for the following purposes:  
   
 -   Writing to a variable the values that a Web service method returns. For example, you could obtain the highest temperature of the day from a Web service method, and then use that value to update a variable that is used in an expression that sets a column value.  

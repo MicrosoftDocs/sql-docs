@@ -1,7 +1,7 @@
 ---
 title: "CREATE USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/03/2018"
+ms.date: "05/09/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -28,7 +28,6 @@ helpviewer_keywords:
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE USER (Transact-SQL)
@@ -47,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   User based on a Windows user that has no login. `CREATE USER [Contoso\Fritz];`    
 -   User based on a Windows group that has no login. `CREATE USER [Contoso\Sales];`  
--   User in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] based on an Azure Active Directory user. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
+-   User in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] or [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] based on an Azure Active Directory user. `CREATE USER [Fritz@contoso.com] FROM EXTERNAL PROVIDER;`     
 
 -   Contained database user with password. (Not available in [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   
@@ -173,7 +172,7 @@ CREATE USER user_name
  LOGIN *login_name*  
  Specifies the login for which the database user is being created. *login_name* must be a valid login in the server. Can be a login based on a Windows principal (user or group), or a login using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication. When this SQL Server login enters the database, it acquires the name and ID of the database user that is being created. When creating a login mapped from a Windows principal, use the format **[**_\<domainName\>_**\\**_\<loginName\>_**]**. For examples, see [Syntax Summary](#SyntaxSummary).  
   
- If the CREATE USER statement is the only statement in a SQL batch, Windows Azure SQL Database supports the WITH LOGIN clause. If the CREATE USER statement is not the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause is not supported.  
+ If the CREATE USER statement is the only statement in a SQL batch, Azure SQL Database supports the WITH LOGIN clause. If the CREATE USER statement is not the only statement in a SQL batch or is executed in dynamic SQL, the WITH LOGIN clause is not supported.  
   
  WITH DEFAULT_SCHEMA = *schema_name*  
  Specifies the first schema that will be searched by the server when it resolves the names of objects for this database user.  
@@ -186,15 +185,16 @@ CREATE USER user_name
   
  Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, an Azure Active Directory group, or an Azure Active Directory application. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
 
- For users, you use the full alias of their domain principal.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ For Azure AD principals, the CREATE USER syntax requires:
 
- For security groups, you use the *Display Name* of the security group. For the *Nurses* security group, you would use:  
+- UserPrincipalName of the Azure AD object for Azure AD Users.
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications. If you had the *Nurses* security group, you would use:  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
@@ -462,7 +462,7 @@ WITH
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
- Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) example.
+ Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](create-login-transact-sql.md#examples) example.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -509,7 +509,3 @@ You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-o
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-

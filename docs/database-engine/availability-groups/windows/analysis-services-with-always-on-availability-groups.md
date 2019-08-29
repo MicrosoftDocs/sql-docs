@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: "erikre"
+manager: erikre
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Analysis Services with Always On Availability Groups
@@ -20,18 +20,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   An Always On availability group is a predefined collection of SQL Server relational databases that failover together when conditions trigger a failover in any one database, redirecting requests to a mirrored database on another instance in the same availability group. If you are using availability groups as your high availability solution, you can use a database in that group as a data source in an Analysis Services tabular or multidimensional solution. All of the following Analysis Services operations work as expected when using an availability database: processing or importing data, querying relational data directly (using ROLAP storage or DirectQuery mode), and writeback.  
   
  Processing and querying are read-only workloads. You can improve performance by offloading these workloads to a readable secondary replica. Additional configuration is required for this scenario. Use the checklist in this topic to ensure you follow all the steps.  
-  
- [Prerequisites](#bkmk_prereq)  
-  
- [Checklist: Use a secondary replica for read-only operations](#bkmk_UseSecondary)  
-  
- [Create an Analysis Services data source using an Always On availability database](#bkmk_ssasAODB)  
-  
- [Test the configuration](#bkmk_test)  
-  
- [What happens after a failover occurs](#bkmk_whathappens)  
-  
- [Writeback when using an Always On availability database](#bkmk_writeback)  
   
 ##  <a name="bkmk_prereq"></a> Prerequisites  
  You must have a SQL Server login on all replicas. You must be a **sysadmin** to configure availability groups, listeners, and databases, but users only need **db_datareader** permissions to access the database from an Analysis Services client.  
@@ -228,7 +216,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
- [Create a Data Source &#40;SSAS Multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Enable Dimension Writeback](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Create a Data Source &#40;SSAS Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Enable Dimension Writeback](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

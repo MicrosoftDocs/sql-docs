@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 436c4480-f1e3-403f-b2bd-de04539afe3c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DOMAIN_CONSTRAINTS (Transact-SQL)

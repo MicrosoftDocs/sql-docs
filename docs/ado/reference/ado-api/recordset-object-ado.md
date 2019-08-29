@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Recordset Object (ADO)
 Represents the entire set of records from a base table or the results of an executed command. At any time, the **Recordset** object refers to only a single record within the set as the current record.  

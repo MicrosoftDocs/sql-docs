@@ -16,9 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Transfer Logins Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Transfer Logins task transfers one or more logins between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Transfer Logins Between Instances of SQL Server  

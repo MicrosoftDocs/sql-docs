@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "authentication [Reporting Services]"
   - "extensions [Reporting Services], custom security"
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure Report Manager to Pass Custom Authentication Cookies

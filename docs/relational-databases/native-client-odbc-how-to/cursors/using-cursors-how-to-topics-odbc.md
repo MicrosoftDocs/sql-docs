@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Cursors How-to Topics (ODBC)

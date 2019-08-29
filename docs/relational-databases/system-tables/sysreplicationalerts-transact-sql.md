@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

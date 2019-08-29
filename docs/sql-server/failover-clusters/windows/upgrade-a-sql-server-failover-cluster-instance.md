@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade a SQL Server Failover Cluster Instance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

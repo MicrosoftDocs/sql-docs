@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Troubleshoot a Full Transaction Log (SQL Server Error 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

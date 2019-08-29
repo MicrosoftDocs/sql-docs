@@ -9,7 +9,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.mds.configmanager.srvconnect.f1"
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

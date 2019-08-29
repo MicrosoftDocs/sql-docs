@@ -15,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STLength (geometry Data Type)"
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STLength (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

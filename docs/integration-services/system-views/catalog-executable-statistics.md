@@ -10,9 +10,12 @@ ms.topic: "language-reference"
 ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
-# catalog.executable_statistics
+# catalog.executable_statistics 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays a row for each executable that is run, including each iteration of an executable.  

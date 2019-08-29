@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Node.js Driver for SQL Server
 

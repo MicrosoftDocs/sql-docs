@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
@@ -211,7 +210,10 @@ _Suppress unwanted line breaks:_ You might use SQL Server Management Studio (SSM
  Specifies that the columns are returned as subelements. Otherwise, they are mapped to XML attributes. This option is supported in RAW, AUTO and PATH modes only. For more information, see [Use RAW Mode with FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  XSINIL  
- Specifies that an element with **xsi:nil** attribute set to **True** be created for NULL column values. This option can only be specified with ELEMENTS directive. For more information, see [Generate Elements for NULL Values with the XSINIL Parameter](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).  
+ Specifies that an element with **xsi:nil** attribute set to **True** be created for NULL column values. This option can only be specified with ELEMENTS directive. For more information, see:
+
+- [Generate Elements for NULL Values with the XSINIL Parameter](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).
+- [FOR XML on the SELECT statement](../../relational-databases/xml/for-xml-sql-server.md)
   
  ABSENT  
  Indicates that for null column values, corresponding XML elements will not be added in the XML result. Specify this option only with ELEMENTS.  

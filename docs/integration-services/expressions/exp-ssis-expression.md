@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # EXP (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the exponent to base e of a numeric expression. The EXP function complements the action of the LN function and is sometimes referred to as the antilogarithm.  
   
 ## Syntax  

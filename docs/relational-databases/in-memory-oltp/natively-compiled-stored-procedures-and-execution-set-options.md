@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Natively Compiled Stored Procedures and Execution Set Options

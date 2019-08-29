@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 47149073-307d-47a5-b7d2-66a737d3231d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # disallow results from triggers Server Configuration Option
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

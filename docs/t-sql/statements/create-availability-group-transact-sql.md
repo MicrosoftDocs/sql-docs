@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: craigg
 ---
 # CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -98,11 +97,11 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ip4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+        'ip4_address', 'pv4_mask'  
       | 'ipv6_address'  
      }  
   
@@ -454,10 +453,10 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ip4_address*  
  Specifies an IPv4 four-part address for an availability group listener. For example, `10.120.19.155`.  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  Specifies an IPv4 four-part mask for an availability group listener. For example, `255.255.254.0`.  
   
  *ipv6_address*  

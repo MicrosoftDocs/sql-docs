@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - Other Annotations

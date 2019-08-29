@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supporting Local Transactions

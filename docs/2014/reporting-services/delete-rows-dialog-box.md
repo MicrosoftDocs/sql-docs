@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.deleterows.f1"
@@ -13,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete Rows dialog box"
 ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Delete Rows Dialog Box

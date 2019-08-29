@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "Reporting Services WMI Provider Library"
@@ -16,8 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "WMI provider [Reporting Services], library"
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services WMI Provider Library Reference (SSRS)

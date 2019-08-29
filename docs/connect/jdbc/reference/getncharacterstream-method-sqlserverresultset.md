@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 69620047-78fd-4be9-a245-1851afaeac1b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # getNCharacterStream Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,9 +13,12 @@ helpviewer_keywords:
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ---
 # Installing Integration Services Versions Side by Side
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can install   
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) side-by-side with earlier versions of SSIS. This topic describes some limitations of side-by-side installations.  
   

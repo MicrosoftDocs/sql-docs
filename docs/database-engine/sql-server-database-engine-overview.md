@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 65e2f424-1386-45a6-8912-bd053f434073
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SQL Server Database Engine
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

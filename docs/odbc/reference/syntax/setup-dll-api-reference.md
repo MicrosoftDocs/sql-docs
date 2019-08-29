@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # Setup DLL API Reference
 This section describes the syntax of the driver setup DLL API,which consists of two functions (**ConfigDriver** and **ConfigDSN**). **ConfigDriver** and **ConfigDSN** can be either in the driver DLL or in a separate setup DLL.  

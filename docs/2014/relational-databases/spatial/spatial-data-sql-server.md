@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "spatial storage [SQL Server]"
   - "geodetic spatial data [SQL Server], designing"
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 ---
 # Spatial Data (SQL Server)

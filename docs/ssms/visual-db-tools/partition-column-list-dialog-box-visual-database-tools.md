@@ -10,9 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.partitioncolumnlist"
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 
 ---
 # Partition Column List Dialog Box (Visual Database Tools)

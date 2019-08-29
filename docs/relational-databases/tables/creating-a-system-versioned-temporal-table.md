@@ -10,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a System-Versioned Temporal Table
@@ -143,8 +142,8 @@ For example, you may have a set of tables where versioning is implemented with t
   
 -   minimal maintenance costs  
   
- When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns to avoid impacting existing applications that are not designed to handle new columns.  
-  
+ When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns (the datetime2 columns **SysStartTime** and **SysEndTime**) to avoid impacting existing applications that are not designed to handle new columns.  
+
 ### Adding versioning to non-temporal tables  
  If you want to start tracking changes for a non-temporal table that contains the data, you need to add the **PERIOD** definition and optionally provide a name for the empty history table that SQL Server will create for you:  
   
@@ -203,6 +202,8 @@ ALTER TABLE ProjectTaskCurrent
 -   Adding **PERIOD** will perform a data consistency check on current table to make sure that the existing values for period columns are valid  
   
 -   It is highly recommended to set **SYSTEM_VERSIONING** with **DATA_CONSISTENCY_CHECK = ON** to enforce data consistency checks on existing data.  
+
+-   If hidden columns are preferred, use the command `ALTER TABLE [tableName] ALTER COLUMN [columnName] ADD HIDDEN;`.
   
  
 ## See Also  

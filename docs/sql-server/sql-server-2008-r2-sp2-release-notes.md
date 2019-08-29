@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
 ---
 # SQL Server 2008 R2 SP2 Release Notes

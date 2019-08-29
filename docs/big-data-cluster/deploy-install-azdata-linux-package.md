@@ -43,20 +43,20 @@ At this time, there are no package managers to install `azdata` on other operati
 2. Download and install the signing key:
 
     ```bash
-    sudo curl -sL http://repo.corp.microsoft.com/browse/repo/ubuntu/dpgswdist.v1.asc | gpg --dearmor |sudo tee /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg > /dev/null
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
     ```
 
 3. Add the `azdata` repository information:
 
     ```bash
-    sudo echo "deb [trusted=yes arch=amd64] http://repo.corp.microsoft.com/browse/repo/ubuntu/azdata-test mssql main" |sudo tee /etc/apt/sources.list.d/azdata-cli.list
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
     ```
 
 4. Update repository information and install `azdata`:
 
     ```bash
     sudo apt-get update
-    sudo apt-get install azdata-cli -y
+    sudo apt-get install -y azdata-cli
     ```
 
 5. Verify installation:

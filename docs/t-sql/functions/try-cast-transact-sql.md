@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # TRY_CAST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Returns a value cast to the specified data type if the cast succeeds; otherwise, returns null.  
   

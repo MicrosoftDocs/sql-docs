@@ -46,7 +46,7 @@ To avoid dropping idle connections by a network component, the following registr
   
 Restart the computer for the registry settings to take effect.  
 
-To accomplish this when running in Windows Azure create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
+To accomplish this when running in Azure create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
 
 ```xml
 <Startup>  

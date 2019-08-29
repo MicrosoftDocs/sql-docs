@@ -76,7 +76,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  *object_name*  
  Is the name of the base object that the synonym references.  
   
- Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
+ Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
   
 ## Remarks  
  The base object need not exist at synonym create time. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checks for the existence of the base object at run time.  

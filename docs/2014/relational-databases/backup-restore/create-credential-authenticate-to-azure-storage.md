@@ -16,7 +16,7 @@ manager: craigg
 # Create Credential - Authenticate to Azure Storage
   Use the **Backup to URL - Create Credential** dialog box to create a new SQL Credential.  
   
- When using this dialog box to create a credential, you must provide a Azure Management Certificate added to the local certificate store or a publishing profile downloaded to your computer to validate the subscription and the storage account information.  
+ When using this dialog box to create a credential, you must provide an Azure Management Certificate added to the local certificate store or a publishing profile downloaded to your computer to validate the subscription and the storage account information.  
   
  **SQL Credential**  
  Specify the name of the SQL Credential you want to create.  

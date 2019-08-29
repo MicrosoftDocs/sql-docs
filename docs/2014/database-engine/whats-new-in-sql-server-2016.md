@@ -27,8 +27,8 @@ manager: craigg
  [SQL Server Data Files in Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) enables native support for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database files stored as Azure Blobs. This feature allows you to create a database in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] running in on-premises or in a virtual machine in Azure with a dedicated storage location for your data in Azure Blob Storage.  
   
   
-###  <a name="AzureVM"></a> Host a SQL Server Database in a Azure Virtual Machine  
- Use the [Deploy a SQL Server Database to a Azure Virtual Machine](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Wizard to host a database from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a Azure Virtual Machine.  
+###  <a name="AzureVM"></a> Host a SQL Server Database in an Azure Virtual Machine  
+ Use the [Deploy a SQL Server Database to an Azure Virtual Machine](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Wizard to host a database from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in an Azure Virtual Machine.  
   
   
 ###  <a name="Backup"></a> Backup and Restore Enhancements  
@@ -162,7 +162,7 @@ manager: craigg
   
 ##  <a name="Deployment"></a> Deployment Enhancements  
 ### Azure VM
-[Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) enables deployment of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database to a Azure VM.  
+[Deploy a SQL Server Database to a Microsoft Azure Virtual Machine](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) enables deployment of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database to an Azure VM.  
 
 ### ReFS
 Deployment of databases on ReFS is now supported.   

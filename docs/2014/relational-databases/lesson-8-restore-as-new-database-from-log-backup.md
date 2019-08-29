@@ -20,7 +20,7 @@ manager: craigg
   
 -   You have created a backup of your database (.bak) in Azure Storage by using the [SQL Server Backup and Restore with Azure Blob Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) feature. Note that you will need to create another SQL Server Credential in this step. This credential uses storage account keys.  
   
--   You have a Azure Storage account.  
+-   You have an Azure Storage account.  
   
 -   You have created a container under your Azure Storage account.  
   

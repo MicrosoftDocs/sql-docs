@@ -80,7 +80,7 @@ SQL Server Version  |Redistributable Install Link
   
 2.  **Create a new resource group**  
   
-     All Azure resources created via Azure Resource Manager must be contained in resource groups. Create a resource group to house your key vault. This example uses `ContosoDevRG`. Choose your own **unique** resource group and key vault name as all key vault names are globally unique.  
+     All Azure resources created vian Azure Resource Manager must be contained in resource groups. Create a resource group to house your key vault. This example uses `ContosoDevRG`. Choose your own **unique** resource group and key vault name as all key vault names are globally unique.  
   
     ```powershell  
     New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  

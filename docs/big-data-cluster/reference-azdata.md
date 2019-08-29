@@ -15,8 +15,6 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-The following article provides reference for the **sql** commands in the **azdata** tool. 
-
 ## Commands
 |     |     |
 | --- | --- |

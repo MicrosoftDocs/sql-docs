@@ -8,7 +8,7 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
 ms.custom: ""
-ms.date: 05/08/2019
+ms.date: 08/27/2019
 ---
 
 # What's new in SQL Server Reporting Services (SSRS)
@@ -27,9 +27,22 @@ To download SQL Server 2017 Reporting Services, go to the  **[Microsoft Download
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## SQL Server 2019 preview Reporting Services
+## SQL Server 2019 Reporting Services preview
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services isn't available for CTP 3.2. Install the current version, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services preview is available for download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=100122).
+
+### Azure SQL Managed Instance support
+
+You can now host a database catalog used for SQL Server Reporting Services (SSRS) in an Azure SQL Managed Instance (MI) that's hosted either in a VM or in your data center. Support is limited to using database credentials for the connection to SQL MI.
+
+### Power BI Premium dataset support
+
+You can connect to Power BI datasets using either Microsoft Report Builder or SQL Server Data Tools (SSDT). Then you can publish those reports to SSRS 2019 using SQL Server Analysis Services connectivity. Users need to use a stored Windows user name and password to enable the scenario.
+
+### AltText (alternative text) support for report elements
+
+When authoring reports, you can use tooltips to specify text for each element on the report. Screen reader technology identifies these tooltips properly.
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -61,7 +74,8 @@ Read more on the [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlr
 * Download [SQL Server Report Builder](https://go.microsoft.com/fwlink/?LinkId=734968).
 * Download [SQL Server Data Tools - Release Candidate](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Note**: You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
+> [!NOTE]
+> You can only use the query designer for DAX with SSAS tabular data sources built in SQL Server 2016+.
 ::: moniker-end
 
 ## SSRS 2016

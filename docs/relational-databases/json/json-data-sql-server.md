@@ -289,8 +289,8 @@ SET @jsonVariable = N'[
           }  
        }  
   ]'
-  
-INSERT INTO SalesReport  
+
+--INSERT INTO <sampleTable>  
 SELECT SalesOrderJsonData.*  
 FROM OPENJSON (@jsonVariable, N'$')  
            WITH (  

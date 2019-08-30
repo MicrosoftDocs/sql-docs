@@ -14,7 +14,7 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "editions [SQL Server], feature restrictions"
+  - "editions [SQL Server]"
   - "sys.dm_db_persisted_sku_features dynamic management view"
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein

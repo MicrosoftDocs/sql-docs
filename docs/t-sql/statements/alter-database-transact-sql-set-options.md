@@ -2906,6 +2906,8 @@ SET
     <db_encryption_option>
   | <query_store_options>
   | <result_set_caching>
+<RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2953,6 +2955,12 @@ SET
 
 <result_set_caching_option_list> ::=
      { result_set_caching { ON | OFF }
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
+
 ```
 
 ## Arguments
@@ -2962,6 +2970,8 @@ SET
 Is the name of the database to be modified.
 
 **\<db_encryption_option> ::=**        
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+**Applies to** Azure SQL Data Warehouse (preview)
 
 Controls the database encryption state.
 
@@ -3049,6 +3059,24 @@ This command must be run while connected to the `master` database.  Change to th
 ON   
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
 
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Applies to** Azure SQL Data Warehouse (preview)
+
+ON
+Enables the READ_COMMITTED_SNAPSHOT option at the database level.
+
+OFF
+Turn off READ_COMMITTED_SNAPSHOT option at the database level.
+
+Turning READ_COMMITTED_SNAPSHOT ON or OFF for a database will kill all open connections to this database.  You may want to make this change during database maintenance window or wait until there is no active connection to the database except for the connection executing the ALTER DATABSE command.  The database does not have to be in single-user mode.  Changing READ_COMMITTED_SNAPSHOT setting at session level is not supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+
+In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long open transactions can also cause increase in the size of the database if there are data changes by these transactions which blocks the cleanup of versions.  
+
+
+
+
+## Remarks
+
 Cached result set is reused for a query if all of the following requirements are all met:
 
 1. The user executing the query has access to all the tables referenced in the query.
@@ -3059,12 +3087,9 @@ Once result set caching is turned ON for a database, results are cached for all 
 
 ## Permissions
 
-Requires these permissions:
+To set RESULT_SET_CACHING option, a user needs server-level principal login (the one created by the provisioning process) or be a member of the `dbmanager` database role.  
 
-- Server-level principal login (the one created by the provisioning process), or
-- Member of the `dbmanager` database role.
-
-The owner of the database cannot alter the database unless the owner is a member of the dbmanager role.
+To set READ_COMMITTED_SNAPSHOT option, a user needs ALTER permission on the database.
 
 ## Examples
 
@@ -3189,6 +3214,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### Enable Read_Committed_Snapshot option for a database
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## See also

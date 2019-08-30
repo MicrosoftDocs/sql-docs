@@ -77,7 +77,6 @@ SQL Server Management Studio 18.2:
 | Query Execution or Results | Added a "Completion time" in the messages to track when a given query completed its execution. |
 | Query Execution or Results  | Allow more data to be displayed (Result to Text) and stored in cells (Result to Grid). SSMS now allows up to 2M characters for both (up from 256   and 64 K, respectively). This also addressed the issue of users not able to grab more than 43680 chars from the cells of the grid. |
 | ShowPlan | Added a new attribute in QueryPlan when inline scalar UDF feature is enabled   (ContainsInlineScalarTsqlUdfs). |
-| SMO | Added support for "Feature Restrictions*. For information on the feature itself, see [feature  restrictions](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). For information on assessment extensions, see [Introducing SQL Assessment API](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570). |
 | Integration Services (SSIS) | Perf optimization for SSIS package scheduler in Azure |
 |  |  |
 

@@ -47,7 +47,7 @@ ms.author: mikeray
 
 - ActiveX subsystem is discontinued. Use command line or PowerShell scripts instead.
 
-- Startup parameters **-h** and **-g**. For more information, see [sqlservr Application](../tools/sqlservr-application.md).
+- Startup parameters **-h** and **-g**. For more information, see [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
   
 ## Previous Versions  
   

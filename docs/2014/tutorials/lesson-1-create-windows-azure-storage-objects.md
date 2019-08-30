@@ -1,5 +1,5 @@
 ---
-title: "Lesson 1: Create Windows Azure Storage Objects | Microsoft Docs"
+title: "Lesson 1: Create Azure Storage Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
@@ -11,21 +11,21 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ---
-# Lesson 1: Create Windows Azure Storage Objects
-  Before you can create [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups on cloud storage, you must first create a storage account, and then a blob container. Lesson 1 walks you through the steps of Logging into the Windows Azure Management Portal, creating a storage account and a blob container.  
+# Lesson 1: Create Azure Storage Objects
+  Before you can create [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] backups on cloud storage, you must first create a storage account, and then a blob container. Lesson 1 walks you through the steps of Logging into the Azure Management Portal, creating a storage account and a blob container.  
   
 ## Create a storage Account  
- To create a storage account from the Windows Azure Management Portal, use the following steps:  
+ To create a storage account from the Azure Management Portal, use the following steps:  
   
-1.  Log in to the Windows Azure Management Portal using your account. If you do not have a Windows Azure account, [visit Windows Azure 3-Month free trial](https://go.microsoft.com/fwlink/?LinkId=271927).  
+1.  Log in to the Azure Management Portal using your account. If you do not have an Azure account, [visit Azure 3-Month free trial](https://go.microsoft.com/fwlink/?LinkId=271927).  
   
-     ![Windows Azure Login Screen](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Windows Azure Login Screen")  
+     ![Azure Login Screen](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Azure Login Screen")  
   
 2.  Use the step by step instructions detailed [here](https://go.microsoft.com/fwlink/?LinkId=271926), to create a storage account.  
   
 3.  Browse to the storage account you created in previous step. From the bottom center of the web page, click **MANAGE KEYS**. The account information is displayed. Copy the storage account name, and the Access Keys. This information is required to create SQL Stored Credentials. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses this information to access the storage account and create backups.  
   
-     ![Screen shot of Windows Azure Storage Account Keys](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Screen shot of Windows Azure Storage Account Keys")  
+     ![Screen shot of Azure Storage Account Keys](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Screen shot of Azure Storage Account Keys")  
   
     > [!NOTE]  
     >  You can also create a storage account programmatically using REST APIs. For more information, see [Create Storage Account](https://go.microsoft.com/fwlink/?LinkId=271928).  

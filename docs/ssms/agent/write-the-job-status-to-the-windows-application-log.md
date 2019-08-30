@@ -34,18 +34,6 @@ Job responses ensure that database administrators know when jobs complete and ho
   
 -   Automatically deleting the job. Use this job response if you are certain that you do not need to rerun this job.  
   
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To write the job status to the Windows application log, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [SQL Server Management Objects](#SMO)  
-  
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Security"></a>Security  

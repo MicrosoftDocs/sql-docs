@@ -1,5 +1,5 @@
 ---
-title: Run SQL Server Machine Learning Services in a Container | Microsoft Docs
+title: Run SQL Server Machine Learning Services in a container | Microsoft Docs
 description: This tutorial shows you how to use SQL Server Machine Learning Services in a Linux container running on Docker.
 author: uc-msft
 ms.author: umajay
@@ -10,58 +10,58 @@ ms.technology: linux
 ms.collection: linux-container
 moniker: ">= sql-server-linux-ver15 || =sqlallproducts-allversions"
 ---
-# Run SQL Server Machine Learning Services in a Container
+# Run SQL Server Machine Learning Services in a container
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This tutorial demonstrates how to build a Docker container with SQL Server Machine Learning Services and run Machine Learning Scripts from Transact-SQL.
+This tutorial demonstrates how to build a Docker container by using SQL Server Machine Learning Services, and how to run Machine Learning scripts from Transact-SQL. Coverage includes the following tasks:
 
 > [!div class="checklist"]
 > * Clone the mssql-docker repository.
-> * Build SQL Server Linux container image with Machine Learning Services.
-> * Run SQL Server Linux container image with Machine Learning Services.
-> * Run R or Python scripts using Transact-SQL statements.
-> * Stop and remove the SQL Server Linux container. 
+> * Build a SQL Server Linux container image with Machine Learning Services.
+> * Run the SQL Server Linux container image with Machine Learning Services.
+> * Run R or Python scripts by using Transact-SQL statements.
+> * Stop and remove the SQL Server Linux container.
 
 ## Prerequisites
 
 * Git command-line interface.
-* Docker Engine 1.8+ on any supported Linux distribution or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
-* Minimum of 2 GB of disk space.
+* Docker Engine 1.8+ on any supported Linux distribution, or Docker for Mac/Windows. For more information, see [Install Docker](https://docs.docker.com/engine/installation/).
+* Minimum of 2 gigabytes (GB) of disk space.
 * Minimum of 2 GB of RAM.
 * [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Clone the mssql-docker repository
 
-1. Open a bash terminal on Linux/Mac or WSL terminal on Windows.
+1. Open a Bash terminal on Linux or Mac, or open a WSL terminal on Windows.
 
-1. Create a local directory to hold a copy of the mssql-docker repository locally.
-1. Run the git clone command to clone the mssql-docker repository.
+1. Create a local directory to hold a local copy of the mssql-docker repository.
+1. Run the git clone command to clone the mssql-docker repository:
 
     ```bash
     git clone https://github.com/microsoft/mssql-docker mssql-docker
     ```
 
-## Build SQL Server Linux container image with Machine Learning Services
+## Build a SQL Server Linux container image with Machine Learning Services
 
-1. Change directory to the mssql-mlservices directory.
+1. Change the directory to the mssql-mlservices directory:
 
     ```bash
     cd mssql-docker/linux/preview/examples/mssql-mlservices
     ```
 
-1. Execute build.sh script.
+1. Run the build.sh script:
 
    ```bash
    ./build.sh
    ```
 
    > [!NOTE]
-   > Building the docker image requires installing packages that are several GBs in size. The script may take up to 20 minutes to complete depending on network bandwidth.
+   > To build the Docker image, you must install packages that are several GBs in size. The script may take up to 20 minutes to finish running, depending on network bandwidth.
 
-## Run SQL Server Linux container image with Machine Learning Services
+## Run the SQL Server Linux container image with Machine Learning Services
 
-1. Set environment variables before running the container. Set PATH_TO_MSSQL environment variable to a host directory.
+1. Set your environment variables before running the container. Set the PATH_TO_MSSQL environment variable to a host directory:
 
    ```bash
     export MSSQL_PID='Developer'
@@ -70,24 +70,24 @@ This tutorial demonstrates how to build a Docker container with SQL Server Machi
     export PATH_TO_MSSQL='/home/mssql/'
    ```
 
-1. Execute run.sh script.
+1. Run the run.sh script:
 
    ```bash
    ./run.sh
    ```
 
-   This command creates a SQL Server container with Machine Learning Services with the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**.
+   This command creates a SQL Server container with Machine Learning Services, using the Developer edition (default). SQL Server port **1433** is exposed on the host as port **1401**.
 
    > [!NOTE]
    > The process for running production SQL Server editions in containers is slightly different. For more information, see [Configure SQL Server container images on Docker](sql-server-linux-configure-docker.md). If you use the same container names and ports, the rest of this walk-through still works with production containers.
 
-1. To view your Docker containers, use the `docker ps` command.
+1. To view your Docker containers, run the `docker ps` command:
 
    ```bash
    sudo docker ps -a
    ```
 
-1. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
+1. If the **STATUS** column shows a status of **Up**, SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see the [Troubleshooting section of the configuration guide](sql-server-linux-configure-docker.md#troubleshooting).
 
    ```bash
    $ sudo docker ps -a
@@ -106,7 +106,7 @@ This tutorial demonstrates how to build a Docker container with SQL Server Machi
 
 ## Execute R / Python scripts from Transact-SQL
 
-1. Connect to SQL Server in the container and enable the external script configuration option by running the following T-SQL statement.
+1. Connect to SQL Server in the container, and enable the external script configuration option by running the following T-SQL statement:
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1
@@ -114,7 +114,7 @@ This tutorial demonstrates how to build a Docker container with SQL Server Machi
     go
     ```
 
-1. Verify Machine Learning Services is working by running the following simple R/Python sp_execute_external_script.
+1. Verify that Machine Learning Services is working by running the following simple R/Python sp_execute_external_script:
 
     ```sql
     execute sp_execute_external_script 
@@ -147,11 +147,11 @@ This tutorial demonstrates how to build a Docker container with SQL Server Machi
 In this tutorial, you learned to do the following:
 
 > [!div class="checklist"]
-> * Clone the mssql-docker repository.
-> * Build SQL Server Linux container image with Machine Learning Services.
-> * Run SQL Server Linux container image with Machine Learning Services.
-> * Run R or Python scripts using Transact-SQL statements.
-> * Stop and remove the SQL Server Linux container.
+> * Clone the mssql-docker repository
+> * Build SQL Server Linux container image with Machine Learning Services
+> * Run SQL Server Linux container image with Machine Learning Services
+> * Run R or Python scripts using Transact-SQL statements
+> * Stop and remove the SQL Server Linux container
 
 Next, review other Docker configuration and troubleshooting scenarios:
 

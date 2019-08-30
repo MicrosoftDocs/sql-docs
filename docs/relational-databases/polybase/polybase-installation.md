@@ -23,8 +23,6 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
    
 - Microsoft .NET Framework 4.5.  
 
-- Oracle Java SE Runtime Environment (JRE). Versions 7 (starting from 7.51) and 8 are supported. [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) and [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) both work. Go to [Java SE downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html). If JRE isn't present, the installer fails. JRE9 and JRE10 aren't supported.
-
 - Minimum memory: 4 GB. 
    
 - Minimum hard-disk space: 2 GB.
@@ -66,6 +64,9 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
 3. On the Feature Selection page, select **PolyBase Query Service for External Data**.  
 
    ![PolyBase services](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
+   
+   >[!NOTE]
+   >SQL Server 2019 PolyBase now includes an additional option **Java connector for HDFS data sources**. See [SQL Server preview features](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) for more information about this feature.
    
 4. On the Server Configuration page, configure the **SQL Server PolyBase Engine Service** and **SQL Server PolyBase Data Movement Service** to run under the same domain account.  
 

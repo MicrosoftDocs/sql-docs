@@ -93,7 +93,7 @@
         href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
       - name: 4 - Deploy the model
         href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
-      - name: Python for SQL developers
+    - name: Python for SQL developers
       items:
       - name: 1 - Introduction
         href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md

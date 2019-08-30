@@ -4,7 +4,7 @@ description: In this four-part tutorial series, you'll perform clustering of cus
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 08/30/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
@@ -18,15 +18,15 @@ In this four-part tutorial series, you'll use Python to develop and deploy a K-M
 
 In part one of this series, you'll set up the prerequisites for the tutorial and then import a sample dataset to a SQL database. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
 
+In parts two and three of this series, you'll develop some Python scripts in an Azure Data Studio notebook to analyze and prepare your data and train a machine learning model. Then, in part four, you'll run those Python scripts inside a SQL database using stored procedures.
+
 *Clustering* can be explained as organizing data into groups where members of a group are similar in some way. For this tutorial series, imagine you own a retail business. You'll use the **K-Means** algorithm to perform the clustering of customers in a dataset of product purchases and returns. By clustering customers, you can focus your marketing efforts more effectively by targeting specific groups.
 K-Means clustering is an *unsupervised learning* algorithm that looks for patterns in data based on similarities.
-
-In parts two and three of this series, you'll develop some Python scripts in an Azure Data Studio notebook to prepare your data and train a machine learning model. Then, in part four, you'll run those Python scripts inside a SQL database using stored procedures.
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Import a sample database into a SQL Server database
+> * Import a sample database into a SQL Server instance
 
 In [part two](tutorial-python-clustering-model-prepare-data.md), you'll learn how to prepare the data from a SQL database to perform clustering.
 
@@ -36,15 +36,13 @@ In [part four](tutorial-python-clustering-model-deploy.md), you'll learn how to 
 
 ## Prerequisites
 
-* SQL Server Machine Learning Services with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15).
+* [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) with the Python language option - Follow the installation instructions in the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fadvanced-analytics%2ftoc.json&view=sql-server-linux-ver15).
 
-* Python IDE - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+* Python IDE - This tutorial uses a Python notebook in [Azure Data Studio](../../azure-data-studio/what-is.md). For more information, see [How to use notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md). You can also use your own Python IDE, such as a Jupyter notebook or [Visual Studio Code](https://code.visualstudio.com/docs) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
-  You can also use your own Python IDE, such as a Jupyter notebook or [Visual Studio Code](https://code.visualstudio.com/docs) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
+* [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) package - The **revoscalepy** package is included in SQL Server Machine Learning Services. To use the package on a client computer, see [Set up a data science client for Python development](../python/setup-python-client-tools-sql.md) for options to install this package locally.
 
-* revoscalepy package - The revoscalepy package is included in SQL Server Machine Learning Services. To use the package on a client computer, see [Set up a data science client for Python development on SQL Server Machine Learning Services](../python/setup-python-client-tools-sql.md) for options to install this package locally.
-
-  If you're using Azure Data Studio, follow these additional steps to use revoscalepy in a Data Studio Python notebook:
+  If you're using a Python notebook in Azure Data Studio, follow these additional steps to use **revoscalepy**:
 
   1. Open Azure Data Studio
   1. From the **File** menu, select **Preferences** and then **Settings**
@@ -73,7 +71,7 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\`
 
-1. Open Azure Data Studio, connect to SQL Server, and open a new query window.
+1. Open Azure Data Studio, connect to your SQL Server instance, and open a new query window.
 
 1. Run the following commands to restore the database.
 
@@ -90,13 +88,13 @@ The sample dataset used in this tutorial has been saved to a **.bak** database b
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from SQL Server.
+If you're not going to continue with this tutorial, delete the tpcxbb_1gb database from SQL Server.
 
 ## Next steps
 
 In part one of this tutorial series, you completed these steps:
 
-* Import a sample database into a SQL Server database
+* Import a sample database into a SQL Server instance
 
 To prepare the data for the machine learning model, follow part two of this tutorial series:
 

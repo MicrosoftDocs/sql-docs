@@ -122,18 +122,20 @@ GO
 Now that you've created the stored procedure, execute the following script to perform clustering using the procedure.
 
 ```sql
---Creating a table for storing the clustering data
+--Create a table to store the predictions in
+
 DROP TABLE IF EXISTS [dbo].[py_customer_clusters];
 GO
---Create a table to store the predictions in
-CREATE TABLE [dbo].[py_customer_clusters](
- [Customer] [bigint] NULL,
- [OrderRatio] [float] NULL,
- [itemsRatio] [float] NULL,
- [monetaryRatio] [float] NULL,
- [frequency] [float] NULL,
- [cluster] [int] NULL,
- ) ON [PRIMARY]
+
+CREATE TABLE [dbo].[py_customer_clusters] (
+    [Customer] [bigint] NULL
+  , [OrderRatio] [float] NULL
+  , [itemsRatio] [float] NULL
+  , [monetaryRatio] [float] NULL
+  , [frequency] [float] NULL
+  , [cluster] [int] NULL
+  ,
+    ) ON [PRIMARY]
 GO
 
 --Execute the clustering and insert results into table
@@ -144,54 +146,28 @@ EXEC [dbo].[py_generate_customer_return_clusters];
 SELECT * FROM py_customer_clusters;
 ```
 
-```sql
---Create a table to store the predictions in
-
-DROP TABLE IF EXISTS [dbo].[py_customer_clusters];
-GO
-
-CREATE TABLE [dbo].[py_customer_clusters] (
-    [Customer] [bigint] NULL
-    , [OrderRatio] [float] NULL
-    , [itemsRatio] [float] NULL
-    , [monetaryRatio] [float] NULL
-    , [frequency] [float] NULL
-    , [cluster] [int] NULL
-    ,
-    ) ON [PRIMARY]
-GO
-
---Execute the clustering and insert results into table
-INSERT INTO py_customer_clusters
-EXEC [dbo].[py_generate_customer_return_clusters];
-
--- Select contents of the table to verify it works
-SELECT *
-FROM py_customer_clusters;
-```
-
 ## Use the clustering information
 
 Because you stored the clustering procedure in the database, it can perform clustering efficiently against customer data stored in the same database. You can execute the procedure whenever your customer data is updated and use the updated clustering information.
 
-Suppose you want to send a promotional email to customers in cluster 3, the group that has more active return behavior (you can see how the four clusters were described in [part three](tutorial-python-clustering-model-build.md#analyze-the-results) of this tutorial). The following code selects the email addresses of customers in cluster 3.
+Suppose you want to send a promotional email to customers in cluster 0, the group that was inactive (you can see how the four clusters were described in [part three](tutorial-python-clustering-model-build.md#analyze-the-results) of this tutorial). The following code selects the email addresses of customers in cluster 0.
 
 ```sql
 USE [tpcxbb_1gb]
---Get email addresses of customers in cluster 3 for a promotion campaign
+--Get email addresses of customers in cluster 0 for a promotion campaign
 SELECT customer.[c_email_address], customer.c_customer_sk
   FROM dbo.customer
   JOIN
   [dbo].[py_customer_clusters] as c
   ON c.Customer = customer.c_customer_sk
-  WHERE c.cluster = 3
+  WHERE c.cluster = 0
 ```
 
 You can change the **c.cluster** value to return email addresses for customers in other clusters.
 
 ## Clean up resources
 
-When you're finished with this tutorial, you can delete the tpcxbb_1gb database from your Azure SQL Database server.
+When you're finished with this tutorial, you can delete the tpcxbb_1gb database from SQL Server.
 
 ## Next steps
 
@@ -204,6 +180,6 @@ In part four of this tutorial series, you completed these steps:
 To learn more about using Python in SQL Server Machine Learning Services, see:
 
 * [Quickstart: Run a "Hello world" Python script on SQL Server Machine Learning Services](quickstart-python-run-using-t-sql.md)
-* [Python tutorials for SQL Server Machine Learning Services](sql-server-python-tutorials.md)
+* [Other Python tutorials for SQL Server Machine Learning Services](sql-server-python-tutorials.md)
 * [Install Python packages with sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
 

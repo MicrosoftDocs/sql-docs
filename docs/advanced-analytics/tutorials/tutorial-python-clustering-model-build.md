@@ -132,14 +132,14 @@ The four cluster means are given using the variables defined in [part one](tutor
 Data mining using K-Means often requires further analysis of the results, and further steps to better understand each cluster, but it can provide some good leads.
 Here are a couple ways you could interpret these results:
 
-* Cluster 0 (the largest cluster) seems to be a group of customers that are not active (all values are zero).
+* Cluster 0 seems to be a group of customers that are not active (all values are zero).
 * Cluster 3 seems to be a group that stands out in terms of return behavior.
 
 Cluster 0 is a set of customers who are clearly not active. Perhaps you can target marketing efforts towards this group to trigger an interest for purchases. In the next step, you'll query the database for the email addresses of customers in cluster 0, so that you can send a marketing email to them.
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your Azure SQL Database server.
+If you're not going to continue with this tutorial, delete the tpcxbb_1gb database from SQL Server.
 
 ## Next steps
 

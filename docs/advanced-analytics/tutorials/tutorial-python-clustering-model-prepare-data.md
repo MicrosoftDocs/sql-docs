@@ -4,7 +4,7 @@ description: In part two of this four-part tutorial series, you'll prepare the d
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 08/30/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
@@ -19,8 +19,8 @@ In part two of this four-part tutorial series, you'll import and prepare the dat
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
-> * Separate customers along different dimensions using R
-> * Load the data from the Azure SQL database into an R data frame
+> * Separate customers along different dimensions using Python
+> * Load the data from the SQL database into a Python data frame
 
 In [part one](tutorial-python-clustering-model.md), you installed the prerequisites and imported the sample database.
 
@@ -54,60 +54,60 @@ import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
-  ################################################################################################
+################################################################################################
 
-  ## Connect to DB and select data
+## Connect to DB and select data
 
-  ################################################################################################
+################################################################################################
 
-  # Connection string to connect to SQL Server named instance.
-  conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+# Connection string to connect to SQL Server named instance.
+conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
 
-  input_query = '''SELECT
-  ss_customer_sk AS customer,
-  ROUND(COALESCE(returns_count / NULLIF(1.0*orders_count, 0), 0), 7) AS orderRatio,
-  ROUND(COALESCE(returns_items / NULLIF(1.0*orders_items, 0), 0), 7) AS itemsRatio,
-  ROUND(COALESCE(returns_money / NULLIF(1.0*orders_money, 0), 0), 7) AS monetaryRatio,
-  COALESCE(returns_count, 0) AS frequency
-  FROM
-  (
-    SELECT
-      ss_customer_sk,
-      -- return order ratio
-      COUNT(distinct(ss_ticket_number)) AS orders_count,
-      -- return ss_item_sk ratio
-      COUNT(ss_item_sk) AS orders_items,
-      -- return monetary amount ratio
-      SUM( ss_net_paid ) AS orders_money
-    FROM store_sales s
-    GROUP BY ss_customer_sk
-  ) orders
-  LEFT OUTER JOIN
-  (
-    SELECT
-      sr_customer_sk,
-      -- return order ratio
-      count(distinct(sr_ticket_number)) as returns_count,
-      -- return ss_item_sk ratio
-      COUNT(sr_item_sk) as returns_items,
-      -- return monetary amount ratio
-      SUM( sr_return_amt ) AS returns_money
-  FROM store_returns
-  GROUP BY sr_customer_sk ) returned ON ss_customer_sk=sr_customer_sk'''
+input_query = '''SELECT
+ss_customer_sk AS customer,
+ROUND(COALESCE(returns_count / NULLIF(1.0*orders_count, 0), 0), 7) AS orderRatio,
+ROUND(COALESCE(returns_items / NULLIF(1.0*orders_items, 0), 0), 7) AS itemsRatio,
+ROUND(COALESCE(returns_money / NULLIF(1.0*orders_money, 0), 0), 7) AS monetaryRatio,
+COALESCE(returns_count, 0) AS frequency
+FROM
+(
+  SELECT
+    ss_customer_sk,
+    -- return order ratio
+    COUNT(distinct(ss_ticket_number)) AS orders_count,
+    -- return ss_item_sk ratio
+    COUNT(ss_item_sk) AS orders_items,
+    -- return monetary amount ratio
+    SUM( ss_net_paid ) AS orders_money
+  FROM store_sales s
+  GROUP BY ss_customer_sk
+) orders
+LEFT OUTER JOIN
+(
+  SELECT
+    sr_customer_sk,
+    -- return order ratio
+    count(distinct(sr_ticket_number)) as returns_count,
+    -- return ss_item_sk ratio
+    COUNT(sr_item_sk) as returns_items,
+    -- return monetary amount ratio
+    SUM( sr_return_amt ) AS returns_money
+FROM store_returns
+GROUP BY sr_customer_sk ) returned ON ss_customer_sk=sr_customer_sk'''
 
 
-  # Define the columns we wish to import.
-  column_info = {
-      "customer": {"type": "integer"},
-      "orderRatio": {"type": "integer"},
-      "itemsRatio": {"type": "integer"},
-      "frequency": {"type": "integer"}
-  }
+# Define the columns we wish to import.
+column_info = {
+    "customer": {"type": "integer"},
+    "orderRatio": {"type": "integer"},
+    "itemsRatio": {"type": "integer"},
+    "frequency": {"type": "integer"}
+}
 ```
 
 ## Load the data into a data frame
 
-Results from the query are returned to Python using the revoscalepy RxSqlServerData function. As part of the process, you'll use the column information you defined in the previous script.
+Results from the query are returned to Python using the revoscalepy **RxSqlServerData** function. As part of the process, you'll use the column information you defined in the previous script.
 
 ```python
 data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
@@ -117,7 +117,7 @@ revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=Fa
 customer_data = pd.DataFrame(revoscale.rx_import(data_source))
 ```
 
-Now display the beginning of the data frame to make sure it looks correct.
+Now display the beginning of the data frame to verify it looks correct.
 
 ```python
 print("Data frame:", customer_data.head(n=5))
@@ -135,14 +135,14 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 ## Clean up resources
 
-***If you're not going to continue with this tutorial***, delete the tpcxbb_1gb database from your SQL Server.
+If you're not going to continue with this tutorial, delete the tpcxbb_1gb database from SQL Server.
 
 ## Next steps
 
 In part two of this tutorial series, you completed these steps:
 
-* Separate customers along different dimensions using R
-* Load the data from the Azure SQL database into an R data frame
+* Separate customers along different dimensions using Python
+* Load the data from the SQL database into a Python data frame
 
 To create a machine learning model that uses this customer data, follow part three of this tutorial series:
 

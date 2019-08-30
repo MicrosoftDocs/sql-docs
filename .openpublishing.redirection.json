@@ -1562,7 +1562,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
-            "redirect_url": "/sql/advanced-analytics/r/create-a-local-package-repository-using-minicran",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
             "redirect_document_id": false
         },
         {
@@ -1832,7 +1837,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
-            "redirect_url": "/sql/advanced-analytics/r/packages-installed-in-user-libraries",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
             "redirect_document_id": false
         },
         {

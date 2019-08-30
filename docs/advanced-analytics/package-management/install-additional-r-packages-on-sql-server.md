@@ -60,13 +60,13 @@ If the client computer has Internet access, you can download and install **sqlml
 If the client computer doesn't have an Internet connection, you need to download the packages **sqlmlutils** and **RODBCext** in advance using a computer that does have Internet access. You then can copy the files to a folder on the client computer and install the packages offline.
 
 The **RODBCext** package has a number of dependent packages, and identifying all dependencies for a package gets complicated. We recommend that you use [**miniCRAN**](https://andrie.github.io/miniCRAN/) to create a local repository folder for the package that includes all the dependent packages.
-For more information, see [Create a local R package repository using miniCRAN](../r/create-a-local-package-repository-using-minicran.md).
+For more information, see [Create a local R package repository using miniCRAN](create-a-local-package-repository-using-minicran.md).
 
 The **sqlmlutils** package consists of a single zip file that you can copy to the client computer and install.
 
 On a computer with Internet access:
 
-1. Install **miniCRAN**. See [Install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) for details.
+1. Install **miniCRAN**. See [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) for details.
 
 1. In RStudio, run the following R script to create a local repository of the package **RODBCext**. This example creates the repository in the folder `c:\downloads\rodbcext`.
 
@@ -143,7 +143,7 @@ If the client computer you use to connect to SQL Server has Internet access, you
 ### Add the package offline
 
 If the client computer doesn't have an Internet connection, you can use **miniCRAN** to download the **glue** package using a computer that does have Internet access. You then copy the package to the client computer where you can install the package offline.
-See [Install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) for information on installing **miniCRAN**.
+See [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) for information on installing **miniCRAN**.
 
 On a computer with Internet access:
 
@@ -245,6 +245,6 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 ## Next steps
 
 - For information about installed R packages, see [Get R package information](r-package-information.md)
-- For help in working with R packages, see [Tips for using R packages](../r/packages-installed-in-user-libraries.md)
+- For help in working with R packages, see [Tips for using R packages](tips-for-using-r-packages.md)
 - For information about installing Python packages, see [Install Python packages with pip](install-additional-python-packages-on-sql-server.md)
 - For more information about SQL Server Machine Learning Services, see [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)

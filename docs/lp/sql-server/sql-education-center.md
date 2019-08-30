@@ -130,6 +130,60 @@ featureFlags:
                             </div>
                             </a>
                         </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-single-database-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Database single database</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-managed-instance-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Database managed instance</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+	                        <li>
+                            <a href="/azure/sql-data-warehouse/create-data-warehouse-portal" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Data Warehouse</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
                 </ul>
            <h2>Tutorials</h2>
 		 <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">

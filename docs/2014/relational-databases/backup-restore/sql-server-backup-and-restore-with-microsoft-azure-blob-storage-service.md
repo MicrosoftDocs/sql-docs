@@ -31,9 +31,9 @@ manager: craigg
   
 -   No overhead of hardware management:There is no overhead of hardware management with Azure services. Azure services manage the hardware and provide geo-replication for redundancy and protection against hardware failures.  
   
--   Currently for instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in a Azure Virtual Machine, backing up to Azure Blob storage services can be done by creating attached disks. However, there is a limit to the number of disks you can attach to a Azure Virtual Machine. This limit is 16 disks for an extra large instance and fewer for smaller instances. By enabling a direct backup to Azure Blob Storage, you can bypass the 16 disk limit.  
+-   Currently for instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in an Azure Virtual Machine, backing up to Azure Blob storage services can be done by creating attached disks. However, there is a limit to the number of disks you can attach to an Azure Virtual Machine. This limit is 16 disks for an extra large instance and fewer for smaller instances. By enabling a direct backup to Azure Blob Storage, you can bypass the 16 disk limit.  
   
-     In addition, the backup file which now is stored in the Azure Blob storage service is directly available to either an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in a Azure Virtual Machine, without the need for database attach/detach or downloading and attaching the VHD.  
+     In addition, the backup file which now is stored in the Azure Blob storage service is directly available to either an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or another [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in an Azure Virtual Machine, without the need for database attach/detach or downloading and attaching the VHD.  
   
 -   Cost Benefits: Pay only for the service that is used. Can be cost-effective as an off-site and backup archive option. See the [Azure Billing Considerations](#Billing) section for more information and links.  
   

@@ -38,7 +38,7 @@ manager: kfile
   
 -   [SQL Server Business Intelligence in Azure Virtual Machines](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
--   [Use PowerShell to Create a Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
+-   [Use PowerShell to Create an Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
   
 ##  <a name="bkmk_top"></a> In this topic  
   

@@ -22,7 +22,7 @@ manager: craigg
  This tutorial is divided into nine lessons:  
   
  **[Lesson 1: Create Azure Storage Account and Container](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
- In this lesson, you create a Azure Storage account and a container.  
+ In this lesson, you create an Azure Storage account and a container.  
   
  **[Lesson 2. Create a policy on container and generate a Shared Access Signature &#40;SAS&#41; key](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
  In this lesson, you create a policy on the Blob container and also generate a shared access signature.  

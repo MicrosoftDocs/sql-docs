@@ -17,7 +17,7 @@ manager: craigg
 ## Create a storage Account  
  To create a storage account from the Azure Management Portal, use the following steps:  
   
-1.  Log in to the Azure Management Portal using your account. If you do not have a Azure account, [visit Azure 3-Month free trial](https://go.microsoft.com/fwlink/?LinkId=271927).  
+1.  Log in to the Azure Management Portal using your account. If you do not have an Azure account, [visit Azure 3-Month free trial](https://go.microsoft.com/fwlink/?LinkId=271927).  
   
      ![Azure Login Screen](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Azure Login Screen")  
   

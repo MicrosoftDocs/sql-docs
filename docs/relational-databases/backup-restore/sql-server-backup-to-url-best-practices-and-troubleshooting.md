@@ -29,7 +29,7 @@ ms.author: mikeray
   
 -   When creating a container, it is recommended that you set the access level to **private**, so only users or accounts that can provide the required authentication information can read or write the blobs in the container.  
   
--   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in a Azure Virtual Machine, use a storage account in the same region as the virtual machine to avoid data transfer costs between regions. Using the same region also ensures optimal performance for backup and restore operations.  
+-   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running in an Azure Virtual Machine, use a storage account in the same region as the virtual machine to avoid data transfer costs between regions. Using the same region also ensures optimal performance for backup and restore operations.  
   
 -   Failed backup activity can result in an invalid backup file. We recommend periodic identification of failed backups and deleting the blob files. For more information, see [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)  
   

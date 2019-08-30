@@ -16,7 +16,7 @@ manager: craigg
   
  This lesson assumes that you already completed the following steps:  
   
--   You have a Azure Storage account.  
+-   You have an Azure Storage account.  
   
 -   You have created a container under your Azure Storage account.  
   

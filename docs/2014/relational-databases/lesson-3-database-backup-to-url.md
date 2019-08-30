@@ -18,7 +18,7 @@ manager: craigg
   
  This lesson assumes that you already completed the following steps:  
   
--   You have a Azure Storage account.  
+-   You have an Azure Storage account.  
   
 -   You have created a container under your Azure Storage account.  
   
@@ -65,7 +65,7 @@ manager: craigg
   
 5.  To see the new TestDB1 in your on-premises SQL Server, refresh databases in the Object Explorer.  
   
-6.  Similarly, to see the newly created database in your storage account, connect to your storage account via SQL Server Management Studio (SSMS). For information on how to connect to a Azure storage using SQL Server Management Studio, follow these steps:  
+6.  Similarly, to see the newly created database in your storage account, connect to your storage account via SQL Server Management Studio (SSMS). For information on how to connect to an Azure storage using SQL Server Management Studio, follow these steps:  
   
     1.  First, get the storage account information. Log in to the Management Portal. Then, click **Storage** and choose your storage account. When a storage account is selected, click **Manage Access Keys** at the bottom of the page. This opens a similar dialog window:  
   

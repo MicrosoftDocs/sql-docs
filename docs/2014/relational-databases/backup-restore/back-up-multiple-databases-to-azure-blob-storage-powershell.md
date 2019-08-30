@@ -49,7 +49,7 @@ manager: craigg
   
      For more information, see [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   
-3.  Although each code sample can be tried independently by changing the variable values, creating a Azure Storage Account and a SQL Credential are prerequisites and required for all backup and restore operations to Azure Blob storage service.  
+3.  Although each code sample can be tried independently by changing the variable values, creating an Azure Storage Account and a SQL Credential are prerequisites and required for all backup and restore operations to Azure Blob storage service.  
   
 ### Create a SQL Credential on All the Instances of SQL Server  
  There are two sample scripts, and both create a SQL Credential "mybackupToURL" on all the instances of SQL Server on a computer. The first example creates is simple and creates the credential and does not trap exceptions.  For example, if there was already an existing credential with the same name on one of the instances of the computer, the script would fail. The second example traps errors and allows the script to continue.  

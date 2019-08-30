@@ -60,7 +60,7 @@ ms.author: mathoma
  Click to add a secondary replica to the availability group.  
   
  **Add Azure Replica**  
- Click to create a Azure virtual machine that is running a secondary replica in the availability group. This option is applicable only for an availability group in hybrid IT that contains on-premise replicas. For more information, see [High Availability and Disaster Recovery for SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Click to create an Azure virtual machine that is running a secondary replica in the availability group. This option is applicable only for an availability group in hybrid IT that contains on-premise replicas. For more information, see [High Availability and Disaster Recovery for SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Remove Replica**  
  Click to remove the selected secondary replica from the availability group.  

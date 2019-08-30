@@ -12,7 +12,7 @@ ms.author: vanto
 manager: craigg
 ---
 # Lesson 1: Create Azure Storage Account and Container
-  Before you can start storing SQL Server data files in Azure Storage, you must first create a Azure Storage account and a blob container, and a shared access signature. Lesson 1 walks you through the steps of logging into the Azure Management Portal, creating a storage account, a blob container, and a shared access signature.  
+  Before you can start storing SQL Server data files in Azure Storage, you must first create an Azure Storage account and a blob container, and a shared access signature. Lesson 1 walks you through the steps of logging into the Azure Management Portal, creating a storage account, a blob container, and a shared access signature.  
   
  By default, only the owner of the storage account may access blobs, tables, and queues within that account. To be able to access these resources using this new SQL Server enhancement without sharing the storage account access key, you are required to do these:  
   
@@ -27,7 +27,7 @@ manager: craigg
 ## Create Storage Account  
  To create a storage account on the Azure Management Portal, follow these steps:  
   
-1.  Log in to the [Azure Management Portal](https://manage.windowsazure.com) using your account. If you do not have a Azure account, visit [Azure free trial](http://www.windowsazure.com/pricing/free-trial/).  
+1.  Log in to the [Azure Management Portal](https://manage.windowsazure.com) using your account. If you do not have an Azure account, visit [Azure free trial](http://www.windowsazure.com/pricing/free-trial/).  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Overview and Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
@@ -87,7 +87,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples repository
 
 - [Quorum doubles key database's workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet improved the performance of batch data load and removed the need to maintain a mid-tier cache, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center was able to dramatically improve data ingestion rate from domain controllers, and handle spikes in the workload, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
+- Beth Israel Deaconess Medical Center was able to dramatically improve data ingestion rate from domain controllers, and handle spikes in the workload, with In-Memory OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
 ### Caching and session state
 

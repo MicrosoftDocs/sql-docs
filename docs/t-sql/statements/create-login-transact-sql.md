@@ -319,7 +319,7 @@ SQL Server rules allow you create a SQL Server authentication login in the forma
 
 In SQL Database, login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-For more information about SQL Database logins, see [Managing Databases and Logins in Windows Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+For more information about SQL Database logins, see [Managing Databases and Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## Permissions
 
@@ -626,7 +626,7 @@ SQL Server rules allow you create a SQL Server authentication login in the forma
 
 In SQL Data Warehouse, login data required to authenticate a connection and server-level firewall rules is temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-For more information about SQL Data Warehouse logins, see [Managing Databases and Logins in Windows Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+For more information about SQL Data Warehouse logins, see [Managing Databases and Logins in Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## Permissions
 

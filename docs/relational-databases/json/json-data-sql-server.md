@@ -289,7 +289,7 @@ SET @jsonVariable = N'[
           }  
        }  
   ]'
-  
+
 --INSERT INTO <sampleTable>  
 SELECT SalesOrderJsonData.*  
 FROM OPENJSON (@jsonVariable, N'$')  

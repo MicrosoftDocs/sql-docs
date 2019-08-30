@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # Virtual device interface (VDI) reference
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This section contains the specifications for SQL Server application programming interfaces intended for use by third-party backup software vendors.
 

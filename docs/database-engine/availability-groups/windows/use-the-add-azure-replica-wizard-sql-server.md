@@ -28,7 +28,7 @@ ms.author: mathoma
   
 -   Your availability group must contain on-premise availability replicas.  
   
--   Clients to the availability group listener must have connectivity to the Internet if they want to maintain connectivity with the listener when the availability group is failed over to a Azure replica.  
+-   Clients to the availability group listener must have connectivity to the Internet if they want to maintain connectivity with the listener when the availability group is failed over to an Azure replica.  
   
 -   **Prerequisites for using full initial data synchronization** You will need to specify a network share in order for the wizard to create and access backups. For the primary replica, the account used to start the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] must have read and write file-system permissions on a network share. For secondary replicas, the account must have read permission on the network share.  
   

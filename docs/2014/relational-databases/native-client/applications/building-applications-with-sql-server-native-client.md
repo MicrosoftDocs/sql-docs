@@ -44,7 +44,7 @@ manager: craigg
  [Support Policies for SQL Server Native Client](support-policies-for-sql-server-native-client.md)  
  Discusses how various data-access components can be used with different versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Connecting to a Azure SQL Database Using SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [Connecting to an Azure SQL Database Using SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Discusses how to connect to a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## See Also  

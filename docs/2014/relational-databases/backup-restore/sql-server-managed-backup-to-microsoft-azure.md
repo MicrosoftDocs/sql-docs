@@ -50,7 +50,7 @@ manager: craigg
 ###  <a name="Prereqs"></a> Prerequisites  
  **Prerequisites:**  
   
- **Azure Storage service** is used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to store the backup files.    The concepts, structure, and requirements for creating a Azure storage account is explained in detail in the [Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic.  
+ **Azure Storage service** is used by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to store the backup files.    The concepts, structure, and requirements for creating an Azure storage account is explained in detail in the [Introduction to Key Components and Concepts](sql-server-backup-to-url.md#intorkeyconcepts) section of the **SQL Server Backup to URL** topic.  
   
  **SQL Credential** is used to store the information required to authenticate to the Azure storage account. The SQL Credential object stores the account name and the access key information. For more information, see the [Introduction to Key Components and Concepts](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) section in the **SQL Server Backup to URL** topic. For a walkthrough on how to create a SQL Credential to store Azure Storage authentication information, see [Lesson 2: Create a SQL Server Credential](../../tutorials/lesson-2-create-a-sql-server-credential.md).  
   

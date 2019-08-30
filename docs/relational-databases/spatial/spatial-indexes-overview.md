@@ -117,7 +117,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 >  The **tessellation_scheme** setting of a spatial index is visible in the [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) catalog view.  
   
 #### Geometry Grid Tessellation Scheme  
- GEOMETRY_AUTO_GRID tessellation is the default tessellation scheme for the **geometry** data type for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and later.  GEOMETRY_GRID tessellation is the only tessellation scheme available for geometry data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This section discusses aspects of geometry grid tessellation that are relevant to working with spatial indexes: supported methods and bounding boxes.  
+ GEOMETRY_AUTO_GRID tessellation is the default tessellation scheme for the **geometry** data type for [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] and later.  GEOMETRY_GRID tessellation is the only tessellation scheme available for geometry data types in [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]. This section discusses aspects of geometry grid tessellation that are relevant to working with spatial indexes: supported methods and bounding boxes.  
   
 > [!NOTE]  
 >  You can explicitly specify this tessellation scheme by using the USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) clause of the [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  

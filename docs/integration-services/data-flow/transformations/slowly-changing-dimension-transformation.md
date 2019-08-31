@@ -105,6 +105,7 @@ ms.author: janinez
   
 ## Related Content  
   
--   Blog entry, [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481), on blogs.msdn.com.  
+-   [Handling Slowly Changing Dimensions in SSIS](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
+-   [Optimizing the Slowly Changing Dimension Wizard](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)
   
   

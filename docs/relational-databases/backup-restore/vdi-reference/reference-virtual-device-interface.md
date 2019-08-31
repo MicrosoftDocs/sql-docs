@@ -33,6 +33,6 @@ Conventional online backups done through VDI can take advantage of the full rang
 
 Review the VDI reference documentation in this section.
 
-Download the full specification and the supporting source files, see the following download:
+Download the full specification and the supporting source files:
 
 [SQL Server 2005 Virtual Backup Device Interface (VDI) Specification](https://www.microsoft.com/download/details.aspx?id=17282)

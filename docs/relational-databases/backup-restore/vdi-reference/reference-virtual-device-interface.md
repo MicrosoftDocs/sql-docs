@@ -1,7 +1,7 @@
 ---
 title: Virtual device interface reference
 titlesuffix: SQL Server VDI reference
-description: This article provides reference for the IServerVirtualDeviceSet2::SignalAbort command.
+description: This article provides an overview of the virtual device interface reference for SQL Server backup.
 ms.date: 08/30/2019
 ms.prod: sql
 ms.prod_service: backup-restore

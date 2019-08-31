@@ -11,7 +11,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 
-# IClientVirtualDeviceSet2::Close reference (VDI)
+# IClientVirtualDeviceSet2::Close (VDI)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

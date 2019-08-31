@@ -11,7 +11,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 
-# IServerVirtualDeviceSet2::Open reference (VDI)
+# IServerVirtualDeviceSet2::Open (VDI)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

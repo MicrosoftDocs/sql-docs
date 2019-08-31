@@ -11,7 +11,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 
-# IServerVirtualDeviceSet2::RequestBuffers reference (VDI)
+# IServerVirtualDeviceSet2::RequestBuffers (VDI)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

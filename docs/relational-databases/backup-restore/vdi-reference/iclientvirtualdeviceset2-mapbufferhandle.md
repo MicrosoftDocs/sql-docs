@@ -11,7 +11,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 
-# IClientVirtualDeviceSet2::MapBufferHandle reference (VDI)
+# IClientVirtualDeviceSet2::MapBufferHandle (VDI)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

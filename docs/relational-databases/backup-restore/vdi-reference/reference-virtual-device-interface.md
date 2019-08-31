@@ -1,5 +1,5 @@
 ---
-title: IServerVirtualDeviceSet2::SignalAbort
+title: Virtual device interface reference
 titlesuffix: SQL Server VDI reference
 description: This article provides reference for the IServerVirtualDeviceSet2::SignalAbort command.
 ms.date: 08/30/2019

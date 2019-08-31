@@ -1,13 +1,18 @@
 {
     "redirections": [
-         {
-            "source_path": "docs/big-data-cluster/reference-azdata-sql.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
-            "redirect_document_id": false
-        },  
         {
-            "source_path": "docs/big-data-cluster/reference-azdata-notebook.md",
-            "redirect_url": "/sql/big-data-cluster/reference-azdata",
+            "source_path": "docs/big-data-cluster/deploy-install-azdata-installer.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/system-catalog-views/sys-sql-feature-restrictions.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/feature-restrictions.md",
+            "redirect_url": "/sql/sql-server/what-s-new-in-sql-server-ver15",
             "redirect_document_id": false
         },
         {
@@ -501,8 +506,18 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/advanced-analytics/package-management/default-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md",
             "redirect_url": "/sql/advanced-analytics/package-management/installed-package-information",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/advanced-analytics/package-management/installed-package-information.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/r-package-information",
             "redirect_document_id": true
         },
         {
@@ -932,7 +947,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r/r-package-management-for-sql-server-r-services.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1547,7 +1562,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/create-a-local-package-repository-using-minicran.md",
-            "redirect_url": "/sql/advanced-analytics/r/create-a-local-package-repository-using-minicran",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/create-a-local-package-repository-using-minicran.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/create-a-local-package-repository-using-minicran",
             "redirect_document_id": false
         },
         {
@@ -1632,7 +1652,7 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md",
-            "redirect_url": "/sql/advanced-analytics/r/install-additional-r-packages-on-sql-server",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -1817,7 +1837,12 @@
         },
         {
             "source_path": "docs/advanced-analytics/r-services/packages-installed-in-user-libraries.md",
-            "redirect_url": "/sql/advanced-analytics/r/packages-installed-in-user-libraries",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/packages-installed-in-user-libraries.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/tips-for-using-r-packages",
             "redirect_document_id": false
         },
         {
@@ -1876,8 +1901,38 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/advanced-analytics/r/r-package-how-to-enable-or-disable.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/install-r-packages-tsql.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/package-install-uninstall-and-sync.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/use-revoscaler-to-manage-r-packages.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md",
             "redirect_url": "/sql/advanced-analytics/r/r-package-management-for-sql-server-r-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/r/install-additional-r-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-r-packages-on-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/advanced-analytics/python/install-additional-python-packages-on-sql-server.md",
+            "redirect_url": "/sql/advanced-analytics/package-management/install-additional-python-packages-on-sql-server",
             "redirect_document_id": false
         },
         {
@@ -13863,6 +13918,36 @@
         {
             "source_path": "docs/analysis-services/multidimensional-models-adomd-net-server/index.md",
             "redirect_url": "/bi-reference/adomd/index",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-ag-kubernetes.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-connect.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-create-deployment.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-manage.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-kubernetes-deploy.md",
+            "redirect_url": "/sql/sql-server/sql-server-ver15-release-notes",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/indexes/columnstore-indexes-defragmentation.md",
+            "redirect_url": "/sql/relational-databases/indexes/reorganize-and-rebuild-indexes",
             "redirect_document_id": false
         }
     ]

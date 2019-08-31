@@ -67,7 +67,7 @@ For more information, see [Columnstore indexes - data warehousing](../../relatio
 
 Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can create nonclustered B-tree indexes as secondary indexes on a clustered columnstore index. The nonclustered B-tree index is updated as changes occur to the columnstore index. This is a powerful feature that you can use to your advantage. 
 
-By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since an non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
+By using the secondary B-tree index, you can efficiently search for specific rows without scanning through all the rows.  Other options become available too. For example, you can enforce a primary or foreign key constraint by using a UNIQUE constraint on the B-tree index. Since a non-unique value will fail to insert into the B-tree index, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot insert the value into the columnstore. 
 
 Consider using a B-tree index on a columnstore index to:
 * Run queries that search for particular values or small ranges of values.
@@ -121,7 +121,7 @@ Unless you have a large enough data size, a columnstore index performs best with
 
 Example:
 * Load 1,000,000 rows into one partition or a non-partitioned table. You get one compressed rowgroup with 1,000,000 rows. This is great for high data compression and fast query performance.
-* Load 1,000,000 rows evenly into 10 partitions. Each partition gets 100,000 rows, which is less than the minimum threshold for columnstore compression. As a result the columnstore index could have 10 delta rowgroups with 100,000 rows in each. There are ways to force the delta rowgroups into the columnstore. However, if these are the only rows in the columnstore index, the comrpessed rowgroups will be too small for best compression and query performance.
+* Load 1,000,000 rows evenly into 10 partitions. Each partition gets 100,000 rows, which is less than the minimum threshold for columnstore compression. As a result the columnstore index could have 10 delta rowgroups with 100,000 rows in each. There are ways to force the delta rowgroups into the columnstore. However, if these are the only rows in the columnstore index, the compressed rowgroups will be too small for best compression and query performance.
 
 For more information about partitioning, see Sunil Agarwal's blog post, [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/).
 
@@ -175,10 +175,9 @@ These are tasks for creating and maintaining columnstore indexes.
 |Drop a columnstore index|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Dropping a columnstore index uses the standard DROP INDEX syntax that B-tree indexes use. Dropping a clustered columnstore index will convert the columnstore table to a heap.|  
 |Delete a row from a columnstore index|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) to delete a row.<br /><br /> **columnstore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted but does not reclaim the physical storage for the row until the index is rebuilt.<br /><br /> **deltastore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logically and physically deletes the row.|  
 |Update a row in the columnstore index|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) to update a row.<br /><br /> **columnstore** row:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marks the row as logically deleted, and then inserts the updated row into the deltastore.<br /><br /> **deltastore** row: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates the row in the deltastore.|  
-|Force all rows in the deltastore to go into the columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Columnstore indexes - defragmentation](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX with the REBUILD option forces all rows to go into the columnstore.|  
+|Force all rows in the deltastore to go into the columnstore.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|ALTER INDEX with the REBUILD option forces all rows to go into the columnstore.|  
 |Defragment a columnstore index|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE  defragments columnstore indexes online.|  
 |Merge tables with columnstore indexes.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
-
 
 ## Next steps
 To create an empty columnstore index for:

@@ -42,7 +42,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 `[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default value of NULL. If **all**, subscriptions to all articles for each specified publication and Subscriber are dropped. Use **all** for publications that allow immediate updating.  
   
-`[ @subscriber = ] 'subscribe_r'`
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber that will have its subscriptions dropped. *subscriber* is **sysname**, with no default. If **all**, all subscriptions for all Subscribers are dropped.  
   
 `[ @destination_db = ] 'destination_db'`

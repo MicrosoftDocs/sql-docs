@@ -129,7 +129,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |Topic/Task|Description|  
 |-----------------|-----------------|  
 |[Create an Encrypted Backup](create-an-encrypted-backup.md)|Describes the basic steps required to create an encrypted backup|  
-|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
+|[SQL Server Managed Backup to Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
 |[Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Provides an example of creating an encrypted backup protected by keys in the Azure Key Vault.|  
   
 ## See Also  

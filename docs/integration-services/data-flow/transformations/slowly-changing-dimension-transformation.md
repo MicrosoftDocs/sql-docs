@@ -1,7 +1,7 @@
 ---
 title: "Slowly Changing Dimension Transformation | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "08/31/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""

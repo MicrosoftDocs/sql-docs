@@ -83,6 +83,16 @@
       href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
     - name: Create a Python model using revoscalepy
       href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
+    - name: Customer clustering (K-Means)
+      items:
+      - name: 1 - Introduction
+        href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
+      - name: 2 - Prepare the data
+        href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md
+      - name: 3 - Create the model
+        href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
+      - name: 4 - Deploy the model
+        href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
     - name: Python for SQL developers
       items:
       - name: 1 - Introduction
@@ -242,9 +252,9 @@
       - name: Install R packages
         href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
       - name: Create a miniCRAN repo
-        href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
+        href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
       - name: Tips for using R packages
-        href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
+        href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
   - name: Administration
     items:
     - name: Manage integration

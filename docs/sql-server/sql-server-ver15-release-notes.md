@@ -38,6 +38,10 @@ Complete details about support and licensing for release candidate software are 
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
+## Build number
+
+The build number for SQL Server 2019 RC on Windows, Linux, and containers is `15.0.1900.25`.  The build number for SQL Server 2019 RC used in big data clusters is `15.0.1900.47`.
+
 ## Hardware and software requirements
 
 - **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.

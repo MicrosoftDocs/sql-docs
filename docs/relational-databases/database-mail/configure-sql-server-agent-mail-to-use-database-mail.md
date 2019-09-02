@@ -30,13 +30,16 @@ ms.author: sstein
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
+  > [!NOTE]
+  > SQL Agent on Managed Instance is always configured to use Database Mail, so this content is not applicable on Managed Instance. In Managed Instance you need to have a profile that must be called **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** in order to bind SQL Agent with Database Mail. 
+  
 ###  <a name="Prerequisites"></a> Prerequisites  
   
 -   [Enable Database Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [Create a Database Mail account](../../relational-databases/database-mail/create-a-database-mail-account.md) for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account to use.  
   
--   [Create a Database Mail profile](../../relational-databases/database-mail/create-a-database-mail-profile.md) for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account to use and add the user to the **DatabaseMailUserRole** in the **msdb** database.  
+-   [Create a Database Mail profile](../../relational-databases/database-mail/create-a-database-mail-profile.md) for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account to use and add the user to the **DatabaseMailUserRole** in the **msdb** database.
   
 -   Set the profile as the default profile for the **msdb** database.  
   
@@ -58,9 +61,9 @@ ms.author: sstein
   
 -   In the **Mail system** list, select **Database Mail**.  
   
--   In the **Mail profile list**, select a mail profile for Database Mail.  
+-   In the **Mail profile list**, select a mail profile for Database Mail. 
   
--   Restart SQL Server Agent.  
+-   Restart SQL Server Agent .  
   
 ##  <a name="Follow_Up"></a> Follow-up Tasks  
  The following tasks are necessary to complete the configuration of Agent to send alerts and notifications.  

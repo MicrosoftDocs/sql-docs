@@ -1,6 +1,6 @@
 ---
-title: "Host database on a managed instance | Microsoft Docs"
-description: Describes how to configure a MDS database on a managed instance.
+title: "Host a MDS database on a managed instance | Microsoft Docs"
+description: This article describes how to configure a Master Data Service database on a managed instance.
 ms.custom: ""
 ms.date: "07/01/2019"
 ms.prod: sql
@@ -14,19 +14,22 @@ ms.author: lle
 manager: craigg
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
-# Host database on managed instance
+# Host a MDS database on managed instance
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  This article covers how to config a MDS database on managed instance.
+  This article covers how to configure a Master Data Services (MDS) database on managed instance.
   
 ## Preparation
 
-We need finish following steps in the preparation.
-- Finish managed instance creating and configuration. Include virtual network and Point-to-site VPN.
-- Finish web application machine configuration.
-  - Include install Point-to-site VPN.
-  - Install Roles and Features.
+To prepare, complete the following steps:
+
+- Create and configure a managed instance with the following features installed:
+  - Virtual network
+  - Point-to-Site VPN
+- Configure web application machine with the following features installed:
+  - Point-to-site VPN
+  - Roles and Features
 
 **Database side:**
 

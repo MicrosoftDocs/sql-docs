@@ -90,7 +90,7 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
  
 - FOR_APPEND is required.  For example:
   ```sql 
-  CREATE MATRIALIZED VIEW mv_test2  
+  CREATE MATERIALIZED VIEW mv_test2  
   WITH (distribution = hash(i_category_id), FOR_APPEND)  
   AS
   SELECT MAX(i.i_rec_start_date) as max_i_rec_start_date, MIN(i.i_rec_end_date) as min_i_rec_end_date, i.i_item_sk, i.i_item_id, i.i_category_id

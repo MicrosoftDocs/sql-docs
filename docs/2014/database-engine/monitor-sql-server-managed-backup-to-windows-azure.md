@@ -1,5 +1,5 @@
 ---
-title: "Monitor SQL Server Managed Backup to Windows Azure | Microsoft Docs"
+title: "Monitor SQL Server Managed Backup to Azure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ---
-# Monitor SQL Server Managed Backup to Windows Azure
+# Monitor SQL Server Managed Backup to Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has built-in measures to identify problems and errors during backup processes and remedy with corrective action when possible.  However there are certain situations where user intervention is required. This topic describes the tools that you can use to determine the overall health status of backups, and identify any errors that need to be addressed.  
   
 ## Overview of [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Built-in Debugging  
- The [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] periodically reviews scheduled backups and attempts to reschedule any failed backups. It polls the storage account periodically to identify breaks in log chains affecting recoverability of the database, and schedules new backups accordingly. It also takes into account Windows Azure throttling policies, and has mechanisms in place to manage multiple database backups. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses extended events to track all activity. The Extended Event channels used by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agent include, Admin, Operational, Analytical, and Debug. Events that fall under the Admin category usually are related to errors and require user intervention and are enabled by default. Analytical events are also turned on by default, but usually are not related to errors that require user intervention. Operation events are typically informational. For example, operational events include scheduling a backup, a successful completion of backup, etc. The Debug is the most verbose and is used internally by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] to determine issues and correct them if required.  
+ The [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] periodically reviews scheduled backups and attempts to reschedule any failed backups. It polls the storage account periodically to identify breaks in log chains affecting recoverability of the database, and schedules new backups accordingly. It also takes into account Azure throttling policies, and has mechanisms in place to manage multiple database backups. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses extended events to track all activity. The Extended Event channels used by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] agent include, Admin, Operational, Analytical, and Debug. Events that fall under the Admin category usually are related to errors and require user intervention and are enabled by default. Analytical events are also turned on by default, but usually are not related to errors that require user intervention. Operation events are typically informational. For example, operational events include scheduling a backup, a successful completion of backup, etc. The Debug is the most verbose and is used internally by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] to determine issues and correct them if required.  
   
 ### Configure Monitoring Parameters for [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  The **smart_admin.sp_set_parameter** system stored procedure allows you to specify monitoring settings. The following sections walks through the process of enabling Extended Events,  and enabling email notification for errors and warnings.  
@@ -244,16 +244,16 @@ smart_backup_files;
   
  Following is a detailed explanation of the different status returned:  
   
--   **Available - A:** This is a normal backup file. The backup has been completed, and also verified that it is available in the Windows Azure storage.  
+-   **Available - A:** This is a normal backup file. The backup has been completed, and also verified that it is available in the Azure storage.  
   
--   **Copy in Progress -B:** This status is specifically for Availability Group databases. If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detects a break in the backup log chain, it will first attempt identify the  backup that might have caused the break in backup chain. On finding the backup file it attempts to copy the file to Windows Azure storage. When the copying process is in progress it will display this status.  
+-   **Copy in Progress -B:** This status is specifically for Availability Group databases. If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] detects a break in the backup log chain, it will first attempt identify the  backup that might have caused the break in backup chain. On finding the backup file it attempts to copy the file to Azure storage. When the copying process is in progress it will display this status.  
   
 -   **Copy Failed - F:** Similar to Copy In Progress, this is specific t Availability Group databases. If the copy process fails, the status is marked as F.  
   
 -   **Corrupted - C:** If [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] is unable to verify the backup file in the storage by performing a RESTORE HEADER_ONLY command even after multiple attempts, it marks this file as corrupted. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup to ensure that the corrupted file does not result in a break of the backup chain.  
   
--   **Deleted - D:** The corresponding file cannot be found in the Windows Azure storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup if the deleted file results in a break in the backup chain.  
+-   **Deleted - D:** The corresponding file cannot be found in the Azure storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will schedule a backup if the deleted file results in a break in the backup chain.  
   
--   **Unknown - U:** This status indicated that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has not yet been able to verify file existence and its properties in the Windows Azure storage. The next time the process runs, which is approximately every 15 minutes, this status will be updated.  
+-   **Unknown - U:** This status indicated that [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has not yet been able to verify file existence and its properties in the Azure storage. The next time the process runs, which is approximately every 15 minutes, this status will be updated.  
   
   

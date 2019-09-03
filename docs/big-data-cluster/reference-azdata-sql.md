@@ -46,13 +46,12 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## azdata sql query
 The query command allows execution of a T-SQL query.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q --database -d 
 ```
 ### Examples
 Select the list of tables names.  Database defaults to master.
 ```bash
-azdata sql query 'SELECT name FROM SYS.TABLES'
+azdata sql query -q 'SELECT name FROM SYS.TABLES'
 ```
 ### Required Parameters
 #### `--database -d`
